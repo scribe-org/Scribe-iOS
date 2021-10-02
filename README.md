@@ -11,7 +11,16 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging clients based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association.
+**Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging clients based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Eventual functionality will include in-chat verb conjugation and other power user features.
+
+Being fully open-source, Scribe prioritizes user privacy by not accessing any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+
+# **Contents**<a id="contents"></a>
+
+- [Features](#features)
+- [To-Do](#to-do)
+
+# Features [`↩`](#contents) <a id="features"></a>
 
 Scribe colors nouns according to the following conventions:
 
@@ -20,16 +29,6 @@ Scribe colors nouns according to the following conventions:
 - Neutral nouns are colored green 🟩
 - Plural nouns are colored orange 🟧
 - Nouns with more than one gender are multicolored
-
-Languages that are currently supported are German and Spanish, but the Scribe team has interest in creating keyboards for all languages of interest. Scribe also prioritizes user privacy by not accessing any user data. Fully open-source, Scribe aims to add functionality to create keyboards for language learners and iOS power users alike.
-
-# **Contents**<a id="contents"></a>
-
-- [Examples](#examples)
-
-- [To-Do](#to-do)
-
-# Examples [`↩`](#contents) <a id="examples"></a>
 
 # To-Do [`↩`](#contents) <a id="to-do"></a>
 
