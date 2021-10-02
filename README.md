@@ -11,7 +11,17 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS system keyboards that...
+**Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging clients based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association.
+
+Scribe colors nouns according to the following conventions:
+
+- All feminine nouns are colored <span style="color:red">**red**</span>
+- All masculine nouns are colored <span style="color:blue">**blue**</span>
+- All neutral nouns are colored <span style="color:green">**green**</span>
+- All plural nouns are colored <span style="color:orange">**orange**</span>
+- All nouns that could fall into one or more of the above categories are multicolored given the categories into which they fall
+
+Languages that are currently supported are German and Spanish, but the Scribe team has interest in creating keyboards for all languages of interest. Fully open-source, Scribe aims to add functionality to create keyboards for iOS power users and language learners.
 
 # **Contents**<a id="contents"></a>
 
@@ -22,3 +32,25 @@
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
 - Creating an MVP
+
+<!--
+
+- Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
+
+- Planning the potential implementation of a verb conjugation command (see issue)
+
+  - Example: typing /fps chosen_infinitive could conjugate the verb to first person singular
+
+- Planning the potential implementation of a noun plural command (see issue)
+
+  - Example: typing /pl chosen_noun could provide the plural for the noun
+
+- Adding iPadOS specific functionality (see issue)
+
+- Add dark mode functionality (see issue)
+
+-->
+
+- Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access
+
+  - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
