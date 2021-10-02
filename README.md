@@ -6,12 +6,13 @@
 
 <!--
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
-[![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 -->
+
+[![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging clients based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Eventual functionality will include in-chat verb conjugation and other power user features.
+**Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Eventual functionality will include in-chat verb conjugation and other power user features.
 
 Being fully open-source, Scribe prioritizes user privacy by not accessing any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
@@ -46,7 +47,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Example: typing /fps chosen_infinitive could conjugate the verb to first person singular
 
-- Planning the potential implementation of a noun plural command (see issue)
+- Planning the potential implementation of a plural command (see issue)
 
   - Example: typing /pl chosen_noun could provide the plural for the noun
 
