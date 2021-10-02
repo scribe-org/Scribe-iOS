@@ -60,3 +60,5 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access
 
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
+
+- Converting Scribe languages into downloadable packs within the app
