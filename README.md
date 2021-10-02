@@ -15,11 +15,11 @@
 
 Scribe colors nouns according to the following conventions:
 
-- All feminine nouns are colored red 🔴
-- All masculine nouns are colored blue 🔵
-- All neutral nouns are colored green 🟢
-- All plural nouns are colored orange 🟠
-- All nouns that could fall into one or more of the above categories are multicolored given the categories into which they fall
+- All feminine nouns are colored red
+- All masculine nouns are colored blue
+- All neutral nouns are colored green
+- All plural nouns are colored orange
+- Nouns with more than one gender are multicolored
 
 Languages that are currently supported are German and Spanish, but the Scribe team has interest in creating keyboards for all languages of interest. Fully open-source, Scribe aims to add functionality to create keyboards for iOS power users and language learners.
 
