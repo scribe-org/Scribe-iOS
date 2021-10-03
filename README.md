@@ -10,6 +10,8 @@
 
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
+[![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://www.apple.com/app-store/){:target="\_blank"}
+
 ### Scribe language keyboards for iOS
 
 **Scribe-iOS** is a pack of iOS system keyboards that colors nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other power user features.
@@ -26,7 +28,7 @@ Being fully open-source, Scribe prioritizes user privacy by not accessing any us
 
 Users access Scribe language keyboards by doing the following:
 
-- Download Scribe from the [App Store](https://www.apple.com/app-store/)
+- Download Scribe from the <a href="https://www.apple.com/app-store/" target="_blank">App Store</a>
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Add Deutsch (Scribe) for German or Español (Scribe) for Spanish
 - Press the 🌐 key when typing to switch to a Scribe keyboard
