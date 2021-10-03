@@ -18,8 +18,19 @@ Being fully open-source, Scribe prioritizes user privacy by not accessing any us
 
 # **Contents**<a id="contents"></a>
 
+- [Setup](#setup)
 - [Features](#features)
 - [To-Do](#to-do)
+
+# Setup [`↩`](#contents) <a id="setup"></a>
+
+Users access Scribe language keyboards by doing the following:
+
+- Download Scribe from the [App Store](https://www.apple.com/app-store/)
+- Open the settings app
+- General -> Keyboard -> Keyboards -> Add New Keyboard
+- Add Deutsch (Scribe) for German or Español (Scribe) for Spanish
+- Press the 🌐 key when typing to switch to a Scribe keyboard
 
 # Features [`↩`](#contents) <a id="features"></a>
 
@@ -47,7 +58,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Planning the potential implementation of a verb conjugation command (see issue)
 
-  - Example: typing /fps chosen_infinitive could conjugate the verb to first person singular
+  - Example 1: typing /fps chosen_infinitive could conjugate the verb to first person singular
+
+  - Example 2: typing /pp chosen_infinitive could query the verb's past participle
 
 - Planning the potential implementation of a plural command (see issue)
 
@@ -61,6 +74,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access
 
+  - This would likely best be implemented via a Python package that allows users to access data within JSON files stored in the package
+
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
 
-- Converting Scribe languages into downloadable packs within the app
+- Converting Scribe keyboards into downloadable packs within the app
