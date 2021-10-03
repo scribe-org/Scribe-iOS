@@ -10,7 +10,7 @@
 
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
-[![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://www.apple.com/app-store/){:target="\_blank"}
+[![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://www.apple.com/app-store/)
 
 ### Scribe language keyboards for iOS
 
@@ -28,7 +28,7 @@ Being fully open-source, Scribe prioritizes user privacy by not accessing any us
 
 Users access Scribe language keyboards by doing the following:
 
-- Download Scribe from the <a href="https://www.apple.com/app-store/" target="_blank">App Store</a>
+- Download Scribe from the <a href="https://www.apple.com/app-store/">App Store</a>
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Add Deutsch (Scribe) for German or Español (Scribe) for Spanish
 - Press the 🌐 key when typing to switch to a Scribe keyboard
