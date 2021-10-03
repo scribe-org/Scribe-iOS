@@ -50,7 +50,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Creating an MVP
 
-- Expanding Scribe's support for current languages by adding words and their genders
+- Expanding Scribe's support for current languages by adding words and their genders to the [language files](https://github.com/scribe-org/Scribe-iOS)
+
+  - Pull requests are more than welcome for this!
 
 <!--
 
