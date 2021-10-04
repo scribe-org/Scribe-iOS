@@ -26,9 +26,9 @@ Being fully open-source, Scribe prioritizes user privacy by not accessing any us
 
 # Setup [`↩`](#contents) <a id="setup"></a>
 
-Users access Scribe language keyboards by doing the following:
+Users access Scribe language keyboards through the following:
 
-- Download Scribe from the <a href="https://www.apple.com/app-store/">App Store</a>
+- Download Scribe from the [App Store](https://www.apple.com/app-store/)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Add Deutsch (Scribe) for German or Español (Scribe) for Spanish
 - Press the 🌐 key when typing to switch to a Scribe keyboard
