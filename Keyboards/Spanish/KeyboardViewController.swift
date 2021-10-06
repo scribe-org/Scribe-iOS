@@ -7,79 +7,79 @@ import UIKit
 var proxy : UITextDocumentProxy!
 
 class KeyboardViewController: UIInputViewController {
-    
+
     @IBOutlet var nextKeyboardButton: UIButton!
-    
+
     var keyboardView: UIView!
     var keys: [UIButton] = []
     var paddingViews: [UIButton] = []
     var backspaceTimer: Timer?
-    
+
     enum KeyboardState{
         case letters
         case numbers
         case symbols
     }
-    
+
     enum ShiftButtonState {
         case normal
         case shift
         case caps
     }
-    
+
     var keyboardState: KeyboardState = .letters
     var shiftButtonState:ShiftButtonState = .normal
-    
+
     @IBOutlet weak var stackView1: UIStackView!
     @IBOutlet weak var stackView2: UIStackView!
     @IBOutlet weak var stackView3: UIStackView!
     @IBOutlet weak var stackView4: UIStackView!
-    
+
     override func updateViewConstraints() {
         super.updateViewConstraints()
         // Add custom view sizing constraints here
         keyboardView.frame.size = view.frame.size
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         proxy = textDocumentProxy as UITextDocumentProxy
         loadInterface()
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
+
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
         super.viewWillLayoutSubviews()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: 220)
         view.addConstraint(heightConstraint)
-        
+
     }
-    
-    
+
+
     func loadInterface(){
         let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
         keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
         view.addSubview(keyboardView)
         loadKeys()
     }
-    
+
     func addPadding(to stackView: UIStackView, width: CGFloat, key: String){
         let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
         padding.setTitleColor(.clear, for: .normal)
         padding.alpha = 0.02
         padding.widthAnchor.constraint(equalToConstant: width).isActive = true
-        
+
         // If we want to use this padding as a key
         let keyToDisplay = shiftButtonState == .normal ? key : key.capitalized
         padding.layer.setValue(key, forKey: "original")
@@ -88,19 +88,19 @@ class KeyboardViewController: UIInputViewController {
         padding.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
         padding.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
         padding.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
-        
+
         paddingViews.append(padding)
         stackView.addArrangedSubview(padding)
     }
-    
+
     func loadKeys(){
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
-        
+
         let buttonWidth = (UIScreen.main.bounds.width - 6) / CGFloat(Constants.letterKeys[0].count)
-        
+
         var keyboard: [[String]]
-        
+
         // Start padding
         switch keyboardState {
         case .letters:
@@ -111,7 +111,7 @@ class KeyboardViewController: UIInputViewController {
         case .symbols:
             keyboard = Constants.symbolKeys
         }
-        
+
         let numRows = keyboard.count
         for row in 0...numRows - 1{
             for col in 0...keyboard[row].count - 1{
@@ -136,7 +136,7 @@ class KeyboardViewController: UIInputViewController {
                     let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
                     button.addGestureRecognizer(longPressRecognizer)
                 }
-                
+
                 button.layer.cornerRadius = buttonWidth/4
                 keys.append(button)
                 switch row{
@@ -150,7 +150,7 @@ class KeyboardViewController: UIInputViewController {
                 if key == "🌐"{
                     nextKeyboardButton = button
                 }
-                
+
                 // Top row is longest row so it should decide button width
                 print("button width: ", buttonWidth)
                 if key == "⌫" || key == "↵" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
@@ -175,20 +175,20 @@ class KeyboardViewController: UIInputViewController {
                 }
             }
         }
-        
-        
+
+
         // End padding
         switch keyboardState {
         case .letters:
-            break 
+            break
             // addPadding(to: stackView2, width: buttonWidth/2, key: "l")
         case .numbers:
             break
         case .symbols: break
         }
-        
+
     }
-        
+
     func changeKeyboardToNumberKeys(){
         keyboardState = .numbers
         shiftButtonState = .normal
@@ -205,10 +205,10 @@ class KeyboardViewController: UIInputViewController {
     func handlDeleteButtonPressed(){
         proxy.deleteBackward()
     }
-    
+
     @IBAction func keyPressedTouchUp(_ sender: UIButton) {
         guard let originalKey = sender.layer.value(forKey: "original") as? String, let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {return}
-        
+
         guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
         sender.backgroundColor = isSpecial ? Constants.specialKeyColor : Constants.keyColor
 
@@ -242,7 +242,7 @@ class KeyboardViewController: UIInputViewController {
             proxy.insertText(keyToDisplay)
         }
     }
-    
+
     @objc func keyMultiPress(_ sender: UIButton, event: UIEvent){
         guard let originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
@@ -252,7 +252,7 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
         }
     }
-    
+
     @objc func keyLongPressed(_ gesture: UIGestureRecognizer){
         if gesture.state == .began {
             backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
@@ -264,23 +264,23 @@ class KeyboardViewController: UIInputViewController {
             (gesture.view as! UIButton).backgroundColor = Constants.specialKeyColor
         }
     }
-    
+
     @objc func keyUntouched(_ sender: UIButton){
         guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
         sender.backgroundColor = isSpecial ? Constants.specialKeyColor : Constants.keyColor
     }
-    
+
     @objc func keyTouchDown(_ sender: UIButton){
         sender.backgroundColor = Constants.keyPressedColor
     }
-    
+
     override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
-    
+
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
+
         var textColor: UIColor
         let proxy = self.textDocumentProxy
         if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
@@ -290,6 +290,5 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-    
-}
 
+}

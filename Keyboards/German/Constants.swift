@@ -10,7 +10,7 @@ extension UIColor {
 }
 
 enum Constants{
-	
+
 	static let keyColor: UIColor = .white
 	static let keyPressedColor: UIColor = .lightText
     static let specialKeyColor: UIColor = .defaultSpecialGrey
@@ -21,14 +21,14 @@ enum Constants{
 		["⇧", "y", "x", "c", "v", "b", "n", "m", "⌫"],
 		["123", "🌐", "Leerzeichen", "↵"]
 	]
-    
+
 	static let numberKeys = [
 		["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",],
 		["-", "/", ":", ";", "(", ")" ,",", "$", "&", "@", "\""],
 		["#+=",".", ",", "?", "!", "\'", "⌫"],
 		["ABC", "🌐", "Leerzeichen", "↵"]
 	]
-	
+
 	static let symbolKeys = [
 		["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
 		["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],

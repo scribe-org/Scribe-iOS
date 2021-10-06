@@ -30,8 +30,8 @@ Users access Scribe language keyboards through the following:
 
 - Download Scribe from the [App Store](https://www.apple.com/app-store/)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
-- Add Deutsch (Scribe) for German or Español (Scribe) for Spanish
-- Press the 🌐 key when typing to switch to a Scribe keyboard
+- Select from the available Scribe keyboards
+- When typing press 🌐 to select keyboards
 
 # Features [`↩`](#contents) <a id="features"></a>
 

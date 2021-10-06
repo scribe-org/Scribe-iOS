@@ -6,9 +6,9 @@ import Foundation
 import UIKit
 
 extension UIButton{
-	
+
 	func pressedColor(color: UIColor){
-		
+
 		let origImage = self.imageView?.image
 		let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
 		self.setImage(tintedImage, for: .highlighted)
