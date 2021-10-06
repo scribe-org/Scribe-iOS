@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD213322D5907F00C6795D /* AppDelegate.swift */; };
+		38BD213622D5907F00C6795D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD213522D5907F00C6795D /* ViewController.swift */; };
+		38BD213922D5907F00C6795D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213722D5907F00C6795D /* Main.storyboard */; };
+		38BD213E22D5908100C6795D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
+		38BD214F22D592CA00C6795D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* KeyboardViewController.swift */; };
+		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38BD215922D5935A00C6795D /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BD215822D5935A00C6795D /* Keyboard.xib */; };
+		38BD215B22D5A26900C6795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD215A22D5A26900C6795D /* Constants.swift */; };
+		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D1426389270B6F1D00D3702D /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1426388270B6F1D00D3702D /* Keyboard.xib */; };
+		D142638C270B6F2B00D3702D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638A270B6F2B00D3702D /* Constants.swift */; };
+		D142638D270B6F2B00D3702D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638B270B6F2B00D3702D /* Extensions.swift */; };
+		D1608668270B6D3C00134D48 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* KeyboardViewController.swift */; };
+		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38BD215122D592CA00C6795D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38BD214B22D592CA00C6795D;
+			remoteInfo = typEmoji;
+		};
+		D160866A270B6D3C00134D48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1608664270B6D3C00134D48;
+			remoteInfo = CustomKeyboard2Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38BD215722D592CA00C6795D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */,
+				D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		38BD213022D5907E00C6795D /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BD213322D5907F00C6795D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38BD213522D5907F00C6795D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38BD213822D5907F00C6795D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38BD213D22D5908100C6795D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38BD214022D5908100C6795D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38BD214222D5908100C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BD214C22D592CA00C6795D /* German.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = German.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BD214E22D592CA00C6795D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BD215822D5935A00C6795D /* Keyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		38BD215A22D5A26900C6795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D1426388270B6F1D00D3702D /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		D142638A270B6F2B00D3702D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D142638B270B6F2B00D3702D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1608667270B6D3C00134D48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38BD212D22D5907E00C6795D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BD214922D592CA00C6795D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1608662270B6D3C00134D48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38BD212722D5907E00C6795D = {
+			isa = PBXGroup;
+			children = (
+				38BD213222D5907F00C6795D /* Scribe */,
+				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
+				38BD213122D5907E00C6795D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38BD213122D5907E00C6795D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38BD213022D5907E00C6795D /* Scribe.app */,
+				38BD214C22D592CA00C6795D /* German.appex */,
+				D1608665270B6D3C00134D48 /* Spanish.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38BD213222D5907F00C6795D /* Scribe */ = {
+			isa = PBXGroup;
+			children = (
+				38BD213322D5907F00C6795D /* AppDelegate.swift */,
+				38BD213522D5907F00C6795D /* ViewController.swift */,
+				38BD213722D5907F00C6795D /* Main.storyboard */,
+				38BD213D22D5908100C6795D /* Assets.xcassets */,
+				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
+				38BD214222D5908100C6795D /* Info.plist */,
+			);
+			path = Scribe;
+			sourceTree = "<group>";
+		};
+		38BD214D22D592CA00C6795D /* German */ = {
+			isa = PBXGroup;
+			children = (
+				38BD214E22D592CA00C6795D /* KeyboardViewController.swift */,
+				38BD215022D592CA00C6795D /* Info.plist */,
+				38BD215822D5935A00C6795D /* Keyboard.xib */,
+				38BD215A22D5A26900C6795D /* Constants.swift */,
+				38DD94F022D6A40000FF8845 /* Extensions.swift */,
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
+		D1608666270B6D3C00134D48 /* Spanish */ = {
+			isa = PBXGroup;
+			children = (
+				D1608667270B6D3C00134D48 /* KeyboardViewController.swift */,
+				D1608669270B6D3C00134D48 /* Info.plist */,
+				D1426388270B6F1D00D3702D /* Keyboard.xib */,
+				D142638A270B6F2B00D3702D /* Constants.swift */,
+				D142638B270B6F2B00D3702D /* Extensions.swift */,
+			);
+			path = Spanish;
+			sourceTree = "<group>";
+		};
+		D1FECBC9270E1A1500C8BC60 /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				38BD214D22D592CA00C6795D /* German */,
+				D1608666270B6D3C00134D48 /* Spanish */,
+			);
+			path = Keyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38BD212F22D5907E00C6795D /* Scribe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38BD214522D5908100C6795D /* Build configuration list for PBXNativeTarget "Scribe" */;
+			buildPhases = (
+				38BD212C22D5907E00C6795D /* Sources */,
+				38BD212D22D5907E00C6795D /* Frameworks */,
+				38BD212E22D5907E00C6795D /* Resources */,
+				38BD215722D592CA00C6795D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38BD215222D592CA00C6795D /* PBXTargetDependency */,
+				D160866B270B6D3C00134D48 /* PBXTargetDependency */,
+			);
+			name = Scribe;
+			productName = EmojiKeyboard;
+			productReference = 38BD213022D5907E00C6795D /* Scribe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38BD214B22D592CA00C6795D /* German */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38BD215422D592CA00C6795D /* Build configuration list for PBXNativeTarget "German" */;
+			buildPhases = (
+				38BD214822D592CA00C6795D /* Sources */,
+				38BD214922D592CA00C6795D /* Frameworks */,
+				38BD214A22D592CA00C6795D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = German;
+			productName = typEmoji;
+			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D1608664270B6D3C00134D48 /* Spanish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D160866D270B6D3C00134D48 /* Build configuration list for PBXNativeTarget "Spanish" */;
+			buildPhases = (
+				D1608661270B6D3C00134D48 /* Sources */,
+				D1608662270B6D3C00134D48 /* Frameworks */,
+				D1608663270B6D3C00134D48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spanish;
+			productName = CustomKeyboard2Extension;
+			productReference = D1608665270B6D3C00134D48 /* Spanish.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38BD212822D5907E00C6795D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					38BD212F22D5907E00C6795D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					38BD214B22D592CA00C6795D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D1608664270B6D3C00134D48 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 38BD212B22D5907E00C6795D /* Build configuration list for PBXProject "Scribe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38BD212722D5907E00C6795D;
+			productRefGroup = 38BD213122D5907E00C6795D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38BD212F22D5907E00C6795D /* Scribe */,
+				38BD214B22D592CA00C6795D /* German */,
+				D1608664270B6D3C00134D48 /* Spanish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38BD212E22D5907E00C6795D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
+				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
+				38BD213922D5907F00C6795D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BD214A22D592CA00C6795D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BD215922D5935A00C6795D /* Keyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1608663270B6D3C00134D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1426389270B6F1D00D3702D /* Keyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38BD212C22D5907E00C6795D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BD213622D5907F00C6795D /* ViewController.swift in Sources */,
+				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BD214822D592CA00C6795D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BD214F22D592CA00C6795D /* KeyboardViewController.swift in Sources */,
+				38BD215B22D5A26900C6795D /* Constants.swift in Sources */,
+				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1608661270B6D3C00134D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1608668270B6D3C00134D48 /* KeyboardViewController.swift in Sources */,
+				D142638D270B6F2B00D3702D /* Extensions.swift in Sources */,
+				D142638C270B6F2B00D3702D /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38BD215222D592CA00C6795D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38BD214B22D592CA00C6795D /* German */;
+			targetProxy = 38BD215122D592CA00C6795D /* PBXContainerItemProxy */;
+		};
+		D160866B270B6D3C00134D48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1608664270B6D3C00134D48 /* Spanish */;
+			targetProxy = D160866A270B6D3C00134D48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38BD213722D5907F00C6795D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38BD213822D5907F00C6795D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38BD213F22D5908100C6795D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38BD214022D5908100C6795D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38BD214322D5908100C6795D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38BD214422D5908100C6795D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38BD214622D5908100C6795D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38BD214722D5908100C6795D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38BD215522D592CA00C6795D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/German/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe.Keyboards.German;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38BD215622D592CA00C6795D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/German/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe.Keyboards.German;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D160866E270B6D3C00134D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/Spanish/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Español (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe.Keyboards.Spanish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D160866F270B6D3C00134D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/Spanish/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Español (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Scribe.Keyboards.Spanish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38BD212B22D5907E00C6795D /* Build configuration list for PBXProject "Scribe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38BD214322D5908100C6795D /* Debug */,
+				38BD214422D5908100C6795D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38BD214522D5908100C6795D /* Build configuration list for PBXNativeTarget "Scribe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38BD214622D5908100C6795D /* Debug */,
+				38BD214722D5908100C6795D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38BD215422D592CA00C6795D /* Build configuration list for PBXNativeTarget "German" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38BD215522D592CA00C6795D /* Debug */,
+				38BD215622D592CA00C6795D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D160866D270B6D3C00134D48 /* Build configuration list for PBXNativeTarget "Spanish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D160866E270B6D3C00134D48 /* Debug */,
+				D160866F270B6D3C00134D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38BD212822D5907E00C6795D /* Project object */;
+}
