@@ -62,7 +62,7 @@ The goal is for Scribe keyboards have all the functionality of iOS system keyboa
 - Dynamic layouts for cross-device performance
 - Auto capitalization (WIP)
 - The double space period shortcut (WIP)
-- Typing `'` returns to the alphabetic keyboard (WIP)
+- Typing `'` returns to the alphabetic keyboard
 - Portrait and landscape views (WIP)
 - Dark mode compatibility (WIP)
 - Hold-to-select characters (WIP)
@@ -99,3 +99,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
 
 - Converting Scribe keyboards into downloadable packs within the app
+
+- Make shift key change color after being pressed (see issue)
+
+  - Note: we want ⇧ to switch to `⬆` and ⇪ to be filled in

@@ -12,7 +12,6 @@ extension UIButton{
 		let origImage = self.imageView?.image
 		let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
 		self.setImage(tintedImage, for: .highlighted)
-		//self.imageView?.contentMode = .scaleAspectFill
 		self.tintColor = color
 	}
 	func pressedColor(color: UIColor, uiImage: UIImage?,  alphaMultiplier: CGFloat){

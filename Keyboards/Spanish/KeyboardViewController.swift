@@ -75,9 +75,9 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func addPadding(to stackView: UIStackView, width: CGFloat, key: String){
-        let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+        let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
         padding.setTitleColor(.clear, for: .normal)
-        padding.alpha = 0.02
+        padding.alpha = 0.0
         padding.widthAnchor.constraint(equalToConstant: width).isActive = true
 
         // If we want to use this padding as a key
@@ -97,7 +97,7 @@ class KeyboardViewController: UIInputViewController {
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
 
-        let buttonWidth = (UIScreen.main.bounds.width - 6) / CGFloat(Constants.letterKeys[0].count)
+        let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
 
         var keyboard: [[String]]
 
@@ -126,7 +126,7 @@ class KeyboardViewController: UIInputViewController {
                 button.layer.setValue(false, forKey: "isSpecial")
                 button.setTitle(keyToDisplay, for: .normal)
                 button.layer.borderColor = keyboardView.backgroundColor?.cgColor
-                button.layer.borderWidth = 4
+                button.layer.borderWidth = 3
                 button.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
                 button.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
                 button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
@@ -228,6 +228,9 @@ class KeyboardViewController: UIInputViewController {
         case "123":
             changeKeyboardToNumberKeys()
         case "ABC":
+            changeKeyboardToLetterKeys()
+        case "'":
+            proxy.insertText("'")
             changeKeyboardToLetterKeys()
         case "#+=":
             changeKeyboardToSymbolKeys()
