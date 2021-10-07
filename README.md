@@ -14,7 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS/iPadOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
+**Scribe-iOS** is a pack of iOS and iPadOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
 
 Being fully open-source, Scribe prioritizes user privacy and doesn't access any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
@@ -55,9 +55,9 @@ Scribe allows users to programmatically query words based on grammar rules. Exam
 - /pp(verb_infinitive) provides the past participle of the verb
 -->
 
-### iOS/iPadOS system keyboard functionality
+### iOS and iPadOS system keyboard functionality
 
-Scribe keyboards have all the functionality of system keyboards including:
+The goal is for Scribe keyboards have all the functionality of iOS system keyboards. Currently implemented features include:
 
 - Dynamic layouts for cross-device performance
 - Auto capitalization (WIP)
