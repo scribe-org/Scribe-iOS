@@ -49,6 +49,7 @@ Scribe colors nouns according to the following conventions:
 
 Scribe keyboards have all the functionality of iOS system keyboards including:
 
+- Dynamic layouts for cross-device performance
 - Auto capitalization (WIP)
 - The double space period shortcut (WIP)
 - Typing `'` goes back to the letter keyboard (WIP)
