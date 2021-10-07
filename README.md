@@ -60,7 +60,7 @@ Scribe allows users to programmatically query words based on grammar rules. Exam
 The goal is for Scribe keyboards have all the functionality of iOS system keyboards. Currently implemented features include:
 
 - Dynamic layouts for cross-device performance
-- Auto capitalization (WIP)
+- Auto capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Portrait and landscape views (WIP)

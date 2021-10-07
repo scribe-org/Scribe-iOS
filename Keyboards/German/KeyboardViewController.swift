@@ -109,6 +109,10 @@ class KeyboardViewController: UIInputViewController {
 		switch keyboardState {
 		case .letters:
 			keyboard = Constants.letterKeys
+            // Auto capitalization
+            if proxy.documentContextBeforeInput?.count == 0 {
+                shiftButtonState = .shift
+            }
 		case .numbers:
 			keyboard = Constants.numberKeys
             buttonWidth = numSymButtonWidth
@@ -271,8 +275,12 @@ class KeyboardViewController: UIInputViewController {
 			loadKeys()
 		}
         if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters) {
-            proxy.deleteBackward()
-            proxy.insertText(".")
+            if proxy.documentContextBeforeInput?.suffix(2) != "  " {
+                proxy.deleteBackward()
+                proxy.insertText(". ")
+                shiftButtonState = .shift
+                loadKeys()
+            }
         }
 	}
 
