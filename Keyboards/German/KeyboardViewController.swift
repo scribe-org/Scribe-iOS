@@ -92,12 +92,14 @@ class KeyboardViewController: UIInputViewController {
 		paddingViews.append(padding)
 		stackView.addArrangedSubview(padding)
 	}
+    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys
+    // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
 	func loadKeys(){
 		keys.forEach{$0.removeFromSuperview()}
 		paddingViews.forEach{$0.removeFromSuperview()}
         
-        // buttonWidth determined per keyboard
+        // buttonWidth determined per keyboard by the top row
 		var buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
         let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeys[0].count)
 
@@ -165,7 +167,7 @@ class KeyboardViewController: UIInputViewController {
                     addPadding(to: stackView3, width: buttonWidth/2, key: "m")
                 }
 
-				// Top row is longest row so it should decide button width
+				// specialKey constraints
 				print("button width: ", buttonWidth)
 				if key == "⌫" || key == "↵" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
 					button.widthAnchor.constraint(equalToConstant: buttonWidth + buttonWidth/2).isActive = true
@@ -197,7 +199,8 @@ class KeyboardViewController: UIInputViewController {
             break
 		case .numbers:
 			break
-		case .symbols: break
+		case .symbols:
+            break
 		}
 
 	}
@@ -267,6 +270,10 @@ class KeyboardViewController: UIInputViewController {
 			shiftButtonState = .caps
 			loadKeys()
 		}
+        if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters) {
+            proxy.deleteBackward()
+            proxy.insertText(".")
+        }
 	}
 
 	@objc func keyLongPressed(_ gesture: UIGestureRecognizer){

@@ -92,11 +92,14 @@ class KeyboardViewController: UIInputViewController {
         paddingViews.append(padding)
         stackView.addArrangedSubview(padding)
     }
+    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys
+    // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
     func loadKeys(){
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
-
+        
+        // buttonWidth determined by the top row
         let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
 
         var keyboard: [[String]]
@@ -105,7 +108,6 @@ class KeyboardViewController: UIInputViewController {
         switch keyboardState {
         case .letters:
             keyboard = Constants.letterKeys
-            // addPadding(to: stackView2, width: buttonWidth/2, key: "a")
         case .numbers:
             keyboard = Constants.numberKeys
         case .symbols:
@@ -151,7 +153,7 @@ class KeyboardViewController: UIInputViewController {
                     nextKeyboardButton = button
                 }
 
-                // Top row is longest row so it should decide button width
+                // specialKey constraints
                 print("button width: ", buttonWidth)
                 if key == "⌫" || key == "↵" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth + buttonWidth/2).isActive = true
@@ -176,15 +178,14 @@ class KeyboardViewController: UIInputViewController {
             }
         }
 
-
         // End padding
         switch keyboardState {
         case .letters:
             break
-            // addPadding(to: stackView2, width: buttonWidth/2, key: "l")
         case .numbers:
             break
-        case .symbols: break
+        case .symbols:
+            break
         }
 
     }
@@ -253,6 +254,10 @@ class KeyboardViewController: UIInputViewController {
         if (touch.tapCount == 2 && originalKey == "⇧") {
             shiftButtonState = .caps
             loadKeys()
+        }
+        if (touch.tapCount == 2 && originalKey == "espacio" && keyboardState == .letters) {
+            proxy.deleteBackward()
+            proxy.insertText(".")
         }
     }
 

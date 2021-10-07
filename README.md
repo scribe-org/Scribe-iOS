@@ -61,7 +61,7 @@ The goal is for Scribe keyboards have all the functionality of iOS system keyboa
 
 - Dynamic layouts for cross-device performance
 - Auto capitalization (WIP)
-- The double space period shortcut (WIP)
+- The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Portrait and landscape views (WIP)
 - Dark mode compatibility (WIP)
