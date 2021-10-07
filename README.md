@@ -45,6 +45,17 @@ Scribe colors nouns according to the following conventions:
 - Plural nouns are colored orange 🟧
 - Nouns with more than one gender are multicolored
 
+### iOS system keyboard functionality
+
+Scribe keyboards have all the functionality of iOS system keyboards including:
+
+- Auto capitalization (WIP)
+- The double space period shortcut (WIP)
+- Typing `'` goes back to the letter keyboard (WIP)
+- Portrait and landscape views (WIP)
+- Dark mode compatibility (WIP)
+- Hold-to-select characters (WIP)
+
 # To-Do [`↩`](#contents) <a id="to-do"></a>
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
