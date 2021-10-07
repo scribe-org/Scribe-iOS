@@ -57,17 +57,17 @@ Scribe allows users to programmatically query words based on grammar rules. Exam
 
 ### iOS and iPadOS system keyboard functionality
 
-The goal is for Scribe keyboards have all the functionality of iOS system keyboards.
+The goal is for Scribe keyboards have all the functionality of system keyboards.
 
 <details><summary><strong>Currently implemented features</strong></summary>
 <p>
 
+- iPhone and iPad support (WIP)
 - Dynamic layouts for cross-device performance
+- Portrait and landscape views (WIP)
 - Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
-- Portrait and landscape views (WIP)
-- iPhone and iPad support (WIP)
 - Dark mode compatibility (WIP)
 - Hold-to-select characters (WIP)
 
