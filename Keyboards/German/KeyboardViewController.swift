@@ -100,7 +100,8 @@ class KeyboardViewController: UIInputViewController {
 		paddingViews.forEach{$0.removeFromSuperview()}
         
         // buttonWidth determined per keyboard by the top row
-		var buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
+        var buttonWidth = CGFloat(0)
+		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
         let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeys[0].count)
 
 		var keyboard: [[String]]
@@ -109,7 +110,8 @@ class KeyboardViewController: UIInputViewController {
 		switch keyboardState {
 		case .letters:
 			keyboard = Constants.letterKeys
-            // Auto capitalization
+            buttonWidth = letterButtonWidth
+            // Auto-capitalization
             if proxy.documentContextBeforeInput?.count == 0 {
                 shiftButtonState = .shift
             }
@@ -133,9 +135,17 @@ class KeyboardViewController: UIInputViewController {
 				button.layer.setValue(key, forKey: "original")
 				button.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
 				button.layer.setValue(false, forKey: "isSpecial")
-				button.setTitle(keyToDisplay, for: .normal)
+                
+				button.setTitle(keyToDisplay, for: .normal) // set button character
+                if key == "#+=" || key == "ABC" || key == "123" {
+                    button.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+                } else {
+                    button.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
+                }
+                
 				button.layer.borderColor = keyboardView.backgroundColor?.cgColor
 				button.layer.borderWidth = 3
+                button.layer.cornerRadius = buttonWidth / 4
 				button.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
 				button.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
 				button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
@@ -151,7 +161,6 @@ class KeyboardViewController: UIInputViewController {
 					button.addGestureRecognizer(longPressRecognizer)
 				}
 
-				button.layer.cornerRadius = buttonWidth/4
 				keys.append(button)
 				switch row{
 				case 0: stackView1.addArrangedSubview(button)
@@ -274,7 +283,8 @@ class KeyboardViewController: UIInputViewController {
 			shiftButtonState = .caps
 			loadKeys()
 		}
-        if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters) {
+        // Double space period shortcut
+        if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1) {
             if proxy.documentContextBeforeInput?.suffix(2) != "  " {
                 proxy.deleteBackward()
                 proxy.insertText(". ")

@@ -16,7 +16,7 @@
 
 **Scribe-iOS** is a pack of iOS and iPadOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
 
-Being fully open-source, Scribe prioritizes user privacy and doesn't access any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -60,7 +60,7 @@ Scribe allows users to programmatically query words based on grammar rules. Exam
 The goal is for Scribe keyboards have all the functionality of iOS system keyboards. Currently implemented features include:
 
 - Dynamic layouts for cross-device performance
-- Auto capitalization
+- Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Portrait and landscape views (WIP)
@@ -103,3 +103,5 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Make shift key change color after being pressed (see issue)
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to be filled in
+
+- Make the space bar read the name of the keyboard when it's switched to (see issue)
