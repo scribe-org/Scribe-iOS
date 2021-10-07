@@ -153,7 +153,7 @@ class KeyboardViewController: UIInputViewController {
                 
                 // Pad before key is added
                 if key == "y"{
-                    addPadding(to: stackView3, width: buttonWidth/2, key: "y")
+                    addPadding(to: stackView3, width: buttonWidth/3, key: "y")
                 }
 
 				if key == "⌫"{
@@ -177,13 +177,13 @@ class KeyboardViewController: UIInputViewController {
                 
                 // Pad after key is added
                 if key == "m"{
-                    addPadding(to: stackView3, width: buttonWidth/2, key: "m")
+                    addPadding(to: stackView3, width: buttonWidth/3, key: "m")
                 }
 
 				// specialKey constraints
 				print("button width: ", buttonWidth)
-				if key == "⌫" || key == "↵" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
-					button.widthAnchor.constraint(equalToConstant: buttonWidth + buttonWidth/2).isActive = true
+				if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
+					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
 					button.layer.setValue(true, forKey: "isSpecial")
 					button.backgroundColor = Constants.specialKeyColor
 					if key == "⇧" {
@@ -194,8 +194,12 @@ class KeyboardViewController: UIInputViewController {
 							button.setTitle("⇪", for: .normal)
 						}
 					}
-				}else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2{
-					button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.4).isActive = true
+                }else if key == "↵" {
+                    button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+                    button.layer.setValue(true, forKey: "isSpecial")
+                    button.backgroundColor = Constants.specialKeyColor
+                }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 {
+					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
 				}else if key != "Leerzeichen"{
 					button.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
 				}else{
@@ -204,7 +208,6 @@ class KeyboardViewController: UIInputViewController {
 				}
 			}
 		}
-
 
 		// End padding
 		switch keyboardState {
@@ -215,7 +218,6 @@ class KeyboardViewController: UIInputViewController {
 		case .symbols:
             break
 		}
-
 	}
 
 	func changeKeyboardToNumberKeys(){

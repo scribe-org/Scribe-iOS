@@ -109,7 +109,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Make shift key change color after being pressed (see issue)
 
-  - Note: we want ⇧ to switch to `⬆` and ⇪ to be filled in
+  - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
 - Make the space bar read the name of the keyboard when it's switched to (see issue)
 

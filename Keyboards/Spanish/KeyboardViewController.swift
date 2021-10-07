@@ -167,8 +167,8 @@ class KeyboardViewController: UIInputViewController {
 
                 // specialKey constraints
                 print("button width: ", buttonWidth)
-                if key == "⌫" || key == "↵" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
-                    button.widthAnchor.constraint(equalToConstant: buttonWidth + buttonWidth/2).isActive = true
+                if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
+                    button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.5).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
                     button.backgroundColor = Constants.specialKeyColor
                     if key == "⇧" {
@@ -179,6 +179,10 @@ class KeyboardViewController: UIInputViewController {
                             button.setTitle("⇪", for: .normal)
                         }
                     }
+                }else if key == "↵" {
+                    button.widthAnchor.constraint(equalToConstant: buttonWidth * 2).isActive = true
+                    button.layer.setValue(true, forKey: "isSpecial")
+                    button.backgroundColor = Constants.specialKeyColor
                 }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.4).isActive = true
                 }else if key != "espacio"{
@@ -199,7 +203,6 @@ class KeyboardViewController: UIInputViewController {
         case .symbols:
             break
         }
-
     }
 
     func changeKeyboardToNumberKeys(){
