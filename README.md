@@ -14,9 +14,9 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
+**Scribe-iOS** is a pack of iOS/iPadOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
 
-Being fully open-source, Scribe prioritizes user privacy by not accessing any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+Being fully open-source, Scribe prioritizes user privacy and doesn't access any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -45,14 +45,24 @@ Scribe colors nouns according to the following conventions:
 - Plural nouns are colored orange 🟧
 - Nouns with more than one gender are multicolored
 
-### iOS system keyboard functionality
+<!--
+# Grammar queries
 
-Scribe keyboards have all the functionality of iOS system keyboards including:
+Scribe allows users to programmatically query words based on grammar rules. Examples of this include:
+
+- /pl(noun) provides the plural of the noun
+- /fps(verb_infinitive) provides the first person singular of the verb
+- /pp(verb_infinitive) provides the past participle of the verb
+-->
+
+### iOS/iPadOS system keyboard functionality
+
+Scribe keyboards have all the functionality of system keyboards including:
 
 - Dynamic layouts for cross-device performance
 - Auto capitalization (WIP)
 - The double space period shortcut (WIP)
-- Typing `'` goes back to the letter keyboard (WIP)
+- Typing `'` returns to the alphabetic keyboard (WIP)
 - Portrait and landscape views (WIP)
 - Dark mode compatibility (WIP)
 - Hold-to-select characters (WIP)
@@ -80,11 +90,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Planning the potential implementation of a plural command (see issue)
 
   - Example: typing /pl chosen_noun could provide the plural for the noun
-
-- Adding iPadOS specific functionality (see issue)
-
-- Add dark mode functionality (see issue)
-
 -->
 
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access
