@@ -57,15 +57,22 @@ Scribe allows users to programmatically query words based on grammar rules. Exam
 
 ### iOS and iPadOS system keyboard functionality
 
-The goal is for Scribe keyboards have all the functionality of iOS system keyboards. Currently implemented features include:
+The goal is for Scribe keyboards have all the functionality of iOS system keyboards.
+
+<details><summary><strong>Currently implemented features</strong></summary>
+<p>
 
 - Dynamic layouts for cross-device performance
 - Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Portrait and landscape views (WIP)
+- iPhone and iPad support (WIP)
 - Dark mode compatibility (WIP)
 - Hold-to-select characters (WIP)
+
+</p>
+</details>
 
 # To-Do [`↩`](#contents) <a id="to-do"></a>
 
@@ -92,13 +99,13 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - Example: typing /pl chosen_noun could provide the plural for the noun
 -->
 
-- Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access
+- Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access (see issue)
 
   - This would likely best be implemented via a Python package that allows users to access data within JSON files stored in the package
 
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
 
-- Converting Scribe keyboards into downloadable packs within the app
+- Converting Scribe keyboards into downloadable packs within the app (see issue)
 
 - Make shift key change color after being pressed (see issue)
 
