@@ -84,6 +84,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Pull requests are more than welcome for this!
 
+- Localizing the Scribe app across various languages and regions
+
 <!--
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
@@ -107,9 +109,15 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Converting Scribe keyboards into downloadable packs within the app (see issue)
 
+  - This would help keep the app size to a minimum
+
 - Make shift key change color after being pressed (see issue)
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
+
+- Creating a UI field where grammar queries would take place when triggered (see issue)
+
+  - This would allow for the removal of parentheses around words that the user wants to convert
 
 - Make the space bar read the name of the keyboard when it's switched to (see issue)
 
