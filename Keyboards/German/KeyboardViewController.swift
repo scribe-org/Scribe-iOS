@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import MessageUI
 
 var proxy : UITextDocumentProxy!
 
@@ -37,7 +38,7 @@ class KeyboardViewController: UIInputViewController {
 
 	override func updateViewConstraints() {
 		super.updateViewConstraints()
-		// Add custom view sizing constraints here
+		// Add custom view sizing constraints here.
 		keyboardView.frame.size = view.frame.size
 	}
 
@@ -80,7 +81,7 @@ class KeyboardViewController: UIInputViewController {
 		padding.alpha = 0.0
 		padding.widthAnchor.constraint(equalToConstant: width).isActive = true
 
-		// If we want to use this padding as a key
+		// If we want to use this padding as a key.
 		let keyToDisplay = shiftButtonState == .normal ? key : key.capitalized
 		padding.layer.setValue(key, forKey: "original")
 		padding.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
@@ -92,26 +93,26 @@ class KeyboardViewController: UIInputViewController {
 		paddingViews.append(padding)
 		stackView.addArrangedSubview(padding)
 	}
-    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys
+    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
 	func loadKeys(){
 		keys.forEach{$0.removeFromSuperview()}
 		paddingViews.forEach{$0.removeFromSuperview()}
         
-        // buttonWidth determined per keyboard by the top row
+        // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
 		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
         let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeys[0].count)
 
 		var keyboard: [[String]]
 
-		// Start padding
+		// Start padding.
 		switch keyboardState {
 		case .letters:
 			keyboard = Constants.letterKeys
             buttonWidth = letterButtonWidth
-            // Auto-capitalization
+            // Auto-capitalization.
             if proxy.documentContextBeforeInput?.count == 0 {
                 shiftButtonState = .shift
             }
@@ -151,7 +152,7 @@ class KeyboardViewController: UIInputViewController {
 				button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
 				button.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
                 
-                // Pad before key is added
+                // Pad before key is added.
                 if key == "y"{
                     addPadding(to: stackView3, width: buttonWidth/3, key: "y")
                 }
@@ -175,13 +176,12 @@ class KeyboardViewController: UIInputViewController {
 					nextKeyboardButton = button
 				}
                 
-                // Pad after key is added
+                // Pad after key is added.
                 if key == "m"{
                     addPadding(to: stackView3, width: buttonWidth/3, key: "m")
                 }
 
-				// specialKey constraints
-				print("button width: ", buttonWidth)
+				// specialKey constraints.
 				if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
 					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
 					button.layer.setValue(true, forKey: "isSpecial")
@@ -209,7 +209,7 @@ class KeyboardViewController: UIInputViewController {
 			}
 		}
 
-		// End padding
+		// End padding.
 		switch keyboardState {
 		case .letters:
             break
@@ -236,6 +236,41 @@ class KeyboardViewController: UIInputViewController {
 	func handlDeleteButtonPressed(){
 		proxy.deleteBackward()
 	}
+    
+    func nounGenderColoration(){
+        if proxy.documentContextBeforeInput?.suffix("colorMe".count) == "colorMe"{
+            proxy.insertText("!")
+        }
+//        if proxy.documentContextBeforeInput?.suffix("Bücher".count) == "Buch"{}
+//        if proxy.documentContextBeforeInput?.suffix("Bücher".count) == "Bücher"{}
+//        if proxy.documentContextBeforeInput?.suffix("Kind".count) == "Kind"{}
+//        if proxy.documentContextBeforeInput?.suffix("Frau".count) == "Frau"{}
+//        if proxy.documentContextBeforeInput?.suffix("Tisch".count) == "Tisch"{}
+    }
+
+    func pluralFuncCapitalization(){
+        if proxy.documentContextBeforeInput?.suffix("pl(".count) == "pl("{
+            changeKeyboardToLetterKeys()
+            if shiftButtonState == .normal {
+                shiftButtonState = .shift
+                loadKeys()
+            }
+        }
+    }
+    
+    func nounSingularToPlural(){
+        if proxy.documentContextBeforeInput?.suffix("pl(Buch)".count) == "pl(Buch)"{
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.deleteBackward()
+            proxy.insertText("Bücher")
+        }
+    }
 
 	@IBAction func keyPressedTouchUp(_ sender: UIButton) {
 		guard let originalKey = sender.layer.value(forKey: "original") as? String, let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {return}
@@ -250,6 +285,12 @@ class KeyboardViewController: UIInputViewController {
 				loadKeys()
 			}
 			handlDeleteButtonPressed()
+            if proxy.documentContextBeforeInput == nil  {
+                if keyboardState == .letters && shiftButtonState == .normal {
+                    shiftButtonState = .shift
+                    loadKeys()
+                }
+            }
 		case "Leerzeichen":
 			proxy.insertText(" ")
 		case "🌐":
@@ -268,12 +309,20 @@ class KeyboardViewController: UIInputViewController {
 		case "⇧":
 			shiftButtonState = shiftButtonState == .normal ? .shift : .normal
 			loadKeys()
+        case "(":
+            proxy.insertText("(")
+            pluralFuncCapitalization()
+        case ")":
+            proxy.insertText(")")
+            nounSingularToPlural()
 		default:
 			if shiftButtonState == .shift {
 				shiftButtonState = .normal
 				loadKeys()
 			}
 			proxy.insertText(keyToDisplay)
+            
+        nounGenderColoration()
 		}
 	}
 
@@ -285,7 +334,7 @@ class KeyboardViewController: UIInputViewController {
 			shiftButtonState = .caps
 			loadKeys()
 		}
-        // Double space period shortcut
+        // Double space period shortcut.
         if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1) {
             if proxy.documentContextBeforeInput?.suffix(2) != "  " {
                 proxy.deleteBackward()

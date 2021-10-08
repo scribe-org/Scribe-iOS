@@ -37,7 +37,7 @@ class KeyboardViewController: UIInputViewController {
 
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        // Add custom view sizing constraints here
+        // Add custom view sizing constraints here.
         keyboardView.frame.size = view.frame.size
     }
 
@@ -80,7 +80,7 @@ class KeyboardViewController: UIInputViewController {
         padding.alpha = 0.0
         padding.widthAnchor.constraint(equalToConstant: width).isActive = true
 
-        // If we want to use this padding as a key
+        // If we want to use this padding as a key.
         let keyToDisplay = shiftButtonState == .normal ? key : key.capitalized
         padding.layer.setValue(key, forKey: "original")
         padding.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
@@ -92,23 +92,23 @@ class KeyboardViewController: UIInputViewController {
         paddingViews.append(padding)
         stackView.addArrangedSubview(padding)
     }
-    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys
+    // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
     func loadKeys(){
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
         
-        // buttonWidth determined by the top row
+        // buttonWidth determined by the top row.
         let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
 
         var keyboard: [[String]]
 
-        // Start padding
+        // Start padding.
         switch keyboardState {
         case .letters:
             keyboard = Constants.letterKeys
-            // Auto-capitalization
+            // Auto-capitalization.
             if proxy.documentContextBeforeInput?.count == 0 {
                 shiftButtonState = .shift
             }
@@ -165,8 +165,7 @@ class KeyboardViewController: UIInputViewController {
                     nextKeyboardButton = button
                 }
 
-                // specialKey constraints
-                print("button width: ", buttonWidth)
+                // specialKey constraints.
                 if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.5).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
@@ -194,7 +193,7 @@ class KeyboardViewController: UIInputViewController {
             }
         }
 
-        // End padding
+        // End padding.
         switch keyboardState {
         case .letters:
             break
@@ -235,6 +234,12 @@ class KeyboardViewController: UIInputViewController {
                 loadKeys()
             }
             handlDeleteButtonPressed()
+            if proxy.documentContextBeforeInput == nil  {
+                if keyboardState == .letters && shiftButtonState == .normal {
+                    shiftButtonState = .shift
+                    loadKeys()
+                }
+            }
         case "espacio":
             proxy.insertText(" ")
         case "🌐":
@@ -270,7 +275,7 @@ class KeyboardViewController: UIInputViewController {
             shiftButtonState = .caps
             loadKeys()
         }
-        // Double space period shortcut
+        // Double space period shortcut.
         if (touch.tapCount == 2 && originalKey == "espacio" && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1) {
             if proxy.documentContextBeforeInput?.suffix(2) != "  " {
                 proxy.deleteBackward()
