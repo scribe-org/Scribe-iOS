@@ -99,6 +99,10 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Planning the potential implementation of a plural command (see issue)
 
   - Example: typing /pl chosen_noun could provide the plural for the noun
+
+- Exploring the possibility of doing in-messenger translations
+
+    - Example: type /tr and entering a word would bring up a selectable list
 -->
 
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access (see issue)
