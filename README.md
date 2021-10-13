@@ -124,5 +124,3 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - This would allow for the removal of parentheses around words that the user wants to convert
 
 - Make the space bar read the name of the keyboard when it's switched to (see issue)
-
-- Change the 🌐 menu display of keyboards to "languageName (Scribe)" (see issue)
