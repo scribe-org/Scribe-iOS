@@ -1,0 +1,1990 @@
+people – pueblo
+time – el tiempo
+year – el año
+thing – la cosa
+way – el camino
+day – el día
+man – el hombre
+state – el estado
+lot – el lote
+woman – la mujer
+country – el país
+life – la vida
+question – la cuestión
+president – el presidente
+child – el niño
+week – la semana
+world – el mundo
+kind – el tipo
+case – el caso
+problem – el problema
+fact – el hecho
+family – la familia
+story – la historia
+point – el punto
+government – el gobierno
+money – el dinero
+issue – la cuestión
+part – la parte
+morning – la mañana
+guy – el chico
+number – el número
+job – el trabajo
+night – la noche
+right – el derecho
+school – la escuela
+place – el lugar
+war – la guerra
+kid – el niño
+month – el mes
+book – el libro
+hour – la hora
+show – el show
+police – la policía
+program – el programa
+party – el partido
+law – la ley
+word – la palabra
+person – la persona
+home – el hogar
+business – el negocio
+friend – el amigo
+company – la empresa
+side – el lado
+tax – el impuesto
+democrat – el demócrata
+group – el grupo
+moment – el momento
+break – la ruptura
+idea – la idea
+member – el miembro
+system – el sistema de
+minute – el minuto
+reason – la razón
+campaign – la campaña
+work – la obra
+nation – la nación
+congress – el congreso
+mother – la madre
+force – la fuerza
+health – la salud
+back – la parte de atrás
+area – la zona
+name – el nombre
+report – el informe
+hand – la mano
+line – la línea
+end – el fin
+court – la corte
+care – el cuidado
+couple – la pareja
+house – la casa
+american – la americana
+father – el padre
+situation – la situación
+car – el coche
+parent – el padre
+administration – la administración
+drug – la droga
+city – la ciudad
+sense – el sentido
+policy – la política
+office – la oficina
+decision – la decisión
+power – el poder
+plan – el plan
+leader – el líder
+information – la información
+election – la elección
+movie – la película
+100. death – la muerte
+101. air – el aire
+102. call – la llamada
+103. community – la comunidad
+104. look – la mirada
+105. evidence – la evidencia
+106. girl – la chica
+107. doctor – el médico
+108. vote – el voto
+109. video – el video
+110. picture – la imagen
+111. room – la habitación
+113. economy – la economía
+114. phone – el teléfono
+115. history – la historia
+116. sort – el tipo
+117. boy – el niño
+118. crime – el crimen
+119. process – el proceso de
+120. wife – la esposa
+121. music – la música
+122. water – el agua
+123. service – el servicio
+124. record – el registro
+125. security – la seguridad
+126. talk – la charla
+127. mind – la mente
+128. head – la cabeza
+129. candidate – el candidato
+130. official – el funcionario
+131. camera – la cámara
+132. student – el estudiante
+133. attack – el ataque
+134. chance – la oportunidad
+135. game – el juego
+136. baby – el bebé
+137. south – el sur
+138. change – cambio
+139. trial – el juicio
+140. body – el cuerpo
+141. market – el mercado
+142. stuff – las cosas
+143. interest – el interés
+144. weapon – el arma
+145. heart – el corazón
+146. son – el hijo
+147. team – el equipo
+148. town – la ciudad
+149. television – la televisión
+150. will – la voluntad
+151. troop – la tropa
+152. judge – el juez
+153. action – la acción
+154. answer – la respuesta
+155. position – la posición
+156. view – la vista
+157. difference – la diferencia
+158. food – la comida
+159. daughter – la hija
+160. race – la carrera
+161. deal – el acuerdo
+162. street – la calle
+163. price – el precio
+164. message – el mensaje
+165. control – el control
+166. debate – el debate
+167. officer – el oficial
+168. film – la película
+169. level – el nivel
+170. effort – el esfuerzo
+171. relationship – la relación
+172. correspondent – el corresponsal
+173. ground – el terreno
+174. piece – la pieza
+175. husband – el marido
+176. budget – el presupuesto
+177. jury – el jurado
+178. reporter – el reportero
+179. weekend – el fin de semana
+180. matter – la materia
+181. age – la edad
+182. gun – la pistola
+183. peace – la paz
+184. murder – el asesinato
+185. role – el papel
+186. investigation – la investigación
+187. experience – la experiencia
+188. hospital – el hospital
+189. eye – el ojo
+190. director – el director
+191. future – el futuro
+192. face – la cara
+193. oil – el aceite
+194. result – el resultado
+195. public – el público
+196. lawyer – el abogado
+197. poll – la encuesta
+198. second – la segunda
+199. opportunity – la oportunidad
+200. industry – la industria
+201. brother – el hermano
+202. statement – la declaración
+203. fire – el fuego
+204. love – el amor
+205. rate – la tasa
+206. effect – el efecto
+207. song – la canción
+208. event – el evento
+209. charge – la carga
+210. support – el apoyo
+211. radio – la radio
+212. building – el edificio
+213. bank – el banco
+214. victim – la víctima
+215. door – la puerta
+216. interview – la entrevista
+217. scene – la escena
+218. rest – el resto
+219. press – la prensa
+220. attention – la atención
+221. choice – la elección
+222. speech – el discurso
+223. patient – el paciente
+224. truth – la verdad
+225. road – la carretera
+226. term – el término
+227. site – el sitio
+228. worker – el trabajador
+229. professor – el profesor
+230. letter – la letra
+231. reform – la reforma
+232. concern – la preocupación
+233. folk – la gente
+234. sex – el sexo
+235. study – el estudio
+236. college – la universidad
+237. voter – el votante
+238. wall – la pared
+239. evening – la noche
+240. meeting – la reunión
+241. voice – la voz
+242. audience – la audiencia
+243. violence – la violencia
+244. rule – la regla
+245. star – la estrella
+246. test – la prueba
+247. education – la educación
+248. trouble – el problema
+249. risk – el riesgo
+250. prison – la prisión
+251. guest – el invitado
+252. class – la clase
+253. society – la sociedad
+254. soldier – el soldado
+255. plane – el plano
+256. amount – la cantidad
+257. help – la ayuda
+258. cost – el costo
+259. authority – la autoridad
+260. foot – el pie
+261. period – el período
+262. feeling – la sensación
+263. step – la etapa de
+264. cause – causa
+265. tape – la cinta
+266. threat – la amenaza
+267. opinion – la opinión
+268. organization – la organización
+269. type – el tipo de
+270. conversation – la conversación
+271. disease – la enfermedad
+272. operation – la operación
+273. cancer – el cáncer
+274. magazine – la revista
+275. governor – el gobernador
+276. pressure – la presión
+277. majority – la mayoría
+278. research – La investigación
+279. character – el carácter
+280. station – la estación
+281. crisis – la crisis
+282. expert – el experto
+283. blood – la sangre
+284. chairman – el presidente
+285. argument – el argumento
+286. list – la lista
+287. dog – el perro
+288. computer – el ordenador
+289. beginning – el principio
+290. insurance – el seguro
+291. field – el campo
+292. sister – la hermana
+293. mistake – el error
+294. player – el jugador
+295. energy – la energía
+296. paper – el documento
+297. space – el espacio
+298. store – la tienda
+299. agreement – el acuerdo
+300. responsibility – la responsabilidad
+301. lady – la dama
+302. order – el orden
+303. summer – el verano
+304. product – el producto
+305. value – el valor
+306. stock – la acción
+307. intelligence – la inteligencia
+308. teacher – el profesor
+309. agency – la agencia
+310. trade – el comercio
+311. conference – la conferencia
+312. cell – la célula
+313. church – la iglesia
+314. comment – el comentario
+315. source – la fuente
+316. past – el pasado
+317. cut – el corte
+318. thought – el pensamiento
+319. credit – el crédito
+320. hope – la esperanza
+321. sign – el signo
+322. career – la carrera
+323. marriage – el matrimonio
+324. condition – la condición
+325. witness – el testigo
+326. technology – la tecnología
+327. stage – la etapa de
+328. staff – el personal
+329. arm – el brazo
+330. mission – la misión
+331. art – el arte
+332. actor – el actor
+333. battle – la batalla
+334. top – la parte superior
+335. citizen – el ciudadano
+336. author – el autor
+337. reaction – la reacción
+338. gentleman – el caballero
+339. leadership – el liderazgo
+340. fear – el miedo
+341. example – el ejemplo
+342. language – el idioma
+343. need – la necesidad
+344. justice – la justicia
+345. discussion – la discusión
+346. border – la frontera
+347. animal – el animal
+348. detail – el detalle
+349. response – la respuesta
+350. network – la red
+351. movement – el movimiento
+352. use – el uso
+353. male – el macho
+354. capital – la capital
+355. hearing – la audiencia
+356. standard – la norma
+357. benefit – el beneficio
+358. table – la tabla
+359. treatment – el tratamiento
+360. agent – el agente
+361. card – la tarjeta
+362. shot – el disparo
+363. board – el tablero
+364. reality – la realidad
+365. sir – el señor
+366. land – la tierra
+367. project – el proyecto
+368. light – la luz
+369. image – la imagen
+370. century – el siglo
+371. page – la página
+372. success – el éxito
+sound – el sonido
+impact – el impacto
+pain – el dolor
+season – la temporada
+individual – el individuo
+sport – el deporte
+studio – el estudio
+decade – la década
+challenge – el desafío
+dream – el sueño
+newspaper – el periódico
+floor – el piso
+fight – la lucha
+safety – la seguridad
+act – el acto
+trip – el viaje
+course – el curso
+possibility – la posibilidad
+freedom – la libertad
+fund – el fondo
+seat – el asiento
+bomb – la bomba
+form – la forma
+executive – el ejecutivo
+minister – el ministro
+deficit – el déficit
+development – el desarrollo
+flight – el vuelo
+secretary – el secretario
+committee – el comité
+consumer – el consumidor
+rock – la roca
+figure – la figura
+subject – el sujeto
+culture – la cultura
+hair – el cabello
+coverage – la cobertura
+loss – la pérdida
+dad – el papá
+note – la nota
+activity – la actividad
+goal – el objetivo
+option – la opción
+gas – el gas
+region – la región
+population – la población
+ability – la capacidad
+resolution – la resolución
+employee – el empleado
+brain – el cerebro
+politician – el político
+middle – el centro
+storm – la tormenta
+generation – la generación
+critic – el crítico
+fan – el ventilador
+scientist – el científico
+target – el objetivo
+camp – el campamento
+afternoon – la tarde
+direction – la dirección
+science – la ciencia
+journalist – el periodista
+degree – el grado
+affair – el asunto
+damage – el daño
+strategy – la estrategia
+factor – el factor
+plant – la planta
+democracy – la democracia
+doubt – la duda
+solution – la solución
+spending – el gasto
+training – la formación
+abuse – el abuso
+danger – el peligro
+environment – el medio ambiente
+memory – la memoria
+nature – la naturaleza
+material – el material
+document – el documento
+income – los ingresos
+analyst – el analista
+play – el juego
+guard – la guardia
+hotel – el hotel
+editor – el editor
+missile – el misil
+accident – el accidente
+purpose – el propósito
+writer – el escritor
+emergency – la emergencia
+growth – el crecimiento
+bed – la cama
+welfare – el bienestar
+adult – el adulto
+faith – la fe
+proposal – la propuesta
+model – el modelo
+army – el ejército
+incident – el incidente
+box – la caja
+crowd – la multitud
+respect – el respeto
+department – el departamento
+access – el acceso
+date – la fecha
+chief – el jefe
+weather – el clima
+airport – el aeropuerto
+machine – la máquina
+window – la ventana
+agenda – el orden del día
+advice – el consejo
+prosecution – la fiscalía
+conflict – el conflicto
+fall – la caída
+pilot – el piloto
+practice – la práctica
+track – la pista
+owner – el propietario
+increase – el aumento
+legislation – la legislación
+tree – el árbol
+debt – la deuda
+enemy – el enemigo
+truck – el camión
+lead – el plomo
+convention – la convención
+502. aid – la ayuda
+503. suicide – el suicidio
+504. quality – la calidad
+505. conservative – la conservadora
+506. size – el tamaño
+507. account – la cuenta
+508. pleasure – el placer
+509. institution – la institución
+510. airline – la línea aérea
+511. weight – el peso
+512. approach – el enfoque
+513. surgery – la cirugía
+514. holiday – las vacaciones
+515. start – el inicio
+516. victory – la victoria
+517. district – el distrito
+518. relation – la relación
+519. search – la búsqueda
+520. crew – la tripulación
+521. panel – el panel
+522. coalition – la coalición
+523. move – el movimiento
+524. package – el paquete
+525. check – el cheque
+526. minority – la minoría
+527. unit – la unidad
+528. bag – la bolsa
+529. surprise – la sorpresa
+530. focus – el foco
+531. circumstance – la circunstancia
+532. producer – el productor
+533. investment – la inversión
+534. ball – la pelota
+535. colleague – el colega
+536. resource – el recurso
+537. judgment – la sentencia
+538. background – el fondo
+539. union – la unión
+540. address – la dirección
+541. driver – el controlador
+542. hero – el héroe
+543. medicine – el medicamento
+544. representative – el representante
+545. vehicle – el vehículo
+546. commander – el comandante
+547. artist – el artista
+548. mayor – el alcalde
+549. run – la carrera
+550. ship – el barco
+551. theory – la teoría
+552. screen – la pantalla
+553. lesson – la lección
+554. resident – el residente
+555. partner – el socio
+556. bar – el bar
+557. ticket – el billete
+558. disaster – el desastre
+559. performance – el desempeño
+560. supporter – aficionados
+561. killer – el asesino
+562. negotiation – la negociación
+563. sea – el mar
+564. wind – el viento
+565. shoe – el zapato
+566. secret – el secreto
+567. tragedy – la tragedia
+568. gift – el regalo
+569. tour – la gira
+570. manager – el gestor
+571. band – la banda
+572. birth – el nacimiento
+573. host – el anfitrión
+574. loan – el préstamo
+575. allegation – la alegación
+576. winner – el ganador
+577. religion – la religión
+578. article – el artículo
+579. session – la sesión
+580. being – el ser
+581. extent – la medida
+582. contract – el contrato
+583. sentence – la sentencia
+584. measure – la medida
+585. deputy – el diputado
+586. confidence – la confianza
+587. hell – el infierno
+588. relief – el alivio
+589. perspective – la perspectiva
+590. advantage – La ventaja
+591. scandal – el escándalo
+592. leg – la pierna
+593. restaurant – el restaurante
+594. dinner – la cena
+595. client – el cliente
+596. failure – el fracaso
+597. quarter – el trimestre
+598. element – el elemento
+599. claim – la reclamación
+600. property – la propiedad
+601. version – la versión
+602. attempt – el intento
+603. bus – el autobús
+604. customer – el cliente
+605. appeal – la apelación
+606. pound – la libra
+607. protection – la protección
+608. gene – el gen
+609. stone – la piedra
+610. opposition – la oposición
+611. apartment – el apartamento
+612. front – el frente
+613. female – la hembra
+614. prisoner – el prisionero
+615. black – el negro
+616. gang – la pandilla
+617. principle – el principio
+618. ally – el aliado
+619. adviser – el asesor
+620. visit – la visita
+621. bird – el pájaro
+622. stand – el soporte
+623. communication – la comunicación
+624. boat – el barco
+625. connection – la conexión
+626. key – la tecla
+627. strike – la huelga
+628. penalty – la pena
+629. warning – la advertencia
+630. luck – la suerte
+631. dna – el ADN
+632. spirit – el espíritu
+633. turn – la vuelta
+634. facility – la instalación
+635. teenager – el adolescente
+636. commitment – el compromiso
+637. item – el elemento
+638. procedure – el procedimiento de
+639. half – la media
+640. tank – el tanque
+641. telephone – el teléfono
+642. supply – el suministro
+643. attitude – la actitud
+644. block – el bloque
+645. bond – el vínculo
+646. style – el estilo
+647. football – el fútbol
+648. fuel – el combustible
+649. data – los datos
+650. glass – el cristal
+651. suit – el traje
+652. strength – la fuerza
+653. criticism – las críticas
+654. ice – el hielo
+655. equipment – el equipo
+656. promise – la promesa
+657. return – el regreso
+658. album – el álbum
+659. production – la producción
+660. corner – la esquina
+661. consequence – la consecuencia
+662. living – los vivos
+663. injury – la lesión
+664. cover – la tapa
+665. spot – el punto
+666. breast – la mama
+667. spring – la primavera
+668. controversy – la controversia
+669. destruction – la destrucción
+670. aspect – el aspecto
+671. club – el club
+672. aircraft – la aeronave
+673. firm – la empresa
+674. regime – el régimen
+675. competition – la competencia
+676. profit – el beneficio
+677. knowledge – el conocimiento
+678. spokesman – el portavoz
+679. review – la revisión
+680. understanding – la comprensión
+681. recession – la recesión
+682. singer – el cantante
+683. village – el pueblo
+684. arrest – la detención
+685. snow – la nieve
+686. joke – la broma
+687. gold – el oro
+688. contact – el contacto
+689. demand – la demanda
+690. task – la tarea
+691. hole – el agujero
+692. general – general
+693. skin – la piel
+694. count – el recuento
+695. opponent – el oponente
+696. conclusion – la conclusión
+697. priority – la prioridad
+698. rape – la violación
+699. refugee – el refugiado
+700. mountain – la montaña
+701. summit – la cumbre
+702. bottom – la parte inferior
+703. management – la gestión
+704. commission – la comisión
+705. range – la gama
+706. code – el código
+707. cash – el dinero en efectivo
+708. mouth – la boca
+709. presence – la presencia
+710. share – la cuota
+711. fashion – la moda
+712. shape – la forma
+713. chair – la silla
+714. finger – el dedo
+715. fish – el pescado
+716. edition – la edición
+717. edge – el borde
+718. limit – el límite
+719. train – el tren
+720. belief – la creencia
+721. balance – el balance
+722. exchange – el intercambio
+723. farm – la granja
+724. zone – la zona
+725. passenger – el pasajero
+726. lie – la mentira
+727. duty – el deber
+728. traffic – el tráfico
+729. horse – el caballo
+730. tradition – la tradición
+731. recovery – la recuperación
+732. inspector – el inspector
+733. difficulty – la dificultad
+734. file – el archivo
+735. birthday – el cumpleaños
+736. finance – la financiación
+737. crash – el accidente
+738. influence – la influencia
+739. regulation – la regulación
+740. analysis – el análisis
+741. struggle – la lucha
+742. heat – el calor
+743. dress – el vestido
+744. release – la liberación
+745. winter – el invierno
+746. virus – el virus
+747. theme – el tema
+748. notion – la noción
+749. device – el dispositivo
+750. anger – la ira
+751. english – el Inglés
+752. flag – la bandera
+753. context – el contexto
+754. wing – el ala
+755. fighting – los combates
+756. pattern – el patrón
+757. entertainment – el entretenimiento
+758. appearance – la aparición
+759. saving – el ahorro
+760. investor – el inversor
+761. bridge – el puente
+762. settlement – el asentamiento
+763. rain – la lluvia
+764. wood – la madera
+765. mail – el correo
+766. farmer – el agricultor
+767. mystery – el misterio
+768. prayer – la oración
+769. vision – la visión
+770. depression – la depresión
+771. explosion – la explosión
+772. defendant – el acusado
+773. structure – la estructura
+774. amendment – la enmienda
+775. assault – el asalto
+776. thinking – el pensamiento
+777. therapy – la terapia
+778. nurse – la enfermera
+779. path – el camino
+780. funding – la financiación
+781. tool – la herramienta
+782. title – el título
+783. housing – la carcasa
+784. shop – la tienda
+785. complaint – la queja
+786. wave – la ola
+787. cat – el gato
+788. map – el mapa
+789. employer – el empleador
+790. proof – la prueba
+791. emotion – la emoción
+792. skill – la habilidad
+793. trust – la confianza
+794. topic – el tema
+795. personality – la personalidad
+796. hall – la sala
+797. cabinet – el armario
+798. bone – el hueso
+799. soul – el alma
+800. chicken – el pollo
+801. location – la ubicación
+802. indication – la indicación
+803. speaker – el altavoz
+804. wage – el salario
+805. era – la era
+806. request – la solicitud
+807. boss – el jefe
+808. coach – el entrenador
+809. estate – la finca
+810. sector – el sector
+811. egg – el huevo
+812. stake – la estaca
+813. stop – la parada
+814. ring – el anillo
+815. shock – el choque
+816. contribution – la contribución
+817. announcement – el anuncio
+818. cigarette – el cigarrillo
+819. kitchen – la cocina
+820. territory – el territorio
+821. command – el comando
+822. island – la isla
+823. protest – la protesta
+824. impression – la impresión de
+825. fault – el fallo
+826. coast – la costa
+827. reading – la lectura
+828. variety – la variedad
+829. revenue – los ingresos
+830. bell – la campana
+831. coffee – el café
+832. alcohol – el alcohol
+833. lunch – el almuerzo
+834. expectation – la expectativa
+835. grade – el grado
+836. diet – la dieta
+837. section – la sección
+838. ear – el oído
+839. sky – el cielo
+840. assistance – la ayuda
+841. signal – la señal
+842. stress – el estrés
+843. alternative – la alternativa
+844. researcher – el investigador
+845. cable – el cable
+846. opening – la apertura
+847. beach – la playa
+848. volunteer – el voluntario
+849. burden – la carga
+850. detective – el detective
+851. toy – el juguete
+852. gain – la ganancia
+853. asset – el activo
+854. pool – la piscina
+855. trend – la tendencia
+856. survey – la encuesta
+857. planet – el planeta
+858. river – el río
+859. identity – la identidad
+860. ocean – el océano
+861. joy – la alegría
+862. delay – el retraso
+863. clinic – la clínica
+864. yard – el patio
+865. tip – la punta
+866. divorce – el divorcio
+867. sun – el sol
+868. row – la fila
+869. phrase – la frase
+870. worth – la pena
+871. collection – la colección
+872. occasion – la ocasión
+873. surface – la superficie
+874. tie – el empate
+musician – el músico
+concept – el concepto
+tension – la tensión
+outcome – el resultado
+approval – la aprobación
+fellow – el becario
+beauty – la belleza
+casualty – el siniestro
+copy – la copia
+mine – la mina
+watch – el reloj
+sleep – el sueño
+average – la media
+travel – el recorrido
+fraud – el fraude
+category – la categoría
+exercise – el ejercicio
+conviction – la convicción
+initiative – la iniciativa
+technique – la técnica de
+recording – la grabación
+sight – la vista
+reduction – la reducción
+whole – el conjunto
+corporation – la corporación
+passion – la pasión
+funeral – el funeral
+youth – la juventud
+instrument – el instrumento
+distance – la distancia
+desert – el desierto
+anniversary – el aniversario
+writing – la escritura
+invasion – la invasión
+compromise – el compromiso
+illness – la enfermedad
+tear – el desgarro
+gate – la puerta
+forest – el bosque
+experiment – el experimento
+golf – el golf
+talent – el talento
+post – el cargo
+gap – la brecha
+priest – el sacerdote
+novel – la novela
+division – la división
+desire – el deseo
+hat – el sombrero
+mortgage – la hipoteca
+reputation – la reputación
+score – la puntuación
+shoulder – el hombro
+relative – la relación
+column – la columna
+payment – el pago
+transition – la transición
+award – el premio
+capability – la capacidad
+definition – la definición
+pocket – el bolsillo
+speed – la velocidad
+concert – el concierto
+climate – el clima
+clue – la clave
+beer – La cerveza
+nose – la nariz
+green – el verde
+garden – el jardín
+satellite – el satélite
+ceremony – la ceremonia
+human – la humana
+discovery – el descubrimiento
+ride – el paseo
+root – la raíz
+tea – el té
+motion – el movimiento
+percentage – el porcentaje
+combination – la combinación
+explanation – la explicación
+scale – la escala
+chain – la cadena de
+twin – el gemelo
+capacity – la capacidad
+dealer – el distribuidor
+touch – el toque
+journey – el viaje
+delegate – el delegado
+link – el enlace
+plastic – el plástico
+stimulus – el estímulo
+cap – la tapa
+roll – el rollo
+construction – la construcción
+intention – la intención
+dispute – la disputa
+mood – el estado de ánimo
+design – el diseño
+childhood – la infancia
+engine – el motor
+lifetime – el tiempo de vida
+nightmare – la pesadilla
+dance – la danza
+meal – la comida
+offer – la oferta
+obligation – la obligación
+advance – el avance
+charity – la caridad
+tourist – el turista
+factory – la fábrica
+fat – la grasa
+salt – la sal de
+neck – el cuello
+bedroom – el dormitorio
+episode – el episodio
+engineer – el ingeniero
+punishment – el castigo
+testing – las pruebas
+instance – la instancia
+prospect – la perspectiva
+shopping – las compras
+smoke – el humo
+meat – la carne
+hold – la bodega
+retirement – la jubilación
+inflation – la inflación
+drama – el drama
+desk – el escritorio
+salary – el salario
+bible – la biblia
+grant – la subvención
+demonstration – la demostración
+dialogue – el diálogo
+substance – la sustancia
+core – el núcleo
+treaty – el tratado
+personnel – el personal
+sample – la muestra
+tactic – la táctica
+method – el método
+noise – el ruido
+objective – el objetivo
+flower – la flor
+cup – la copa
+temperature – la temperatura
+symbol – el símbolo
+revolution – la revolución
+taste – el sabor
+museum – el museo
+profile – el perfil
+suggestion – la sugerencia
+route – la ruta
+tooth – el diente
+consultant – el consultor
+drive – la unidad
+disorder – el trastorno
+sugar – el azúcar
+rise – el aumento
+chip – el chip
+motive – el motivo
+shirt – la camisa
+port – el puerto
+potential – el potencial
+schedule – el calendario
+parliament – el parlamento
+contest – el concurso
+atmosphere – la atmósfera
+branch – la rama
+estimate – la estimación
+symptom – el síntoma
+involvement – la participación
+discrimination – la discriminación
+heaven – el cielo
+walk – la caminata
+operator – el operador
+recommendation – la recomendación
+rebel – el rebelde
+round – la ronda
+maker – el fabricante
+wine – el vino
+remark – la observación
+mess – el lío
+tone – el tono
+resistance – la resistencia
+importance – la importancia
+exception – la excepción
+platform – la plataforma
+knife – el cuchillo
+perception – la percepción
+fee – la cuota
+master – el maestro
+circle – el círculo
+manner – la forma
+jet – el chorro
+meaning – el significado
+assessment – la evaluación
+plate – la placa
+expense – expensas
+plot – la trama
+classroom – el aula
+brand – la marca
+painting – la pintura
+roof – el techo
+privilege – el privilegio
+drink – la bebida
+ban – la prohibición
+content – el contenido
+chemical – el producto químico
+french – el francés
+inspection – la inspección
+incentive – el incentivo
+piano – el piano
+bottle – la botella
+waste – los residuos
+error – el error
+label – la etiqueta
+clock – el reloj
+cream – la crema
+good – el bien
+phase – la fase de
+philosophy – la filosofía
+conduct – la conducta
+cycle – el ciclo
+electricity – la electricidad
+bishop – el obispo
+reader – el lector
+pregnancy – el embarazo
+league – la liga
+pet – la mascota
+foundation – la fundación
+boom – el boom
+tower – la torre
+feature – la característica
+withdrawal – la retirada
+breath – la respiración
+crack – la grieta
+manufacturer – el fabricante
+specialist – el especialista
+reference – la referencia
+tale – el cuento
+provision – la provisión
+historian – el historiador
+wire – el alambre
+speculation – la especulación
+pair – el par
+excuse – la excusa
+chocolate – el chocolate
+celebration – la celebración
+cheese – el queso
+fortune – la fortuna
+bathroom – el cuarto de baño
+function – la función de
+universe – el universo
+channel – el canal
+smile – la sonrisa
+milk – la leche
+requirement – el requisito
+suspicion – la sospecha
+household – el hogar
+finding – el hallazgo
+chest – el pecho
+routine – la rutina
+consideration – la consideración
+library – la biblioteca
+harm – el daño
+margin – el margen
+object – el objeto
+guitar – la guitarra
+button – el botón
+silence – el silencio
+improvement – la mejora
+drop – la caída de
+appointment – el nombramiento
+businessman – el hombre de negocios
+flow – el flujo
+metal – el metal
+mirror – el espejo
+present – la presente
+carrier – el portador
+expression – la expresión
+fate – el destino
+cloud – la nube
+muscle – el músculo
+belt – el cinturón
+chapter – el capítulo
+string – la cadena de
+trading – el comercio
+trick – el truco
+guide – la guía
+volume – el volumen
+match – el partido
+fantasy – la fantasía
+knee – la rodilla
+compound – el compuesto
+stomach – el estómago
+height – la altura
+draft – el proyecto
+stranger – el desconocido
+infection – la infección
+mass – la masa
+discipline – la disciplina
+fruit – el fruto
+visitor – el visitante
+poem – el poema
+phenomenon – el fenómeno
+fence – la valla
+application – la aplicación
+recipe – la receta
+clothing – la ropa
+guilt – la culpa
+survival – la supervivencia
+champion – el campeón
+uniform – el uniforme
+print – la impresión
+potato – la papa
+arrangement – la disposición
+moon – la luna
+bear – el oso
+wound – la herida
+stability – la estabilidad
+pride – el orgullo
+restriction – la restricción
+total – del total
+barrier – la barrera
+cousin – el primo
+occupation – la ocupación
+silver – la plata
+cake – la torta
+lung – el pulmón
+wheel – la rueda
+observer – el observador
+tune – la melodía
+description – la descripción
+establishment – el establecimiento
+chamber – la cámara de
+horror – el horror
+banking – la banca
+apple – la manzana
+implication – la implicación
+steel – el acero
+throat – la garganta
+essence – la esencia
+raid – la incursión
+distinction – la distinción
+german – el alemán
+lip – el labio
+timing – la temporización
+insight – la visión
+coup – el golpe de Estado
+shift – el cambio
+policeman – el policía
+habit – el hábito
+sheet – la hoja de
+offender – el delincuente
+midnight – la medianoche
+execution – la ejecución
+anxiety – la ansiedad
+enterprise – la empresa
+strip – la tira
+pop – el pop
+wonder – la maravilla
+shadow – la sombra
+liberty – la libertad
+fiction – la ficción
+intervention – la intervención
+creation – la creación
+marketing – la comercialización
+christian – el cristiano
+pot – la olla
+fishing – la pesca
+breakfast – el desayuno
+tube – el tubo
+determination – la determinación
+sand – la arena
+permission – el permiso
+guideline – la directriz
+shame – la vergüenza
+riot – los disturbios
+user – el usuario
+organ – el órgano
+resort – el resort
+designer – el diseñador
+comparison – la comparación
+employment – el empleo
+bread – el pan
+wish – el deseo
+lover – el amante
+jacket – la chaqueta
+pass – el pase
+statute – el estatuto
+pace – el ritmo
+frame – la trama
+confusion – la confusión
+guarantee – la garantía
+commissioner – el comisionado
+flame – la llama
+assumption – la asunción
+graduate – el graduado
+entry – la entrada
+ward – la sala
+win – la victoria
+opera – la ópera
+friendship – la amistad
+exposure – la exposición
+pig – el cerdo
+mate – el mate
+nerve – el nervio
+length – la longitud
+cow – la vaca
+pack – el paquete
+instruction – la instrucción
+collapse – el colapso
+assistant – el asistente
+objection – la objeción
+diary – el diario
+scholar – el erudito
+comfort – la comodidad
+preparation – la preparación
+province – la provincia
+passage – el pasaje
+crystal – el cristal
+gear – el engranaje
+stroke – el trazo
+decline – la disminución
+achievement – el logro
+existence – la existencia
+alliance – la alianza
+profession – la profesión
+delivery – la entrega
+publisher – el editor
+sympathy – la simpatía
+dish – el plato
+worry – la preocupación
+component – el componente
+adventure – la aventura
+crop – el cultivo
+blow – el golpe
+sake – aras
+sin – el pecado
+pension – la pensión
+garage – el garaje
+radiation – la radiación
+juice – el jugo
+setting – el ajuste
+index – el índice
+vegetable – el vegetal
+partnership – la asociación
+poetry – la poesía
+recognition – el reconocimiento
+self – el auto
+standing – el pie
+tissue – el tejido
+shell – la concha
+captain – el capitán
+grave – la tumba
+rank – el rango
+gender – el género
+shortage – la escasez
+prize – el premio
+coat – la capa
+seed – la semilla
+rat – la rata
+soil – el suelo
+shore – la orilla
+defeat – la derrota
+notice – la notificación
+boot – la bota
+chart – el gráfico
+ministry – el ministerio
+diamond – el diamante
+finish – el acabado
+admission – la admisión
+dark – la oscuridad
+laboratory – el laboratorio
+professional – el profesional
+reward – la recompensa
+infant – el bebé
+text – el texto
+shower – la ducha
+dose – la dosis
+panic – el pánico
+net – la red
+clerk – el secretario
+miner – el minero
+delegation – la delegación
+imagination – la imaginación
+unity – la unidad
+uncle – el tío
+ingredient – el ingrediente
+assignment – la asignación
+currency – la moneda
+battery – la batería
+tunnel – el túnel
+resignation – la renuncia
+buyer – el comprador
+bike – la moto
+excitement – la emoción
+mouse – el ratón
+alarm – la alarma
+poet – el poeta
+landscape – el paisaje
+selection – la selección
+cry – el grito
+separation – la separación
+display – la pantalla
+disability – la discapacidad
+counter – el contador
+championship – el campeonato
+butter – la mantequilla
+portrait – el retrato
+stick – el palo
+engineering – la ingeniería
+myth – el mito
+essay – el ensayo
+cold – el frío
+coal – el carbón
+contrast – el contraste
+observation – la observación
+tail – la cola
+mechanism – el mecanismo
+scheme – el esquema
+presentation – la presentación
+angel – el ángel
+bonus – el bono
+possession – la posesión
+learning – el aprendizaje
+teaching – la enseñanza
+deck – la cubierta
+creature – la criatura
+running – el funcionamiento
+literature – la literatura
+weakness – la debilidad
+blue – el azul
+engagement – el compromiso
+uncertainty – la incertidumbre
+inquiry – la investigación
+motivation – la motivación
+dust – el polvo
+peak – el pico
+instinct – el instinto
+needle – la aguja
+leaf – la hoja
+launch – el lanzamiento
+laugh – la risa
+leave – la licencia
+grass – la hierba
+iron – el hierro
+competitor – el competidor
+complex – el complejo
+bean – el frijol
+pole – el polo
+vessel – el buque
+subsidy – la subvención
+bid – la oferta
+landing – el aterrizaje
+pipe – la tubería
+interpretation – la interpretación
+tournament – Torneo
+hip – la cadera
+diagnosis – el diagnóstico
+pitch – el terreno de juego
+journal – la revista
+ceiling – el techo
+export – la exportación
+awareness – la conciencia
+cross – la cruz
+kiss – el beso
+examination – el examen
+empire – el imperio
+replacement – la sustitución
+duck – el pato
+formula – la fórmula
+devil – el diablo
+limitation – la limitación
+compensation – la compensación
+invitation – la invitación
+declaration – la declaración
+significance – el significado
+final – la final
+premium – la prima
+ambulance – la ambulancia
+carpet – la alfombra
+temple – el templo
+constituent – el constituyente
+concession – la concesión
+consent – el consentimiento
+premise – la premisa
+heritage – el patrimonio
+shelf – el estante
+hint – la indirecta
+rhythm – el ritmo
+liability – el pasivo
+heel – el talón
+layer – la capa de
+strain – la cepa
+carbon – el carbono
+forum – el foro
+merit – el mérito
+youngster – el joven
+transfer – la transferencia
+distribution – la distribución
+expansion – la expansión
+depth – la profundidad
+blanket – la manta
+kingdom – el reino
+mud – el barro
+arrival – la llegada
+reflection – el reflejo
+envelope – la envoltura
+reserve – la reserva
+hunting – la caza
+furniture – los muebles
+gesture – el gesto
+residence – la residencia
+ambition – la ambición
+nail – la uña
+spectrum – el espectro
+drawing – el dibujo
+enthusiasm – el entusiasmo
+pen – la pluma
+preference – la preferencia
+absence – la ausencia
+oxygen – el oxígeno
+squad – la escuadra
+pollution – la contaminación
+lock – la cerradura
+extension – la extensión
+participant – el participante
+architect – el arquitecto
+bench – la magistratura
+rope – la cuerda
+aim – el objetivo
+stream – la corriente de
+evolution – la evolución
+angle – el ángulo
+jurisdiction – la jurisdicción
+charter – la carta
+ideology – la ideología
+tide – la marea
+representation – la representación
+identification – la identificación
+concentration – la concentración
+norm – la norma
+spread – la propagación
+rival – el rival
+disappointment – la decepción
+tribunal – el tribunal
+grain – el grano
+proportion – la proporción
+fool – el tonto
+merger – la fusión
+loyalty – la lealtad
+publication – la publicación
+participation – la participación
+escape – el escape
+shareholder – el accionista
+constituency – la circunscripción
+paint – la pintura
+toilet – el inodoro
+ghost – el fantasma
+attraction – la atracción
+lion – el león
+craft – la nave
+custom – la costumbre
+cliff – el acantilado
+palace – el palacio
+grip – la empuñadura
+protein – la proteína
+accuracy – la exactitud
+theft – el robo
+widow – la viuda
+acceptance – la aceptación
+accent – el acento
+smell – el olor
+departure – la salida
+membership – los miembros
+expertise – la experiencia
+repair – la reparación
+assembly – la asamblea
+summary – el resumen
+logic – la lógica
+boundary – el límite
+equivalent – el equivalente
+holder – el titular
+dimension – la dimensión
+rail – el riel
+transaction – la transacción
+left – la izquierda
+sequence – la secuencia
+festival – el festival
+pit – el pozo
+horizon – el horizonte
+bowl – el cuenco
+purchase – la compra
+plaintiff – el demandante
+aunt – la tía
+equity – la equidad
+load – la carga
+scope – el alcance
+darkness – la oscuridad
+sandwich – el sándwich
+parish – la parroquia
+closure – el cierre
+pile – la pila
+ownership – la propiedad
+origin – el origen
+defender – el defensor
+circuit – el circuito de
+introduction – la introducción
+mode – el modo de
+discount – el descuento
+equation – la ecuación
+entity – la entidad
+kit – el kit
+psychology – la psicología
+virtue – la virtud
+flexibility – la flexibilidad
+trainer – el entrenador
+continent – el continente
+trader – el comerciante
+bath – el baño
+brick – el ladrillo
+indicator – el indicador
+seller – el vendedor
+promotion – la promoción
+clash – el choque
+characteristic – la característica
+coin – la moneda
+assurance – la garantía
+proposition – la proposición
+tongue – la lengua
+minimum – el mínimo
+collector – el colector
+capitalism – el capitalismo
+basket – la cesta
+framework – el marco
+consciousness – la conciencia
+switch – el interruptor
+rent – el alquiler
+curve – la curva
+cotton – el algodón
+patch – el parche
+import – la importación
+isolation – el aislamiento
+entrance – la entrada
+necessity – la necesidad
+square – la plaza
+venture – la empresa
+steam – el vapor
+agriculture – la agricultura
+transformation – la transformación
+sheep – las ovejas
+brush – el cepillo
+database – la base de datos
+deposit – el depósito
+menu – el menú
+adjustment – el ajuste
+triumph – el triunfo
+consumption – el consumo
+guardian – el guardián
+curtain – la cortina
+satisfaction – la satisfacción
+calculation – el cálculo
+fleet – la flota
+remedy – el remedio
+lane – el carril
+certificate – el certificado
+swimming – la natación
+emission – la emisión
+fabric – la tela
+medium – el medio
+efficiency – la eficiencia
+interaction – la interacción
+cab – la cabina
+easter – la Pascua
+glory – la gloria
+reception – la recepción
+productivity – la productividad
+acid – el ácido
+servant – el siervo
+evaluation – la evaluación
+mill – el molino
+exhibition – la exposición
+sum – la suma
+counterpart – la contraparte
+sergeant – el sargento
+storage – el almacenamiento
+fraction – la fracción
+innovation – la innovación
+stance – la postura
+motor – el motor
+format – el formato
+particle – la partícula
+trace – la traza
+fluid – el fluido
+curriculum – el plan de estudios
+doctrine – la doctrina
+developer – el desarrollador
+pause – la pausa
+removal – la eliminación
+sensation – la sensación
+dividend – el dividendo
+monopoly – el monopolio
+gallery – la galería
+lecture – la conferencia
+taxi – el taxi
+discretion – la discreción
+flesh – la carne
+merchant – el comerciante
+quantity – la cantidad
+darling – el niño mimado
+justification – la justificación
+painter – el pintor
+mixture – la mezcla de
+breach – el incumplimiento
+lift – el ascensor
+pond – el estanque
+cheek – la mejilla
+successor – el sucesor
+registration – el registro
+consultation – la consulta
+qualification – la calificación
+supplier – el proveedor
+autumn – el otoño
+hardware – el hardware
+leather – el cuero
+rabbit – el conejo
+paragraph – el párrafo
+companion – el compañero
+bulk – la mayor parte
+corridor – el corredor
+workshop – el taller
+shade – la sombra
+accountant – el contador
+sword – la espada
+formation – la formación
+integration – la integración
+expenditure – los gastos
+input – la entrada
+rod – la varilla
+complexity – la complejidad
+skirt – la falda
+insect – el insecto
+transport – el transporte
+mortality – La mortalidad
+slope – la pendiente
+restoration – la restauración
+nest – el nido
+variation – la variación
+composition – la composición
+crown – la corona
+probability – la probabilidad
+liberation – la liberación
+attendance – la asistencia
+organism – el organismo
+conservation – la conservación
+sculpture – la escultura
+champagne – el champagne
+architecture – la arquitectura
+other – el otro
+lord – el señor
+tv – la tv
+van – la furgoneta
+directory – el directorio
+hundred – el cien
+dozen – la docena
+treasury – la tesorería
+petrol – la gasolina
+purchaser – el comprador
+terrace – la terraza
+avenue – la avenida
+thousand – los mil
+sociology – la sociología
+inn – la posada
+colony – la colonia
+association – la asociación
+prince – el príncipe
+corp – la corp
+lad – el muchacho
+catalogue – el catálogo
+magistrate – el magistrado
+allocation – la asignación
+harbour – el puerto
+solicitor – el abogado
+traveller – el viajero
+earl – el conde
+humour – el humor
+pope – el Papa
+mrs – la señora
+behaviour – el comportamiento
+bill – el proyecto de ley
+mark – la marca
+criterion – el criterio
+duke – el duque
+red – la roja
+federation – la federación
+jew – el judio
+colonel – el coronel
+shit – la mierda
+eagle – el águila
+centre – el centro
+miss – la señorita
+fig – el higo
+institute – el instituto
+bay – la bahía
+honour – el honor
+classification – la clasificación
+councillor – el concejal
+constable – el alguacil
+bureau – la oficina
+mile – la milla
+proceeding – el procedimiento
+judgement – la sentencia
+cheque – el cheque
+no – la no
+queen – la reina
+valley – el valle
+billion – los mil millones
+inch – la pulgada
+stairs – las escaleras
+fibre – la fibra
+acre – el acre
+white – el blanco
+lake – el lago
+god – el dios
+enquiry – la investigación
+princess – la princesa
+rubbish – la basura
+tonne – la tonelada
+navy – la marina
+chap – el cap
+million – el millón
+programme – el programa
+organisation – la organización
+republic – la república
+percent – el porcentaje
+mummy – la momia
+favourite – el favorito
+cm – el cm
+illustration – la ilustración
+tory – la his-
+aids – las ayudas
+theatre – el teatro
+licence – la licencia
+metre – el metro
+constitution – la constitución
+junction – la unión
+interface – la interfaz
+gaze – la mirada
+pensioner – el pensionista
+builder – el constructor
+university – la universidad
+park – el parque
+hill – la colina
+neighbour – el vecino
+unix – el unix
+favour – el favor
+borough – la ciudad
+redundancy – la redundancia
+king – el rey
+co – la co
+ref – el árbitro
+lifespan – la vida útil
+abbey – la abadía
+rumour – el rumor
+cupboard – el armario
+council – el ayuntamiento
+colour – el color
+dollar – el dólar
+commonwealth – la mancomunidad
+county – el condado
+mum – la momia
+rose – la rosa
+vat – la cuba
+photo – la foto
+lorry – el camión
+labour – la mano de obra
+defence – la defensa
+earth – la tierra
+flat – la plana
+offence – el delito
+daddy – el papá
+appendix – el apéndice
+whisky – el whisky
+isle – la isla
+go – la marcha
+villa – la villa
+tutor – el tutor
+archbishop – el arzobispo
+photograph – la fotografía
+specification – la especificación
+polytechnic – la politécnica
+bush – la zarza
+frequency – la frecuencia
+seminar – el seminario
+interior – el interior
+verse – el verso
+receipt – el recibo
+breed – la raza
+measurement – la medición
+palm – la palma
+dock – el muelle
+pc – el pc
+disadvantage – la desventaja
+installation – la instalación
+advertisement – el anuncio
+implementation – la implementación
+portfolio – la cartera
+timber – la madera
+clause – la cláusula
+discourse – el discurso
+disc – el disco
+blade – la cuchilla
+ratio – la relación
+mineral – el mineral
+outline – el contorno
+addition – la adición
+machinery – la maquinaria
+canal – el canal
+local – lo local
+disposal – la eliminación
+refusal – la negativa
+domain – el dominio
+register – el registro
+audit – la auditoría
+availability – la disponibilidad
+acquisition – la adquisición
+autonomy – la autonomía
+silk – la seda
+beam – el haz
+accommodation – el alojamiento
+applicant – el solicitante
+modification – la modificación
+tin – el estaño
+fragment – el fragmento
+tenant – el inquilino
+conversion – la conversión
+vendor – el vendedor
+practitioner – el practicante
+delight – el deleite
+filter – el filtro
+bronze – el bronce
+doorway – la puerta
+incidence – la incidencia
+lease – el contrato de arrendamiento
+constraint – la restricción
+cloth – el paño
+nursery – el vivero
+creditor – el acreedor
+taxation – la imposición
+disk – el disco
+dictionary – el diccionario
+conception – la concepción
+trustee – el fiduciario
+molecule – la molécula
+holding – la celebración
+cottage – la casa de campo
+landlord – el arrendador
+succession – la sucesión
+warmth – el calor
+spell – el hechizo
+chapel – la capilla
+leisure – el ocio
+reign – el reinado
+reply – la respuesta
+duration – la duración
+castle – el castillo
+hierarchy – la jerarquía
+correlation – la correlación
+exclusion – la exclusión
+pub – el pub
+hypothesis – la hipótesis
+lamp – la lámpara
+sphere – la esfera
+chancellor – el canciller
+peasant – el campesino
+output – la salida
+emperor – el emperador
+glance – la mirada
+specimen – el espécimen
+directive – la directiva
+thesis – la tesis
+working – el trabajo
+oak – el roble
+turnover – el volumen de negocios
+allowance – el subsidio
+tray – la bandeja
+auditor – el auditor
+server – el servidor
+cathedral – la catedral
+pity – la piedad
+variable – la variable
+clay – la arcilla
+carriage – el carro
+cinema – el cine
+leaflet – el folleto
+copper – el cobre
+density – la densidad
+subsidiary – la filial
+dismissal – el despido
+completion – la finalización
+processor – el procesador
+packet – el paquete
+wool – la lana
+heading – el encabezamiento
+grammar – la gramática
+pavement – el pavimento
+receiver – el receptor
+module – el módulo
+railway – el ferrocarril
+pupil – la pupila
+cricket – el grillo
+printer – la impresora
+interval – el intervalo
+diagram – el diagrama
+bastard – el hijo de puta
+
