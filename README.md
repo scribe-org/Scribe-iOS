@@ -45,6 +45,8 @@ Scribe colors nouns according to the following conventions:
 - Plural nouns are colored orange 🟧
 - Nouns with more than one gender are multicolored
 
+Markers are also planned for color blind users (see issue).
+
 <!--
 # Grammar queries
 
@@ -124,3 +126,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - This would allow for the removal of parentheses around words that the user wants to convert
 
 - Make the space bar read the name of the keyboard when it's switched to (see issue)
+
+- Providing an option in the Scribe app to change the coloration into another kind of indicator that would work for color blind users (see issue)
+
+  - Simply adding markers like (M), (F), (N) and (P) before words in the preview would work
