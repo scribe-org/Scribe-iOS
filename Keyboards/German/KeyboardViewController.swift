@@ -3,7 +3,6 @@
 //
 
 import UIKit
-import MessageUI
 
 var proxy : UITextDocumentProxy!
 
@@ -30,11 +29,15 @@ class KeyboardViewController: UIInputViewController {
 
 	var keyboardState: KeyboardState = .letters
 	var shiftButtonState:ShiftButtonState = .normal
-
-	@IBOutlet weak var stackView1: UIStackView!
-	@IBOutlet weak var stackView2: UIStackView!
-	@IBOutlet weak var stackView3: UIStackView!
-	@IBOutlet weak var stackView4: UIStackView!
+    
+    @IBOutlet var deGrammarPreviewLabel: UILabel!
+    func setPreviewLabel() {
+        deGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
+  }
+    @IBOutlet weak var deStackView1: UIStackView!
+	@IBOutlet weak var deStackView2: UIStackView!
+	@IBOutlet weak var deStackView3: UIStackView!
+	@IBOutlet weak var deStackView4: UIStackView!
 
 	override func updateViewConstraints() {
 		super.updateViewConstraints()
@@ -97,6 +100,8 @@ class KeyboardViewController: UIInputViewController {
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
 	func loadKeys(){
+        setPreviewLabel()
+        
 		keys.forEach{$0.removeFromSuperview()}
 		paddingViews.forEach{$0.removeFromSuperview()}
         
@@ -152,9 +157,18 @@ class KeyboardViewController: UIInputViewController {
 				button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
 				button.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
                 
+                deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
+                deGrammarPreviewLabel?.layer.masksToBounds = true
+                deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+                deGrammarPreviewLabel?.textColor = .black
+                deGrammarPreviewLabel?.numberOfLines = 0
+                deGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+                deGrammarPreviewLabel?.text = ""
+                deGrammarPreviewLabel?.sizeToFit()
+                
                 // Pad before key is added.
                 if key == "y"{
-                    addPadding(to: stackView3, width: buttonWidth/3, key: "y")
+                    addPadding(to: deStackView3, width: buttonWidth/3, key: "y")
                 }
 
 				if key == "⌫"{
@@ -164,10 +178,10 @@ class KeyboardViewController: UIInputViewController {
 
 				keys.append(button)
 				switch row{
-				case 0: stackView1.addArrangedSubview(button)
-				case 1: stackView2.addArrangedSubview(button)
-				case 2: stackView3.addArrangedSubview(button)
-				case 3: stackView4.addArrangedSubview(button)
+				case 0: deStackView1.addArrangedSubview(button)
+				case 1: deStackView2.addArrangedSubview(button)
+				case 2: deStackView3.addArrangedSubview(button)
+				case 3: deStackView4.addArrangedSubview(button)
 				default:
 					break
 				}
@@ -178,7 +192,7 @@ class KeyboardViewController: UIInputViewController {
                 
                 // Pad after key is added.
                 if key == "m"{
-                    addPadding(to: stackView3, width: buttonWidth/3, key: "m")
+                    addPadding(to: deStackView3, width: buttonWidth/3, key: "m")
                 }
 
 				// specialKey constraints.
@@ -238,14 +252,35 @@ class KeyboardViewController: UIInputViewController {
 	}
     
     func nounGenderColoration(){
-        if proxy.documentContextBeforeInput?.suffix("colorMe".count) == "colorMe"{
-            proxy.insertText("!")
+        if proxy.selectedText == "Buch" {
+            deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
+            deGrammarPreviewLabel?.text = "Buch"
+            deGrammarPreviewLabel?.sizeToFit()
         }
-//        if proxy.documentContextBeforeInput?.suffix("Bücher".count) == "Buch"{}
-//        if proxy.documentContextBeforeInput?.suffix("Bücher".count) == "Bücher"{}
-//        if proxy.documentContextBeforeInput?.suffix("Kind".count) == "Kind"{}
-//        if proxy.documentContextBeforeInput?.suffix("Frau".count) == "Frau"{}
-//        if proxy.documentContextBeforeInput?.suffix("Tisch".count) == "Tisch"{}
+        if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch "{
+            deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
+            deGrammarPreviewLabel?.text = "Buch"
+            deGrammarPreviewLabel?.sizeToFit()
+        }
+        if proxy.documentContextBeforeInput?.suffix("Bücher ".count) == "Bücher "{
+            deGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme
+            deGrammarPreviewLabel?.text = "Bücher"
+            deGrammarPreviewLabel?.sizeToFit()
+        }
+        if proxy.documentContextBeforeInput?.suffix("Frau ".count) == "Frau "{
+            deGrammarPreviewLabel?.textColor = Constants.previewRedLightTheme
+            deGrammarPreviewLabel?.text = "Frau"
+            deGrammarPreviewLabel?.sizeToFit()
+        }
+        if proxy.documentContextBeforeInput?.suffix("Tisch ".count) == "Tisch "{
+            deGrammarPreviewLabel?.textColor = Constants.previewBlueLightTheme
+            deGrammarPreviewLabel?.text = "Tisch"
+            deGrammarPreviewLabel?.sizeToFit()
+        }
+    }
+    func clearPreviewLabel(){
+        deGrammarPreviewLabel?.textColor = UIColor.black
+        deGrammarPreviewLabel?.text = " "
     }
 
     func pluralFuncCapitalization(){
@@ -269,6 +304,8 @@ class KeyboardViewController: UIInputViewController {
             proxy.deleteBackward()
             proxy.deleteBackward()
             proxy.insertText("Bücher")
+            proxy.insertText(" ")
+            nounGenderColoration()
         }
     }
 
@@ -291,27 +328,39 @@ class KeyboardViewController: UIInputViewController {
                     loadKeys()
                 }
             }
+            clearPreviewLabel()
 		case "Leerzeichen":
 			proxy.insertText(" ")
+            nounGenderColoration()
+            if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
+                clearPreviewLabel()
+            }
 		case "🌐":
 			break
 		case "↵":
 			proxy.insertText("\n")
+            clearPreviewLabel()
 		case "123":
 			changeKeyboardToNumberKeys()
+            clearPreviewLabel()
 		case "ABC":
 			changeKeyboardToLetterKeys()
+            clearPreviewLabel()
         case "'":
             proxy.insertText("'")
             changeKeyboardToLetterKeys()
+            clearPreviewLabel()
 		case "#+=":
 			changeKeyboardToSymbolKeys()
+            clearPreviewLabel()
 		case "⇧":
 			shiftButtonState = shiftButtonState == .normal ? .shift : .normal
 			loadKeys()
+            clearPreviewLabel()
         case "(":
             proxy.insertText("(")
             pluralFuncCapitalization()
+            clearPreviewLabel()
         case ")":
             proxy.insertText(")")
             nounSingularToPlural()
@@ -321,8 +370,7 @@ class KeyboardViewController: UIInputViewController {
 				loadKeys()
 			}
 			proxy.insertText(keyToDisplay)
-            
-        nounGenderColoration()
+            clearPreviewLabel()
 		}
 	}
 
@@ -333,6 +381,7 @@ class KeyboardViewController: UIInputViewController {
 		if (touch.tapCount == 2 && originalKey == "⇧") {
 			shiftButtonState = .caps
 			loadKeys()
+            clearPreviewLabel()
 		}
         // Double space period shortcut.
         if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1) {
@@ -342,6 +391,7 @@ class KeyboardViewController: UIInputViewController {
                 shiftButtonState = .shift
                 loadKeys()
             }
+            clearPreviewLabel()
         }
 	}
 

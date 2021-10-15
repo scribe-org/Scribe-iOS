@@ -30,10 +30,14 @@ class KeyboardViewController: UIInputViewController {
     var keyboardState: KeyboardState = .letters
     var shiftButtonState:ShiftButtonState = .normal
 
-    @IBOutlet weak var stackView1: UIStackView!
-    @IBOutlet weak var stackView2: UIStackView!
-    @IBOutlet weak var stackView3: UIStackView!
-    @IBOutlet weak var stackView4: UIStackView!
+    @IBOutlet weak var esGrammarPreviewLabel: UILabel!
+    func setPreviewLabel() {
+        esGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
+  }
+    @IBOutlet weak var esStackView1: UIStackView!
+    @IBOutlet weak var esStackView2: UIStackView!
+    @IBOutlet weak var esStackView3: UIStackView!
+    @IBOutlet weak var esStackView4: UIStackView!
 
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -96,6 +100,8 @@ class KeyboardViewController: UIInputViewController {
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
     func loadKeys(){
+        setPreviewLabel()
+        
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
         
@@ -146,6 +152,15 @@ class KeyboardViewController: UIInputViewController {
                 button.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
                 button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
                 button.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+                
+                esGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
+                esGrammarPreviewLabel?.layer.masksToBounds = true
+                esGrammarPreviewLabel?.font = .systemFont(ofSize: buttonWidth / 1.75)
+                esGrammarPreviewLabel?.textColor = .black
+                esGrammarPreviewLabel?.numberOfLines = 0
+                esGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+                esGrammarPreviewLabel?.text = ""
+                esGrammarPreviewLabel?.sizeToFit()
 
                 if key == "⌫"{
                     let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
@@ -154,10 +169,10 @@ class KeyboardViewController: UIInputViewController {
 
                 keys.append(button)
                 switch row{
-                case 0: stackView1.addArrangedSubview(button)
-                case 1: stackView2.addArrangedSubview(button)
-                case 2: stackView3.addArrangedSubview(button)
-                case 3: stackView4.addArrangedSubview(button)
+                case 0: esStackView1.addArrangedSubview(button)
+                case 1: esStackView2.addArrangedSubview(button)
+                case 2: esStackView3.addArrangedSubview(button)
+                case 3: esStackView4.addArrangedSubview(button)
                 default:
                     break
                 }
@@ -219,6 +234,28 @@ class KeyboardViewController: UIInputViewController {
     }
     func handlDeleteButtonPressed(){
         proxy.deleteBackward()
+    }
+    
+    func nounGenderColoration(){
+        if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
+            esGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme
+            esGrammarPreviewLabel?.text = ""
+            esGrammarPreviewLabel?.sizeToFit()
+        }
+        if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
+            esGrammarPreviewLabel?.textColor = Constants.previewRedLightTheme
+            esGrammarPreviewLabel?.text = ""
+            esGrammarPreviewLabel?.sizeToFit()
+        }
+        if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
+            esGrammarPreviewLabel?.textColor = Constants.previewBlueLightTheme
+            esGrammarPreviewLabel?.text = ""
+            esGrammarPreviewLabel?.sizeToFit()
+        }
+    }
+    func clearPreviewLabel(){
+        esGrammarPreviewLabel?.textColor = UIColor.black
+        esGrammarPreviewLabel?.text = " "
     }
 
     @IBAction func keyPressedTouchUp(_ sender: UIButton) {

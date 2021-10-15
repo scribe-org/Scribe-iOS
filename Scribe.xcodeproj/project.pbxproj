@@ -14,14 +14,16 @@
 		38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
 		38BD214F22D592CA00C6795D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* KeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		38BD215922D5935A00C6795D /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BD215822D5935A00C6795D /* Keyboard.xib */; };
 		38BD215B22D5A26900C6795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD215A22D5A26900C6795D /* Constants.swift */; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		D1426389270B6F1D00D3702D /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1426388270B6F1D00D3702D /* Keyboard.xib */; };
 		D142638C270B6F2B00D3702D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638A270B6F2B00D3702D /* Constants.swift */; };
 		D142638D270B6F2B00D3702D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638B270B6F2B00D3702D /* Extensions.swift */; };
+		D14B73482719BFD800F90105 /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = D14B73472719BFD800F90105 /* nouns.txt */; };
+		D14B734C2719C7CD00F90105 /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = D14B734B2719C7CD00F90105 /* nouns.txt */; };
 		D1608668270B6D3C00134D48 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* KeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D1C0ACDC2719E0BA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,15 +69,17 @@
 		38BD214C22D592CA00C6795D /* German.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = German.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BD214E22D592CA00C6795D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38BD215822D5935A00C6795D /* Keyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		38BD215A22D5A26900C6795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D1426388270B6F1D00D3702D /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		D142638A270B6F2B00D3702D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D142638B270B6F2B00D3702D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D14B73472719BFD800F90105 /* nouns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nouns.txt; sourceTree = "<group>"; };
+		D14B734B2719C7CD00F90105 /* nouns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nouns.txt; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,23 +142,41 @@
 		38BD214D22D592CA00C6795D /* German */ = {
 			isa = PBXGroup;
 			children = (
+				D14B73492719C48B00F90105 /* Grammar */,
 				38BD214E22D592CA00C6795D /* KeyboardViewController.swift */,
 				38BD215022D592CA00C6795D /* Info.plist */,
-				38BD215822D5935A00C6795D /* Keyboard.xib */,
 				38BD215A22D5A26900C6795D /* Constants.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
+				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		D14B73492719C48B00F90105 /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				D14B73472719BFD800F90105 /* nouns.txt */,
+			);
+			path = Grammar;
+			sourceTree = "<group>";
+		};
+		D14B734A2719C79300F90105 /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				D14B734B2719C7CD00F90105 /* nouns.txt */,
+			);
+			path = Grammar;
 			sourceTree = "<group>";
 		};
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
+				D14B734A2719C79300F90105 /* Grammar */,
 				D1608667270B6D3C00134D48 /* KeyboardViewController.swift */,
 				D1608669270B6D3C00134D48 /* Info.plist */,
-				D1426388270B6F1D00D3702D /* Keyboard.xib */,
 				D142638A270B6F2B00D3702D /* Constants.swift */,
 				D142638B270B6F2B00D3702D /* Extensions.swift */,
+				D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */,
 			);
 			path = Spanish;
 			sourceTree = "<group>";
@@ -281,7 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BD215922D5935A00C6795D /* Keyboard.xib in Resources */,
+				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				D14B73482719BFD800F90105 /* nouns.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1426389270B6F1D00D3702D /* Keyboard.xib in Resources */,
+				D1C0ACDC2719E0BA001E11C3 /* Keyboard.xib in Resources */,
+				D14B734C2719C7CD00F90105 /* nouns.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
