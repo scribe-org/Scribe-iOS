@@ -114,6 +114,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Example: type /tr and entering a word in the preview bar would bring up a selectable list of translations over the keyboard
 
+  - The base functionality would translate from the system language into the language of the keyboard, with the ability to choose a language from which translations would be made being ideal
+
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access (see issue)
 
   - This would likely best be implemented via a Python package that allows users to access data within JSON files stored in the package
