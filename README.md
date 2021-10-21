@@ -86,6 +86,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Example: typing /chosen_command would change the cursor to the preview bar where grammar rules would be queried once return is pressed
 
+  - Giving users the ability to map grammar queries to their own desired commands might also be helpful
+
 - Implementation of a verb conjugation command
 
   - Example 1: typing /fps + chosen_infinitive would query the verb's first person singular conjugation
