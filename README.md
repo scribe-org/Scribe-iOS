@@ -55,6 +55,8 @@ Examples of this include:
 - /pl provides the plural of the noun
 - /fps provides the first person singular of the verb
 - /pp provides the past participle of the verb
+
+An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
 -->
 
 ### iOS and iPadOS system keyboard functionality
