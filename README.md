@@ -14,9 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS system keyboards that color nouns typed in messaging apps based on their gender. The keyboards give users the confidence that they are using words in an appropriate context, and further helps language learners remember word genders through color association. Planned functionality includes in-chat verb conjugation and other grammar query features.
-
-Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS power keyboards for language learners. Features include verb conjugation and gender based coloration of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -48,13 +46,15 @@ Scribe colors nouns according to the following conventions:
 Markers are also planned for color blind users (see issue).
 
 <!--
-# Grammar queries
+### Grammar queries
 
-Scribe allows users to programmatically query words based on grammar rules. Examples of this include:
+Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar, with the desired word form then being inserted with a press of the return key.
 
-- /pl(noun) provides the plural of the noun
-- /fps(verb_infinitive) provides the first person singular of the verb
-- /pp(verb_infinitive) provides the past participle of the verb
+Examples of this include:
+
+- /pl provides the plural of the noun
+- /fps provides the first person singular of the verb
+- /pp provides the past participle of the verb
 -->
 
 ### iOS and iPadOS system keyboard functionality
@@ -80,7 +80,19 @@ The goal is for Scribe keyboards have all the functionality of system keyboards.
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
-- Creating an MVP
+- Allowing for backslash commands
+
+  - Example: typing /chosen_command would change the cursor to the preview bar where grammar rules would be queried once return is pressed
+
+- Implementation of a verb conjugation command
+
+  - Example 1: typing /fps + chosen_infinitive would query the verb's first person singular conjugation
+
+  - Example 2: typing /pp + chosen_infinitive would query the verb's past participle
+
+- Implementation of a plural command
+
+  - Example: typing /pl + chosen_noun could provide the plural for the noun
 
 - Expanding Scribe's support for current languages by adding words and their genders to the [language files](https://github.com/scribe-org/Scribe-iOS)
 
@@ -88,24 +100,15 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Localizing the Scribe app across various languages and regions
 
-<!--
+- Adding support for more languages to Scribe-iOS (see issues)
 
-- Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
+- Selecting a word would display its gender if it’s a noun
 
-- Planning the potential implementation of a verb conjugation command (see issue)
-
-  - Example 1: typing /fps chosen_infinitive could conjugate the verb to first person singular
-
-  - Example 2: typing /pp chosen_infinitive could query the verb's past participle
-
-- Planning the potential implementation of a plural command (see issue)
-
-  - Example: typing /pl chosen_noun could provide the plural for the noun
+- Allowing words to be colored within preview texts such that the user will consistently see their gender
 
 - Exploring the possibility of doing in-messenger translations
 
-    - Example: type /tr and entering a word would bring up a selectable list
--->
+  - Example: type /tr and entering a word in the preview bar would bring up a selectable list of translations over the keyboard
 
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access (see issue)
 
@@ -127,6 +130,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Make the space bar read the name of the keyboard when it's switched to (see issue)
 
-- Providing an option in the Scribe app to change the coloration into another kind of indicator that would work for color blind users (see issue)
+- Providing an option in the Scribe app to change noun coloration into another kind of indicator that would work for color blind users (see issue)
 
   - Simply adding markers like (M), (F), (N) and (P) before words in the preview would work
