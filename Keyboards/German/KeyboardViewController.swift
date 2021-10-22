@@ -5,6 +5,27 @@
 import UIKit
 
 var proxy : UITextDocumentProxy!
+// A larger vertical bar than the normal key for the cursor.
+let previewCursor = "│"
+
+extension String {
+    func index(from: Int) -> Index {
+            return self.index(startIndex, offsetBy: from)
+    }
+    
+    func substring(to: Int) -> String {
+            let toIndex = index(from: to)
+            return String(self[..<toIndex])
+    }
+    
+    func insertPriorToCursor(char: String) -> String {
+        return substring(to: self.count - 1) + char + previewCursor
+    }
+    
+    func deletePriorToCursor() -> String {
+        return substring(to: self.count - 2) + previewCursor
+    }
+}
 
 class KeyboardViewController: UIInputViewController {
 
@@ -33,7 +54,19 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var deGrammarPreviewLabel: UILabel!
     func setPreviewLabel() {
         deGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
-  }
+    }
+    var previewState: Bool! = false
+    var invalidState: Bool! = false
+    let pluralPrompt: String = "     /pl: " + previewCursor
+    let firstPersonSingularPrompt: String = "     /fps: " + previewCursor
+    let secondPersonSingularPrompt: String = "     /sps: " + previewCursor
+    let thirdPersonSingularPrompt: String = "     /tps: " + previewCursor
+    let firstPersonPluralPrompt: String = "     /fpp: " + previewCursor
+    let secondPersonPluralPrompt: String = "     /spp: " + previewCursor
+    let thirdPersonPluralPrompt: String = "     /tpp: " + previewCursor
+    let pastParticiplePrompt: String = "     /: " + previewCursor
+    lazy var allPrompts : [String] = [pluralPrompt, firstPersonSingularPrompt]
+    
     @IBOutlet weak var deStackView1: UIStackView!
 	@IBOutlet weak var deStackView2: UIStackView!
 	@IBOutlet weak var deStackView3: UIStackView!
@@ -71,14 +104,14 @@ class KeyboardViewController: UIInputViewController {
 	}
 
 
-	func loadInterface(){
+	func loadInterface() {
 		let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
 		keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
 		view.addSubview(keyboardView)
 		loadKeys()
 	}
 
-	func addPadding(to stackView: UIStackView, width: CGFloat, key: String){
+	func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
 		let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
 		padding.setTitleColor(.clear, for: .normal)
 		padding.alpha = 0.0
@@ -99,8 +132,9 @@ class KeyboardViewController: UIInputViewController {
     // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
-	func loadKeys(){
+	func loadKeys() {
         setPreviewLabel()
+        invalidState = false
         
 		keys.forEach{$0.removeFromSuperview()}
 		paddingViews.forEach{$0.removeFromSuperview()}
@@ -163,7 +197,10 @@ class KeyboardViewController: UIInputViewController {
                 deGrammarPreviewLabel?.textColor = .black
                 deGrammarPreviewLabel?.numberOfLines = 0
                 deGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-                deGrammarPreviewLabel?.text = ""
+                if previewState == false {
+                    deGrammarPreviewLabel?.text = ""
+                    deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
+                }
                 deGrammarPreviewLabel?.sizeToFit()
                 
                 // Pad before key is added.
@@ -234,78 +271,120 @@ class KeyboardViewController: UIInputViewController {
 		}
 	}
 
-	func changeKeyboardToNumberKeys(){
+	func changeKeyboardToNumberKeys() {
 		keyboardState = .numbers
 		shiftButtonState = .normal
 		loadKeys()
 	}
-	func changeKeyboardToLetterKeys(){
+	func changeKeyboardToLetterKeys() {
 		keyboardState = .letters
 		loadKeys()
 	}
-	func changeKeyboardToSymbolKeys(){
+	func changeKeyboardToSymbolKeys() {
 		keyboardState = .symbols
 		loadKeys()
 	}
-	func handlDeleteButtonPressed(){
-		proxy.deleteBackward()
+	func handlDeleteButtonPressed() {
+        if previewState != true {
+            proxy.deleteBackward()
+        } else if !(previewState == true && allPrompts.contains((deGrammarPreviewLabel?.text!)!)) {
+        guard
+            let text = deGrammarPreviewLabel?.text,
+            !text.isEmpty
+        else {
+            return
+        }
+            deGrammarPreviewLabel?.text = deGrammarPreviewLabel.text!.deletePriorToCursor()
+        }
+        else {
+            backspaceTimer?.invalidate()
+            backspaceTimer = nil
+        }
 	}
     
-    func nounGenderColoration(){
+    @IBAction func grammarQueryPreview(commandLength: Int) {
+        for _ in 0...commandLength - 1{
+            proxy.deleteBackward()
+        }
+        previewState = true
+    }
+    
+    func pluralPreview() {
+        if proxy.documentContextBeforeInput?.suffix("/pl".count) == "/pl"{
+            if shiftButtonState == .normal {
+                            shiftButtonState = .shift
+                            loadKeys()
+                        }
+            deGrammarPreviewLabel?.text = pluralPrompt
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
+            let commandLength = 3
+            grammarQueryPreview(commandLength: commandLength)
+        }
+    }
+    
+    func firstPersonSingularPreview() {
+        if proxy.documentContextBeforeInput?.suffix("/fps".count) == "/fps"{
+            deGrammarPreviewLabel?.text = firstPersonSingularPrompt
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
+            let commandLength = 4
+            grammarQueryPreview(commandLength: commandLength)
+        }
+    }
+    
+    func queryPlural() {
+        if deGrammarPreviewLabel?.text == "     /pl: Buch" + previewCursor{
+            proxy.insertText("Bücher ")
+        } else if ((deGrammarPreviewLabel?.text?.prefix(pluralPrompt.count))! == pluralPrompt) && (deGrammarPreviewLabel?.text!.count ?? pluralPrompt.count > pluralPrompt.count) {
+            invalidState = true
+        }
+    }
+    func queryFirstPersonSingular() {
+        if deGrammarPreviewLabel?.text == "     /fps: gehen" + previewCursor{
+            proxy.insertText("gehe ")
+        } else if ((deGrammarPreviewLabel?.text?.prefix(firstPersonSingularPrompt.count))! == firstPersonSingularPrompt) && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPrompt.count > firstPersonSingularPrompt.count) {
+            invalidState = true
+        }
+    }
+    
+    func selectedNounGenderColoration() {
         if proxy.selectedText == "Buch" {
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
             deGrammarPreviewLabel?.text = "Buch"
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
+    }
+    
+    func typedNounGenderColoration() {
         if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch "{
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
-            deGrammarPreviewLabel?.text = "Buch"
+            deGrammarPreviewLabel?.text = "(N) Buch"
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
         if proxy.documentContextBeforeInput?.suffix("Bücher ".count) == "Bücher "{
             deGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme
-            deGrammarPreviewLabel?.text = "Bücher"
+            deGrammarPreviewLabel?.text = "(PL) Bücher"
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
         if proxy.documentContextBeforeInput?.suffix("Frau ".count) == "Frau "{
             deGrammarPreviewLabel?.textColor = Constants.previewRedLightTheme
-            deGrammarPreviewLabel?.text = "Frau"
+            deGrammarPreviewLabel?.text = "(F) Frau"
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
         if proxy.documentContextBeforeInput?.suffix("Tisch ".count) == "Tisch "{
             deGrammarPreviewLabel?.textColor = Constants.previewBlueLightTheme
-            deGrammarPreviewLabel?.text = "Tisch"
+            deGrammarPreviewLabel?.text = "(M) Tisch"
+            deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
     }
-    func clearPreviewLabel(){
-        deGrammarPreviewLabel?.textColor = UIColor.black
-        deGrammarPreviewLabel?.text = " "
-    }
-
-    func pluralFuncCapitalization(){
-        if proxy.documentContextBeforeInput?.suffix("pl(".count) == "pl("{
-            changeKeyboardToLetterKeys()
-            if shiftButtonState == .normal {
-                shiftButtonState = .shift
-                loadKeys()
-            }
-        }
-    }
-    
-    func nounSingularToPlural(){
-        if proxy.documentContextBeforeInput?.suffix("pl(Buch)".count) == "pl(Buch)"{
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.deleteBackward()
-            proxy.insertText("Bücher")
-            proxy.insertText(" ")
-            nounGenderColoration()
+    func clearPreviewLabel() {
+        if previewState != true {
+            deGrammarPreviewLabel?.textColor = UIColor.black
+            deGrammarPreviewLabel?.text = " "
         }
     }
 
@@ -321,8 +400,12 @@ class KeyboardViewController: UIInputViewController {
 				shiftButtonState = .normal
 				loadKeys()
 			}
+            // Prevent the preview state prompt from being deleted.
+            if previewState == true && allPrompts.contains((deGrammarPreviewLabel?.text!)!) {
+                return
+            }
 			handlDeleteButtonPressed()
-            if proxy.documentContextBeforeInput == nil  {
+            if proxy.documentContextBeforeInput == nil && previewState != true{
                 if keyboardState == .letters && shiftButtonState == .normal {
                     shiftButtonState = .shift
                     loadKeys()
@@ -330,16 +413,43 @@ class KeyboardViewController: UIInputViewController {
             }
             clearPreviewLabel()
 		case "Leerzeichen":
-			proxy.insertText(" ")
-            nounGenderColoration()
+            if previewState != true {
+                proxy.insertText(" ")
+            } else {
+                deGrammarPreviewLabel?.text! += " "
+            }
+            typedNounGenderColoration()
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
 		case "🌐":
 			break
 		case "↵":
-			proxy.insertText("\n")
-            clearPreviewLabel()
+            queryPlural()
+            queryFirstPersonSingular()
+            if previewState == false {
+                proxy.insertText("\n")
+                clearPreviewLabel()
+            } else if invalidState == true {
+                previewState = false
+                deGrammarPreviewLabel?.text = "Not in directory"
+                deGrammarPreviewLabel?.textColor = .black
+                deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
+            }
+            else {
+                previewState = false
+                clearPreviewLabel()
+                typedNounGenderColoration()
+                // Auto-capitalization if at the start of the proxy.
+                proxy.insertText(" ")
+                if proxy.documentContextBeforeInput == " " {
+                    if shiftButtonState == .normal {
+                                    shiftButtonState = .shift
+                                    loadKeys()
+                                }
+                }
+                proxy.deleteBackward()
+            }
 		case "123":
 			changeKeyboardToNumberKeys()
             clearPreviewLabel()
@@ -347,7 +457,19 @@ class KeyboardViewController: UIInputViewController {
 			changeKeyboardToLetterKeys()
             clearPreviewLabel()
         case "'":
-            proxy.insertText("'")
+            if previewState != true {
+                proxy.insertText("'")
+            } else {
+                deGrammarPreviewLabel?.text! += "'"
+            }
+            changeKeyboardToLetterKeys()
+            clearPreviewLabel()
+        case "/":
+            if previewState != true {
+                proxy.insertText("/")
+            } else {
+                deGrammarPreviewLabel?.text! += "/"
+            }
             changeKeyboardToLetterKeys()
             clearPreviewLabel()
 		case "#+=":
@@ -357,24 +479,23 @@ class KeyboardViewController: UIInputViewController {
 			shiftButtonState = shiftButtonState == .normal ? .shift : .normal
 			loadKeys()
             clearPreviewLabel()
-        case "(":
-            proxy.insertText("(")
-            pluralFuncCapitalization()
-            clearPreviewLabel()
-        case ")":
-            proxy.insertText(")")
-            nounSingularToPlural()
 		default:
 			if shiftButtonState == .shift {
 				shiftButtonState = .normal
 				loadKeys()
 			}
-			proxy.insertText(keyToDisplay)
-            clearPreviewLabel()
+            if previewState == false {
+                proxy.insertText(keyToDisplay)
+                pluralPreview()
+                firstPersonSingularPreview()
+                clearPreviewLabel()
+            } else {
+                deGrammarPreviewLabel?.text = deGrammarPreviewLabel?.text!.insertPriorToCursor(char: keyToDisplay)
+            }
 		}
 	}
 
-	@objc func keyMultiPress(_ sender: UIButton, event: UIEvent){
+	@objc func keyMultiPress(_ sender: UIButton, event: UIEvent) {
 		guard let originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
 		let touch: UITouch = event.allTouches!.first!
@@ -385,9 +506,15 @@ class KeyboardViewController: UIInputViewController {
 		}
         // Double space period shortcut.
         if (touch.tapCount == 2 && originalKey == "Leerzeichen" && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1) {
-            if proxy.documentContextBeforeInput?.suffix(2) != "  " {
+            if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState != true {
                 proxy.deleteBackward()
                 proxy.insertText(". ")
+                shiftButtonState = .shift
+                loadKeys()
+            } else if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == true {
+                let previewText = deGrammarPreviewLabel?.text!
+                deGrammarPreviewLabel?.text = String((previewText?.dropLast())!)
+                deGrammarPreviewLabel?.text! += ". "
                 shiftButtonState = .shift
                 loadKeys()
             }
@@ -395,24 +522,28 @@ class KeyboardViewController: UIInputViewController {
         }
 	}
 
-	@objc func keyLongPressed(_ gesture: UIGestureRecognizer){
-		if gesture.state == .began {
-			backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
-				self.handlDeleteButtonPressed()
-			}
-		} else if gesture.state == .ended || gesture.state == .cancelled {
-			backspaceTimer?.invalidate()
-			backspaceTimer = nil
-			(gesture.view as! UIButton).backgroundColor = Constants.specialKeyColor
-		}
+	@objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
+        // Prevent the preview state prompt from being deleted.
+        if previewState == true && allPrompts.contains((deGrammarPreviewLabel?.text!)!) {
+            gesture.state = .cancelled
+        }
+        if gesture.state == .began {
+            backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+                self.handlDeleteButtonPressed()
+            }
+        } else if gesture.state == .ended || gesture.state == .cancelled {
+            backspaceTimer?.invalidate()
+            backspaceTimer = nil
+            (gesture.view as! UIButton).backgroundColor = Constants.specialKeyColor
+        }
 	}
 
-	@objc func keyUntouched(_ sender: UIButton){
+	@objc func keyUntouched(_ sender: UIButton) {
 		guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
 		sender.backgroundColor = isSpecial ? Constants.specialKeyColor : Constants.keyColor
 	}
 
-	@objc func keyTouchDown(_ sender: UIButton){
+	@objc func keyTouchDown(_ sender: UIButton) {
 		sender.backgroundColor = Constants.keyPressedColor
 	}
 
