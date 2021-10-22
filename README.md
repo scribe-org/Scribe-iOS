@@ -33,31 +33,26 @@ Users access Scribe language keyboards through the following:
 
 # Features [`↩`](#contents) <a id="features"></a>
 
+### Grammar queries
+
+Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar. The desired word form is then inserted with a press of the return key.
+
+Examples of this include:
+
+- /pl provides the plural of a noun
+- /fps provides the first person singular of a verb
+
+An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it switches to the alphabetic keys.
+
 ### Noun-gender coloration
 
 Scribe colors nouns according to the following conventions:
 
-- Feminine nouns are colored red 🟥
-- Masculine nouns are colored blue 🟦
-- Neutral nouns are colored green 🟩
-- Plural nouns are colored orange 🟧
-- Nouns with more than one gender are multicolored
-
-Markers are also planned for color blind users (see issue).
-
-<!--
-### Grammar queries
-
-Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar, with the desired word form then being inserted with a press of the return key.
-
-Examples of this include:
-
-- /pl provides the plural of the noun
-- /fps provides the first person singular of the verb
-- /pp provides the past participle of the verb
-
-An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
--->
+- Feminine nouns are colored red 🟥 and marked with (F)
+- Masculine nouns are colored blue 🟦 and marked with (M)
+- Neutral nouns are colored green 🟩 and marked with (N)
+- Plural nouns are colored orange 🟧 and marked with (PL)
+- Nouns with more than one gender are multicolored and marked with all genders using commas
 
 ### iOS and iPadOS system keyboard functionality
 
