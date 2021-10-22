@@ -37,10 +37,12 @@ Users access Scribe language keyboards through the following:
 
 Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar. The desired word form is then inserted with a press of the return key.
 
-Examples of this include:
+### Query Commands and Examples
 
-- /pl provides the plural of a noun
-- /fps provides the first person singular of a verb
+| Command | Description           | Example            |
+| :------ | :-------------------- | :----------------- |
+| /pl     | Plural of a Noun      | /pl Buch -> Bücher |
+| /fps    | First Person Singular | /fps gehen -> gehe |
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 
@@ -79,9 +81,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Expanding Scribe's support for current languages by adding to the [language files](https://github.com/scribe-org/Scribe-iOS)
 
-  - Nouns added should have their gender and plural
+  - Nouns should have their gender and plural
 
-  - Verbs added should have all conjugations
+  - Verbs should have all conjugations
 
   - Pull requests are more than welcome!
 
