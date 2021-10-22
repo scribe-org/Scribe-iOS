@@ -42,7 +42,7 @@ Examples of this include:
 - /pl provides the plural of a noun
 - /fps provides the first person singular of a verb
 
-An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it switches to the alphabetic keys.
+An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 
 ## Noun-Gender Coloration
 
