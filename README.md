@@ -33,7 +33,7 @@ Users access Scribe language keyboards through the following:
 
 # Features [`↩`](#contents) <a id="features"></a>
 
-### Grammar queries
+## Grammar Queries
 
 Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar. The desired word form is then inserted with a press of the return key.
 
@@ -44,7 +44,7 @@ Examples of this include:
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it switches to the alphabetic keys.
 
-### Noun-gender coloration
+## Noun-Gender Coloration
 
 Scribe colors nouns according to the following conventions:
 
@@ -54,7 +54,7 @@ Scribe colors nouns according to the following conventions:
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Nouns with more than one gender are multicolored and marked with all genders using commas
 
-### iOS and iPadOS system keyboard functionality
+## iOS and iPadOS System Keyboard Functionality
 
 The goal is for Scribe keyboards have all the functionality of system keyboards.
 
