@@ -334,14 +334,16 @@ class KeyboardViewController: UIInputViewController {
     func queryPlural() {
         if deGrammarPreviewLabel?.text == "     /pl: Buch" + previewCursor{
             proxy.insertText("Bücher ")
-        } else if ((deGrammarPreviewLabel?.text?.prefix(pluralPrompt.count))! == pluralPrompt) && (deGrammarPreviewLabel?.text!.count ?? pluralPrompt.count > pluralPrompt.count) {
+        // Check for prompt without cursor.
+        } else if ((deGrammarPreviewLabel?.text?.prefix("     /pl: ".count))! == "     /pl: ") && (deGrammarPreviewLabel?.text!.count ?? pluralPrompt.count > "     /pl: ".count + 1) {
             invalidState = true
         }
     }
     func queryFirstPersonSingular() {
         if deGrammarPreviewLabel?.text == "     /fps: gehen" + previewCursor{
             proxy.insertText("gehe ")
-        } else if ((deGrammarPreviewLabel?.text?.prefix(firstPersonSingularPrompt.count))! == firstPersonSingularPrompt) && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPrompt.count > firstPersonSingularPrompt.count) {
+        // Check for prompt without cursor.
+        } else if ((deGrammarPreviewLabel?.text?.prefix("     /fps: ".count))! == "     /fps: ") && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPrompt.count > "     /fps: ".count + 1) {
             invalidState = true
         }
     }
@@ -432,6 +434,15 @@ class KeyboardViewController: UIInputViewController {
                 clearPreviewLabel()
             } else if invalidState == true {
                 previewState = false
+                // Auto-capitalization if at the start of the proxy.
+                proxy.insertText(" ")
+                if proxy.documentContextBeforeInput == " " {
+                    if shiftButtonState == .normal {
+                                    shiftButtonState = .shift
+                                    loadKeys()
+                                }
+                }
+                proxy.deleteBackward()
                 deGrammarPreviewLabel?.text = "Not in directory"
                 deGrammarPreviewLabel?.textColor = .black
                 deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
