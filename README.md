@@ -39,17 +39,17 @@ Scribe allows users to programmatically query words based on grammar rules. Typi
 
 ### Query Commands and Examples
 
-| Command | Description            | German Example         | Spanish Example          |
-| :------ | :--------------------- | :--------------------- | :----------------------- |
-| /pl     | Plural of a Noun       | /pl Buch -> Bücher     | /pl Régimen -> Regímenes |
-| /fps    | First Person Singular  | /fps gehen -> gehe     | /fps ir -> voy           |
-| /sps    | Second Person Singular | /sps gehen -> gehst    | /sps ir -> vas           |
-| /tps    | Third Person Singular  | /tps gehen -> geht     | /tps ir -> va            |
-| /fpp    | First Person Plural    | /fpp gehen -> gehen    | /fpp ir -> vamos         |
-| /spp    | Second Person Plural   | /spp gehen -> geht     | /spp ir -> vais          |
-| /tpp    | Third Person Plural    | /tpp gehen -> gehe     | /tpp ir -> van           |
-| /prp    | Present Participle     | /prp gehen -> gehend   | /prp ir -> yendo         |
-| /pap    | Past Participle        | /pap gehen -> gegangen | /pap ir -> ido           |
+| Command | Description            | Spanish Example          | German Example         |
+| :------ | :--------------------- | :----------------------- | :--------------------- |
+| /pl     | Plural of a Noun       | /pl Régimen -> Regímenes | /pl Buch -> Bücher     |
+| /fps    | First Person Singular  | /fps ir -> voy           | /fps gehen -> gehe     |
+| /sps    | Second Person Singular | /sps ir -> vas           | /sps gehen -> gehst    |
+| /tps    | Third Person Singular  | /tps ir -> va            | /tps gehen -> geht     |
+| /fpp    | First Person Plural    | /fpp ir -> vamos         | /fpp gehen -> gehen    |
+| /spp    | Second Person Plural   | /spp ir -> vais          | /spp gehen -> geht     |
+| /tpp    | Third Person Plural    | /tpp ir -> van           | /tpp gehen -> gehe     |
+| /prp    | Present Participle     | /prp ir -> yendo         | /prp gehen -> gehend   |
+| /pap    | Past Participle        | /pap ir -> ido           | /pap gehen -> gegangen |
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 
@@ -90,7 +90,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
-- Expanding Scribe's support for current languages by adding to the [language files](https://github.com/scribe-org/Scribe-iOS)
+- Expanding Scribe's support for current languages by adding to the [grammar files](https://github.com/scribe-org/Scribe-iOS)
 
   - Nouns should have their gender and plural
 
@@ -110,7 +110,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Options: long holding a key such as the shift or 123 keys
 
-- Localizing the Scribe app across various languages and regions
+- Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
 - Allowing words to be colored within preview texts such that the user will consistently see their gender [(see issue)]()
 
