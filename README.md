@@ -39,10 +39,10 @@ Scribe allows users to programmatically query words based on grammar rules. Typi
 
 ### Query Commands and Examples
 
-| Command | Description           | Example            |
-| :------ | :-------------------- | :----------------- |
-| /pl     | Plural of a Noun      | /pl Buch -> Bücher |
-| /fps    | First Person Singular | /fps gehen -> gehe |
+| Command | Description           | German Example     | Spanish Example          |
+| :------ | :-------------------- | :----------------- | :----------------------- |
+| /pl     | Plural of a Noun      | /pl Buch -> Bücher | /pl Régimen -> Regímenes |
+| /fps    | First Person Singular | /fps gehen -> gehe | /fps ir -> voy           |
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 
