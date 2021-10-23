@@ -33,7 +33,7 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var esGrammarPreviewLabel: UILabel!
     func setPreviewLabel() {
         esGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
-  }
+    }
     @IBOutlet weak var esStackView1: UIStackView!
     @IBOutlet weak var esStackView2: UIStackView!
     @IBOutlet weak var esStackView3: UIStackView!
@@ -101,10 +101,10 @@ class KeyboardViewController: UIInputViewController {
 
     func loadKeys(){
         setPreviewLabel()
-        
+
         keys.forEach{$0.removeFromSuperview()}
         paddingViews.forEach{$0.removeFromSuperview()}
-        
+
         // buttonWidth determined by the top row.
         let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
 
@@ -136,23 +136,23 @@ class KeyboardViewController: UIInputViewController {
                 button.layer.setValue(key, forKey: "original")
                 button.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
                 button.layer.setValue(false, forKey: "isSpecial")
-                
+
                 button.setTitle(keyToDisplay, for: .normal) // set button character
                 if key == "#+=" || key == "ABC" || key == "123" {
                     button.titleLabel?.font = .systemFont(ofSize: buttonWidth / 1.9)
                 } else {
                     button.titleLabel?.font = .systemFont(ofSize: buttonWidth / 1.6)
                 }
-                
+
                 button.layer.borderColor = keyboardView.backgroundColor?.cgColor
                 button.layer.borderWidth = 3
                 button.layer.cornerRadius = buttonWidth / 4
-                
+
                 button.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
                 button.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
                 button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
                 button.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-                
+
                 esGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
                 esGrammarPreviewLabel?.layer.masksToBounds = true
                 esGrammarPreviewLabel?.font = .systemFont(ofSize: buttonWidth / 1.75)
@@ -235,7 +235,7 @@ class KeyboardViewController: UIInputViewController {
     func handlDeleteButtonPressed(){
         proxy.deleteBackward()
     }
-    
+
     func nounGenderColoration(){
         if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
             esGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme

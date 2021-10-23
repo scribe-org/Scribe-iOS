@@ -36,16 +36,16 @@ extension String {
     func index(from: Int) -> Index {
             return self.index(startIndex, offsetBy: from)
     }
-    
+
     func substring(to: Int) -> String {
             let toIndex = index(from: to)
             return String(self[..<toIndex])
     }
-    
+
     func insertPriorToCursor(char: String) -> String {
         return substring(to: self.count - 1) + char + previewCursor
     }
-    
+
     func deletePriorToCursor() -> String {
         return substring(to: self.count - 2) + previewCursor
     }
@@ -74,14 +74,14 @@ class KeyboardViewController: UIInputViewController {
 
 	var keyboardState: KeyboardState = .letters
 	var shiftButtonState:ShiftButtonState = .normal
-    
+
     @IBOutlet var deGrammarPreviewLabel: UILabel!
     func setPreviewLabel() {
         deGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
     }
     var previewState: Bool! = false
     var invalidState: Bool! = false
-    
+
     @IBOutlet weak var deStackView1: UIStackView!
 	@IBOutlet weak var deStackView2: UIStackView!
 	@IBOutlet weak var deStackView3: UIStackView!
@@ -150,10 +150,10 @@ class KeyboardViewController: UIInputViewController {
 	func loadKeys() {
         setPreviewLabel()
         invalidState = false
-        
+
 		keys.forEach{$0.removeFromSuperview()}
 		paddingViews.forEach{$0.removeFromSuperview()}
-        
+
         // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
 		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
@@ -190,14 +190,14 @@ class KeyboardViewController: UIInputViewController {
 				button.layer.setValue(key, forKey: "original")
 				button.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
 				button.layer.setValue(false, forKey: "isSpecial")
-                
+
 				button.setTitle(keyToDisplay, for: .normal) // set button character
                 if key == "#+=" || key == "ABC" || key == "123" {
                     button.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
                 } else {
                     button.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
                 }
-                
+
 				button.layer.borderColor = keyboardView.backgroundColor?.cgColor
 				button.layer.borderWidth = 3
                 button.layer.cornerRadius = buttonWidth / 4
@@ -205,7 +205,7 @@ class KeyboardViewController: UIInputViewController {
 				button.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
 				button.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
 				button.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-                
+
                 deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
                 deGrammarPreviewLabel?.layer.masksToBounds = true
                 deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
@@ -217,7 +217,7 @@ class KeyboardViewController: UIInputViewController {
                     deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
                 }
                 deGrammarPreviewLabel?.sizeToFit()
-                
+
                 // Pad before key is added.
                 if key == "y"{
                     addPadding(to: deStackView3, width: buttonWidth/3, key: "y")
@@ -237,11 +237,11 @@ class KeyboardViewController: UIInputViewController {
 				default:
 					break
 				}
-                
+
 				if key == "🌐"{
 					nextKeyboardButton = button
 				}
-                
+
                 // Pad after key is added.
                 if key == "m"{
                     addPadding(to: deStackView3, width: buttonWidth/3, key: "m")
@@ -316,14 +316,14 @@ class KeyboardViewController: UIInputViewController {
             backspaceTimer = nil
         }
 	}
-    
+
     @IBAction func grammarQueryPreview(commandLength: Int) {
         for _ in 0...commandLength - 1{
             proxy.deleteBackward()
         }
         previewState = true
     }
-    
+
     func pluralPreview() {
         if proxy.documentContextBeforeInput?.suffix("/pl".count) == "/pl"{
             if shiftButtonState == .normal {
@@ -336,7 +336,7 @@ class KeyboardViewController: UIInputViewController {
             grammarQueryPreview(commandLength: commandLength)
         }
     }
-    
+
     func firstPersonSingularPreview() {
         if proxy.documentContextBeforeInput?.suffix("/fps".count) == "/fps"{
             deGrammarPreviewLabel?.text = firstPersonSingularPromptAndCursor
@@ -345,7 +345,7 @@ class KeyboardViewController: UIInputViewController {
             grammarQueryPreview(commandLength: commandLength)
         }
     }
-    
+
     func queryPlural() {
         if deGrammarPreviewLabel?.text == pluralPrompt + "Buch" + previewCursor {
             proxy.insertText("Bücher ")
@@ -362,7 +362,7 @@ class KeyboardViewController: UIInputViewController {
             invalidState = true
         }
     }
-    
+
     func selectedNounGenderAnnotation() {
         if proxy.selectedText == "Buch" {
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
@@ -371,7 +371,7 @@ class KeyboardViewController: UIInputViewController {
             deGrammarPreviewLabel?.sizeToFit()
         }
     }
-    
+
     func typedNounGenderAnnotation() {
         if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch "{
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
