@@ -64,7 +64,7 @@ class KeyboardViewController: UIInputViewController {
     let firstPersonPluralPrompt: String = "     /fpp: " + previewCursor
     let secondPersonPluralPrompt: String = "     /spp: " + previewCursor
     let thirdPersonPluralPrompt: String = "     /tpp: " + previewCursor
-    let pastParticiplePrompt: String = "     /: " + previewCursor
+    let pastParticiplePrompt: String = "     /pp: " + previewCursor
     lazy var allPrompts : [String] = [pluralPrompt, firstPersonSingularPrompt]
     
     @IBOutlet weak var deStackView1: UIStackView!
@@ -416,7 +416,7 @@ class KeyboardViewController: UIInputViewController {
             if previewState != true {
                 proxy.insertText(" ")
             } else {
-                deGrammarPreviewLabel?.text! += " "
+                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: " "))!
             }
             typedNounGenderColoration()
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
@@ -460,7 +460,7 @@ class KeyboardViewController: UIInputViewController {
             if previewState != true {
                 proxy.insertText("'")
             } else {
-                deGrammarPreviewLabel?.text! += "'"
+                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: "'"))!
             }
             changeKeyboardToLetterKeys()
             clearPreviewLabel()
@@ -468,7 +468,7 @@ class KeyboardViewController: UIInputViewController {
             if previewState != true {
                 proxy.insertText("/")
             } else {
-                deGrammarPreviewLabel?.text! += "/"
+                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: "/"))!
             }
             changeKeyboardToLetterKeys()
             clearPreviewLabel()
@@ -512,9 +512,8 @@ class KeyboardViewController: UIInputViewController {
                 shiftButtonState = .shift
                 loadKeys()
             } else if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == true {
-                let previewText = deGrammarPreviewLabel?.text!
-                deGrammarPreviewLabel?.text = String((previewText?.dropLast())!)
-                deGrammarPreviewLabel?.text! += ". "
+                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.deletePriorToCursor())!
+                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: ". "))!
                 shiftButtonState = .shift
                 loadKeys()
             }
