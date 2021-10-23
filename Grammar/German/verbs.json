@@ -1,0 +1,12 @@
+{
+    "gehen": {
+        "present_participle": "gehend",
+        "past_participle": "gegangen",
+        "first_person_singular": "gehe",
+        "second_person_singular": "gehst",
+        "third_person_singular": "geht",
+        "first_person_plural": "gehen",
+        "second_person_plural": "geht",
+        "third_person_plural": "gehen"
+    }
+}

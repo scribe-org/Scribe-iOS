@@ -181,7 +181,7 @@ class KeyboardViewController: UIInputViewController {
                 }
 
                 // specialKey constraints.
-                if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
+                if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "🌐"{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.5).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
                     button.backgroundColor = Constants.specialKeyColor
@@ -193,7 +193,7 @@ class KeyboardViewController: UIInputViewController {
                             button.setTitle("⇪", for: .normal)
                         }
                     }
-                }else if key == "↵" {
+                }else if key == "123" || key == "↵" {
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 2).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
                     button.backgroundColor = Constants.specialKeyColor

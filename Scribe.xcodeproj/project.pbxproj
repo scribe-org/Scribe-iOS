@@ -16,6 +16,10 @@
 		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38BD215B22D5A26900C6795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD215A22D5A26900C6795D /* Constants.swift */; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D1163E842724565300FCD811 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1163E822724565300FCD811 /* verbs.json */; };
+		D1163E852724565300FCD811 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1163E832724565300FCD811 /* nouns.json */; };
+		D1163E8C27246C6E00FCD811 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1163E8A27246C6E00FCD811 /* verbs.json */; };
+		D1163E8D27246C6E00FCD811 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1163E8B27246C6E00FCD811 /* nouns.json */; };
 		D142638C270B6F2B00D3702D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638A270B6F2B00D3702D /* Constants.swift */; };
 		D142638D270B6F2B00D3702D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638B270B6F2B00D3702D /* Extensions.swift */; };
 		D14B73482719BFD800F90105 /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = D14B73472719BFD800F90105 /* nouns.txt */; };
@@ -71,6 +75,10 @@
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BD215A22D5A26900C6795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D1163E822724565300FCD811 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D1163E832724565300FCD811 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D1163E8A27246C6E00FCD811 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D1163E8B27246C6E00FCD811 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D142638A270B6F2B00D3702D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D142638B270B6F2B00D3702D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D14B73472719BFD800F90105 /* nouns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nouns.txt; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
+				D1163E7F272454E700FCD811 /* Grammar */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213122D5907E00C6795D /* Products */,
@@ -142,7 +151,6 @@
 		38BD214D22D592CA00C6795D /* German */ = {
 			isa = PBXGroup;
 			children = (
-				D14B73492719C48B00F90105 /* Grammar */,
 				38BD214E22D592CA00C6795D /* KeyboardViewController.swift */,
 				38BD215022D592CA00C6795D /* Info.plist */,
 				38BD215A22D5A26900C6795D /* Constants.swift */,
@@ -152,26 +160,38 @@
 			path = German;
 			sourceTree = "<group>";
 		};
-		D14B73492719C48B00F90105 /* Grammar */ = {
+		D1163E7F272454E700FCD811 /* Grammar */ = {
 			isa = PBXGroup;
 			children = (
-				D14B73472719BFD800F90105 /* nouns.txt */,
+				D1163E802724551A00FCD811 /* German */,
+				D1163E812724552500FCD811 /* Spanish */,
 			);
 			path = Grammar;
 			sourceTree = "<group>";
 		};
-		D14B734A2719C79300F90105 /* Grammar */ = {
+		D1163E802724551A00FCD811 /* German */ = {
+			isa = PBXGroup;
+			children = (
+				D14B73472719BFD800F90105 /* nouns.txt */,
+				D1163E832724565300FCD811 /* nouns.json */,
+				D1163E822724565300FCD811 /* verbs.json */,
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
+		D1163E812724552500FCD811 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
 				D14B734B2719C7CD00F90105 /* nouns.txt */,
+				D1163E8B27246C6E00FCD811 /* nouns.json */,
+				D1163E8A27246C6E00FCD811 /* verbs.json */,
 			);
-			path = Grammar;
+			path = Spanish;
 			sourceTree = "<group>";
 		};
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
-				D14B734A2719C79300F90105 /* Grammar */,
 				D1608667270B6D3C00134D48 /* KeyboardViewController.swift */,
 				D1608669270B6D3C00134D48 /* Info.plist */,
 				D142638A270B6F2B00D3702D /* Constants.swift */,
@@ -304,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				D1163E852724565300FCD811 /* nouns.json in Resources */,
+				D1163E842724565300FCD811 /* verbs.json in Resources */,
 				D14B73482719BFD800F90105 /* nouns.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C0ACDC2719E0BA001E11C3 /* Keyboard.xib in Resources */,
+				D1163E8D27246C6E00FCD811 /* nouns.json in Resources */,
+				D1163E8C27246C6E00FCD811 /* verbs.json in Resources */,
 				D14B734C2719C7CD00F90105 /* nouns.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

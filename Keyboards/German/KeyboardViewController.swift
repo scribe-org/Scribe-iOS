@@ -7,6 +7,30 @@ import UIKit
 var proxy : UITextDocumentProxy!
 // A larger vertical bar than the normal key for the cursor.
 let previewCursor = "│"
+let previewPromptSpacing = "     "
+
+let pluralPrompt: String = previewPromptSpacing + "/pl: "
+let pluralPromptAndCursor: String = pluralPrompt + previewCursor
+
+let firstPersonSingularPrompt: String = previewPromptSpacing + "/fps: "
+let secondPersonSingularPrompt: String = previewPromptSpacing + "/sps: "
+let thirdPersonSingularPrompt: String = previewPromptSpacing + "/tps: "
+let firstPersonPluralPrompt: String = previewPromptSpacing + "/fpp: "
+let secondPersonPluralPrompt: String = previewPromptSpacing + "/spp: "
+let thirdPersonPluralPrompt: String = previewPromptSpacing + "/tpp: "
+let presentParticiplePrompt: String = previewPromptSpacing + "/prp: "
+let pastParticiplePrompt: String = previewPromptSpacing + "/pap: "
+
+let firstPersonSingularPromptAndCursor: String = firstPersonSingularPrompt + previewCursor
+let secondPersonSingularPromptAndCursor: String = secondPersonSingularPrompt + previewCursor
+let thirdPersonSingularPromptAndCursor: String = thirdPersonSingularPrompt + previewCursor
+let firstPersonPluralPromptAndCursor: String = firstPersonPluralPrompt + previewCursor
+let secondPersonPluralPromptAndCursor: String = secondPersonPluralPrompt + previewCursor
+let thirdPersonPluralPromptAndCursor: String = thirdPersonPluralPrompt + previewCursor
+let presentParticiplePromptAndCursor: String = presentParticiplePrompt + previewCursor
+let pastParticiplePromptAndCursor: String = pastParticiplePrompt + previewCursor
+
+let allPrompts : [String] = [pluralPromptAndCursor, firstPersonSingularPromptAndCursor]
 
 extension String {
     func index(from: Int) -> Index {
@@ -57,16 +81,6 @@ class KeyboardViewController: UIInputViewController {
     }
     var previewState: Bool! = false
     var invalidState: Bool! = false
-    let pluralPrompt: String = "     /pl: " + previewCursor
-    let firstPersonSingularPrompt: String = "     /fps: " + previewCursor
-    let secondPersonSingularPrompt: String = "     /sps: " + previewCursor
-    let thirdPersonSingularPrompt: String = "     /tps: " + previewCursor
-    let firstPersonPluralPrompt: String = "     /fpp: " + previewCursor
-    let secondPersonPluralPrompt: String = "     /spp: " + previewCursor
-    let thirdPersonPluralPrompt: String = "     /tpp: " + previewCursor
-    let presentParticiplePrompt: String = "     /prp: " + previewCursor
-    let pastParticiplePrompt: String = "     /pap: " + previewCursor
-    lazy var allPrompts : [String] = [pluralPrompt, firstPersonSingularPrompt]
     
     @IBOutlet weak var deStackView1: UIStackView!
 	@IBOutlet weak var deStackView2: UIStackView!
@@ -234,7 +248,7 @@ class KeyboardViewController: UIInputViewController {
                 }
 
 				// specialKey constraints.
-				if key == "⌫" || key == "#+=" || key == "ABC" || key == "123" || key == "⇧" || key == "🌐"{
+				if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "🌐"{
 					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
 					button.layer.setValue(true, forKey: "isSpecial")
 					button.backgroundColor = Constants.specialKeyColor
@@ -246,7 +260,7 @@ class KeyboardViewController: UIInputViewController {
 							button.setTitle("⇪", for: .normal)
 						}
 					}
-                }else if key == "↵" {
+                }else if key == "123" || key == "↵" {
                     button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
                     button.backgroundColor = Constants.specialKeyColor
@@ -316,7 +330,7 @@ class KeyboardViewController: UIInputViewController {
                             shiftButtonState = .shift
                             loadKeys()
                         }
-            deGrammarPreviewLabel?.text = pluralPrompt
+            deGrammarPreviewLabel?.text = pluralPromptAndCursor
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
             let commandLength = 3
             grammarQueryPreview(commandLength: commandLength)
@@ -325,7 +339,7 @@ class KeyboardViewController: UIInputViewController {
     
     func firstPersonSingularPreview() {
         if proxy.documentContextBeforeInput?.suffix("/fps".count) == "/fps"{
-            deGrammarPreviewLabel?.text = firstPersonSingularPrompt
+            deGrammarPreviewLabel?.text = firstPersonSingularPromptAndCursor
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
             let commandLength = 4
             grammarQueryPreview(commandLength: commandLength)
@@ -333,18 +347,18 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func queryPlural() {
-        if deGrammarPreviewLabel?.text == "     /pl: Buch" + previewCursor{
+        if deGrammarPreviewLabel?.text == pluralPrompt + "Buch" + previewCursor {
             proxy.insertText("Bücher ")
         // Check for prompt without cursor.
-        } else if ((deGrammarPreviewLabel?.text?.prefix("     /pl: ".count))! == "     /pl: ") && (deGrammarPreviewLabel?.text!.count ?? pluralPrompt.count > "     /pl: ".count + 1) {
+        } else if ((deGrammarPreviewLabel?.text?.prefix(pluralPrompt.count))! == pluralPrompt) && (deGrammarPreviewLabel?.text!.count ?? pluralPromptAndCursor.count > pluralPrompt.count + 1) {
             invalidState = true
         }
     }
     func queryFirstPersonSingular() {
-        if deGrammarPreviewLabel?.text == "     /fps: gehen" + previewCursor{
+        if deGrammarPreviewLabel?.text == firstPersonSingularPrompt + "gehen" + previewCursor {
             proxy.insertText("gehe ")
         // Check for prompt without cursor.
-        } else if ((deGrammarPreviewLabel?.text?.prefix("     /fps: ".count))! == "     /fps: ") && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPrompt.count > "     /fps: ".count + 1) {
+        } else if ((deGrammarPreviewLabel?.text?.prefix(firstPersonSingularPrompt.count))! == firstPersonSingularPrompt) && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPromptAndCursor.count > firstPersonSingularPrompt.count + 1) {
             invalidState = true
         }
     }
