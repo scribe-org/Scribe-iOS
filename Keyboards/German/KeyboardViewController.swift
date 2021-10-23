@@ -346,16 +346,16 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    func selectedNounGenderColoration() {
+    func selectedNounGenderAnnotation() {
         if proxy.selectedText == "Buch" {
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
-            deGrammarPreviewLabel?.text = "Buch"
+            deGrammarPreviewLabel?.text = "(N) Buch"
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
     }
     
-    func typedNounGenderColoration() {
+    func typedNounGenderAnnotation() {
         if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch "{
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
             deGrammarPreviewLabel?.text = "(N) Buch"
@@ -418,7 +418,7 @@ class KeyboardViewController: UIInputViewController {
             } else {
                 deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: " "))!
             }
-            typedNounGenderColoration()
+            typedNounGenderAnnotation()
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
@@ -439,7 +439,7 @@ class KeyboardViewController: UIInputViewController {
             else {
                 previewState = false
                 clearPreviewLabel()
-                typedNounGenderColoration()
+                typedNounGenderAnnotation()
                 // Auto-capitalization if at the start of the proxy.
                 proxy.insertText(" ")
                 if proxy.documentContextBeforeInput == " " {

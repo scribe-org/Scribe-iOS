@@ -46,15 +46,19 @@ Scribe allows users to programmatically query words based on grammar rules. Typi
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 
-## Noun-Gender Coloration
+## Noun-Gender Annotation
 
-Scribe colors nouns according to the following conventions:
+Scribe annotates nouns according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
 - Neutral nouns are colored green 🟩 and marked with (N)
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Nouns with more than one gender are multicolored and marked with all genders using commas
+
+<!--
+Genders are displayed once a user has typed a noun and pressed space or while a noun is selected.
+-->
 
 ## iOS and iPadOS System Keyboard Functionality
 
@@ -93,7 +97,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Problem: users don't know what the names of all the verb tenses are
 
-  - Possible solution: a button could be added to the keyboard that allows a user to select from a series of verb conjugation charts, with this selection putting in the command so that the user can learn it
+  - Solution: allowing a user to bring up verb conjugation charts over the keyboard with a command or button press
+
+  - Options: long holding a key such as the shift or 123 keys
 
 - Localizing the Scribe app across various languages and regions
 
