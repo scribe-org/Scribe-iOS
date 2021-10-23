@@ -39,10 +39,17 @@ Scribe allows users to programmatically query words based on grammar rules. Typi
 
 ### Query Commands and Examples
 
-| Command | Description           | German Example     | Spanish Example          |
-| :------ | :-------------------- | :----------------- | :----------------------- |
-| /pl     | Plural of a Noun      | /pl Buch -> Bücher | /pl Régimen -> Regímenes |
-| /fps    | First Person Singular | /fps gehen -> gehe | /fps ir -> voy           |
+| Command | Description            | German Example         | Spanish Example          |
+| :------ | :--------------------- | :--------------------- | :----------------------- |
+| /pl     | Plural of a Noun       | /pl Buch -> Bücher     | /pl Régimen -> Regímenes |
+| /fps    | First Person Singular  | /fps gehen -> gehe     | /fps ir -> voy           |
+| /sps    | Second Person Singular | /sps gehen -> gehst    | /sps ir -> vas           |
+| /tps    | Third Person Singular  | /tps gehen -> geht     | /tps ir -> va            |
+| /fpp    | First Person Plural    | /fpp gehen -> gehen    | /fpp ir -> vamos         |
+| /spp    | Second Person Plural   | /spp gehen -> geht     | /spp ir -> vais          |
+| /tpp    | Third Person Plural    | /tpp gehen -> gehe     | /tpp ir -> van           |
+| /prp    | Present Participle     | /prp gehen -> gehend   | /prp ir -> yendo         |
+| /pap    | Past Participle        | /pap gehen -> gegangen | /pap ir -> ido           |
 
 An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
 

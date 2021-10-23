@@ -64,7 +64,8 @@ class KeyboardViewController: UIInputViewController {
     let firstPersonPluralPrompt: String = "     /fpp: " + previewCursor
     let secondPersonPluralPrompt: String = "     /spp: " + previewCursor
     let thirdPersonPluralPrompt: String = "     /tpp: " + previewCursor
-    let pastParticiplePrompt: String = "     /pp: " + previewCursor
+    let presentParticiplePrompt: String = "     /prp: " + previewCursor
+    let pastParticiplePrompt: String = "     /pap: " + previewCursor
     lazy var allPrompts : [String] = [pluralPrompt, firstPersonSingularPrompt]
     
     @IBOutlet weak var deStackView1: UIStackView!
