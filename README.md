@@ -14,7 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include verb conjugation and gender based coloration of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include verb conjugation and gender based annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
