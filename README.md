@@ -58,7 +58,7 @@ Scribe colors nouns according to the following conventions:
 
 ## iOS and iPadOS System Keyboard Functionality
 
-The goal is for Scribe keyboards have all the functionality of system keyboards.
+The goal is that Scribe keyboards have all the functionality of system keyboards.
 
 <details><summary><strong>Currently implemented features</strong></summary>
 <p>
@@ -88,6 +88,12 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - Pull requests are more than welcome!
 
 - Selecting a noun would display its gender in the preview bar (see issue)
+
+- Allowing a user to select the verb tense that they want to conjugate into (see issue)
+
+  - Problem: users don't know what the names of all the verb tenses are
+
+  - Possible solution: a button could be added to the keyboard that allows a user to select from a series of verb conjugation charts, with this selection putting in the command so that the user can learn it
 
 - Localizing the Scribe app across various languages and regions
 
