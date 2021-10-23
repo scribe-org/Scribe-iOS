@@ -91,9 +91,11 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Pull requests are more than welcome!
 
-- Selecting a noun would display its gender in the preview bar (see issue)
+- Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
-- Allowing a user to select the verb tense that they want to conjugate into (see issue)
+- Selecting a noun would display its gender in the preview bar [(see issue)]()
+
+- Allowing a user to select the verb tense that they want to conjugate into [(see issue)]()
 
   - Problem: users don't know what the names of all the verb tenses are
 
@@ -103,34 +105,28 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Localizing the Scribe app across various languages and regions
 
-- Adding support for more languages to Scribe-iOS (see issues)
+- Allowing words to be colored within preview texts such that the user will consistently see their gender [(see issue)]()
 
-- Allowing words to be colored within preview texts such that the user will consistently see their gender (see issue)
-
-- Exploring the possibility of doing in-messenger translations (see issue)
+- Exploring the possibility of doing in-messenger translations [(see issue)]()
 
   - Example: type /tr and entering a word in the preview bar would bring up a selectable list of translations over the keyboard
 
   - The base functionality would translate from the system language into the language of the keyboard, with the ability to choose a language from which translations would be made being ideal
 
-- Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access (see issue)
+- Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access [(see issue)]()
 
   - This would likely best be implemented via a Python package that allows users to access data within JSON files stored in the package
 
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
 
-- Converting Scribe keyboards into downloadable packs within the app (see issue)
+- Converting Scribe keyboards into downloadable packs within the app [(see issue)]()
 
   - This would help keep the app size to a minimum
 
-- Make the shift key change color after being pressed (see issue)
+- Make the shift key change color after being pressed [(see issue)]()
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
-- Creating a UI field where grammar queries would take place when triggered (see issue)
+- Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
 
-  - This would allow for the removal of parentheses around words that the user wants to convert
-
-- Make the space bar read the name of the keyboard when it's switched to (see issue)
-
-- Giving users the ability to map grammar queries to their own desired commands (see issue)
+- Giving users the ability to map grammar queries to their own desired commands [(see issue)]()
