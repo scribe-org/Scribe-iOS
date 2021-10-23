@@ -106,9 +106,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Problem: users don't know what the names of all the verb tenses are
 
-  - Solution: allowing a user to bring up verb conjugation charts over the keyboard with a command or button press
-
-  - Options: long holding a key such as the shift or 123 keys
+  - Solution: allowing a user to bring up verb conjugation charts over the keyboard with a command or by pressing the preview bar
 
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
