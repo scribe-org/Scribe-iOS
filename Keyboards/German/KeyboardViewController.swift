@@ -2,6 +2,7 @@
 //  KeyboardViewController.swift
 //
 
+import Foundation
 import UIKit
 
 var proxy : UITextDocumentProxy!
@@ -13,22 +14,7 @@ let pluralPrompt: String = previewPromptSpacing + "/pl: "
 let pluralPromptAndCursor: String = pluralPrompt + previewCursor
 
 let firstPersonSingularPrompt: String = previewPromptSpacing + "/fps: "
-let secondPersonSingularPrompt: String = previewPromptSpacing + "/sps: "
-let thirdPersonSingularPrompt: String = previewPromptSpacing + "/tps: "
-let firstPersonPluralPrompt: String = previewPromptSpacing + "/fpp: "
-let secondPersonPluralPrompt: String = previewPromptSpacing + "/spp: "
-let thirdPersonPluralPrompt: String = previewPromptSpacing + "/tpp: "
-let presentParticiplePrompt: String = previewPromptSpacing + "/prp: "
-let pastParticiplePrompt: String = previewPromptSpacing + "/pap: "
-
 let firstPersonSingularPromptAndCursor: String = firstPersonSingularPrompt + previewCursor
-let secondPersonSingularPromptAndCursor: String = secondPersonSingularPrompt + previewCursor
-let thirdPersonSingularPromptAndCursor: String = thirdPersonSingularPrompt + previewCursor
-let firstPersonPluralPromptAndCursor: String = firstPersonPluralPrompt + previewCursor
-let secondPersonPluralPromptAndCursor: String = secondPersonPluralPrompt + previewCursor
-let thirdPersonPluralPromptAndCursor: String = thirdPersonPluralPrompt + previewCursor
-let presentParticiplePromptAndCursor: String = presentParticiplePrompt + previewCursor
-let pastParticiplePromptAndCursor: String = pastParticiplePrompt + previewCursor
 
 let allPrompts : [String] = [pluralPromptAndCursor, firstPersonSingularPromptAndCursor]
 
@@ -50,6 +36,23 @@ extension String {
         return substring(to: self.count - 2) + previewCursor
     }
 }
+
+func loadJsonToDict(filepath filePath: String) -> Dictionary<String, AnyObject>? {
+    let path = UserDefaults.standard.string(forKey: filePath)
+    if let url = Bundle.main.url(forResource: path, withExtension: "json") {
+        do {
+            let data = try Data(contentsOf: url, options: .mappedIfSafe)
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+            return jsonData as? Dictionary<String, AnyObject>
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    return nil
+}
+
+let germanNouns = loadJsonToDict(filepath: "Grammar/German/nouns")
+let germanVerbs = loadJsonToDict(filepath: "Grammar/German/verbs")
 
 class KeyboardViewController: UIInputViewController {
 
@@ -219,11 +222,11 @@ class KeyboardViewController: UIInputViewController {
                 deGrammarPreviewLabel?.sizeToFit()
 
                 // Pad before key is added.
-                if key == "y"{
+                if key == "y" {
                     addPadding(to: deStackView3, width: buttonWidth/3, key: "y")
                 }
 
-				if key == "⌫"{
+				if key == "⌫" {
 					let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
 					button.addGestureRecognizer(longPressRecognizer)
 				}
@@ -238,17 +241,17 @@ class KeyboardViewController: UIInputViewController {
 					break
 				}
 
-				if key == "🌐"{
+				if key == "🌐" {
 					nextKeyboardButton = button
 				}
 
                 // Pad after key is added.
-                if key == "m"{
+                if key == "m" {
                     addPadding(to: deStackView3, width: buttonWidth/3, key: "m")
                 }
 
 				// specialKey constraints.
-				if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "🌐"{
+				if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "🌐" {
 					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
 					button.layer.setValue(true, forKey: "isSpecial")
 					button.backgroundColor = Constants.specialKeyColor
@@ -266,7 +269,7 @@ class KeyboardViewController: UIInputViewController {
                     button.backgroundColor = Constants.specialKeyColor
                 }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 {
 					button.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
-				}else if key != "Leerzeichen"{
+				}else if key != "Leerzeichen" {
 					button.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
 				}else{
 					button.layer.setValue(key, forKey: "original")
@@ -318,14 +321,14 @@ class KeyboardViewController: UIInputViewController {
 	}
 
     @IBAction func grammarQueryPreview(commandLength: Int) {
-        for _ in 0...commandLength - 1{
+        for _ in 0...commandLength - 1 {
             proxy.deleteBackward()
         }
         previewState = true
     }
 
     func pluralPreview() {
-        if proxy.documentContextBeforeInput?.suffix("/pl".count) == "/pl"{
+        if proxy.documentContextBeforeInput?.suffix("/pl".count) == "/pl" {
             if shiftButtonState == .normal {
                             shiftButtonState = .shift
                             loadKeys()
@@ -338,7 +341,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func firstPersonSingularPreview() {
-        if proxy.documentContextBeforeInput?.suffix("/fps".count) == "/fps"{
+        if proxy.documentContextBeforeInput?.suffix("/fps".count) == "/fps" {
             deGrammarPreviewLabel?.text = firstPersonSingularPromptAndCursor
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
             let commandLength = 4
@@ -348,7 +351,7 @@ class KeyboardViewController: UIInputViewController {
 
     func queryPlural() {
         if deGrammarPreviewLabel?.text == pluralPrompt + "Buch" + previewCursor {
-            proxy.insertText("Bücher ")
+            proxy.insertText(germanNouns?["Buch"]?["plural"] as! String + " ")
         // Check for prompt without cursor.
         } else if ((deGrammarPreviewLabel?.text?.prefix(pluralPrompt.count))! == pluralPrompt) && (deGrammarPreviewLabel?.text!.count ?? pluralPromptAndCursor.count > pluralPrompt.count + 1) {
             invalidState = true
@@ -356,7 +359,13 @@ class KeyboardViewController: UIInputViewController {
     }
     func queryFirstPersonSingular() {
         if deGrammarPreviewLabel?.text == firstPersonSingularPrompt + "gehen" + previewCursor {
-            proxy.insertText("gehe ")
+            let keyExists = germanVerbs?["gehen"] != nil
+            if keyExists {
+                deGrammarPreviewLabel?.text = "It's in there"
+            } else {
+                deGrammarPreviewLabel?.text = germanVerbs?.description
+            }
+//            proxy.insertText(germanVerbs?["gehen"]?["firstPersonSingular"] as! String + " ")
         // Check for prompt without cursor.
         } else if ((deGrammarPreviewLabel?.text?.prefix(firstPersonSingularPrompt.count))! == firstPersonSingularPrompt) && (deGrammarPreviewLabel?.text!.count ?? firstPersonSingularPromptAndCursor.count > firstPersonSingularPrompt.count + 1) {
             invalidState = true
@@ -373,25 +382,25 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func typedNounGenderAnnotation() {
-        if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch "{
+        if proxy.documentContextBeforeInput?.suffix("Buch ".count) == "Buch " {
             deGrammarPreviewLabel?.textColor = Constants.previewGreenLightTheme
             deGrammarPreviewLabel?.text = "(N) Buch"
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
-        if proxy.documentContextBeforeInput?.suffix("Bücher ".count) == "Bücher "{
+        if proxy.documentContextBeforeInput?.suffix("Bücher ".count) == "Bücher " {
             deGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme
             deGrammarPreviewLabel?.text = "(PL) Bücher"
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
-        if proxy.documentContextBeforeInput?.suffix("Frau ".count) == "Frau "{
+        if proxy.documentContextBeforeInput?.suffix("Frau ".count) == "Frau " {
             deGrammarPreviewLabel?.textColor = Constants.previewRedLightTheme
             deGrammarPreviewLabel?.text = "(F) Frau"
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
             deGrammarPreviewLabel?.sizeToFit()
         }
-        if proxy.documentContextBeforeInput?.suffix("Tisch ".count) == "Tisch "{
+        if proxy.documentContextBeforeInput?.suffix("Tisch ".count) == "Tisch " {
             deGrammarPreviewLabel?.textColor = Constants.previewBlueLightTheme
             deGrammarPreviewLabel?.text = "(M) Tisch"
             deGrammarPreviewLabel?.textAlignment = NSTextAlignment.center
@@ -464,17 +473,17 @@ class KeyboardViewController: UIInputViewController {
             }
             else {
                 previewState = false
-                clearPreviewLabel()
-                typedNounGenderAnnotation()
+//                clearPreviewLabel()
+//                typedNounGenderAnnotation()
                 // Auto-capitalization if at the start of the proxy.
-                proxy.insertText(" ")
-                if proxy.documentContextBeforeInput == " " {
-                    if shiftButtonState == .normal {
-                                    shiftButtonState = .shift
-                                    loadKeys()
-                                }
-                }
-                proxy.deleteBackward()
+//                proxy.insertText(" ")
+//                if proxy.documentContextBeforeInput == " " {
+//                    if shiftButtonState == .normal {
+//                                    shiftButtonState = .shift
+//                                    loadKeys()
+//                                }
+//                }
+//                proxy.deleteBackward()
             }
 		case "123":
 			changeKeyboardToNumberKeys()

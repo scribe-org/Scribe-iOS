@@ -45,7 +45,7 @@ Scribe annotates nouns according to the following conventions:
 - Masculine nouns are colored blue 🟦 and marked with (M)
 - Neutral nouns are colored green 🟩 and marked with (N)
 - Plural nouns are colored orange 🟧 and marked with (PL)
-- Nouns with more than one gender are multicolored and marked with all genders using commas
+- Multi gendered nouns are multicolored and marked with all their genders
 
 <!--
 Genders are displayed once a user has typed a noun and pressed space or while a noun is selected.
