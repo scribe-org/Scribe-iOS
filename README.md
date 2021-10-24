@@ -35,23 +35,7 @@ Users access Scribe language keyboards through the following:
 
 ## Grammar Queries
 
-Scribe allows users to programmatically query words based on grammar rules. Typing backslash and a chosen command allows the user to type a given word in the preview bar. The desired word form is then inserted with a press of the return key.
-
-### Query Commands and Examples
-
-| Command | Description            | Spanish Example          | German Example         |
-| :------ | :--------------------- | :----------------------- | :--------------------- |
-| /pl     | Plural of a Noun       | /pl Régimen -> Regímenes | /pl Buch -> Bücher     |
-| /fps    | First Person Singular  | /fps ir -> voy           | /fps gehen -> gehe     |
-| /sps    | Second Person Singular | /sps ir -> vas           | /sps gehen -> gehst    |
-| /tps    | Third Person Singular  | /tps ir -> va            | /tps gehen -> geht     |
-| /fpp    | First Person Plural    | /fpp ir -> vamos         | /fpp gehen -> gehen    |
-| /spp    | Second Person Plural   | /spp ir -> vais          | /spp gehen -> geht     |
-| /tpp    | Third Person Plural    | /tpp ir -> van           | /tpp gehen -> gehe     |
-| /prp    | Present Participle     | /prp ir -> yendo         | /prp gehen -> gehend   |
-| /pap    | Past Participle        | /pap ir -> ido           | /pap gehen -> gegangen |
-
-An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions. The behavior of the `/` key is further changed so that pressing it also switches to the alphabetic keys.
+Scribe allows users to query words based on grammar rules. The key to this is the Scribe key at the top right of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate` a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural` a user types a noun, presses return, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
 
 ## Noun-Gender Annotation
 
