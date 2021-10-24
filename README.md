@@ -35,7 +35,7 @@ Users access Scribe language keyboards through the following:
 
 ## Grammar Queries
 
-Scribe allows users to query words based on grammar rules. The key to this is the Scribe key at the top right of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate` a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural` a user types a noun, presses return, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
+Scribe allows users to query words based on grammar rules. The key to this is the Scribe key at the top right of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate` a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb instead of the keyboard. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural` a user types a noun, presses return, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
 
 ## Noun-Gender Annotation
 
@@ -74,6 +74,8 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
+- Allowing for selectable grammar queries from json files
+
 - Expanding Scribe's support for current languages by adding to the [grammar files](https://github.com/scribe-org/Scribe-iOS)
 
   - Nouns should have their gender and plural
@@ -86,19 +88,13 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Selecting a noun would display its gender in the preview bar [(see issue)]()
 
-- Allowing a user to select the verb tense that they want to conjugate into [(see issue)]()
-
-  - Problem: users don't know what the names of all the verb tenses are
-
-  - Solution: allowing a user to bring up verb conjugation charts over the keyboard with a command or by pressing the preview bar
-
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
 - Allowing words to be colored within preview texts such that the user will consistently see their gender [(see issue)]()
 
 - Exploring the possibility of doing in-messenger translations [(see issue)]()
 
-  - Example: type /tr and entering a word in the preview bar would bring up a selectable list of translations over the keyboard
+  - This would add another option to the Scribe key where entering a word in the preview bar would bring up a selectable list of translations over the keyboard
 
   - The base functionality would translate from the system language into the language of the keyboard, with the ability to choose a language from which translations would be made being ideal
 
@@ -112,7 +108,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - This would help keep the app size to a minimum
 
-- Make the shift key change color after being pressed [(see issue)]()
+- Make the shift key character change color after being pressed [(see issue)]()
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
