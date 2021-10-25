@@ -35,7 +35,7 @@ Users access Scribe language keyboards through the following:
 
 ## Grammar Queries
 
-Scribe allows users to query words based on grammar rules. This is done via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate`, a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb instead of the keyboard. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural`, a user types a noun, presses return, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
+Scribe allows users to query words based on grammar rules. This is done via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate`, a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb instead of the keyboard. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural`, a user types a noun, presses `↵`, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
 
 ## Noun-Gender Annotation
 
