@@ -47,9 +47,7 @@ Scribe annotates nouns according to the following conventions:
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Multi gendered nouns are multicolored and marked with all their genders
 
-<!--
-Genders are displayed once a user has typed a noun and pressed space or while a noun is selected.
--->
+Genders are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
 
 ## iOS and iPadOS System Keyboard Functionality
 
@@ -86,11 +84,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
-- Selecting a noun would display its gender in the preview bar [(see issue)]()
-
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
-
-- Allowing words to be colored within preview texts such that the user will consistently see their gender [(see issue)]()
 
 - Exploring the possibility of translations [(see issue)]()
 
@@ -113,3 +107,5 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
 - Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
+
+- Make the cursor within the preview bar blink when the field is active [(see issue)]()
