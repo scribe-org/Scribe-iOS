@@ -1,22 +1,22 @@
 {
-    "gehen": {
-        "presentParticiple": "gehend",
-        "pastParticiple": "gegangen",
-        "firstPersonSingular": "gehe",
-        "secondPersonSingular": "gehst",
-        "thirdPersonSingular": "geht",
-        "firstPersonPlural": "gehen",
-        "secondPersonPlural": "geht",
-        "thirdPersonPlural": "gehen"
-    },
-    "fahren": {
-        "presentParticiple": "fahrend",
-        "pastParticiple": "gefahren",
-        "firstPersonSingular": "fahre",
-        "secondPersonSingular": "fährst",
-        "thirdPersonSingular": "fährt",
-        "firstPersonPlural": "fahren",
-        "secondPersonPlural": "fahrt",
-        "thirdPersonPlural": "fahren"
-    }
+  "gehen": {
+    "presentParticiple": "gehend",
+    "pastParticiple": "gegangen",
+    "firstPersonSingular": "gehe",
+    "secondPersonSingular": "gehst",
+    "thirdPersonSingular": "geht",
+    "firstPersonPlural": "gehen",
+    "secondPersonPlural": "geht",
+    "thirdPersonPlural": "gehen"
+  },
+  "fahren": {
+    "presentParticiple": "fahrend",
+    "pastParticiple": "gefahren",
+    "firstPersonSingular": "fahre",
+    "secondPersonSingular": "fährst",
+    "thirdPersonSingular": "fährt",
+    "firstPersonPlural": "fahren",
+    "secondPersonPlural": "fahrt",
+    "thirdPersonPlural": "fahren"
+  }
 }

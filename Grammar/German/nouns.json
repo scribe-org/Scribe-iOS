@@ -1,14 +1,18 @@
 {
-    "Buch": {
-        "gender": "neutral",
-        "plural": "Bücher"
-    },
-    "Frau": {
-        "gender": "feminine",
-        "plural": "Frauen"
-    },
-    "Tisch": {
-        "gender": "masculine",
-        "plural": "Tische"
-    }
+  "Buch": {
+    "gender": "N",
+    "plural": "Bücher"
+  },
+  "Bücher": {
+    "gender": "PL",
+    "plural": "isPlural"
+  },
+  "Frau": {
+    "gender": "F",
+    "plural": "Frauen"
+  },
+  "Tisch": {
+    "gender": "M",
+    "plural": "Tische"
+  }
 }
