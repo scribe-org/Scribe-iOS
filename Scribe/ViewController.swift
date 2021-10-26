@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 
     • Whe typing press 🌐 to select keyboards
 
-    Scribe is a fully open-source app. If you'd like to help please visit us at github.com/scribe-org.
+    Scribe is a fully open-source application. If you'd like to help please visit us at github.com/scribe-org.
     """, hyperLinks: ["github.com/scribe-org": "https://github.com/scribe-org"])
 
 	}

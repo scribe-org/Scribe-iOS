@@ -107,6 +107,7 @@ class KeyboardViewController: UIInputViewController {
     var previewState: Bool! = false
     var invalidState: Bool! = false
     var scribeBtnState: Bool! = false
+    var conjugationState: Bool! = false
     
     func activateBtn (btn: UIButton) {
         btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
@@ -147,6 +148,39 @@ class KeyboardViewController: UIInputViewController {
         pluralBtn.layer.setValue("Plural", forKey: "keyToDisplay")
         pluralBtn.layer.setValue(false, forKey: "isSpecial")
         activateBtn(btn: pluralBtn)
+    }
+    
+    @IBOutlet var conjugateLabel: UILabel!
+    
+    @IBOutlet var conjugateBtnFPS: UIButton!
+    @IBOutlet var conjugateBtnSPS: UIButton!
+    @IBOutlet var conjugateBtnTPS: UIButton!
+    @IBOutlet var conjugateBtnFPP: UIButton!
+    @IBOutlet var conjugateBtnSPP: UIButton!
+    @IBOutlet var conjugateBtnTPP: UIButton!
+    
+    @IBOutlet var conjugateShiftLeftBtn: UIButton!
+    @IBOutlet var conjugateShiftRightBtn: UIButton!
+    
+    func setConjugationDisplay() {
+        conjugateLabel?.backgroundColor = UIColor.clear
+        conjugateBtnFPS?.backgroundColor = UIColor.clear
+        conjugateBtnSPS?.backgroundColor = UIColor.clear
+        conjugateBtnTPS?.backgroundColor = UIColor.clear
+        conjugateBtnFPP?.backgroundColor = UIColor.clear
+        conjugateBtnSPP?.backgroundColor = UIColor.clear
+        conjugateBtnTPP?.backgroundColor = UIColor.clear
+        conjugateShiftLeftBtn?.backgroundColor = UIColor.clear
+        conjugateShiftRightBtn?.backgroundColor = UIColor.clear
+        
+        deactivateBtn(btn: conjugateBtnFPS)
+        deactivateBtn(btn: conjugateBtnSPS)
+        deactivateBtn(btn: conjugateBtnTPS)
+        deactivateBtn(btn: conjugateBtnFPP)
+        deactivateBtn(btn: conjugateBtnSPP)
+        deactivateBtn(btn: conjugateBtnTPP)
+        deactivateBtn(btn: conjugateShiftLeftBtn)
+        deactivateBtn(btn: conjugateShiftRightBtn)
     }
     
     @IBOutlet weak var deStackView1: UIStackView!
@@ -218,6 +252,7 @@ class KeyboardViewController: UIInputViewController {
         setScribeBtn()
         setPreviewLabel()
         setGrammarBtns()
+        setConjugationDisplay()
         invalidState = false
 
 		keys.forEach{$0.removeFromSuperview()}
@@ -648,14 +683,6 @@ class KeyboardViewController: UIInputViewController {
                 proxy.insertText("'")
             } else {
                 deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: "'"))!
-            }
-            changeKeyboardToLetterKeys()
-            clearPreviewLabel()
-        case "/":
-            if previewState != true {
-                proxy.insertText("/")
-            } else {
-                deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: "/"))!
             }
             changeKeyboardToLetterKeys()
             clearPreviewLabel()

@@ -14,12 +14,12 @@
     "indicativePreteriteFPP": "gingen",
     "indicativePreteriteSPP": "gingt",
     "indicativePreteriteTPP": "gingen",
-    "indicativePerfectFPSHelper": "bin",
-    "indicativePerfectSPSHelper": "bist",
-    "indicativePerfectTPSHelper": "ist",
-    "indicativePerfectFPPHelper": "sind",
-    "indicativePerfectSPPHelper": "seid",
-    "indicativePerfectTPPHelper": "sind"
+    "indicativePerfectHelperFPS": "bin",
+    "indicativePerfectHelperSPS": "bist",
+    "indicativePerfectHelperTPS": "ist",
+    "indicativePerfectHelperFPP": "sind",
+    "indicativePerfectHelperSPP": "seid",
+    "indicativePerfectHelperTPP": "sind"
   },
   "fahren": {
     "presentParticiple": "fahrend",
@@ -36,11 +36,11 @@
     "indicativePreteriteFPP": "fuhren",
     "indicativePreteriteSPP": "furht",
     "indicativePreteriteTPP": "fuhren",
-    "indicativePerfectFPSHelper": "bin/habe",
-    "indicativePerfectSPSHelper": "bist/hast",
-    "indicativePerfectTPSHelper": "ist/hat",
-    "indicativePerfectFPPHelper": "sind/haben",
-    "indicativePerfectSPPHelper": "seid/habt",
-    "indicativePerfectTPPHelper": "sind/haben"
+    "indicativePerfectHelperFPS": "bin/habe",
+    "indicativePerfectHelperSPS": "bist/hast",
+    "indicativePerfectHelperTPS": "ist/hat",
+    "indicativePerfectHelperFPP": "sind/haben",
+    "indicativePerfectHelperSPP": "seid/habt",
+    "indicativePerfectHelperTPP": "sind/haben"
   }
 }
