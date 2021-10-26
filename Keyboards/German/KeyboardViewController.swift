@@ -65,12 +65,11 @@ extension Array {
   }
 }
 
-func loadJsonToDict(filepath filePath: String) -> Dictionary<String, AnyObject>? {
-    let path = UserDefaults.standard.string(forKey: filePath)
-    if let url = Bundle.main.url(forResource: path, withExtension: "json") {
+func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>? {
+    if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
         do {
-            let data = try Data(contentsOf: url, options: .mappedIfSafe)
-            let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+            let data = try Data(contentsOf: url)
+            let jsonData = try JSONSerialization.jsonObject(with: data)
             return jsonData as? Dictionary<String, AnyObject>
         } catch {
             print("error:\(error)")
@@ -79,8 +78,8 @@ func loadJsonToDict(filepath filePath: String) -> Dictionary<String, AnyObject>?
     return nil
 }
 
-let germanNouns = loadJsonToDict(filepath: "Grammar/German/nouns")
-let germanVerbs = loadJsonToDict(filepath: "Grammar/German/verbs")
+let germanNouns = loadJsonToDict(filename: "nouns")
+let germanVerbs = loadJsonToDict(filename: "verbs")
 
 class KeyboardViewController: UIInputViewController {
 
@@ -436,7 +435,6 @@ class KeyboardViewController: UIInputViewController {
         if nounInDirectory {
             if germanNouns?[noun!]?["plural"] as! String != "isPlural" {
                 proxy.insertText(germanNouns?[noun!]?["plural"] as! String + " ")
-                isAlreadyPluralState = false
             } else {
                 proxy.insertText(noun! + " ")
                 deGrammarPreviewLabel?.text = previewPromptSpacing + "Already plural"
@@ -452,8 +450,7 @@ class KeyboardViewController: UIInputViewController {
         let verb = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
         let verbInDirectory = germanVerbs?[verb!] != nil
         if verbInDirectory {
-            deGrammarPreviewLabel?.text = germanVerbs?.description
-//            proxy.insertText(germanVerbs?[verb!]?["firstPersonSingular"] as! String + " ")
+            proxy.insertText(germanVerbs?[verb!]?["firstPersonSingular"] as! String + " ")
         } else {
             invalidState = true
         }
@@ -610,19 +607,19 @@ class KeyboardViewController: UIInputViewController {
             }
             else {
                 previewState = false
-//                clearPreviewLabel()
-//                typedNounGenderAnnotation()
-//                // Auto-capitalization if at the start of the proxy.
-//                proxy.insertText(" ")
-//                if proxy.documentContextBeforeInput == " " {
-//                    if shiftButtonState == .normal {
-//                                    shiftButtonState = .shift
-//                                    loadKeys()
-//                                }
-//                }
-//                proxy.deleteBackward()
-//                getConjugation = false
-//                getPlural = false
+                clearPreviewLabel()
+                typedNounGenderAnnotation()
+                // Auto-capitalization if at the start of the proxy.
+                proxy.insertText(" ")
+                if proxy.documentContextBeforeInput == " " {
+                    if shiftButtonState == .normal {
+                                    shiftButtonState = .shift
+                                    loadKeys()
+                                }
+                }
+                proxy.deleteBackward()
+                getConjugation = false
+                getPlural = false
             }
 		case "123":
 			changeKeyboardToNumberKeys()
