@@ -109,3 +109,5 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
 
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
+
+- Adding a feature where the Scribe UI can be hidden and replaced with a system keyboard with an element to show the UI again [(see issue)]()
