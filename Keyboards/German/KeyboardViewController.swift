@@ -441,6 +441,9 @@ class KeyboardViewController: UIInputViewController {
                 invalidState = true
                 isAlreadyPluralState = true
             }
+        // Cancel via a return press.
+        } else if deGrammarPreviewLabel?.text! == pluralPromptAndCursor {
+            return
         } else {
             invalidState = true
         }
@@ -450,8 +453,11 @@ class KeyboardViewController: UIInputViewController {
         let verb = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
         let verbInDirectory = germanVerbs?[verb!] != nil
         if verbInDirectory {
-            proxy.insertText(germanVerbs?[verb!]?["firstPersonSingular"] as! String + " ")
-        } else {
+            proxy.insertText(germanVerbs?[verb!]?["indicativePresentFPS"] as! String + " ")
+        // Cancel via a return press.
+        } else if deGrammarPreviewLabel?.text! == conjugatePromptAndCursor {
+            return
+        }else {
             invalidState = true
         }
     }
@@ -477,23 +483,25 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func typedNounGenderAnnotation() {
-        let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        let lastWordTyped = wordsTyped.penultimate()
-        let isNoun = germanNouns?[lastWordTyped!] != nil
-        if isNoun {
-            let nounGender = germanNouns?[lastWordTyped!]?["gender"] as! String
-            if nounGender == "F" {
-                deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
-            } else if nounGender == "M" {
-                deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
-            } else if nounGender ==  "N" {
-                deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
-            } else if nounGender ==  "PL"{
-                deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
-            }
+        if proxy.documentContextBeforeInput != nil {
+            let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+            let lastWordTyped = wordsTyped.penultimate()
+            let isNoun = germanNouns?[lastWordTyped!] != nil
+            if isNoun {
+                let nounGender = germanNouns?[lastWordTyped!]?["gender"] as! String
+                if nounGender == "F" {
+                    deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
+                } else if nounGender == "M" {
+                    deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
+                } else if nounGender ==  "N" {
+                    deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
+                } else if nounGender ==  "PL"{
+                    deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+                }
 
-            deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounGender)) " + lastWordTyped!
-            deGrammarPreviewLabel?.sizeToFit()
+                deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounGender)) " + lastWordTyped!
+                deGrammarPreviewLabel?.sizeToFit()
+            }
         }
     }
     
@@ -579,9 +587,11 @@ class KeyboardViewController: UIInputViewController {
 		case "↵":
             if getPlural {
                 queryPlural()
+                getPlural = false
             }
             if getConjugation {
                 queryConjugation()
+                getConjugation = false
             }
             if previewState == false {
                 proxy.insertText("\n")
@@ -618,8 +628,6 @@ class KeyboardViewController: UIInputViewController {
                                 }
                 }
                 proxy.deleteBackward()
-                getConjugation = false
-                getPlural = false
             }
 		case "123":
 			changeKeyboardToNumberKeys()
