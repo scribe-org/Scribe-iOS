@@ -41,13 +41,31 @@ Scribe keyboard features are accessed via the `Scribe key` at the top left of an
 
 The **`beta`** `Translate` feature can translate single words from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages, and then explore multi word translations.
 
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/translation_demo.gif"><img src ="Resources/Demos/translation_demo.gif" width="300" /></a>
+</p>
+-->
+
 ### Verb Conjugation
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/conjugation_demo.gif"><img src ="Resources/Demos/conjugation_demo.gif" width="300" /></a>
+</p>
+-->
+
 ### Noun Plurals
 
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `↵` key is pressed.
+
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_plural_demo.gif"><img src ="Resources/Demos/noun_plural_demo.gif" width="300" /></a>
+</p>
+-->
 
 ### Noun-Gender Annotation
 
@@ -60,6 +78,12 @@ Scribe further annotates nouns in the preview label according to the following c
 - Multi gendered nouns are multicolored and marked with all their genders
 
 Genders are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
+
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_gender_demo.gif"><img src ="Resources/Demos/noun_gender_demo.gif" width="300" /></a>
+</p>
+-->
 
 ### iOS and iPadOS System Keyboard Functionality
 
@@ -76,6 +100,12 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 - Typing `'` returns to the alphabetic keyboard
 - Dark mode compatibility (WIP)
 - Hold-to-select characters (WIP)
+
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/ios_keyboard_features_demo.gif"><img src ="Resources/Demos/ios_keyboard_features_demo.gif" width="300" /></a>
+</p>
+-->
 
 </p>
 </details>
