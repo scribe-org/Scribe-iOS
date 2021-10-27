@@ -90,7 +90,7 @@ Work that is in progress or could be implemented includes:
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
-- Creating testing files and a ci process for Scribe-iOS
+- Creating testing files and a ci process for Scribe-iOS [(see issue)]()
 
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
