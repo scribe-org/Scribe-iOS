@@ -35,7 +35,7 @@ Users access Scribe language keyboards through the following:
 
 # Features [`↩`](#contents) <a id="features"></a>
 
-Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field. An extra space is inserted after so that these features function like auto-suggestions.
+Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field. An extra space is inserted after so that these features function like auto-suggestions. Current features include:
 
 ### Translation
 
@@ -51,7 +51,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural wh
 
 ### Noun-Gender Annotation
 
-Scribe further automatically nouns in the preview label according to the following conventions:
+Scribe further automatically annotates nouns in the preview label according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
@@ -87,6 +87,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Changing the conjugation interface to be fully button based
 
 - Setting up a baseline translation feature
+
+- Creating JSON files for nouns, verbs and translations
 
 - Expanding Scribe's support for current languages by adding to the [grammar files](https://github.com/scribe-org/Scribe-iOS)
 
