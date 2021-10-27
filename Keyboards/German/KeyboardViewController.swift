@@ -23,7 +23,7 @@ let pluralPromptAndCursor: String = pluralPrompt + previewCursor
 var getPlural = false
 var isAlreadyPluralState = false
 
-let allPrompts : [String] = [pluralPromptAndCursor, conjugatePromptAndCursor]
+let allPrompts : [String] = [conjugatePromptAndCursor, translatePromptAndCursor, pluralPromptAndCursor]
 
 extension String {
     func index(from: Int) -> Index {
@@ -134,9 +134,17 @@ class KeyboardViewController: UIInputViewController {
         deGrammarPreviewLabel?.backgroundColor = UIColor.defaultSpecialKeyGrey
         deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
     }
+    
+    @IBOutlet var translateBtn: UIButton!
     @IBOutlet var conjugateBtn: UIButton!
     @IBOutlet var pluralBtn: UIButton!
     func setGrammarBtns() {
+        translateBtn?.backgroundColor = UIColor.scribeBlue
+        translateBtn.layer.setValue("Translate", forKey: "original")
+        translateBtn.layer.setValue("Translate", forKey: "keyToDisplay")
+        translateBtn.layer.setValue(false, forKey: "isSpecial")
+        activateBtn(btn: translateBtn)
+        
         conjugateBtn?.backgroundColor = UIColor.scribeBlue
         conjugateBtn.layer.setValue("Conjugate", forKey: "original")
         conjugateBtn.layer.setValue("Conjugate", forKey: "keyToDisplay")
@@ -326,14 +334,23 @@ class KeyboardViewController: UIInputViewController {
                     scribeBtn?.backgroundColor = UIColor.defaultSpecialKeyGrey
                     scribeBtn?.layer.cornerRadius = buttonWidth / 4
                     scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-                    
                     deGrammarPreviewLabel?.backgroundColor = UIColor.clear
                     deGrammarPreviewLabel?.text = ""
+                    
+                    translateBtn?.layer.cornerRadius = buttonWidth / 4
+                    translateBtn?.layer.masksToBounds = true
+//                    translateBtn?.frame.size = CGSize(width: numSymButtonWidth * 2, height: numSymButtonWidth)
+                    translateBtn?.setTitle("Translate", for: .normal)
+//                    translateBtn?.titleLabel?.font.withSize(letterButtonWidth / 2)
+                    translateBtn?.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
+                    translateBtn?.setTitleColor(.black, for: .normal)
                     
                     conjugateBtn?.layer.cornerRadius = buttonWidth / 4
                     conjugateBtn?.layer.masksToBounds = true
 //                    conjugateBtn?.frame.size = CGSize(width: numSymButtonWidth * 2, height: numSymButtonWidth)
                     conjugateBtn?.setTitle("Conjugate", for: .normal)
+//                    conjugateBtn?.titleLabel?.font.withSize(letterButtonWidth / 2)
+                    conjugateBtn?.titleLabel!.lineBreakMode = NSLineBreakMode.byCharWrapping
                     conjugateBtn?.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
                     conjugateBtn?.setTitleColor(.black, for: .normal)
                     
@@ -341,12 +358,17 @@ class KeyboardViewController: UIInputViewController {
                     pluralBtn?.layer.masksToBounds = true
 //                    pluralBtn?.frame.size = CGSize(width: numSymButtonWidth * 2, height: numSymButtonWidth)
                     pluralBtn?.setTitle("Plural", for: .normal)
+//                    pluralBtn?.titleLabel?.font.withSize(letterButtonWidth / 2)
                     pluralBtn?.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
                     pluralBtn?.setTitleColor(.black, for: .normal)
                 } else {
                     conjugateBtn?.setTitle("", for: .normal)
                     conjugateBtn?.backgroundColor = UIColor.clear
                     deactivateBtn(btn: conjugateBtn)
+                    
+                    translateBtn?.setTitle("", for: .normal)
+                    translateBtn?.backgroundColor = UIColor.clear
+                    deactivateBtn(btn: translateBtn)
                     
                     pluralBtn?.setTitle("", for: .normal)
                     pluralBtn?.backgroundColor = UIColor.clear
@@ -355,9 +377,8 @@ class KeyboardViewController: UIInputViewController {
                     deGrammarPreviewLabel?.clipsToBounds = true
                     deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
                     deGrammarPreviewLabel?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-                    deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+                    deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
                     deGrammarPreviewLabel?.textColor = .black
-                    deGrammarPreviewLabel?.numberOfLines = 0
                     deGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
                     if previewState == false {
                         deGrammarPreviewLabel?.text = ""
@@ -569,6 +590,13 @@ class KeyboardViewController: UIInputViewController {
                 loadKeys()
             }
             
+        case "Translate":
+            scribeBtnState = false
+            loadKeys()
+            deGrammarPreviewLabel?.text = translatePromptAndCursor
+            previewState = true
+            getTranslation = true
+            
         case "Conjugate":
             scribeBtnState = false
             if shiftButtonState == .shift {
@@ -620,13 +648,16 @@ class KeyboardViewController: UIInputViewController {
 		case "🌐":
 			break
 		case "↵":
-            if getPlural {
-                queryPlural()
-                getPlural = false
+            if getTranslation {
+                getTranslation = false
             }
             if getConjugation {
                 queryConjugation()
                 getConjugation = false
+            }
+            if getPlural {
+                queryPlural()
+                getPlural = false
             }
             if previewState == false {
                 proxy.insertText("\n")

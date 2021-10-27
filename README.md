@@ -14,7 +14,9 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include verb conjugation and gender based annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for access to any user data. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation (beta), verb conjugation and gender based annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
+
+Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -33,15 +35,23 @@ Users access Scribe language keyboards through the following:
 
 # Features [`↩`](#contents) <a id="features"></a>
 
-## Grammar Queries
+Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field. An extra space is inserted after so that these features function like auto-suggestions.
 
-Scribe allows users to query words based on grammar rules. This is done via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate`, a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb instead of the keyboard. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural`, a user types a noun, presses `↵`, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
+### Translation
 
-Grammar files for Scribe are themselves directly queried from [Wikidata](https://www.wikidata.org/). [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries are written to produce JSON files for nouns and verbs of each supported language.
+The **`beta`** `Translate` feature can translate single words from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages, and then explore multi word translations.
 
-## Noun-Gender Annotation
+### Verb Conjugation
 
-Scribe annotates nouns according to the following conventions:
+With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
+
+### Noun Plurals
+
+The `Plural` feature allows a user to enter a noun and then insert its plural when the `↵` key is pressed.
+
+### Noun-Gender Annotation
+
+Scribe further automatically nouns in the preview label according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
@@ -51,11 +61,11 @@ Scribe annotates nouns according to the following conventions:
 
 Genders are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
 
-## iOS and iPadOS System Keyboard Functionality
+### iOS and iPadOS System Keyboard Functionality
 
 The goal is that Scribe keyboards have all the functionality of system keyboards.
 
-<details><summary><strong>Currently implemented features</strong></summary>
+<details><summary><strong>Current and WIP features</strong></summary>
 <p>
 
 - iPhone and iPad support (WIP)
@@ -74,7 +84,9 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
-- Allowing for grammar queries from json files
+- Changing the conjugation interface to be fully button based
+
+- Setting up a baseline translation feature
 
 - Expanding Scribe's support for current languages by adding to the [grammar files](https://github.com/scribe-org/Scribe-iOS)
 
@@ -87,12 +99,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
-
-- Exploring the possibility of translations [(see issue)]()
-
-  - This would add another option to the `Scribe key` where entering a word in the preview bar would bring up a selectable list of translations over the keyboard
-
-  - The base functionality would translate from the system language into the language of the keyboard, with the ability to choose a language from which translations would be made being ideal
 
 - Moving grammar files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access [(see issue)]()
 
