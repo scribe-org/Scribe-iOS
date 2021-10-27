@@ -10,20 +10,20 @@ var proxy : UITextDocumentProxy!
 let previewCursor = "│"
 let previewPromptSpacing = String(repeating: " ", count: 2)
 
-let conjugatePrompt: String = previewPromptSpacing + "Conjugate: "
-let conjugatePromptAndCursor: String = conjugatePrompt + previewCursor
-var getConjugation = false
-
 let translatePrompt: String = previewPromptSpacing + "Translate: "
 let translatePromptAndCursor: String = translatePrompt + previewCursor
 var getTranslation = false
+
+let conjugatePrompt: String = previewPromptSpacing + "Conjugate: "
+let conjugatePromptAndCursor: String = conjugatePrompt + previewCursor
+var getConjugation = false
 
 let pluralPrompt: String = previewPromptSpacing + "Plural: "
 let pluralPromptAndCursor: String = pluralPrompt + previewCursor
 var getPlural = false
 var isAlreadyPluralState = false
 
-let allPrompts : [String] = [conjugatePromptAndCursor, translatePromptAndCursor, pluralPromptAndCursor]
+let allPrompts : [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 
 extension String {
     func index(from: Int) -> Index {
@@ -80,6 +80,7 @@ func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>?
 
 let germanNouns = loadJsonToDict(filename: "nouns")
 let germanVerbs = loadJsonToDict(filename: "verbs")
+let germanTranslations = loadJsonToDict(filename: "translations")
 
 class KeyboardViewController: UIInputViewController {
 
@@ -484,6 +485,33 @@ class KeyboardViewController: UIInputViewController {
             backspaceTimer = nil
         }
 	}
+    
+    func queryTranslation() {
+        let word = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
+        let lowerCaseWord = word!.lowercased()
+        let wordInDirectory = germanTranslations?[lowerCaseWord] != nil
+        if wordInDirectory {
+            proxy.insertText(germanTranslations?[lowerCaseWord] as! String + " ")
+        // Cancel via a return press.
+        } else if deGrammarPreviewLabel?.text! == translatePromptAndCursor {
+            return
+        }else {
+            invalidState = true
+        }
+    }
+    
+    func queryConjugation() {
+        let verb = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
+        let verbInDirectory = germanVerbs?[verb!] != nil
+        if verbInDirectory {
+            proxy.insertText(germanVerbs?[verb!]?["indicativePresentFPS"] as! String + " ")
+        // Cancel via a return press.
+        } else if deGrammarPreviewLabel?.text! == conjugatePromptAndCursor {
+            return
+        }else {
+            invalidState = true
+        }
+    }
 
     func queryPlural() {
         let noun = deGrammarPreviewLabel?.text!.substring(with: pluralPrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
@@ -501,19 +529,6 @@ class KeyboardViewController: UIInputViewController {
         } else if deGrammarPreviewLabel?.text! == pluralPromptAndCursor {
             return
         } else {
-            invalidState = true
-        }
-    }
-    
-    func queryConjugation() {
-        let verb = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
-        let verbInDirectory = germanVerbs?[verb!] != nil
-        if verbInDirectory {
-            proxy.insertText(germanVerbs?[verb!]?["indicativePresentFPS"] as! String + " ")
-        // Cancel via a return press.
-        } else if deGrammarPreviewLabel?.text! == conjugatePromptAndCursor {
-            return
-        }else {
             invalidState = true
         }
     }
@@ -649,6 +664,7 @@ class KeyboardViewController: UIInputViewController {
 			break
 		case "↵":
             if getTranslation {
+                queryTranslation()
                 getTranslation = false
             }
             if getConjugation {

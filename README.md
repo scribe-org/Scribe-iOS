@@ -51,7 +51,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural wh
 
 ### Noun-Gender Annotation
 
-Scribe further automatically annotates nouns in the preview label according to the following conventions:
+Scribe further annotates nouns in the preview label according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
@@ -88,11 +88,11 @@ Work that is in progress or could be implemented includes:
 
 - Changing the conjugation interface to be fully button based
 
-- Setting up a baseline translation feature
-
 - Using Wikidata to create JSON files for nouns, verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
+
+- Creating testing files and a ci process for Scribe-iOS
 
 - Localizing the Scribe app across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
