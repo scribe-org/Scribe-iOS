@@ -37,6 +37,8 @@ Users access Scribe language keyboards through the following:
 
 Scribe allows users to query words based on grammar rules. This is done via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user two new selectable options: `Conjugate` and `Plural`. In the case of `Conjugate`, a user types in a verb, presses the `↵` key, and then is presented with the grammar charts for the given verb instead of the keyboard. Pressing an example in the charts would then insert the chosen conjugation into the text field. In the case of `Plural`, a user types a noun, presses `↵`, and then the plural would be inserted into the text field. An extra space is inserted after the queried word so that this feature functions similar to auto-suggestions.
 
+Grammar files for Scribe are themselves directly queried from [Wikidata](https://www.wikidata.org/). [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries are written to produce JSON files for nouns and verbs of each supported language.
+
 ## Noun-Gender Annotation
 
 Scribe annotates nouns according to the following conventions:
@@ -111,3 +113,13 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
 
 - Adding a feature where the Scribe UI can be hidden and replaced with a system keyboard with an element to show the UI again [(see issue)]()
+
+# Powered By
+
+<div align="center">
+  <br>
+  <a href="https://www.wikimedia.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/gh_images/wikimedia_foundation_logo.png" alt="Wikimedia"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.wikidata.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/gh_images/wikidata_logo.png" alt="Wikidata"></a>
+  <br>
+</div>
