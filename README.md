@@ -86,8 +86,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 Work that is in progress or could be implemented includes:
 
-- Changing the conjugation interface to be fully button based
-
 - Using Wikidata to create JSON files for nouns, verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
