@@ -82,21 +82,15 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 # To-Do [`↩`](#contents) <a id="to-do"></a>
 
-Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
+Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Specifically: Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update.
+
+Work that is in progress or could be implemented includes:
 
 - Changing the conjugation interface to be fully button based
 
 - Setting up a baseline translation feature
 
-- Creating JSON files for nouns, verbs and translations
-
-- Expanding Scribe's support for current languages by adding to the [grammar files](https://github.com/scribe-org/Scribe-iOS)
-
-  - Nouns should have their gender and plural
-
-  - Verbs should have all conjugations
-
-  - Pull requests are more than welcome!
+- Using Wikidata to create JSON files for nouns, verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
