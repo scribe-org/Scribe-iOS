@@ -98,7 +98,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 - Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
-- Dark mode compatibility (WIP)
+- Dark mode compatibility
 - Hold-to-select characters (WIP)
 
 <!--

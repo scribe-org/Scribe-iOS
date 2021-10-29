@@ -5,7 +5,6 @@
 import UIKit
 
 extension UIColor {
-    static let defaultSpecialKeyGrey = UIColor(red: 180.0/255.0, green: 184.0/255.0, blue: 193.0/255.0, alpha: 1.0)
     static let scribeBlue = UIColor(red: 97.0/255.0, green: 200.0/255.0, blue: 245.0/255.0, alpha: 1.0)
 
     static let previewRedLightTheme = UIColor(red: 153.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
@@ -15,10 +14,6 @@ extension UIColor {
 }
 
 enum Constants{
-
-	static let keyColor: UIColor = .white
-	static let keyPressedColor: UIColor = .lightText
-
 	static let letterKeys = [
 		["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
 		["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä"],

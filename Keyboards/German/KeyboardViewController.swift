@@ -6,6 +6,10 @@ import Foundation
 import UIKit
 
 var proxy : UITextDocumentProxy!
+var keyColor = UIColor.systemGray5
+var specialKeyColor = UIColor.systemGray2
+var keyPressedColor = UIColor.systemGray6
+
 // A larger vertical bar than the normal key for the cursor.
 let previewCursor = "│"
 let previewPromptSpacing = String(repeating: " ", count: 2)
@@ -156,7 +160,7 @@ class KeyboardViewController: UIInputViewController {
         btn.setTitle(title, for: .normal)
 //        btn.titleLabel?.font.withSize(letterButtonWidth / 2) // would need a fontSize arg
         btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-        btn.setTitleColor(.black, for: .normal)
+        btn.setTitleColor(UIColor.label, for: .normal)
     }
 
     @IBOutlet var scribeBtn: UIButton!
@@ -165,7 +169,7 @@ class KeyboardViewController: UIInputViewController {
     }
     @IBOutlet var deGrammarPreviewLabel: UILabel!
     func setPreviewLabel() {
-        deGrammarPreviewLabel?.backgroundColor = UIColor.defaultSpecialKeyGrey
+        deGrammarPreviewLabel?.backgroundColor = specialKeyColor
         deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
     }
     
@@ -189,15 +193,15 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var conjugateShiftRightBtn: UIButton!
     
     func setConjugationBtns() {
-        setBtn(btn: conjugateBtnFPS, color: Constants.keyColor, name: "firstPersonSingular", isSpecial: false)
-        setBtn(btn: conjugateBtnSPS, color: Constants.keyColor, name: "secondPersonSingular", isSpecial: false)
-        setBtn(btn: conjugateBtnTPS, color: Constants.keyColor, name: "thirdPersonSingular", isSpecial: false)
-        setBtn(btn: conjugateBtnFPP, color: Constants.keyColor, name: "firstPersonPlural", isSpecial: false)
-        setBtn(btn: conjugateBtnSPP, color: Constants.keyColor, name: "secondPersonPlural", isSpecial: false)
-        setBtn(btn: conjugateBtnTPP, color: Constants.keyColor, name: "thirdPersonPlural", isSpecial: false)
+        setBtn(btn: conjugateBtnFPS, color: keyColor, name: "firstPersonSingular", isSpecial: false)
+        setBtn(btn: conjugateBtnSPS, color: keyColor, name: "secondPersonSingular", isSpecial: false)
+        setBtn(btn: conjugateBtnTPS, color: keyColor, name: "thirdPersonSingular", isSpecial: false)
+        setBtn(btn: conjugateBtnFPP, color: keyColor, name: "firstPersonPlural", isSpecial: false)
+        setBtn(btn: conjugateBtnSPP, color: keyColor, name: "secondPersonPlural", isSpecial: false)
+        setBtn(btn: conjugateBtnTPP, color: keyColor, name: "thirdPersonPlural", isSpecial: false)
         
-        setBtn(btn: conjugateShiftLeftBtn, color: Constants.keyColor, name: "shiftConjugateLeft", isSpecial: false)
-        setBtn(btn: conjugateShiftRightBtn, color: Constants.keyColor, name: "shiftConjugateRight", isSpecial: false)
+        setBtn(btn: conjugateShiftLeftBtn, color: keyColor, name: "shiftConjugateLeft", isSpecial: false)
+        setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", isSpecial: false)
     }
     
     func daectivateConjugationDisplay() {
@@ -285,14 +289,13 @@ class KeyboardViewController: UIInputViewController {
 		// Add custom view sizing constraints here.
 		keyboardView.frame.size = view.frame.size
 	}
-
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		proxy = textDocumentProxy as UITextDocumentProxy
 		loadInterface()
 		self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -386,8 +389,8 @@ class KeyboardViewController: UIInputViewController {
             for row in 0...numRows - 1{
                 for col in 0...keyboard[row].count - 1{
                     let btn = UIButton(type: .custom)
-                    btn.backgroundColor = Constants.keyColor
-                    btn.setTitleColor(.black, for: .normal)
+                    btn.backgroundColor = keyColor
+                    btn.setTitleColor(UIColor.label, for: .normal)
                     
                     let key = keyboard[row][col]
                     let capsKey = keyboard[row][col].capitalized
@@ -417,7 +420,7 @@ class KeyboardViewController: UIInputViewController {
                     
                     if scribeBtnState {
                         scribeBtn?.setTitle("Esc", for: .normal)
-                        scribeBtn?.backgroundColor = UIColor.defaultSpecialKeyGrey
+                        scribeBtn?.backgroundColor = specialKeyColor
                         scribeBtn?.layer.cornerRadius = buttonWidth / 4
                         scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
                         
@@ -436,7 +439,7 @@ class KeyboardViewController: UIInputViewController {
                         deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
                         deGrammarPreviewLabel?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
                         deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
-                        deGrammarPreviewLabel?.textColor = .black
+                        deGrammarPreviewLabel?.textColor = UIColor.label
                         deGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
                         if previewState == false {
                             deGrammarPreviewLabel?.text = ""
@@ -477,10 +480,10 @@ class KeyboardViewController: UIInputViewController {
                     if key == "⌫" || key == "#+=" || key == "⇧" || key == "🌐" {
                         btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
                         btn.layer.setValue(true, forKey: "isSpecial")
-                        btn.backgroundColor = UIColor.defaultSpecialKeyGrey
+                        btn.backgroundColor = specialKeyColor
                         if key == "⇧" {
                             if shiftButtonState != .normal{
-                                btn.backgroundColor = Constants.keyPressedColor
+                                btn.backgroundColor = keyPressedColor
                             }
                             if shiftButtonState == .caps{
                                 btn.setTitle("⇪", for: .normal)
@@ -489,7 +492,7 @@ class KeyboardViewController: UIInputViewController {
                     }else if key == "123" || key == "ABC" || key == "↵" {
                         btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
                         btn.layer.setValue(true, forKey: "isSpecial")
-                        btn.backgroundColor = UIColor.defaultSpecialKeyGrey
+                        btn.backgroundColor = specialKeyColor
                     }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 {
                         btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
                     }else if key != "Leerzeichen" {
@@ -517,7 +520,7 @@ class KeyboardViewController: UIInputViewController {
             deStackView4.isUserInteractionEnabled = false
             
             scribeBtn?.setTitle("Esc", for: .normal)
-            scribeBtn?.backgroundColor = UIColor.defaultSpecialKeyGrey
+            scribeBtn?.backgroundColor = specialKeyColor
             scribeBtn?.layer.cornerRadius = buttonWidth / 4
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
             
@@ -670,7 +673,7 @@ class KeyboardViewController: UIInputViewController {
     
     func clearPreviewLabel() {
         if previewState != true {
-            deGrammarPreviewLabel?.textColor = UIColor.black
+            deGrammarPreviewLabel?.textColor = UIColor.label
             deGrammarPreviewLabel?.text = " "
         }
     }
@@ -679,7 +682,7 @@ class KeyboardViewController: UIInputViewController {
 		guard let originalKey = sender.layer.value(forKey: "original") as? String, let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {return}
 
 		guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
-		sender.backgroundColor = isSpecial ? UIColor.defaultSpecialKeyGrey : Constants.keyColor
+		sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
 
 		switch originalKey {
         case "Scribe":
@@ -858,7 +861,7 @@ class KeyboardViewController: UIInputViewController {
                 if isAlreadyPluralState != true {
                     deGrammarPreviewLabel?.text = previewPromptSpacing + "Not in directory"
                 }
-                deGrammarPreviewLabel?.textColor = .black
+                deGrammarPreviewLabel?.textColor = UIColor.label
                 
                 invalidState = false
                 isAlreadyPluralState = false
@@ -958,17 +961,17 @@ class KeyboardViewController: UIInputViewController {
         } else if gesture.state == .ended || gesture.state == .cancelled {
             backspaceTimer?.invalidate()
             backspaceTimer = nil
-            (gesture.view as! UIButton).backgroundColor = UIColor.defaultSpecialKeyGrey
+            (gesture.view as! UIButton).backgroundColor = specialKeyColor
         }
 	}
 
 	@objc func keyUntouched(_ sender: UIButton) {
 		guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
-		sender.backgroundColor = isSpecial ? UIColor.defaultSpecialKeyGrey : Constants.keyColor
+		sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
 	}
 
 	@objc func keyTouchDown(_ sender: UIButton) {
-		sender.backgroundColor = Constants.keyPressedColor
+		sender.backgroundColor = keyPressedColor
 	}
 
 	override func textWillChange(_ textInput: UITextInput?) {
@@ -977,15 +980,13 @@ class KeyboardViewController: UIInputViewController {
 
 	override func textDidChange(_ textInput: UITextInput?) {
 		// The app has just changed the document's contents, the document context has been updated.
-
-		var textColor: UIColor
-		let proxy = self.textDocumentProxy
-		if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-			textColor = UIColor.white
-		} else {
-			textColor = UIColor.black
-		}
-		self.nextKeyboardButton.setTitleColor(textColor, for: [])
 	}
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        // Trait collection has already changed
+    }
 
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        // Trait collection will change. Use this one so you know what the state is changing to.
+    }
 }
