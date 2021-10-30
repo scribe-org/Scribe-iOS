@@ -5,44 +5,44 @@
 import Foundation
 import UIKit
 
-var proxy : UITextDocumentProxy!
-var keyColor = UIColor.systemGray5
+var proxy: UITextDocumentProxy!
+var keyColor = UIColor.systemGray6
 var specialKeyColor = UIColor.systemGray2
-var keyPressedColor = UIColor.systemGray6
+var keyPressedColor = UIColor.systemGray5
 
 // A larger vertical bar than the normal key for the cursor.
-let previewCursor = "│"
+let previewCursor: String = "│"
 let previewPromptSpacing = String(repeating: " ", count: 2)
 
 let translatePrompt: String = previewPromptSpacing + "Translate: "
 let translatePromptAndCursor: String = translatePrompt + previewCursor
-var getTranslation = false
+var getTranslation: Bool = false
 
 let conjugatePrompt: String = previewPromptSpacing + "Conjugate: "
 let conjugatePromptAndCursor: String = conjugatePrompt + previewCursor
-var getConjugation = false
-var conjugateView = false
-var tenseFPS = ""
-var tenseSPS = ""
-var tenseTPS = ""
-var tenseFPP = ""
-var tenseSPP = ""
-var tenseTPP = ""
-var verbToConjugate = ""
-var verbConjugated = ""
+var getConjugation: Bool = false
+var conjugateView: Bool = false
+var tenseFPS: String = ""
+var tenseSPS: String = ""
+var tenseTPS: String = ""
+var tenseFPP: String = ""
+var tenseSPP: String = ""
+var tenseTPP: String = ""
+var verbToConjugate: String = ""
+var verbConjugated: String = ""
 
 let pluralPrompt: String = previewPromptSpacing + "Plural: "
 let pluralPromptAndCursor: String = pluralPrompt + previewCursor
-var getPlural = false
-var isAlreadyPluralState = false
+var getPlural: Bool = false
+var isAlreadyPluralState: Bool = false
 
-let allPrompts : [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
+let allPrompts: [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 
 extension String {
     func index(from: Int) -> Index {
             return self.index(startIndex, offsetBy: from)
     }
-    
+
     func substring(from: Int) -> String {
             let fromIndex = index(from: from)
             return String(self[fromIndex...])
@@ -52,7 +52,7 @@ extension String {
             let toIndex = index(from: to)
             return String(self[..<toIndex])
     }
-    
+
     func substring(with r: Range<Int>) -> String {
             let startIndex = index(from: r.lowerBound)
             let endIndex = index(from: r.upperBound)
@@ -69,13 +69,13 @@ extension String {
 }
 
 extension Array {
-  func penultimate() -> Element? {
-      if self.count < 2 {
-          return nil
-      }
-      let index = self.count - 2
-      return self[index]
-  }
+    func penultimate() -> Element? {
+        if self.count < 2 {
+            return nil
+        }
+        let index = self.count - 2
+        return self[index]
+    }
 }
 
 func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>? {
@@ -115,13 +115,13 @@ class KeyboardViewController: UIInputViewController {
 		case shift
 		case caps
 	}
-    
+
     enum ConjugationState{
         case indicativePresent
         case indicativePreterite
         case indicativePerfect
     }
-    
+
     // Baseline state variables.
 	var keyboardState: KeyboardState = .letters
 	var shiftButtonState: ShiftButtonState = .normal
@@ -129,13 +129,13 @@ class KeyboardViewController: UIInputViewController {
     var previewState: Bool! = false
     var invalidState: Bool! = false
     var scribeBtnState: Bool! = false
-    
+
     func activateBtn(btn: UIButton) {
         btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
         btn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
         btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
     }
-    
+
     func deactivateBtn(btn: UIButton) {
         btn.setTitle("", for: .normal)
         btn.backgroundColor = UIColor.clear
@@ -143,7 +143,7 @@ class KeyboardViewController: UIInputViewController {
         btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
         btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
     }
-    
+
     func setBtn(btn: UIButton, color: UIColor, name: String, isSpecial: Bool) {
         btn.backgroundColor = color
         btn.layer.setValue(name, forKey: "original")
@@ -151,7 +151,7 @@ class KeyboardViewController: UIInputViewController {
         btn.layer.setValue(isSpecial, forKey: "isSpecial")
         activateBtn(btn: btn)
     }
-    
+
     func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
         btn.clipsToBounds = true
         btn.layer.masksToBounds = true
@@ -172,7 +172,7 @@ class KeyboardViewController: UIInputViewController {
         deGrammarPreviewLabel?.backgroundColor = specialKeyColor
         deGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
     }
-    
+
     @IBOutlet var translateBtn: UIButton!
     @IBOutlet var conjugateBtn: UIButton!
     @IBOutlet var pluralBtn: UIButton!
@@ -181,17 +181,17 @@ class KeyboardViewController: UIInputViewController {
         setBtn(btn: conjugateBtn, color: UIColor.scribeBlue, name: "Conjugate", isSpecial: false)
         setBtn(btn: pluralBtn, color: UIColor.scribeBlue, name: "Plural", isSpecial: false)
     }
-    
+
     @IBOutlet var conjugateBtnFPS: UIButton!
     @IBOutlet var conjugateBtnSPS: UIButton!
     @IBOutlet var conjugateBtnTPS: UIButton!
     @IBOutlet var conjugateBtnFPP: UIButton!
     @IBOutlet var conjugateBtnSPP: UIButton!
     @IBOutlet var conjugateBtnTPP: UIButton!
-    
+
     @IBOutlet var conjugateShiftLeftBtn: UIButton!
     @IBOutlet var conjugateShiftRightBtn: UIButton!
-    
+
     func setConjugationBtns() {
         setBtn(btn: conjugateBtnFPS, color: keyColor, name: "firstPersonSingular", isSpecial: false)
         setBtn(btn: conjugateBtnSPS, color: keyColor, name: "secondPersonSingular", isSpecial: false)
@@ -199,11 +199,11 @@ class KeyboardViewController: UIInputViewController {
         setBtn(btn: conjugateBtnFPP, color: keyColor, name: "firstPersonPlural", isSpecial: false)
         setBtn(btn: conjugateBtnSPP, color: keyColor, name: "secondPersonPlural", isSpecial: false)
         setBtn(btn: conjugateBtnTPP, color: keyColor, name: "thirdPersonPlural", isSpecial: false)
-        
+
         setBtn(btn: conjugateShiftLeftBtn, color: keyColor, name: "shiftConjugateLeft", isSpecial: false)
         setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", isSpecial: false)
     }
-    
+
     func daectivateConjugationDisplay() {
         deactivateBtn(btn: conjugateBtnFPS)
         deactivateBtn(btn: conjugateBtnSPS)
@@ -211,11 +211,11 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: conjugateBtnFPP)
         deactivateBtn(btn: conjugateBtnSPP)
         deactivateBtn(btn: conjugateBtnTPP)
-        
+
         deactivateBtn(btn: conjugateShiftLeftBtn)
         deactivateBtn(btn: conjugateShiftRightBtn)
     }
-    
+
     func getConjugationTitle() -> String {
         switch conjugationState {
         case .indicativePresent:
@@ -226,7 +226,7 @@ class KeyboardViewController: UIInputViewController {
             return previewPromptSpacing + "Indikativ Perfect: " + verbToConjugate
         }
     }
-    
+
     func getConjugationState() -> String{
         switch conjugationState {
         case .indicativePresent:
@@ -237,17 +237,17 @@ class KeyboardViewController: UIInputViewController {
             return "indicativePerfect"
         }
     }
-    
+
     func setConjugationState(radius: CGFloat) {
         deGrammarPreviewLabel?.text = getConjugationTitle()
-        
+
         tenseFPS = getConjugationState() + "FPS"
         tenseSPS = getConjugationState() + "SPS"
         tenseTPS = getConjugationState() + "TPS"
         tenseFPP = getConjugationState() + "FPP"
         tenseSPP = getConjugationState() + "SPP"
         tenseTPP = getConjugationState() + "TPP"
-        
+
         styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: radius)
         styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: radius)
         styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: radius)
@@ -255,7 +255,7 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: radius)
         styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: radius)
     }
-    
+
     func conjugationStateLeft() {
         if conjugationState == .indicativePresent {
             return
@@ -267,7 +267,7 @@ class KeyboardViewController: UIInputViewController {
             return
         }
     }
-    
+
     func conjugationStateRight() {
         if conjugationState == .indicativePresent {
             conjugationState = .indicativePreterite
@@ -278,7 +278,7 @@ class KeyboardViewController: UIInputViewController {
             return
         }
     }
-    
+
     @IBOutlet weak var deStackView1: UIStackView!
 	@IBOutlet weak var deStackView2: UIStackView!
 	@IBOutlet weak var deStackView3: UIStackView!
@@ -289,7 +289,7 @@ class KeyboardViewController: UIInputViewController {
 		// Add custom view sizing constraints here.
 		keyboardView.frame.size = view.frame.size
 	}
-    
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -376,22 +376,22 @@ class KeyboardViewController: UIInputViewController {
 			keyboard = Constants.symbolKeys
             buttonWidth = numSymButtonWidth
 		}
-        
+
         if !conjugateView {
             deStackView1.isUserInteractionEnabled = true
             deStackView2.isUserInteractionEnabled = true
             deStackView3.isUserInteractionEnabled = true
             deStackView4.isUserInteractionEnabled = true
-            
+
             daectivateConjugationDisplay()
-            
+
             let numRows = keyboard.count
             for row in 0...numRows - 1{
                 for col in 0...keyboard[row].count - 1{
                     let btn = UIButton(type: .custom)
                     btn.backgroundColor = keyColor
                     btn.setTitleColor(UIColor.label, for: .normal)
-                    
+
                     let key = keyboard[row][col]
                     let capsKey = keyboard[row][col].capitalized
                     let keyToDisplay = shiftButtonState == .normal ? key : capsKey
@@ -411,22 +411,22 @@ class KeyboardViewController: UIInputViewController {
                     btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
                     btn.layer.borderWidth = 3
                     btn.layer.cornerRadius = buttonWidth / 4
-                    
+
                     activateBtn(btn: btn)
                     btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-                    
+
                     styleBtn(btn: scribeBtn, title: "Scribe", radius: buttonWidth / 4)
                     scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-                    
+
                     if scribeBtnState {
-                        scribeBtn?.setTitle("Esc", for: .normal)
+                        scribeBtn?.setTitle("esc", for: .normal)
                         scribeBtn?.backgroundColor = specialKeyColor
                         scribeBtn?.layer.cornerRadius = buttonWidth / 4
                         scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-                        
+
                         deGrammarPreviewLabel?.backgroundColor = UIColor.clear
                         deGrammarPreviewLabel?.text = ""
-                        
+
                         styleBtn(btn: translateBtn, title: "Translate", radius: buttonWidth / 4)
                         styleBtn(btn: conjugateBtn, title: "Conjugate", radius: buttonWidth / 4)
                         styleBtn(btn: pluralBtn, title: "Plural", radius: buttonWidth / 4)
@@ -434,7 +434,7 @@ class KeyboardViewController: UIInputViewController {
                         deactivateBtn(btn: conjugateBtn)
                         deactivateBtn(btn: translateBtn)
                         deactivateBtn(btn: pluralBtn)
-                        
+
                         deGrammarPreviewLabel?.clipsToBounds = true
                         deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
                         deGrammarPreviewLabel?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
@@ -518,30 +518,30 @@ class KeyboardViewController: UIInputViewController {
             deStackView2.isUserInteractionEnabled = false
             deStackView3.isUserInteractionEnabled = false
             deStackView4.isUserInteractionEnabled = false
-            
-            scribeBtn?.setTitle("Esc", for: .normal)
+
+            scribeBtn?.setTitle("esc", for: .normal)
             scribeBtn?.backgroundColor = specialKeyColor
             scribeBtn?.layer.cornerRadius = buttonWidth / 4
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-            
+
             deGrammarPreviewLabel?.backgroundColor = UIColor.scribeBlue
-            
+
             deactivateBtn(btn: conjugateBtn)
             deactivateBtn(btn: translateBtn)
             deactivateBtn(btn: pluralBtn)
-            
+
             activateBtn(btn: conjugateBtnFPS)
             activateBtn(btn: conjugateBtnSPS)
             activateBtn(btn: conjugateBtnTPS)
             activateBtn(btn: conjugateBtnFPP)
             activateBtn(btn: conjugateBtnSPP)
             activateBtn(btn: conjugateBtnTPP)
-            
+
             activateBtn(btn: conjugateShiftLeftBtn)
             activateBtn(btn: conjugateShiftRightBtn)
-            
+
             setConjugationState(radius: buttonWidth / 4)
-            
+
             styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: buttonWidth / 4)
 //            conjugateShiftLeftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
             styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: buttonWidth / 4)
@@ -579,7 +579,7 @@ class KeyboardViewController: UIInputViewController {
             backspaceTimer = nil
         }
 	}
-    
+
     func queryTranslation() {
         let word = deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
         let lowerCaseWord = word!.lowercased()
@@ -593,7 +593,7 @@ class KeyboardViewController: UIInputViewController {
             invalidState = true
         }
     }
-    
+
     func queryConjugation() {
         verbToConjugate = (deGrammarPreviewLabel?.text!.substring(with: conjugatePrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1)))!
         let verbInDirectory = germanVerbs?[verbToConjugate] != nil
@@ -670,7 +670,7 @@ class KeyboardViewController: UIInputViewController {
             }
         }
     }
-    
+
     func clearPreviewLabel() {
         if previewState != true {
             deGrammarPreviewLabel?.textColor = UIColor.label
@@ -703,14 +703,14 @@ class KeyboardViewController: UIInputViewController {
                 }
                 loadKeys()
             }
-            
+
         case "Translate":
             scribeBtnState = false
             loadKeys()
             deGrammarPreviewLabel?.text = translatePromptAndCursor
             previewState = true
             getTranslation = true
-            
+
         case "Conjugate":
             scribeBtnState = false
             if shiftButtonState == .shift {
@@ -720,7 +720,7 @@ class KeyboardViewController: UIInputViewController {
             deGrammarPreviewLabel?.text = conjugatePromptAndCursor
             previewState = true
             getConjugation = true
-            
+
         case "firstPersonSingular":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseFPS] as! String + " ")
@@ -730,7 +730,7 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "secondPersonSingular":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseSPS] as! String + " ")
@@ -740,7 +740,7 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "thirdPersonSingular":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseTPS] as! String + " ")
@@ -750,7 +750,7 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "firstPersonPlural":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseFPP] as! String + " ")
@@ -760,7 +760,7 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "secondPersonPlural":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseSPP] as! String + " ")
@@ -770,7 +770,7 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "thirdPersonPlural":
             if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseTPP] as! String + " ")
@@ -780,15 +780,15 @@ class KeyboardViewController: UIInputViewController {
             previewState = false
             conjugateView = false
             loadKeys()
-            
+
         case "shiftConjugateLeft":
             conjugationStateLeft()
             loadKeys()
-            
+
         case "shiftConjugateRight":
             conjugationStateRight()
             loadKeys()
-            
+
         case "Plural":
             scribeBtnState = false
             if shiftButtonState == .normal {
@@ -799,7 +799,7 @@ class KeyboardViewController: UIInputViewController {
             deGrammarPreviewLabel?.text = pluralPromptAndCursor
             previewState = true
             getPlural = true
-            
+
 		case "⌫":
 			if shiftButtonState == .shift {
 				shiftButtonState = .normal
@@ -862,7 +862,7 @@ class KeyboardViewController: UIInputViewController {
                     deGrammarPreviewLabel?.text = previewPromptSpacing + "Not in directory"
                 }
                 deGrammarPreviewLabel?.textColor = UIColor.label
-                
+
                 invalidState = false
                 isAlreadyPluralState = false
             }
@@ -981,7 +981,7 @@ class KeyboardViewController: UIInputViewController {
 	override func textDidChange(_ textInput: UITextInput?) {
 		// The app has just changed the document's contents, the document context has been updated.
 	}
-    
+
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         // Trait collection has already changed
     }

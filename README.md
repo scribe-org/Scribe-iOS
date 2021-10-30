@@ -16,7 +16,7 @@
 
 **Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation (beta), verb conjugation and gender based annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
 
-Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -137,6 +137,10 @@ Work that is in progress or could be implemented includes:
 - Make the shift key character change color after being pressed [(see issue)]()
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
+
+- Fixes to the dark mode implementation [(see issue)]()
+
+- Planning and implementing baseline documentation for Scribe [(see issue)]()
 
 - Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
 
