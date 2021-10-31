@@ -14,7 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation (beta), verb conjugation and gender based annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
+**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation (beta), verb conjugation and annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
 
 Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
@@ -67,7 +67,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural wh
 </p>
 -->
 
-### Noun-Gender Annotation
+### Noun Annotation
 
 Scribe further annotates nouns in the preview label according to the following conventions:
 
@@ -75,9 +75,9 @@ Scribe further annotates nouns in the preview label according to the following c
 - Masculine nouns are colored blue 🟦 and marked with (M)
 - Neutral nouns are colored green 🟩 and marked with (N)
 - Plural nouns are colored orange 🟧 and marked with (PL)
-- Multi gendered nouns are multicolored and marked with all their genders
+- Nouns meeting more than one of the above criteria are multi-colored and marked
 
-Genders are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
+Annotations are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
 
 <!--
 <p align="center">
