@@ -116,7 +116,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 Work that is in progress or could be implemented includes:
 
-- Using Wikidata to create JSON files for nouns, verbs and translations
+- Using Wikidata to create JSON files for nouns (including proper nouns), verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 

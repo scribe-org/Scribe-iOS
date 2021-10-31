@@ -1,0 +1,37 @@
+# All Spanish nouns, their gender, and their plural.
+SELECT DISTINCT ?singular ?plural ?gender WHERE {
+
+  # All nouns in a given language.
+  ?lexeme a ontolex:LexicalEntry ;
+            wikibase:lexicalCategory wd:Q1084 ;
+            dct:language ?language .
+
+  # Language is Spanish.
+  ?language wdt:P218 'es' .
+
+  # Optional selection of nominative singular forms.
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?singularForm .
+    ?singularForm ontolex:representation ?singular ;
+                  wikibase:grammaticalFeature wd:Q110786 ;
+                  wikibase:grammaticalFeature wd:Q131105
+  } .
+
+  # Optional selection of nominative plural forms.
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?pluralForm .
+    ?pluralForm ontolex:representation ?plural ;
+                wikibase:grammaticalFeature wd:Q146786 ;
+                wikibase:grammaticalFeature wd:Q131105
+  } .
+
+  # Optional selection of genders.
+  OPTIONAL {
+    ?lexeme wdt:P5185 ?nounGender .
+  } .
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?nounGender rdfs:label ?gender .
+  }
+}

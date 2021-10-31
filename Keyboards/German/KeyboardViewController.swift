@@ -628,44 +628,48 @@ class KeyboardViewController: UIInputViewController {
         }
     }
 
-    func selectedNounGenderAnnotation() {
+    func selectedNounAnnotation() {
         let selectedWord = proxy.selectedText
         let isNoun = germanNouns?[selectedWord!] != nil
         if isNoun {
-            let nounGender = germanNouns?[selectedWord!]?["gender"] as! String
-            if nounGender == "F" {
+            let nounForm = germanNouns?[selectedWord!]?["form"] as! String
+            if nounForm == "F" {
                 deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
-            } else if nounGender == "M" {
+            } else if nounForm == "M" {
                 deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
-            } else if nounGender ==  "N" {
+            } else if nounForm ==  "N" {
                 deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
-            } else if nounGender ==  "PL"{
+            } else if nounForm ==  "PL" {
                 deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+            } else {
+                deGrammarPreviewLabel?.textColor = .black
             }
 
-            deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounGender)) " + selectedWord!
+            deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm)) " + selectedWord!
             deGrammarPreviewLabel?.sizeToFit()
         }
     }
 
-    func typedNounGenderAnnotation() {
+    func typedNounAnnotation() {
         if proxy.documentContextBeforeInput != nil {
             let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
             let lastWordTyped = wordsTyped.penultimate()
             let isNoun = germanNouns?[lastWordTyped!] != nil
             if isNoun {
-                let nounGender = germanNouns?[lastWordTyped!]?["gender"] as! String
-                if nounGender == "F" {
+                let nounForm = germanNouns?[lastWordTyped!]?["form"] as! String
+                if nounForm == "F" {
                     deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
-                } else if nounGender == "M" {
+                } else if nounForm == "M" {
                     deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
-                } else if nounGender ==  "N" {
+                } else if nounForm ==  "N" {
                     deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
-                } else if nounGender ==  "PL"{
+                } else if nounForm ==  "PL" {
                     deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+                } else {
+                    deGrammarPreviewLabel?.textColor = .black
                 }
 
-                deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounGender)) " + lastWordTyped!
+                deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm)) " + lastWordTyped!
                 deGrammarPreviewLabel?.sizeToFit()
             }
         }
@@ -688,7 +692,7 @@ class KeyboardViewController: UIInputViewController {
         case "Scribe":
             if (proxy.selectedText != nil) {
                 loadKeys()
-                selectedNounGenderAnnotation()
+                selectedNounAnnotation()
             } else {
                 if scribeBtnState == false && conjugateView != true{
                     scribeBtnState = true
@@ -823,7 +827,7 @@ class KeyboardViewController: UIInputViewController {
             } else {
                 deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: " "))!
             }
-            typedNounGenderAnnotation()
+            typedNounAnnotation()
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
@@ -869,7 +873,7 @@ class KeyboardViewController: UIInputViewController {
             else {
                 previewState = false
                 clearPreviewLabel()
-                typedNounGenderAnnotation()
+                typedNounAnnotation()
                 // Auto-capitalization if at the start of the proxy.
                 proxy.insertText(" ")
                 if proxy.documentContextBeforeInput == " " {
