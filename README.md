@@ -16,7 +16,7 @@
 
 **Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation (beta), verb conjugation and annotation of nouns that give users the tools needed to communicate with confidence. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
 
-Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. The Wikidata query and formatting files for each keyboard are found in the `DataPrep` directory or each keyboard in [Scribe-iOS/Keyboards](https://github.com/scribe-org/Scribe-iOS/tree/main/Keyboards). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. The [Wikidata](https://www.wikidata.org/) query and formatting files for each keyboard are found in the `DataPrep` directory or each keyboard in [Scribe-iOS/Keyboards](https://github.com/scribe-org/Scribe-iOS/tree/main/Keyboards). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 # **Contents**<a id="contents"></a>
 
@@ -116,7 +116,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 Work that is in progress or could be implemented includes:
 
-- Using Wikidata to create JSON files for nouns (including proper nouns), verbs and translations
+- Using Wikidata to create JSON files for verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
