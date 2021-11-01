@@ -116,6 +116,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 Work that is in progress or could be implemented includes:
 
+## Functionality
+
 - Using Wikidata to create JSON files for verbs and translations
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
@@ -134,13 +136,15 @@ Work that is in progress or could be implemented includes:
 
   - This would help keep the app size to a minimum
 
+- Planning and implementing baseline documentation for Scribe [(see issue)]()
+
+## Appearance
+
 - Make the shift key character change color after being pressed [(see issue)]()
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
 - Fixes to the dark mode implementation [(see issue)]()
-
-- Planning and implementing baseline documentation for Scribe [(see issue)]()
 
 - Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
 
