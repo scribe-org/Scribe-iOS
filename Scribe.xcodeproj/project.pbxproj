@@ -16,10 +16,8 @@
 		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38BD215B22D5A26900C6795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD215A22D5A26900C6795D /* Constants.swift */; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		D10182112728275B0032A82D /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = D101820E2728275B0032A82D /* nouns.txt */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
-		D101821C2728291B0032A82D /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = D10182192728291B0032A82D /* nouns.txt */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
 		D1018220272829E70032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821B2728291B0032A82D /* verbs.json */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
@@ -77,10 +75,8 @@
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BD215A22D5A26900C6795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D101820E2728275B0032A82D /* nouns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nouns.txt; sourceTree = "<group>"; };
 		D101820F2728275B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
-		D10182192728291B0032A82D /* nouns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nouns.txt; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D101821B2728291B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
@@ -159,7 +155,6 @@
 				38BD215A22D5A26900C6795D /* Constants.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
-				D10182192728291B0032A82D /* nouns.txt */,
 				D101821A2728291B0032A82D /* nouns.json */,
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
@@ -175,7 +170,6 @@
 				D142638A270B6F2B00D3702D /* Constants.swift */,
 				D142638B270B6F2B00D3702D /* Extensions.swift */,
 				D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */,
-				D101820E2728275B0032A82D /* nouns.txt */,
 				D101820F2728275B0032A82D /* nouns.json */,
 				D10182102728275B0032A82D /* verbs.json */,
 				D11E3B6A27299C8000FBE62C /* translations.json */,
@@ -307,7 +301,6 @@
 			files = (
 				D1018220272829E70032A82D /* verbs.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
-				D101821C2728291B0032A82D /* nouns.txt in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 			);
@@ -319,7 +312,6 @@
 			files = (
 				D10182132728275B0032A82D /* verbs.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
-				D10182112728275B0032A82D /* nouns.txt in Resources */,
 				D1C0ACDC2719E0BA001E11C3 /* Keyboard.xib in Resources */,
 				D10182122728275B0032A82D /* nouns.json in Resources */,
 			);
