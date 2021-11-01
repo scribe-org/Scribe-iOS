@@ -247,13 +247,43 @@ class KeyboardViewController: UIInputViewController {
         tenseFPP = getConjugationState() + "FPP"
         tenseSPP = getConjugationState() + "SPP"
         tenseTPP = getConjugationState() + "TPP"
-
-        styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: radius)
-        styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: radius)
-        styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: radius)
-        styleBtn(btn: conjugateBtnFPP, title: germanVerbs?[verbToConjugate]![tenseFPP] as! String, radius: radius)
-        styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: radius)
-        styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: radius)
+        
+        // Assign the invalid message if the conjugation isn't present in the directory.
+        if germanVerbs?[verbToConjugate]![tenseFPS] as! String == "" {
+            styleBtn(btn: conjugateBtnFPS, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: radius)
+        }
+        
+        if germanVerbs?[verbToConjugate]![tenseSPS] as! String == "" {
+            styleBtn(btn: conjugateBtnSPS, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: radius)
+        }
+        
+        if germanVerbs?[verbToConjugate]![tenseTPS] as! String == "" {
+            styleBtn(btn: conjugateBtnTPS, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: radius)
+        }
+        
+        if germanVerbs?[verbToConjugate]![tenseFPP] as! String == "" {
+            styleBtn(btn: conjugateBtnFPP, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnFPP, title: germanVerbs?[verbToConjugate]![tenseFPP] as! String, radius: radius)
+        }
+        
+        if germanVerbs?[verbToConjugate]![tenseSPP] as! String == "" {
+            styleBtn(btn: conjugateBtnSPP, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: radius)
+        }
+        
+        if germanVerbs?[verbToConjugate]![tenseTPP] as! String == "" {
+            styleBtn(btn: conjugateBtnTPP, title: "Not in directory", radius: radius)
+        } else {
+            styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: radius)
+        }
     }
 
     func conjugationStateLeft() {
@@ -726,7 +756,11 @@ class KeyboardViewController: UIInputViewController {
             getConjugation = true
 
         case "firstPersonSingular":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseFPS] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
@@ -736,7 +770,11 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
 
         case "secondPersonSingular":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseSPS] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
@@ -746,7 +784,11 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
 
         case "thirdPersonSingular":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseTPS] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
@@ -756,7 +798,11 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
 
         case "firstPersonPlural":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseFPP] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
@@ -766,7 +812,11 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
 
         case "secondPersonPlural":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseSPP] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
@@ -776,7 +826,11 @@ class KeyboardViewController: UIInputViewController {
             loadKeys()
 
         case "thirdPersonPlural":
-            if conjugationState != .indicativePerfect {
+            // Don't change proxy if they select a conjugation that's missing.
+            if sender.titleLabel?.text == "Not in directory" {
+                proxy.insertText("")
+            }
+            else if conjugationState != .indicativePerfect {
                 proxy.insertText(germanVerbs?[verbToConjugate]![tenseTPP] as! String + " ")
             } else {
                 proxy.insertText(germanVerbs?[verbToConjugate]!["pastParticiple"] as! String + " ")

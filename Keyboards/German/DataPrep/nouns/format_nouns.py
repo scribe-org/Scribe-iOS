@@ -1,5 +1,5 @@
 """
-Nouns Format
+Format Nouns
 ------------
 
 Formats the nouns queried from Wikidata using queryNouns.sparql.
@@ -42,6 +42,7 @@ for noun_vals in nouns_list:
                             "plural": "isPlural",
                             "form": "PL",
                         }
+
                     else:
                         nouns_formatted[noun_vals["plural"]] = {
                             "plural": noun_vals["plural"],
@@ -56,8 +57,10 @@ for noun_vals in nouns_list:
                         nouns_formatted[noun_vals["plural"]]["form"] = (
                             nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
                         )
+
                     elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
                         nouns_formatted[noun_vals["plural"]]["form"] = "PL"
+
                     # Assign itself as a plural if possible (maybe wasn't for prior versions).
                     if noun_vals["singular"] == noun_vals["plural"]:
                         nouns_formatted[noun_vals["plural"]]["plural"] = noun_vals[
@@ -78,6 +81,7 @@ for noun_vals in nouns_list:
                             "plural": "isPlural",
                             "form": "PL",
                         }
+
                     else:
                         nouns_formatted[noun_vals["plural"]] = {
                             "plural": noun_vals["plural"],
@@ -92,8 +96,10 @@ for noun_vals in nouns_list:
                         nouns_formatted[noun_vals["plural"]]["form"] = (
                             nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
                         )
+
                     elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
                         nouns_formatted[noun_vals["plural"]]["form"] = "PL"
+
                     # Assign itself as a plural if possible (maybe wasn't for prior versions).
                     if noun_vals["singular"] == noun_vals["plural"]:
                         nouns_formatted[noun_vals["plural"]]["plural"] = noun_vals[
@@ -121,6 +127,7 @@ for noun_vals in nouns_list:
                 nouns_formatted[noun_vals["plural"]]["form"] = (
                     nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
                 )
+
             elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
                 nouns_formatted[noun_vals["plural"]]["form"] = "PL"
 

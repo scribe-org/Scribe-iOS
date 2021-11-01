@@ -3,15 +3,12 @@
 
 SELECT DISTINCT ?singular ?plural ?gender WHERE {
 
-  # All nouns or pronouns of a given language.
+  # All German nouns or pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-            wikibase:lexicalCategory ?noun ;
-            dct:language ?language .
+            dct:language wd:Q188 ;
+            wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes )
-
-  # Language is German.
-  ?language wdt:P218 'de' .
 
   # Optional selection of nominative singular forms.
   OPTIONAL {
