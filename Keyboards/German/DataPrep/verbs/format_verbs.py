@@ -49,7 +49,6 @@ def assign_past_participle(verb, tense):
 for verb_vals in verbs_list:
     if "infinitive" in verb_vals.keys():
         if verb_vals["infinitive"] not in verbs_formatted.keys():
-            print(verb_vals["infinitive"])
             non_infinitive_conjugations = {
                 k: v for k, v in verb_vals.items() if k != "infinitive"
             }

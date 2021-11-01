@@ -112,13 +112,13 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 # To-Do [`↩`](#contents) <a id="to-do"></a>
 
-Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Specifically: Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
-
-Work that is in progress or could be implemented includes:
+Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
 ## Functionality
 
-- Using Wikidata to create JSON files for verbs and translations
+- Using Wikidata to create JSON files for translations
+
+- Allowing for keys to be long pressed for alternate keys options
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
@@ -151,6 +151,12 @@ Work that is in progress or could be implemented includes:
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
 
 - Adding a feature where the Scribe UI can be hidden and replaced with a system keyboard with an element to show the UI again [(see issue)]()
+
+## Data
+
+Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Known data issues include:
+
+- Many German verbs do not have auxiliary verbs meaning that their full perfect conjugations cannot be displayed [(see issue)]()
 
 # Powered By
 
