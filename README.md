@@ -39,7 +39,9 @@ Scribe keyboard features are accessed via the `Scribe key` at the top left of an
 
 ### Translation
 
-The **`beta`** `Translate` feature can translate single words from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages, and then explore multi word translations.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages, then to provide options for entered words where a user can use grammatical categories and synonyms to select a best option, and then finally to explore api translation implementations.
+
+As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) machine translated words queried from [Wikidata](https://www.wikidata.org/).
 
 <!--
 <p align="center">
@@ -155,6 +157,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 ## Data
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Known data issues include:
+
+- Expanding the availability of translations in [Wikidata lexicographical data](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) and reworking the `Translate` feature to access them [(see issue)]()
 
 - Many German verbs do not have auxiliary verbs meaning that their full perfect conjugations cannot be displayed [(see issue)]()
 
