@@ -77,11 +77,13 @@
       "size" : "20x20"
     },
     {
+      "filename" : "Scribe_icon_29pt-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
+      "filename" : "Scribe_icon_29pt@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"

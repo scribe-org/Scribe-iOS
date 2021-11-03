@@ -25,7 +25,3 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
-
-# Display files
-###############
-*.sketch
