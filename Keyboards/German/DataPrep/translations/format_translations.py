@@ -2,7 +2,7 @@
 Format Translations
 -------------------
 
-Formats the translations queried from Wikidata using queryTranslations.sparql.
+Formats and translates the words queried from Wikidata using queryTranslations.sparql.
 
 Note: first go into translationsQueried.json and do a find and replace of:
 <"verb", "word": "> with <"verb", "word": "to > to differentiate verbs.
