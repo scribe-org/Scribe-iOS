@@ -5,7 +5,7 @@
 # An initial goal is that Scribe will directly query these features.
 # This would allow for basic translations from any system or chosen language.
 # Words with multiple translations could also prompt the keyboard to be replaced with the options.
-# For now English words are querried and machine translated using OpenNMT-py.
+# For now English words are querried and machine translated using 🤗 Transformers.
 # Verbs are differentiated from their noun equivalents by adding "to" prior to translation.
 # All other copies of words are dropped -  nouns thus take prescedence over adjectives, adjectives over adverbs, etc.
 

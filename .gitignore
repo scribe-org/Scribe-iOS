@@ -1,6 +1,7 @@
 # OS Files
 ##########
 .DS_Store
+.vscode
 
 ## Xcode Files
 project.xcworkspace

@@ -1,0 +1,7 @@
+name: scribe-ios-dev
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - black>=19.10b0
+  - transformers>=4.12

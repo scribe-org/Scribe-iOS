@@ -21,6 +21,7 @@ words = list(set(words))
 
 translations_formatted = {}
 
+# Need a model for English to Spanish.
 model = AutoModelForSeq2SeqLM.from_pretrained("t5-large")
 tokenizer = AutoTokenizer.from_pretrained("t5-large")
 
