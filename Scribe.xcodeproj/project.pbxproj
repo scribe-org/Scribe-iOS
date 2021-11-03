@@ -151,13 +151,13 @@
 			isa = PBXGroup;
 			children = (
 				38BD214E22D592CA00C6795D /* KeyboardViewController.swift */,
-				38BD215022D592CA00C6795D /* Info.plist */,
 				38BD215A22D5A26900C6795D /* Constants.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
 				D101821A2728291B0032A82D /* nouns.json */,
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
+				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
 			sourceTree = "<group>";
@@ -166,13 +166,13 @@
 			isa = PBXGroup;
 			children = (
 				D1608667270B6D3C00134D48 /* KeyboardViewController.swift */,
-				D1608669270B6D3C00134D48 /* Info.plist */,
 				D142638A270B6F2B00D3702D /* Constants.swift */,
 				D142638B270B6F2B00D3702D /* Extensions.swift */,
 				D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */,
 				D101820F2728275B0032A82D /* nouns.json */,
 				D10182102728275B0032A82D /* verbs.json */,
 				D11E3B6A27299C8000FBE62C /* translations.json */,
+				D1608669270B6D3C00134D48 /* Info.plist */,
 			);
 			path = Spanish;
 			sourceTree = "<group>";

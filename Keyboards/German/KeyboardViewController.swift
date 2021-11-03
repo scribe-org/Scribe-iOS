@@ -385,25 +385,25 @@ class KeyboardViewController: UIInputViewController {
 
         // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
-		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
-        let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeys[0].count)
+		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeysPhone[0].count)
+        let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeysPhone[0].count)
 
 		var keyboard: [[String]]
 
 		// Start padding.
 		switch keyboardState {
 		case .letters:
-			keyboard = Constants.letterKeys
+			keyboard = Constants.letterKeysPhone
             buttonWidth = letterButtonWidth
             // Auto-capitalization.
             if proxy.documentContextBeforeInput?.count == 0 {
                 shiftButtonState = .shift
             }
 		case .numbers:
-			keyboard = Constants.numberKeys
+			keyboard = Constants.numberKeysPhone
             buttonWidth = numSymButtonWidth
 		case .symbols:
-			keyboard = Constants.symbolKeys
+			keyboard = Constants.symbolKeysPhone
             buttonWidth = numSymButtonWidth
 		}
 
