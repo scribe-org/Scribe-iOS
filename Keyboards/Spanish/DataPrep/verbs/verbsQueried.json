@@ -1,5 +1,6 @@
-{
-  "parecer": {
+[
+  {
+    "infinitive": "parecer",
     "indicativePresentFPS": "parezco",
     "indicativePresentSPS": "pareces",
     "indicativePresentTPS": "parece",
@@ -19,7 +20,8 @@
     "pastPerfectSPP": "parecíais",
     "pastPerfectTPP": "parecían"
   },
-  "oír": {
+  {
+    "infinitive": "oír",
     "indicativePresentFPS": "oigo",
     "indicativePresentSPS": "oyes",
     "indicativePresentTPS": "oye",
@@ -39,7 +41,8 @@
     "pastPerfectSPP": "oíais",
     "pastPerfectTPP": "oían"
   },
-  "aprender": {
+  {
+    "infinitive": "aprender",
     "indicativePresentFPS": "aprendo",
     "indicativePresentSPS": "aprendes",
     "indicativePresentTPS": "aprende",
@@ -59,7 +62,8 @@
     "pastPerfectSPP": "aprendíais",
     "pastPerfectTPP": "aprendía"
   },
-  "ayudar": {
+  {
+    "infinitive": "ayudar",
     "indicativePresentFPS": "ayudo",
     "indicativePresentSPS": "ayudas",
     "indicativePresentTPS": "ayuda",
@@ -79,7 +83,8 @@
     "pastPerfectSPP": "ayudabais",
     "pastPerfectTPP": "ayudaban"
   },
-  "decir": {
+  {
+    "infinitive": "decir",
     "indicativePresentFPS": "digo",
     "indicativePresentSPS": "dices",
     "indicativePresentTPS": "dice",
@@ -99,7 +104,8 @@
     "pastPerfectSPP": "decíais",
     "pastPerfectTPP": "decían"
   },
-  "cantar": {
+  {
+    "infinitive": "cantar",
     "indicativePresentFPS": "canto",
     "indicativePresentSPS": "cantas",
     "indicativePresentTPS": "canta",
@@ -119,13 +125,9 @@
     "pastPerfectSPP": "cantabais",
     "pastPerfectTPP": "cantaban"
   },
-  "venir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
+  {
+    "infinitive": "venir",
+    "gerund": "viniendo",
     "preteriteFPS": "vine",
     "preteriteSPS": "viniste",
     "preteriteTPS": "vino",
@@ -139,14 +141,9 @@
     "pastPerfectSPP": "veníais",
     "pastPerfectTPP": "venían"
   },
-  "trabajar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
+  {
+    "infinitive": "trabajar",
+    "gerund": "trabajando",
     "preteriteSPS": "trabajaste",
     "preteriteTPS": "trabajó",
     "preteriteFPP": "trabajamos",
@@ -159,13 +156,8 @@
     "pastPerfectSPP": "trabajabais",
     "pastPerfectTPP": "trabajaban"
   },
-  "hacer": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
+  {
+    "infinitive": "hacer",
     "preteriteFPS": "hice",
     "preteriteSPS": "hiciste",
     "preteriteTPS": "hizo",
@@ -179,7 +171,8 @@
     "pastPerfectSPP": "hacíais",
     "pastPerfectTPP": "hacían"
   },
-  "destruir": {
+  {
+    "infinitive": "destruir",
     "indicativePresentFPS": "destruyo",
     "indicativePresentSPS": "destruyes",
     "indicativePresentTPS": "destruye",
@@ -199,7 +192,8 @@
     "pastPerfectSPP": "destruíais",
     "pastPerfectTPP": "destruían"
   },
-  "necesitar": {
+  {
+    "infinitive": "necesitar",
     "indicativePresentFPS": "necesito",
     "indicativePresentSPS": "necesitas",
     "indicativePresentTPS": "necesita",
@@ -219,7 +213,8 @@
     "pastPerfectSPP": "necesitabais",
     "pastPerfectTPP": "necesitaban"
   },
-  "probar": {
+  {
+    "infinitive": "probar",
     "indicativePresentFPS": "pruebo",
     "indicativePresentSPS": "pruebas",
     "indicativePresentTPS": "prueba",
@@ -239,7 +234,8 @@
     "pastPerfectSPP": "probabais",
     "pastPerfectTPP": "probaban"
   },
-  "reír": {
+  {
+    "infinitive": "reír",
     "indicativePresentFPS": "río",
     "indicativePresentSPS": "ríes",
     "indicativePresentTPS": "ríe",
@@ -259,7 +255,8 @@
     "pastPerfectSPP": "reíais",
     "pastPerfectTPP": "reían"
   },
-  "pasar": {
+  {
+    "infinitive": "pasar",
     "indicativePresentFPS": "paso",
     "indicativePresentSPS": "pasas",
     "indicativePresentTPS": "pasa",
@@ -279,7 +276,8 @@
     "pastPerfectSPP": "pasabais",
     "pastPerfectTPP": "pasaban"
   },
-  "escribir": {
+  {
+    "infinitive": "escribir",
     "indicativePresentFPS": "escribo",
     "indicativePresentSPS": "escribes",
     "indicativePresentTPS": "escribe",
@@ -299,7 +297,8 @@
     "pastPerfectSPP": "escribíais",
     "pastPerfectTPP": "escribían"
   },
-  "deglutir": {
+  {
+    "infinitive": "deglutir",
     "indicativePresentFPS": "degluto",
     "indicativePresentSPS": "deglutes",
     "indicativePresentTPS": "deglute",
@@ -319,7 +318,8 @@
     "pastPerfectSPP": "deglutíais",
     "pastPerfectTPP": "deglutían"
   },
-  "hablar": {
+  {
+    "infinitive": "hablar",
     "indicativePresentFPS": "hablo",
     "indicativePresentSPS": "hablas",
     "indicativePresentTPS": "habla",
@@ -339,7 +339,8 @@
     "pastPerfectSPP": "hablabais",
     "pastPerfectTPP": "hablaban"
   },
-  "leer": {
+  {
+    "infinitive": "leer",
     "indicativePresentFPS": "leo",
     "indicativePresentSPS": "lees",
     "indicativePresentTPS": "lee",
@@ -359,7 +360,8 @@
     "pastPerfectSPP": "leíais",
     "pastPerfectTPP": "leían"
   },
-  "correr": {
+  {
+    "infinitive": "correr",
     "indicativePresentFPS": "corro",
     "indicativePresentSPS": "corres",
     "indicativePresentTPS": "corre",
@@ -379,7 +381,8 @@
     "pastPerfectSPP": "corríais",
     "pastPerfectTPP": "corrían"
   },
-  "llevar": {
+  {
+    "infinitive": "llevar",
     "indicativePresentFPS": "llevo",
     "indicativePresentSPS": "llevas",
     "indicativePresentTPS": "lleva",
@@ -399,7 +402,8 @@
     "pastPerfectSPP": "llevabais",
     "pastPerfectTPP": "llevaban"
   },
-  "parar": {
+  {
+    "infinitive": "parar",
     "indicativePresentFPS": "paro",
     "indicativePresentSPS": "paras",
     "indicativePresentTPS": "para",
@@ -419,7 +423,8 @@
     "pastPerfectSPP": "parabais",
     "pastPerfectTPP": "paraban"
   },
-  "ofrecer": {
+  {
+    "infinitive": "ofrecer",
     "indicativePresentFPS": "ofrezco",
     "indicativePresentSPS": "ofreces",
     "indicativePresentTPS": "ofrece",
@@ -439,7 +444,8 @@
     "pastPerfectSPP": "ofrecíais",
     "pastPerfectTPP": "ofrecían"
   },
-  "nacer": {
+  {
+    "infinitive": "nacer",
     "indicativePresentFPS": "nazco",
     "indicativePresentSPS": "naces",
     "indicativePresentTPS": "nace",
@@ -459,7 +465,8 @@
     "pastPerfectSPP": "nacíais",
     "pastPerfectTPP": "nacían"
   },
-  "almorzar": {
+  {
+    "infinitive": "almorzar",
     "indicativePresentFPS": "almuerzo",
     "indicativePresentSPS": "almuerzas",
     "indicativePresentTPS": "almuerza",
@@ -479,7 +486,8 @@
     "pastPerfectSPP": "almorzabais",
     "pastPerfectTPP": "almorzaban"
   },
-  "doblar": {
+  {
+    "infinitive": "doblar",
     "indicativePresentFPS": "doblo",
     "indicativePresentSPS": "doblas",
     "indicativePresentTPS": "dobla",
@@ -499,7 +507,8 @@
     "pastPerfectSPP": "doblabais",
     "pastPerfectTPP": "doblaban"
   },
-  "jugar": {
+  {
+    "infinitive": "jugar",
     "indicativePresentFPS": "juego",
     "indicativePresentSPS": "juegas",
     "indicativePresentTPS": "juega",
@@ -519,7 +528,29 @@
     "pastPerfectSPP": "jugabais",
     "pastPerfectTPP": "jugaban"
   },
-  "recorrer": {
+  {
+    "infinitive": "recorrer",
+    "indicativePresentFPS": "recorro",
+    "indicativePresentSPS": "recorres",
+    "indicativePresentTPS": "recorre",
+    "indicativePresentFPP": "recorremos",
+    "indicativePresentSPP": "recorréis",
+    "indicativePresentTPP": "recorren",
+    "preteriteFPS": "recorrí",
+    "preteriteSPS": "recorriste",
+    "preteriteTPS": "recorrió",
+    "preteriteFPP": "recorrimos",
+    "preteriteSPP": "recorristeis",
+    "preteriteTPP": "recorrieron",
+    "pastPerfectFPS": "recorría",
+    "pastPerfectSPS": "recorrías",
+    "pastPerfectTPS": "recorría",
+    "pastPerfectFPP": "recorríamos",
+    "pastPerfectSPP": "recorríais",
+    "pastPerfectTPP": "recorrían"
+  },
+  {
+    "infinitive": "recorrer",
     "indicativePresentFPS": "recorro",
     "indicativePresentSPS": "recorrés",
     "indicativePresentTPS": "recorre",
@@ -539,444 +570,41 @@
     "pastPerfectSPP": "recorríais",
     "pastPerfectTPP": "recorrían"
   },
-  "describir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "construir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "ser": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "estar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "dibujar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "haber": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "regresar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "tener": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "caminar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "vivir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "iterar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "poder": {
+  { "infinitive": "describir", "gerund": "describiendo" },
+  { "infinitive": "construir" },
+  { "infinitive": "ser", "gerund": "siendo" },
+  { "infinitive": "estar", "gerund": "estando" },
+  { "infinitive": "dibujar" },
+  { "infinitive": "haber", "gerund": "habiendo" },
+  { "infinitive": "regresar" },
+  { "infinitive": "tener", "gerund": "teniendo" },
+  { "infinitive": "caminar" },
+  { "infinitive": "vivir", "gerund": "viviendo" },
+  { "infinitive": "iterar" },
+  {
+    "infinitive": "poder",
     "indicativePresentFPS": "puedo",
     "indicativePresentSPS": "puedes",
     "indicativePresentTPS": "puede",
     "indicativePresentFPP": "podemos",
     "indicativePresentSPP": "podéis",
     "indicativePresentTPP": "pueden",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "podía",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "pastPerfectFPS": "podía"
   },
-  "ir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+  {
+    "infinitive": "ir",
+    "gerund": "yendo",
+    "pastParticipleSingularFemale": "ida",
+    "pastParticiplePluralMale": "idos",
+    "pastParticiplePluralFemale": "idas"
   },
-  "portar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "abrir": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "contar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "volver": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "crear": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "comer": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "poner": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "basar": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  },
-  "ñoñear": {
-    "indicativePresentFPS": "",
-    "indicativePresentSPS": "",
-    "indicativePresentTPS": "",
-    "indicativePresentFPP": "",
-    "indicativePresentSPP": "",
-    "indicativePresentTPP": "",
-    "preteriteFPS": "",
-    "preteriteSPS": "",
-    "preteriteTPS": "",
-    "preteriteFPP": "",
-    "preteriteSPP": "",
-    "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
-  }
-}
+  { "infinitive": "portar" },
+  { "infinitive": "abrir" },
+  { "infinitive": "contar" },
+  { "infinitive": "volver" },
+  { "infinitive": "crear", "gerund": "creando" },
+  { "infinitive": "comer" },
+  { "infinitive": "poner" },
+  { "infinitive": "basar" },
+  { "infinitive": "ñoñear" }
+]

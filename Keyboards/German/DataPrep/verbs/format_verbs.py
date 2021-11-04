@@ -47,88 +47,77 @@ def assign_past_participle(verb, tense):
 
 
 for verb_vals in verbs_list:
-    if "infinitive" in verb_vals.keys():
-        if verb_vals["infinitive"] not in verbs_formatted.keys():
-            non_infinitive_conjugations = {
-                k: v for k, v in verb_vals.items() if k != "infinitive"
-            }
-            verbs_formatted[verb_vals["infinitive"]] = non_infinitive_conjugations
+    if verb_vals["infinitive"] not in verbs_formatted.keys():
+        non_infinitive_conjugations = {
+            k: v for k, v in verb_vals.items() if k != "infinitive"
+        }
+        verbs_formatted[verb_vals["infinitive"]] = non_infinitive_conjugations
 
-            for k in all_keys:
-                if k not in verbs_formatted[verb_vals["infinitive"]].keys():
-                    verbs_formatted[verb_vals["infinitive"]][k] = ""
+        for k in all_keys:
+            if k not in verbs_formatted[verb_vals["infinitive"]].keys():
+                verbs_formatted[verb_vals["infinitive"]][k] = ""
 
-            if "auxiliaryVerb" in verb_vals.keys():
-                # Sein
-                if verb_vals["auxiliaryVerb"] == "L1761":
-                    verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "sein"
+        if "auxiliaryVerb" in verb_vals.keys():
+            # Sein
+            if verb_vals["auxiliaryVerb"] == "L1761":
+                verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "sein"
 
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectFPS"
-                    ] += "bin"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectSPS"
-                    ] += "bist"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectTPS"
-                    ] += "ist"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectFPP"
-                    ] += "sind"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectSPP"
-                    ] += "seid"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectTPP"
-                    ] += "sind"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectFPS"
+                ] += "bin"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectSPS"
+                ] += "bist"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectTPS"
+                ] += "ist"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectFPP"
+                ] += "sind"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectSPP"
+                ] += "seid"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectTPP"
+                ] += "sind"
 
-                # Haben
-                elif verb_vals["auxiliaryVerb"] == "L4179":
-                    verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "haben"
+            # Haben
+            elif verb_vals["auxiliaryVerb"] == "L4179":
+                verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "haben"
 
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectFPS"
-                    ] += "habe"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectSPS"
-                    ] += "hast"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectTPS"
-                    ] += "hat"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectFPP"
-                    ] += "haben"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectSPP"
-                    ] += "habt"
-                    verbs_formatted[verb_vals["infinitive"]][
-                        "indicativePerfectTPP"
-                    ] += "haben"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectFPS"
+                ] += "habe"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectSPS"
+                ] += "hast"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectTPS"
+                ] += "hat"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectFPP"
+                ] += "haben"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectSPP"
+                ] += "habt"
+                verbs_formatted[verb_vals["infinitive"]][
+                    "indicativePerfectTPP"
+                ] += "haben"
 
-        # The verb has two entries and thus has forms with both sein and haben.
-        elif (
-            "auxiliaryVerb" in verb_vals.keys()
-            and verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"]
-            != verb_vals["auxiliaryVerb"]
-        ):
-            verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "sein/haben"
+    # The verb has two entries and thus has forms with both sein and haben.
+    elif (
+        "auxiliaryVerb" in verb_vals.keys()
+        and verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"]
+        != verb_vals["auxiliaryVerb"]
+    ):
+        verbs_formatted[verb_vals["infinitive"]]["auxiliaryVerb"] = "sein/haben"
 
-            verbs_formatted[verb_vals["infinitive"]][
-                "indicativePerfectFPS"
-            ] = "bin/habe"
-            verbs_formatted[verb_vals["infinitive"]][
-                "indicativePerfectSPS"
-            ] = "bist/hast"
-            verbs_formatted[verb_vals["infinitive"]]["indicativePerfectTPS"] = "ist/hat"
-            verbs_formatted[verb_vals["infinitive"]][
-                "indicativePerfectFPP"
-            ] = "sind/haben"
-            verbs_formatted[verb_vals["infinitive"]][
-                "indicativePerfectSPP"
-            ] = "seid/habt"
-            verbs_formatted[verb_vals["infinitive"]][
-                "indicativePerfectTPP"
-            ] = "sind/haben"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectFPS"] = "bin/habe"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectSPS"] = "bist/hast"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectTPS"] = "ist/hat"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectFPP"] = "sind/haben"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectSPP"] = "seid/habt"
+        verbs_formatted[verb_vals["infinitive"]]["indicativePerfectTPP"] = "sind/haben"
 
     if "pastParticiple" in verb_vals.keys():
         assign_past_participle(verb=verb_vals, tense="indicativePerfectFPS")

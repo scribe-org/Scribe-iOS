@@ -150,6 +150,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Appearance
 
+- Edits to Keyboard.xib files to make keyboards more responsive and to provide language specific UI based on grammatical needs [(see issue)]()
+
 - Make the shift key character change color after being pressed [(see issue)]()
 
   - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in

@@ -11,12 +11,10 @@ SELECT ?infinitive ?presentParticiple ?pastParticiple ?auxiliaryVerb
             dct:language wd:Q188 ;
             wikibase:lexicalCategory wd:Q24905 .
 
-  # Infinitive, past participle and the auxiliary verb(s)
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?infinitiveForm .
-      ?infinitiveForm ontolex:representation ?infinitive ;
-                      wikibase:grammaticalFeature wd:Q179230 ;
-  } .
+  # Infinitive (required), past participle and the auxiliary verb(s)
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+                  wikibase:grammaticalFeature wd:Q179230 .
 
   # OPTIONAL {
   #     ?lexeme ontolex:lexicalForm ?presentParticipleForm .
