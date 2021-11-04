@@ -55,7 +55,7 @@ for noun_vals in nouns_list:
                         and nouns_formatted[noun_vals["plural"]]["form"] != "noForm"
                     ):
                         nouns_formatted[noun_vals["plural"]]["form"] = (
-                            nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
+                            nouns_formatted[noun_vals["plural"]]["form"] + "/PL"
                         )
 
                     elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
@@ -94,7 +94,7 @@ for noun_vals in nouns_list:
                         and nouns_formatted[noun_vals["plural"]]["form"] != "noForm"
                     ):
                         nouns_formatted[noun_vals["plural"]]["form"] = (
-                            nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
+                            nouns_formatted[noun_vals["plural"]]["form"] + "/PL"
                         )
 
                     elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
@@ -125,7 +125,7 @@ for noun_vals in nouns_list:
                 and nouns_formatted[noun_vals["plural"]]["form"] != "noForm"
             ):
                 nouns_formatted[noun_vals["plural"]]["form"] = (
-                    nouns_formatted[noun_vals["plural"]]["form"] + "/" + "PL"
+                    nouns_formatted[noun_vals["plural"]]["form"] + "/PL"
                 )
 
             elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
