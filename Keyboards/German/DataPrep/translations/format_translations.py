@@ -28,9 +28,7 @@ for w in tqdm(words, desc="Words translated", unit="word",):
     inputs = tokenizer.encode("translate English to German: " + w, return_tensors="pt")
     outputs = model.generate(inputs, max_length=40, num_beams=4, early_stopping=True)
 
-    translations_formatted[w] = {
-        "translation": tokenizer.decode(outputs[0], skip_special_tokens=True)
-    }
+    translations_formatted[w] = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 with open("../../translations.json", "w", encoding="utf-8") as f:
     json.dump(translations_formatted, f, ensure_ascii=False, indent=2)
