@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ## Branding
 
-All branding elements such as logos, icons, colors and fonts should follow those that are set out in [scribe-org/Organization](https://github.com/scribe-org/Organization). As the project is fully open source, these elements are also open for discussion. Your efforts to making Scribe products professional with a distinct and cohesive identity are much appreciated.
+All branding elements such as logos, icons, colors and fonts should follow those that are set out in [scribe-org/Organization](https://github.com/scribe-org/Organization). As the project is fully open source, these elements are also open for discussion. Your efforts in making Scribe products professional with a distinct and cohesive identity are much appreciated.
 
 ## Using the issue tracker
 
