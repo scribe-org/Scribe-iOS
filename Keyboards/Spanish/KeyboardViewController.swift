@@ -4,7 +4,10 @@
 
 import UIKit
 
-var proxy : UITextDocumentProxy!
+var proxy: UITextDocumentProxy!
+var keyColor = UIColor.systemGray6
+var specialKeyColor = UIColor.systemGray2
+var keyPressedColor = UIColor.systemGray5
 
 class KeyboardViewController: UIInputViewController {
 
@@ -32,7 +35,8 @@ class KeyboardViewController: UIInputViewController {
 
     @IBOutlet weak var esGrammarPreviewLabel: UILabel!
     func setPreviewLabel() {
-        esGrammarPreviewLabel?.backgroundColor = Constants.previewLabelColor
+        esGrammarPreviewLabel?.backgroundColor = specialKeyColor
+        esGrammarPreviewLabel?.textAlignment = NSTextAlignment.left
     }
     @IBOutlet weak var esStackView1: UIStackView!
     @IBOutlet weak var esStackView2: UIStackView!
@@ -128,7 +132,7 @@ class KeyboardViewController: UIInputViewController {
         for row in 0...numRows - 1{
             for col in 0...keyboard[row].count - 1{
                 let button = UIButton(type: .custom)
-                button.backgroundColor = Constants.keyColor
+                button.backgroundColor = keyColor
                 button.setTitleColor(.black, for: .normal)
                 let key = keyboard[row][col]
                 let capsKey = keyboard[row][col].capitalized
@@ -184,10 +188,10 @@ class KeyboardViewController: UIInputViewController {
                 if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "🌐"{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.5).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
-                    button.backgroundColor = Constants.specialKeyColor
+                    button.backgroundColor = specialKeyColor
                     if key == "⇧" {
                         if shiftButtonState != .normal{
-                            button.backgroundColor = Constants.keyPressedColor
+                            button.backgroundColor = keyPressedColor
                         }
                         if shiftButtonState == .caps{
                             button.setTitle("⇪", for: .normal)
@@ -196,7 +200,7 @@ class KeyboardViewController: UIInputViewController {
                 }else if key == "123" || key == "↵" {
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 2).isActive = true
                     button.layer.setValue(true, forKey: "isSpecial")
-                    button.backgroundColor = Constants.specialKeyColor
+                    button.backgroundColor = specialKeyColor
                 }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2{
                     button.widthAnchor.constraint(equalToConstant: buttonWidth * 1.4).isActive = true
                 }else if key != "espacio"{
@@ -238,17 +242,17 @@ class KeyboardViewController: UIInputViewController {
 
     func nounGenderColoration(){
         if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
-            esGrammarPreviewLabel?.textColor = Constants.previewOrangeLightTheme
+            esGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
             esGrammarPreviewLabel?.text = ""
             esGrammarPreviewLabel?.sizeToFit()
         }
         if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
-            esGrammarPreviewLabel?.textColor = Constants.previewRedLightTheme
+            esGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
             esGrammarPreviewLabel?.text = ""
             esGrammarPreviewLabel?.sizeToFit()
         }
         if proxy.documentContextBeforeInput?.suffix(" ".count) == " "{
-            esGrammarPreviewLabel?.textColor = Constants.previewBlueLightTheme
+            esGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
             esGrammarPreviewLabel?.text = ""
             esGrammarPreviewLabel?.sizeToFit()
         }
@@ -262,7 +266,7 @@ class KeyboardViewController: UIInputViewController {
         guard let originalKey = sender.layer.value(forKey: "original") as? String, let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {return}
 
         guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
-        sender.backgroundColor = isSpecial ? Constants.specialKeyColor : Constants.keyColor
+        sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
 
         switch originalKey {
         case "⌫":
@@ -331,17 +335,17 @@ class KeyboardViewController: UIInputViewController {
         } else if gesture.state == .ended || gesture.state == .cancelled {
             backspaceTimer?.invalidate()
             backspaceTimer = nil
-            (gesture.view as! UIButton).backgroundColor = Constants.specialKeyColor
+            (gesture.view as! UIButton).backgroundColor = specialKeyColor
         }
     }
 
     @objc func keyUntouched(_ sender: UIButton){
         guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
-        sender.backgroundColor = isSpecial ? Constants.specialKeyColor : Constants.keyColor
+        sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
     }
 
     @objc func keyTouchDown(_ sender: UIButton){
-        sender.backgroundColor = Constants.keyPressedColor
+        sender.backgroundColor = keyPressedColor
     }
 
     override func textWillChange(_ textInput: UITextInput?) {

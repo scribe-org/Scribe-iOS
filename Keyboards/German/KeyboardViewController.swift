@@ -10,6 +10,16 @@ var keyColor = UIColor.systemGray6
 var specialKeyColor = UIColor.systemGray2
 var keyPressedColor = UIColor.systemGray5
 
+var letterKeys = [[String]]()
+var numberKeys = [[String]]()
+var symbolKeys = [[String]]()
+
+struct DeviceType
+{
+    static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
+    static let isPad = UIDevice.current.userInterfaceIdiom == .pad
+}
+
 // A larger vertical bar than the normal key for the cursor.
 let previewCursor: String = "│"
 let previewPromptSpacing = String(repeating: " ", count: 2)
@@ -109,6 +119,18 @@ class KeyboardViewController: UIInputViewController {
 		case numbers
 		case symbols
 	}
+    
+    func setKeyboardStyles() {
+        if DeviceType.isPhone {
+            letterKeys = Constants.letterKeysPhone
+            numberKeys = Constants.numberKeysPhone
+            symbolKeys = Constants.symbolKeysPhone
+        } else if DeviceType.isPad {
+            letterKeys = Constants.letterKeysPad
+            numberKeys = Constants.numberKeysPad
+            symbolKeys = Constants.symbolKeysPad
+        }
+    }
 
 	enum ShiftButtonState {
 		case normal
@@ -374,6 +396,7 @@ class KeyboardViewController: UIInputViewController {
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
 	func loadKeys() {
+        setKeyboardStyles()
         setScribeBtn()
         setPreviewLabel()
         setGrammarBtns()
@@ -385,25 +408,25 @@ class KeyboardViewController: UIInputViewController {
 
         // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
-		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeysPhone[0].count)
-        let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.numberKeysPhone[0].count)
+		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(letterKeys[0].count)
+        let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
 
 		var keyboard: [[String]]
 
 		// Start padding.
 		switch keyboardState {
 		case .letters:
-			keyboard = Constants.letterKeysPhone
+			keyboard = letterKeys
             buttonWidth = letterButtonWidth
             // Auto-capitalization.
             if proxy.documentContextBeforeInput?.count == 0 {
                 shiftButtonState = .shift
             }
 		case .numbers:
-			keyboard = Constants.numberKeysPhone
+			keyboard = numberKeys
             buttonWidth = numSymButtonWidth
 		case .symbols:
-			keyboard = Constants.symbolKeysPhone
+			keyboard = symbolKeys
             buttonWidth = numSymButtonWidth
 		}
 

@@ -11,7 +11,7 @@ Note: first go into translationsQueried.json and do a find and replace of:
 import json
 
 from tqdm.auto import tqdm
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import MarianMTModel, MarianTokenizer
 
 with open("translationsQueried.json") as f:
     translations_list = json.load(f)
@@ -21,15 +21,17 @@ words = list(set(words))
 
 translations_formatted = {}
 
-# Need a model for English to Spanish.
-model = AutoModelForSeq2SeqLM.from_pretrained("t5-large")
-tokenizer = AutoTokenizer.from_pretrained("t5-large")
+MODEL_NAME = "Helsinki-NLP/opus-mt-en-roa"
+tokenizer = MarianTokenizer.from_pretrained(MODEL_NAME)
+model = MarianMTModel.from_pretrained(MODEL_NAME)
 
 for w in tqdm(words, desc="Words translated", unit="word",):
-    inputs = tokenizer.encode("translate English to German: " + w, return_tensors="pt")
-    outputs = model.generate(inputs, max_length=40, num_beams=4, early_stopping=True)
-
-    translations_formatted[w] = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    translated = model.generate(
+        **tokenizer(">>esp<< " + w, return_tensors="pt", padding=True)
+    )
+    translations_formatted[w] = tokenizer.decode(
+        translated[0], skip_special_tokens=True
+    )
 
 with open("../../translations.json", "w", encoding="utf-8") as f:
     json.dump(translations_formatted, f, ensure_ascii=False, indent=2)
