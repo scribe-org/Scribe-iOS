@@ -10,6 +10,8 @@ var keyColor = UIColor.systemGray6
 var specialKeyColor = UIColor.systemGray2
 var keyPressedColor = UIColor.systemGray5
 
+var btnKeyCornerRadius: CGFloat = 0
+
 var letterKeys = [[String]]()
 var numberKeys = [[String]]()
 var symbolKeys = [[String]]()
@@ -260,7 +262,7 @@ class KeyboardViewController: UIInputViewController {
         }
     }
 
-    func setConjugationState(radius: CGFloat) {
+    func setConjugationState() {
         deGrammarPreviewLabel?.text = getConjugationTitle()
 
         tenseFPS = getConjugationState() + "FPS"
@@ -272,39 +274,39 @@ class KeyboardViewController: UIInputViewController {
         
         // Assign the invalid message if the conjugation isn't present in the directory.
         if germanVerbs?[verbToConjugate]![tenseFPS] as! String == "" {
-            styleBtn(btn: conjugateBtnFPS, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnFPS, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: btnKeyCornerRadius)
         }
         
         if germanVerbs?[verbToConjugate]![tenseSPS] as! String == "" {
-            styleBtn(btn: conjugateBtnSPS, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnSPS, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: btnKeyCornerRadius)
         }
         
         if germanVerbs?[verbToConjugate]![tenseTPS] as! String == "" {
-            styleBtn(btn: conjugateBtnTPS, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnTPS, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: btnKeyCornerRadius)
         }
         
         if germanVerbs?[verbToConjugate]![tenseFPP] as! String == "" {
-            styleBtn(btn: conjugateBtnFPP, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnFPP, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnFPP, title: germanVerbs?[verbToConjugate]![tenseFPP] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnFPP, title: germanVerbs?[verbToConjugate]![tenseFPP] as! String, radius: btnKeyCornerRadius)
         }
         
         if germanVerbs?[verbToConjugate]![tenseSPP] as! String == "" {
-            styleBtn(btn: conjugateBtnSPP, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnSPP, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: btnKeyCornerRadius)
         }
         
         if germanVerbs?[verbToConjugate]![tenseTPP] as! String == "" {
-            styleBtn(btn: conjugateBtnTPP, title: "Not in directory", radius: radius)
+            styleBtn(btn: conjugateBtnTPP, title: "Not in directory", radius: btnKeyCornerRadius)
         } else {
-            styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: radius)
+            styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: btnKeyCornerRadius)
         }
     }
 
@@ -360,10 +362,21 @@ class KeyboardViewController: UIInputViewController {
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: 220)
+        super.viewWillAppear(animated)
+        var desiredHeight:CGFloat!
+        if DeviceType.isPhone {
+            desiredHeight = 240
+        } else if DeviceType.isPad {
+            desiredHeight = 320
+//            if UIDevice.currentDevice().orientation == .Portrait{
+//                desiredHeight = 260
+//            }else {
+//                desiredHeight = 300
+//            }
+        }
+        
+		let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: desiredHeight)
 		view.addConstraint(heightConstraint)
-
 	}
 
 
@@ -429,6 +442,12 @@ class KeyboardViewController: UIInputViewController {
 			keyboard = symbolKeys
             buttonWidth = numSymButtonWidth
 		}
+        
+        if DeviceType.isPhone {
+            btnKeyCornerRadius = buttonWidth / 4
+        } else if DeviceType.isPad {
+            btnKeyCornerRadius = buttonWidth / 8
+        }
 
         if !conjugateView {
             deStackView1.isUserInteractionEnabled = true
@@ -446,52 +465,73 @@ class KeyboardViewController: UIInputViewController {
                     btn.setTitleColor(UIColor.label, for: .normal)
 
                     let key = keyboard[row][col]
-                    let capsKey = keyboard[row][col].capitalized
+                    var capsKey = ""
+                    if key != "ß" {
+                        capsKey = keyboard[row][col].capitalized
+                    } else {
+                        capsKey = key
+                    }
                     let keyToDisplay = shiftButtonState == .normal ? key : capsKey
                     btn.layer.setValue(key, forKey: "original")
                     btn.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
                     btn.layer.setValue(false, forKey: "isSpecial")
-
                     btn.setTitle(keyToDisplay, for: .normal) // set button character
-                    if key == "#+=" || key == "ABC" || key == "123" {
-                        btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
-                    } else if key == "Leerzeichen" {
-                        btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
-                    } else {
-                        btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
-                    }
-
+                    
                     btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
                     btn.layer.borderWidth = 3
-                    btn.layer.cornerRadius = buttonWidth / 4
+                    if DeviceType.isPhone {
+                        btn.layer.cornerRadius = btnKeyCornerRadius
+                        if key == "#+=" || key == "ABC" || key == "123" {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+                        } else if key == "Leerzeichen" {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+                        } else {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
+                        }
+                    } else if DeviceType.isPad {
+                        btn.layer.cornerRadius = btnKeyCornerRadius
+                        if key == "#+=" || key == "ABC" || key == "hideKeyboard" {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.25)
+                        } else if key == "Leerzeichen" {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
+                        } else if key == ".?123" {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+                        } else {
+                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
+                        }
+                    }
 
                     activateBtn(btn: btn)
                     btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
 
-                    styleBtn(btn: scribeBtn, title: "Scribe", radius: buttonWidth / 4)
+                    styleBtn(btn: scribeBtn, title: "Scribe", radius: btnKeyCornerRadius)
                     scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
                     if scribeBtnState {
                         scribeBtn?.setTitle("esc", for: .normal)
                         scribeBtn?.backgroundColor = specialKeyColor
-                        scribeBtn?.layer.cornerRadius = buttonWidth / 4
+                        scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
                         scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
                         deGrammarPreviewLabel?.backgroundColor = UIColor.clear
                         deGrammarPreviewLabel?.text = ""
 
-                        styleBtn(btn: translateBtn, title: "Translate", radius: buttonWidth / 4)
-                        styleBtn(btn: conjugateBtn, title: "Conjugate", radius: buttonWidth / 4)
-                        styleBtn(btn: pluralBtn, title: "Plural", radius: buttonWidth / 4)
+                        styleBtn(btn: translateBtn, title: "Translate", radius: btnKeyCornerRadius)
+                        styleBtn(btn: conjugateBtn, title: "Conjugate", radius: btnKeyCornerRadius)
+                        styleBtn(btn: pluralBtn, title: "Plural", radius: btnKeyCornerRadius)
                     } else {
                         deactivateBtn(btn: conjugateBtn)
                         deactivateBtn(btn: translateBtn)
                         deactivateBtn(btn: pluralBtn)
 
                         deGrammarPreviewLabel?.clipsToBounds = true
-                        deGrammarPreviewLabel?.layer.cornerRadius = buttonWidth / 4
+                        deGrammarPreviewLabel?.layer.cornerRadius = btnKeyCornerRadius
                         deGrammarPreviewLabel?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-                        deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+                        if DeviceType.isPhone {
+                            deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+                        } else if DeviceType.isPad {
+                            deGrammarPreviewLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+                        }
                         deGrammarPreviewLabel?.textColor = UIColor.label
                         deGrammarPreviewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
                         if previewState == false {
@@ -501,7 +541,7 @@ class KeyboardViewController: UIInputViewController {
                     }
 
                     // Pad before key is added.
-                    if key == "y" {
+                    if DeviceType.isPhone && key == "y" {
                         addPadding(to: deStackView3, width: buttonWidth/3, key: "y")
                     }
 
@@ -520,37 +560,46 @@ class KeyboardViewController: UIInputViewController {
                         break
                     }
 
-                    if key == "🌐" {
+                    if key == "language" {
                         nextKeyboardButton = btn
                     }
 
                     // Pad after key is added.
-                    if key == "m" {
+                    if DeviceType.isPhone && key == "m" {
                         addPadding(to: deStackView3, width: buttonWidth/3, key: "m")
                     }
 
                     // specialKey constraints.
-                    if key == "⌫" || key == "#+=" || key == "⇧" || key == "🌐" {
-                        btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+                    if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "undoArrow" || key == "language" {
+                        if DeviceType.isPhone {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+                        } else {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+                        }
                         btn.layer.setValue(true, forKey: "isSpecial")
                         btn.backgroundColor = specialKeyColor
                         if key == "⇧" {
-                            if shiftButtonState != .normal{
+                            if shiftButtonState != .normal {
                                 btn.backgroundColor = keyPressedColor
                             }
-                            if shiftButtonState == .caps{
+                            if shiftButtonState == .caps {
                                 btn.setTitle("⇪", for: .normal)
                             }
                         }
-                    }else if key == "123" || key == "ABC" || key == "↵" {
-                        btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+                    } else if key == "123" || key == ".?123" || key == "↵" || key == "hideKeyboard" {
+                        if DeviceType.isPhone {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+                        } else {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+                        }
                         btn.layer.setValue(true, forKey: "isSpecial")
                         btn.backgroundColor = specialKeyColor
-                    }else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 {
+                    // Only change widths for number and symbol keys for iPhones.
+                    } else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 && DeviceType.isPhone {
                         btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
-                    }else if key != "Leerzeichen" {
+                    } else if key != "Leerzeichen" {
                         btn.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
-                    }else{
+                    } else {
                         btn.layer.setValue(key, forKey: "original")
                         btn.setTitle(key, for: .normal)
                     }
@@ -593,11 +642,11 @@ class KeyboardViewController: UIInputViewController {
             activateBtn(btn: conjugateShiftLeftBtn)
             activateBtn(btn: conjugateShiftRightBtn)
 
-            setConjugationState(radius: buttonWidth / 4)
+            setConjugationState()
 
-            styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: buttonWidth / 4)
+            styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: btnKeyCornerRadius)
 //            conjugateShiftLeftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-            styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: buttonWidth / 4)
+            styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: btnKeyCornerRadius)
 //            conjugateShiftRightBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         }
     }
@@ -642,7 +691,7 @@ class KeyboardViewController: UIInputViewController {
         // Cancel via a return press.
         } else if deGrammarPreviewLabel?.text! == translatePromptAndCursor {
             return
-        }else {
+        } else {
             invalidState = true
         }
     }
@@ -656,7 +705,7 @@ class KeyboardViewController: UIInputViewController {
         // Cancel via a return press.
         } else if deGrammarPreviewLabel?.text! == conjugatePromptAndCursor {
             return
-        }else {
+        } else {
             invalidState = true
         }
     }
@@ -908,7 +957,7 @@ class KeyboardViewController: UIInputViewController {
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
-		case "🌐":
+		case "language":
 			break
 		case "↵":
             if getTranslation {
@@ -963,6 +1012,9 @@ class KeyboardViewController: UIInputViewController {
             }
 		case "123":
 			changeKeyboardToNumberKeys()
+            clearPreviewLabel()
+        case ".?123":
+            changeKeyboardToNumberKeys()
             clearPreviewLabel()
 		case "ABC":
 			changeKeyboardToLetterKeys()

@@ -94,7 +94,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 <details><summary><strong>Current and WIP features</strong></summary>
 <p>
 
-- iPhone and iPad support (WIP)
+- iPhone and iPad support
 - Dynamic layouts for cross-device performance
 - Portrait and landscape views (WIP)
 - Auto-capitalization
@@ -118,7 +118,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality
 
-- Adding iPad keyboard layout support and fixing key appearance
+- Adding support for language shift and keyboard down buttons for iPads
 
 - Adding support for landscape orientation
 
