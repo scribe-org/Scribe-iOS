@@ -87,7 +87,7 @@ Annotations are displayed once a user has typed a noun and pressed space or by p
 </p>
 -->
 
-### iOS and iPadOS System Keyboard Functionality
+### System Keyboard Functionality
 
 The goal is that Scribe keyboards have all the functionality of system keyboards.
 

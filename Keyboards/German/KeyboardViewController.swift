@@ -10,7 +10,9 @@ var keyColor = UIColor.systemGray6
 var specialKeyColor = UIColor.systemGray2
 var keyPressedColor = UIColor.systemGray5
 
-var btnKeyCornerRadius: CGFloat = 0
+var keyboardHeight: CGFloat!
+var btnKeyCornerRadius: CGFloat!
+var isLandscapeView:Bool = false
 
 var letterKeys = [[String]]()
 var numberKeys = [[String]]()
@@ -180,7 +182,7 @@ class KeyboardViewController: UIInputViewController {
         btn.clipsToBounds = true
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = radius
-//        btn.frame.size = CGSize(width: numSymButtonWidth * 2, height: numSymButtonWidth)  // would need a size arg
+//        btn.frame.size = CGSize(width: X * 2, height: Y)  // would need a size arg
         btn.setTitle(title, for: .normal)
 //        btn.titleLabel?.font.withSize(letterButtonWidth / 2) // would need a fontSize arg
         btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
@@ -363,22 +365,35 @@ class KeyboardViewController: UIInputViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var desiredHeight:CGFloat!
         if DeviceType.isPhone {
-            desiredHeight = 240
+            if isLandscapeView == true {
+                keyboardHeight = 180
+            } else {
+                keyboardHeight = 230
+            }
         } else if DeviceType.isPad {
-            desiredHeight = 320
-//            if UIDevice.currentDevice().orientation == .Portrait{
-//                desiredHeight = 260
-//            }else {
-//                desiredHeight = 300
-//            }
+            if isLandscapeView == true {
+                keyboardHeight = 260
+            } else {
+                keyboardHeight = 320
+            }
         }
         
-		let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: desiredHeight)
+		let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
 		view.addConstraint(heightConstraint)
 	}
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
 
+        if UIDevice.current.orientation.isLandscape {
+            isLandscapeView = true
+            loadKeys()
+        } else {
+            isLandscapeView = false
+            loadKeys()
+        }
+    }
 
 	func loadInterface() {
 		let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
@@ -421,7 +436,7 @@ class KeyboardViewController: UIInputViewController {
 
         // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
-		let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(letterKeys[0].count)
+        let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(letterKeys[0].count)
         let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
 
 		var keyboard: [[String]]
