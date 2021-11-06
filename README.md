@@ -120,8 +120,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding support for language shift and keyboard down buttons for iPads
 
-- Adding support for landscape orientation
-
 - Adding labels to keys that don't have unicode character representations
 
 - Baseline fixes to translations.json files
