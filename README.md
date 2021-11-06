@@ -118,7 +118,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality
 
-- Adding support for language shift and keyboard down buttons for iPads
+- Fixing issues with switch keyboard button
 
 - Adding labels to keys that don't have unicode character representations
 
@@ -129,6 +129,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Improving appearance and adding settings features to the Scribe app
 
 - Releasing Scribe-iOS MVP
+
+- Reorganizing the Scribe-iOS directory structure so that the code is easier to maintain [(see issue)]()
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 

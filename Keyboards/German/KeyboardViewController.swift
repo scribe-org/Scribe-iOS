@@ -109,7 +109,7 @@ let germanNouns = loadJsonToDict(filename: "nouns")
 let germanVerbs = loadJsonToDict(filename: "verbs")
 let germanTranslations = loadJsonToDict(filename: "translations")
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
 	@IBOutlet var nextKeyboardButton: UIButton!
 
@@ -366,11 +366,6 @@ class KeyboardViewController: UIInputViewController {
 		super.viewDidAppear(animated)
 	}
 
-	override func viewWillLayoutSubviews() {
-		self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-		super.viewWillLayoutSubviews()
-	}
-
 	override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -382,7 +377,7 @@ class KeyboardViewController: UIInputViewController {
             }
         } else if DeviceType.isPad {
             if isLandscapeView == true {
-                keyboardHeight = 310
+                keyboardHeight = 320
             } else {
                 keyboardHeight = 340
             }
@@ -1010,6 +1005,8 @@ class KeyboardViewController: UIInputViewController {
             }
 		case "language":
 			break
+        case "hideKeyboard":
+            self.dismissKeyboard()
 		case "↵":
             if getTranslation {
                 queryTranslation()
@@ -1132,7 +1129,7 @@ class KeyboardViewController: UIInputViewController {
             clearPreviewLabel()
         }
 	}
-
+    
 	@objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
         // Prevent the preview state prompt from being deleted.
         if previewState == true && allPrompts.contains((deGrammarPreviewLabel?.text!)!) {
