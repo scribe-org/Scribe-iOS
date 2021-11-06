@@ -96,7 +96,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 - iPhone and iPad support
 - Dynamic layouts for cross-device performance
-- Portrait and landscape views (WIP)
+- Portrait and landscape modes
 - Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
@@ -152,7 +152,13 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Appearance
 
-- Edits to Keyboard.xib files to make keyboards more responsive and to provide language specific UI based on grammatical needs [(see issue)]()
+- Fix transition from portrait to landscape so that height is re-rendered [(see issue)]()
+
+  - This is likely caused by a missing parent-child relationship for `keyboardView`
+
+- Edits to KeyboardViewController and Keyboard.xib files to make Scribe keyboard elements dynamically sized [(see issue)]()
+
+- Edits to Keyboard.xib files to provide language specific UI elements based on grammatical needs [(see issue)]()
 
 - Make the shift key character change color after being pressed [(see issue)]()
 

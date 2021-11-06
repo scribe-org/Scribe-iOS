@@ -334,6 +334,14 @@ class KeyboardViewController: UIInputViewController {
             return
         }
     }
+    
+    func checkLandscrapeMode () {
+        if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+            isLandscapeView = true
+        } else if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
+            isLandscapeView = false
+        }
+    }
 
     @IBOutlet weak var deStackView1: UIStackView!
 	@IBOutlet weak var deStackView2: UIStackView!
@@ -365,6 +373,7 @@ class KeyboardViewController: UIInputViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         if DeviceType.isPhone {
             if isLandscapeView == true {
                 keyboardHeight = 180
@@ -373,9 +382,9 @@ class KeyboardViewController: UIInputViewController {
             }
         } else if DeviceType.isPad {
             if isLandscapeView == true {
-                keyboardHeight = 260
+                keyboardHeight = 310
             } else {
-                keyboardHeight = 320
+                keyboardHeight = 340
             }
         }
         
@@ -385,19 +394,13 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-
-        if UIDevice.current.orientation.isLandscape {
-            isLandscapeView = true
-            loadKeys()
-        } else {
-            isLandscapeView = false
-            loadKeys()
-        }
+        loadKeys()
     }
 
 	func loadInterface() {
 		let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
 		keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
+        keyboardView.translatesAutoresizingMaskIntoConstraints = true
 		view.addSubview(keyboardView)
 		loadKeys()
 	}
@@ -424,6 +427,7 @@ class KeyboardViewController: UIInputViewController {
     // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
 	func loadKeys() {
+        checkLandscrapeMode()
         setKeyboardStyles()
         setScribeBtn()
         setPreviewLabel()
@@ -436,8 +440,21 @@ class KeyboardViewController: UIInputViewController {
 
         // buttonWidth determined per keyboard by the top row.
         var buttonWidth = CGFloat(0)
-        let letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(letterKeys[0].count)
-        let numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
+        var letterButtonWidth = CGFloat(0)
+        var numSymButtonWidth = CGFloat(0)
+        
+        if isLandscapeView == true {
+            if DeviceType.isPhone {
+                letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.8
+                numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.8
+            } else if DeviceType.isPad {
+                letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.3
+                numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.3
+            }
+        } else {
+            letterButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(letterKeys[0].count)
+            numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
+        }
 
 		var keyboard: [[String]]
 
@@ -459,9 +476,17 @@ class KeyboardViewController: UIInputViewController {
 		}
         
         if DeviceType.isPhone {
-            btnKeyCornerRadius = buttonWidth / 4
+            if isLandscapeView == true {
+                btnKeyCornerRadius = buttonWidth / 8
+            } else {
+                btnKeyCornerRadius = buttonWidth / 4
+            }
         } else if DeviceType.isPad {
-            btnKeyCornerRadius = buttonWidth / 8
+            if isLandscapeView == true {
+                btnKeyCornerRadius = buttonWidth / 12
+            } else {
+                btnKeyCornerRadius = buttonWidth / 8
+            }
         }
 
         if !conjugateView {
@@ -495,13 +520,24 @@ class KeyboardViewController: UIInputViewController {
                     btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
                     btn.layer.borderWidth = 3
                     if DeviceType.isPhone {
-                        btn.layer.cornerRadius = btnKeyCornerRadius
-                        if key == "#+=" || key == "ABC" || key == "123" {
-                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
-                        } else if key == "Leerzeichen" {
-                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+                        if isLandscapeView == true {
+                            btn.layer.cornerRadius = btnKeyCornerRadius
+                            if key == "#+=" || key == "ABC" || key == "123" {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
+                            } else if key == "Leerzeichen" {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+                            } else {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
+                            }
                         } else {
-                            btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
+                            btn.layer.cornerRadius = btnKeyCornerRadius
+                            if key == "#+=" || key == "ABC" || key == "123" {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+                            } else if key == "Leerzeichen" {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+                            } else {
+                                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
+                            }
                         }
                     } else if DeviceType.isPad {
                         btn.layer.cornerRadius = btnKeyCornerRadius
