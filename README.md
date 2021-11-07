@@ -158,6 +158,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - This is likely caused by a missing parent-child relationship for `keyboardView`
 
+- Create proper bezier path implementation of hold to select characters including keys popping up when being pressed [(see issue)]()
+
 - Edits to KeyboardViewController and Keyboard.xib files to make Scribe keyboard elements dynamically sized [(see issue)]()
 
 - Edits to Keyboard.xib files to provide language specific UI elements based on grammatical needs [(see issue)]()

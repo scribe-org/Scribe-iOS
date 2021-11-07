@@ -18,6 +18,8 @@ var letterKeys = [[String]]()
 var numberKeys = [[String]]()
 var symbolKeys = [[String]]()
 
+var alternateKeysView: UIView!
+
 struct DeviceType
 {
     static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
@@ -609,6 +611,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                     if key == "selectKeyboard" {
                         selectKeyboardButton = btn
                     }
+                    
+                    if key == "a" {
+                        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressedSelectAlternates(sender:)))
+                        longGesture.minimumPressDuration = 1.2
+                        btn.addGestureRecognizer(longGesture)
+                    }
 
                     // Pad after key is added.
                     if DeviceType.isPhone && key == "m" {
@@ -993,6 +1001,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 }
             }
             clearPreviewLabel()
+            
 		case "Leerzeichen":
             if previewState != true {
                 proxy.insertText(" ")
@@ -1003,11 +1012,14 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
+            
 		case "selectKeyboard":
             self.advanceToNextInputMode()
 			break
+            
         case "hideKeyboard":
             self.dismissKeyboard()
+            
 		case "↵":
             if getTranslation {
                 queryTranslation()
@@ -1059,12 +1071,15 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 }
                 proxy.deleteBackward()
             }
+            
 		case "123":
 			changeKeyboardToNumberKeys()
             clearPreviewLabel()
+            
         case ".?123":
             changeKeyboardToNumberKeys()
             clearPreviewLabel()
+            
 		case "ABC":
 			changeKeyboardToLetterKeys()
             clearPreviewLabel()
@@ -1076,6 +1091,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                             }
             }
             proxy.deleteBackward()
+            
         case "'":
             if previewState != true {
                 proxy.insertText("'")
@@ -1084,13 +1100,40 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             }
             changeKeyboardToLetterKeys()
             clearPreviewLabel()
+            
 		case "#+=":
 			changeKeyboardToSymbolKeys()
             clearPreviewLabel()
+            
 		case "⇧":
 			shiftButtonState = shiftButtonState == .normal ? .shift : .normal
 			loadKeys()
             clearPreviewLabel()
+            
+        case "alternateA0":
+            if self.view.viewWithTag(1001) != nil {
+                let viewWithTag = self.view.viewWithTag(1001)
+                viewWithTag?.removeFromSuperview()
+            }
+            proxy.insertText("A0")
+            loadKeys()
+            
+        case "alternateA1":
+            if self.view.viewWithTag(1001) != nil {
+                let viewWithTag = self.view.viewWithTag(1001)
+                viewWithTag?.removeFromSuperview()
+            }
+            proxy.insertText("A1")
+            loadKeys()
+            
+        case "alternateA2":
+            if self.view.viewWithTag(1001) != nil {
+                let viewWithTag = self.view.viewWithTag(1001)
+                viewWithTag?.removeFromSuperview()
+            }
+            proxy.insertText("A2")
+            loadKeys()
+            
 		default:
 			if shiftButtonState == .shift {
 				shiftButtonState = .normal
@@ -1130,6 +1173,58 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             clearPreviewLabel()
         }
 	}
+    
+    @objc func keyLongPressedSelectAlternates(sender: Any) {
+                
+        let longPressGesture = sender as! UILongPressGestureRecognizer
+        let tapLocation = longPressGesture.location(in: self.view)
+        alternateKeysView = UIView(frame: CGRect(x: tapLocation.x-10, y: tapLocation.y-65, width: 120, height: 60))
+
+        //Only run this code When State Began.
+        if longPressGesture.state != UIGestureRecognizer.State.began {
+                    return
+             }
+        // If alternateKeysView is Already in added than remove and then add.
+        if self.view.viewWithTag(1001) != nil {
+            alternateKeysView.removeFromSuperview()
+           }
+        
+        alternateKeysView.backgroundColor = specialKeyColor
+        alternateKeysView.layer.cornerRadius = 5
+        alternateKeysView.layer.borderWidth = 2
+        alternateKeysView.tag = 1001
+        alternateKeysView.layer.borderColor = UIColor.black.cgColor
+        
+        let btn0: UIButton=UIButton(frame: CGRect(x: 5, y: 5, width: 30, height: 30))
+        btn0.setTitle("A0", for: .normal)
+        btn0.setTitleColor(UIColor.black, for: .normal);
+        btn0.layer.borderWidth = 0.5
+        btn0.layer.borderColor = UIColor.lightGray.cgColor
+        
+        alternateKeysView.addSubview(btn0)
+        
+        let btn1: UIButton=UIButton(frame: CGRect(x: 35, y: 5, width: 30, height: 30))
+        btn1.setTitle("A1", for: .normal)
+        btn1.setTitleColor(UIColor.black, for: .normal);
+        btn1.layer.borderWidth = 0.5
+        btn1.layer.borderColor = UIColor.lightGray.cgColor
+        
+        alternateKeysView.addSubview(btn1)
+        
+        let btn2: UIButton=UIButton(frame: CGRect(x: 70, y: 5, width: 30, height: 30))
+        btn2.setTitle("A2", for: .normal)
+        btn2.setTitleColor(UIColor.black, for: .normal);
+        btn2.layer.borderWidth = 0.5
+        btn2.layer.borderColor = UIColor.lightGray.cgColor
+        
+        alternateKeysView.addSubview(btn2)
+        
+        setBtn(btn: btn0, color: keyColor, name: "alternateA0", isSpecial: false)
+        setBtn(btn: btn1, color: keyColor, name: "alternateA1", isSpecial: false)
+        setBtn(btn: btn2, color: keyColor, name: "alternateA2", isSpecial: false)
+ 
+         self.view.addSubview(alternateKeysView)
+    }
     
 	@objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
         // Prevent the preview state prompt from being deleted.
