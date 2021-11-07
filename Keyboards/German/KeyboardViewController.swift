@@ -111,7 +111,7 @@ let germanTranslations = loadJsonToDict(filename: "translations")
 
 class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
-	@IBOutlet var nextKeyboardButton: UIButton!
+	@IBOutlet var selectKeyboardButton: UIButton!
 
 	var keyboardView: UIView!
 	var keys: [UIButton] = []
@@ -359,7 +359,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
 		proxy = textDocumentProxy as UITextDocumentProxy
 		loadInterface()
-		self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+		self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -606,8 +606,8 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                         break
                     }
 
-                    if key == "language" {
-                        nextKeyboardButton = btn
+                    if key == "selectKeyboard" {
+                        selectKeyboardButton = btn
                     }
 
                     // Pad after key is added.
@@ -616,7 +616,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                     }
 
                     // specialKey constraints.
-                    if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "undoArrow" || key == "language" {
+                    if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "undoArrow" || key == "selectKeyboard" {
                         if DeviceType.isPhone {
                             btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
                         } else {
@@ -1003,7 +1003,8 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
                 clearPreviewLabel()
             }
-		case "language":
+		case "selectKeyboard":
+            self.advanceToNextInputMode()
 			break
         case "hideKeyboard":
             self.dismissKeyboard()

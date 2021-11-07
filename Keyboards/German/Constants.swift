@@ -19,41 +19,41 @@ enum Constants{
 		["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
 		["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä"],
 		["⇧", "y", "x", "c", "v", "b", "n", "m", "⌫"],
-		["123", "language", "Leerzeichen", "↵"]
+		["123", "selectKeyboard", "Leerzeichen", "↵"]
 	]
 
 	static let numberKeysPhone = [
 		["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
 		["-", "/", ":", ";", "(", ")" , "$", "&", "@", "\""],
 		["#+=", ".", ",", "?", "!", "\'", "⌫"],
-		["ABC", "language", "Leerzeichen", "↵"]
+		["ABC", "selectKeyboard", "Leerzeichen", "↵"]
 	]
 
 	static let symbolKeysPhone = [
 		["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
 		["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
 		["123", ".", ",", "?", "!", "\'", "⌫"],
-		["ABC", "language", "Leerzeichen", "↵"]
+		["ABC", "selectKeyboard", "Leerzeichen", "↵"]
 	]
     
     static let letterKeysPad = [
         ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "⌫"],
         ["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä", "↵"],
         ["⇧", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "⇧"],
-        [".?123", "language", "Leerzeichen", ".?123", "hideKeyboard"]
+        [".?123", "selectKeyboard", "Leerzeichen", ".?123", "hideKeyboard"]
     ]
 
     static let numberKeysPad = [
         ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "⌫"],
         ["\"", "§", "€", "%", "&", "/", "(", ")" , "=", "'", "#", "↵"],
         ["#+=", "—", "`", "'", "...", "@", ";", ":'", ",", ".", "-", "#+="],
-        ["ABC", "language", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
+        ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
     ]
 
     static let symbolKeysPad = [
         ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "⌫"],
         ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "↵"],
         ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
-        ["ABC", "language", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
+        ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
     ]
 }

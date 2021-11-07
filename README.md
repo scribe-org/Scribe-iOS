@@ -118,13 +118,11 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality
 
-- Fixing issues with switch keyboard button
-
 - Adding labels to keys that don't have unicode character representations
 
-- Baseline fixes to translations.json files
-
 - Allowing for keys to be long pressed for alternate keys options
+
+- Baseline fixes to translations.json files
 
 - Improving appearance and adding settings features to the Scribe app
 
