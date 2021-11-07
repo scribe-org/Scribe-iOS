@@ -31,7 +31,7 @@ Users access Scribe language keyboards through the following:
 - Download Scribe from the [App Store](https://www.apple.com/app-store/)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Select from the available Scribe keyboards
-- When typing press 🌐 to select keyboards
+- When typing press `🌐` to select keyboards
 
 # Features [`↩`](#contents) <a id="features"></a>
 
@@ -149,6 +149,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
   - This would help keep the app size to a minimum
 
 - Planning and implementing baseline documentation for Scribe [(see issue)]()
+
+- Discussing further grammatical information that can be displayed to the user in the preview bar that could help with language learning [(see issue)]()
 
 ## Appearance
 
