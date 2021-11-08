@@ -56,4 +56,22 @@ enum Constants{
         ["123", "§", "|", "~", "¶", "\\", "<", ">", "¡", "¿", "123"],
         ["ABC", "🌐", "espacio", "undoArrow", "ABC", "hideKeyboard"]
     ]
+    
+    static let aAlternateKeys = ["á", "à", "ä", "â", "ã",  "å", "ą", "æ", "ā", "ᵃ"]
+    
+    static let eAlternateKeys = ["é", "è", "ë", "ê", "ę", "ė", "ē"]
+    
+    static let iAlternateKeys = ["ī", "į", "î", "ì", "ï", "í"]
+    
+    static let oAlternateKeys = ["ᵒ", "ō", "œ", "ø", "õ", "ô", "ö", "ó", "ò"]
+    
+    static let uAlternateKeys = ["ū", "û", "ù", "ü", "ú"]
+    
+    static let sAlternateKeys = ["š"]
+    
+    static let dAlternateKeys = ["đ"]
+    
+    static let cAlternateKeys = ["ç", "ć", "č"]
+    
+    static let nAlternateKeys = ["ń"]
 }
