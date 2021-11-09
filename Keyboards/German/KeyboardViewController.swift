@@ -371,6 +371,11 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 	}
+    
+    override func viewWillLayoutSubviews() {
+        self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+        super.viewWillLayoutSubviews()
+    }
 
 	override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -1206,14 +1211,13 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         }
 	}
     
-    @objc func aLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func aLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(40 * (Constants.aAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(30 * (Constants.aAlternateKeys.count) + (5 * Constants.aAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1229,26 +1233,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.aAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
 
-    @objc func eLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func eLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(40 * (Constants.eAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(30 * (Constants.eAlternateKeys.count) + (5 * Constants.eAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1264,26 +1271,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.eAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func iLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func iLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(40 * (Constants.aAlternateKeys.count - 1)), y: tapLocation.y - 50, width: CGFloat(40 * (Constants.iAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(30 * (Constants.iAlternateKeys.count) + (5 * Constants.iAlternateKeys.count) - 5), y: tapLocation.y - 50, width: CGFloat(30 * (Constants.iAlternateKeys.count) + (5 * Constants.iAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1299,26 +1309,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.iAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func oLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func oLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(40 * (Constants.aAlternateKeys.count - 1)), y: tapLocation.y - 50, width: CGFloat(40 * (Constants.oAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(30 * (Constants.oAlternateKeys.count) + (5 * Constants.oAlternateKeys.count) - 5), y: tapLocation.y - 50, width: CGFloat(30 * (Constants.oAlternateKeys.count) + (5 * Constants.oAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1334,26 +1347,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.oAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func uLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func uLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(40 * (Constants.aAlternateKeys.count - 1)), y: tapLocation.y - 50, width: CGFloat(40 * (Constants.uAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(30 * (Constants.uAlternateKeys.count) + (5 * Constants.uAlternateKeys.count) - 5), y: tapLocation.y - 50, width: CGFloat(30 * (Constants.uAlternateKeys.count) + (5 * Constants.uAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1369,26 +1385,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.uAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func yLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func yLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(40 * (Constants.yAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(30 * (Constants.yAlternateKeys.count) + (5 * Constants.yAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1404,26 +1423,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.yAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func sLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func sLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(40 * (Constants.sAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(30 * (Constants.sAlternateKeys.count) + (5 * Constants.sAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1439,26 +1461,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.sAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal || char == "ß" {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func cLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func cLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(40 * (Constants.cAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - 10, y: tapLocation.y - 50, width: CGFloat(30 * (Constants.cAlternateKeys.count) + (5 * Constants.cAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1474,26 +1499,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.cAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }
          self.view.addSubview(alternatesKeyView)
     }
     
-    @objc func nLongPressedSelectAlternates(sender: Any) {
-        let longPressGesture = sender as! UILongPressGestureRecognizer
-        let tapLocation = longPressGesture.location(in: self.view)
+    @objc func nLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+        let tapLocation = sender.location(in: self.view)
         
-        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(40 * (Constants.aAlternateKeys.count - 1)), y: tapLocation.y - 50, width: CGFloat(40 * (Constants.nAlternateKeys.count - 1) + 10), height: 40))
+        alternatesKeyView = UIView(frame: CGRect(x: tapLocation.x - CGFloat(30 * (Constants.nAlternateKeys.count) + (5 * Constants.nAlternateKeys.count) - 5), y: tapLocation.y - 50, width: CGFloat(30 * (Constants.nAlternateKeys.count) + (5 * Constants.nAlternateKeys.count) + 5), height: 40))
 
         //Only run this code when the state begins.
-        if longPressGesture.state != UIGestureRecognizer.State.began {
+        if sender.state != UIGestureRecognizer.State.began {
                     return
              }
         // If alternateKeysView is Already in added than remove and then add.
@@ -1509,12 +1537,16 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         
         var alternateBtnStartX = 5
         for char in Constants.nAlternateKeys {
-            let btn0: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
-            btn0.setTitle(char, for: .normal)
-            btn0.setTitleColor(UIColor.black, for: .normal);
+            let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: 30, height: 40))
+            if shiftButtonState == .normal {
+                btn.setTitle(char, for: .normal)
+            } else {
+                btn.setTitle(char.capitalized, for: .normal)
+            }
+            btn.setTitleColor(UIColor.black, for: .normal);
             
-            alternatesKeyView.addSubview(btn0)
-            setBtn(btn: btn0, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
+            alternatesKeyView.addSubview(btn)
+            setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, isSpecial: false)
             
             alternateBtnStartX += 35
         }

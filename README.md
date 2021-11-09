@@ -101,7 +101,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Dark mode compatibility
-- Hold-to-select characters (WIP)
+- Hold-to-select characters
 
 <!--
 <p align="center">
@@ -120,8 +120,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding labels to keys that don't have unicode character representations
 
-- Allowing for keys to be long pressed for alternate keys options
-
 - Baseline fixes to translations.json files
 
 - Improving appearance and adding settings features to the Scribe app
@@ -130,7 +128,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Reorganizing the Scribe-iOS directory structure so that the code is easier to maintain [(see issue)]()
 
-- FIx issue with `selectKeyboard` button not being able to be long-pressed after another key press [(see issue)]()
+- Fix issue with `selectKeyboard` button not being able to be long-pressed after another key press [(see issue)]()
+
+- Fixing hold-to-select character implementation so it's one function (and maybe that the user needs to continue to hold) [(see issue)]()
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
@@ -158,7 +158,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - This is likely caused by a missing parent-child relationship for `keyboardView`
 
-- Create proper bezier path implementation of hold to select characters including keys popping up when being pressed [(see issue)]()
+- Create a proper bezier path implementation of hold-to-select characters including keys popping up when being pressed and then removing key pressed coloration [(see issue)]()
 
 - Edits to KeyboardViewController and Keyboard.xib files to make Scribe keyboard elements dynamically sized [(see issue)]()
 
