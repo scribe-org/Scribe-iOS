@@ -67,9 +67,9 @@ enum Constants{
     
     static let uAlternateKeys = ["ū", "ú", "ù", "û"]
     
-    static let sAlternateKeys = ["ß", "ś", "š"]
-    
     static let yAlternateKeys = ["ÿ"]
+    
+    static let sAlternateKeys = ["ß", "ś", "š"]
     
     static let cAlternateKeys = ["ç", "ć", "č"]
     
