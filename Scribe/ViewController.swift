@@ -19,7 +19,7 @@ extension UITextView {
 
     self.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor.blue,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
     ]
     self.attributedText = attributedOriginalText
   }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 		setupUI()
 	}
 
-	func setupUI(){
+	func setupUI() {
 		instructions.text = """
     Keyboard Installation:
 
