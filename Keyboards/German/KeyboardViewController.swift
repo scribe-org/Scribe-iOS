@@ -1387,7 +1387,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1443,7 +1448,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1499,7 +1509,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1555,7 +1570,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1611,7 +1631,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1667,7 +1692,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1723,7 +1753,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1779,7 +1814,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1835,7 +1875,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                 btn.setTitle(char.capitalized, for: .normal)
             }
             btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-            btn.setTitleColor(UIColor.black, for: .normal);
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                btn.setTitleColor(UIColor.white, for: .normal);
+            }
+            else {
+                btn.setTitleColor(UIColor.black, for: .normal);
+            }
             
             alternatesKeyView.addSubview(btn)
             setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
