@@ -18,41 +18,41 @@ enum Constants{
 	static let letterKeysPhone = [
 		["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
 		["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä"],
-		["⇧", "y", "x", "c", "v", "b", "n", "m", "⌫"],
-		["123", "selectKeyboard", "Leerzeichen", "↵"]
+		["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
+		["123", "selectKeyboard", "Leerzeichen", "return"]
 	]
 
 	static let numberKeysPhone = [
 		["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
 		["-", "/", ":", ";", "(", ")" , "$", "&", "@", "\""],
-		["#+=", ".", ",", "?", "!", "\'", "⌫"],
-		["ABC", "selectKeyboard", "Leerzeichen", "↵"]
+		["#+=", ".", ",", "?", "!", "\'", "delete"],
+		["ABC", "selectKeyboard", "Leerzeichen", "return"]
 	]
 
 	static let symbolKeysPhone = [
 		["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
 		["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
-		["123", ".", ",", "?", "!", "\'", "⌫"],
-		["ABC", "selectKeyboard", "Leerzeichen", "↵"]
+		["123", ".", ",", "?", "!", "\'", "delete"],
+		["ABC", "selectKeyboard", "Leerzeichen", "return"]
 	]
     
     static let letterKeysPad = [
-        ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "⌫"],
-        ["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä", "↵"],
-        ["⇧", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "⇧"],
-        [".?123", "selectKeyboard", "Leerzeichen", ".?123", "hideKeyboard"]
+        ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "delete"],
+        ["a", "s", "d", "f", "g","h", "j", "k", "l", "ö", "ä", "return"],
+        ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
+        [".?123", "selectKeyboard", "Leerzeichen", ".?123", "hideKeyboard"] // "undoArrow"
     ]
 
     static let numberKeysPad = [
-        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "⌫"],
-        ["\"", "§", "€", "%", "&", "/", "(", ")" , "=", "'", "#", "↵"],
+        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
+        ["\"", "§", "€", "%", "&", "/", "(", ")" , "=", "'", "#", "return"],
         ["#+=", "—", "`", "'", "...", "@", ";", ":'", ",", ".", "-", "#+="],
         ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
     ]
 
     static let symbolKeysPad = [
-        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "⌫"],
-        ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "↵"],
+        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
+        ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "return"],
         ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
         ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
     ]

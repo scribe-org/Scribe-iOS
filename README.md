@@ -126,6 +126,10 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Releasing Scribe-iOS MVP
 
+- Adding autocorrect functionality [(see issue)]()
+
+- Adding autocomplete functionality [(see issue)]()
+
 - Reorganizing the Scribe-iOS directory structure so that the code is easier to maintain [(see issue)]()
 
 - Fix issue with `selectKeyboard` button not being able to be long-pressed after another key press [(see issue)]()
@@ -152,6 +156,10 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Discussing further grammatical information that can be displayed to the user in the preview bar that could help with language learning [(see issue)]()
 
+- Adding undo button functionality iPads (and potentially iPhones) [(see issue)]()
+
+- Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
+
 ## Appearance
 
 - Fix transition from portrait to landscape so that height is re-rendered [(see issue)]()
@@ -163,10 +171,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Edits to KeyboardViewController and Keyboard.xib files to make Scribe keyboard elements dynamically sized [(see issue)]()
 
 - Edits to Keyboard.xib files to provide language specific UI elements based on grammatical needs [(see issue)]()
-
-- Make the shift key character change color after being pressed [(see issue)]()
-
-  - Note: we want ⇧ to switch to `⬆` and ⇪ to also be filled in
 
 - Fixes to the dark mode implementation [(see issue)]()
 

@@ -100,6 +100,23 @@ extension Array {
     }
 }
 
+extension UIImage {
+  func resizeImage(targetSize: CGSize) -> UIImage {
+    let size = self.size
+    let widthRatio  = targetSize.width  / size.width
+    let heightRatio = targetSize.height / size.height
+    let newSize = widthRatio > heightRatio ?  CGSize(width: size.width * heightRatio, height: size.height * heightRatio) : CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+    let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+    UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+    self.draw(in: rect)
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+
+    return newImage!
+  }
+}
+
 func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>? {
     if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
         do {
@@ -614,7 +631,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                         addPadding(to: deStackView3, width: buttonWidth / 3, key: "y")
                     }
 
-                    if key == "⌫" {
+                    if key == "delete" {
                         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
                         btn.addGestureRecognizer(longPressRecognizer)
                     }
@@ -631,6 +648,50 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
                     if key == "selectKeyboard" {
                         selectKeyboardButton = btn
+                        btn.setTitle("", for: .normal)
+                        var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
+                        if DeviceType.isPad {
+                            selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
+                        }
+                        btn.setImage(UIImage(systemName: "globe", withConfiguration: selectKeyboardIconConfig), for: .normal)
+                        btn.tintColor = .black
+                    }
+                    
+                    if key == "hideKeyboard" {
+                        btn.setTitle("", for: .normal)
+                        let hideKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
+                        btn.setImage(UIImage(systemName: "keyboard.chevron.compact.down", withConfiguration: hideKeyboardIconConfig), for: .normal)
+                        btn.tintColor = .black
+                    }
+                    
+                    if key == "shift" {
+                        btn.setTitle("", for: .normal)
+                        var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+                        if DeviceType.isPad {
+                            shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+                        }
+                        btn.setImage(UIImage(systemName: "shift", withConfiguration: shiftIconConfig), for: .normal)
+                        btn.tintColor = .black
+                    }
+                    
+                    if key == "return" {
+                        btn.setTitle("", for: .normal)
+                        var returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+                        if DeviceType.isPad {
+                            returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+                        }
+                        btn.setImage(UIImage(systemName: "return", withConfiguration: returnIconConfig), for: .normal)
+                        btn.tintColor = .black
+                    }
+                    
+                    if key == "delete" {
+                        btn.setTitle("", for: .normal)
+                        var deleteIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+                        if DeviceType.isPad {
+                            deleteIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+                        }
+                        btn.setImage(UIImage(systemName: "delete.left", withConfiguration: deleteIconConfig), for: .normal)
+                        btn.tintColor = .black
                     }
                     
                     if key == "a" {
@@ -693,7 +754,15 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                     }
 
                     // specialKey constraints.
-                    if key == "⌫" || key == "#+=" || key == "ABC" || key == "⇧" || key == "undoArrow" || key == "selectKeyboard" {
+                    if key == "ABC" {
+                        if DeviceType.isPhone {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+                        } else {
+                            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+                        }
+                        btn.layer.setValue(true, forKey: "isSpecial")
+                        btn.backgroundColor = specialKeyColor
+                    } else if key == "delete" || key == "#+=" || key == "shift" || key == "undoArrow" || key == "selectKeyboard" {
                         if DeviceType.isPhone {
                             btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
                         } else {
@@ -701,15 +770,26 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                         }
                         btn.layer.setValue(true, forKey: "isSpecial")
                         btn.backgroundColor = specialKeyColor
-                        if key == "⇧" {
+                        if key == "shift" {
                             if shiftButtonState != .normal {
                                 btn.backgroundColor = keyPressedColor
+                                var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+                                if DeviceType.isPad {
+                                    shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+                                }
+                                btn.setImage(UIImage(systemName: "shift.fill", withConfiguration: shiftIconConfig), for: .normal)
+                                btn.tintColor = .black
                             }
                             if shiftButtonState == .caps {
-                                btn.setTitle("⇪", for: .normal)
+                                var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+                                if DeviceType.isPad {
+                                    shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+                                }
+                                btn.setImage(UIImage(systemName: "capslock.fill", withConfiguration: shiftIconConfig), for: .normal)
+                                btn.tintColor = .black
                             }
                         }
-                    } else if key == "123" || key == ".?123" || key == "↵" || key == "hideKeyboard" {
+                    } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
                         if DeviceType.isPhone {
                             btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
                         } else {
@@ -1053,7 +1133,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             previewState = true
             getPlural = true
 
-		case "⌫":
+		case "delete":
 			if shiftButtonState == .shift {
 				shiftButtonState = .normal
 				loadKeys()
@@ -1089,7 +1169,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         case "hideKeyboard":
             self.dismissKeyboard()
             
-		case "↵":
+		case "return":
             if getTranslation {
                 queryTranslation()
                 getTranslation = false
@@ -1174,7 +1254,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 			changeKeyboardToSymbolKeys()
             clearPreviewLabel()
             
-		case "⇧":
+		case "shift":
 			shiftButtonState = shiftButtonState == .normal ? .shift : .normal
 			loadKeys()
             clearPreviewLabel()
@@ -1201,7 +1281,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 		guard let originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
 		let touch: UITouch = event.allTouches!.first!
-		if (touch.tapCount == 2 && originalKey == "⇧") {
+		if (touch.tapCount == 2 && originalKey == "shift") {
 			shiftButtonState = .caps
 			loadKeys()
             clearPreviewLabel()
