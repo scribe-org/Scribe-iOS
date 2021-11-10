@@ -194,6 +194,8 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
   - Missing values are marked as `""` in verbs.json files
 
+- Standardizing the conjugation properties for Spanish verbs [(see issue)]()
+
 # Powered By
 
 <div align="center">
