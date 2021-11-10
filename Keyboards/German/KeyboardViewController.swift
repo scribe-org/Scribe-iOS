@@ -239,9 +239,9 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
   @IBOutlet var conjugateBtn: UIButton!
   @IBOutlet var pluralBtn: UIButton!
   func setGrammarBtns() {
-    setBtn(btn: translateBtn, color: UIColor.scribeBlue, name: "Translate", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateBtn, color: UIColor.scribeBlue, name: "Conjugate", canCapitalize: false, isSpecial: false)
-    setBtn(btn: pluralBtn, color: UIColor.scribeBlue, name: "Plural", canCapitalize: false, isSpecial: false)
+    setBtn(btn: translateBtn, color: specialKeyColor, name: "Translate", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtn, color: specialKeyColor, name: "Conjugate", canCapitalize: false, isSpecial: false)
+    setBtn(btn: pluralBtn, color: specialKeyColor, name: "Plural", canCapitalize: false, isSpecial: false)
   }
 
   @IBOutlet var conjugateBtnFPS: UIButton!
@@ -596,7 +596,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
           if scribeBtnState {
             scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
             scribeBtn?.setTitle("", for: .normal) // esc
-            scribeBtn?.backgroundColor = specialKeyColor
             scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
@@ -607,6 +606,9 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
             styleBtn(btn: conjugateBtn, title: "Conjugate", radius: btnKeyCornerRadius)
             styleBtn(btn: pluralBtn, title: "Plural", radius: btnKeyCornerRadius)
           } else {
+            if previewState == true {
+              scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
+            }
             scribeBtn?.setTitle("", for: .normal)
             deactivateBtn(btn: conjugateBtn)
             deactivateBtn(btn: translateBtn)
@@ -858,12 +860,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       deStackView3.isUserInteractionEnabled = false
       deStackView4.isUserInteractionEnabled = false
 
-      scribeBtn?.setTitle("esc", for: .normal)
-      scribeBtn?.backgroundColor = specialKeyColor
+      scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
+      scribeBtn?.setTitle("", for: .normal) // esc
       scribeBtn?.layer.cornerRadius = buttonWidth / 4
       scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
-      deGrammarPreviewLabel?.backgroundColor = UIColor.scribeBlue
+      deGrammarPreviewLabel?.backgroundColor = specialKeyColor
 
       deactivateBtn(btn: conjugateBtn)
       deactivateBtn(btn: translateBtn)
@@ -893,14 +895,17 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     shiftButtonState = .normal
     loadKeys()
   }
+
   func changeKeyboardToLetterKeys() {
     keyboardState = .letters
     loadKeys()
   }
+
   func changeKeyboardToSymbolKeys() {
     keyboardState = .symbols
     loadKeys()
   }
+
   func handlDeleteButtonPressed() {
     if previewState != true {
       proxy.deleteBackward()
@@ -1032,25 +1037,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         loadKeys()
         selectedNounAnnotation()
       } else {
-        if scribeBtnState == false && conjugateView != true {
+        if previewState == true { // esc
+          previewState = false
+        } else if scribeBtnState == false && conjugateView != true { // ScribeBtn
           scribeBtnState = true
           activateBtn(btn: translateBtn)
           activateBtn(btn: conjugateBtn)
           activateBtn(btn: pluralBtn)
-        } else if conjugateView == true {
+        } else if conjugateView == true { // esc
           conjugateView = false
           scribeBtnState = false
-        } else {
+          previewState = false
+        } else { // esc
           scribeBtnState = false
+          previewState = false
         }
         loadKeys()
       }
 
     case "Translate":
       scribeBtnState = false
+      previewState = true
       loadKeys()
       deGrammarPreviewLabel?.text = translatePromptAndCursor
-      previewState = true
       getTranslation = true
 
     case "Conjugate":
@@ -1058,10 +1067,28 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       if shiftButtonState == .shift {
         shiftButtonState = .normal
       }
+      previewState = true
       loadKeys()
       deGrammarPreviewLabel?.text = conjugatePromptAndCursor
-      previewState = true
       getConjugation = true
+
+    case "shiftConjugateLeft":
+      conjugationStateLeft()
+      loadKeys()
+
+    case "shiftConjugateRight":
+      conjugationStateRight()
+      loadKeys()
+
+    case "Plural":
+      scribeBtnState = false
+      if shiftButtonState == .normal {
+        shiftButtonState = .shift
+      }
+      previewState = true
+      loadKeys()
+      deGrammarPreviewLabel?.text = pluralPromptAndCursor
+      getPlural = true
 
     case "firstPersonSingular":
       // Don't change proxy if they select a conjugation that's missing.
@@ -1141,25 +1168,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       conjugateView = false
       loadKeys()
 
-    case "shiftConjugateLeft":
-      conjugationStateLeft()
-      loadKeys()
-
-    case "shiftConjugateRight":
-      conjugationStateRight()
-      loadKeys()
-
-    case "Plural":
-      scribeBtnState = false
-      if shiftButtonState == .normal {
-        shiftButtonState = .shift
-        loadKeys()
-      }
-      loadKeys()
-      deGrammarPreviewLabel?.text = pluralPromptAndCursor
-      previewState = true
-      getPlural = true
-
     case "delete":
       if shiftButtonState == .shift {
         shiftButtonState = .normal
@@ -1234,7 +1242,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       } else {
         previewState = false
         clearPreviewLabel()
-        typedNounAnnotation()
         // Auto-capitalization if at the start of the proxy.
         proxy.insertText(" ")
         if proxy.documentContextBeforeInput == " " {
@@ -1244,6 +1251,8 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
           }
         }
         proxy.deleteBackward()
+        loadKeys()
+        typedNounAnnotation()
       }
 
     case "123":
