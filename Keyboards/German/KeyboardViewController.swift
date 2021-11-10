@@ -60,32 +60,32 @@ var isAlreadyPluralState: Bool = false
 let allPrompts: [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 
 extension String {
-  func index(from: Int) -> Index {
-    return self.index(startIndex, offsetBy: from)
+  func index(fromIdx: Int) -> Index {
+    return self.index(startIndex, offsetBy: fromIdx)
   }
 
-  func substring(from: Int) -> String {
-    let fromIndex = index(from: from)
+  func substring(fromIdx: Int) -> String {
+    let fromIndex = index(fromIdx: fromIdx)
     return String(self[fromIndex...])
   }
 
-  func substring(to: Int) -> String {
-    let toIndex = index(from: to)
+  func substring(toIdx: Int) -> String {
+    let toIndex = index(fromIdx: toIdx)
     return String(self[..<toIndex])
   }
 
-  func substring(with r: Range<Int>) -> String {
-    let startIndex = index(from: r.lowerBound)
-    let endIndex = index(from: r.upperBound)
+  func substring(with range: Range<Int>) -> String {
+    let startIndex = index(fromIdx: range.lowerBound)
+    let endIndex = index(fromIdx: range.upperBound)
     return String(self[startIndex..<endIndex])
   }
 
   func insertPriorToCursor(char: String) -> String {
-    return substring(to: self.count - 1) + char + previewCursor
+    return substring(toIdx: self.count - 1) + char + previewCursor
   }
 
   func deletePriorToCursor() -> String {
-    return substring(to: self.count - 2) + previewCursor
+    return substring(toIdx: self.count - 2) + previewCursor
   }
 }
 
@@ -311,37 +311,37 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     tenseTPP = getConjugationState() + "TPP"
 
     // Assign the invalid message if the conjugation isn't present in the directory.
-    if germanVerbs?[verbToConjugate]![tenseFPS] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseFPS] as? String == "" {
       styleBtn(btn: conjugateBtnFPS, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnFPS, title: germanVerbs?[verbToConjugate]![tenseFPS] as! String, radius: btnKeyCornerRadius)
     }
 
-    if germanVerbs?[verbToConjugate]![tenseSPS] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseSPS] as? String == "" {
       styleBtn(btn: conjugateBtnSPS, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnSPS, title: germanVerbs?[verbToConjugate]![tenseSPS] as! String, radius: btnKeyCornerRadius)
     }
 
-    if germanVerbs?[verbToConjugate]![tenseTPS] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseTPS] as? String == "" {
       styleBtn(btn: conjugateBtnTPS, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnTPS, title: germanVerbs?[verbToConjugate]![tenseTPS] as! String, radius: btnKeyCornerRadius)
     }
 
-    if germanVerbs?[verbToConjugate]![tenseFPP] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseFPP] as? String == "" {
       styleBtn(btn: conjugateBtnFPP, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnFPP, title: germanVerbs?[verbToConjugate]![tenseFPP] as! String, radius: btnKeyCornerRadius)
     }
 
-    if germanVerbs?[verbToConjugate]![tenseSPP] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseSPP] as? String == "" {
       styleBtn(btn: conjugateBtnSPP, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnSPP, title: germanVerbs?[verbToConjugate]![tenseSPP] as! String, radius: btnKeyCornerRadius)
     }
 
-    if germanVerbs?[verbToConjugate]![tenseTPP] as! String == "" {
+    if germanVerbs?[verbToConjugate]![tenseTPP] as? String == "" {
       styleBtn(btn: conjugateBtnTPP, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: btnKeyCornerRadius)
@@ -955,7 +955,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     let noun = deGrammarPreviewLabel?.text!.substring(with: pluralPrompt.count..<((deGrammarPreviewLabel?.text!.count)!-1))
     let nounInDirectory = germanNouns?[noun!] != nil
     if nounInDirectory {
-      if germanNouns?[noun!]?["plural"] as! String != "isPlural" {
+      if germanNouns?[noun!]?["plural"] as? String != "isPlural" {
         proxy.insertText(germanNouns?[noun!]?["plural"] as! String + " ")
       } else {
         proxy.insertText(noun! + " ")
@@ -975,7 +975,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     let selectedWord = proxy.selectedText
     let isNoun = germanNouns?[selectedWord!] != nil
     if isNoun {
-      let nounForm = germanNouns?[selectedWord!]?["form"] as! String
+      let nounForm = germanNouns?[selectedWord!]?["form"] as? String
       if nounForm == "F" {
         deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
       } else if nounForm == "M" {
@@ -988,7 +988,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         deGrammarPreviewLabel?.textColor = .black
       }
 
-      deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm)) " + selectedWord!
+      deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!
       deGrammarPreviewLabel?.sizeToFit()
     }
   }
@@ -999,7 +999,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       let lastWordTyped = wordsTyped.penultimate()
       let isNoun = germanNouns?[lastWordTyped!] != nil
       if isNoun {
-        let nounForm = germanNouns?[lastWordTyped!]?["form"] as! String
+        let nounForm = germanNouns?[lastWordTyped!]?["form"] as? String
         if nounForm == "F" {
           deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
         } else if nounForm == "M" {
@@ -1012,7 +1012,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
           deGrammarPreviewLabel?.textColor = .black
         }
 
-        deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm)) " + lastWordTyped!
+        deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
         deGrammarPreviewLabel?.sizeToFit()
       }
     }
