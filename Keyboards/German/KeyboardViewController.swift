@@ -698,7 +698,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                         if DeviceType.isPad {
                             returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                         }
-                        btn.setImage(UIImage(systemName: "return", withConfiguration: returnIconConfig), for: .normal)
+                        btn.setImage(UIImage(systemName: "arrow.turn.down.left", withConfiguration: returnIconConfig), for: .normal)
                         if UITraitCollection.current.userInterfaceStyle == .dark {
                             btn.tintColor = .white
                         }
