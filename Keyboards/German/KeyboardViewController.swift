@@ -826,7 +826,11 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
             }
             btn.layer.setValue(true, forKey: "isSpecial")
-            btn.backgroundColor = specialKeyColor
+            if key == "return" && previewState == true {
+              btn.backgroundColor = UIColor.scribeBlue
+            } else {
+              btn.backgroundColor = specialKeyColor
+            }
             // Only change widths for number and symbol keys for iPhones.
           } else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 && DeviceType.isPhone {
             btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
