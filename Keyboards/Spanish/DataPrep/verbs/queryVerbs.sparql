@@ -1,10 +1,8 @@
 # All Spanish (Q1321) verbs and the currently implemented verb tenses for each.
 # Enter this query at https://query.wikidata.org/.
 # Note that there are two different categorizations of verbs given properties.
-# Either all the properties are separate: Q21714344, Q110786, Q682111, Q192613
-# Or the properties can also be combined: Q51929218, Q56682909
 
-SELECT ?lexeme ?infinitive ?gerund
+SELECT ?infinitive ?gerund
        ?pastParticipleSingularMale ?pastParticipleSingularFemale
        ?pastParticiplePluralMale ?pastParticiplePluralFemale
        ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
@@ -26,41 +24,6 @@ SELECT ?lexeme ?infinitive ?gerund
       ?lexeme ontolex:lexicalForm ?gerundForm .
       ?gerundForm ontolex:representation ?gerund ;
                   wikibase:grammaticalFeature wd:Q1923028 ;
-  } .
-
-  # The participle(s)
-  ###################
-
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?pastParticipleSingularMaleForm .
-      ?pastParticipleSingularMaleForm ontolex:representation ?pastParticipleSingularMale ;
-                                      wikibase:grammaticalFeature wd:Q110786 ;
-                                      wikibase:grammaticalFeature wd:Q499327 ;
-                                      wikibase:grammaticalFeature wd:Q814722 ;
-  } .
-
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?pastParticipleSingularFemaleForm .
-      ?pastParticipleSingularFemaleForm ontolex:representation ?pastParticipleSingularFemale ;
-                                        wikibase:grammaticalFeature wd:Q110786 ;
-                                        wikibase:grammaticalFeature wd:Q1775415 ;
-                                        wikibase:grammaticalFeature wd:Q814722 ;
-  } .
-
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?pastParticiplePluralMaleForm .
-      ?pastParticiplePluralMaleForm ontolex:representation ?pastParticiplePluralMale ;
-                                    wikibase:grammaticalFeature wd:Q146786 ;
-                                    wikibase:grammaticalFeature wd:Q499327 ;
-                                    wikibase:grammaticalFeature wd:Q814722 ;
-  } .
-
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?pastParticiplePluralFemaleForm .
-      ?pastParticiplePluralFemaleForm ontolex:representation ?pastParticiplePluralFemale ;
-                                      wikibase:grammaticalFeature wd:Q146786 ;
-                                      wikibase:grammaticalFeature wd:Q1775415 ;
-                                      wikibase:grammaticalFeature wd:Q814722 ;
   } .
 
   # Indicative Present
