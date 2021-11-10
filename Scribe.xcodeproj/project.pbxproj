@@ -20,6 +20,8 @@
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
 		D1018220272829E70032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821B2728291B0032A82D /* verbs.json */; };
+		D103B17F273C280900B97121 /* escBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B17E273C280800B97121 /* escBtn.png */; };
+		D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtn.png */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D142638C270B6F2B00D3702D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638A270B6F2B00D3702D /* Constants.swift */; };
@@ -79,6 +81,8 @@
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D101821B2728291B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D103B17E273C280800B97121 /* escBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escBtn.png; sourceTree = "<group>"; };
+		D103B182273C2A1400B97121 /* ScribeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtn.png; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D142638A270B6F2B00D3702D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
 				38BD215022D592CA00C6795D /* Info.plist */,
+				D103B17E273C280800B97121 /* escBtn.png */,
+				D103B182273C2A1400B97121 /* ScribeBtn.png */,
 			);
 			path = German;
 			sourceTree = "<group>";
@@ -299,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */,
+				D103B17F273C280900B97121 /* escBtn.png in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,

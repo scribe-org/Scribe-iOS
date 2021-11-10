@@ -118,7 +118,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality
 
-- Adding labels to keys that don't have unicode character representations
+- Code cleaning
+
+- Finalizing the Spanish keyboard
 
 - Baseline fixes to translations.json files
 
@@ -156,11 +158,13 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Discussing further grammatical information that can be displayed to the user in the preview bar that could help with language learning [(see issue)]()
 
-- Adding undo button functionality iPads (and potentially iPhones) [(see issue)]()
+- Adding undo button functionality for iPads and iPhones [(see issue)]()
 
 - Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
 
 ## Appearance
+
+- Create a version of the `Scribe key` that is appropriately rendered across devices [(see issue)]()
 
 - Fix transition from portrait to landscape so that height is re-rendered [(see issue)]()
 

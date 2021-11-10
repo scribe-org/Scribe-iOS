@@ -227,6 +227,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
     @IBOutlet var scribeBtn: UIButton!
     func setScribeBtn() {
+        scribeBtn.setImage(UIImage(named: "ScribeBtn.png"), for: .normal)
         setBtn(btn: scribeBtn, color: UIColor.scribeBlue, name: "Scribe", canCapitalize: false, isSpecial: false)
     }
     @IBOutlet var deGrammarPreviewLabel: UILabel!
@@ -594,7 +595,8 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                     scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
                     if scribeBtnState {
-                        scribeBtn?.setTitle("esc", for: .normal)
+                        scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
+                        scribeBtn?.setTitle("", for: .normal) // esc
                         scribeBtn?.backgroundColor = specialKeyColor
                         scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
                         scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
@@ -606,6 +608,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                         styleBtn(btn: conjugateBtn, title: "Conjugate", radius: btnKeyCornerRadius)
                         styleBtn(btn: pluralBtn, title: "Plural", radius: btnKeyCornerRadius)
                     } else {
+                        scribeBtn?.setTitle("", for: .normal)
                         deactivateBtn(btn: conjugateBtn)
                         deactivateBtn(btn: translateBtn)
                         deactivateBtn(btn: pluralBtn)
@@ -654,14 +657,24 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                             selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
                         }
                         btn.setImage(UIImage(systemName: "globe", withConfiguration: selectKeyboardIconConfig), for: .normal)
-                        btn.tintColor = .black
+                        if UITraitCollection.current.userInterfaceStyle == .dark {
+                            btn.tintColor = .white
+                        }
+                        else {
+                            btn.tintColor = .black
+                        }
                     }
                     
                     if key == "hideKeyboard" {
                         btn.setTitle("", for: .normal)
                         let hideKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
                         btn.setImage(UIImage(systemName: "keyboard.chevron.compact.down", withConfiguration: hideKeyboardIconConfig), for: .normal)
-                        btn.tintColor = .black
+                        if UITraitCollection.current.userInterfaceStyle == .dark {
+                            btn.tintColor = .white
+                        }
+                        else {
+                            btn.tintColor = .black
+                        }
                     }
                     
                     if key == "shift" {
@@ -671,7 +684,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                             shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                         }
                         btn.setImage(UIImage(systemName: "shift", withConfiguration: shiftIconConfig), for: .normal)
-                        btn.tintColor = .black
+                        if UITraitCollection.current.userInterfaceStyle == .dark {
+                            btn.tintColor = .white
+                        }
+                        else {
+                            btn.tintColor = .black
+                        }
                     }
                     
                     if key == "return" {
@@ -681,7 +699,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                             returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                         }
                         btn.setImage(UIImage(systemName: "return", withConfiguration: returnIconConfig), for: .normal)
-                        btn.tintColor = .black
+                        if UITraitCollection.current.userInterfaceStyle == .dark {
+                            btn.tintColor = .white
+                        }
+                        else {
+                            btn.tintColor = .black
+                        }
                     }
                     
                     if key == "delete" {
@@ -691,7 +714,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                             deleteIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                         }
                         btn.setImage(UIImage(systemName: "delete.left", withConfiguration: deleteIconConfig), for: .normal)
-                        btn.tintColor = .black
+                        if UITraitCollection.current.userInterfaceStyle == .dark {
+                            btn.tintColor = .white
+                        }
+                        else {
+                            btn.tintColor = .black
+                        }
                     }
                     
                     if key == "a" {
@@ -778,7 +806,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                                     shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                                 }
                                 btn.setImage(UIImage(systemName: "shift.fill", withConfiguration: shiftIconConfig), for: .normal)
-                                btn.tintColor = .black
+                                if UITraitCollection.current.userInterfaceStyle == .dark {
+                                    btn.tintColor = .white
+                                }
+                                else {
+                                    btn.tintColor = .black
+                                }
                             }
                             if shiftButtonState == .caps {
                                 var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
@@ -786,7 +819,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
                                     shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
                                 }
                                 btn.setImage(UIImage(systemName: "capslock.fill", withConfiguration: shiftIconConfig), for: .normal)
-                                btn.tintColor = .black
+                                if UITraitCollection.current.userInterfaceStyle == .dark {
+                                    btn.tintColor = .white
+                                }
+                                else {
+                                    btn.tintColor = .black
+                                }
                             }
                         }
                     } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
