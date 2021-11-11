@@ -13,7 +13,7 @@ var keyPressedColor = UIColor.systemGray5
 func checkDarkMode() {
   if UITraitCollection.current.userInterfaceStyle == .dark {
     keyColor = UIColor.systemGray2
-    specialKeyColor = UIColor.systemGray5
+    specialKeyColor = UIColor.systemGray3
     keyPressedColor = UIColor.systemGray
   } else if UITraitCollection.current.userInterfaceStyle == .light {
     keyColor = .white
@@ -565,6 +565,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
           btn.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
           btn.layer.setValue(false, forKey: "isSpecial")
           btn.setTitle(keyToDisplay, for: .normal) // set button character
+
+          if UITraitCollection.current.userInterfaceStyle == .dark {
+            keyboardView.backgroundColor? = UIColor.systemGray5
+          } else if UITraitCollection.current.userInterfaceStyle == .light {
+            keyboardView.backgroundColor? = UIColor.systemGray4
+          }
 
           btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
           btn.layer.borderWidth = 3
