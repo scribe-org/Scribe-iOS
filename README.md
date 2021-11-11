@@ -180,7 +180,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Edits to Keyboard.xib files to provide language specific UI elements based on grammatical needs [(see issue)]()
 
-- Fixes to the dark mode implementation [(see issue)]()
+- Refining colors in both light and dark mode implementations [(see issue)]()
 
 - Adding key shading to keyboards [(see issue)]()
 

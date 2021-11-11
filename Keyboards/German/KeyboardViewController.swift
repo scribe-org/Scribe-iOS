@@ -2,13 +2,25 @@
 //  KeyboardViewController.swift
 //
 
-import Foundation
 import UIKit
 
 var proxy: UITextDocumentProxy!
-var keyColor = UIColor.systemGray6
+
+var keyColor = UIColor.white
 var specialKeyColor = UIColor.systemGray2
 var keyPressedColor = UIColor.systemGray5
+
+func checkDarkMode() {
+  if UITraitCollection.current.userInterfaceStyle == .dark {
+    keyColor = UIColor.systemGray2
+    specialKeyColor = UIColor.systemGray5
+    keyPressedColor = UIColor.systemGray
+  } else if UITraitCollection.current.userInterfaceStyle == .light {
+    keyColor = .white
+    specialKeyColor = UIColor.systemGray2
+    keyPressedColor = UIColor.systemGray5
+  }
+}
 
 var keyboardHeight: CGFloat!
 var btnKeyCornerRadius: CGFloat!
@@ -19,12 +31,13 @@ var numberKeys = [[String]]()
 var symbolKeys = [[String]]()
 
 // Variables for alternate key views.
+var slectedKey: String = ""
 let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
 let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
 let keysWithAlternatesRight = ["u", "i", "o", "n"]
 var alternatesKeyView: UIView!
 
-var buttonWidth = CGFloat(5) // place holder.
+var buttonWidth = CGFloat(5) // place holder
 
 struct DeviceType {
   static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
@@ -414,7 +427,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       if isLandscapeView == true {
         keyboardHeight = 180
       } else {
-        keyboardHeight = 230
+        keyboardHeight = 240
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
@@ -464,6 +477,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
   func loadKeys() {
     checkLandscapeMode()
+    checkDarkMode()
     setKeyboardStyles()
     setScribeBtn()
     setPreviewLabel()
