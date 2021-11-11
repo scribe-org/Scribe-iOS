@@ -371,7 +371,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     }
   }
 
-  func checkLandscrapeMode() {
+  func checkLandscapeMode() {
     if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
       isLandscapeView = true
     } else if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
@@ -463,7 +463,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
   // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
   func loadKeys() {
-    checkLandscrapeMode()
+    checkLandscapeMode()
     setKeyboardStyles()
     setScribeBtn()
     setPreviewLabel()
@@ -866,6 +866,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
       deGrammarPreviewLabel?.backgroundColor = specialKeyColor
+      deGrammarPreviewLabel?.textColor = UIColor.label
 
       deactivateBtn(btn: conjugateBtn)
       deactivateBtn(btn: translateBtn)
@@ -977,15 +978,31 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     if isNoun {
       let nounForm = germanNouns?[selectedWord!]?["form"] as? String
       if nounForm == "F" {
-        deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+          deGrammarPreviewLabel?.textColor = UIColor.previewRedDarkTheme
+        } else {
+          deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
+        }
       } else if nounForm == "M" {
-        deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+          deGrammarPreviewLabel?.textColor = UIColor.previewBlueDarkTheme
+        } else {
+          deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
+        }
       } else if nounForm ==  "N" {
-        deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+          deGrammarPreviewLabel?.textColor = UIColor.previewGreenDarkTheme
+        } else {
+          deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
+        }
       } else if nounForm ==  "PL" {
-        deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+          deGrammarPreviewLabel?.textColor = UIColor.previewOrangeDarkTheme
+        } else {
+          deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+        }
       } else {
-        deGrammarPreviewLabel?.textColor = .black
+        deGrammarPreviewLabel?.textColor = UIColor.label
       }
 
       deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!
@@ -1001,15 +1018,31 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       if isNoun {
         let nounForm = germanNouns?[lastWordTyped!]?["form"] as? String
         if nounForm == "F" {
-          deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
+          if UITraitCollection.current.userInterfaceStyle == .dark {
+            deGrammarPreviewLabel?.textColor = UIColor.previewRedDarkTheme
+          } else {
+            deGrammarPreviewLabel?.textColor = UIColor.previewRedLightTheme
+          }
         } else if nounForm == "M" {
-          deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
+          if UITraitCollection.current.userInterfaceStyle == .dark {
+            deGrammarPreviewLabel?.textColor = UIColor.previewBlueDarkTheme
+          } else {
+            deGrammarPreviewLabel?.textColor = UIColor.previewBlueLightTheme
+          }
         } else if nounForm ==  "N" {
-          deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
+          if UITraitCollection.current.userInterfaceStyle == .dark {
+            deGrammarPreviewLabel?.textColor = UIColor.previewGreenDarkTheme
+          } else {
+            deGrammarPreviewLabel?.textColor = UIColor.previewGreenLightTheme
+          }
         } else if nounForm ==  "PL" {
-          deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+          if UITraitCollection.current.userInterfaceStyle == .dark {
+            deGrammarPreviewLabel?.textColor = UIColor.previewOrangeDarkTheme
+          } else {
+            deGrammarPreviewLabel?.textColor = UIColor.previewOrangeLightTheme
+          }
         } else {
-          deGrammarPreviewLabel?.textColor = .black
+          deGrammarPreviewLabel?.textColor = UIColor.label
         }
 
         deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
@@ -1252,7 +1285,10 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         }
         proxy.deleteBackward()
         loadKeys()
-        typedNounAnnotation()
+        // Avoid showing noun annotation instead of conjugation state header.
+        if conjugateView == false {
+          typedNounAnnotation()
+        }
       }
 
     case "123":
@@ -1383,11 +1419,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1443,11 +1475,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1503,11 +1531,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1563,11 +1587,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1623,11 +1643,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1683,11 +1699,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1743,11 +1755,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1803,11 +1811,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
@@ -1863,11 +1867,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      if UITraitCollection.current.userInterfaceStyle == .dark {
-        btn.setTitleColor(UIColor.white, for: .normal)
-      } else {
-        btn.setTitleColor(UIColor.black, for: .normal)
-      }
+      btn.setTitleColor(UIColor.label, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)

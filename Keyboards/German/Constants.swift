@@ -12,6 +12,11 @@ extension UIColor {
   static let previewBlueLightTheme = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 153.0/255.0, alpha: 1.0)
   static let previewGreenLightTheme = UIColor(red: 0.0/255.0, green: 153.0/255.0, blue: 0.0/255.0, alpha: 1.0)
   static let previewOrangeLightTheme = UIColor(red: 153.0/255.0, green: 76.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+
+  static let previewRedDarkTheme = UIColor(red: 204.0/255.0, green: 50.0/255.0, blue: 50.0/255.0, alpha: 1.0)
+  static let previewBlueDarkTheme = UIColor(red: 50.0/255.0, green: 50.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+  static let previewGreenDarkTheme = UIColor(red: 50.0/255.0, green: 204.0/255.0, blue: 50.0/255.0, alpha: 1.0)
+  static let previewOrangeDarkTheme = UIColor(red: 204.0/255.0, green: 102.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 }
 
 enum Constants {
