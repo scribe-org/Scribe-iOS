@@ -212,8 +212,6 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
 <div align="center">
   <br>
-  <a href="https://www.wikimedia.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/gh_images/wikimedia_foundation_logo.png" alt="Wikimedia"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.wikidata.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/gh_images/wikidata_logo.png" alt="Wikidata"></a>
   <br>
 </div>
