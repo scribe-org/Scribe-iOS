@@ -40,14 +40,17 @@ def assign_past_participle(verb, tense):
     """
     Assigns the past participle after the auxiliary verb or by itself
     """
-    if verbs_formatted[verb["infinitive"]][tense] != "":
+    if verbs_formatted[verb["infinitive"]][tense] not in ["", verb["pastParticiple"]]:
         verbs_formatted[verb["infinitive"]][tense] += " " + verb["pastParticiple"]
     else:
-        verbs_formatted[verb["infinitive"]][tense] += verb["pastParticiple"]
+        verbs_formatted[verb["infinitive"]][tense] = verb["pastParticiple"]
 
 
 for verb_vals in verbs_list:
-    if verb_vals["infinitive"] not in verbs_formatted.keys():
+    if (
+        "infinitive" in verb_vals.keys()
+        and verb_vals["infinitive"] not in verbs_formatted.keys()
+    ):
         non_infinitive_conjugations = {
             k: v for k, v in verb_vals.items() if k != "infinitive"
         }

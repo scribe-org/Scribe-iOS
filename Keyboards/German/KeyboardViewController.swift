@@ -30,11 +30,6 @@ var letterKeys = [[String]]()
 var numberKeys = [[String]]()
 var symbolKeys = [[String]]()
 
-// Variables for alternate key views.
-var slectedKey: String = ""
-let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
-let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
-let keysWithAlternatesRight = ["u", "i", "o", "n"]
 var alternatesKeyView: UIView!
 
 var buttonWidth = CGFloat(5) // place holder
@@ -1091,6 +1086,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         selectedNounAnnotation()
       } else {
         if previewState == true { // esc
+          scribeBtnState = false
           previewState = false
         } else if scribeBtnState == false && conjugateView != true { // ScribeBtn
           scribeBtnState = true
@@ -1257,17 +1253,17 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       self.dismissKeyboard()
 
     case "return":
-      if getTranslation {
+      if getTranslation && previewState == true {
         queryTranslation()
         getTranslation = false
       }
-      if getConjugation {
+      if getConjugation && previewState == true {
         // Reset to the most basic conjugations.
         conjugationState = .indicativePresent
         queryConjugation()
         getConjugation = false
       }
-      if getPlural {
+      if getPlural && previewState == true {
         queryPlural()
         getPlural = false
       }

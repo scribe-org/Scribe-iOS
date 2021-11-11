@@ -166,6 +166,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
 
+- Change the selected noun annotation feature to not require a the `Scribe key` to be pressed [(see issue)]()
+
 ## Appearance
 
 - Create a version of the `Scribe key` that is appropriately rendered across devices [(see issue)]()

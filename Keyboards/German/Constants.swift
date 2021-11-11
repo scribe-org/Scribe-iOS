@@ -62,6 +62,11 @@ enum Constants {
     ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
+  // Variables for alternate key views.
+  static let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
+  static let keysWithAlternatesRight = ["u", "i", "o", "n"]
+
   static let aAlternateKeys = ["à", "á", "â", "æ", "ã", "å", "ā"]
 
   static let eAlternateKeys = ["é", "è", "ê", "ë", "ė"]
