@@ -1072,7 +1072,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     let isPreposition = germanPrepositions?[selectedWord!] != nil
     if isPreposition {
       let prepositionCase = germanPrepositions?[selectedWord!] as? String
-      deGrammarPreviewLabel?.text = previewPromptSpacing + prepositionCase!
+      deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
       deGrammarPreviewLabel?.sizeToFit()
     }
   }
@@ -1084,7 +1084,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       let isPreposition = germanPrepositions?[lastWordTyped!] != nil
       if isPreposition {
         let prepositionCase = germanPrepositions?[lastWordTyped!] as? String
-        deGrammarPreviewLabel?.text = previewPromptSpacing + prepositionCase!
+        deGrammarPreviewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
         deGrammarPreviewLabel?.sizeToFit()
       }
     }

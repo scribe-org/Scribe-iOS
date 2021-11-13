@@ -14,11 +14,11 @@ with open("prepositionsQueried.json") as f:
 
 def convert_cases(case):
     if case == "accusative":
-        return "Akkusativ"
+        return "Akk"
     if case == "dative":
-        return "Dativ"
+        return "Dat"
     if case == "genitive":
-        return "Genitiv"
+        return "Gen"
 
 
 prepositions_formatted = {}
