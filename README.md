@@ -83,7 +83,17 @@ Annotations are displayed once a user has typed a noun and pressed space or by p
 
 <!--
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_gender_demo.gif"><img src ="Resources/Demos/noun_gender_demo.gif" width="300" /></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_annotation_demo.gif"><img src ="Resources/Demos/noun_annotation_demo.gif" width="300" /></a>
+</p>
+-->
+
+### Preposition Annotation
+
+Prepositions are also annotated by Scribe in the preview label according to their corresponding case(s). Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
+
+<!--
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/preposition_annotation_demo.gif"><img src ="Resources/Demos/preposition_annotation_demo.gif" width="300" /></a>
 </p>
 -->
 
@@ -166,7 +176,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
 
-- Change the selected noun annotation feature to not require a the `Scribe key` to be pressed [(see issue)]()
+- Change the selected noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
 
 ## Appearance
 
@@ -209,6 +219,8 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
   - Missing values are marked as `""` in verbs.json files
 
 - Standardizing the conjugation properties for Spanish verbs [(see issue)]()
+
+- Adding data to allow for the long hold or drop down of verbs in the `Conjugate` feature that can give information on what case is used for the verb as well as the prepositions that follow it [(see issue)]()
 
 # Powered By
 
