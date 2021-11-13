@@ -89,7 +89,7 @@ Annotations are displayed once a user has typed a noun and pressed space or by p
 
 ### Preposition Annotation
 
-Prepositions are also annotated by Scribe in the preview label according to their corresponding case(s). Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
+If the keyboard's language has cases that are determined by prepositions, Scribe also annotates prepositions in the preview label according to their corresponding case(s). Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
 
 <!--
 <p align="center">
@@ -178,6 +178,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Change the selected noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
 
+- Allowing a user to press or long hold the preview label for further information on what's being displayed [(see issue)]()
+
 ## Appearance
 
 - Create a version of the `Scribe key` that is appropriately rendered across devices [(see issue)]()
@@ -220,7 +222,7 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
 - Standardizing the conjugation properties for Spanish verbs [(see issue)]()
 
-- Adding data to allow for the long hold or drop down of verbs in the `Conjugate` feature that can give information on what case is used for the verb as well as the prepositions that follow it [(see issue)]()
+- Adding data to allow for the long hold or drop down of verb info in the `Conjugate` feature that can show what case is used for the verb as well as the prepositions that follow it [(see issue)]()
 
 # Powered By
 

@@ -140,6 +140,7 @@ func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>?
 let germanNouns = loadJsonToDict(filename: "nouns")
 let germanVerbs = loadJsonToDict(filename: "verbs")
 let germanTranslations = loadJsonToDict(filename: "translations")
+let germanPrepositions = loadJsonToDict(filename: "prepositions")
 
 class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
@@ -1066,6 +1067,29 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     }
   }
 
+  func selectedPrepositionAnnotation() {
+    let selectedWord = proxy.selectedText?.lowercased()
+    let isPreposition = germanPrepositions?[selectedWord!] != nil
+    if isPreposition {
+      let prepositionCase = germanPrepositions?[selectedWord!] as? String
+      deGrammarPreviewLabel?.text = previewPromptSpacing + prepositionCase!
+      deGrammarPreviewLabel?.sizeToFit()
+    }
+  }
+
+  func typedPrepositionAnnotation() {
+    if proxy.documentContextBeforeInput != nil {
+      let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+      let lastWordTyped = wordsTyped.penultimate()?.lowercased()
+      let isPreposition = germanPrepositions?[lastWordTyped!] != nil
+      if isPreposition {
+        let prepositionCase = germanPrepositions?[lastWordTyped!] as? String
+        deGrammarPreviewLabel?.text = previewPromptSpacing + prepositionCase!
+        deGrammarPreviewLabel?.sizeToFit()
+      }
+    }
+  }
+
   func clearPreviewLabel() {
     if previewState != true {
       deGrammarPreviewLabel?.textColor = UIColor.label
@@ -1084,6 +1108,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       if proxy.selectedText != nil {
         loadKeys()
         selectedNounAnnotation()
+        selectedPrepositionAnnotation()
       } else {
         if previewState == true { // esc
           scribeBtnState = false
@@ -1242,6 +1267,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         deGrammarPreviewLabel?.text! = (deGrammarPreviewLabel?.text!.insertPriorToCursor(char: " "))!
       }
       typedNounAnnotation()
+      typedPrepositionAnnotation()
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearPreviewLabel()
       }
@@ -1304,6 +1330,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
         // Avoid showing noun annotation instead of conjugation state header.
         if conjugateView == false {
           typedNounAnnotation()
+          typedPrepositionAnnotation()
         }
       }
 

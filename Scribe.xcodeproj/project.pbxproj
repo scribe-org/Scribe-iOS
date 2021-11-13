@@ -27,6 +27,7 @@
 		D142638D270B6F2B00D3702D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142638B270B6F2B00D3702D /* Extensions.swift */; };
 		D1608668270B6D3C00134D48 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* KeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D19474C42740295300AF6EA5 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D19474C32740295300AF6EA5 /* prepositions.json */; };
 		D1B10CA6273C7B2900D56081 /* escBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B10CA5273C7B2900D56081 /* escBtn.png */; };
 		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1C0ACDC2719E0BA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */; };
@@ -89,6 +90,7 @@
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D1B10CA5273C7B2900D56081 /* escBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escBtn.png; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		D1C0ACDB2719E0BA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				D101821A2728291B0032A82D /* nouns.json */,
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
+				D19474C32740295300AF6EA5 /* prepositions.json */,
 				38BD215022D592CA00C6795D /* Info.plist */,
 				D1B10CA5273C7B2900D56081 /* escBtn.png */,
 				D103B182273C2A1400B97121 /* ScribeBtn.png */,
@@ -311,6 +314,7 @@
 				D1018220272829E70032A82D /* verbs.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
