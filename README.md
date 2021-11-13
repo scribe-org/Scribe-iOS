@@ -89,7 +89,7 @@ Annotations are displayed once a user has typed a noun and pressed space or by p
 
 ### Preposition Annotation
 
-If the keyboard's language has cases that are determined by prepositions, Scribe also annotates prepositions in the preview label according to their corresponding case(s). Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
+Scribe also annotates the grammatical cases of prepositions in the preview label if there is a relation in the given language. Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
 
 <!--
 <p align="center">
