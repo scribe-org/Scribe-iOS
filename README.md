@@ -24,7 +24,7 @@ Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/),
 - [Features](#features)
 - [To-Do](#to-do)
 
-# Setup [`↩`](#contents) <a id="setup"></a>
+# Setup [`⇱`](#contents) <a id="setup"></a>
 
 Users access Scribe language keyboards through the following:
 
@@ -33,7 +33,7 @@ Users access Scribe language keyboards through the following:
 - Select from the available Scribe keyboards
 - When typing press `🌐` to select keyboards
 
-# Features [`↩`](#contents) <a id="features"></a>
+# Features [`⇱`](#contents) <a id="features"></a>
 
 Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field. An extra space is inserted after so that these features function like auto-suggestions. Current features include:
 
@@ -122,7 +122,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 </p>
 </details>
 
-# To-Do [`↩`](#contents) <a id="to-do"></a>
+# To-Do [`⇱`](#contents) <a id="to-do"></a>
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
