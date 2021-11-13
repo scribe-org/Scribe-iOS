@@ -29,7 +29,7 @@ for prep_vals in prepositions_list:
             if prep_vals["preposition"] not in prepositions_formatted:
                 prepositions_formatted[prep_vals["preposition"]] = convert_cases(
                     prep_vals["case"].split(" case")[0]
-                )``
+                )
 
             else:
                 prepositions_formatted[prep_vals["preposition"]] += "/" + convert_cases(
