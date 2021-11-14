@@ -33,7 +33,9 @@ for w in tqdm(words, desc="Words translated", unit="word",):
         translated[0], skip_special_tokens=True
     )
 
-with open("../../translations.json", "w", encoding="utf-8") as f:
+with open(
+    "../../../../Keyboards/Spanish/translations.json", "w", encoding="utf-8"
+) as f:
     json.dump(translations_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file translations.json with {len(translations_formatted)} translations.")

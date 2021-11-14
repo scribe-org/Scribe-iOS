@@ -30,7 +30,7 @@ for w in tqdm(words, desc="Words translated", unit="word",):
 
     translations_formatted[w] = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-with open("../../translations.json", "w", encoding="utf-8") as f:
+with open("../../../../Keyboards/German/translations.json", "w", encoding="utf-8") as f:
     json.dump(translations_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file translations.json with {len(translations_formatted)} translations.")

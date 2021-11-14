@@ -38,7 +38,7 @@ all_keys = [
 
 def assign_past_participle(verb, tense):
     """
-    Assigns the past participle after the auxiliary verb or by itself
+    Assigns the past participle after the auxiliary verb or by itself.
     """
     if verbs_formatted[verb["infinitive"]][tense] not in ["", verb["pastParticiple"]]:
         verbs_formatted[verb["infinitive"]][tense] += " " + verb["pastParticiple"]
@@ -130,7 +130,7 @@ for verb_vals in verbs_list:
         assign_past_participle(verb=verb_vals, tense="indicativePerfectSPP")
         assign_past_participle(verb=verb_vals, tense="indicativePerfectTPP")
 
-with open("../../verbs.json", "w", encoding="utf-8") as f:
+with open("../../../../Keyboards/German/verbs.json", "w", encoding="utf-8") as f:
     json.dump(verbs_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file verbs.json with {len(verbs_formatted)} verbs.")

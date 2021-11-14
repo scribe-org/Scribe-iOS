@@ -4,190 +4,31 @@
 
 import UIKit
 
-var proxy: UITextDocumentProxy!
-
-var keyColor = UIColor.white
-var specialKeyColor = UIColor.systemGray2
-var keyPressedColor = UIColor.systemGray5
-
-func checkDarkMode() {
-  if UITraitCollection.current.userInterfaceStyle == .dark {
-    keyColor = UIColor.systemGray2
-    specialKeyColor = UIColor.systemGray3
-    keyPressedColor = UIColor.systemGray
-  } else if UITraitCollection.current.userInterfaceStyle == .light {
-    keyColor = .white
-    specialKeyColor = UIColor.systemGray2
-    keyPressedColor = UIColor.systemGray5
-  }
-}
-
-var keyboardHeight: CGFloat!
-var btnKeyCornerRadius: CGFloat!
-var isLandscapeView: Bool = false
-
-var letterKeys = [[String]]()
-var numberKeys = [[String]]()
-var symbolKeys = [[String]]()
-
-var alternatesKeyView: UIView!
-
-var buttonWidth = CGFloat(5) // place holder
-
-struct DeviceType {
-  static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
-  static let isPad = UIDevice.current.userInterfaceIdiom == .pad
-}
-
-// A larger vertical bar than the normal key for the cursor.
-let previewCursor: String = "│"
-let previewPromptSpacing = String(repeating: " ", count: 2)
-
-let translatePrompt: String = previewPromptSpacing + "Translate: "
-let translatePromptAndCursor: String = translatePrompt + previewCursor
-var getTranslation: Bool = false
-
-let conjugatePrompt: String = previewPromptSpacing + "Conjugate: "
-let conjugatePromptAndCursor: String = conjugatePrompt + previewCursor
-var getConjugation: Bool = false
-var conjugateView: Bool = false
-var tenseFPS: String = ""
-var tenseSPS: String = ""
-var tenseTPS: String = ""
-var tenseFPP: String = ""
-var tenseSPP: String = ""
-var tenseTPP: String = ""
-var verbToConjugate: String = ""
-var verbConjugated: String = ""
-
-let pluralPrompt: String = previewPromptSpacing + "Plural: "
-let pluralPromptAndCursor: String = pluralPrompt + previewCursor
-var getPlural: Bool = false
-var isAlreadyPluralState: Bool = false
-
-let allPrompts: [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
-
-extension String {
-  func index(fromIdx: Int) -> Index {
-    return self.index(startIndex, offsetBy: fromIdx)
-  }
-
-  func substring(fromIdx: Int) -> String {
-    let fromIndex = index(fromIdx: fromIdx)
-    return String(self[fromIndex...])
-  }
-
-  func substring(toIdx: Int) -> String {
-    let toIndex = index(fromIdx: toIdx)
-    return String(self[..<toIndex])
-  }
-
-  func substring(with range: Range<Int>) -> String {
-    let startIndex = index(fromIdx: range.lowerBound)
-    let endIndex = index(fromIdx: range.upperBound)
-    return String(self[startIndex..<endIndex])
-  }
-
-  func insertPriorToCursor(char: String) -> String {
-    return substring(toIdx: self.count - 1) + char + previewCursor
-  }
-
-  func deletePriorToCursor() -> String {
-    return substring(toIdx: self.count - 2) + previewCursor
-  }
-}
-
-extension Array {
-  func penultimate() -> Element? {
-    if self.count < 2 {
-      return nil
-    }
-    let index = self.count - 2
-    return self[index]
-  }
-}
-
-extension UIImage {
-  func resizeImage(targetSize: CGSize) -> UIImage {
-    let size = self.size
-    let widthRatio  = targetSize.width  / size.width
-    let heightRatio = targetSize.height / size.height
-    let newSize = widthRatio > heightRatio ?  CGSize(width: size.width * heightRatio, height: size.height * heightRatio) : CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
-    let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-
-    UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-    self.draw(in: rect)
-    let newImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-
-    return newImage!
-  }
-}
-
-func loadJsonToDict(filename fileName: String) -> Dictionary<String, AnyObject>? {
-  if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-    do {
-      let data = try Data(contentsOf: url)
-      let jsonData = try JSONSerialization.jsonObject(with: data)
-      return jsonData as? Dictionary<String, AnyObject>
-    } catch {
-      print("error:\(error)")
-    }
-  }
-  return nil
-}
-
-let germanNouns = loadJsonToDict(filename: "nouns")
-let germanVerbs = loadJsonToDict(filename: "verbs")
-let germanTranslations = loadJsonToDict(filename: "translations")
-let germanPrepositions = loadJsonToDict(filename: "prepositions")
+let germanNouns = loadJSONToDict(filename: "nouns")
+let germanVerbs = loadJSONToDict(filename: "verbs")
+let germanTranslations = loadJSONToDict(filename: "translations")
+let germanPrepositions = loadJSONToDict(filename: "prepositions")
 
 class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
-
-  @IBOutlet var selectKeyboardButton: UIButton!
 
   var keyboardView: UIView!
   var keys: [UIButton] = []
   var paddingViews: [UIButton] = []
+  @IBOutlet var selectKeyboardButton: UIButton!
   var backspaceTimer: Timer?
 
-  enum KeyboardState {
-    case letters
-    case numbers
-    case symbols
-  }
-
-  func setKeyboardStyles() {
+  /// Sets the keyboard layouts given the device type.
+  func setKeyboardLayouts() {
     if DeviceType.isPhone {
-      letterKeys = Constants.letterKeysPhone
-      numberKeys = Constants.numberKeysPhone
-      symbolKeys = Constants.symbolKeysPhone
+      letterKeys = KeyboardConstants.letterKeysPhone
+      numberKeys = KeyboardConstants.numberKeysPhone
+      symbolKeys = KeyboardConstants.symbolKeysPhone
     } else if DeviceType.isPad {
-      letterKeys = Constants.letterKeysPad
-      numberKeys = Constants.numberKeysPad
-      symbolKeys = Constants.symbolKeysPad
+      letterKeys = KeyboardConstants.letterKeysPad
+      numberKeys = KeyboardConstants.numberKeysPad
+      symbolKeys = KeyboardConstants.symbolKeysPad
     }
   }
-
-  enum ShiftButtonState {
-    case normal
-    case shift
-    case caps
-  }
-
-  enum ConjugationState {
-    case indicativePresent
-    case indicativePreterite
-    case indicativePerfect
-  }
-
-  // Baseline state variables.
-  var keyboardState: KeyboardState = .letters
-  var shiftButtonState: ShiftButtonState = .normal
-  var conjugationState: ConjugationState = .indicativePresent
-  var previewState: Bool! = false
-  var invalidState: Bool! = false
-  var scribeBtnState: Bool! = false
 
   func activateBtn(btn: UIButton) {
     btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
@@ -206,9 +47,12 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
   func setBtn(btn: UIButton, color: UIColor, name: String, canCapitalize: Bool, isSpecial: Bool) {
     btn.backgroundColor = color
     btn.layer.setValue(name, forKey: "original")
+
+    let charsWithoutShiftState = ["ß"]
+
     var capsKey = ""
     if canCapitalize == true {
-      if name != "ß" {
+      if !charsWithoutShiftState.contains(name) {
         capsKey = name.capitalized
       } else {
         capsKey = name
@@ -220,17 +64,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     }
     btn.layer.setValue(isSpecial, forKey: "isSpecial")
     activateBtn(btn: btn)
-  }
-
-  func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
-    btn.clipsToBounds = true
-    btn.layer.masksToBounds = true
-    btn.layer.cornerRadius = radius
-    //  btn.frame.size = CGSize(width: X * 2, height: Y)  // would need a size arg
-    btn.setTitle(title, for: .normal)
-    //  btn.titleLabel?.font.withSize(letterButtonWidth / 2) // would need a fontSize arg
-    btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    btn.setTitleColor(UIColor.label, for: .normal)
   }
 
   @IBOutlet var scribeBtn: UIButton!
@@ -287,28 +120,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     deactivateBtn(btn: conjugateShiftRightBtn)
   }
 
-  func getConjugationTitle() -> String {
-    switch conjugationState {
-    case .indicativePresent:
-      return previewPromptSpacing + "Indikativ Präsens: " + verbToConjugate
-    case .indicativePreterite:
-      return previewPromptSpacing + "Indikativ Präteritum: " + verbToConjugate
-    case .indicativePerfect:
-      return previewPromptSpacing + "Indikativ Perfect: " + verbToConjugate
-    }
-  }
-
-  func getConjugationState() -> String {
-    switch conjugationState {
-    case .indicativePresent:
-      return "indicativePresent"
-    case .indicativePreterite:
-      return "indicativePreterite"
-    case .indicativePerfect:
-      return "indicativePerfect"
-    }
-  }
-
   func setConjugationState() {
     deGrammarPreviewLabel?.text = getConjugationTitle()
 
@@ -354,37 +165,6 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
       styleBtn(btn: conjugateBtnTPP, title: "Not in directory", radius: btnKeyCornerRadius)
     } else {
       styleBtn(btn: conjugateBtnTPP, title: germanVerbs?[verbToConjugate]![tenseTPP] as! String, radius: btnKeyCornerRadius)
-    }
-  }
-
-  func conjugationStateLeft() {
-    if conjugationState == .indicativePresent {
-      return
-    } else if conjugationState == .indicativePreterite {
-      conjugationState = .indicativePresent
-      return
-    } else if conjugationState == .indicativePerfect {
-      conjugationState = .indicativePreterite
-      return
-    }
-  }
-
-  func conjugationStateRight() {
-    if conjugationState == .indicativePresent {
-      conjugationState = .indicativePreterite
-    } else if conjugationState == .indicativePreterite {
-      conjugationState = .indicativePerfect
-      return
-    } else if conjugationState == .indicativePerfect {
-      return
-    }
-  }
-
-  func checkLandscapeMode() {
-    if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-      isLandscapeView = true
-    } else if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
-      isLandscapeView = false
     }
   }
 
@@ -473,8 +253,8 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
 
   func loadKeys() {
     checkLandscapeMode()
-    checkDarkMode()
-    setKeyboardStyles()
+    checkDarkModeSetColors()
+    setKeyboardLayouts()
     setScribeBtn()
     setPreviewLabel()
     setGrammarBtns()
@@ -1454,7 +1234,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.aAlternateKeys {
+    for char in KeyboardConstants.aAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1510,7 +1290,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.eAlternateKeys {
+    for char in KeyboardConstants.eAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1566,7 +1346,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.iAlternateKeys {
+    for char in KeyboardConstants.iAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1622,7 +1402,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.oAlternateKeys {
+    for char in KeyboardConstants.oAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1678,7 +1458,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.uAlternateKeys {
+    for char in KeyboardConstants.uAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1734,7 +1514,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.yAlternateKeys {
+    for char in KeyboardConstants.yAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1790,7 +1570,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.sAlternateKeys {
+    for char in KeyboardConstants.sAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal || char == "ß" {
         btn.setTitle(char, for: .normal)
@@ -1846,7 +1626,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.cAlternateKeys {
+    for char in KeyboardConstants.cAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)
@@ -1902,7 +1682,7 @@ class KeyboardViewController: UIInputViewController, UITextFieldDelegate {
     alternatesKeyView.tag = 1001
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
-    for char in Constants.nAlternateKeys {
+    for char in KeyboardConstants.nAlternateKeys {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal {
         btn.setTitle(char, for: .normal)

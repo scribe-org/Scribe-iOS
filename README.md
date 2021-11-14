@@ -206,6 +206,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Long holding keys for alternate characters would need to be edited to make sure that the alternates would still be fully within the keyboard view
 
+- Link keyboards to a common .xib file [(see issue)]()
+
 ## Data
 
 Aside from translation JSONs, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Known data issues include:

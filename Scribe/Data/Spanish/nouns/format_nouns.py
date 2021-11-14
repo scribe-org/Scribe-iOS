@@ -13,7 +13,7 @@ with open("nounsQueried.json") as f:
 
 def map_genders(wikidata_gender):
     """
-    Maps those genders from Wikidata to succinct versions
+    Maps those genders from Wikidata to succinct versions.
     """
     if wikidata_gender == "masculine":
         return "M"
@@ -78,7 +78,7 @@ for noun_vals in nouns_list:
                 nouns_formatted[noun_vals["singular"]]["form"] + "/PL"
             )
 
-with open("../../nouns.json", "w", encoding="utf-8") as f:
+with open("../../../../Keyboards/Spanish/nouns.json", "w", encoding="utf-8") as f:
     json.dump(nouns_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file nouns.json with {len(nouns_formatted)} nouns.")

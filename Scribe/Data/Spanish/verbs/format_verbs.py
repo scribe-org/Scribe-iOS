@@ -44,7 +44,7 @@ for verb_vals in verbs_list:
         else:
             verbs_formatted[verb_vals["infinitive"]][conj] = ""
 
-with open("../../verbs.json", "w", encoding="utf-8") as f:
+with open("../../../../Keyboards/Spanish/verbs.json", "w", encoding="utf-8") as f:
     json.dump(verbs_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file verbs.json with {len(verbs_formatted)} verbs.")

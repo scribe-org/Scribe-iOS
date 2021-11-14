@@ -4,11 +4,6 @@
 
 import UIKit
 
-var proxy: UITextDocumentProxy!
-var keyColor = UIColor.systemGray6
-var specialKeyColor = UIColor.systemGray2
-var keyPressedColor = UIColor.systemGray5
-
 class KeyboardViewController: UIInputViewController {
 
   @IBOutlet var nextKeyboardButton: UIButton!
@@ -109,22 +104,22 @@ class KeyboardViewController: UIInputViewController {
     paddingViews.forEach {$0.removeFromSuperview()}
 
     // buttonWidth determined by the top row.
-    let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(Constants.letterKeys[0].count)
+    let buttonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(KeyboardConstants.letterKeys[0].count)
 
     var keyboard: [[String]]
 
     // Start padding.
     switch keyboardState {
     case .letters:
-      keyboard = Constants.letterKeys
+      keyboard = KeyboardConstants.letterKeys
       // Auto-capitalization.
       if proxy.documentContextBeforeInput?.count == 0 {
         shiftButtonState = .shift
       }
     case .numbers:
-      keyboard = Constants.numberKeys
+      keyboard = KeyboardConstants.numberKeys
     case .symbols:
-      keyboard = Constants.symbolKeys
+      keyboard = KeyboardConstants.symbolKeys
     }
 
     let numRows = keyboard.count
