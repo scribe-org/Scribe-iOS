@@ -108,6 +108,34 @@
 		D190B2492741B31F00705659 /* InterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceVariables.swift; sourceTree = "<group>"; };
 		D190B24D2741B61000705659 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		D190B2592742565500705659 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D190B26D27426EEA00705659 /* format_nouns.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_nouns.py; sourceTree = "<group>"; };
+		D190B26E27426EEA00705659 /* queryNouns.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryNouns.sparql; sourceTree = "<group>"; };
+		D190B26F27426EEA00705659 /* nounsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nounsQueried.json; sourceTree = "<group>"; };
+		D190B27127426EEA00705659 /* verbsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verbsQueried.json; sourceTree = "<group>"; };
+		D190B27227426EEA00705659 /* format_verbs.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_verbs.py; sourceTree = "<group>"; };
+		D190B27327426EEA00705659 /* queryVerbs.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryVerbs.sparql; sourceTree = "<group>"; };
+		D190B27527426EEA00705659 /* format_translations.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_translations.py; sourceTree = "<group>"; };
+		D190B27627426EEA00705659 /* queryTranslations.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryTranslations.sparql; sourceTree = "<group>"; };
+		D190B27727426EEA00705659 /* translationsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = translationsQueried.json; sourceTree = "<group>"; };
+		D190B27A27426EEA00705659 /* prepositionsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositionsQueried.json; sourceTree = "<group>"; };
+		D190B27B27426EEA00705659 /* queryPrepositions.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryPrepositions.sparql; sourceTree = "<group>"; };
+		D190B27C27426EEA00705659 /* format_prepositions.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_prepositions.py; sourceTree = "<group>"; };
+		D190B27E27426EEA00705659 /* format_nouns.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_nouns.py; sourceTree = "<group>"; };
+		D190B27F27426EEA00705659 /* queryNouns.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryNouns.sparql; sourceTree = "<group>"; };
+		D190B28027426EEA00705659 /* nounsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nounsQueried.json; sourceTree = "<group>"; };
+		D190B28227426EEA00705659 /* verbsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verbsQueried.json; sourceTree = "<group>"; };
+		D190B28327426EEA00705659 /* format_verbs.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_verbs.py; sourceTree = "<group>"; };
+		D190B28427426EEA00705659 /* queryVerbs.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryVerbs.sparql; sourceTree = "<group>"; };
+		D190B28627426EEA00705659 /* format_translations.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = format_translations.py; sourceTree = "<group>"; };
+		D190B28727426EEA00705659 /* queryTranslations.sparql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queryTranslations.sparql; sourceTree = "<group>"; };
+		D190B28827426EEA00705659 /* translationsQueried.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = translationsQueried.json; sourceTree = "<group>"; };
+		D190B28A27426F1F00705659 /* Scribe-iOS_logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scribe-iOS_logo_transparent.png"; sourceTree = "<group>"; };
+		D190B28B27426F1F00705659 /* Scribe-iOS_logo.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scribe-iOS_logo.sketch"; sourceTree = "<group>"; };
+		D190B28C27426F1F00705659 /* Scribe-iOS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scribe-iOS_logo.png"; sourceTree = "<group>"; };
+		D190B28E27426F1F00705659 /* wikidata_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wikidata_logo.png; sourceTree = "<group>"; };
+		D190B28F27426F4900705659 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
+		D190B29027426F4900705659 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		D190B29127426F7300705659 /* environment.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = environment.yml; sourceTree = "<group>"; };
 		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D1B10CA5273C7B2900D56081 /* escBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escBtn.png; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
@@ -142,8 +170,12 @@
 			isa = PBXGroup;
 			children = (
 				D190B24C2741B53C00705659 /* Data */,
-				38BD213222D5907F00C6795D /* Scribe */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
+				D190B28927426F1F00705659 /* Resources */,
+				38BD213222D5907F00C6795D /* Scribe */,
+				D190B28F27426F4900705659 /* LICENSE.txt */,
+				D190B29027426F4900705659 /* README.md */,
+				D190B29127426F7300705659 /* environment.yml */,
 				38BD213122D5907E00C6795D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -210,6 +242,8 @@
 		D190B24C2741B53C00705659 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D190B27827426EEA00705659 /* German */,
+				D190B26B27426EEA00705659 /* Spanish */,
 				D190B24D2741B61000705659 /* LoadData.swift */,
 			);
 			path = Data;
@@ -252,6 +286,116 @@
 				D11E3B6A27299C8000FBE62C /* translations.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D190B26B27426EEA00705659 /* Spanish */ = {
+			isa = PBXGroup;
+			children = (
+				D190B26C27426EEA00705659 /* nouns */,
+				D190B27027426EEA00705659 /* verbs */,
+				D190B27427426EEA00705659 /* translations */,
+			);
+			path = Spanish;
+			sourceTree = "<group>";
+		};
+		D190B26C27426EEA00705659 /* nouns */ = {
+			isa = PBXGroup;
+			children = (
+				D190B26D27426EEA00705659 /* format_nouns.py */,
+				D190B26E27426EEA00705659 /* queryNouns.sparql */,
+				D190B26F27426EEA00705659 /* nounsQueried.json */,
+			);
+			path = nouns;
+			sourceTree = "<group>";
+		};
+		D190B27027426EEA00705659 /* verbs */ = {
+			isa = PBXGroup;
+			children = (
+				D190B27127426EEA00705659 /* verbsQueried.json */,
+				D190B27227426EEA00705659 /* format_verbs.py */,
+				D190B27327426EEA00705659 /* queryVerbs.sparql */,
+			);
+			path = verbs;
+			sourceTree = "<group>";
+		};
+		D190B27427426EEA00705659 /* translations */ = {
+			isa = PBXGroup;
+			children = (
+				D190B27527426EEA00705659 /* format_translations.py */,
+				D190B27627426EEA00705659 /* queryTranslations.sparql */,
+				D190B27727426EEA00705659 /* translationsQueried.json */,
+			);
+			path = translations;
+			sourceTree = "<group>";
+		};
+		D190B27827426EEA00705659 /* German */ = {
+			isa = PBXGroup;
+			children = (
+				D190B27927426EEA00705659 /* prepositions */,
+				D190B27D27426EEA00705659 /* nouns */,
+				D190B28127426EEA00705659 /* verbs */,
+				D190B28527426EEA00705659 /* translations */,
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
+		D190B27927426EEA00705659 /* prepositions */ = {
+			isa = PBXGroup;
+			children = (
+				D190B27A27426EEA00705659 /* prepositionsQueried.json */,
+				D190B27B27426EEA00705659 /* queryPrepositions.sparql */,
+				D190B27C27426EEA00705659 /* format_prepositions.py */,
+			);
+			path = prepositions;
+			sourceTree = "<group>";
+		};
+		D190B27D27426EEA00705659 /* nouns */ = {
+			isa = PBXGroup;
+			children = (
+				D190B27E27426EEA00705659 /* format_nouns.py */,
+				D190B27F27426EEA00705659 /* queryNouns.sparql */,
+				D190B28027426EEA00705659 /* nounsQueried.json */,
+			);
+			path = nouns;
+			sourceTree = "<group>";
+		};
+		D190B28127426EEA00705659 /* verbs */ = {
+			isa = PBXGroup;
+			children = (
+				D190B28227426EEA00705659 /* verbsQueried.json */,
+				D190B28327426EEA00705659 /* format_verbs.py */,
+				D190B28427426EEA00705659 /* queryVerbs.sparql */,
+			);
+			path = verbs;
+			sourceTree = "<group>";
+		};
+		D190B28527426EEA00705659 /* translations */ = {
+			isa = PBXGroup;
+			children = (
+				D190B28627426EEA00705659 /* format_translations.py */,
+				D190B28727426EEA00705659 /* queryTranslations.sparql */,
+				D190B28827426EEA00705659 /* translationsQueried.json */,
+			);
+			path = translations;
+			sourceTree = "<group>";
+		};
+		D190B28927426F1F00705659 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D190B28A27426F1F00705659 /* Scribe-iOS_logo_transparent.png */,
+				D190B28B27426F1F00705659 /* Scribe-iOS_logo.sketch */,
+				D190B28C27426F1F00705659 /* Scribe-iOS_logo.png */,
+				D190B28D27426F1F00705659 /* gh_images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D190B28D27426F1F00705659 /* gh_images */ = {
+			isa = PBXGroup;
+			children = (
+				D190B28E27426F1F00705659 /* wikidata_logo.png */,
+			);
+			path = gh_images;
 			sourceTree = "<group>";
 		};
 		D1FECBC9270E1A1500C8BC60 /* Keyboards */ = {
