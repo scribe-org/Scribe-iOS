@@ -142,8 +142,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding autocomplete functionality [(see issue)]()
 
-- Reorganizing the Scribe-iOS directory structure so that the code is easier to maintain [(see issue)]()
-
 - Fix issue with `selectKeyboard` button not being able to be long-pressed after another key press [(see issue)]()
 
 - Fixing hold-to-select character implementation so it's one function (and maybe that the user needs to continue to hold) [(see issue)]()
@@ -205,8 +203,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Adding a feature where the Scribe UI can be hidden with an element to show the UI again [(see issue)]()
 
   - Long holding keys for alternate characters would need to be edited to make sure that the alternates would still be fully within the keyboard view
-
-- Link keyboards to a common .xib file [(see issue)]()
 
 ## Data
 
