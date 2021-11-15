@@ -8,6 +8,7 @@ import UIKit
 
 // A proxy into which text is typed.
 var proxy: UITextDocumentProxy!
+var controllerLanguage = String()
 
 // Variables for keyboard appearance.
 var keyboardHeight: CGFloat!

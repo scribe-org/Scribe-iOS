@@ -20,13 +20,13 @@
                 <outlet property="conjugateBtnTPS" destination="kON-8k-vtV" id="Oby-AJ-dpC"/>
                 <outlet property="conjugateShiftLeftBtn" destination="Yr3-T8-7HB" id="Xe7-Cw-MsI"/>
                 <outlet property="conjugateShiftRightBtn" destination="epX-eh-uqd" id="DxO-qK-gWO"/>
-                <outlet property="deGrammarPreviewLabel" destination="IR7-Kd-kHd" id="U3J-6m-LMC"/>
-                <outlet property="deStackView1" destination="xYB-wV-ziM" id="u8F-0X-Bem"/>
-                <outlet property="deStackView2" destination="OeW-Ji-4P7" id="fyh-go-hrq"/>
-                <outlet property="deStackView3" destination="lVo-8I-Rya" id="BP6-y5-QxR"/>
-                <outlet property="deStackView4" destination="Y6B-bi-XMS" id="niS-D0-AGR"/>
                 <outlet property="pluralBtn" destination="FgS-T1-2rI" id="Lyz-FR-1IQ"/>
+                <outlet property="previewLabel" destination="IR7-Kd-kHd" id="GOd-gc-GW8"/>
                 <outlet property="scribeBtn" destination="MCB-7F-dNd" id="VGG-wW-Swu"/>
+                <outlet property="stackView1" destination="xYB-wV-ziM" id="Byc-So-GBw"/>
+                <outlet property="stackView2" destination="OeW-Ji-4P7" id="9oy-oT-tvC"/>
+                <outlet property="stackView3" destination="lVo-8I-Rya" id="8Kv-9P-uas"/>
+                <outlet property="stackView4" destination="Y6B-bi-XMS" id="rXs-S2-rsl"/>
                 <outlet property="translateBtn" destination="9j4-80-zkW" id="kE4-oZ-o27"/>
             </connections>
         </placeholder>

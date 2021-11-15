@@ -2,39 +2,7 @@
 //  esKeyboardViewController.swift
 //
 
-class esKeyboardViewController: KeyboardViewController {
-  convenience init() {
-    self.init(nibName: "KeyboardViewController", bundle: nil)
-  }
-
-  /// Sets the keyboard layouts given the device type.
-  func esKeyboardSetLayouts() {
-    if DeviceType.isPhone {
-      letterKeys = esKeyboardConstants.letterKeysPhone
-      numberKeys = esKeyboardConstants.numberKeysPhone
-      symbolKeys = esKeyboardConstants.symbolKeysPhone
-    } else if DeviceType.isPad {
-      letterKeys = esKeyboardConstants.letterKeysPad
-      numberKeys = esKeyboardConstants.numberKeysPad
-      symbolKeys = esKeyboardConstants.symbolKeysPad
-    }
-
-    aAlternateKeys = esKeyboardConstants.aAlternateKeys
-    eAlternateKeys = esKeyboardConstants.eAlternateKeys
-    iAlternateKeys = esKeyboardConstants.iAlternateKeys
-    oAlternateKeys = esKeyboardConstants.oAlternateKeys
-    uAlternateKeys = esKeyboardConstants.uAlternateKeys
-    yAlternateKeys = esKeyboardConstants.sAlternateKeys
-    sAlternateKeys = esKeyboardConstants.dAlternateKeys
-    cAlternateKeys = esKeyboardConstants.cAlternateKeys
-    nAlternateKeys = esKeyboardConstants.nAlternateKeys
-  }
-
-  override func viewDidLoad() {
-    esKeyboardSetLayouts()
-    super.viewDidLoad()
-  }
-}
+class esKeyboardViewController: KeyboardViewController {}
 
 //  @IBOutlet var nextKeyboardButton: UIButton!
 //

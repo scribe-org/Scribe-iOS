@@ -178,6 +178,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Allowing a user to press or long hold the preview label for further information on what's being displayed [(see issue)]()
 
+- Change the Scribe interface buttons to default UIButtons from plain so that versions lower than iOS 15 can be supported [(see issue)]()
+
 ## Appearance
 
 - Create a version of the `Scribe key` that is appropriately rendered across devices [(see issue)]()
