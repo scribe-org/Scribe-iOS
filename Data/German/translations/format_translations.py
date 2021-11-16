@@ -8,6 +8,7 @@ Note: first go into translationsQueried.json and do a find and replace of:
 <"verb", "word": "> with <"verb", "word": "to > to differentiate verbs.
 """
 
+import collections
 import json
 
 from tqdm.auto import tqdm
@@ -29,6 +30,8 @@ for w in tqdm(words, desc="Words translated", unit="word",):
     outputs = model.generate(inputs, max_length=40, num_beams=4, early_stopping=True)
 
     translations_formatted[w] = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+translations_formatted = collections.OrderedDict(sorted(translations_formatted.items()))
 
 with open(
     "../../../Keyboards/LanguageKeyboards/German/Data/translations.json",
