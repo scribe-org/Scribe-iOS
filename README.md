@@ -130,8 +130,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Code cleaning
 
-- Finalizing the Spanish keyboard
-
 - Baseline fixes to translations.json files
 
 - Improving appearance and adding settings features to the Scribe app
@@ -160,13 +158,11 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - The creation of a repository with grammar rules for Scribe languages would be a valuable resource for Scribe and the open-source community
 
-- Converting Scribe keyboards into downloadable packs within the app [(see issue)]()
-
-  - This would help keep the app size to a minimum
-
 - Planning and implementing baseline documentation for Scribe [(see issue)]()
 
 - Discussing further grammatical information that can be displayed to the user in the preview bar that could help with language learning [(see issue)]()
+
+- Allowing a user to press or long hold the preview label for further information on what's being displayed [(see issue)]()
 
 - Adding undo button functionality for iPads and iPhones [(see issue)]()
 
@@ -176,9 +172,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
 
-- Change the selected noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
-
-- Allowing a user to press or long hold the preview label for further information on what's being displayed [(see issue)]()
+- Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
 
 - Change the Scribe interface buttons to default UIButtons from plain so that versions lower than iOS 15 can be supported [(see issue)]()
 
@@ -192,15 +186,15 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Create a proper bezier path implementation of hold-to-select characters including keys popping up when being pressed and then removing key pressed coloration [(see issue)]()
 
-- Edits to KeyboardViewController and Keyboard.xib files to make Scribe keyboard elements dynamically sized [(see issue)]()
+- Edits to [KeyboardViewController.swift]() and [Keyboard.xib]() files to make Scribe keyboard elements dynamically sized [(see issue)]()
 
-- Edits to Keyboard.xib files to provide language specific UI elements based on grammatical needs [(see issue)]()
+- Edits to [Keyboard.xib]() to provide language specific UI elements based on grammatical needs [(see issue)]()
 
 - Refining colors in both light and dark mode implementations [(see issue)]()
 
 - Adding key shading to keyboards [(see issue)]()
 
-- Have the space bar read the name of the keyboard when it's switched to but not selected [(see issue)]()
+- Have the space bar read the name of the keyboard when it's switched to but not selected from the drop down [(see issue)]()
 
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
 
