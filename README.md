@@ -190,6 +190,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Improving the appearance of the Scribe app in [ViewController.swift](https://github.com/scribe-org/Scribe-iOS/blob/main/Scribe/ViewController.swift) including UI to make activating keyboards easier [(see issue)]()
 
+- Improving the adaptability of [AppScreen.storyboard](https://github.com/scribe-org/Scribe-iOS/blob/main/Scribe/Base.lproj/AppScreen.storyboard) and [LaunchScreen.storyboard](https://github.com/scribe-org/Scribe-iOS/blob/main/Scribe/Base.lproj/LaunchScreen.storyboard) to make them work better across devices [(see issue)]()
+
 - Edits to [KeyboardViewController.swift](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/KeyboardViewController.swift) and [Keyboard.xib](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/Keyboard.xib) files to make Scribe keyboard elements dynamically sized [(see issue)]()
 
 - Edits to [Keyboard.xib](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/Keyboard.xib) to provide language specific UI elements based on grammatical needs [(see issue)]()
