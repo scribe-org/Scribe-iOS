@@ -208,6 +208,10 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
 - Fixing errors in the `Translate` feature's JSON files while it is in **`beta`** [(see issue)]()
 
+- Adding a way to indicate which nouns in Spanish switch their articles to avoid difficult pronunciations [(see issue)]()
+
+  - For example: agua (water) is feminine, but it's "el agua" to avoid "la agua" (but still "las aguas")
+
 - Expanding the availability of translations in [Wikidata lexicographical data](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) and reworking the `Translate` query process to access them [(see issue)]()
 
   - Scribe will not accept edits to any JSON files when this task is finished
