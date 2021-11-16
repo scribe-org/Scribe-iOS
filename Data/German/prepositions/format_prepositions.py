@@ -5,7 +5,7 @@ Format Prepositions
 Formats the prepositions queried from Wikidata using queryPrepositions.sparql.
 """
 
-
+import collections
 import json
 
 with open("prepositionsQueried.json") as f:
@@ -42,6 +42,8 @@ for prep_vals in prepositions_list:
 
         elif "case" not in prep_vals.keys():
             prepositions_formatted[prep_vals["preposition"]] = ""
+
+prepositions_formatted = collections.OrderedDict(sorted(prepositions_formatted.items()))
 
 with open(
     "../../../Keyboards/LanguageKeyboards/German/Data/prepositions.json",

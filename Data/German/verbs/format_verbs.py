@@ -5,6 +5,7 @@ Format Verbs
 Formats the verbs queried from Wikidata using queryVerbs.sparql.
 """
 
+import collections
 import json
 
 with open("verbsQueried.json") as f:
@@ -129,6 +130,8 @@ for verb_vals in verbs_list:
         assign_past_participle(verb=verb_vals, tense="indicativePerfectFPP")
         assign_past_participle(verb=verb_vals, tense="indicativePerfectSPP")
         assign_past_participle(verb=verb_vals, tense="indicativePerfectTPP")
+
+verbs_formatted = collections.OrderedDict(sorted(verbs_formatted.items()))
 
 with open(
     "../../../Keyboards/LanguageKeyboards/German/Data/verbs.json",

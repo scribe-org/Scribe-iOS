@@ -5,7 +5,7 @@ Format Verbs
 Formats the verbs queried from Wikidata using queryVerbs.sparql.
 """
 
-
+import collections
 import json
 
 with open("verbsQueried.json") as f:
@@ -56,6 +56,8 @@ for verb_vals in verbs_list:
             verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = verb_vals[conj]
         else:
             verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = ""
+
+verbs_formatted = collections.OrderedDict(sorted(verbs_formatted.items()))
 
 with open(
     "../../../Keyboards/LanguageKeyboards/Spanish/Data/verbs.json",

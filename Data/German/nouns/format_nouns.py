@@ -5,6 +5,7 @@ Format Nouns
 Formats the nouns queried from Wikidata using queryNouns.sparql.
 """
 
+import collections
 import json
 
 with open("nounsQueried.json") as f:
@@ -131,6 +132,7 @@ for noun_vals in nouns_list:
             elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
                 nouns_formatted[noun_vals["plural"]]["form"] = "PL"
 
+nouns_formatted = collections.OrderedDict(sorted(nouns_formatted.items()))
 
 with open(
     "../../../Keyboards/LanguageKeyboards/German/Data/nouns.json",
