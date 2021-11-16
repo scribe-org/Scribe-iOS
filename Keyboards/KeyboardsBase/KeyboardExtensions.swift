@@ -1,5 +1,7 @@
 //
-//  Extensiosns.swift
+//  KeyboardExtensiosns.swift
+//
+//  Extensions for Scribe keyboards.
 //
 
 import UIKit

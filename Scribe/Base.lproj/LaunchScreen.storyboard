@@ -18,9 +18,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-v3-CzU" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Scribe_icon_no_background" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-7A-Chg">
-                                <rect key="frame" x="27" y="352" width="360" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scribe_icon_no_background" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-7A-Chg">
+                                <rect key="frame" x="21" y="181.5" width="372" height="533"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -28,8 +27,12 @@
                         <constraints>
                             <constraint firstItem="4Af-v3-CzU" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="P4m-M1-zZv"/>
                             <constraint firstItem="4Af-v3-CzU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PTr-jc-5Rg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EJw-7A-Chg" secondAttribute="trailing" constant="21" id="TeB-Fb-vJ7"/>
+                            <constraint firstItem="EJw-7A-Chg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="nIx-IN-cXc"/>
                             <constraint firstItem="4Af-v3-CzU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nuB-tD-9Pe"/>
                             <constraint firstItem="4Af-v3-CzU" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="szy-e3-Pyj"/>
+                            <constraint firstItem="EJw-7A-Chg" firstAttribute="centerX" secondItem="4Af-v3-CzU" secondAttribute="centerX" id="uER-MG-SgC"/>
+                            <constraint firstItem="EJw-7A-Chg" firstAttribute="centerY" secondItem="4Af-v3-CzU" secondAttribute="centerY" id="yNb-QZ-OKV"/>
                         </constraints>
                     </view>
                 </viewController>

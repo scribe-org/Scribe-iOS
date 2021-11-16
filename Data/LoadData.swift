@@ -6,7 +6,7 @@
 
 import Foundation
 
-/// Loads a JSON file that contains grammatical information.
+/// Loads a JSON file that contains grammatical information into a dictionary.
 ///
 /// - Parameters
 ///  - filename: the name of the JSON file to be loaded.

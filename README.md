@@ -14,7 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and annotation of nouns that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and noun annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
 Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
 
@@ -132,8 +132,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Baseline fixes to translations.json files
 
-- Improving appearance and adding settings features to the Scribe app
-
 - Releasing Scribe-iOS MVP
 
 - Adding autocorrect functionality [(see issue)]()
@@ -190,9 +188,11 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Create a proper bezier path implementation of hold-to-select characters including keys popping up when being pressed and then removing key pressed coloration [(see issue)]()
 
-- Edits to [KeyboardViewController.swift]() and [Keyboard.xib]() files to make Scribe keyboard elements dynamically sized [(see issue)]()
+- Improving the appearance of the Scribe app in [ViewController.swift](https://github.com/scribe-org/Scribe-iOS/blob/main/Scribe/ViewController.swift) including UI to make activating keyboards easier [(see issue)]()
 
-- Edits to [Keyboard.xib]() to provide language specific UI elements based on grammatical needs [(see issue)]()
+- Edits to [KeyboardViewController.swift](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/KeyboardViewController.swift) and [Keyboard.xib](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/Keyboard.xib) files to make Scribe keyboard elements dynamically sized [(see issue)]()
+
+- Edits to [Keyboard.xib](https://github.com/scribe-org/Scribe-iOS/blob/main/Keyboards/KeyboardsBase/Keyboard.xib) to provide language specific UI elements based on grammatical needs [(see issue)]()
 
 - Refining colors in both light and dark mode implementations [(see issue)]()
 
