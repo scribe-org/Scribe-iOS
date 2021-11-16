@@ -953,12 +953,23 @@ class KeyboardViewController: UIInputViewController {
   }
 
   func selectedPrepositionAnnotation() {
-    let selectedWord = proxy.selectedText?.lowercased()
-    let isPreposition = prepositions?[selectedWord!] != nil
-    if isPreposition {
-      let prepositionCase = prepositions?[selectedWord!] as? String
-      previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
-      previewLabel?.sizeToFit()
+    if controllerLanguage == "German" {
+      var selectedWord = proxy.selectedText
+      var queriedWordIsUpperCase: Bool = false
+      // Check to see if the input was uppercase to return an uppercase plural.
+      let firstLetter = selectedWord?.substring(toIdx: 1)
+      queriedWordIsUpperCase = firstLetter!.isUppercase
+      selectedWord = selectedWord?.lowercased()
+      let isPreposition = prepositions?[selectedWord!] != nil
+      if isPreposition {
+        let prepositionCase = prepositions?[selectedWord!] as? String
+        if queriedWordIsUpperCase == false {
+          previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
+        } else {
+          previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!.capitalized
+        }
+        previewLabel?.sizeToFit()
+      }
     }
   }
 
@@ -966,11 +977,20 @@ class KeyboardViewController: UIInputViewController {
     if controllerLanguage == "German" {
       if proxy.documentContextBeforeInput != nil {
         let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        let lastWordTyped = wordsTyped.penultimate()?.lowercased()
+        var lastWordTyped = wordsTyped.penultimate()
+        var queriedWordIsUpperCase: Bool = false
+        // Check to see if the input was uppercase to return an uppercase plural.
+        let firstLetter = lastWordTyped?.substring(toIdx: 1)
+        queriedWordIsUpperCase = firstLetter!.isUppercase
+        lastWordTyped = lastWordTyped?.lowercased()
         let isPreposition = prepositions?[lastWordTyped!] != nil
         if isPreposition {
           let prepositionCase = prepositions?[lastWordTyped!] as? String
-          previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
+          if queriedWordIsUpperCase == false {
+            previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
+          } else {
+            previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
+          }
           previewLabel?.sizeToFit()
         }
       }
