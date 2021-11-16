@@ -44,4 +44,12 @@ extension String {
   func deletePriorToCursor() -> String {
     return substring(toIdx: self.count - 2) + previewCursor
   }
+
+  var isLowercase: Bool {
+      return self == self.lowercased()
+  }
+
+  var isUppercase: Bool {
+      return self == self.uppercased()
+  }
 }

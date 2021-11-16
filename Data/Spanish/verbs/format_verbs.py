@@ -27,12 +27,12 @@ all_keys = [
     "preteriteFPP",
     "preteriteSPP",
     "preteriteTPP",
-    "pastPerfectFPS",
-    "pastPerfectSPS",
-    "pastPerfectTPS",
-    "pastPerfectFPP",
-    "pastPerfectSPP",
-    "pastPerfectTPP",
+    "imperfectFPS",
+    "imperfectSPS",
+    "imperfectTPS",
+    "imperfectFPP",
+    "imperfectSPP",
+    "imperfectTPP",
 ]
 
 for verb_vals in verbs_list:

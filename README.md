@@ -146,6 +146,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Fixing hold-to-select character implementation so it's one function (and maybe that the user needs to continue to hold) [(see issue)]()
 
+- Refactoring Scribe-iOS so that it's more modular [(see issue)]()
+
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
 - Creating testing files and a ci process for Scribe-iOS [(see issue)]()
@@ -198,7 +200,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding key shading to keyboards [(see issue)]()
 
-- Make the space bar read the name of the keyboard when it's switched to [(see issue)]()
+- Have the space bar read the name of the keyboard when it's switched to but not selected [(see issue)]()
 
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
 

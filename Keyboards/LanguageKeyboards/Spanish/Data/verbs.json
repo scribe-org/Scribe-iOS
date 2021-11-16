@@ -12,12 +12,12 @@
     "preteriteFPP": "describimos",
     "preteriteSPP": "describisteis",
     "preteriteTPP": "describieron",
-    "pastPerfectFPS": "describía",
-    "pastPerfectSPS": "describías",
-    "pastPerfectTPS": "describía",
-    "pastPerfectFPP": "describíamos",
-    "pastPerfectSPP": "describíais",
-    "pastPerfectTPP": "describían"
+    "imperfectFPS": "describía",
+    "imperfectSPS": "describías",
+    "imperfectTPS": "describía",
+    "imperfectFPP": "describíamos",
+    "imperfectSPP": "describíais",
+    "imperfectTPP": "describían"
   },
   "construir": {
     "indicativePresentFPS": "construyo",
@@ -32,12 +32,12 @@
     "preteriteFPP": "construimos",
     "preteriteSPP": "construisteis",
     "preteriteTPP": "construieron",
-    "pastPerfectFPS": "construía",
-    "pastPerfectSPS": "construías",
-    "pastPerfectTPS": "construía",
-    "pastPerfectFPP": "construíamos",
-    "pastPerfectSPP": "construíais",
-    "pastPerfectTPP": "construían"
+    "imperfectFPS": "construía",
+    "imperfectSPS": "construías",
+    "imperfectTPS": "construía",
+    "imperfectFPP": "construíamos",
+    "imperfectSPP": "construíais",
+    "imperfectTPP": "construían"
   },
   "ser": {
     "indicativePresentFPS": "soy",
@@ -52,12 +52,12 @@
     "preteriteFPP": "fuimos",
     "preteriteSPP": "fuisteis",
     "preteriteTPP": "fueron",
-    "pastPerfectFPS": "era",
-    "pastPerfectSPS": "eras",
-    "pastPerfectTPS": "era",
-    "pastPerfectFPP": "éramos",
-    "pastPerfectSPP": "erais",
-    "pastPerfectTPP": "eran"
+    "imperfectFPS": "era",
+    "imperfectSPS": "eras",
+    "imperfectTPS": "era",
+    "imperfectFPP": "éramos",
+    "imperfectSPP": "erais",
+    "imperfectTPP": "eran"
   },
   "dibujar": {
     "indicativePresentFPS": "dibujo",
@@ -72,12 +72,12 @@
     "preteriteFPP": "dibujamos",
     "preteriteSPP": "dibujasteis",
     "preteriteTPP": "dibujaron",
-    "pastPerfectFPS": "dibujaba",
-    "pastPerfectSPS": "dibujabas",
-    "pastPerfectTPS": "dibujaba",
-    "pastPerfectFPP": "dibujábamos",
-    "pastPerfectSPP": "dibujabais",
-    "pastPerfectTPP": "dibujaban"
+    "imperfectFPS": "dibujaba",
+    "imperfectSPS": "dibujabas",
+    "imperfectTPS": "dibujaba",
+    "imperfectFPP": "dibujábamos",
+    "imperfectSPP": "dibujabais",
+    "imperfectTPP": "dibujaban"
   },
   "regresar": {
     "indicativePresentFPS": "regreso",
@@ -92,12 +92,12 @@
     "preteriteFPP": "regresamos",
     "preteriteSPP": "regresasteis",
     "preteriteTPP": "regresaron",
-    "pastPerfectFPS": "regresaba",
-    "pastPerfectSPS": "regresabas",
-    "pastPerfectTPS": "regresaba",
-    "pastPerfectFPP": "regresábamos",
-    "pastPerfectSPP": "regresabais",
-    "pastPerfectTPP": "regresaban"
+    "imperfectFPS": "regresaba",
+    "imperfectSPS": "regresabas",
+    "imperfectTPS": "regresaba",
+    "imperfectFPP": "regresábamos",
+    "imperfectSPP": "regresabais",
+    "imperfectTPP": "regresaban"
   },
   "poder": {
     "indicativePresentFPS": "puedo",
@@ -112,12 +112,12 @@
     "preteriteFPP": "pudimos",
     "preteriteSPP": "pudisteis",
     "preteriteTPP": "pudieron",
-    "pastPerfectFPS": "podía",
-    "pastPerfectSPS": "podías",
-    "pastPerfectTPS": "podía",
-    "pastPerfectFPP": "podíamos",
-    "pastPerfectSPP": "podíais",
-    "pastPerfectTPP": "podían"
+    "imperfectFPS": "podía",
+    "imperfectSPS": "podías",
+    "imperfectTPS": "podía",
+    "imperfectFPP": "podíamos",
+    "imperfectSPP": "podíais",
+    "imperfectTPP": "podían"
   },
   "abrir": {
     "indicativePresentFPS": "abro",
@@ -132,12 +132,12 @@
     "preteriteFPP": "abrimos",
     "preteriteSPP": "abristeis",
     "preteriteTPP": "abrieron",
-    "pastPerfectFPS": "abría",
-    "pastPerfectSPS": "abrías",
-    "pastPerfectTPS": "abría",
-    "pastPerfectFPP": "abríamos",
-    "pastPerfectSPP": "abríais",
-    "pastPerfectTPP": "abrían"
+    "imperfectFPS": "abría",
+    "imperfectSPS": "abrías",
+    "imperfectTPS": "abría",
+    "imperfectFPP": "abríamos",
+    "imperfectSPP": "abríais",
+    "imperfectTPP": "abrían"
   },
   "contar": {
     "indicativePresentFPS": "cuento",
@@ -152,12 +152,12 @@
     "preteriteFPP": "contamos",
     "preteriteSPP": "contasteis",
     "preteriteTPP": "contaron",
-    "pastPerfectFPS": "contaba",
-    "pastPerfectSPS": "contabas",
-    "pastPerfectTPS": "contaba",
-    "pastPerfectFPP": "contábamos",
-    "pastPerfectSPP": "contabais",
-    "pastPerfectTPP": "contaban"
+    "imperfectFPS": "contaba",
+    "imperfectSPS": "contabas",
+    "imperfectTPS": "contaba",
+    "imperfectFPP": "contábamos",
+    "imperfectSPP": "contabais",
+    "imperfectTPP": "contaban"
   },
   "volver": {
     "indicativePresentFPS": "vuelvo",
@@ -172,12 +172,12 @@
     "preteriteFPP": "volvimos",
     "preteriteSPP": "volvisteis",
     "preteriteTPP": "volvieron",
-    "pastPerfectFPS": "volvía",
-    "pastPerfectSPS": "volvías",
-    "pastPerfectTPS": "volvía",
-    "pastPerfectFPP": "volvíamos",
-    "pastPerfectSPP": "volvíais",
-    "pastPerfectTPP": "volvían"
+    "imperfectFPS": "volvía",
+    "imperfectSPS": "volvías",
+    "imperfectTPS": "volvía",
+    "imperfectFPP": "volvíamos",
+    "imperfectSPP": "volvíais",
+    "imperfectTPP": "volvían"
   },
   "crear": {
     "indicativePresentFPS": "creo",
@@ -192,12 +192,12 @@
     "preteriteFPP": "creamos",
     "preteriteSPP": "creasteis",
     "preteriteTPP": "crearon",
-    "pastPerfectFPS": "creaba",
-    "pastPerfectSPS": "creabas",
-    "pastPerfectTPS": "creaba",
-    "pastPerfectFPP": "creábamos",
-    "pastPerfectSPP": "creabais",
-    "pastPerfectTPP": "creaban"
+    "imperfectFPS": "creaba",
+    "imperfectSPS": "creabas",
+    "imperfectTPS": "creaba",
+    "imperfectFPP": "creábamos",
+    "imperfectSPP": "creabais",
+    "imperfectTPP": "creaban"
   },
   "comer": {
     "indicativePresentFPS": "como",
@@ -212,12 +212,12 @@
     "preteriteFPP": "comimos",
     "preteriteSPP": "comisteis",
     "preteriteTPP": "comieron",
-    "pastPerfectFPS": "comía",
-    "pastPerfectSPS": "comías",
-    "pastPerfectTPS": "comía",
-    "pastPerfectFPP": "comíamos",
-    "pastPerfectSPP": "comíais",
-    "pastPerfectTPP": "comían"
+    "imperfectFPS": "comía",
+    "imperfectSPS": "comías",
+    "imperfectTPS": "comía",
+    "imperfectFPP": "comíamos",
+    "imperfectSPP": "comíais",
+    "imperfectTPP": "comían"
   },
   "basar": {
     "indicativePresentFPS": "baso",
@@ -232,12 +232,12 @@
     "preteriteFPP": "basamos",
     "preteriteSPP": "",
     "preteriteTPP": "basaron",
-    "pastPerfectFPS": "basaba",
-    "pastPerfectSPS": "basabas",
-    "pastPerfectTPS": "basaba",
-    "pastPerfectFPP": "basábamos",
-    "pastPerfectSPP": "basabais",
-    "pastPerfectTPP": "basaban"
+    "imperfectFPS": "basaba",
+    "imperfectSPS": "basabas",
+    "imperfectTPS": "basaba",
+    "imperfectFPP": "basábamos",
+    "imperfectSPP": "basabais",
+    "imperfectTPP": "basaban"
   },
   "parecer": {
     "indicativePresentFPS": "parezco",
@@ -252,12 +252,12 @@
     "preteriteFPP": "parecimos",
     "preteriteSPP": "paracisteis",
     "preteriteTPP": "parecieron",
-    "pastPerfectFPS": "parecía",
-    "pastPerfectSPS": "parecías",
-    "pastPerfectTPS": "parecía",
-    "pastPerfectFPP": "parecíamos",
-    "pastPerfectSPP": "parecíais",
-    "pastPerfectTPP": "parecían"
+    "imperfectFPS": "parecía",
+    "imperfectSPS": "parecías",
+    "imperfectTPS": "parecía",
+    "imperfectFPP": "parecíamos",
+    "imperfectSPP": "parecíais",
+    "imperfectTPP": "parecían"
   },
   "oír": {
     "indicativePresentFPS": "oigo",
@@ -272,12 +272,12 @@
     "preteriteFPP": "oímos",
     "preteriteSPP": "oísteis",
     "preteriteTPP": "oyeron",
-    "pastPerfectFPS": "oía",
-    "pastPerfectSPS": "oías",
-    "pastPerfectTPS": "oía",
-    "pastPerfectFPP": "oíamos",
-    "pastPerfectSPP": "oíais",
-    "pastPerfectTPP": "oían"
+    "imperfectFPS": "oía",
+    "imperfectSPS": "oías",
+    "imperfectTPS": "oía",
+    "imperfectFPP": "oíamos",
+    "imperfectSPP": "oíais",
+    "imperfectTPP": "oían"
   },
   "aprender": {
     "indicativePresentFPS": "aprendo",
@@ -292,12 +292,12 @@
     "preteriteFPP": "aprendimos",
     "preteriteSPP": "aprendisteis",
     "preteriteTPP": "aprendieron",
-    "pastPerfectFPS": "aprendía",
-    "pastPerfectSPS": "aprendías",
-    "pastPerfectTPS": "aprendía",
-    "pastPerfectFPP": "aprendíamos",
-    "pastPerfectSPP": "aprendíais",
-    "pastPerfectTPP": "aprendía"
+    "imperfectFPS": "aprendía",
+    "imperfectSPS": "aprendías",
+    "imperfectTPS": "aprendía",
+    "imperfectFPP": "aprendíamos",
+    "imperfectSPP": "aprendíais",
+    "imperfectTPP": "aprendía"
   },
   "estar": {
     "indicativePresentFPS": "estoy",
@@ -312,12 +312,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "haber": {
     "indicativePresentFPS": "",
@@ -332,12 +332,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "ayudar": {
     "indicativePresentFPS": "ayudo",
@@ -352,12 +352,12 @@
     "preteriteFPP": "ayudamos",
     "preteriteSPP": "ayudasteis",
     "preteriteTPP": "ayudaron",
-    "pastPerfectFPS": "ayudaba",
-    "pastPerfectSPS": "ayudabas",
-    "pastPerfectTPS": "ayudaba",
-    "pastPerfectFPP": "ayudábamos",
-    "pastPerfectSPP": "ayudabais",
-    "pastPerfectTPP": "ayudaban"
+    "imperfectFPS": "ayudaba",
+    "imperfectSPS": "ayudabas",
+    "imperfectTPS": "ayudaba",
+    "imperfectFPP": "ayudábamos",
+    "imperfectSPP": "ayudabais",
+    "imperfectTPP": "ayudaban"
   },
   "destruir": {
     "indicativePresentFPS": "destruyo",
@@ -372,12 +372,12 @@
     "preteriteFPP": "destruimos",
     "preteriteSPP": "destruisteis",
     "preteriteTPP": "destruyeron",
-    "pastPerfectFPS": "destruía",
-    "pastPerfectSPS": "destruías",
-    "pastPerfectTPS": "destruía",
-    "pastPerfectFPP": "destruíamos",
-    "pastPerfectSPP": "destruíais",
-    "pastPerfectTPP": "destruían"
+    "imperfectFPS": "destruía",
+    "imperfectSPS": "destruías",
+    "imperfectTPS": "destruía",
+    "imperfectFPP": "destruíamos",
+    "imperfectSPP": "destruíais",
+    "imperfectTPP": "destruían"
   },
   "necesitar": {
     "indicativePresentFPS": "necesito",
@@ -392,12 +392,12 @@
     "preteriteFPP": "necesitamos",
     "preteriteSPP": "necesitasteis",
     "preteriteTPP": "necesitaron",
-    "pastPerfectFPS": "necesitaba",
-    "pastPerfectSPS": "necesitabas",
-    "pastPerfectTPS": "necesitaba",
-    "pastPerfectFPP": "necesitábamos",
-    "pastPerfectSPP": "necesitabais",
-    "pastPerfectTPP": "necesitaban"
+    "imperfectFPS": "necesitaba",
+    "imperfectSPS": "necesitabas",
+    "imperfectTPS": "necesitaba",
+    "imperfectFPP": "necesitábamos",
+    "imperfectSPP": "necesitabais",
+    "imperfectTPP": "necesitaban"
   },
   "probar": {
     "indicativePresentFPS": "pruebo",
@@ -412,12 +412,12 @@
     "preteriteFPP": "probamos",
     "preteriteSPP": "probasteis",
     "preteriteTPP": "probaron",
-    "pastPerfectFPS": "probaba",
-    "pastPerfectSPS": "probaba",
-    "pastPerfectTPS": "probaba",
-    "pastPerfectFPP": "probábamos",
-    "pastPerfectSPP": "probabais",
-    "pastPerfectTPP": "probaban"
+    "imperfectFPS": "probaba",
+    "imperfectSPS": "probaba",
+    "imperfectTPS": "probaba",
+    "imperfectFPP": "probábamos",
+    "imperfectSPP": "probabais",
+    "imperfectTPP": "probaban"
   },
   "tener": {
     "indicativePresentFPS": "",
@@ -432,12 +432,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "caminar": {
     "indicativePresentFPS": "",
@@ -452,12 +452,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "vivir": {
     "indicativePresentFPS": "vivo",
@@ -472,12 +472,12 @@
     "preteriteFPP": "vivimos",
     "preteriteSPP": "vivisteis",
     "preteriteTPP": "vivieron",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "iterar": {
     "indicativePresentFPS": "itero",
@@ -492,12 +492,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "decir": {
     "indicativePresentFPS": "digo",
@@ -512,12 +512,12 @@
     "preteriteFPP": "dijimos",
     "preteriteSPP": "djisteis",
     "preteriteTPP": "dijeron",
-    "pastPerfectFPS": "decía",
-    "pastPerfectSPS": "decías",
-    "pastPerfectTPS": "decía",
-    "pastPerfectFPP": "decíamos",
-    "pastPerfectSPP": "decíais",
-    "pastPerfectTPP": "decían"
+    "imperfectFPS": "decía",
+    "imperfectSPS": "decías",
+    "imperfectTPS": "decía",
+    "imperfectFPP": "decíamos",
+    "imperfectSPP": "decíais",
+    "imperfectTPP": "decían"
   },
   "cantar": {
     "indicativePresentFPS": "canto",
@@ -532,12 +532,12 @@
     "preteriteFPP": "cantamos",
     "preteriteSPP": "cantasteis",
     "preteriteTPP": "cantaron",
-    "pastPerfectFPS": "cantaba",
-    "pastPerfectSPS": "cantabas",
-    "pastPerfectTPS": "cantaba",
-    "pastPerfectFPP": "cantábamos",
-    "pastPerfectSPP": "cantabais",
-    "pastPerfectTPP": "cantaban"
+    "imperfectFPS": "cantaba",
+    "imperfectSPS": "cantabas",
+    "imperfectTPS": "cantaba",
+    "imperfectFPP": "cantábamos",
+    "imperfectSPP": "cantabais",
+    "imperfectTPP": "cantaban"
   },
   "ir": {
     "indicativePresentFPS": "voy",
@@ -552,12 +552,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "venir": {
     "indicativePresentFPS": "",
@@ -572,12 +572,12 @@
     "preteriteFPP": "vinimos",
     "preteriteSPP": "vinisteis",
     "preteriteTPP": "vinieron",
-    "pastPerfectFPS": "venía",
-    "pastPerfectSPS": "venías",
-    "pastPerfectTPS": "venía",
-    "pastPerfectFPP": "veníamos",
-    "pastPerfectSPP": "veníais",
-    "pastPerfectTPP": "venían"
+    "imperfectFPS": "venía",
+    "imperfectSPS": "venías",
+    "imperfectTPS": "venía",
+    "imperfectFPP": "veníamos",
+    "imperfectSPP": "veníais",
+    "imperfectTPP": "venían"
   },
   "trabajar": {
     "indicativePresentFPS": "",
@@ -592,12 +592,12 @@
     "preteriteFPP": "trabajamos",
     "preteriteSPP": "trabajasteis",
     "preteriteTPP": "trabajaron",
-    "pastPerfectFPS": "trabajaba",
-    "pastPerfectSPS": "trabajabas",
-    "pastPerfectTPS": "trabajaba",
-    "pastPerfectFPP": "trabajábamos",
-    "pastPerfectSPP": "trabajabais",
-    "pastPerfectTPP": "trabajaban"
+    "imperfectFPS": "trabajaba",
+    "imperfectSPS": "trabajabas",
+    "imperfectTPS": "trabajaba",
+    "imperfectFPP": "trabajábamos",
+    "imperfectSPP": "trabajabais",
+    "imperfectTPP": "trabajaban"
   },
   "hacer": {
     "indicativePresentFPS": "hago",
@@ -612,12 +612,12 @@
     "preteriteFPP": "hicimos",
     "preteriteSPP": "hicisteis",
     "preteriteTPP": "hicieron",
-    "pastPerfectFPS": "hacía",
-    "pastPerfectSPS": "hacías",
-    "pastPerfectTPS": "hacía",
-    "pastPerfectFPP": "hacíamos",
-    "pastPerfectSPP": "hacíais",
-    "pastPerfectTPP": "hacían"
+    "imperfectFPS": "hacía",
+    "imperfectSPS": "hacías",
+    "imperfectTPS": "hacía",
+    "imperfectFPP": "hacíamos",
+    "imperfectSPP": "hacíais",
+    "imperfectTPP": "hacían"
   },
   "portar": {
     "indicativePresentFPS": "",
@@ -632,12 +632,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "hablar": {
     "indicativePresentFPS": "hablo",
@@ -652,12 +652,12 @@
     "preteriteFPP": "hablamos",
     "preteriteSPP": "hablasteis",
     "preteriteTPP": "hablaron",
-    "pastPerfectFPS": "hablaba",
-    "pastPerfectSPS": "hablabas",
-    "pastPerfectTPS": "hablaba",
-    "pastPerfectFPP": "hablábamos",
-    "pastPerfectSPP": "hablabais",
-    "pastPerfectTPP": "hablaban"
+    "imperfectFPS": "hablaba",
+    "imperfectSPS": "hablabas",
+    "imperfectTPS": "hablaba",
+    "imperfectFPP": "hablábamos",
+    "imperfectSPP": "hablabais",
+    "imperfectTPP": "hablaban"
   },
   "leer": {
     "indicativePresentFPS": "leo",
@@ -672,12 +672,12 @@
     "preteriteFPP": "leímos",
     "preteriteSPP": "leísteis",
     "preteriteTPP": "leyeron",
-    "pastPerfectFPS": "leía",
-    "pastPerfectSPS": "leías",
-    "pastPerfectTPS": "leía",
-    "pastPerfectFPP": "leíamos",
-    "pastPerfectSPP": "leíais",
-    "pastPerfectTPP": "leían"
+    "imperfectFPS": "leía",
+    "imperfectSPS": "leías",
+    "imperfectTPS": "leía",
+    "imperfectFPP": "leíamos",
+    "imperfectSPP": "leíais",
+    "imperfectTPP": "leían"
   },
   "correr": {
     "indicativePresentFPS": "corro",
@@ -692,12 +692,12 @@
     "preteriteFPP": "corrimos",
     "preteriteSPP": "corristeis",
     "preteriteTPP": "corrieron",
-    "pastPerfectFPS": "corría",
-    "pastPerfectSPS": "corrías",
-    "pastPerfectTPS": "corría",
-    "pastPerfectFPP": "corríamos",
-    "pastPerfectSPP": "corríais",
-    "pastPerfectTPP": "corrían"
+    "imperfectFPS": "corría",
+    "imperfectSPS": "corrías",
+    "imperfectTPS": "corría",
+    "imperfectFPP": "corríamos",
+    "imperfectSPP": "corríais",
+    "imperfectTPP": "corrían"
   },
   "llevar": {
     "indicativePresentFPS": "llevo",
@@ -712,12 +712,12 @@
     "preteriteFPP": "llevamos",
     "preteriteSPP": "llevasteis",
     "preteriteTPP": "llevaron",
-    "pastPerfectFPS": "llevaba",
-    "pastPerfectSPS": "llevabas",
-    "pastPerfectTPS": "llevaba",
-    "pastPerfectFPP": "llevábamos",
-    "pastPerfectSPP": "llevabais",
-    "pastPerfectTPP": "llevaban"
+    "imperfectFPS": "llevaba",
+    "imperfectSPS": "llevabas",
+    "imperfectTPS": "llevaba",
+    "imperfectFPP": "llevábamos",
+    "imperfectSPP": "llevabais",
+    "imperfectTPP": "llevaban"
   },
   "reír": {
     "indicativePresentFPS": "río",
@@ -732,12 +732,12 @@
     "preteriteFPP": "reímos",
     "preteriteSPP": "reísteis",
     "preteriteTPP": "rieron",
-    "pastPerfectFPS": "reía",
-    "pastPerfectSPS": "reías",
-    "pastPerfectTPS": "reía",
-    "pastPerfectFPP": "reíamos",
-    "pastPerfectSPP": "reíais",
-    "pastPerfectTPP": "reían"
+    "imperfectFPS": "reía",
+    "imperfectSPS": "reías",
+    "imperfectTPS": "reía",
+    "imperfectFPP": "reíamos",
+    "imperfectSPP": "reíais",
+    "imperfectTPP": "reían"
   },
   "pasar": {
     "indicativePresentFPS": "paso",
@@ -752,12 +752,12 @@
     "preteriteFPP": "pasamos",
     "preteriteSPP": "pasasteis",
     "preteriteTPP": "pasaron",
-    "pastPerfectFPS": "pasaba",
-    "pastPerfectSPS": "pasabas",
-    "pastPerfectTPS": "pasaba",
-    "pastPerfectFPP": "pasábamos",
-    "pastPerfectSPP": "pasabais",
-    "pastPerfectTPP": "pasaban"
+    "imperfectFPS": "pasaba",
+    "imperfectSPS": "pasabas",
+    "imperfectTPS": "pasaba",
+    "imperfectFPP": "pasábamos",
+    "imperfectSPP": "pasabais",
+    "imperfectTPP": "pasaban"
   },
   "escribir": {
     "indicativePresentFPS": "escribo",
@@ -772,12 +772,12 @@
     "preteriteFPP": "escribimos",
     "preteriteSPP": "escribisteis",
     "preteriteTPP": "escribieron",
-    "pastPerfectFPS": "escribía",
-    "pastPerfectSPS": "escribías",
-    "pastPerfectTPS": "escribía",
-    "pastPerfectFPP": "escribíamos",
-    "pastPerfectSPP": "escribíais",
-    "pastPerfectTPP": "escribían"
+    "imperfectFPS": "escribía",
+    "imperfectSPS": "escribías",
+    "imperfectTPS": "escribía",
+    "imperfectFPP": "escribíamos",
+    "imperfectSPP": "escribíais",
+    "imperfectTPP": "escribían"
   },
   "deglutir": {
     "indicativePresentFPS": "degluto",
@@ -792,12 +792,12 @@
     "preteriteFPP": "deglutimos",
     "preteriteSPP": "deglutisteis",
     "preteriteTPP": "deglutieron",
-    "pastPerfectFPS": "deglutía",
-    "pastPerfectSPS": "deglutías",
-    "pastPerfectTPS": "deglutía",
-    "pastPerfectFPP": "deglutíamos",
-    "pastPerfectSPP": "deglutíais",
-    "pastPerfectTPP": "deglutían"
+    "imperfectFPS": "deglutía",
+    "imperfectSPS": "deglutías",
+    "imperfectTPS": "deglutía",
+    "imperfectFPP": "deglutíamos",
+    "imperfectSPP": "deglutíais",
+    "imperfectTPP": "deglutían"
   },
   "almorzar": {
     "indicativePresentFPS": "almuerzo",
@@ -812,12 +812,12 @@
     "preteriteFPP": "almorzamos",
     "preteriteSPP": "almorzasteis",
     "preteriteTPP": "almorzaron",
-    "pastPerfectFPS": "almorzaba",
-    "pastPerfectSPS": "almorzas",
-    "pastPerfectTPS": "almorzaba",
-    "pastPerfectFPP": "almorzábamos",
-    "pastPerfectSPP": "almorzabais",
-    "pastPerfectTPP": "almorzaban"
+    "imperfectFPS": "almorzaba",
+    "imperfectSPS": "almorzas",
+    "imperfectTPS": "almorzaba",
+    "imperfectFPP": "almorzábamos",
+    "imperfectSPP": "almorzabais",
+    "imperfectTPP": "almorzaban"
   },
   "doblar": {
     "indicativePresentFPS": "doblo",
@@ -832,12 +832,12 @@
     "preteriteFPP": "doblamos",
     "preteriteSPP": "doblasteis",
     "preteriteTPP": "doblaron",
-    "pastPerfectFPS": "doblaba",
-    "pastPerfectSPS": "doblabas",
-    "pastPerfectTPS": "doblaba",
-    "pastPerfectFPP": "doblábamos",
-    "pastPerfectSPP": "doblabais",
-    "pastPerfectTPP": "doblaban"
+    "imperfectFPS": "doblaba",
+    "imperfectSPS": "doblabas",
+    "imperfectTPS": "doblaba",
+    "imperfectFPP": "doblábamos",
+    "imperfectSPP": "doblabais",
+    "imperfectTPP": "doblaban"
   },
   "jugar": {
     "indicativePresentFPS": "juego",
@@ -852,12 +852,12 @@
     "preteriteFPP": "jugamos",
     "preteriteSPP": "jugasteis",
     "preteriteTPP": "jugaron",
-    "pastPerfectFPS": "jugaba",
-    "pastPerfectSPS": "jugabas",
-    "pastPerfectTPS": "jugaba",
-    "pastPerfectFPP": "jugábamos",
-    "pastPerfectSPP": "jugabais",
-    "pastPerfectTPP": "jugaban"
+    "imperfectFPS": "jugaba",
+    "imperfectSPS": "jugabas",
+    "imperfectTPS": "jugaba",
+    "imperfectFPP": "jugábamos",
+    "imperfectSPP": "jugabais",
+    "imperfectTPP": "jugaban"
   },
   "recorrer": {
     "indicativePresentFPS": "recorro",
@@ -872,12 +872,12 @@
     "preteriteFPP": "recorrimos",
     "preteriteSPP": "recorristeis",
     "preteriteTPP": "recorrieron",
-    "pastPerfectFPS": "recorría",
-    "pastPerfectSPS": "recorrías",
-    "pastPerfectTPS": "recorría",
-    "pastPerfectFPP": "recorríamos",
-    "pastPerfectSPP": "recorríais",
-    "pastPerfectTPP": "recorrían"
+    "imperfectFPS": "recorría",
+    "imperfectSPS": "recorrías",
+    "imperfectTPS": "recorría",
+    "imperfectFPP": "recorríamos",
+    "imperfectSPP": "recorríais",
+    "imperfectTPP": "recorrían"
   },
   "poner": {
     "indicativePresentFPS": "pongo",
@@ -892,12 +892,12 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   },
   "parar": {
     "indicativePresentFPS": "paro",
@@ -912,12 +912,12 @@
     "preteriteFPP": "paramos",
     "preteriteSPP": "parasteis",
     "preteriteTPP": "pararon",
-    "pastPerfectFPS": "paraba",
-    "pastPerfectSPS": "parabas",
-    "pastPerfectTPS": "paraba",
-    "pastPerfectFPP": "parábamos",
-    "pastPerfectSPP": "parabais",
-    "pastPerfectTPP": "paraban"
+    "imperfectFPS": "paraba",
+    "imperfectSPS": "parabas",
+    "imperfectTPS": "paraba",
+    "imperfectFPP": "parábamos",
+    "imperfectSPP": "parabais",
+    "imperfectTPP": "paraban"
   },
   "ofrecer": {
     "indicativePresentFPS": "ofrezco",
@@ -932,12 +932,12 @@
     "preteriteFPP": "ofrecimos",
     "preteriteSPP": "ofrecisteis",
     "preteriteTPP": "ofrecieron",
-    "pastPerfectFPS": "ofrecía",
-    "pastPerfectSPS": "ofrecías",
-    "pastPerfectTPS": "ofrecía",
-    "pastPerfectFPP": "ofrecíamos",
-    "pastPerfectSPP": "ofrecíais",
-    "pastPerfectTPP": "ofrecían"
+    "imperfectFPS": "ofrecía",
+    "imperfectSPS": "ofrecías",
+    "imperfectTPS": "ofrecía",
+    "imperfectFPP": "ofrecíamos",
+    "imperfectSPP": "ofrecíais",
+    "imperfectTPP": "ofrecían"
   },
   "nacer": {
     "indicativePresentFPS": "nazco",
@@ -952,12 +952,12 @@
     "preteriteFPP": "nacimos",
     "preteriteSPP": "nacisteis",
     "preteriteTPP": "nacieron",
-    "pastPerfectFPS": "nacía",
-    "pastPerfectSPS": "nacías",
-    "pastPerfectTPS": "nacía",
-    "pastPerfectFPP": "nacíamos",
-    "pastPerfectSPP": "nacíais",
-    "pastPerfectTPP": "nacían"
+    "imperfectFPS": "nacía",
+    "imperfectSPS": "nacías",
+    "imperfectTPS": "nacía",
+    "imperfectFPP": "nacíamos",
+    "imperfectSPP": "nacíais",
+    "imperfectTPP": "nacían"
   },
   "ñoñear": {
     "indicativePresentFPS": "",
@@ -972,11 +972,11 @@
     "preteriteFPP": "",
     "preteriteSPP": "",
     "preteriteTPP": "",
-    "pastPerfectFPS": "",
-    "pastPerfectSPS": "",
-    "pastPerfectTPS": "",
-    "pastPerfectFPP": "",
-    "pastPerfectSPP": "",
-    "pastPerfectTPP": ""
+    "imperfectFPS": "",
+    "imperfectSPS": "",
+    "imperfectTPS": "",
+    "imperfectFPP": "",
+    "imperfectSPP": "",
+    "imperfectTPP": ""
   }
 }
