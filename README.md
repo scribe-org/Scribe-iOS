@@ -77,7 +77,7 @@ Scribe further annotates nouns in the preview label according to the following c
 - Masculine nouns are colored blue 🟦 and marked with (M)
 - Neutral nouns are colored green 🟩 and marked with (N)
 - Plural nouns are colored orange 🟧 and marked with (PL)
-- Nouns meeting more than one of the above criteria are black ⬛ and marked with all forms
+- Nouns meeting more than one of the above criteria are black ⬛ and marked with all their forms
 
 Annotations are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
 
