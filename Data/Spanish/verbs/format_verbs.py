@@ -27,25 +27,38 @@ all_keys = [
     "preteriteFPP",
     "preteriteSPP",
     "preteriteTPP",
-    "imperfectFPS",
-    "imperfectSPS",
-    "imperfectTPS",
-    "imperfectFPP",
-    "imperfectSPP",
-    "imperfectTPP",
+    "pastPerfectFPS",
+    "pastPerfectSPS",
+    "pastPerfectTPS",
+    "pastPerfectFPP",
+    "pastPerfectSPP",
+    "pastPerfectTPP",
 ]
+
+
+def fix_tense(tense):
+    """
+    Fixes the name of pastPerfect to imperfect.
+
+    Fixes a bug where for some reason the SPARQL query times out if "imperfect" is used.
+    """
+    if "pastPerfect" in tense:
+        return tense.replace("pastPerfect", "imperfect")
+    else:
+        return tense
+
 
 for verb_vals in verbs_list:
     verbs_formatted[verb_vals["infinitive"]] = {}
 
     for conj in [c for c in all_keys if c != "infinitive"]:
         if conj in verb_vals.keys():
-            verbs_formatted[verb_vals["infinitive"]][conj] = verb_vals[conj]
+            verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = verb_vals[conj]
         else:
-            verbs_formatted[verb_vals["infinitive"]][conj] = ""
+            verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = ""
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/Spanish/Data/verbs.json",
+    "../../../Keyboards/LanguageKeyboards/Spanish/Data/verbs.json",
     "w",
     encoding="utf-8",
 ) as f:

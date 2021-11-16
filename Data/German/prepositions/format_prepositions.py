@@ -44,7 +44,7 @@ for prep_vals in prepositions_list:
             prepositions_formatted[prep_vals["preposition"]] = ""
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/German/Data/prepositions.json",
+    "../../../Keyboards/LanguageKeyboards/German/Data/prepositions.json",
     "w",
     encoding="utf-8",
 ) as f:

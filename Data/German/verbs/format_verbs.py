@@ -131,7 +131,7 @@ for verb_vals in verbs_list:
         assign_past_participle(verb=verb_vals, tense="indicativePerfectTPP")
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/German/Data/verbs.json",
+    "../../../Keyboards/LanguageKeyboards/German/Data/verbs.json",
     "w",
     encoding="utf-8",
 ) as f:

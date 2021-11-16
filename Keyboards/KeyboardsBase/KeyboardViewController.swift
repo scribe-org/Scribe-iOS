@@ -933,7 +933,7 @@ class KeyboardViewController: UIInputViewController {
           } else {
             previewLabel?.textColor = UIColor.previewOrangeLightTheme
           }
-        }  else if nounForm ==  "" {
+        } else if nounForm ==  "" {
           invalidState = true
         } else {
           previewLabel?.textColor = UIColor.label
@@ -1309,7 +1309,7 @@ class KeyboardViewController: UIInputViewController {
       clearPreviewLabel()
     }
     // Double space period shortcut.
-    if ( touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 ) {
+    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 {
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState != true {
         proxy.deleteBackward()
         proxy.insertText(". ")

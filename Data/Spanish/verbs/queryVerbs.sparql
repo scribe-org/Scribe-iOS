@@ -9,8 +9,8 @@ SELECT ?infinitive ?gerund
        ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
        ?preteriteFPS ?preteriteSPS ?preteriteTPS
        ?preteriteFPP ?preteriteSPP ?preteriteTPP
-       ?imperfectFPS ?imperfectSPS ?imperfectTPS
-       ?imperfectFPP ?imperfectSPP ?imperfectTPP WHERE {
+       ?pastPerfectFPS ?pastPerfectSPS ?pastPerfectTPS
+       ?pastPerfectFPP ?pastPerfectSPP ?pastPerfectTPP WHERE {
   ?lexeme a ontolex:LexicalEntry ;
             dct:language wd:Q1321 ;
             wikibase:lexicalCategory wd:Q24905 .
@@ -208,90 +208,90 @@ SELECT ?infinitive ?gerund
                         wikibase:grammaticalFeature wd:Q442485 ;
   } .
 
-  # Past Imperfect
-  ################
+  # Imperfect
+  ###########
 
   # FPS
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectFPSForm .
-      ?pastPerfectFPSForm ontolex:representation ?imperfectFPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPSForm .
+      ?pastPerfectFPSForm ontolex:representation ?pastPerfectFPS ;
                           wikibase:grammaticalFeature wd:Q21714344 ;
                           wikibase:grammaticalFeature wd:Q110786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectFPSForm .
-      ?pastPerfectFPSForm ontolex:representation ?imperfectFPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPSForm .
+      ?pastPerfectFPSForm ontolex:representation ?pastPerfectFPS ;
                           wikibase:grammaticalFeature wd:Q51929218 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   # SPS
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectSPSForm .
-      ?pastPerfectSPSForm ontolex:representation ?imperfectSPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPSForm .
+      ?pastPerfectSPSForm ontolex:representation ?pastPerfectSPS ;
                           wikibase:grammaticalFeature wd:Q51929049 ;
                           wikibase:grammaticalFeature wd:Q110786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectSPSForm .
-      ?pastPerfectSPSForm ontolex:representation ?imperfectSPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPSForm .
+      ?pastPerfectSPSForm ontolex:representation ?pastPerfectSPS ;
                           wikibase:grammaticalFeature wd:Q51929369 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   # TPS
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectTPSForm .
-      ?pastPerfectTPSForm ontolex:representation ?imperfectTPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPSForm .
+      ?pastPerfectTPSForm ontolex:representation ?pastPerfectTPS ;
                           wikibase:grammaticalFeature wd:Q51929074 ;
                           wikibase:grammaticalFeature wd:Q110786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectTPSForm .
-      ?pastPerfectTPSForm ontolex:representation ?imperfectTPS ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPSForm .
+      ?pastPerfectTPSForm ontolex:representation ?pastPerfectTPS ;
                           wikibase:grammaticalFeature wd:Q51929447 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   # FPP
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectFPPForm .
-      ?pastPerfectFPPForm ontolex:representation ?imperfectFPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPPForm .
+      ?pastPerfectFPPForm ontolex:representation ?pastPerfectFPP ;
                           wikibase:grammaticalFeature wd:Q21714344 ;
                           wikibase:grammaticalFeature wd:Q146786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectFPPForm .
-      ?pastPerfectFPPForm ontolex:representation ?imperfectFPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPPForm .
+      ?pastPerfectFPPForm ontolex:representation ?pastPerfectFPP ;
                           wikibase:grammaticalFeature wd:Q51929290 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   # SPP
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectSPPForm .
-      ?pastPerfectSPPForm ontolex:representation ?imperfectSPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPPForm .
+      ?pastPerfectSPPForm ontolex:representation ?pastPerfectSPP ;
                           wikibase:grammaticalFeature wd:Q51929049 ;
                           wikibase:grammaticalFeature wd:Q146786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectSPPForm .
-      ?pastPerfectSPPForm ontolex:representation ?imperfectSPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPPForm .
+      ?pastPerfectSPPForm ontolex:representation ?pastPerfectSPP ;
                           wikibase:grammaticalFeature wd:Q51929403 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   # TPP
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectTPPForm .
-      ?pastPerfectTPPForm ontolex:representation ?imperfectTPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPPForm .
+      ?pastPerfectTPPForm ontolex:representation ?pastPerfectTPP ;
                           wikibase:grammaticalFeature wd:Q51929074 ;
                           wikibase:grammaticalFeature wd:Q146786 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperfectTPPForm .
-      ?pastPerfectTPPForm ontolex:representation ?imperfectTPP ;
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPPForm .
+      ?pastPerfectTPPForm ontolex:representation ?pastPerfectTPP ;
                           wikibase:grammaticalFeature wd:Q51929517 ;
                           wikibase:grammaticalFeature wd:Q12547192 ;
   } .

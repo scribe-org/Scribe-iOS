@@ -31,7 +31,7 @@ for w in tqdm(words, desc="Words translated", unit="word",):
     translations_formatted[w] = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/German/Data/translations.json",
+    "../../../Keyboards/LanguageKeyboards/German/Data/translations.json",
     "w",
     encoding="utf-8",
 ) as f:

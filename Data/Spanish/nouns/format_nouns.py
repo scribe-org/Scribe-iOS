@@ -79,7 +79,7 @@ for noun_vals in nouns_list:
             )
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/Spanish/Data/nouns.json",
+    "../../../Keyboards/LanguageKeyboards/Spanish/Data/nouns.json",
     "w",
     encoding="utf-8",
 ) as f:

@@ -34,7 +34,7 @@ for w in tqdm(words, desc="Words translated", unit="word",):
     )
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/Spanish/Data/translations.json",
+    "../../../Keyboards/LanguageKeyboards/Spanish/Data/translations.json",
     "w",
     encoding="utf-8",
 ) as f:

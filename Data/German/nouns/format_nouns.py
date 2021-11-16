@@ -133,7 +133,7 @@ for noun_vals in nouns_list:
 
 
 with open(
-    "../../../../Keyboards/LanguageKeyboards/German/Data/nouns.json",
+    "../../../Keyboards/LanguageKeyboards/German/Data/nouns.json",
     "w",
     encoding="utf-8",
 ) as f:
