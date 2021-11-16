@@ -111,7 +111,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Dark mode compatibility
-- Hold-to-select characters
+- Hold-to-select characters [(WIP - see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 
 <!--
 <p align="center">
