@@ -12,7 +12,7 @@
 		38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213722D5907F00C6795D /* AppScreen.storyboard */; };
 		38BD213E22D5908100C6795D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
-		38BD214F22D592CA00C6795D /* deKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* deKeyboardViewController.swift */; };
+		38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* KeyboardExtensions.swift */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
@@ -22,7 +22,7 @@
 		D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtn.png */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
-		D1608668270B6D3C00134D48 /* esKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* esKeyboardViewController.swift */; };
+		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D190B242274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D190B243274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -86,7 +86,7 @@
 		38BD214022D5908100C6795D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38BD214222D5908100C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BD214C22D592CA00C6795D /* German.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = German.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		38BD214E22D592CA00C6795D /* deKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deKeyboardViewController.swift; sourceTree = "<group>"; };
+		38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		D101820F2728275B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1608667270B6D3C00134D48 /* esKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = esKeyboardViewController.swift; sourceTree = "<group>"; };
+		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D190B240274056D400705659 /* ColorVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVariables.swift; sourceTree = "<group>"; };
 		D190B2462741B24F00705659 /* CommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandVariables.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				D190B25C2742582500705659 /* Data */,
-				38BD214E22D592CA00C6795D /* deKeyboardViewController.swift */,
+				38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */,
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D190B25E27425EED00705659 /* Data */,
-				D1608667270B6D3C00134D48 /* esKeyboardViewController.swift */,
+				D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */,
 				D1608669270B6D3C00134D48 /* Info.plist */,
 			);
 			path = Spanish;
@@ -576,7 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BD214F22D592CA00C6795D /* deKeyboardViewController.swift in Sources */,
+				38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D190B242274056D400705659 /* ColorVariables.swift in Sources */,
 				D190B2472741B24F00705659 /* CommandVariables.swift in Sources */,
@@ -590,7 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1608668270B6D3C00134D48 /* esKeyboardViewController.swift in Sources */,
+				D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */,
 				D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D190B243274056D400705659 /* ColorVariables.swift in Sources */,
 				D190B2482741B24F00705659 /* CommandVariables.swift in Sources */,

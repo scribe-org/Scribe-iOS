@@ -91,7 +91,7 @@ func checkLandscapeMode() {
 
 // MARK: German interface variables
 
-public enum deKeyboardConstants {
+public enum GermanKeyboardConstants {
   // Keyboard key layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
@@ -153,7 +153,7 @@ public enum deKeyboardConstants {
 
 // MARK: Spanish interface variables
 
-public class esKeyboardConstants {
+public class SpanishKeyboardConstants {
   // Keyboard key layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],

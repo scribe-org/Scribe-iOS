@@ -23,23 +23,23 @@ class KeyboardViewController: UIInputViewController {
   func setKeyboardLayouts() {
     if controllerLanguage == "German" {
       if DeviceType.isPhone {
-        letterKeys = deKeyboardConstants.letterKeysPhone
-        numberKeys = deKeyboardConstants.numberKeysPhone
-        symbolKeys = deKeyboardConstants.symbolKeysPhone
+        letterKeys = GermanKeyboardConstants.letterKeysPhone
+        numberKeys = GermanKeyboardConstants.numberKeysPhone
+        symbolKeys = GermanKeyboardConstants.symbolKeysPhone
       } else {
-        letterKeys = deKeyboardConstants.letterKeysPad
-        numberKeys = deKeyboardConstants.numberKeysPad
-        symbolKeys = deKeyboardConstants.symbolKeysPad
+        letterKeys = GermanKeyboardConstants.letterKeysPad
+        numberKeys = GermanKeyboardConstants.numberKeysPad
+        symbolKeys = GermanKeyboardConstants.symbolKeysPad
       }
     } else if controllerLanguage == "Spanish" {
       if DeviceType.isPhone {
-        letterKeys = esKeyboardConstants.letterKeysPhone
-        numberKeys = esKeyboardConstants.numberKeysPhone
-        symbolKeys = esKeyboardConstants.symbolKeysPhone
+        letterKeys = SpanishKeyboardConstants.letterKeysPhone
+        numberKeys = SpanishKeyboardConstants.numberKeysPhone
+        symbolKeys = SpanishKeyboardConstants.symbolKeysPhone
       } else {
-        letterKeys = esKeyboardConstants.letterKeysPad
-        numberKeys = esKeyboardConstants.numberKeysPad
-        symbolKeys = esKeyboardConstants.symbolKeysPad
+        letterKeys = SpanishKeyboardConstants.letterKeysPad
+        numberKeys = SpanishKeyboardConstants.numberKeysPad
+        symbolKeys = SpanishKeyboardConstants.symbolKeysPad
       }
     }
   }
@@ -279,31 +279,31 @@ class KeyboardViewController: UIInputViewController {
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     if controllerLanguage == "German" {
-      keysWithAlternates = deKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = deKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = deKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = deKeyboardConstants.aAlternateKeys
-      eAlternateKeys = deKeyboardConstants.eAlternateKeys
-      iAlternateKeys = deKeyboardConstants.iAlternateKeys
-      oAlternateKeys = deKeyboardConstants.oAlternateKeys
-      uAlternateKeys = deKeyboardConstants.uAlternateKeys
-      yAlternateKeys = deKeyboardConstants.yAlternateKeys
-      sAlternateKeys = deKeyboardConstants.sAlternateKeys
-      cAlternateKeys = deKeyboardConstants.cAlternateKeys
-      nAlternateKeys = deKeyboardConstants.nAlternateKeys
+      keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = GermanKeyboardConstants.aAlternateKeys
+      eAlternateKeys = GermanKeyboardConstants.eAlternateKeys
+      iAlternateKeys = GermanKeyboardConstants.iAlternateKeys
+      oAlternateKeys = GermanKeyboardConstants.oAlternateKeys
+      uAlternateKeys = GermanKeyboardConstants.uAlternateKeys
+      yAlternateKeys = GermanKeyboardConstants.yAlternateKeys
+      sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
+      cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
+      nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
     } else if controllerLanguage == "Spanish" {
-      keysWithAlternates = esKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = esKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = esKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = esKeyboardConstants.aAlternateKeys
-      eAlternateKeys = esKeyboardConstants.eAlternateKeys
-      iAlternateKeys = esKeyboardConstants.iAlternateKeys
-      oAlternateKeys = esKeyboardConstants.oAlternateKeys
-      uAlternateKeys = esKeyboardConstants.uAlternateKeys
-      sAlternateKeys = esKeyboardConstants.sAlternateKeys
-      dAlternateKeys = esKeyboardConstants.dAlternateKeys
-      cAlternateKeys = esKeyboardConstants.cAlternateKeys
-      nAlternateKeys = esKeyboardConstants.nAlternateKeys
+      keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = SpanishKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = SpanishKeyboardConstants.aAlternateKeys
+      eAlternateKeys = SpanishKeyboardConstants.eAlternateKeys
+      iAlternateKeys = SpanishKeyboardConstants.iAlternateKeys
+      oAlternateKeys = SpanishKeyboardConstants.oAlternateKeys
+      uAlternateKeys = SpanishKeyboardConstants.uAlternateKeys
+      sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
+      dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
+      cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
+      nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
     }
 
     checkLandscapeMode()
