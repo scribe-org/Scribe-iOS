@@ -6,7 +6,7 @@
 
 import UIKit
 
-/// Get the second to last element of an array.
+/// Extension to access the second to last element of an array.
 extension Array {
   func penultimate() -> Element? {
     if self.count < 2 {

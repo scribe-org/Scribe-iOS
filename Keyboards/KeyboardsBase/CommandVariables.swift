@@ -11,7 +11,7 @@ let previewPromptSpacing = String(repeating: " ", count: 2)
 var previewState: Bool! = false
 var invalidState: Bool! = false
 
-// Variables assosciated with Scribe commands.
+// Translate, conjugate, and plural variables.
 let translatePrompt: String = previewPromptSpacing + "Translate: "
 let translatePromptAndCursor: String = translatePrompt + previewCursor
 var getTranslation: Bool = false
@@ -48,6 +48,7 @@ enum DEConjugationState {
 
 var deConjugationState: DEConjugationState = .indicativePresent
 
+/// Sets the title of the preview label when the keyboard is in conjugate mode.
 func deGetConjugationTitle() -> String {
   switch deConjugationState {
   case .indicativePresent:
@@ -59,6 +60,7 @@ func deGetConjugationTitle() -> String {
   }
 }
 
+/// Returns the appropriate key in the verbs dictionary to access conjugations.
 func deGetConjugationState() -> String {
   switch deConjugationState {
   case .indicativePresent:
@@ -70,6 +72,7 @@ func deGetConjugationState() -> String {
   }
 }
 
+/// Action assosciated with the left view switch button of the conjugation state.
 func deConjugationStateLeft() {
   if deConjugationState == .indicativePresent {
     return
@@ -82,6 +85,7 @@ func deConjugationStateLeft() {
   }
 }
 
+/// Action assosciated with the right view switch button of the conjugation state.
 func deConjugationStateRight() {
   if deConjugationState == .indicativePresent {
     deConjugationState = .indicativePreterite
@@ -104,6 +108,7 @@ enum ESConjugationState {
 
 var esConjugationState: ESConjugationState = .indicativePresent
 
+/// Sets the title of the preview label when the keyboard is in conjugate mode.
 func esGetConjugationTitle() -> String {
   switch esConjugationState {
   case .indicativePresent:
@@ -115,6 +120,7 @@ func esGetConjugationTitle() -> String {
   }
 }
 
+/// Returns the appropriate key in the verbs dictionary to access conjugations.
 func esGetConjugationState() -> String {
   switch esConjugationState {
   case .indicativePresent:
@@ -126,6 +132,7 @@ func esGetConjugationState() -> String {
   }
 }
 
+/// Action assosciated with the left view switch button of the conjugation state.
 func esConjugationStateLeft() {
   if esConjugationState == .indicativePresent {
     return
@@ -138,6 +145,7 @@ func esConjugationStateLeft() {
   }
 }
 
+/// Action assosciated with the right view switch button of the conjugation state.
 func esConjugationStateRight() {
   if esConjugationState == .indicativePresent {
     esConjugationState = .preterite
