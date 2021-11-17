@@ -447,8 +447,13 @@ class KeyboardViewController: UIInputViewController {
           scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
           if scribeBtnState {
-            scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
-            scribeBtn?.setTitle("", for: .normal) // esc
+            scribeBtn.setTitle("", for: .normal)
+            var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+            if DeviceType.isPad {
+              selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+            }
+            scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
+            scribeBtn.tintColor = UIColor.scribeGrey
             scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
@@ -460,7 +465,13 @@ class KeyboardViewController: UIInputViewController {
             styleBtn(btn: pluralBtn, title: "Plural", radius: btnKeyCornerRadius)
           } else {
             if previewState == true {
-              scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
+              scribeBtn.setTitle("", for: .normal)
+              var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+              if DeviceType.isPad {
+                selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+              }
+              scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
+              scribeBtn.tintColor = UIColor.scribeGrey
             }
             scribeBtn?.setTitle("", for: .normal)
             deactivateBtn(btn: conjugateBtn)
@@ -723,8 +734,13 @@ class KeyboardViewController: UIInputViewController {
       stackView3.isUserInteractionEnabled = false
       stackView4.isUserInteractionEnabled = false
 
-      scribeBtn.setImage(UIImage(named: "escBtn.png"), for: .normal)
-      scribeBtn?.setTitle("", for: .normal) // esc
+      scribeBtn.setTitle("", for: .normal)
+      var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
+      if DeviceType.isPad {
+        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
+      }
+      scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
+      scribeBtn.tintColor = UIColor.scribeGrey
       scribeBtn?.layer.cornerRadius = buttonWidth / 4
       scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
@@ -1958,6 +1974,15 @@ class KeyboardViewController: UIInputViewController {
 
   @objc func keyTouchDown(_ sender: UIButton) {
     sender.backgroundColor = keyPressedColor
+
+    let senderKey = sender.layer.value(forKey: "original") as? String
+    if senderKey == "Scribe" {
+      sender.alpha = 0.5
+      // Bring sender's opacity back up to fully opaque
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+          sender.alpha = 1.0
+      }
+    }
   }
 
   override func textWillChange(_ textInput: UITextInput?) {

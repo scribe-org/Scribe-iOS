@@ -12,6 +12,7 @@ var keyPressedColor = UIColor.systemGray5
 
 /// Extends UIColor with branding colors as well as those for annotating nouns.
 extension UIColor {
+  static let scribeGrey = UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)
   static let scribeBlue = UIColor(red: 97.0/255.0, green: 200.0/255.0, blue: 245.0/255.0, alpha: 1.0)
 
   static let previewRedLightTheme = UIColor(red: 170.0/255.0, green: 40.0/255.0, blue: 45.0/255.0, alpha: 1.0)
