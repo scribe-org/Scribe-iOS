@@ -222,7 +222,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Ideally the pronoun would be greyed out at the top left of the conjugation cell
 
-- Discussing the potential for custom styles for Scribe keyboards [(see issue)]()
+- Discussing the potential for custom themes for Scribe keyboards [(see issue)]()
 
 ## Data
 
