@@ -84,6 +84,25 @@ class KeyboardViewController: UIInputViewController {
     btn.setTitleColor(UIColor.label, for: .normal)
   }
 
+  /// Styles btns that have icon keys.
+  ///
+  /// - Parameters
+  ///  - btn: the button to be styled.
+  ///  - iconName: the name of the UIImage systemName icon to be used.
+  func styleIconBtn(btn: UIButton, iconName: String) {
+    btn.setTitle("", for: .normal)
+    var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
+    if DeviceType.isPad {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
+    }
+    btn.setImage(UIImage(systemName: iconName, withConfiguration: selectKeyboardIconConfig), for: .normal)
+    if UITraitCollection.current.userInterfaceStyle == .dark {
+      btn.tintColor = .white
+    } else {
+      btn.tintColor = .black
+    }
+  }
+
   /// Activates a button by assigning key touch functions for their given actions.
   ///
   /// - Parameters
@@ -282,6 +301,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Adds padding to keys to position them.
+  /// 
   /// - Parameters
   ///  - to: the stackView in which the button is found.
   ///  - width: the width of the padding.
@@ -425,9 +445,6 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // buttonWidth determined per keyboard by the top row.
-    var letterButtonWidth = CGFloat(0)
-    var numSymButtonWidth = CGFloat(0)
-
     if isLandscapeView == true {
       if DeviceType.isPhone {
         letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.8
@@ -441,6 +458,7 @@ class KeyboardViewController: UIInputViewController {
       numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
     }
 
+    // Derive keyboard given current states.
     switch keyboardState {
     case .letters:
       keyboard = letterKeys
@@ -537,6 +555,7 @@ class KeyboardViewController: UIInputViewController {
           activateBtn(btn: btn)
           btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
 
+          // Set up and activate Scribe command buttons.
           styleBtn(btn: scribeBtn, title: "Scribe", radius: keyCornerRadius)
           scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
@@ -581,11 +600,6 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
           }
 
-          if key == "delete" {
-            let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
-            btn.addGestureRecognizer(longPressRecognizer)
-          }
-
           keys.append(btn)
           switch row {
           case 0: stackView1.addArrangedSubview(btn)
@@ -596,74 +610,34 @@ class KeyboardViewController: UIInputViewController {
             break
           }
 
+          // Special key styling.
+          if key == "delete" {
+            let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
+            btn.addGestureRecognizer(longPressRecognizer)
+          }
+
           if key == "selectKeyboard" {
             selectKeyboardButton = btn
-            btn.setTitle("", for: .normal)
-            var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
-            if DeviceType.isPad {
-              selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
-            }
-            btn.setImage(UIImage(systemName: "globe", withConfiguration: selectKeyboardIconConfig), for: .normal)
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              btn.tintColor = .white
-            } else {
-              btn.tintColor = .black
-            }
+            styleIconBtn(btn: btn, iconName: "globe")
           }
 
           if key == "hideKeyboard" {
-            btn.setTitle("", for: .normal)
-            let hideKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
-            btn.setImage(UIImage(systemName: "keyboard.chevron.compact.down", withConfiguration: hideKeyboardIconConfig), for: .normal)
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              btn.tintColor = .white
-            } else {
-              btn.tintColor = .black
-            }
+            styleIconBtn(btn: btn, iconName: "keyboard.chevron.compact.down")
           }
 
           if key == "shift" {
-            btn.setTitle("", for: .normal)
-            var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-            if DeviceType.isPad {
-              shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-            }
-            btn.setImage(UIImage(systemName: "shift", withConfiguration: shiftIconConfig), for: .normal)
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              btn.tintColor = .white
-            } else {
-              btn.tintColor = .black
-            }
+            styleIconBtn(btn: btn, iconName: "shift")
           }
 
           if key == "return" {
-            btn.setTitle("", for: .normal)
-            var returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-            if DeviceType.isPad {
-              returnIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-            }
-            btn.setImage(UIImage(systemName: "arrow.turn.down.left", withConfiguration: returnIconConfig), for: .normal)
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              btn.tintColor = .white
-            } else {
-              btn.tintColor = .black
-            }
+            styleIconBtn(btn: btn, iconName: "arrow.turn.down.left")
           }
 
           if key == "delete" {
-            btn.setTitle("", for: .normal)
-            var deleteIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-            if DeviceType.isPad {
-              deleteIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-            }
-            btn.setImage(UIImage(systemName: "delete.left", withConfiguration: deleteIconConfig), for: .normal)
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              btn.tintColor = .white
-            } else {
-              btn.tintColor = .black
-            }
+            styleIconBtn(btn: btn, iconName: "delete.left")
           }
 
+          // Setting hold-to-select functionality.
           if key == "a" {
             let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(aLongPressedSelectAlternates(sender:)))
             longGesture.minimumPressDuration = 1.2
@@ -733,7 +707,7 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
           }
 
-          // specialKey constraints.
+          // specialKey styling.
           if key == "ABC" {
             if DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
@@ -753,28 +727,10 @@ class KeyboardViewController: UIInputViewController {
             if key == "shift" {
               if shiftButtonState != .normal {
                 btn.backgroundColor = keyPressedColor
-                var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-                if DeviceType.isPad {
-                  shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-                }
-                btn.setImage(UIImage(systemName: "shift.fill", withConfiguration: shiftIconConfig), for: .normal)
-                if UITraitCollection.current.userInterfaceStyle == .dark {
-                  btn.tintColor = .white
-                } else {
-                  btn.tintColor = .black
-                }
+                styleIconBtn(btn: btn, iconName: "shift.fill")
               }
               if shiftButtonState == .caps {
-                var shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-                if DeviceType.isPad {
-                  shiftIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-                }
-                btn.setImage(UIImage(systemName: "capslock.fill", withConfiguration: shiftIconConfig), for: .normal)
-                if UITraitCollection.current.userInterfaceStyle == .dark {
-                  btn.tintColor = .white
-                } else {
-                  btn.tintColor = .black
-                }
+                styleIconBtn(btn: btn, iconName: "capslock.fill")
               }
             }
           } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
@@ -964,55 +920,57 @@ class KeyboardViewController: UIInputViewController {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
       var lastWordTyped = wordsTyped.penultimate()
-      // Check to see if the input was uppercase to return an uppercase plural.
-      var queriedWordIsUpperCase: Bool = false
-      if controllerLanguage == "Spanish" {
-        let firstLetter = lastWordTyped?.substring(toIdx: 1)
-        queriedWordIsUpperCase = firstLetter!.isUppercase
-        lastWordTyped = lastWordTyped?.lowercased()
-      }
-      let isNoun = nouns?[lastWordTyped!] != nil || nouns?[lastWordTyped!.lowercased()] != nil
-      if isNoun {
-        let nounForm = nouns?[lastWordTyped!]?["form"] as? String
-        if nounForm == "F" {
-          if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewBar?.textColor = UIColor.previewRedDarkTheme
-          } else {
-            previewBar?.textColor = UIColor.previewRedLightTheme
-          }
-        } else if nounForm == "M" {
-          if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewBar?.textColor = UIColor.previewBlueDarkTheme
-          } else {
-            previewBar?.textColor = UIColor.previewBlueLightTheme
-          }
-        } else if nounForm ==  "N" {
-          if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewBar?.textColor = UIColor.previewGreenDarkTheme
-          } else {
-            previewBar?.textColor = UIColor.previewGreenLightTheme
-          }
-        } else if nounForm ==  "PL" {
-          if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewBar?.textColor = UIColor.previewOrangeDarkTheme
-          } else {
-            previewBar?.textColor = UIColor.previewOrangeLightTheme
-          }
-        } else if nounForm ==  "" {
-          invalidState = true
-        } else {
-          previewBar?.textColor = UIColor.label
+      if lastWordTyped != "" {
+        // Check to see if the input was uppercase to return an uppercase plural.
+        var queriedWordIsUpperCase: Bool = false
+        if controllerLanguage == "Spanish" {
+          let firstLetter = lastWordTyped?.substring(toIdx: 1)
+          queriedWordIsUpperCase = firstLetter!.isUppercase
+          lastWordTyped = lastWordTyped?.lowercased()
         }
+        let isNoun = nouns?[lastWordTyped!] != nil || nouns?[lastWordTyped!.lowercased()] != nil
+        if isNoun {
+          let nounForm = nouns?[lastWordTyped!]?["form"] as? String
+          if nounForm == "F" {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+              previewBar?.textColor = UIColor.previewRedDarkTheme
+            } else {
+              previewBar?.textColor = UIColor.previewRedLightTheme
+            }
+          } else if nounForm == "M" {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+              previewBar?.textColor = UIColor.previewBlueDarkTheme
+            } else {
+              previewBar?.textColor = UIColor.previewBlueLightTheme
+            }
+          } else if nounForm ==  "N" {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+              previewBar?.textColor = UIColor.previewGreenDarkTheme
+            } else {
+              previewBar?.textColor = UIColor.previewGreenLightTheme
+            }
+          } else if nounForm ==  "PL" {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+              previewBar?.textColor = UIColor.previewOrangeDarkTheme
+            } else {
+              previewBar?.textColor = UIColor.previewOrangeLightTheme
+            }
+          } else if nounForm ==  "" {
+            invalidState = true
+          } else {
+            previewBar?.textColor = UIColor.label
+          }
 
-        if invalidState != true {
-          if queriedWordIsUpperCase == false {
-            previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
-          } else {
-            previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!.capitalized
+          if invalidState != true {
+            if queriedWordIsUpperCase == false {
+              previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
+            } else {
+              previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!.capitalized
+            }
           }
+          previewBar?.sizeToFit()
+          invalidState = false
         }
-        previewBar?.sizeToFit()
-        invalidState = false
       }
     }
   }
@@ -1045,20 +1003,22 @@ class KeyboardViewController: UIInputViewController {
       if proxy.documentContextBeforeInput != nil {
         let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
         var lastWordTyped = wordsTyped.penultimate()
-        // Check to see if the input was uppercase to return an uppercase plural.
-        var queriedWordIsUpperCase: Bool = false
-        let firstLetter = lastWordTyped?.substring(toIdx: 1)
-        queriedWordIsUpperCase = firstLetter!.isUppercase
-        lastWordTyped = lastWordTyped?.lowercased()
-        let isPreposition = prepositions?[lastWordTyped!] != nil
-        if isPreposition {
-          let prepositionCase = prepositions?[lastWordTyped!] as? String
-          if queriedWordIsUpperCase == false {
-            previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
-          } else {
-            previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
+        if lastWordTyped != "" {
+          // Check to see if the input was uppercase to return an uppercase plural.
+          var queriedWordIsUpperCase: Bool = false
+          let firstLetter = lastWordTyped?.substring(toIdx: 1)
+          queriedWordIsUpperCase = firstLetter!.isUppercase
+          lastWordTyped = lastWordTyped?.lowercased()
+          let isPreposition = prepositions?[lastWordTyped!] != nil
+          if isPreposition {
+            let prepositionCase = prepositions?[lastWordTyped!] as? String
+            if queriedWordIsUpperCase == false {
+              previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
+            } else {
+              previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
+            }
+            previewBar?.sizeToFit()
           }
-          previewBar?.sizeToFit()
         }
       }
     }
