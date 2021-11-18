@@ -25,6 +25,24 @@ def convert_cases(case):
         return "Gen"
 
 
+def order_annotations(annotation):
+    """
+    Standardizes the annotations that are presented to users where more than one is applicable.
+
+    Parameters
+    ----------
+        annotation : str
+            The annotation to be returned to the user in the preview bar.
+    """
+    single_annotations = ["Akk", "Dat", "Gen"]
+    if annotation in single_annotations:
+        return annotation
+
+    annotation_split = sorted(annotation.split("/"))
+
+    return "/".join(annotation_split)
+
+
 prepositions_formatted = {}
 
 for prep_vals in prepositions_list:
@@ -42,6 +60,9 @@ for prep_vals in prepositions_list:
 
         elif "case" not in prep_vals.keys():
             prepositions_formatted[prep_vals["preposition"]] = ""
+
+for k in prepositions_formatted.keys():
+    prepositions_formatted[k] = order_annotations(prepositions_formatted[k])
 
 prepositions_formatted = collections.OrderedDict(sorted(prepositions_formatted.items()))
 

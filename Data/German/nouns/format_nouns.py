@@ -15,6 +15,11 @@ with open("nounsQueried.json") as f:
 def map_genders(wikidata_gender):
     """
     Maps those genders from Wikidata to succinct versions.
+
+    Parameters
+    ----------
+        wikidata_gender : str
+            The gender of the noun that was queried from WikiData
     """
     if wikidata_gender == "masculine":
         return "M"
@@ -22,6 +27,24 @@ def map_genders(wikidata_gender):
         return "F"
     if wikidata_gender == "neuter":
         return "N"
+
+
+def order_annotations(annotation):
+    """
+    Standardizes the annotations that are presented to users where more than one is applicable.
+
+    Parameters
+    ----------
+        annotation : str
+            The annotation to be returned to the user in the preview bar.
+    """
+    single_annotations = ["F", "M", "N", "PL"]
+    if annotation in single_annotations:
+        return annotation
+
+    annotation_split = sorted([a for a in set(annotation.split("/")) if a != ""])
+
+    return "/".join(annotation_split)
 
 
 nouns_formatted = {}
@@ -131,6 +154,9 @@ for noun_vals in nouns_list:
 
             elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
                 nouns_formatted[noun_vals["plural"]]["form"] = "PL"
+
+for k in nouns_formatted.keys():
+    nouns_formatted[k]["form"] = order_annotations(nouns_formatted[k]["form"])
 
 nouns_formatted = collections.OrderedDict(sorted(nouns_formatted.items()))
 

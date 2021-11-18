@@ -22,6 +22,24 @@ def map_genders(wikidata_gender):
         return "F"
 
 
+def order_annotations(annotation):
+    """
+    Standardizes the annotations that are presented to users where more than one is applicable.
+
+    Parameters
+    ----------
+        annotation : str
+            The annotation to be returned to the user in the preview bar.
+    """
+    single_annotations = ["F", "M", "PL"]
+    if annotation in single_annotations:
+        return annotation
+
+    annotation_split = sorted([a for a in set(annotation.split("/")) if a != ""])
+
+    return "/".join(annotation_split)
+
+
 nouns_formatted = {}
 
 for noun_vals in nouns_list:
@@ -78,6 +96,9 @@ for noun_vals in nouns_list:
             nouns_formatted[noun_vals["singular"]]["form"] = (
                 nouns_formatted[noun_vals["singular"]]["form"] + "/PL"
             )
+
+for k in nouns_formatted.keys():
+    nouns_formatted[k]["form"] = order_annotations(nouns_formatted[k]["form"])
 
 nouns_formatted = collections.OrderedDict(sorted(nouns_formatted.items()))
 
