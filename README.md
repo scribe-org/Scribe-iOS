@@ -170,7 +170,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding settings to choose which Scribe functionality is available or order commands when the `Scribe key` is pressed [(see issue)]()
 
-- Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
+- Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed (potentially) [(see issue)]()
 
 - Change the Scribe interface buttons to default UIButtons from plain so that versions lower than iOS 15 can be supported [(see issue)]()
 
@@ -178,9 +178,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - For example: providing `Conjugate` as an option for verb translations when `Translate` provides selectable options
 
-- Hold space bar to move cursor and select text functionality [(see issue)]()
+- Holding the space bar for cursor sliding and text selection functionalities [(see issue)]()
 
-- Adding `Synonym` functionality (especially useful for native speakers of the language) [(see issue)]()
+- Planning and implementing a `Synonym` feature (especially useful for native speakers of the language) [(see issue)]()
 
 - Using saved vector representations of words to effectively order the suggestions for the future `Translate` feature [(see issue)]()
 
