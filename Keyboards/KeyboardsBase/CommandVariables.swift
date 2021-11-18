@@ -48,7 +48,7 @@ enum DEConjugationState {
 
 var deConjugationState: DEConjugationState = .indicativePresent
 
-/// Sets the title of the preview label when the keyboard is in conjugate mode.
+/// Sets the title of the preview bar when the keyboard is in conjugate mode.
 func deGetConjugationTitle() -> String {
   switch deConjugationState {
   case .indicativePresent:
@@ -108,7 +108,7 @@ enum ESConjugationState {
 
 var esConjugationState: ESConjugationState = .indicativePresent
 
-/// Sets the title of the preview label when the keyboard is in conjugate mode.
+/// Sets the title of the preview bar when the keyboard is in conjugate mode.
 func esGetConjugationTitle() -> String {
   switch esConjugationState {
   case .indicativePresent:

@@ -71,7 +71,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural wh
 
 ### Noun Annotation
 
-Scribe further annotates nouns in the preview label according to the following conventions:
+Scribe further annotates nouns in the preview bar according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
@@ -89,7 +89,7 @@ Annotations are displayed once a user has typed a noun and pressed space or by p
 
 ### Preposition Annotation
 
-Scribe also annotates the grammatical cases of prepositions in the preview label if there is a relation in the given language. Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
+Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language. Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
 
 <!--
 <p align="center">
@@ -160,7 +160,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Discussing further grammatical information that can be displayed to the user in the preview bar that could help with language learning [(see issue)]()
 
-- Allowing a user to press or long hold the preview label for further information on what's being displayed [(see issue)]()
+- Allowing a user to press or long hold the preview bar for further information on what's being displayed [(see issue)]()
 
 - Adding undo button functionality for iPads and iPhones [(see issue)]()
 

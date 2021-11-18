@@ -45,6 +45,11 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Styles a button's appearance including it's shape and text.
+  ///
+  /// - Parameters
+  ///  - btn: the button to be styled.
+  ///  - title: the title to be assigned.
+  ///  - radius: the corner radius of the button.
   func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
     btn.clipsToBounds = true
     btn.layer.masksToBounds = true
@@ -54,12 +59,20 @@ class KeyboardViewController: UIInputViewController {
     btn.setTitleColor(UIColor.label, for: .normal)
   }
 
+  /// Activates a button by assigning key touch functions for their given actions.
+  ///
+  /// - Parameters
+  ///   - btn: the button to be activated.
   func activateBtn(btn: UIButton) {
     btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
     btn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
     btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
+  /// Deavtives a button by removing key touch functions for their given actions and making it clear.
+  ///
+  /// - Parameters
+  ///   - btn: the button to be deactivated.
   func deactivateBtn(btn: UIButton) {
     btn.setTitle("", for: .normal)
     btn.backgroundColor = UIColor.clear
@@ -68,6 +81,14 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
+  /// Sets a button's values that are displayed and inseted into the proxy as well as assigning a color.
+  ///
+  /// - Parameters
+  ///   - btn: the button to be set up.
+  ///   - color: the color to assign to the background.
+  ///   - name: the name of the value for the key.
+  ///   - canCapitalize: whether the key receives a special character for the shift state.
+  ///   - isSpecial: whether the btn should be marked as special to be colored accordingly.
   func setBtn(btn: UIButton, color: UIColor, name: String, canCapitalize: Bool, isSpecial: Bool) {
     btn.backgroundColor = color
     btn.layer.setValue(name, forKey: "original")
@@ -90,10 +111,11 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: btn)
   }
 
-  @IBOutlet var previewLabel: UILabel!
-  func setPreviewLabel() {
-    previewLabel?.backgroundColor = specialKeyColor
-    previewLabel?.textAlignment = NSTextAlignment.left
+  @IBOutlet var previewBar: UILabel!
+  /// Sets up the preview bar
+  func setPreviewBar() {
+    previewBar?.backgroundColor = specialKeyColor
+    previewBar?.textAlignment = NSTextAlignment.left
   }
 
   @IBOutlet var scribeBtn: UIButton!
@@ -159,7 +181,7 @@ class KeyboardViewController: UIInputViewController {
 
   func setConjugationState() {
     if controllerLanguage == "German" {
-      previewLabel?.text = deGetConjugationTitle()
+      previewBar?.text = deGetConjugationTitle()
 
       tenseFPS = deGetConjugationState() + "FPS"
       tenseSPS = deGetConjugationState() + "SPS"
@@ -168,7 +190,7 @@ class KeyboardViewController: UIInputViewController {
       tenseSPP = deGetConjugationState() + "SPP"
       tenseTPP = deGetConjugationState() + "TPP"
     } else if controllerLanguage == "Spanish" {
-      previewLabel?.text = esGetConjugationTitle()
+      previewBar?.text = esGetConjugationTitle()
 
       tenseFPS = esGetConjugationState() + "FPS"
       tenseSPS = esGetConjugationState() + "SPS"
@@ -310,7 +332,7 @@ class KeyboardViewController: UIInputViewController {
     checkDarkModeSetColors()
     setKeyboardLayouts()
     setScribeBtn()
-    setPreviewLabel()
+    setPreviewBar()
     setCommandBtns()
     setConjugationBtns()
     invalidState = false
@@ -457,8 +479,8 @@ class KeyboardViewController: UIInputViewController {
             scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
-            previewLabel?.backgroundColor = UIColor.clear
-            previewLabel?.text = ""
+            previewBar?.backgroundColor = UIColor.clear
+            previewBar?.text = ""
 
             styleBtn(btn: translateBtn, title: "Translate", radius: btnKeyCornerRadius)
             styleBtn(btn: conjugateBtn, title: "Conjugate", radius: btnKeyCornerRadius)
@@ -478,20 +500,20 @@ class KeyboardViewController: UIInputViewController {
             deactivateBtn(btn: translateBtn)
             deactivateBtn(btn: pluralBtn)
 
-            previewLabel?.clipsToBounds = true
-            previewLabel?.layer.cornerRadius = btnKeyCornerRadius
-            previewLabel?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            previewBar?.clipsToBounds = true
+            previewBar?.layer.cornerRadius = btnKeyCornerRadius
+            previewBar?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             if DeviceType.isPhone {
-              previewLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+              previewBar?.font = .systemFont(ofSize: letterButtonWidth / 2)
             } else if DeviceType.isPad {
-              previewLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+              previewBar?.font = .systemFont(ofSize: letterButtonWidth / 4)
             }
-            previewLabel?.textColor = UIColor.label
-            previewLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+            previewBar?.textColor = UIColor.label
+            previewBar?.lineBreakMode = NSLineBreakMode.byWordWrapping
             if previewState == false {
-              previewLabel?.text = ""
+              previewBar?.text = ""
             }
-            previewLabel?.sizeToFit()
+            previewBar?.sizeToFit()
           }
 
           // Pad before key is added.
@@ -744,8 +766,8 @@ class KeyboardViewController: UIInputViewController {
       scribeBtn?.layer.cornerRadius = buttonWidth / 4
       scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
-      previewLabel?.backgroundColor = specialKeyColor
-      previewLabel?.textColor = UIColor.label
+      previewBar?.backgroundColor = specialKeyColor
+      previewBar?.textColor = UIColor.label
 
       deactivateBtn(btn: conjugateBtn)
       deactivateBtn(btn: translateBtn)
@@ -780,14 +802,14 @@ class KeyboardViewController: UIInputViewController {
   func handlDeleteButtonPressed() {
     if previewState != true {
       proxy.deleteBackward()
-    } else if !(previewState == true && allPrompts.contains((previewLabel?.text!)!)) {
+    } else if !(previewState == true && allPrompts.contains((previewBar?.text!)!)) {
       guard
-        let text = previewLabel?.text,
+        let text = previewBar?.text,
         !text.isEmpty
       else {
         return
       }
-      previewLabel?.text = previewLabel.text!.deletePriorToCursor()
+      previewBar?.text = previewBar.text!.deletePriorToCursor()
     } else {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
@@ -796,10 +818,10 @@ class KeyboardViewController: UIInputViewController {
 
   func queryTranslation() {
     // Cancel via a return press.
-    if previewLabel?.text! == translatePromptAndCursor {
+    if previewBar?.text! == translatePromptAndCursor {
       return
     }
-    let word = previewLabel?.text!.substring(with: conjugatePrompt.count..<((previewLabel?.text!.count)!-1))
+    let word = previewBar?.text!.substring(with: conjugatePrompt.count..<((previewBar?.text!.count)!-1))
     let lowerCaseWord = word!.lowercased()
     let wordInDirectory = translations?[lowerCaseWord] != nil
     if wordInDirectory {
@@ -811,10 +833,10 @@ class KeyboardViewController: UIInputViewController {
 
   func queryConjugation() {
     // Cancel via a return press.
-    if previewLabel?.text! == conjugatePromptAndCursor {
+    if previewBar?.text! == conjugatePromptAndCursor {
       return
     }
-    verbToConjugate = (previewLabel?.text!.substring(with: conjugatePrompt.count..<((previewLabel?.text!.count)!-1)))!
+    verbToConjugate = (previewBar?.text!.substring(with: conjugatePrompt.count..<((previewBar?.text!.count)!-1)))!
     let verbInDirectory = verbs?[verbToConjugate] != nil
     if verbInDirectory {
       conjugateView = true
@@ -826,10 +848,10 @@ class KeyboardViewController: UIInputViewController {
 
   func queryPlural() {
     // Cancel via a return press.
-    if previewLabel?.text! == pluralPromptAndCursor {
+    if previewBar?.text! == pluralPromptAndCursor {
       return
     }
-    var noun = previewLabel?.text!.substring(with: pluralPrompt.count..<((previewLabel?.text!.count)!-1))
+    var noun = previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1))
     var queriedWordIsUpperCase: Bool = false
     // Check to see if the input was uppercase to return an uppercase plural.
     if controllerLanguage == "Spanish" {
@@ -848,7 +870,7 @@ class KeyboardViewController: UIInputViewController {
         }
       } else {
         proxy.insertText(noun! + " ")
-        previewLabel?.text = previewPromptSpacing + "Already plural"
+        previewBar?.text = previewPromptSpacing + "Already plural"
         invalidState = true
         isAlreadyPluralState = true
       }
@@ -871,42 +893,42 @@ class KeyboardViewController: UIInputViewController {
       let nounForm = nouns?[selectedWord!]?["form"] as? String
       if nounForm == "F" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
-          previewLabel?.textColor = UIColor.previewRedDarkTheme
+          previewBar?.textColor = UIColor.previewRedDarkTheme
         } else {
-          previewLabel?.textColor = UIColor.previewRedLightTheme
+          previewBar?.textColor = UIColor.previewRedLightTheme
         }
       } else if nounForm == "M" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
-          previewLabel?.textColor = UIColor.previewBlueDarkTheme
+          previewBar?.textColor = UIColor.previewBlueDarkTheme
         } else {
-          previewLabel?.textColor = UIColor.previewBlueLightTheme
+          previewBar?.textColor = UIColor.previewBlueLightTheme
         }
       } else if nounForm ==  "N" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
-          previewLabel?.textColor = UIColor.previewGreenDarkTheme
+          previewBar?.textColor = UIColor.previewGreenDarkTheme
         } else {
-          previewLabel?.textColor = UIColor.previewGreenLightTheme
+          previewBar?.textColor = UIColor.previewGreenLightTheme
         }
       } else if nounForm ==  "PL" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
-          previewLabel?.textColor = UIColor.previewOrangeDarkTheme
+          previewBar?.textColor = UIColor.previewOrangeDarkTheme
         } else {
-          previewLabel?.textColor = UIColor.previewOrangeLightTheme
+          previewBar?.textColor = UIColor.previewOrangeLightTheme
         }
       } else if nounForm ==  "" {
         invalidState = true
       } else {
-        previewLabel?.textColor = UIColor.label
+        previewBar?.textColor = UIColor.label
       }
 
       if invalidState != true {
         if queriedWordIsUpperCase == false {
-          previewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!
+          previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!
         } else {
-          previewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!.capitalized
+          previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!.capitalized
         }
       }
-      previewLabel?.sizeToFit()
+      previewBar?.sizeToFit()
       invalidState = false
     }
   }
@@ -927,42 +949,42 @@ class KeyboardViewController: UIInputViewController {
         let nounForm = nouns?[lastWordTyped!]?["form"] as? String
         if nounForm == "F" {
           if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewLabel?.textColor = UIColor.previewRedDarkTheme
+            previewBar?.textColor = UIColor.previewRedDarkTheme
           } else {
-            previewLabel?.textColor = UIColor.previewRedLightTheme
+            previewBar?.textColor = UIColor.previewRedLightTheme
           }
         } else if nounForm == "M" {
           if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewLabel?.textColor = UIColor.previewBlueDarkTheme
+            previewBar?.textColor = UIColor.previewBlueDarkTheme
           } else {
-            previewLabel?.textColor = UIColor.previewBlueLightTheme
+            previewBar?.textColor = UIColor.previewBlueLightTheme
           }
         } else if nounForm ==  "N" {
           if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewLabel?.textColor = UIColor.previewGreenDarkTheme
+            previewBar?.textColor = UIColor.previewGreenDarkTheme
           } else {
-            previewLabel?.textColor = UIColor.previewGreenLightTheme
+            previewBar?.textColor = UIColor.previewGreenLightTheme
           }
         } else if nounForm ==  "PL" {
           if UITraitCollection.current.userInterfaceStyle == .dark {
-            previewLabel?.textColor = UIColor.previewOrangeDarkTheme
+            previewBar?.textColor = UIColor.previewOrangeDarkTheme
           } else {
-            previewLabel?.textColor = UIColor.previewOrangeLightTheme
+            previewBar?.textColor = UIColor.previewOrangeLightTheme
           }
         } else if nounForm ==  "" {
           invalidState = true
         } else {
-          previewLabel?.textColor = UIColor.label
+          previewBar?.textColor = UIColor.label
         }
 
         if invalidState != true {
           if queriedWordIsUpperCase == false {
-            previewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
+            previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
           } else {
-            previewLabel?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!.capitalized
+            previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!.capitalized
           }
         }
-        previewLabel?.sizeToFit()
+        previewBar?.sizeToFit()
         invalidState = false
       }
     }
@@ -980,11 +1002,11 @@ class KeyboardViewController: UIInputViewController {
       if isPreposition {
         let prepositionCase = prepositions?[selectedWord!] as? String
         if queriedWordIsUpperCase == false {
-          previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
+          previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
         } else {
-          previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!.capitalized
+          previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!.capitalized
         }
-        previewLabel?.sizeToFit()
+        previewBar?.sizeToFit()
       }
     }
   }
@@ -1003,20 +1025,20 @@ class KeyboardViewController: UIInputViewController {
         if isPreposition {
           let prepositionCase = prepositions?[lastWordTyped!] as? String
           if queriedWordIsUpperCase == false {
-            previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
+            previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
           } else {
-            previewLabel?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
+            previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
           }
-          previewLabel?.sizeToFit()
+          previewBar?.sizeToFit()
         }
       }
     }
   }
 
-  func clearPreviewLabel() {
+  func clearPreviewBar() {
     if previewState != true {
-      previewLabel?.textColor = UIColor.label
-      previewLabel?.text = " "
+      previewBar?.textColor = UIColor.label
+      previewBar?.text = " "
     }
   }
 
@@ -1056,7 +1078,7 @@ class KeyboardViewController: UIInputViewController {
       scribeBtnState = false
       previewState = true
       loadKeys()
-      previewLabel?.text = translatePromptAndCursor
+      previewBar?.text = translatePromptAndCursor
       getTranslation = true
 
     case "Conjugate":
@@ -1066,7 +1088,7 @@ class KeyboardViewController: UIInputViewController {
       }
       previewState = true
       loadKeys()
-      previewLabel?.text = conjugatePromptAndCursor
+      previewBar?.text = conjugatePromptAndCursor
       getConjugation = true
 
     case "shiftConjugateLeft":
@@ -1094,7 +1116,7 @@ class KeyboardViewController: UIInputViewController {
       }
       previewState = true
       loadKeys()
-      previewLabel?.text = pluralPromptAndCursor
+      previewBar?.text = pluralPromptAndCursor
       getPlural = true
 
     case "firstPersonSingular":
@@ -1181,7 +1203,7 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
       // Prevent the preview state prompt from being deleted.
-      if previewState == true && allPrompts.contains((previewLabel?.text!)!) {
+      if previewState == true && allPrompts.contains((previewBar?.text!)!) {
         return
       }
       handlDeleteButtonPressed()
@@ -1191,30 +1213,30 @@ class KeyboardViewController: UIInputViewController {
           loadKeys()
         }
       }
-      clearPreviewLabel()
+      clearPreviewBar()
 
     case "Leerzeichen":
       if previewState != true {
         proxy.insertText(" ")
       } else {
-        previewLabel?.text! = (previewLabel?.text!.insertPriorToCursor(char: " "))!
+        previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
       }
       typedNounAnnotation()
       typedPrepositionAnnotation()
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
-        clearPreviewLabel()
+        clearPreviewBar()
       }
 
     case "espacio":
       if previewState != true {
         proxy.insertText(" ")
       } else {
-        previewLabel?.text! = (previewLabel?.text!.insertPriorToCursor(char: " "))!
+        previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
       }
       typedNounAnnotation()
       typedPrepositionAnnotation()
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
-        clearPreviewLabel()
+        clearPreviewBar()
       }
 
     case "selectKeyboard":
@@ -1240,7 +1262,7 @@ class KeyboardViewController: UIInputViewController {
       }
       if previewState == false {
         proxy.insertText("\n")
-        clearPreviewLabel()
+        clearPreviewBar()
       } else if invalidState == true {
         previewState = false
         // Auto-capitalization if at the start of the proxy.
@@ -1253,15 +1275,15 @@ class KeyboardViewController: UIInputViewController {
         }
         proxy.deleteBackward()
         if isAlreadyPluralState != true {
-          previewLabel?.text = previewPromptSpacing + "Not in directory"
+          previewBar?.text = previewPromptSpacing + "Not in directory"
         }
-        previewLabel?.textColor = UIColor.label
+        previewBar?.textColor = UIColor.label
 
         invalidState = false
         isAlreadyPluralState = false
       } else {
         previewState = false
-        clearPreviewLabel()
+        clearPreviewBar()
         // Auto-capitalization if at the start of the proxy.
         proxy.insertText(" ")
         if proxy.documentContextBeforeInput == " " {
@@ -1281,15 +1303,15 @@ class KeyboardViewController: UIInputViewController {
 
     case "123":
       changeKeyboardToNumberKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
 
     case ".?123":
       changeKeyboardToNumberKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
 
     case "ABC":
       changeKeyboardToLetterKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
       proxy.insertText(" ")
       if proxy.documentContextBeforeInput == " " {
         if shiftButtonState == .normal {
@@ -1303,19 +1325,19 @@ class KeyboardViewController: UIInputViewController {
       if previewState != true {
         proxy.insertText("'")
       } else {
-        previewLabel?.text! = (previewLabel?.text!.insertPriorToCursor(char: "'"))!
+        previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: "'"))!
       }
       changeKeyboardToLetterKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
 
     case "#+=":
       changeKeyboardToSymbolKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
 
     case "shift":
       shiftButtonState = shiftButtonState == .normal ? .shift : .normal
       loadKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
 
     default:
       if shiftButtonState == .shift {
@@ -1324,9 +1346,9 @@ class KeyboardViewController: UIInputViewController {
       }
       if previewState == false {
         proxy.insertText(keyToDisplay)
-        clearPreviewLabel()
+        clearPreviewBar()
       } else {
-        previewLabel?.text = previewLabel?.text!.insertPriorToCursor(char: keyToDisplay)
+        previewBar?.text = previewBar?.text!.insertPriorToCursor(char: keyToDisplay)
       }
     }
     if self.view.viewWithTag(1001) != nil {
@@ -1342,7 +1364,7 @@ class KeyboardViewController: UIInputViewController {
     if touch.tapCount == 2 && originalKey == "shift" {
       shiftButtonState = .caps
       loadKeys()
-      clearPreviewLabel()
+      clearPreviewBar()
     }
     // Double space period shortcut.
     if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 {
@@ -1352,12 +1374,12 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .shift
         loadKeys()
       } else if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == true {
-        previewLabel?.text! = (previewLabel?.text!.deletePriorToCursor())!
-        previewLabel?.text! = (previewLabel?.text!.insertPriorToCursor(char: ". "))!
+        previewBar?.text! = (previewBar?.text!.deletePriorToCursor())!
+        previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: ". "))!
         shiftButtonState = .shift
         loadKeys()
       }
-      clearPreviewLabel()
+      clearPreviewBar()
     }
   }
 
@@ -1953,7 +1975,7 @@ class KeyboardViewController: UIInputViewController {
 
   @objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the preview state prompt from being deleted.
-    if previewState == true && allPrompts.contains((previewLabel?.text!)!) {
+    if previewState == true && allPrompts.contains((previewBar?.text!)!) {
       gesture.state = .cancelled
     }
     if gesture.state == .began {
