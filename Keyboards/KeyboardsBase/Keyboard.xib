@@ -36,7 +36,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr3-T8-7HB" userLabel="ConjugateLeft">
                     <rect key="frame" x="3" y="51.5" width="24" height="205.5"/>
-                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="CBI-02-jwC"/>
                     </constraints>
@@ -46,7 +46,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epX-eh-uqd" userLabel="ConjugateRight">
                     <rect key="frame" x="293" y="51.5" width="24" height="205.5"/>
-                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                     <buttonConfiguration key="configuration" style="plain" title=""/>
@@ -249,6 +249,9 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -257,9 +260,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,18 +6,24 @@
 
 import UIKit
 
+// All data needed for Scribe features for the given language keyboard.
 let nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
 
 class KeyboardViewController: UIInputViewController {
-
   var keyboardView: UIView!
   var keys: [UIButton] = []
   var paddingViews: [UIButton] = []
   @IBOutlet var selectKeyboardButton: UIButton!
   var backspaceTimer: Timer?
+
+  // Stack views that are populated with they keyboard rows.
+  @IBOutlet weak var stackView1: UIStackView!
+  @IBOutlet weak var stackView2: UIStackView!
+  @IBOutlet weak var stackView3: UIStackView!
+  @IBOutlet weak var stackView4: UIStackView!
 
   /// Sets the keyboard layouts given the chosen keyboard and device type.
   func setKeyboardLayouts() {
@@ -42,6 +48,25 @@ class KeyboardViewController: UIInputViewController {
         symbolKeys = SpanishKeyboardConstants.symbolKeysPad
       }
     }
+  }
+
+  /// Changes the keyboard state such that the letters view will be shown.
+  func changeKeyboardToLetterKeys() {
+    keyboardState = .letters
+    loadKeys()
+  }
+
+  /// Changes the keyboard state such that the numbers view will be shown.
+  func changeKeyboardToNumberKeys() {
+    keyboardState = .numbers
+    shiftButtonState = .normal
+    loadKeys()
+  }
+
+  /// Changes the keyboard state such that the symbols view will be shown.
+  func changeKeyboardToSymbolKeys() {
+    keyboardState = .symbols
+    loadKeys()
   }
 
   /// Styles a button's appearance including it's shape and text.
@@ -81,6 +106,26 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
+  /// Changes the proxy or preview bar given the current constaints.
+  func handlDeleteButtonPressed() {
+    if previewState != true {
+      proxy.deleteBackward()
+    } else if !(previewState == true && allPrompts.contains((previewBar?.text!)!)) {
+      guard
+        let text = previewBar?.text,
+        !text.isEmpty
+      else {
+        return
+      }
+      previewBar?.text = previewBar.text!.deletePriorToCursor()
+    } else {
+      backspaceTimer?.invalidate()
+      backspaceTimer = nil
+    }
+  }
+
+  // MARK: Scribe command elements
+
   /// Sets a button's values that are displayed and inseted into the proxy as well as assigning a color.
   ///
   /// - Parameters
@@ -111,28 +156,37 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: btn)
   }
 
+  // The bar that displays language logic or is typed into for Scribe commands.
   @IBOutlet var previewBar: UILabel!
-  /// Sets up the preview bar
+
+  /// Sets up the preview bar's color and text allignment.
   func setPreviewBar() {
     previewBar?.backgroundColor = specialKeyColor
     previewBar?.textAlignment = NSTextAlignment.left
   }
 
+  // The button used to display Scribe commands.
   @IBOutlet var scribeBtn: UIButton!
+
+  /// Assigns the icon and sets up the Scribe button.
   func setScribeBtn() {
     scribeBtn.setImage(UIImage(named: "ScribeBtn.png"), for: .normal)
     setBtn(btn: scribeBtn, color: UIColor.scribeBlue, name: "Scribe", canCapitalize: false, isSpecial: false)
   }
 
+  // Buttons used to trigger Scribe command functionality.
   @IBOutlet var translateBtn: UIButton!
   @IBOutlet var conjugateBtn: UIButton!
   @IBOutlet var pluralBtn: UIButton!
+
+  /// Sets up all buttons that are assosciated with Scribe commands.
   func setCommandBtns() {
     setBtn(btn: translateBtn, color: specialKeyColor, name: "Translate", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtn, color: specialKeyColor, name: "Conjugate", canCapitalize: false, isSpecial: false)
     setBtn(btn: pluralBtn, color: specialKeyColor, name: "Plural", canCapitalize: false, isSpecial: false)
   }
 
+  // Buttons for the conjugation view.
   @IBOutlet var conjugateBtnFPS: UIButton!
   @IBOutlet var conjugateBtnSPS: UIButton!
   @IBOutlet var conjugateBtnTPS: UIButton!
@@ -143,6 +197,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateShiftLeftBtn: UIButton!
   @IBOutlet var conjugateShiftRightBtn: UIButton!
 
+  /// Sets up all buttons that are associated with the conjugation display.
   func setConjugationBtns() {
     setBtn(btn: conjugateBtnFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtnSPS, color: keyColor, name: "secondPersonSingular", canCapitalize: false, isSpecial: false)
@@ -155,6 +210,7 @@ class KeyboardViewController: UIInputViewController {
     setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", canCapitalize: false, isSpecial: false)
   }
 
+  /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
     activateBtn(btn: conjugateBtnFPS)
     activateBtn(btn: conjugateBtnSPS)
@@ -167,6 +223,7 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: conjugateShiftRightBtn)
   }
 
+  /// Deactivates all buttons that are associated with the conjugation display.
   func deactivateConjugationDisplay() {
     deactivateBtn(btn: conjugateBtnFPS)
     deactivateBtn(btn: conjugateBtnSPS)
@@ -179,6 +236,7 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateShiftRightBtn)
   }
 
+  /// Sets the label of the conjugation statea nd assigns the current tenses that are accessed to label the buttons.
   func setConjugationState() {
     if controllerLanguage == "German" {
       previewBar?.text = deGetConjugationTitle()
@@ -213,68 +271,11 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  @IBOutlet weak var stackView1: UIStackView!
-  @IBOutlet weak var stackView2: UIStackView!
-  @IBOutlet weak var stackView3: UIStackView!
-  @IBOutlet weak var stackView4: UIStackView!
-
-  override func updateViewConstraints() {
-    super.updateViewConstraints()
-    // Add custom view sizing constraints here.
-    keyboardView.frame.size = view.frame.size
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    proxy = textDocumentProxy as UITextDocumentProxy
-    loadInterface()
-    self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-  }
-
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
-
-  override func viewWillLayoutSubviews() {
-    self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-    super.viewWillLayoutSubviews()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-
-    if DeviceType.isPhone {
-      if isLandscapeView == true {
-        keyboardHeight = 180
-      } else {
-        keyboardHeight = 240
-      }
-    } else if DeviceType.isPad {
-      if isLandscapeView == true {
-        keyboardHeight = 320
-      } else {
-        keyboardHeight = 340
-      }
-    }
-
-    let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
-    view.addConstraint(heightConstraint)
-  }
-
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    super.viewWillTransition(to: size, with: coordinator)
-    loadKeys()
-  }
-
-  func loadInterface() {
-    let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
-    keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
-    keyboardView.translatesAutoresizingMaskIntoConstraints = true
-    view.addSubview(keyboardView)
-    loadKeys()
-  }
-
+  /// Adds padding to keys to position them.
+  /// - Parameters
+  ///  - to: the stackView in which the button is found.
+  ///  - width: the width of the padding.
+  ///  - key: the key assosciated with the bytton.
   func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
     let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
     padding.setTitleColor(.clear, for: .normal)
@@ -296,6 +297,69 @@ class KeyboardViewController: UIInputViewController {
   // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
   // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
+  // MARK: Override UIInputViewController functions
+
+  /// Includes adding custom view sizing constraints.
+  override func updateViewConstraints() {
+    super.updateViewConstraints()
+    keyboardView.frame.size = view.frame.size
+  }
+
+  /// Includes instantiation of the interface builder given the UINib, adding sub views, and loading keys.
+  func loadInterface() {
+    let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
+    keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
+    keyboardView.translatesAutoresizingMaskIntoConstraints = true
+    view.addSubview(keyboardView)
+    loadKeys()
+  }
+
+  /// Includes assignment of the proxy, loading the Scribe interface, and adds the keyboard selector target.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    proxy = textDocumentProxy as UITextDocumentProxy
+    loadInterface()
+    self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+  }
+
+  /// Includes hiding the keyboard selector button if it is not needed for the current device.
+  override func viewWillLayoutSubviews() {
+    self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+    super.viewWillLayoutSubviews()
+  }
+
+  /// Includes conditions to assign the keyboard height given device type and orientation.
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if DeviceType.isPhone {
+      if isLandscapeView == true {
+        keyboardHeight = 180
+      } else {
+        keyboardHeight = 240
+      }
+    } else if DeviceType.isPad {
+      if isLandscapeView == true {
+        keyboardHeight = 320
+      } else {
+        keyboardHeight = 340
+      }
+    }
+
+    let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
+    view.addConstraint(heightConstraint)
+  }
+
+  /// Includes a call to loadKeys to reload the display after an orientation change.
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    loadKeys()
+  }
+
+  // MARK: Load keys
+
+  /// Loads the keys given the current constraints.
   func loadKeys() {
     // German or Spanish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
@@ -364,7 +428,6 @@ class KeyboardViewController: UIInputViewController {
     case .letters:
       keyboard = letterKeys
       buttonWidth = letterButtonWidth
-      alternateButtonWidth = buttonWidth * 0.9
       // Auto-capitalization.
       if proxy.documentContextBeforeInput?.count == 0 {
         shiftButtonState = .shift
@@ -372,11 +435,9 @@ class KeyboardViewController: UIInputViewController {
     case .numbers:
       keyboard = numberKeys
       buttonWidth = numSymButtonWidth
-      alternateButtonWidth = buttonWidth * 0.9
     case .symbols:
       keyboard = symbolKeys
       buttonWidth = numSymButtonWidth
-      alternateButtonWidth = buttonWidth * 0.9
     }
 
     if DeviceType.isPhone {
@@ -783,39 +844,9 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  func changeKeyboardToNumberKeys() {
-    keyboardState = .numbers
-    shiftButtonState = .normal
-    loadKeys()
-  }
+  // MARK: Scribe command functionality
 
-  func changeKeyboardToLetterKeys() {
-    keyboardState = .letters
-    loadKeys()
-  }
-
-  func changeKeyboardToSymbolKeys() {
-    keyboardState = .symbols
-    loadKeys()
-  }
-
-  func handlDeleteButtonPressed() {
-    if previewState != true {
-      proxy.deleteBackward()
-    } else if !(previewState == true && allPrompts.contains((previewBar?.text!)!)) {
-      guard
-        let text = previewBar?.text,
-        !text.isEmpty
-      else {
-        return
-      }
-      previewBar?.text = previewBar.text!.deletePriorToCursor()
-    } else {
-      backspaceTimer?.invalidate()
-      backspaceTimer = nil
-    }
-  }
-
+  /// Inserts the translation of a valid word in the preview bar into the proxy.
   func queryTranslation() {
     // Cancel via a return press.
     if previewBar?.text! == translatePromptAndCursor {
@@ -831,6 +862,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Triggers the display of the conjugation view for a valid verb in the preview bar.
   func queryConjugation() {
     // Cancel via a return press.
     if previewBar?.text! == conjugatePromptAndCursor {
@@ -846,6 +878,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Inserts the plural of a valid noun in the preview bar into the proxy.
   func queryPlural() {
     // Cancel via a return press.
     if previewBar?.text! == pluralPromptAndCursor {
@@ -879,6 +912,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Annotates the preview bar with the form of a valid selected noun.
   func selectedNounAnnotation() {
     var selectedWord = proxy.selectedText
     var queriedWordIsUpperCase: Bool = false
@@ -933,6 +967,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Annotates the preview bar with the form of a valid typed noun.
   func typedNounAnnotation() {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
@@ -990,6 +1025,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Annotates the preview bar with the form of a valid selected preposition.
   func selectedPrepositionAnnotation() {
     if controllerLanguage == "German" {
       var selectedWord = proxy.selectedText
@@ -1011,6 +1047,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Annotates the preview bar with the form of a valid typed preposition.
   func typedPrepositionAnnotation() {
     if controllerLanguage == "German" {
       if proxy.documentContextBeforeInput != nil {
@@ -1035,6 +1072,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Clears the text found in the preview bar.
   func clearPreviewBar() {
     if previewState != true {
       previewBar?.textColor = UIColor.label
@@ -1042,6 +1080,12 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  // MARK: Button actions
+
+  /// Triggers actions based on the press of a key.
+  ///
+  /// - Parameters
+  ///   - sender: the button pressed as sender.
   @IBAction func keyPressedTouchUp(_ sender: UIButton) {
     guard let originalKey = sender.layer.value(forKey: "original") as? String, let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {return}
 
@@ -1357,9 +1401,34 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  // MARK: Key press functions
+
+  /// Colors keys to show they have been pressed.
+  ///
+  /// - Parameters
+  ///   - sender: the key that was pressed.
+  @objc func keyTouchDown(_ sender: UIButton) {
+    sender.backgroundColor = keyPressedColor
+
+    let senderKey = sender.layer.value(forKey: "original") as? String
+    if senderKey == "Scribe" {
+      sender.alpha = 0.5
+      // Bring sender's opacity back up to fully opaque
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+          sender.alpha = 1.0
+      }
+    }
+  }
+
+  /// Defines events that occur given multiple presses of a single key.
+  ///
+  /// - Parameters
+  ///  - sender: the key that was pressed multiple times.
+  ///  - event: event to derive tap counts.
   @objc func keyMultiPress(_ sender: UIButton, event: UIEvent) {
     guard let originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
+    // Caps lock given two taps of shift.
     let touch: UITouch = event.allTouches!.first!
     if touch.tapCount == 2 && originalKey == "shift" {
       shiftButtonState = .caps
@@ -1383,596 +1452,10 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  @objc func aLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(aAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in aAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func eLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(eAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in eAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func iLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(iAlternateKeys.count)
-    let viewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (5.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in iAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func oLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(oAlternateKeys.count)
-    let viewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (5.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in oAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func uLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(uAlternateKeys.count)
-    let viewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in uAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func yLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(yAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in yAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func sLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(sAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in sAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal || char == "ß" {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func dLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(dAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in dAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal || char == "ß" {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func cLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(cAlternateKeys.count)
-    let viewX = tapLocation.x - 10.0
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in cAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
-  @objc func nLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    let numAlternates = CGFloat(nAlternateKeys.count)
-    let viewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
-    var viewWidth = CGFloat(0)
-    if numAlternates > 0 {
-      viewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    var alternateBtnStartX = 5.0
-    var viewY = 0.0
-    var alternatesBtnHeight = 0.0
-    var alternatesCharHeight = 0.0
-    if DeviceType.isPhone {
-      viewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      viewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: alternatesBtnHeight))
-
-    // Only run this code when the state begins.
-    if sender.state != UIGestureRecognizer.State.began {
-      return
-    }
-    // If alternateKeysView is Already in added than remove and then add.
-    if self.view.viewWithTag(1001) != nil {
-      alternatesKeyView.removeFromSuperview()
-    }
-
-    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
-
-    for char in nAlternateKeys {
-      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: buttonWidth, height: alternatesBtnHeight))
-      if shiftButtonState == .normal {
-        btn.setTitle(char, for: .normal)
-      } else {
-        btn.setTitle(char.capitalized, for: .normal)
-      }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
-
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
-
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
-    }
-    self.view.addSubview(alternatesKeyView)
-  }
-
+  /// Defines the criteria under which a key is long pressed.
+  ///
+  /// - Parameters
+  ///   - gesture: the gesture that was recived.
   @objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the preview state prompt from being deleted.
     if previewState == true && allPrompts.contains((previewBar?.text!)!) {
@@ -1989,37 +1472,169 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Resets key coloration after they have been annotated to by keyPressedColor.
+  ///
+  /// - Parameters
+  ///   - sender: the key that was pressed.
   @objc func keyUntouched(_ sender: UIButton) {
     guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
   }
 
-  @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = keyPressedColor
+  // MARK: Hold to select functions
 
-    let senderKey = sender.layer.value(forKey: "original") as? String
-    if senderKey == "Scribe" {
-      sender.alpha = 0.5
-      // Bring sender's opacity back up to fully opaque
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-          sender.alpha = 1.0
-      }
+  /// Sets and styles the view displayed for hold-to-select keys.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  ///   - numAlternates: number of alternates for the given key.
+  func setAlternatesView(sender: UILongPressGestureRecognizer, keyOn: String, alternateKeys: Array<String>) {
+    let tapLocation = sender.location(in: self.view)
+    let numAlternates = CGFloat(alternateKeys.count)
+
+    // Variables for alternate key view appearance.
+    var alternatesViewWidth = CGFloat(0)
+    var alternatesViewX = CGFloat(0)
+    var alternatesViewY = CGFloat(0)
+    let alternateButtonWidth = buttonWidth * 0.9
+    var alternateBtnStartX = CGFloat(0)
+    var alternatesBtnHeight = CGFloat(0)
+    var alternatesCharHeight = CGFloat(0)
+
+    if keyOn == "Left" {
+      alternatesViewX = tapLocation.x - 10.0
+    } else if keyOn == "Right" {
+      alternatesViewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
     }
+
+    if numAlternates > 0 {
+      alternatesViewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
+    }
+
+    if DeviceType.isPhone {
+      alternatesViewY = tapLocation.y - 50.0
+      alternatesBtnHeight = buttonWidth * 1.4
+      alternatesCharHeight = buttonWidth / 2
+    } else if DeviceType.isPad {
+      alternatesViewY = tapLocation.y - 100.0
+      alternatesBtnHeight = buttonWidth
+      alternatesCharHeight = buttonWidth / 3
+    }
+
+    alternatesKeyView = UIView(frame: CGRect(x: alternatesViewX, y: alternatesViewY, width: alternatesViewWidth, height: alternatesBtnHeight))
+
+    // Only run this code when the state begins.
+    if sender.state != UIGestureRecognizer.State.began {
+      return
+    }
+    // If alternateKeysView is already added than remove and then add again.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+    }
+
+    alternatesKeyView.backgroundColor = keyboardView.backgroundColor
+    alternatesKeyView.layer.cornerRadius = 5
+    alternatesKeyView.layer.borderWidth = 1
+    alternatesKeyView.tag = 1001
+    alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
+
+    alternateBtnStartX = 5.0
+    for char in alternateKeys {
+      let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
+      if shiftButtonState == .normal || char == "ß" {
+        btn.setTitle(char, for: .normal)
+      } else {
+        btn.setTitle(char.capitalized, for: .normal)
+      }
+      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
+      btn.setTitleColor(UIColor.label, for: .normal)
+
+      alternatesKeyView.addSubview(btn)
+      setBtn(btn: btn, color: keyboardView.backgroundColor!, name: char, canCapitalize: true, isSpecial: false)
+
+      alternateBtnStartX += (alternateButtonWidth + 3.0)
+    }
+    self.view.addSubview(alternatesKeyView)
   }
 
-  override func textWillChange(_ textInput: UITextInput?) {
-    // The app is about to change the document's contents. Perform any preparation here.
+  /// Adds a view with alternate keys above the a key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func aLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: aAlternateKeys)
   }
 
-  override func textDidChange(_ textInput: UITextInput?) {
-    // The app has just changed the document's contents, the document context has been updated.
+  /// Adds a view with alternate keys above the e key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func eLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: eAlternateKeys)
   }
 
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    // Trait collection has already changed
+  /// Adds a view with alternate keys above the i key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func iLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: iAlternateKeys)
   }
 
-  override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-    // Trait collection will change. Use this one so you know what the state is changing to.
+  /// Adds a view with alternate keys above the o key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func oLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: oAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the u key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func uLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: uAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the y key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func yLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: yAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the s key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func sLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: sAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the d key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func dLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: dAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the c key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func cLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: cAlternateKeys)
+  }
+
+  /// Adds a view with alternate keys above the n key.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func nLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
+    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: nAlternateKeys)
   }
 }
