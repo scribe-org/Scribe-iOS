@@ -178,7 +178,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - For example: providing `Conjugate` as an option for verb translations when `Translate` provides selectable options
 
-- Hold space bar to move cursor functionality [(see issue)]()
+- Hold space bar to move cursor and select text functionality [(see issue)]()
 
 - Adding `Synonym` functionality (especially useful for native speakers of the language) [(see issue)]()
 
@@ -221,6 +221,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Adding the pronouns to the conjugation view as an indicator of which conjugation corresponds to which cell [(see issue)]()
 
   - Ideally the pronoun would be greyed out at the top left of the conjugation cell
+
+- Discussing the potential for custom styles for Scribe keyboards [(see issue)]()
 
 ## Data
 
