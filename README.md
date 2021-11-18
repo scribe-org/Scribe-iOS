@@ -39,7 +39,7 @@ Scribe keyboard features are accessed via the `Scribe key` at the top left of an
 
 ### Translation
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages and then to provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages. Later this feature will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
 
 As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
 
@@ -204,7 +204,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
 
-- Adding a feature where the Scribe UI can be hidden with an element to show the UI again [(see issue)]()
+- Adding a feature where the Scribe UI can be hidden (including an element to show the UI again) [(see issue)]()
 
   - Long holding keys for alternate characters would need to be edited to make sure that the alternates would still be fully within the keyboard view
 
@@ -222,7 +222,7 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
   - For example: agua (water) is feminine, but it's "el agua" to avoid "la agua" (but still "las aguas")
 
-- Many German verbs do not have auxiliary verbs meaning that their full perfect conjugations cannot be displayed [(see issue)]()
+- Many German verbs do not have auxiliary verbs on [Wikidata](https://www.wikidata.org/) meaning that their full perfect conjugations cannot be displayed [(see issue)]()
 
 - Adding missing verb conjugations to [Wikidata](https://www.wikidata.org/) [(see issue)]()
 
