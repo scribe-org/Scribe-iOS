@@ -16,7 +16,7 @@
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and noun annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
-Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/) and stored in app, so an internet connection is not required. Being fully open-source, Scribe prioritizes user privacy and doesn't collect usage data or ask for system access.
+Being fully open-source, Scribe prioritizes user privacy and doesn't collect usage data or ask for system access.
 
 # **Contents**<a id="contents"></a>
 
@@ -35,7 +35,9 @@ Users access Scribe language keyboards through the following:
 
 # Features [`⇧`](#contents) <a id="features"></a>
 
-Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field. An extra space is inserted after so that these features function like auto-suggestions. Current features include:
+Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These buttons allow for words to be queried and inserted into the text field followed by a space. Scribe feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in app, so an internet connection is not required.
+
+Current features include:
 
 ### Translation
 
@@ -128,9 +130,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality
 
-- Code cleaning
-
 - Baseline fixes to translations.json files
+
+- Creating preview media including videos and images
 
 - Releasing Scribe-iOS MVP
 
