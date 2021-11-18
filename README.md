@@ -14,9 +14,9 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS power user keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and noun annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and noun annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
-Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/), with [WDQS](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) queries being written to produce JSON files for easy reference. Being fully open-source, Scribe prioritizes user privacy and doesn't ask for any data or system access.
+Data for Scribe keyboards is sourced from [Wikidata](https://www.wikidata.org/) and stored in app, so an internet connection is not required. Being fully open-source, Scribe prioritizes user privacy and doesn't collect usage data or ask for system access.
 
 # **Contents**<a id="contents"></a>
 
@@ -168,7 +168,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - This would allow users to do certain actions like selecting just participles or the full conjugation with helper verbs
 
-- Allowing certain features to be changed in the system settings and/or in the Scribe app [(see issue)]()
+- Adding settings to choose which Scribe functionality is available or order commands when the `Scribe key` is pressed [(see issue)]()
 
 - Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed [(see issue)]()
 
@@ -177,6 +177,14 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Devising and implementing a way to effectively chain Scribe commands together [(see issue)]()
 
   - For example: providing `Conjugate` as an option for verb translations when `Translate` provides selectable options
+
+- Hold space bar to move cursor functionality [(see issue)]()
+
+- Adding `Synonym` functionality (especially useful for native speakers of the language) [(see issue)]()
+
+- Using saved vector representations of words to effectively order the suggestions for the future `Translate` feature [(see issue)]()
+
+  - These vectors could also be used to compute synonyms rather than having to save them, as well as other features like auto-suggestions
 
 ## Appearance
 
@@ -208,6 +216,12 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - Long holding keys for alternate characters would need to be edited to make sure that the alternates would still be fully within the keyboard view
 
+- Devising and implementing how best to show more Scribe command options in the UI [(see issue)]()
+
+- Adding the pronouns to the conjugation view as an indicator of which conjugation corresponds to which cell [(see issue)]()
+
+  - Ideally the pronoun would be greyed out at the top left of the conjugation cell
+
 ## Data
 
 Aside from translation JSONs, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Known data issues include:
@@ -222,7 +236,11 @@ Aside from translation JSONs, Scribe does not accept direct edits to the grammar
 
   - For example: agua (water) is feminine, but it's "el agua" to avoid "la agua" (but still "las aguas")
 
+- Adding synonyms of words that would support the future `Translate` feature as well as a potential `Synonym` feature [(see issue)]()
+
 - Many German verbs do not have auxiliary verbs on [Wikidata](https://www.wikidata.org/) meaning that their full perfect conjugations cannot be displayed [(see issue)]()
+
+- Adding and accessing reflexive versions of verbs [(see issue)]()
 
 - Adding missing verb conjugations to [Wikidata](https://www.wikidata.org/) [(see issue)]()
 

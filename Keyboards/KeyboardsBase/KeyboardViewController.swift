@@ -106,7 +106,7 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
-  /// Changes the proxy or preview bar given the current constaints.
+  /// Deletes in the proxy or preview bar given the current constaints.
   func handlDeleteButtonPressed() {
     if previewState != true {
       proxy.deleteBackward()
@@ -172,6 +172,16 @@ class KeyboardViewController: UIInputViewController {
   func setScribeBtn() {
     scribeBtn.setImage(UIImage(named: "ScribeBtn.png"), for: .normal)
     setBtn(btn: scribeBtn, color: UIColor.scribeBlue, name: "Scribe", canCapitalize: false, isSpecial: false)
+  }
+
+  func scribeBtnToEscape() {
+    scribeBtn.setTitle("", for: .normal)
+    var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 1.75, weight: .regular, scale: .medium)
+    if DeviceType.isPad {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3, weight: .regular, scale: .medium)
+    }
+    scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
+    scribeBtn.tintColor = UIColor.scribeGrey
   }
 
   // Buttons used to trigger Scribe command functionality.
@@ -264,9 +274,9 @@ class KeyboardViewController: UIInputViewController {
     // Assign the invalid message if the conjugation isn't present in the directory.
     for index in 0..<allTenses.count {
       if verbs?[verbToConjugate]![allTenses[index]] as? String == "" {
-        styleBtn(btn: allConjugationBtns[index]!, title: "Not in directory", radius: btnKeyCornerRadius)
+        styleBtn(btn: allConjugationBtns[index]!, title: "Not in directory", radius: keyCornerRadius)
       } else {
-        styleBtn(btn: allConjugationBtns[index]!, title: verbs?[verbToConjugate]![allTenses[index]] as! String, radius: btnKeyCornerRadius)
+        styleBtn(btn: allConjugationBtns[index]!, title: verbs?[verbToConjugate]![allTenses[index]] as! String, radius: keyCornerRadius)
       }
     }
   }
@@ -401,8 +411,18 @@ class KeyboardViewController: UIInputViewController {
     setConjugationBtns()
     invalidState = false
 
+    // Clear interface from the last state.
     keys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
+
+    // Start new keyboard.
+    var keyboard: [[String]]
+
+    if UITraitCollection.current.userInterfaceStyle == .dark {
+      keyboardView.backgroundColor? = UIColor.systemGray5
+    } else if UITraitCollection.current.userInterfaceStyle == .light {
+      keyboardView.backgroundColor? = UIColor.systemGray4
+    }
 
     // buttonWidth determined per keyboard by the top row.
     var letterButtonWidth = CGFloat(0)
@@ -421,9 +441,6 @@ class KeyboardViewController: UIInputViewController {
       numSymButtonWidth = (UIScreen.main.bounds.width - 5) / CGFloat(numberKeys[0].count)
     }
 
-    var keyboard: [[String]]
-
-    // Start padding.
     switch keyboardState {
     case .letters:
       keyboard = letterKeys
@@ -442,19 +459,19 @@ class KeyboardViewController: UIInputViewController {
 
     if DeviceType.isPhone {
       if isLandscapeView == true {
-        btnKeyCornerRadius = buttonWidth / 8
+        keyCornerRadius = buttonWidth / 8
       } else {
-        btnKeyCornerRadius = buttonWidth / 4
+        keyCornerRadius = buttonWidth / 4
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
-        btnKeyCornerRadius = buttonWidth / 12
+        keyCornerRadius = buttonWidth / 12
       } else {
-        btnKeyCornerRadius = buttonWidth / 8
+        keyCornerRadius = buttonWidth / 8
       }
     }
 
-    if !conjugateView {
+    if !conjugateView { // normal keybaord view
       stackView1.isUserInteractionEnabled = true
       stackView2.isUserInteractionEnabled = true
       stackView3.isUserInteractionEnabled = true
@@ -465,9 +482,12 @@ class KeyboardViewController: UIInputViewController {
       let numRows = keyboard.count
       for row in 0...numRows - 1 {
         for col in 0...keyboard[row].count - 1 {
+          // Set up button as a key with its values and properties.
           let btn = UIButton(type: .custom)
           btn.backgroundColor = keyColor
-          btn.setTitleColor(UIColor.label, for: .normal)
+          btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
+          btn.layer.borderWidth = 3
+          btn.layer.cornerRadius = keyCornerRadius
 
           let key = keyboard[row][col]
           var capsKey = ""
@@ -477,22 +497,15 @@ class KeyboardViewController: UIInputViewController {
             capsKey = key
           }
           let keyToDisplay = shiftButtonState == .normal ? key : capsKey
+          btn.setTitleColor(UIColor.label, for: .normal)
           btn.layer.setValue(key, forKey: "original")
           btn.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
           btn.layer.setValue(false, forKey: "isSpecial")
           btn.setTitle(keyToDisplay, for: .normal) // set button character
 
-          if UITraitCollection.current.userInterfaceStyle == .dark {
-            keyboardView.backgroundColor? = UIColor.systemGray5
-          } else if UITraitCollection.current.userInterfaceStyle == .light {
-            keyboardView.backgroundColor? = UIColor.systemGray4
-          }
-
-          btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
-          btn.layer.borderWidth = 3
+          // Set key character sizes.
           if DeviceType.isPhone {
             if isLandscapeView == true {
-              btn.layer.cornerRadius = btnKeyCornerRadius
               if key == "#+=" || key == "ABC" || key == "123" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
               } else if key == "Leerzeichen" || key == "espacio" {
@@ -501,7 +514,6 @@ class KeyboardViewController: UIInputViewController {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
               }
             } else {
-              btn.layer.cornerRadius = btnKeyCornerRadius
               if key == "#+=" || key == "ABC" || key == "123" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
               } else if key == "Leerzeichen" || key == "espacio" {
@@ -511,7 +523,6 @@ class KeyboardViewController: UIInputViewController {
               }
             }
           } else if DeviceType.isPad {
-            btn.layer.cornerRadius = btnKeyCornerRadius
             if key == "#+=" || key == "ABC" || key == "hideKeyboard" {
               btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.25)
             } else if key == "Leerzeichen" || key == "espacio" {
@@ -526,35 +537,23 @@ class KeyboardViewController: UIInputViewController {
           activateBtn(btn: btn)
           btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
 
-          styleBtn(btn: scribeBtn, title: "Scribe", radius: btnKeyCornerRadius)
+          styleBtn(btn: scribeBtn, title: "Scribe", radius: keyCornerRadius)
           scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
           if scribeBtnState {
-            scribeBtn.setTitle("", for: .normal)
-            var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-            if DeviceType.isPad {
-              selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-            }
-            scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
-            scribeBtn.tintColor = UIColor.scribeGrey
-            scribeBtn?.layer.cornerRadius = btnKeyCornerRadius
+            scribeBtnToEscape()
+            scribeBtn?.layer.cornerRadius = keyCornerRadius
             scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
             previewBar?.backgroundColor = UIColor.clear
             previewBar?.text = ""
 
-            styleBtn(btn: translateBtn, title: "Translate", radius: btnKeyCornerRadius)
-            styleBtn(btn: conjugateBtn, title: "Conjugate", radius: btnKeyCornerRadius)
-            styleBtn(btn: pluralBtn, title: "Plural", radius: btnKeyCornerRadius)
+            styleBtn(btn: translateBtn, title: "Translate", radius: keyCornerRadius)
+            styleBtn(btn: conjugateBtn, title: "Conjugate", radius: keyCornerRadius)
+            styleBtn(btn: pluralBtn, title: "Plural", radius: keyCornerRadius)
           } else {
             if previewState == true {
-              scribeBtn.setTitle("", for: .normal)
-              var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-              if DeviceType.isPad {
-                selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-              }
-              scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
-              scribeBtn.tintColor = UIColor.scribeGrey
+              scribeBtnToEscape()
             }
             scribeBtn?.setTitle("", for: .normal)
             deactivateBtn(btn: conjugateBtn)
@@ -562,7 +561,7 @@ class KeyboardViewController: UIInputViewController {
             deactivateBtn(btn: pluralBtn)
 
             previewBar?.clipsToBounds = true
-            previewBar?.layer.cornerRadius = btnKeyCornerRadius
+            previewBar?.layer.cornerRadius = keyCornerRadius
             previewBar?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             if DeviceType.isPhone {
               previewBar?.font = .systemFont(ofSize: letterButtonWidth / 2)
@@ -811,19 +810,14 @@ class KeyboardViewController: UIInputViewController {
       case .symbols:
         break
       }
-    } else {
+
+    } else { // conjugate view
       stackView1.isUserInteractionEnabled = false
       stackView2.isUserInteractionEnabled = false
       stackView3.isUserInteractionEnabled = false
       stackView4.isUserInteractionEnabled = false
 
-      scribeBtn.setTitle("", for: .normal)
-      var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .regular, scale: .medium)
-      if DeviceType.isPad {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .regular, scale: .medium)
-      }
-      scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
-      scribeBtn.tintColor = UIColor.scribeGrey
+      scribeBtnToEscape()
       scribeBtn?.layer.cornerRadius = buttonWidth / 4
       scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
@@ -837,10 +831,8 @@ class KeyboardViewController: UIInputViewController {
       activateConjugationDisplay()
       setConjugationState()
 
-      styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: btnKeyCornerRadius)
-      //      conjugateShiftLeftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-      styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: btnKeyCornerRadius)
-      //      conjugateShiftRightBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+      styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: keyCornerRadius)
+      styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: keyCornerRadius)
     }
   }
 
@@ -915,8 +907,8 @@ class KeyboardViewController: UIInputViewController {
   /// Annotates the preview bar with the form of a valid selected noun.
   func selectedNounAnnotation() {
     var selectedWord = proxy.selectedText
-    var queriedWordIsUpperCase: Bool = false
     // Check to see if the input was uppercase to return an uppercase plural.
+    var queriedWordIsUpperCase: Bool = false
     if controllerLanguage == "Spanish" {
       let firstLetter = selectedWord?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
@@ -972,8 +964,8 @@ class KeyboardViewController: UIInputViewController {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
       var lastWordTyped = wordsTyped.penultimate()
-      var queriedWordIsUpperCase: Bool = false
       // Check to see if the input was uppercase to return an uppercase plural.
+      var queriedWordIsUpperCase: Bool = false
       if controllerLanguage == "Spanish" {
         let firstLetter = lastWordTyped?.substring(toIdx: 1)
         queriedWordIsUpperCase = firstLetter!.isUppercase
@@ -1029,8 +1021,8 @@ class KeyboardViewController: UIInputViewController {
   func selectedPrepositionAnnotation() {
     if controllerLanguage == "German" {
       var selectedWord = proxy.selectedText
-      var queriedWordIsUpperCase: Bool = false
       // Check to see if the input was uppercase to return an uppercase plural.
+      var queriedWordIsUpperCase: Bool = false
       let firstLetter = selectedWord?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
       selectedWord = selectedWord?.lowercased()
@@ -1053,8 +1045,8 @@ class KeyboardViewController: UIInputViewController {
       if proxy.documentContextBeforeInput != nil {
         let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
         var lastWordTyped = wordsTyped.penultimate()
-        var queriedWordIsUpperCase: Bool = false
         // Check to see if the input was uppercase to return an uppercase plural.
+        var queriedWordIsUpperCase: Bool = false
         let firstLetter = lastWordTyped?.substring(toIdx: 1)
         queriedWordIsUpperCase = firstLetter!.isUppercase
         lastWordTyped = lastWordTyped?.lowercased()
@@ -1094,7 +1086,7 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil {
+      if proxy.selectedText != nil { // annotate word
         loadKeys()
         selectedNounAnnotation()
         selectedPrepositionAnnotation()
@@ -1118,6 +1110,7 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
 
+    // Switch to translate state.
     case "Translate":
       scribeBtnState = false
       previewState = true
@@ -1125,6 +1118,7 @@ class KeyboardViewController: UIInputViewController {
       previewBar?.text = translatePromptAndCursor
       getTranslation = true
 
+    // Switch to conjugate state.
     case "Conjugate":
       scribeBtnState = false
       if shiftButtonState == .shift {
@@ -1135,6 +1129,7 @@ class KeyboardViewController: UIInputViewController {
       previewBar?.text = conjugatePromptAndCursor
       getConjugation = true
 
+    // Move displayed conjugations to the left in order if able.
     case "shiftConjugateLeft":
       if controllerLanguage == "German" {
         deConjugationStateLeft()
@@ -1143,6 +1138,7 @@ class KeyboardViewController: UIInputViewController {
       }
       loadKeys()
 
+    // Move displayed conjugations to the right in order if able.
     case "shiftConjugateRight":
       if controllerLanguage == "German" {
         deConjugationStateRight()
@@ -1151,9 +1147,10 @@ class KeyboardViewController: UIInputViewController {
       }
       loadKeys()
 
+    // Switch to plural state.
     case "Plural":
       scribeBtnState = false
-      if controllerLanguage == "German" {
+      if controllerLanguage == "German" { // capitalize for nouns
         if shiftButtonState == .normal {
           shiftButtonState = .shift
         }
@@ -1251,6 +1248,7 @@ class KeyboardViewController: UIInputViewController {
         return
       }
       handlDeleteButtonPressed()
+      // Shift state if delete goes to the start of the proxy.
       if proxy.documentContextBeforeInput == nil && previewState != true {
         if keyboardState == .letters && shiftButtonState == .normal {
           shiftButtonState = .shift
@@ -1290,24 +1288,24 @@ class KeyboardViewController: UIInputViewController {
       self.dismissKeyboard()
 
     case "return":
-      if getTranslation && previewState == true {
+      if getTranslation && previewState == true { // translate state
         queryTranslation()
         getTranslation = false
       }
-      if getConjugation && previewState == true {
+      if getConjugation && previewState == true { // conjugate state
         // Reset to the most basic conjugations.
         deConjugationState = .indicativePresent
         queryConjugation()
         getConjugation = false
       }
-      if getPlural && previewState == true {
+      if getPlural && previewState == true { // plural state
         queryPlural()
         getPlural = false
       }
-      if previewState == false {
+      if previewState == false { // normal return button
         proxy.insertText("\n")
         clearPreviewBar()
-      } else if invalidState == true {
+      } else if invalidState == true { // invalid state
         previewState = false
         // Auto-capitalization if at the start of the proxy.
         proxy.insertText(" ")
@@ -1353,6 +1351,10 @@ class KeyboardViewController: UIInputViewController {
       changeKeyboardToNumberKeys()
       clearPreviewBar()
 
+    case "#+=":
+      changeKeyboardToSymbolKeys()
+      clearPreviewBar()
+
     case "ABC":
       changeKeyboardToLetterKeys()
       clearPreviewBar()
@@ -1366,16 +1368,13 @@ class KeyboardViewController: UIInputViewController {
       proxy.deleteBackward()
 
     case "'":
+      // Change back to letter keys.
       if previewState != true {
         proxy.insertText("'")
       } else {
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: "'"))!
       }
       changeKeyboardToLetterKeys()
-      clearPreviewBar()
-
-    case "#+=":
-      changeKeyboardToSymbolKeys()
       clearPreviewBar()
 
     case "shift":
@@ -1395,6 +1394,7 @@ class KeyboardViewController: UIInputViewController {
         previewBar?.text = previewBar?.text!.insertPriorToCursor(char: keyToDisplay)
       }
     }
+    // Remove alternates view if it's present.
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
@@ -1410,6 +1410,7 @@ class KeyboardViewController: UIInputViewController {
   @objc func keyTouchDown(_ sender: UIButton) {
     sender.backgroundColor = keyPressedColor
 
+    // Scribe key annotation.
     let senderKey = sender.layer.value(forKey: "original") as? String
     if senderKey == "Scribe" {
       sender.alpha = 0.5

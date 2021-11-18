@@ -12,7 +12,7 @@ var controllerLanguage = String()
 
 // Variables for keyboard appearance.
 var keyboardHeight: CGFloat!
-var btnKeyCornerRadius: CGFloat!
+var keyCornerRadius: CGFloat!
 var buttonWidth = CGFloat(0)
 
 // Arrays for the possible keyboard views that are loaded with their characters.
