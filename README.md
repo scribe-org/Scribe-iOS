@@ -37,7 +37,7 @@ Users access Scribe language keyboards through the following:
 
 - Download Scribe from the [App Store](https://www.apple.com/app-store/)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
-- Select from the available Scribe keyboards
+- Select Scribe and choose from the available Scribe keyboards
 - When typing press `🌐` to select keyboards
 
 # Features [`⇧`](#contents) <a id="features"></a>
