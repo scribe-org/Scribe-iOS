@@ -221,6 +221,12 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Adding key shading to keyboards [(see issue)]()
 
+- Making the iPad version of Scribe more reflective of the system keyboard layout [(see issue)]()
+
+- Planning and implementing key flick functionality for iPads [(see issue)]()
+
+- Planning and implementing `shift`, `123`, `#+=` and `ABC` drag-to-key functionality [(see issue)]()
+
 - Have the space bar read the name of the keyboard when it's switched to but not selected from the drop down [(see issue)]()
 
 - Make the cursor within the preview bar blink when the field is active [(see issue)]()
