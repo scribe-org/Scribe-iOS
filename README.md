@@ -139,12 +139,14 @@ The goal is for Scribe keyboards to have all the functionality of system keyboar
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
-| Language | Nouns | Verbs | Translations\* | Prepositions |
-| :------- | :---- | ----: | :------------- | -----------: |
-| German   |       |       |                |              |
-| Spanish  |       |       |                |           NA |
+| Language | Nouns | Verbs | Translations\* | Prepositions† |
+| :------- | :---- | ----: | :------------- | ------------: |
+| German   |       |       |                |               |
+| Spanish  |       |       |                |            NA |
 
-`*` Given the current **`beta`** status.
+`*` Given the current **`beta`** status where words are machine translated.
+
+`†` Only for those language for which preposition annotation is needed.
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
