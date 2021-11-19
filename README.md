@@ -146,7 +146,7 @@ The following table shows the supported languages and the amount of data availab
 
 `*` Given the current **`beta`** status where words are machine translated.
 
-`†` Only for those language for which preposition annotation is needed.
+`†` Only for languages for which preposition annotation is needed.
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
