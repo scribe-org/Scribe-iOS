@@ -145,6 +145,8 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Releasing Scribe-iOS MVP
 
+- Refactoring Scribe-iOS so that it's more modular [(see issue)]()
+
 - Adding autocorrect functionality [(see issue)]()
 
 - Adding autocomplete functionality [(see issue)]()
@@ -152,8 +154,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 - Fix issue with `selectKeyboard` button not being able to be long-pressed after another key press [(see issue)]()
 
 - Fixing hold-to-select character implementation so it's one function (and maybe that the user needs to continue to hold) [(see issue)]()
-
-- Refactoring Scribe-iOS so that it's more modular [(see issue)]()
 
 - Adding support for more languages to Scribe-iOS [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
 

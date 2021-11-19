@@ -75,11 +75,12 @@ class KeyboardViewController: UIInputViewController {
   ///  - btn: the button to be styled.
   ///  - title: the title to be assigned.
   ///  - radius: the corner radius of the button.
-  func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
+  func styleBtn(btn: UIButton, title: String, radius: CGFloat) { // titleSize: CGFloat
     btn.clipsToBounds = true
     btn.layer.masksToBounds = true
     btn.layer.cornerRadius = radius
     btn.setTitle(title, for: .normal)
+//    btn.titleLabel?.font =  .systemFont(ofSize: titleSize)
     btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     btn.setTitleColor(UIColor.label, for: .normal)
   }
@@ -92,6 +93,9 @@ class KeyboardViewController: UIInputViewController {
   func styleIconBtn(btn: UIButton, iconName: String) {
     btn.setTitle("", for: .normal)
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
+    if isLandscapeView == true {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.5, weight: .light, scale: .medium)
+    }
     if DeviceType.isPad {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
     }
@@ -193,9 +197,13 @@ class KeyboardViewController: UIInputViewController {
     setBtn(btn: scribeBtn, color: UIColor.scribeBlue, name: "Scribe", canCapitalize: false, isSpecial: false)
   }
 
+  /// Changes the Scribe key to an escape key.
   func scribeBtnToEscape() {
     scribeBtn.setTitle("", for: .normal)
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 1.75, weight: .regular, scale: .medium)
+    if isLandscapeView == true {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.5, weight: .regular, scale: .medium)
+    }
     if DeviceType.isPad {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3, weight: .regular, scale: .medium)
     }
@@ -570,6 +578,21 @@ class KeyboardViewController: UIInputViewController {
             styleBtn(btn: translateBtn, title: "Translate", radius: keyCornerRadius)
             styleBtn(btn: conjugateBtn, title: "Conjugate", radius: keyCornerRadius)
             styleBtn(btn: pluralBtn, title: "Plural", radius: keyCornerRadius)
+            if DeviceType.isPhone {
+              if isLandscapeView == true {
+                translateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+                conjugateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+                pluralBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+              } else {
+                translateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 2.25)
+                conjugateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 2.25)
+                pluralBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 2.25)
+              }
+            } else if DeviceType.isPad {
+              translateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+              conjugateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+              pluralBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+            }
           } else {
             if previewState == true {
               scribeBtnToEscape()

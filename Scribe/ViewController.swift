@@ -37,7 +37,11 @@ class ViewController: UIViewController {
   var fontSize = CGFloat(0)
   func setFontSize() {
     if UIDevice.current.userInterfaceIdiom == .phone {
-      fontSize = UIScreen.main.bounds.width / 30
+      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+        fontSize = UIScreen.main.bounds.width / 60
+      } else {
+        fontSize = UIScreen.main.bounds.width / 30
+      }
     } else if UIDevice.current.userInterfaceIdiom == .pad {
       fontSize = UIScreen.main.bounds.width / 50
     }
@@ -63,7 +67,7 @@ class ViewController: UIViewController {
 
      • In General do the following:
 
-        Keyboard \u{21e8} Keyboards \u{21e8} Add New Keyboard
+      Keyboard \u{21e8} Keyboards \u{21e8} Add New Keyboard
 
      • Select Scribe and then activate keyboards
 
