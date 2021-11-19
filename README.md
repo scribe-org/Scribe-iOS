@@ -14,9 +14,9 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and noun annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
 
-Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that further does not require an internet connection.
+Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
 
 # **Contents**<a id="contents"></a>
 
