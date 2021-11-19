@@ -22,7 +22,14 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 - [Setup](#setup)
 - [Features](#features)
+  - [Translation](#translation)
+  - [Verb Conjugation](#verb-conjugation)
+  - [Noun plurals](#noun-plurals)
+  - [Word Annotation](#word-annotation)
 - [To-Do](#to-do)
+  - [Functionality](#functionality)
+  - [Appearance](#appearance)
+  - [Data](#data)
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
@@ -39,7 +46,7 @@ Scribe keyboard features are accessed via the `Scribe key` at the top left of an
 
 Current features include:
 
-### Translation
+### Translation [`⇧`](#contents) <a id="translation"></a>
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages. Later `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
 
@@ -51,7 +58,7 @@ As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [
 </p>
 -->
 
-### Verb Conjugation
+### Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
@@ -61,7 +68,7 @@ With the `Conjugate` feature, a user is presented with the grammar charts for an
 </p>
 -->
 
-### Noun Plurals
+### Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
 
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `↵` key is pressed.
 
@@ -71,9 +78,13 @@ The `Plural` feature allows a user to enter a noun and then insert its plural wh
 </p>
 -->
 
-### Noun Annotation
+### Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
 
-Scribe further annotates nouns in the preview bar according to the following conventions:
+Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected.
+
+#### Nouns
+
+Scribe annotates nouns in the preview bar according to the following conventions:
 
 - Feminine nouns are colored red 🟥 and marked with (F)
 - Masculine nouns are colored blue 🟦 and marked with (M)
@@ -81,17 +92,15 @@ Scribe further annotates nouns in the preview bar according to the following con
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Nouns meeting more than one of the above criteria are marked with all their forms
 
-Annotations are displayed once a user has typed a noun and pressed space or by pressing the `Scribe key` while a noun is selected.
-
 <!--
 <p align="center">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_annotation_demo.gif"><img src ="Resources/Demos/noun_annotation_demo.gif" width="300" /></a>
 </p>
 -->
 
-### Preposition Annotation
+#### Prepositions
 
-Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language. Annotations are displayed once a user has typed a preposition and pressed space or by pressing the `Scribe key` while a preposition is selected.
+Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
 
 <!--
 <p align="center">
@@ -128,7 +137,7 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Work that is in progress or could be implemented includes:
 
-## Functionality
+## Functionality [`⇧`](#contents) <a id="functionality"></a>
 
 - Baseline fixes to translations.json files
 
@@ -190,7 +199,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - These vectors could also be used to compute synonyms rather than having to save them, as well as other features like auto-suggestions
 
-## Appearance
+## Appearance [`⇧`](#contents) <a id="appearance"></a>
 
 - Create a version of the `Scribe key` that is appropriately rendered across devices [(see issue)]()
 
@@ -228,7 +237,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Discussing the potential for custom themes for Scribe keyboards [(see issue)]()
 
-## Data
+## Data [`⇧`](#contents) <a id="data"></a>
 
 Aside from translations.json files, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
