@@ -24,7 +24,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 - [Features](#features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
-  - [Noun plurals](#noun-plurals)
+  - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
 - [To-Do](#to-do)
   - [Functionality](#functionality)
