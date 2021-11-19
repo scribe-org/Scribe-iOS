@@ -14,7 +14,7 @@
 
 ### Scribe language keyboards for iOS
 
-**Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence. German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+**Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
 
 Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
 
@@ -26,6 +26,8 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
+  - [Keyboard Functionality](#keyboard-functionality)
+- [Supported Languages](#supported-languages)
 - [To-Do](#to-do)
   - [Functionality](#functionality)
   - [Appearance](#appearance)
@@ -108,9 +110,9 @@ Scribe also annotates the grammatical cases of prepositions in the preview bar i
 </p>
 -->
 
-### System Keyboard Functionality
+### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
-The goal is that Scribe keyboards have all the functionality of system keyboards.
+The goal is for Scribe keyboards to have all the functionality of system keyboards.
 
 <details><summary><strong>Current and WIP features</strong></summary>
 <p>
@@ -132,6 +134,17 @@ The goal is that Scribe keyboards have all the functionality of system keyboards
 
 </p>
 </details>
+
+# Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
+
+The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+
+| Language | Nouns | Verbs | Translations\* | Prepositions |
+| :------- | :---- | ----: | :------------- | -----------: |
+| German   |       |       |                |              |
+| Spanish  |       |       |                |           NA |
+
+`*` Given the current **`beta`** status.
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
