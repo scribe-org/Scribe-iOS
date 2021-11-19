@@ -150,7 +150,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Creating testing files and a ci process for Scribe-iOS [(see issue)]()
 
-- Localizing Scribe-iOS across various languages and regions [(see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
+- Discussing the localization of Scribe-iOS across various languages and regions [(see issue)]()
 
 - Moving data files to a new repository in [scribe-org](https://github.com/scribe-org) and accessing them remotely to allow Android and extension access [(see issue)]()
 
@@ -170,7 +170,7 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
   - This would allow users to do certain actions like selecting just participles or the full conjugation with helper verbs
 
-- Adding settings to choose which Scribe functionality is available or order commands when the `Scribe key` is pressed [(see issue)]()
+- Adding settings to choose which Scribe functionality is available or order how commands are displayed when the `Scribe key` is pressed [(see issue)]()
 
 - Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed (potentially) [(see issue)]()
 
@@ -182,7 +182,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Holding the space bar for cursor sliding and text selection functionalities [(see issue)]()
 
-- Planning and implementing a `Synonym` feature (especially useful for native speakers of the language) [(see issue)]()
+- Planning and implementing a `Synonym` feature [(see issue)]()
+
+  - This would be especially useful for native and advanced speakers of the language in cases like formal email writing
 
 - Using saved vector representations of words to effectively order the suggestions for the future `Translate` feature [(see issue)]()
 
@@ -228,7 +230,9 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Data
 
-Aside from translation JSONs, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Known data issues include:
+Aside from translations.json files, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
+
+Potential work includes:
 
 - Fixing errors in the `Translate` feature's JSON files while it is in **`beta`** [(see issue)]()
 
