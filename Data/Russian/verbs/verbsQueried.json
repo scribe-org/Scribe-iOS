@@ -1,0 +1,21 @@
+[
+  {
+    "infinitive": "идти",
+    "indicativePresentFPS": "иду",
+    "indicativePresentSPS": "идёшь",
+    "indicativePresentTPS": "идёт",
+    "indicativePresentFPP": "идём",
+    "indicativePresentSPP": "идёте",
+    "indicativePresentTPP": "идут"
+  },
+  { "infinitive": "возить" },
+  { "infinitive": "гуля́ть" },
+  { "infinitive": "бездельничать" },
+  { "infinitive": "сачкова́ть" },
+  { "infinitive": "труди́ться" },
+  { "infinitive": "объяснить" },
+  { "infinitive": "быть" },
+  { "infinitive": "длить" },
+  { "infinitive": "весели́ться" },
+  { "infinitive": "пойти́" }
+]

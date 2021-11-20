@@ -1,0 +1,18 @@
+[
+  { "preposition": "из" },
+  { "preposition": "по" },
+  { "preposition": "в" },
+  { "preposition": "въ" },
+  { "preposition": "на" },
+  { "preposition": "за" },
+  { "preposition": "около" },
+  { "preposition": "минус" },
+  { "preposition": "после" },
+  { "preposition": "под" },
+  { "preposition": "от", "case": "genitive case" },
+  { "preposition": "вокруг" },
+  { "preposition": "с" },
+  { "preposition": "съ" },
+  { "preposition": "для", "case": "genitive case" },
+  { "preposition": "к", "case": "dative case" }
+]

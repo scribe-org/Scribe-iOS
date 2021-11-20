@@ -1,4 +1,4 @@
-# All German (Q188) nouns, their gender, and their plural.
+# All German (Q188) nouns, their plural and their gender.
 # Enter this query at https://query.wikidata.org/.
 
 SELECT DISTINCT ?singular ?plural ?gender WHERE {

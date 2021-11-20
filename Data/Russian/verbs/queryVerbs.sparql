@@ -1,0 +1,68 @@
+# All Russian (Q7737) verbs and the currently implemented verb tenses for each.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?infinitive
+       ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
+       ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+            dct:language wd:Q7737 ;
+            wikibase:lexicalCategory wd:Q24905 .
+
+  # Infinitive (required)
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+                  wikibase:grammaticalFeature wd:Q179230 .
+
+  # Indicative Present
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPSForm .
+      ?indicativePresentFPSForm ontolex:representation ?indicativePresentFPS ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPSForm .
+      ?indicativePresentSPSForm ontolex:representation ?indicativePresentSPS ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPSForm .
+      ?indicativePresentTPSForm ontolex:representation ?indicativePresentTPS ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPPForm .
+      ?indicativePresentFPPForm ontolex:representation ?indicativePresentFPP ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPPForm .
+      ?indicativePresentSPPForm ontolex:representation ?indicativePresentSPP ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPPForm .
+      ?indicativePresentTPPForm ontolex:representation ?indicativePresentTPP ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+  }
+}
