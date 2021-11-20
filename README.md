@@ -137,7 +137,7 @@ The goal is for Scribe keyboards to have all the functionality of system keyboar
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
-The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Based on the available data, the next languages that the Scribe team could focus on are Russian [(see queries)](https://github.com/scribe-org/Scribe-iOS/blob/main/Data/Russian/) and English (along with the `Synonym` feature).
+The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Based on the available data, the next languages that the Scribe team could focus on are Russian ([queries](https://github.com/scribe-org/Scribe-iOS/blob/main/Data/Russian/), [issue]()) and English (along with the `Synonym` feature).
 
 | Language | Nouns | Verbs | Translations\* | Prepositions† |
 | :------- | ----: | ----: | -------------: | ------------: |
