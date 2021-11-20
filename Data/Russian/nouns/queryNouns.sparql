@@ -8,7 +8,7 @@ SELECT DISTINCT ?singular ?plural ?gender WHERE {
   ?lexeme a ontolex:LexicalEntry ;
             dct:language wd:Q7737 ;
             wikibase:lexicalCategory ?noun .
-  FILTER(?noun = ?nounTypes )
+  FILTER(?noun = ?nounTypes)
 
   # Optional selection of nominative singular forms.
   OPTIONAL {

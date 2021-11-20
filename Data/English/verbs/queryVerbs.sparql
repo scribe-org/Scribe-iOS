@@ -1,0 +1,12 @@
+# All English (Q1860) verbs and the currently implemented verb tenses for each.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT DISTINCT ?lexeme WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+            dct:language wd:Q1860 ;
+            wikibase:lexicalCategory wd:Q24905 .
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+  }
+}
