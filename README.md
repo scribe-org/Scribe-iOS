@@ -137,12 +137,12 @@ The goal is for Scribe keyboards to have all the functionality of system keyboar
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
-The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest.
+The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). German and Spanish are currently the only supported languages, but the Scribe team has interest in creating keyboards for all languages of interest. Based on the available data on [Wikidata](https://www.wikidata.org/), the next languages that the Scribe team could focus on are Russian and English (along with the `Synonym` feature).
 
 | Language | Nouns | Verbs | Translations\* | Prepositions† |
-| :------- | :---- | ----: | :------------- | ------------: |
-| German   |       |       |                |               |
-| Spanish  |       |       |                |            NA |
+| :------- | ----: | ----: | -------------: | ------------: |
+| German   |  27K+ |   3K+ |           65K+ |           190 |
+| Spanish  |   8K+ |    65 |           65K+ |            NA |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
