@@ -104,7 +104,7 @@ Scribe also annotates the grammatical cases of prepositions in the preview bar i
 
 ### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
-The goal is for Scribe keyboards to have all the functionality of system keyboards.
+The goal is for Scribe to have all the functionality of system keyboards.
 
 <details><summary><strong>Current and WIP features</strong></summary>
 <p>
