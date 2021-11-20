@@ -54,7 +54,7 @@ The **`beta`** `Translate` feature can translate single words or phrases from En
 
 As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
 
-<p align="center">
+<p align="left">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/translation_demo.gif"><kbd><img src ="Resources/Demos/translation_demo.gif" width="250"/></kbd></a>
 </p>
 
@@ -62,7 +62,7 @@ As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-<p align="center">
+<p align="left">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/conjugation_demo.gif"><kbd><img src ="Resources/Demos/conjugation_demo.gif" width="250"/></kbd></a>
 </p>
 
@@ -70,7 +70,7 @@ With the `Conjugate` feature, a user is presented with the grammar charts for an
 
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `↵` key is pressed.
 
-<p align="center">
+<p align="left">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_plural_demo.gif"><kbd><img src ="Resources/Demos/noun_plural_demo.gif" width="250"/></kbd></a>
 </p>
 
@@ -88,7 +88,7 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Nouns meeting more than one of the above criteria are marked with all their forms
 
-<p align="center">
+<p align="left">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_annotation_demo.gif"><kbd><img src ="Resources/Demos/noun_annotation_demo.gif" width="250"/></kbd></a>
 </p>
 
@@ -96,7 +96,7 @@ Scribe annotates nouns in the preview bar according to the following conventions
 
 Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
 
-<p align="center">
+<p align="left">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/preposition_annotation_demo.gif"><kbd><img src ="Resources/Demos/preposition_annotation_demo.gif" width="250"/></kbd></a>
 </p>
 
