@@ -50,13 +50,15 @@ Current features include:
 
 ### Translation [`⇧`](#contents) <a id="translation"></a>
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed. The goal is to first expand this feature to allow for translations from system and chosen languages. Later `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
-
-As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed.
 
 <p align="center">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/translation_demo.gif"><kbd><img src ="Resources/Demos/translation_demo.gif" width="225"/></kbd></a>
 </p>
+
+The goal is to first expand this feature to allow for translations from system and chosen languages. Later `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
+
+As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
 
 ### Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
 
