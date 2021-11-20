@@ -198,8 +198,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 - Change the select noun and preposition annotation features to not require a the `Scribe key` to be pressed (potentially) [(see issue)]()
 
-- Change the Scribe interface buttons to default UIButtons from plain so that versions lower than iOS 15 can be supported [(see issue)]()
-
 - Devising and implementing a way to effectively chain Scribe commands together [(see issue)]()
 
   - For example: providing `Conjugate` as an option for verb translations when `Translate` provides selectable options
