@@ -880,7 +880,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -919,7 +919,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/German/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -965,7 +965,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/Spanish/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Español (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
