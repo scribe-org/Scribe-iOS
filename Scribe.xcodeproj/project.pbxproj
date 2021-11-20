@@ -22,6 +22,24 @@
 		D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtn.png */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
+		D130AC5A27495EF6001A3B12 /* prepositionsQueried.json in Resources */ = {isa = PBXBuildFile; fileRef = D130AC4F27495EF6001A3B12 /* prepositionsQueried.json */; };
+		D130AC5B27495EF6001A3B12 /* queryPrepositions.sparql in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5027495EF6001A3B12 /* queryPrepositions.sparql */; };
+		D130AC5C27495EF6001A3B12 /* queryNouns.sparql in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5227495EF6001A3B12 /* queryNouns.sparql */; };
+		D130AC5D27495EF6001A3B12 /* nounsQueried.json in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5327495EF6001A3B12 /* nounsQueried.json */; };
+		D130AC5E27495EF6001A3B12 /* verbsQueried.json in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5527495EF6001A3B12 /* verbsQueried.json */; };
+		D130AC5F27495EF6001A3B12 /* queryVerbs.sparql in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5627495EF6001A3B12 /* queryVerbs.sparql */; };
+		D130AC6027495EF6001A3B12 /* queryTranslations.sparql in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5827495EF6001A3B12 /* queryTranslations.sparql */; };
+		D130AC6127495EF6001A3B12 /* translationsQueried.json in Resources */ = {isa = PBXBuildFile; fileRef = D130AC5927495EF6001A3B12 /* translationsQueried.json */; };
+		D130AC6E27495F22001A3B12 /* noun_plural_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6327495F22001A3B12 /* noun_plural_demo.gif */; };
+		D130AC6F27495F22001A3B12 /* noun_plural_demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6527495F22001A3B12 /* noun_plural_demo.mp4 */; };
+		D130AC7027495F22001A3B12 /* translation_demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6627495F22001A3B12 /* translation_demo.mp4 */; };
+		D130AC7127495F22001A3B12 /* preposition_annotation_demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6727495F22001A3B12 /* preposition_annotation_demo.mp4 */; };
+		D130AC7227495F22001A3B12 /* noun_annotation_demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6827495F22001A3B12 /* noun_annotation_demo.mp4 */; };
+		D130AC7327495F22001A3B12 /* conjugation_demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6927495F22001A3B12 /* conjugation_demo.mp4 */; };
+		D130AC7427495F22001A3B12 /* conjugation_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6A27495F22001A3B12 /* conjugation_demo.gif */; };
+		D130AC7527495F22001A3B12 /* translation_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6B27495F22001A3B12 /* translation_demo.gif */; };
+		D130AC7627495F22001A3B12 /* preposition_annotation_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6C27495F22001A3B12 /* preposition_annotation_demo.gif */; };
+		D130AC7727495F22001A3B12 /* noun_annotation_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D130AC6D27495F22001A3B12 /* noun_annotation_demo.gif */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D190B242274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -93,6 +111,24 @@
 		D103B182273C2A1400B97121 /* ScribeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtn.png; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D130AC4F27495EF6001A3B12 /* prepositionsQueried.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositionsQueried.json; sourceTree = "<group>"; };
+		D130AC5027495EF6001A3B12 /* queryPrepositions.sparql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queryPrepositions.sparql; sourceTree = "<group>"; };
+		D130AC5227495EF6001A3B12 /* queryNouns.sparql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queryNouns.sparql; sourceTree = "<group>"; };
+		D130AC5327495EF6001A3B12 /* nounsQueried.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nounsQueried.json; sourceTree = "<group>"; };
+		D130AC5527495EF6001A3B12 /* verbsQueried.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbsQueried.json; sourceTree = "<group>"; };
+		D130AC5627495EF6001A3B12 /* queryVerbs.sparql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queryVerbs.sparql; sourceTree = "<group>"; };
+		D130AC5827495EF6001A3B12 /* queryTranslations.sparql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queryTranslations.sparql; sourceTree = "<group>"; };
+		D130AC5927495EF6001A3B12 /* translationsQueried.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translationsQueried.json; sourceTree = "<group>"; };
+		D130AC6327495F22001A3B12 /* noun_plural_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noun_plural_demo.gif; sourceTree = "<group>"; };
+		D130AC6527495F22001A3B12 /* noun_plural_demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = noun_plural_demo.mp4; sourceTree = "<group>"; };
+		D130AC6627495F22001A3B12 /* translation_demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = translation_demo.mp4; sourceTree = "<group>"; };
+		D130AC6727495F22001A3B12 /* preposition_annotation_demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = preposition_annotation_demo.mp4; sourceTree = "<group>"; };
+		D130AC6827495F22001A3B12 /* noun_annotation_demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = noun_annotation_demo.mp4; sourceTree = "<group>"; };
+		D130AC6927495F22001A3B12 /* conjugation_demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = conjugation_demo.mp4; sourceTree = "<group>"; };
+		D130AC6A27495F22001A3B12 /* conjugation_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = conjugation_demo.gif; sourceTree = "<group>"; };
+		D130AC6B27495F22001A3B12 /* translation_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = translation_demo.gif; sourceTree = "<group>"; };
+		D130AC6C27495F22001A3B12 /* preposition_annotation_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preposition_annotation_demo.gif; sourceTree = "<group>"; };
+		D130AC6D27495F22001A3B12 /* noun_annotation_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noun_annotation_demo.gif; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,6 +241,79 @@
 			path = German;
 			sourceTree = "<group>";
 		};
+		D130AC4D27495EF6001A3B12 /* Russian */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC4E27495EF6001A3B12 /* prepositions */,
+				D130AC5127495EF6001A3B12 /* nouns */,
+				D130AC5427495EF6001A3B12 /* verbs */,
+				D130AC5727495EF6001A3B12 /* translations */,
+			);
+			name = Russian;
+			path = Data/Russian;
+			sourceTree = SOURCE_ROOT;
+		};
+		D130AC4E27495EF6001A3B12 /* prepositions */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC4F27495EF6001A3B12 /* prepositionsQueried.json */,
+				D130AC5027495EF6001A3B12 /* queryPrepositions.sparql */,
+			);
+			path = prepositions;
+			sourceTree = "<group>";
+		};
+		D130AC5127495EF6001A3B12 /* nouns */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC5227495EF6001A3B12 /* queryNouns.sparql */,
+				D130AC5327495EF6001A3B12 /* nounsQueried.json */,
+			);
+			path = nouns;
+			sourceTree = "<group>";
+		};
+		D130AC5427495EF6001A3B12 /* verbs */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC5527495EF6001A3B12 /* verbsQueried.json */,
+				D130AC5627495EF6001A3B12 /* queryVerbs.sparql */,
+			);
+			path = verbs;
+			sourceTree = "<group>";
+		};
+		D130AC5727495EF6001A3B12 /* translations */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC5827495EF6001A3B12 /* queryTranslations.sparql */,
+				D130AC5927495EF6001A3B12 /* translationsQueried.json */,
+			);
+			path = translations;
+			sourceTree = "<group>";
+		};
+		D130AC6227495F22001A3B12 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC6427495F22001A3B12 /* OriginalRecordings */,
+				D130AC6327495F22001A3B12 /* noun_plural_demo.gif */,
+				D130AC6A27495F22001A3B12 /* conjugation_demo.gif */,
+				D130AC6B27495F22001A3B12 /* translation_demo.gif */,
+				D130AC6C27495F22001A3B12 /* preposition_annotation_demo.gif */,
+				D130AC6D27495F22001A3B12 /* noun_annotation_demo.gif */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		D130AC6427495F22001A3B12 /* OriginalRecordings */ = {
+			isa = PBXGroup;
+			children = (
+				D130AC6527495F22001A3B12 /* noun_plural_demo.mp4 */,
+				D130AC6627495F22001A3B12 /* translation_demo.mp4 */,
+				D130AC6727495F22001A3B12 /* preposition_annotation_demo.mp4 */,
+				D130AC6827495F22001A3B12 /* noun_annotation_demo.mp4 */,
+				D130AC6927495F22001A3B12 /* conjugation_demo.mp4 */,
+			);
+			path = OriginalRecordings;
+			sourceTree = "<group>";
+		};
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				D190B27827426EEA00705659 /* German */,
+				D130AC4D27495EF6001A3B12 /* Russian */,
 				D190B26B27426EEA00705659 /* Spanish */,
 				D190B24D2741B61000705659 /* LoadData.swift */,
 			);
@@ -362,6 +472,7 @@
 		D190B28927426F1F00705659 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D130AC6227495F22001A3B12 /* Demos */,
 				D190B28A27426F1F00705659 /* Scribe-iOS_logo_transparent.png */,
 				D190B28B27426F1F00705659 /* Scribe-iOS_logo.sketch */,
 				D190B28C27426F1F00705659 /* Scribe-iOS_logo.png */,
@@ -501,9 +612,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1EC6DA92745C029003C2C04 /* ScribeBtn.png in Resources */,
+				D130AC5A27495EF6001A3B12 /* prepositionsQueried.json in Resources */,
+				D130AC6E27495F22001A3B12 /* noun_plural_demo.gif in Resources */,
+				D130AC7627495F22001A3B12 /* preposition_annotation_demo.gif in Resources */,
+				D130AC7527495F22001A3B12 /* translation_demo.gif in Resources */,
+				D130AC5B27495EF6001A3B12 /* queryPrepositions.sparql in Resources */,
+				D130AC6F27495F22001A3B12 /* noun_plural_demo.mp4 in Resources */,
+				D130AC5E27495EF6001A3B12 /* verbsQueried.json in Resources */,
+				D130AC6027495EF6001A3B12 /* queryTranslations.sparql in Resources */,
+				D130AC6127495EF6001A3B12 /* translationsQueried.json in Resources */,
+				D130AC7327495F22001A3B12 /* conjugation_demo.mp4 in Resources */,
+				D130AC7127495F22001A3B12 /* preposition_annotation_demo.mp4 in Resources */,
+				D130AC5D27495EF6001A3B12 /* nounsQueried.json in Resources */,
+				D130AC5C27495EF6001A3B12 /* queryNouns.sparql in Resources */,
+				D130AC7227495F22001A3B12 /* noun_annotation_demo.mp4 in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
+				D130AC7727495F22001A3B12 /* noun_annotation_demo.gif in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
+				D130AC5F27495EF6001A3B12 /* queryVerbs.sparql in Resources */,
+				D130AC7427495F22001A3B12 /* conjugation_demo.gif in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
+				D130AC7027495F22001A3B12 /* translation_demo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
