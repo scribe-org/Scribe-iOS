@@ -138,10 +138,6 @@ Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iO
 
 ## Functionality [`⇧`](#contents) <a id="functionality"></a>
 
-- Baseline fixes to translations.json files
-
-- Creating preview media including videos and images
-
 - Releasing Scribe-iOS MVP
 
 - Refactoring Scribe-iOS so that it's more modular [(see issue)]()
@@ -246,7 +242,7 @@ Aside from translations.json files, Scribe does not accept direct edits to the g
 
 Potential work includes:
 
-- Fixing errors in the `Translate` feature's JSON files while it is in **`beta`** [(see issue)]()
+- Fixing errors in the `Translate` feature's translate.json files while it is in **`beta`** [(see issue)]()
 
 - Expanding the availability of translations in [Wikidata lexicographical data](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) and reworking the `Translate` query process to access them [(see issue)]()
 

@@ -473,10 +473,10 @@
 			isa = PBXGroup;
 			children = (
 				D130AC6227495F22001A3B12 /* Demos */,
+				D190B28D27426F1F00705659 /* gh_images */,
 				D190B28A27426F1F00705659 /* Scribe-iOS_logo_transparent.png */,
 				D190B28B27426F1F00705659 /* Scribe-iOS_logo.sketch */,
 				D190B28C27426F1F00705659 /* Scribe-iOS_logo.png */,
-				D190B28D27426F1F00705659 /* gh_images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
