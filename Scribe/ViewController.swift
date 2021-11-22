@@ -156,7 +156,7 @@ class ViewController: UIViewController {
 
     3. Third-Party Data
 
-    This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata, which states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-ShareAlike License." The policy in regards to the third-party data used can be found https://www.wikidata.org/wiki/Wikidata:Licensing.
+    This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata, which states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-ShareAlike License." The policy in regards to the third-party data used can be found at https://www.wikidata.org/wiki/Wikidata:Licensing.
 
     4. Third-Party Services
 
