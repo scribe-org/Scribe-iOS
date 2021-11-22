@@ -2,8 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="39" width="375" height="734"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aqf-es-2wB">
-                                <rect key="frame" x="37.666666666666657" y="117" width="300" height="641"/>
+                                <rect key="frame" x="37.666666666666657" y="111" width="300" height="607"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -33,29 +35,41 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QI-f0-YLj">
+                                <rect key="frame" x="37.666666666666657" y="718" width="300" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Cfc-Zv-XCM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wNQ-WS-San" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="2OV-o8-bAT"/>
                             <constraint firstItem="2Yo-Qc-baO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="35y-1M-rJa"/>
+                            <constraint firstItem="2QI-f0-YLj" firstAttribute="width" secondItem="aqf-es-2wB" secondAttribute="width" id="3jh-H7-0zO"/>
                             <constraint firstItem="fV8-bd-sgm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Av-8u-CFx"/>
                             <constraint firstItem="fV8-bd-sgm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8Gi-Sj-3b0"/>
                             <constraint firstItem="wNQ-WS-San" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KOH-80-Wlg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aqf-es-2wB" secondAttribute="bottom" constant="20" id="M6i-ly-cnI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aqf-es-2wB" secondAttribute="bottom" constant="60" id="M6i-ly-cnI"/>
                             <constraint firstItem="2Yo-Qc-baO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PQp-ip-A36"/>
                             <constraint firstItem="fV8-bd-sgm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PhN-Am-TjF"/>
+                            <constraint firstItem="2QI-f0-YLj" firstAttribute="top" secondItem="aqf-es-2wB" secondAttribute="bottom" id="WFL-pA-idg"/>
                             <constraint firstItem="wNQ-WS-San" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="WFi-c1-Ezs"/>
                             <constraint firstItem="2Yo-Qc-baO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WIS-hb-aoA"/>
                             <constraint firstItem="wNQ-WS-San" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZRo-WM-2eF"/>
-                            <constraint firstItem="aqf-es-2wB" firstAttribute="top" secondItem="2Yo-Qc-baO" secondAttribute="bottom" constant="16" id="cG7-3h-ICc"/>
+                            <constraint firstItem="aqf-es-2wB" firstAttribute="top" secondItem="2Yo-Qc-baO" secondAttribute="bottom" constant="10" id="cG7-3h-ICc"/>
                             <constraint firstItem="fV8-bd-sgm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="gFb-aK-sRH"/>
+                            <constraint firstItem="2QI-f0-YLj" firstAttribute="centerX" secondItem="aqf-es-2wB" secondAttribute="centerX" id="gHW-lD-ldt"/>
                             <constraint firstItem="aqf-es-2wB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jr9-6V-1Rb"/>
                             <constraint firstItem="aqf-es-2wB" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="zvu-KJ-JzD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appTextView" destination="aqf-es-2wB" id="AGd-BV-1xA"/>
+                        <outlet property="privacyPolicyBtn" destination="2QI-f0-YLj" id="tWT-NA-FeU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,5 +79,8 @@
     </scenes>
     <resources>
         <image name="background" width="1024" height="1024"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
