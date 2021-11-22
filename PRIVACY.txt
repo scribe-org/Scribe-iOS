@@ -22,9 +22,9 @@ any USER INFORMATION or USER DATA.
 
 2. Do Not Track
 
-USERS contacting SCRIBE to ask for their USER INFORMATION and USER DATA
-to not be tracked will be provided with a copy of this POLICY as well as
-a link to all source codes as proof that they are not being tracked.
+USERS contacting SCRIBE to ask that their USER INFORMATION and USER DATA
+not be tracked will be provided with a copy of this POLICY as well as a
+link to all source codes as proof that they are not being tracked.
 
 3. Third-Party Data
 
@@ -61,11 +61,11 @@ any third-party sites or services.
 This SERVICE allows USERS to access linguistic content (CONTENT). Some of this
 CONTENT could be deemed inappropriate for children and legal minors. Accessing
 CONTENT using the SERVICE is done in a way that the information is unavailable
-unless explicitly known. Specifically, USERS CAN translate words, conjugate verbs,
-and access other grammatical features of CONTENT that may be sexual, violent, or
-otherwise inappropriate in nature. USERS CANNOT translate words, conjugate verbs,
-and access other grammatical features of CONTENT that may be sexual, violent, or
-otherwise inappropriate in nature if they do not already know about the nature of
+unless explicitly known. Specifically, USERS "can" translate words, conjugate
+verbs, and access other grammatical features of CONTENT that may be sexual, violent,
+or otherwise inappropriate in nature. USERS "cannot" translate words, conjugate
+verbs, and access other grammatical features of CONTENT that may be sexual, violent,
+or otherwise inappropriate in nature if they do not already know about the nature of
 this CONTENT. SCRIBE takes no responsibility for the access of such CONTENT.
 
 7. Changes

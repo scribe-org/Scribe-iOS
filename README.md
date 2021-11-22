@@ -50,7 +50,7 @@ Current features include:
 
 ### Translation [`⇧`](#contents) <a id="translation"></a>
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `↵` key is pressed.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
 
 <p align="center">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/translation_demo.gif"><kbd><img src ="Resources/Demos/translation_demo.gif" width="225"/></kbd></a>
@@ -70,7 +70,7 @@ With the `Conjugate` feature, a user is presented with the grammar charts for an
 
 ### Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
 
-The `Plural` feature allows a user to enter a noun and then insert its plural when the `↵` key is pressed.
+The `Plural` feature allows a user to enter a noun and then insert its plural when the `return` key is pressed.
 
 <p align="center">
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/noun_plural_demo.gif"><kbd><img src ="Resources/Demos/noun_plural_demo.gif" width="225"/></kbd></a>
