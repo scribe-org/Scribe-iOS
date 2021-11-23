@@ -55,7 +55,7 @@ The **`beta`** `Translate` feature can translate single words or phrases from En
     <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Demos/translation_demo.gif"><kbd><img src ="Resources/Demos/translation_demo.gif" width="225"/></kbd></a>
 </p>
 
-The goal is to first expand this feature to allow for translations from system and chosen languages. Later `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
+Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1).The goal is to first expand this feature to allow for translations from system and chosen languages. Later `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option. More advanced methods will be planned and added once this feature is out of **`beta`**.
 
 As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
 
@@ -103,7 +103,7 @@ Scribe also annotates the grammatical cases of prepositions in the preview bar i
 
 ### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
-The goal is for Scribe to have all the functionality of system keyboards.
+The goal is for Scribe to have all the functionality of system keyboards. See the [Base Keyboard Features project](https://github.com/scribe-org/Scribe-iOS/projects/6) if interested in helping.
 
 <details><summary><strong>Current and WIP features</strong></summary>
 <p>
@@ -115,7 +115,7 @@ The goal is for Scribe to have all the functionality of system keyboards.
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Dark mode compatibility
-- Hold-to-select characters [(WIP - see issues)](https://github.com/scribe-org/Scribe-iOS/issues)
+- Hold-to-select characters [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>
 </details>
@@ -135,7 +135,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
-Work that is in progress or could be implemented is tracked in [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also note the use of the `--priority--` label that indicates which issues are most important.
+Work that is in progress or could be implemented is tracked in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also note the use of the `--priority--` label that indicates which issues are most important.
 
 Aside from `translations.json` files, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
