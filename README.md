@@ -135,7 +135,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
-Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/Scribe-iOS/issues). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Also note the use of the `--priority--` label that indicates which issues are most important.
+Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) and [projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to this project. Also note the use of the `--priority--` label that indicates which issues are most important.
 
 Aside from translations.json files, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
