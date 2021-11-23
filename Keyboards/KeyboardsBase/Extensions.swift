@@ -1,5 +1,5 @@
 //
-//  KeyboardExtensiosns.swift
+//  Extensions.swift
 //
 //  Extensions for Scribe keyboards.
 //
