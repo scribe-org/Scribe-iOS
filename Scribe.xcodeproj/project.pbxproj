@@ -19,7 +19,7 @@
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
 		D1018220272829E70032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821B2728291B0032A82D /* verbs.json */; };
-		D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtn.png */; };
+		D103B183273C2A1400B97121 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtnPhone.png */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -34,12 +34,14 @@
 		D190B24B2741B31F00705659 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D190B24E2741B61000705659 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D190B24F2741B61000705659 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
-		D190B25627424F4A00705659 /* ScribeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtn.png */; };
+		D190B25627424F4A00705659 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D103B182273C2A1400B97121 /* ScribeBtnPhone.png */; };
 		D190B2582742525C00705659 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D19474C42740295300AF6EA5 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D19474C32740295300AF6EA5 /* prepositions.json */; };
 		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D1E3EF6D274EA545001D40E7 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E3EF6C274EA545001D40E7 /* ScribeBtnPad.png */; };
+		D1E3EF6E274EA545001D40E7 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E3EF6C274EA545001D40E7 /* ScribeBtnPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +92,7 @@
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D101821B2728291B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
-		D103B182273C2A1400B97121 /* ScribeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtn.png; sourceTree = "<group>"; };
+		D103B182273C2A1400B97121 /* ScribeBtnPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhone.png; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D130AC4F27495EF6001A3B12 /* prepositionsQueried.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositionsQueried.json; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		D190B29127426F7300705659 /* environment.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = environment.yml; sourceTree = "<group>"; };
 		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		D1E3EF6C274EA545001D40E7 /* ScribeBtnPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,7 +371,8 @@
 		D190B25427424F2900705659 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D103B182273C2A1400B97121 /* ScribeBtn.png */,
+				D103B182273C2A1400B97121 /* ScribeBtnPhone.png */,
+				D1E3EF6C274EA545001D40E7 /* ScribeBtnPad.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -638,8 +642,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
-				D103B183273C2A1400B97121 /* ScribeBtn.png in Resources */,
+				D103B183273C2A1400B97121 /* ScribeBtnPhone.png in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
+				D1E3EF6D274EA545001D40E7 /* ScribeBtnPad.png in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
@@ -651,9 +656,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
-				D190B25627424F4A00705659 /* ScribeBtn.png in Resources */,
+				D190B25627424F4A00705659 /* ScribeBtnPhone.png in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
+				D1E3EF6E274EA545001D40E7 /* ScribeBtnPad.png in Resources */,
 				D10182122728275B0032A82D /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

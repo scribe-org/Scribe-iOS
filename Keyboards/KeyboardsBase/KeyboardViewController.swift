@@ -193,7 +193,11 @@ class KeyboardViewController: UIInputViewController {
 
   /// Assigns the icon and sets up the Scribe button.
   func setScribeBtn() {
-    scribeBtn.setImage(UIImage(named: "ScribeBtn.png"), for: .normal)
+    if DeviceType.isPhone {
+      scribeBtn.setImage(UIImage(named: "ScribeBtnPhone.png"), for: .normal)
+    } else if DeviceType.isPad {
+      scribeBtn.setImage(UIImage(named: "ScribeBtnPad.png"), for: .normal)
+    }
     setBtn(btn: scribeBtn, color: UIColor.scribeBlue, name: "Scribe", canCapitalize: false, isSpecial: false)
   }
 
