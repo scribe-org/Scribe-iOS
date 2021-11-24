@@ -52,7 +52,7 @@ Current features include:
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
 
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubDemos/translation_demo.gif"><kbd><img src ="Resources/GitHubDemos/translation_demo.gif" width="225"/></kbd></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/translation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/translation_demo.gif" width="225"/></kbd></a>
 </p>
 
 Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1). The goal is that `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
@@ -64,7 +64,7 @@ As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubDemos/conjugation_demo.gif"><kbd><img src ="Resources/GitHubDemos/conjugation_demo.gif" width="225"/></kbd></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/conjugation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/conjugation_demo.gif" width="225"/></kbd></a>
 </p>
 
 ### Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
@@ -72,7 +72,7 @@ With the `Conjugate` feature, a user is presented with the grammar charts for an
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `return` key is pressed.
 
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubDemos/noun_plural_demo.gif"><kbd><img src ="Resources/GitHubDemos/noun_plural_demo.gif" width="225"/></kbd></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/noun_plural_demo.gif"><kbd><img src ="Resources/GitHub/Demos/noun_plural_demo.gif" width="225"/></kbd></a>
 </p>
 
 ### Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
@@ -90,7 +90,7 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Nouns meeting more than one of the above criteria are marked with all their forms
 
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubDemos/noun_annotation_demo.gif"><kbd><img src ="Resources/GitHubDemos/noun_annotation_demo.gif" width="225"/></kbd></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/noun_annotation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/noun_annotation_demo.gif" width="225"/></kbd></a>
 </p>
 
 #### Prepositions
@@ -98,7 +98,7 @@ Scribe annotates nouns in the preview bar according to the following conventions
 Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
 
 <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubDemos/preposition_annotation_demo.gif"><kbd><img src ="Resources/GitHubDemos/preposition_annotation_demo.gif" width="225"/></kbd></a>
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/preposition_annotation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/preposition_annotation_demo.gif" width="225"/></kbd></a>
 </p>
 
 ### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
