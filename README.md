@@ -143,6 +143,6 @@ Aside from `translations.json` files, Scribe does not accept direct edits to the
 
 <div align="center">
   <br>
-  <a href="https://www.wikidata.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHubImages/wikidata_logo.png" alt="Wikidata"></a>
+  <a href="https://www.wikidata.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Images/wikidata_logo.png" alt="Wikidata"></a>
   <br>
 </div>
