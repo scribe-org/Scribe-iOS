@@ -23,6 +23,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 # **Contents**<a id="contents"></a>
 
 - [Setup](#setup)
+- [Preview Video](#preview-video)
 - [Features](#features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
@@ -36,10 +37,20 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 Users access Scribe language keyboards through the following:
 
-- Download Scribe from the [App Store](https://www.apple.com/app-store/)
+- Download Scribe from the [App Store](https://www.apple.com/app-store/) (submission in progress)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Select Scribe and choose from the available language keyboards
 - When typing press `🌐` to select keyboards
+
+# Preview Video [`⇧`](#contents) <a id="preview-video"></a>
+
+The following is the combined preview videos for the [App Store](https://www.apple.com/app-store/):
+
+<!-- <p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/"><kbd><img src ="Resources/AppStore/" width="225"/></kbd></a>
+</p> -->
+
+The App Store images and videos can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
 # Features [`⇧`](#contents) <a id="features"></a>
 
@@ -51,33 +62,21 @@ Current features include:
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
 
-<p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/translation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/translation_demo.gif" width="225"/></kbd></a>
-</p>
-
 Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1). The goal is that `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
-As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). Edits to translations.json files are welcome while this feature is in **`beta`**, but the goal is for translations to be directly queried. Furthermore, translating verbs currently requires the user to input `to VERB` so that there is a distinction between verbs and other word forms. This requirement will be removed when later versions change the keyboard display to provide the user with multiple options across grammatical categories.
+As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
 ### Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-<p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/conjugation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/conjugation_demo.gif" width="225"/></kbd></a>
-</p>
-
 ### Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
 
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `return` key is pressed.
 
-<p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/noun_plural_demo.gif"><kbd><img src ="Resources/GitHub/Demos/noun_plural_demo.gif" width="225"/></kbd></a>
-</p>
-
 ### Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
 
-Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected.
+Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
 #### Nouns
 
@@ -89,17 +88,9 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Plural nouns are colored orange 🟧 and marked with (PL)
 - Nouns meeting more than one of the above criteria are marked with all their forms
 
-<p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/noun_annotation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/noun_annotation_demo.gif" width="225"/></kbd></a>
-</p>
-
 #### Prepositions
 
 Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
-
-<p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Demos/preposition_annotation_demo.gif"><kbd><img src ="Resources/GitHub/Demos/preposition_annotation_demo.gif" width="225"/></kbd></a>
-</p>
 
 ### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
@@ -137,7 +128,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 Work that is in progress or could be implemented is tracked in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also note the use of the `--priority--` label that indicates which issues are most important.
 
-Aside from `translations.json` files, Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
+Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
 # Powered By
 

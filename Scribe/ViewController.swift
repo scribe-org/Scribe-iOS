@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     } else if displayPrivacyPolicy == true {
       privacyPolicyBtn.setTitle("View Installation", for: .normal)
     }
-    privacyPolicyBtn.setTitleColor(UIColor.label, for: .normal)
+    privacyPolicyBtn.setTitleColor(.black, for: .normal)
     privacyPolicyBtn.backgroundColor = UIColor.link
     privacyPolicyBtn.addTarget(self, action: #selector(showHidePrivacyPolicy), for: .touchUpInside)
     privacyPolicyBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
