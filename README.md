@@ -44,11 +44,11 @@ Users access Scribe language keyboards through the following:
 
 # Preview Video [`⇧`](#contents) <a id="preview-video"></a>
 
-The following is the combined preview videos for the [App Store](https://www.apple.com/app-store/):
+The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
 
-<!-- <p align="center">
-    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/"><kbd><img src ="Resources/AppStore/" width="225"/></kbd></a>
-</p> -->
+<p align="center">
+    <a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_vids_iPhone65.mp4"><kbd><img src ="Resources/GitHub/Videos/Scribe_vids_iPhone65.mp4" width="225"/></kbd></a>
+</p>
 
 The App Store images and videos can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
