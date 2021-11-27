@@ -186,6 +186,12 @@ class KeyboardViewController: UIInputViewController {
   func setPreviewBar() {
     previewBar?.backgroundColor = specialKeyColor
     previewBar?.textAlignment = NSTextAlignment.left
+
+    if DeviceType.isPhone {
+      previewPromptSpacing = String(repeating: " ", count: 2)
+    } else if DeviceType.isPad {
+      previewPromptSpacing = String(repeating: " ", count: 5)
+    }
   }
 
   // The button used to display Scribe commands.
@@ -249,6 +255,18 @@ class KeyboardViewController: UIInputViewController {
 
     setBtn(btn: conjugateShiftLeftBtn, color: keyColor, name: "shiftConjugateLeft", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", canCapitalize: false, isSpecial: false)
+
+    if DeviceType.isPad {
+      conjugateBtnFPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnSPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnTPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnFPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnSPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnTPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+
+      conjugateShiftLeftBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateShiftRightBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+    }
   }
 
   /// Activates all buttons that are associated with the conjugation display.

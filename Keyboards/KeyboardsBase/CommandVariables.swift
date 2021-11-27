@@ -6,7 +6,7 @@
 
 // A larger vertical bar than the normal | key for the cursor.
 let previewCursor: String = "│"
-let previewPromptSpacing = String(repeating: " ", count: 2)
+var previewPromptSpacing: String = ""
 
 var previewState: Bool! = false
 var invalidState: Bool! = false
