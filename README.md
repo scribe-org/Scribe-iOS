@@ -43,7 +43,7 @@ The following is the combined preview video for the [App Store](https://www.appl
 </video></a>
 </p>
 
-The App Store images and videos can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
+The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
