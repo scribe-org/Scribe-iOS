@@ -22,8 +22,8 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 # **Contents**<a id="contents"></a>
 
-- [Setup](#setup)
 - [Preview Video](#preview-video)
+- [Setup](#setup)
 - [Features](#features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
@@ -33,6 +33,14 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 - [Supported Languages](#supported-languages)
 - [To-Do](#to-do)
 
+# Preview Video [`⇧`](#contents) <a id="preview-video"></a>
+
+The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
+
+![preview_video](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_vids_iPhone65.mp4)
+
+The App Store images and videos can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
+
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
 Users access Scribe language keyboards through the following:
@@ -41,18 +49,6 @@ Users access Scribe language keyboards through the following:
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Select Scribe and choose from the available language keyboards
 - When typing press `🌐` to select keyboards
-
-# Preview Video [`⇧`](#contents) <a id="preview-video"></a>
-
-The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
-
-<p align="center">
-<a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_vids_iPhone65.mp4"><video width="320" height="500" controls>
-  <source src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_vids_iPhone65.mp4" type="video/mp4">
-</video></a>
-</p>
-
-The App Store images and videos can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
 # Features [`⇧`](#contents) <a id="features"></a>
 
