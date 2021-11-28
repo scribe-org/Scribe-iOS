@@ -37,11 +37,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
 
-<p align="center">
-<a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_iPhone65_preview.mp4"><video width="221.5" height="480" controls>
-  <source src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_iPhone65_preview.mp4" type="video/mp4">
-</video></a>
-</p>
+https://user-images.githubusercontent.com/24387426/143725407-b9144445-0824-429c-b995-b1cff6995fb2.mov
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
