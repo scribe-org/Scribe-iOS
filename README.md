@@ -19,7 +19,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 # **Contents**<a id="contents"></a>
 
-- [Preview Video](#preview-video)
+- [Preview Videos](#preview-videos)
 - [Setup](#setup)
 - [Features](#features)
   - [Translation](#translation)
@@ -30,7 +30,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 - [Supported Languages](#supported-languages)
 - [To-Do](#to-do)
 
-# Preview Video [`⇧`](#contents) <a id="preview-video"></a>
+# Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
 
 The following are combined preview videos for the [App Store](https://www.apple.com/app-store/). Choose which one to open based on your current device:
 
@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-
 <p>
 
 https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
-  
+
 </p>
 </details>
 
