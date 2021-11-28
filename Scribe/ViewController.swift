@@ -34,7 +34,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var privacyPolicyBtn: UIButton!
   var displayPrivacyPolicy = false
 
-  /// Sets the funcitonality of the privacy policy button.
+  /// Sets the functionality of the privacy policy button.
   func setPrivacyPolicyBtn() {
     if displayPrivacyPolicy == false {
       privacyPolicyBtn.setTitle("View Privacy Policy", for: .normal)

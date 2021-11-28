@@ -1,7 +1,7 @@
 //
 //  ColorVariables.swift
 //
-//  Variables assosciated with coloration for Scribe.
+//  Variables associated with coloration for Scribe.
 //
 
 import UIKit

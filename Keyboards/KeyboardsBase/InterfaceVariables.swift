@@ -1,7 +1,7 @@
 //
 //  InterfaceVariables.swift.swift
 //
-//  Variables assosciated with Scribe's user interface.
+//  Variables associated with Scribe's user interface.
 //
 
 import UIKit
@@ -81,7 +81,7 @@ func checkDarkModeSetColors() {
   }
 }
 
-/// Checks if the device is in landcrape mode.
+/// Checks if the device is in landscape mode.
 func checkLandscapeMode() {
   if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
     isLandscapeView = true

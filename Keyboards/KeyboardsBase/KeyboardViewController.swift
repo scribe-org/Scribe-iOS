@@ -117,7 +117,7 @@ class KeyboardViewController: UIInputViewController {
     btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
-  /// Deavtives a button by removing key touch functions for their given actions and making it clear.
+  /// Deactivates a button by removing key touch functions for their given actions and making it clear.
   ///
   /// - Parameters
   ///   - btn: the button to be deactivated.
@@ -129,8 +129,8 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
   }
 
-  /// Deletes in the proxy or preview bar given the current constaints.
-  func handlDeleteButtonPressed() {
+  /// Deletes in the proxy or preview bar given the current constraints.
+  func handleDeleteButtonPressed() {
     if previewState != true {
       proxy.deleteBackward()
     } else if !(previewState == true && allPrompts.contains((previewBar?.text!)!)) {
@@ -149,7 +149,7 @@ class KeyboardViewController: UIInputViewController {
 
   // MARK: Scribe command elements
 
-  /// Sets a button's values that are displayed and inseted into the proxy as well as assigning a color.
+  /// Sets a button's values that are displayed and inserted into the proxy as well as assigning a color.
   ///
   /// - Parameters
   ///   - btn: the button to be set up.
@@ -182,7 +182,7 @@ class KeyboardViewController: UIInputViewController {
   // The bar that displays language logic or is typed into for Scribe commands.
   @IBOutlet var previewBar: UILabel!
 
-  /// Sets up the preview bar's color and text allignment.
+  /// Sets up the preview bar's color and text alignment.
   func setPreviewBar() {
     previewBar?.backgroundColor = specialKeyColor
     previewBar?.textAlignment = NSTextAlignment.left
@@ -226,7 +226,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateBtn: UIButton!
   @IBOutlet var pluralBtn: UIButton!
 
-  /// Sets up all buttons that are assosciated with Scribe commands.
+  /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
     setBtn(btn: translateBtn, color: specialKeyColor, name: "Translate", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtn, color: specialKeyColor, name: "Conjugate", canCapitalize: false, isSpecial: false)
@@ -295,7 +295,7 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateShiftRightBtn)
   }
 
-  /// Sets the label of the conjugation statea nd assigns the current tenses that are accessed to label the buttons.
+  /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
   func setConjugationState() {
     if controllerLanguage == "German" {
       previewBar?.text = deGetConjugationTitle()
@@ -331,11 +331,11 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Adds padding to keys to position them.
-  /// 
+  ///
   /// - Parameters
   ///  - to: the stackView in which the button is found.
   ///  - width: the width of the padding.
-  ///  - key: the key assosciated with the bytton.
+  ///  - key: the key associated with the button.
   func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
     let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
     padding.setTitleColor(.clear, for: .normal)
@@ -519,7 +519,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if !conjugateView { // normal keybaord view
+    if !conjugateView { // normal keyboard view
       stackView1.isUserInteractionEnabled = true
       stackView2.isUserInteractionEnabled = true
       stackView3.isUserInteractionEnabled = true
@@ -1252,7 +1252,7 @@ class KeyboardViewController: UIInputViewController {
       if previewState == true && allPrompts.contains((previewBar?.text!)!) {
         return
       }
-      handlDeleteButtonPressed()
+      handleDeleteButtonPressed()
       // Shift state if delete goes to the start of the proxy.
       if proxy.documentContextBeforeInput == nil && previewState != true {
         if keyboardState == .letters && shiftButtonState == .normal {
@@ -1461,7 +1461,7 @@ class KeyboardViewController: UIInputViewController {
   /// Defines the criteria under which a key is long pressed.
   ///
   /// - Parameters
-  ///   - gesture: the gesture that was recived.
+  ///   - gesture: the gesture that was received.
   @objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the preview state prompt from being deleted.
     if previewState == true && allPrompts.contains((previewBar?.text!)!) {
@@ -1469,7 +1469,7 @@ class KeyboardViewController: UIInputViewController {
     }
     if gesture.state == .began {
       backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
-        self.handlDeleteButtonPressed()
+        self.handleDeleteButtonPressed()
       }
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()

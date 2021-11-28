@@ -1,7 +1,7 @@
 //
 //  CommandVariables.swift
 //
-//  Variables assosciated with Scribe commands.
+//  Variables associated with Scribe commands.
 //
 
 // A larger vertical bar than the normal | key for the cursor.
@@ -72,7 +72,7 @@ func deGetConjugationState() -> String {
   }
 }
 
-/// Action assosciated with the left view switch button of the conjugation state.
+/// Action associated with the left view switch button of the conjugation state.
 func deConjugationStateLeft() {
   if deConjugationState == .indicativePresent {
     return
@@ -85,7 +85,7 @@ func deConjugationStateLeft() {
   }
 }
 
-/// Action assosciated with the right view switch button of the conjugation state.
+/// Action associated with the right view switch button of the conjugation state.
 func deConjugationStateRight() {
   if deConjugationState == .indicativePresent {
     deConjugationState = .indicativePreterite
@@ -132,7 +132,7 @@ func esGetConjugationState() -> String {
   }
 }
 
-/// Action assosciated with the left view switch button of the conjugation state.
+/// Action associated with the left view switch button of the conjugation state.
 func esConjugationStateLeft() {
   if esConjugationState == .indicativePresent {
     return
@@ -145,7 +145,7 @@ func esConjugationStateLeft() {
   }
 }
 
-/// Action assosciated with the right view switch button of the conjugation state.
+/// Action associated with the right view switch button of the conjugation state.
 func esConjugationStateRight() {
   if esConjugationState == .indicativePresent {
     esConjugationState = .preterite
