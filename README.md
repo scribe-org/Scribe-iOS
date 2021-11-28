@@ -36,6 +36,16 @@ The following is the combined preview video for the [App Store](https://www.appl
 
 https://user-images.githubusercontent.com/24387426/143763005-59746e14-62fc-43d5-8b22-cf0788683e49.mp4
 
+<details><summary><strong>Video for iPhone</strong></summary>
+<p>
+
+GitHub markdown seems to not support proportions of iPhone preview videos, so the following is a download link:
+
+https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
+
+</p>
+</details>
+
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
