@@ -4,10 +4,7 @@
 
 ---
 
-<!--
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
--->
-
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://www.apple.com/app-store/)
@@ -37,11 +34,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
 
-<p align="center">
-<a href="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_iPhone65_preview.mov"><video width="221.5" height="480" controls>
-  <source src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Videos/Scribe_iPhone65_preview.mov" type="video/mov">
-</video></a>
-</p>
+[![preview_video](https://img.youtube.com/vi/Jb4DFRT7mC0/maxresdefault.jpg)](https://youtu.be/Jb4DFRT7mC0)
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
