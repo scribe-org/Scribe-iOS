@@ -32,14 +32,18 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 # Preview Video [`⇧`](#contents) <a id="preview-video"></a>
 
-The following is the combined preview video for the [App Store](https://www.apple.com/app-store/):
+The following are combined preview videos for the [App Store](https://www.apple.com/app-store/). Choose which one to open based on your current device:
+
+<details><summary><strong>Desktop: iPad Pro 4th Gen</strong></summary>
+<p>
+
+</p>
+</details>
 
 https://user-images.githubusercontent.com/24387426/143763005-59746e14-62fc-43d5-8b22-cf0788683e49.mp4
 
-<details><summary><strong>Video for iPhone</strong></summary>
+<details><summary><strong>Mobile: iPhone 13 Pro Max</strong></summary>
 <p>
-
-GitHub markdown seems to not support proportions of iPhone preview videos, so the following is a download link:
 
 https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
 
