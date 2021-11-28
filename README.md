@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-
 </p>
 </details>
 
-<details><summary><strong>Desktop: iPad Pro 3rd gen version</strong></summary>
+<details><summary><strong>Desktop: iPad Pro 4th gen version</strong></summary>
 <p>
 
 https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
