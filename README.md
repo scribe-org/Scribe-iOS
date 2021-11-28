@@ -34,19 +34,19 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The following are combined preview videos for the [App Store](https://www.apple.com/app-store/). Choose which one to open based on your current device:
 
-<details><summary><strong>Desktop: iPad Pro 4th Gen</strong></summary>
-<p>
-
-</p>
-</details>
-
-https://user-images.githubusercontent.com/24387426/143763005-59746e14-62fc-43d5-8b22-cf0788683e49.mp4
-
 <details><summary><strong>Mobile: iPhone 13 Pro Max</strong></summary>
 <p>
 
 https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
 
+</p>
+</details>
+
+<details><summary><strong>Desktop: iPad Pro 4th Gen</strong></summary>
+<p>
+
+https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
+  
 </p>
 </details>
 
