@@ -5,13 +5,11 @@
 ---
 
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
-[![iOS 13.0+](https://img.shields.io/badge/iOS-13.0%2B-blue.svg)](https://www.apple.com/app-store/)
+[![iOS 13.0+](https://img.shields.io/badge/iOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
-[![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://www.apple.com/app-store/)
-
-NOTE: submission to the App Store in progress.
+[![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
 ### Scribe language keyboards for iOS
 
@@ -34,7 +32,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 # Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
 
-The following are combined preview videos for the [App Store](https://www.apple.com/app-store/). Choose which one to open based on your current device:
+The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886). Choose which one to open based on your current device:
 
 <details><summary><strong>Mobile: iPhone 6.5" version</strong></summary>
 <p>
@@ -58,7 +56,7 @@ The App Store videos, images and text can be found in [Resources/AppStore](https
 
 Users access Scribe language keyboards through the following:
 
-- Download Scribe from the [App Store](https://www.apple.com/app-store/) (submission in progress)
+- Download Scribe from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Select Scribe and choose from the available language keyboards
 - When typing press `🌐` to select keyboards
@@ -116,6 +114,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Auto-capitalization
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
+- Typing `,` and then `space` returns to the alphabetic keyboard (WIP)
 - Dark mode compatibility
 - Hold-to-select characters [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
