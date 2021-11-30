@@ -452,6 +452,17 @@ class KeyboardViewController: UIInputViewController {
       nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
     }
 
+    keyAlternatesDict = ["a": aAlternateKeys,
+                         "e": eAlternateKeys,
+                         "i": iAlternateKeys,
+                         "o": oAlternateKeys,
+                         "u": uAlternateKeys,
+                         "y": yAlternateKeys,
+                         "s": sAlternateKeys,
+                         "d": dAlternateKeys,
+                         "c": cAlternateKeys,
+                         "n": nAlternateKeys]
+
     checkLandscapeMode()
     checkDarkModeSetColors()
     setKeyboardLayouts()
@@ -684,68 +695,51 @@ class KeyboardViewController: UIInputViewController {
           }
 
           // Setting hold-to-select functionality.
+          let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(setAlternatesView(sender:)))
+          longPressGesture.minimumPressDuration = 1.2
+
           if key == "a" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(aLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "e" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(eLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "i" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(iLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "o" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(oLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "u" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(uLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "y" {
             if controllerLanguage == "German" {
-              let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(yLongPressedSelectAlternates(sender:)))
-              longGesture.minimumPressDuration = 1.2
-              btn.addGestureRecognizer(longGesture)
+              btn.addGestureRecognizer(longPressGesture)
             }
           }
 
           if key == "s" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(sLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "d" {
             if controllerLanguage == "Spanish" {
-              let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(dLongPressedSelectAlternates(sender:)))
-              longGesture.minimumPressDuration = 1.2
-              btn.addGestureRecognizer(longGesture)
+              btn.addGestureRecognizer(longPressGesture)
             }
           }
 
           if key == "c" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(cLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           if key == "n" {
-            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(nLongPressedSelectAlternates(sender:)))
-            longGesture.minimumPressDuration = 1.2
-            btn.addGestureRecognizer(longGesture)
+            btn.addGestureRecognizer(longPressGesture)
           }
 
           // Pad after key is added.
@@ -1488,16 +1482,18 @@ class KeyboardViewController: UIInputViewController {
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
   }
 
-  // MARK: Hold to select functions
-
   /// Sets and styles the view displayed for hold-to-select keys.
   ///
   /// - Parameters
   ///   - sender: the long press of the given key.
-  ///   - numAlternates: number of alternates for the given key.
-  func setAlternatesView(sender: UILongPressGestureRecognizer, keyOn: String, alternateKeys: Array<String>) {
+  @objc func setAlternatesView(sender: UILongPressGestureRecognizer) {
     let tapLocation = sender.location(in: self.view)
-    let numAlternates = CGFloat(alternateKeys.count)
+
+    // Derive which button was pressed and get its alternates.
+    let button = sender.view as! UIButton
+    let btnPressed = button.layer.value(forKey: "original") as? String
+    let alternateKeys = keyAlternatesDict[btnPressed ?? ""]
+    let numAlternates = CGFloat(alternateKeys!.count)
 
     // Variables for alternate key view appearance.
     var alternatesViewWidth = CGFloat(0)
@@ -1508,9 +1504,9 @@ class KeyboardViewController: UIInputViewController {
     var alternatesBtnHeight = CGFloat(0)
     var alternatesCharHeight = CGFloat(0)
 
-    if keyOn == "Left" {
+    if keysWithAlternatesLeft.contains(btnPressed ?? "") {
       alternatesViewX = tapLocation.x - 10.0
-    } else if keyOn == "Right" {
+    } else if keysWithAlternatesRight.contains(btnPressed ?? "") {
       alternatesViewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
     }
 
@@ -1547,7 +1543,7 @@ class KeyboardViewController: UIInputViewController {
     alternatesKeyView.layer.borderColor = specialKeyColor.cgColor
 
     alternateBtnStartX = 5.0
-    for char in alternateKeys {
+    for char in alternateKeys! {
       let btn: UIButton = UIButton(frame: CGRect(x: alternateBtnStartX, y: 0, width: alternateButtonWidth, height: alternatesBtnHeight))
       if shiftButtonState == .normal || char == "ß" {
         btn.setTitle(char, for: .normal)
@@ -1563,85 +1559,5 @@ class KeyboardViewController: UIInputViewController {
       alternateBtnStartX += (alternateButtonWidth + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
-  }
-
-  /// Adds a view with alternate keys above the a key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func aLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: aAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the e key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func eLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: eAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the i key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func iLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: iAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the o key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func oLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: oAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the u key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func uLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: uAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the y key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func yLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: yAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the s key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func sLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: sAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the d key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func dLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: dAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the c key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func cLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Left", alternateKeys: cAlternateKeys)
-  }
-
-  /// Adds a view with alternate keys above the n key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  @objc func nLongPressedSelectAlternates(sender: UILongPressGestureRecognizer) {
-    setAlternatesView(sender: sender, keyOn: "Right", alternateKeys: nAlternateKeys)
   }
 }
