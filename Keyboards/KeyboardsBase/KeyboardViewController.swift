@@ -663,6 +663,7 @@ class KeyboardViewController: UIInputViewController {
 
           if key == "selectKeyboard" {
             selectKeyboardButton = btn
+            self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
             styleIconBtn(btn: btn, iconName: "globe")
           }
 
