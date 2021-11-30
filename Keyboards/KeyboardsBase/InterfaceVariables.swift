@@ -27,6 +27,7 @@ var alternatesKeyView: UIView!
 var keysWithAlternates = [String]()
 var keysWithAlternatesLeft = [String]()
 var keysWithAlternatesRight = [String]()
+var keyAlternatesDict = [String: Array<String>]()
 var aAlternateKeys = [String]()
 var eAlternateKeys = [String]()
 var iAlternateKeys = [String]()
