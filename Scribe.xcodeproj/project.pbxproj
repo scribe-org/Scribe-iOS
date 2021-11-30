@@ -98,6 +98,7 @@
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D18575D92756690C00BA7F8A /* ScribeBtnPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPad.png; sourceTree = "<group>"; };
 		D18575DC2756691400BA7F8A /* ScribeBtnPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhone.png; sourceTree = "<group>"; };
 		D190B240274056D400705659 /* ColorVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVariables.swift; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 				38BD213222D5907F00C6795D /* Scribe */,
 				D190B28F27426F4900705659 /* LICENSE.txt */,
 				D190B29027426F4900705659 /* README.md */,
+				D174F8A22756893200DCE106 /* CHANGELOG.md */,
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				38BD213122D5907E00C6795D /* Products */,
 			);

@@ -397,7 +397,7 @@ class KeyboardViewController: UIInputViewController {
       if isLandscapeView == true {
         keyboardHeight = 180
       } else {
-        keyboardHeight = 240
+        keyboardHeight = 260
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
