@@ -18,6 +18,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design
 
 - Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read.
+  <!-- - Changes the border on the keys so that they're press area is higher. -->
 - The keyboard has been made taller for iPhones as there were issues with the wrong keys being typed.
 
 ### 🐛 Bug fixes
