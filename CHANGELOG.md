@@ -12,8 +12,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ Features
 
- - Adds comma-space to letter keys functionality. 
-<!-- - Adds question mark and exclamation point followed by space to capital letter keys functionality. -->
+- Adds comma-space to letter keys functionality.
+- Adds question mark and exclamation point followed by space to capital letter keys functionality.
 
 ### 🎨 Design
 
