@@ -12,14 +12,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ Features
 
-<!-- - Adds comma-space to letter keys functionality. -->
+ - Adds comma-space to letter keys functionality. 
 <!-- - Adds question mark and exclamation point followed by space to capital letter keys functionality. -->
 
 ### 🎨 Design
 
-<!-- - The display of hold-to-select characters now better resembles that of system keyboards. -->
-<!-- - Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read. -->
-
+- Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read.
 - The keyboard has been made taller for iPhones as there were issues with the wrong keys being typed.
 
 ### 🐛 Bug fixes
