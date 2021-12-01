@@ -31,6 +31,10 @@ func addHyperLinksToText(originalText: String, hyperLinks: [String: String]) -> 
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class ViewController: UIViewController {
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .darkContent
+  }
+
   @IBOutlet weak var privacyPolicyBtn: UIButton!
   var displayPrivacyPolicy = false
 
