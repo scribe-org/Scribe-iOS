@@ -91,15 +91,15 @@ Scribe further annotates words in the preview bar to help users understand the c
 
 Scribe annotates nouns in the preview bar according to the following conventions:
 
-- Feminine nouns are colored red 🟥 and marked with (F)
-- Masculine nouns are colored blue 🟦 and marked with (M)
-- Neutral nouns are colored green 🟩 and marked with (N)
-- Plural nouns are colored orange 🟧 and marked with (PL)
-- Nouns meeting more than one of the above criteria are marked with all their forms
+- Feminine: colored red 🟥 and marked with (F)
+- Masculine: colored blue 🟦 and marked with (M)
+- Neutral: colored green 🟩 and marked with (N)
+- Plural: colored orange 🟧 and marked with (PL)
+- More than one: marked with all their forms
 
 #### Prepositions
 
-Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
+Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
 
 ### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
@@ -111,11 +111,11 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - iPhone and iPad support
 - Dynamic layouts for cross-device performance
 - Portrait and landscape modes
-- Auto-capitalization
+- Dark mode compatibility
+- Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
-- Typing `,` and then `space` returns to the alphabetic keyboard (WIP)
-- Dark mode compatibility
+- Typing `,`, `?` or `!` and then `space` returns to the alphabetic keyboards
 - Hold-to-select characters [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>

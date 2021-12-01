@@ -15,13 +15,13 @@ Current features include:
 
 Scribe annotates nouns in the preview bar according to the following conventions:
 
-- Feminine nouns are colored red and marked with (F)
-- Masculine nouns are colored blue and marked with (M)
-- Neutral nouns are colored green and marked with (N)
-- Plural nouns are colored orange and marked with (PL)
-- Nouns meeting more than one of the above criteria are marked with all their forms
+- Feminine: colored red and marked with (F)
+- Masculine: colored blue and marked with (M)
+- Neutral: colored green and marked with (N)
+- Plural: colored orange and marked with (PL)
+- More than one: marked with all their forms
 
-Scribe also annotates the grammatical cases of prepositions in the preview bar if there is a relation in the given language.
+Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
 
 Being fully open source, the Scribe team loves to get both feedback and contributions.
 

@@ -36,7 +36,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Moved the contribution guidelines to the main directory.
 
-## 1.0
+## 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
@@ -55,6 +55,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data
 
+- Wikidata WDQS queries saved so that data can be updated before releases.
+- Data formatting done via Python scripts.
 - Data saved in JSON files in app to allow for quick access that doesn't require an internet connection.
 - Nouns, verbs and prepositions (where applicable).
 - Translations of English words via 🤗 Transformers.
