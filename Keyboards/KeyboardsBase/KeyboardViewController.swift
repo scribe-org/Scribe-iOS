@@ -1260,8 +1260,14 @@ class KeyboardViewController: UIInputViewController {
     case "Leerzeichen":
       if previewState != true {
         proxy.insertText(" ")
+        if proxy.documentContextBeforeInput?.suffix(2) == ", " {
+          changeKeyboardToLetterKeys()
+        }
       } else {
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
+        if previewBar?.text!.suffix(3) == ", " + previewCursor {
+          changeKeyboardToLetterKeys()
+        }
       }
       typedNounAnnotation()
       typedPrepositionAnnotation()
