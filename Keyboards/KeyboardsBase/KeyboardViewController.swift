@@ -19,6 +19,11 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var selectKeyboardButton: UIButton!
   var backspaceTimer: Timer?
 
+  // Prevents caps lock when the first key wasn't shift.
+  var capsLockPossible = false
+  // Prevents the double space period shortcut when the first key wasn't space.
+  var doubleSpacePeriodPossible = false
+
   // Stack views that are populated with they keyboard rows.
   @IBOutlet weak var stackView1: UIStackView!
   @IBOutlet weak var stackView2: UIStackView!
@@ -594,8 +599,9 @@ class KeyboardViewController: UIInputViewController {
           }
 
           activateBtn(btn: btn)
-          btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-
+          if key == "shift" || key == "Leerzeichen" || key == "espacio" {
+            btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+          }
           // Set up and activate Scribe command buttons.
           styleBtn(btn: scribeBtn, title: "Scribe", radius: keyCornerRadius)
           scribeBtn?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
@@ -959,7 +965,7 @@ class KeyboardViewController: UIInputViewController {
   func typedNounAnnotation() {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-      var lastWordTyped = wordsTyped.penultimate()
+      var lastWordTyped = wordsTyped.secondToLast()
       if lastWordTyped != "" {
         // Check to see if the input was uppercase to return an uppercase plural.
         var queriedWordIsUpperCase: Bool = false
@@ -1042,7 +1048,7 @@ class KeyboardViewController: UIInputViewController {
     if controllerLanguage == "German" {
       if proxy.documentContextBeforeInput != nil {
         let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        var lastWordTyped = wordsTyped.penultimate()
+        var lastWordTyped = wordsTyped.secondToLast()
         if lastWordTyped != "" {
           // Check to see if the input was uppercase to return an uppercase plural.
           var queriedWordIsUpperCase: Bool = false
@@ -1083,6 +1089,15 @@ class KeyboardViewController: UIInputViewController {
 
     guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else {return}
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
+
+    // Disable the possibility of a double shift call.
+    if originalKey != "shift" {
+      capsLockPossible = false
+    }
+    // Disable the possibility of a double space period call.
+    if originalKey != "Leerzeichen" || originalKey != "espacio" {
+      doubleSpacePeriodPossible = false
+    }
 
     switch originalKey {
     case "Scribe":
@@ -1293,18 +1308,42 @@ class KeyboardViewController: UIInputViewController {
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearPreviewBar()
       }
+      doubleSpacePeriodPossible = true
 
     case "espacio":
       if previewState != true {
         proxy.insertText(" ")
+        if proxy.documentContextBeforeInput?.suffix(2) == ", " {
+          changeKeyboardToLetterKeys()
+        }
+        if proxy.documentContextBeforeInput?.suffix(2) == "? " {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+        if proxy.documentContextBeforeInput?.suffix(2) == "! " {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
       } else {
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
+        if previewBar?.text!.suffix(3) == ", " + previewCursor {
+          changeKeyboardToLetterKeys()
+        }
+        if previewBar?.text!.suffix(3) == "? " + previewCursor {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+        if previewBar?.text!.suffix(3) == "! " + previewCursor {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
       }
       typedNounAnnotation()
       typedPrepositionAnnotation()
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearPreviewBar()
       }
+      doubleSpacePeriodPossible = true
 
     case "selectKeyboard":
       self.advanceToNextInputMode()
@@ -1406,6 +1445,7 @@ class KeyboardViewController: UIInputViewController {
       shiftButtonState = shiftButtonState == .normal ? .shift : .normal
       loadKeys()
       clearPreviewBar()
+      capsLockPossible = true
 
     default:
       if shiftButtonState == .shift {
@@ -1456,19 +1496,19 @@ class KeyboardViewController: UIInputViewController {
 
     // Caps lock given two taps of shift.
     let touch: UITouch = event.allTouches!.first!
-    if touch.tapCount == 2 && originalKey == "shift" {
+    if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible == true {
       shiftButtonState = .caps
       loadKeys()
       clearPreviewBar()
     }
     // Double space period shortcut.
-    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 {
-      if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState != true {
+    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
+      if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == false {
         proxy.deleteBackward()
         proxy.insertText(". ")
         shiftButtonState = .shift
         loadKeys()
-      } else if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == true {
+      } else if previewBar?.text!.suffix(2) != "  " && previewState == true {
         previewBar?.text! = (previewBar?.text!.deletePriorToCursor())!
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: ". "))!
         shiftButtonState = .shift
