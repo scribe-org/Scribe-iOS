@@ -1503,11 +1503,13 @@ class KeyboardViewController: UIInputViewController {
     }
     // Double space period shortcut.
     if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
+      // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == false {
         proxy.deleteBackward()
         proxy.insertText(". ")
         shiftButtonState = .shift
         loadKeys()
+      // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       } else if previewBar?.text!.suffix(2) != "  " && previewState == true {
         previewBar?.text! = (previewBar?.text!.deletePriorToCursor())!
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: ". "))!

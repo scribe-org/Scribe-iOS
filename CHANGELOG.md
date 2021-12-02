@@ -19,9 +19,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read.
 - Fixes the display of the scroll bar in the app when the user is in dark mode, as the white bar wasn't visually appealing.
-  <!-- - Changes the border on the keys so that they're press area is higher. -->
-- The keyboard has been made taller for iPhones to make the buttons taller.
-- More space has been added around the buttons to make them resemble system keyboard spacing better.
+- The keyboard has been made taller for iPhones to make the buttons larger vertically.
+- More space has been added around the buttons to make them better resemble system keyboard spacing.
 
 ### 🐛 Bug fixes
 
