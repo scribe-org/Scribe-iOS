@@ -400,9 +400,9 @@ class KeyboardViewController: UIInputViewController {
 
     if DeviceType.isPhone {
       if isLandscapeView == true {
-        keyboardHeight = 180
+        keyboardHeight = 200
       } else {
-        keyboardHeight = 260
+        keyboardHeight = 280
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
@@ -493,8 +493,8 @@ class KeyboardViewController: UIInputViewController {
     // buttonWidth determined per keyboard by the top row.
     if isLandscapeView == true {
       if DeviceType.isPhone {
-        letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.8
-        numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.8
+        letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.6
+        numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.6
       } else if DeviceType.isPad {
         letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.3
         numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.3
@@ -550,7 +550,7 @@ class KeyboardViewController: UIInputViewController {
           let btn = UIButton(type: .custom)
           btn.backgroundColor = keyColor
           btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
-          btn.layer.borderWidth = 3
+          btn.layer.borderWidth = 4
           btn.layer.cornerRadius = keyCornerRadius
 
           let key = keyboard[row][col]

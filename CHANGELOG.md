@@ -20,13 +20,18 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read.
 - Fixes the display of the scroll bar in the app when the user is in dark mode, as the white bar wasn't visually appealing.
   <!-- - Changes the border on the keys so that they're press area is higher. -->
-- The keyboard has been made taller for iPhones as there were issues with the wrong keys being typed.
+- The keyboard has been made taller for iPhones to make the buttons taller.
+- More space has been added around the buttons to make them resemble system keyboard spacing better.
 
 ### 🐛 Bug fixes
 
 - Fixes an issue where the select keyboard button wouldn't be able to be long held after an initial button is pressed.
 - Fixes an issue where canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
 - Fixes an issue where the double space period shortcut is triggered without intent.
+
+### 🌐 Localization
+
+- Added readme files to be translated to other languages and added a drop down menu to select them to each readme.
 
 ### ♻️ Refactoring
 
