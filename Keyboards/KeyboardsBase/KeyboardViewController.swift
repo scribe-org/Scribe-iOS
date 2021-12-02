@@ -1094,18 +1094,21 @@ class KeyboardViewController: UIInputViewController {
         if previewState == true { // esc
           scribeBtnState = false
           previewState = false
+          getTranslation = false
+          getConjugation = false
+          getPlural = false
         } else if scribeBtnState == false && conjugateView != true { // ScribeBtn
           scribeBtnState = true
           activateBtn(btn: translateBtn)
           activateBtn(btn: conjugateBtn)
           activateBtn(btn: pluralBtn)
-        } else if conjugateView == true { // esc
+        } else { // esc
           conjugateView = false
           scribeBtnState = false
           previewState = false
-        } else { // esc
-          scribeBtnState = false
-          previewState = false
+          getTranslation = false
+          getConjugation = false
+          getPlural = false
         }
         loadKeys()
       }
