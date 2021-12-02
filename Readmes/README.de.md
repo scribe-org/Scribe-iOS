@@ -11,7 +11,7 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-<details><summary><strong>Sprache auswählen</strong></summary>
+<details><summary><strong>🌐 Sprache auswählen</strong></summary>
 <p>
 
 - [English](https://github.com/scribe-org/Scribe-iOS/blob/main/README.md)
