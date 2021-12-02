@@ -11,6 +11,16 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
+<details><summary><strong>Select language</strong></summary>
+<p>
+
+- English
+- [Deutsch](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.de.md)
+- [Español](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.es.md)
+
+</p>
+</details>
+
 ### Scribe language keyboards for iOS
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
