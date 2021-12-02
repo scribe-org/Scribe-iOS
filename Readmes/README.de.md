@@ -14,7 +14,7 @@
 <details><summary><strong>🌐 Sprache auswählen</strong></summary>
 <p>
 
-- [English](https://github.com/scribe-org/Scribe-iOS/blob/main/README.md)
+- [English](https://github.com/scribe-org/Scribe-iOS)
 - Deutsch
 - [Español](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.es.md)
 
