@@ -3,7 +3,7 @@
 
 SELECT DISTINCT ?singular ?plural ?gender WHERE {
 
-  # All Russian nouns or pronouns.
+  # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
             dct:language wd:Q7737 ;
