@@ -30,7 +30,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ♻️ Refactoring
 
-- Combines all the space bar logic into one and rename the key based on the keyboard.
+- Combines all the space bar logic into one and renames the key based on the keyboard.
 
 ## 1.0.1 (WIP)
 
