@@ -8,6 +8,24 @@ Scribe-iOS follows [semantic versioning](https://semver.org/), a MAJOR.MINOR.PAT
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
+## 1.0.2 (WIP)
+
+### 🚀 Deployment
+
+- Adds a Russian keyboard.
+
+### 🗃️ Data
+
+<!--  -->
+
+### 🐛 Bug fixes
+
+- Fixed a problem with iPads where semicolon keys also had apostrophes.
+
+### 🌐 Localization
+
+- Added a WIP Russian readme file.
+
 ## 1.0.1 (WIP)
 
 ### ✨ Features

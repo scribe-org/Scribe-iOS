@@ -139,6 +139,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 | Language | Nouns | Verbs | Translations\* | Prepositions† |
 | :------- | ----: | ----: | -------------: | ------------: |
 | German   |  27K+ |   3K+ |           65K+ |           190 |
+| Russian  |   WIP |   WIP |            WIP |           WIP |
 | Spanish  |   8K+ |    65 |           65K+ |            NA |
 
 `*` Given the current **`beta`** status where words are machine translated.
