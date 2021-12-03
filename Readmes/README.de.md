@@ -17,6 +17,7 @@
 - [English](https://github.com/scribe-org/Scribe-iOS)
 - Deutsch
 - [Español](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.es.md)
+- [Русская](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.ru.md)
 
 </p>
 </details>

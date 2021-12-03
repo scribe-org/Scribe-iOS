@@ -38,6 +38,7 @@ var sAlternateKeys = [String]()
 var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
 var nAlternateKeys = [String]()
+var ьAlternateKeys = [String]()
 
 /// States of the keyboard corresponding to layouts found in KeyboardConstants.swift.
 enum KeyboardState {
@@ -104,14 +105,14 @@ public enum GermanKeyboardConstants {
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
+    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
     ["ABC", "selectKeyboard", "Leerzeichen", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
+    ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
     ["ABC", "selectKeyboard", "Leerzeichen", "return"] // "undoArrow"
   ]
@@ -126,7 +127,7 @@ public enum GermanKeyboardConstants {
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
     ["\"", "§", "€", "%", "&", "/", "(", ")", "=", "'", "#", "return"],
-    ["#+=", "—", "`", "'", "...", "@", ";", ":'", ",", ".", "-", "#+="],
+    ["#+=", "—", "`", "'", "...", "@", ";", ":", ",", ".", "-", "#+="],
     ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
@@ -151,6 +152,61 @@ public enum GermanKeyboardConstants {
   static let sAlternateKeys = ["ß", "ś", "š"]
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let nAlternateKeys = ["ń", "ñ"]
+}
+
+// MARK: Russian interface variables
+
+public enum RussianKeyboardConstants {
+  // Keyboard key layouts.
+  static let letterKeysPhone = [
+    ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"],
+    ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"],
+    ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "delete"],
+    ["123", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+  ]
+
+  static let numberKeysPhone = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
+    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["АБВ", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+  ]
+
+  static let symbolKeysPhone = [
+    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
+    ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
+    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["АБВ", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+  ]
+
+  static let letterKeysPad = [
+    ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "delete"],
+    ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "return"],
+    ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", ".", "shift"],
+    [".?123", "selectKeyboard", "Пробел", ".?123", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let numberKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
+    ["@", "#", "№", "₽", "ʼ", "&", "*", "(", ")", "'", "\"", "return"],
+    ["#+=", "%", "_", "-", "+", "=", "≠", ";", ":", ",", ".", "#+="],
+    ["АБВ", "selectKeyboard", "Пробел", "АБВ", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let symbolKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
+    ["$", "€", "£", "¥", "±", "·", "`", "[", "]", "{", "}", "return"],
+    ["123", "§", "|", "~", "...",  "^", "\\", "<", ">", "!", "?", "123"],
+    ["АБВ", "selectKeyboard", "Пробел", "АБВ", "hideKeyboard"] // "undoArrow"
+  ]
+
+  // Alternate key vars.
+  static let keysWithAlternates = ["е", "ь"]
+  static let keysWithAlternatesLeft = ["е"]
+  static let keysWithAlternatesRight = ["ь"]
+
+  static let eAlternateKeys = ["ë"]
+  static let ьAlternateKeys = ["Ъ"]
 }
 
 // MARK: Spanish interface variables
@@ -188,7 +244,7 @@ public class SpanishKeyboardConstants {
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "+", "return"],
-    ["#+=", "%", "_", "-", "=", "/", ";", ":'", ",", ".", "#+="],
+    ["#+=", "%", "_", "-", "=", "/", ";", ":", ",", ".", "#+="],
     ["ABC", "selectKeyboard", "espacio", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 

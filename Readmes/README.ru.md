@@ -11,13 +11,13 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-<details><summary><strong>🌐 Seleccione el idioma</strong></summary>
+<details><summary><strong>🌐 Выберите язык</strong></summary>
 <p>
 
 - [English](https://github.com/scribe-org/Scribe-iOS)
 - [Deutsch](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.de.md)
-- Español
-- [Русская](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.ru.md)
+- [Español](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.es.md)
+- Русская
 
 </p>
 </details>
