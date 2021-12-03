@@ -42,6 +42,16 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = GermanKeyboardConstants.numberKeysPad
         symbolKeys = GermanKeyboardConstants.symbolKeysPad
       }
+    } else if controllerLanguage == "Russian" {
+      if DeviceType.isPhone {
+        letterKeys = RussianKeyboardConstants.letterKeysPhone
+        numberKeys = RussianKeyboardConstants.numberKeysPhone
+        symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+      } else {
+        letterKeys = RussianKeyboardConstants.letterKeysPad
+        numberKeys = RussianKeyboardConstants.numberKeysPad
+        symbolKeys = RussianKeyboardConstants.symbolKeysPad
+      }
     } else if controllerLanguage == "Spanish" {
       if DeviceType.isPhone {
         letterKeys = SpanishKeyboardConstants.letterKeysPhone
@@ -426,7 +436,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
-    // German or Spanish
+    // German, Russian or Spanish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     if controllerLanguage == "German" {
@@ -442,6 +452,9 @@ class KeyboardViewController: UIInputViewController {
       sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
       cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
       nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+    } else if controllerLanguage == "Russian" {
+      eAlternateKeys = RussianKeyboardConstants.eAlternateKeys
+      ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
     } else if controllerLanguage == "Spanish" {
       keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
       keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
@@ -466,7 +479,8 @@ class KeyboardViewController: UIInputViewController {
                          "s": sAlternateKeys,
                          "d": dAlternateKeys,
                          "c": cAlternateKeys,
-                         "n": nAlternateKeys]
+                         "n": nAlternateKeys,
+                         "ь": ьAlternateKeys]
 
     checkLandscapeMode()
     checkDarkModeSetColors()
@@ -570,26 +584,26 @@ class KeyboardViewController: UIInputViewController {
           // Set key character sizes.
           if DeviceType.isPhone {
             if isLandscapeView == true {
-              if key == "#+=" || key == "ABC" || key == "123" {
+              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "123" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
-              } else if key == "Leerzeichen" || key == "espacio" {
+              } else if key == "Leerzeichen" || key == "Пробел" || key == "espacio" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
               } else {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
               }
             } else {
-              if key == "#+=" || key == "ABC" || key == "123" {
+              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "123" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
-              } else if key == "Leerzeichen" || key == "espacio" {
+              } else if key == "Leerzeichen" || key == "Пробел" || key == "espacio" {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
               } else {
                 btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
               }
             }
           } else if DeviceType.isPad {
-            if key == "#+=" || key == "ABC" || key == "hideKeyboard" {
+            if key == "#+=" || key == "ABC" || key == "АБВ" || key == "hideKeyboard" {
               btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.25)
-            } else if key == "Leerzeichen" || key == "espacio" {
+            } else if key == "Leerzeichen" || key == "Пробел" || key == "espacio" {
               btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
             } else if key == ".?123" {
               btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
@@ -599,7 +613,7 @@ class KeyboardViewController: UIInputViewController {
           }
 
           activateBtn(btn: btn)
-          if key == "shift" || key == "Leerzeichen" || key == "espacio" {
+          if key == "shift" || key == "Leerzeichen" || key == "Пробел" || key == "espacio" {
             btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
           }
           // Set up and activate Scribe command buttons.
@@ -748,13 +762,19 @@ class KeyboardViewController: UIInputViewController {
             btn.addGestureRecognizer(longPressGesture)
           }
 
+          if key == "ь" {
+            if controllerLanguage == "Russian" {
+              btn.addGestureRecognizer(longPressGesture)
+            }
+          }
+
           // Pad after key is added.
           if DeviceType.isPhone && key == "m" && controllerLanguage == "German" {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
           }
 
           // specialKey styling.
-          if key == "ABC" {
+          if key == "ABC" || key == "АБВ" {
             if DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
             } else {
@@ -762,9 +782,13 @@ class KeyboardViewController: UIInputViewController {
             }
             btn.layer.setValue(true, forKey: "isSpecial")
             btn.backgroundColor = specialKeyColor
-          } else if key == "delete" || key == "#+=" || key == "shift" || key == "undoArrow" || key == "selectKeyboard" {
+          } else if key == "delete" || key == "#+=" || key == "shift" || key == "selectKeyboard" { // key == "undoArrow"
             if DeviceType.isPhone {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+              if controllerLanguage == "Russian" && keyboardState == .letters {
+                btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+              } else {
+                btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+              }
             } else {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
             }
@@ -782,6 +806,8 @@ class KeyboardViewController: UIInputViewController {
           } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
             if DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+            } else if controllerLanguage == "Russian" && row == 2 && DeviceType.isPhone {
+              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
             } else {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
             }
@@ -794,7 +820,7 @@ class KeyboardViewController: UIInputViewController {
             // Only change widths for number and symbol keys for iPhones.
           } else if (keyboardState == .numbers || keyboardState == .symbols) && row == 2 && DeviceType.isPhone {
             btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
-          } else if ( key != "Leerzeichen" && controllerLanguage == "German" ) || ( key != "espacio" && controllerLanguage == "Spanish" ) {
+          } else if ( key != "Leerzeichen" && controllerLanguage == "German" ) || ( key != "Пробел" && controllerLanguage == "Russian" ) || ( key != "espacio" && controllerLanguage == "Spanish" ) {
             btn.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
           } else {
             btn.layer.setValue(key, forKey: "original")
@@ -881,7 +907,7 @@ class KeyboardViewController: UIInputViewController {
     var noun = previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1))
     var queriedWordIsUpperCase: Bool = false
     // Check to see if the input was uppercase to return an uppercase plural.
-    if controllerLanguage == "Spanish" {
+    if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
       let firstLetter = noun?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
       noun = noun?.lowercased()
@@ -911,7 +937,7 @@ class KeyboardViewController: UIInputViewController {
     var selectedWord = proxy.selectedText
     // Check to see if the input was uppercase to return an uppercase plural.
     var queriedWordIsUpperCase: Bool = false
-    if controllerLanguage == "Spanish" {
+    if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
       let firstLetter = selectedWord?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
       selectedWord = selectedWord?.lowercased()
@@ -969,7 +995,7 @@ class KeyboardViewController: UIInputViewController {
       if lastWordTyped != "" {
         // Check to see if the input was uppercase to return an uppercase plural.
         var queriedWordIsUpperCase: Bool = false
-        if controllerLanguage == "Spanish" {
+        if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
           let firstLetter = lastWordTyped?.substring(toIdx: 1)
           queriedWordIsUpperCase = firstLetter!.isUppercase
           lastWordTyped = lastWordTyped?.lowercased()
@@ -1095,7 +1121,7 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = false
     }
     // Disable the possibility of a double space period call.
-    if originalKey != "Leerzeichen" || originalKey != "espacio" {
+    if originalKey != "Leerzeichen" || originalKey != "Пробел" || originalKey != "espacio" {
       doubleSpacePeriodPossible = false
     }
 
@@ -1310,6 +1336,41 @@ class KeyboardViewController: UIInputViewController {
       }
       doubleSpacePeriodPossible = true
 
+    case "Пробел":
+      if previewState != true {
+        proxy.insertText(" ")
+        if proxy.documentContextBeforeInput?.suffix(2) == ", " {
+          changeKeyboardToLetterKeys()
+        }
+        if proxy.documentContextBeforeInput?.suffix(2) == "? " {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+        if proxy.documentContextBeforeInput?.suffix(2) == "! " {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+      } else {
+        previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
+        if previewBar?.text!.suffix(3) == ", " + previewCursor {
+          changeKeyboardToLetterKeys()
+        }
+        if previewBar?.text!.suffix(3) == "? " + previewCursor {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+        if previewBar?.text!.suffix(3) == "! " + previewCursor {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
+      }
+      typedNounAnnotation()
+      typedPrepositionAnnotation()
+      if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
+        clearPreviewBar()
+      }
+      doubleSpacePeriodPossible = true
+
     case "espacio":
       if previewState != true {
         proxy.insertText(" ")
@@ -1431,6 +1492,18 @@ class KeyboardViewController: UIInputViewController {
       }
       proxy.deleteBackward()
 
+    case "АБВ":
+      changeKeyboardToLetterKeys()
+      clearPreviewBar()
+      proxy.insertText(" ")
+      if proxy.documentContextBeforeInput == " " {
+        if shiftButtonState == .normal {
+          shiftButtonState = .shift
+          loadKeys()
+        }
+      }
+      proxy.deleteBackward()
+
     case "'":
       // Change back to letter keys.
       if previewState != true {
@@ -1502,7 +1575,7 @@ class KeyboardViewController: UIInputViewController {
       clearPreviewBar()
     }
     // Double space period shortcut.
-    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
+    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "Пробел" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == false {
         proxy.deleteBackward()
