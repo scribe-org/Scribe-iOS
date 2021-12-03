@@ -16,7 +16,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ Features
 
-- Adding hold-to-select functionality for symbols.
+- Adds hold-to-select functionality for symbols.
 
 ### 🗃️ Data
 
@@ -24,9 +24,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐛 Bug fixes
 
-- Fixed an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
-- Fixed an issue with iPads where semicolon keys also had apostrophes.
-- Fixed an issue where number keys weren't able to trigger the double space period shortcut.
+- Fixes an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
+- Fixes an issue with iPads where semicolon keys also had apostrophes.
+- Fixes an issue where number keys weren't able to trigger the double space period shortcut.
+
+### ♻️ Refactoring
+
+- Combines all the space bar logic into one and rename the key based on the keyboard.
 
 ## 1.0.1 (WIP)
 

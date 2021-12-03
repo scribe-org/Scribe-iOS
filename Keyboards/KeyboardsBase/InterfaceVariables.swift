@@ -9,6 +9,7 @@ import UIKit
 // A proxy into which text is typed.
 var proxy: UITextDocumentProxy!
 var controllerLanguage = String()
+var spaceBar = String()
 
 // Variables for keyboard appearance.
 var keyboardHeight: CGFloat!
@@ -118,42 +119,42 @@ public enum FrenchKeyboardConstants {
     ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
     ["shift", "w", "x", "c", "v", "b", "n", "'", "delete"],
-    ["123", "selectKeyboard", "espace", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espace", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espace", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "'", ",", ".", "shift"],
-    [".?123", "selectKeyboard", "espace", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"],
     ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["ABC", "selectKeyboard", "espace", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"],
     ["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"],
-    ["ABC", "selectKeyboard", "espace", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -180,42 +181,42 @@ public enum GermanKeyboardConstants {
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "Leerzeichen", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "Leerzeichen", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "Leerzeichen", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
-    [".?123", "selectKeyboard", "Leerzeichen", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
     ["\"", "§", "€", "%", "&", "/", "(", ")", "=", "'", "#", "return"],
     ["#+=", "—", "`", "'", "...", "@", ";", ":", ",", ".", "-", "#+="],
-    ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "return"],
     ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
-    ["ABC", "selectKeyboard", "Leerzeichen", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -243,42 +244,42 @@ public enum PortugueseKeyboardConstants {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "espaço", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espaço", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espaço", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "!", "?", "shift"],
-    [".?123", "selectKeyboard", "espaço", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"],
     ["#+=", "%", "-", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["ABC", "selectKeyboard", "espaço", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"],
     ["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"],
-    ["ABC", "selectKeyboard", "espaço", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -304,42 +305,42 @@ public enum RussianKeyboardConstants {
     ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"],
     ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"],
     ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "delete"],
-    ["123", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
-    ["АБВ", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+    ["АБВ", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
-    ["АБВ", "selectKeyboard", "Пробел", "return"] // "undoArrow"
+    ["АБВ", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "delete"],
     ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "return"],
     ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", ".", "shift"],
-    [".?123", "selectKeyboard", "Пробел", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
     ["@", "#", "№", "₽", "ʼ", "&", "*", "(", ")", "'", "\"", "return"],
     ["#+=", "%", "_", "-", "+", "=", "≠", ";", ":", ",", ".", "#+="],
-    ["АБВ", "selectKeyboard", "Пробел", "АБВ", "hideKeyboard"] // "undoArrow"
+    ["АБВ", "selectKeyboard", "space", "АБВ", "hideKeyboard"] // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
     ["$", "€", "£", "¥", "±", "·", "`", "[", "]", "{", "}", "return"],
     ["123", "§", "|", "~", "...",  "^", "\\", "<", ">", "!", "?", "123"],
-    ["АБВ", "selectKeyboard", "Пробел", "АБВ", "hideKeyboard"] // "undoArrow"
+    ["АБВ", "selectKeyboard", "space", "АБВ", "hideKeyboard"] // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -360,42 +361,42 @@ public class SpanishKeyboardConstants {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "espacio", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espacio", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "\'", "delete"],
-    ["ABC", "selectKeyboard", "espacio", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
-    [".?123", "selectKeyboard", "espacio", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "+", "return"],
     ["#+=", "%", "_", "-", "=", "/", ";", ":", ",", ".", "#+="],
-    ["ABC", "selectKeyboard", "espacio", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["€", "£", "¥", "^", "[", "]", "{", "}", "ᵒ", "ᵃ", "return"],
     ["123", "§", "|", "~", "¶", "\\", "<", ">", "¡", "¿", "123"],
-    ["ABC", "selectKeyboard", "espacio", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
   ]
 
   // Alternate key vars.
