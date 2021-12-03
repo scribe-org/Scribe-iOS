@@ -439,7 +439,21 @@ class KeyboardViewController: UIInputViewController {
     // German, Russian or Spanish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
-    if controllerLanguage == "German" {
+    if controllerLanguage == "French" {
+      keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = FrenchKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = FrenchKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = FrenchKeyboardConstants.aAlternateKeys
+      eAlternateKeys = FrenchKeyboardConstants.eAlternateKeys
+      iAlternateKeys = FrenchKeyboardConstants.iAlternateKeys
+      oAlternateKeys = FrenchKeyboardConstants.oAlternateKeys
+      uAlternateKeys = FrenchKeyboardConstants.uAlternateKeys
+      yAlternateKeys = FrenchKeyboardConstants.yAlternateKeys
+      cAlternateKeys = FrenchKeyboardConstants.cAlternateKeys
+      nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
+      currencySymbol = "€"
+      currencySymbolAlternates = euroAlternateKeys
+    } else if controllerLanguage == "German" {
       keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
       keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
       keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
@@ -452,9 +466,29 @@ class KeyboardViewController: UIInputViewController {
       sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
       cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
       nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+      currencySymbol = "€"
+      currencySymbolAlternates = euroAlternateKeys
+    } else if controllerLanguage == "Portuguese" {
+      keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
+      eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
+      iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
+      oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
+      uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
+      cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
+      nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+      currencySymbol = "$"
+      currencySymbolAlternates = dollarAlternateKeys
     } else if controllerLanguage == "Russian" {
-      eAlternateKeys = RussianKeyboardConstants.eAlternateKeys
+      keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = RussianKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
+      еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
       ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
+      currencySymbol = "€"
+      currencySymbolAlternates = euroAlternateKeys
     } else if controllerLanguage == "Spanish" {
       keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
       keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
@@ -468,10 +502,22 @@ class KeyboardViewController: UIInputViewController {
       dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
       cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
       nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+      currencySymbol = "$"
+      currencySymbolAlternates = dollarAlternateKeys
+    }
+
+    if DeviceType.isPhone {
+      keysWithAlternates += symbolKeysWithAlternatesLeft
+      keysWithAlternates += symbolKeysWithAlternatesRight
+      keysWithAlternates.append(currencySymbol)
+      keysWithAlternatesLeft += symbolKeysWithAlternatesLeft
+      keysWithAlternatesRight += symbolKeysWithAlternatesRight
+      keysWithAlternatesRight.append(currencySymbol)
     }
 
     keyAlternatesDict = ["a": aAlternateKeys,
                          "e": eAlternateKeys,
+                         "е": еAlternateKeys, // Russian е
                          "i": iAlternateKeys,
                          "o": oAlternateKeys,
                          "u": uAlternateKeys,
@@ -480,7 +526,16 @@ class KeyboardViewController: UIInputViewController {
                          "d": dAlternateKeys,
                          "c": cAlternateKeys,
                          "n": nAlternateKeys,
-                         "ь": ьAlternateKeys]
+                         "ь": ьAlternateKeys,
+                         "/": backslashAlternateKeys,
+                         "?": questionMarkAlternateKeys,
+                         "!": exclamationAlternateKeys,
+                         "%": percentAlternateKeys,
+                         "&": ampersandAlternateKeys,
+                         "'": apostropheAlternateKeys,
+                         "\"": quatationAlternateKeys,
+                         "=": equalSignAlternateKeys,
+                         currencySymbol: currencySymbolAlternates]
 
     checkLandscapeMode()
     checkDarkModeSetColors()
@@ -675,6 +730,9 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone && key == "y" && controllerLanguage == "German" {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
           }
+          if DeviceType.isPhone && key == "a" && controllerLanguage == "Portuguese" {
+            addPadding(to: stackView3, width: buttonWidth / 3, key: "a")
+          }
 
           keys.append(btn)
           switch row {
@@ -718,59 +776,16 @@ class KeyboardViewController: UIInputViewController {
           let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(setAlternatesView(sender:)))
           longPressGesture.minimumPressDuration = 1.2
 
-          if key == "a" {
+          if keysWithAlternates.contains(key) {
             btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "e" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "i" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "o" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "u" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "y" {
-            if controllerLanguage == "German" {
-              btn.addGestureRecognizer(longPressGesture)
-            }
-          }
-
-          if key == "s" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "d" {
-            if controllerLanguage == "Spanish" {
-              btn.addGestureRecognizer(longPressGesture)
-            }
-          }
-
-          if key == "c" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "n" {
-            btn.addGestureRecognizer(longPressGesture)
-          }
-
-          if key == "ь" {
-            if controllerLanguage == "Russian" {
-              btn.addGestureRecognizer(longPressGesture)
-            }
           }
 
           // Pad after key is added.
           if DeviceType.isPhone && key == "m" && controllerLanguage == "German" {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
+          }
+          if DeviceType.isPhone && key == "l" && controllerLanguage == "Portuguese" {
+            addPadding(to: stackView3, width: buttonWidth / 3, key: "l")
           }
 
           // specialKey styling.

@@ -12,7 +12,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🚀 Deployment
 
-- Adds a Russian keyboard.
+- Adds baseline Russian, French and Portuguese keyboards.
+
+### ✨ Features
+
+- Adding hold-to-select functionality for symbols.
 
 ### 🗃️ Data
 
@@ -20,6 +24,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐛 Bug fixes
 
+- Fixed a problem with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
 - Fixed a problem with iPads where semicolon keys also had apostrophes.
 
 ## 1.0.1 (WIP)
