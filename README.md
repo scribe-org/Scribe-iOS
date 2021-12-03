@@ -11,17 +11,6 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-<details><summary><strong>🌐 Select language</strong></summary>
-<p>
-
-- English
-- [Deutsch](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.de.md)
-- [Español](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.es.md)
-- [Русская](https://github.com/scribe-org/Scribe-iOS/blob/main/Readmes/README.ru.md)
-
-</p>
-</details>
-
 ### Scribe language keyboards for iOS
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
@@ -106,6 +95,7 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Masculine: colored blue 🟦 and marked with (M)
 - Neutral: colored green 🟩 and marked with (N)
 - Plural: colored orange 🟧 and marked with (PL)
+<!-- - Common: colored purple 🟪 and marked with (C) -->
 - More than one: marked with all their forms
 
 #### Prepositions

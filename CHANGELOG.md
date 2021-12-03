@@ -22,10 +22,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Fixed a problem with iPads where semicolon keys also had apostrophes.
 
-### 🌐 Localization
-
-- Added a WIP Russian readme file.
-
 ## 1.0.1 (WIP)
 
 ### ✨ Features
@@ -45,10 +41,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Fixes an issue where the select keyboard button wouldn't be able to be long held after an initial button is pressed.
 - Fixes an issue where canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
 - Fixes an issue where the double space period shortcut is triggered without intent.
-
-### 🌐 Localization
-
-- Added readme files to be translated to other languages and added a drop down menu to select them to each readme.
 
 ### ♻️ Refactoring
 
