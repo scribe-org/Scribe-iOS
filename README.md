@@ -37,7 +37,7 @@ The following are combined preview videos for the [App Store](https://apps.apple
 <details><summary><strong>iPhone 6.5" version</strong></summary>
 <p>
 
-**`Does not work on desktop`**
+- **`Dimensions break video on desktop`**
 
 https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
 
