@@ -95,8 +95,8 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Masculine: colored blue 🟦 and marked with (M)
 - Neutral: colored green 🟩 and marked with (N)
 - Plural: colored orange 🟧 and marked with (PL)
-<!-- - Common: colored purple 🟪 and marked with (C) -->
 - More than one: marked with all their forms
+<!-- - Common: colored purple 🟪 and marked with (C) -->
 
 #### Prepositions
 
