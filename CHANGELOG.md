@@ -18,6 +18,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Adds hold-to-select functionality for symbols.
 
+### 🎨 Design
+
+- Fixes the display of the caps lock key by making its background the key pressed color.
+
 ### 🗃️ Data
 
 <!--  -->

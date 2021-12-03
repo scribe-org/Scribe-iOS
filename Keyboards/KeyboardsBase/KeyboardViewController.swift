@@ -436,7 +436,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
-    // German, Russian or Spanish
+    // French, German, Portuguese, Russian or Spanish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     if controllerLanguage == "French" {
@@ -583,7 +583,7 @@ class KeyboardViewController: UIInputViewController {
     case .letters:
       keyboard = letterKeys
       buttonWidth = letterButtonWidth
-      // Auto-capitalization.
+      // Auto-capitalization if the cursor is at the start of the proxy.
       if proxy.documentContextBeforeInput?.count == 0 {
         shiftButtonState = .shift
       }
@@ -818,11 +818,11 @@ class KeyboardViewController: UIInputViewController {
             btn.layer.setValue(true, forKey: "isSpecial")
             btn.backgroundColor = specialKeyColor
             if key == "shift" {
-              if shiftButtonState != .normal {
+              if shiftButtonState == .shift {
                 btn.backgroundColor = keyPressedColor
                 styleIconBtn(btn: btn, iconName: "shift.fill")
-              }
-              if shiftButtonState == .caps {
+              } else if shiftButtonState == .caps {
+                btn.backgroundColor = keyPressedColor
                 styleIconBtn(btn: btn, iconName: "capslock.fill")
               }
             }
@@ -1520,8 +1520,9 @@ class KeyboardViewController: UIInputViewController {
   @objc func keyMultiPress(_ sender: UIButton, event: UIEvent) {
     guard var originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
-    // Caps lock given two taps of shift.
     let touch: UITouch = event.allTouches!.first!
+
+    // Caps lock given two taps of shift.
     if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible == true {
       shiftButtonState = .caps
       loadKeys()
@@ -1532,7 +1533,7 @@ class KeyboardViewController: UIInputViewController {
     var lastCharIsInt: Bool = false
     // ?, ! and ' return true for isInt, so prevent them from being read.
     let punctuationThatIsInt = ["?", "!", "'"]
-    if proxy.documentContextBeforeInput?.count != 1 && previewState == false {
+    if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && previewState == false {
       let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
       if punctuationThatIsInt.contains(charBeforeSpace) {
         originalKey = "Don't do the shortcut"

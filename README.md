@@ -116,7 +116,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
-- Typing `,`, `?` or `!` and then `space` returns to the alphabetic keyboards
+- Typing `,`, `?` or `!` and then `space` returns to the alphabetic keyboard
 - Hold-to-select characters for letters and symbols[(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>
