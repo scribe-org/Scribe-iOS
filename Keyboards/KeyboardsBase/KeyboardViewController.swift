@@ -1580,7 +1580,7 @@ class KeyboardViewController: UIInputViewController {
   ///  - sender: the key that was pressed multiple times.
   ///  - event: event to derive tap counts.
   @objc func keyMultiPress(_ sender: UIButton, event: UIEvent) {
-    guard let originalKey = sender.layer.value(forKey: "original") as? String else {return}
+    guard var originalKey = sender.layer.value(forKey: "original") as? String else {return}
 
     // Caps lock given two taps of shift.
     let touch: UITouch = event.allTouches!.first!
@@ -1589,8 +1589,28 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
       clearPreviewBar()
     }
+
+    // To make sure that the user can still use the double space period shortcut after numbers.
+    var lastCharIsInt: Bool = false
+    // ?, ! and ' return true for isInt, so prevent them from being read.
+    let punctuationThatIsInt = ["?", "!", "'"]
+    if proxy.documentContextBeforeInput?.count != 1 && previewState == false {
+      let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
+      if punctuationThatIsInt.contains(charBeforeSpace) {
+        originalKey = "Don't do the shortcut"
+      } else {
+        lastCharIsInt = charBeforeSpace.isInt
+      }
+    } else if previewState == true {
+      let charBeforeSpace = String(Array((previewBar?.text!)!).secondToLast()!)
+      if punctuationThatIsInt.contains(charBeforeSpace) {
+        originalKey = "Don't do the shortcut"
+      } else {
+        lastCharIsInt = charBeforeSpace.isInt
+      }
+    }
     // Double space period shortcut.
-    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "Пробел" || originalKey == "espacio" ) && keyboardState == .letters && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
+    if touch.tapCount == 2 && ( originalKey == "Leerzeichen" || originalKey == "Пробел" || originalKey == "espacio" ) && ( keyboardState == .letters || ( keyboardState != .letters && lastCharIsInt )) && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == false {
         proxy.deleteBackward()

@@ -8,7 +8,7 @@ Scribe-iOS follows [semantic versioning](https://semver.org/), a MAJOR.MINOR.PAT
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-## 1.0.2 (WIP)
+## 1.1.0 (WIP)
 
 ### 🚀 Deployment
 
@@ -24,8 +24,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐛 Bug fixes
 
-- Fixed a problem with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
-- Fixed a problem with iPads where semicolon keys also had apostrophes.
+- Fixed an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
+- Fixed an issue with iPads where semicolon keys also had apostrophes.
+- Fixed an issue where number keys weren't able to trigger the double space period shortcut.
 
 ## 1.0.1 (WIP)
 
