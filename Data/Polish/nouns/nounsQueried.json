@@ -1,0 +1,4525 @@
+[
+  { "singular": "ród", "plural": "rody", "gender": "masculine inanimate" },
+  {
+    "singular": "Eugeniusz",
+    "plural": "Eugeniusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "batat", "plural": "bataty", "gender": "masculine inanimate" },
+  { "singular": "książka", "plural": "książki" },
+  {
+    "singular": "Łukasz",
+    "plural": "Łukaszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "językoznawstwo",
+    "plural": "językoznawstwa",
+    "gender": "neuter"
+  },
+  {
+    "singular": "Wenancjusz",
+    "plural": "Wenancjusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wenancjusz",
+    "plural": "Wenancjuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Szwajcar",
+    "plural": "Szwajcarzy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "lit",
+    "plural": "lity",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "spójnik",
+    "plural": "spójniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "kuna", "plural": "kuny", "gender": "feminine" },
+  {
+    "singular": "Joachim",
+    "plural": "Joachimowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Joachim",
+    "plural": "Joachimy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "gawron",
+    "plural": "gawrony",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "ruccola", "plural": "ruccole" },
+  {
+    "singular": "Flawiusz",
+    "plural": "Flawiusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "strona", "plural": "strony", "gender": "feminine" },
+  { "singular": "Łukasz", "plural": "Łukasze", "gender": "masculine personal" },
+  {
+    "singular": "Tomisław",
+    "plural": "Tomisławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Tomisław",
+    "plural": "Tomisławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Szwajcar",
+    "plural": "Szwajcary",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Flawiusz",
+    "plural": "Flawiuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "słowik",
+    "plural": "słowiki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Beniamin",
+    "plural": "Beniamini",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Beniamin",
+    "plural": "Beniaminowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Beniamin",
+    "plural": "Beniaminy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Euzebiusz",
+    "plural": "Euzebiusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "Włodzisława", "plural": "Włodzisławy", "gender": "feminine" },
+  { "singular": "bekas", "plural": "bekasy" },
+  { "singular": "u", "plural": "u", "gender": "neuter" },
+  {
+    "singular": "Bogdan",
+    "plural": "Bogdanowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "mała", "plural": "małe", "gender": "feminine" },
+  {
+    "singular": "Oktawian",
+    "plural": "Oktawianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Oktawian",
+    "plural": "Oktawiany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Bogdan", "plural": "Bogdany", "gender": "masculine personal" },
+  {
+    "singular": "tellur",
+    "plural": "tellury",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "batat",
+    "plural": "bataty",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "sekunda", "plural": "sekundy", "gender": "feminine" },
+  { "singular": "stary", "plural": "stare", "gender": "masculine personal" },
+  { "singular": "stary", "plural": "starzy", "gender": "masculine personal" },
+  { "singular": "Irmina", "plural": "Irminy", "gender": "feminine" },
+  { "singular": "Alfreda", "plural": "Alfredy", "gender": "feminine" },
+  { "singular": "kolendra", "plural": "kolendry", "gender": "feminine" },
+  {
+    "singular": "językoznawca",
+    "plural": "językoznawce",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "językoznawca",
+    "plural": "językoznawcy",
+    "gender": "masculine personal"
+  },
+  { "singular": "chrapliwość", "plural": "chrapliwości", "gender": "feminine" },
+  { "singular": "kurewka", "plural": "kurewki", "gender": "feminine" },
+  {
+    "singular": "tydzień",
+    "plural": "tygodnie",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "kobieta", "plural": "kobiety", "gender": "feminine" },
+  {
+    "singular": "Odyseusz",
+    "plural": "Odyseusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Odyseusz",
+    "plural": "Odyseuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "ktoś", "plural": "ktosie", "gender": "masculine personal" },
+  { "singular": "wielki", "plural": "wielcy", "gender": "masculine personal" },
+  { "singular": "wielki", "plural": "wielkie", "gender": "masculine personal" },
+  { "singular": "koń", "plural": "konie" },
+  { "singular": "Melania", "plural": "Melanie", "gender": "feminine" },
+  { "singular": "cez", "plural": "cezy" },
+  {
+    "singular": "koliberek",
+    "plural": "koliberki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "mangowiec",
+    "plural": "mangowce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "waran",
+    "plural": "warany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "tytan", "plural": "tytany", "gender": "masculine personal" },
+  {
+    "singular": "wróbel",
+    "plural": "wróble",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "siarka", "plural": "siarki", "gender": "feminine" },
+  {
+    "singular": "seler",
+    "plural": "selery",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "tytan",
+    "plural": "tytany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Beatrycze", "plural": "Beatrycze", "gender": "feminine" },
+  { "singular": "świt", "plural": "świty", "gender": "masculine inanimate" },
+  {
+    "singular": "Sylwester",
+    "plural": "Sylwestrowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Sylwester",
+    "plural": "Sylwestry",
+    "gender": "masculine personal"
+  },
+  { "singular": "Szwajcarka", "plural": "Szwajcarki", "gender": "feminine" },
+  { "singular": "jesień", "plural": "jesienie", "gender": "feminine" },
+  {
+    "singular": "pies",
+    "plural": "psy",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "miedź", "plural": "miedzie", "gender": "feminine" },
+  { "singular": "sobota", "plural": "soboty", "gender": "feminine" },
+  { "singular": "Neptun", "plural": "Neptuny", "gender": "masculine personal" },
+  { "singular": "zwierzę", "plural": "zwierzęta", "gender": "neuter" },
+  {
+    "singular": "Neptun",
+    "plural": "Neptuny",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Neptun", "plural": "Neptuni", "gender": "masculine personal" },
+  {
+    "singular": "Neptun",
+    "plural": "Neptunowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ambroży",
+    "plural": "Ambroże",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ambroży",
+    "plural": "Ambrożowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "dzionek",
+    "plural": "dzionki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "jarmuż",
+    "plural": "jarmuże",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "mangowiec",
+    "plural": "mangowce",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "przysłówek",
+    "plural": "przysłówki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Waldemar",
+    "plural": "Waldemarowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Waldemar",
+    "plural": "Waldemary",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Eugeniusz",
+    "plural": "Eugeniuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "tytan", "plural": "tytani", "gender": "masculine personal" },
+  { "singular": "państwo", "plural": "państwa", "gender": "neuter" },
+  { "singular": "opad", "plural": "opady", "gender": "masculine inanimate" },
+  { "singular": "seler", "plural": "selery", "gender": "masculine inanimate" },
+  {
+    "singular": "bocian",
+    "plural": "bociany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "chlor", "plural": "chlory", "gender": "masculine inanimate" },
+  { "singular": "tytan", "plural": "tytany", "gender": "masculine inanimate" },
+  { "singular": "bor", "plural": "bory", "gender": "masculine inanimate" },
+  {
+    "singular": "fosfor",
+    "plural": "fosfory",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "dysproz",
+    "plural": "dysprozy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "doba", "plural": "doby", "gender": "feminine" },
+  { "singular": "popołudnie", "plural": "popołudnia", "gender": "neuter" },
+  { "singular": "persymona", "plural": "persymony" },
+  {
+    "singular": "pallad",
+    "plural": "pallady",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "aronia", "plural": "aronie", "gender": "feminine" },
+  { "singular": "Wenus", "plural": "Wenus", "gender": "feminine" },
+  {
+    "singular": "szczygieł",
+    "plural": "szczygły",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "german",
+    "plural": "germany",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "kraj", "plural": "kraje", "gender": "masculine inanimate" },
+  {
+    "singular": "samochód",
+    "plural": "samochody",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "piątek", "plural": "piątki", "gender": "masculine inanimate" },
+  { "singular": "mięta", "plural": "mięty", "gender": "feminine" },
+  {
+    "singular": "Włodzimierz",
+    "plural": "Włodzimierze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "krypton",
+    "plural": "kryptony",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "żółw",
+    "plural": "żółwie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Czesława", "plural": "Czesławy", "gender": "feminine" },
+  { "singular": "Euzebia", "plural": "Euzebie", "gender": "feminine" },
+  {
+    "singular": "Włodzimierz",
+    "plural": "Włodzimierzowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Julia", "plural": "Julie", "gender": "feminine" },
+  { "singular": "glin", "plural": "gliny", "gender": "masculine inanimate" },
+  {
+    "singular": "Tezeusz",
+    "plural": "Tezeusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Tezeusz",
+    "plural": "Tezeuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mieczysław",
+    "plural": "Mieczysławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mieczysław",
+    "plural": "Mieczysławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "legwan",
+    "plural": "legwany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "hel", "plural": "hele", "gender": "masculine inanimate" },
+  { "singular": "tlen", "plural": "tleny", "gender": "masculine inanimate" },
+  {
+    "singular": "Andrzej",
+    "plural": "Andrzeje",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Andrzej",
+    "plural": "Andrzejowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "porzeczkoagrest", "plural": "porzeczkoagresty" },
+  { "singular": "mars", "plural": "marsy", "gender": "masculine inanimate" },
+  { "singular": "przepiórka", "plural": "przepiórki", "gender": "feminine" },
+  {
+    "singular": "koliber",
+    "plural": "kolibry",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "dzień", "plural": "dni", "gender": "masculine inanimate" },
+  { "singular": "dzień", "plural": "dnie", "gender": "masculine inanimate" },
+  { "singular": "lit", "plural": "lity", "gender": "masculine inanimate" },
+  { "singular": "groch", "plural": "grochy", "gender": "masculine inanimate" },
+  { "singular": "grusza", "plural": "grusze", "gender": "feminine" },
+  { "singular": "pszenica", "plural": "pszenice", "gender": "feminine" },
+  { "singular": "gąsienica", "plural": "gąsienice", "gender": "feminine" },
+  {
+    "singular": "Włodzimierz",
+    "plural": "Włodzimierze",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "ceza", "plural": "cezy" },
+  {
+    "singular": "samochodzik",
+    "plural": "samochodziki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "topinambur",
+    "plural": "topinambury",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "papryka", "plural": "papryki", "gender": "feminine" },
+  { "singular": "czas", "plural": "czasy", "gender": "masculine inanimate" },
+  {
+    "singular": "Szczecin",
+    "plural": "Szczeciny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "jeżyna", "plural": "jeżyny", "gender": "feminine" },
+  {
+    "singular": "Adolf",
+    "plural": "Adolfowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Adolf", "plural": "Adolfy", "gender": "masculine personal" },
+  { "singular": "Marysieńka", "plural": "Marysieńki", "gender": "feminine" },
+  {
+    "singular": "pierwszy",
+    "plural": "pierwsze",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "kurwa", "plural": "kurwy", "gender": "feminine" },
+  { "singular": "śniadanie", "plural": "śniadania", "gender": "neuter" },
+  { "singular": "Aniela", "plural": "Aniele", "gender": "feminine" },
+  { "singular": "Weronika", "plural": "Weroniki", "gender": "feminine" },
+  { "singular": "alka", "plural": "alki", "gender": "feminine" },
+  {
+    "singular": "krzemień",
+    "plural": "krzemienie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "pasikonik",
+    "plural": "pasikoniki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "kondor",
+    "plural": "kondory",
+    "gender": "masculine animate non-personal"
+  },
+  { "plural": "państwo" },
+  { "singular": "Aldona", "plural": "Aldony", "gender": "feminine" },
+  {
+    "singular": "Aleksander",
+    "plural": "Aleksandrowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Aleksander",
+    "plural": "Aleksandry",
+    "gender": "masculine personal"
+  },
+  { "singular": "Liwia", "plural": "Liwie", "gender": "feminine" },
+  { "singular": "jemiołuszka", "plural": "jemiołuszki", "gender": "feminine" },
+  { "singular": "brukiew", "plural": "brukwie", "gender": "feminine" },
+  { "singular": "mango", "plural": "mango", "gender": "neuter" },
+  { "singular": "łasica", "plural": "łasice", "gender": "feminine" },
+  {
+    "singular": "pierwszy",
+    "plural": "pierwsze",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Bianka", "plural": "Bianki", "gender": "feminine" },
+  { "singular": "mandarynka", "plural": "mandarynki", "gender": "feminine" },
+  { "singular": "cynk", "plural": "cynki" },
+  { "singular": "kapusta", "plural": "kapusty", "gender": "feminine" },
+  { "singular": "głóg", "plural": "głogi", "gender": "masculine inanimate" },
+  { "singular": "piątka", "plural": "piątki", "gender": "feminine" },
+  {
+    "singular": "dinar",
+    "plural": "dinary",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "jamnik",
+    "plural": "jamniki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "czapla", "plural": "czaple", "gender": "feminine" },
+  { "singular": "gąsieniczka", "plural": "gąsieniczki", "gender": "feminine" },
+  { "singular": "jamniczka", "plural": "jamniczki", "gender": "feminine" },
+  { "singular": "kobietka", "plural": "kobietki", "gender": "feminine" },
+  {
+    "singular": "przepióreczka",
+    "plural": "przepióreczki",
+    "gender": "feminine"
+  },
+  {
+    "singular": "wiadukt",
+    "plural": "wiadukty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "płaszczka", "plural": "płaszczki", "gender": "feminine" },
+  {
+    "singular": "Leoncjusz",
+    "plural": "Leoncjusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Leoncjusz",
+    "plural": "Leoncjuszowie",
+    "gender": "masculine personal"
+  },
+  { "plural": "gronostaje", "gender": "not masculine personal" },
+  {
+    "singular": "Antoniusz",
+    "plural": "Antoniusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Układ Słoneczny",
+    "plural": "Układy Słoneczne",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Sławomir",
+    "plural": "Sławomirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Sławomir",
+    "plural": "Sławomiry",
+    "gender": "masculine personal"
+  },
+  { "singular": "Mars", "plural": "Marsowie", "gender": "masculine personal" },
+  { "singular": "Walentyna", "plural": "Walentyny", "gender": "feminine" },
+  { "singular": "chrom", "plural": "chromy", "gender": "masculine inanimate" },
+  {
+    "singular": "kobalt",
+    "plural": "kobalty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "skand", "plural": "skandy", "gender": "masculine inanimate" },
+  { "singular": "wapń", "plural": "wapnie", "gender": "masculine inanimate" },
+  {
+    "singular": "mars",
+    "plural": "marsy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Florian",
+    "plural": "Florianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Florian",
+    "plural": "Floriany",
+    "gender": "masculine personal"
+  },
+  { "singular": "żółw", "plural": "żółwie", "gender": "masculine personal" },
+  {
+    "singular": "gronostaj",
+    "plural": "gronostaje",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Bogumiła", "plural": "Bogumiły", "gender": "feminine" },
+  { "singular": "pełność", "plural": "pełności" },
+  {
+    "singular": "Erhard",
+    "plural": "Erhardowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Erhard", "plural": "Erhardy", "gender": "masculine personal" },
+  {
+    "singular": "system",
+    "plural": "systemy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Anastazja", "plural": "Anastazje", "gender": "feminine" },
+  { "singular": "Mars", "plural": "Marsy", "gender": "masculine personal" },
+  {
+    "singular": "Mars",
+    "plural": "Marsy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Tomasz",
+    "plural": "Tomaszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "chrząszcz",
+    "plural": "chrząszcze",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "argona", "plural": "argony", "gender": "feminine" },
+  { "singular": "flądra", "plural": "flądry", "gender": "feminine" },
+  { "singular": "Fabiola", "plural": "Fabiole", "gender": "feminine" },
+  {
+    "singular": "kalafior",
+    "plural": "kalafiory",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Wilibald",
+    "plural": "Wilibaldowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wilibald",
+    "plural": "Wilibaldy",
+    "gender": "masculine personal"
+  },
+  { "plural": "Wikidane", "gender": "not masculine personal" },
+  { "singular": "Adelina", "plural": "Adeliny", "gender": "feminine" },
+  {
+    "singular": "Mścisław",
+    "plural": "Mścisławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mścisław",
+    "plural": "Mścisławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Euzebiusz",
+    "plural": "Euzebiuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Drogomir",
+    "plural": "Drogomirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Drogomir",
+    "plural": "Drogomiry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Drogomir",
+    "plural": "Drogomirzy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kalafior",
+    "plural": "kalafiory",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "dżungla", "plural": "dżungle", "gender": "feminine" },
+  { "singular": "Tomasz", "plural": "Tomasze", "gender": "masculine personal" },
+  { "singular": "Adamina", "plural": "Adaminy", "gender": "feminine" },
+  {
+    "singular": "Melchior",
+    "plural": "Melchiorowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Melchior",
+    "plural": "Melchiory",
+    "gender": "masculine personal"
+  },
+  { "singular": "układ", "plural": "układy", "gender": "masculine inanimate" },
+  { "singular": "z", "plural": "z", "gender": "feminine" },
+  { "singular": "Marcelina", "plural": "Marceliny", "gender": "feminine" },
+  { "singular": "elektronika", "plural": "elektroniki", "gender": "feminine" },
+  {
+    "singular": "kwiatuszek",
+    "plural": "kwiatuszki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "czwartek",
+    "plural": "czwartki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Kleopatra", "plural": "Kleopatry", "gender": "feminine" },
+  {
+    "singular": "Flawian",
+    "plural": "Flawiani",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Flawian",
+    "plural": "Flawianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Flawian",
+    "plural": "Flawiany",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kwiatuszek",
+    "plural": "kwiatuszki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "widelczyk",
+    "plural": "widelczyki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Antoniusz",
+    "plural": "Antoniuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "tantal",
+    "plural": "tantale",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "borek", "plural": "borki", "gender": "masculine inanimate" },
+  {
+    "singular": "Zygfryd",
+    "plural": "Zygfrydowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zygfryd",
+    "plural": "Zygfrydy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "neptun",
+    "plural": "neptuny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "lipiec", "plural": "lipce", "gender": "masculine inanimate" },
+  {
+    "singular": "Augustyn",
+    "plural": "Augustynowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Ignacja", "plural": "Ignacje", "gender": "feminine" },
+  {
+    "singular": "krokodyl",
+    "plural": "krokodyle",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Emma", "plural": "Emmy", "gender": "feminine" },
+  { "singular": "Izyda", "plural": "Izydy", "gender": "feminine" },
+  { "singular": "Agata", "plural": "Agaty", "gender": "feminine" },
+  { "singular": "Szymon", "plural": "Szymony", "gender": "masculine personal" },
+  { "singular": "grupka", "plural": "grupki" },
+  { "singular": "lipa", "plural": "lipy", "gender": "feminine" },
+  {
+    "singular": "Szymon",
+    "plural": "Szymonowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Augustyn",
+    "plural": "Augustyny",
+    "gender": "masculine personal"
+  },
+  { "singular": "CD", "plural": "CD", "gender": "neuter" },
+  { "singular": "Jakub", "plural": "Jakuby", "gender": "masculine personal" },
+  { "singular": "drzewo", "plural": "drzewa" },
+  { "singular": "limona", "plural": "limony", "gender": "feminine" },
+  { "singular": "Roman", "plural": "Romany", "gender": "masculine personal" },
+  { "singular": "marchew", "plural": "marchwie", "gender": "feminine" },
+  { "singular": "Tantal", "plural": "Tantale", "gender": "masculine personal" },
+  { "singular": "Telimena", "plural": "Telimeny", "gender": "feminine" },
+  { "singular": "Aspazja", "plural": "Aspazje", "gender": "feminine" },
+  { "singular": "CD", "plural": "CD", "gender": "masculine inanimate" },
+  { "singular": "VAT", "plural": "VAT-y", "gender": "masculine inanimate" },
+  { "singular": "Elwira", "plural": "Elwiry", "gender": "feminine" },
+  {
+    "singular": "Jakub",
+    "plural": "Jakubowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Bizancjum", "plural": "Bizancjum", "gender": "neuter" },
+  {
+    "singular": "twaróg",
+    "plural": "twarogi",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "frank",
+    "plural": "franki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Hanna", "plural": "Hanny", "gender": "feminine" },
+  { "singular": "zupka", "plural": "zupki", "gender": "feminine" },
+  {
+    "singular": "Telesfor",
+    "plural": "Telesforowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Telesfor",
+    "plural": "Telesfory",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Telesfor",
+    "plural": "Telesforzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "jabłoń", "plural": "jabłonie", "gender": "feminine" },
+  {
+    "singular": "Juliusz",
+    "plural": "Juliusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "grupa", "plural": "grupy" },
+  {
+    "singular": "dolar",
+    "plural": "dolary",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "VAT", "plural": "VAT", "gender": "masculine inanimate" },
+  { "singular": "cukinia", "plural": "cukinie", "gender": "feminine" },
+  { "singular": "malina", "plural": "maliny", "gender": "feminine" },
+  { "singular": "Mieczysława", "plural": "Mieczysławy", "gender": "feminine" },
+  { "singular": "Bizancjum", "plural": "Bizancja", "gender": "neuter" },
+  { "singular": "czerwień", "plural": "czerwienie", "gender": "feminine" },
+  { "singular": "zebra", "plural": "zebry", "gender": "feminine" },
+  { "singular": "zupa", "plural": "zupy", "gender": "feminine" },
+  {
+    "singular": "Roman",
+    "plural": "Romanowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "wielbłąd",
+    "plural": "wielbłądy",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "rzecz", "plural": "rzeczy", "gender": "feminine" },
+  {
+    "singular": "twarożek",
+    "plural": "twarożki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "morela", "plural": "morele", "gender": "feminine" },
+  { "singular": "droga", "plural": "drogi", "gender": "feminine" },
+  { "singular": "sadek", "plural": "sadki", "gender": "masculine inanimate" },
+  {
+    "singular": "spacerek",
+    "plural": "spacerki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "radon", "plural": "radony", "gender": "masculine inanimate" },
+  {
+    "singular": "kszyk",
+    "plural": "kszyki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "jabłko", "plural": "jabłka" },
+  { "singular": "młody", "plural": "młode", "gender": "masculine personal" },
+  { "singular": "stan", "plural": "stany", "gender": "masculine inanimate" },
+  {
+    "singular": "technet",
+    "plural": "technety",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "molibden",
+    "plural": "molibdeny",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "pieprz",
+    "plural": "pieprze",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "antymon",
+    "plural": "antymony",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "brzoskwinia", "plural": "brzoskwinie", "gender": "feminine" },
+  {
+    "singular": "chrzan",
+    "plural": "chrzany",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "atom", "plural": "atomy", "gender": "masculine inanimate" },
+  { "singular": "wróblica", "plural": "wróblice", "gender": "feminine" },
+  {
+    "singular": "szlafrok",
+    "plural": "szlafroki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "bielaczek", "plural": "bielaczki" },
+  {
+    "singular": "spacer",
+    "plural": "spacery",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "owoc", "plural": "owoce", "gender": "masculine inanimate" },
+  { "singular": "pszczoła", "plural": "pszczoły", "gender": "feminine" },
+  { "singular": "skromność", "plural": "skromności" },
+  {
+    "singular": "domeczek",
+    "plural": "domeczki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "domek", "plural": "domki", "gender": "masculine inanimate" },
+  { "singular": "endywia", "plural": "endywie", "gender": "feminine" },
+  { "singular": "mieszkanka", "plural": "mieszkanki", "gender": "feminine" },
+  { "singular": "zwierzęcość", "plural": "zwierzęcości", "gender": "feminine" },
+  {
+    "singular": "chmiel",
+    "plural": "chmiele",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "owczarek",
+    "plural": "owczarki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "tchórzofretka",
+    "plural": "tchórzofretki",
+    "gender": "feminine"
+  },
+  { "singular": "młody", "plural": "młodzi", "gender": "masculine personal" },
+  {
+    "singular": "bargiel",
+    "plural": "bargle",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "chmiel",
+    "plural": "chmiele",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "życie", "plural": "życia" },
+  {
+    "singular": "berkel",
+    "plural": "berkele",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Klaudiusz",
+    "plural": "Klaudiuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "bernikla kanadyjska",
+    "plural": "bernikle kanadyjskie",
+    "gender": "feminine"
+  },
+  { "singular": "dziecko", "plural": "dzieci", "gender": "neuter" },
+  { "singular": "morelka", "plural": "morelki", "gender": "feminine" },
+  { "singular": "wróbliczka", "plural": "wróbliczki", "gender": "feminine" },
+  {
+    "singular": "prawnik",
+    "plural": "prawnicy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "prawnik",
+    "plural": "prawniki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wespazjan",
+    "plural": "Wespazjanowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wespazjan",
+    "plural": "Wespazjany",
+    "gender": "masculine personal"
+  },
+  { "singular": "aktyn", "plural": "aktyny", "gender": "masculine inanimate" },
+  { "singular": "sad", "plural": "sady", "gender": "masculine inanimate" },
+  {
+    "singular": "borsuk",
+    "plural": "borsuki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "środek", "plural": "środki", "gender": "masculine inanimate" },
+  { "singular": "selen", "plural": "seleny", "gender": "masculine inanimate" },
+  {
+    "singular": "Klaudiusz",
+    "plural": "Klaudiusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "cyranka", "plural": "cyranki", "gender": "feminine" },
+  { "singular": "tor", "plural": "tory" },
+  { "singular": "park", "plural": "parki", "gender": "masculine inanimate" },
+  {
+    "singular": "parczek",
+    "plural": "parczki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "środeczek",
+    "plural": "środeczki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Kanada", "plural": "Kanady", "gender": "feminine" },
+  { "singular": "fluor", "plural": "fluory", "gender": "masculine inanimate" },
+  { "singular": "puszcza", "plural": "puszcze", "gender": "feminine" },
+  { "singular": "Hiszpania", "plural": "Hiszpanie", "gender": "feminine" },
+  { "singular": "cyraneczka", "plural": "cyraneczki", "gender": "feminine" },
+  { "singular": "filmowość", "plural": "filmowości", "gender": "feminine" },
+  { "singular": "Mołdawianka", "plural": "Mołdawianki", "gender": "feminine" },
+  { "singular": "Litwa", "plural": "Litwy", "gender": "feminine" },
+  { "singular": "osm", "plural": "osmy" },
+  {
+    "singular": "Mirosław",
+    "plural": "Mirosławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mirosław",
+    "plural": "Mirosławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Żegota", "plural": "Żegoty", "gender": "masculine personal" },
+  {
+    "singular": "Andorczyk",
+    "plural": "Andorczycy",
+    "gender": "masculine personal"
+  },
+  { "singular": "długopis", "plural": "długopisy" },
+  { "singular": "borsuk", "plural": "borsuki", "gender": "masculine personal" },
+  { "plural": "ludzie" },
+  {
+    "singular": "Irlandczyk",
+    "plural": "Irlandczyki",
+    "gender": "masculine personal"
+  },
+  { "singular": "sąsiad", "plural": "sąsiady", "gender": "masculine personal" },
+  {
+    "singular": "sąsiad",
+    "plural": "sąsiedzi",
+    "gender": "masculine personal"
+  },
+  { "singular": "majowe", "plural": "majowe", "gender": "neuter" },
+  { "singular": "ren", "plural": "reny", "gender": "masculine inanimate" },
+  {
+    "singular": "Andorczyk",
+    "plural": "Andorczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "melonowiec",
+    "plural": "melonowce",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "nektaryna", "plural": "nektaryny", "gender": "feminine" },
+  { "singular": "zasobność", "plural": "zasobności", "gender": "feminine" },
+  { "singular": "miłość", "plural": "miłości", "gender": "feminine" },
+  { "singular": "słonisko", "plural": "słoniska", "gender": "neuter" },
+  { "singular": "kiur", "plural": "kiury", "gender": "masculine inanimate" },
+  {
+    "singular": "festiwal",
+    "plural": "festiwale",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "świnia", "plural": "świnie", "gender": "feminine" },
+  {
+    "singular": "zamożny",
+    "plural": "zamożne",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "szablodziób",
+    "plural": "szablodzioby",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Jowisz", "plural": "Jowisze", "gender": "masculine personal" },
+  {
+    "singular": "Irlandczyk",
+    "plural": "Irlandczycy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Żegota",
+    "plural": "Żegotowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "melonowiec",
+    "plural": "melonowce",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "kwiat", "plural": "kwiaty", "gender": "masculine inanimate" },
+  { "singular": "rodzina", "plural": "rodziny", "gender": "feminine" },
+  {
+    "singular": "Jowisz",
+    "plural": "Jowisze",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "film", "plural": "filmy" },
+  {
+    "singular": "Maltańczyk",
+    "plural": "Maltańczycy",
+    "gender": "masculine personal"
+  },
+  { "plural": "kapcie", "gender": "masculine inanimate" },
+  { "singular": "azot", "plural": "azoty", "gender": "masculine inanimate" },
+  { "singular": "polon", "plural": "polony", "gender": "masculine inanimate" },
+  { "singular": "brom", "plural": "bromy", "gender": "masculine inanimate" },
+  {
+    "singular": "Maltańczyk",
+    "plural": "Maltańczyki",
+    "gender": "masculine personal"
+  },
+  { "singular": "neon", "plural": "neony", "gender": "masculine inanimate" },
+  {
+    "singular": "Jowisz",
+    "plural": "Jowiszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "pomarańcza", "plural": "pomarańcze", "gender": "feminine" },
+  { "singular": "bernikla", "plural": "bernikle" },
+  {
+    "singular": "lorens",
+    "plural": "lorensy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "tul", "plural": "tule", "gender": "masculine inanimate" },
+  { "singular": "zaimek", "plural": "zaimki", "gender": "masculine inanimate" },
+  { "singular": "arsen", "plural": "arseny", "gender": "masculine inanimate" },
+  {
+    "singular": "bizmut",
+    "plural": "bizmuty",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "polski",
+    "plural": "polskie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "błotniak",
+    "plural": "błotniaki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "duch",
+    "plural": "duchy",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "pomarańczka", "plural": "pomarańczki", "gender": "feminine" },
+  { "singular": "sąsiadka", "plural": "sąsiadki", "gender": "feminine" },
+  { "singular": "śliweczka", "plural": "śliweczki", "gender": "feminine" },
+  { "singular": "truskawka", "plural": "truskawki", "gender": "feminine" },
+  { "singular": "Aleksy", "plural": "Alekse", "gender": "masculine personal" },
+  {
+    "singular": "Aleksy",
+    "plural": "Aleksowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "jak",
+    "plural": "jaki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "jałowiec",
+    "plural": "jałowce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "ptak",
+    "plural": "ptaki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Józef", "plural": "Józefy", "gender": "masculine personal" },
+  {
+    "singular": "promet",
+    "plural": "promety",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "wolfram",
+    "plural": "wolframy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Karina", "plural": "Kariny", "gender": "feminine" },
+  {
+    "singular": "rabarbar",
+    "plural": "rabarbary",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "krewniak",
+    "plural": "krewniacy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "krewniak",
+    "plural": "krewniaki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "spacerowicz",
+    "plural": "spacerowicze",
+    "gender": "masculine personal"
+  },
+  { "singular": "borowy", "plural": "borowi", "gender": "masculine personal" },
+  {
+    "singular": "spaniel",
+    "plural": "spaniele",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "agrest",
+    "plural": "agresty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "przeszłość", "plural": "przeszłości" },
+  {
+    "singular": "jałowiec",
+    "plural": "jałowce",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Józef",
+    "plural": "Józefowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "prawo", "plural": "prawa" },
+  { "singular": "bogata przeszłość", "plural": "bogate przeszłości" },
+  { "singular": "borówka", "plural": "borówki", "gender": "feminine" },
+  { "singular": "borowy", "plural": "borowe", "gender": "masculine personal" },
+  { "singular": "dobry", "plural": "dobre", "gender": "masculine inanimate" },
+  {
+    "singular": "szlafroczek",
+    "plural": "szlafroczki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "aksamitność", "plural": "aksamitności", "gender": "feminine" },
+  { "singular": "iguana", "plural": "iguany", "gender": "feminine" },
+  { "singular": "nowa", "plural": "nowe", "gender": "feminine" },
+  { "singular": "rzeczka", "plural": "rzeczki", "gender": "feminine" },
+  {
+    "singular": "czasownik",
+    "plural": "czasowniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "partykuła", "plural": "partykuły", "gender": "feminine" },
+  {
+    "singular": "złoty",
+    "plural": "złote",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "krewny", "plural": "krewne", "gender": "masculine personal" },
+  { "singular": "krewny", "plural": "krewni", "gender": "masculine personal" },
+  { "singular": "kadm", "plural": "kadmy" },
+  { "singular": "Bułgarka", "plural": "Bułgarki", "gender": "feminine" },
+  { "singular": "krewna", "plural": "krewne", "gender": "feminine" },
+  { "singular": "zamożność", "plural": "zamożności", "gender": "feminine" },
+  { "singular": "Eulalia", "plural": "Eulalie", "gender": "feminine" },
+  { "singular": "Dania", "plural": "Danie", "gender": "feminine" },
+  {
+    "singular": "widelec",
+    "plural": "widelce",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "dorsz",
+    "plural": "dorsze",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "karp",
+    "plural": "karpie",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "tymianek",
+    "plural": "tymianki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "niedźwiedzisko",
+    "plural": "niedźwiedziska",
+    "gender": "neuter"
+  },
+  { "singular": "Walery", "plural": "Walere", "gender": "masculine personal" },
+  {
+    "singular": "Walery",
+    "plural": "Walerowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "rzeka", "plural": "rzeki", "gender": "feminine" },
+  {
+    "singular": "biedaczek",
+    "plural": "biedaczki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "biedaczek",
+    "plural": "biedaczkowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "biedak", "plural": "biedacy", "gender": "masculine personal" },
+  { "singular": "biedak", "plural": "biedaki", "gender": "masculine personal" },
+  { "singular": "frant", "plural": "franci", "gender": "masculine personal" },
+  {
+    "singular": "frant",
+    "plural": "frantowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "frant", "plural": "franty", "gender": "masculine personal" },
+  {
+    "singular": "białozór",
+    "plural": "białozory",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "przyimek",
+    "plural": "przyimki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "śliwka", "plural": "śliwki", "gender": "feminine" },
+  {
+    "singular": "niedźwiedź",
+    "plural": "niedźwiedzie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Luiza", "plural": "Luizy", "gender": "feminine" },
+  { "singular": "trytytka", "plural": "trytytki", "gender": "feminine" },
+  {
+    "singular": "rodzaj",
+    "plural": "rodzaje",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "styczeń",
+    "plural": "stycznie",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "śliwa", "plural": "śliwy", "gender": "feminine" },
+  {
+    "singular": "krogulec",
+    "plural": "krogulce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "estragon",
+    "plural": "estragony",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "ren",
+    "plural": "reny",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "edredon",
+    "plural": "edredony",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "czerwiec",
+    "plural": "czerwce",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "antylopa", "plural": "antylopy", "gender": "feminine" },
+  { "plural": "bobry" },
+  {
+    "singular": "derkacz",
+    "plural": "derkacze",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "słoń",
+    "plural": "słonie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "kwark", "plural": "kwarki", "gender": "masculine inanimate" },
+  {
+    "singular": "kalendarz",
+    "plural": "kalendarze",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Rosjanin",
+    "plural": "Rosjanie",
+    "gender": "masculine personal"
+  },
+  { "singular": "łyżka", "plural": "łyżki", "gender": "feminine" },
+  { "singular": "krewniaczka", "plural": "krewniaczki", "gender": "feminine" },
+  { "singular": "srebro", "plural": "srebra" },
+  {
+    "singular": "wiersz",
+    "plural": "wiersze",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Niemiec", "plural": "Niemce", "gender": "masculine personal" },
+  { "singular": "torowy", "plural": "torowe", "gender": "masculine personal" },
+  { "singular": "torowy", "plural": "torowi", "gender": "masculine personal" },
+  { "singular": "ojciec", "plural": "ojce", "gender": "masculine personal" },
+  { "singular": "ojciec", "plural": "ojcowie", "gender": "masculine personal" },
+  { "singular": "Kot", "plural": "Kot", "gender": "feminine" },
+  {
+    "singular": "słownik",
+    "plural": "słowniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "żyrafa", "plural": "żyrafy", "gender": "feminine" },
+  {
+    "singular": "Holender",
+    "plural": "Holendry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kolender",
+    "plural": "kolendry",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Mołdawia", "plural": "Mołdawie", "gender": "feminine" },
+  { "singular": "Kot", "plural": "Koty", "gender": "masculine personal" },
+  { "singular": "bóbr", "plural": "bobry" },
+  {
+    "singular": "Austriak",
+    "plural": "Austriacy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kolorek",
+    "plural": "kolorki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "kumkwat",
+    "plural": "kumkwaty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "słonica", "plural": "słonice", "gender": "feminine" },
+  {
+    "singular": "Czarnogórzec",
+    "plural": "Czarnogórcy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Łotysz", "plural": "Łotysze", "gender": "masculine personal" },
+  { "singular": "Estonia", "plural": "Estonie", "gender": "feminine" },
+  { "singular": "kolor", "plural": "kolory", "gender": "masculine inanimate" },
+  { "singular": "biedaczka", "plural": "biedaczki", "gender": "feminine" },
+  {
+    "singular": "odmianoznawstwo",
+    "plural": "odmianoznawstwa",
+    "gender": "neuter"
+  },
+  {
+    "singular": "drzemlik",
+    "plural": "drzemliki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Niemiec", "plural": "Niemcy", "gender": "masculine personal" },
+  {
+    "singular": "kalafiorek",
+    "plural": "kalafiorki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "kino drogi", "plural": "kina drogi", "gender": "neuter" },
+  { "singular": "Dunka", "plural": "Dunki", "gender": "feminine" },
+  {
+    "singular": "Czarnogórzec",
+    "plural": "Czarnogórce",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "droździk",
+    "plural": "droździki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Kot", "plural": "Kotowie", "gender": "masculine personal" },
+  {
+    "singular": "paździerz",
+    "plural": "paździerze",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Austriak",
+    "plural": "Austriaki",
+    "gender": "masculine personal"
+  },
+  { "singular": "nóż", "plural": "noże", "gender": "masculine inanimate" },
+  {
+    "singular": "kalafiorek",
+    "plural": "kalafiorki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "imbir", "plural": "imbiry", "gender": "masculine inanimate" },
+  { "singular": "Grecja", "plural": "Grecje", "gender": "feminine" },
+  { "plural": "Czechy", "gender": "not masculine personal" },
+  { "singular": "wiek", "plural": "wieki", "gender": "masculine inanimate" },
+  { "plural": "edredony", "gender": "not masculine personal" },
+  {
+    "singular": "czerwiec",
+    "plural": "czerwce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Holender",
+    "plural": "Holendrzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Rosja", "plural": "Rosje", "gender": "feminine" },
+  {
+    "singular": "drop",
+    "plural": "dropie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Grek", "plural": "Greki", "gender": "masculine personal" },
+  { "singular": "Francja", "plural": "Francje", "gender": "feminine" },
+  { "singular": "Norwegia", "plural": "Norwegie", "gender": "feminine" },
+  {
+    "singular": "Luksemburg",
+    "plural": "Luksemburgi",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "laseczek",
+    "plural": "laseczki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Liechtenstein",
+    "plural": "Liechtensteiny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Albanka", "plural": "Albanki", "gender": "feminine" },
+  { "singular": "Francuzka", "plural": "Francuzki", "gender": "feminine" },
+  { "singular": "głupia", "plural": "głupie", "gender": "feminine" },
+  { "singular": "Greczynka", "plural": "Greczynki", "gender": "feminine" },
+  { "singular": "ludność", "plural": "ludności", "gender": "feminine" },
+  { "singular": "polskość", "plural": "polskości", "gender": "feminine" },
+  { "singular": "Portugalka", "plural": "Portugalki", "gender": "feminine" },
+  { "singular": "jabłuszko", "plural": "jabłuszka", "gender": "neuter" },
+  { "singular": "ptaszydło", "plural": "ptaszydła", "gender": "neuter" },
+  { "singular": "ptaszysko", "plural": "ptaszyska", "gender": "neuter" },
+  { "singular": "dobry", "plural": "dobre", "gender": "masculine personal" },
+  { "singular": "dobry", "plural": "dobrzy", "gender": "masculine personal" },
+  {
+    "singular": "Duńczyk",
+    "plural": "Duńczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Liechtensteińczyk",
+    "plural": "Liechtensteińczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Luksemburczyk",
+    "plural": "Luksemburczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "majętny",
+    "plural": "majętne",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "majętny",
+    "plural": "majętni",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "koniś",
+    "plural": "konisie",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "niedźwiadek",
+    "plural": "niedźwiadki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "szczygiełek",
+    "plural": "szczygiełki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "bogaty", "plural": "bogaci", "gender": "masculine personal" },
+  { "singular": "bogaty", "plural": "bogate", "gender": "masculine personal" },
+  {
+    "singular": "bażant",
+    "plural": "bażanty",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "las", "plural": "lasy", "gender": "masculine inanimate" },
+  { "singular": "jaskółeczka", "plural": "jaskółeczki" },
+  { "singular": "Belg", "plural": "Belgowie", "gender": "masculine personal" },
+  { "singular": "Łotyszka", "plural": "Łotyszki", "gender": "feminine" },
+  { "singular": "AK", "plural": "AK", "gender": "feminine" },
+  { "singular": "jaskółka", "plural": "jaskółki" },
+  { "singular": "Belg", "plural": "Belgi", "gender": "masculine personal" },
+  { "singular": "lasek", "plural": "laski", "gender": "masculine inanimate" },
+  {
+    "singular": "Duńczyk",
+    "plural": "Duńczycy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Andora", "plural": "Andory", "gender": "feminine" },
+  { "singular": "AK", "plural": "AK", "gender": "neuter" },
+  { "singular": "Serb", "plural": "Serby", "gender": "masculine personal" },
+  {
+    "singular": "Luksemburczyk",
+    "plural": "Luksemburczycy",
+    "gender": "masculine personal"
+  },
+  { "plural": "Niemcy", "gender": "not masculine personal" },
+  { "singular": "kukurydza", "plural": "kukurydze" },
+  { "singular": "Cecylia", "plural": "Cecylie", "gender": "feminine" },
+  { "singular": "Grek", "plural": "Grecy", "gender": "masculine personal" },
+  {
+    "singular": "Uran",
+    "plural": "Urany",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Merkury",
+    "plural": "Merkure",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Merkury",
+    "plural": "Merkurowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Merkury",
+    "plural": "Merkure",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Islandia", "plural": "Islandie", "gender": "feminine" },
+  { "singular": "Malta", "plural": "Malty", "gender": "feminine" },
+  {
+    "singular": "Liechtensteińczyk",
+    "plural": "Liechtensteińczycy",
+    "gender": "masculine personal"
+  },
+  { "singular": "uran", "plural": "urany", "gender": "masculine inanimate" },
+  { "singular": "Chorwacja", "plural": "Chorwacje", "gender": "feminine" },
+  { "singular": "Łotwa", "plural": "Łotwy", "gender": "feminine" },
+  { "singular": "Serb", "plural": "Serbowie", "gender": "masculine personal" },
+  { "singular": "Rumun", "plural": "Rumuni", "gender": "masculine personal" },
+  {
+    "singular": "kardamon",
+    "plural": "kardamony",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Małgorzata", "plural": "Małgorzaty", "gender": "feminine" },
+  { "singular": "Rumunka", "plural": "Rumunki", "gender": "feminine" },
+  {
+    "singular": "elektronik",
+    "plural": "elektroniki",
+    "gender": "masculine personal"
+  },
+  { "singular": "Gabriela", "plural": "Gabriele", "gender": "feminine" },
+  { "singular": "europ", "plural": "europy", "gender": "masculine inanimate" },
+  {
+    "singular": "elektronik",
+    "plural": "elektronicy",
+    "gender": "masculine personal"
+  },
+  { "singular": "białoczółka", "plural": "białoczółki", "gender": "feminine" },
+  { "singular": "gala", "plural": "gale", "gender": "feminine" },
+  { "singular": "nutria", "plural": "nutrie", "gender": "feminine" },
+  { "singular": "rozumność", "plural": "rozumności", "gender": "feminine" },
+  {
+    "singular": "Bogumił",
+    "plural": "Bogumiły",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Polikarp",
+    "plural": "Polikarpowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Polikarp",
+    "plural": "Polikarpy",
+    "gender": "masculine personal"
+  },
+  { "singular": "złoto", "plural": "złota", "gender": "neuter" },
+  { "singular": "wataha", "plural": "watahy" },
+  {
+    "singular": "podwieczorek",
+    "plural": "podwieczorki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "terb", "plural": "terby" },
+  {
+    "singular": "kabaczek",
+    "plural": "kabaczki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "osiemdziesięciopięciolecie",
+    "plural": "osiemdziesięciopięciolecia",
+    "gender": "neuter"
+  },
+  { "singular": "państewko", "plural": "państewka", "gender": "neuter" },
+  { "singular": "krezus", "plural": "krezusi", "gender": "masculine personal" },
+  { "singular": "krezus", "plural": "krezusy", "gender": "masculine personal" },
+  { "singular": "ubogi", "plural": "ubodzy", "gender": "masculine personal" },
+  { "singular": "ubogi", "plural": "ubogie", "gender": "masculine personal" },
+  {
+    "singular": "zamożny",
+    "plural": "zamożni",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Rosjanin",
+    "plural": "Rosjany",
+    "gender": "masculine personal"
+  },
+  { "singular": "zły", "plural": "złe", "gender": "masculine personal" },
+  { "singular": "zły", "plural": "źli", "gender": "masculine personal" },
+  {
+    "singular": "grudzień",
+    "plural": "grudnie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "drugi",
+    "plural": "drugie",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "puszczyk",
+    "plural": "puszczyki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "węgorzyk",
+    "plural": "węgorzyki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "biały", "plural": "białe", "gender": "masculine personal" },
+  { "singular": "biały", "plural": "biali", "gender": "masculine personal" },
+  { "singular": "porzeczka", "plural": "porzeczki", "gender": "feminine" },
+  {
+    "singular": "Norweg",
+    "plural": "Norwedzy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Norweg",
+    "plural": "Norwegowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Miron",
+    "plural": "Mironowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Miron", "plural": "Mirony", "gender": "masculine personal" },
+  { "singular": "Estonka", "plural": "Estonki", "gender": "feminine" },
+  { "singular": "astat", "plural": "astaty", "gender": "masculine inanimate" },
+  { "singular": "bór", "plural": "bory", "gender": "masculine inanimate" },
+  { "singular": "język", "plural": "języki", "gender": "masculine personal" },
+  { "singular": "jajko", "plural": "jajka", "gender": "neuter" },
+  { "singular": "Marcjanna", "plural": "Marcjanny", "gender": "feminine" },
+  {
+    "singular": "Klemens",
+    "plural": "Klemensowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Klemens",
+    "plural": "Klemensy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "rozmaryn",
+    "plural": "rozmaryny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "holm", "plural": "holmy", "gender": "masculine inanimate" },
+  {
+    "singular": "neodym",
+    "plural": "neodymy",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "bakłażan",
+    "plural": "bakłażany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Norweg", "plural": "Norwegi", "gender": "masculine personal" },
+  { "singular": "Bułgar", "plural": "Bułgary", "gender": "masculine personal" },
+  { "singular": "drugi", "plural": "drugie", "gender": "masculine inanimate" },
+  { "singular": "kraik", "plural": "kraiki", "gender": "masculine inanimate" },
+  {
+    "singular": "węgorz",
+    "plural": "węgorze",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Siemirad",
+    "plural": "Siemiradowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Siemirad",
+    "plural": "Siemirady",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Siemirad",
+    "plural": "Siemiradzi",
+    "gender": "masculine personal"
+  },
+  { "singular": "ewidencja", "plural": "ewidencje", "gender": "feminine" },
+  {
+    "singular": "brokuł",
+    "plural": "brokuły",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "gorczyca", "plural": "gorczyce", "gender": "feminine" },
+  {
+    "singular": "krótkoszpon",
+    "plural": "krótkoszpony",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Zenon",
+    "plural": "Zenonowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Zenon", "plural": "Zenony", "gender": "masculine personal" },
+  {
+    "singular": "Juliusz",
+    "plural": "Juliuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "język", "plural": "języki", "gender": "masculine inanimate" },
+  { "singular": "nowy", "plural": "nowe", "gender": "masculine personal" },
+  {
+    "singular": "Franciszek",
+    "plural": "Franciszki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Franciszek",
+    "plural": "Franciszkowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "rękawiczka", "plural": "rękawiczki", "gender": "feminine" },
+  { "singular": "Greta", "plural": "Grety", "gender": "feminine" },
+  { "singular": "nowy", "plural": "nowi", "gender": "masculine personal" },
+  {
+    "singular": "bakłażan",
+    "plural": "bakłażany",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Albańczyk",
+    "plural": "Albańczycy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Serbia", "plural": "Serbie", "gender": "feminine" },
+  {
+    "singular": "majeranek",
+    "plural": "majeranki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Rumun", "plural": "Rumuny", "gender": "masculine personal" },
+  { "singular": "niob", "plural": "nioby" },
+  {
+    "singular": "brokuł",
+    "plural": "brokuły",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "lubczyk",
+    "plural": "lubczyki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Adam", "plural": "Adamy", "gender": "masculine personal" },
+  {
+    "singular": "Portugalczyk",
+    "plural": "Portugalczyki",
+    "gender": "masculine personal"
+  },
+  { "singular": "gal", "plural": "gale" },
+  { "singular": "kurkuma", "plural": "kurkumy" },
+  { "singular": "rukola", "plural": "rukole" },
+  { "singular": "stolica", "plural": "stolice", "gender": "feminine" },
+  {
+    "singular": "Seweryn",
+    "plural": "Sewerynowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Seweryn",
+    "plural": "Seweryny",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ignacy",
+    "plural": "Ignacowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Erazm",
+    "plural": "Erazmowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Erazm", "plural": "Erazmy", "gender": "masculine personal" },
+  {
+    "singular": "Hadrian",
+    "plural": "Hadriani",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Hadrian",
+    "plural": "Hadrianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Hadrian",
+    "plural": "Hadriany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Bułgaria", "plural": "Bułgarie", "gender": "feminine" },
+  { "singular": "modliszka", "plural": "modliszki", "gender": "feminine" },
+  { "singular": "Ignacy", "plural": "Ignace", "gender": "masculine personal" },
+  { "singular": "Albert", "plural": "Alberty", "gender": "masculine personal" },
+  { "singular": "Ziemia", "plural": "Ziemie", "gender": "feminine" },
+  { "singular": "Adam", "plural": "Adamowie", "gender": "masculine personal" },
+  {
+    "singular": "Estończyk",
+    "plural": "Estończycy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "poniedziałek",
+    "plural": "poniedziałki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Bóbr", "plural": "Bobry" },
+  { "singular": "ziemia", "plural": "ziemie", "gender": "feminine" },
+  {
+    "singular": "Estończyk",
+    "plural": "Estończyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Bułgar",
+    "plural": "Bułgarzy",
+    "gender": "masculine personal"
+  },
+  { "plural": "drzwi", "gender": "not masculine personal" },
+  { "singular": "Albert", "plural": "Alberci", "gender": "masculine personal" },
+  {
+    "singular": "Albert",
+    "plural": "Albertowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "ksenon",
+    "plural": "ksenony",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Bogumił",
+    "plural": "Bogumiłowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Albańczyk",
+    "plural": "Albańczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Tymoteusz",
+    "plural": "Tymoteusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Tymoteusz",
+    "plural": "Tymoteuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Abraham",
+    "plural": "Abrahamowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Abraham",
+    "plural": "Abrahamy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Portugalczyk",
+    "plural": "Portugalczycy",
+    "gender": "masculine personal"
+  },
+  { "singular": "bar", "plural": "bary", "gender": "masculine inanimate" },
+  {
+    "singular": "kabaczek",
+    "plural": "kabaczki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Anastazy",
+    "plural": "Anastaze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Anastazy",
+    "plural": "Anastazowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Arkadiusz",
+    "plural": "Arkadiusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Arkadiusz",
+    "plural": "Arkadiuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "luty", "plural": "lute", "gender": "masculine inanimate" },
+  {
+    "singular": "Urban",
+    "plural": "Urbanowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "marzec", "plural": "marce", "gender": "masculine inanimate" },
+  { "singular": "Michał", "plural": "Michały", "gender": "masculine personal" },
+  {
+    "singular": "Tytus",
+    "plural": "Tytusowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Tytus", "plural": "Tytusy", "gender": "masculine personal" },
+  {
+    "singular": "Dorian",
+    "plural": "Dorianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Dorian", "plural": "Doriany", "gender": "masculine personal" },
+  {
+    "singular": "Waleriusz",
+    "plural": "Waleriuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Lotar",
+    "plural": "Lotarowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Lotar", "plural": "Lotary", "gender": "masculine personal" },
+  {
+    "singular": "Honorat",
+    "plural": "Honoraci",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Honorat",
+    "plural": "Honoratowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Honorat",
+    "plural": "Honoraty",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Waleriusz",
+    "plural": "Waleriusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Alfons",
+    "plural": "Alfonsowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Alfons", "plural": "Alfonsy", "gender": "masculine personal" },
+  { "singular": "Urban", "plural": "Urbany", "gender": "masculine personal" },
+  { "singular": "Nina", "plural": "Niny", "gender": "feminine" },
+  {
+    "singular": "Radomir",
+    "plural": "Radomirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Radomir",
+    "plural": "Radomiry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Radomir",
+    "plural": "Radomirzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Marta", "plural": "Marty", "gender": "feminine" },
+  {
+    "singular": "czosnek",
+    "plural": "czosnki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Fortunata", "plural": "Fortunaty", "gender": "feminine" },
+  {
+    "singular": "Bogusław",
+    "plural": "Bogusławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Gosław", "plural": "Gosławi", "gender": "masculine personal" },
+  {
+    "singular": "Gosław",
+    "plural": "Gosławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Gosław", "plural": "Gosławy", "gender": "masculine personal" },
+  { "singular": "Estera", "plural": "Estery", "gender": "feminine" },
+  {
+    "singular": "Karol",
+    "plural": "Karolowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Roksana", "plural": "Roksany", "gender": "feminine" },
+  {
+    "singular": "Ildefons",
+    "plural": "Ildefonsowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ildefons",
+    "plural": "Ildefonsy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Ernestyna", "plural": "Ernestyny", "gender": "feminine" },
+  { "singular": "Narcyz", "plural": "Narcyzi", "gender": "masculine personal" },
+  {
+    "singular": "Narcyz",
+    "plural": "Narcyzowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Narcyz", "plural": "Narcyzy", "gender": "masculine personal" },
+  { "singular": "Dobrochna", "plural": "Dobrochny", "gender": "feminine" },
+  { "singular": "Alfons", "plural": "Alfonsi", "gender": "masculine personal" },
+  { "singular": "Żanna", "plural": "Żanny", "gender": "feminine" },
+  {
+    "singular": "Czesław",
+    "plural": "Czesławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Lucjan", "plural": "Lucjany", "gender": "masculine personal" },
+  {
+    "singular": "Czesław",
+    "plural": "Czesławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Wanda", "plural": "Wandy", "gender": "feminine" },
+  { "singular": "Łucja", "plural": "Łucje", "gender": "feminine" },
+  {
+    "singular": "Bogusław",
+    "plural": "Bogusławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Alicja", "plural": "Alicje", "gender": "feminine" },
+  {
+    "singular": "Felicjan",
+    "plural": "Felicjanowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Felicjan",
+    "plural": "Felicjany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Edwarda", "plural": "Edwardy", "gender": "feminine" },
+  {
+    "singular": "Michał",
+    "plural": "Michałowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Lucjan",
+    "plural": "Lucjanowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gilbert",
+    "plural": "Gilberci",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gilbert",
+    "plural": "Gilbertowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gilbert",
+    "plural": "Gilberty",
+    "gender": "masculine personal"
+  },
+  { "singular": "Karol", "plural": "Karole", "gender": "masculine personal" },
+  {
+    "singular": "Godzisław",
+    "plural": "Godzisławi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Godzisław",
+    "plural": "Godzisławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Godzisław",
+    "plural": "Godzisławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Leon", "plural": "Leony", "gender": "masculine personal" },
+  { "singular": "Odon", "plural": "Odoni", "gender": "masculine personal" },
+  { "singular": "Odon", "plural": "Odonowie", "gender": "masculine personal" },
+  { "singular": "Odon", "plural": "Odony", "gender": "masculine personal" },
+  {
+    "singular": "Orest",
+    "plural": "Orestowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Orest", "plural": "Oresty", "gender": "masculine personal" },
+  {
+    "singular": "ocelot",
+    "plural": "oceloty",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "pan", "plural": "panowie", "gender": "masculine personal" },
+  { "singular": "pan", "plural": "pany", "gender": "masculine personal" },
+  { "singular": "minuta", "plural": "minuty", "gender": "feminine" },
+  { "singular": "i", "plural": "i", "gender": "neuter" },
+  { "singular": "o", "plural": "o", "gender": "neuter" },
+  { "singular": "Antoni", "plural": "Antonie", "gender": "masculine personal" },
+  {
+    "singular": "gatunek",
+    "plural": "gatunki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Bernard",
+    "plural": "Bernardowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Pan", "plural": "Panowie", "gender": "masculine personal" },
+  { "singular": "bez", "plural": "bzy", "gender": "masculine inanimate" },
+  {
+    "singular": "chrzanik",
+    "plural": "chrzaniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "część", "plural": "części", "gender": "feminine" },
+  { "plural": "oceloty", "gender": "not masculine personal" },
+  {
+    "singular": "okoń",
+    "plural": "okonie",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "cynamon",
+    "plural": "cynamony",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "lato", "plural": "lata", "gender": "neuter" },
+  { "singular": "bocianica", "plural": "bocianice", "gender": "feminine" },
+  { "singular": "cierpliwość", "plural": "cierpliwości", "gender": "feminine" },
+  { "singular": "kalarepka", "plural": "kalarepki", "gender": "feminine" },
+  { "singular": "poziomeczka", "plural": "poziomeczki", "gender": "feminine" },
+  { "singular": "wilga", "plural": "wilgi", "gender": "feminine" },
+  { "singular": "Słowaczka", "plural": "Słowaczki", "gender": "feminine" },
+  {
+    "singular": "Antoni",
+    "plural": "Antoniowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "rtęć", "plural": "rtęci", "gender": "feminine" },
+  { "singular": "rtęć", "plural": "rtęcie", "gender": "feminine" },
+  { "singular": "zima", "plural": "zimy", "gender": "feminine" },
+  {
+    "singular": "aksamit",
+    "plural": "aksamity",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Adelajda", "plural": "Adelajdy", "gender": "feminine" },
+  { "singular": "Gerda", "plural": "Gerdy", "gender": "feminine" },
+  {
+    "singular": "Bernard",
+    "plural": "Bernardy",
+    "gender": "masculine personal"
+  },
+  { "singular": "poziomka", "plural": "poziomki", "gender": "feminine" },
+  { "singular": "Słowak", "plural": "Słowaki", "gender": "masculine personal" },
+  { "singular": "dzierlatka", "plural": "dzierlatki", "gender": "feminine" },
+  { "singular": "śmieć", "plural": "śmiecie", "gender": "masculine personal" },
+  { "singular": "noc", "plural": "noce", "gender": "feminine" },
+  {
+    "singular": "fenig",
+    "plural": "fenigi",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Judyta", "plural": "Judyty", "gender": "feminine" },
+  {
+    "singular": "Szczepan",
+    "plural": "Szczepanowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Wiesława", "plural": "Wiesławy", "gender": "feminine" },
+  { "singular": "rod", "plural": "rody", "gender": "masculine inanimate" },
+  { "singular": "godzina", "plural": "godziny", "gender": "feminine" },
+  {
+    "singular": "Ksawery",
+    "plural": "Ksawere",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ksawery",
+    "plural": "Ksawerowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Pan", "plural": "Pany", "gender": "masculine personal" },
+  { "singular": "Aurelia", "plural": "Aurelie", "gender": "feminine" },
+  {
+    "singular": "rubel",
+    "plural": "ruble",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "flet", "plural": "flety" },
+  { "singular": "Arleta", "plural": "Arlety", "gender": "feminine" },
+  { "singular": "cer", "plural": "cery", "gender": "masculine inanimate" },
+  {
+    "singular": "lantan",
+    "plural": "lantany",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Jeremi", "plural": "Jeremi", "gender": "masculine personal" },
+  {
+    "singular": "batalion",
+    "plural": "bataliony",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Witosława", "plural": "Witosławy", "gender": "feminine" },
+  { "singular": "Martyna", "plural": "Martyny", "gender": "feminine" },
+  { "singular": "Żaneta", "plural": "Żanety", "gender": "feminine" },
+  { "singular": "Leon", "plural": "Leonowie", "gender": "masculine personal" },
+  { "singular": "jęzor", "plural": "jęzory", "gender": "masculine inanimate" },
+  { "singular": "sierp", "plural": "sierpy", "gender": "masculine inanimate" },
+  { "singular": "śmieć", "plural": "śmiecie", "gender": "masculine inanimate" },
+  { "singular": "lutet", "plural": "lutety", "gender": "masculine inanimate" },
+  { "singular": "cebula", "plural": "cebule", "gender": "feminine" },
+  {
+    "singular": "sierpień",
+    "plural": "sierpnie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "magnez",
+    "plural": "magnezy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "cyna", "plural": "cyny" },
+  { "singular": "hafn", "plural": "hafny", "gender": "masculine inanimate" },
+  { "singular": "Jeremi", "plural": "Jeremie", "gender": "masculine personal" },
+  {
+    "singular": "mężczyzna",
+    "plural": "mężczyźni",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "mężczyzna",
+    "plural": "mężczyzny",
+    "gender": "masculine personal"
+  },
+  { "singular": "Szwajcaria", "plural": "Szwajcarie", "gender": "feminine" },
+  {
+    "singular": "Konstanty",
+    "plural": "Konstante",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Konstanty",
+    "plural": "Konstantowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Marcelin",
+    "plural": "Marceliny",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Krystian",
+    "plural": "Krystianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Krystian",
+    "plural": "Krystiany",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "bekasik",
+    "plural": "bekasiki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "batalion",
+    "plural": "bataliony",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Kornel",
+    "plural": "Kornelowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Szczepan",
+    "plural": "Szczepany",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Eligiusz",
+    "plural": "Eligiusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Eligiusz",
+    "plural": "Eligiuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Słowenia", "plural": "Słowenie", "gender": "feminine" },
+  {
+    "singular": "cietrzew",
+    "plural": "cietrzewie",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Emilian",
+    "plural": "Emilianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Emilian",
+    "plural": "Emiliany",
+    "gender": "masculine personal"
+  },
+  { "singular": "kalarepa", "plural": "kalarepy", "gender": "feminine" },
+  { "singular": "Barbara", "plural": "Barbary", "gender": "feminine" },
+  {
+    "singular": "Marcelin",
+    "plural": "Marcelini",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Marcelin",
+    "plural": "Marcelinowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "ćwikła", "plural": "ćwikły", "gender": "feminine" },
+  { "singular": "Henryka", "plural": "Henryki", "gender": "feminine" },
+  { "singular": "cząstka", "plural": "cząstki", "gender": "feminine" },
+  {
+    "singular": "warszawianin",
+    "plural": "warszawianie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "warszawianin",
+    "plural": "warszawiany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Waleria", "plural": "Walerie", "gender": "feminine" },
+  { "singular": "nazwa", "plural": "nazwy", "gender": "feminine" },
+  { "singular": "selekcjoner", "plural": "selekcjonerzy" },
+  { "singular": "Kornel", "plural": "Kornele", "gender": "masculine personal" },
+  { "singular": "forsa", "plural": "forsy" },
+  { "singular": "węgiel", "plural": "węgle", "gender": "masculine inanimate" },
+  {
+    "singular": "Symeon",
+    "plural": "Symeonowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Symeon", "plural": "Symeony", "gender": "masculine personal" },
+  { "singular": "śmieć", "plural": "śmieci", "gender": "masculine inanimate" },
+  { "singular": "Słowak", "plural": "Słowacy", "gender": "masculine personal" },
+  {
+    "singular": "jedwab",
+    "plural": "jedwabie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "sandacz",
+    "plural": "sandacze",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Ryszard",
+    "plural": "Ryszardowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ryszard",
+    "plural": "Ryszardy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dobrosław",
+    "plural": "Dobrosławi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dobrosław",
+    "plural": "Dobrosławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dobrosław",
+    "plural": "Dobrosławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "odkurzacz",
+    "plural": "odkurzacze",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Mikołaj",
+    "plural": "Mikołaje",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mikołaj",
+    "plural": "Mikołajowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "jedwabnik",
+    "plural": "jedwabniki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Aleksandra", "plural": "Aleksandry", "gender": "feminine" },
+  { "singular": "Balbina", "plural": "Balbiny", "gender": "feminine" },
+  { "singular": "Rumunia", "plural": "Rumunie", "gender": "feminine" },
+  { "singular": "mały", "plural": "małe", "gender": "masculine personal" },
+  { "singular": "bezmyślność", "plural": "bezmyślności", "gender": "feminine" },
+  { "singular": "dziecięcość", "plural": "dziecięcości", "gender": "feminine" },
+  { "singular": "jabłonka", "plural": "jabłonki", "gender": "feminine" },
+  { "singular": "łasiczka", "plural": "łasiczki", "gender": "feminine" },
+  { "singular": "pustułka", "plural": "pustułki", "gender": "feminine" },
+  { "singular": "spanielka", "plural": "spanielki", "gender": "feminine" },
+  { "singular": "wyżlica", "plural": "wyżlice", "gender": "feminine" },
+  { "singular": "krowa", "plural": "krowy", "gender": "feminine" },
+  { "singular": "łyżeczka", "plural": "łyżeczki", "gender": "feminine" },
+  {
+    "singular": "leksykografia",
+    "plural": "leksykografie",
+    "gender": "feminine"
+  },
+  { "singular": "Zenobia", "plural": "Zenobie", "gender": "feminine" },
+  { "singular": "słowo", "plural": "słowa", "gender": "neuter" },
+  { "singular": "mały", "plural": "mali", "gender": "masculine personal" },
+  {
+    "singular": "chrząszczyk",
+    "plural": "chrząszczyki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "okoniek",
+    "plural": "okońki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "rubelek",
+    "plural": "rubelki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "wróbelek",
+    "plural": "wróbelki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "żółwik",
+    "plural": "żółwiki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Gościmir",
+    "plural": "Gościmirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gościmir",
+    "plural": "Gościmiry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gościmir",
+    "plural": "Gościmirzy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "grubodziób",
+    "plural": "grubodzioby",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "grubodziób",
+    "plural": "grubodzióby",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Albin",
+    "plural": "Albinowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Albin", "plural": "Albiny", "gender": "masculine personal" },
+  { "singular": "Kanadyjka", "plural": "Kanadyjki", "gender": "feminine" },
+  {
+    "singular": "Walerian",
+    "plural": "Waleriany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Damazy", "plural": "Damaze", "gender": "masculine personal" },
+  {
+    "singular": "Damazy",
+    "plural": "Damazowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "sójka", "plural": "sójki", "gender": "feminine" },
+  { "singular": "Arkady", "plural": "Arkade", "gender": "masculine personal" },
+  {
+    "singular": "Arkady",
+    "plural": "Arkadowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zefiryn",
+    "plural": "Zefiryni",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zefiryn",
+    "plural": "Zefirynowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zefiryn",
+    "plural": "Zefiryny",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kwadransik",
+    "plural": "kwadransiki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "neonik",
+    "plural": "neoniki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "edredon",
+    "plural": "edredony",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Kasper",
+    "plural": "Kasprowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Otylia", "plural": "Otylie", "gender": "feminine" },
+  { "singular": "nikiel", "plural": "nikle", "gender": "masculine inanimate" },
+  {
+    "singular": "Grzegorz",
+    "plural": "Grzegorze",
+    "gender": "masculine personal"
+  },
+  { "singular": "Adela", "plural": "Adele", "gender": "feminine" },
+  {
+    "singular": "Fabian",
+    "plural": "Fabianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Fabian", "plural": "Fabiany", "gender": "masculine personal" },
+  { "singular": "Beata", "plural": "Beaty", "gender": "feminine" },
+  {
+    "singular": "neon",
+    "plural": "neony",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "iterb", "plural": "iterby" },
+  { "singular": "ara", "plural": "ary" },
+  {
+    "singular": "pasternak",
+    "plural": "pasternaki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Arnold",
+    "plural": "Arnoldowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "żelazo", "plural": "żelaza", "gender": "neuter" },
+  { "singular": "wiosna", "plural": "wiosny", "gender": "feminine" },
+  {
+    "singular": "Grzegorz",
+    "plural": "Grzegorzowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Kasper", "plural": "Kaspry", "gender": "masculine personal" },
+  { "singular": "odmiana", "plural": "odmiany", "gender": "feminine" },
+  { "singular": "Austria", "plural": "Austrie", "gender": "feminine" },
+  {
+    "singular": "Popielec",
+    "plural": "Popielce",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Saturn", "plural": "Saturny", "gender": "masculine personal" },
+  { "singular": "gęgawa", "plural": "gęgawy", "gender": "feminine" },
+  {
+    "singular": "Saturn",
+    "plural": "Saturny",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "seaborg",
+    "plural": "seaborgi",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "gruszka", "plural": "gruszki", "gender": "feminine" },
+  {
+    "singular": "Saturn",
+    "plural": "Saturnowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gaudenty",
+    "plural": "Gaudente",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Gaudenty",
+    "plural": "Gaudentowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dobromysł",
+    "plural": "Dobromysłowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dobromysł",
+    "plural": "Dobromysły",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "hipopotam",
+    "plural": "hipopotamy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Benedykt",
+    "plural": "Benedyktowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Benedykt",
+    "plural": "Benedykty",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "liczba atomowa",
+    "plural": "liczby atomowe",
+    "gender": "feminine"
+  },
+  {
+    "singular": "gadolin",
+    "plural": "gadoliny",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "listopad",
+    "plural": "listopady",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Laurencja", "plural": "Laurencje", "gender": "feminine" },
+  {
+    "singular": "Walerian",
+    "plural": "Waleriani",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Walerian",
+    "plural": "Walerianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "iryd", "plural": "irydy" },
+  { "singular": "potas", "plural": "potasy", "gender": "masculine inanimate" },
+  { "singular": "Warszawa", "plural": "Warszawy", "gender": "feminine" },
+  {
+    "singular": "mangan",
+    "plural": "mangany",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "szalotka", "plural": "szalotki", "gender": "feminine" },
+  { "singular": "Bogusława", "plural": "Bogusławy", "gender": "feminine" },
+  {
+    "singular": "Rościsław",
+    "plural": "Rościsławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Rościsław",
+    "plural": "Rościsławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Honorata", "plural": "Honoraty", "gender": "feminine" },
+  { "singular": "soda", "plural": "sody", "gender": "feminine" },
+  {
+    "singular": "szerszeń",
+    "plural": "szerszenie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "vat", "plural": "vat", "gender": "masculine inanimate" },
+  { "singular": "vat", "plural": "vat-y", "gender": "masculine inanimate" },
+  { "singular": "estakada", "plural": "estakady", "gender": "feminine" },
+  {
+    "singular": "Białorusinka",
+    "plural": "Białorusinki",
+    "gender": "feminine"
+  },
+  { "singular": "Chorwatka", "plural": "Chorwatki", "gender": "feminine" },
+  { "singular": "Czarnogórka", "plural": "Czarnogórki", "gender": "feminine" },
+  { "singular": "jabłoneczka", "plural": "jabłoneczki", "gender": "feminine" },
+  {
+    "singular": "powszechność",
+    "plural": "powszechności",
+    "gender": "feminine"
+  },
+  {
+    "singular": "Wincenty",
+    "plural": "Wincente",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wincenty",
+    "plural": "Wincentowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kwadrans",
+    "plural": "kwadranse",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "głupi", "plural": "głupie", "gender": "masculine personal" },
+  { "singular": "Fabian", "plural": "Fabiani", "gender": "masculine personal" },
+  { "singular": "konisko", "plural": "koniska", "gender": "neuter" },
+  { "singular": "Aneta", "plural": "Anety", "gender": "feminine" },
+  { "singular": "głupi", "plural": "głupi", "gender": "masculine personal" },
+  {
+    "singular": "Białorusin",
+    "plural": "Białorusiny",
+    "gender": "masculine personal"
+  },
+  { "singular": "praca", "plural": "prace", "gender": "feminine" },
+  { "singular": "błahość", "plural": "błahości" },
+  {
+    "singular": "Mołdawianin",
+    "plural": "Mołdawianie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "wyżeł",
+    "plural": "wyżły",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Arnold", "plural": "Arnoldy", "gender": "masculine personal" },
+  {
+    "singular": "Radogost",
+    "plural": "Radogostowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Radogost",
+    "plural": "Radogosty",
+    "gender": "masculine personal"
+  },
+  { "singular": "liczba", "plural": "liczby", "gender": "feminine" },
+  { "singular": "prawniczka", "plural": "prawniczki", "gender": "feminine" },
+  {
+    "singular": "baktrian",
+    "plural": "baktriany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Litwinka", "plural": "Litwinki", "gender": "feminine" },
+  {
+    "singular": "Białorusin",
+    "plural": "Białorusini",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Przemysław",
+    "plural": "Przemysławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Przemysław",
+    "plural": "Przemysławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "jedwabik",
+    "plural": "jedwabiki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Ewa", "plural": "Ewy", "gender": "feminine" },
+  { "singular": "Hiszpanka", "plural": "Hiszpanki", "gender": "feminine" },
+  { "singular": "Andorka", "plural": "Andorki", "gender": "feminine" },
+  { "singular": "Belgijka", "plural": "Belgijki", "gender": "feminine" },
+  { "singular": "brzegówka", "plural": "brzegówki", "gender": "feminine" },
+  {
+    "singular": "konstantynopolitańczykowianeczka",
+    "plural": "konstantynopolitańczykowianeczki",
+    "gender": "feminine"
+  },
+  { "singular": "marchewka", "plural": "marchewki", "gender": "feminine" },
+  { "singular": "pelikanica", "plural": "pelikanice", "gender": "feminine" },
+  { "singular": "roztropność", "plural": "roztropności", "gender": "feminine" },
+  {
+    "singular": "truskaweczka",
+    "plural": "truskaweczki",
+    "gender": "feminine"
+  },
+  {
+    "singular": "Nikodem",
+    "plural": "Nikodemowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Nikodem",
+    "plural": "Nikodemy",
+    "gender": "masculine personal"
+  },
+  { "singular": "liść", "plural": "liście", "gender": "masculine inanimate" },
+  { "singular": "Norweżka", "plural": "Norweżki", "gender": "feminine" },
+  {
+    "singular": "Chorwat",
+    "plural": "Chorwaty",
+    "gender": "masculine personal"
+  },
+  { "singular": "świat", "plural": "światy", "gender": "masculine inanimate" },
+  { "singular": "obiad", "plural": "obiady", "gender": "masculine inanimate" },
+  { "singular": "frantostwo", "plural": "frantostwa", "gender": "neuter" },
+  { "singular": "nożysko", "plural": "nożyska", "gender": "neuter" },
+  { "singular": "w", "plural": "w", "gender": "neuter" },
+  { "singular": "akowiec", "plural": "akowce", "gender": "masculine personal" },
+  { "singular": "akowiec", "plural": "akowcy", "gender": "masculine personal" },
+  {
+    "singular": "akowiec",
+    "plural": "AK-owce",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "akowiec",
+    "plural": "AK-owcy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "AK-owiec",
+    "plural": "akowce",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "AK-owiec",
+    "plural": "akowcy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "AK-owiec",
+    "plural": "AK-owce",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "AK-owiec",
+    "plural": "AK-owcy",
+    "gender": "masculine personal"
+  },
+  { "singular": "imię", "plural": "imiona", "gender": "neuter" },
+  {
+    "singular": "Mołdawianin",
+    "plural": "Mołdawiany",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Chorwat",
+    "plural": "Chorwaci",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "albatros",
+    "plural": "albatrosy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "lawrens",
+    "plural": "lawrensy",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "obiadek",
+    "plural": "obiadki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "róż", "plural": "róże", "gender": "masculine inanimate" },
+  {
+    "singular": "sposób",
+    "plural": "sposoby",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "wierszyk",
+    "plural": "wierszyki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Eustachy",
+    "plural": "Eustachowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Eustachy",
+    "plural": "Eustache",
+    "gender": "masculine personal"
+  },
+  { "singular": "ja", "plural": "ja", "gender": "neuter" },
+  { "singular": "beryl", "plural": "beryle", "gender": "masculine inanimate" },
+  {
+    "singular": "Francuz",
+    "plural": "Francuzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Ludwik", "plural": "Ludwiki", "gender": "masculine personal" },
+  {
+    "singular": "Marcin",
+    "plural": "Marcinowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Holenderka", "plural": "Holenderki", "gender": "feminine" },
+  { "singular": "sód", "plural": "sody", "gender": "masculine inanimate" },
+  {
+    "singular": "flaming",
+    "plural": "flamingi",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "drozd",
+    "plural": "drozdy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "gulden",
+    "plural": "guldeny",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Salomea", "plural": "Salomee", "gender": "feminine" },
+  { "singular": "warszawiak", "plural": "warszawiacy" },
+  { "singular": "warszawiak", "plural": "warszawiaki" },
+  { "singular": "a", "plural": "a", "gender": "neuter" },
+  { "singular": "Polska", "plural": "Polski", "gender": "feminine" },
+  {
+    "singular": "makak",
+    "plural": "makaki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "środa", "plural": "środy", "gender": "feminine" },
+  { "singular": "Słowenka", "plural": "Słowenki", "gender": "feminine" },
+  {
+    "singular": "przymiot",
+    "plural": "przymioty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "pigwa", "plural": "pigwy", "gender": "feminine" },
+  {
+    "singular": "kwiatek",
+    "plural": "kwiatki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "niedziela", "plural": "niedziele", "gender": "feminine" },
+  { "singular": "pizza", "plural": "pizze", "gender": "feminine" },
+  { "singular": "biedny", "plural": "biedne", "gender": "masculine personal" },
+  { "singular": "biedny", "plural": "biedni", "gender": "masculine personal" },
+  { "singular": "Irlandka", "plural": "Irlandki", "gender": "feminine" },
+  { "singular": "pies", "plural": "psowie", "gender": "masculine personal" },
+  { "singular": "pies", "plural": "psy", "gender": "masculine personal" },
+  {
+    "singular": "Kanadyjczyk",
+    "plural": "Kanadyjczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ludwik",
+    "plural": "Ludwikowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "platyna", "plural": "platyny", "gender": "feminine" },
+  { "plural": "drzwiczki", "gender": "not masculine personal" },
+  { "singular": "Zuzanna", "plural": "Zuzanny", "gender": "feminine" },
+  { "singular": "rubid", "plural": "rubidy", "gender": "masculine inanimate" },
+  { "singular": "samar", "plural": "samary" },
+  { "singular": "Czech", "plural": "Czechy", "gender": "masculine personal" },
+  { "singular": "Białoruś", "plural": "Białorusie", "gender": "feminine" },
+  { "singular": "Benigna", "plural": "Benigny", "gender": "feminine" },
+  {
+    "singular": "kwiatek",
+    "plural": "kwiatki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Rosjanka", "plural": "Rosjanki", "gender": "feminine" },
+  { "singular": "Słowacja", "plural": "Słowacje", "gender": "feminine" },
+  { "singular": "dynia", "plural": "dynie", "gender": "feminine" },
+  { "singular": "antonówka", "plural": "antonówki", "gender": "feminine" },
+  {
+    "singular": "bernikla białolica",
+    "plural": "bernikle białolice",
+    "gender": "feminine"
+  },
+  {
+    "singular": "kormoran",
+    "plural": "kormorany",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "brodziec",
+    "plural": "brodźce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "wrzesień",
+    "plural": "wrześnie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "przymiotnik",
+    "plural": "przymiotniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "białorzytka", "plural": "białorzytki", "gender": "feminine" },
+  { "singular": "borsuczyca", "plural": "borsuczyce", "gender": "feminine" },
+  { "singular": "fretka", "plural": "fretki", "gender": "feminine" },
+  { "singular": "Islandka", "plural": "Islandki", "gender": "feminine" },
+  { "singular": "kobyła", "plural": "kobyły", "gender": "feminine" },
+  { "singular": "komentacja", "plural": "komentacje", "gender": "feminine" },
+  {
+    "singular": "Liechtensteinka",
+    "plural": "Liechtensteinki",
+    "gender": "feminine"
+  },
+  {
+    "singular": "niedźwiedzica",
+    "plural": "niedźwiedzice",
+    "gender": "feminine"
+  },
+  { "singular": "roślinka", "plural": "roślinki", "gender": "feminine" },
+  { "singular": "Serbka", "plural": "Serbki", "gender": "feminine" },
+  {
+    "singular": "pomidor",
+    "plural": "pomidory",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "dzień", "plural": "dzienie", "gender": "feminine" },
+  { "singular": "wodór", "plural": "wodory", "gender": "masculine inanimate" },
+  {
+    "singular": "Wielka Środa",
+    "plural": "Wielkie Środy",
+    "gender": "feminine"
+  },
+  { "singular": "Abel", "plural": "Ablowie", "gender": "masculine personal" },
+  { "singular": "płastuga", "plural": "płastugi", "gender": "feminine" },
+  { "singular": "miasto", "plural": "miasta", "gender": "neuter" },
+  { "singular": "krzem", "plural": "krzemy", "gender": "masculine inanimate" },
+  {
+    "singular": "Wikisłownik",
+    "plural": "Wikisłowniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "krówsko", "plural": "krówska", "gender": "neuter" },
+  { "singular": "wanad", "plural": "wanady", "gender": "masculine inanimate" },
+  {
+    "singular": "kwiecień",
+    "plural": "kwietnie",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "ameryk",
+    "plural": "ameryki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "kaliforn",
+    "plural": "kaliforny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Brygida", "plural": "Brygidy", "gender": "feminine" },
+  {
+    "singular": "karczoch",
+    "plural": "karczochy",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "bogatka", "plural": "bogatki", "gender": "feminine" },
+  { "singular": "dubn", "plural": "dubny", "gender": "masculine inanimate" },
+  { "singular": "miejsce", "plural": "miejsca", "gender": "neuter" },
+  {
+    "singular": "biegus",
+    "plural": "biegusy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "pelikan",
+    "plural": "pelikany",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "brzoskwinka", "plural": "brzoskwinki", "gender": "feminine" },
+  { "singular": "kapustka", "plural": "kapustki", "gender": "feminine" },
+  { "singular": "miejskość", "plural": "miejskości", "gender": "feminine" },
+  { "singular": "sekundka", "plural": "sekundki", "gender": "feminine" },
+  {
+    "singular": "pomidor",
+    "plural": "pomidory",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "cyrkon",
+    "plural": "cyrkony",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "erb", "plural": "erby", "gender": "masculine inanimate" },
+  { "singular": "ołów", "plural": "ołowie" },
+  { "singular": "Czech", "plural": "Czesi", "gender": "masculine personal" },
+  { "singular": "Abel", "plural": "Able", "gender": "masculine personal" },
+  {
+    "singular": "stront",
+    "plural": "stronty",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "frans", "plural": "fransy", "gender": "masculine inanimate" },
+  { "singular": "Litwin", "plural": "Litwini", "gender": "masculine personal" },
+  {
+    "singular": "błękit",
+    "plural": "błękity",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "ale", "plural": "ale", "gender": "neuter" },
+  { "singular": "psisko", "plural": "psiska", "gender": "neuter" },
+  { "singular": "do", "plural": "do", "gender": "neuter" },
+  { "singular": "jod", "plural": "jody", "gender": "masculine inanimate" },
+  {
+    "singular": "karczoch",
+    "plural": "karczochy",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "kajman",
+    "plural": "kajmany",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "słowiczek",
+    "plural": "słowiczki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "kalendarzyk",
+    "plural": "kalendarzyki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "szafran",
+    "plural": "szafrany",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "wrzos", "plural": "wrzosy", "gender": "masculine inanimate" },
+  {
+    "singular": "mendelew",
+    "plural": "mendelewy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Felicyta", "plural": "Felicyty", "gender": "feminine" },
+  { "singular": "głowa", "plural": "głowy" },
+  { "singular": "dzierzba", "plural": "dzierzby", "gender": "feminine" },
+  { "singular": "godzinka", "plural": "godzinki", "gender": "feminine" },
+  { "singular": "minutka", "plural": "minutki", "gender": "feminine" },
+  { "singular": "wiosenka", "plural": "wiosenki", "gender": "feminine" },
+  { "singular": "zmyślność", "plural": "zmyślności", "gender": "feminine" },
+  { "singular": "białość", "plural": "białości", "gender": "feminine" },
+  {
+    "singular": "mysikrólik",
+    "plural": "mysikróliki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Kanadyjczyk",
+    "plural": "Kanadyjczycy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "lin",
+    "plural": "liny",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "śniadanko", "plural": "śniadanka", "gender": "neuter" },
+  { "singular": "Holandia", "plural": "Holandie", "gender": "feminine" },
+  { "singular": "kocisko", "plural": "kociska" },
+  { "singular": "cipa", "plural": "cipy" },
+  { "singular": "pener", "plural": "penerzy" },
+  { "singular": "Litwin", "plural": "Litwiny", "gender": "masculine personal" },
+  { "singular": "bezczelność", "plural": "bezczelności" },
+  { "singular": "roszponka", "plural": "roszponki" },
+  { "singular": "roszpunka", "plural": "roszpunki" },
+  {
+    "singular": "Chryzostom",
+    "plural": "Chryzostomowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Chryzostom",
+    "plural": "Chryzostomy",
+    "gender": "masculine personal"
+  },
+  { "singular": "roślina", "plural": "rośliny", "gender": "feminine" },
+  { "singular": "brąz", "plural": "brązy", "gender": "masculine inanimate" },
+  {
+    "singular": "liczebnik",
+    "plural": "liczebniki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "szczypior",
+    "plural": "szczypiory",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "szczypiorek",
+    "plural": "szczypiorki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Francuz",
+    "plural": "Francuzi",
+    "gender": "masculine personal"
+  },
+  { "singular": "dziwonia", "plural": "dziwonie" },
+  { "singular": "Jowita", "plural": "Jowity", "gender": "feminine" },
+  { "singular": "milisekunda", "plural": "milisekundy", "gender": "feminine" },
+  { "singular": "brzęczka", "plural": "brzęczki", "gender": "feminine" },
+  { "singular": "czereśnia", "plural": "czereśnie", "gender": "feminine" },
+  {
+    "singular": "filmik",
+    "plural": "filmiki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Makary", "plural": "Makare", "gender": "masculine personal" },
+  {
+    "singular": "Makary",
+    "plural": "Makarowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Marianna", "plural": "Marianny", "gender": "feminine" },
+  { "singular": "Cyryl", "plural": "Cyryle", "gender": "masculine personal" },
+  {
+    "singular": "Cyryl",
+    "plural": "Cyrylowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Cyntia", "plural": "Cyntie", "gender": "feminine" },
+  { "singular": "Achacy", "plural": "Achace", "gender": "masculine personal" },
+  {
+    "singular": "Achacy",
+    "plural": "Achacowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Sabin", "plural": "Sabiny", "gender": "masculine personal" },
+  { "singular": "Ilona", "plural": "Ilony", "gender": "feminine" },
+  {
+    "singular": "Romuald",
+    "plural": "Romualdowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Romuald",
+    "plural": "Romualdy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Cezary", "plural": "Cezare", "gender": "masculine personal" },
+  {
+    "singular": "Cezary",
+    "plural": "Cezarowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "jaszczurka", "plural": "jaszczurki", "gender": "feminine" },
+  {
+    "singular": "Achacjusz",
+    "plural": "Achacjusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Achacjusz",
+    "plural": "Achacjuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "arbuz",
+    "plural": "arbuzy",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Dorota", "plural": "Doroty", "gender": "feminine" },
+  { "singular": "fasola", "plural": "fasole", "gender": "feminine" },
+  { "singular": "pszczółka", "plural": "pszczółki", "gender": "feminine" },
+  { "singular": "ropuszka", "plural": "ropuszki", "gender": "feminine" },
+  { "singular": "Sewer", "plural": "Sewrowie", "gender": "masculine personal" },
+  { "singular": "Sewer", "plural": "Sewry", "gender": "masculine personal" },
+  { "singular": "tusza", "plural": "tusze", "gender": "feminine" },
+  { "singular": "Paulina", "plural": "Pauliny", "gender": "feminine" },
+  {
+    "singular": "okonek",
+    "plural": "okonki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "terier",
+    "plural": "teriery",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "arbuz", "plural": "arbuzy", "gender": "masculine inanimate" },
+  { "singular": "Paweł", "plural": "Pawłowie", "gender": "masculine personal" },
+  { "singular": "Amelia", "plural": "Amelie", "gender": "feminine" },
+  { "singular": "Agaton", "plural": "Agatoni", "gender": "masculine personal" },
+  {
+    "singular": "Agaton",
+    "plural": "Agatonowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Agaton", "plural": "Agatony", "gender": "masculine personal" },
+  {
+    "singular": "wykrzyknik",
+    "plural": "wykrzykniki",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Rajmund",
+    "plural": "Rajmundowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Rajmund",
+    "plural": "Rajmundy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Kalikst",
+    "plural": "Kalikstowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Kalikst",
+    "plural": "Kaliksty",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Przybysław",
+    "plural": "Przybysławi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Przybysław",
+    "plural": "Przybysławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Przybysław",
+    "plural": "Przybysławy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Uniedrog",
+    "plural": "Uniedrogi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Uniedrog",
+    "plural": "Uniedrogowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Łucjan",
+    "plural": "Łucjanowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Łucjan", "plural": "Łucjany", "gender": "masculine personal" },
+  { "singular": "Apolonia", "plural": "Apolonie", "gender": "feminine" },
+  { "singular": "ropucha", "plural": "ropuchy", "gender": "feminine" },
+  { "singular": "Teofila", "plural": "Teofile", "gender": "feminine" },
+  {
+    "singular": "Sabin",
+    "plural": "Sabinowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Kraków",
+    "plural": "Krakowy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Edward", "plural": "Edwardy", "gender": "masculine personal" },
+  { "singular": "Paweł", "plural": "Pawły", "gender": "masculine personal" },
+  { "singular": "bazylia", "plural": "bazylie", "gender": "feminine" },
+  { "singular": "Sabin", "plural": "Sabini", "gender": "masculine personal" },
+  {
+    "singular": "Edward",
+    "plural": "Edwardowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Krzesimir",
+    "plural": "Krzesimirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Krzesimir",
+    "plural": "Krzesimiry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Krzesimir",
+    "plural": "Krzesimirzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Maksym", "plural": "Maksymi", "gender": "masculine personal" },
+  {
+    "singular": "Maksym",
+    "plural": "Maksymowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Maksym", "plural": "Maksymy", "gender": "masculine personal" },
+  {
+    "singular": "Łazarz",
+    "plural": "Łazarzowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Izydor",
+    "plural": "Izydorowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Izydor", "plural": "Izydory", "gender": "masculine personal" },
+  { "singular": "czapla siwa", "plural": "czaple siwe", "gender": "feminine" },
+  { "singular": "Maltanka", "plural": "Maltanki", "gender": "feminine" },
+  {
+    "singular": "Dariusz",
+    "plural": "Dariusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dariusz",
+    "plural": "Dariuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "czapla biała",
+    "plural": "czaple białe",
+    "gender": "feminine"
+  },
+  { "singular": "Dawid", "plural": "Dawidy", "gender": "masculine personal" },
+  { "singular": "Zdzisława", "plural": "Zdzisławy", "gender": "feminine" },
+  {
+    "singular": "Słoweniec",
+    "plural": "Słoweńcy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Alina", "plural": "Aliny", "gender": "feminine" },
+  { "singular": "Jolanta", "plural": "Jolanty", "gender": "feminine" },
+  { "singular": "Luksemburka", "plural": "Luksemburki", "gender": "feminine" },
+  {
+    "singular": "Dawid",
+    "plural": "Dawidowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Irma", "plural": "Irmy", "gender": "feminine" },
+  { "singular": "Daniela", "plural": "Daniele", "gender": "feminine" },
+  {
+    "singular": "Daniel",
+    "plural": "Danielowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Dagna", "plural": "Dagny", "gender": "feminine" },
+  {
+    "singular": "Słoweniec",
+    "plural": "Słoweńce",
+    "gender": "masculine personal"
+  },
+  { "singular": "sobota angielska", "plural": "soboty angielskie" },
+  { "singular": "Daniel", "plural": "Daniele", "gender": "masculine personal" },
+  {
+    "singular": "Ananiasz",
+    "plural": "Ananiasze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ananiasz",
+    "plural": "Ananiaszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Kacper",
+    "plural": "Kacprowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Kacper", "plural": "Kacpry", "gender": "masculine personal" },
+  { "singular": "Izabela", "plural": "Izabele", "gender": "feminine" },
+  {
+    "singular": "Piotr",
+    "plural": "Piotrowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Gertruda", "plural": "Gertrudy", "gender": "feminine" },
+  { "singular": "Gryzelda", "plural": "Gryzeldy", "gender": "feminine" },
+  { "singular": "Łazarz", "plural": "Łazarze", "gender": "masculine personal" },
+  { "singular": "Eleonora", "plural": "Eleonory", "gender": "feminine" },
+  { "singular": "Niemka", "plural": "Niemki", "gender": "feminine" },
+  { "singular": "Irlandia", "plural": "Irlandie", "gender": "feminine" },
+  { "singular": "Iga", "plural": "Igi", "gender": "feminine" },
+  { "singular": "Franciszka", "plural": "Franciszki", "gender": "feminine" },
+  {
+    "singular": "Artur",
+    "plural": "Arturowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Artur", "plural": "Artury", "gender": "masculine personal" },
+  {
+    "singular": "Leokadiusz",
+    "plural": "Leokadiusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Leokadiusz",
+    "plural": "Leokadiuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Piotr", "plural": "Piotry", "gender": "masculine personal" },
+  { "singular": "Joanna", "plural": "Joanny", "gender": "feminine" },
+  { "singular": "Julianna", "plural": "Julianny", "gender": "feminine" },
+  {
+    "singular": "Julian",
+    "plural": "Julianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Julian", "plural": "Juliany", "gender": "masculine personal" },
+  {
+    "singular": "Wendelin",
+    "plural": "Wendelini",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wendelin",
+    "plural": "Wendelinowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wendelin",
+    "plural": "Wendeliny",
+    "gender": "masculine personal"
+  },
+  { "singular": "Marcela", "plural": "Marcele", "gender": "feminine" },
+  { "singular": "oregano", "plural": "oregano", "gender": "neuter" },
+  { "singular": "Konstancja", "plural": "Konstancje", "gender": "feminine" },
+  {
+    "singular": "leksykograf",
+    "plural": "leksykografowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "leksykograf",
+    "plural": "leksykografy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "czyżyk",
+    "plural": "czyżyki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Zenona", "plural": "Zenony", "gender": "feminine" },
+  { "singular": "Sabina", "plural": "Sabiny", "gender": "feminine" },
+  { "singular": "jajeczko", "plural": "jajeczka", "gender": "neuter" },
+  { "singular": "itr", "plural": "itry", "gender": "masculine inanimate" },
+  {
+    "singular": "prazeodym",
+    "plural": "prazeodymy",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "jamniczek",
+    "plural": "jamniczki",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Islandczyk",
+    "plural": "Islandczyki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "majowy robotnik",
+    "plural": "majowe robotniki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "majowy robotnik",
+    "plural": "majowi robotnicy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Hiszpan",
+    "plural": "Hiszpany",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "orangutan",
+    "plural": "orangutany",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Emiliusz",
+    "plural": "Emiliuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zenobiusz",
+    "plural": "Zenobiusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zenobiusz",
+    "plural": "Zenobiuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Olimpia", "plural": "Olimpie", "gender": "feminine" },
+  { "singular": "Albania", "plural": "Albanie", "gender": "feminine" },
+  { "singular": "Belgia", "plural": "Belgie", "gender": "feminine" },
+  {
+    "singular": "turkan",
+    "plural": "turkany",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "dzwoniec",
+    "plural": "dzwońce",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Kaja", "plural": "Kaje", "gender": "feminine" },
+  { "singular": "Ada", "plural": "Ady", "gender": "feminine" },
+  { "singular": "woda", "plural": "wody", "gender": "feminine" },
+  {
+    "singular": "kodeks",
+    "plural": "kodeksy",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "tal", "plural": "tale" },
+  { "singular": "Czeszka", "plural": "Czeszki", "gender": "feminine" },
+  {
+    "singular": "Arseniusz",
+    "plural": "Arseniusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Arseniusz",
+    "plural": "Arseniuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Danuta", "plural": "Danuty", "gender": "feminine" },
+  { "singular": "Matylda", "plural": "Matyldy", "gender": "feminine" },
+  {
+    "singular": "Mieszko",
+    "plural": "Mieszkowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Gloria", "plural": "Glorie", "gender": "feminine" },
+  { "singular": "Czarnogóra", "plural": "Czarnogóry", "gender": "feminine" },
+  {
+    "singular": "Wiesław",
+    "plural": "Wiesławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "cebulka", "plural": "cebulki", "gender": "feminine" },
+  { "singular": "czerń", "plural": "czernie", "gender": "feminine" },
+  { "singular": "setka", "plural": "setki", "gender": "feminine" },
+  {
+    "singular": "wielbłądzica",
+    "plural": "wielbłądzice",
+    "gender": "feminine"
+  },
+  {
+    "singular": "Olgierd",
+    "plural": "Olgierdowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Olgierd",
+    "plural": "Olgierdy",
+    "gender": "masculine personal"
+  },
+  { "singular": "argon", "plural": "argony", "gender": "masculine inanimate" },
+  {
+    "singular": "Apolinary",
+    "plural": "Apolinare",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Apolinary",
+    "plural": "Apolinarowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "czapla purpurowa",
+    "plural": "czaple purpurowe",
+    "gender": "feminine"
+  },
+  { "singular": "Albina", "plural": "Albiny", "gender": "feminine" },
+  {
+    "singular": "Konrad",
+    "plural": "Konradowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wiesław",
+    "plural": "Wiesławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "aligator",
+    "plural": "aligatory",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "karpik",
+    "plural": "karpiki",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "maj", "plural": "maje", "gender": "masculine inanimate" },
+  {
+    "singular": "Heliodor",
+    "plural": "Heliodory",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Korneliusz",
+    "plural": "Korneliusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Korneliusz",
+    "plural": "Korneliuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Orbitar",
+    "plural": "Orbitary",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "papaja", "plural": "papaje", "gender": "feminine" },
+  {
+    "singular": "protaktyn",
+    "plural": "protaktyny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Ewelina", "plural": "Eweliny", "gender": "feminine" },
+  { "singular": "Felicja", "plural": "Felicje", "gender": "feminine" },
+  { "singular": "Bernadetta", "plural": "Bernadetty", "gender": "feminine" },
+  { "singular": "ruten", "plural": "ruteny", "gender": "masculine inanimate" },
+  {
+    "singular": "rzeczownik",
+    "plural": "rzeczowniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Henryk", "plural": "Henryki", "gender": "masculine personal" },
+  {
+    "singular": "gadożer",
+    "plural": "gadożery",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "krzemyk",
+    "plural": "krzemyki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Marian", "plural": "Mariany", "gender": "masculine personal" },
+  {
+    "singular": "gągoł",
+    "plural": "gągoły",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Mieszko",
+    "plural": "Mieszki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Henryk",
+    "plural": "Henrykowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ireneusz",
+    "plural": "Ireneusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ireneusz",
+    "plural": "Ireneuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mateusz",
+    "plural": "Mateuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Chwalibóg",
+    "plural": "Chwalibogi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Chwalibóg",
+    "plural": "Chwalibogowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Hilary", "plural": "Hilare", "gender": "masculine personal" },
+  {
+    "singular": "Hilary",
+    "plural": "Hilarowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Islandczyk",
+    "plural": "Islandczycy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Koszalin",
+    "plural": "Koszaliny",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "magot", "plural": "magoty" },
+  {
+    "singular": "Miłosław",
+    "plural": "Miłosławi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Miłosław",
+    "plural": "Miłosławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Miłosław",
+    "plural": "Miłosławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Bożena", "plural": "Bożeny", "gender": "feminine" },
+  { "singular": "Eufemia", "plural": "Eufemie", "gender": "feminine" },
+  { "singular": "ind", "plural": "indy" },
+  { "singular": "dzięcioł duży", "plural": "dzięcioły duże" },
+  {
+    "singular": "Emiliusz",
+    "plural": "Emiliusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "trznadel",
+    "plural": "trznadle",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "głuszec",
+    "plural": "głuszce",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Dionizy",
+    "plural": "Dionize",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dionizy",
+    "plural": "Dionizowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Konrad", "plural": "Konrady", "gender": "masculine personal" },
+  {
+    "singular": "Feliks",
+    "plural": "Feliksowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Feliks", "plural": "Feliksy", "gender": "masculine personal" },
+  {
+    "singular": "Hiszpan",
+    "plural": "Hiszpanie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Tomisława", "plural": "Tomisławy", "gender": "feminine" },
+  { "singular": "Marysia", "plural": "Marysie", "gender": "feminine" },
+  {
+    "singular": "Mateusz",
+    "plural": "Mateusze",
+    "gender": "masculine personal"
+  },
+  { "singular": "Marcin", "plural": "Marciny", "gender": "masculine personal" },
+  {
+    "singular": "Marian",
+    "plural": "Marianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Teofil", "plural": "Teofile", "gender": "masculine personal" },
+  { "singular": "Paula", "plural": "Paule", "gender": "feminine" },
+  {
+    "singular": "symbol",
+    "plural": "symbole",
+    "gender": "masculine inanimate"
+  },
+  {
+    "singular": "Ernest",
+    "plural": "Ernestowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Ernest", "plural": "Ernesty", "gender": "masculine personal" },
+  {
+    "singular": "Lubomir",
+    "plural": "Lubomirowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Lubomir",
+    "plural": "Lubomiry",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Lubomir",
+    "plural": "Lubomirzy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "jazgarz",
+    "plural": "jazgarze",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Jędrzej",
+    "plural": "Jędrzeje",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Jędrzej",
+    "plural": "Jędrzejowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Maciej", "plural": "Macieje", "gender": "masculine personal" },
+  {
+    "singular": "Maciej",
+    "plural": "Maciejowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Teofil",
+    "plural": "Teofilowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Lesław",
+    "plural": "Lesławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Lesław", "plural": "Lesławy", "gender": "masculine personal" },
+  { "singular": "Austriaczka", "plural": "Austriaczki", "gender": "feminine" },
+  { "singular": "fasolka", "plural": "fasolki", "gender": "feminine" },
+  { "singular": "grucha", "plural": "gruchy", "gender": "feminine" },
+  { "singular": "limonka", "plural": "limonki", "gender": "feminine" },
+  { "singular": "nektarynka", "plural": "nektarynki", "gender": "feminine" },
+  { "singular": "obfitość", "plural": "obfitości", "gender": "feminine" },
+  { "singular": "okazałość", "plural": "okazałości", "gender": "feminine" },
+  { "singular": "papryczka", "plural": "papryczki", "gender": "feminine" },
+  { "singular": "rodzinka", "plural": "rodzinki", "gender": "feminine" },
+  { "singular": "rzeczułka", "plural": "rzeczułki", "gender": "feminine" },
+  { "singular": "stołeczność", "plural": "stołeczności", "gender": "feminine" },
+  { "singular": "wenus", "plural": "wenus", "gender": "feminine" },
+  { "singular": "wspaniałość", "plural": "wspaniałości", "gender": "feminine" },
+  {
+    "singular": "październik",
+    "plural": "październiki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Dagmara", "plural": "Dagmary", "gender": "feminine" },
+  { "singular": "Natasza", "plural": "Natasze", "gender": "feminine" },
+  { "singular": "szmermel" },
+  { "singular": "spodek" },
+  { "singular": "Pan", "gender": "masculine personal" },
+  {},
+  { "gender": "feminine" },
+  { "singular": "matka", "gender": "feminine" },
+  { "gender": "not masculine personal" },
+  { "gender": "neuter" },
+  { "gender": "masculine personal" },
+  { "gender": "masculine animate non-personal" },
+  { "gender": "masculine" },
+  { "gender": "masculine inanimate" },
+  { "singular": "zamek", "gender": "masculine inanimate" },
+  {
+    "singular": "kot",
+    "plural": "kotowie",
+    "gender": "masculine animate non-personal"
+  },
+  { "singular": "Celina", "plural": "Celiny", "gender": "feminine" },
+  {
+    "singular": "Baltazar",
+    "plural": "Baltazarowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Baltazar",
+    "plural": "Baltazary",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Jarema",
+    "plural": "Jaremowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Jarema", "plural": "Jaremy", "gender": "masculine personal" },
+  {
+    "singular": "Wirgiliusz",
+    "plural": "Wirgiliusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wirgiliusz",
+    "plural": "Wirgiliuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Alfred", "plural": "Alfredy", "gender": "masculine personal" },
+  { "singular": "Eufrozyna", "plural": "Eufrozyny", "gender": "feminine" },
+  { "singular": "latko", "plural": "latka", "gender": "neuter" },
+  { "singular": "okapi", "plural": "okapi", "gender": "neuter" },
+  {
+    "singular": "Ksenofont",
+    "plural": "Ksenofonci",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ksenofont",
+    "plural": "Ksenofontowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Ksenofont",
+    "plural": "Ksenofonty",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "mieszkaniec",
+    "plural": "mieszkańcy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Seweryna", "plural": "Seweryny", "gender": "feminine" },
+  { "singular": "Elżbieta", "plural": "Elżbiety", "gender": "feminine" },
+  { "singular": "Teresa", "plural": "Teresy", "gender": "feminine" },
+  {
+    "singular": "okapi",
+    "plural": "okapi",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Wojsław",
+    "plural": "Wojsławi",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wojsław",
+    "plural": "Wojsławowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Sebastian",
+    "plural": "Sebastianowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Dobrawa", "plural": "Dobrawy", "gender": "feminine" },
+  { "singular": "osoba", "plural": "osoby", "gender": "feminine" },
+  { "singular": "Portugalia", "plural": "Portugalie", "gender": "feminine" },
+  {
+    "singular": "Samuel",
+    "plural": "Samuelowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Alfred",
+    "plural": "Alfredowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Mirosława", "plural": "Mirosławy", "gender": "feminine" },
+  { "singular": "Eugenia", "plural": "Eugenie", "gender": "feminine" },
+  {
+    "singular": "mieszkaniec",
+    "plural": "mieszkańce",
+    "gender": "masculine personal"
+  },
+  { "singular": "nanosekunda", "plural": "nanosekundy", "gender": "feminine" },
+  {
+    "singular": "Teodozjusz",
+    "plural": "Teodozjusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Teodozjusz",
+    "plural": "Teodozjuszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Ismena", "plural": "Ismeny", "gender": "feminine" },
+  { "singular": "Genowefa", "plural": "Genowefy", "gender": "feminine" },
+  { "singular": "Jan", "plural": "Jany", "gender": "masculine personal" },
+  {
+    "singular": "paryżanin",
+    "plural": "paryżanie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "gepard",
+    "plural": "gepardy",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Damian",
+    "plural": "Damianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wojsław",
+    "plural": "Wojsławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Jan", "plural": "Janowie", "gender": "masculine personal" },
+  {
+    "singular": "Miłosz",
+    "plural": "Miłoszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Saba", "plural": "Saby", "gender": "feminine" },
+  { "singular": "Stefan", "plural": "Stefany", "gender": "masculine personal" },
+  { "singular": "Katarzyna", "plural": "Katarzyny", "gender": "feminine" },
+  {
+    "singular": "Heliodor",
+    "plural": "Heliodorowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Heliodor",
+    "plural": "Heliodorzy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Damian", "plural": "Damiany", "gender": "masculine personal" },
+  { "singular": "Joachima", "plural": "Joachimy", "gender": "feminine" },
+  { "singular": "Adrian", "plural": "Adriany", "gender": "masculine personal" },
+  {
+    "singular": "Gabriel",
+    "plural": "Gabrielowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Wilhelm",
+    "plural": "Wilhelmy",
+    "gender": "masculine personal"
+  },
+  { "singular": "Teodor", "plural": "Teodory", "gender": "masculine personal" },
+  { "singular": "dom", "plural": "domy", "gender": "masculine inanimate" },
+  { "singular": "wtorek", "plural": "wtorki", "gender": "masculine inanimate" },
+  {
+    "singular": "Malachiasz",
+    "plural": "Malachiasze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Malachiasz",
+    "plural": "Malachiaszowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Bazyli", "plural": "Bazyle", "gender": "masculine personal" },
+  {
+    "singular": "Adrian",
+    "plural": "Adrianowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Bazyli",
+    "plural": "Bazylowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Laurenty",
+    "plural": "Laurentowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Sebastian",
+    "plural": "Sebastiany",
+    "gender": "masculine personal"
+  },
+  { "singular": "Dioniza", "plural": "Dionizy", "gender": "feminine" },
+  {
+    "singular": "Laurenty",
+    "plural": "Laurente",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Robert",
+    "plural": "Robertowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Robert", "plural": "Roberty", "gender": "masculine personal" },
+  { "singular": "Miłosz", "plural": "Miłosze", "gender": "masculine personal" },
+  { "singular": "Rafał", "plural": "Rafały", "gender": "masculine personal" },
+  { "singular": "Agnieszka", "plural": "Agnieszki", "gender": "feminine" },
+  { "singular": "Justyna", "plural": "Justyny", "gender": "feminine" },
+  {
+    "singular": "Walenty",
+    "plural": "Walente",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Walenty",
+    "plural": "Walentowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "cecha", "plural": "cechy", "gender": "feminine" },
+  {
+    "singular": "Wilhelm",
+    "plural": "Wilhelmowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Modest",
+    "plural": "Modestowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Modest", "plural": "Modesty", "gender": "masculine personal" },
+  { "singular": "Iweta", "plural": "Iwety", "gender": "feminine" },
+  {
+    "singular": "fenkuł",
+    "plural": "fenkuły",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "Jerzy", "plural": "Jerze", "gender": "masculine personal" },
+  { "singular": "Jerzy", "plural": "Jerzowie", "gender": "masculine personal" },
+  { "singular": "Leokadia", "plural": "Leokadie", "gender": "feminine" },
+  { "singular": "Gaja", "plural": "Gaje", "gender": "feminine" },
+  { "singular": "kot", "plural": "koty", "gender": "masculine personal" },
+  {
+    "singular": "Stefan",
+    "plural": "Stefanowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Masław", "plural": "Masławi", "gender": "masculine personal" },
+  {
+    "singular": "Masław",
+    "plural": "Masławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Masław", "plural": "Masławy", "gender": "masculine personal" },
+  {
+    "singular": "Jeremiasz",
+    "plural": "Jeremiasze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Jeremiasz",
+    "plural": "Jeremiaszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "kot",
+    "plural": "koty",
+    "gender": "masculine animate non-personal"
+  },
+  {
+    "singular": "Saturnin",
+    "plural": "Saturnini",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Saturnin",
+    "plural": "Saturninowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Saturnin",
+    "plural": "Saturniny",
+    "gender": "masculine personal"
+  },
+  { "singular": "polik", "plural": "poliki" },
+  {
+    "singular": "Rafał",
+    "plural": "Rafałowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Teodor",
+    "plural": "Teodorowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Miłosława", "plural": "Miłosławy", "gender": "feminine" },
+  { "singular": "Samuel", "plural": "Samuele", "gender": "masculine personal" },
+  { "singular": "Tatiana", "plural": "Tatiany", "gender": "feminine" },
+  {
+    "singular": "Jonatan",
+    "plural": "Jonatanowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Jonatan",
+    "plural": "Jonatany",
+    "gender": "masculine personal"
+  },
+  { "singular": "kobiecość", "plural": "kobiecości", "gender": "feminine" },
+  {
+    "singular": "człowiek",
+    "plural": "ludzie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Aida", "plural": "Aidy", "gender": "feminine" },
+  { "singular": "Helga", "plural": "Helgi", "gender": "feminine" },
+  {
+    "singular": "Gabriel",
+    "plural": "Gabriele",
+    "gender": "masculine personal"
+  },
+  { "singular": "Sławomira", "plural": "Sławomiry", "gender": "feminine" },
+  {
+    "singular": "Zdzisław",
+    "plural": "Zdzisławy",
+    "gender": "masculine personal"
+  },
+  { "singular": "pani", "plural": "panie", "gender": "feminine" },
+  {
+    "singular": "Mariusz",
+    "plural": "Mariusze",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Mariusz",
+    "plural": "Mariuszowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Zdzisław",
+    "plural": "Zdzisławowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Krystyna", "plural": "Krystyny", "gender": "feminine" },
+  { "singular": "łycha", "plural": "łychy", "gender": "feminine" },
+  { "singular": "młynarzówna", "plural": "młynarzówny", "gender": "feminine" },
+  { "singular": "odmianka", "plural": "odmianki", "gender": "feminine" },
+  { "singular": "okapi", "plural": "okapi", "gender": "feminine" },
+  { "singular": "setuchna", "plural": "setuchny", "gender": "feminine" },
+  { "singular": "ukleja", "plural": "ukleje", "gender": "feminine" },
+  { "singular": "uklejka", "plural": "uklejki", "gender": "feminine" },
+  { "singular": "Maria", "plural": "Marie", "gender": "feminine" },
+  { "singular": "Błażej", "plural": "Błażeje", "gender": "masculine personal" },
+  {
+    "singular": "Błażej",
+    "plural": "Błażejowie",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "odsłownik",
+    "plural": "odsłowniki",
+    "gender": "masculine inanimate"
+  },
+  { "singular": "kot", "plural": "kotowie", "gender": "masculine personal" },
+  {
+    "singular": "Dominik",
+    "plural": "Dominicy",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dominik",
+    "plural": "Dominiki",
+    "gender": "masculine personal"
+  },
+  {
+    "singular": "Dominik",
+    "plural": "Dominikowie",
+    "gender": "masculine personal"
+  },
+  { "singular": "Milena", "plural": "Mileny", "gender": "feminine" }
+]
