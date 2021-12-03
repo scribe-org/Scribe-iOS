@@ -32,17 +32,19 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 # Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
 
-The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886). Choose which one to open based on your current device:
+The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
-<details><summary><strong>Mobile: iPhone 6.5" version</strong></summary>
+<details><summary><strong>iPhone 6.5" version</strong></summary>
 <p>
+
+**`Does not work on desktop`**
 
 https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
 
 </p>
 </details>
 
-<details><summary><strong>Desktop: iPad Pro 4th gen version</strong></summary>
+<details><summary><strong>iPad Pro 4th gen version</strong></summary>
 <p>
 
 https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
