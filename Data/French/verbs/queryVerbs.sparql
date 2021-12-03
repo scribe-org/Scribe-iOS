@@ -1,0 +1,298 @@
+# All French (Q150) verbs and the currently implemented verb tenses for each.
+# Enter this query at https://query.wikidata.org/.
+# Note that there are two different categorizations of verbs given properties.
+
+SELECT ?infinitive ?gerund
+       ?pastParticipleSingularMale ?pastParticipleSingularFemale
+       ?pastParticiplePluralMale ?pastParticiplePluralFemale
+       ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
+       ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
+       ?preteriteFPS ?preteriteSPS ?preteriteTPS
+       ?preteriteFPP ?preteriteSPP ?preteriteTPP
+       ?pastPerfectFPS ?pastPerfectSPS ?pastPerfectTPS
+       ?pastPerfectFPP ?pastPerfectSPP ?pastPerfectTPP WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+            dct:language wd:Q150 ;
+            wikibase:lexicalCategory wd:Q24905 .
+
+  # Infinitive (required) and gerund
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+                  wikibase:grammaticalFeature wd:Q179230 ;
+
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?gerundForm .
+      ?gerundForm ontolex:representation ?gerund ;
+                  wikibase:grammaticalFeature wd:Q1923028 ;
+  } .
+
+  # Indicative Present
+  ####################
+
+  # FPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPSForm .
+      ?indicativePresentFPSForm ontolex:representation ?indicativePresentFPS ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPSForm .
+      ?indicativePresentFPSForm ontolex:representation ?indicativePresentFPS ;
+                                wikibase:grammaticalFeature wd:Q51929218 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # SPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPSForm .
+      ?indicativePresentSPSForm ontolex:representation ?indicativePresentSPS ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPSForm .
+      ?indicativePresentSPSForm ontolex:representation ?indicativePresentSPS ;
+                                wikibase:grammaticalFeature wd:Q51929369 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # TPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPSForm .
+      ?indicativePresentTPSForm ontolex:representation ?indicativePresentTPS ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPSForm .
+      ?indicativePresentTPSForm ontolex:representation ?indicativePresentTPS ;
+                                wikibase:grammaticalFeature wd:Q51929447 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # FPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPPForm .
+      ?indicativePresentFPPForm ontolex:representation ?indicativePresentFPP ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPPForm .
+      ?indicativePresentFPPForm ontolex:representation ?indicativePresentFPP ;
+                                wikibase:grammaticalFeature wd:Q51929290 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # SPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPPForm .
+      ?indicativePresentSPPForm ontolex:representation ?indicativePresentSPP ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPPForm .
+      ?indicativePresentSPPForm ontolex:representation ?indicativePresentSPP ;
+                                wikibase:grammaticalFeature wd:Q51929403 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # TPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPPForm .
+      ?indicativePresentTPPForm ontolex:representation ?indicativePresentTPP ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPPForm .
+      ?indicativePresentTPPForm ontolex:representation ?indicativePresentTPP ;
+                                wikibase:grammaticalFeature wd:Q51929517 ;
+                                wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+
+  # Preterite
+  ###########
+
+  # FPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteFPSForm .
+      ?preteriteFPSForm ontolex:representation ?preteriteFPS ;
+                        wikibase:grammaticalFeature wd:Q21714344 ;
+                        wikibase:grammaticalFeature wd:Q110786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteFPSForm .
+      ?preteriteFPSForm ontolex:representation ?preteriteFPS ;
+                        wikibase:grammaticalFeature wd:Q51929218 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # SPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteSPSForm .
+      ?preteriteSPSForm ontolex:representation ?preteriteSPS ;
+                        wikibase:grammaticalFeature wd:Q51929049 ;
+                        wikibase:grammaticalFeature wd:Q110786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteSPSForm .
+      ?preteriteSPSForm ontolex:representation ?preteriteSPS ;
+                        wikibase:grammaticalFeature wd:Q51929369 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # TPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteTPSForm .
+      ?preteriteTPSForm ontolex:representation ?preteriteTPS ;
+                        wikibase:grammaticalFeature wd:Q51929074 ;
+                        wikibase:grammaticalFeature wd:Q110786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteTPSForm .
+      ?preteriteTPSForm ontolex:representation ?preteriteTPS ;
+                        wikibase:grammaticalFeature wd:Q51929447 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # FPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteFPPForm .
+      ?preteriteFPPForm ontolex:representation ?preteriteFPP ;
+                        wikibase:grammaticalFeature wd:Q21714344 ;
+                        wikibase:grammaticalFeature wd:Q146786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteFPPForm .
+      ?preteriteFPPForm ontolex:representation ?preteriteFPP ;
+                        wikibase:grammaticalFeature wd:Q51929290 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # SPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteSPPForm .
+      ?preteriteSPPForm ontolex:representation ?preteriteSPP ;
+                        wikibase:grammaticalFeature wd:Q51929049 ;
+                        wikibase:grammaticalFeature wd:Q146786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteSPPForm .
+      ?preteriteSPPForm ontolex:representation ?preteriteSPP ;
+                        wikibase:grammaticalFeature wd:Q51929403 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # TPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteTPPForm .
+      ?preteriteTPPForm ontolex:representation ?preteriteTPP ;
+                        wikibase:grammaticalFeature wd:Q51929074 ;
+                        wikibase:grammaticalFeature wd:Q146786 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?preteriteTPPForm .
+      ?preteriteTPPForm ontolex:representation ?preteriteTPP ;
+                        wikibase:grammaticalFeature wd:Q51929517 ;
+                        wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+
+  # Imperfect
+  ###########
+
+  # FPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPSForm .
+      ?pastPerfectFPSForm ontolex:representation ?pastPerfectFPS ;
+                          wikibase:grammaticalFeature wd:Q21714344 ;
+                          wikibase:grammaticalFeature wd:Q110786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPSForm .
+      ?pastPerfectFPSForm ontolex:representation ?pastPerfectFPS ;
+                          wikibase:grammaticalFeature wd:Q51929218 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # SPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPSForm .
+      ?pastPerfectSPSForm ontolex:representation ?pastPerfectSPS ;
+                          wikibase:grammaticalFeature wd:Q51929049 ;
+                          wikibase:grammaticalFeature wd:Q110786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPSForm .
+      ?pastPerfectSPSForm ontolex:representation ?pastPerfectSPS ;
+                          wikibase:grammaticalFeature wd:Q51929369 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # TPS
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPSForm .
+      ?pastPerfectTPSForm ontolex:representation ?pastPerfectTPS ;
+                          wikibase:grammaticalFeature wd:Q51929074 ;
+                          wikibase:grammaticalFeature wd:Q110786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPSForm .
+      ?pastPerfectTPSForm ontolex:representation ?pastPerfectTPS ;
+                          wikibase:grammaticalFeature wd:Q51929447 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # FPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPPForm .
+      ?pastPerfectFPPForm ontolex:representation ?pastPerfectFPP ;
+                          wikibase:grammaticalFeature wd:Q21714344 ;
+                          wikibase:grammaticalFeature wd:Q146786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectFPPForm .
+      ?pastPerfectFPPForm ontolex:representation ?pastPerfectFPP ;
+                          wikibase:grammaticalFeature wd:Q51929290 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # SPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPPForm .
+      ?pastPerfectSPPForm ontolex:representation ?pastPerfectSPP ;
+                          wikibase:grammaticalFeature wd:Q51929049 ;
+                          wikibase:grammaticalFeature wd:Q146786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectSPPForm .
+      ?pastPerfectSPPForm ontolex:representation ?pastPerfectSPP ;
+                          wikibase:grammaticalFeature wd:Q51929403 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # TPP
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPPForm .
+      ?pastPerfectTPPForm ontolex:representation ?pastPerfectTPP ;
+                          wikibase:grammaticalFeature wd:Q51929074 ;
+                          wikibase:grammaticalFeature wd:Q146786 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?pastPerfectTPPForm .
+      ?pastPerfectTPPForm ontolex:representation ?pastPerfectTPP ;
+                          wikibase:grammaticalFeature wd:Q51929517 ;
+                          wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+}
