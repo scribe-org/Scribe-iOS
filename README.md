@@ -117,14 +117,14 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
 - Typing `,`, `?` or `!` and then `space` returns to the alphabetic keyboard
-- Hold-to-select characters for letters and symbols[(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
+- Hold-to-select characters for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>
 </details>
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
-The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the ['-new keyboard-'](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
+The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
 
 | Language   | Nouns | Verbs | Translations\* | Prepositions† |
 | :--------- | ----: | ----: | -------------: | ------------: |
