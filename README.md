@@ -34,7 +34,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
-<details><summary><strong>iPhone 6.5" version (mobile browsers only)</strong></summary>
+<details><summary><strong>iPhone 6.5" version (only works on mobile)</strong></summary>
 <p>
 
 https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
@@ -124,7 +124,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
-The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Based on the available data, the next languages that the Scribe team could focus on are Russian ([queries](https://github.com/scribe-org/Scribe-iOS/blob/main/Data/Russian/), [issue](https://github.com/scribe-org/Scribe-iOS/issues/6)), Portuguese ([queries](https://github.com/scribe-org/Scribe-iOS/blob/main/Data/Portuguese/), [issue](https://github.com/scribe-org/Scribe-iOS/issues/67)) and French ([queries](https://github.com/scribe-org/Scribe-iOS/blob/main/Data/French/), [issue](https://github.com/scribe-org/Scribe-iOS/issues/68)).
+The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the ['-new keyboard-'](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
 
 | Language   | Nouns | Verbs | Translations\* | Prepositions† |
 | :--------- | ----: | ----: | -------------: | ------------: |
@@ -140,7 +140,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
-Work that is in progress or could be implemented is tracked in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also note the use of the `--priority--` label that indicates which issues are most important.
+Work that is in progress or could be implemented is tracked in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also check the [`--priority--`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3A--priority--) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important.
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
