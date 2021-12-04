@@ -61,9 +61,9 @@ Users access Scribe language keyboards through the following:
 
 Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These keys allow for words to be queried and inserted into the text field followed by a space.
 
-Current features include:
+**Current features include:**
 
-### Translation [`⇧`](#contents) <a id="translation"></a>
+## Translation [`⇧`](#contents) <a id="translation"></a>
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
 
@@ -71,19 +71,19 @@ Those interested in improving this feature can see the [Translation project](htt
 
 As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
-### Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
+## Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-### Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
+## Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
 
 The `Plural` feature allows a user to enter a noun and then insert its plural when the `return` key is pressed.
 
-### Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
+## Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
 
 Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
-#### Nouns
+### Nouns
 
 Scribe annotates nouns in the preview bar according to the following conventions:
 
@@ -94,11 +94,11 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Plural: colored orange 🟧 and marked with (PL)
 - More than one: marked with all their forms
 
-#### Prepositions
+### Prepositions
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
 
-### Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
+## Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
 
 The goal is for Scribe to have all the functionality of system keyboards. See the [Base Keyboard Features project](https://github.com/scribe-org/Scribe-iOS/projects/6) if interested in helping.
 
