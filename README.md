@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/Scribe/Scribe-iOS_logo_transparent.png" width=624 height=164></a>
+  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/Scribe/Scribe-iOS_logo_transparent.png" width=624 height=164 alt="Scribe-iOS Logo"></a>
 </div>
 
 ---
@@ -144,6 +144,6 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 <div align="center">
   <br>
-  <a href="https://www.wikidata.org/"><img height="150" src="https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/GitHub/Images/wikidata_logo.png" alt="Wikidata"></a>
+  <a href="https://www.wikidata.org/"><img height="150" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikidata_logo.png" alt="Wikidata"></a>
   <br>
 </div>
