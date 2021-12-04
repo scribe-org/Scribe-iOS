@@ -1704,5 +1704,6 @@ class KeyboardViewController: UIInputViewController {
       alternateBtnStartX += (alternateButtonWidth + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
+    button.backgroundColor = keyColor
   }
 }

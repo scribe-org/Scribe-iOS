@@ -8,7 +8,7 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# 1.1.0 (WIP)
+# Scribe 1.1.0 (WIP)
 
 ### 🌐 New Keyboards
 
@@ -35,12 +35,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Fixes an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
 - Fixes an issue with iPads where semicolon keys also had apostrophes.
 - Fixes an issue where number keys weren't able to trigger the double space period shortcut.
+- Fixes an issue where hold-to-select keys wouldn't return to their original color. 
 
 ### ♻️ Code Refactoring
 
 - Combines all the space bar logic into one and renames the key based on the keyboard.
 
-# 1.0.1
+# Scribe 1.0.1
 
 ### ✨ New Features
 
@@ -68,7 +69,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Moved the contribution guidelines to the main directory.
 
-# 1.0.0
+# Scribe 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
