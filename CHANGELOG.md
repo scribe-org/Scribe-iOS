@@ -1,6 +1,6 @@
 # Changelog
 
-Scribe-iOS follows [semantic versioning](https://semver.org/), a MAJOR.MINOR.PATCH version where increments are made of the:
+Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.MINOR.PATCH version where increments are made of the:
 
 - MAJOR version when we make incompatible API changes
 - MINOR version when we add functionality in a backwards compatible manner
@@ -8,69 +8,76 @@ Scribe-iOS follows [semantic versioning](https://semver.org/), a MAJOR.MINOR.PAT
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-## 1.1.0 (WIP)
+# 1.1.0 (WIP)
 
-### 🚀 Deployment
+### 🌐 New Keyboards
 
-- Adds baseline Russian, French and Portuguese keyboards.
+- Adds Russian, French and Portuguese keyboards.
+- Verb support is currently limited, but noun annotation, plural and `beta` translation are available.
 
-### ✨ Features
+### ✨ New Features
 
 - Adds hold-to-select functionality for symbols.
 
-### 🎨 Design
+### 🎨 Design Changes
 
-- Fixes the display of the caps lock key by making its background the key pressed color.
+- Improves the display of the caps lock key by making its background the key pressed color.
 
-### 🗃️ Data
+### 🗃️ Data Added
 
-<!--  -->
+- Adds baseline noun, verb, translation and preposition data for the new keyboards.
+  - French:
+  - Portuguese:
+  - Russian:
 
-### 🐛 Bug fixes
+### 🐛 Bug Fixes
 
 - Fixes an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
 - Fixes an issue with iPads where semicolon keys also had apostrophes.
 - Fixes an issue where number keys weren't able to trigger the double space period shortcut.
 
-### ♻️ Refactoring
+### ♻️ Code Refactoring
 
 - Combines all the space bar logic into one and renames the key based on the keyboard.
 
-## 1.0.1 (WIP)
+# 1.0.1
 
-### ✨ Features
+### ✨ New Features
 
 - Adds comma-space to letter keys functionality.
 - Adds question mark and exclamation point followed by space to capital letter keys functionality.
 
-### 🎨 Design
+### 🎨 Design Changes
 
 - Fixes the display of the system header in the app when the user is in dark mode, as the white text was hard to read.
 - Fixes the display of the scroll bar in the app when the user is in dark mode, as the white bar wasn't visually appealing.
 - The keyboard has been made taller for iPhones to make the buttons larger vertically.
 - More space has been added around the buttons to make them better resemble system keyboard spacing.
 
-### 🐛 Bug fixes
+### 🐛 Bug Fixes
 
 - Fixes an issue where the select keyboard button wouldn't be able to be long held after an initial button is pressed.
 - Fixes an issue where canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
 - Fixes an issue where the double space period shortcut is triggered without intent.
 
-### ♻️ Refactoring
+### ♻️ Code Refactoring
 
 - The hold-to-select character functions are now combined into one.
 
-### 🚚 File movement
+### 🚚 File Movement
 
 - Moved the contribution guidelines to the main directory.
 
-## 1.0.0
+# 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
 ### 🚀 Deployment
 
 - Releasing for iPhone and iPad.
+
+### 🌐 Keyboards
+
 - Keyboards for German and Spanish.
 
 ### ✨ Features
@@ -88,6 +95,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Data saved in JSON files in app to allow for quick access that doesn't require an internet connection.
 - Nouns, verbs and prepositions (where applicable).
 - Translations of English words via 🤗 Transformers.
+- Adds baseline noun, verb, translation and preposition data for the new keyboards.
+  - German: 27K+ nouns, 3K+ verbs, 65K+ translations, 190 prepositions
+  - Spanish: 8K+ nouns, 65 verbs, 65K+ translations
 
 ### 🎨 Design
 

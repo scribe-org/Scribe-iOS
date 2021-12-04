@@ -42,13 +42,9 @@ https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-
 </p>
 </details>
 
-<details><summary><strong>iPad Pro 4th gen version (mobile and desktop)</strong></summary>
-<p>
+#### iPad Pro 4th gen version
 
 https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
-
-</p>
-</details>
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
