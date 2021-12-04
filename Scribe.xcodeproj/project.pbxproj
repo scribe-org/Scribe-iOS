@@ -19,6 +19,28 @@
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
 		D1018220272829E70032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821B2728291B0032A82D /* verbs.json */; };
+		D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */; };
+		D109A212275B6888005E2271 /* French.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */; };
+		D109A221275B68B3005E2271 /* Portuguese.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D109A21A275B68B3005E2271 /* Portuguese.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
+		D109A228275B6A8B005E2271 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
+		D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
+		D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		D109A22D275B6A8C005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
+		D109A22E275B6A8C005E2271 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
+		D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
+		D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		D109A233275B6A91005E2271 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
+		D109A234275B6A91005E2271 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
+		D109A235275B6A92005E2271 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
+		D109A236275B6A92005E2271 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
+		D109A237275B6A99005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
+		D109A238275B6A9A005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D12E537427594C1E000205F9 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
@@ -63,6 +85,20 @@
 			remoteGlobalIDString = 38BD214B22D592CA00C6795D;
 			remoteInfo = typEmoji;
 		};
+		D109A210275B6888005E2271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D109A20A275B6888005E2271;
+			remoteInfo = French;
+		};
+		D109A21F275B68B3005E2271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D109A219275B68B3005E2271;
+			remoteInfo = Portuguese;
+		};
 		D160866A270B6D3C00134D48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
@@ -87,7 +123,9 @@
 			dstSubfolderSpec = 13;
 			files = (
 				38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */,
+				D109A221275B68B3005E2271 /* Portuguese.appex in Embed App Extensions */,
 				D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */,
+				D109A212275B6888005E2271 /* French.appex in Embed App Extensions */,
 				D1671A67275A1E8700A7C118 /* Russian.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -111,6 +149,12 @@
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D101821B2728291B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D109A20B275B6888005E2271 /* French.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = French.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchKeyboardViewController.swift; sourceTree = "<group>"; };
+		D109A20F275B6888005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D109A21A275B68B3005E2271 /* Portuguese.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Portuguese.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugueseKeyboardViewController.swift; sourceTree = "<group>"; };
+		D109A21E275B68B3005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D12E537327594C1E000205F9 /* ScribeBtnPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhone.png; sourceTree = "<group>"; };
@@ -143,6 +187,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		38BD214922D592CA00C6795D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D109A208275B6888005E2271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D109A217275B68B3005E2271 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,6 +245,8 @@
 				38BD214C22D592CA00C6795D /* German.appex */,
 				D1608665270B6D3C00134D48 /* Spanish.appex */,
 				D1671A60275A1E8700A7C118 /* Russian.appex */,
+				D109A20B275B6888005E2271 /* French.appex */,
+				D109A21A275B68B3005E2271 /* Portuguese.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +272,40 @@
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		D109A20C275B6888005E2271 /* French */ = {
+			isa = PBXGroup;
+			children = (
+				D109A225275B68F4005E2271 /* Data */,
+				D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */,
+				D109A20F275B6888005E2271 /* Info.plist */,
+			);
+			path = French;
+			sourceTree = "<group>";
+		};
+		D109A21B275B68B3005E2271 /* Portuguese */ = {
+			isa = PBXGroup;
+			children = (
+				D109A226275B68FD005E2271 /* Data */,
+				D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */,
+				D109A21E275B68B3005E2271 /* Info.plist */,
+			);
+			path = Portuguese;
+			sourceTree = "<group>";
+		};
+		D109A225275B68F4005E2271 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D109A226275B68FD005E2271 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D10D36C5275A1B8F00A2EBF1 /* Data */ = {
@@ -296,8 +390,10 @@
 		D1CCA15B2742B9F700902744 /* LanguageKeyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D109A20C275B6888005E2271 /* French */,
 				38BD214D22D592CA00C6795D /* German */,
 				D1671A61275A1E8700A7C118 /* Russian */,
+				D109A21B275B68B3005E2271 /* Portuguese */,
 				D1608666270B6D3C00134D48 /* Spanish */,
 			);
 			path = LanguageKeyboards;
@@ -331,6 +427,8 @@
 				38BD215222D592CA00C6795D /* PBXTargetDependency */,
 				D160866B270B6D3C00134D48 /* PBXTargetDependency */,
 				D1671A66275A1E8700A7C118 /* PBXTargetDependency */,
+				D109A211275B6888005E2271 /* PBXTargetDependency */,
+				D109A220275B68B3005E2271 /* PBXTargetDependency */,
 			);
 			name = Scribe;
 			productName = EmojiKeyboard;
@@ -352,6 +450,40 @@
 			name = German;
 			productName = typEmoji;
 			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D109A20A275B6888005E2271 /* French */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French" */;
+			buildPhases = (
+				D109A207275B6888005E2271 /* Sources */,
+				D109A208275B6888005E2271 /* Frameworks */,
+				D109A209275B6888005E2271 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = French;
+			productName = French;
+			productReference = D109A20B275B6888005E2271 /* French.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D109A219275B68B3005E2271 /* Portuguese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D109A222275B68B3005E2271 /* Build configuration list for PBXNativeTarget "Portuguese" */;
+			buildPhases = (
+				D109A216275B68B3005E2271 /* Sources */,
+				D109A217275B68B3005E2271 /* Frameworks */,
+				D109A218275B68B3005E2271 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Portuguese;
+			productName = Portuguese;
+			productReference = D109A21A275B68B3005E2271 /* Portuguese.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		D1608664270B6D3C00134D48 /* Spanish */ = {
@@ -404,6 +536,12 @@
 					38BD214B22D592CA00C6795D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					D109A20A275B6888005E2271 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D109A219275B68B3005E2271 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					D1608664270B6D3C00134D48 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -427,7 +565,9 @@
 			projectRoot = "";
 			targets = (
 				38BD212F22D5907E00C6795D /* Scribe */,
+				D109A20A275B6888005E2271 /* French */,
 				38BD214B22D592CA00C6795D /* German */,
+				D109A219275B68B3005E2271 /* Portuguese */,
 				D1671A5F275A1E8700A7C118 /* Russian */,
 				D1608664270B6D3C00134D48 /* Spanish */,
 			);
@@ -456,6 +596,26 @@
 				D12E537427594C1E000205F9 /* ScribeBtnPhone.png in Resources */,
 				D18575DA2756690C00BA7F8A /* ScribeBtnPad.png in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D109A209275B6888005E2271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
+				D109A234275B6A91005E2271 /* ScribeBtnPad.png in Resources */,
+				D109A233275B6A91005E2271 /* ScribeBtnPhone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D109A218275B68B3005E2271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
+				D109A236275B6A92005E2271 /* ScribeBtnPad.png in Resources */,
+				D109A235275B6A92005E2271 /* ScribeBtnPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +689,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D109A207275B6888005E2271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */,
+				D109A237275B6A99005E2271 /* LoadData.swift in Sources */,
+				D109A228275B6A8B005E2271 /* Extensions.swift in Sources */,
+				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
+				D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */,
+				D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */,
+				D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D109A216275B68B3005E2271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */,
+				D109A238275B6A9A005E2271 /* LoadData.swift in Sources */,
+				D109A22E275B6A8C005E2271 /* Extensions.swift in Sources */,
+				D109A22D275B6A8C005E2271 /* KeyboardViewController.swift in Sources */,
+				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
+				D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */,
+				D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1608661270B6D3C00134D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +752,16 @@
 			isa = PBXTargetDependency;
 			target = 38BD214B22D592CA00C6795D /* German */;
 			targetProxy = 38BD215122D592CA00C6795D /* PBXContainerItemProxy */;
+		};
+		D109A211275B6888005E2271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D109A20A275B6888005E2271 /* French */;
+			targetProxy = D109A210275B6888005E2271 /* PBXContainerItemProxy */;
+		};
+		D109A220275B68B3005E2271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D109A219275B68B3005E2271 /* Portuguese */;
+			targetProxy = D109A21F275B68B3005E2271 /* PBXContainerItemProxy */;
 		};
 		D160866B270B6D3C00134D48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -729,7 +927,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -752,7 +950,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -776,7 +974,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.german;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -801,8 +999,107 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.german;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D109A213275B6888005E2271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Français (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D109A214275B6888005E2271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Français (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D109A223275B68B3005E2271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/Portuguese/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Português (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D109A224275B68B3005E2271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/Portuguese/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Português (Scribe)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -826,7 +1123,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.spanish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -851,7 +1148,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.spanish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -876,7 +1173,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.russian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -901,7 +1198,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.russian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -937,6 +1234,24 @@
 			buildConfigurations = (
 				38BD215522D592CA00C6795D /* Debug */,
 				38BD215622D592CA00C6795D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D109A213275B6888005E2271 /* Debug */,
+				D109A214275B6888005E2271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D109A222275B68B3005E2271 /* Build configuration list for PBXNativeTarget "Portuguese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D109A223275B68B3005E2271 /* Debug */,
+				D109A224275B68B3005E2271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

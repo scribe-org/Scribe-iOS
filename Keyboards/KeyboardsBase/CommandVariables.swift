@@ -27,6 +27,8 @@ var tenseFPP: String = ""
 var tenseSPP: String = ""
 var tenseTPP: String = ""
 
+let languagesWithCapitalizedNouns = ["German"]
+
 var verbToConjugate: String = ""
 var verbConjugated: String = ""
 
