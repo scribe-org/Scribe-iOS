@@ -31,7 +31,7 @@ var currencySymbol: String = ""
 var currencySymbolAlternates = [String]()
 let dollarAlternateKeys = ["₿", "¢", "₽", "₩", "¥", "£", "€"]
 let euroAlternateKeys = ["₿", "¢", "₽", "₩", "¥", "£", "$"]
-// Symbol keys that have consistent altnernates for iPhones.
+// Symbol keys that have consistent alternates for iPhones.
 var symbolKeysWithAlternatesLeft = ["/", "?", "!", "%", "&"]
 let backslashAlternateKeys = ["\\"]
 let questionMarkAlternateKeys = ["¿"]
@@ -40,7 +40,7 @@ let percentAlternateKeys = ["‰"]
 let ampersandAlternateKeys = ["§"]
 var symbolKeysWithAlternatesRight = ["'", "\"", "="]
 let apostropheAlternateKeys = ["`", "´", "'"]
-let quatationAlternateKeys = ["«", "»", "„", "“", "\""]
+let quotationAlternateKeys = ["«", "»", "„", "“", "\""]
 let equalSignAlternateKeys = ["≈", "±", "≠"]
 var keysWithAlternatesLeft = [String]()
 var keysWithAlternatesRight = [String]()

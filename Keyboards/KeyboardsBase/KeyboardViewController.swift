@@ -558,7 +558,7 @@ class KeyboardViewController: UIInputViewController {
                          "%": percentAlternateKeys,
                          "&": ampersandAlternateKeys,
                          "'": apostropheAlternateKeys,
-                         "\"": quatationAlternateKeys,
+                         "\"": quotationAlternateKeys,
                          "=": equalSignAlternateKeys,
                          currencySymbol: currencySymbolAlternates]
 

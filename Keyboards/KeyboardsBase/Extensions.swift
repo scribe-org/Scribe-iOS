@@ -17,7 +17,7 @@ extension Array {
   }
 }
 
-/// Extensions to String to allow for easier indexing, extraction of substrings and checking if they have certain charactaristics.
+/// Extensions to String to allow for easier indexing, substring extraction and checking for certain characteristics.
 extension String {
   func index(fromIdx: Int) -> Index {
     return self.index(startIndex, offsetBy: fromIdx)
