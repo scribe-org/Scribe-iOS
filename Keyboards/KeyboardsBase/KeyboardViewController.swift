@@ -32,7 +32,17 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the keyboard layouts given the chosen keyboard and device type.
   func setKeyboardLayouts() {
-    if controllerLanguage == "German" {
+    if controllerLanguage == "French" {
+      if DeviceType.isPhone {
+        letterKeys = FrenchKeyboardConstants.letterKeysPhone
+        numberKeys = FrenchKeyboardConstants.numberKeysPhone
+        symbolKeys = FrenchKeyboardConstants.symbolKeysPhone
+      } else {
+        letterKeys = FrenchKeyboardConstants.letterKeysPad
+        numberKeys = FrenchKeyboardConstants.numberKeysPad
+        symbolKeys = FrenchKeyboardConstants.symbolKeysPad
+      }
+    } else if controllerLanguage == "German" {
       if DeviceType.isPhone {
         letterKeys = GermanKeyboardConstants.letterKeysPhone
         numberKeys = GermanKeyboardConstants.numberKeysPhone
@@ -41,6 +51,16 @@ class KeyboardViewController: UIInputViewController {
         letterKeys = GermanKeyboardConstants.letterKeysPad
         numberKeys = GermanKeyboardConstants.numberKeysPad
         symbolKeys = GermanKeyboardConstants.symbolKeysPad
+      }
+    } else if controllerLanguage == "Portuguese" {
+      if DeviceType.isPhone {
+        letterKeys = PortugueseKeyboardConstants.letterKeysPhone
+        numberKeys = PortugueseKeyboardConstants.numberKeysPhone
+        symbolKeys = PortugueseKeyboardConstants.symbolKeysPhone
+      } else {
+        letterKeys = PortugueseKeyboardConstants.letterKeysPad
+        numberKeys = PortugueseKeyboardConstants.numberKeysPad
+        symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
       }
     } else if controllerLanguage == "Russian" {
       if DeviceType.isPhone {
@@ -739,7 +759,16 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
           }
           if DeviceType.isPhone && key == "a" && controllerLanguage == "Portuguese" {
-            addPadding(to: stackView3, width: buttonWidth / 3, key: "a")
+            addPadding(to: stackView2, width: buttonWidth / 4, key: "a")
+          }
+          if DeviceType.isPad && key == "a" && controllerLanguage == "Portuguese" {
+            addPadding(to: stackView2, width: buttonWidth / 3, key: "a")
+          }
+          if DeviceType.isPad && key == "@" && controllerLanguage == "Portuguese" {
+            addPadding(to: stackView2, width: buttonWidth / 3, key: "@")
+          }
+          if DeviceType.isPad && key == "€" && controllerLanguage == "Portuguese" {
+            addPadding(to: stackView2, width: buttonWidth / 3, key: "€")
           }
 
           keys.append(btn)
@@ -793,7 +822,7 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
           }
           if DeviceType.isPhone && key == "l" && controllerLanguage == "Portuguese" {
-            addPadding(to: stackView3, width: buttonWidth / 3, key: "l")
+            addPadding(to: stackView2, width: buttonWidth / 4, key: "l")
           }
 
           // specialKey styling.
@@ -830,6 +859,8 @@ class KeyboardViewController: UIInputViewController {
             if DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
             } else if controllerLanguage == "Russian" && row == 2 && DeviceType.isPhone {
+              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+            } else if key == "return" && controllerLanguage == "Portuguese" && row == 1 && DeviceType.isPad {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
             } else {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
@@ -930,7 +961,7 @@ class KeyboardViewController: UIInputViewController {
     var noun = previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1))
     var queriedWordIsUpperCase: Bool = false
     // Check to see if the input was uppercase to return an uppercase plural.
-    if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
+    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       let firstLetter = noun?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
       noun = noun?.lowercased()
@@ -960,7 +991,7 @@ class KeyboardViewController: UIInputViewController {
     var selectedWord = proxy.selectedText
     // Check to see if the input was uppercase to return an uppercase plural.
     var queriedWordIsUpperCase: Bool = false
-    if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
+    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       let firstLetter = selectedWord?.substring(toIdx: 1)
       queriedWordIsUpperCase = firstLetter!.isUppercase
       selectedWord = selectedWord?.lowercased()
@@ -1018,7 +1049,7 @@ class KeyboardViewController: UIInputViewController {
       if lastWordTyped != "" {
         // Check to see if the input was uppercase to return an uppercase plural.
         var queriedWordIsUpperCase: Bool = false
-        if controllerLanguage == "Russian" || controllerLanguage == "Spanish" {
+        if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
           let firstLetter = lastWordTyped?.substring(toIdx: 1)
           queriedWordIsUpperCase = firstLetter!.isUppercase
           lastWordTyped = lastWordTyped?.lowercased()
