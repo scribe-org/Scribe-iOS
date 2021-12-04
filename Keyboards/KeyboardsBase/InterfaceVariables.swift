@@ -158,9 +158,9 @@ public enum FrenchKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
-  static let keysWithAlternatesRight = ["u", "i", "o", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
 
   static let aAlternateKeys = ["à", "â", "æ", "á", "ä", "ã", "å", "ā", "ᵃ"]
   static let eAlternateKeys = ["é", "è", "ê", "ë", "ę", "ė", "ē"]
@@ -220,9 +220,9 @@ public enum GermanKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
-  static let keysWithAlternatesRight = ["u", "i", "o", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "s", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
 
   static let aAlternateKeys = ["à", "á", "â", "æ", "ã", "å", "ā"]
   static let eAlternateKeys = ["é", "è", "ê", "ë", "ė"]
@@ -283,9 +283,9 @@ public enum PortugueseKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "s", "y", "c"]
-  static let keysWithAlternatesRight = ["u", "i", "o", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
 
   static let aAlternateKeys = ["á", "ã", "à", "â", "ä", "å", "æ", "ᵃ"]
   static let eAlternateKeys = ["é", "ê", "è", "ę", "ė", "ē", "ë"]
@@ -400,9 +400,9 @@ public class SpanishKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "s", "y", "c", "u", "i", "o", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "s", "d", "c", "n"]
   static let keysWithAlternatesLeft = ["a", "e", "s", "d", "c"]
-  static let keysWithAlternatesRight = ["u", "i", "o", "n"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
 
   static let aAlternateKeys = ["á", "à", "ä", "â", "ã", "å", "ą", "æ", "ā", "ᵃ"]
   static let eAlternateKeys = ["é", "è", "ë", "ê", "ę", "ė", "ē"]
