@@ -14,6 +14,7 @@ var keyPressedColor = UIColor.systemGray5
 extension UIColor {
   static let scribeGrey = UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)
   static let scribeBlue = UIColor(red: 97.0/255.0, green: 200.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+  static let scribeBlueLightTheme = UIColor(red: 45.0/255.0, green: 100.0/255.0, blue: 130.0/255.0, alpha: 1.0)
 
   static let previewRedLightTheme = UIColor(red: 170.0/255.0, green: 40.0/255.0, blue: 45.0/255.0, alpha: 1.0)
   static let previewBlueLightTheme = UIColor(red: 30.0/255.0, green: 55.0/255.0, blue: 155.0/255.0, alpha: 1.0)

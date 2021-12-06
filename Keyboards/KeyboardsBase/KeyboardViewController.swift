@@ -996,6 +996,16 @@ class KeyboardViewController: UIInputViewController {
       queriedWordIsUpperCase = firstLetter!.isUppercase
       selectedWord = selectedWord?.lowercased()
     }
+//    if selectedWord == "Scribe" {
+//      if UITraitCollection.current.userInterfaceStyle == .dark {
+//        previewBar?.textColor = UIColor.scribeBlue
+//      } else {
+//        previewBar?.textColor = UIColor.scribeBlueLightTheme
+//      }
+//      previewBar?.text = previewPromptSpacing + "(N) " + selectedWord!
+//      previewBar?.sizeToFit()
+//      invalidState = false
+//    } else {
     let isNoun = nouns?[selectedWord!] != nil
     if isNoun {
       let nounForm = nouns?[selectedWord!]?["form"] as? String
@@ -1039,6 +1049,7 @@ class KeyboardViewController: UIInputViewController {
       previewBar?.sizeToFit()
       invalidState = false
     }
+//    }
   }
 
   /// Annotates the preview bar with the form of a valid typed noun.
@@ -1054,6 +1065,16 @@ class KeyboardViewController: UIInputViewController {
           queriedWordIsUpperCase = firstLetter!.isUppercase
           lastWordTyped = lastWordTyped?.lowercased()
         }
+//        if lastWordTyped == "Scribe" {
+//          if UITraitCollection.current.userInterfaceStyle == .dark {
+//            previewBar?.textColor = UIColor.scribeBlue
+//          } else {
+//            previewBar?.textColor = UIColor.scribeBlueLightTheme
+//          }
+//          previewBar?.text = previewPromptSpacing + "(N) " + lastWordTyped!
+//          previewBar?.sizeToFit()
+//          invalidState = false
+//        } else {
         let isNoun = nouns?[lastWordTyped!] != nil || nouns?[lastWordTyped!.lowercased()] != nil
         if isNoun {
           let nounForm = nouns?[lastWordTyped!]?["form"] as? String
@@ -1097,6 +1118,7 @@ class KeyboardViewController: UIInputViewController {
           previewBar?.sizeToFit()
           invalidState = false
         }
+//        }
       }
     }
   }
