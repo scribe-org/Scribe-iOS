@@ -21,13 +21,13 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 - [Preview Videos](#preview-videos)
 - [Setup](#setup)
+- [Supported Languages](#supported-languages)
 - [Features](#features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
   - [Keyboard Functionality](#keyboard-functionality)
-- [Supported Languages](#supported-languages)
 - [To-Do](#to-do)
 
 # Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
@@ -56,6 +56,23 @@ Users access Scribe language keyboards through the following:
 - Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
 - Select Scribe and choose from the available language keyboards
 - When typing press `🌐` to select keyboards
+
+# Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
+
+The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
+
+| Language   | Nouns | Verbs | Translations\* | Prepositions† |
+| :--------- | ----: | ----: | -------------: | ------------: |
+| French     |   WIP |   WIP |            WIP |            NA |
+| German     |  27K+ |   3K+ |           65K+ |           190 |
+| Portuguese |   WIP |   WIP |            WIP |            NA |
+| Russian    |   WIP |   WIP |            WIP |           WIP |
+| Spanish    |   8K+ |    65 |           65K+ |            NA |
+| Swedish    |   WIP |   WIP |            WIP |            NA |
+
+`*` Given the current **`beta`** status where words are machine translated.
+
+`†` Only for languages for which preposition annotation is needed.
 
 # Features [`⇧`](#contents) <a id="features"></a>
 
@@ -117,23 +134,6 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 </p>
 </details>
-
-# Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
-
-The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
-
-| Language   | Nouns | Verbs | Translations\* | Prepositions† |
-| :--------- | ----: | ----: | -------------: | ------------: |
-| French     |   WIP |   WIP |            WIP |            NA |
-| German     |  27K+ |   3K+ |           65K+ |           190 |
-| Portuguese |   WIP |   WIP |            WIP |            NA |
-| Russian    |   WIP |   WIP |            WIP |           WIP |
-| Spanish    |   8K+ |    65 |           65K+ |            NA |
-| Swedish    |   WIP |   WIP |            WIP |            NA |
-
-`*` Given the current **`beta`** status where words are machine translated.
-
-`†` Only for languages for which preposition annotation is needed.
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
