@@ -2,4 +2,4 @@
 //  SpanishKeyboardViewController.swift
 //
 
-class GermanKeyboardViewController: KeyboardViewController {}
+class SpanishKeyboardViewController: KeyboardViewController {}

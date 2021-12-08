@@ -12,7 +12,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🌐 New Keyboards
 
-- Adds Russian, French and Portuguese keyboards.
+- Adds Russian, French, Portuguese and Swedish keyboards.
 - Verb support is currently limited, but noun annotation, plural and `beta` translation are available.
 
 ### ✨ New Features

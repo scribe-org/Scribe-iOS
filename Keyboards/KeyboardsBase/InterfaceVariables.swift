@@ -31,6 +31,8 @@ var currencySymbol: String = ""
 var currencySymbolAlternates = [String]()
 let dollarAlternateKeys = ["₿", "¢", "₽", "₩", "¥", "£", "€"]
 let euroAlternateKeys = ["₿", "¢", "₽", "₩", "¥", "£", "$"]
+let roubleAlternateKeys = ["₿", "¢", "₩", "¥", "£", "$", "€"]
+let kronaAlternateKeys = ["₿", "¢", "₽", "¥", "£", "$", "€"]
 // Symbol keys that have consistent alternates for iPhones.
 var symbolKeysWithAlternatesLeft = ["/", "?", "!", "%", "&"]
 let backslashAlternateKeys = ["\\"]
@@ -52,6 +54,8 @@ var iAlternateKeys = [String]()
 var oAlternateKeys = [String]()
 var uAlternateKeys = [String]()
 var yAlternateKeys = [String]()
+var äAlternateKeys = [String]()
+var öAlternateKeys = [String]()
 var sAlternateKeys = [String]()
 var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
@@ -125,14 +129,14 @@ public enum FrenchKeyboardConstants {
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
@@ -187,14 +191,14 @@ public enum GermanKeyboardConstants {
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
@@ -250,14 +254,14 @@ public enum PortugueseKeyboardConstants {
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
@@ -310,15 +314,15 @@ public enum RussianKeyboardConstants {
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["-", "/", ":", ";", "(", ")", "₽", "&", "@", "\""],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["АБВ", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["_", "\\", "|", "~", "<", ">", "$", "€", "£", "·"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
     ["АБВ", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
@@ -367,14 +371,14 @@ public class SpanishKeyboardConstants {
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "\'", "delete"],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "\'", "delete"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
   ]
 
@@ -413,4 +417,68 @@ public class SpanishKeyboardConstants {
   static let dAlternateKeys = ["đ"]
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let nAlternateKeys = ["ń"]
+}
+
+// MARK: Swedish interface variables
+
+public class SwedishKeyboardConstants {
+
+  // Keyboard key layouts.
+  static let letterKeysPhone = [
+    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
+    ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let numberKeysPhone = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+    ["-", "/", ":", ";", "(", ")", "kr", "&", "@", "\""],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let symbolKeysPhone = [
+    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
+    ["_", "\\", "|", "~", "<", ">", "€", "$", "£", "·"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let letterKeysPad = [
+    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å", "delete"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
+    ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let numberKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "delete"],
+    ["@", "#", "kr", "&", "*", "(", ")", "'", "\"", "+", "·", "return"],
+    ["#+=", "%", "≈", "±", "=", "/", ";", ":", ",", ".", "-", "#+="],
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let symbolKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
+    ["€", "$", "£", "^", "[", "]", "{", "}", "―", "ᵒ", "...", "return"],
+    ["123", "§", "|", "~", "≠", "\\", "<", ">", "!", "?", "_", "123"],
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+  ]
+
+  // Alternate key vars.
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "ä", "ö",  "s", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "s", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "ä", "ö", "n"]
+
+  static let aAlternateKeys = ["á", "à", "â", "ã", "ā"]
+  static let eAlternateKeys = ["é", "ë", "è", "ê", "ẽ", "ē", "ę"]
+  static let iAlternateKeys = ["ī", "î", "í", "ï", "ì", "ĩ"]
+  static let oAlternateKeys = ["ō", "õ", "ô", "ò", "ó", "œ"]
+  static let uAlternateKeys = ["û", "ú", "ü", "ù", "ũ", "ū"]
+  static let äAlternateKeys = ["æ"]
+  static let öAlternateKeys = ["ø"]
+  static let sAlternateKeys = ["ß", "ś", "š"]
+  static let cAlternateKeys = ["ç"]
+  static let nAlternateKeys = ["ñ"]
 }

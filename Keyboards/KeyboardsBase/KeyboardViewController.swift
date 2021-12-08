@@ -82,6 +82,16 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = SpanishKeyboardConstants.numberKeysPad
         symbolKeys = SpanishKeyboardConstants.symbolKeysPad
       }
+    } else if controllerLanguage == "Swedish" {
+      if DeviceType.isPhone {
+        letterKeys = SwedishKeyboardConstants.letterKeysPhone
+        numberKeys = SwedishKeyboardConstants.numberKeysPhone
+        symbolKeys = SwedishKeyboardConstants.symbolKeysPhone
+      } else {
+        letterKeys = SwedishKeyboardConstants.letterKeysPad
+        numberKeys = SwedishKeyboardConstants.numberKeysPad
+        symbolKeys = SwedishKeyboardConstants.symbolKeysPad
+      }
     }
   }
 
@@ -456,7 +466,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
-    // French, German, Portuguese, Russian or Spanish
+    // French, German, Portuguese, Russian, Spanish or Swedish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     if controllerLanguage == "French" {
@@ -511,7 +521,7 @@ class KeyboardViewController: UIInputViewController {
       еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
       ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
       currencySymbol = "€"
-      currencySymbolAlternates = euroAlternateKeys
+      currencySymbolAlternates = roubleAlternateKeys
       spaceBar = "Пробел"
     } else if controllerLanguage == "Spanish" {
       keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
@@ -529,6 +539,23 @@ class KeyboardViewController: UIInputViewController {
       currencySymbol = "$"
       currencySymbolAlternates = dollarAlternateKeys
       spaceBar = "espacio"
+    } else if controllerLanguage == "Swedish" {
+      keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = SwedishKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = SwedishKeyboardConstants.aAlternateKeys
+      eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
+      iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
+      oAlternateKeys = SwedishKeyboardConstants.oAlternateKeys
+      uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
+      äAlternateKeys = SwedishKeyboardConstants.äAlternateKeys
+      öAlternateKeys = SwedishKeyboardConstants.öAlternateKeys
+      sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
+      cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
+      nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
+      currencySymbol = "kr"
+      currencySymbolAlternates = kronaAlternateKeys
+      spaceBar = "mellanslag"
     }
 
     if DeviceType.isPhone {
@@ -546,6 +573,8 @@ class KeyboardViewController: UIInputViewController {
                          "i": iAlternateKeys,
                          "o": oAlternateKeys,
                          "u": uAlternateKeys,
+                         "ä": äAlternateKeys,
+                         "ö": öAlternateKeys,
                          "y": yAlternateKeys,
                          "s": sAlternateKeys,
                          "d": dAlternateKeys,
@@ -755,7 +784,7 @@ class KeyboardViewController: UIInputViewController {
           }
 
           // Pad before key is added.
-          if DeviceType.isPhone && key == "y" && controllerLanguage == "German" {
+          if DeviceType.isPhone && key == "y" && ["German", "Swedish"].contains(controllerLanguage) {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
           }
           if DeviceType.isPhone && key == "a" && controllerLanguage == "Portuguese" {
@@ -818,7 +847,7 @@ class KeyboardViewController: UIInputViewController {
           }
 
           // Pad after key is added.
-          if DeviceType.isPhone && key == "m" && controllerLanguage == "German" {
+          if DeviceType.isPhone && key == "m" && ["German", "Swedish"].contains(controllerLanguage) {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
           }
           if DeviceType.isPhone && key == "l" && controllerLanguage == "Portuguese" {
