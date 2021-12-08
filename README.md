@@ -129,6 +129,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 | Portuguese |   WIP |   WIP |            WIP |            NA |
 | Russian    |   WIP |   WIP |            WIP |           WIP |
 | Spanish    |   8K+ |    65 |           65K+ |            NA |
+| Swedish    |   WIP |   WIP |            WIP |            NA |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
