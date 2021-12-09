@@ -26,9 +26,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🗃️ Data Added
 
 - Adds baseline noun, verb, translation and preposition data for the new keyboards.
+
   - French:
   - Portuguese:
   - Russian:
+  - Swedish:
+
+- Adds more entries to German.
 
 ### 🐛 Bug Fixes
 
