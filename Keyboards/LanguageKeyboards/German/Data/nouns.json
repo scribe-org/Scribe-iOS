@@ -25,7 +25,7 @@
   },
   "Aa": {
     "plural": "noPlural",
-    "form": "F"
+    "form": "F/N"
   },
   "Aachen": {
     "plural": "noPlural",
@@ -1777,7 +1777,7 @@
   },
   "Achtel": {
     "plural": "Achtel",
-    "form": "N/PL"
+    "form": "F/M/N/PL"
   },
   "Achtelfinale": {
     "plural": "Achtelfinale",
@@ -1841,7 +1841,7 @@
   },
   "Achtzigstel": {
     "plural": "Achtzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Acker": {
     "plural": "Äcker",
@@ -2017,11 +2017,11 @@
   },
   "Adjunkt": {
     "plural": "Adjunkte",
-    "form": "N"
+    "form": "M/N"
   },
   "Adjunkte": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Adjunktin": {
     "plural": "Adjunktinnen",
@@ -3349,7 +3349,7 @@
   },
   "Alphabet": {
     "plural": "Alphabete",
-    "form": "N"
+    "form": "M/N"
   },
   "Alphabete": {
     "plural": "isPlural",
@@ -3585,7 +3585,7 @@
   },
   "Alu": {
     "plural": "noPlural",
-    "form": "F"
+    "form": "F/N"
   },
   "Alufolie": {
     "plural": "Alufolien",
@@ -3729,7 +3729,7 @@
   },
   "Ami": {
     "plural": "Amis",
-    "form": "F"
+    "form": "F/M"
   },
   "Aminogruppe": {
     "plural": "Aminogruppen",
@@ -4137,7 +4137,7 @@
   },
   "Android": {
     "plural": "Androiden",
-    "form": "M"
+    "form": "M/N"
   },
   "Androide": {
     "plural": "Androiden",
@@ -4285,7 +4285,7 @@
   },
   "Angehörige": {
     "plural": "Angehörigen",
-    "form": "M"
+    "form": "F/M"
   },
   "Angehörigen": {
     "plural": "isPlural",
@@ -5833,7 +5833,7 @@
   },
   "Arbeitende": {
     "plural": "Arbeitenden",
-    "form": "M"
+    "form": "F/M"
   },
   "Arbeitenden": {
     "plural": "isPlural",
@@ -6573,7 +6573,7 @@
   },
   "Arsen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Arsenik": {
     "plural": "noPlural",
@@ -9889,7 +9889,7 @@
   },
   "Band": {
     "plural": "Bande",
-    "form": "N"
+    "form": "F/M/N"
   },
   "Bandbreite": {
     "plural": "Bandbreiten",
@@ -10121,7 +10121,7 @@
   },
   "Barometer": {
     "plural": "Barometer",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Baron": {
     "plural": "Barone",
@@ -10489,7 +10489,7 @@
   },
   "Bauer": {
     "plural": "Bauern",
-    "form": "M"
+    "form": "M/N"
   },
   "Bauerin": {
     "plural": "Bauerinnen",
@@ -10769,7 +10769,7 @@
   },
   "Bauteil": {
     "plural": "Bauteile",
-    "form": "M"
+    "form": "M/N"
   },
   "Bauteile": {
     "plural": "isPlural",
@@ -11633,7 +11633,7 @@
   },
   "Beige": {
     "plural": "Beigen",
-    "form": "F"
+    "form": "F/N"
   },
   "Beigen": {
     "plural": "isPlural",
@@ -14297,7 +14297,7 @@
   },
   "Bienenseuchensachverständige": {
     "plural": "Bienenseuchensachverständigen",
-    "form": "M"
+    "form": "F/M"
   },
   "Bienenseuchensachverständigen": {
     "plural": "isPlural",
@@ -14613,7 +14613,7 @@
   },
   "Bill": {
     "plural": "Bills",
-    "form": "F"
+    "form": "F/M"
   },
   "Billiarde": {
     "plural": "Billiarden",
@@ -14649,11 +14649,11 @@
   },
   "Billionstel": {
     "plural": "Billionstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Billiontel": {
     "plural": "Billiontel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Bills": {
     "plural": "isPlural",
@@ -15209,7 +15209,7 @@
   },
   "Bitten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Bittermandelöl": {
     "plural": "Bittermandelöle",
@@ -15417,7 +15417,7 @@
   },
   "Blei": {
     "plural": "Bleie",
-    "form": "M"
+    "form": "M/N"
   },
   "Bleiakkumulator": {
     "plural": "Bleiakkumulatoren",
@@ -15893,7 +15893,7 @@
   },
   "Bock": {
     "plural": "Böcke",
-    "form": "M"
+    "form": "M/N"
   },
   "Bodden": {
     "plural": "Bodden",
@@ -16157,7 +16157,7 @@
   },
   "Boot": {
     "plural": "Boote",
-    "form": "N"
+    "form": "M/N"
   },
   "Boote": {
     "plural": "isPlural",
@@ -17485,7 +17485,7 @@
   },
   "Bund": {
     "plural": "Bünde",
-    "form": "N"
+    "form": "M/N"
   },
   "Bundes-Immissionsschutzgesetz": {
     "plural": "Bundes-Immissionsschutzgesetze",
@@ -17561,7 +17561,7 @@
   },
   "Bundesbeauftragte": {
     "plural": "Bundesbeauftragten",
-    "form": "F"
+    "form": "F/M"
   },
   "Bundesbeauftragten": {
     "plural": "isPlural",
@@ -17997,7 +17997,7 @@
   },
   "Burg": {
     "plural": "Burgen",
-    "form": "F"
+    "form": "F/N"
   },
   "Burgen": {
     "plural": "isPlural",
@@ -18713,7 +18713,7 @@
   },
   "Center": {
     "plural": "Center",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Cents": {
     "plural": "isPlural",
@@ -19489,7 +19489,7 @@
   },
   "Cookie": {
     "plural": "Cookies",
-    "form": "N"
+    "form": "M/N"
   },
   "Cookies": {
     "plural": "isPlural",
@@ -19737,7 +19737,7 @@
   },
   "Curry": {
     "plural": "Currys",
-    "form": "N"
+    "form": "M/N"
   },
   "Currypulver": {
     "plural": "Currypulver",
@@ -20273,7 +20273,7 @@
   },
   "Datenschutzbeauftragte": {
     "plural": "Datenschutzbeauftragten",
-    "form": "F"
+    "form": "F/M"
   },
   "Datenschutzbeauftragten": {
     "plural": "isPlural",
@@ -21113,7 +21113,7 @@
   },
   "Deutsche": {
     "plural": "Deutschen",
-    "form": "F"
+    "form": "F/M/N"
   },
   "Deutschen": {
     "plural": "isPlural",
@@ -22709,7 +22709,7 @@
   },
   "Drachen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Drachentöter": {
     "plural": "Drachentöter",
@@ -22993,7 +22993,7 @@
   },
   "Dreißigstel": {
     "plural": "Dreißigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Drescher": {
     "plural": "Drescher",
@@ -23285,7 +23285,7 @@
   },
   "Dschungel": {
     "plural": "Dschungel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Dual": {
     "plural": "Duale",
@@ -23997,7 +23997,7 @@
   },
   "Ecke": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Ecuador": {
     "plural": "noPlural",
@@ -26061,7 +26061,7 @@
   },
   "Elf": {
     "plural": "Elfen",
-    "form": "F"
+    "form": "F/M"
   },
   "Elfe": {
     "plural": "Elfen",
@@ -26097,7 +26097,7 @@
   },
   "Elftel": {
     "plural": "Elftel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Elision": {
     "plural": "Elisionen",
@@ -26493,7 +26493,7 @@
   },
   "Endoskop": {
     "plural": "Endoskope",
-    "form": "N"
+    "form": "M/N"
   },
   "Endoskope": {
     "plural": "isPlural",
@@ -27421,7 +27421,7 @@
   },
   "Erbe": {
     "plural": "Erben",
-    "form": "M"
+    "form": "M/N"
   },
   "Erben": {
     "plural": "isPlural",
@@ -28497,7 +28497,7 @@
   },
   "Erwachsene": {
     "plural": "Erwachsenen",
-    "form": "M"
+    "form": "F/M"
   },
   "Erwachsenen": {
     "plural": "isPlural",
@@ -28789,7 +28789,7 @@
   },
   "Essen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Essenz": {
     "plural": "Essenzen",
@@ -29425,7 +29425,7 @@
   },
   "Extrakt": {
     "plural": "Extrakte",
-    "form": "N"
+    "form": "M/N"
   },
   "Extrakte": {
     "plural": "isPlural",
@@ -30037,7 +30037,7 @@
   },
   "Falafel": {
     "plural": "Falafeln",
-    "form": "F"
+    "form": "F/N"
   },
   "Falafeln": {
     "plural": "isPlural",
@@ -31389,7 +31389,7 @@
   },
   "Filter": {
     "plural": "Filter",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Filzstift": {
     "plural": "Filzstifte",
@@ -32181,7 +32181,7 @@
   },
   "Fluor": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Fluoreszenzmikroskopie": {
     "plural": "noPlural",
@@ -32189,7 +32189,7 @@
   },
   "Flur": {
     "plural": "Fluren",
-    "form": "F"
+    "form": "F/M"
   },
   "Fluren": {
     "plural": "isPlural",
@@ -32421,7 +32421,7 @@
   },
   "Fondant": {
     "plural": "Fondants",
-    "form": "N"
+    "form": "M/N"
   },
   "Fondants": {
     "plural": "isPlural",
@@ -32877,7 +32877,7 @@
   },
   "Franchise": {
     "plural": "Franchisen",
-    "form": "F"
+    "form": "F/N"
   },
   "Franchisen": {
     "plural": "isPlural",
@@ -34185,7 +34185,7 @@
   },
   "Fünftel": {
     "plural": "Fünftel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Fünfzig": {
     "plural": "Fünfzigen",
@@ -34353,7 +34353,7 @@
   },
   "Gambia": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Gambist": {
     "plural": "Gambisten",
@@ -34373,7 +34373,7 @@
   },
   "Gang": {
     "plural": "Gänge",
-    "form": "M"
+    "form": "F/M"
   },
   "Gangschaltung": {
     "plural": "Gangschaltungen",
@@ -35577,7 +35577,7 @@
   },
   "Gelee": {
     "plural": "Gelees",
-    "form": "N"
+    "form": "M/N"
   },
   "Gelees": {
     "plural": "isPlural",
@@ -37465,7 +37465,7 @@
   },
   "Gift": {
     "plural": "Giften",
-    "form": "F"
+    "form": "F/M/N"
   },
   "Giften": {
     "plural": "isPlural",
@@ -37817,7 +37817,7 @@
   },
   "Gluten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Gläser": {
     "plural": "isPlural",
@@ -37989,7 +37989,7 @@
   },
   "Golf": {
     "plural": "Golfe",
-    "form": "M"
+    "form": "M/N"
   },
   "Golfe": {
     "plural": "isPlural",
@@ -38017,7 +38017,7 @@
   },
   "Gotisch": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "F/N"
   },
   "Gott": {
     "plural": "Götter",
@@ -38041,7 +38041,7 @@
   },
   "Gouda": {
     "plural": "Goudas",
-    "form": "M"
+    "form": "M/N"
   },
   "Goudas": {
     "plural": "isPlural",
@@ -38133,7 +38133,7 @@
   },
   "Graf": {
     "plural": "Grafen",
-    "form": "M"
+    "form": "M/N"
   },
   "Grafem": {
     "plural": "Grafeme",
@@ -38257,7 +38257,7 @@
   },
   "Graph": {
     "plural": "Graphen",
-    "form": "M"
+    "form": "M/N"
   },
   "Graphem": {
     "plural": "Grapheme",
@@ -39029,7 +39029,7 @@
   },
   "Guinea": {
     "plural": "Guineas",
-    "form": "F"
+    "form": "F/N"
   },
   "Guinea-Bissau": {
     "plural": "noPlural",
@@ -39541,7 +39541,7 @@
   },
   "Hagen": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Hagionym": {
     "plural": "Hagionyme",
@@ -40373,7 +40373,7 @@
   },
   "Hashtag": {
     "plural": "Hashtags",
-    "form": "N"
+    "form": "M/N"
   },
   "Hashtags": {
     "plural": "isPlural",
@@ -40389,7 +40389,7 @@
   },
   "Hatespeech": {
     "plural": "Hatespeeches",
-    "form": "F"
+    "form": "F/M"
   },
   "Hatespeeches": {
     "plural": "isPlural",
@@ -42701,7 +42701,7 @@
   },
   "Homburg": {
     "plural": "Homburgs",
-    "form": "M"
+    "form": "M/N"
   },
   "Homburgs": {
     "plural": "isPlural",
@@ -43085,7 +43085,7 @@
   },
   "Hummus": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Humor": {
     "plural": "noPlural",
@@ -43141,7 +43141,7 @@
   },
   "Hundertstel": {
     "plural": "Hundertstel",
-    "form": "M/PL"
+    "form": "F/M/N/PL"
   },
   "Hundertstelsekunde": {
     "plural": "Hundertstelsekunden",
@@ -44293,7 +44293,7 @@
   },
   "Indikativ": {
     "plural": "Indikative",
-    "form": "M"
+    "form": "M/N"
   },
   "Indikative": {
     "plural": "isPlural",
@@ -44477,7 +44477,7 @@
   },
   "Info": {
     "plural": "Infos",
-    "form": "F"
+    "form": "F/N"
   },
   "Informatik": {
     "plural": "noPlural",
@@ -45033,7 +45033,7 @@
   },
   "Instrumental": {
     "plural": "Instrumentals",
-    "form": "N"
+    "form": "M/N"
   },
   "Instrumentales": {
     "plural": "isPlural",
@@ -46137,7 +46137,7 @@
   },
   "Jersey": {
     "plural": "Jerseys",
-    "form": "N"
+    "form": "M/N"
   },
   "Jerseys": {
     "plural": "isPlural",
@@ -46213,7 +46213,7 @@
   },
   "Joghurt": {
     "plural": "Joghurts",
-    "form": "M"
+    "form": "F/M/N"
   },
   "Joghurts": {
     "plural": "isPlural",
@@ -46221,7 +46221,7 @@
   },
   "Jogurt": {
     "plural": "Jogurts",
-    "form": "F"
+    "form": "F/M/N"
   },
   "Jogurts": {
     "plural": "isPlural",
@@ -46625,7 +46625,7 @@
   },
   "Juwel": {
     "plural": "Juwele",
-    "form": "N"
+    "form": "M/N"
   },
   "Juwele": {
     "plural": "isPlural",
@@ -46877,7 +46877,7 @@
   },
   "Kaki": {
     "plural": "Kakis",
-    "form": "F"
+    "form": "F/M/N"
   },
   "Kakis": {
     "plural": "isPlural",
@@ -46997,7 +46997,7 @@
   },
   "Kalkül": {
     "plural": "Kalküle",
-    "form": "N"
+    "form": "M/N"
   },
   "Kalküle": {
     "plural": "isPlural",
@@ -47381,7 +47381,7 @@
   },
   "Kanton": {
     "plural": "Kantone",
-    "form": "M"
+    "form": "M/N"
   },
   "Kantone": {
     "plural": "isPlural",
@@ -47605,7 +47605,7 @@
   },
   "Karate": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Karawane": {
     "plural": "Karawanen",
@@ -48649,7 +48649,7 @@
   },
   "Keks": {
     "plural": "Kekse",
-    "form": "N"
+    "form": "M/N"
   },
   "Keksdose": {
     "plural": "Keksdosen",
@@ -49041,7 +49041,7 @@
   },
   "Khaki": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Kichererbse": {
     "plural": "Kichererbsen",
@@ -49069,7 +49069,7 @@
   },
   "Kiefer": {
     "plural": "Kiefern",
-    "form": "F"
+    "form": "F/M/N"
   },
   "Kiefern": {
     "plural": "isPlural",
@@ -49077,7 +49077,7 @@
   },
   "Kiel": {
     "plural": "Kiele",
-    "form": "M"
+    "form": "M/N"
   },
   "Kiele": {
     "plural": "isPlural",
@@ -49433,7 +49433,7 @@
   },
   "Kiwi": {
     "plural": "Kiwis",
-    "form": "M"
+    "form": "F/M"
   },
   "Kiwis": {
     "plural": "isPlural",
@@ -50369,7 +50369,7 @@
   },
   "Koch": {
     "plural": "Köche",
-    "form": "M"
+    "form": "M/N"
   },
   "Kochbanane": {
     "plural": "Kochbananen",
@@ -51373,7 +51373,7 @@
   },
   "Kongo": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Kongress": {
     "plural": "Kongresse",
@@ -51585,7 +51585,7 @@
   },
   "Konstanz": {
     "plural": "noPlural",
-    "form": "F"
+    "form": "F/N"
   },
   "Konstanze": {
     "plural": "noPlural",
@@ -52309,7 +52309,7 @@
   },
   "Kosovo": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Kosten": {
     "plural": "isPlural",
@@ -52681,7 +52681,7 @@
   },
   "Kredit": {
     "plural": "Kredits",
-    "form": "N"
+    "form": "M/N"
   },
   "Kreditinstitut": {
     "plural": "Kreditinstitute",
@@ -53021,7 +53021,7 @@
   },
   "Kristall": {
     "plural": "Kristalle",
-    "form": "M"
+    "form": "M/N"
   },
   "Kristalle": {
     "plural": "isPlural",
@@ -54609,7 +54609,7 @@
   },
   "Lachen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Lachgas": {
     "plural": "noPlural",
@@ -54729,11 +54729,11 @@
   },
   "Laken": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Lakritz": {
     "plural": "Lakritze",
-    "form": "N"
+    "form": "M/N"
   },
   "Lakritze": {
     "plural": "isPlural",
@@ -54745,7 +54745,7 @@
   },
   "Lama": {
     "plural": "Lamas",
-    "form": "N"
+    "form": "M/N"
   },
   "Lamas": {
     "plural": "isPlural",
@@ -55249,7 +55249,7 @@
   },
   "Laptop": {
     "plural": "Laptops",
-    "form": "N"
+    "form": "M/N"
   },
   "Laptops": {
     "plural": "isPlural",
@@ -55461,7 +55461,7 @@
   },
   "Laute": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Lautmalerei": {
     "plural": "Lautmalereien",
@@ -55501,7 +55501,7 @@
   },
   "Lavendel": {
     "plural": "Lavendel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Lavendelöl": {
     "plural": "Lavendelöle",
@@ -56253,7 +56253,7 @@
   },
   "Leiter": {
     "plural": "Leiter",
-    "form": "M/PL"
+    "form": "F/M/PL"
   },
   "Leiterin": {
     "plural": "Leiterinnen",
@@ -56561,7 +56561,7 @@
   },
   "Leuchten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Leuchter": {
     "plural": "Leuchter",
@@ -57341,7 +57341,7 @@
   },
   "Liter": {
     "plural": "Liter",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Literatur": {
     "plural": "Literaturen",
@@ -57609,7 +57609,7 @@
   },
   "Logo": {
     "plural": "Logos",
-    "form": "N"
+    "form": "M/N"
   },
   "Logos": {
     "plural": "isPlural",
@@ -57881,7 +57881,7 @@
   },
   "Luftfilter": {
     "plural": "Luftfilter",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Luftmasche": {
     "plural": "Luftmaschen",
@@ -58189,7 +58189,7 @@
   },
   "Löwen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Löwenohr": {
     "plural": "Löwenohren",
@@ -58613,7 +58613,7 @@
   },
   "Male": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Malediven": {
     "plural": "isPlural",
@@ -58849,7 +58849,7 @@
   },
   "Mangel": {
     "plural": "Mängel",
-    "form": "M"
+    "form": "F/M"
   },
   "Mangelware": {
     "plural": "Mangelwaren",
@@ -59053,7 +59053,7 @@
   },
   "Mark": {
     "plural": "Mark",
-    "form": "F/PL"
+    "form": "F/M/N/PL"
   },
   "Marke": {
     "plural": "Marken",
@@ -59197,7 +59197,7 @@
   },
   "Maroni": {
     "plural": "Maroni",
-    "form": "F/PL"
+    "form": "F/M/PL"
   },
   "Mars": {
     "plural": "noPlural",
@@ -60321,11 +60321,11 @@
   },
   "Meme": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Memel": {
     "plural": "noPlural",
-    "form": "F"
+    "form": "F/N"
   },
   "Mendelevium": {
     "plural": "noPlural",
@@ -60537,7 +60537,7 @@
   },
   "Messer": {
     "plural": "Messer",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Messergebnis": {
     "plural": "Messergebnisse",
@@ -60733,7 +60733,7 @@
   },
   "Meteor": {
     "plural": "Meteore",
-    "form": "M"
+    "form": "M/N"
   },
   "Meteore": {
     "plural": "isPlural",
@@ -61085,7 +61085,7 @@
   },
   "Mikrometer": {
     "plural": "Mikrometer",
-    "form": "M/PL"
+    "form": "M/N/PL"
   },
   "Mikronesien": {
     "plural": "noPlural",
@@ -61241,7 +61241,7 @@
   },
   "Militär": {
     "plural": "Militärs",
-    "form": "M"
+    "form": "M/N"
   },
   "Militärdienst": {
     "plural": "Militärdienste",
@@ -61297,7 +61297,7 @@
   },
   "Milliardstel": {
     "plural": "Milliardstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Millimeter": {
     "plural": "Millimeter",
@@ -61321,11 +61321,11 @@
   },
   "Millionstel": {
     "plural": "Millionstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Milliontel": {
     "plural": "Milliontel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Millionär": {
     "plural": "Millionäre",
@@ -61805,7 +61805,7 @@
   },
   "Mitte": {
     "plural": "Mitten",
-    "form": "F"
+    "form": "F/N"
   },
   "Mitteilung": {
     "plural": "Mitteilungen",
@@ -61817,7 +61817,7 @@
   },
   "Mittel": {
     "plural": "Mittel",
-    "form": "N/PL"
+    "form": "F/N/PL"
   },
   "Mittelalter": {
     "plural": "noPlural",
@@ -62081,7 +62081,7 @@
   },
   "Mode": {
     "plural": "Moden",
-    "form": "F"
+    "form": "F/M"
   },
   "Modeartikel": {
     "plural": "Modeartikel",
@@ -62101,7 +62101,7 @@
   },
   "Model": {
     "plural": "Model",
-    "form": "M/PL"
+    "form": "M/N/PL"
   },
   "Modell": {
     "plural": "Modelle",
@@ -62281,7 +62281,7 @@
   },
   "Moment": {
     "plural": "Momente",
-    "form": "N"
+    "form": "M/N"
   },
   "Momente": {
     "plural": "isPlural",
@@ -62501,7 +62501,7 @@
   },
   "Montage": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Montagmittag": {
     "plural": "Montagmittage",
@@ -63569,7 +63569,7 @@
   },
   "Münster": {
     "plural": "Münster",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Münze": {
     "plural": "Münzen",
@@ -64537,7 +64537,7 @@
   },
   "Narben": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Narbenbildung": {
     "plural": "Narbenbildungen",
@@ -65457,7 +65457,7 @@
   },
   "Nessel": {
     "plural": "Nesseln",
-    "form": "F"
+    "form": "F/M"
   },
   "Nesseln": {
     "plural": "isPlural",
@@ -65701,7 +65701,7 @@
   },
   "Neuntel": {
     "plural": "Neuntel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Neunzig": {
     "plural": "Neunzigen",
@@ -65713,7 +65713,7 @@
   },
   "Neunzigstel": {
     "plural": "Neunzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Neuordnung": {
     "plural": "Neuordnungen",
@@ -67289,7 +67289,7 @@
   },
   "Ofen": {
     "plural": "Öfen",
-    "form": "M"
+    "form": "M/N"
   },
   "Ofenheizung": {
     "plural": "Ofenheizungen",
@@ -67365,7 +67365,7 @@
   },
   "Ohio": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Ohmmeter": {
     "plural": "Ohmmeter",
@@ -67561,7 +67561,7 @@
   },
   "Oktav": {
     "plural": "Oktaven",
-    "form": "F"
+    "form": "F/N"
   },
   "Oktave": {
     "plural": "Oktaven",
@@ -67865,7 +67865,7 @@
   },
   "Orange": {
     "plural": "Orange",
-    "form": "N/PL"
+    "form": "F/N/PL"
   },
   "Orangenmarmelade": {
     "plural": "Orangenmarmeladen",
@@ -68485,7 +68485,7 @@
   },
   "Otter": {
     "plural": "Ottern",
-    "form": "F"
+    "form": "F/M"
   },
   "Ottern": {
     "plural": "isPlural",
@@ -68545,7 +68545,7 @@
   },
   "Ozon": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Ozonschicht": {
     "plural": "Ozonschichten",
@@ -68897,7 +68897,7 @@
   },
   "Pantomime": {
     "plural": "Pantomimen",
-    "form": "F"
+    "form": "F/M"
   },
   "Pantomimen": {
     "plural": "isPlural",
@@ -70129,7 +70129,7 @@
   },
   "Perron": {
     "plural": "Perrons",
-    "form": "N"
+    "form": "M/N"
   },
   "Perrons": {
     "plural": "isPlural",
@@ -70245,7 +70245,7 @@
   },
   "Pesto": {
     "plural": "Pestos",
-    "form": "N"
+    "form": "M/N"
   },
   "Pestos": {
     "plural": "isPlural",
@@ -71785,7 +71785,7 @@
   },
   "Polen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Polin": {
     "plural": "Polinnen",
@@ -71925,7 +71925,7 @@
   },
   "Pony": {
     "plural": "Ponys",
-    "form": "N"
+    "form": "M/N"
   },
   "Ponys": {
     "plural": "isPlural",
@@ -72149,7 +72149,7 @@
   },
   "Positiv": {
     "plural": "Positive",
-    "form": "N"
+    "form": "M/N"
   },
   "Positive": {
     "plural": "isPlural",
@@ -72173,7 +72173,7 @@
   },
   "Post": {
     "plural": "Posten",
-    "form": "F"
+    "form": "F/M"
   },
   "Postamt": {
     "plural": "Postämter",
@@ -72201,7 +72201,7 @@
   },
   "Poster": {
     "plural": "Poster",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Postfach": {
     "plural": "Postfächer",
@@ -72441,7 +72441,7 @@
   },
   "Preußen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Preußin": {
     "plural": "Preußinnen",
@@ -73061,7 +73061,7 @@
   },
   "Proptech": {
     "plural": "Proptechs",
-    "form": "F"
+    "form": "F/N"
   },
   "Proptechs": {
     "plural": "isPlural",
@@ -74137,7 +74137,7 @@
   },
   "Quark": {
     "plural": "Quarks",
-    "form": "N"
+    "form": "M/N"
   },
   "Quarks": {
     "plural": "isPlural",
@@ -74833,7 +74833,7 @@
   },
   "Raps": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Rapsöl": {
     "plural": "Rapsöle",
@@ -76521,7 +76521,7 @@
   },
   "Rentier": {
     "plural": "Rentiere",
-    "form": "N"
+    "form": "M/N"
   },
   "Rentiere": {
     "plural": "isPlural",
@@ -78037,7 +78037,7 @@
   },
   "Rutsche": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Räder": {
     "plural": "isPlural",
@@ -78733,7 +78733,7 @@
   },
   "Sakko": {
     "plural": "Sakkos",
-    "form": "N"
+    "form": "M/N"
   },
   "Sakkos": {
     "plural": "isPlural",
@@ -78761,7 +78761,7 @@
   },
   "Salat": {
     "plural": "Salate",
-    "form": "M"
+    "form": "F/M"
   },
   "Salate": {
     "plural": "isPlural",
@@ -79005,7 +79005,7 @@
   },
   "Samen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Samin": {
     "plural": "Saminnen",
@@ -79257,7 +79257,7 @@
   },
   "Sasse": {
     "plural": "Sassen",
-    "form": "M"
+    "form": "F/M"
   },
   "Sassen": {
     "plural": "isPlural",
@@ -79849,7 +79849,7 @@
   },
   "Schaschlik": {
     "plural": "Schaschliks",
-    "form": "N"
+    "form": "M/N"
   },
   "Schaschliks": {
     "plural": "isPlural",
@@ -80221,7 +80221,7 @@
   },
   "Schild": {
     "plural": "Schilder",
-    "form": "N"
+    "form": "M/N"
   },
   "Schilddrüse": {
     "plural": "Schilddrüsen",
@@ -80617,7 +80617,7 @@
   },
   "Schlamassel": {
     "plural": "Schlamassel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Schlange": {
     "plural": "Schlangen",
@@ -80845,7 +80845,7 @@
   },
   "Schmalz": {
     "plural": "Schmalze",
-    "form": "N"
+    "form": "M/N"
   },
   "Schmalze": {
     "plural": "isPlural",
@@ -80861,7 +80861,7 @@
   },
   "Schmelzen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Schmelzenthalpie": {
     "plural": "Schmelzenthalpien",
@@ -81361,7 +81361,7 @@
   },
   "Schotte": {
     "plural": "Schotten",
-    "form": "M"
+    "form": "F/M"
   },
   "Schotten": {
     "plural": "isPlural",
@@ -82005,7 +82005,7 @@
   },
   "Schweden": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Schwedin": {
     "plural": "Schwedinnen",
@@ -82705,7 +82705,7 @@
   },
   "Sechzehntel": {
     "plural": "Sechzehntel",
-    "form": "N/PL"
+    "form": "F/M/N/PL"
   },
   "Sechzehntelnote": {
     "plural": "Sechzehntelnoten",
@@ -82725,7 +82725,7 @@
   },
   "Sechzigstel": {
     "plural": "Sechzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Sedezimalsystem": {
     "plural": "Sedezimalsysteme",
@@ -82753,7 +82753,7 @@
   },
   "See": {
     "plural": "Seen",
-    "form": "M"
+    "form": "F/M"
   },
   "Seeaal": {
     "plural": "Seeaale",
@@ -83517,7 +83517,7 @@
   },
   "Senegal": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Senf": {
     "plural": "Senfe",
@@ -83701,7 +83701,7 @@
   },
   "Service": {
     "plural": "Services",
-    "form": "N"
+    "form": "M/N"
   },
   "Services": {
     "plural": "isPlural",
@@ -84013,7 +84013,7 @@
   },
   "Siebentel": {
     "plural": "Siebentel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Siebenzimmerwohnung": {
     "plural": "Siebenzimmerwohnungen",
@@ -84025,7 +84025,7 @@
   },
   "Siebtel": {
     "plural": "Siebtel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Siebträger": {
     "plural": "Siebträger",
@@ -84033,7 +84033,7 @@
   },
   "Siebzehntel": {
     "plural": "Siebzehntel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Siebzig": {
     "plural": "Siebzigen",
@@ -84045,7 +84045,7 @@
   },
   "Siebzigstel": {
     "plural": "Siebzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Siedler": {
     "plural": "Siedler",
@@ -84069,7 +84069,7 @@
   },
   "Sieg": {
     "plural": "Siege",
-    "form": "M"
+    "form": "F/M"
   },
   "Siege": {
     "plural": "isPlural",
@@ -84345,7 +84345,7 @@
   },
   "Siphon": {
     "plural": "Siphons",
-    "form": "N"
+    "form": "M/N"
   },
   "Siphons": {
     "plural": "isPlural",
@@ -84505,7 +84505,7 @@
   },
   "Skelett": {
     "plural": "Skelette",
-    "form": "N"
+    "form": "F/N"
   },
   "Skelette": {
     "plural": "isPlural",
@@ -89805,7 +89805,7 @@
   },
   "Suriname": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Surinamer": {
     "plural": "Surinamer",
@@ -90525,7 +90525,7 @@
   },
   "Tag": {
     "plural": "Tage",
-    "form": "M"
+    "form": "M/N"
   },
   "Tage": {
     "plural": "isPlural",
@@ -91033,7 +91033,7 @@
   },
   "Tau": {
     "plural": "Taus",
-    "form": "N"
+    "form": "M/N"
   },
   "Taube": {
     "plural": "Tauben",
@@ -91201,7 +91201,7 @@
   },
   "Tausendstel": {
     "plural": "Tausendstel",
-    "form": "N/PL"
+    "form": "F/M/N/PL"
   },
   "Tausendstelsekunde": {
     "plural": "Tausendstelsekunden",
@@ -91217,7 +91217,7 @@
   },
   "Taxi": {
     "plural": "Taxis",
-    "form": "N"
+    "form": "M/N"
   },
   "Taxifahrer": {
     "plural": "Taxifahrer",
@@ -91917,7 +91917,7 @@
   },
   "Tessin": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Test": {
     "plural": "Tests",
@@ -92253,7 +92253,7 @@
   },
   "Thermometer": {
     "plural": "Thermometer",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "These": {
     "plural": "Thesen",
@@ -92733,7 +92733,7 @@
   },
   "Titan": {
     "plural": "Titanen",
-    "form": "M"
+    "form": "M/N"
   },
   "Titanen": {
     "plural": "isPlural",
@@ -93129,7 +93129,7 @@
   },
   "Toolkit": {
     "plural": "Toolkits",
-    "form": "N"
+    "form": "M/N"
   },
   "Toolkits": {
     "plural": "isPlural",
@@ -93317,7 +93317,7 @@
   },
   "Tote": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Totensonntag": {
     "plural": "Totensonntage",
@@ -93997,7 +93997,7 @@
   },
   "Trial": {
     "plural": "Trials",
-    "form": "N"
+    "form": "M/N"
   },
   "Trials": {
     "plural": "isPlural",
@@ -94901,7 +94901,7 @@
   },
   "Türkis": {
     "plural": "Türkise",
-    "form": "M"
+    "form": "M/N"
   },
   "Türkisch": {
     "plural": "noPlural",
@@ -95093,7 +95093,7 @@
   },
   "Ulm": {
     "plural": "Ulmen",
-    "form": "F"
+    "form": "F/N"
   },
   "Ulme": {
     "plural": "Ulmen",
@@ -95653,7 +95653,7 @@
   },
   "Ungarn": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Ungeduld": {
     "plural": "noPlural",
@@ -95685,7 +95685,7 @@
   },
   "Uni": {
     "plural": "Unis",
-    "form": "F"
+    "form": "F/N"
   },
   "Uniform": {
     "plural": "Uniformen",
@@ -96645,7 +96645,7 @@
   },
   "Uruguay": {
     "plural": "noPlural",
-    "form": "N"
+    "form": "M/N"
   },
   "Uruguayer": {
     "plural": "Uruguayer",
@@ -98657,7 +98657,7 @@
   },
   "Vertretungsberechtigte": {
     "plural": "Vertretungsberechtigten",
-    "form": "M"
+    "form": "F/M"
   },
   "Vertretungsberechtigten": {
     "plural": "isPlural",
@@ -99093,7 +99093,7 @@
   },
   "Viertel": {
     "plural": "Viertel",
-    "form": "N/PL"
+    "form": "F/M/N/PL"
   },
   "Viertelfinale": {
     "plural": "Viertelfinale",
@@ -99133,7 +99133,7 @@
   },
   "Vierundsechzigstel": {
     "plural": "Vierundsechzigstel",
-    "form": "N/PL"
+    "form": "F/M/N/PL"
   },
   "Vierundsechzigstelnote": {
     "plural": "Vierundsechzigstelnoten",
@@ -99161,7 +99161,7 @@
   },
   "Vierzigstel": {
     "plural": "Vierzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Vierzimmerwohnung": {
     "plural": "Vierzimmerwohnungen",
@@ -99325,7 +99325,7 @@
   },
   "Virus": {
     "plural": "Viren",
-    "form": "N"
+    "form": "M/N"
   },
   "Virushülle": {
     "plural": "Virushüllen",
@@ -99725,7 +99725,7 @@
   },
   "Volleyball": {
     "plural": "Volleybälle",
-    "form": "N"
+    "form": "M/N"
   },
   "Volleyballmannschaft": {
     "plural": "Volleyballmannschaften",
@@ -101661,7 +101661,7 @@
   },
   "Wecken": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/N/PL"
   },
   "Wecker": {
     "plural": "Wecker",
@@ -102009,7 +102009,7 @@
   },
   "Weise": {
     "plural": "Weisen",
-    "form": "F"
+    "form": "F/M"
   },
   "Weisen": {
     "plural": "isPlural",
@@ -102069,7 +102069,7 @@
   },
   "Weizen": {
     "plural": "Weizen",
-    "form": "M/PL"
+    "form": "M/N/PL"
   },
   "Weizenanbaugebiet": {
     "plural": "Weizenanbaugebiete",
@@ -102425,7 +102425,7 @@
   },
   "Wende": {
     "plural": "Wenden",
-    "form": "F"
+    "form": "F/M"
   },
   "Wendehals": {
     "plural": "Wendehälse",
@@ -102765,7 +102765,7 @@
   },
   "Westen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Western": {
     "plural": "Western",
@@ -102873,7 +102873,7 @@
   },
   "Wetter": {
     "plural": "Wetter",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Wetterbericht": {
     "plural": "Wetterberichte",
@@ -105661,7 +105661,7 @@
   },
   "Zement": {
     "plural": "Zemente",
-    "form": "M"
+    "form": "M/N"
   },
   "Zemente": {
     "plural": "isPlural",
@@ -105837,7 +105837,7 @@
   },
   "Zeuge": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Zeugin": {
     "plural": "Zeuginnen",
@@ -106473,7 +106473,7 @@
   },
   "Zoo": {
     "plural": "Zoos",
-    "form": "M"
+    "form": "M/N"
   },
   "Zoologe": {
     "plural": "Zoologen",
@@ -106625,7 +106625,7 @@
   },
   "Zug": {
     "plural": "Züge",
-    "form": "M"
+    "form": "M/N"
   },
   "Zugabe": {
     "plural": "Zugaben",
@@ -107109,7 +107109,7 @@
   },
   "Zwanzigstel": {
     "plural": "Zwanzigstel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Zweck": {
     "plural": "Zwecke",
@@ -107389,7 +107389,7 @@
   },
   "Zwinkersmiley": {
     "plural": "Zwinkersmileys",
-    "form": "N"
+    "form": "M/N"
   },
   "Zwinkersmileys": {
     "plural": "isPlural",
@@ -107489,7 +107489,7 @@
   },
   "Zwölftel": {
     "plural": "Zwölftel",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Zyklen": {
     "plural": "isPlural",

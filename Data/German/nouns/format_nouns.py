@@ -136,6 +136,17 @@ for noun_vals in nouns_list:
                     "form": map_genders(noun_vals["gender"]),
                 }
 
+        # The singular already exists and there might be another gender of it for a different meaning.
+        else:
+            if (
+                "gender" in noun_vals.keys()
+                and nouns_formatted[noun_vals["singular"]]["form"]
+                != noun_vals["gender"]
+            ):
+                nouns_formatted[noun_vals["singular"]]["form"] += "/" + map_genders(
+                    noun_vals["gender"]
+                )
+
     elif "plural" in noun_vals.keys():
         if noun_vals["plural"] not in nouns_formatted:
             nouns_formatted[noun_vals["plural"]] = {
