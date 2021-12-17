@@ -419,11 +419,12 @@ class KeyboardViewController: UIInputViewController {
     loadKeys()
   }
 
-  /// Includes assignment of the proxy, loading the Scribe interface, and adds the keyboard selector target.
+  /// Includes assignment of the proxy, loading the Scribe interface, making keys letters, and adds the keyboard selector target.
   override func viewDidLoad() {
     super.viewDidLoad()
 
     proxy = textDocumentProxy as UITextDocumentProxy
+    keyboardState = .letters
     loadInterface()
     self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
   }

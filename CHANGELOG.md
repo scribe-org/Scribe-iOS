@@ -34,12 +34,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Adds more entries to German.
 
+- Adds more entries to Spanish.
+
 ### 🐛 Bug Fixes
 
 - Fixes an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
 - Fixes an issue with iPads where semicolon keys also had apostrophes.
 - Fixes an issue where number keys weren't able to trigger the double space period shortcut.
 - Fixes an issue where hold-to-select keys wouldn't return to their original color.
+- Fixes an issue where the keyboard wouldn't always be letter keys when switched to.
+  <!-- - Fixes an issue where the double space period shortcut wasn't possible after certain characters. -->
 - Fixes an issue where more than one singular gender wasn't being assigned to German nouns in the formatting process.
 
 ### ♻️ Code Refactoring
