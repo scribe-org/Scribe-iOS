@@ -1612,37 +1612,33 @@ class KeyboardViewController: UIInputViewController {
       clearPreviewBar()
     }
 
-    // To make sure that the user can still use the double space period shortcut after numbers.
-    var lastCharIsInt: Bool = false
-    // ?, ! and ' return true for isInt, so prevent them from being read.
-    let punctuationThatIsInt = ["?", "!", "'"]
+    // To make sure that the user can still use the double space period shortcut after numbers and symbols.
+    let punctuationThatCancelsShortcut = ["?", "!", ",", ".", ":", ";", "-"]
     if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && previewState == false {
       let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
-      if punctuationThatIsInt.contains(charBeforeSpace) {
-        originalKey = "Don't do the shortcut"
-      } else {
-        lastCharIsInt = charBeforeSpace.isInt
+      if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
+        originalKey = "Cancel shortcut"
       }
     } else if previewState == true {
       let charBeforeSpace = String(Array((previewBar?.text!)!).secondToLast()!)
-      if punctuationThatIsInt.contains(charBeforeSpace) {
-        originalKey = "Don't do the shortcut"
-      } else {
-        lastCharIsInt = charBeforeSpace.isInt
+      if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
+        originalKey = "Cancel shortcut"
       }
     }
     // Double space period shortcut.
-    if touch.tapCount == 2 && originalKey == spaceBar && ( keyboardState == .letters || ( keyboardState != .letters && lastCharIsInt )) && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
+    if touch.tapCount == 2 && originalKey == spaceBar && proxy.documentContextBeforeInput?.count != 1 && doubleSpacePeriodPossible == true {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && previewState == false {
         proxy.deleteBackward()
         proxy.insertText(". ")
+        keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       } else if previewBar?.text!.suffix(2) != "  " && previewState == true {
         previewBar?.text! = (previewBar?.text!.deletePriorToCursor())!
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: ". "))!
+        keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
       }

@@ -43,7 +43,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Fixes an issue where number keys weren't able to trigger the double space period shortcut.
 - Fixes an issue where hold-to-select keys wouldn't return to their original color.
 - Fixes an issue where the keyboard wouldn't always be letter keys when switched to.
-  <!-- - Fixes an issue where the double space period shortcut wasn't possible after certain characters. -->
+- Fixes an issue where the double space period shortcut wasn't possible after certain characters.
 - Fixes an issue where more than one singular gender wasn't being assigned to German nouns in the formatting process.
 
 ### ♻️ Code Refactoring

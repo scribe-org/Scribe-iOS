@@ -54,8 +54,4 @@ extension String {
   var isUppercase: Bool {
     return self == self.uppercased()
   }
-
-  var isInt: Bool {
-    return Int(self) != nil
-  }
 }
