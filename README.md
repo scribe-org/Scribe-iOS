@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-
 
 https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
 
-The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before. Edits to the device mockups should further be done in [andrewtavis/CC0-Mockups](https://github.com/andrewtavis/CC0-Mockups).
+The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
