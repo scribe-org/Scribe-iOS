@@ -38,14 +38,14 @@ The following are combined preview videos for the [App Store](https://apps.apple
 <details><summary><strong>iPhone 6.5" version (only works on mobile)</strong></summary>
 <p>
 
-https://user-images.githubusercontent.com/24387426/143763293-439fe6c8-e417-4f76-9a32-cedecc057490.mov
+https://user-images.githubusercontent.com/24387426/147608257-3e87f20e-328d-466d-a410-c6c44b24d0f8.mp4
 
 </p>
 </details>
 
 #### iPad Pro 4th gen version
 
-https://user-images.githubusercontent.com/24387426/143763680-16931dda-0d5e-4029-b1a9-f293bc1f1bba.mp4
+https://user-images.githubusercontent.com/24387426/147608312-0818cdd0-a5b6-46c4-97bc-2545f81044b2.mp4
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
