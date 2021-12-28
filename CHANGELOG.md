@@ -17,7 +17,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- Adds hold-to-select functionality for symbols.
+- Hold-to-select functionality for symbols.
 
 ### 🎨 Design Changes
 
@@ -38,13 +38,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐛 Bug Fixes
 
-- Fixes an issue with German keyboards where the dollar sign was shown on the number keys instead of the euro sign.
-- Fixes an issue with iPads where semicolon keys also had apostrophes.
-- Fixes an issue where number keys weren't able to trigger the double space period shortcut.
-- Fixes an issue where hold-to-select keys wouldn't return to their original color.
-- Fixes an issue where the keyboard wouldn't always be letter keys when switched to.
-- Fixes an issue where the double space period shortcut wasn't possible after certain characters.
-- Fixes an issue where more than one singular gender wasn't being assigned to German nouns in the formatting process.
+- German keyboards had the dollar sign shown on the number keys instead of the euro sign.
+- iPads had a semicolon key that also had apostrophes.
+- Hold-to-select keys wouldn't return to their original color.
+- The keyboard wouldn't always be letter keys when switched to.
+- The double space period shortcut wasn't possible after certain special characters and numbers.
+- More than one singular gender wasn't being assigned to German nouns in the formatting process.
 
 ### ♻️ Code Refactoring
 
@@ -54,8 +53,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- Adds comma-space to letter keys functionality.
-- Adds question mark and exclamation point followed by space to capital letter keys functionality.
+- Comma-space to letter keys functionality.
+- Question mark and exclamation point followed by space to capital letter keys functionality.
 
 ### 🎨 Design Changes
 
@@ -66,9 +65,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐛 Bug Fixes
 
-- Fixes an issue where the select keyboard button wouldn't be able to be long held after an initial button is pressed.
-- Fixes an issue where canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
-- Fixes an issue where the double space period shortcut is triggered without intent.
+- The select keyboard button wouldn't be able to be long held after an initial button is pressed.
+- Canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
+- The double space period shortcut was being triggered without intent.
 
 ### ♻️ Code Refactoring
 
