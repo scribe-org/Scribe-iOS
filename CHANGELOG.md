@@ -25,16 +25,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
-- Adds baseline noun, verb, translation and preposition data for the new keyboards.
+- Adds baseline noun, verb, translation and preposition data for the new keyboards and adds more data to those already included:
 
+  - German:
   - French:
   - Portuguese:
   - Russian:
+  - Spanish:
   - Swedish:
-
-- Adds more entries to German.
-
-- Adds more entries to Spanish.
 
 ### 🐛 Bug Fixes
 
