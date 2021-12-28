@@ -17,18 +17,11 @@ Scribe annotates nouns in the preview bar according to the following conventions
 
 - Feminine: colored red and marked with (F)
 - Masculine: colored blue and marked with (M)
+- Common: colored purple and marked with (C)
 - Neutral: colored green and marked with (N)
 - Plural: colored orange and marked with (PL)
 - More than one: marked with all their forms
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
 
-Being fully open source, the Scribe team loves to get both feedback and contributions.
-
-- Want to suggest our next language?
-- Have an idea for a new feature?
-- Notice something's missing?
-- Want to learn how to add data to Scribe?
-- Interested in contributing to Scribe to help us make the best keyboards for language learners?
-
-Please don't hesitate to visit us at https://github.com/scribe-org/Scribe-iOS!
+Being fully open source, the Scribe team loves to get both feedback and contributions. Please don't hesitate to visit us at https://github.com/scribe-org/Scribe-iOS!
