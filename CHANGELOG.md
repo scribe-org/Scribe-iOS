@@ -49,7 +49,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Combines all the space bar logic into one and renames the key based on the keyboard.
 
-# Scribe 1.0.1
+# Scribe 1.0.1 (December 4th, 2021)
 
 ### ✨ New Features
 
@@ -77,7 +77,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Moved the contribution guidelines to the main directory.
 
-# Scribe 1.0.0
+# Scribe 1.0.0 (November 30th, 2021)
 
 ### MVP release of Scribe - Language Keyboards
 
