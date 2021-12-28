@@ -1,1 +1,1 @@
-learning,chat,messaging,type,write,email,dictionary,grammar,translation,conjugation,german,spanish
+learn,learning,practice,dictionary,grammar,translate,conjugate,german,spanish,russian,french,message
