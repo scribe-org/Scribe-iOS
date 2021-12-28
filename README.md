@@ -6,6 +6,7 @@
 
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![iOS 13.0+](https://img.shields.io/badge/iOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+[![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
