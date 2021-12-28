@@ -35,17 +35,17 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
-<details><summary><strong>iPhone 6.5" version (only works on mobile)</strong></summary>
-<p>
+#### iPhone 6.5" version
 
 https://user-images.githubusercontent.com/24387426/147608257-3e87f20e-328d-466d-a410-c6c44b24d0f8.mp4
 
-</p>
-</details>
-
-#### iPad Pro 4th gen version
+<details><summary><strong>iPad Pro 4th gen version</strong></summary>
+<p>
 
 https://user-images.githubusercontent.com/24387426/147608312-0818cdd0-a5b6-46c4-97bc-2545f81044b2.mp4
+
+</p>
+</details>
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
