@@ -23,12 +23,13 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 - [Preview Videos](#preview-videos)
 - [Setup](#setup)
 - [Supported Languages](#supported-languages)
-- [Features](#features)
+- [Keyboard Features](#features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
-  - [Keyboard Functionality](#keyboard-functionality)
+  - [Functionality](#functionality)
+- [Language Practice](#language-practice)
 - [To-Do](#to-do)
 
 # Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
@@ -116,11 +117,11 @@ Scribe annotates nouns in the preview bar according to the following conventions
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
 
-### • Keyboard Functionality [`⇧`](#contents) <a id="keyboard-functionality"></a>
+### • Functionality [`⇧`](#contents) <a id="functionality"></a>
 
 The goal is for Scribe to have all the functionality of system keyboards. See the [Base Keyboard Features project](https://github.com/scribe-org/Scribe-iOS/projects/6) if interested in helping.
 
-<details><summary><strong>Current and WIP features</strong></summary>
+<details><summary><strong>Current features</strong></summary>
 <p>
 
 - iPhone and iPad support
@@ -135,6 +136,10 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 </p>
 </details>
+
+# Language Practice [`⇧`](#contents) <a id="language-practice"></a>
+
+A future feature of Scribe is language practice within the app itself. Scribe presents users with information that is directly relevant to their current struggles with a second language. This information can be saved in-app and used to create personalized lessons such as flash cards to reinforce the information that Scribe has provided. Work on this feature will be completed in the [language practice project](https://github.com/scribe-org/Scribe-iOS/projects/7).
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 
