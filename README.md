@@ -23,7 +23,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 - [Preview Videos](#preview-videos)
 - [Setup](#setup)
 - [Supported Languages](#supported-languages)
-- [Keyboard Features](#features)
+- [Keyboard Features](#keyboard-features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
@@ -76,7 +76,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 `†` Only for languages for which preposition annotation is needed.
 
-# Features [`⇧`](#contents) <a id="features"></a>
+# Keyboard Features [`⇧`](#contents) <a id="keyboard-features"></a>
 
 Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These keys allow for words to be queried and inserted into the text field followed by a space.
 
