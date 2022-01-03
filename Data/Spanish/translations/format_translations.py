@@ -3,9 +3,6 @@ Format Translations
 -------------------
 
 Formats the translations queried from Wikidata using queryTranslations.sparql.
-
-Note: first go into translationsQueried.json and do a find and replace of:
-<"verb", "word": "> with <"verb", "word": "to > to differentiate verbs.
 """
 
 import collections
@@ -14,7 +11,7 @@ import json
 from tqdm.auto import tqdm
 from transformers import MarianMTModel, MarianTokenizer
 
-with open("translationsQueried.json") as f:
+with open("./../translationsQueried.json") as f:
     translations_list = json.load(f)
 
 words = [translation_vals["word"] for translation_vals in translations_list]

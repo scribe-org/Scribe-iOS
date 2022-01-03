@@ -27,7 +27,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Adds baseline noun, verb, translation and preposition data for the new keyboards and adds more data to those already included:
 
-  - German:
+  - German: corrected many prepositions
   - French:
   - Portuguese:
   - Russian:

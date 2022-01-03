@@ -1,0 +1,17 @@
+{
+  "в": "Akk/Loc/Nom/Pre",
+  "вокруг": "Gen",
+  "въ": "Akk/Loc/Nom/Pre",
+  "для": "Gen",
+  "за": "Akk/Ins/Nom",
+  "из": "Gen",
+  "к": "Dat",
+  "на": "Akk/Pre",
+  "около": "Gen",
+  "от": "Gen",
+  "по": "Akk/Dat/Pre",
+  "под": "Akk/Ins",
+  "после": "Gen",
+  "с": "Ins",
+  "съ": "Ins"
+}

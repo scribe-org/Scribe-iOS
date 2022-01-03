@@ -58,10 +58,12 @@ for prep_vals in prepositions_list:
                     prep_vals["case"]
                 )
 
-        elif "case" not in prep_vals.keys():
+        elif (
+            "case" not in prep_vals.keys() and prep_vals["preposition"] != "a"
+        ):  # à is the correct preposition
             prepositions_formatted[prep_vals["preposition"]] = ""
 
-for k in prepositions_formatted.keys():
+for k in prepositions_formatted:
     prepositions_formatted[k] = order_annotations(prepositions_formatted[k])
 
 prepositions_formatted = collections.OrderedDict(sorted(prepositions_formatted.items()))

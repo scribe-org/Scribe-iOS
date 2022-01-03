@@ -18,8 +18,10 @@ def map_genders(wikidata_gender):
     """
     if wikidata_gender == "masculine":
         return "M"
-    if wikidata_gender == "feminine":
+    elif wikidata_gender == "feminine":
         return "F"
+    else:
+        return ""
 
 
 def order_annotations(annotation):
@@ -92,10 +94,11 @@ for noun_vals in nouns_list:
 
         # Plural is same as singular.
         else:
-            nouns_formatted[noun_vals["singular"]]["plural"] = noun_vals["plural"]
-            nouns_formatted[noun_vals["singular"]]["form"] = (
-                nouns_formatted[noun_vals["singular"]]["form"] + "/PL"
-            )
+            if "singular" in noun_vals.keys():
+                nouns_formatted[noun_vals["singular"]]["plural"] = noun_vals["plural"]
+                nouns_formatted[noun_vals["singular"]]["form"] = (
+                    nouns_formatted[noun_vals["singular"]]["form"] + "/PL"
+                )
 
 for k in nouns_formatted.keys():
     nouns_formatted[k]["form"] = order_annotations(nouns_formatted[k]["form"])
