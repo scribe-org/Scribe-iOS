@@ -12,7 +12,7 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-### Scribe language keyboards for iOS
+### Language learning keyboards for iOS
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
 
@@ -21,8 +21,8 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 # **Contents**<a id="contents"></a>
 
 - [Preview Videos](#preview-videos)
-- [Setup](#setup)
 - [Supported Languages](#supported-languages)
+- [Setup](#setup)
 - [Keyboard Features](#keyboard-features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
@@ -50,15 +50,6 @@ https://user-images.githubusercontent.com/24387426/147608312-0818cdd0-a5b6-46c4-
 
 The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
 
-# Setup [`⇧`](#contents) <a id="setup"></a>
-
-Users access Scribe language keyboards through the following:
-
-- Download Scribe from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
-- Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
-- Select Scribe and choose from the available language keyboards
-- When typing press `🌐` to select keyboards
-
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
 The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
@@ -75,6 +66,15 @@ The Scribe team has interest in creating keyboards for all languages of interest
 `*` Given the current **`beta`** status where words are machine translated.
 
 `†` Only for languages for which preposition annotation is needed.
+
+# Setup [`⇧`](#contents) <a id="setup"></a>
+
+Users access Scribe language keyboards through the following:
+
+- Download Scribe from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+- Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
+- Select Scribe and choose from the available language keyboards
+- When typing press `🌐` to select keyboards
 
 # Keyboard Features [`⇧`](#contents) <a id="keyboard-features"></a>
 
