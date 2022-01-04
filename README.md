@@ -54,18 +54,20 @@ The App Store videos, images and text can be found in [Resources/AppStore](https
 
 The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
 
-| Language   |   Nouns | Verbs | Translations\* | Prepositions† |
-| :--------- | ------: | ----: | -------------: | ------------: |
-| French     |  14,246 | 1,236 |         70,702 |            NA |
-| German     |  27,125 | 3,047 |         70,702 |           188 |
-| Portuguese |   4,518 |   152 |         70,702 |            NA |
-| Russian    | 194,389 |    11 |         70,702 |            15 |
-| Spanish    |   8,130 |    65 |         70,702 |            NA |
-| Swedish    |  41,102 | 4,133 |         70,702 |            NA |
+| Language    |   Nouns | Verbs | Translations\* | Prepositions† |
+| :---------- | ------: | ----: | -------------: | ------------: |
+| French‡     |  14,246 | 1,236 |         67,609 |            NA |
+| German      |  27,125 | 3,047 |         67,609 |           188 |
+| Portuguese‡ |   4,518 |   152 |         67,609 |            NA |
+| Russian‡    | 194,389 |    11 |         67,609 |            15 |
+| Spanish     |   8,130 |    65 |         67,609 |            NA |
+| Swedish‡    |  41,102 | 4,133 |         67,609 |            NA |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
 `†` Only for languages for which preposition annotation is needed.
+
+`‡` Included in the next release of Scribe.
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
