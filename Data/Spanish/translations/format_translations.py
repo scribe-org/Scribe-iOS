@@ -11,7 +11,7 @@ import json
 from tqdm.auto import tqdm
 from transformers import MarianMTModel, MarianTokenizer
 
-with open("./../translationsQueried.json") as f:
+with open("../../translationsQueried.json") as f:
     translations_list = json.load(f)
 
 words = [translation_vals["word"] for translation_vals in translations_list]
@@ -19,14 +19,12 @@ words = list(set(words))
 
 translations_formatted = {}
 
-MODEL_NAME = "Helsinki-NLP/opus-mt-en-roa"
+MODEL_NAME = "Helsinki-NLP/opus-mt-en-es"
 tokenizer = MarianTokenizer.from_pretrained(MODEL_NAME)
 model = MarianMTModel.from_pretrained(MODEL_NAME)
 
 for w in tqdm(words, desc="Words translated", unit="word",):
-    translated = model.generate(
-        **tokenizer(">>esp<< " + w, return_tensors="pt", padding=True)
-    )
+    translated = model.generate(**tokenizer(w, return_tensors="pt", padding=True))
     translations_formatted[w] = tokenizer.decode(
         translated[0], skip_special_tokens=True
     )

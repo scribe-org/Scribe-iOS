@@ -19,7 +19,7 @@ words = list(set(words))
 
 translations_formatted = {}
 
-MODEL_NAME = "Helsinki-NLP/opus-mt-en-de"
+MODEL_NAME = "Helsinki-NLP/opus-mt-en-fr"
 tokenizer = MarianTokenizer.from_pretrained(MODEL_NAME)
 model = MarianMTModel.from_pretrained(MODEL_NAME)
 
@@ -32,7 +32,7 @@ for w in tqdm(words, desc="Words translated", unit="word",):
 translations_formatted = collections.OrderedDict(sorted(translations_formatted.items()))
 
 with open(
-    "../../../Keyboards/LanguageKeyboards/German/Data/translations.json",
+    "../../../Keyboards/LanguageKeyboards/French/Data/translations.json",
     "w",
     encoding="utf-8",
 ) as f:
