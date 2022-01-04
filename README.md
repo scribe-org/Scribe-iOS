@@ -67,7 +67,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 `†` Only for languages for which preposition annotation is needed.
 
-`‡` Included in the next release of Scribe.
+`‡` Included in the [next release](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) of Scribe.
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
