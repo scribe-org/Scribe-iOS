@@ -56,12 +56,12 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 | Language    |   Nouns | Verbs | Translations\* | Prepositions† |
 | :---------- | ------: | ----: | -------------: | ------------: |
-| French‡     |  14,246 | 1,236 |         67,609 |            NA |
+| French‡     |  14,246 | 1,236 |         67,609 |               |
 | German      |  27,125 | 3,047 |         67,609 |           188 |
-| Portuguese‡ |   4,518 |   152 |         67,609 |            NA |
+| Portuguese‡ |   4,518 |   152 |         67,609 |               |
 | Russian‡    | 194,389 |    11 |         67,609 |            15 |
-| Spanish     |   8,130 |    65 |         67,609 |            NA |
-| Swedish‡    |  41,102 | 4,133 |         67,609 |            NA |
+| Spanish     |   8,130 |    65 |         67,609 |               |
+| Swedish‡    |  41,102 | 4,133 |         67,609 |               |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
@@ -80,7 +80,7 @@ Users access Scribe language keyboards through the following:
 
 # Keyboard Features [`⇧`](#contents) <a id="keyboard-features"></a>
 
-Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural`. These keys allow for words to be queried and inserted into the text field followed by a space.
+Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural` in the keyboard's language. These keys allow for words to be queried and inserted into the text field followed by a space.
 
 **Current features include:**
 
