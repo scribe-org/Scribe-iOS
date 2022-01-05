@@ -289,6 +289,11 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateShiftLeftBtn: UIButton!
   @IBOutlet var conjugateShiftRightBtn: UIButton!
 
+  @IBOutlet var conjugateBtn11: UIButton!
+  @IBOutlet var conjugateBtn21: UIButton!
+  @IBOutlet var conjugateBtn12: UIButton!
+  @IBOutlet var conjugateBtn22: UIButton!
+
   /// Sets up all buttons that are associated with the conjugation display.
   func setConjugationBtns() {
     setBtn(btn: conjugateBtnFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
