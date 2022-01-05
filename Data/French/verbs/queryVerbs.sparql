@@ -3,8 +3,6 @@
 # Note that there are two different categorizations of verbs given properties.
 
 SELECT ?infinitive ?gerund
-       ?pastParticipleSingularMale ?pastParticipleSingularFemale
-       ?pastParticiplePluralMale ?pastParticiplePluralFemale
        ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
        ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
        ?preteriteFPS ?preteriteSPS ?preteriteTPS
