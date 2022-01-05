@@ -23,6 +23,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Improves the display of the caps lock key by making its background the key pressed color.
 - Updates the App Store images and videos.
+- Scribe command titles are now in the keyboard language for a more immersive experience.
 
 ### 🗃️ Data Added
 

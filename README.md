@@ -56,12 +56,12 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 | Language    |   Nouns | Verbs | Translations\* | Prepositions† |
 | :---------- | ------: | ----: | -------------: | ------------: |
-| French‡     |  14,246 | 1,236 |         67,609 |               |
+| French‡     |  14,246 | 1,236 |         67,609 |             - |
 | German      |  27,125 | 3,047 |         67,609 |           188 |
-| Portuguese‡ |   4,518 |   152 |         67,609 |               |
+| Portuguese‡ |   4,518 |   152 |         67,609 |             - |
 | Russian‡    | 194,389 |    11 |         67,609 |            15 |
-| Spanish     |   8,130 |    65 |         67,609 |               |
-| Swedish‡    |  41,102 | 4,133 |         67,609 |               |
+| Spanish     |   8,130 |    65 |         67,609 |             - |
+| Swedish‡    |  41,102 | 4,133 |         67,609 |             - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
