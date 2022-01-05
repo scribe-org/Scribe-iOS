@@ -331,7 +331,7 @@ class KeyboardViewController: UIInputViewController {
                            conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
 
     for lbl in conjugationLbls {
-      lbl!.setTitle("", for: .normal) // replaced with conjution labels
+      lbl!.setTitle("  Label", for: .normal) // replaced with conjution labels
       lbl!.backgroundColor = UIColor.clear
       lbl!.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
       lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
