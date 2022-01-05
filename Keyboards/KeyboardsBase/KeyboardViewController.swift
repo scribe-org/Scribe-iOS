@@ -331,8 +331,8 @@ class KeyboardViewController: UIInputViewController {
                            conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
 
     for lbl in conjugationLbls {
-      lbl!.setTitle("  " + "Label", for: .normal) // replaced with conjution labels
       lbl!.backgroundColor = UIColor.clear
+      lbl!.setTitleColor(specialKeyColor, for: .normal)
       lbl!.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
       lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
       lbl!.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
@@ -423,6 +423,7 @@ class KeyboardViewController: UIInputViewController {
   func setConjugationState() {
     if controllerLanguage == "German" {
       previewBar?.text = deGetConjugationTitle()
+      deGetConjugationLabels()
 
       tenseFPS = deGetConjugationState() + "FPS"
       tenseSPS = deGetConjugationState() + "SPS"
@@ -432,6 +433,7 @@ class KeyboardViewController: UIInputViewController {
       tenseTPP = deGetConjugationState() + "TPP"
     } else if controllerLanguage == "Spanish" {
       previewBar?.text = esGetConjugationTitle()
+      esGetConjugationLabels()
 
       tenseFPS = esGetConjugationState() + "FPS"
       tenseSPS = esGetConjugationState() + "SPS"
@@ -440,6 +442,13 @@ class KeyboardViewController: UIInputViewController {
       tenseSPP = esGetConjugationState() + "SPP"
       tenseTPP = esGetConjugationState() + "TPP"
     }
+
+    conjugateLblFPS!.setTitle("  " + labelFPS, for: .normal)
+    conjugateLblSPS!.setTitle("  " + labelSPS, for: .normal)
+    conjugateLblTPS!.setTitle("  " + labelTPS, for: .normal)
+    conjugateLblFPP!.setTitle("  " + labelFPP, for: .normal)
+    conjugateLblSPP!.setTitle("  " + labelSPP, for: .normal)
+    conjugateLblTPP!.setTitle("  " + labelTPP, for: .normal)
 
     let allTenses = [tenseFPS, tenseSPS, tenseTPS, tenseFPP, tenseSPP, tenseTPP]
     let allConjugationBtns = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP]

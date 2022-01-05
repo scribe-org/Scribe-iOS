@@ -28,6 +28,23 @@ var tenseFPP: String = ""
 var tenseSPP: String = ""
 var tenseTPP: String = ""
 
+var labelFPS: String = ""
+var labelSPS: String = ""
+var labelTPS: String = ""
+var labelFPP: String = ""
+var labelSPP: String = ""
+var labelTPP: String = ""
+
+var tenseTopLeft: String = ""
+var tenseBottomLeft: String = ""
+var tenseTopRight: String = ""
+var tenseBottomRight: String = ""
+
+var labelTopLeft: String = ""
+var labelBottomLeft: String = ""
+var labelTopRight: String = ""
+var labelBottomRight: String = ""
+
 let languagesWithCapitalizedNouns = ["German"]
 
 var verbToConjugate: String = ""
@@ -41,6 +58,15 @@ var isAlreadyPluralState: Bool = false
 let allPrompts: [String] = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 
 // MARK: German conjugation command variables
+
+func deGetConjugationLabels() {
+  labelFPS = "ich"
+  labelSPS = "du"
+  labelTPS = "er/sie/es"
+  labelFPP = "wir"
+  labelSPP = "ihr"
+  labelTPP = "sie/Sie"
+}
 
 /// What the conjugation state is for the conjugate feature.
 enum DEConjugationState {
@@ -101,6 +127,15 @@ func deConjugationStateRight() {
 }
 
 // MARK: Spanish conjugation command variables
+
+func esGetConjugationLabels() {
+  labelFPS = "yo"
+  labelSPS = "tú"
+  labelTPS = "él/ella/Ud."
+  labelFPP = "nosotros"
+  labelSPP = "vosotros"
+  labelTPP = "ellos/ellas/Uds."
+}
 
 /// What the conjugation state is for the conjugate feature.
 enum ESConjugationState {
