@@ -99,6 +99,7 @@ SELECT DISTINCT ?nominativeSingular ?nominativePlural
   # Optional selection of genders.
   OPTIONAL {
     ?nounLexeme wdt:P5185 ?nounGender .
+    FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
   } .
 
   SERVICE wikibase:label {
