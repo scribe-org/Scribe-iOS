@@ -20,6 +20,7 @@ let conjugatePrompt: String = previewPromptSpacing + "Conjugate: "
 let conjugatePromptAndCursor: String = conjugatePrompt + previewCursor
 var getConjugation: Bool = false
 var conjugateView: Bool = false
+var conjugateAlternateView: Bool = false
 var tenseFPS: String = ""
 var tenseSPS: String = ""
 var tenseTPS: String = ""

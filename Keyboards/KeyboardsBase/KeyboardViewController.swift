@@ -160,6 +160,7 @@ class KeyboardViewController: UIInputViewController {
     btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
     btn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
     btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+    btn.isUserInteractionEnabled = true
   }
 
   /// Deactivates a button by removing key touch functions for their given actions and making it clear.
@@ -172,6 +173,7 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
     btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+    btn.isUserInteractionEnabled = false
   }
 
   /// Deletes in the proxy or preview bar given the current constraints.
@@ -306,6 +308,11 @@ class KeyboardViewController: UIInputViewController {
     setBtn(btn: conjugateShiftLeftBtn, color: keyColor, name: "shiftConjugateLeft", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", canCapitalize: false, isSpecial: false)
 
+    setBtn(btn: conjugateBtn11, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtn21, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtn12, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtn22, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
+
     if DeviceType.isPad {
       conjugateBtnFPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
       conjugateBtnSPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
@@ -316,20 +323,46 @@ class KeyboardViewController: UIInputViewController {
 
       conjugateShiftLeftBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
       conjugateShiftRightBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+
+      conjugateBtn11.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtn21.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtn12.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtn22.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
     }
   }
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
-    activateBtn(btn: conjugateBtnFPS)
-    activateBtn(btn: conjugateBtnSPS)
-    activateBtn(btn: conjugateBtnTPS)
-    activateBtn(btn: conjugateBtnFPP)
-    activateBtn(btn: conjugateBtnSPP)
-    activateBtn(btn: conjugateBtnTPP)
+    if conjugateAlternateView == false {
+      activateBtn(btn: conjugateBtnFPS)
+      activateBtn(btn: conjugateBtnSPS)
+      activateBtn(btn: conjugateBtnTPS)
+      activateBtn(btn: conjugateBtnFPP)
+      activateBtn(btn: conjugateBtnSPP)
+      activateBtn(btn: conjugateBtnTPP)
+
+      deactivateBtn(btn: conjugateBtn11)
+      deactivateBtn(btn: conjugateBtn21)
+      deactivateBtn(btn: conjugateBtn12)
+      deactivateBtn(btn: conjugateBtn22)
+    }
 
     activateBtn(btn: conjugateShiftLeftBtn)
     activateBtn(btn: conjugateShiftRightBtn)
+
+    if conjugateAlternateView == true {
+      activateBtn(btn: conjugateBtn11)
+      activateBtn(btn: conjugateBtn21)
+      activateBtn(btn: conjugateBtn12)
+      activateBtn(btn: conjugateBtn22)
+
+      deactivateBtn(btn: conjugateBtnFPS)
+      deactivateBtn(btn: conjugateBtnSPS)
+      deactivateBtn(btn: conjugateBtnTPS)
+      deactivateBtn(btn: conjugateBtnFPP)
+      deactivateBtn(btn: conjugateBtnSPP)
+      deactivateBtn(btn: conjugateBtnTPP)
+    }
   }
 
   /// Deactivates all buttons that are associated with the conjugation display.
@@ -343,6 +376,11 @@ class KeyboardViewController: UIInputViewController {
 
     deactivateBtn(btn: conjugateShiftLeftBtn)
     deactivateBtn(btn: conjugateShiftRightBtn)
+
+    deactivateBtn(btn: conjugateBtn11)
+    deactivateBtn(btn: conjugateBtn21)
+    deactivateBtn(btn: conjugateBtn12)
+    deactivateBtn(btn: conjugateBtn22)
   }
 
   /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
