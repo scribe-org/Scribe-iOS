@@ -2,7 +2,7 @@
 Format Translations
 -------------------
 
-Formats the translations queried from Wikidata using queryTranslations.sparql.
+Formats and translates the words queried from Wikidata using queryTranslations.sparql.
 """
 
 import collections
