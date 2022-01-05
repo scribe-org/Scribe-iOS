@@ -331,7 +331,7 @@ class KeyboardViewController: UIInputViewController {
                            conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
 
     for lbl in conjugationLbls {
-      lbl!.setTitle("  Label", for: .normal) // replaced with conjution labels
+      lbl!.setTitle("  " + "Label", for: .normal) // replaced with conjution labels
       lbl!.backgroundColor = UIColor.clear
       lbl!.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
       lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
@@ -1130,6 +1130,12 @@ class KeyboardViewController: UIInputViewController {
         } else {
           previewBar?.textColor = UIColor.previewBlueLightTheme
         }
+      } else if nounForm == "C" {
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+          previewBar?.textColor = UIColor.previewPurpleDarkTheme
+        } else {
+          previewBar?.textColor = UIColor.previewPurpleLightTheme
+        }
       } else if nounForm ==  "N" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
           previewBar?.textColor = UIColor.previewGreenDarkTheme
@@ -1198,6 +1204,12 @@ class KeyboardViewController: UIInputViewController {
               previewBar?.textColor = UIColor.previewBlueDarkTheme
             } else {
               previewBar?.textColor = UIColor.previewBlueLightTheme
+            }
+          } else if nounForm == "C" {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+              previewBar?.textColor = UIColor.previewPurpleDarkTheme
+            } else {
+              previewBar?.textColor = UIColor.previewPurpleLightTheme
             }
           } else if nounForm ==  "N" {
             if UITraitCollection.current.userInterfaceStyle == .dark {
