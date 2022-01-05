@@ -291,10 +291,24 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateShiftLeftBtn: UIButton!
   @IBOutlet var conjugateShiftRightBtn: UIButton!
 
-  @IBOutlet var conjugateBtn11: UIButton!
-  @IBOutlet var conjugateBtn21: UIButton!
-  @IBOutlet var conjugateBtn12: UIButton!
-  @IBOutlet var conjugateBtn22: UIButton!
+  @IBOutlet var conjugateBtnTL: UIButton!
+  @IBOutlet var conjugateBtnBL: UIButton!
+  @IBOutlet var conjugateBtnTR: UIButton!
+  @IBOutlet var conjugateBtnBR: UIButton!
+
+  // Labels for the conjugation view buttons.
+  // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
+  @IBOutlet var conjugateLblFPS: UIButton!
+  @IBOutlet var conjugateLblSPS: UIButton!
+  @IBOutlet var conjugateLblTPS: UIButton!
+  @IBOutlet var conjugateLblFPP: UIButton!
+  @IBOutlet var conjugateLblSPP: UIButton!
+  @IBOutlet var conjugateLblTPP: UIButton!
+
+  @IBOutlet var conjugateLblTL: UIButton!
+  @IBOutlet var conjugateLblBL: UIButton!
+  @IBOutlet var conjugateLblTR: UIButton!
+  @IBOutlet var conjugateLblBR: UIButton!
 
   /// Sets up all buttons that are associated with the conjugation display.
   func setConjugationBtns() {
@@ -308,10 +322,22 @@ class KeyboardViewController: UIInputViewController {
     setBtn(btn: conjugateShiftLeftBtn, color: keyColor, name: "shiftConjugateLeft", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", canCapitalize: false, isSpecial: false)
 
-    setBtn(btn: conjugateBtn11, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateBtn21, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateBtn12, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateBtn22, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtnTL, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtnBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtnTR, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtnBR, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
+
+    let conjugationLbls = [conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
+                           conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
+
+    for lbl in conjugationLbls {
+      lbl!.setTitle("", for: .normal) // replaced with conjution labels
+      lbl!.backgroundColor = UIColor.clear
+      lbl!.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
+      lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+      lbl!.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+      lbl!.isUserInteractionEnabled = false
+    }
 
     if DeviceType.isPad {
       conjugateBtnFPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
@@ -324,44 +350,40 @@ class KeyboardViewController: UIInputViewController {
       conjugateShiftLeftBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
       conjugateShiftRightBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
 
-      conjugateBtn11.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
-      conjugateBtn21.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
-      conjugateBtn12.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
-      conjugateBtn22.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnTL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnBL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnTR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+      conjugateBtnBR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
     }
   }
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
+    let conjugateViewElements = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP,
+                                 conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP]
+    let conjugateViewElementsAlt = [conjugateBtnTL, conjugateBtnBL, conjugateBtnTR, conjugateBtnBR,
+                                    conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
     if conjugateAlternateView == false {
-      activateBtn(btn: conjugateBtnFPS)
-      activateBtn(btn: conjugateBtnSPS)
-      activateBtn(btn: conjugateBtnTPS)
-      activateBtn(btn: conjugateBtnFPP)
-      activateBtn(btn: conjugateBtnSPP)
-      activateBtn(btn: conjugateBtnTPP)
+      for elem in conjugateViewElements {
+        activateBtn(btn: elem!)
+      }
 
-      deactivateBtn(btn: conjugateBtn11)
-      deactivateBtn(btn: conjugateBtn21)
-      deactivateBtn(btn: conjugateBtn12)
-      deactivateBtn(btn: conjugateBtn22)
+      for elem in conjugateViewElementsAlt {
+        deactivateBtn(btn: elem!)
+      }
     }
 
     activateBtn(btn: conjugateShiftLeftBtn)
     activateBtn(btn: conjugateShiftRightBtn)
 
     if conjugateAlternateView == true {
-      activateBtn(btn: conjugateBtn11)
-      activateBtn(btn: conjugateBtn21)
-      activateBtn(btn: conjugateBtn12)
-      activateBtn(btn: conjugateBtn22)
+      for elem in conjugateViewElements {
+        deactivateBtn(btn: elem!)
+      }
 
-      deactivateBtn(btn: conjugateBtnFPS)
-      deactivateBtn(btn: conjugateBtnSPS)
-      deactivateBtn(btn: conjugateBtnTPS)
-      deactivateBtn(btn: conjugateBtnFPP)
-      deactivateBtn(btn: conjugateBtnSPP)
-      deactivateBtn(btn: conjugateBtnTPP)
+      for elem in conjugateViewElementsAlt {
+        activateBtn(btn: elem!)
+      }
     }
   }
 
@@ -374,13 +396,27 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateBtnSPP)
     deactivateBtn(btn: conjugateBtnTPP)
 
+    deactivateBtn(btn: conjugateLblFPS)
+    deactivateBtn(btn: conjugateLblSPS)
+    deactivateBtn(btn: conjugateLblTPS)
+    deactivateBtn(btn: conjugateLblFPP)
+    deactivateBtn(btn: conjugateLblSPP)
+    deactivateBtn(btn: conjugateLblTPP)
+
     deactivateBtn(btn: conjugateShiftLeftBtn)
     deactivateBtn(btn: conjugateShiftRightBtn)
 
-    deactivateBtn(btn: conjugateBtn11)
-    deactivateBtn(btn: conjugateBtn21)
-    deactivateBtn(btn: conjugateBtn12)
-    deactivateBtn(btn: conjugateBtn22)
+    deactivateBtn(btn: conjugateBtnTL)
+    deactivateBtn(btn: conjugateBtnBL)
+    deactivateBtn(btn: conjugateBtnTR)
+    deactivateBtn(btn: conjugateBtnBR)
+
+    let conjugationLbls = [conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
+                           conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
+
+    for lbl in conjugationLbls {
+      lbl!.setTitle("", for: .normal)
+    }
   }
 
   /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
@@ -1075,7 +1111,7 @@ class KeyboardViewController: UIInputViewController {
 //      } else {
 //        previewBar?.textColor = UIColor.scribeBlueLightTheme
 //      }
-//      previewBar?.text = previewPromptSpacing + "(N) " + selectedWord!
+//      previewBar?.text = previewPromptSpacing + selectedWord!
 //      previewBar?.sizeToFit()
 //      invalidState = false
 //    } else {
@@ -1144,7 +1180,7 @@ class KeyboardViewController: UIInputViewController {
 //          } else {
 //            previewBar?.textColor = UIColor.scribeBlueLightTheme
 //          }
-//          previewBar?.text = previewPromptSpacing + "(N) " + lastWordTyped!
+//          previewBar?.text = previewPromptSpacing + lastWordTyped!
 //          previewBar?.sizeToFit()
 //          invalidState = false
 //        } else {

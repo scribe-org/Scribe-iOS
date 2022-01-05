@@ -43,7 +43,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The keyboard wouldn't always be letter keys when switched to.
 - The double space period shortcut wasn't possible after certain special characters and numbers.
 - More than one singular gender wasn't being assigned to German nouns in the formatting process.
-<!-- - Removes noun-gender annotation for given names to avoid misgendering people. -->
+- Removes noun-gender annotation for given names to avoid misgendering people.
 
 ### ♻️ Code Refactoring
 
