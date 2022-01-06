@@ -343,7 +343,7 @@ public enum RussianKeyboardConstants {
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
     ["$", "€", "£", "¥", "±", "·", "`", "[", "]", "{", "}", "return"],
-    ["123", "§", "|", "~", "...",  "^", "\\", "<", ">", "!", "?", "123"],
+    ["123", "§", "|", "~", "...", "^", "\\", "<", ">", "!", "?", "123"],
     ["АБВ", "selectKeyboard", "space", "АБВ", "hideKeyboard"] // "undoArrow"
   ]
 
@@ -467,7 +467,7 @@ public class SwedishKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "i", "o", "u", "ä", "ö",  "s", "c", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "ä", "ö", "s", "c", "n"]
   static let keysWithAlternatesLeft = ["a", "e", "s", "c"]
   static let keysWithAlternatesRight = ["i", "o", "u", "ä", "ö", "n"]
 
