@@ -2,14 +2,14 @@
 # Enter this query at https://query.wikidata.org/.
 
 SELECT DISTINCT ?infinitive ?gerund
-       ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
-       ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
-       ?pastPerfectFPS ?pastPerfectSPS ?pastPerfectTPS
-       ?pastPerfectFPP ?pastPerfectSPP ?pastPerfectTPP
-       ?pastImperfectFPS ?pastImperfectSPS ?pastImperfectTPS
-       ?pastImperfectFPP ?pastImperfectSPP ?pastImperfectTPP
-       ?futureSimpleFPS ?futureSimpleSPS ?futureSimpleTPS
-       ?futureSimpleFPP ?futureSimpleSPP ?futureSimpleTPP WHERE {
+                ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
+                ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
+                ?pastPerfectFPS ?pastPerfectSPS ?pastPerfectTPS
+                ?pastPerfectFPP ?pastPerfectSPP ?pastPerfectTPP
+                ?pastImperfectFPS ?pastImperfectSPS ?pastImperfectTPS
+                ?pastImperfectFPP ?pastImperfectSPP ?pastImperfectTPP
+                ?futureSimpleFPS ?futureSimpleSPS ?futureSimpleTPS
+                ?futureSimpleFPP ?futureSimpleSPP ?futureSimpleTPP WHERE {
 
   ?lexeme a ontolex:LexicalEntry ;
             dct:language wd:Q5146 ;

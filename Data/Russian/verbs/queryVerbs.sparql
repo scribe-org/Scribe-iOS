@@ -2,9 +2,9 @@
 # Enter this query at https://query.wikidata.org/.
 
 SELECT DISTINCT ?infinitive
-       ?presentFPS ?presentSPS ?presentTPS
-       ?presentFPP ?presentSPP ?presentTPP
-       ?pastFeminine ?pastMasculine ?pastNeutral ?pastPlural WHERE {
+                ?presentFPS ?presentSPS ?presentTPS
+                ?presentFPP ?presentSPP ?presentTPP
+                ?pastFeminine ?pastMasculine ?pastNeutral ?pastPlural WHERE {
   ?lexeme a ontolex:LexicalEntry ;
             dct:language wd:Q7737 ;
             wikibase:lexicalCategory wd:Q24905 .
