@@ -57,6 +57,8 @@ var yAlternateKeys = [String]()
 var äAlternateKeys = [String]()
 var öAlternateKeys = [String]()
 var sAlternateKeys = [String]()
+var lAlternateKeys = [String]()
+var zAlternateKeys = [String]()
 var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
 var nAlternateKeys = [String]()
@@ -112,6 +114,69 @@ func checkLandscapeMode() {
   } else if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
     isLandscapeView = false
   }
+}
+
+// MARK: English interface variables
+
+public enum EnglishKeyboardConstants {
+  // Keyboard key layouts.
+  static let letterKeysPhone = [
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
+    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let numberKeysPhone = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+    ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
+    ["#+=", ".", ",", "?", "!", "'", "delete"],
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let symbolKeysPhone = [
+    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
+    ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
+    ["123", ".", ",", "?", "!", "'", "delete"],
+    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+  ]
+
+  static let letterKeysPad = [
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
+    ["q", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
+    ["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let numberKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
+    ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"],
+    ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+  ]
+
+  static let symbolKeysPad = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
+    ["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"],
+    ["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"],
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+  ]
+
+  // Alternate key vars.
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "l", "z", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "s", "z", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "l", "n"]
+
+  static let aAlternateKeys = ["à", "á", "â", "ä", "æ", "ã", "å", "ā"]
+  static let eAlternateKeys = ["è", "é", "ê", "ë", "ē", "ė", "ę"]
+  static let iAlternateKeys = ["ì", "į", "ī", "í", "ï", "î"]
+  static let oAlternateKeys = ["õ", "ō", "ø", "œ", "ó", "ò", "ö", "ô"]
+  static let uAlternateKeys = ["ū", "ú", "ù", "ü", "û"]
+  static let sAlternateKeys = ["ś", "š"]
+  static let lAlternateKeys = ["ł"]
+  static let zAlternateKeys = ["ž", "ź", "ż"]
+  static let cAlternateKeys = ["ç", "ć", "č"]
+  static let nAlternateKeys = ["ń", "ñ"]
 }
 
 // MARK: French interface variables
@@ -224,17 +289,19 @@ public enum GermanKeyboardConstants {
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "c", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "y", "s", "c"]
-  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "l", "z", "c", "n"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "s", "z", "c"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "l", "n"]
 
-  static let aAlternateKeys = ["à", "á", "â", "æ", "ã", "å", "ā"]
-  static let eAlternateKeys = ["é", "è", "ê", "ë", "ė"]
+  static let aAlternateKeys = ["à", "á", "â", "æ", "ã", "å", "ā", "ą"]
+  static let eAlternateKeys = ["é", "è", "ê", "ë", "ė", "ę"]
   static let iAlternateKeys = ["ì", "ī", "í", "î", "ï"]
   static let oAlternateKeys = ["ō", "ø", "œ", "õ", "ó", "ò", "ô"]
   static let uAlternateKeys = ["ū", "ú", "ù", "û"]
   static let yAlternateKeys = ["ÿ"]
   static let sAlternateKeys = ["ß", "ś", "š"]
+  static let lAlternateKeys = ["ł"]
+  static let zAlternateKeys = ["ź", "ż"]
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let nAlternateKeys = ["ń", "ñ"]
 }
