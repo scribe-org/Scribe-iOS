@@ -16,9 +16,11 @@ SELECT DISTINCT ?infinitive ?gerund
             wikibase:lexicalCategory wd:Q24905 .
 
   # Infinitive (required) and gerund
+  VALUES ?infTypes { wd:Q179230 wd:Q64003131 }
   ?lexeme ontolex:lexicalForm ?infinitiveForm .
   ?infinitiveForm ontolex:representation ?infinitive ;
-                  wikibase:grammaticalFeature wd:Q64003131 ;
+                  wikibase:grammaticalFeature ?inf ;
+  FILTER(?inf = ?infTypes)
 
   OPTIONAL {
       ?lexeme ontolex:lexicalForm ?gerundForm .
