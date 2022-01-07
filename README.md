@@ -4,13 +4,24 @@
 
 ---
 
+<!---
+[![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
+--->
+
+[![last commit](https://img.shields.io/github/last-commit/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/commits/)
+[![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/issues)
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![iOS 13.0+](https://img.shields.io/badge/iOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+[![iOS 13.0+](https://img.shields.io/badge/iPadOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+
+<!---
+Also available on [Android](https://github.com/scribe-org/Scribe-Android).
+--->
 
 ### Language learning keyboards for iOS
 
@@ -154,7 +165,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 <div align="center">
   <br>
-  <a href="https://tech-news.wikimedia.de/en/homepage/"><img height="150" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikimedia_deutschland_logo.png" alt="Wikimedia Tech News"></a>
+  <a href="https://tech-news.wikimedia.de/en/homepage/"><img width="300" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikimedia_deutschland_logo.png" alt="Wikimedia Tech News"></a>
   <br>
 </div>
 --->
