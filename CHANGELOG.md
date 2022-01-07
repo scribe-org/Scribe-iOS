@@ -13,28 +13,28 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🌐 New Keyboards
 
 - Adds Russian, French, Portuguese and Swedish keyboards.
-- Verb conjugation support is currently limited, but noun annotation, plural and `beta` translation are available.
+
+### 🗃️ Data Added
+
+- Adds baseline noun, verb, translation and preposition data for the new keyboards and adds more data to those already included:
+
+  - German (Additions): 401 nouns, 78 verbs, corrected many prepositions
+  - French (New keyboard): 15,710 nouns, 1,241 verbs (mostly infinitives), 67,609 translations
+  - Portuguese (New keyboard): 4,530 nouns, 188 verbs, 67,609 translations
+  - Russian (New keyboard): 194,389 nouns, 11 verbs, 12 prepositions, 67,609 translations
+  - Spanish (Additions): 180 nouns, 22 verbs
+  - Swedish (New keyboard): 41,102 nouns, 4,133 verbs, 67,609 translations
 
 ### ✨ New Features
 
-- Hold-to-select functionality for symbols.
+- Hold-to-select functionality for symbol keys.
 
 ### 🎨 Design Changes
 
 - Improves the display of the caps lock key by making its background the key pressed color.
 - Updates the App Store images and videos.
 - Scribe command titles are now in the keyboard language for a more immersive experience.
-
-### 🗃️ Data Added
-
-- Adds baseline noun, verb, translation and preposition data for the new keyboards and adds more data to those already included:
-
-  - German: corrected many prepositions
-  - French:
-  - Portuguese:
-  - Russian:
-  - Spanish:
-  - Swedish:
+- Translate for Russian switches to an English keyboard.
 
 ### 🐛 Bug Fixes
 
@@ -45,6 +45,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The double space period shortcut wasn't possible after certain special characters and numbers.
 - More than one singular gender wasn't being assigned to German nouns in the formatting process.
 - Removes noun-gender annotation for given names to avoid misgendering people.
+- Users were not allowed to pass upper-case arguments to translate and conjugate.
+- The keyboard keys are capitalized if the user deletes at the start of the preview bar.
 
 ### ♻️ Code Refactoring
 
@@ -90,14 +92,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Keyboards for German and Spanish.
 
-### ✨ Features
-
-- Keyboard extensions that can be used in any app.
-- Annotation of words in the preview bar including the genders of nouns and cases that follow prepositions.
-- Basic English to keyboard language translations.
-- Querying the plurals of nouns.
-- Conjugations of verbs.
-
 ### 🗃️ Data
 
 - Wikidata WDQS queries saved so that data can be updated before releases.
@@ -108,6 +102,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Adds baseline noun, verb, translation and preposition data for the new keyboards.
   - German: 27K+ nouns, 3K+ verbs, 65K+ translations, 190 prepositions
   - Spanish: 8K+ nouns, 65 verbs, 65K+ translations
+
+### ✨ Features
+
+- Keyboard extensions that can be used in any app.
+- Annotation of words in the preview bar including the genders of nouns and cases that follow prepositions.
+- Basic English to keyboard language translations.
+- Querying the plurals of nouns.
+- Conjugations of verbs.
 
 ### 🎨 Design
 
