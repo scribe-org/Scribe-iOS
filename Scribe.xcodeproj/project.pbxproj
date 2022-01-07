@@ -86,6 +86,19 @@
 		D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D19474C42740295300AF6EA5 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D19474C32740295300AF6EA5 /* prepositions.json */; };
 		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D1D880CC27860CFA00407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880C927860CFA00407050 /* translations.json */; };
+		D1D880CD27860CFA00407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880CA27860CFA00407050 /* verbs.json */; };
+		D1D880CE27860CFA00407050 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880CB27860CFA00407050 /* nouns.json */; };
+		D1D880D227860D4700407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880CF27860D4600407050 /* verbs.json */; };
+		D1D880D327860D4700407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D027860D4700407050 /* translations.json */; };
+		D1D880D427860D4700407050 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D127860D4700407050 /* nouns.json */; };
+		D1D880D927860D6300407050 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D527860D6300407050 /* nouns.json */; };
+		D1D880DA27860D6300407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D627860D6300407050 /* verbs.json */; };
+		D1D880DB27860D6300407050 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D727860D6300407050 /* prepositions.json */; };
+		D1D880DC27860D6300407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880D827860D6300407050 /* translations.json */; };
+		D1D880E027860D7B00407050 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DD27860D7B00407050 /* nouns.json */; };
+		D1D880E127860D7B00407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DE27860D7B00407050 /* translations.json */; };
+		D1D880E227860D7B00407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DF27860D7B00407050 /* verbs.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +211,19 @@
 		D190B29027426F4900705659 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		D1D880C927860CFA00407050 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D1D880CA27860CFA00407050 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D1D880CB27860CFA00407050 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D1D880CF27860D4600407050 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D1D880D027860D4700407050 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D1D880D127860D4700407050 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D1D880D527860D6300407050 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D1D880D627860D6300407050 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D1D880D727860D6300407050 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D1D880D827860D6300407050 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D1D880DD27860D7B00407050 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D1D880DE27860D7B00407050 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D1D880DF27860D7B00407050 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +353,9 @@
 		D109A225275B68F4005E2271 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D1D880CB27860CFA00407050 /* nouns.json */,
+				D1D880C927860CFA00407050 /* translations.json */,
+				D1D880CA27860CFA00407050 /* verbs.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -334,6 +363,9 @@
 		D109A226275B68FD005E2271 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D1D880D127860D4700407050 /* nouns.json */,
+				D1D880D027860D4700407050 /* translations.json */,
+				D1D880CF27860D4600407050 /* verbs.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -341,6 +373,10 @@
 		D10D36C5275A1B8F00A2EBF1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D1D880D527860D6300407050 /* nouns.json */,
+				D1D880D727860D6300407050 /* prepositions.json */,
+				D1D880D827860D6300407050 /* translations.json */,
+				D1D880D627860D6300407050 /* verbs.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -378,6 +414,9 @@
 		D18EA8AD2760D720001E1358 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D1D880DD27860D7B00407050 /* nouns.json */,
+				D1D880DE27860D7B00407050 /* translations.json */,
+				D1D880DF27860D7B00407050 /* verbs.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -439,8 +478,8 @@
 			children = (
 				D109A20C275B6888005E2271 /* French */,
 				38BD214D22D592CA00C6795D /* German */,
-				D1671A61275A1E8700A7C118 /* Russian */,
 				D109A21B275B68B3005E2271 /* Portuguese */,
+				D1671A61275A1E8700A7C118 /* Russian */,
 				D1608666270B6D3C00134D48 /* Spanish */,
 				D18EA89A2760D4A6001E1358 /* Swedish */,
 			);
@@ -676,6 +715,9 @@
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
 				D109A234275B6A91005E2271 /* ScribeBtnPad.png in Resources */,
 				D109A233275B6A91005E2271 /* ScribeBtnPhone.png in Resources */,
+				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
+				D1D880CC27860CFA00407050 /* translations.json in Resources */,
+				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,9 +725,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D880D227860D4700407050 /* verbs.json in Resources */,
+				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				D109A236275B6A92005E2271 /* ScribeBtnPad.png in Resources */,
 				D109A235275B6A92005E2271 /* ScribeBtnPhone.png in Resources */,
+				D1D880D427860D4700407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,8 +751,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
+				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
+				D1D880D927860D6300407050 /* nouns.json in Resources */,
 				D1671A79275A1FC500A7C118 /* ScribeBtnPad.png in Resources */,
+				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 				D1671A78275A1FC500A7C118 /* ScribeBtnPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +766,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18EA8AA2760D6FC001E1358 /* ScribeBtnPad.png in Resources */,
+				D1D880E127860D7B00407050 /* translations.json in Resources */,
+				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
+				D1D880E227860D7B00407050 /* verbs.json in Resources */,
 				D18EA8AB2760D6FC001E1358 /* ScribeBtnPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

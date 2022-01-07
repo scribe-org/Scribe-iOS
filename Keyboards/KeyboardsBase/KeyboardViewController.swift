@@ -42,6 +42,35 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = FrenchKeyboardConstants.numberKeysPad
         symbolKeys = FrenchKeyboardConstants.symbolKeysPad
       }
+
+      keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = FrenchKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = FrenchKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = FrenchKeyboardConstants.aAlternateKeys
+      eAlternateKeys = FrenchKeyboardConstants.eAlternateKeys
+      iAlternateKeys = FrenchKeyboardConstants.iAlternateKeys
+      oAlternateKeys = FrenchKeyboardConstants.oAlternateKeys
+      uAlternateKeys = FrenchKeyboardConstants.uAlternateKeys
+      yAlternateKeys = FrenchKeyboardConstants.yAlternateKeys
+      cAlternateKeys = FrenchKeyboardConstants.cAlternateKeys
+      nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
+      currencySymbol = "€"
+      currencySymbolAlternates = euroAlternateKeys
+      spaceBar = "espace"
+      invalidCommandMsg = "Pas dans le répertoire"
+
+      translateBtnLbl = "Traduire"
+      translatePrompt = previewPromptSpacing + "Traduire (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Conjuguer"
+      conjugatePrompt = previewPromptSpacing + "Conjuguer: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Pluriel"
+      pluralPrompt = previewPromptSpacing + "Pluriel: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
+
     } else if controllerLanguage == "German" {
       if DeviceType.isPhone {
         letterKeys = GermanKeyboardConstants.letterKeysPhone
@@ -52,6 +81,38 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = GermanKeyboardConstants.numberKeysPad
         symbolKeys = GermanKeyboardConstants.symbolKeysPad
       }
+
+      keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = GermanKeyboardConstants.aAlternateKeys
+      eAlternateKeys = GermanKeyboardConstants.eAlternateKeys
+      iAlternateKeys = GermanKeyboardConstants.iAlternateKeys
+      oAlternateKeys = GermanKeyboardConstants.oAlternateKeys
+      uAlternateKeys = GermanKeyboardConstants.uAlternateKeys
+      yAlternateKeys = GermanKeyboardConstants.yAlternateKeys
+      sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
+      lAlternateKeys = GermanKeyboardConstants.lAlternateKeys
+      zAlternateKeys = GermanKeyboardConstants.zAlternateKeys
+      cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
+      nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+      currencySymbol = "€"
+      currencySymbolAlternates = euroAlternateKeys
+      spaceBar = "Leerzeichen"
+      invalidCommandMsg = "Nicht im Verzeichnis"
+
+      translateBtnLbl = "Übersetzen"
+      translatePrompt = previewPromptSpacing + "Übersetzen (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Konjugieren"
+      conjugatePrompt = previewPromptSpacing + "Konjugieren: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Plural"
+      pluralPrompt = previewPromptSpacing + "Plural: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
+
     } else if controllerLanguage == "Portuguese" {
       if DeviceType.isPhone {
         letterKeys = PortugueseKeyboardConstants.letterKeysPhone
@@ -62,16 +123,99 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = PortugueseKeyboardConstants.numberKeysPad
         symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
       }
+
+      keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
+      eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
+      iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
+      oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
+      uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
+      cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
+      nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+      currencySymbol = "$"
+      currencySymbolAlternates = dollarAlternateKeys
+      spaceBar = "espaço"
+      invalidCommandMsg = "Não está no diretório"
+
+      translateBtnLbl = "Traduzir"
+      translatePrompt = previewPromptSpacing + "Traduzir (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Conjugar"
+      conjugatePrompt = previewPromptSpacing + "Conjugar: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Plural"
+      pluralPrompt = previewPromptSpacing + "Plural: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
+
     } else if controllerLanguage == "Russian" {
-      if DeviceType.isPhone {
-        letterKeys = RussianKeyboardConstants.letterKeysPhone
-        numberKeys = RussianKeyboardConstants.numberKeysPhone
-        symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+      // Check if a user is translating and provide an English keyboard if so.
+      if swtichInput {
+        if DeviceType.isPhone {
+          letterKeys = EnglishKeyboardConstants.letterKeysPhone
+          numberKeys = EnglishKeyboardConstants.numberKeysPhone
+          symbolKeys = EnglishKeyboardConstants.symbolKeysPhone
+        } else {
+          letterKeys = EnglishKeyboardConstants.letterKeysPad
+          numberKeys = EnglishKeyboardConstants.numberKeysPad
+          symbolKeys = EnglishKeyboardConstants.symbolKeysPad
+        }
+
+        keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates
+        keysWithAlternatesLeft = EnglishKeyboardConstants.keysWithAlternatesLeft
+        keysWithAlternatesRight = EnglishKeyboardConstants.keysWithAlternatesRight
+        aAlternateKeys = EnglishKeyboardConstants.aAlternateKeys
+        eAlternateKeys = EnglishKeyboardConstants.eAlternateKeys
+        iAlternateKeys = EnglishKeyboardConstants.iAlternateKeys
+        oAlternateKeys = EnglishKeyboardConstants.oAlternateKeys
+        uAlternateKeys = EnglishKeyboardConstants.uAlternateKeys
+        sAlternateKeys = EnglishKeyboardConstants.sAlternateKeys
+        lAlternateKeys = EnglishKeyboardConstants.lAlternateKeys
+        zAlternateKeys = EnglishKeyboardConstants.zAlternateKeys
+        cAlternateKeys = EnglishKeyboardConstants.cAlternateKeys
+        nAlternateKeys = EnglishKeyboardConstants.nAlternateKeys
+        currencySymbol = "$"
+        currencySymbolAlternates = dollarAlternateKeys
+        spaceBar = "space"
+
       } else {
-        letterKeys = RussianKeyboardConstants.letterKeysPad
-        numberKeys = RussianKeyboardConstants.numberKeysPad
-        symbolKeys = RussianKeyboardConstants.symbolKeysPad
+        if DeviceType.isPhone {
+          letterKeys = RussianKeyboardConstants.letterKeysPhone
+          numberKeys = RussianKeyboardConstants.numberKeysPhone
+          symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+        } else {
+          letterKeys = RussianKeyboardConstants.letterKeysPad
+          numberKeys = RussianKeyboardConstants.numberKeysPad
+          symbolKeys = RussianKeyboardConstants.symbolKeysPad
+        }
+
+        keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
+        keysWithAlternatesLeft = RussianKeyboardConstants.keysWithAlternatesLeft
+        keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
+        еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
+        ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
+        currencySymbol = "₽"
+        currencySymbolAlternates = roubleAlternateKeys
+        spaceBar = "Пробел"
       }
+
+      invalidCommandMsg = "Нет в каталоге"
+
+      translateBtnLbl = "Перевести"
+      translatePrompt = previewPromptSpacing + "Перевести (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Спрягать"
+      conjugatePrompt = previewPromptSpacing + "Спрягать: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Множ"
+      pluralPrompt = previewPromptSpacing + "Множ: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
+
     } else if controllerLanguage == "Spanish" {
       if DeviceType.isPhone {
         letterKeys = SpanishKeyboardConstants.letterKeysPhone
@@ -82,6 +226,36 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = SpanishKeyboardConstants.numberKeysPad
         symbolKeys = SpanishKeyboardConstants.symbolKeysPad
       }
+
+      keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = SpanishKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = SpanishKeyboardConstants.aAlternateKeys
+      eAlternateKeys = SpanishKeyboardConstants.eAlternateKeys
+      iAlternateKeys = SpanishKeyboardConstants.iAlternateKeys
+      oAlternateKeys = SpanishKeyboardConstants.oAlternateKeys
+      uAlternateKeys = SpanishKeyboardConstants.uAlternateKeys
+      sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
+      dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
+      cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
+      nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+      currencySymbol = "$"
+      currencySymbolAlternates = dollarAlternateKeys
+      spaceBar = "espacio"
+      invalidCommandMsg = "No en el directorio"
+
+      translateBtnLbl = "Traducir"
+      translatePrompt = previewPromptSpacing + "Traducir (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Conjugar"
+      conjugatePrompt = previewPromptSpacing + "Conjugar: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Plural"
+      pluralPrompt = previewPromptSpacing + "Plural: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
+
     } else if controllerLanguage == "Swedish" {
       if DeviceType.isPhone {
         letterKeys = SwedishKeyboardConstants.letterKeysPhone
@@ -92,7 +266,74 @@ class KeyboardViewController: UIInputViewController {
         numberKeys = SwedishKeyboardConstants.numberKeysPad
         symbolKeys = SwedishKeyboardConstants.symbolKeysPad
       }
+
+      keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates
+      keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
+      keysWithAlternatesRight = SwedishKeyboardConstants.keysWithAlternatesRight
+      aAlternateKeys = SwedishKeyboardConstants.aAlternateKeys
+      eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
+      iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
+      oAlternateKeys = SwedishKeyboardConstants.oAlternateKeys
+      uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
+      äAlternateKeys = SwedishKeyboardConstants.äAlternateKeys
+      öAlternateKeys = SwedishKeyboardConstants.öAlternateKeys
+      sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
+      cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
+      nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
+      currencySymbol = "kr"
+      currencySymbolAlternates = kronaAlternateKeys
+      spaceBar = "mellanslag"
+      invalidCommandMsg = "Inte i katalogen"
+
+      translateBtnLbl = "Översätt"
+      translatePrompt = previewPromptSpacing + "Översätt (en): "
+      translatePromptAndCursor = translatePrompt + previewCursor
+
+      conjugateBtnLbl = "Konjugera"
+      conjugatePrompt = previewPromptSpacing + "Konjugera: "
+      conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+      pluralBtnLbl = "Plural"
+      pluralPrompt = previewPromptSpacing + "Plural: "
+      pluralPromptAndCursor = pluralPrompt + previewCursor
     }
+
+    allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
+
+    if DeviceType.isPhone {
+      keysWithAlternates += symbolKeysWithAlternatesLeft
+      keysWithAlternates += symbolKeysWithAlternatesRight
+      keysWithAlternates.append(currencySymbol)
+      keysWithAlternatesLeft += symbolKeysWithAlternatesLeft
+      keysWithAlternatesRight += symbolKeysWithAlternatesRight
+      keysWithAlternatesRight.append(currencySymbol)
+    }
+
+    keyAlternatesDict = ["a": aAlternateKeys,
+                         "e": eAlternateKeys,
+                         "е": еAlternateKeys, // Russian е
+                         "i": iAlternateKeys,
+                         "o": oAlternateKeys,
+                         "u": uAlternateKeys,
+                         "ä": äAlternateKeys,
+                         "ö": öAlternateKeys,
+                         "y": yAlternateKeys,
+                         "s": sAlternateKeys,
+                         "l": lAlternateKeys,
+                         "z": zAlternateKeys,
+                         "d": dAlternateKeys,
+                         "c": cAlternateKeys,
+                         "n": nAlternateKeys,
+                         "ь": ьAlternateKeys,
+                         "/": backslashAlternateKeys,
+                         "?": questionMarkAlternateKeys,
+                         "!": exclamationAlternateKeys,
+                         "%": percentAlternateKeys,
+                         "&": ampersandAlternateKeys,
+                         "'": apostropheAlternateKeys,
+                         "\"": quotationAlternateKeys,
+                         "=": equalSignAlternateKeys,
+                         currencySymbol: currencySymbolAlternates]
   }
 
   /// Changes the keyboard state such that the letters view will be shown.
@@ -292,8 +533,8 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateShiftRightBtn: UIButton!
 
   @IBOutlet var conjugateBtnTL: UIButton!
-  @IBOutlet var conjugateBtnBL: UIButton!
   @IBOutlet var conjugateBtnTR: UIButton!
+  @IBOutlet var conjugateBtnBL: UIButton!
   @IBOutlet var conjugateBtnBR: UIButton!
 
   // Labels for the conjugation view buttons.
@@ -306,12 +547,21 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateLblTPP: UIButton!
 
   @IBOutlet var conjugateLblTL: UIButton!
-  @IBOutlet var conjugateLblBL: UIButton!
   @IBOutlet var conjugateLblTR: UIButton!
+  @IBOutlet var conjugateLblBL: UIButton!
   @IBOutlet var conjugateLblBR: UIButton!
 
   /// Sets up all buttons that are associated with the conjugation display.
   func setConjugationBtns() {
+    // Set the conjugation view to 2x2 for Swedish and Russian past tense.
+    if controllerLanguage == "Swedish" {
+      conjugateAlternateView = true
+    } else if controllerLanguage == "Russian" && ruConjugationState == .past {
+      conjugateAlternateView = true
+    } else {
+      conjugateAlternateView = false
+    }
+
     setBtn(btn: conjugateBtnFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtnSPS, color: keyColor, name: "secondPersonSingular", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtnTPS, color: keyColor, name: "thirdPersonSingular", canCapitalize: false, isSpecial: false)
@@ -323,8 +573,8 @@ class KeyboardViewController: UIInputViewController {
     setBtn(btn: conjugateShiftRightBtn, color: keyColor, name: "shiftConjugateRight", canCapitalize: false, isSpecial: false)
 
     setBtn(btn: conjugateBtnTL, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateBtnBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtnTR, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateBtnBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
     setBtn(btn: conjugateBtnBR, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
 
     let conjugationLbls = [conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
@@ -354,6 +604,10 @@ class KeyboardViewController: UIInputViewController {
       conjugateBtnBL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
       conjugateBtnTR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
       conjugateBtnBR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 3.5)
+
+      for lbl in conjugationLbls {
+        lbl!.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+      }
     }
   }
 
@@ -421,9 +675,20 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
   func setConjugationState() {
-    if controllerLanguage == "German" {
+    if controllerLanguage == "French" {
+      previewBar?.text = frGetConjugationTitle()
+      frSetConjugationLabels()
+
+      tenseFPS = frGetConjugationState() + "FPS"
+      tenseSPS = frGetConjugationState() + "SPS"
+      tenseTPS = frGetConjugationState() + "TPS"
+      tenseFPP = frGetConjugationState() + "FPP"
+      tenseSPP = frGetConjugationState() + "SPP"
+      tenseTPP = frGetConjugationState() + "TPP"
+
+    } else if controllerLanguage == "German" {
       previewBar?.text = deGetConjugationTitle()
-      deGetConjugationLabels()
+      deSetConjugationLabels()
 
       tenseFPS = deGetConjugationState() + "FPS"
       tenseSPS = deGetConjugationState() + "SPS"
@@ -431,9 +696,39 @@ class KeyboardViewController: UIInputViewController {
       tenseFPP = deGetConjugationState() + "FPP"
       tenseSPP = deGetConjugationState() + "SPP"
       tenseTPP = deGetConjugationState() + "TPP"
+
+    } else if controllerLanguage == "Portuguese" {
+      previewBar?.text = ptGetConjugationTitle()
+      ptSetConjugationLabels()
+
+      tenseFPS = ptGetConjugationState() + "FPS"
+      tenseSPS = ptGetConjugationState() + "SPS"
+      tenseTPS = ptGetConjugationState() + "TPS"
+      tenseFPP = ptGetConjugationState() + "FPP"
+      tenseSPP = ptGetConjugationState() + "SPP"
+      tenseTPP = ptGetConjugationState() + "TPP"
+
+    } else if controllerLanguage == "Russian" {
+      previewBar?.text = ruGetConjugationTitle()
+      ruSetConjugationLabels()
+
+      if conjugateAlternateView == false {
+        tenseFPS = ruGetConjugationState() + "FPS"
+        tenseSPS = ruGetConjugationState() + "SPS"
+        tenseTPS = ruGetConjugationState() + "TPS"
+        tenseFPP = ruGetConjugationState() + "FPP"
+        tenseSPP = ruGetConjugationState() + "SPP"
+        tenseTPP = ruGetConjugationState() + "TPP"
+      } else {
+        tenseTopLeft = "pastMasculine"
+        tenseTopRight = "pastFeminine"
+        tenseBottomLeft = "pastNeutral"
+        tenseBottomRight = "pastPlural"
+      }
+
     } else if controllerLanguage == "Spanish" {
       previewBar?.text = esGetConjugationTitle()
-      esGetConjugationLabels()
+      esSetConjugationLabels()
 
       tenseFPS = esGetConjugationState() + "FPS"
       tenseSPS = esGetConjugationState() + "SPS"
@@ -441,8 +736,19 @@ class KeyboardViewController: UIInputViewController {
       tenseFPP = esGetConjugationState() + "FPP"
       tenseSPP = esGetConjugationState() + "SPP"
       tenseTPP = esGetConjugationState() + "TPP"
+
+    } else if controllerLanguage == "Swedish" {
+      previewBar?.text = svGetConjugationTitle()
+      svSetConjugationLabels()
+      let swedishTenses = svGetConjugationState()
+
+      tenseTopLeft = swedishTenses[0]
+      tenseTopRight = swedishTenses[1]
+      tenseBottomLeft = swedishTenses[2]
+      tenseBottomRight = swedishTenses[3]
     }
 
+    // Assign labels that have been set by SetConjugationLabels functions.
     conjugateLblFPS!.setTitle("  " + labelFPS, for: .normal)
     conjugateLblSPS!.setTitle("  " + labelSPS, for: .normal)
     conjugateLblTPS!.setTitle("  " + labelTPS, for: .normal)
@@ -450,15 +756,30 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblSPP!.setTitle("  " + labelSPP, for: .normal)
     conjugateLblTPP!.setTitle("  " + labelTPP, for: .normal)
 
-    let allTenses = [tenseFPS, tenseSPS, tenseTPS, tenseFPP, tenseSPP, tenseTPP]
-    let allConjugationBtns = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP]
+    conjugateLblTL!.setTitle("  " + labelTopLeft, for: .normal)
+    conjugateLblTR!.setTitle("  " + labelTopRight, for: .normal)
+    conjugateLblBL!.setTitle("  " + labelBottomLeft, for: .normal)
+    conjugateLblBR!.setTitle("  " + labelBottomRight, for: .normal)
 
-    // Assign the invalid message if the conjugation isn't present in the directory.
+    if conjugateAlternateView == true {
+      allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
+      allConjugationBtns = [conjugateBtnTL, conjugateBtnTR, conjugateBtnBL, conjugateBtnBR]
+    } else {
+      allTenses = [tenseFPS, tenseSPS, tenseTPS, tenseFPP, tenseSPP, tenseTPP]
+      allConjugationBtns = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP]
+    }
+
+    // Populate conjugation view buttons.
     for index in 0..<allTenses.count {
       if verbs?[verbToConjugate]![allTenses[index]] as? String == "" {
-        styleBtn(btn: allConjugationBtns[index]!, title: "Not in directory", radius: keyCornerRadius)
+        // Assign the invalid message if the conjugation isn't present in the directory.
+        styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
-        styleBtn(btn: allConjugationBtns[index]!, title: verbs?[verbToConjugate]![allTenses[index]] as! String, radius: keyCornerRadius)
+        conjugationToDisplay = verbs?[verbToConjugate]![allTenses[index]] as! String
+        if inputWordIsCapitalized && deConjugationState != .indicativePerfect {
+          conjugationToDisplay = conjugationToDisplay.capitalized
+        }
+        styleBtn(btn: allConjugationBtns[index], title: conjugationToDisplay, radius: keyCornerRadius)
       }
     }
   }
@@ -504,6 +825,12 @@ class KeyboardViewController: UIInputViewController {
     keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
     keyboardView.translatesAutoresizingMaskIntoConstraints = true
     view.addSubview(keyboardView)
+
+    // Override keyboards switching to others for translation and prior Scribe commands.
+    swtichInput = false
+    scribeBtnState = false
+    previewState = false
+
     loadKeys()
   }
 
@@ -557,128 +884,6 @@ class KeyboardViewController: UIInputViewController {
   func loadKeys() {
     // French, German, Portuguese, Russian, Spanish or Swedish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
-
-    if controllerLanguage == "French" {
-      keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = FrenchKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = FrenchKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = FrenchKeyboardConstants.aAlternateKeys
-      eAlternateKeys = FrenchKeyboardConstants.eAlternateKeys
-      iAlternateKeys = FrenchKeyboardConstants.iAlternateKeys
-      oAlternateKeys = FrenchKeyboardConstants.oAlternateKeys
-      uAlternateKeys = FrenchKeyboardConstants.uAlternateKeys
-      yAlternateKeys = FrenchKeyboardConstants.yAlternateKeys
-      cAlternateKeys = FrenchKeyboardConstants.cAlternateKeys
-      nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
-      currencySymbol = "€"
-      currencySymbolAlternates = euroAlternateKeys
-      spaceBar = "espace"
-    } else if controllerLanguage == "German" {
-      keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = GermanKeyboardConstants.aAlternateKeys
-      eAlternateKeys = GermanKeyboardConstants.eAlternateKeys
-      iAlternateKeys = GermanKeyboardConstants.iAlternateKeys
-      oAlternateKeys = GermanKeyboardConstants.oAlternateKeys
-      uAlternateKeys = GermanKeyboardConstants.uAlternateKeys
-      yAlternateKeys = GermanKeyboardConstants.yAlternateKeys
-      sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
-      cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
-      nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
-      currencySymbol = "€"
-      currencySymbolAlternates = euroAlternateKeys
-      spaceBar = "Leerzeichen"
-    } else if controllerLanguage == "Portuguese" {
-      keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
-      eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
-      iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
-      oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
-      uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
-      cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
-      nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
-      currencySymbol = "$"
-      currencySymbolAlternates = dollarAlternateKeys
-      spaceBar = "espaço"
-    } else if controllerLanguage == "Russian" {
-      keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = RussianKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
-      еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
-      ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
-      currencySymbol = "€"
-      currencySymbolAlternates = roubleAlternateKeys
-      spaceBar = "Пробел"
-    } else if controllerLanguage == "Spanish" {
-      keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = SpanishKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = SpanishKeyboardConstants.aAlternateKeys
-      eAlternateKeys = SpanishKeyboardConstants.eAlternateKeys
-      iAlternateKeys = SpanishKeyboardConstants.iAlternateKeys
-      oAlternateKeys = SpanishKeyboardConstants.oAlternateKeys
-      uAlternateKeys = SpanishKeyboardConstants.uAlternateKeys
-      sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
-      dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
-      cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
-      nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
-      currencySymbol = "$"
-      currencySymbolAlternates = dollarAlternateKeys
-      spaceBar = "espacio"
-    } else if controllerLanguage == "Swedish" {
-      keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates
-      keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
-      keysWithAlternatesRight = SwedishKeyboardConstants.keysWithAlternatesRight
-      aAlternateKeys = SwedishKeyboardConstants.aAlternateKeys
-      eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
-      iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
-      oAlternateKeys = SwedishKeyboardConstants.oAlternateKeys
-      uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
-      äAlternateKeys = SwedishKeyboardConstants.äAlternateKeys
-      öAlternateKeys = SwedishKeyboardConstants.öAlternateKeys
-      sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
-      cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
-      nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
-      currencySymbol = "kr"
-      currencySymbolAlternates = kronaAlternateKeys
-      spaceBar = "mellanslag"
-    }
-
-    if DeviceType.isPhone {
-      keysWithAlternates += symbolKeysWithAlternatesLeft
-      keysWithAlternates += symbolKeysWithAlternatesRight
-      keysWithAlternates.append(currencySymbol)
-      keysWithAlternatesLeft += symbolKeysWithAlternatesLeft
-      keysWithAlternatesRight += symbolKeysWithAlternatesRight
-      keysWithAlternatesRight.append(currencySymbol)
-    }
-
-    keyAlternatesDict = ["a": aAlternateKeys,
-                         "e": eAlternateKeys,
-                         "е": еAlternateKeys, // Russian е
-                         "i": iAlternateKeys,
-                         "o": oAlternateKeys,
-                         "u": uAlternateKeys,
-                         "ä": äAlternateKeys,
-                         "ö": öAlternateKeys,
-                         "y": yAlternateKeys,
-                         "s": sAlternateKeys,
-                         "d": dAlternateKeys,
-                         "c": cAlternateKeys,
-                         "n": nAlternateKeys,
-                         "ь": ьAlternateKeys,
-                         "/": backslashAlternateKeys,
-                         "?": questionMarkAlternateKeys,
-                         "!": exclamationAlternateKeys,
-                         "%": percentAlternateKeys,
-                         "&": ampersandAlternateKeys,
-                         "'": apostropheAlternateKeys,
-                         "\"": quotationAlternateKeys,
-                         "=": equalSignAlternateKeys,
-                         currencySymbol: currencySymbolAlternates]
 
     checkLandscapeMode()
     checkDarkModeSetColors()
@@ -829,9 +1034,9 @@ class KeyboardViewController: UIInputViewController {
             previewBar?.backgroundColor = UIColor.clear
             previewBar?.text = ""
 
-            styleBtn(btn: translateBtn, title: "Translate", radius: keyCornerRadius)
-            styleBtn(btn: conjugateBtn, title: "Conjugate", radius: keyCornerRadius)
-            styleBtn(btn: pluralBtn, title: "Plural", radius: keyCornerRadius)
+            styleBtn(btn: translateBtn, title: translateBtnLbl, radius: keyCornerRadius)
+            styleBtn(btn: conjugateBtn, title: conjugateBtnLbl, radius: keyCornerRadius)
+            styleBtn(btn: pluralBtn, title: pluralBtnLbl, radius: keyCornerRadius)
             if DeviceType.isPhone {
               if isLandscapeView == true {
                 translateBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
@@ -876,16 +1081,16 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone && key == "y" && ["German", "Swedish"].contains(controllerLanguage) {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
           }
-          if DeviceType.isPhone && key == "a" && controllerLanguage == "Portuguese" {
+          if DeviceType.isPhone && key == "a" && (controllerLanguage == "Portuguese" || (controllerLanguage == "Russian"  && swtichInput == true)) {
             addPadding(to: stackView2, width: buttonWidth / 4, key: "a")
           }
-          if DeviceType.isPad && key == "a" && controllerLanguage == "Portuguese" {
+          if DeviceType.isPad && key == "a" && (controllerLanguage == "Portuguese" || (controllerLanguage == "Russian"  && swtichInput == true)) {
             addPadding(to: stackView2, width: buttonWidth / 3, key: "a")
           }
-          if DeviceType.isPad && key == "@" && controllerLanguage == "Portuguese" {
+          if DeviceType.isPad && key == "@" && (controllerLanguage == "Portuguese" || (controllerLanguage == "Russian"  && swtichInput == true)) {
             addPadding(to: stackView2, width: buttonWidth / 3, key: "@")
           }
-          if DeviceType.isPad && key == "€" && controllerLanguage == "Portuguese" {
+          if DeviceType.isPad && key == "€" && (controllerLanguage == "Portuguese" || (controllerLanguage == "Russian"  && swtichInput == true)) {
             addPadding(to: stackView2, width: buttonWidth / 3, key: "€")
           }
 
@@ -939,7 +1144,7 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone && key == "m" && ["German", "Swedish"].contains(controllerLanguage) {
             addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
           }
-          if DeviceType.isPhone && key == "l" && controllerLanguage == "Portuguese" {
+          if DeviceType.isPhone && key == "l" && (controllerLanguage == "Portuguese" || (controllerLanguage == "Russian"  && swtichInput == true)) {
             addPadding(to: stackView2, width: buttonWidth / 4, key: "l")
           }
 
@@ -954,7 +1159,8 @@ class KeyboardViewController: UIInputViewController {
             btn.backgroundColor = specialKeyColor
           } else if key == "delete" || key == "#+=" || key == "shift" || key == "selectKeyboard" { // key == "undoArrow"
             if DeviceType.isPhone {
-              if controllerLanguage == "Russian" && keyboardState == .letters {
+              // Cancel Russian keyboard key resizing if translating as the keyboard is English.
+              if controllerLanguage == "Russian" && keyboardState == .letters && swtichInput != true {
                 btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
               } else {
                 btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
@@ -978,7 +1184,9 @@ class KeyboardViewController: UIInputViewController {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
             } else if controllerLanguage == "Russian" && row == 2 && DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
-            } else if key == "return" && controllerLanguage == "Portuguese" && row == 1 && DeviceType.isPad {
+            } else if key == "return" && controllerLanguage == "Portuguese" && row == 1 && swtichInput != true && DeviceType.isPad {
+              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+            } else if key == "return" && controllerLanguage == "Russian" && row == 1 && DeviceType.isPad {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
             } else {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
@@ -1044,11 +1252,22 @@ class KeyboardViewController: UIInputViewController {
     if previewBar?.text! == translatePromptAndCursor {
       return
     }
-    let word = previewBar?.text!.substring(with: conjugatePrompt.count..<((previewBar?.text!.count)!-1))
-    let lowerCaseWord = word!.lowercased()
-    let wordInDirectory = translations?[lowerCaseWord] != nil
+    wordToTranslate = (previewBar?.text!.substring(with: translatePrompt.count..<((previewBar?.text!.count)!-1)))!
+
+    // Check to see if the input was uppercase to return an uppercase conjugation.
+    inputWordIsCapitalized = false
+    let firstLetter = wordToTranslate.substring(toIdx: 1)
+    inputWordIsCapitalized = firstLetter.isUppercase
+    wordToTranslate = wordToTranslate.lowercased()
+
+    let wordInDirectory = translations?[wordToTranslate] != nil
     if wordInDirectory {
-      proxy.insertText(translations?[lowerCaseWord] as! String + " ")
+      wordToReturn = translations?[wordToTranslate] as! String
+      if inputWordIsCapitalized {
+        proxy.insertText(wordToReturn.capitalized + " ")
+      } else {
+        proxy.insertText(wordToReturn + " ")
+      }
     } else {
       invalidState = true
     }
@@ -1061,6 +1280,13 @@ class KeyboardViewController: UIInputViewController {
       return
     }
     verbToConjugate = (previewBar?.text!.substring(with: conjugatePrompt.count..<((previewBar?.text!.count)!-1)))!
+
+    // Check to see if the input was uppercase to return an uppercase conjugation.
+    inputWordIsCapitalized = false
+    let firstLetter = verbToConjugate.substring(toIdx: 1)
+    inputWordIsCapitalized = firstLetter.isUppercase
+    verbToConjugate = verbToConjugate.lowercased()
+
     let verbInDirectory = verbs?[verbToConjugate] != nil
     if verbInDirectory {
       conjugateView = true
@@ -1070,6 +1296,39 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Returns a conjugation once a user presses a key in the conjugateView.
+  ///
+  /// - Parameters
+  ///   - keyPressed: the button pressed as sender.
+  ///   - requestedTense: the tense that is triggered by the given key.
+  func returnConjugation(keyPressed: UIButton, requestedTense: String) {
+    // Don't change proxy if they select a conjugation that's missing.
+    if keyPressed.titleLabel?.text == invalidCommandMsg {
+      proxy.insertText("")
+    } else if conjugateAlternateView == false {
+      if deConjugationState != .indicativePerfect {
+        wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
+        if inputWordIsCapitalized == true {
+          proxy.insertText(wordToReturn.capitalized + " ")
+        } else {
+          proxy.insertText(wordToReturn + " ")
+        }
+      } else {
+        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
+      }
+    } else if conjugateAlternateView == true {
+      wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
+      if inputWordIsCapitalized == true {
+        proxy.insertText(wordToReturn.capitalized + " ")
+      } else {
+        proxy.insertText(wordToReturn + " ")
+      }
+    }
+    previewState = false
+    conjugateView = false
+    loadKeys()
+  }
+
   /// Inserts the plural of a valid noun in the preview bar into the proxy.
   func queryPlural() {
     // Cancel via a return press.
@@ -1077,18 +1336,19 @@ class KeyboardViewController: UIInputViewController {
       return
     }
     var noun = previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1))
-    var queriedWordIsUpperCase: Bool = false
+
     // Check to see if the input was uppercase to return an uppercase plural.
+    inputWordIsCapitalized = false
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       let firstLetter = noun?.substring(toIdx: 1)
-      queriedWordIsUpperCase = firstLetter!.isUppercase
+      inputWordIsCapitalized = firstLetter!.isUppercase
       noun = noun?.lowercased()
     }
     let nounInDirectory = nouns?[noun!] != nil
     if nounInDirectory {
       if nouns?[noun!]?["plural"] as? String != "isPlural" {
         let plural = nouns?[noun!]?["plural"] as! String
-        if queriedWordIsUpperCase == false {
+        if inputWordIsCapitalized == false {
           proxy.insertText(plural + " ")
         } else {
           proxy.insertText(plural.capitalized + " ")
@@ -1104,29 +1364,21 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Annotates the preview bar with the form of a valid selected noun.
-  func selectedNounAnnotation() {
-    var selectedWord = proxy.selectedText
-    // Check to see if the input was uppercase to return an uppercase plural.
-    var queriedWordIsUpperCase: Bool = false
+  func nounAnnotation(givenNoun: String) {
+    // Check to see if the input was uppercase to return an uppercase annotation.
+    inputWordIsCapitalized = false
+    var nounToCheck: String = ""
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      let firstLetter = selectedWord?.substring(toIdx: 1)
-      queriedWordIsUpperCase = firstLetter!.isUppercase
-      selectedWord = selectedWord?.lowercased()
+      let firstLetter = givenNoun.substring(toIdx: 1)
+      inputWordIsCapitalized = firstLetter.isUppercase
+      nounToCheck = givenNoun.lowercased()
+    } else {
+      nounToCheck = givenNoun
     }
-//    if selectedWord == "Scribe" {
-//      if UITraitCollection.current.userInterfaceStyle == .dark {
-//        previewBar?.textColor = UIColor.scribeBlue
-//      } else {
-//        previewBar?.textColor = UIColor.scribeBlueLightTheme
-//      }
-//      previewBar?.text = previewPromptSpacing + selectedWord!
-//      previewBar?.sizeToFit()
-//      invalidState = false
-//    } else {
-    let isNoun = nouns?[selectedWord!] != nil
+
+    let isNoun = nouns?[nounToCheck] != nil || nouns?[givenNoun.lowercased()] != nil
     if isNoun {
-      let nounForm = nouns?[selectedWord!]?["form"] as? String
+      let nounForm = nouns?[nounToCheck]?["form"] as? String
       if nounForm == "F" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
           previewBar?.textColor = UIColor.previewRedDarkTheme
@@ -1163,140 +1415,85 @@ class KeyboardViewController: UIInputViewController {
         previewBar?.textColor = UIColor.label
       }
 
+      nounFormToDisplay = nounForm ?? ""
+
+      if controllerLanguage == "Swedish" {
+        nounFormToDisplay = nounFormToDisplay.replacingOccurrences(of: "C", with: "U")
+      } else if controllerLanguage == "Russian" {
+        nounFormToDisplay = nounFormToDisplay.replacingOccurrences(of: "F", with: "Ж")
+        nounFormToDisplay = nounFormToDisplay.replacingOccurrences(of: "M", with: "М")
+        nounFormToDisplay = nounFormToDisplay.replacingOccurrences(of: "N", with: "Н")
+        nounFormToDisplay = nounFormToDisplay.replacingOccurrences(of: "PL", with: "МН")
+      }
+
       if invalidState != true {
-        if queriedWordIsUpperCase == false {
-          previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!
+        if inputWordIsCapitalized == false {
+          previewBar?.text = previewPromptSpacing + "(\(nounFormToDisplay)) " + nounToCheck
         } else {
-          previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + selectedWord!.capitalized
+          previewBar?.text = previewPromptSpacing + "(\(nounFormToDisplay)) " + nounToCheck.capitalized
         }
       }
       previewBar?.sizeToFit()
       invalidState = false
     }
-//    }
+  }
+
+  /// Annotates the preview bar with the form of a valid selected noun.
+  func selectedNounAnnotation() {
+    let selectedWord = proxy.selectedText ?? ""
+
+    nounAnnotation(givenNoun: selectedWord)
   }
 
   /// Annotates the preview bar with the form of a valid typed noun.
   func typedNounAnnotation() {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-      var lastWordTyped = wordsTyped.secondToLast()
-      if lastWordTyped != "" {
-        // Check to see if the input was uppercase to return an uppercase plural.
-        var queriedWordIsUpperCase: Bool = false
-        if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-          let firstLetter = lastWordTyped?.substring(toIdx: 1)
-          queriedWordIsUpperCase = firstLetter!.isUppercase
-          lastWordTyped = lastWordTyped?.lowercased()
-        }
-//        if lastWordTyped == "Scribe" {
-//          if UITraitCollection.current.userInterfaceStyle == .dark {
-//            previewBar?.textColor = UIColor.scribeBlue
-//          } else {
-//            previewBar?.textColor = UIColor.scribeBlueLightTheme
-//          }
-//          previewBar?.text = previewPromptSpacing + lastWordTyped!
-//          previewBar?.sizeToFit()
-//          invalidState = false
-//        } else {
-        let isNoun = nouns?[lastWordTyped!] != nil || nouns?[lastWordTyped!.lowercased()] != nil
-        if isNoun {
-          let nounForm = nouns?[lastWordTyped!]?["form"] as? String
-          if nounForm == "F" {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              previewBar?.textColor = UIColor.previewRedDarkTheme
-            } else {
-              previewBar?.textColor = UIColor.previewRedLightTheme
-            }
-          } else if nounForm == "M" {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              previewBar?.textColor = UIColor.previewBlueDarkTheme
-            } else {
-              previewBar?.textColor = UIColor.previewBlueLightTheme
-            }
-          } else if nounForm == "C" {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              previewBar?.textColor = UIColor.previewPurpleDarkTheme
-            } else {
-              previewBar?.textColor = UIColor.previewPurpleLightTheme
-            }
-          } else if nounForm ==  "N" {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              previewBar?.textColor = UIColor.previewGreenDarkTheme
-            } else {
-              previewBar?.textColor = UIColor.previewGreenLightTheme
-            }
-          } else if nounForm ==  "PL" {
-            if UITraitCollection.current.userInterfaceStyle == .dark {
-              previewBar?.textColor = UIColor.previewOrangeDarkTheme
-            } else {
-              previewBar?.textColor = UIColor.previewOrangeLightTheme
-            }
-          } else if nounForm ==  "" {
-            invalidState = true
-          } else {
-            previewBar?.textColor = UIColor.label
-          }
+      let lastWordTyped = wordsTyped.secondToLast()
 
-          if invalidState != true {
-            if queriedWordIsUpperCase == false {
-              previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!
-            } else {
-              previewBar?.text = previewPromptSpacing + "(\(nounForm ?? "")) " + lastWordTyped!.capitalized
-            }
-          }
-          previewBar?.sizeToFit()
-          invalidState = false
-        }
-//        }
+      if lastWordTyped != "" {
+        nounAnnotation(givenNoun: lastWordTyped ?? "")
       }
+    }
+  }
+
+  func prepositionAnnotation(givenPreposition: String) {
+    // Check to see if the input was uppercase to return an uppercase annotation.
+    inputWordIsCapitalized = false
+    let firstLetter = givenPreposition.substring(toIdx: 1)
+    inputWordIsCapitalized = firstLetter.isUppercase
+    let prepositionToCheck = givenPreposition.lowercased()
+
+    let isPreposition = prepositions?[prepositionToCheck] != nil
+    if isPreposition {
+      let prepositionCase = prepositions?[prepositionToCheck] as? String
+      if inputWordIsCapitalized == false {
+        previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + prepositionToCheck
+      } else {
+        previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + prepositionToCheck.capitalized
+      }
+      previewBar?.sizeToFit()
     }
   }
 
   /// Annotates the preview bar with the form of a valid selected preposition.
   func selectedPrepositionAnnotation() {
-    if controllerLanguage == "German" {
-      var selectedWord = proxy.selectedText
-      // Check to see if the input was uppercase to return an uppercase plural.
-      var queriedWordIsUpperCase: Bool = false
-      let firstLetter = selectedWord?.substring(toIdx: 1)
-      queriedWordIsUpperCase = firstLetter!.isUppercase
-      selectedWord = selectedWord?.lowercased()
-      let isPreposition = prepositions?[selectedWord!] != nil
-      if isPreposition {
-        let prepositionCase = prepositions?[selectedWord!] as? String
-        if queriedWordIsUpperCase == false {
-          previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!
-        } else {
-          previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + selectedWord!.capitalized
-        }
-        previewBar?.sizeToFit()
-      }
+    if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
+      let selectedWord = proxy.selectedText ?? ""
+
+      prepositionAnnotation(givenPreposition: selectedWord)
     }
   }
 
   /// Annotates the preview bar with the form of a valid typed preposition.
   func typedPrepositionAnnotation() {
-    if controllerLanguage == "German" {
+    if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
       if proxy.documentContextBeforeInput != nil {
         let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        var lastWordTyped = wordsTyped.secondToLast()
+        let lastWordTyped = wordsTyped.secondToLast()
+
         if lastWordTyped != "" {
-          // Check to see if the input was uppercase to return an uppercase plural.
-          var queriedWordIsUpperCase: Bool = false
-          let firstLetter = lastWordTyped?.substring(toIdx: 1)
-          queriedWordIsUpperCase = firstLetter!.isUppercase
-          lastWordTyped = lastWordTyped?.lowercased()
-          let isPreposition = prepositions?[lastWordTyped!] != nil
-          if isPreposition {
-            let prepositionCase = prepositions?[lastWordTyped!] as? String
-            if queriedWordIsUpperCase == false {
-              previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!
-            } else {
-              previewBar?.text = previewPromptSpacing + "(\(prepositionCase ?? "")) " + lastWordTyped!.capitalized
-            }
-            previewBar?.sizeToFit()
-          }
+          prepositionAnnotation(givenPreposition: lastWordTyped ?? "")
         }
       }
     }
@@ -1331,6 +1528,9 @@ class KeyboardViewController: UIInputViewController {
       doubleSpacePeriodPossible = false
     }
 
+    // Reset the Russian verbs view after a selection.
+    ruConjugationState = .present
+
     switch originalKey {
     case "Scribe":
       if proxy.selectedText != nil { // annotate word
@@ -1364,38 +1564,20 @@ class KeyboardViewController: UIInputViewController {
     case "Translate":
       scribeBtnState = false
       previewState = true
+      getTranslation = true
+      if controllerLanguage == "Russian" {
+        swtichInput = true
+      }
       loadKeys()
       previewBar?.text = translatePromptAndCursor
-      getTranslation = true
 
     // Switch to conjugate state.
     case "Conjugate":
       scribeBtnState = false
-      if shiftButtonState == .shift {
-        shiftButtonState = .normal
-      }
       previewState = true
+      getConjugation = true
       loadKeys()
       previewBar?.text = conjugatePromptAndCursor
-      getConjugation = true
-
-    // Move displayed conjugations to the left in order if able.
-    case "shiftConjugateLeft":
-      if controllerLanguage == "German" {
-        deConjugationStateLeft()
-      } else if controllerLanguage == "Spanish" {
-        esConjugationStateLeft()
-      }
-      loadKeys()
-
-    // Move displayed conjugations to the right in order if able.
-    case "shiftConjugateRight":
-      if controllerLanguage == "German" {
-        deConjugationStateRight()
-      } else if controllerLanguage == "Spanish" {
-        esConjugationStateRight()
-      }
-      loadKeys()
 
     // Switch to plural state.
     case "Plural":
@@ -1406,87 +1588,73 @@ class KeyboardViewController: UIInputViewController {
         }
       }
       previewState = true
+      getPlural = true
       loadKeys()
       previewBar?.text = pluralPromptAndCursor
-      getPlural = true
+
+    // Move displayed conjugations to the left in order if able.
+    case "shiftConjugateLeft":
+      if controllerLanguage == "French" {
+        frConjugationStateLeft()
+      } else if controllerLanguage == "German" {
+        deConjugationStateLeft()
+      } else if controllerLanguage == "Portuguese" {
+        ptConjugationStateLeft()
+      } else if controllerLanguage == "Russian" {
+        ruConjugationStateLeft()
+      } else if controllerLanguage == "Spanish" {
+        esConjugationStateLeft()
+      } else if controllerLanguage == "Swedish" {
+        svConjugationStateLeft()
+      }
+      loadKeys()
+
+    // Move displayed conjugations to the right in order if able.
+    case "shiftConjugateRight":
+      if controllerLanguage == "French" {
+        frConjugationStateRight()
+      } else if controllerLanguage == "German" {
+        deConjugationStateRight()
+      } else if controllerLanguage == "Portuguese" {
+        ptConjugationStateRight()
+      } else if controllerLanguage == "Russian" {
+        ruConjugationStateRight()
+      } else if controllerLanguage == "Spanish" {
+        esConjugationStateRight()
+      } else if controllerLanguage == "Swedish" {
+        svConjugationStateRight()
+      }
+      loadKeys()
 
     case "firstPersonSingular":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseFPS] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseFPS)
 
     case "secondPersonSingular":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseSPS] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseSPS)
 
     case "thirdPersonSingular":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseTPS] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseTPS)
 
     case "firstPersonPlural":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseFPP] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseFPP)
 
     case "secondPersonPlural":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseSPP] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseSPP)
 
     case "thirdPersonPlural":
-      // Don't change proxy if they select a conjugation that's missing.
-      if sender.titleLabel?.text == "Not in directory" {
-        proxy.insertText("")
-      } else if deConjugationState != .indicativePerfect {
-        proxy.insertText(verbs?[verbToConjugate]![tenseTPP] as! String + " ")
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-      previewState = false
-      conjugateView = false
-      loadKeys()
+      returnConjugation(keyPressed: sender, requestedTense: tenseTPP)
+
+    case "conjugateTopLeft":
+      returnConjugation(keyPressed: sender, requestedTense: tenseTopLeft)
+
+    case "conjugateTopRight":
+      returnConjugation(keyPressed: sender, requestedTense: tenseTopRight)
+
+    case "conjugateBottomLeft":
+      returnConjugation(keyPressed: sender, requestedTense: tenseBottomLeft)
+
+    case "conjugateBottomRight":
+      returnConjugation(keyPressed: sender, requestedTense: tenseBottomRight)
 
     case "delete":
       if shiftButtonState == .shift {
@@ -1495,10 +1663,12 @@ class KeyboardViewController: UIInputViewController {
       }
       // Prevent the preview state prompt from being deleted.
       if previewState == true && allPrompts.contains((previewBar?.text!)!) {
+        shiftButtonState = .shift // Auto-capitalization
+        loadKeys()
         return
       }
       handleDeleteButtonPressed()
-      // Shift state if delete goes to the start of the proxy.
+      // Auto-capitalization if delete goes to the start of the proxy.
       if proxy.documentContextBeforeInput == nil && previewState != true {
         if keyboardState == .letters && shiftButtonState == .normal {
           shiftButtonState = .shift
@@ -1552,6 +1722,7 @@ class KeyboardViewController: UIInputViewController {
       if getTranslation && previewState == true { // translate state
         queryTranslation()
         getTranslation = false
+        swtichInput = false
       }
       if getConjugation && previewState == true { // conjugate state
         // Reset to the most basic conjugations.
@@ -1568,17 +1739,16 @@ class KeyboardViewController: UIInputViewController {
         clearPreviewBar()
       } else if invalidState == true { // invalid state
         previewState = false
-        // Auto-capitalization if at the start of the proxy.
-        proxy.insertText(" ")
-        if proxy.documentContextBeforeInput == " " {
-          if shiftButtonState == .normal {
-            shiftButtonState = .shift
-            loadKeys()
-          }
+
+        // Return to the original input method if it has been switched away from.
+        if swtichInput == true {
+          swtichInput = false
+          loadKeys()
         }
-        proxy.deleteBackward()
+
+        autoCapAtStartOfProxy()
         if isAlreadyPluralState != true {
-          previewBar?.text = previewPromptSpacing + "Not in directory"
+          previewBar?.text = previewPromptSpacing + invalidCommandMsg
         }
         previewBar?.textColor = UIColor.label
 
@@ -1587,15 +1757,7 @@ class KeyboardViewController: UIInputViewController {
       } else {
         previewState = false
         clearPreviewBar()
-        // Auto-capitalization if at the start of the proxy.
-        proxy.insertText(" ")
-        if proxy.documentContextBeforeInput == " " {
-          if shiftButtonState == .normal {
-            shiftButtonState = .shift
-            loadKeys()
-          }
-        }
-        proxy.deleteBackward()
+        autoCapAtStartOfProxy()
         loadKeys()
         // Avoid showing noun annotation instead of conjugation state header.
         if conjugateView == false {
@@ -1619,26 +1781,12 @@ class KeyboardViewController: UIInputViewController {
     case "ABC":
       changeKeyboardToLetterKeys()
       clearPreviewBar()
-      proxy.insertText(" ")
-      if proxy.documentContextBeforeInput == " " {
-        if shiftButtonState == .normal {
-          shiftButtonState = .shift
-          loadKeys()
-        }
-      }
-      proxy.deleteBackward()
+      autoCapAtStartOfProxy()
 
     case "АБВ":
       changeKeyboardToLetterKeys()
       clearPreviewBar()
-      proxy.insertText(" ")
-      if proxy.documentContextBeforeInput == " " {
-        if shiftButtonState == .normal {
-          shiftButtonState = .shift
-          loadKeys()
-        }
-      }
-      proxy.deleteBackward()
+      autoCapAtStartOfProxy()
 
     case "'":
       // Change back to letter keys.
@@ -1676,6 +1824,18 @@ class KeyboardViewController: UIInputViewController {
   }
 
   // MARK: Key press functions
+
+  /// Auto-capitalization if the cursor is at the start of the proxy.
+  func autoCapAtStartOfProxy() {
+    proxy.insertText(" ")
+    if proxy.documentContextBeforeInput == " " {
+      if shiftButtonState == .normal {
+        shiftButtonState = .shift
+        loadKeys()
+      }
+    }
+    proxy.deleteBackward()
+  }
 
   /// Colors keys to show they have been pressed.
   ///
