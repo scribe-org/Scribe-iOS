@@ -1,99 +1,140 @@
-# All Swedish (Q9027) verbs and the currently implemented verb tenses for each.
+# All German (Q188) verbs and the currently implemented verb tenses for each.
 # Enter this query at https://query.wikidata.org/.
 
-SELECT ?activeVoiceInfinitive ?activeVoicePresent ?activeVoicePreterite
-       ?activeVoicePluralPreterite ?activeVoiceSupine
-       ?passiveVoiceInfinitive ?passiveVoicePresent ?passiveVoicePreterite
-       ?passiveVoicePluralPreterite ?passiveVoiceSupine
-       ?imperative WHERE {
+# Not SELECT DISTINCT as we want to get verbs with both sein and haben as auxiliaries
+SELECT ?infinitive ?presentParticiple ?pastParticiple ?auxiliaryVerb
+       ?indicativePresentFPS ?indicativePresentSPS ?indicativePresentTPS
+       ?indicativePresentFPP ?indicativePresentSPP ?indicativePresentTPP
+       ?indicativePreteriteFPS ?indicativePreteriteSPS ?indicativePreteriteTPS
+       ?indicativePreteriteFPP ?indicativePreteriteSPP ?indicativePreteriteTPP WHERE {
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q9027 ;
+            dct:language wd:Q188 ;
             wikibase:lexicalCategory wd:Q24905 .
 
-  # Active Voice Infinitive (required)
-  ?lexeme ontolex:lexicalForm ?activeVoiceInfinitiveForm .
-  ?activeVoiceInfinitiveForm ontolex:representation ?activeVoiceInfinitive ;
-                  wikibase:grammaticalFeature wd:Q1317831 ;
-                  wikibase:grammaticalFeature wd:Q179230 ;
+  # Infinitive (required), past participle and the auxiliary verb(s)
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+                  wikibase:grammaticalFeature wd:Q179230 .
 
-  # Active Voice Present
+  # OPTIONAL {
+  #     ?lexeme ontolex:lexicalForm ?presentParticipleForm .
+  #     ?presentParticipleForm ontolex:representation ?presentParticiple ;
+  #                            wikibase:grammaticalFeature wd:Q10345583 ;
+  # } .
+
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?activeVoicePresentForm .
-      ?activeVoicePresentForm ontolex:representation ?activeVoicePresent ;
-                                wikibase:grammaticalFeature wd:Q1317831 ;
+      ?lexeme ontolex:lexicalForm ?pastParticipleForm .
+      ?pastParticipleForm ontolex:representation ?pastParticiple ;
+                          wikibase:grammaticalFeature wd:Q12717679 ;
+  } .
+
+  # WIP: select select only auxiliary or both sein and haben and convert to labels
+  OPTIONAL {
+      ?lexeme wdt:P5401 ?auxiliaryVerbFrom ;
+  } .
+
+  # Indicative Present
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPSForm .
+      ?indicativePresentFPSForm ontolex:representation ?indicativePresentFPS ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPSForm .
+      ?indicativePresentSPSForm ontolex:representation ?indicativePresentSPS ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPSForm .
+      ?indicativePresentTPSForm ontolex:representation ?indicativePresentTPS ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q110786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentFPPForm .
+      ?indicativePresentFPPForm ontolex:representation ?indicativePresentFPP ;
+                                wikibase:grammaticalFeature wd:Q21714344 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentSPPForm .
+      ?indicativePresentSPPForm ontolex:representation ?indicativePresentSPP ;
+                                wikibase:grammaticalFeature wd:Q51929049 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
+                                wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePresentTPPForm .
+      ?indicativePresentTPPForm ontolex:representation ?indicativePresentTPP ;
+                                wikibase:grammaticalFeature wd:Q51929074 ;
+                                wikibase:grammaticalFeature wd:Q146786 ;
+                                wikibase:grammaticalFeature wd:Q682111 ;
                                 wikibase:grammaticalFeature wd:Q192613 ;
   } .
 
-  # Active Voice Preterite
+  # Indicative Preterite
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?activeVoicePreteriteForm .
-      ?activeVoicePreteriteForm ontolex:representation ?activeVoicePreterite ;
-                                wikibase:grammaticalFeature wd:Q1317831 ;
-                                wikibase:grammaticalFeature wd:Q442485 ;
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteFPSForm .
+      ?indicativePreteriteFPSForm ontolex:representation ?indicativePreteriteFPS ;
+                                  wikibase:grammaticalFeature wd:Q21714344 ;
+                                  wikibase:grammaticalFeature wd:Q110786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteSPSForm .
+      ?indicativePreteriteSPSForm ontolex:representation ?indicativePreteriteSPS ;
+                                  wikibase:grammaticalFeature wd:Q51929049 ;
+                                  wikibase:grammaticalFeature wd:Q110786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteTPSForm .
+      ?indicativePreteriteTPSForm ontolex:representation ?indicativePreteriteTPS ;
+                                  wikibase:grammaticalFeature wd:Q51929074 ;
+                                  wikibase:grammaticalFeature wd:Q110786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteFPPForm .
+      ?indicativePreteriteFPPForm ontolex:representation ?indicativePreteriteFPP ;
+                                  wikibase:grammaticalFeature wd:Q21714344 ;
+                                  wikibase:grammaticalFeature wd:Q146786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteSPPForm .
+      ?indicativePreteriteSPPForm ontolex:representation ?indicativePreteriteSPP ;
+                                  wikibase:grammaticalFeature wd:Q51929049 ;
+                                  wikibase:grammaticalFeature wd:Q146786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+      ?lexeme ontolex:lexicalForm ?indicativePreteriteTPPForm .
+      ?indicativePreteriteTPPForm ontolex:representation ?indicativePreteriteTPP ;
+                                  wikibase:grammaticalFeature wd:Q51929074 ;
+                                  wikibase:grammaticalFeature wd:Q146786 ;
+                                  wikibase:grammaticalFeature wd:Q682111 ;
+                                  wikibase:grammaticalFeature wd:Q442485 ;
   } .
 
-  # Active Voice Plural Preterite
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?activeVoicePluralPreteriteForm .
-      ?activeVoicePluralPreteriteForm ontolex:representation ?activeVoicePluralPreterite ;
-                                wikibase:grammaticalFeature wd:Q1317831 ;
-                                wikibase:grammaticalFeature wd:Q146786 ;
-                                wikibase:grammaticalFeature wd:Q442485 ;
-  } .
-
-  # Active Voice Supine
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?activeVoiceSupineForm .
-      ?activeVoiceSupineForm ontolex:representation ?activeVoiceSupine ;
-                                wikibase:grammaticalFeature wd:Q1317831 ;
-                                wikibase:grammaticalFeature wd:Q548470 ;
-  } .
-
-  # Imperative
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?imperativeForm .
-      ?imperativeForm ontolex:representation ?imperative ;
-                                wikibase:grammaticalFeature wd:Q22716 ;
-  } .
-
-  # Passive Voice Infivitive
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?passiveVoiceInfinitiveForm .
-      ?passiveVoiceInfinitiveForm ontolex:representation ?passiveVoiceInfinitive ;
-                                wikibase:grammaticalFeature wd:Q1194697 ;
-                                wikibase:grammaticalFeature wd:Q179230 ;
-  } .
-
-  # Passive Voice Present
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?passiveVoicePresentForm .
-      ?passiveVoicePresentForm ontolex:representation ?passiveVoicePresent ;
-                                wikibase:grammaticalFeature wd:Q1194697 ;
-                                wikibase:grammaticalFeature wd:Q192613 ;
-  } .
-
-  # Passive Voice Preterite
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?passiveVoicePreteriteForm .
-      ?passiveVoicePreteriteForm ontolex:representation ?passiveVoicePreterite ;
-                                wikibase:grammaticalFeature wd:Q1194697 ;
-                                wikibase:grammaticalFeature wd:Q442485 ;
-  } .
-
-  # Passive Voice Plural Preterite
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?passiveVoicePluralPreteriteForm .
-      ?passiveVoicePluralPreteriteForm ontolex:representation ?passiveVoicePluralPreterite ;
-                                wikibase:grammaticalFeature wd:Q1194697 ;
-                                wikibase:grammaticalFeature wd:Q146786 ;
-                                wikibase:grammaticalFeature wd:Q442485 ;
-  } .
-
-  # Passive Voice Supine
-  OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?passiveVoiceSupineForm .
-      ?passiveVoiceSupineForm ontolex:representation ?passiveVoiceSupine ;
-                                wikibase:grammaticalFeature wd:Q1194697 ;
-                                wikibase:grammaticalFeature wd:Q548470 ;
-  } .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?auxiliaryVerbFrom rdfs:label ?auxiliaryVerb .
+  }
 }

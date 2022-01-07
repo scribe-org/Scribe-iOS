@@ -203,6 +203,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Angéologue": {
+    "plural": "Angéologues",
+    "form": "F/M"
+  },
+  "Angéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Ankara": {
     "plural": "",
     "form": "F"
@@ -267,6 +275,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Archaeomalacologiste": {
+    "plural": "Archaeomalacologistes",
+    "form": "F/M"
+  },
+  "Archaeomalacologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Arctique": {
     "plural": "Arctiques",
     "form": "M"
@@ -280,12 +296,8 @@
     "form": "M"
   },
   "Argentine": {
-    "plural": "Argentines",
+    "plural": "",
     "form": "F"
-  },
-  "Argentines": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Argentins": {
     "plural": "isPlural",
@@ -547,6 +559,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Biohygiéniste": {
+    "plural": "Biohygiénistes",
+    "form": "F/M"
+  },
+  "Biohygiénistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Biotois": {
     "plural": "Biotois",
     "form": "M/PL"
@@ -756,6 +776,14 @@
     "form": "PL"
   },
   "Briochins": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Briqueteur": {
+    "plural": "Briqueteurs",
+    "form": "M"
+  },
+  "Briqueteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1019,6 +1047,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Caviste": {
+    "plural": "Cavistes",
+    "form": "F/M"
+  },
+  "Cavistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Caïmanien": {
     "plural": "Caïmaniens",
     "form": "M"
@@ -1052,6 +1088,14 @@
     "form": "PL"
   },
   "Centrafricains": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Chargeur": {
+    "plural": "Chargeurs",
+    "form": "M"
+  },
+  "Chargeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1175,6 +1219,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Coloriste": {
+    "plural": "Coloristes",
+    "form": "F/M"
+  },
+  "Coloristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Comorien": {
     "plural": "Comoriens",
     "form": "M"
@@ -1212,6 +1264,14 @@
     "form": "F"
   },
   "Contoises": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Corailleur": {
+    "plural": "Corailleurs",
+    "form": "M"
+  },
+  "Corailleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1539,6 +1599,14 @@
     "plural": "",
     "form": "F"
   },
+  "Facteur": {
+    "plural": "Facteurs",
+    "form": "M"
+  },
+  "Facteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Fidjien": {
     "plural": "Fidjiens",
     "form": "M"
@@ -1587,6 +1655,14 @@
     "plural": "",
     "form": "F"
   },
+  "Fixeur": {
+    "plural": "Fixeurs",
+    "form": "M"
+  },
+  "Fixeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Florence": {
     "plural": "",
     "form": "F"
@@ -1624,6 +1700,14 @@
     "form": "F"
   },
   "Françaises": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Frigoriste": {
+    "plural": "Frigoristes",
+    "form": "F/M"
+  },
+  "Frigoristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1739,6 +1823,22 @@
     "plural": "",
     "form": ""
   },
+  "Gouverneur": {
+    "plural": "Gouverneurs",
+    "form": "M"
+  },
+  "Gouverneurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Graphothérapeute": {
+    "plural": "Graphothérapeutes",
+    "form": "F/M"
+  },
+  "Graphothérapeutes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Grassois": {
     "plural": "Grassois",
     "form": "M/PL"
@@ -1804,6 +1904,22 @@
     "form": "F"
   },
   "Groenlandaises": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Groupiste": {
+    "plural": "Groupistes",
+    "form": "F/M"
+  },
+  "Groupistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gruppenkommandeur": {
+    "plural": "Gruppenkommandeurs",
+    "form": "M"
+  },
+  "Gruppenkommandeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2087,6 +2203,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Infographiste": {
+    "plural": "Infographistes",
+    "form": "F/M"
+  },
+  "Infographistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Insulaire des Turques-et-Caïques": {
     "plural": "Insulaires des Turques-et-Caïques",
     "form": "F/M"
@@ -2116,6 +2240,14 @@
     "form": "M"
   },
   "Internets": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Intervalliste": {
+    "plural": "Intervallistes",
+    "form": "F/M"
+  },
+  "Intervallistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2494,6 +2626,14 @@
   "Le Caire": {
     "plural": "",
     "form": "M"
+  },
+  "Lecteur": {
+    "plural": "Lecteurs",
+    "form": "M"
+  },
+  "Lecteurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Letton": {
     "plural": "Lettons",
@@ -2929,15 +3069,11 @@
   },
   "Maralpin": {
     "plural": "Maralpine",
-    "form": "M/PL"
+    "form": "M"
   },
   "Maralpine": {
-    "plural": "Maralpines",
-    "form": "F"
-  },
-  "Maralpines": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Mariannais": {
     "plural": "Mariannais",
@@ -3107,15 +3243,31 @@
     "plural": "",
     "form": "F"
   },
+  "Miseur": {
+    "plural": "Miseurs",
+    "form": "M"
+  },
+  "Miseurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Mlle": {
     "plural": "mesdemoiselles",
     "form": "F"
   },
   "Mme": {
-    "plural": "mesdames",
-    "form": "F"
+    "plural": "Mmes",
+    "form": "F/PL"
   },
   "Mmes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Modeleur": {
+    "plural": "Modeleurs",
+    "form": "M"
+  },
+  "Modeleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3266,6 +3418,14 @@
   "Munich": {
     "plural": "",
     "form": "F"
+  },
+  "Médecin-biologiste": {
+    "plural": "Médecin-biologistes",
+    "form": "F/M"
+  },
+  "Médecin-biologistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Méditerranée": {
     "plural": "Méditerranées",
@@ -3744,6 +3904,14 @@
     "form": "PL"
   },
   "Parisiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Passeur": {
+    "plural": "Passeurs",
+    "form": "M"
+  },
+  "Passeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -4371,6 +4539,14 @@
     "plural": "",
     "form": "F"
   },
+  "Sauveteur": {
+    "plural": "Sauveteurs",
+    "form": "M"
+  },
+  "Sauveteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Serbe": {
     "plural": "Serbes",
     "form": "F/M"
@@ -4382,6 +4558,14 @@
   "Serbie": {
     "plural": "",
     "form": "F"
+  },
+  "Sertisseur": {
+    "plural": "Sertisseurs",
+    "form": "M"
+  },
+  "Sertisseurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Seychellois": {
     "plural": "Seychellois",
@@ -4507,6 +4691,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Spécialiste": {
+    "plural": "Spécialistes",
+    "form": "F/M"
+  },
+  "Spécialistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Srilankais": {
     "plural": "Srilankais",
     "form": "M/PL"
@@ -4616,12 +4808,8 @@
     "form": "M/PL"
   },
   "Suisse": {
-    "plural": "Suisses",
+    "plural": "",
     "form": "F/M"
-  },
-  "Suisses": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Surinamien": {
     "plural": "Surinamiens",
@@ -4688,6 +4876,22 @@
     "form": "PL"
   },
   "Syriens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Systémicien": {
+    "plural": "Systémiciens",
+    "form": "M"
+  },
+  "Systémicienne": {
+    "plural": "Systémiciennes",
+    "form": "F"
+  },
+  "Systémiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Systémiciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -4815,6 +5019,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Teutonique": {
+    "plural": "Teutoniques",
+    "form": "F/M"
+  },
+  "Teutoniques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Thailande": {
     "plural": "",
     "form": "F"
@@ -4844,6 +5056,14 @@
     "form": "F"
   },
   "Timoraises": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Tirailleur": {
+    "plural": "Tirailleurs",
+    "form": "M"
+  },
+  "Tirailleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5187,6 +5407,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Vigneron-tractoriste": {
+    "plural": "Vigneron-tractoristes",
+    "form": "F/M"
+  },
+  "Vigneron-tractoristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Villefranchois": {
     "plural": "Villefranchois",
     "form": "M/PL"
@@ -5491,6 +5719,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aboyeur": {
+    "plural": "aboyeurs",
+    "form": "M"
+  },
+  "aboyeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "abracadabra": {
     "plural": "abracadabras",
     "form": ""
@@ -5639,6 +5875,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "acarologue": {
+    "plural": "acarologues",
+    "form": "F/M"
+  },
+  "acarologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "accent": {
     "plural": "accents",
     "form": "M"
@@ -5676,6 +5920,14 @@
     "form": "M"
   },
   "accessoires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "accessoiriste": {
+    "plural": "accessoiristes",
+    "form": "F/M"
+  },
+  "accessoiristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5742,6 +5994,14 @@
   "accord universel des négociations climatiques de Paris": {
     "plural": "",
     "form": "M"
+  },
+  "accordeur": {
+    "plural": "accordeurs",
+    "form": "M"
+  },
+  "accordeurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "accords": {
     "plural": "isPlural",
@@ -5891,6 +6151,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "acousticien": {
+    "plural": "acousticiens",
+    "form": "M"
+  },
+  "acousticienne": {
+    "plural": "acousticiennes",
+    "form": "F"
+  },
+  "acousticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "acousticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "acquis": {
     "plural": "acquis",
     "form": "M/PL"
@@ -5995,6 +6271,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "acupuncteur": {
+    "plural": "acupuncteurs",
+    "form": "M"
+  },
+  "acupuncteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "adaptateur": {
+    "plural": "adaptateurs",
+    "form": "M"
+  },
+  "adaptateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "adaptation": {
     "plural": "adaptations",
     "form": "F"
@@ -6008,6 +6300,14 @@
     "form": "PL"
   },
   "adaptations au changement climatique": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "addictologue": {
+    "plural": "addictologues",
+    "form": "F/M"
+  },
+  "addictologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6227,11 +6527,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "affichiste": {
+    "plural": "affichistes",
+    "form": "F/M"
+  },
+  "affichistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "affiliation": {
     "plural": "affiliations",
     "form": "F"
   },
   "affiliations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "affineur": {
+    "plural": "affineurs",
+    "form": "M"
+  },
+  "affineurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6271,11 +6587,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "affréteur": {
+    "plural": "affréteurs",
+    "form": "M"
+  },
+  "affréteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "africain": {
     "plural": "africains",
     "form": "M"
   },
   "africains": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "africaniste": {
+    "plural": "africanistes",
+    "form": "F/M"
+  },
+  "africanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6400,6 +6732,30 @@
     "form": "F"
   },
   "agricultures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "agrobiologiste": {
+    "plural": "agrobiologistes",
+    "form": "F/M"
+  },
+  "agrobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "agrostologue": {
+    "plural": "agrostologues",
+    "form": "F/M"
+  },
+  "agrostologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "agroéconomiste": {
+    "plural": "agroéconomistes",
+    "form": "F/M"
+  },
+  "agroéconomistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6563,11 +6919,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ajusteur": {
+    "plural": "ajusteurs",
+    "form": "M"
+  },
+  "ajusteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "alarme": {
     "plural": "alarmes",
     "form": "F"
   },
   "alarmes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "albanologue": {
+    "plural": "albanologues",
+    "form": "F/M"
+  },
+  "albanologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6611,6 +6983,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alchimiste": {
+    "plural": "alchimistes",
+    "form": "F/M"
+  },
+  "alchimistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "alcool": {
     "plural": "alcools",
     "form": "M"
@@ -6620,6 +7000,14 @@
     "form": "M"
   },
   "alcoolismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alcoologue": {
+    "plural": "alcoologues",
+    "form": "F/M"
+  },
+  "alcoologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6648,6 +7036,14 @@
     "form": "F"
   },
   "alertes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "algoriste": {
+    "plural": "algoristes",
+    "form": "F/M"
+  },
+  "algoristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6727,6 +7123,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aliéniste": {
+    "plural": "aliénistes",
+    "form": "F/M"
+  },
+  "aliénistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "allaitement": {
     "plural": "allaitements",
     "form": "M"
@@ -6748,6 +7152,14 @@
     "form": "F"
   },
   "allergies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "allergologue": {
+    "plural": "allergologues",
+    "form": "F/M"
+  },
+  "allergologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6859,6 +7271,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alpiniste": {
+    "plural": "alpinistes",
+    "form": "F/M"
+  },
+  "alpinistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "alternance": {
     "plural": "alternances",
     "form": "F"
@@ -6888,6 +7308,14 @@
     "form": "M"
   },
   "altimètres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "altiste": {
+    "plural": "altistes",
+    "form": "F/M"
+  },
+  "altistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7315,6 +7743,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "anatomo-pathologiste": {
+    "plural": "anatomo-pathologistes",
+    "form": "F/M"
+  },
+  "anatomo-pathologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anatomocytopathologiste": {
+    "plural": "anatomocytopathologistes",
+    "form": "F/M"
+  },
+  "anatomocytopathologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ancienneté": {
     "plural": "anciennetés",
     "form": "F"
@@ -7336,6 +7780,22 @@
     "form": ""
   },
   "ancêtres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "andragogue": {
+    "plural": "andragogues",
+    "form": "F/M"
+  },
+  "andragogues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "andrologue": {
+    "plural": "andrologues",
+    "form": "F/M"
+  },
+  "andrologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7379,6 +7839,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "angiologue": {
+    "plural": "angiologues",
+    "form": "F/M"
+  },
+  "angiologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anglais": {
     "plural": "",
     "form": "M"
@@ -7388,6 +7856,14 @@
     "form": "M"
   },
   "angles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "angliciste": {
+    "plural": "anglicistes",
+    "form": "F/M"
+  },
+  "anglicistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7447,6 +7923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "annaliste": {
+    "plural": "annalistes",
+    "form": "F/M"
+  },
+  "annalistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anneau": {
     "plural": "anneaux",
     "form": "M"
@@ -7476,6 +7960,14 @@
     "form": "F"
   },
   "annonces": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "annonceur": {
+    "plural": "annonceurs",
+    "form": "M"
+  },
+  "annonceurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7535,6 +8027,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "annélidologiste": {
+    "plural": "annélidologistes",
+    "form": "F/M"
+  },
+  "annélidologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anomalie": {
     "plural": "anomalies",
     "form": "F"
@@ -7563,11 +8063,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "anthologiste": {
+    "plural": "anthologistes",
+    "form": "F/M"
+  },
+  "anthologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anthropologie": {
     "plural": "anthropologies",
     "form": "F"
   },
   "anthropologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anthropologue": {
+    "plural": "anthropologues",
+    "form": "F/M"
+  },
+  "anthropologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7727,6 +8243,22 @@
     "plural": "",
     "form": ""
   },
+  "aphoriste": {
+    "plural": "aphoristes",
+    "form": "F/M"
+  },
+  "aphoristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "apiculteur": {
+    "plural": "apiculteurs",
+    "form": "M"
+  },
+  "apiculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "apocalypse": {
     "plural": "apocalypses",
     "form": "F"
@@ -7879,6 +8411,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "approvisionneur": {
+    "plural": "approvisionneurs",
+    "form": "M"
+  },
+  "approvisionneurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "approximation": {
     "plural": "approximations",
     "form": "F"
@@ -7951,11 +8491,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aquaculteur": {
+    "plural": "aquaculteurs",
+    "form": "M"
+  },
+  "aquaculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aquaculture": {
     "plural": "aquacultures",
     "form": "F"
   },
   "aquacultures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aquafortiste": {
+    "plural": "aquafortistes",
+    "form": "F/M"
+  },
+  "aquafortistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aquanaute": {
+    "plural": "aquanautes",
+    "form": "F/M"
+  },
+  "aquanautes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7967,11 +8531,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "arachnologue": {
+    "plural": "arachnologues",
+    "form": "F/M"
+  },
+  "arachnologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "araignée": {
     "plural": "araignées",
     "form": "F"
   },
   "araignées": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aranéologue": {
+    "plural": "aranéologues",
+    "form": "F/M"
+  },
+  "aranéologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8028,6 +8608,14 @@
     "form": "F"
   },
   "arborisations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arboriste": {
+    "plural": "arboristes",
+    "form": "F/M"
+  },
+  "arboristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8123,11 +8711,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "archéobotaniste": {
+    "plural": "archéobotanistes",
+    "form": "F/M"
+  },
+  "archéobotanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "archéologie": {
     "plural": "archéologies",
     "form": "F"
   },
   "archéologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "archéologue": {
+    "plural": "archéologues",
+    "form": "F/M"
+  },
+  "archéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "archéozoologiste": {
+    "plural": "archéozoologistes",
+    "form": "F/M"
+  },
+  "archéozoologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8215,6 +8827,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "armateur": {
+    "plural": "armateurs",
+    "form": "M"
+  },
+  "armateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "armature": {
     "plural": "armatures",
     "form": "F"
@@ -8276,6 +8896,38 @@
     "form": "F"
   },
   "armées": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arménologue": {
+    "plural": "arménologues",
+    "form": "F/M"
+  },
+  "arménologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arnaqueur": {
+    "plural": "arnaqueurs",
+    "form": "M"
+  },
+  "arnaqueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aromachologiste": {
+    "plural": "aromachologistes",
+    "form": "F/M"
+  },
+  "aromachologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aromathérapeute": {
+    "plural": "aromathérapeutes",
+    "form": "F/M"
+  },
+  "aromathérapeutes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8426,6 +9078,14 @@
   "art": {
     "plural": "arts",
     "form": "M"
+  },
+  "art-thérapeute": {
+    "plural": "art-thérapeutes",
+    "form": "F/M"
+  },
+  "art-thérapeutes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "arthropode": {
     "plural": "arthropodes",
@@ -8799,6 +9459,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "assyriologue": {
+    "plural": "assyriologues",
+    "form": "F/M"
+  },
+  "assyriologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "assèchement": {
     "plural": "assèchements",
     "form": "M"
@@ -8823,6 +9491,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "astrologue": {
+    "plural": "astrologues",
+    "form": "F/M"
+  },
+  "astrologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "astronaute": {
     "plural": "astronautes",
     "form": "M"
@@ -8844,6 +9520,22 @@
     "form": "F"
   },
   "astronomies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "astrophysicien": {
+    "plural": "astrophysiciens",
+    "form": "M"
+  },
+  "astrophysicienne": {
+    "plural": "astrophysiciennes",
+    "form": "F"
+  },
+  "astrophysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "astrophysiciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8959,6 +9651,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "atteleur": {
+    "plural": "atteleurs",
+    "form": "M"
+  },
+  "atteleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "attentat": {
     "plural": "attentats",
     "form": ""
@@ -9071,6 +9771,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aubergiste": {
+    "plural": "aubergistes",
+    "form": "F/M"
+  },
+  "aubergistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aubes": {
     "plural": "isPlural",
     "form": "PL"
@@ -9091,9 +9799,33 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "audiologiste": {
+    "plural": "audiologistes",
+    "form": "F/M"
+  },
+  "audiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "audioprothésiste": {
+    "plural": "audioprothésistes",
+    "form": "F/M"
+  },
+  "audioprothésistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "audit": {
     "plural": "audits",
     "form": ""
+  },
+  "auditeur": {
+    "plural": "auditeurs",
+    "form": "M"
+  },
+  "auditeurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "audition": {
     "plural": "auditions",
@@ -9284,6 +10016,22 @@
     "form": "M"
   },
   "automates": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "automaticien": {
+    "plural": "automaticiens",
+    "form": "M"
+  },
+  "automaticienne": {
+    "plural": "automaticiennes",
+    "form": "F"
+  },
+  "automaticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "automaticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -9619,6 +10367,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aviculteur": {
+    "plural": "aviculteurs",
+    "form": "M"
+  },
+  "aviculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "avion": {
     "plural": "avions",
     "form": "M"
@@ -9780,6 +10536,14 @@
     "form": "PL"
   },
   "bacs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bactériologiste": {
+    "plural": "bactériologistes",
+    "form": "F/M"
+  },
+  "bactériologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10099,9 +10863,25 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bandouriste": {
+    "plural": "bandouristes",
+    "form": "F/M"
+  },
+  "bandouristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bangla": {
     "plural": "",
     "form": "M"
+  },
+  "banjoïste": {
+    "plural": "banjoïstes",
+    "form": "F/M"
+  },
+  "banjoïstes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "banlieue": {
     "plural": "banlieues",
@@ -10239,6 +11019,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bariste": {
+    "plural": "baristes",
+    "form": "F/M"
+  },
+  "baristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "baromètre": {
     "plural": "baromètres",
     "form": "M"
@@ -10292,6 +11080,14 @@
     "form": "PL"
   },
   "barres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "barreur": {
+    "plural": "barreurs",
+    "form": "M"
+  },
+  "barreurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10631,6 +11427,14 @@
     "plural": "biais",
     "form": "M/PL"
   },
+  "bibeloteur": {
+    "plural": "bibeloteurs",
+    "form": "M"
+  },
+  "bibeloteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bible": {
     "plural": "bibles",
     "form": "F"
@@ -10660,6 +11464,22 @@
     "form": ""
   },
   "bibliothécaires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bibliothéconomiste": {
+    "plural": "bibliothéconomistes",
+    "form": "F/M"
+  },
+  "bibliothéconomistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bibliste": {
+    "plural": "biblistes",
+    "form": "F/M"
+  },
+  "biblistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10847,6 +11667,38 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bio-informaticien": {
+    "plural": "bio-informaticiens",
+    "form": "M"
+  },
+  "bio-informaticienne": {
+    "plural": "bio-informaticiennes",
+    "form": "F"
+  },
+  "bio-informaticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bio-informaticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bioacousticien": {
+    "plural": "bioacousticiens",
+    "form": "M"
+  },
+  "bioacousticienne": {
+    "plural": "bioacousticiennes",
+    "form": "F"
+  },
+  "bioacousticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bioacousticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "biochimie": {
     "plural": "biochimies",
     "form": "F"
@@ -10855,11 +11707,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "biochimiste": {
+    "plural": "biochimistes",
+    "form": "F/M"
+  },
+  "biochimistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bioculturalisme": {
     "plural": "bioculturalismes",
     "form": ""
   },
   "bioculturalismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biocurateur": {
+    "plural": "biocurateurs",
+    "form": "M"
+  },
+  "biocurateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10879,6 +11747,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "biogéochimiste": {
+    "plural": "biogéochimistes",
+    "form": "F/M"
+  },
+  "biogéochimistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bioingénieur": {
+    "plural": "bioingénieurs",
+    "form": "M"
+  },
+  "bioingénieurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "biologie": {
     "plural": "biologies",
     "form": "F"
@@ -10895,6 +11779,46 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "biologiste": {
+    "plural": "biologistes",
+    "form": "F/M"
+  },
+  "biologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biomathématicien": {
+    "plural": "biomathématiciens",
+    "form": "M"
+  },
+  "biomathématicienne": {
+    "plural": "biomathématiciennes",
+    "form": "F"
+  },
+  "biomathématiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biomathématiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biophysicien": {
+    "plural": "biophysiciens",
+    "form": "M"
+  },
+  "biophysicienne": {
+    "plural": "biophysiciennes",
+    "form": "F"
+  },
+  "biophysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biophysiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "biosphère": {
     "plural": "biosphères",
     "form": "F"
@@ -10903,11 +11827,67 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "biostatisticien": {
+    "plural": "biostatisticiens",
+    "form": "M"
+  },
+  "biostatisticienne": {
+    "plural": "biostatisticiennes",
+    "form": "F"
+  },
+  "biostatisticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biostatisticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biosémioticien": {
+    "plural": "biosémioticiens",
+    "form": "M"
+  },
+  "biosémioticienne": {
+    "plural": "biosémioticiennes",
+    "form": "F"
+  },
+  "biosémioticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biosémioticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biotechnologiste": {
+    "plural": "biotechnologistes",
+    "form": "F/M"
+  },
+  "biotechnologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "biotope": {
     "plural": "biotopes",
     "form": "M"
   },
   "biotopes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bioéthicien": {
+    "plural": "bioéthiciens",
+    "form": "M"
+  },
+  "bioéthicienne": {
+    "plural": "bioéthiciennes",
+    "form": "F"
+  },
+  "bioéthiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bioéthiciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11123,6 +12103,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "blogueur": {
+    "plural": "blogueurs",
+    "form": "M"
+  },
+  "blogueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "blonde": {
     "plural": "blondes",
     "form": "F"
@@ -11144,6 +12132,14 @@
     "form": "F"
   },
   "blouses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bluegelhorniste": {
+    "plural": "bluegelhornistes",
+    "form": "F/M"
+  },
+  "bluegelhornistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11171,11 +12167,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bobeur": {
+    "plural": "bobeurs",
+    "form": "M"
+  },
+  "bobeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bodyboardeur": {
+    "plural": "bodyboardeurs",
+    "form": "M"
+  },
+  "bodyboardeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bohème": {
     "plural": "bohèmes",
     "form": "F"
   },
   "bohèmes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bohémiste": {
+    "plural": "bohémistes",
+    "form": "F/M"
+  },
+  "bohémistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11763,6 +12783,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "boxeur": {
+    "plural": "boxeurs",
+    "form": "M"
+  },
+  "boxeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "boy": {
     "plural": "boys",
     "form": "M"
@@ -11856,6 +12884,14 @@
     "form": "F"
   },
   "brasseries": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "brasseur": {
+    "plural": "brasseurs",
+    "form": "M"
+  },
+  "brasseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -12015,6 +13051,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "brodeur": {
+    "plural": "brodeurs",
+    "form": "M"
+  },
+  "brodeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bronchite": {
     "plural": "bronchites",
     "form": "F"
@@ -12116,6 +13160,22 @@
     "form": "M"
   },
   "brutions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bryologiste": {
+    "plural": "bryologistes",
+    "form": "F/M"
+  },
+  "bryologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bryozoologiste": {
+    "plural": "bryozoologistes",
+    "form": "F/M"
+  },
+  "bryozoologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -12272,6 +13332,14 @@
     "form": "PL"
   },
   "buts": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "byzantiniste": {
+    "plural": "byzantinistes",
+    "form": "F/M"
+  },
+  "byzantinistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -12571,6 +13639,14 @@
     "plural": "cafés",
     "form": "M"
   },
+  "caféiculteur": {
+    "plural": "caféiculteurs",
+    "form": "M"
+  },
+  "caféiculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cafés": {
     "plural": "isPlural",
     "form": "PL"
@@ -12675,6 +13751,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "calfateur": {
+    "plural": "calfateurs",
+    "form": "M"
+  },
+  "calfateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "calibration": {
     "plural": "calibrations",
     "form": "F"
@@ -12768,6 +13852,14 @@
     "form": "M"
   },
   "caméléons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "camériste": {
+    "plural": "caméristes",
+    "form": "F/M"
+  },
+  "caméristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13167,6 +14259,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "carcinologiste": {
+    "plural": "carcinologistes",
+    "form": "F/M"
+  },
+  "carcinologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "carde": {
     "plural": "cardes",
     "form": "F"
@@ -13175,11 +14275,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cardeur": {
+    "plural": "cardeurs",
+    "form": "M"
+  },
+  "cardeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cardinal": {
     "plural": "cardinaux",
     "form": "M"
   },
   "cardinaux": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cardiologue": {
+    "plural": "cardiologues",
+    "form": "F/M"
+  },
+  "cardiologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13234,6 +14350,14 @@
   "carillon": {
     "plural": "carillons",
     "form": "M"
+  },
+  "carillonneur": {
+    "plural": "carillonneurs",
+    "form": "M"
+  },
+  "carillonneurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "carillons": {
     "plural": "isPlural",
@@ -13300,6 +14424,14 @@
     "form": "M"
   },
   "carrelages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "carreleur": {
+    "plural": "carreleurs",
+    "form": "M"
+  },
+  "carreleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13463,6 +14595,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "castellologue": {
+    "plural": "castellologues",
+    "form": "F/M"
+  },
+  "castellologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "castor": {
     "plural": "castors",
     "form": "M"
@@ -13495,6 +14635,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "catalogueur": {
+    "plural": "catalogueurs",
+    "form": "M"
+  },
+  "catalogueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cataplasme": {
     "plural": "cataplasmes",
     "form": "M"
@@ -13524,6 +14672,14 @@
     "form": "F"
   },
   "catastrophes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "catcheur": {
+    "plural": "catcheurs",
+    "form": "M"
+  },
+  "catcheurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13591,6 +14747,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "causidique": {
+    "plural": "causidiques",
+    "form": "F/M"
+  },
+  "causidiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "caution": {
     "plural": "cautions",
     "form": "F"
@@ -13655,6 +14819,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "caviste": {
+    "plural": "cavistes",
+    "form": "F/M"
+  },
+  "cavistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cavité": {
     "plural": "cavités",
     "form": "F"
@@ -13706,6 +14878,14 @@
   "cendrillon": {
     "plural": "",
     "form": "F"
+  },
+  "censeur": {
+    "plural": "censeurs",
+    "form": "M"
+  },
+  "censeurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "censure": {
     "plural": "censures",
@@ -13798,6 +14978,14 @@
   "cerf": {
     "plural": "cerfs",
     "form": "M"
+  },
+  "cerf-voliste": {
+    "plural": "cerf-volistes",
+    "form": "F/M"
+  },
+  "cerf-volistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "cerfs": {
     "plural": "isPlural",
@@ -14028,6 +15216,14 @@
     "form": "PL"
   },
   "changes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "changeur": {
+    "plural": "changeurs",
+    "form": "M"
+  },
+  "changeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -14599,6 +15795,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "chiroptérologue": {
+    "plural": "chiroptérologues",
+    "form": "F/M"
+  },
+  "chiroptérologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "chirurgie": {
     "plural": "chirurgies",
     "form": "F"
@@ -14775,11 +15979,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "chroniqueur": {
+    "plural": "chroniqueurs",
+    "form": "M"
+  },
+  "chroniqueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "chroniqueuse": {
     "plural": "chroniqueuses",
     "form": "F"
   },
   "chroniqueuses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "chronobiologiste": {
+    "plural": "chronobiologistes",
+    "form": "F/M"
+  },
+  "chronobiologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -14796,6 +16016,14 @@
     "form": "F/M"
   },
   "chronologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "chuchoteur": {
+    "plural": "chuchoteurs",
+    "form": "M"
+  },
+  "chuchoteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -14836,6 +16064,14 @@
     "form": "M"
   },
   "châtiments": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "châtreur": {
+    "plural": "châtreurs",
+    "form": "M"
+  },
+  "châtreurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15091,6 +16327,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ciseleur": {
+    "plural": "ciseleurs",
+    "form": "M"
+  },
+  "ciseleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cisgenrisme": {
     "plural": "cisgenrismes",
     "form": ""
@@ -15112,6 +16356,14 @@
     "form": "F"
   },
   "citations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cithariste": {
+    "plural": "citharistes",
+    "form": "F/M"
+  },
+  "citharistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15295,11 +16547,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "claveciniste": {
+    "plural": "clavecinistes",
+    "form": "F/M"
+  },
+  "clavecinistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "clavier": {
     "plural": "claviers",
     "form": "M"
   },
   "claviers": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "claviste": {
+    "plural": "clavistes",
+    "form": "F/M"
+  },
+  "clavistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "claviériste": {
+    "plural": "claviéristes",
+    "form": "F/M"
+  },
+  "claviéristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15371,7 +16647,31 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "climatologue": {
+    "plural": "climatologues",
+    "form": "F/M"
+  },
+  "climatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "climats": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "clinicien": {
+    "plural": "cliniciens",
+    "form": "M"
+  },
+  "clinicienne": {
+    "plural": "cliniciennes",
+    "form": "F"
+  },
+  "cliniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cliniciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15515,6 +16815,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cnidariologue": {
+    "plural": "cnidariologues",
+    "form": "F/M"
+  },
+  "cnidariologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "coaching": {
     "plural": "coachings",
     "form": "M"
@@ -15587,6 +16895,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "codicologue": {
+    "plural": "codicologues",
+    "form": "F/M"
+  },
+  "codicologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "coefficient": {
     "plural": "coefficients",
     "form": "M"
@@ -15640,6 +16956,22 @@
     "form": "F"
   },
   "cofondatrices": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cogniticien": {
+    "plural": "cogniticiens",
+    "form": "M"
+  },
+  "cogniticienne": {
+    "plural": "cogniticiennes",
+    "form": "F"
+  },
+  "cogniticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cogniticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15764,6 +17096,14 @@
     "form": "M"
   },
   "collages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "collagiste": {
+    "plural": "collagistes",
+    "form": "F/M"
+  },
+  "collagistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15923,6 +17263,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "colonisateur": {
+    "plural": "colonisateurs",
+    "form": "M"
+  },
+  "colonisateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "colonisation": {
     "plural": "colonisations",
     "form": "F"
@@ -15959,11 +17307,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "coloriste": {
+    "plural": "coloristes",
+    "form": "F/M"
+  },
+  "coloristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "colportage": {
     "plural": "colportages",
     "form": "M"
   },
   "colportages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "colporteur": {
+    "plural": "colporteurs",
+    "form": "M"
+  },
+  "colporteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15984,6 +17348,14 @@
     "form": "F"
   },
   "colères": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coléoptériste": {
+    "plural": "coléoptéristes",
+    "form": "F/M"
+  },
+  "coléoptéristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16263,6 +17635,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "comparatiste": {
+    "plural": "comparatistes",
+    "form": "F/M"
+  },
+  "comparatistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "compartiment": {
     "plural": "compartiments",
     "form": "M"
@@ -16320,6 +17700,14 @@
     "form": "PL"
   },
   "compensations carbone": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "compilateur": {
+    "plural": "compilateurs",
+    "form": "M"
+  },
+  "compilateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16667,6 +18055,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "conchyliologiste": {
+    "plural": "conchyliologistes",
+    "form": "F/M"
+  },
+  "conchyliologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "concile": {
     "plural": "conciles",
     "form": "M"
@@ -16907,6 +18303,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "confiseur": {
+    "plural": "confiseurs",
+    "form": "M"
+  },
+  "confiseurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "confit": {
     "plural": "confits",
     "form": "M"
@@ -16952,6 +18356,14 @@
     "form": "F"
   },
   "confréries": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "confucianiste": {
+    "plural": "confucianistes",
+    "form": "F/M"
+  },
+  "confucianistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17151,6 +18563,14 @@
     "plural": "conservations",
     "form": "F"
   },
+  "conservationniste": {
+    "plural": "conservationnistes",
+    "form": "F/M"
+  },
+  "conservationnistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "conservations": {
     "plural": "isPlural",
     "form": "PL"
@@ -17187,6 +18607,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "consolideur": {
+    "plural": "consolideurs",
+    "form": "M"
+  },
+  "consolideurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "consommateur": {
     "plural": "consommateurs",
     "form": "M"
@@ -17216,6 +18644,14 @@
     "form": ""
   },
   "consommés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "conspirateur": {
+    "plural": "conspirateurs",
+    "form": "M"
+  },
+  "conspirateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17254,6 +18690,14 @@
   "constitution": {
     "plural": "constitutions",
     "form": "F"
+  },
+  "constitutionnaliste": {
+    "plural": "constitutionnalistes",
+    "form": "F/M"
+  },
+  "constitutionnalistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "constitutionnalité": {
     "plural": "constitutionnalités",
@@ -17358,6 +18802,14 @@
   "conte": {
     "plural": "contes",
     "form": "M"
+  },
+  "contemporanéiste": {
+    "plural": "contemporanéistes",
+    "form": "F/M"
+  },
+  "contemporanéistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "contentieux": {
     "plural": "contentieux",
@@ -17775,11 +19227,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "copiste": {
+    "plural": "copistes",
+    "form": "F/M"
+  },
+  "copistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coptologue": {
+    "plural": "coptologues",
+    "form": "F/M"
+  },
+  "coptologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "copulation": {
     "plural": "copulations",
     "form": "F"
   },
   "copulations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "copépodologiste": {
+    "plural": "copépodologistes",
+    "form": "F/M"
+  },
+  "copépodologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17888,6 +19364,14 @@
     "form": "PL"
   },
   "cordiaux": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cordiste": {
+    "plural": "cordistes",
+    "form": "F/M"
+  },
+  "cordistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -18044,6 +19528,22 @@
     "form": "M"
   },
   "cortèges": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coréanologue": {
+    "plural": "coréanologues",
+    "form": "F/M"
+  },
+  "coréanologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cosmologiste": {
+    "plural": "cosmologistes",
+    "form": "F/M"
+  },
+  "cosmologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -18427,6 +19927,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "couvreur": {
+    "plural": "couvreurs",
+    "form": "M"
+  },
+  "couvreurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "covergirl": {
     "plural": "covergirls",
     "form": ""
@@ -18437,7 +19945,7 @@
   },
   "cow-boy": {
     "plural": "cow-boys",
-    "form": "M"
+    "form": "M/PL"
   },
   "cow-boys": {
     "plural": "isPlural",
@@ -18445,7 +19953,7 @@
   },
   "cowboy": {
     "plural": "cow-boys",
-    "form": "M/PL"
+    "form": "M"
   },
   "coyote": {
     "plural": "coyotes",
@@ -18591,6 +20099,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "criminaliste": {
+    "plural": "criminalistes",
+    "form": "F/M"
+  },
+  "criminalistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "criminalité": {
     "plural": "criminalités",
     "form": "F"
@@ -18604,6 +20120,14 @@
     "form": "M"
   },
   "criminels": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "criminologue": {
+    "plural": "criminologues",
+    "form": "F/M"
+  },
+  "criminologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -18784,6 +20308,30 @@
     "form": "M"
   },
   "cryptages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cryptanalyste": {
+    "plural": "cryptanalystes",
+    "form": "F/M"
+  },
+  "cryptanalystes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cryptologue": {
+    "plural": "cryptologues",
+    "form": "F/M"
+  },
+  "cryptologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cryptozoologue": {
+    "plural": "cryptozoologues",
+    "form": "F/M"
+  },
+  "cryptozoologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19047,11 +20595,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cultivateur": {
+    "plural": "cultivateurs",
+    "form": "M"
+  },
+  "cultivateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "culture": {
     "plural": "cultures",
     "form": "F"
   },
   "cultures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "culturiste": {
+    "plural": "culturistes",
+    "form": "F/M"
+  },
+  "culturistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "culturologue": {
+    "plural": "culturologues",
+    "form": "F/M"
+  },
+  "culturologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19087,6 +20659,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "curleur": {
+    "plural": "curleurs",
+    "form": "M"
+  },
+  "curleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "curry": {
     "plural": "currys",
     "form": "M"
@@ -19116,6 +20696,14 @@
     "form": "F"
   },
   "cybernétiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cybernétiste": {
+    "plural": "cybernétistes",
+    "form": "F/M"
+  },
+  "cybernétistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19191,6 +20779,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cynologue": {
+    "plural": "cynologues",
+    "form": "F/M"
+  },
+  "cynologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "câble": {
     "plural": "câbles",
     "form": "M"
@@ -19259,6 +20855,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "céiste": {
+    "plural": "céistes",
+    "form": "F/M"
+  },
+  "céistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "céleri": {
     "plural": "céleris",
     "form": "M/PL"
@@ -19291,6 +20895,30 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "céramiste": {
+    "plural": "céramistes",
+    "form": "F/M"
+  },
+  "céramistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "céramologue": {
+    "plural": "céramologues",
+    "form": "F/M"
+  },
+  "céramologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "céroplaste": {
+    "plural": "céroplastes",
+    "form": "F/M"
+  },
+  "céroplastes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "céréale": {
     "plural": "céréales",
     "form": "F"
@@ -19318,6 +20946,14 @@
   "césium": {
     "plural": "cæsiums",
     "form": "M"
+  },
+  "cétologue": {
+    "plural": "cétologues",
+    "form": "F/M"
+  },
+  "cétologues": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "côlon": {
     "plural": "côlons",
@@ -19374,6 +21010,14 @@
   "dagbani": {
     "plural": "",
     "form": "M"
+  },
+  "daguerréotypiste": {
+    "plural": "daguerréotypistes",
+    "form": "F/M"
+  },
+  "daguerréotypistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "dai": {
     "plural": "dais",
@@ -19643,6 +21287,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "dendrologue": {
+    "plural": "dendrologues",
+    "form": "F/M"
+  },
+  "dendrologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "dengue": {
     "plural": "dengues",
     "form": "F"
@@ -19712,6 +21364,14 @@
     "form": "PL"
   },
   "dents": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dermatologue": {
+    "plural": "dermatologues",
+    "form": "F/M"
+  },
+  "dermatologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19887,6 +21547,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "diabétologue": {
+    "plural": "diabétologues",
+    "form": "F/M"
+  },
+  "diabétologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "diagnostic": {
     "plural": "diagnostics",
     "form": ""
@@ -19924,6 +21592,14 @@
     "form": "M"
   },
   "dialogues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dialoguiste": {
+    "plural": "dialoguistes",
+    "form": "F/M"
+  },
+  "dialoguistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19983,6 +21659,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "didacticien": {
+    "plural": "didacticiens",
+    "form": "M"
+  },
+  "didacticienne": {
+    "plural": "didacticiennes",
+    "form": "F"
+  },
+  "didacticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "didacticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "didactique": {
     "plural": "didactiques",
     "form": "F"
@@ -20028,6 +21720,14 @@
     "form": "F"
   },
   "diffractions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "diffuseur": {
+    "plural": "diffuseurs",
+    "form": "M"
+  },
+  "diffuseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -20232,6 +21932,14 @@
     "form": "M"
   },
   "diplômés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "diptérologue": {
+    "plural": "diptérologues",
+    "form": "F/M"
+  },
+  "diptérologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -20487,6 +22195,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "distillateur": {
+    "plural": "distillateurs",
+    "form": "M"
+  },
+  "distillateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "distillation": {
     "plural": "distillations",
     "form": "F"
@@ -20675,6 +22391,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "documentariste": {
+    "plural": "documentaristes",
+    "form": "F/M"
+  },
+  "documentaristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "documentation": {
     "plural": "documentations",
     "form": "F"
@@ -20759,6 +22483,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "domoticien": {
+    "plural": "domoticiens",
+    "form": "M"
+  },
+  "domoticienne": {
+    "plural": "domoticiennes",
+    "form": "F"
+  },
+  "domoticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "domoticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "don": {
     "plural": "dons",
     "form": "M"
@@ -20796,6 +22536,14 @@
     "form": "F"
   },
   "donzelles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "doreur": {
+    "plural": "doreurs",
+    "form": "M"
+  },
+  "doreurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -21027,6 +22775,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "dresseur": {
+    "plural": "dresseurs",
+    "form": "M"
+  },
+  "dresseurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "dressoir": {
     "plural": "dressoirs",
     "form": ""
@@ -21043,6 +22799,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "droguiste": {
+    "plural": "droguistes",
+    "form": "F/M"
+  },
+  "droguistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "droit": {
     "plural": "droits",
     "form": "M"
@@ -21056,6 +22820,14 @@
     "form": "PL"
   },
   "droits": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "drouineur": {
+    "plural": "drouineurs",
+    "form": "M"
+  },
+  "drouineurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -21335,6 +23107,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "déchargeur": {
+    "plural": "déchargeurs",
+    "form": "M"
+  },
+  "déchargeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "déchet": {
     "plural": "déchets",
     "form": "M"
@@ -21467,6 +23247,14 @@
     "plural": "décors",
     "form": "M"
   },
+  "décorateur": {
+    "plural": "décorateurs",
+    "form": "M"
+  },
+  "décorateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "décoration": {
     "plural": "décorations",
     "form": "F"
@@ -21552,6 +23340,14 @@
     "form": "M"
   },
   "défauts": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "défectologue": {
+    "plural": "défectologues",
+    "form": "F/M"
+  },
+  "défectologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -21835,6 +23631,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "démineur": {
+    "plural": "démineurs",
+    "form": "M"
+  },
+  "démineurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "démission": {
     "plural": "démissions",
     "form": "F"
@@ -21879,6 +23683,14 @@
     "plural": "démons",
     "form": "M"
   },
+  "démonologue": {
+    "plural": "démonologues",
+    "form": "F/M"
+  },
+  "démonologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "démons": {
     "plural": "isPlural",
     "form": "PL"
@@ -21888,6 +23700,22 @@
     "form": "F"
   },
   "démonstrations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "déménagement": {
+    "plural": "déménagements",
+    "form": "M"
+  },
+  "déménagements": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "déménageur": {
+    "plural": "déménageurs",
+    "form": "M"
+  },
+  "déménageurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -22144,6 +23972,14 @@
     "form": "M"
   },
   "dérapages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dératiseur": {
+    "plural": "dératiseurs",
+    "form": "M"
+  },
+  "dératiseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -22671,6 +24507,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "embryologiste": {
+    "plural": "embryologistes",
+    "form": "F/M"
+  },
+  "embryologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "embryon": {
     "plural": "embryons",
     "form": "M"
@@ -22851,6 +24695,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "encaveur": {
+    "plural": "encaveurs",
+    "form": "M"
+  },
+  "encaveurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "enceinte": {
     "plural": "enceintes",
     "form": "F"
@@ -22899,11 +24751,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "encreur": {
+    "plural": "encreurs",
+    "form": "M"
+  },
+  "encreurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "encyclopédie": {
     "plural": "encyclopédies",
     "form": "F"
   },
   "encyclopédies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "encyclopédiste": {
+    "plural": "encyclopédistes",
+    "form": "F/M"
+  },
+  "encyclopédistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -22920,6 +24788,22 @@
     "form": "F"
   },
   "endives": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "endocrinologue": {
+    "plural": "endocrinologues",
+    "form": "F/M"
+  },
+  "endocrinologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "endodontiste": {
+    "plural": "endodontistes",
+    "form": "F/M"
+  },
+  "endodontistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23039,6 +24923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "enlumineur": {
+    "plural": "enlumineurs",
+    "form": "M"
+  },
+  "enlumineurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "enlèvement": {
     "plural": "enlèvements",
     "form": "M"
@@ -23068,6 +24960,14 @@
     "form": "F"
   },
   "enquêtes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "enquêteur": {
+    "plural": "enquêteurs",
+    "form": "M"
+  },
+  "enquêteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23180,6 +25080,14 @@
     "form": "F"
   },
   "entomologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "entomologiste": {
+    "plural": "entomologistes",
+    "form": "F/M"
+  },
+  "entomologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23368,6 +25276,14 @@
     "form": "F"
   },
   "ergonomies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ergonomiste": {
+    "plural": "ergonomistes",
+    "form": "F/M"
+  },
+  "ergonomistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23579,6 +25495,14 @@
     "plural": "espérantos",
     "form": "M"
   },
+  "espérantologue": {
+    "plural": "espérantologues",
+    "form": "F/M"
+  },
+  "espérantologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "espérantos": {
     "plural": "isPlural",
     "form": "PL"
@@ -23604,6 +25528,22 @@
     "form": "PL"
   },
   "essais": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "essayeur": {
+    "plural": "essayeurs",
+    "form": "M"
+  },
+  "essayeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "essayiste": {
+    "plural": "essayistes",
+    "form": "F/M"
+  },
+  "essayistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23656,6 +25596,22 @@
     "form": "F"
   },
   "estampes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "esthéticien": {
+    "plural": "esthéticiens",
+    "form": "M"
+  },
+  "esthéticienne": {
+    "plural": "esthéticiennes",
+    "form": "F"
+  },
+  "esthéticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "esthéticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23716,6 +25672,30 @@
     "form": "F"
   },
   "ethnographies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ethnohistorien": {
+    "plural": "ethnohistoriens",
+    "form": "M"
+  },
+  "ethnohistorienne": {
+    "plural": "ethnohistoriennes",
+    "form": "F"
+  },
+  "ethnohistoriennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ethnohistoriens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ethnologue": {
+    "plural": "ethnologues",
+    "form": "F/M"
+  },
+  "ethnologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23955,9 +25935,25 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "existentialiste": {
+    "plural": "existentialistes",
+    "form": "F/M"
+  },
+  "existentialistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "exlibris": {
     "plural": "exlibris",
     "form": "M/PL"
+  },
+  "exobiologiste": {
+    "plural": "exobiologistes",
+    "form": "F/M"
+  },
+  "exobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "exonération": {
     "plural": "exonérations",
@@ -24276,6 +26272,14 @@
     "form": "F"
   },
   "fabriques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fabuliste": {
+    "plural": "fabulistes",
+    "form": "F/M"
+  },
+  "fabulistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -24843,6 +26847,14 @@
     "plural": "feuilletons",
     "form": "M"
   },
+  "feuilletoniste": {
+    "plural": "feuilletonistes",
+    "form": "F/M"
+  },
+  "feuilletonistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "feuilletons": {
     "plural": "isPlural",
     "form": "PL"
@@ -24988,6 +27000,14 @@
     "form": "F"
   },
   "filamentations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fileur": {
+    "plural": "fileurs",
+    "form": "M"
+  },
+  "fileurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -25303,6 +27323,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "floriculteur": {
+    "plural": "floriculteurs",
+    "form": "M"
+  },
+  "floriculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "floréal": {
     "plural": "floréals",
     "form": "M"
@@ -25447,6 +27475,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "folkloriste": {
+    "plural": "folkloristes",
+    "form": "F/M"
+  },
+  "folkloristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "fonction": {
     "plural": "fonctions",
     "form": "F"
@@ -25515,6 +27551,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "fondeur": {
+    "plural": "fondeurs",
+    "form": "M"
+  },
+  "fondeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "fonds": {
     "plural": "fonds",
     "form": "M/PL"
@@ -25574,6 +27618,14 @@
   "format": {
     "plural": "formats",
     "form": "M"
+  },
+  "formateur": {
+    "plural": "formateurs",
+    "form": "M"
+  },
+  "formateurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "formation": {
     "plural": "formations",
@@ -25687,6 +27739,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "fossoyeur": {
+    "plural": "fossoyeurs",
+    "form": "M"
+  },
+  "fossoyeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "fou": {
     "plural": "fous",
     "form": "M"
@@ -25764,6 +27824,14 @@
     "form": "F"
   },
   "fournitures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fourreur": {
+    "plural": "fourreurs",
+    "form": "M"
+  },
+  "fourreurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26087,6 +28155,14 @@
     "plural": "fruits",
     "form": "M"
   },
+  "fruiticulteur": {
+    "plural": "fruiticulteurs",
+    "form": "M"
+  },
+  "fruiticulteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "fruitière": {
     "plural": "fruitières",
     "form": "F"
@@ -26214,6 +28290,14 @@
   "futur": {
     "plural": "futurs",
     "form": "M"
+  },
+  "futurologue": {
+    "plural": "futurologues",
+    "form": "F/M"
+  },
+  "futurologues": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "futurs": {
     "plural": "isPlural",
@@ -26404,6 +28488,14 @@
     "form": "M"
   },
   "galériens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gambiste": {
+    "plural": "gambistes",
+    "form": "F/M"
+  },
+  "gambistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26695,6 +28787,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gemmologue": {
+    "plural": "gemmologues",
+    "form": "F/M"
+  },
+  "gemmologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gendarme": {
     "plural": "gendarmes",
     "form": ""
@@ -26760,6 +28860,14 @@
     "form": ""
   },
   "germanismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "germaniste": {
+    "plural": "germanistes",
+    "form": "F/M"
+  },
+  "germanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26907,6 +29015,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "glaciologue": {
+    "plural": "glaciologues",
+    "form": "F/M"
+  },
+  "glaciologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "glaive": {
     "plural": "glaives",
     "form": "M"
@@ -27003,6 +29119,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "glossateur": {
+    "plural": "glossateurs",
+    "form": "M"
+  },
+  "glossateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gloutonnerie": {
     "plural": "gloutonneries",
     "form": "F"
@@ -27019,11 +29143,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "glypticien": {
+    "plural": "glypticiens",
+    "form": "M"
+  },
+  "glypticienne": {
+    "plural": "glypticiennes",
+    "form": "F"
+  },
+  "glypticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "glypticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gnocchi": {
     "plural": "gnocchis",
     "form": "M"
   },
   "gnocchis": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gnomoniste": {
+    "plural": "gnomonistes",
+    "form": "F/M"
+  },
+  "gnomonistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27038,6 +29186,14 @@
   "golf": {
     "plural": "golfs",
     "form": "M"
+  },
+  "golfeur": {
+    "plural": "golfeurs",
+    "form": "M"
+  },
+  "golfeurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "golfs": {
     "plural": "isPlural",
@@ -27207,6 +29363,14 @@
     "plural": "goûts",
     "form": "M"
   },
+  "goûteur": {
+    "plural": "goûteurs",
+    "form": "M"
+  },
+  "goûteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "goûts": {
     "plural": "isPlural",
     "form": "PL"
@@ -27311,6 +29475,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "graphiste": {
+    "plural": "graphistes",
+    "form": "F/M"
+  },
+  "graphistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "graphème": {
     "plural": "graphèmes",
     "form": "M"
@@ -27332,6 +29504,14 @@
     "form": "F"
   },
   "gratuités": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "graveur": {
+    "plural": "graveurs",
+    "form": "M"
+  },
+  "graveurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27411,6 +29591,14 @@
     "plural": "gri-gris",
     "form": "M/PL"
   },
+  "grimpeur": {
+    "plural": "grimpeurs",
+    "form": "M"
+  },
+  "grimpeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "grippe": {
     "plural": "grippes",
     "form": "F"
@@ -27440,6 +29628,14 @@
     "form": "F"
   },
   "grosses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "grossiste": {
+    "plural": "grossistes",
+    "form": "F/M"
+  },
+  "grossistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27488,6 +29684,14 @@
     "form": "M"
   },
   "grés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "grêle": {
+    "plural": "grêles",
+    "form": "F"
+  },
+  "grêles": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27611,11 +29815,43 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gymnaste": {
+    "plural": "gymnastes",
+    "form": "F/M"
+  },
+  "gymnastes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gymnastique": {
     "plural": "gymnastiques",
     "form": "F"
   },
   "gymnastiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gynécologue": {
+    "plural": "gynécologues",
+    "form": "F/M"
+  },
+  "gynécologue-obstétricien": {
+    "plural": "gynécologue-obstétriciens",
+    "form": "M"
+  },
+  "gynécologue-obstétricienne": {
+    "plural": "gynécologue-obstétriciennes",
+    "form": "F"
+  },
+  "gynécologue-obstétriciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gynécologue-obstétriciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gynécologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27687,6 +29923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "généalogiste": {
+    "plural": "généalogistes",
+    "form": "F/M"
+  },
+  "généalogistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "général": {
     "plural": "généraux",
     "form": "M"
@@ -27727,9 +29971,57 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "généticien": {
+    "plural": "généticiens",
+    "form": "M"
+  },
+  "généticienne": {
+    "plural": "généticiennes",
+    "form": "F"
+  },
+  "généticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "généticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "géo-ingénierie": {
     "plural": "",
     "form": "F"
+  },
+  "géoarchéologue": {
+    "plural": "géoarchéologues",
+    "form": "F/M"
+  },
+  "géoarchéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géobiologiste": {
+    "plural": "géobiologistes",
+    "form": "F/M"
+  },
+  "géobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géobotaniste": {
+    "plural": "géobotanistes",
+    "form": "F/M"
+  },
+  "géobotanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géochimiste": {
+    "plural": "géochimistes",
+    "form": "F/M"
+  },
+  "géochimistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "géodésie": {
     "plural": "géodésies",
@@ -27739,11 +30031,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "géodésiste": {
+    "plural": "géodésistes",
+    "form": "F/M"
+  },
+  "géodésistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "géographie": {
     "plural": "géographies",
     "form": ""
   },
   "géographies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géohistorien": {
+    "plural": "géohistoriens",
+    "form": "M"
+  },
+  "géohistorienne": {
+    "plural": "géohistoriennes",
+    "form": "F"
+  },
+  "géohistoriennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géohistoriens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27763,11 +30079,91 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "géologue": {
+    "plural": "géologues",
+    "form": "F/M"
+  },
+  "géologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géomaticien": {
+    "plural": "géomaticiens",
+    "form": "M"
+  },
+  "géomaticienne": {
+    "plural": "géomaticiennes",
+    "form": "F"
+  },
+  "géomaticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géomaticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géomicrobiologiste": {
+    "plural": "géomicrobiologistes",
+    "form": "F/M"
+  },
+  "géomicrobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géomorphologue": {
+    "plural": "géomorphologues",
+    "form": "F/M"
+  },
+  "géomorphologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "géométrie": {
     "plural": "géométries",
     "form": ""
   },
   "géométries": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géophysicien": {
+    "plural": "géophysiciens",
+    "form": "M"
+  },
+  "géophysicienne": {
+    "plural": "géophysiciennes",
+    "form": "F"
+  },
+  "géophysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géophysiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géopolitologue": {
+    "plural": "géopolitologues",
+    "form": "F/M"
+  },
+  "géopolitologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géotechnicien": {
+    "plural": "géotechniciens",
+    "form": "M"
+  },
+  "géotechnicienne": {
+    "plural": "géotechniciennes",
+    "form": "F"
+  },
+  "géotechniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géotechniciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27800,6 +30196,14 @@
     "form": ""
   },
   "gérontologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gérontologue": {
+    "plural": "gérontologues",
+    "form": "F/M"
+  },
+  "gérontologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27907,6 +30311,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "halieutologue": {
+    "plural": "halieutologues",
+    "form": "F/M"
+  },
+  "halieutologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hallucination": {
     "plural": "hallucinations",
     "form": "F"
@@ -27942,6 +30354,14 @@
   "handball": {
     "plural": "handballs",
     "form": "M"
+  },
+  "handballeur": {
+    "plural": "handballeurs",
+    "form": "M"
+  },
+  "handballeurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "handballs": {
     "plural": "isPlural",
@@ -28015,6 +30435,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "harpiste": {
+    "plural": "harpistes",
+    "form": "F/M"
+  },
+  "harpistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hasard": {
     "plural": "hasards",
     "form": "M"
@@ -28034,6 +30462,14 @@
   "haut": {
     "plural": "hauts",
     "form": "M"
+  },
+  "hautboïste": {
+    "plural": "hautboïstes",
+    "form": "F/M"
+  },
+  "hautboïstes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "hauteur": {
     "plural": "hauteurs",
@@ -28079,6 +30515,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "helléniste": {
+    "plural": "hellénistes",
+    "form": "F/M"
+  },
+  "hellénistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "helminthologiste": {
+    "plural": "helminthologistes",
+    "form": "F/M"
+  },
+  "helminthologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "henry": {
     "plural": "henrys",
     "form": ""
@@ -28119,6 +30571,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "herpétologiste": {
+    "plural": "herpétologistes",
+    "form": "F/M"
+  },
+  "herpétologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hertz": {
     "plural": "hertz",
     "form": "M/PL"
@@ -28147,6 +30607,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "himalayiste": {
+    "plural": "himalayistes",
+    "form": "F/M"
+  },
+  "himalayistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hippologue": {
+    "plural": "hippologues",
+    "form": "F/M"
+  },
+  "hippologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hippopotame": {
     "plural": "hippopotames",
     "form": "M"
@@ -28163,11 +30639,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "hispaniste": {
+    "plural": "hispanistes",
+    "form": "F/M"
+  },
+  "hispanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "histoire": {
     "plural": "histoires",
     "form": "F"
   },
   "histoires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "histologiste": {
+    "plural": "histologistes",
+    "form": "F/M"
+  },
+  "histologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28192,6 +30684,14 @@
     "form": "M"
   },
   "historiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hittitologue": {
+    "plural": "hittitologues",
+    "form": "F/M"
+  },
+  "hittitologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28415,6 +30915,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "horticulteur": {
+    "plural": "horticulteurs",
+    "form": "M"
+  },
+  "horticulteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "horticulture": {
     "plural": "horticultures",
     "form": ""
@@ -28539,11 +31047,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "humoriste": {
+    "plural": "humoristes",
+    "form": "F/M"
+  },
+  "humoristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "humour": {
     "plural": "humours",
     "form": "M"
   },
   "humours": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hungarologue": {
+    "plural": "hungarologues",
+    "form": "F/M"
+  },
+  "hungarologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28575,11 +31099,35 @@
     "plural": "",
     "form": "M"
   },
+  "hydrobiologiste": {
+    "plural": "hydrobiologistes",
+    "form": "F/M"
+  },
+  "hydrobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hydrogéologue": {
+    "plural": "hydrogéologues",
+    "form": "F/M"
+  },
+  "hydrogéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hydrologie": {
     "plural": "hydrologies",
     "form": "F"
   },
   "hydrologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hydrologue": {
+    "plural": "hydrologues",
+    "form": "F/M"
+  },
+  "hydrologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28591,11 +31139,43 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "hygiéniste": {
+    "plural": "hygiénistes",
+    "form": "F/M"
+  },
+  "hygiénistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hymnologue": {
+    "plural": "hymnologues",
+    "form": "F/M"
+  },
+  "hymnologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hyperprésidentialisation": {
     "plural": "hyperprésidentialisations",
     "form": "F"
   },
   "hyperprésidentialisations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hypnothérapiste": {
+    "plural": "hypnothérapistes",
+    "form": "F/M"
+  },
+  "hypnothérapistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hypnotiseur": {
+    "plural": "hypnotiseurs",
+    "form": "M"
+  },
+  "hypnotiseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28647,6 +31227,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "hématologue": {
+    "plural": "hématologues",
+    "form": "F/M"
+  },
+  "hématologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hémisphère": {
     "plural": "hémisphères",
     "form": "M"
@@ -28668,6 +31256,22 @@
     "form": "F"
   },
   "hépatites": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hépatologue": {
+    "plural": "hépatologues",
+    "form": "F/M"
+  },
+  "hépatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "héraldiste": {
+    "plural": "héraldistes",
+    "form": "F/M"
+  },
+  "héraldistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28704,6 +31308,14 @@
     "form": "F"
   },
   "héroïnes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hérésiarque": {
+    "plural": "hérésiarques",
+    "form": "F/M"
+  },
+  "hérésiarques": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28792,6 +31404,14 @@
     "form": ""
   },
   "ichthyologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ichtyologiste": {
+    "plural": "ichtyologistes",
+    "form": "F/M"
+  },
+  "ichtyologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -28915,6 +31535,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "idéolinguiste": {
+    "plural": "idéolinguistes",
+    "form": "F/M"
+  },
+  "idéolinguistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "igbo": {
     "plural": "",
     "form": "M"
@@ -28959,6 +31587,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "illustrateur": {
+    "plural": "illustrateurs",
+    "form": "M"
+  },
+  "illustrateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "illustration": {
     "plural": "illustrations",
     "form": "F"
@@ -28996,6 +31632,14 @@
     "form": "F"
   },
   "imbécilités": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "imitateur": {
+    "plural": "imitateurs",
+    "form": "M"
+  },
+  "imitateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29259,6 +31903,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "improvisateur": {
+    "plural": "improvisateurs",
+    "form": "M"
+  },
+  "improvisateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "imprudence": {
     "plural": "imprudences",
     "form": ""
@@ -29511,6 +32163,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "indianiste": {
+    "plural": "indianistes",
+    "form": "F/M"
+  },
+  "indianistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "indicateur": {
     "plural": "indicateurs",
     "form": "M"
@@ -29551,6 +32211,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "indienneur": {
+    "plural": "indienneurs",
+    "form": "M"
+  },
+  "indienneurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "indifférence": {
     "plural": "indifférences",
     "form": "F"
@@ -29564,6 +32232,14 @@
     "form": "F"
   },
   "indignations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "indigéniste": {
+    "plural": "indigénistes",
+    "form": "F/M"
+  },
+  "indigénistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29596,6 +32272,14 @@
     "form": "M"
   },
   "indoeuropéanismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "indoeuropéaniste": {
+    "plural": "indoeuropéanistes",
+    "form": "F/M"
+  },
+  "indoeuropéanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29652,6 +32336,14 @@
     "form": ""
   },
   "inerties": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "infectiologue": {
+    "plural": "infectiologues",
+    "form": "F/M"
+  },
+  "infectiologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29751,6 +32443,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "influenceur": {
+    "plural": "influenceurs",
+    "form": "M"
+  },
+  "influenceurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "informaticien": {
     "plural": "informaticiens",
     "form": "M"
@@ -29839,6 +32539,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "inhalothérapeute": {
+    "plural": "inhalothérapeutes",
+    "form": "F/M"
+  },
+  "inhalothérapeutes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "inhumation": {
     "plural": "inhumations",
     "form": "F"
@@ -29888,6 +32596,14 @@
     "form": ""
   },
   "innocences": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "innovateur": {
+    "plural": "innovateurs",
+    "form": "M"
+  },
+  "innovateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29991,11 +32707,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "inspirateur": {
+    "plural": "inspirateurs",
+    "form": "M"
+  },
+  "inspirateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "inspiration": {
     "plural": "inspirations",
     "form": "F"
   },
   "inspirations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "instagrameur": {
+    "plural": "instagrameurs",
+    "form": "M"
+  },
+  "instagrameurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -30035,6 +32767,14 @@
     "plural": "instituts",
     "form": "M"
   },
+  "instituteur": {
+    "plural": "instituteurs",
+    "form": "M"
+  },
+  "instituteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "institution": {
     "plural": "institutions",
     "form": "F"
@@ -30044,6 +32784,14 @@
     "form": "PL"
   },
   "instituts": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "instructeur": {
+    "plural": "instructeurs",
+    "form": "M"
+  },
+  "instructeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -30058,6 +32806,14 @@
   "instrument": {
     "plural": "instruments",
     "form": "M"
+  },
+  "instrumentiste": {
+    "plural": "instrumentistes",
+    "form": "F/M"
+  },
+  "instrumentistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "instruments": {
     "plural": "isPlural",
@@ -30235,6 +32991,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "interlinguiste": {
+    "plural": "interlinguistes",
+    "form": "F/M"
+  },
+  "interlinguistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "interlocuteur": {
     "plural": "interlocuteurs",
     "form": "M"
@@ -30342,6 +33106,14 @@
   "interview": {
     "plural": "interviews",
     "form": "F"
+  },
+  "intervieweur": {
+    "plural": "intervieweurs",
+    "form": "M"
+  },
+  "intervieweurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "interviews": {
     "plural": "isPlural",
@@ -30595,6 +33367,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "iranologue": {
+    "plural": "iranologues",
+    "form": "F/M"
+  },
+  "iranologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "iridium": {
     "plural": "iridiums",
     "form": "M"
@@ -30635,9 +33415,25 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "irénologue": {
+    "plural": "irénologues",
+    "form": "F/M"
+  },
+  "irénologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "islam": {
     "plural": "islams",
     "form": ""
+  },
+  "islamologue": {
+    "plural": "islamologues",
+    "form": "F/M"
+  },
+  "islamologues": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "islams": {
     "plural": "isPlural",
@@ -30672,6 +33468,14 @@
     "form": ""
   },
   "isoloirs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "italianiste": {
+    "plural": "italianistes",
+    "form": "F/M"
+  },
+  "italianistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -30767,6 +33571,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "japonologue": {
+    "plural": "japonologues",
+    "form": "F/M"
+  },
+  "japonologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "jardin": {
     "plural": "jardins",
     "form": "M"
@@ -30859,6 +33671,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "jetskieur": {
+    "plural": "jetskieurs",
+    "form": "M"
+  },
+  "jetskieurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "jetée": {
     "plural": "jetées",
     "form": "F"
@@ -30920,6 +33740,14 @@
     "form": "F"
   },
   "jonctions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "jongleur": {
+    "plural": "jongleurs",
+    "form": "M"
+  },
+  "jongleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31131,6 +33959,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "juriste": {
+    "plural": "juristes",
+    "form": "F/M"
+  },
+  "juristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "juré": {
     "plural": "jurés",
     "form": "M"
@@ -31175,11 +34011,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kabbaliste": {
+    "plural": "kabbalistes",
+    "form": "F/M"
+  },
+  "kabbalistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kamikaze": {
     "plural": "kamikazes",
     "form": ""
   },
   "kamikazes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kartvélologue": {
+    "plural": "kartvélologues",
+    "form": "F/M"
+  },
+  "kartvélologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31275,6 +34127,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kinésiologue": {
+    "plural": "kinésiologues",
+    "form": "F/M"
+  },
+  "kinésiologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kinésithérapeute": {
     "plural": "kinésithérapeutes",
     "form": ""
@@ -31296,6 +34156,14 @@
     "form": ""
   },
   "kitchens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kitesurfeur": {
+    "plural": "kitesurfeurs",
+    "form": "M"
+  },
+  "kitesurfeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31619,6 +34487,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "latiniste": {
+    "plural": "latinistes",
+    "form": "F/M"
+  },
+  "latinistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "latitude": {
     "plural": "latitudes",
     "form": "F"
@@ -31815,6 +34691,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "lettreur": {
+    "plural": "lettreurs",
+    "form": "M"
+  },
+  "lettreurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "leucémie": {
     "plural": "leucémies",
     "form": "F"
@@ -31844,6 +34728,14 @@
     "form": ""
   },
   "lexicographes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lexicologue": {
+    "plural": "lexicologues",
+    "form": "F/M"
+  },
+  "lexicologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31951,6 +34843,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "librettiste": {
+    "plural": "librettistes",
+    "form": "F/M"
+  },
+  "librettistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "libération": {
     "plural": "libérations",
     "form": "F"
@@ -31972,6 +34872,14 @@
     "form": "M"
   },
   "lichens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lichénologue": {
+    "plural": "lichénologues",
+    "form": "F/M"
+  },
+  "lichénologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32063,6 +34971,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "limnologue": {
+    "plural": "limnologues",
+    "form": "F/M"
+  },
+  "limnologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "limonade": {
     "plural": "limonades",
     "form": "F"
@@ -32140,6 +35056,14 @@
     "form": "PL"
   },
   "lions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lipidologue": {
+    "plural": "lipidologues",
+    "form": "F/M"
+  },
+  "lipidologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32223,6 +35147,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "liturgiste": {
+    "plural": "liturgistes",
+    "form": "F/M"
+  },
+  "liturgistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "livraison": {
     "plural": "livraisons",
     "form": "F"
@@ -32268,6 +35200,14 @@
     "form": "M"
   },
   "lobbyings": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lobbyiste": {
+    "plural": "lobbyistes",
+    "form": "F/M"
+  },
+  "lobbyistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32383,9 +35323,41 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "logicien": {
+    "plural": "logiciens",
+    "form": "M"
+  },
+  "logicienne": {
+    "plural": "logiciennes",
+    "form": "F"
+  },
+  "logiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "logiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "logis": {
     "plural": "logis",
     "form": "M/PL"
+  },
+  "logisticien": {
+    "plural": "logisticiens",
+    "form": "M"
+  },
+  "logisticienne": {
+    "plural": "logisticiennes",
+    "form": "F"
+  },
+  "logisticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "logisticiens": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "logistique": {
     "plural": "logistiques",
@@ -32523,6 +35495,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "lugeur": {
+    "plural": "lugeurs",
+    "form": "M"
+  },
+  "lugeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "lumen": {
     "plural": "lumens",
     "form": "M"
@@ -32603,6 +35583,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "lusitaniste": {
+    "plural": "lusitanistes",
+    "form": "F/M"
+  },
+  "lusitanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "lustre": {
     "plural": "lustres",
     "form": "M"
@@ -32611,11 +35599,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "luthiste": {
+    "plural": "luthistes",
+    "form": "F/M"
+  },
+  "luthistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "lutte": {
     "plural": "luttes",
     "form": "F"
   },
   "luttes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lutteur": {
+    "plural": "lutteurs",
+    "form": "M"
+  },
+  "lutteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32768,6 +35772,14 @@
     "form": "M"
   },
   "léopards": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lépidoptériste": {
+    "plural": "lépidoptéristes",
+    "form": "F/M"
+  },
+  "lépidoptéristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33075,6 +36087,14 @@
     "plural": "maux",
     "form": "M"
   },
+  "malacologiste": {
+    "plural": "malacologistes",
+    "form": "F/M"
+  },
+  "malacologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "malade": {
     "plural": "malades",
     "form": ""
@@ -33096,6 +36116,14 @@
     "form": "F"
   },
   "malarias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "malariologue": {
+    "plural": "malariologues",
+    "form": "F/M"
+  },
+  "malariologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33184,6 +36212,14 @@
     "form": "M"
   },
   "mamelons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mammalogiste": {
+    "plural": "mammalogistes",
+    "form": "F/M"
+  },
+  "mammalogistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33435,6 +36471,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "maquettiste": {
+    "plural": "maquettistes",
+    "form": "F/M"
+  },
+  "maquettistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "maquilleur": {
+    "plural": "maquilleurs",
+    "form": "M"
+  },
+  "maquilleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "marais": {
     "plural": "marais",
     "form": "M/PL"
@@ -33442,6 +36494,22 @@
   "marathon": {
     "plural": "marathons",
     "form": "M"
+  },
+  "marathonien": {
+    "plural": "marathoniens",
+    "form": "M"
+  },
+  "marathonienne": {
+    "plural": "marathoniennes",
+    "form": "F"
+  },
+  "marathoniennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marathoniens": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "marathons": {
     "plural": "isPlural",
@@ -33492,6 +36560,14 @@
     "form": "F"
   },
   "marches": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marcheur": {
+    "plural": "marcheurs",
+    "form": "M"
+  },
+  "marcheurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33571,6 +36647,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mariologue": {
+    "plural": "mariologues",
+    "form": "F/M"
+  },
+  "mariologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marionnettiste": {
+    "plural": "marionnettistes",
+    "form": "F/M"
+  },
+  "marionnettistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "maris": {
     "plural": "isPlural",
     "form": "PL"
@@ -33583,11 +36675,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "marketeur": {
+    "plural": "marketeurs",
+    "form": "M"
+  },
+  "marketeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "marketing": {
     "plural": "marketings",
     "form": ""
   },
   "marketings": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marketologue": {
+    "plural": "marketologues",
+    "form": "F/M"
+  },
+  "marketologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33703,6 +36811,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "marxologue": {
+    "plural": "marxologues",
+    "form": "F/M"
+  },
+  "marxologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "maréchal": {
     "plural": "maréchaux",
     "form": ""
@@ -33813,7 +36929,7 @@
   },
   "master": {
     "plural": "mastères",
-    "form": "M/PL"
+    "form": "M"
   },
   "masturbation": {
     "plural": "masturbations",
@@ -33825,7 +36941,7 @@
   },
   "mastère": {
     "plural": "mastères",
-    "form": "M"
+    "form": "M/PL"
   },
   "mastères": {
     "plural": "isPlural",
@@ -33988,6 +37104,14 @@
     "form": "M"
   },
   "maximums": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mayaniste": {
+    "plural": "mayanistes",
+    "form": "F/M"
+  },
+  "mayanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -34279,10 +37403,6 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "mesdames": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "mesdemoiselles": {
     "plural": "isPlural",
     "form": "PL"
@@ -34415,11 +37535,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "micro-paléontologue": {
+    "plural": "micro-paléontologues",
+    "form": "F/M"
+  },
+  "micro-paléontologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "microbe": {
     "plural": "microbes",
     "form": "M"
   },
   "microbes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "microbiologiste": {
+    "plural": "microbiologistes",
+    "form": "F/M"
+  },
+  "microbiologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -34655,6 +37791,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "miniaturiste": {
+    "plural": "miniaturistes",
+    "form": "F/M"
+  },
+  "miniaturistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "minima de Maunder": {
     "plural": "isPlural",
     "form": "PL"
@@ -34724,6 +37868,14 @@
     "form": "F"
   },
   "minéralogies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "minéralogiste": {
+    "plural": "minéralogistes",
+    "form": "F/M"
+  },
+  "minéralogistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -34851,6 +38003,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mixologue": {
+    "plural": "mixologues",
+    "form": "F/M"
+  },
+  "mixologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "mixture": {
     "plural": "mixtures",
     "form": ""
@@ -34923,6 +38083,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "modiste": {
+    "plural": "modistes",
+    "form": "F/M"
+  },
+  "modistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "module": {
     "plural": "modules",
     "form": "M"
@@ -34944,6 +38112,14 @@
     "form": "M"
   },
   "modèles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "modéliste": {
+    "plural": "modélistes",
+    "form": "F/M"
+  },
+  "modélistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35091,6 +38267,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mongoliste": {
+    "plural": "mongolistes",
+    "form": "F/M"
+  },
+  "mongolistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "monnaie": {
     "plural": "monnaies",
     "form": "F"
@@ -35104,6 +38288,14 @@
     "form": "M"
   },
   "monocles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "monogrammiste": {
+    "plural": "monogrammistes",
+    "form": "F/M"
+  },
+  "monogrammistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35171,6 +38363,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "monteur": {
+    "plural": "monteurs",
+    "form": "M"
+  },
+  "monteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "montre": {
     "plural": "montres",
     "form": "F"
@@ -35204,6 +38404,14 @@
     "form": "F"
   },
   "morales": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "moraliste": {
+    "plural": "moralistes",
+    "form": "F/M"
+  },
+  "moralistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35279,6 +38487,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mosaïste": {
+    "plural": "mosaïstes",
+    "form": "F/M"
+  },
+  "mosaïstes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "mosquée": {
     "plural": "mosquées",
     "form": "F"
@@ -35312,6 +38528,14 @@
     "form": "F"
   },
   "motions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "motivateur": {
+    "plural": "motivateurs",
+    "form": "M"
+  },
+  "motivateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35376,6 +38600,14 @@
     "form": "M"
   },
   "moulins": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mouliste": {
+    "plural": "moulistes",
+    "form": "F/M"
+  },
+  "moulistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35627,6 +38859,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "muséologue": {
+    "plural": "muséologues",
+    "form": "F/M"
+  },
+  "muséologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "muséum": {
     "plural": "muséums",
     "form": "M"
@@ -35651,6 +38891,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mycologue": {
+    "plural": "mycologues",
+    "form": "F/M"
+  },
+  "mycologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "myopie": {
     "plural": "myopies",
     "form": "F"
@@ -35664,6 +38912,22 @@
     "form": "M"
   },
   "myriamètres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "myriapodologiste": {
+    "plural": "myriapodologistes",
+    "form": "F/M"
+  },
+  "myriapodologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "myrmécologue": {
+    "plural": "myrmécologues",
+    "form": "F/M"
+  },
+  "myrmécologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35688,6 +38952,14 @@
     "form": "F"
   },
   "mythologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mythologue": {
+    "plural": "mythologues",
+    "form": "F/M"
+  },
+  "mythologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35755,6 +39027,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mécatronicien": {
+    "plural": "mécatroniciens",
+    "form": "M"
+  },
+  "mécatronicienne": {
+    "plural": "mécatroniciennes",
+    "form": "F"
+  },
+  "mécatroniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mécatroniciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "méchant": {
     "plural": "méchants",
     "form": "M"
@@ -35768,6 +39056,14 @@
     "form": "F"
   },
   "médailles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "médailleur": {
+    "plural": "médailleurs",
+    "form": "M"
+  },
+  "médailleurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35798,6 +39094,22 @@
   "média": {
     "plural": "médias",
     "form": "M"
+  },
+  "médiamaticien": {
+    "plural": "médiamaticiens",
+    "form": "M"
+  },
+  "médiamaticienne": {
+    "plural": "médiamaticiennes",
+    "form": "F"
+  },
+  "médiamaticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "médiamaticiens": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "médias": {
     "plural": "isPlural",
@@ -35856,6 +39168,14 @@
     "form": "F"
   },
   "médiocrités": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "médiéviste": {
+    "plural": "médiévistes",
+    "form": "F/M"
+  },
+  "médiévistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35923,6 +39243,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "méhariste": {
+    "plural": "méharistes",
+    "form": "F/M"
+  },
+  "méharistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "mélancolie": {
     "plural": "mélancolies",
     "form": "F"
@@ -35979,6 +39307,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mémorialiste": {
+    "plural": "mémorialistes",
+    "form": "F/M"
+  },
+  "mémorialistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ménage": {
     "plural": "ménages",
     "form": "M"
@@ -36031,6 +39367,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mésoaméricaniste": {
+    "plural": "mésoaméricanistes",
+    "form": "F/M"
+  },
+  "mésoaméricanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "métabolisme": {
     "plural": "métabolismes",
     "form": "M"
@@ -36067,6 +39411,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "métallurgiste": {
+    "plural": "métallurgistes",
+    "form": "F/M"
+  },
+  "métallurgistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "métamorphose": {
     "plural": "métamorphoses",
     "form": ""
@@ -36080,6 +39432,22 @@
     "form": "F"
   },
   "métaphores": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "métaphysicien": {
+    "plural": "métaphysiciens",
+    "form": "M"
+  },
+  "métaphysicienne": {
+    "plural": "métaphysiciennes",
+    "form": "F"
+  },
+  "métaphysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "métaphysiciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36151,6 +39519,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "métreur": {
+    "plural": "métreurs",
+    "form": "M"
+  },
+  "métreurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "métro": {
     "plural": "métros",
     "form": "M"
@@ -36160,6 +39536,14 @@
     "form": "F"
   },
   "métrologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "métrologue": {
+    "plural": "métrologues",
+    "form": "F/M"
+  },
+  "métrologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36179,11 +39563,23 @@
     "plural": "météos",
     "form": "F"
   },
+  "météorite": {
+    "plural": "",
+    "form": ""
+  },
   "météorologie": {
     "plural": "météorologies",
     "form": "F"
   },
   "météorologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "météorologue": {
+    "plural": "météorologues",
+    "form": "F/M"
+  },
+  "météorologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36276,6 +39672,14 @@
     "form": "M"
   },
   "narrateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "narratologue": {
+    "plural": "narratologues",
+    "form": "F/M"
+  },
+  "narratologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36447,11 +39851,67 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "nettoyeur": {
+    "plural": "nettoyeurs",
+    "form": "M"
+  },
+  "nettoyeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neurobiologiste": {
+    "plural": "neurobiologistes",
+    "form": "F/M"
+  },
+  "neurobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neuroendocrinologue": {
+    "plural": "neuroendocrinologues",
+    "form": "F/M"
+  },
+  "neuroendocrinologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "neurone": {
     "plural": "neurones",
     "form": "M"
   },
   "neurones": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neuropathologiste": {
+    "plural": "neuropathologistes",
+    "form": "F/M"
+  },
+  "neuropathologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neuropharmacologue": {
+    "plural": "neuropharmacologues",
+    "form": "F/M"
+  },
+  "neuropharmacologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neurophysiologiste": {
+    "plural": "neurophysiologistes",
+    "form": "F/M"
+  },
+  "neurophysiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neuropsychologue": {
+    "plural": "neuropsychologues",
+    "form": "F/M"
+  },
+  "neuropsychologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36791,6 +40251,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "nourrisseur": {
+    "plural": "nourrisseurs",
+    "form": "M"
+  },
+  "nourrisseurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "nourriture": {
     "plural": "nourritures",
     "form": "F"
@@ -36820,6 +40288,14 @@
     "form": ""
   },
   "nouvelles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nouvelliste": {
+    "plural": "nouvellistes",
+    "form": "F/M"
+  },
+  "nouvellistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37067,6 +40543,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "nématologiste": {
+    "plural": "nématologistes",
+    "form": "F/M"
+  },
+  "nématologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "nénufar": {
     "plural": "nénufars",
     "form": "M"
@@ -37099,7 +40583,23 @@
     "plural": "néons",
     "form": "M"
   },
+  "néonatologue": {
+    "plural": "néonatologues",
+    "form": "F/M"
+  },
+  "néonatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "néons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "néphrologue": {
+    "plural": "néphrologues",
+    "form": "F/M"
+  },
+  "néphrologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37207,6 +40707,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "obstétricien": {
+    "plural": "obstétriciens",
+    "form": "M"
+  },
+  "obstétricienne": {
+    "plural": "obstétriciennes",
+    "form": "F"
+  },
+  "obstétriciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "obstétriciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "obsèque": {
     "plural": "obsèques",
     "form": "F"
@@ -37268,6 +40784,14 @@
     "form": "PL"
   },
   "occidents": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "occitaniste": {
+    "plural": "occitanistes",
+    "form": "F/M"
+  },
+  "occitanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37340,6 +40864,14 @@
     "form": ""
   },
   "octrois": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "oculariste": {
+    "plural": "ocularistes",
+    "form": "F/M"
+  },
+  "ocularistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37459,6 +40991,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "oiseleur": {
+    "plural": "oiseleurs",
+    "form": "M"
+  },
+  "oiseleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "oisiveté": {
     "plural": "oisivetés",
     "form": "F"
@@ -37472,6 +41012,14 @@
     "form": ""
   },
   "oks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "oligochètologiste": {
+    "plural": "oligochètologistes",
+    "form": "F/M"
+  },
+  "oligochètologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37547,11 +41095,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "onco-hématologue": {
+    "plural": "onco-hématologues",
+    "form": "F/M"
+  },
+  "onco-hématologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "oncologie": {
     "plural": "oncologies",
     "form": "F"
   },
   "oncologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "oncologue": {
+    "plural": "oncologues",
+    "form": "F/M"
+  },
+  "oncologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37571,11 +41135,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ontologiste": {
+    "plural": "ontologistes",
+    "form": "F/M"
+  },
+  "ontologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ophtalmologie": {
     "plural": "ophtalmologies",
     "form": "F"
   },
   "ophtalmologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ophtalmologue": {
+    "plural": "ophtalmologues",
+    "form": "F/M"
+  },
+  "ophtalmologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37635,6 +41215,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "opticien": {
+    "plural": "opticiens",
+    "form": "M"
+  },
+  "opticienne": {
+    "plural": "opticiennes",
+    "form": "F"
+  },
+  "opticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "opticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "optimisation": {
     "plural": "optimisations",
     "form": "F"
@@ -37660,6 +41256,22 @@
     "form": "F"
   },
   "options": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "optronicien": {
+    "plural": "optroniciens",
+    "form": "M"
+  },
+  "optronicienne": {
+    "plural": "optroniciennes",
+    "form": "F"
+  },
+  "optroniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "optroniciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37716,6 +41328,14 @@
     "form": "PL"
   },
   "oranges": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orateur": {
+    "plural": "orateurs",
+    "form": "M"
+  },
+  "orateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37887,11 +41507,27 @@
     "plural": "orients",
     "form": "M"
   },
+  "orientaliste": {
+    "plural": "orientalistes",
+    "form": "F/M"
+  },
+  "orientalistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "orientation": {
     "plural": "orientations",
     "form": "F"
   },
   "orientations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orienteur": {
+    "plural": "orienteurs",
+    "form": "M"
+  },
+  "orienteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37947,11 +41583,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ornemaniste": {
+    "plural": "ornemanistes",
+    "form": "F/M"
+  },
+  "ornemanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ornithologie": {
     "plural": "ornithologies",
     "form": "F"
   },
   "ornithologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ornithologue": {
+    "plural": "ornithologues",
+    "form": "F/M"
+  },
+  "ornithologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37983,11 +41635,51 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "orthodontiste": {
+    "plural": "orthodontistes",
+    "form": "F/M"
+  },
+  "orthodontistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "orthographe": {
     "plural": "orthographes",
     "form": "F"
   },
   "orthographes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orthographiste": {
+    "plural": "orthographistes",
+    "form": "F/M"
+  },
+  "orthographistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orthophoniste": {
+    "plural": "orthophonistes",
+    "form": "F/M"
+  },
+  "orthophonistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orthoptiste": {
+    "plural": "orthoptistes",
+    "form": "F/M"
+  },
+  "orthoptistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orthésiste": {
+    "plural": "orthésistes",
+    "form": "F/M"
+  },
+  "orthésistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38043,11 +41735,43 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ostracologiste": {
+    "plural": "ostracologistes",
+    "form": "F/M"
+  },
+  "ostracologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ostréiculteur": {
+    "plural": "ostréiculteurs",
+    "form": "M"
+  },
+  "ostréiculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ostéologue": {
+    "plural": "ostéologues",
+    "form": "F/M"
+  },
+  "ostéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "otage": {
     "plural": "otages",
     "form": "M"
   },
   "otages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "oto-rhino-laryngologiste": {
+    "plural": "oto-rhino-laryngologistes",
+    "form": "F/M"
+  },
+  "oto-rhino-laryngologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38339,6 +42063,30 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "palynologiste": {
+    "plural": "palynologistes",
+    "form": "F/M"
+  },
+  "palynologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléoanthropologue": {
+    "plural": "paléoanthropologues",
+    "form": "F/M"
+  },
+  "paléoanthropologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléobiologiste": {
+    "plural": "paléobiologistes",
+    "form": "F/M"
+  },
+  "paléobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "paléobotaniste": {
     "plural": "paléobotanistes",
     "form": "F/M"
@@ -38355,11 +42103,75 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "paléoclimatologue": {
+    "plural": "paléoclimatologues",
+    "form": "F/M"
+  },
+  "paléoclimatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléoentomologiste": {
+    "plural": "paléoentomologistes",
+    "form": "F/M"
+  },
+  "paléoentomologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléogénéticien": {
+    "plural": "paléogénéticiens",
+    "form": "M"
+  },
+  "paléogénéticienne": {
+    "plural": "paléogénéticiennes",
+    "form": "F"
+  },
+  "paléogénéticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléogénéticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléoherpétologiste": {
+    "plural": "paléoherpétologistes",
+    "form": "F/M"
+  },
+  "paléoherpétologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléohistologiste": {
+    "plural": "paléohistologistes",
+    "form": "F/M"
+  },
+  "paléohistologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléomalacologiste": {
+    "plural": "paléomalacologistes",
+    "form": "F/M"
+  },
+  "paléomalacologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "paléontologie": {
     "plural": "paléontologies",
     "form": "F"
   },
   "paléontologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paléontologue": {
+    "plural": "paléontologues",
+    "form": "F/M"
+  },
+  "paléontologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38571,6 +42383,14 @@
     "plural": "papys",
     "form": "M"
   },
+  "papyrologue": {
+    "plural": "papyrologues",
+    "form": "F/M"
+  },
+  "papyrologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "papys": {
     "plural": "isPlural",
     "form": "PL"
@@ -38651,6 +42471,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "parapentiste": {
+    "plural": "parapentistes",
+    "form": "F/M"
+  },
+  "parapentistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "paraphrase": {
     "plural": "paraphrases",
     "form": "F"
@@ -38664,6 +42492,22 @@
     "form": "M"
   },
   "parapluies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "parapsychologue": {
+    "plural": "parapsychologues",
+    "form": "F/M"
+  },
+  "parapsychologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "parasitologue": {
+    "plural": "parasitologues",
+    "form": "F/M"
+  },
+  "parasitologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38755,6 +42599,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pareur": {
+    "plural": "pareurs",
+    "form": "M"
+  },
+  "pareurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "parfum": {
     "plural": "parfums",
     "form": "M"
@@ -38764,6 +42616,14 @@
     "form": ""
   },
   "parfumes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "parfumeur": {
+    "plural": "parfumeurs",
+    "form": "M"
+  },
+  "parfumeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38808,6 +42668,14 @@
     "form": "M"
   },
   "parmesans": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "parodiste": {
+    "plural": "parodistes",
+    "form": "F/M"
+  },
+  "parodistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38991,6 +42859,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "parémiologue": {
+    "plural": "parémiologues",
+    "form": "F/M"
+  },
+  "parémiologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pas": {
     "plural": "pas",
     "form": "M/PL"
@@ -39111,6 +42987,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pastelliste": {
+    "plural": "pastellistes",
+    "form": "F/M"
+  },
+  "pastellistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pasteur": {
+    "plural": "pasteurs",
+    "form": "M"
+  },
+  "pasteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pastèque": {
     "plural": "pastèques",
     "form": "F"
@@ -39156,6 +43048,14 @@
     "form": "F"
   },
   "pathologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pathologiste": {
+    "plural": "pathologistes",
+    "form": "F/M"
+  },
+  "pathologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39459,6 +43359,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pentathlonien": {
+    "plural": "pentathloniens",
+    "form": "M"
+  },
+  "pentathlonienne": {
+    "plural": "pentathloniennes",
+    "form": "F"
+  },
+  "pentathloniennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pentathloniens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pente": {
     "plural": "pentes",
     "form": "F"
@@ -39472,6 +43388,14 @@
     "form": "F"
   },
   "perceptions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "perchiste": {
+    "plural": "perchistes",
+    "form": "F/M"
+  },
+  "perchistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39512,6 +43436,14 @@
     "form": "F"
   },
   "performances": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "performeur": {
+    "plural": "performeurs",
+    "form": "M"
+  },
+  "performeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39819,6 +43751,14 @@
     "plural": "pharmaciens",
     "form": "M"
   },
+  "pharmacien-biologiste": {
+    "plural": "pharmacien-biologistes",
+    "form": "F/M"
+  },
+  "pharmacien-biologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pharmacienne": {
     "plural": "pharmaciennes",
     "form": "F"
@@ -39832,6 +43772,14 @@
     "form": "PL"
   },
   "pharmacies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pharmacologue": {
+    "plural": "pharmacologues",
+    "form": "F/M"
+  },
+  "pharmacologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39907,11 +43855,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "phonologiste": {
+    "plural": "phonologistes",
+    "form": "F/M"
+  },
+  "phonologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "phonème": {
     "plural": "phonèmes",
     "form": "M"
   },
   "phonèmes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phonéticien": {
+    "plural": "phonéticiens",
+    "form": "M"
+  },
+  "phonéticienne": {
+    "plural": "phonéticiennes",
+    "form": "F"
+  },
+  "phonéticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phonéticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39935,11 +43907,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "photojournaliste": {
+    "plural": "photojournalistes",
+    "form": "F/M"
+  },
+  "photojournalistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "photométrie": {
     "plural": "photométries",
     "form": ""
   },
   "photométries": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "photophysicien": {
+    "plural": "photophysiciens",
+    "form": "M"
+  },
+  "photophysicienne": {
+    "plural": "photophysiciennes",
+    "form": "F"
+  },
+  "photophysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "photophysiciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39959,6 +43955,38 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "phtisiologue": {
+    "plural": "phtisiologues",
+    "form": "F/M"
+  },
+  "phtisiologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phycologue": {
+    "plural": "phycologues",
+    "form": "F/M"
+  },
+  "phycologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phylogénéticien": {
+    "plural": "phylogénéticiens",
+    "form": "M"
+  },
+  "phylogénéticienne": {
+    "plural": "phylogénéticiennes",
+    "form": "F"
+  },
+  "phylogénéticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phylogénéticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "physicien": {
     "plural": "physiciens",
     "form": ""
@@ -39967,15 +43995,39 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "physico-chimiste": {
+    "plural": "physico-chimistes",
+    "form": "F/M"
+  },
+  "physico-chimistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "physio": {
     "plural": "physios",
     "form": ""
+  },
+  "physiognomiste": {
+    "plural": "physiognomistes",
+    "form": "F/M"
+  },
+  "physiognomistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "physiologie": {
     "plural": "physiologies",
     "form": "F"
   },
   "physiologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "physiologiste": {
+    "plural": "physiologistes",
+    "form": "F/M"
+  },
+  "physiologistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -40015,6 +44067,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "phytopathologiste": {
+    "plural": "phytopathologistes",
+    "form": "F/M"
+  },
+  "phytopathologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phytoécologiste": {
+    "plural": "phytoécologistes",
+    "form": "F/M"
+  },
+  "phytoécologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "phénologie": {
     "plural": "phénologies",
     "form": "F"
@@ -40028,6 +44096,14 @@
     "form": "M"
   },
   "phénomènes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "phénoménologue": {
+    "plural": "phénoménologues",
+    "form": "F/M"
+  },
+  "phénoménologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -40050,6 +44126,14 @@
   "piano": {
     "plural": "pianos",
     "form": "M"
+  },
+  "pianofortiste": {
+    "plural": "pianofortistes",
+    "form": "F/M"
+  },
+  "pianofortistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "pianos": {
     "plural": "isPlural",
@@ -40303,6 +44387,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pisciculteur": {
+    "plural": "pisciculteurs",
+    "form": "M"
+  },
+  "pisciculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "piscine": {
     "plural": "piscines",
     "form": "F"
@@ -40332,6 +44424,22 @@
     "form": "F"
   },
   "pistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pisteur": {
+    "plural": "pisteurs",
+    "form": "M"
+  },
+  "pisteur-secouriste": {
+    "plural": "pisteur-secouristes",
+    "form": "F/M"
+  },
+  "pisteur-secouristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pisteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -40547,6 +44655,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "planctonologiste": {
+    "plural": "planctonologistes",
+    "form": "F/M"
+  },
+  "planctonologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "planification": {
     "plural": "planifications",
     "form": "F"
@@ -40604,6 +44720,14 @@
     "form": "M"
   },
   "planétaires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "planétologue": {
+    "plural": "planétologues",
+    "form": "F/M"
+  },
+  "planétologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -40843,6 +44967,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "podologue": {
+    "plural": "podologues",
+    "form": "F/M"
+  },
+  "podologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "poids": {
     "plural": "poids",
     "form": "M/PL"
@@ -41043,6 +45175,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "politologue": {
+    "plural": "politologues",
+    "form": "F/M"
+  },
+  "politologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "polluant": {
     "plural": "polluants",
     "form": "M"
@@ -41095,6 +45235,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "polychètologiste": {
+    "plural": "polychètologistes",
+    "form": "F/M"
+  },
+  "polychètologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "polygraphe": {
     "plural": "polygraphes",
     "form": "F/M"
@@ -41135,11 +45283,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "polémiste": {
+    "plural": "polémistes",
+    "form": "F/M"
+  },
+  "polémistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pomme": {
     "plural": "pommes",
     "form": "F"
   },
   "pommes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pomologue": {
+    "plural": "pomologues",
+    "form": "F/M"
+  },
+  "pomologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -41438,6 +45602,14 @@
   "portrait": {
     "plural": "portraits",
     "form": "M"
+  },
+  "portraitiste": {
+    "plural": "portraitistes",
+    "form": "F/M"
+  },
+  "portraitistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "portraits": {
     "plural": "isPlural",
@@ -41943,6 +46115,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "primatologue": {
+    "plural": "primatologues",
+    "form": "F/M"
+  },
+  "primatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "primauté": {
     "plural": "primautés",
     "form": "F"
@@ -42259,6 +46439,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "programmateur": {
+    "plural": "programmateurs",
+    "form": "M"
+  },
+  "programmateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "programmation": {
     "plural": "programmations",
     "form": "F"
@@ -42272,6 +46460,22 @@
     "form": "M"
   },
   "programmes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "programmeur": {
+    "plural": "programmeurs",
+    "form": "M"
+  },
+  "programmeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "programmiste": {
+    "plural": "programmistes",
+    "form": "F/M"
+  },
+  "programmistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42415,6 +46619,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "propagandiste": {
+    "plural": "propagandistes",
+    "form": "F/M"
+  },
+  "propagandistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "propagation": {
     "plural": "propagations",
     "form": "F"
@@ -42507,9 +46719,25 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "prosateur": {
+    "plural": "prosateurs",
+    "form": "M"
+  },
+  "prosateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "prose": {
     "plural": "proses",
     "form": "F"
+  },
+  "prosecteur": {
+    "plural": "prosecteurs",
+    "form": "M"
+  },
+  "prosecteurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "proses": {
     "plural": "isPlural",
@@ -42536,6 +46764,14 @@
     "form": "F"
   },
   "prospectives": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "prospectiviste": {
+    "plural": "prospectivistes",
+    "form": "F/M"
+  },
+  "prospectivistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42579,6 +46815,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "protistologiste": {
+    "plural": "protistologistes",
+    "form": "F/M"
+  },
+  "protistologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "protocole": {
     "plural": "protocoles",
     "form": "M"
@@ -42606,6 +46850,14 @@
   "protoxyde d'azote": {
     "plural": "",
     "form": "M"
+  },
+  "protozoologiste": {
+    "plural": "protozoologistes",
+    "form": "F/M"
+  },
+  "protozoologistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "protéine": {
     "plural": "protéines",
@@ -42644,6 +46896,14 @@
     "form": ""
   },
   "provinces": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "proviseur": {
+    "plural": "proviseurs",
+    "form": "M"
+  },
+  "proviseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42743,6 +47003,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "précepteur": {
+    "plural": "précepteurs",
+    "form": "M"
+  },
+  "précepteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "précipitation": {
     "plural": "précipitations",
     "form": "F"
@@ -42786,6 +47054,14 @@
   "prédicat": {
     "plural": "prédicats",
     "form": "M"
+  },
+  "prédicateur": {
+    "plural": "prédicateurs",
+    "form": "M"
+  },
+  "prédicateurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "prédicats": {
     "plural": "isPlural",
@@ -42876,6 +47152,22 @@
     "form": "F"
   },
   "préhistoires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "préhistorien": {
+    "plural": "préhistoriens",
+    "form": "M"
+  },
+  "préhistorienne": {
+    "plural": "préhistoriennes",
+    "form": "F"
+  },
+  "préhistoriennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "préhistoriens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42990,6 +47282,14 @@
   "préservation": {
     "plural": "préservations",
     "form": "F"
+  },
+  "préservationniste": {
+    "plural": "préservationnistes",
+    "form": "F/M"
+  },
+  "préservationnistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "préservations": {
     "plural": "isPlural",
@@ -43135,6 +47435,14 @@
     "plural": "prêtres",
     "form": "M"
   },
+  "prêtre-critique": {
+    "plural": "prêtre-critiques",
+    "form": "F/M"
+  },
+  "prêtre-critiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "prêtres": {
     "plural": "isPlural",
     "form": "PL"
@@ -43148,6 +47456,14 @@
     "form": "F"
   },
   "psalmodies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pseudo-scientifique": {
+    "plural": "pseudo-scientifiques",
+    "form": "F/M"
+  },
+  "pseudo-scientifiques": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43183,11 +47499,75 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "psycholinguiste": {
+    "plural": "psycholinguistes",
+    "form": "F/M"
+  },
+  "psycholinguistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "psychologie": {
     "plural": "psychologies",
     "form": "F"
   },
   "psychologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychologue": {
+    "plural": "psychologues",
+    "form": "F/M"
+  },
+  "psychologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychomotricien": {
+    "plural": "psychomotriciens",
+    "form": "M"
+  },
+  "psychomotricienne": {
+    "plural": "psychomotriciennes",
+    "form": "F"
+  },
+  "psychomotriciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychomotriciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychopathologiste": {
+    "plural": "psychopathologistes",
+    "form": "F/M"
+  },
+  "psychopathologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychopédagogue": {
+    "plural": "psychopédagogues",
+    "form": "F/M"
+  },
+  "psychopédagogues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychosociologue": {
+    "plural": "psychosociologues",
+    "form": "F/M"
+  },
+  "psychosociologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "psychothérapeute": {
+    "plural": "psychothérapeutes",
+    "form": "F/M"
+  },
+  "psychothérapeutes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43204,6 +47584,22 @@
     "form": "F"
   },
   "psychés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pséphologue": {
+    "plural": "pséphologues",
+    "form": "F/M"
+  },
+  "pséphologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ptéridologue": {
+    "plural": "ptéridologues",
+    "form": "F/M"
+  },
+  "ptéridologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43260,6 +47656,14 @@
     "form": ""
   },
   "pudeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pugiliste": {
+    "plural": "pugilistes",
+    "form": "F/M"
+  },
+  "pugilistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43339,11 +47743,43 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "puériculteur": {
+    "plural": "puériculteurs",
+    "form": "M"
+  },
+  "puériculteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pyramide": {
     "plural": "pyramides",
     "form": "F"
   },
   "pyramides": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pyrotechnicien": {
+    "plural": "pyrotechniciens",
+    "form": "M"
+  },
+  "pyrotechnicienne": {
+    "plural": "pyrotechniciennes",
+    "form": "F"
+  },
+  "pyrotechniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pyrotechniciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pyrénéiste": {
+    "plural": "pyrénéistes",
+    "form": "F/M"
+  },
+  "pyrénéistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43467,11 +47903,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pédologue": {
+    "plural": "pédologues",
+    "form": "F/M"
+  },
+  "pédologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pédophilie": {
     "plural": "pédophilies",
     "form": "F"
   },
   "pédophilies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pédopsychothérapeute": {
+    "plural": "pédopsychothérapeutes",
+    "form": "F/M"
+  },
+  "pédopsychothérapeutes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43560,6 +48012,14 @@
     "form": "F"
   },
   "pépinières": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pépiniériste": {
+    "plural": "pépiniéristes",
+    "form": "F/M"
+  },
+  "pépiniéristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43699,6 +48159,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pétrologue": {
+    "plural": "pétrologues",
+    "form": "F/M"
+  },
+  "pétrologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pêche": {
     "plural": "pêches",
     "form": "F"
@@ -43760,6 +48228,22 @@
     "form": "F"
   },
   "qualifications": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "qualiticien": {
+    "plural": "qualiticiens",
+    "form": "M"
+  },
+  "qualiticienne": {
+    "plural": "qualiticiennes",
+    "form": "F"
+  },
+  "qualiticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "qualiticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -44131,11 +48615,27 @@
     "plural": "radios",
     "form": "F"
   },
+  "radiobiologiste": {
+    "plural": "radiobiologistes",
+    "form": "F/M"
+  },
+  "radiobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "radiodiffusion": {
     "plural": "radiodiffusions",
     "form": "F"
   },
   "radiodiffusions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "radiologue": {
+    "plural": "radiologues",
+    "form": "F/M"
+  },
+  "radiologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -44443,6 +48943,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "raseteur": {
+    "plural": "raseteurs",
+    "form": "M"
+  },
+  "raseteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rasoir": {
     "plural": "rasoirs",
     "form": "M"
@@ -44718,6 +49226,14 @@
   "recours": {
     "plural": "recours",
     "form": "M/PL"
+  },
+  "recruteur": {
+    "plural": "recruteurs",
+    "form": "M"
+  },
+  "recruteurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "recteur": {
     "plural": "recteurs",
@@ -45463,6 +49979,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "restaurateur": {
+    "plural": "restaurateurs",
+    "form": "M"
+  },
+  "restaurateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "restauration": {
     "plural": "restaurations",
     "form": "F"
@@ -45619,6 +50143,14 @@
     "plural": "rhums",
     "form": "M"
   },
+  "rhumatologue": {
+    "plural": "rhumatologues",
+    "form": "F/M"
+  },
+  "rhumatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rhume": {
     "plural": "rhumes",
     "form": "M"
@@ -45628,6 +50160,22 @@
     "form": "PL"
   },
   "rhums": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rhéologue": {
+    "plural": "rhéologues",
+    "form": "F/M"
+  },
+  "rhéologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rhéteur": {
+    "plural": "rhéteurs",
+    "form": "M"
+  },
+  "rhéteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -45819,6 +50367,22 @@
     "plural": "robots",
     "form": "M"
   },
+  "roboticien": {
+    "plural": "roboticiens",
+    "form": "M"
+  },
+  "roboticienne": {
+    "plural": "roboticiennes",
+    "form": "F"
+  },
+  "roboticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "roboticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "robots": {
     "plural": "isPlural",
     "form": "PL"
@@ -45932,6 +50496,14 @@
     "form": "F"
   },
   "rosières": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rosiériste": {
+    "plural": "rosiéristes",
+    "form": "F/M"
+  },
+  "rosiéristes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -46079,6 +50651,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "rudologue": {
+    "plural": "rudologues",
+    "form": "F/M"
+  },
+  "rudologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rue": {
     "plural": "rues",
     "form": "F"
@@ -46124,6 +50704,14 @@
     "form": "F"
   },
   "rumeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "runologue": {
+    "plural": "runologues",
+    "form": "F/M"
+  },
+  "runologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -46307,6 +50895,14 @@
     "plural": "réceptions",
     "form": "F"
   },
+  "réceptionniste": {
+    "plural": "réceptionnistes",
+    "form": "F/M"
+  },
+  "réceptionnistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "réceptions": {
     "plural": "isPlural",
     "form": "PL"
@@ -46362,6 +50958,14 @@
   "récit": {
     "plural": "récits",
     "form": "M"
+  },
+  "récitateur": {
+    "plural": "récitateurs",
+    "form": "M"
+  },
+  "récitateurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "récits": {
     "plural": "isPlural",
@@ -46635,6 +51239,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "régleur": {
+    "plural": "régleurs",
+    "form": "M"
+  },
+  "régleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "régularité": {
     "plural": "régularités",
     "form": "F"
@@ -46824,6 +51436,14 @@
     "form": "F"
   },
   "réputations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "répétiteur": {
+    "plural": "répétiteurs",
+    "form": "M"
+  },
+  "répétiteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47039,7 +51659,15 @@
     "plural": "réveillons",
     "form": "M"
   },
+  "réveillon de la Saint-Sylvestre": {
+    "plural": "réveillons de la Saint-Sylvestre",
+    "form": "M"
+  },
   "réveillons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "réveillons de la Saint-Sylvestre": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47228,6 +51856,14 @@
     "form": "M"
   },
   "sabotages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "saboteur": {
+    "plural": "saboteurs",
+    "form": "M"
+  },
+  "saboteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47499,6 +52135,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sans-abrisme": {
+    "plural": "sans-abrismes",
+    "form": "M"
+  },
+  "sans-abrismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sans-coeur": {
     "plural": "sans-coeurs",
     "form": "M"
@@ -47527,6 +52171,14 @@
     "plural": "sans-coeurs",
     "form": "M/PL"
   },
+  "sanscritiste": {
+    "plural": "sanscritistes",
+    "form": "F/M"
+  },
+  "sanscritistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sansonnet": {
     "plural": "sansonnets",
     "form": "M"
@@ -47540,6 +52192,14 @@
     "form": "F"
   },
   "santés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sapeur": {
+    "plural": "sapeurs",
+    "form": "M"
+  },
+  "sapeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47564,6 +52224,14 @@
     "form": "M"
   },
   "sarcomes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sardaniste": {
+    "plural": "sardanistes",
+    "form": "F/M"
+  },
+  "sardanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47723,6 +52391,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "savateur": {
+    "plural": "savateurs",
+    "form": "M"
+  },
+  "savateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "saveur": {
     "plural": "saveurs",
     "form": "M"
@@ -47744,6 +52420,14 @@
     "form": "M"
   },
   "scandales": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scandinaviste": {
+    "plural": "scandinavistes",
+    "form": "F/M"
+  },
+  "scandinavistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48387,6 +53071,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sexologue": {
+    "plural": "sexologues",
+    "form": "F/M"
+  },
+  "sexologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sexothérapeute": {
+    "plural": "sexothérapeutes",
+    "form": "F/M"
+  },
+  "sexothérapeutes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sextidi": {
     "plural": "sextidis",
     "form": "M"
@@ -48435,6 +53135,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sidérurgiste": {
+    "plural": "sidérurgistes",
+    "form": "F/M"
+  },
+  "sidérurgistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "siemens": {
     "plural": "siemens",
     "form": "M/PL"
@@ -48458,6 +53166,14 @@
   "signal": {
     "plural": "signaux",
     "form": "M"
+  },
+  "signaleur": {
+    "plural": "signaleurs",
+    "form": "M"
+  },
+  "signaleurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "signalisation": {
     "plural": "signalisations",
@@ -48520,6 +53236,14 @@
     "form": "F"
   },
   "silhouettes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "silhouettiste": {
+    "plural": "silhouettistes",
+    "form": "F/M"
+  },
+  "silhouettistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48619,6 +53343,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sinologue": {
+    "plural": "sinologues",
+    "form": "F/M"
+  },
+  "sinologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sinople": {
     "plural": "sinoples",
     "form": "M"
@@ -48659,6 +53391,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sismologue": {
+    "plural": "sismologues",
+    "form": "F/M"
+  },
+  "sismologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "site": {
     "plural": "sites",
     "form": "M"
@@ -48691,9 +53431,33 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "skateur": {
+    "plural": "skateurs",
+    "form": "M"
+  },
+  "skateurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "skeletoneur": {
+    "plural": "skeletoneurs",
+    "form": "M"
+  },
+  "skeletoneurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ski": {
     "plural": "skis",
     "form": "M"
+  },
+  "skieur": {
+    "plural": "skieurs",
+    "form": "M"
+  },
+  "skieurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "skin": {
     "plural": "skins",
@@ -48715,11 +53479,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "slammeur": {
+    "plural": "slammeurs",
+    "form": "M"
+  },
+  "slammeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "slaviste": {
+    "plural": "slavistes",
+    "form": "F/M"
+  },
+  "slavistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sloop": {
     "plural": "sloops",
     "form": "M"
   },
   "sloops": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "slovéniste": {
+    "plural": "slovénistes",
+    "form": "F/M"
+  },
+  "slovénistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48775,11 +53563,59 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "socio-esthéticien": {
+    "plural": "socio-esthéticiens",
+    "form": "M"
+  },
+  "socio-esthéticienne": {
+    "plural": "socio-esthéticiennes",
+    "form": "F"
+  },
+  "socio-esthéticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "socio-esthéticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "socioanthropologue": {
+    "plural": "socioanthropologues",
+    "form": "F/M"
+  },
+  "socioanthropologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sociobiologie": {
     "plural": "sociobiologies",
     "form": "F"
   },
   "sociobiologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sociobiologiste": {
+    "plural": "sociobiologistes",
+    "form": "F/M"
+  },
+  "sociobiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sociolinguiste": {
+    "plural": "sociolinguistes",
+    "form": "F/M"
+  },
+  "sociolinguistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sociologue": {
+    "plural": "sociologues",
+    "form": "F/M"
+  },
+  "sociologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49187,6 +54023,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "soudeur": {
+    "plural": "soudeurs",
+    "form": "M"
+  },
+  "soudeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "soudure": {
     "plural": "soudures",
     "form": "F"
@@ -49579,6 +54423,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "spongiologue": {
+    "plural": "spongiologues",
+    "form": "F/M"
+  },
+  "spongiologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sport": {
     "plural": "sports",
     "form": "M"
@@ -49592,6 +54444,14 @@
     "form": "M"
   },
   "spoutniks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sprinteur": {
+    "plural": "sprinteurs",
+    "form": "M"
+  },
+  "sprinteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49648,6 +54508,14 @@
     "form": "M"
   },
   "spéculums": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "spéléologue": {
+    "plural": "spéléologues",
+    "form": "F/M"
+  },
+  "spéléologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49747,6 +54615,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "statisticien": {
+    "plural": "statisticiens",
+    "form": "M"
+  },
+  "statisticienne": {
+    "plural": "statisticiennes",
+    "form": "F"
+  },
+  "statisticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "statisticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "statistique": {
     "plural": "statistiques",
     "form": "F"
@@ -49804,6 +54688,22 @@
     "form": "M"
   },
   "stockages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "stomatologue": {
+    "plural": "stomatologues",
+    "form": "F/M"
+  },
+  "stomatologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "storyboardeur": {
+    "plural": "storyboardeurs",
+    "form": "M"
+  },
+  "storyboardeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49867,6 +54767,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "structureur": {
+    "plural": "structureurs",
+    "form": "M"
+  },
+  "structureurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "studio": {
     "plural": "studios",
     "form": "M"
@@ -49896,6 +54804,14 @@
     "form": "F"
   },
   "styles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sténotypiste": {
+    "plural": "sténotypistes",
+    "form": "F/M"
+  },
+  "sténotypistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50143,6 +55059,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sumérologue": {
+    "plural": "sumérologues",
+    "form": "F/M"
+  },
+  "sumérologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "superficie": {
     "plural": "superficies",
     "form": "F"
@@ -50276,6 +55200,14 @@
     "form": "F"
   },
   "surfaces": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "surinamiste": {
+    "plural": "surinamistes",
+    "form": "F/M"
+  },
+  "surinamistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50420,6 +55352,14 @@
     "form": "F"
   },
   "suspensions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sylviculteur": {
+    "plural": "sylviculteurs",
+    "form": "M"
+  },
+  "sylviculteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50611,6 +55551,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sédimentologiste": {
+    "plural": "sédimentologistes",
+    "form": "F/M"
+  },
+  "sédimentologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "séducteur": {
     "plural": "séducteurs",
     "form": ""
@@ -50675,6 +55623,30 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sémioticien": {
+    "plural": "sémioticiens",
+    "form": "M"
+  },
+  "sémioticienne": {
+    "plural": "sémioticiennes",
+    "form": "F"
+  },
+  "sémioticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sémioticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sémitologue": {
+    "plural": "sémitologues",
+    "form": "F/M"
+  },
+  "sémitologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sénat": {
     "plural": "sénats",
     "form": "M"
@@ -50696,6 +55668,14 @@
     "form": ""
   },
   "sénatus-consultes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sénologue": {
+    "plural": "sénologues",
+    "form": "F/M"
+  },
+  "sénologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50752,6 +55732,14 @@
     "form": "M"
   },
   "sérails": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sériciculteur": {
+    "plural": "sériciculteurs",
+    "form": "M"
+  },
+  "sériciculteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50903,6 +55891,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "taekwondoïste": {
+    "plural": "taekwondoïstes",
+    "form": "F/M"
+  },
+  "taekwondoïstes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "taille": {
     "plural": "tailles",
     "form": "F"
@@ -50943,6 +55939,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "talmudiste": {
+    "plural": "talmudistes",
+    "form": "F/M"
+  },
+  "talmudistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "talon": {
     "plural": "talons",
     "form": "M"
@@ -50980,6 +55984,14 @@
     "form": "M"
   },
   "tandems": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tanneur": {
+    "plural": "tanneurs",
+    "form": "M"
+  },
+  "tanneurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51075,6 +56087,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tatoueur": {
+    "plural": "tatoueurs",
+    "form": "M"
+  },
+  "tatoueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tatoué": {
     "plural": "tatoués",
     "form": "M"
@@ -51127,11 +56147,27 @@
     "plural": "taxis",
     "form": "M"
   },
+  "taxidermiste": {
+    "plural": "taxidermistes",
+    "form": "F/M"
+  },
+  "taxidermistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "taxinomie": {
     "plural": "taxinomies",
     "form": "F/PL"
   },
   "taxinomies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "taxinomiste": {
+    "plural": "taxinomistes",
+    "form": "F/M"
+  },
+  "taxinomistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51142,6 +56178,14 @@
   "taxonomie": {
     "plural": "taxinomies",
     "form": "F"
+  },
+  "tchékiste": {
+    "plural": "tchékistes",
+    "form": "F/M"
+  },
+  "tchékistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "tchétchène": {
     "plural": "tchétchènes",
@@ -51159,6 +56203,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "technicien": {
+    "plural": "techniciens",
+    "form": "M"
+  },
+  "technicienne": {
+    "plural": "techniciennes",
+    "form": "F"
+  },
+  "techniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "techniciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "technologie": {
     "plural": "technologies",
     "form": "F"
@@ -51167,11 +56227,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "technologue": {
+    "plural": "technologues",
+    "form": "F/M"
+  },
+  "technologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "technopole": {
     "plural": "technopoles",
     "form": ""
   },
   "technopoles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "technopédagogue": {
+    "plural": "technopédagogues",
+    "form": "F/M"
+  },
+  "technopédagogues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51343,6 +56419,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "terminologue": {
+    "plural": "terminologues",
+    "form": "F/M"
+  },
+  "terminologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "terminus": {
     "plural": "terminus",
     "form": "M/PL"
@@ -51479,6 +56563,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "teuthologiste": {
+    "plural": "teuthologistes",
+    "form": "F/M"
+  },
+  "teuthologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "texte": {
     "plural": "textes",
     "form": "M"
@@ -51500,6 +56592,14 @@
     "form": "F"
   },
   "textures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "thanatopracteur": {
+    "plural": "thanatopracteurs",
+    "form": "M"
+  },
+  "thanatopracteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51567,11 +56667,43 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "théorbiste": {
+    "plural": "théorbistes",
+    "form": "F/M"
+  },
+  "théorbistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "théoricien": {
+    "plural": "théoriciens",
+    "form": "M"
+  },
+  "théoricienne": {
+    "plural": "théoriciennes",
+    "form": "F"
+  },
+  "théoriciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "théoriciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "théorie": {
     "plural": "théories",
     "form": "F"
   },
   "théories": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "théosophiste": {
+    "plural": "théosophistes",
+    "form": "F/M"
+  },
+  "théosophistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51596,6 +56728,22 @@
     "form": "M"
   },
   "théâtres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "théâtrologue": {
+    "plural": "théâtrologues",
+    "form": "F/M"
+  },
+  "théâtrologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tibétologue": {
+    "plural": "tibétologues",
+    "form": "F/M"
+  },
+  "tibétologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51779,6 +56927,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "toiletteur": {
+    "plural": "toiletteurs",
+    "form": "M"
+  },
+  "toiletteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "toison": {
     "plural": "toisons",
     "form": "F"
@@ -51907,11 +57063,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "topologue": {
+    "plural": "topologues",
+    "form": "F/M"
+  },
+  "topologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "toponymie": {
     "plural": "toponymies",
     "form": "F"
   },
   "toponymies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "toponymiste": {
+    "plural": "toponymistes",
+    "form": "F/M"
+  },
+  "toponymistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52123,6 +57295,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "toxicologue": {
+    "plural": "toxicologues",
+    "form": "F/M"
+  },
+  "toxicologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "toxicomane": {
     "plural": "toxicomanes",
     "form": ""
@@ -52147,6 +57327,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "traceur": {
+    "plural": "traceurs",
+    "form": "M"
+  },
+  "traceurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tractation": {
     "plural": "tractations",
     "form": "F"
@@ -52168,6 +57356,22 @@
     "form": "M"
   },
   "tracés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tradipraticien": {
+    "plural": "tradipraticiens",
+    "form": "M"
+  },
+  "tradipraticienne": {
+    "plural": "tradipraticiennes",
+    "form": "F"
+  },
+  "tradipraticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tradipraticiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52224,6 +57428,14 @@
     "form": "F"
   },
   "traductions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "traductologue": {
+    "plural": "traductologues",
+    "form": "F/M"
+  },
+  "traductologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52303,6 +57515,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "traiteur": {
+    "plural": "traiteurs",
+    "form": "M"
+  },
+  "traiteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "traitre": {
     "plural": "traitres",
     "form": "M"
@@ -52336,6 +57556,14 @@
     "form": "M"
   },
   "trajets": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trampoliniste": {
+    "plural": "trampolinistes",
+    "form": "F/M"
+  },
+  "trampolinistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52531,6 +57759,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "trappeur": {
+    "plural": "trappeurs",
+    "form": "M"
+  },
+  "trappeurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trapéziste": {
+    "plural": "trapézistes",
+    "form": "F/M"
+  },
+  "trapézistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "traque": {
     "plural": "traques",
     "form": "F"
@@ -52544,6 +57788,14 @@
     "form": "M"
   },
   "traumatismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "traumatologue": {
+    "plural": "traumatologues",
+    "form": "F/M"
+  },
+  "traumatologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52995,6 +58247,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tsiganologue": {
+    "plural": "tsiganologues",
+    "form": "F/M"
+  },
+  "tsiganologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tsunami": {
     "plural": "tsunamis",
     "form": "M"
@@ -53063,6 +58323,14 @@
     "plural": "turcs",
     "form": "M"
   },
+  "turcologue": {
+    "plural": "turcologues",
+    "form": "F/M"
+  },
+  "turcologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "turcs": {
     "plural": "isPlural",
     "form": "PL"
@@ -53075,11 +58343,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tuteur": {
+    "plural": "tuteurs",
+    "form": "M"
+  },
+  "tuteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tutoiement": {
     "plural": "tutoiements",
     "form": "M"
   },
   "tutoiements": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "twitteur": {
+    "plural": "twitteurs",
+    "form": "M"
+  },
+  "twitteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53175,6 +58459,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "télévangéliste": {
+    "plural": "télévangélistes",
+    "form": "F/M"
+  },
+  "télévangélistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "télévision": {
     "plural": "télévisions",
     "form": "F/PL"
@@ -53251,6 +58543,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tétrarque": {
+    "plural": "tétrarques",
+    "form": "F/M"
+  },
+  "tétrarques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "têtard": {
     "plural": "têtards",
     "form": "M"
@@ -53275,11 +58575,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ufologue": {
+    "plural": "ufologues",
+    "form": "F/M"
+  },
+  "ufologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ukrainien": {
     "plural": "ukrainiens",
     "form": "M"
   },
   "ukrainiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ukrainologue": {
+    "plural": "ukrainologues",
+    "form": "F/M"
+  },
+  "ukrainologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53403,6 +58719,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "urbaniste": {
+    "plural": "urbanistes",
+    "form": "F/M"
+  },
+  "urbanistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "urgence": {
     "plural": "urgences",
     "form": ""
@@ -53416,6 +58740,14 @@
     "form": ""
   },
   "urnes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "urologue": {
+    "plural": "urologues",
+    "form": "F/M"
+  },
+  "urologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53496,6 +58828,14 @@
     "form": "F"
   },
   "vaccinations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vaccinologue": {
+    "plural": "vaccinologues",
+    "form": "F/M"
+  },
+  "vaccinologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53675,6 +59015,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vampirologue": {
+    "plural": "vampirologues",
+    "form": "F/M"
+  },
+  "vampirologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vandale": {
     "plural": "vandales",
     "form": "M"
@@ -53784,6 +59132,14 @@
     "form": "F/M"
   },
   "vases": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vaticaniste": {
+    "plural": "vaticanistes",
+    "form": "F/M"
+  },
+  "vaticanistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53939,6 +59295,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ventriloque": {
+    "plural": "ventriloques",
+    "form": "F/M"
+  },
+  "ventriloques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vents": {
     "plural": "isPlural",
     "form": "PL"
@@ -53957,13 +59321,21 @@
   },
   "ver": {
     "plural": "vers",
-    "form": "M"
+    "form": "M/PL"
   },
   "verbe": {
     "plural": "verbes",
     "form": "M"
   },
   "verbes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "verbicruciste": {
+    "plural": "verbicrucistes",
+    "form": "F/M"
+  },
+  "verbicrucistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53995,6 +59367,10 @@
     "plural": "",
     "form": "M"
   },
+  "verglas": {
+    "plural": "verglas",
+    "form": "M/PL"
+  },
   "verlan": {
     "plural": "verlans",
     "form": ""
@@ -54008,6 +59384,22 @@
     "form": ""
   },
   "vermillons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vernien": {
+    "plural": "verniens",
+    "form": "M"
+  },
+  "vernienne": {
+    "plural": "verniennes",
+    "form": "F"
+  },
+  "verniennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "verniens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54052,7 +59444,7 @@
     "form": "PL"
   },
   "vers": {
-    "plural": "isPlural",
+    "plural": "vers",
     "form": "M/PL"
   },
   "versement": {
@@ -54271,6 +59663,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vidéaste": {
+    "plural": "vidéastes",
+    "form": "F/M"
+  },
+  "vidéastes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vidéo": {
     "plural": "vidéos",
     "form": "F"
@@ -54367,6 +59767,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vignettiste": {
+    "plural": "vignettistes",
+    "form": "F/M"
+  },
+  "vignettistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vigueur": {
     "plural": "vigueurs",
     "form": "F"
@@ -54436,6 +59844,14 @@
     "form": "F"
   },
   "vingtaines": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "viniculteur": {
+    "plural": "viniculteurs",
+    "form": "M"
+  },
+  "viniculteurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54539,6 +59955,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "virologue": {
+    "plural": "virologues",
+    "form": "F/M"
+  },
+  "virologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "virtualisation": {
     "plural": "virtualisations",
     "form": "F"
@@ -54631,6 +60055,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "viticulteur": {
+    "plural": "viticulteurs",
+    "form": "M"
+  },
+  "viticulteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "viticulture": {
     "plural": "viticultures",
     "form": "F"
@@ -54644,6 +60076,14 @@
     "form": "M"
   },
   "vitrages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vitrailliste": {
+    "plural": "vitraillistes",
+    "form": "F/M"
+  },
+  "vitraillistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54676,6 +60116,14 @@
     "form": "M"
   },
   "vocabulaires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vocaliste": {
+    "plural": "vocalistes",
+    "form": "F/M"
+  },
+  "vocalistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54763,6 +60211,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "volapükologue": {
+    "plural": "volapükologues",
+    "form": "F/M"
+  },
+  "volapükologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "volatilité": {
     "plural": "volatilités",
     "form": "F"
@@ -54780,6 +60236,14 @@
     "form": "M"
   },
   "volcanismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "volcanologue": {
+    "plural": "volcanologues",
+    "form": "F/M"
+  },
+  "volcanologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54808,6 +60272,14 @@
     "form": "M"
   },
   "volleyballs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "volleyeur": {
+    "plural": "volleyeurs",
+    "form": "M"
+  },
+  "volleyeurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54983,6 +60455,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "véliplanchiste": {
+    "plural": "véliplanchistes",
+    "form": "F/M"
+  },
+  "véliplanchistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vélo": {
     "plural": "vélos",
     "form": "M"
@@ -55063,6 +60543,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vététiste": {
+    "plural": "vététistes",
+    "form": "F/M"
+  },
+  "vététistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vêtement": {
     "plural": "vêtements",
     "form": "M"
@@ -55080,6 +60568,14 @@
     "form": "M"
   },
   "wagons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "walloniste": {
+    "plural": "wallonistes",
+    "form": "F/M"
+  },
+  "wallonistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -55183,6 +60679,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "yodleur": {
+    "plural": "yodleurs",
+    "form": "M"
+  },
+  "yodleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "yoga": {
     "plural": "yogas",
     "form": "M"
@@ -55267,7 +60771,31 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "zoologiste": {
+    "plural": "zoologistes",
+    "form": "F/M"
+  },
+  "zoologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "zoos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zootechnicien": {
+    "plural": "zootechniciens",
+    "form": "M"
+  },
+  "zootechnicienne": {
+    "plural": "zootechniciennes",
+    "form": "F"
+  },
+  "zootechniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zootechniciens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -55332,6 +60860,14 @@
     "form": "PL"
   },
   "Émiriens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Épaviste": {
+    "plural": "Épavistes",
+    "form": "F/M"
+  },
+  "Épavistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -55487,6 +61023,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "éboueur": {
+    "plural": "éboueurs",
+    "form": "M"
+  },
+  "éboueurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "éboulement": {
     "plural": "éboulements",
     "form": "M"
@@ -55503,6 +61047,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ébéniste": {
+    "plural": "ébénistes",
+    "form": "F/M"
+  },
   "ébénisterie": {
     "plural": "ébénisteries",
     "form": "F"
@@ -55511,9 +61059,29 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ébénistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "écailliste": {
+    "plural": "écaillistes",
+    "form": "F/M"
+  },
+  "écaillistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "écart": {
     "plural": "écarts",
     "form": "M"
+  },
+  "écarteur": {
+    "plural": "écarteurs",
+    "form": "M"
+  },
+  "écarteurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "écarts": {
     "plural": "isPlural",
@@ -55611,6 +61179,14 @@
     "plural": "échos",
     "form": "M"
   },
+  "échographiste": {
+    "plural": "échographistes",
+    "form": "F/M"
+  },
+  "échographistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "échos": {
     "plural": "isPlural",
     "form": "PL"
@@ -55660,6 +61236,14 @@
     "form": "M"
   },
   "éclairements": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "éclaireur": {
+    "plural": "éclaireurs",
+    "form": "M"
+  },
+  "éclaireurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -55716,6 +61300,14 @@
     "form": "F"
   },
   "écologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "écologue": {
+    "plural": "écologues",
+    "form": "F/M"
+  },
+  "écologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -55919,11 +61511,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "éditorialiste": {
+    "plural": "éditorialistes",
+    "form": "F/M"
+  },
+  "éditorialistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "édredon": {
     "plural": "édredons",
     "form": "M"
   },
   "édredons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "éducateur": {
+    "plural": "éducateurs",
+    "form": "M"
+  },
+  "éducateurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56007,6 +61615,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "égyptologue": {
+    "plural": "égyptologues",
+    "form": "F/M"
+  },
+  "égyptologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "éjaculation": {
     "plural": "éjaculations",
     "form": "F"
@@ -56063,11 +61679,51 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "électricien": {
+    "plural": "électriciens",
+    "form": "M"
+  },
+  "électricienne": {
+    "plural": "électriciennes",
+    "form": "F"
+  },
+  "électriciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électriciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "électricité": {
     "plural": "électricités",
     "form": "F"
   },
   "électricités": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électro-opticien": {
+    "plural": "électro-opticiens",
+    "form": "M"
+  },
+  "électro-opticienne": {
+    "plural": "électro-opticiennes",
+    "form": "F"
+  },
+  "électro-opticiennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électro-opticiens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électrochimiste": {
+    "plural": "électrochimistes",
+    "form": "F/M"
+  },
+  "électrochimistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56079,11 +61735,59 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "électronicien": {
+    "plural": "électroniciens",
+    "form": "M"
+  },
+  "électronicienne": {
+    "plural": "électroniciennes",
+    "form": "F"
+  },
+  "électroniciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électroniciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électrophysicien": {
+    "plural": "électrophysiciens",
+    "form": "M"
+  },
+  "électrophysicienne": {
+    "plural": "électrophysiciennes",
+    "form": "F"
+  },
+  "électrophysiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électrophysiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électrophysiologiste": {
+    "plural": "électrophysiologistes",
+    "form": "F/M"
+  },
+  "électrophysiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "électrotechnicien": {
     "plural": "électrotechniciens",
     "form": "M"
   },
   "électrotechniciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "électrotechnologue": {
+    "plural": "électrotechnologues",
+    "form": "F/M"
+  },
+  "électrotechnologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56167,6 +61871,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "élégiste": {
+    "plural": "élégistes",
+    "form": "F/M"
+  },
+  "élégistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "élément": {
     "plural": "éléments",
     "form": "M"
@@ -56194,6 +61906,14 @@
   "élévation du niveau de la mer": {
     "plural": "",
     "form": "F"
+  },
+  "émailleur": {
+    "plural": "émailleurs",
+    "form": "M"
+  },
+  "émailleurs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "émeraude": {
     "plural": "émeraudes",
@@ -56371,11 +62091,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "épidémiologiste": {
+    "plural": "épidémiologistes",
+    "form": "F/M"
+  },
+  "épidémiologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "épigrammatiste": {
+    "plural": "épigrammatistes",
+    "form": "F/M"
+  },
+  "épigrammatistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "épigramme": {
     "plural": "épigrammes",
     "form": "F"
   },
   "épigrammes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "épigraphiste": {
+    "plural": "épigraphistes",
+    "form": "F/M"
+  },
+  "épigraphistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56392,6 +62136,14 @@
     "form": "F"
   },
   "épilepsies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "épileptologue": {
+    "plural": "épileptologues",
+    "form": "F/M"
+  },
+  "épileptologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56416,6 +62168,14 @@
     "form": "M"
   },
   "épisodes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "épistémologue": {
+    "plural": "épistémologues",
+    "form": "F/M"
+  },
+  "épistémologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56476,6 +62236,14 @@
     "form": "F"
   },
   "épées": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "équarrisseur": {
+    "plural": "équarrisseurs",
+    "form": "M"
+  },
+  "équarrisseurs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56615,6 +62383,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ésotériste": {
+    "plural": "ésotéristes",
+    "form": "F/M"
+  },
+  "ésotéristes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "établi": {
     "plural": "établis",
     "form": "M"
@@ -56655,6 +62431,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "étalagiste": {
+    "plural": "étalagistes",
+    "form": "F/M"
+  },
+  "étalagistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "étalement": {
     "plural": "étalements",
     "form": "M"
@@ -56676,6 +62460,14 @@
     "form": "F"
   },
   "étanchéifications": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "étanchéiste": {
+    "plural": "étanchéistes",
+    "form": "F/M"
+  },
+  "étanchéistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56719,11 +62511,35 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "éthicien": {
+    "plural": "éthiciens",
+    "form": "M"
+  },
+  "éthicienne": {
+    "plural": "éthiciennes",
+    "form": "F"
+  },
+  "éthiciennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "éthiciens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "éthique": {
     "plural": "éthiques",
     "form": "F"
   },
   "éthiques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "éthologue": {
+    "plural": "éthologues",
+    "form": "F/M"
+  },
+  "éthologues": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56799,6 +62615,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "étruscologue": {
+    "plural": "étruscologues",
+    "form": "F/M"
+  },
+  "étruscologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "étude": {
     "plural": "études",
     "form": "F"
@@ -56831,6 +62655,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "étymologiste": {
+    "plural": "étymologistes",
+    "form": "F/M"
+  },
+  "étymologistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "été": {
     "plural": "étés",
     "form": "M"
@@ -56852,6 +62684,14 @@
     "form": "F"
   },
   "évaluations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "évangéliste": {
+    "plural": "évangélistes",
+    "form": "F/M"
+  },
+  "évangélistes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56898,6 +62738,14 @@
   "éventail": {
     "plural": "éventails",
     "form": "M"
+  },
+  "éventailliste": {
+    "plural": "éventaillistes",
+    "form": "F/M"
+  },
+  "éventaillistes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "éventails": {
     "plural": "isPlural",
@@ -56968,6 +62816,14 @@
     "form": "M"
   },
   "œils": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "œnologue": {
+    "plural": "œnologues",
+    "form": "F/M"
+  },
+  "œnologues": {
     "plural": "isPlural",
     "form": "PL"
   },

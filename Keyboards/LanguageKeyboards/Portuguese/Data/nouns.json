@@ -763,28 +763,32 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "animaizinhos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "animal": {
-    "plural": "animais",
+    "plural": "animaizinhos",
     "form": "M"
   },
   "animalaço": {
-    "plural": "animais",
+    "plural": "animaizinhos",
     "form": "M/PL"
   },
   "animalejo": {
-    "plural": "animais",
+    "plural": "animaizinhos",
     "form": "M/PL"
   },
   "animalzinho": {
-    "plural": "animais",
+    "plural": "animaizinhos",
     "form": "M/PL"
   },
   "animalão": {
     "plural": "animais",
-    "form": "M/PL"
+    "form": "M"
   },
   "animálculo": {
-    "plural": "animais",
+    "plural": "animaizinhos",
     "form": "M/PL"
   },
   "aniversário": {
@@ -1815,6 +1819,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "barulhinho": {
+    "plural": "barulhinhos",
+    "form": "M/PL"
+  },
+  "barulhinhos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "barulho": {
+    "plural": "barulhinhos",
+    "form": "M/PL"
+  },
+  "barulhão": {
+    "plural": "barulhinhos",
+    "form": "M"
+  },
   "basculho": {
     "plural": "basculhos",
     "form": "M"
@@ -2077,7 +2097,7 @@
   },
   "bocarra": {
     "plural": "bocarras",
-    "form": "F"
+    "form": "F/PL"
   },
   "bocarras": {
     "plural": "isPlural",
@@ -2089,7 +2109,7 @@
   },
   "bocão": {
     "plural": "bocarras",
-    "form": "F/PL"
+    "form": "F"
   },
   "boicote": {
     "plural": "boicote",
@@ -2293,11 +2313,11 @@
   },
   "brasileiro": {
     "plural": "brasileirinhos",
-    "form": "M/PL"
+    "form": "M"
   },
   "brasileirão": {
     "plural": "brasileirinhos",
-    "form": "M"
+    "form": "M/PL"
   },
   "brecha": {
     "plural": "brechas",
@@ -3851,6 +3871,14 @@
     "plural": "colas",
     "form": "F"
   },
+  "colaboração": {
+    "plural": "colaborações",
+    "form": "F"
+  },
+  "colaborações": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "colapso": {
     "plural": "colapsos",
     "form": "M"
@@ -4025,7 +4053,7 @@
   },
   "comida": {
     "plural": "comidas",
-    "form": "F/PL"
+    "form": "F"
   },
   "comidas": {
     "plural": "isPlural",
@@ -4033,11 +4061,15 @@
   },
   "comidazinha": {
     "plural": "comidas",
-    "form": "F"
+    "form": "F/PL"
+  },
+  "comidazinhas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "comidinha": {
-    "plural": "comidas",
-    "form": "F/PL"
+    "plural": "comidazinhas",
+    "form": "F"
   },
   "comidona": {
     "plural": "comidas",
@@ -5349,11 +5381,11 @@
   },
   "dentinho": {
     "plural": "dentes",
-    "form": "M"
+    "form": "M/PL"
   },
   "dentão": {
     "plural": "dentes",
-    "form": "M/PL"
+    "form": "M"
   },
   "departamento": {
     "plural": "departamentos",
@@ -6532,8 +6564,8 @@
     "form": "PL"
   },
   "escola": {
-    "plural": "escolas",
-    "form": "F/PL"
+    "plural": "escolinhas",
+    "form": "F"
   },
   "escolas": {
     "plural": "isPlural",
@@ -6542,6 +6574,10 @@
   "escolinha": {
     "plural": "escolas",
     "form": "F"
+  },
+  "escolinhas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "escorpião": {
     "plural": "escorpiões",
@@ -7359,6 +7395,10 @@
     "plural": "festaças",
     "form": "F"
   },
+  "festas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "festazinha": {
     "plural": "festaças",
     "form": "F/PL"
@@ -7380,8 +7420,8 @@
     "form": "F/PL"
   },
   "festinha": {
-    "plural": "festaças",
-    "form": "F/PL"
+    "plural": "festas",
+    "form": "F"
   },
   "festivais": {
     "plural": "isPlural",
@@ -9673,7 +9713,7 @@
   },
   "laranja": {
     "plural": "laranjas",
-    "form": "F/PL"
+    "form": "F"
   },
   "laranjas": {
     "plural": "isPlural",
@@ -9684,16 +9724,12 @@
     "form": "F/PL"
   },
   "laranjona": {
-    "plural": "laranjões",
-    "form": "F"
+    "plural": "laranjas",
+    "form": "F/PL"
   },
   "laranjão": {
     "plural": "laranjas",
-    "form": "F"
-  },
-  "laranjões": {
-    "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "laxante": {
     "plural": "laxantes",
@@ -9753,15 +9789,15 @@
   },
   "leitura": {
     "plural": "leituras",
-    "form": "F/PL"
+    "form": "F"
   },
   "leituras": {
     "plural": "isPlural",
     "form": "PL"
   },
   "leiturinha": {
-    "plural": "leituras",
-    "form": "F/PL"
+    "plural": "leiturões",
+    "form": "F"
   },
   "leiturona": {
     "plural": "leituras",
@@ -9769,7 +9805,11 @@
   },
   "leiturão": {
     "plural": "leituras",
-    "form": "F"
+    "form": "F/PL"
+  },
+  "leiturões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lenha": {
     "plural": "lenhas",
@@ -11307,10 +11347,6 @@
     "plural": "mulheres",
     "form": "F"
   },
-  "mulheraças": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "mulheres": {
     "plural": "isPlural",
     "form": "PL"
@@ -11320,8 +11356,8 @@
     "form": "F/PL"
   },
   "mulherona": {
-    "plural": "mulheraças",
-    "form": "F"
+    "plural": "mulheres",
+    "form": "F/PL"
   },
   "mulherzinha": {
     "plural": "mulheres",
@@ -12295,6 +12331,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "paninho": {
+    "plural": "paninhos",
+    "form": "M/PL"
+  },
+  "paninhos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pano": {
+    "plural": "paninhos",
+    "form": "M/PL"
+  },
   "pantera": {
     "plural": "panteras",
     "form": "F"
@@ -12302,6 +12350,10 @@
   "panteras": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "panão": {
+    "plural": "paninhos",
+    "form": "M"
   },
   "papa": {
     "plural": "papas",
@@ -15097,19 +15149,15 @@
   },
   "rodinha": {
     "plural": "rodas",
-    "form": "F"
+    "form": "F/PL"
   },
   "rodona": {
     "plural": "rodas",
     "form": "F/PL"
   },
   "rodão": {
-    "plural": "rodões",
+    "plural": "rodas",
     "form": "F"
-  },
-  "rodões": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "roleta": {
     "plural": "roletas",
@@ -15261,7 +15309,7 @@
   },
   "sabre": {
     "plural": "sabres",
-    "form": "M/PL"
+    "form": "M"
   },
   "sabres": {
     "plural": "isPlural",
@@ -15273,7 +15321,7 @@
   },
   "sabrezão": {
     "plural": "sabres",
-    "form": "M"
+    "form": "M/PL"
   },
   "saca": {
     "plural": "sacas",

@@ -10,7 +10,6 @@
   { "preposition": "по", "case": "prepositional case" },
   { "preposition": "около", "case": "genitive case" },
   { "preposition": "минус" },
-  { "preposition": "к", "case": "dative case" },
   { "preposition": "после", "case": "genitive case" },
   { "preposition": "под", "case": "accusative case" },
   { "preposition": "под", "case": "instrumental case" },
@@ -18,5 +17,6 @@
   { "preposition": "вокруг", "case": "genitive case" },
   { "preposition": "с", "case": "instrumental case" },
   { "preposition": "съ", "case": "instrumental case" },
-  { "preposition": "для", "case": "genitive case" }
+  { "preposition": "для", "case": "genitive case" },
+  { "preposition": "к", "case": "dative case" }
 ]
