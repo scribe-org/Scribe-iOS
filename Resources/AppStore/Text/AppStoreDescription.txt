@@ -4,7 +4,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 Features:
 
-Scribe keyboard features are accessed via the Scribe key at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: Translate, Conjugate and Plural. These keys allow for words to be queried and inserted into the text field followed by a space.
+Scribe keyboard features are accessed via the Scribe key at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: Translate, Conjugate and Plural in the keyboard's language. These keys allow for words to be queried and inserted into the text field followed by a space.
 
 Current features include:
 
