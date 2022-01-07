@@ -143,7 +143,7 @@ public enum EnglishKeyboardConstants {
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
-    ["q", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
     [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
   ]
