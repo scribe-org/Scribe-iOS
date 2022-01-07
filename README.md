@@ -9,8 +9,7 @@
 --->
 
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
-[![iOS 13.0+](https://img.shields.io/badge/iOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
-[![iOS 13.0+](https://img.shields.io/badge/iPadOS-13.0%2B-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+[![coc](https://img.shields.io/badge/platforms-iOS%20|%20iPadOS-999999.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 [![last commit](https://img.shields.io/github/last-commit/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/commits/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/issues)
 [![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
