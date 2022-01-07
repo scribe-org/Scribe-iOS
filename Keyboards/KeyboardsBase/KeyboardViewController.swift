@@ -1379,7 +1379,9 @@ class KeyboardViewController: UIInputViewController {
     let isNoun = nouns?[nounToCheck] != nil || nouns?[givenNoun.lowercased()] != nil
     if isNoun {
       let nounForm = nouns?[nounToCheck]?["form"] as? String
-      if nounForm == "F" {
+      if nounForm == "" {
+        return
+      } else if nounForm == "F" {
         if UITraitCollection.current.userInterfaceStyle == .dark {
           previewBar?.textColor = UIColor.previewRedDarkTheme
         } else {
@@ -1409,8 +1411,6 @@ class KeyboardViewController: UIInputViewController {
         } else {
           previewBar?.textColor = UIColor.previewOrangeLightTheme
         }
-      } else if nounForm ==  "" {
-        invalidState = true
       } else {
         previewBar?.textColor = UIColor.label
       }

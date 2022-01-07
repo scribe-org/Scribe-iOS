@@ -1885,7 +1885,7 @@
   },
   "Adam": {
     "plural": "Adame",
-    "form": "noForm"
+    "form": ""
   },
   "Adame": {
     "plural": "isPlural",
@@ -2941,7 +2941,7 @@
   },
   "Albrecht": {
     "plural": "Albrechts",
-    "form": "noForm"
+    "form": ""
   },
   "Albrechts": {
     "plural": "isPlural",
@@ -3053,7 +3053,7 @@
   },
   "Ali": {
     "plural": "Alis",
-    "form": "noForm"
+    "form": ""
   },
   "Alimentierung": {
     "plural": "Alimentierungen",
@@ -4133,7 +4133,7 @@
   },
   "Andreas": {
     "plural": "Andreasse",
-    "form": "noForm"
+    "form": ""
   },
   "Andreasse": {
     "plural": "isPlural",
@@ -4161,7 +4161,7 @@
   },
   "André": {
     "plural": "Andrés",
-    "form": "noForm"
+    "form": ""
   },
   "Andrés": {
     "plural": "isPlural",
@@ -6545,7 +6545,7 @@
   },
   "Arnold": {
     "plural": "Arnolde",
-    "form": "noForm"
+    "form": ""
   },
   "Arnolde": {
     "plural": "isPlural",
@@ -12149,7 +12149,7 @@
   },
   "Benedikt": {
     "plural": "Benedikts",
-    "form": "noForm"
+    "form": ""
   },
   "Benedikts": {
     "plural": "isPlural",
@@ -12693,7 +12693,7 @@
   },
   "Bernd": {
     "plural": "Bernds",
-    "form": "noForm"
+    "form": ""
   },
   "Bernds": {
     "plural": "isPlural",
@@ -12701,7 +12701,7 @@
   },
   "Bernhard": {
     "plural": "Bernhards",
-    "form": "noForm"
+    "form": ""
   },
   "Bernhards": {
     "plural": "isPlural",
@@ -13845,7 +13845,7 @@
   },
   "Bettina": {
     "plural": "Bettinas",
-    "form": "noForm"
+    "form": ""
   },
   "Bettinas": {
     "plural": "isPlural",
@@ -15209,7 +15209,7 @@
   },
   "Birgit": {
     "plural": "Birgits",
-    "form": "noForm"
+    "form": ""
   },
   "Birgits": {
     "plural": "isPlural",
@@ -19373,7 +19373,7 @@
   },
   "Christina": {
     "plural": "Christinas",
-    "form": "noForm"
+    "form": ""
   },
   "Christinas": {
     "plural": "isPlural",
@@ -19381,11 +19381,11 @@
   },
   "Christoph": {
     "plural": "Christophs",
-    "form": "noForm"
+    "form": ""
   },
   "Christopher": {
     "plural": "Christophers",
-    "form": "noForm"
+    "form": ""
   },
   "Christophers": {
     "plural": "isPlural",
@@ -31141,7 +31141,7 @@
   },
   "Ferdinand": {
     "plural": "Ferdinands",
-    "form": "noForm"
+    "form": ""
   },
   "Ferdinands": {
     "plural": "isPlural",
@@ -32401,7 +32401,7 @@
   },
   "Florian": {
     "plural": "Florians",
-    "form": "noForm"
+    "form": ""
   },
   "Florians": {
     "plural": "isPlural",
@@ -33313,7 +33313,7 @@
   },
   "Frank": {
     "plural": "Franks",
-    "form": "noForm"
+    "form": ""
   },
   "Frankfurt am Main": {
     "plural": "noPlural",
@@ -34689,7 +34689,7 @@
   },
   "Gabriele": {
     "plural": "Gabrielen",
-    "form": "noForm"
+    "form": ""
   },
   "Gabrielen": {
     "plural": "isPlural",
@@ -38497,7 +38497,7 @@
   },
   "Gottfried": {
     "plural": "Gottfrieds",
-    "form": "noForm"
+    "form": ""
   },
   "Gottfrieds": {
     "plural": "isPlural",
@@ -39621,7 +39621,7 @@
   },
   "Gustav": {
     "plural": "Gustavs",
-    "form": "noForm"
+    "form": ""
   },
   "Gustavs": {
     "plural": "isPlural",
@@ -41937,7 +41937,7 @@
   },
   "Herbert": {
     "plural": "Herberts",
-    "form": "noForm"
+    "form": ""
   },
   "Herberts": {
     "plural": "isPlural",
@@ -42029,7 +42029,7 @@
   },
   "Hermann": {
     "plural": "Hermanns",
-    "form": "noForm"
+    "form": ""
   },
   "Hermanns": {
     "plural": "isPlural",
@@ -46429,7 +46429,7 @@
   },
   "Jack": {
     "plural": "Jacks",
-    "form": "noForm"
+    "form": ""
   },
   "Jacke": {
     "plural": "Jacken",
@@ -46657,7 +46657,7 @@
   },
   "Jakob": {
     "plural": "Jakobs",
-    "form": "noForm"
+    "form": ""
   },
   "Jakobs": {
     "plural": "isPlural",
@@ -46837,7 +46837,7 @@
   },
   "Jennifer": {
     "plural": "Jennifers",
-    "form": "noForm"
+    "form": ""
   },
   "Jennifers": {
     "plural": "isPlural",
@@ -46929,11 +46929,11 @@
   },
   "Johann": {
     "plural": "Johanns",
-    "form": "noForm"
+    "form": ""
   },
   "Johanna": {
     "plural": "Johannas",
-    "form": "noForm"
+    "form": ""
   },
   "Johannas": {
     "plural": "isPlural",
@@ -47125,7 +47125,7 @@
   },
   "Julia": {
     "plural": "Julias",
-    "form": "noForm"
+    "form": ""
   },
   "Julias": {
     "plural": "isPlural",
@@ -48425,7 +48425,7 @@
   },
   "Karl": {
     "plural": "Karls",
-    "form": "noForm"
+    "form": ""
   },
   "Karls": {
     "plural": "isPlural",
@@ -48953,7 +48953,7 @@
   },
   "Katharina": {
     "plural": "Katharinas",
-    "form": "noForm"
+    "form": ""
   },
   "Katharinas": {
     "plural": "isPlural",
@@ -58753,7 +58753,7 @@
   },
   "Ludwig": {
     "plural": "Ludwigs",
-    "form": "noForm"
+    "form": ""
   },
   "Ludwigs": {
     "plural": "isPlural",
@@ -59849,7 +59849,7 @@
   },
   "Manuel": {
     "plural": "Manuels",
-    "form": "noForm"
+    "form": ""
   },
   "Manuels": {
     "plural": "isPlural",
@@ -60169,7 +60169,7 @@
   },
   "Martin": {
     "plural": "Martins",
-    "form": "noForm"
+    "form": ""
   },
   "Martinique": {
     "plural": "noPlural",
@@ -60465,7 +60465,7 @@
   },
   "Matthias": {
     "plural": "Matthiasse",
-    "form": "noForm"
+    "form": ""
   },
   "Matthiasse": {
     "plural": "isPlural",
@@ -69573,7 +69573,7 @@
   },
   "Otto": {
     "plural": "Ottos",
-    "form": "noForm"
+    "form": ""
   },
   "Ottos": {
     "plural": "isPlural",
@@ -75873,7 +75873,7 @@
   },
   "Ralf": {
     "plural": "Ralfs",
-    "form": "noForm"
+    "form": ""
   },
   "Ralfs": {
     "plural": "isPlural",
@@ -77021,7 +77021,7 @@
   },
   "Regina": {
     "plural": "Reginas",
-    "form": "noForm"
+    "form": ""
   },
   "Reginas": {
     "plural": "isPlural",
@@ -77329,7 +77329,7 @@
   },
   "Reinhard": {
     "plural": "Reinhards",
-    "form": "noForm"
+    "form": ""
   },
   "Reinhards": {
     "plural": "isPlural",
@@ -77645,7 +77645,7 @@
   },
   "Renate": {
     "plural": "Renaten",
-    "form": "noForm"
+    "form": ""
   },
   "Renaten": {
     "plural": "isPlural",
@@ -78229,7 +78229,7 @@
   },
   "Richard": {
     "plural": "Richards",
-    "form": "noForm"
+    "form": ""
   },
   "Richards": {
     "plural": "isPlural",
@@ -79713,7 +79713,7 @@
   },
   "Sabina": {
     "plural": "Sabinas",
-    "form": "noForm"
+    "form": ""
   },
   "Sabinas": {
     "plural": "isPlural",
@@ -79721,7 +79721,7 @@
   },
   "Sabine": {
     "plural": "Sabines",
-    "form": "noForm"
+    "form": ""
   },
   "Sabines": {
     "plural": "isPlural",
@@ -83933,7 +83933,7 @@
   },
   "Sebastian": {
     "plural": "Sebastians",
-    "form": "noForm"
+    "form": ""
   },
   "Sebastians": {
     "plural": "isPlural",
@@ -86641,7 +86641,7 @@
   },
   "Sophie": {
     "plural": "Sophien",
-    "form": "noForm"
+    "form": ""
   },
   "Sophien": {
     "plural": "isPlural",
@@ -89017,7 +89017,7 @@
   },
   "Stefan": {
     "plural": "Stefans",
-    "form": "noForm"
+    "form": ""
   },
   "Stefans": {
     "plural": "isPlural",
@@ -89269,7 +89269,7 @@
   },
   "Stephan": {
     "plural": "Stephans",
-    "form": "noForm"
+    "form": ""
   },
   "Stephans": {
     "plural": "isPlural",
@@ -92461,7 +92461,7 @@
   },
   "Tatjana": {
     "plural": "Tatjanas",
-    "form": "noForm"
+    "form": ""
   },
   "Tatjanas": {
     "plural": "isPlural",
@@ -93609,7 +93609,7 @@
   },
   "Theodor": {
     "plural": "Theodore",
-    "form": "noForm"
+    "form": ""
   },
   "Theodore": {
     "plural": "isPlural",
@@ -93721,7 +93721,7 @@
   },
   "Thomas": {
     "plural": "Thomasse",
-    "form": "noForm"
+    "form": ""
   },
   "Thomasse": {
     "plural": "isPlural",
@@ -93969,7 +93969,7 @@
   },
   "Tim": {
     "plural": "Tims",
-    "form": "noForm"
+    "form": ""
   },
   "Timbre": {
     "plural": "Timbres",
@@ -93981,7 +93981,7 @@
   },
   "Timm": {
     "plural": "Timms",
-    "form": "noForm"
+    "form": ""
   },
   "Timms": {
     "plural": "isPlural",
@@ -93997,7 +93997,7 @@
   },
   "Tina": {
     "plural": "Tinas",
-    "form": "noForm"
+    "form": ""
   },
   "Tinas": {
     "plural": "isPlural",
@@ -98137,7 +98137,7 @@
   },
   "Ursula": {
     "plural": "Ursulas",
-    "form": "noForm"
+    "form": ""
   },
   "Ursulas": {
     "plural": "isPlural",
@@ -104957,7 +104957,7 @@
   },
   "William": {
     "plural": "Williams",
-    "form": "noForm"
+    "form": ""
   },
   "Williams": {
     "plural": "isPlural",

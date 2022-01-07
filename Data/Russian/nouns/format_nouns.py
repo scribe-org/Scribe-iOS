@@ -78,13 +78,13 @@ for noun_vals in nouns_list:
                     # Mark plural as a possible form if it isn't already.
                     if (
                         "PL" not in nouns_formatted[noun_vals["plural"]]["form"]
-                        and nouns_formatted[noun_vals["plural"]]["form"] != "noForm"
+                        and nouns_formatted[noun_vals["plural"]]["form"] != ""
                     ):
                         nouns_formatted[noun_vals["plural"]]["form"] = (
                             nouns_formatted[noun_vals["plural"]]["form"] + "/PL"
                         )
 
-                    elif nouns_formatted[noun_vals["plural"]]["form"] == "noForm":
+                    elif nouns_formatted[noun_vals["plural"]]["form"] == "":
                         nouns_formatted[noun_vals["plural"]]["form"] = "PL"
 
                     # Assign itself as a plural if possible (maybe wasn't for prior versions).
@@ -97,7 +97,7 @@ for noun_vals in nouns_list:
             elif "plural" in noun_vals.keys() and "gender" not in noun_vals.keys():
                 nouns_formatted[noun_vals["singular"]] = {
                     "plural": noun_vals["plural"],
-                    "form": "noForm",
+                    "form": "",
                 }
 
                 # Assign plural as a new entry after checking if it's its own plural.
