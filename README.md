@@ -12,7 +12,7 @@
 [![platforms](https://img.shields.io/badge/platforms-iOS%20│%20iPadOS-999999.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![last commit](https://img.shields.io/github/last-commit/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/commits/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/issues)
-[![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CONTRIBUTING.md)
+[![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
