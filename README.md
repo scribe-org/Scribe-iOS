@@ -90,7 +90,7 @@ Users access Scribe language keyboards through the following:
 
 # Keyboard Features [`⇧`](#contents) <a id="keyboard-features"></a>
 
-Scribe keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural` in the keyboard's language. These keys allow for words to be queried and inserted into the text field followed by a space.
+Keyboard features are accessed via the `Scribe key` at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: `Translate`, `Conjugate` and `Plural` in the keyboard's language. These keys allow for words to be queried and inserted into the text field followed by a space.
 
 **Current features include:**
 
@@ -124,6 +124,8 @@ Scribe annotates nouns in the preview bar according to the following conventions
 - Neutral: colored green 🟩 and marked with (N)
 - Plural: colored orange 🟧 and marked with (PL)
 - More than one: marked with all their forms
+
+The above form abbreviations are translated into their equivalents in the keyboard's language.
 
 #### Prepositions
 
