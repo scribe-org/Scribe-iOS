@@ -49,6 +49,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ♻️ Code Refactoring
 
 - Combines all the space bar logic into one and renames the key based on the keyboard.
+- Combines all conjugation logic into one function that is accessed by each button press case.
+- Combines all noun annotation logic into one function that accessed by child functions.
 
 # Scribe 1.0.1 (December 4th, 2021)
 
