@@ -1,0 +1,28 @@
+{
+  "French": {
+    "nouns": 15710,
+    "verbs": 1241
+  },
+  "German": {
+    "nouns": 27526,
+    "verbs": 3125,
+    "prepositions": 188
+  },
+  "Portuguese": {
+    "nouns": 4530,
+    "verbs": 188
+  },
+  "Russian": {
+    "nouns": 194389,
+    "verbs": 11,
+    "prepositions": 12
+  },
+  "Spanish": {
+    "nouns": 8310,
+    "verbs": 87
+  },
+  "Swedish": {
+    "nouns": 41102,
+    "verbs": 4133
+  }
+}

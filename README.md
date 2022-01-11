@@ -74,9 +74,11 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 `*` Given the current **`beta`** status where words are machine translated.
 
-`†` Adjective-preposition support is in progress [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/86).
+`†` Adjective-preposition support is in progress [(see #86)](https://github.com/scribe-org/Scribe-iOS/issues/86).
 
 `‡` Only for languages for which preposition annotation is needed.
+
+WIP [#95](https://github.com/scribe-org/Scribe-iOS/issues/95): Updates to the above data can be done using [Data/update_data.py](https://github.com/scribe-org/Scribe-iOS/tree/main/Data/update_data.py).
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
