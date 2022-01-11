@@ -1683,6 +1683,10 @@ class KeyboardViewController: UIInputViewController {
         if proxy.documentContextBeforeInput?.suffix(2) == ", " {
           changeKeyboardToLetterKeys()
         }
+        if proxy.documentContextBeforeInput?.suffix(2) == ". " {
+          shiftButtonState = .shift
+          changeKeyboardToLetterKeys()
+        }
         if proxy.documentContextBeforeInput?.suffix(2) == "? " {
           shiftButtonState = .shift
           changeKeyboardToLetterKeys()
@@ -1694,6 +1698,10 @@ class KeyboardViewController: UIInputViewController {
       } else {
         previewBar?.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
         if previewBar?.text!.suffix(3) == ", " + previewCursor {
+          changeKeyboardToLetterKeys()
+        }
+        if previewBar?.text!.suffix(3) == ". " + previewCursor {
+          shiftButtonState = .shift
           changeKeyboardToLetterKeys()
         }
         if previewBar?.text!.suffix(3) == "? " + previewCursor {
