@@ -282,7 +282,6 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
-				D190B24C2741B53C00705659 /* Data */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D190B28F27426F4900705659 /* LICENSE.txt */,
@@ -430,17 +429,10 @@
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
 				D190B2592742565500705659 /* KeyboardViewController.swift */,
+				D190B24D2741B61000705659 /* LoadData.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
 			);
 			path = KeyboardsBase;
-			sourceTree = "<group>";
-		};
-		D190B24C2741B53C00705659 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D190B24D2741B61000705659 /* LoadData.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		D190B25427424F2900705659 /* Images */ = {
