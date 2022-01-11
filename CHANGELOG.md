@@ -22,12 +22,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
-- German (Additions): 401 nouns, 78 verbs, corrected many prepositions
-- French (New keyboard): 15,710 nouns, 1,241 verbs (mostly infinitives), 67,609 translations
-- Portuguese (New keyboard): 4,530 nouns, 188 verbs, 67,609 translations
-- Russian (New keyboard): 194,389 nouns, 11 verbs, 12 prepositions, 67,609 translations
-- Spanish (Additions): 180 nouns, 22 verbs
-- Swedish (New keyboard): 41,102 nouns, 4,133 verbs, 67,609 translations
+- French (New): 15,710 nouns, 1,241 verbs (mostly infinitives), 67,609 translations
+- German: 401 nouns, 78 verbs, corrected many prepositions
+- Portuguese (New): 4,530 nouns, 188 verbs, 67,609 translations
+- Russian (New): 194,389 nouns, 11 verbs, 12 prepositions, 67,609 translations
+- Spanish: 180 nouns, 22 verbs
+- Swedish (New): 41,102 nouns, 4,133 verbs, 67,609 translations
 
 ### ✨ New Features
 
