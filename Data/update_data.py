@@ -99,6 +99,8 @@ queries_to_run_lists = [
 
 queries_to_run = list({q for sub in queries_to_run_lists for q in sub})
 
+data_added_dict = {}
+
 for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
     target_type = q.split("/")[1]
     query_name = "query" + target_type.title() + ".sparql"
@@ -132,3 +134,34 @@ for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
         ["python", f"./{q.split('/')[0]}/{q.split('/')[1]}/format_{q.split('/')[1]}"],
         shell=True,
     )
+
+    with open(
+        f"./../Keyboards/LanguageKeyboards/{q.split('/')[0]}/{q.split('/')[1]}.json"
+    ) as f:
+        new_keyboard_data = json.load(f)
+
+    data_added_dict[q.split("/")[0]][q.split("/")[1]] = (
+        len(new_keyboard_data) - current_data[q.split("/")[0]][q.split("/")[1]]
+    )
+
+    current_data[q.split("/")[0]][q.split("/")[1]] = len(new_keyboard_data)
+
+# Update total_data.json
+with open("./total_data.json", "w", encoding="utf-8",) as f:
+    json.dump(current_data, f, ensure_ascii=False, indent=2)
+
+# Update data_updates.txt
+data_added_string = """"""
+for l in data_added_dict:
+    data_added_string += f"\n{l}"
+    for w in word_types:
+        if data_added_dict[l][w] == 0:
+            pass
+        elif data_added_dict[l][w] == 1:  # remove the s for label
+            data_added_string += f"{data_added_dict[l][w]} {w[:-1]},"
+        else:
+            data_added_string += f"{data_added_dict[l][w]} {w},"
+    data_added_string = data_added_string[:-1]  # remove the last comma
+
+with open("data_updates.txt", "w+") as f:
+    f.writelines(data_added_string)
