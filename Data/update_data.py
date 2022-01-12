@@ -5,7 +5,6 @@ Update Data
 Updates all data for Scribe by running all WDQS queries and formatting scripts.
 """
 
-
 import json
 import os
 import sys
@@ -40,9 +39,6 @@ if len(sys.argv) == 2:
 elif len(sys.argv) == 3:
     language = sys.argv[1]
     word_type = sys.argv[2]
-
-    print(language)
-    print(word_type)
 
 # Derive Data directory elements for potential queries.
 data_dir_elements = []
@@ -101,7 +97,7 @@ queries_to_run = list({q for sub in queries_to_run_lists for q in sub})
 
 data_added_dict = {}
 
-for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
+for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
     target_type = q.split("/")[1]
     query_name = "query" + target_type.title() + ".sparql"
     query_path = "./" + q + "/" + query_name
@@ -117,6 +113,7 @@ for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
 
     query_results = query["results"]["bindings"]
 
+    # Format and save the resulting JSON.
     results_formatted = []
     for r in query_results:  # query_results is also a list
         r_dict = {k: r[k]["value"] for k in r.keys()}
@@ -130,6 +127,7 @@ for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
     ) as f:
         json.dump(results_formatted, f, ensure_ascii=False, indent=2)
 
+    # Call the corresponding formatting file and update data changes.
     call(
         ["python", f"./{q.split('/')[0]}/{q.split('/')[1]}/format_{q.split('/')[1]}"],
         shell=True,
