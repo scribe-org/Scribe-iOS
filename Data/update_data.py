@@ -9,6 +9,7 @@ Updates all data for Scribe by running all WDQS queries and formatting scripts.
 import json
 import os
 import sys
+from subprocess import call
 
 from tqdm.auto import tqdm
 from wikidataintegrator import wdi_core
@@ -120,5 +121,14 @@ for q in tqdm(queries_to_run[:1], desc="Data updated", unit="dirs",):
 
         results_formatted.append(r_dict)
 
-with open("./example.json", "w", encoding="utf-8",) as f:
-    json.dump(results_formatted, f, ensure_ascii=False, indent=2)
+    with open(
+        f"./{q.split('/')[0]}/{q.split('/')[1]}/{q.split('/')[1]}Queried.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(results_formatted, f, ensure_ascii=False, indent=2)
+
+    call(
+        ["python", f"./{q.split('/')[0]}/{q.split('/')[1]}/format_{q.split('/')[1]}"],
+        shell=True,
+    )
