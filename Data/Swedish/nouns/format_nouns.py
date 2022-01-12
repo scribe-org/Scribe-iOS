@@ -16,10 +16,12 @@ def map_genders(wikidata_gender):
     """
     Maps those genders from Wikidata to succinct versions.
     """
-    if wikidata_gender == "common gender":
+    if wikidata_gender in ["common gender", "Q1305037"]:
         return "C"
-    if wikidata_gender == "neuter":
+    if wikidata_gender in ["neuter", "Q1775461"]:
         return "N"
+    else:
+        return ""  # nouns could have a gender that is not valid as an attribute
 
 
 def order_annotations(annotation):

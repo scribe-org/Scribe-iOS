@@ -17,20 +17,18 @@ def convert_cases(case):
     Converts cases as found on Wikidata to more succinct versions.
     """
     case = case.split(" case")[0]
-    if case == "accusative":
+    if case in ["accusative", "Q146078"]:
         return "Akk"
-    elif case == "dative":
+    elif case in ["dative", "Q145599"]:
         return "Dat"
-    elif case == "genitive":
+    elif case in ["genitive", "Q146233"]:
         return "Gen"
-    elif case == "instrumental":
+    elif case in ["instrumental", "Q192997"]:
         return "Ins"
-    elif case == "prepositional":
+    elif case in ["prepositional", "Q2114906"]:
         return "Pre"
-    elif case == "locative":
+    elif case in ["locative", "Q202142"]:
         return "Loc"
-    elif case == "nominative":
-        return "Nom"
     else:
         return ""
 

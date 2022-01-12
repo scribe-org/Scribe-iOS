@@ -21,12 +21,14 @@ def map_genders(wikidata_gender):
         wikidata_gender : str
             The gender of the noun that was queried from WikiData
     """
-    if wikidata_gender == "masculine":
+    if wikidata_gender in ["masculine", "Q499327"]:
         return "M"
-    if wikidata_gender == "feminine":
+    if wikidata_gender in ["feminine", "Q1775415"]:
         return "F"
-    if wikidata_gender == "neuter":
+    if wikidata_gender in ["neuter", "Q1775461"]:
         return "N"
+    else:
+        return ""  # nouns could have a gender that is not valid as an attribute
 
 
 def order_annotations(annotation):

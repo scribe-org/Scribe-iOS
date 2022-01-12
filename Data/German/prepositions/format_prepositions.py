@@ -17,12 +17,14 @@ def convert_cases(case):
     Converts cases as found on Wikidata to more succinct versions.
     """
     case = case.split(" case")[0]
-    if case == "accusative":
+    if case in ["accusative", "Q146078"]:
         return "Akk"
-    if case == "dative":
+    elif case in ["dative", "Q145599"]:
         return "Dat"
-    if case == "genitive":
+    elif case in ["genitive", "Q146233"]:
         return "Gen"
+    else:
+        return ""
 
 
 def order_annotations(annotation):
