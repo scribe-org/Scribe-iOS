@@ -74,11 +74,11 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 `*` Given the current **`beta`** status where words are machine translated.
 
-`†` Adjective-preposition support is in progress [(see #86)](https://github.com/scribe-org/Scribe-iOS/issues/86).
+`†` Adjective-preposition support is in progress [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/86).
 
 `‡` Only for languages for which preposition annotation is needed.
 
-WIP [(see #95)](https://github.com/scribe-org/Scribe-iOS/issues/95): Updates to the above data can be done using [Data/update_data.py](https://github.com/scribe-org/Scribe-iOS/tree/main/Data/update_data.py).
+WIP [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/95): Updates to the above data can be done using [Data/update_data.py](https://github.com/scribe-org/Scribe-iOS/tree/main/Data/update_data.py).
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
@@ -99,9 +99,9 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
 
-Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1). The goal is that `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see #49)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
+Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1). The goal is that `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
-As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/) [(see #40)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
+As of now translations ([P5972](https://www.wikidata.org/wiki/Property:P5972), [Q7553](https://www.wikidata.org/wiki/Q7553)) are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
 ### • Verb Conjugation [`⇧`](#contents) <a id="verb-conjugation"></a>
 
