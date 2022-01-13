@@ -107,9 +107,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
 
     # First format the lines into a multi-line string and then pass this to wikidataintegrator.
     print(f"Querying {q.split('/')[0]} {q.split('/')[1]}")
-    query = wdi_core.WDFunctionsEngine.execute_sparql_query(
-        """{}""".format("".join(query_lines))
-    )
+    query = wdi_core.WDFunctionsEngine.execute_sparql_query("".join(query_lines))
 
     query_results = query["results"]["bindings"]
 
