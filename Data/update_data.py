@@ -159,7 +159,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
         data_added_string = ""
         language_keys = list(data_added_dict.keys())
         for l in language_keys:
-            data_added_string += f"- {l} " if l == language_keys[0] else f"\n- {l} "
+            data_added_string += f"- {l}: " if l == language_keys[0] else f"\n- {l}: "
             for w in word_types:
                 if data_added_dict[l][w] == 0:
                     pass
