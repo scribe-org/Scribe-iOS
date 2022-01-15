@@ -7,9 +7,15 @@ Formats the nouns queried from Wikidata using queryNouns.sparql.
 
 import collections
 import json
+import sys
 
-with open("nounsQueried.json") as f:
-    nouns_list = json.load(f)
+file_path = sys.argv[0]
+if "Spanish/nouns/" not in file_path:
+    with open("nounsQueried.json") as f:
+        nouns_list = json.load(f)
+else:  # is being called by update_data.py
+    with open("./Spanish/nouns/nounsQueried.json") as f:
+        nouns_list = json.load(f)
 
 
 def map_genders(wikidata_gender):
@@ -18,7 +24,7 @@ def map_genders(wikidata_gender):
     """
     if wikidata_gender in ["masculine", "Q499327"]:
         return "M"
-    if wikidata_gender in ["feminine", "Q1775415"]:
+    elif wikidata_gender in ["feminine", "Q1775415"]:
         return "F"
     else:
         return ""  # nouns could have a gender that is not valid as an attribute
@@ -105,11 +111,17 @@ for k in nouns_formatted.keys():
 
 nouns_formatted = collections.OrderedDict(sorted(nouns_formatted.items()))
 
-with open(
-    "../../../Keyboards/LanguageKeyboards/Spanish/Data/nouns.json",
-    "w",
-    encoding="utf-8",
-) as f:
-    json.dump(nouns_formatted, f, ensure_ascii=False, indent=2)
+if "Spanish/nouns/" not in file_path:
+    with open(
+        "../../../Keyboards/LanguageKeyboards/Spanish/Data/nouns.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(nouns_formatted, f, ensure_ascii=False, indent=2)
+else:  # is being called by update_data.py
+    with open(
+        "../Keyboards/LanguageKeyboards/Spanish/Data/nouns.json", "w", encoding="utf-8",
+    ) as f:
+        json.dump(nouns_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file nouns.json with {len(nouns_formatted)} nouns.")

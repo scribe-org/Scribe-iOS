@@ -7,9 +7,15 @@ Formats the verbs queried from Wikidata using queryVerbs.sparql.
 
 import collections
 import json
+import sys
 
-with open("verbsQueried.json") as f:
-    verbs_list = json.load(f)
+file_path = sys.argv[0]
+if "Russian/verbs/" not in file_path:
+    with open("verbsQueried.json") as f:
+        verbs_list = json.load(f)
+else:  # is being called by update_data.py
+    with open("./Russian/verbs/verbsQueried.json") as f:
+        verbs_list = json.load(f)
 
 verbs_formatted = {}
 
@@ -38,11 +44,17 @@ for verb_vals in verbs_list:
 
 verbs_formatted = collections.OrderedDict(sorted(verbs_formatted.items()))
 
-with open(
-    "../../../Keyboards/LanguageKeyboards/Russian/Data/verbs.json",
-    "w",
-    encoding="utf-8",
-) as f:
-    json.dump(verbs_formatted, f, ensure_ascii=False, indent=2)
+if "Russian/verbs/" not in file_path:
+    with open(
+        "../../../Keyboards/LanguageKeyboards/Russian/Data/verbs.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(verbs_formatted, f, ensure_ascii=False, indent=2)
+else:  # is being called by update_data.py
+    with open(
+        "../Keyboards/LanguageKeyboards/Russian/Data/verbs.json", "w", encoding="utf-8",
+    ) as f:
+        json.dump(verbs_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file verbs.json with {len(verbs_formatted)} verbs.")

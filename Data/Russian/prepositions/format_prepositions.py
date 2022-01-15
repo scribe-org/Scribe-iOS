@@ -7,9 +7,15 @@ Formats the prepositions queried from Wikidata using queryPrepositions.sparql.
 
 import collections
 import json
+import sys
 
-with open("prepositionsQueried.json") as f:
-    prepositions_list = json.load(f)
+file_path = sys.argv[0]
+if "Russian/prepositions/" not in file_path:
+    with open("prepositionsQueried.json") as f:
+        prepositions_list = json.load(f)
+else:  # is being called by update_data.py
+    with open("./Russian/prepositions/prepositionsQueried.json") as f:
+        prepositions_list = json.load(f)
 
 
 def convert_cases(case):
@@ -70,11 +76,19 @@ for k in prepositions_formatted:
 
 prepositions_formatted = collections.OrderedDict(sorted(prepositions_formatted.items()))
 
-with open(
-    "../../../Keyboards/LanguageKeyboards/Russian/Data/prepositions.json",
-    "w",
-    encoding="utf-8",
-) as f:
-    json.dump(prepositions_formatted, f, ensure_ascii=False, indent=2)
+if "Russian/prepositions/" not in file_path:
+    with open(
+        "../../../Keyboards/LanguageKeyboards/Russian/Data/prepositions.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(prepositions_formatted, f, ensure_ascii=False, indent=2)
+else:  # is being called by update_data.py
+    with open(
+        "../Keyboards/LanguageKeyboards/Russian/Data/prepositions.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(prepositions_formatted, f, ensure_ascii=False, indent=2)
 
 print(f"Wrote file prepositions.json with {len(prepositions_formatted)} prepositions.")
