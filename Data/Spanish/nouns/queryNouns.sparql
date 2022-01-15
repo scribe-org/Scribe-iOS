@@ -6,7 +6,7 @@ SELECT DISTINCT ?singular ?plural ?gender WHERE {
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q188 ;
+            dct:language wd:Q1321 ;
             wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes)
 
