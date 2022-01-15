@@ -78,7 +78,7 @@ The Scribe team has interest in creating keyboards for all languages of interest
 
 `‡` Only for languages for which preposition annotation is needed.
 
-WIP [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/95): Updates to the above data can be done using [Data/update_data.py](https://github.com/scribe-org/Scribe-iOS/tree/main/Data/update_data.py).
+Updates to the above data can be done using [Data/update_data.py](https://github.com/scribe-org/Scribe-iOS/tree/main/Data/update_data.py).
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
