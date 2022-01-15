@@ -10,6 +10,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # Scribe 1.1.1 (WIP)
 
+### 🗃️ Data Added
+
+Data updates are now all done through a single Python file.
+
 ### 🐛 Bug Fixes
 
 - Fixes a bug where auto-capitalization and switching to the letter keys weren't always triggered after a period.
