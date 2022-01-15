@@ -8,10 +8,13 @@ Updates all data for Scribe by running all WDQS queries and formatting scripts.
 import json
 import os
 import sys
-from subprocess import call
 
+from requests.exceptions import HTTPError
 from tqdm.auto import tqdm
 from wikidataintegrator import wdi_core
+from wikidataintegrator.wdi_config import config as wdi_config
+
+wdi_config["BACKOFF_MAX_TRIES"] = 1
 
 with open("total_data.json") as f:
     current_data = json.load(f)
@@ -82,11 +85,11 @@ if word_type is not None:
 
 possible_queries = []
 for d in data_dir_dirs:
-    for wt in word_types:
-        if "./" + d + "/" + wt in [
-            e[: len("./" + d + "/" + wt)] for e in data_dir_elements
+    for target_type in word_types:
+        if "./" + d + "/" + target_type in [
+            e[: len("./" + d + "/" + target_type)] for e in data_dir_elements
         ]:
-            possible_queries.append(d + "/" + wt)
+            possible_queries.append(d + "/" + target_type)
 
 queries_to_run_lists = [
     [q for q in possible_queries if q[: len(lang)] in current_languages]
@@ -98,6 +101,7 @@ queries_to_run = list({q for sub in queries_to_run_lists for q in sub})
 data_added_dict = {}
 
 for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
+    lang = q.split("/")[0]
     target_type = q.split("/")[1]
     query_name = "query" + target_type.title() + ".sparql"
     query_path = "./" + q + "/" + query_name
@@ -106,58 +110,64 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
         query_lines = file.readlines()
 
     # First format the lines into a multi-line string and then pass this to wikidataintegrator.
-    print(f"Querying {q.split('/')[0]} {q.split('/')[1]}")
-    query = wdi_core.WDFunctionsEngine.execute_sparql_query("".join(query_lines))
+    print(f"Querying {lang} {target_type}")
+    query = None
+    try:
+        query = wdi_core.WDFunctionsEngine.execute_sparql_query("".join(query_lines))
+    except HTTPError as err:
+        print(f"HTTPError with {query_name}: {err}")
 
-    query_results = query["results"]["bindings"]
+    if query is None:
+        print(f"Nothing returned by the WDQS server for {query_name}")
 
-    # Format and save the resulting JSON.
-    results_formatted = []
-    for r in query_results:  # query_results is also a list
-        r_dict = {k: r[k]["value"] for k in r.keys()}
+    else:
+        query_results = query["results"]["bindings"]
 
-        results_formatted.append(r_dict)
+        # Format and save the resulting JSON.
+        results_formatted = []
+        for r in query_results:  # query_results is also a list
+            r_dict = {k: r[k]["value"] for k in r.keys()}
 
-    with open(
-        f"./{q.split('/')[0]}/{q.split('/')[1]}/{q.split('/')[1]}Queried.json",
-        "w",
-        encoding="utf-8",
-    ) as f:
-        json.dump(results_formatted, f, ensure_ascii=False, indent=2)
+            results_formatted.append(r_dict)
 
-    # Call the corresponding formatting file and update data changes.
-    call(
-        ["python", f"./{q.split('/')[0]}/{q.split('/')[1]}/format_{q.split('/')[1]}"],
-        shell=True,
-    )
+        with open(
+            f"./{lang}/{target_type}/{target_type}Queried.json", "w", encoding="utf-8",
+        ) as f:
+            json.dump(results_formatted, f, ensure_ascii=False, indent=2)
 
-    with open(
-        f"./../Keyboards/LanguageKeyboards/{q.split('/')[0]}/{q.split('/')[1]}.json"
-    ) as f:
-        new_keyboard_data = json.load(f)
+        # Call the corresponding formatting file and update data changes.
+        os.system(f"python ./{lang}/{target_type}/format_{target_type}.py")
 
-    data_added_dict[q.split("/")[0]][q.split("/")[1]] = (
-        len(new_keyboard_data) - current_data[q.split("/")[0]][q.split("/")[1]]
-    )
+        with open(
+            f"./../Keyboards/LanguageKeyboards/{lang}/Data/{target_type}.json"
+        ) as f:
+            new_keyboard_data = json.load(f)
 
-    current_data[q.split("/")[0]][q.split("/")[1]] = len(new_keyboard_data)
+        if lang not in data_added_dict.keys():
+            data_added_dict[lang] = {}
+        data_added_dict[lang][target_type] = (
+            len(new_keyboard_data) - current_data[lang][target_type]
+        )
 
-# Update total_data.json
-with open("./total_data.json", "w", encoding="utf-8",) as f:
-    json.dump(current_data, f, ensure_ascii=False, indent=2)
+        current_data[lang][target_type] = len(new_keyboard_data)
 
-# Update data_updates.txt
-data_added_string = """"""
-for l in data_added_dict:
-    data_added_string += f"\n{l}"
-    for w in word_types:
-        if data_added_dict[l][w] == 0:
-            pass
-        elif data_added_dict[l][w] == 1:  # remove the s for label
-            data_added_string += f"{data_added_dict[l][w]} {w[:-1]},"
-        else:
-            data_added_string += f"{data_added_dict[l][w]} {w},"
-    data_added_string = data_added_string[:-1]  # remove the last comma
+        # Update total_data.json.
+        with open("./total_data.json", "w", encoding="utf-8",) as f:
+            json.dump(current_data, f, ensure_ascii=False, indent=2)
 
-with open("data_updates.txt", "w+") as f:
-    f.writelines(data_added_string)
+        # Update data_updates.txt.
+        data_added_string = ""
+        language_keys = list(data_added_dict.keys())
+        for l in language_keys:
+            data_added_string += f"- {l} " if l == language_keys[0] else f"\n- {l} "
+            for w in word_types:
+                if data_added_dict[l][w] == 0:
+                    pass
+                elif data_added_dict[l][w] == 1:  # remove the s for label
+                    data_added_string += f"{data_added_dict[l][w]} {w[:-1]},"
+                else:
+                    data_added_string += f"{data_added_dict[l][w]} {w},"
+            data_added_string = data_added_string[:-1]  # remove the last comma
+
+        with open("data_updates.txt", "w+") as f:
+            f.writelines(data_added_string)
