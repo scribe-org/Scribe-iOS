@@ -22,6 +22,13 @@ with open("total_data.json") as f:
 current_languages = list(current_data.keys())
 word_types = ["nouns", "verbs", "prepositions"]
 
+# Check to see if the language has all zeroes for its data, meaning it's been added.
+new_language_list = []
+for lang in current_languages:
+    current_data = list({current_data[lang][w] for w in word_types})
+    if len(current_data) == 1 and current_data[0] == 0:
+        new_language_list.append(lang)
+
 language = None
 word_type = None
 if len(sys.argv) == 2:
@@ -159,7 +166,17 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
         data_added_string = ""
         language_keys = list(data_added_dict.keys())
         for l in language_keys:
-            data_added_string += f"- {l}: " if l == language_keys[0] else f"\n- {l}: "
+            if l == language_keys[0]:
+                if l in new_language_list:
+                    data_added_string += f"- {l} (New): "
+                else:
+                    data_added_string += f"- {l}: "
+            else:
+                if l in new_language_list:
+                    data_added_string += f"\n- {l} (New): "
+                else:
+                    data_added_string += f"\n- {l}: "
+
             for w in word_types:
                 if data_added_dict[l][w] == 0:
                     pass
