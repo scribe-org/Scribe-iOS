@@ -10,6 +10,19 @@ var keyColor = UIColor.white
 var specialKeyColor = UIColor.systemGray2
 var keyPressedColor = UIColor.systemGray5
 
+/// Determines if the device is in dark mode and sets the color scheme.
+func checkDarkModeSetColors() {
+  if UITraitCollection.current.userInterfaceStyle == .dark {
+    keyColor = UIColor.systemGray2
+    specialKeyColor = UIColor.systemGray3
+    keyPressedColor = UIColor.systemGray
+  } else if UITraitCollection.current.userInterfaceStyle == .light {
+    keyColor = .white
+    specialKeyColor = UIColor.systemGray2
+    keyPressedColor = UIColor.systemGray5
+  }
+}
+
 /// Extends UIColor with branding colors as well as those for annotating nouns.
 extension UIColor {
   static let scribeGrey = UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)

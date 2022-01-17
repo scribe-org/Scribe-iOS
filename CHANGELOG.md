@@ -14,9 +14,15 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 Data updates are now all done through a single Python file.
 
+### 🎨 Design Changes
+
+- The text size for the preview bar in landscape mode for phones was made smaller.
+- The height of the keyboard for landscape mode was made slightly smaller.
+
 ### 🐛 Bug Fixes
 
-- Fixes a bug where auto-capitalization and switching to the letter keys weren't always triggered after a period.
+- Auto-capitalization and switching to the letter keys weren't always triggered after a period.
+- Shifting orientation from portrait to landscape now is seamless, but landscape to portrait is still a WIP.
 
 # Scribe 1.1.0
 

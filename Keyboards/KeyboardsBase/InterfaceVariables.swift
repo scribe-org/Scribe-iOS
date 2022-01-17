@@ -87,31 +87,18 @@ var shiftButtonState: ShiftButtonState = .normal
 var scribeBtnState: Bool! = false
 
 // Variables and functions to determine display parameters.
-var isLandscapeView: Bool = false
-
 struct DeviceType {
   static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
   static let isPad = UIDevice.current.userInterfaceIdiom == .pad
 }
 
-/// Determines if the device is in dark mode and sets the color scheme.
-func checkDarkModeSetColors() {
-  if UITraitCollection.current.userInterfaceStyle == .dark {
-    keyColor = UIColor.systemGray2
-    specialKeyColor = UIColor.systemGray3
-    keyPressedColor = UIColor.systemGray
-  } else if UITraitCollection.current.userInterfaceStyle == .light {
-    keyColor = .white
-    specialKeyColor = UIColor.systemGray2
-    keyPressedColor = UIColor.systemGray5
-  }
-}
+var isLandscapeView: Bool = false
 
 /// Checks if the device is in landscape mode.
 func checkLandscapeMode() {
   if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
     isLandscapeView = true
-  } else if UIScreen.main.bounds.height > UIScreen.main.bounds.width {
+  } else {
     isLandscapeView = false
   }
 }

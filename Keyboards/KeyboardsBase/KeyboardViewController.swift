@@ -816,6 +816,25 @@ class KeyboardViewController: UIInputViewController {
   /// Includes adding custom view sizing constraints.
   override func updateViewConstraints() {
     super.updateViewConstraints()
+
+    checkLandscapeMode()
+    if DeviceType.isPhone {
+      if isLandscapeView == true {
+        keyboardHeight = 190
+      } else {
+        keyboardHeight = 280
+      }
+    } else if DeviceType.isPad {
+      if isLandscapeView == true {
+        keyboardHeight = 320
+      } else {
+        keyboardHeight = 340
+      }
+    }
+
+    let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
+    view.addConstraint(heightConstraint)
+
     keyboardView.frame.size = view.frame.size
   }
 
@@ -850,31 +869,16 @@ class KeyboardViewController: UIInputViewController {
     super.viewWillLayoutSubviews()
   }
 
-  /// Includes conditions to assign the keyboard height given device type and orientation.
+  /// Includes updateViewConstraints to change the keyboard height given device type and orientation.
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    if DeviceType.isPhone {
-      if isLandscapeView == true {
-        keyboardHeight = 200
-      } else {
-        keyboardHeight = 280
-      }
-    } else if DeviceType.isPad {
-      if isLandscapeView == true {
-        keyboardHeight = 320
-      } else {
-        keyboardHeight = 340
-      }
-    }
-
-    let heightConstraint = NSLayoutConstraint(item: view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
-    view.addConstraint(heightConstraint)
+    updateViewConstraints()
   }
 
-  /// Includes a call to loadKeys to reload the display after an orientation change.
+  /// Includes updateViewConstraints to change the keyboard height and call to loadKeys to reload the display after an orientation change.
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
+    updateViewConstraints()
     loadKeys()
   }
 
@@ -885,7 +889,6 @@ class KeyboardViewController: UIInputViewController {
     // French, German, Portuguese, Russian, Spanish or Swedish
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
-    checkLandscapeMode()
     checkDarkModeSetColors()
     setKeyboardLayouts()
     setScribeBtn()
@@ -1065,7 +1068,11 @@ class KeyboardViewController: UIInputViewController {
             previewBar?.layer.cornerRadius = keyCornerRadius
             previewBar?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             if DeviceType.isPhone {
-              previewBar?.font = .systemFont(ofSize: letterButtonWidth / 2)
+              if isLandscapeView == true {
+                previewBar?.font = .systemFont(ofSize: letterButtonWidth / 4)
+              } else {
+                previewBar?.font = .systemFont(ofSize: letterButtonWidth / 2)
+              }
             } else if DeviceType.isPad {
               previewBar?.font = .systemFont(ofSize: letterButtonWidth / 4)
             }
