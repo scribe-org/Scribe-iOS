@@ -882,6 +882,13 @@ class KeyboardViewController: UIInputViewController {
     loadKeys()
   }
 
+  /// Overrides the previous color variables if the user switches between light and dark mode.
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    checkDarkModeSetColors()
+    loadKeys()
+  }
+
   // MARK: Load keys
 
   /// Loads the keys given the current constraints.
