@@ -43,7 +43,7 @@ languages = None
 word_types = None
 if len(sys.argv) == 2:
     arg = sys.argv[1]
-    if type(arg) == str:
+    if isinstance(arg, str):
         raise ValueError(
             f"""The argument type of '{arg}' passed to update_data.py is invalid.
             Only lists are allowed, and can be passed via:
@@ -61,7 +61,7 @@ if len(sys.argv) == 2:
             """
         )
 
-    if type(arg) == list:
+    if isinstance(arg, list):
         if set(arg).issubset(current_languages):
             languages = arg
         elif set(arg).issubset(updateable_word_types):
@@ -106,8 +106,8 @@ data_dir_dirs = list(
 languages_update = []
 if languages is not None:
     if (
-        type(ast.literal_eval(languages)) != str
-        and type(ast.literal_eval(languages)) == list
+        not isinstance(ast.literal_eval(languages), str)
+        and isinstance(ast.literal_eval(languages), list)
         and set(ast.literal_eval(languages)).issubset(current_languages)
     ):
         languages_update = ast.literal_eval(languages)
@@ -124,8 +124,8 @@ else:
 word_types_update = []
 if word_types is not None:
     if (
-        type(ast.literal_eval(word_types)) != str
-        and type(ast.literal_eval(word_types)) == list
+        not isinstance(ast.literal_eval(word_types), str)
+        and isinstance(ast.literal_eval(word_types), list)
         and set(ast.literal_eval(word_types)).issubset(updateable_word_types)
     ):
         word_types_update = ast.literal_eval(word_types)
