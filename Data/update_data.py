@@ -219,19 +219,57 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
 with open("./_update_files/total_data.json", "w", encoding="utf-8",) as f:
     json.dump(current_data, f, ensure_ascii=False, indent=2)
 
+
+def num_add_commas(num):
+    """
+    Adds commas to a numeric string for readability.
+
+    Parameters
+    ----------
+        num : int
+            An int to have commas added to.
+
+    Retruns
+    -------
+        str_with_commas : str
+            The original number with commas to make it more readable.
+    """
+    num_str = str(num)
+
+    str_list = [i for i in num_str]
+    str_list = str_list[::-1]
+
+    str_list_with_commas = [
+        s + "," if i % 3 == 0 and i != 0 else s for i, s in enumerate(str_list)
+    ]
+    str_list_with_commas = str_list_with_commas[::-1]
+
+    return "".join(str_list_with_commas)
+
+
 # Update data_table.txt
 current_data_df = pd.DataFrame(
-    index=sorted(list(current_data.keys())), columns=updateable_word_types
+    index=sorted(list(current_data.keys())),
+    columns=["nouns", "verbs", "translations", "adjectives", "prepositions"],
 )
 for lang in list(current_data_df.index):
     for wt in list(current_data_df.columns):
         if wt in current_data[lang].keys():
-            current_data_df.loc[lang, wt] = current_data[lang][wt]
+            current_data_df.loc[lang, wt] = num_add_commas(current_data[lang][wt])
+        elif wt == "translations":
+            current_data_df.loc[lang, wt] = num_add_commas(67609)
 
 current_data_df.index.name = "Languages"
 current_data_df.columns = [c.capitalize() for c in current_data_df.columns]
 with open("./_update_files/data_table.txt", "w+") as f:
-    f.writelines(str(current_data_df.to_markdown()).replace(" nan ", "  -  "))
+    table_string = str(current_data_df.to_markdown()).replace(" nan ", "  -  ")
+    # Right justify the data and left justify the language indexes.
+    table_string = (
+        table_string.replace("-|-", ":|-")
+        .replace("-|:", ":|-")
+        .replace(":|-", "-|-", 1)
+    )
+    f.writelines(table_string)
 
 # Update data_updates.txt.
 data_added_string = ""
