@@ -18,7 +18,7 @@ from wikidataintegrator.wdi_config import config as wdi_config
 
 wdi_config["BACKOFF_MAX_TRIES"] = 1
 
-with open("total_data.json") as f:
+with open("./_update_files/total_data.json") as f:
     current_data = json.load(f)
 
 current_languages = list(current_data.keys())
@@ -167,7 +167,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
         current_data[lang][target_type] = len(new_keyboard_data)
 
     # Update total_data.json.
-    with open("./total_data.json", "w", encoding="utf-8",) as f:
+    with open("./_update_files/total_data.json", "w", encoding="utf-8",) as f:
         json.dump(current_data, f, ensure_ascii=False, indent=2)
 
     # Update data_table.txt
@@ -178,7 +178,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
         for wt in list(current_data_df.columns):
             current_data_df.loc[lang, wt] = current_data[lang][wt]
 
-    with open("data_table.txt", "w+") as f:
+    with open("./_update_files/data_table.txt", "w+") as f:
         f.writelines(
             tabulate.tabulate(
                 tabular_data=current_data_df.values,
@@ -211,5 +211,5 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
                 data_added_string += f"{data_added_dict[l][w]} {w},"
         data_added_string = data_added_string[:-1]  # remove the last comma
 
-    with open("data_updates.txt", "w+") as f:
+    with open("./_update_files/data_updates.txt", "w+") as f:
         f.writelines(data_added_string)
