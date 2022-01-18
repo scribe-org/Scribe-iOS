@@ -262,7 +262,7 @@ for lang in list(current_data_df.index):
 current_data_df.index.name = "Languages"
 current_data_df.columns = [c.capitalize() for c in current_data_df.columns]
 with open("./_update_files/data_table.txt", "w+") as f:
-    table_string = str(current_data_df.to_markdown()).replace(" nan ", "  -  ")
+    table_string = str(current_data_df.to_markdown()).replace(" nan ", "   - ")
     # Right justify the data and left justify the language indexes.
     table_string = (
         table_string.replace("-|-", ":|-")
@@ -274,28 +274,34 @@ with open("./_update_files/data_table.txt", "w+") as f:
 # Update data_updates.txt.
 data_added_string = ""
 language_keys = sorted(list(data_added_dict.keys()))
+
+# Check if all data added values are 0 and remove if so.
+for l in language_keys:
+    if all(v == 0 for v in data_added_dict[l].values()):
+        language_keys.remove(l)
+
 for l in language_keys:
     if l == language_keys[0]:
         if l in new_language_list:
-            data_added_string += f"- {l} (New): "
+            data_added_string += f"- {l} (New):"
         else:
-            data_added_string += f"- {l}: "
+            data_added_string += f"- {l}:"
     else:
         if l in new_language_list:
-            data_added_string += f"\n- {l} (New): "
+            data_added_string += f"\n- {l} (New):"
         else:
-            data_added_string += f"\n- {l}: "
+            data_added_string += f"\n- {l}:"
 
     for wt in word_types_update:
         if wt in data_added_dict[l].keys():
             if data_added_dict[l][wt] == 0:
                 pass
             elif data_added_dict[l][wt] == 1:  # remove the s for label
-                data_added_string += f"{data_added_dict[l][wt]} {wt[:-1]},"
+                data_added_string += f" {data_added_dict[l][wt]} {wt[:-1]},"
             else:
-                data_added_string += f"{data_added_dict[l][wt]} {wt},"
+                data_added_string += f" {data_added_dict[l][wt]} {wt},"
 
-        data_added_string = data_added_string[:-1]  # remove the last comma
+    data_added_string = data_added_string[:-1]  # remove the last comma
 
 with open("./_update_files/data_updates.txt", "w+") as f:
     f.writelines(data_added_string)
