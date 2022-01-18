@@ -277,7 +277,7 @@ language_keys = sorted(list(data_added_dict.keys()))
 
 # Check if all data added values are 0 and remove if so.
 for l in language_keys:
-    if all(v == 0 for v in data_added_dict[l].values()):
+    if all(v <= 0 for v in data_added_dict[l].values()):
         language_keys.remove(l)
 
 for l in language_keys:
@@ -290,7 +290,7 @@ for l in language_keys:
 
     for wt in word_types_update:
         if wt in data_added_dict[l].keys():
-            if data_added_dict[l][wt] == 0:
+            if data_added_dict[l][wt] <= 0:
                 pass
             elif data_added_dict[l][wt] == 1:  # remove the s for label
                 data_added_string += f" {data_added_dict[l][wt]} {wt[:-1]},"
