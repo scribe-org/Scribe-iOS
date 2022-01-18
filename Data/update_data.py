@@ -282,15 +282,11 @@ for l in language_keys:
 
 for l in language_keys:
     if l == language_keys[0]:
-        if l in new_language_list:
-            data_added_string += f"- {l} (New):"
-        else:
-            data_added_string += f"- {l}:"
-    else:
-        if l in new_language_list:
-            data_added_string += f"\n- {l} (New):"
-        else:
-            data_added_string += f"\n- {l}:"
+        data_added_string += f"- {l} (New):" if l in new_language_list else f"- {l}:"
+    elif l in new_language_list:
+        data_added_string += (
+            f"\n- {l} (New):" if l in new_language_list else f"\n- {l}:"
+        )
 
     for wt in word_types_update:
         if wt in data_added_dict[l].keys():
