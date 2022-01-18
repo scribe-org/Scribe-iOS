@@ -1,0 +1,8 @@
+| Language   |  Nouns | Verbs | Prepositions |
+| :--------- | -----: | ----: | -----------: |
+| French     |  15710 |  1241 |            - |
+| German     |  27526 |  3125 |          188 |
+| Portuguese |   4530 |   188 |            - |
+| Russian    | 194389 |    11 |           12 |
+| Spanish    |   8310 |    87 |            - |
+| Swedish    |  41102 |  4133 |            - |

@@ -9,6 +9,8 @@ import json
 import os
 import sys
 
+import pandas as pd
+import tabulate
 from requests.exceptions import HTTPError
 from tqdm.auto import tqdm
 from wikidataintegrator import wdi_core
@@ -68,9 +70,10 @@ data_dir_dirs = list(
 )
 
 # Subset current_languages and word_types if arguments have been passed.
+languages_update = []
 if language is not None:
     if language in current_languages:
-        current_languages = [l for l in current_languages if l == language]
+        languages_update = [l for l in current_languages if l == language]
     else:
         InterruptedError(
             """"
@@ -78,10 +81,13 @@ if language is not None:
         Please choose from those found as keys in total_data.json.
         """
         )
+else:
+    languages_update = current_languages
 
+word_types_update = []
 if word_type is not None:
     if word_type in word_types:
-        word_types = [w for w in word_types if w == word_type]
+        word_types_update = [w for w in word_types if w == word_type]
     else:
         InterruptedError(
             """"
@@ -89,18 +95,20 @@ if word_type is not None:
         Please choose from nouns, verbs or prepositions.
         """
         )
+else:
+    word_types_update = word_types
 
 possible_queries = []
 for d in data_dir_dirs:
-    for target_type in word_types:
+    for target_type in word_types_update:
         if "./" + d + "/" + target_type in [
             e[: len("./" + d + "/" + target_type)] for e in data_dir_elements
         ]:
             possible_queries.append(d + "/" + target_type)
 
 queries_to_run_lists = [
-    [q for q in possible_queries if q[: len(lang)] in current_languages]
-    for lang in current_languages
+    [q for q in possible_queries if q[: len(lang)] in languages_update]
+    for lang in languages_update
 ]
 
 queries_to_run = list({q for sub in queries_to_run_lists for q in sub})
@@ -158,33 +166,50 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
 
         current_data[lang][target_type] = len(new_keyboard_data)
 
-        # Update total_data.json.
-        with open("./total_data.json", "w", encoding="utf-8",) as f:
-            json.dump(current_data, f, ensure_ascii=False, indent=2)
+    # Update total_data.json.
+    with open("./total_data.json", "w", encoding="utf-8",) as f:
+        json.dump(current_data, f, ensure_ascii=False, indent=2)
 
-        # Update data_updates.txt.
-        data_added_string = ""
-        language_keys = list(data_added_dict.keys())
-        for l in language_keys:
-            if l == language_keys[0]:
-                if l in new_language_list:
-                    data_added_string += f"- {l} (New): "
-                else:
-                    data_added_string += f"- {l}: "
+    # Update data_table.txt
+    current_data_df = pd.DataFrame()
+    current_data_df.index = sorted(list(current_data.keys()))
+    current_data_df.columns = word_types
+    for lang in list(current_data_df.index):
+        for wt in list(current_data_df.columns):
+            current_data_df.loc[lang, wt] = current_data[lang][wt]
+
+    with open("data_table.txt", "w+") as f:
+        f.writelines(
+            tabulate.tabulate(
+                tabular_data=current_data_df.values,
+                headers=current_data_df.columns,
+                tablefmt="pipe",
+            )
+        )
+
+    # Update data_updates.txt.
+    data_added_string = ""
+    language_keys = sorted(list(data_added_dict.keys()))
+    for l in language_keys:
+        if l == language_keys[0]:
+            if l in new_language_list:
+                data_added_string += f"- {l} (New): "
             else:
-                if l in new_language_list:
-                    data_added_string += f"\n- {l} (New): "
-                else:
-                    data_added_string += f"\n- {l}: "
+                data_added_string += f"- {l}: "
+        else:
+            if l in new_language_list:
+                data_added_string += f"\n- {l} (New): "
+            else:
+                data_added_string += f"\n- {l}: "
 
-            for w in word_types:
-                if data_added_dict[l][w] == 0:
-                    pass
-                elif data_added_dict[l][w] == 1:  # remove the s for label
-                    data_added_string += f"{data_added_dict[l][w]} {w[:-1]},"
-                else:
-                    data_added_string += f"{data_added_dict[l][w]} {w},"
-            data_added_string = data_added_string[:-1]  # remove the last comma
+        for w in word_types_update:
+            if data_added_dict[l][w] == 0:
+                pass
+            elif data_added_dict[l][w] == 1:  # remove the s for label
+                data_added_string += f"{data_added_dict[l][w]} {w[:-1]},"
+            else:
+                data_added_string += f"{data_added_dict[l][w]} {w},"
+        data_added_string = data_added_string[:-1]  # remove the last comma
 
-        with open("data_updates.txt", "w+") as f:
-            f.writelines(data_added_string)
+    with open("data_updates.txt", "w+") as f:
+        f.writelines(data_added_string)
