@@ -21,7 +21,7 @@ Data updates are now all done through a single Python file.
 
 ### 🐛 Bug Fixes
 
-- The keyboard's colors now update if the user switches between light and dark mode.
+- The keyboard colors now update if the user switches between light and dark mode.
 - Auto-capitalization and switching to the letter keys weren't always triggered after a period.
 - Shifting orientation from portrait to landscape is now seamless, but landscape to portrait is still a WIP.
 
