@@ -2,9 +2,22 @@
 Update Data
 -----------
 
-Updates all data for Scribe by running all WDQS queries and formatting scripts.
+Updates data for Scribe by running all or desired WDQS queries and formatting scripts.
+
+Parameters
+----------
+    languages : list of strings (default=None)
+        A subset of Scribe's languages that the user wants to update.
+
+    word_types : list of strings (default=None)
+        A subset of nouns, verbs, and prepositions that currently can be updated with this fie.
+
+Usage
+-----
+    python update_data.py '[languages_in_quotes]' '[word_types_in_quotes]'
 """
 
+import ast
 import json
 import os
 import sys
@@ -16,41 +29,61 @@ from tqdm.auto import tqdm
 from wikidataintegrator import wdi_core
 from wikidataintegrator.wdi_config import config as wdi_config
 
+# Prevents WikidataIntegrator from infinitely trying queries.
 wdi_config["BACKOFF_MAX_TRIES"] = 1
 
 with open("./_update_files/total_data.json") as f:
     current_data = json.load(f)
 
 current_languages = list(current_data.keys())
-word_types = ["nouns", "verbs", "prepositions"]
+updateable_word_types = ["nouns", "verbs", "prepositions"]
 
-# Check to see if the language has all zeroes for its data, meaning it's been added.
-new_language_list = []
-for lang in current_languages:
-    current_data = list({current_data[lang][w] for w in word_types})
-    if len(current_data) == 1 and current_data[0] == 0:
-        new_language_list.append(lang)
-
-language = None
-word_type = None
+# Check whether arguments have been passed to only update a subset of the data.
+languages = None
+word_types = None
 if len(sys.argv) == 2:
     arg = sys.argv[1]
-    if arg in current_languages:
-        language = arg
-    elif arg in word_types:
-        word_type = arg
+    if type(arg) == str:
+        raise ValueError(
+            f"""The argument type of '{arg}' passed to update_data.py is invalid.
+            Only lists are allowed, and can be passed via:
+            python update_data.py '[args_in_quotes]'
+            """
+        )
+
+    try:
+        arg = ast.literal_eval(arg)
+    except:
+        raise ValueError(
+            f"""The argument type of '{arg}' passed to update_data.py is invalid.
+            Only lists are allowed, and can be passed via:
+            python update_data.py '[args_in_quotes]'
+            """
+        )
+
+    if type(arg) == list:
+        if set(arg).issubset(current_languages):
+            languages = arg
+        elif set(arg).issubset(updateable_word_types):
+            word_types = arg
+        else:
+            raise ValueError(
+                f"""An invalid argument '{arg}' was specified.
+                For languages, please choose from those found as keys in total_data.json.
+                For grammatical types, please choose from nouns, verbs or prepositions.
+                """
+            )
     else:
-        InterruptedError(
-            """"
-        An invalid argument was specified.
-        For languages, please choose from those found as keys in total_data.json.
-        For grammatical types, please choose from nouns, verbs or prepositions.
-        """
+        raise ValueError(
+            f"""The argument type of '{arg}' passed to update_data.py is invalid.
+            Only lists are allowed, and can be passed via:
+            python update_data.py '[args_in_quotes]'
+            """
         )
 
 elif len(sys.argv) == 3:
-    language = sys.argv[1]
-    word_type = sys.argv[2]
+    languages = sys.argv[1]
+    word_types = sys.argv[2]
 
 # Derive Data directory elements for potential queries.
 data_dir_elements = []
@@ -69,35 +102,51 @@ data_dir_dirs = list(
     }
 )
 
-# Subset current_languages and word_types if arguments have been passed.
+# Subset current_languages and updateable_word_types if arguments have been passed.
 languages_update = []
-if language is not None:
-    if language in current_languages:
-        languages_update = [l for l in current_languages if l == language]
+if languages is not None:
+    if (
+        type(ast.literal_eval(languages)) != str
+        and type(ast.literal_eval(languages)) == list
+        and set(ast.literal_eval(languages)).issubset(current_languages)
+    ):
+        languages_update = ast.literal_eval(languages)
     else:
-        InterruptedError(
-            """"
-        An invalid language was specified.
-        Please choose from those found as keys in total_data.json.
-        """
+        raise ValueError(
+            f"""Invalid languages '{languages}' were specified.
+            Please choose from those found as keys in total_data.json.
+            Pass arguments via: python update_data.py '[languages_in_quotes]'
+            """
         )
 else:
     languages_update = current_languages
 
 word_types_update = []
-if word_type is not None:
-    if word_type in word_types:
-        word_types_update = [w for w in word_types if w == word_type]
+if word_types is not None:
+    if (
+        type(ast.literal_eval(word_types)) != str
+        and type(ast.literal_eval(word_types)) == list
+        and set(ast.literal_eval(word_types)).issubset(updateable_word_types)
+    ):
+        word_types_update = ast.literal_eval(word_types)
     else:
-        InterruptedError(
-            """"
-        An invalid grammatical type was specified.
-        Please choose from nouns, verbs or prepositions.
-        """
+        raise ValueError(
+            f"""Invalid grammatical types '{word_types}' were specified.
+            Please choose from nouns, verbs or prepositions.
+            Pass arguments via: python update_data.py '[word_types_in_quotes]'
+            """
         )
 else:
-    word_types_update = word_types
+    word_types_update = updateable_word_types
 
+# Check to see if the language has all zeroes for its data, meaning it's been added.
+new_language_list = []
+for lang in languages_update:
+    current_data = list({current_data[lang][w] for w in updateable_word_types})
+    if len(current_data) == 1 and current_data[0] == 0:
+        new_language_list.append(lang)
+
+# Derive queries to be ran.
 possible_queries = []
 for d in data_dir_dirs:
     for target_type in word_types_update:
@@ -173,7 +222,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
     # Update data_table.txt
     current_data_df = pd.DataFrame()
     current_data_df.index = sorted(list(current_data.keys()))
-    current_data_df.columns = word_types
+    current_data_df.columns = updateable_word_types
     for lang in list(current_data_df.index):
         for wt in list(current_data_df.columns):
             current_data_df.loc[lang, wt] = current_data[lang][wt]
