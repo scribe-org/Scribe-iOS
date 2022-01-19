@@ -1,4 +1,4 @@
-# All German (Q188) verbs and the currently implemented verb tenses for each.
+# All German (Q188) verbs and the currently implemented tenses for each.
 # Enter this query at https://query.wikidata.org/.
 
 # Not SELECT DISTINCT as we want to get verbs with both sein and haben as auxiliaries
