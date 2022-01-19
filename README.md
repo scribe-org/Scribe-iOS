@@ -141,7 +141,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Dynamic layouts for cross-device performance
 - Portrait and landscape modes
 - Dark mode compatibility
-- Autocomplete and correct (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](<(https://github.com/scribe-org/Scribe-iOS/issues/2)>))
+- Autocomplete and correct (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2))
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
