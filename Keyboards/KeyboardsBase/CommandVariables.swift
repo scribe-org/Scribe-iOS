@@ -265,7 +265,7 @@ func ptGetConjugationTitle() -> String {
   case .pastImperfect:
     return previewPromptSpacing + "Pretérito Imperfeito: " + verbToDisplay
   case .futureSimple:
-    return previewPromptSpacing + "Futuro Simples" + verbToDisplay
+    return previewPromptSpacing + "Futuro Simples: " + verbToDisplay
   }
 }
 
@@ -277,7 +277,7 @@ func ptGetConjugationState() -> String {
   case .pastPerfect:
     return "perf"
   case .pastImperfect:
-    return "impf"
+    return "imp"
   case .futureSimple:
     return "fSimp"
   }
