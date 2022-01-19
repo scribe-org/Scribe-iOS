@@ -1,0 +1,30 @@
+name: Feature Request
+description: Have a new idea or feature for Scribe-iOS? Please suggest!
+title: '[FEATURE] <description>'
+labels: ['goal: addition']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descriptions
+      description: A brief description of the enhancement you propose.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there any Solution you tried, Please Include?
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        You can Submit your Request Now.
