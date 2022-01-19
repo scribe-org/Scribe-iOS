@@ -5,9 +5,9 @@ SELECT ?preposition ?case WHERE {
 
   # All Russian prepositions.
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q7737 ;
-            wikibase:lexicalCategory wd:Q4833830 ;
-            wikibase:lemma ?lemma .
+    dct:language wd:Q7737 ;
+    wikibase:lexicalCategory wd:Q4833830 ;
+    wikibase:lemma ?lemma .
 
   # Optional selection of corresponding cases.
   OPTIONAL {

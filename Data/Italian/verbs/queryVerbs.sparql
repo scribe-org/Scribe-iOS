@@ -3,11 +3,11 @@
 
 SELECT ?lexeme ?infinitive WHERE {
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q652 ;
-            wikibase:lexicalCategory wd:Q24905 .
+    dct:language wd:Q652 ;
+    wikibase:lexicalCategory wd:Q24905 .
 
   # Infinitive (required) and gerund
   ?lexeme ontolex:lexicalForm ?infinitiveForm .
   ?infinitiveForm ontolex:representation ?infinitive ;
-                  wikibase:grammaticalFeature wd:Q179230 ;
+    wikibase:grammaticalFeature wd:Q179230 ;
 }

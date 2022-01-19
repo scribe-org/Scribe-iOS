@@ -3,15 +3,15 @@
 
 # Note: does not include pronouns as the query wasn't running.
 
-SELECT DISTINCT ?nominativeSingular ?nominativePlural
-                ?genitiveSingular ?genitivePlural
-                ?gender WHERE {
+SELECT DISTINCT
+  ?nominativeSingular ?nominativePlural
+  ?genitiveSingular ?genitivePlural ?gender WHERE {
 
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q9027 ;
-            wikibase:lexicalCategory ?noun .
+    dct:language wd:Q9027 ;
+    wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes)
 
   # Indefinite forms in both nominative and genitive.
@@ -19,30 +19,30 @@ SELECT DISTINCT ?nominativeSingular ?nominativePlural
     # Nominative Singular
     ?lexeme ontolex:lexicalForm ?nominativeSingularForm .
     ?nominativeSingularForm ontolex:representation ?nominativeSingular ;
-                  wikibase:grammaticalFeature wd:Q53997857 ;
-                  wikibase:grammaticalFeature wd:Q131105 ;
-                  wikibase:grammaticalFeature wd:Q110786 .
+      wikibase:grammaticalFeature wd:Q53997857 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+      wikibase:grammaticalFeature wd:Q110786 .
 
     # Nominative Plural
     ?lexeme ontolex:lexicalForm ?nominativePluralForm .
     ?nominativePluralForm ontolex:representation ?nominativePlural ;
-                wikibase:grammaticalFeature wd:Q53997857 ;
-                wikibase:grammaticalFeature wd:Q131105 ;
-                wikibase:grammaticalFeature wd:Q146786 .
+      wikibase:grammaticalFeature wd:Q53997857 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+      wikibase:grammaticalFeature wd:Q146786 .
 
     # Genitive Singular
     ?lexeme ontolex:lexicalForm ?genitiveSingularForm .
     ?genitiveSingularForm ontolex:representation ?genitiveSingular ;
-                  wikibase:grammaticalFeature wd:Q53997857 ;
-                  wikibase:grammaticalFeature wd:Q146233 ;
-                  wikibase:grammaticalFeature wd:Q110786 .
+      wikibase:grammaticalFeature wd:Q53997857 ;
+      wikibase:grammaticalFeature wd:Q146233 ;
+      wikibase:grammaticalFeature wd:Q110786 .
 
     # Genitive Plural
     ?lexeme ontolex:lexicalForm ?genitivePluralForm .
     ?genitivePluralForm ontolex:representation ?genitivePlural ;
-                wikibase:grammaticalFeature wd:Q53997857 ;
-                wikibase:grammaticalFeature wd:Q146233 ;
-                wikibase:grammaticalFeature wd:Q146786 .
+      wikibase:grammaticalFeature wd:Q53997857 ;
+      wikibase:grammaticalFeature wd:Q146233 ;
+      wikibase:grammaticalFeature wd:Q146786 .
   } .
 
   # Definite forms in both nominative and genitive.
@@ -50,30 +50,30 @@ SELECT DISTINCT ?nominativeSingular ?nominativePlural
     # Nominative Singular
     ?lexeme ontolex:lexicalForm ?nominativeSingularForm .
     ?nominativeSingularForm ontolex:representation ?Q53997851 ;
-                  wikibase:grammaticalFeature wd:Q53997851 ;
-                  wikibase:grammaticalFeature wd:Q131105 ;
-                  wikibase:grammaticalFeature wd:Q110786 .
+      wikibase:grammaticalFeature wd:Q53997851 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+      wikibase:grammaticalFeature wd:Q110786 .
 
     # Nominative Plural
     ?lexeme ontolex:lexicalForm ?nominativePluralForm .
     ?nominativePluralForm ontolex:representation ?nominativePlural ;
-                wikibase:grammaticalFeature wd:Q53997851 ;
-                wikibase:grammaticalFeature wd:Q131105 ;
-                wikibase:grammaticalFeature wd:Q146786 .
+      wikibase:grammaticalFeature wd:Q53997851 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+      wikibase:grammaticalFeature wd:Q146786 .
 
     # Genitive Singular
     ?lexeme ontolex:lexicalForm ?genitiveSingularForm .
     ?genitiveSingularForm ontolex:representation ?genitiveSingular ;
-                  wikibase:grammaticalFeature wd:Q53997851 ;
-                  wikibase:grammaticalFeature wd:Q146233 ;
-                  wikibase:grammaticalFeature wd:Q110786 .
+      wikibase:grammaticalFeature wd:Q53997851 ;
+      wikibase:grammaticalFeature wd:Q146233 ;
+      wikibase:grammaticalFeature wd:Q110786 .
 
     # Genitive Plural
     ?lexeme ontolex:lexicalForm ?genitivePluralForm .
     ?genitivePluralForm ontolex:representation ?genitivePlural ;
-                wikibase:grammaticalFeature wd:Q53997851 ;
-                wikibase:grammaticalFeature wd:Q146233 ;
-                wikibase:grammaticalFeature wd:Q146786 .
+      wikibase:grammaticalFeature wd:Q53997851 ;
+      wikibase:grammaticalFeature wd:Q146233 ;
+      wikibase:grammaticalFeature wd:Q146786 .
   } .
 
   # Optional selection of genders.

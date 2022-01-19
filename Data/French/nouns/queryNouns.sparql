@@ -6,22 +6,22 @@ SELECT DISTINCT ?singular ?plural ?gender WHERE {
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q150 ;
-            wikibase:lexicalCategory ?noun .
+    dct:language wd:Q150 ;
+    wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes)
 
   # Optional selection of singular forms.
   OPTIONAL {
     ?lexeme ontolex:lexicalForm ?singularForm .
     ?singularForm ontolex:representation ?singular ;
-                  wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
   } .
 
   # Optional selection of plural forms.
   OPTIONAL {
     ?lexeme ontolex:lexicalForm ?pluralForm .
     ?pluralForm ontolex:representation ?plural ;
-                wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
   } .
 
   # Optional selection of genders.

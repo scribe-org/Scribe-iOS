@@ -3,22 +3,22 @@
 
 SELECT DISTINCT ?verb ?simplePast ?pastParticiple WHERE {
   ?lexeme a ontolex:LexicalEntry ;
-            dct:language wd:Q1860 ;
-            wikibase:lexicalCategory wd:Q24905 ;
-            wikibase:lemma ?lemma .
+    dct:language wd:Q1860 ;
+    wikibase:lexicalCategory wd:Q24905 ;
+    wikibase:lemma ?lemma .
 
   # Simple Past
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?simplePastForm .
-      ?simplePastForm ontolex:representation ?simplePast ;
-                          wikibase:grammaticalFeature wd:Q1392475 ;
+    ?lexeme ontolex:lexicalForm ?simplePastForm .
+    ?simplePastForm ontolex:representation ?simplePast ;
+      wikibase:grammaticalFeature wd:Q1392475 ;
   } .
 
   # Past Participle
   OPTIONAL {
-      ?lexeme ontolex:lexicalForm ?pastParticipleForm .
-      ?pastParticipleForm ontolex:representation ?pastParticiple ;
-                          wikibase:grammaticalFeature wd:Q1230649 ;
+    ?lexeme ontolex:lexicalForm ?pastParticipleForm .
+    ?pastParticipleForm ontolex:representation ?pastParticiple ;
+      wikibase:grammaticalFeature wd:Q1230649 ;
   } .
 
   SERVICE wikibase:label {
