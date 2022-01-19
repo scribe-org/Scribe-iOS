@@ -11,280 +11,279 @@ SELECT
   ?impFPS ?impSPS ?impTPS
   ?impFPP ?impSPP ?impTPP WHERE {
 
-  VALUES ?wbgf { wikibase:grammaticalFeature }
-  FILTER(?f = ?wbgf)
-  VALUES ?ollf { ontolex:lexicalForm }
-  FILTER(?l = ?ollf)
-  VALUES ?ollr { ontolex:representation }
-  FILTER(?r = ?ollr)
-
   ?lexeme a ontolex:LexicalEntry ;
     dct:language wd:Q1321 ;
     wikibase:lexicalCategory wd:Q24905 .
 
-  # Infinitive
-  ?lexeme ?l ?infinitiveF .
-  ?infinitiveF ?r ?infinitive ;
-    ?f wd:Q179230 ;
+  # Infinitive (required)
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+    wikibase:grammaticalFeature wd:Q179230 ;
 
   # Present
-  OPTIONAL {
-    ?lexeme ?l ?prsFPSF .
-    ?prsFPSF ?r ?prsFPS ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prsFPSF .
-    ?prsFPSF ?r ?prsFPS ;
-      ?f wd:Q51929218 ;
-      ?f wd:Q56682909 ;
-  } .
 
+  # FPS
   OPTIONAL {
-    ?lexeme ?l ?prsSPSF .
-    ?prsSPSF ?r ?prsSPS ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
+    ?lexeme ontolex:lexicalForm ?prsFPSForm .
+    ?prsFPSForm ontolex:representation ?prsFPS ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prsSPSF .
-    ?prsSPSF ?r ?prsSPS ;
-      ?f wd:Q51929369 ;
-      ?f wd:Q56682909 ;
+    ?lexeme ontolex:lexicalForm ?prsFPSForm .
+    ?prsFPSForm ontolex:representation ?prsFPS ;
+      wikibase:grammaticalFeature wd:Q51929218 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
   } .
-
+  # SPS
   OPTIONAL {
-    ?lexeme ?l ?prsTPSF .
-    ?prsTPSF ?r ?prsTPS ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prsTPSF .
-    ?prsTPSF ?r ?prsTPS ;
-      ?f wd:Q51929447 ;
-      ?f wd:Q56682909 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?prsFPPF .
-    ?prsFPPF ?r ?prsFPP ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
+    ?lexeme ontolex:lexicalForm ?prsSPSForm .
+    ?prsSPSForm ontolex:representation ?prsSPS ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prsFPPF .
-    ?prsFPPF ?r ?prsFPP ;
-      ?f wd:Q51929290 ;
-      ?f wd:Q56682909 ;
+    ?lexeme ontolex:lexicalForm ?prsSPSForm .
+    ?prsSPSForm ontolex:representation ?prsSPS ;
+      wikibase:grammaticalFeature wd:Q51929369 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
   } .
-
+  # TPS
   OPTIONAL {
-    ?lexeme ?l ?prsSPPF .
-    ?prsSPPF ?r ?prsSPP ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prsSPPF .
-    ?prsSPPF ?r ?prsSPP ;
-      ?f wd:Q51929403 ;
-      ?f wd:Q56682909 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?prsTPPF .
-    ?prsTPPF ?r ?prsTPP ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q682111 ;
-      ?f wd:Q192613 ;
+    ?lexeme ontolex:lexicalForm ?prsTPSForm .
+    ?prsTPSForm ontolex:representation ?prsTPS ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prsTPPF .
-    ?prsTPPF ?r ?prsTPP ;
-      ?f wd:Q51929517 ;
-      ?f wd:Q56682909 ;
+    ?lexeme ontolex:lexicalForm ?prsTPSForm .
+    ?prsTPSForm ontolex:representation ?prsTPS ;
+      wikibase:grammaticalFeature wd:Q51929447 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # FPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsFPPForm .
+    ?prsFPPForm ontolex:representation ?prsFPP ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsFPPForm .
+    ?prsFPPForm ontolex:representation ?prsFPP ;
+      wikibase:grammaticalFeature wd:Q51929290 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # SPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsSPPForm .
+    ?prsSPPForm ontolex:representation ?prsSPP ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsSPPForm .
+    ?prsSPPForm ontolex:representation ?prsSPP ;
+      wikibase:grammaticalFeature wd:Q51929403 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
+  } .
+  # TPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsTPPForm .
+    ?prsTPPForm ontolex:representation ?prsTPP ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q682111 ;
+      wikibase:grammaticalFeature wd:Q192613 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prsTPPForm .
+    ?prsTPPForm ontolex:representation ?prsTPP ;
+      wikibase:grammaticalFeature wd:Q51929517 ;
+      wikibase:grammaticalFeature wd:Q56682909 ;
   } .
 
   # Preterite
-  OPTIONAL {
-    ?lexeme ?l ?prtFPSF .
-    ?prtFPSF ?r ?prtFPS ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q442485 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prtFPSF .
-    ?prtFPSF ?r ?prtFPS ;
-      ?f wd:Q51929218 ;
-      ?f wd:Q442485 ;
-  } .
 
+  # FPS
   OPTIONAL {
-    ?lexeme ?l ?prtSPSF .
-    ?prtSPSF ?r ?prtSPS ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtFPSForm .
+    ?prtFPSForm ontolex:representation ?prtFPS ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prtSPSF .
-    ?prtSPSF ?r ?prtSPS ;
-      ?f wd:Q51929369 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtFPSForm .
+    ?prtFPSForm ontolex:representation ?prtFPS ;
+      wikibase:grammaticalFeature wd:Q51929218 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
-
+  # SPS
   OPTIONAL {
-    ?lexeme ?l ?prtTPSF .
-    ?prtTPSF ?r ?prtTPS ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q442485 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prtTPSF .
-    ?prtTPSF ?r ?prtTPS ;
-      ?f wd:Q51929447 ;
-      ?f wd:Q442485 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?prtFPPF .
-    ?prtFPPF ?r ?prtFPP ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtSPSForm .
+    ?prtSPSForm ontolex:representation ?prtSPS ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prtFPPF .
-    ?prtFPPF ?r ?prtFPP ;
-      ?f wd:Q51929290 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtSPSForm .
+    ?prtSPSForm ontolex:representation ?prtSPS ;
+      wikibase:grammaticalFeature wd:Q51929369 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
-
+  # TPS
   OPTIONAL {
-    ?lexeme ?l ?prtSPPF .
-    ?prtSPPF ?r ?prtSPP ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q442485 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?prtSPPF .
-    ?prtSPPF ?r ?prtSPP ;
-      ?f wd:Q51929403 ;
-      ?f wd:Q442485 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?prtTPPF .
-    ?prtTPPF ?r ?prtTPP ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtTPSForm .
+    ?prtTPSForm ontolex:representation ?prtTPS ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?prtTPPF .
-    ?prtTPPF ?r ?prtTPP ;
-      ?f wd:Q51929517 ;
-      ?f wd:Q442485 ;
+    ?lexeme ontolex:lexicalForm ?prtTPSForm .
+    ?prtTPSForm ontolex:representation ?prtTPS ;
+      wikibase:grammaticalFeature wd:Q51929447 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # FPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtFPPForm .
+    ?prtFPPForm ontolex:representation ?prtFPP ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtFPPForm .
+    ?prtFPPForm ontolex:representation ?prtFPP ;
+      wikibase:grammaticalFeature wd:Q51929290 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # SPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtSPPForm .
+    ?prtSPPForm ontolex:representation ?prtSPP ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtSPPForm .
+    ?prtSPPForm ontolex:representation ?prtSPP ;
+      wikibase:grammaticalFeature wd:Q51929403 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  # TPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtTPPForm .
+    ?prtTPPForm ontolex:representation ?prtTPP ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?prtTPPForm .
+    ?prtTPPForm ontolex:representation ?prtTPP ;
+      wikibase:grammaticalFeature wd:Q51929517 ;
+      wikibase:grammaticalFeature wd:Q442485 ;
   } .
 
   # Imperfect
-  OPTIONAL {
-    ?lexeme ?l ?impFPSF .
-    ?impFPSF ?r ?impFPS ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q12547192 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?impFPSF .
-    ?impFPSF ?r ?impFPS ;
-      ?f wd:Q51929218 ;
-      ?f wd:Q12547192 ;
-  } .
 
+  # FPS
   OPTIONAL {
-    ?lexeme ?l ?impSPSF .
-    ?impSPSF ?r ?impSPS ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impFPSForm .
+    ?impFPSForm ontolex:representation ?impFPS ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?impSPSF .
-    ?impSPSF ?r ?impSPS ;
-      ?f wd:Q51929369 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impFPSForm .
+    ?impFPSForm ontolex:representation ?impFPS ;
+      wikibase:grammaticalFeature wd:Q51929218 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
-
+  # SPS
   OPTIONAL {
-    ?lexeme ?l ?impTPSF .
-    ?impTPSF ?r ?impTPS ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q110786 ;
-      ?f wd:Q12547192 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?impTPSF .
-    ?impTPSF ?r ?impTPS ;
-      ?f wd:Q51929447 ;
-      ?f wd:Q12547192 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?impFPPF .
-    ?impFPPF ?r ?impFPP ;
-      ?f wd:Q21714344 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impSPSForm .
+    ?impSPSForm ontolex:representation ?impSPS ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?impFPPF .
-    ?impFPPF ?r ?impFPP ;
-      ?f wd:Q51929290 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impSPSForm .
+    ?impSPSForm ontolex:representation ?impSPS ;
+      wikibase:grammaticalFeature wd:Q51929369 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
-
+  # TPS
   OPTIONAL {
-    ?lexeme ?l ?impSPPF .
-    ?impSPPF ?r ?impSPP ;
-      ?f wd:Q51929049 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q12547192 ;
-  } .
-  OPTIONAL {
-    ?lexeme ?l ?impSPPF .
-    ?impSPPF ?r ?impSPP ;
-      ?f wd:Q51929403 ;
-      ?f wd:Q12547192 ;
-  } .
-
-  OPTIONAL {
-    ?lexeme ?l ?impTPPF .
-    ?impTPPF ?r ?impTPP ;
-      ?f wd:Q51929074 ;
-      ?f wd:Q146786 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impTPSForm .
+    ?impTPSForm ontolex:representation ?impTPS ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
   OPTIONAL {
-    ?lexeme ?l ?impTPPF .
-    ?impTPPF ?r ?impTPP ;
-      ?f wd:Q51929517 ;
-      ?f wd:Q12547192 ;
+    ?lexeme ontolex:lexicalForm ?impTPSForm .
+    ?impTPSForm ontolex:representation ?impTPS ;
+      wikibase:grammaticalFeature wd:Q51929447 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # FPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impFPPForm .
+    ?impFPPForm ontolex:representation ?impFPP ;
+      wikibase:grammaticalFeature wd:Q21714344 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impFPPForm .
+    ?impFPPForm ontolex:representation ?impFPP ;
+      wikibase:grammaticalFeature wd:Q51929290 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # SPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impSPPForm .
+    ?impSPPForm ontolex:representation ?impSPP ;
+      wikibase:grammaticalFeature wd:Q51929049 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impSPPForm .
+    ?impSPPForm ontolex:representation ?impSPP ;
+      wikibase:grammaticalFeature wd:Q51929403 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  # TPP
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impTPPForm .
+    ?impTPPForm ontolex:representation ?impTPP ;
+      wikibase:grammaticalFeature wd:Q51929074 ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
+  } .
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?impTPPForm .
+    ?impTPPForm ontolex:representation ?impTPP ;
+      wikibase:grammaticalFeature wd:Q51929517 ;
+      wikibase:grammaticalFeature wd:Q12547192 ;
   } .
 }
