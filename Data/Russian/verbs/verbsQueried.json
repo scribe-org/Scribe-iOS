@@ -1,31 +1,49 @@
 [
   {
-    "infinitive": "пойти́",
-    "pastFeminine": "пошла́",
-    "pastMasculine": "пошёл",
+    "pastPlural": "пошли́",
     "pastNeutral": "пошло́",
-    "pastPlural": "пошли́"
+    "pastMasculine": "пошёл",
+    "pastFeminine": "пошла́",
+    "infinitive": "пойти́"
   },
   {
-    "infinitive": "идти",
-    "presentFPS": "иду",
-    "presentSPS": "идёшь",
-    "presentTPS": "идёт",
-    "presentFPP": "идём",
-    "presentSPP": "идёте",
-    "presentTPP": "идут",
-    "pastFeminine": "шла",
-    "pastMasculine": "шёл",
+    "pastPlural": "шли",
     "pastNeutral": "шло",
-    "pastPlural": "шли"
+    "pastMasculine": "шёл",
+    "pastFeminine": "шла",
+    "infinitive": "идти",
+    "presTPP": "идут",
+    "presSPP": "идёте",
+    "presFPP": "идём",
+    "presTPS": "идёт",
+    "presSPS": "идёшь",
+    "presFPS": "иду"
   },
-  { "infinitive": "бездельничать" },
-  { "infinitive": "возить" },
-  { "infinitive": "гуля́ть" },
-  { "infinitive": "быть" },
-  { "infinitive": "сачкова́ть" },
-  { "infinitive": "труди́ться" },
-  { "infinitive": "объяснить" },
-  { "infinitive": "весели́ться" },
-  { "infinitive": "длить" }
+  {
+    "infinitive": "бездельничать"
+  },
+  {
+    "infinitive": "возить"
+  },
+  {
+    "infinitive": "гуля́ть"
+  },
+  {
+    "infinitive": "быть"
+  },
+  {
+    "infinitive": "сачкова́ть"
+  },
+  {
+    "infinitive": "труди́ться"
+  },
+  {
+    "infinitive": "объяснить"
+  },
+  {
+    "infinitive": "весели́ться"
+  },
+  {
+    "infinitive": "длить"
+  }
 ]

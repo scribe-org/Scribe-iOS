@@ -51,6 +51,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Aaleisen": {
+    "plural": "Aaleisen",
+    "form": "N/PL"
+  },
   "Aalreuse": {
     "plural": "Aalreusen",
     "form": "F"
@@ -2279,6 +2283,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Afghane": {
+    "plural": "Afghanen",
+    "form": "M"
+  },
+  "Afghanen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Afghanin": {
+    "plural": "Afghaninnen",
+    "form": "F"
+  },
+  "Afghaninnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Afghanistan": {
     "plural": "noPlural",
     "form": "N"
@@ -3348,10 +3368,10 @@
     "form": "PL"
   },
   "Alphabet": {
-    "plural": "Alphabete",
+    "plural": "Alphabeten",
     "form": "M/N"
   },
-  "Alphabete": {
+  "Alphabeten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5716,6 +5736,14 @@
     "form": "M"
   },
   "Apothekerverbände": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Appartementwohnung": {
+    "plural": "Appartementwohnungen",
+    "form": "F"
+  },
+  "Appartementwohnungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -9807,6 +9835,22 @@
     "plural": "Bälge",
     "form": "M"
   },
+  "Balinese": {
+    "plural": "Balinesen",
+    "form": "M"
+  },
+  "Balinesen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Balinesin": {
+    "plural": "Balinesinnen",
+    "form": "F"
+  },
+  "Balinesinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Balken": {
     "plural": "Balken",
     "form": "M/PL"
@@ -10014,6 +10058,18 @@
   "Bangladesch": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Bangladescher": {
+    "plural": "Bangladescher",
+    "form": "M/PL"
+  },
+  "Bangladescherin": {
+    "plural": "Bangladescherinnen",
+    "form": "F"
+  },
+  "Bangladescherinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Banjo": {
     "plural": "Banjos",
@@ -10548,18 +10604,14 @@
     "form": "PL"
   },
   "Bauer": {
-    "plural": "Bauern",
-    "form": "M/N"
+    "plural": "Bauer",
+    "form": "M/N/PL"
   },
   "Bauerin": {
     "plural": "Bauerinnen",
     "form": "F"
   },
   "Bauerinnen": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Bauern": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10706,6 +10758,10 @@
   "Baumfällungszonen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Baumkuchen": {
+    "plural": "Baumkuchen",
+    "form": "M/PL"
   },
   "Baummarder": {
     "plural": "Baummarder",
@@ -11620,6 +11676,14 @@
     "form": "F"
   },
   "Behauptungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Behausung": {
+    "plural": "Behausungen",
+    "form": "F"
+  },
+  "Behausungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15320,7 +15384,7 @@
     "form": "F"
   },
   "Bitten": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Bittermandelöl": {
@@ -15528,7 +15592,7 @@
     "form": "PL"
   },
   "Blei": {
-    "plural": "noPlural",
+    "plural": "Bleie",
     "form": "M/N"
   },
   "Bleiakkumulator": {
@@ -15544,6 +15608,10 @@
     "form": "F"
   },
   "Bleichen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Bleie": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15670,6 +15738,10 @@
   "Blues": {
     "plural": "Blues",
     "form": "M/PL"
+  },
+  "Bluetooth": {
+    "plural": "noPlural",
+    "form": "N"
   },
   "Blume": {
     "plural": "Blumen",
@@ -16199,6 +16271,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Bolivianer": {
+    "plural": "Bolivianer",
+    "form": "M/PL"
+  },
+  "Bolivianerin": {
+    "plural": "Bolivianerinnen",
+    "form": "F"
+  },
+  "Bolivianerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Bolivien": {
     "plural": "noPlural",
     "form": "N"
@@ -16383,6 +16467,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Botsuaner": {
+    "plural": "Botsuaner",
+    "form": "M/PL"
+  },
+  "Botsuanerin": {
+    "plural": "Botsuanerinnen",
+    "form": "F"
+  },
+  "Botsuanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Botswana": {
     "plural": "noPlural",
     "form": "N"
@@ -16508,6 +16604,18 @@
     "form": "M"
   },
   "Branntweinessige": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Brasilianer": {
+    "plural": "Brasilianer",
+    "form": "M/PL"
+  },
+  "Brasilianerin": {
+    "plural": "Brasilianerinnen",
+    "form": "F"
+  },
+  "Brasilianerinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17126,6 +17234,18 @@
   "Brunei": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Bruneier": {
+    "plural": "Bruneier",
+    "form": "M/PL"
+  },
+  "Bruneierin": {
+    "plural": "Bruneierinnen",
+    "form": "F"
+  },
+  "Bruneierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Brunnen": {
     "plural": "Brunnen",
@@ -18884,8 +19004,12 @@
     "form": "M/PL"
   },
   "Cappuccino": {
-    "plural": "Cappuccino",
-    "form": "M/PL"
+    "plural": "Cappuccinos",
+    "form": "M"
+  },
+  "Cappuccinos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Cashewnuss": {
     "plural": "Cashewnüsse",
@@ -20098,6 +20222,10 @@
   "Dackelohren": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Daheim": {
+    "plural": "noPlural",
+    "form": "N"
   },
   "Damaskus": {
     "plural": "noPlural",
@@ -21324,8 +21452,12 @@
     "form": "N"
   },
   "Deutsche": {
-    "plural": "noPlural",
+    "plural": "Deutschen",
     "form": "F/M/N"
+  },
+  "Deutschen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Deutschkurs": {
     "plural": "Deutschkurse",
@@ -21779,6 +21911,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Dienstschluss": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Dienststelle": {
     "plural": "Dienststellen",
     "form": "F"
@@ -21786,6 +21922,10 @@
   "Dienststellen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Diesel": {
+    "plural": "Diesel",
+    "form": "M/PL"
   },
   "Dieselkraftstoff": {
     "plural": "Dieselkraftstoffe",
@@ -22460,12 +22600,8 @@
     "form": "PL"
   },
   "Dollar": {
-    "plural": "Dollars",
-    "form": "M"
-  },
-  "Dollars": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "Dollar",
+    "form": "M/PL"
   },
   "Dollarschein": {
     "plural": "Dollarscheine",
@@ -22544,6 +22680,14 @@
     "form": "M"
   },
   "Dominoeffekte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Domizil": {
+    "plural": "Domizile",
+    "form": "N"
+  },
+  "Domizile": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26408,12 +26552,8 @@
     "form": "PL"
   },
   "Elster": {
-    "plural": "Elstern",
+    "plural": "noPlural",
     "form": "F"
-  },
-  "Elstern": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Elsässer": {
     "plural": "Elsässer",
@@ -29803,6 +29943,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Fabelwesen": {
+    "plural": "Fabelwesen",
+    "form": "N/PL"
+  },
   "Fabrik": {
     "plural": "Fabriken",
     "form": "F"
@@ -29988,8 +30132,8 @@
     "form": "PL"
   },
   "Faden": {
-    "plural": "Faden",
-    "form": "M/PL"
+    "plural": "Fäden",
+    "form": "M"
   },
   "Fagott": {
     "plural": "Fagotte",
@@ -32604,10 +32748,10 @@
     "form": "F"
   },
   "Flur": {
-    "plural": "Fluren",
+    "plural": "Flure",
     "form": "F/M"
   },
-  "Fluren": {
+  "Flure": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -34396,6 +34540,10 @@
     "form": "PL"
   },
   "Fächer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Fäden": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36715,6 +36863,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Georgier": {
+    "plural": "Georgier",
+    "form": "M/PL"
+  },
+  "Georgierin": {
+    "plural": "Georgierinnen",
+    "form": "F"
+  },
+  "Georgierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Georgisch": {
     "plural": "noPlural",
     "form": "N"
@@ -37912,10 +38072,10 @@
     "form": "M/PL"
   },
   "Gift": {
-    "plural": "Giften",
+    "plural": "Gifte",
     "form": "F/M/N"
   },
-  "Giften": {
+  "Gifte": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38440,8 +38600,12 @@
     "form": "PL"
   },
   "Golf": {
-    "plural": "noPlural",
+    "plural": "Golfe",
     "form": "M/N"
+  },
+  "Golfe": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Golfspieler": {
     "plural": "Golfspieler",
@@ -39571,6 +39735,10 @@
     "plural": "Gulden",
     "form": "M/PL"
   },
+  "Gummi": {
+    "plural": "Gummis",
+    "form": "M"
+  },
   "Gummibaum": {
     "plural": "Gummibäume",
     "form": "M"
@@ -39584,6 +39752,10 @@
     "form": "F"
   },
   "Gummidichtungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gummis": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39643,6 +39815,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Gute": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Gutschein": {
     "plural": "Gutscheine",
     "form": "M"
@@ -39670,6 +39846,18 @@
   "Guyana": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Guyaner": {
+    "plural": "Guyaner",
+    "form": "M/PL"
+  },
+  "Guyanerin": {
+    "plural": "Guyanerinnen",
+    "form": "F"
+  },
+  "Guyanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Gymnasiallehrer": {
     "plural": "Gymnasiallehrer",
@@ -40146,6 +40334,18 @@
   "Haiti": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Haitianer": {
+    "plural": "Haitianer",
+    "form": "M/PL"
+  },
+  "Haitianerin": {
+    "plural": "Haitianerinnen",
+    "form": "F"
+  },
+  "Haitianerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Haken": {
     "plural": "Haken",
@@ -43320,12 +43520,8 @@
     "form": "PL"
   },
   "Homburg": {
-    "plural": "Homburgs",
+    "plural": "noPlural",
     "form": "M/N"
-  },
-  "Homburgs": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Hommage": {
     "plural": "Hommagen",
@@ -44968,10 +45164,10 @@
     "form": "PL"
   },
   "Indikativ": {
-    "plural": "Indikativs",
+    "plural": "Indikative",
     "form": "M/N"
   },
-  "Indikativs": {
+  "Indikative": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47004,12 +47200,8 @@
     "form": "N/PL"
   },
   "Journal": {
-    "plural": "Journale",
+    "plural": "Journals",
     "form": "N"
-  },
-  "Journale": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Journalist": {
     "plural": "Journalisten",
@@ -47024,6 +47216,10 @@
     "form": "F"
   },
   "Journalistinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Journals": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -47512,6 +47708,10 @@
     "form": "PL"
   },
   "Kaffeetrinken": {
+    "plural": "noPlural",
+    "form": "N"
+  },
+  "Kaffein": {
     "plural": "noPlural",
     "form": "N"
   },
@@ -48886,6 +49086,18 @@
   "Katar": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Katarer": {
+    "plural": "Katarer",
+    "form": "M/PL"
+  },
+  "Katarerin": {
+    "plural": "Katarerinnen",
+    "form": "F"
+  },
+  "Katarerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Katastralgemeinde": {
     "plural": "Katastralgemeinden",
@@ -53540,8 +53752,12 @@
     "form": "PL"
   },
   "Kredit": {
-    "plural": "Kredits",
+    "plural": "Kredite",
     "form": "M/N"
+  },
+  "Kredite": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kreditinstitut": {
     "plural": "Kreditinstitute",
@@ -53572,10 +53788,6 @@
     "form": "F"
   },
   "Kreditrisikominderungstechniken": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Kredits": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -54214,6 +54426,18 @@
   "Kuba": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Kubaner": {
+    "plural": "Kubaner",
+    "form": "M/PL"
+  },
+  "Kubanerin": {
+    "plural": "Kubanerinnen",
+    "form": "F"
+  },
+  "Kubanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kubikdezimeter": {
     "plural": "Kubikdezimeter",
@@ -56388,12 +56612,8 @@
     "form": "M"
   },
   "Laute": {
-    "plural": "Lauten",
-    "form": "F/PL"
-  },
-  "Lauten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Lautmalerei": {
     "plural": "Lautmalereien",
@@ -57627,6 +57847,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Libanese": {
+    "plural": "Libanesen",
+    "form": "M"
+  },
+  "Libanesen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Libanesin": {
+    "plural": "Libanesinnen",
+    "form": "F"
+  },
+  "Libanesinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Libelle": {
     "plural": "Libellen",
     "form": "F"
@@ -57658,6 +57894,18 @@
   "Libyen": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Libyer": {
+    "plural": "Libyer",
+    "form": "M/PL"
+  },
+  "Libyerin": {
+    "plural": "Libyerinnen",
+    "form": "F"
+  },
+  "Libyerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Licht": {
     "plural": "Lichter",
@@ -59199,6 +59447,14 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "MRT": {
+    "plural": "MRTs",
+    "form": "F/N"
+  },
+  "MRTs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Maastricht": {
     "plural": "noPlural",
     "form": "N"
@@ -59551,15 +59807,51 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Malawier": {
+    "plural": "Malawier",
+    "form": "M/PL"
+  },
+  "Malawierin": {
+    "plural": "Malawierinnen",
+    "form": "F"
+  },
+  "Malawierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Malaysia": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Malaysier": {
+    "plural": "Malaysier",
+    "form": "M/PL"
+  },
+  "Malaysierin": {
+    "plural": "Malaysierinnen",
+    "form": "F"
+  },
+  "Malaysierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Male": {
     "plural": "isPlural",
     "form": "N/PL"
   },
   "Malediven": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Malediver": {
+    "plural": "Malediver",
+    "form": "M/PL"
+  },
+  "Malediverin": {
+    "plural": "Malediverinnen",
+    "form": "F"
+  },
+  "Malediverinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -62164,7 +62456,7 @@
     "form": "PL"
   },
   "Militär": {
-    "plural": "noPlural",
+    "plural": "Militärs",
     "form": "M/N"
   },
   "Militärdienst": {
@@ -62180,6 +62472,10 @@
     "form": "F"
   },
   "Militärherrschaften": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Militärs": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -63147,6 +63443,14 @@
     "plural": "noPlural",
     "form": "F"
   },
+  "Moldauerin": {
+    "plural": "Moldauerinnen",
+    "form": "F"
+  },
+  "Moldauerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Moldawien": {
     "plural": "noPlural",
     "form": "N"
@@ -63491,6 +63795,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Montenegriner": {
+    "plural": "Montenegriner",
+    "form": "M/PL"
+  },
+  "Montenegrinerin": {
+    "plural": "Montenegrinerinnen",
+    "form": "F"
+  },
+  "Montenegrinerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Montenegro": {
     "plural": "noPlural",
     "form": "N"
@@ -63630,6 +63946,18 @@
   "Mosambik": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Mosambikaner": {
+    "plural": "Mosambikaner",
+    "form": "M/PL"
+  },
+  "Mosambikanerin": {
+    "plural": "Mosambikanerinnen",
+    "form": "F"
+  },
+  "Mosambikanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Moschee": {
     "plural": "Moscheen",
@@ -64327,6 +64655,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Märchen": {
+    "plural": "Märchen",
+    "form": "N/PL"
+  },
   "Märchenland": {
     "plural": "Märchenländer",
     "form": "N"
@@ -64511,6 +64843,14 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Münchnerin": {
+    "plural": "Münchnerinnen",
+    "form": "F"
+  },
+  "Münchnerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Münder": {
     "plural": "isPlural",
     "form": "PL"
@@ -64532,8 +64872,8 @@
     "form": "PL"
   },
   "Münster": {
-    "plural": "noPlural",
-    "form": "M/N"
+    "plural": "Münster",
+    "form": "M/N/PL"
   },
   "Münze": {
     "plural": "Münzen",
@@ -67051,6 +67391,30 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Nigerianer": {
+    "plural": "Nigerianer",
+    "form": "M/PL"
+  },
+  "Nigerianerin": {
+    "plural": "Nigerianerinnen",
+    "form": "F"
+  },
+  "Nigerianerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Nigrer": {
+    "plural": "Nigrer",
+    "form": "M/PL"
+  },
+  "Nigrerin": {
+    "plural": "Nigrerinnen",
+    "form": "F"
+  },
+  "Nigrerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Nil": {
     "plural": "noPlural",
     "form": "M"
@@ -67786,6 +68150,10 @@
   "OBD-Überwachungseinrichtungen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Obdachlosigkeit": {
+    "plural": "noPlural",
+    "form": "F"
   },
   "Ober": {
     "plural": "Ober",
@@ -68710,6 +69078,18 @@
   "Oma": {
     "plural": "Omas",
     "form": "F"
+  },
+  "Omaner": {
+    "plural": "Omaner",
+    "form": "M/PL"
+  },
+  "Omanerin": {
+    "plural": "Omanerinnen",
+    "form": "F"
+  },
+  "Omanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Omas": {
     "plural": "isPlural",
@@ -69755,6 +70135,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Pakistaner": {
+    "plural": "Pakistaner",
+    "form": "M/PL"
+  },
+  "Pakistanerin": {
+    "plural": "Pakistanerinnen",
+    "form": "F"
+  },
+  "Pakistanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Palais": {
     "plural": "Palais",
     "form": "N/PL"
@@ -70012,12 +70404,8 @@
     "form": "PL"
   },
   "Panzerkampfwagen": {
-    "plural": "Panzerkampfwägen",
-    "form": "M"
-  },
-  "Panzerkampfwägen": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "Panzerkampfwagen",
+    "form": "M/PL"
   },
   "Papa": {
     "plural": "Papas",
@@ -70242,6 +70630,18 @@
   "Paraguay": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Paraguayer": {
+    "plural": "Paraguayer",
+    "form": "M/PL"
+  },
+  "Paraguayerin": {
+    "plural": "Paraguayerinnen",
+    "form": "F"
+  },
+  "Paraguayerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Paral": {
     "plural": "noPlural",
@@ -71223,6 +71623,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Perser": {
+    "plural": "Perser",
+    "form": "M/PL"
+  },
+  "Perserin": {
+    "plural": "Perserinnen",
+    "form": "F"
+  },
+  "Perserinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Perserkatze": {
     "plural": "Perserkatzen",
     "form": "F"
@@ -71932,6 +72344,18 @@
     "form": "PL"
   },
   "Philippinen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Philippiner": {
+    "plural": "Philippiner",
+    "form": "M/PL"
+  },
+  "Philippinerin": {
+    "plural": "Philippinerinnen",
+    "form": "F"
+  },
+  "Philippinerinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -72880,7 +73304,7 @@
     "form": "M/PL"
   },
   "Polen": {
-    "plural": "noPlural",
+    "plural": "isPlural",
     "form": "N/PL"
   },
   "Polin": {
@@ -75956,12 +76380,8 @@
     "form": "PL"
   },
   "Raps": {
-    "plural": "Rapse",
-    "form": "M/PL"
-  },
-  "Rapse": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "M/PL"
   },
   "Rapsöl": {
     "plural": "Rapsöle",
@@ -77700,10 +78120,10 @@
     "form": "PL"
   },
   "Rentier": {
-    "plural": "Rentiere",
+    "plural": "Rentiers",
     "form": "M/N"
   },
-  "Rentiere": {
+  "Rentiers": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -79003,6 +79423,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Ruander": {
+    "plural": "Ruander",
+    "form": "M/PL"
+  },
+  "Ruanderin": {
+    "plural": "Ruanderinnen",
+    "form": "F"
+  },
+  "Ruanderinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Rubidium": {
     "plural": "noPlural",
     "form": "N"
@@ -79960,12 +80392,8 @@
     "form": "M/PL"
   },
   "Salat": {
-    "plural": "Salate",
+    "plural": "noPlural",
     "form": "F/M"
-  },
-  "Salate": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Salatgurke": {
     "plural": "Salatgurken",
@@ -80407,6 +80835,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Sandwich": {
+    "plural": "Sandwiches",
+    "form": "N"
+  },
+  "Sandwiches": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Sandwüste": {
     "plural": "Sandwüsten",
     "form": "F"
@@ -80626,6 +81062,14 @@
   "Sauce béarnaise": {
     "plural": "noPlural",
     "form": "F"
+  },
+  "Saudi-Araberin": {
+    "plural": "Saudi-Araberinnen",
+    "form": "F"
+  },
+  "Saudi-Araberinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Saudi-Arabien": {
     "plural": "noPlural",
@@ -81660,10 +82104,10 @@
     "form": "PL"
   },
   "Schimpfwort": {
-    "plural": "Schimpfwörter",
+    "plural": "Schimpfworte",
     "form": "N"
   },
-  "Schimpfwörter": {
+  "Schimpfworte": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -82076,8 +82520,12 @@
     "form": "PL"
   },
   "Schmalz": {
-    "plural": "noPlural",
+    "plural": "Schmalze",
     "form": "M/N"
+  },
+  "Schmalze": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Schmecken": {
     "plural": "noPlural",
@@ -82480,12 +82928,8 @@
     "form": "PL"
   },
   "Schnitte": {
-    "plural": "Schnitten",
-    "form": "F/PL"
-  },
-  "Schnitten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Schnittlauch": {
     "plural": "noPlural",
@@ -84803,6 +85247,34 @@
     "plural": "noPlural",
     "form": "M/N"
   },
+  "Senegaler": {
+    "plural": "Senegaler",
+    "form": "M/PL"
+  },
+  "Senegalerin": {
+    "plural": "Senegalerinnen",
+    "form": "F"
+  },
+  "Senegalerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Senegalese": {
+    "plural": "Senegalesen",
+    "form": "M"
+  },
+  "Senegalesen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Senegalesin": {
+    "plural": "Senegalesinnen",
+    "form": "F"
+  },
+  "Senegalesinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Senf": {
     "plural": "Senfe",
     "form": "M"
@@ -86144,6 +86616,10 @@
     "form": "N"
   },
   "Somalia": {
+    "plural": "noPlural",
+    "form": "N"
+  },
+  "Somaliland": {
     "plural": "noPlural",
     "form": "N"
   },
@@ -91027,6 +91503,30 @@
     "plural": "Sudaner",
     "form": "M/PL"
   },
+  "Sudanerin": {
+    "plural": "Sudanerinnen",
+    "form": "F"
+  },
+  "Sudanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Sudanese": {
+    "plural": "Sudanesen",
+    "form": "M"
+  },
+  "Sudanesen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Sudanesin": {
+    "plural": "Sudanesinnen",
+    "form": "F"
+  },
+  "Sudanesinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Sude": {
     "plural": "isPlural",
     "form": "PL"
@@ -91423,6 +91923,18 @@
     "plural": "Synthesizer",
     "form": "M/PL"
   },
+  "Syrer": {
+    "plural": "Syrer",
+    "form": "M/PL"
+  },
+  "Syrerin": {
+    "plural": "Syrerinnen",
+    "form": "F"
+  },
+  "Syrerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Syrien": {
     "plural": "noPlural",
     "form": "N"
@@ -91623,6 +92135,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Südafrikaner": {
+    "plural": "Südafrikaner",
+    "form": "M/PL"
+  },
+  "Südafrikanerin": {
+    "plural": "Südafrikanerinnen",
+    "form": "F"
+  },
+  "Südafrikanerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Südamerika": {
     "plural": "noPlural",
     "form": "N"
@@ -91632,6 +92156,18 @@
     "form": "F"
   },
   "Südamerikameisterschaften": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Südamerikaner": {
+    "plural": "Südamerikaner",
+    "form": "M/PL"
+  },
+  "Südamerikanerin": {
+    "plural": "Südamerikanerinnen",
+    "form": "F"
+  },
+  "Südamerikanerinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -91944,12 +92480,8 @@
     "form": "PL"
   },
   "Tag": {
-    "plural": "Tage",
+    "plural": "Tags",
     "form": "M/N"
-  },
-  "Tage": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Tagebau": {
     "plural": "Tagebaue",
@@ -92022,6 +92554,10 @@
   "Tagfalter": {
     "plural": "Tagfalter",
     "form": "M/PL"
+  },
+  "Tags": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tagundnachtgleiche": {
     "plural": "Tagundnachtgleichen",
@@ -92096,8 +92632,12 @@
     "form": "PL"
   },
   "Takt": {
-    "plural": "noPlural",
+    "plural": "Takte",
     "form": "M"
+  },
+  "Takte": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Taktik": {
     "plural": "Taktiken",
@@ -92476,7 +93016,7 @@
     "form": "PL"
   },
   "Tau": {
-    "plural": "Taus",
+    "plural": "noPlural",
     "form": "M/N"
   },
   "Taube": {
@@ -92616,10 +93156,6 @@
     "form": "M"
   },
   "Tauprozesse": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Taus": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -93372,7 +93908,7 @@
     "form": "M/N"
   },
   "Test": {
-    "plural": "Tests",
+    "plural": "Teste",
     "form": "M"
   },
   "Testament": {
@@ -93395,6 +93931,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Teste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Testergebnis": {
     "plural": "Testergebnisse",
     "form": "N"
@@ -93408,10 +93948,6 @@
     "form": "M"
   },
   "Testfälle": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Tests": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -94476,7 +95012,7 @@
     "form": "PL"
   },
   "Ton": {
-    "plural": "Töne",
+    "plural": "Tone",
     "form": "M"
   },
   "Tonalität": {
@@ -94506,6 +95042,10 @@
   "Tondern": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Tone": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tonfolge": {
     "plural": "Tonfolgen",
@@ -96115,6 +96655,22 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Turkmene": {
+    "plural": "Turkmenen",
+    "form": "M"
+  },
+  "Turkmenen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Turkmenin": {
+    "plural": "Turkmeninnen",
+    "form": "F"
+  },
+  "Turkmeninnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Turkmenistan": {
     "plural": "noPlural",
     "form": "N"
@@ -96324,10 +96880,6 @@
     "form": "PL"
   },
   "Töchter": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Töne": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -97888,6 +98440,14 @@
     "form": "F"
   },
   "Unverschämtheiten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Unwahrheit": {
+    "plural": "Unwahrheiten",
+    "form": "F"
+  },
+  "Unwahrheiten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -101215,6 +101775,10 @@
     "plural": "Volkstheater",
     "form": "N/PL"
   },
+  "Volkswagen": {
+    "plural": "Volkswagen",
+    "form": "M/PL"
+  },
   "Volkswirtschaft": {
     "plural": "Volkswirtschaften",
     "form": "F"
@@ -103815,6 +104379,10 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Weltgeschehen": {
+    "plural": "Weltgeschehen",
+    "form": "N/PL"
+  },
   "Weltgesundheitsorganisation": {
     "plural": "noPlural",
     "form": "F"
@@ -103914,6 +104482,10 @@
   "Weltraumforschungen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Weltraumtourismus": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Weltraumwissenschaft": {
     "plural": "Weltraumwissenschaften",
@@ -105511,6 +106083,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Wissenschaftszeitvertragsgesetz": {
+    "plural": "Wissenschaftszeitvertragsgesetze",
+    "form": "N"
+  },
+  "Wissenschaftszeitvertragsgesetze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Wissensdatenbank": {
     "plural": "Wissensdatenbanken",
     "form": "F"
@@ -105684,6 +106264,14 @@
     "form": "M"
   },
   "Wohnsitze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Wohnstätte": {
+    "plural": "Wohnstätten",
+    "form": "F"
+  },
+  "Wohnstätten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -107432,8 +108020,12 @@
     "form": "N"
   },
   "Zeuge": {
-    "plural": "isPlural",
+    "plural": "Zeugen",
     "form": "M/PL"
+  },
+  "Zeugen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Zeugin": {
     "plural": "Zeuginnen",
@@ -108339,6 +108931,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Zuhause": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Zuhörer": {
     "plural": "Zuhörer",
     "form": "M/PL"
@@ -109118,6 +109714,18 @@
   "Zypern": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Zyprer": {
+    "plural": "Zyprer",
+    "form": "M/PL"
+  },
+  "Zyprerin": {
+    "plural": "Zyprerinnen",
+    "form": "F"
+  },
+  "Zyprerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Zytoskelett": {
     "plural": "Zytoskelette",

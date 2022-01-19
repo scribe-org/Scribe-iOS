@@ -14,6 +14,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 Data updates are now all done through a single Python file - update_data.py.
 
+- French: 11 nouns
+- German: 152 nouns, 1 verb, 1 preposition
+- Portuguese: 19 nouns
+- Spanish: 13 nouns, 6 verbs
+- Swedish: 68 nouns
+
 ### 🎨 Design Changes
 
 - The text size for the preview bar in landscape mode for phones was made smaller.

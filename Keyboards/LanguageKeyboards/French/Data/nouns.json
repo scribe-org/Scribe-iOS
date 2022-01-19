@@ -1769,11 +1769,11 @@
   },
   "Germanopratin": {
     "plural": "Germanopratines",
-    "form": "M/PL"
+    "form": "M"
   },
   "Germanopratine": {
     "plural": "Germanopratines",
-    "form": "M"
+    "form": "M/PL"
   },
   "Germanopratines": {
     "plural": "isPlural",
@@ -3256,8 +3256,8 @@
     "form": "F"
   },
   "Mme": {
-    "plural": "Mmes",
-    "form": "F/PL"
+    "plural": "mesdames",
+    "form": "F"
   },
   "Mmes": {
     "plural": "isPlural",
@@ -7091,8 +7091,12 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alimens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aliment": {
-    "plural": "aliments",
+    "plural": "alimens",
     "form": "M"
   },
   "alimentation": {
@@ -7100,10 +7104,6 @@
     "form": "F"
   },
   "alimentations": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "aliments": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -9905,10 +9905,10 @@
   },
   "auroch": {
     "plural": "aurochs",
-    "form": "M"
+    "form": "M/PL"
   },
   "aurochs": {
-    "plural": "isPlural",
+    "plural": "aurochs",
     "form": "M/PL"
   },
   "aurore": {
@@ -11511,6 +11511,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bien": {
+    "plural": "biens",
+    "form": "M"
+  },
   "bien-fonds": {
     "plural": "",
     "form": ""
@@ -11536,6 +11540,10 @@
     "form": "F"
   },
   "bienfaisances": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19945,7 +19953,7 @@
   },
   "cow-boy": {
     "plural": "cow-boys",
-    "form": "M/PL"
+    "form": "M"
   },
   "cow-boys": {
     "plural": "isPlural",
@@ -19953,7 +19961,7 @@
   },
   "cowboy": {
     "plural": "cow-boys",
-    "form": "M"
+    "form": "M/PL"
   },
   "coyote": {
     "plural": "coyotes",
@@ -34339,6 +34347,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "landau": {
+    "plural": "landaus",
+    "form": "M"
+  },
+  "landaus": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "lande": {
     "plural": "landes",
     "form": "F"
@@ -35903,6 +35919,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "magma": {
+    "plural": "magmas",
+    "form": "M"
+  },
+  "magmas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "magnificence": {
     "plural": "magnificences",
     "form": "F"
@@ -37400,6 +37424,10 @@
     "form": ""
   },
   "mescluns": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mesdames": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -40916,8 +40944,8 @@
     "form": "PL"
   },
   "oeuf": {
-    "plural": "œufs",
-    "form": "M"
+    "plural": "oeufs",
+    "form": "M/PL"
   },
   "oeufs": {
     "plural": "isPlural",
@@ -45304,6 +45332,14 @@
     "form": "F/M"
   },
   "pomologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pompe": {
+    "plural": "pompes",
+    "form": "F"
+  },
+  "pompes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -52256,6 +52292,14 @@
     "form": "M"
   },
   "sarrasins": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sarrau": {
+    "plural": "sarraus",
+    "form": "M"
+  },
+  "sarraus": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -60239,6 +60283,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "volcanologie": {
+    "plural": "volcanologies",
+    "form": "F"
+  },
+  "volcanologies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "volcanologue": {
     "plural": "volcanologues",
     "form": "F/M"
@@ -60672,10 +60724,6 @@
     "form": "M"
   },
   "yachtings": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "yeux": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -62812,8 +62860,8 @@
     "form": "F"
   },
   "œil": {
-    "plural": "yeux",
-    "form": "M"
+    "plural": "œils",
+    "form": "M/PL"
   },
   "œils": {
     "plural": "isPlural",
@@ -62830,10 +62878,6 @@
   "œuf": {
     "plural": "oeufs",
     "form": "M"
-  },
-  "œufs": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "œuvre": {
     "plural": "oeuvres",

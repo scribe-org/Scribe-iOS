@@ -1,217 +1,861 @@
 [
-  { "preposition": "aufgrund", "case": "genitive case" },
-  { "preposition": "an", "case": "dative case" },
-  { "preposition": "an", "case": "accusative case" },
-  { "preposition": "innerhalb", "case": "genitive case" },
-  { "preposition": "ausschließlich", "case": "genitive case" },
-  { "preposition": "während", "case": "genitive case" },
-  { "preposition": "abzüglich", "case": "genitive case" },
-  { "preposition": "halber", "case": "genitive case" },
-  { "preposition": "beziehentlich", "case": "genitive case" },
-  { "preposition": "hinsichtlich", "case": "genitive case" },
-  { "preposition": "an Stelle", "case": "genitive case" },
-  { "preposition": "anstelle", "case": "genitive case" },
-  { "preposition": "benebst", "case": "dative case" },
-  { "preposition": "gemäß", "case": "dative case" },
-  { "preposition": "angelegentlich", "case": "genitive case" },
-  { "preposition": "behufs", "case": "genitive case" },
-  { "preposition": "gleich", "case": "dative case" },
-  { "preposition": "zu Seiten", "case": "genitive case" },
-  { "preposition": "zuseiten", "case": "genitive case" },
-  { "preposition": "durch", "case": "accusative case" },
-  { "preposition": "aus", "case": "dative case" },
-  { "preposition": "neben", "case": "dative case" },
-  { "preposition": "neben", "case": "accusative case" },
-  { "preposition": "inwährend", "case": "dative case" },
-  { "preposition": "für", "case": "accusative case" },
-  { "preposition": "wider", "case": "accusative case" },
-  { "preposition": "wegen", "case": "genitive case" },
-  { "preposition": "links", "case": "genitive case" },
-  { "preposition": "unterhalb", "case": "genitive case" },
-  { "preposition": "pro", "case": "dative case" },
-  { "preposition": "pro", "case": "accusative case" },
-  { "preposition": "einschließlich", "case": "genitive case" },
-  { "preposition": "zuwider", "case": "dative case" },
-  { "preposition": "ungeachtet", "case": "genitive case" },
-  { "preposition": "analog", "case": "dative case" },
-  { "preposition": "angesichts", "case": "genitive case" },
-  { "preposition": "mit Hilfe", "case": "genitive case" },
-  { "preposition": "mithilfe", "case": "genitive case" },
-  { "preposition": "zzgl.", "case": "genitive case" },
-  { "preposition": "zuzüglich", "case": "genitive case" },
-  { "preposition": "antwortlich", "case": "genitive case" },
-  { "preposition": "ennet", "case": "dative case" },
-  { "preposition": "ennet", "case": "genitive case" },
-  { "preposition": "gelegentlich", "case": "genitive case" },
-  { "preposition": "je", "case": "accusative case" },
-  { "preposition": "kraft", "case": "genitive case" },
-  { "preposition": "rücksichtlich", "case": "genitive case" },
-  { "preposition": "südlich", "case": "genitive case" },
-  { "preposition": "versus", "case": "accusative case" },
-  { "preposition": "vorbehaltlich", "case": "genitive case" },
-  { "preposition": "zeit", "case": "genitive case" },
-  { "preposition": "aufseiten", "case": "genitive case" },
-  { "preposition": "auf Seiten", "case": "genitive case" },
-  { "preposition": "uneingedenk", "case": "genitive case" },
-  { "preposition": "auf", "case": "dative case" },
-  { "preposition": "auf", "case": "accusative case" },
-  { "preposition": "hinum", "case": "accusative case" },
-  { "preposition": "halb" },
-  { "preposition": "seit", "case": "dative case" },
-  { "preposition": "laut", "case": "dative case" },
-  { "preposition": "laut", "case": "genitive case" },
-  { "preposition": "inklusive", "case": "genitive case" },
-  { "preposition": "ob", "case": "dative case" },
-  { "preposition": "ob", "case": "genitive case" },
-  { "preposition": "längs", "case": "genitive case" },
-  { "preposition": "via", "case": "accusative case" },
-  { "preposition": "inmitten", "case": "genitive case" },
-  { "preposition": "mangels", "case": "genitive case" },
-  { "preposition": "nördlich", "case": "genitive case" },
-  { "preposition": "seitlich", "case": "genitive case" },
-  { "preposition": "vermöge", "case": "genitive case" },
-  { "preposition": "willen", "case": "genitive case" },
-  { "preposition": "zu", "case": "dative case" },
-  { "preposition": "südöstlich", "case": "genitive case" },
-  { "preposition": "a" },
-  { "preposition": "namens", "case": "genitive case" },
-  { "preposition": "rechts", "case": "genitive case" },
-  { "preposition": "anstatt", "case": "genitive case" },
-  { "preposition": "à", "case": "accusative case" },
-  { "preposition": "betreffs", "case": "genitive case" },
-  { "preposition": "minus", "case": "dative case" },
-  { "preposition": "minus", "case": "accusative case" },
-  { "preposition": "minus", "case": "genitive case" },
-  { "preposition": "gen", "case": "accusative case" },
-  { "preposition": "mitsamt", "case": "dative case" },
-  { "preposition": "seitens", "case": "genitive case" },
-  { "preposition": "unfern", "case": "genitive case" },
-  { "preposition": "mang", "case": "dative case" },
-  { "preposition": "mang", "case": "accusative case" },
-  { "preposition": "von", "case": "dative case" },
-  { "preposition": "diesseits", "case": "genitive case" },
-  { "preposition": "jenseits", "case": "genitive case" },
-  { "preposition": "trotz", "case": "genitive case" },
-  { "preposition": "nebst", "case": "dative case" },
-  { "preposition": "per", "case": "dative case" },
-  { "preposition": "per", "case": "accusative case" },
-  { "preposition": "unbeschadet", "case": "genitive case" },
-  { "preposition": "nahe", "case": "dative case" },
-  { "preposition": "zusamt", "case": "dative case" },
-  { "preposition": "abseits", "case": "genitive case" },
-  { "preposition": "zwischen", "case": "dative case" },
-  { "preposition": "zwischen", "case": "accusative case" },
-  { "preposition": "ohne", "case": "accusative case" },
-  { "preposition": "bei", "case": "dative case" },
-  { "preposition": "nach", "case": "dative case" },
-  { "preposition": "gegenwarts", "case": "genitive case" },
-  { "preposition": "auf Grund", "case": "genitive case" },
-  { "preposition": "zwecks", "case": "genitive case" },
-  { "preposition": "zuungunsten", "case": "genitive case" },
-  { "preposition": "nacher", "case": "dative case" },
-  { "preposition": "gegen", "case": "accusative case" },
-  { "preposition": "über", "case": "dative case" },
-  { "preposition": "über", "case": "accusative case" },
-  { "preposition": "zufolge", "case": "dative case" },
-  { "preposition": "mit", "case": "dative case" },
-  { "preposition": "unter", "case": "dative case" },
-  { "preposition": "unter", "case": "accusative case" },
-  { "preposition": "vor", "case": "dative case" },
-  { "preposition": "vor", "case": "accusative case" },
-  { "preposition": "infolge", "case": "genitive case" },
-  { "preposition": "ab", "case": "dative case" },
-  { "preposition": "beiderseits", "case": "genitive case" },
-  { "preposition": "außer", "case": "dative case" },
-  { "preposition": "statt", "case": "genitive case" },
-  { "preposition": "hinter", "case": "dative case" },
-  { "preposition": "hinter", "case": "accusative case" },
-  { "preposition": "dank", "case": "dative case" },
-  { "preposition": "dank", "case": "genitive case" },
-  { "preposition": "fern", "case": "dative case" },
-  { "preposition": "fern", "case": "genitive case" },
-  { "preposition": "bezüglich", "case": "genitive case" },
-  { "preposition": "plus", "case": "dative case" },
-  { "preposition": "plus", "case": "accusative case" },
-  { "preposition": "plus", "case": "genitive case" },
-  { "preposition": "qua" },
-  { "preposition": "anfangs", "case": "genitive case" },
-  { "preposition": "entlang", "case": "dative case" },
-  { "preposition": "entlang", "case": "accusative case" },
-  { "preposition": "entlang", "case": "genitive case" },
-  { "preposition": "entsprechend", "case": "dative case" },
-  { "preposition": "unweit", "case": "genitive case" },
-  { "preposition": "zu Gunsten" },
-  { "preposition": "zugunsten", "case": "genitive case" },
-  { "preposition": "innert", "case": "dative case" },
-  { "preposition": "innert", "case": "genitive case" },
-  { "preposition": "mittelst", "case": "genitive case" },
-  { "preposition": "nächst", "case": "dative case" },
-  { "preposition": "vis-a-vis", "case": "dative case" },
-  { "preposition": "vis-à-vis", "case": "dative case" },
-  { "preposition": "voller", "case": "genitive case" },
-  { "preposition": "von Seiten", "case": "genitive case" },
-  { "preposition": "vonseiten", "case": "genitive case" },
-  { "preposition": "weitab", "case": "genitive case" },
-  { "preposition": "ungleich", "case": "dative case" },
-  { "preposition": "in", "case": "dative case" },
-  { "preposition": "in", "case": "accusative case" },
-  { "preposition": "in puncto", "case": "genitive case" },
-  { "preposition": "lang", "case": "accusative case" },
-  { "preposition": "oberhalb", "case": "genitive case" },
-  { "preposition": "bis", "case": "accusative case" },
-  { "preposition": "unerachtet", "case": "genitive case" },
-  { "preposition": "exklusive", "case": "genitive case" },
-  { "preposition": "zunächst", "case": "dative case" },
-  { "preposition": "anlässlich", "case": "genitive case" },
-  { "preposition": "contra", "case": "accusative case" },
-  { "preposition": "fernab", "case": "genitive case" },
-  { "preposition": "hindurch", "case": "accusative case" },
-  { "preposition": "kontra", "case": "accusative case" },
-  { "preposition": "ober", "case": "dative case" },
-  { "preposition": "oberkant", "case": "genitive case" },
-  { "preposition": "vorgängig", "case": "dative case" },
-  { "preposition": "vorgängig", "case": "genitive case" },
-  { "preposition": "westlich", "case": "genitive case" },
-  { "preposition": "zu Lasten", "case": "genitive case" },
-  { "preposition": "zu Ungunsten", "case": "genitive case" },
-  { "preposition": "zulasten", "case": "genitive case" },
-  { "preposition": "ungerechnet", "case": "genitive case" },
-  { "preposition": "vermittels", "case": "genitive case" },
-  { "preposition": "vermittelst", "case": "genitive case" },
-  { "preposition": "um", "case": "accusative case" },
-  { "preposition": "längsseits", "case": "genitive case" },
-  { "preposition": "nordwestlich", "case": "genitive case" },
-  { "preposition": "außerhalb", "case": "genitive case" },
-  { "preposition": "binnen", "case": "dative case" },
-  { "preposition": "zulieb" },
-  { "preposition": "zuliebe", "case": "dative case" },
-  { "preposition": "betreffend", "case": "accusative case" },
-  { "preposition": "entgegen", "case": "dative case" },
-  { "preposition": "samt", "case": "dative case" },
-  { "preposition": "ausgangs", "case": "genitive case" },
-  { "preposition": "ausweislich", "case": "genitive case" },
-  { "preposition": "eingangs", "case": "genitive case" },
-  { "preposition": "mittels", "case": "genitive case" },
-  { "preposition": "punkto", "case": "genitive case" },
-  { "preposition": "sonder", "case": "accusative case" },
-  { "preposition": "anhand", "case": "genitive case" },
-  { "preposition": "unangesehen", "case": "accusative case" },
-  { "preposition": "unangesehen", "case": "genitive case" },
-  { "preposition": "unterkant", "case": "genitive case" },
-  { "preposition": "nordöstlich", "case": "genitive case" },
-  { "preposition": "südwestlich", "case": "genitive case" },
-  { "preposition": "seitab", "case": "genitive case" },
-  { "preposition": "voll", "case": "genitive case" },
-  { "preposition": "bar", "case": "genitive case" },
-  { "preposition": "beidseits", "case": "genitive case" },
-  { "preposition": "eingedenk", "case": "genitive case" },
-  { "preposition": "nid", "case": "dative case" },
-  { "preposition": "östlich", "case": "genitive case" },
-  { "preposition": "seitwärts", "case": "genitive case" },
-  { "preposition": "vorbehältlich", "case": "genitive case" },
-  { "preposition": "zuhanden", "case": "genitive case" },
-  { "preposition": "getreu", "case": "dative case" },
-  { "preposition": "abseiten", "case": "genitive case" },
-  { "preposition": "näher", "case": "dative case" },
-  { "preposition": "gegenüber", "case": "dative case" }
+  {
+    "preposition": "aufgrund",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "an",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "an",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "innerhalb",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ausschließlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "während",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "abzüglich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "halber",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "beziehentlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "hinsichtlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "an Stelle",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "anstelle",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "benebst",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "gemäß",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "angelegentlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "behufs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "gleich",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "zu Seiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zuseiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "durch",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "aus",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "neben",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "neben",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "inwährend",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "für",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "wider",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "wegen",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "links",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "unterhalb",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "pro",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "pro",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "einschließlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zuwider",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "ungeachtet",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "analog",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "angesichts",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mit Hilfe",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mithilfe",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zzgl.",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zuzüglich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "antwortlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ennet",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "ennet",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "gelegentlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "je",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "kraft",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "rücksichtlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "südlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "versus",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "vorbehaltlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zeit",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "aufseiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "auf Seiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "uneingedenk",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "auf",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "auf",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "hinum",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "halb"
+  },
+  {
+    "preposition": "seit",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "laut",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "laut",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "inklusive",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ob",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "ob",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "längs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "via",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "inmitten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mangels",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nördlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "seitlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vermöge",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "willen",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zu",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "südöstlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "a"
+  },
+  {
+    "preposition": "namens",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "rechts",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "anstatt",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "à",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "betreffs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "minus",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "minus",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "minus",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "gen",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "mitsamt",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "seitens",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "unfern",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mang",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "mang",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "von",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "diesseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "jenseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "trotz",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nebst",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "per",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "per",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "unbeschadet",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nahe",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "zusamt",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "abseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zwischen",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "zwischen",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "ohne",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "bei",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "nach",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "zuungunsten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nacher",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "gegen",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "über",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "über",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "zufolge",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "mit",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "unter",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "unter",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "vor",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "vor",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "infolge",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "gegenwarts",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "auf Grund",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zwecks",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ab",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "beiderseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "außer",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "statt",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "hinter",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "hinter",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "dank",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "dank",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "fern",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "fern",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "bezüglich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "plus",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "plus",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "plus",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "qua"
+  },
+  {
+    "preposition": "anfangs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "entlang",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "entlang",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "entlang",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "entsprechend",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "unweit",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zu Gunsten"
+  },
+  {
+    "preposition": "zugunsten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "innert",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "innert",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mittelst",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nächst",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "vis-a-vis",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "vis-à-vis",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "voller",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "von Seiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vonseiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "weitab",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ungleich",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "in",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "in",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "in puncto",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "lang",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "oberhalb",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "bis",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "unerachtet",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "exklusive",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zunächst",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "anlässlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "contra",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "fernab",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "hindurch",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "kontra",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "ober",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "oberkant",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vorgängig",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "vorgängig",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "westlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zu Lasten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zu Ungunsten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zulasten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ungerechnet",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vermittels",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vermittelst",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "um",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "längsseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nordwestlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "einbezüglich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "außerhalb",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "binnen",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "zulieb"
+  },
+  {
+    "preposition": "zuliebe",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "betreffend",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "entgegen",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "samt",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "ausgangs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "ausweislich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "eingangs",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "mittels",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "punkto",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "sonder",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "anhand",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "unangesehen",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "unangesehen",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "unterkant",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nordöstlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "südwestlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "seitab",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "voll",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "bar",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "beidseits",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "eingedenk",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "nid",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "östlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "seitwärts",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "vorbehältlich",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "zuhanden",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "getreu",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "abseiten",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "näher",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "gegenüber",
+    "case": "Q145599"
+  }
 ]

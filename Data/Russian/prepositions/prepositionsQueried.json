@@ -1,22 +1,78 @@
 [
-  { "preposition": "в" },
-  { "preposition": "въ" },
-  { "preposition": "на", "case": "accusative case" },
-  { "preposition": "на", "case": "prepositional case" },
-  { "preposition": "за" },
-  { "preposition": "из", "case": "genitive case" },
-  { "preposition": "по", "case": "dative case" },
-  { "preposition": "по", "case": "accusative case" },
-  { "preposition": "по", "case": "prepositional case" },
-  { "preposition": "около", "case": "genitive case" },
-  { "preposition": "минус" },
-  { "preposition": "после", "case": "genitive case" },
-  { "preposition": "под", "case": "accusative case" },
-  { "preposition": "под", "case": "instrumental case" },
-  { "preposition": "от", "case": "genitive case" },
-  { "preposition": "вокруг", "case": "genitive case" },
-  { "preposition": "с", "case": "instrumental case" },
-  { "preposition": "съ", "case": "instrumental case" },
-  { "preposition": "для", "case": "genitive case" },
-  { "preposition": "к", "case": "dative case" }
+  {
+    "preposition": "из",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "по",
+    "case": "Q145599"
+  },
+  {
+    "preposition": "по",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "по",
+    "case": "Q2114906"
+  },
+  {
+    "preposition": "около",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "минус"
+  },
+  {
+    "preposition": "в"
+  },
+  {
+    "preposition": "въ"
+  },
+  {
+    "preposition": "на",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "на",
+    "case": "Q2114906"
+  },
+  {
+    "preposition": "за"
+  },
+  {
+    "preposition": "после",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "под",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "под",
+    "case": "Q192997"
+  },
+  {
+    "preposition": "от",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "вокруг",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "с",
+    "case": "Q192997"
+  },
+  {
+    "preposition": "съ",
+    "case": "Q192997"
+  },
+  {
+    "preposition": "для",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "к",
+    "case": "Q145599"
+  }
 ]

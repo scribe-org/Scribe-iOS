@@ -63,14 +63,14 @@ The App Store videos, images and text can be found in [Resources/AppStore](https
 
 The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`-new keyboard-`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22-new+keyboard-%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
 
-| Language   |   Nouns | Verbs | Translations\* | Adjectives† | Prepositions‡ |
-| :--------- | ------: | ----: | -------------: | ----------: | ------------: |
-| French     |  15,710 | 1,241 |         67,609 |           - |             - |
-| German     |  27,526 | 3,125 |         67,609 |           - |           188 |
-| Portuguese |   4,530 |   188 |         67,609 |           - |             - |
-| Russian    | 194,389 |    11 |         67,609 |           - |            12 |
-| Spanish    |   8,310 |    87 |         67,609 |           - |             - |
-| Swedish    |  41,102 | 4,133 |         67,609 |           - |             - |
+| Languages  |   Nouns | Verbs | Translations | Adjectives | Prepositions |
+| :--------- | ------: | ----: | -----------: | ---------: | -----------: |
+| French     |  15,721 | 1,241 |       67,609 |          - |            - |
+| German     |  27,678 | 3,126 |       67,609 |          - |          189 |
+| Portuguese |   4,549 |   188 |       67,609 |          - |            - |
+| Russian    | 194,385 |    11 |       67,609 |          - |           12 |
+| Spanish    |   8,323 |    93 |       67,609 |          - |            - |
+| Swedish    |  41,170 | 4,133 |       67,609 |          - |            - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 

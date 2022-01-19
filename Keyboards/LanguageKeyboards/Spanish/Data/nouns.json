@@ -1955,6 +1955,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "antónimo": {
+    "plural": "antónimos",
+    "form": "M"
+  },
+  "antónimos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anular": {
     "plural": "anulares",
     "form": "M"
@@ -12547,6 +12555,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "erupciones": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "erupción": {
+    "plural": "erupciones",
+    "form": "F"
+  },
   "escabeche": {
     "plural": "escabeches",
     "form": "M"
@@ -15403,10 +15419,6 @@
     "plural": "gatos",
     "form": "M"
   },
-  "gatas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "gatera": {
     "plural": "gateras",
     "form": "F"
@@ -15424,8 +15436,8 @@
     "form": "PL"
   },
   "gato": {
-    "plural": "gatas",
-    "form": "M"
+    "plural": "gatos",
+    "form": "M/PL"
   },
   "gatos": {
     "plural": "isPlural",
@@ -19384,6 +19396,14 @@
     "form": ""
   },
   "magias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "magma": {
+    "plural": "magmas",
+    "form": "M"
+  },
+  "magmas": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26299,6 +26319,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "randa": {
+    "plural": "randas",
+    "form": "F"
+  },
+  "randas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rango": {
     "plural": "rangos",
     "form": "M"
@@ -29204,6 +29232,14 @@
     "form": "M"
   },
   "sintetizadores": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sinónimo": {
+    "plural": "sinónimos",
+    "form": "M"
+  },
+  "sinónimos": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32879,6 +32915,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "volcanes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "volcán": {
+    "plural": "volcanes",
+    "form": "M"
+  },
   "voltereta": {
     "plural": "volteretas",
     "form": "F"
@@ -32932,6 +32976,14 @@
     "form": "F"
   },
   "vueltas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vulcanología": {
+    "plural": "vulcanologías",
+    "form": "F"
+  },
+  "vulcanologías": {
     "plural": "isPlural",
     "form": "PL"
   },
