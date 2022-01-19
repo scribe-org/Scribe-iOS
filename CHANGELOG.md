@@ -23,7 +23,7 @@ Data updates are now all done through a single Python file - update_data.py.
 ### 🎨 Design Changes
 
 - The text size for the preview bar in landscape mode for phones was made smaller.
-- The height of the keyboard for landscape mode was made slightly smaller.
+- The height of the keyboard in landscape for phones mode was made slightly smaller.
 
 ### 🐛 Bug Fixes
 
