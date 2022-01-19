@@ -12,7 +12,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
-Data updates are now all done through a single Python file.
+Data updates are now all done through a single Python file - update_data.py.
 
 ### 🎨 Design Changes
 
@@ -24,6 +24,11 @@ Data updates are now all done through a single Python file.
 - The keyboard colors now update if the user switches between light and dark mode.
 - Auto-capitalization and switching to the letter keys weren't always triggered after a period.
 - Shifting orientation from portrait to landscape is now seamless, but landscape to portrait is still a WIP.
+
+### ♻️ Code Refactoring
+
+- Queries were refactored to reduce their total characters so they can be sent through query APIs.
+- Command variables were edited to interact with new formatting from query refactoring.
 
 # Scribe 1.1.0
 
