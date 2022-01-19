@@ -21,47 +21,34 @@ verbs_formatted = {}
 
 all_keys = [
     "infinitive",
-    "indicativePresentFPS",
-    "indicativePresentSPS",
-    "indicativePresentTPS",
-    "indicativePresentFPP",
-    "indicativePresentSPP",
-    "indicativePresentTPP",
-    "preteriteFPS",
-    "preteriteSPS",
-    "preteriteTPS",
-    "preteriteFPP",
-    "preteriteSPP",
-    "preteriteTPP",
-    "pastPerfectFPS",
-    "pastPerfectSPS",
-    "pastPerfectTPS",
-    "pastPerfectFPP",
-    "pastPerfectSPP",
-    "pastPerfectTPP",
+    "presFPS",
+    "presSPS",
+    "presTPS",
+    "presFPP",
+    "presSPP",
+    "presTPP",
+    "pretFPS",
+    "pretSPS",
+    "pretTPS",
+    "pretFPP",
+    "pretSPP",
+    "pretTPP",
+    "impFPS",
+    "impSPS",
+    "impTPS",
+    "impFPP",
+    "impSPP",
+    "impTPP",
 ]
-
-
-def fix_tense(tense):
-    """
-    Fixes the name of pastPerfect to imperfect.
-
-    Fixes a bug where for some reason the SPARQL query times out if "imperfect" is used.
-    """
-    if "pastPerfect" in tense:
-        return tense.replace("pastPerfect", "imperfect")
-    else:
-        return tense
-
 
 for verb_vals in verbs_list:
     verbs_formatted[verb_vals["infinitive"]] = {}
 
     for conj in [c for c in all_keys if c != "infinitive"]:
         if conj in verb_vals.keys():
-            verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = verb_vals[conj]
+            verbs_formatted[verb_vals["infinitive"]][conj] = verb_vals[conj]
         else:
-            verbs_formatted[verb_vals["infinitive"]][fix_tense(conj)] = ""
+            verbs_formatted[verb_vals["infinitive"]][conj] = ""
 
 verbs_formatted = collections.OrderedDict(sorted(verbs_formatted.items()))
 

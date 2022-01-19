@@ -12,7 +12,6 @@ SELECT
     wikibase:lexicalCategory wd:Q24905 .
 
   # Active Voice
-  ##############
 
   # Infinitive (required)
   ?lexeme ontolex:lexicalForm ?activeInfinitiveForm .
@@ -52,7 +51,6 @@ SELECT
   } .
 
   # Passive Voice
-  ###############
 
   # Infinitive
   OPTIONAL {

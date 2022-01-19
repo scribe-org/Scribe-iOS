@@ -121,11 +121,11 @@ func frGetConjugationTitle() -> String {
 func frGetConjugationState() -> String {
   switch frConjugationState {
   case .indicativePresent:
-    return "indicativePresent"
+    return "pres"
   case .preterite:
-    return "preterite"
+    return "pret"
   case .imperfect:
-    return "imperfect"
+    return "imp"
   }
 }
 
@@ -196,11 +196,11 @@ func deGetConjugationTitle() -> String {
 func deGetConjugationState() -> String {
   switch deConjugationState {
   case .indicativePresent:
-    return "indicativePresent"
+    return "pres"
   case .indicativePreterite:
-    return "indicativePreterite"
+    return "pret"
   case .indicativePerfect:
-    return "indicativePerfect"
+    return "perf"
   }
 }
 
@@ -273,13 +273,13 @@ func ptGetConjugationTitle() -> String {
 func ptGetConjugationState() -> String {
   switch ptConjugationState {
   case .indicativePresent:
-    return "indicativePresent"
+    return "pres"
   case .pastPerfect:
-    return "pastPerfect"
+    return "perf"
   case .pastImperfect:
-    return "pastImperfect"
+    return "impf"
   case .futureSimple:
-    return "futureSimple"
+    return "fSimp"
   }
 }
 
@@ -370,7 +370,7 @@ func ruGetConjugationTitle() -> String {
 func ruGetConjugationState() -> String {
   switch ruConjugationState {
   case .present:
-    return "present"
+    return "pres"
   case .past:
     return "past"
   }
@@ -437,11 +437,11 @@ func esGetConjugationTitle() -> String {
 func esGetConjugationState() -> String {
   switch esConjugationState {
   case .indicativePresent:
-    return "indicativePresent"
+    return "pres"
   case .preterite:
-    return "preterite"
+    return "pret"
   case .imperfect:
-    return "imperfect"
+    return "imp"
   }
 }
 

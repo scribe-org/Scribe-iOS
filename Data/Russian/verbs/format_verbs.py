@@ -21,12 +21,12 @@ verbs_formatted = {}
 
 all_keys = [
     "infinitive",
-    "presentFPS",
-    "presentSPS",
-    "presentTPS",
-    "presentFPP",
-    "presentSPP",
-    "presentTPP",
+    "presFPS",
+    "presSPS",
+    "presTPS",
+    "presFPP",
+    "presSPP",
+    "presTPP",
     "pastFeminine",
     "pastMasculine",
     "pastNeutral",
