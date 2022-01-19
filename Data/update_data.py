@@ -283,7 +283,7 @@ for l in language_keys:
 for l in language_keys:
     if l == language_keys[0]:
         data_added_string += f"- {l} (New):" if l in new_language_list else f"- {l}:"
-    elif l in new_language_list:
+    else:
         data_added_string += (
             f"\n- {l} (New):" if l in new_language_list else f"\n- {l}:"
         )
