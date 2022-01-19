@@ -17,9 +17,7 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-<!---
-Also available on [Android](https://github.com/scribe-org/Scribe-Android) and for [desktop](https://github.com/scribe-org/Scribe-Desktop).
---->
+<!-- Also available on [Android](https://github.com/scribe-org/Scribe-Android) and [Desktop](https://github.com/scribe-org/Scribe-Desktop). -->
 
 ### Language learning keyboards for iOS
 
@@ -143,6 +141,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Dynamic layouts for cross-device performance
 - Portrait and landscape modes
 - Dark mode compatibility
+- Autocomplete and correct (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](<(https://github.com/scribe-org/Scribe-iOS/issues/2)>))
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing `'` returns to the alphabetic keyboard
@@ -162,15 +161,13 @@ Work that is in progress or could be implemented is tracked in the [Issues](http
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe.
 
-<!---
-# Featured By
+<!-- # Featured By
 
 <div align="center">
   <br>
   <a href="https://tech-news.wikimedia.de/en/homepage/"><img width="300" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikimedia_deutschland_logo.png" alt="Wikimedia Tech News"></a>
   <br>
-</div>
---->
+</div> -->
 
 # Powered By
 
