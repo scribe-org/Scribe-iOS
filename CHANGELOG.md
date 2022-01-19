@@ -42,6 +42,13 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - Adds Russian, French, Portuguese and Swedish keyboards.
 
+### ✨ New Features
+
+- Hold-to-select functionality for symbol keys.
+- The keyboard keys are capitalized if the user deletes at the start of the preview bar.
+- Removes noun-gender annotation for given names to avoid misgendering people.
+- Users are now able to pass upper-case arguments to translate and conjugate.
+
 ### 🗃️ Data Added
 
 - French (New): 15,710 nouns, 1,241 verbs (mostly infinitives), 67,609 translations
@@ -50,13 +57,6 @@ Data updates are now all done through a single Python file - update_data.py.
 - Russian (New): 194,389 nouns, 11 verbs, 12 prepositions, 67,609 translations
 - Spanish: 180 nouns, 22 verbs
 - Swedish (New): 41,102 nouns, 4,133 verbs, 67,609 translations
-
-### ✨ New Features
-
-- Hold-to-select functionality for symbol keys.
-- The keyboard keys are capitalized if the user deletes at the start of the preview bar.
-- Removes noun-gender annotation for given names to avoid misgendering people.
-- Users are now able to pass upper-case arguments to translate and conjugate.
 
 ### 🎨 Design Changes
 
@@ -120,6 +120,14 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - Keyboards for German and Spanish.
 
+### ✨ Features
+
+- Keyboard extensions that can be used in any app.
+- Annotation of words in the preview bar including the genders of nouns and cases that follow prepositions.
+- Basic English to keyboard language translations.
+- Querying the plurals of nouns.
+- Conjugations of verbs.
+
 ### 🗃️ Data
 
 - Wikidata WDQS queries saved so that data can be updated before releases.
@@ -130,14 +138,6 @@ Data updates are now all done through a single Python file - update_data.py.
 - Adds baseline noun, verb, translation and preposition data for the new keyboards.
   - German: 27K+ nouns, 3K+ verbs, 65K+ translations, 190 prepositions
   - Spanish: 8K+ nouns, 65 verbs, 65K+ translations
-
-### ✨ Features
-
-- Keyboard extensions that can be used in any app.
-- Annotation of words in the preview bar including the genders of nouns and cases that follow prepositions.
-- Basic English to keyboard language translations.
-- Querying the plurals of nouns.
-- Conjugations of verbs.
 
 ### 🎨 Design
 
