@@ -1,0 +1,3 @@
+Scribe is updated regularly to add new keyboards, features and language data.
+
+This version includes:
