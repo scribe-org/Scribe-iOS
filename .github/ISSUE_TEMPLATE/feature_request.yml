@@ -6,7 +6,6 @@ body:
     id: terms
     attributes:
       label: Terms
-      description: By submitting this issue, you agree to the following
       options:
         - label: I have searched open and closed issues for duplicates
           required: true
