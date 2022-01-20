@@ -15,21 +15,21 @@ body:
     id: description
     attributes:
       label: Description
-      description: A brief description of the enhancement you propose.
+      placeholder: A brief description of the enhancement you propose.
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots
-      description: Please add screenshots if applicable.
+      placeholder: Please add screenshots if applicable.
     validations:
       required: false
   - type: textarea
     id: contribution
     attributes:
       label: Contribution
-      description: Let us know if you'd like to help and how :)
+      placeholder: Let us know if you'd like to help and how :)
     validations:
       required: false
   - type: markdown
