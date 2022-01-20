@@ -1,12 +1,12 @@
 name: ✨ Feature request
 description: Have a new idea or feature for Scribe-iOS? Please suggest!
-labels: ['goal: addition']
+labels: "feature"
 body:
   - type: checkboxes
     id: terms
     attributes:
       label: Terms
-      description: By submitting this issue, you agree to the following
+      description: By submitting this issue, you agree to the following:
       options:
         - label: I have searched open and closed issues for duplicates
           required: true
@@ -23,7 +23,7 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
-      description: Please add screenshots if applicable
+      description: Please add screenshots if applicable.
     validations:
       required: false
   - type: textarea
