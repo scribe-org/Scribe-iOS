@@ -8,7 +8,16 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# Scribe 1.1.1 (WIP)
+# Scribe 1.2.0 (WIP)
+
+Scribe's first design sprint with the help of Berlin's Spencer Arney!
+
+### 🎨 Design Changes
+
+- The keyboard buttons have been made slightly wider.
+<!--- All App Store media has been improved to reflect these changes.-->
+
+# Scribe 1.1.1
 
 ### 🗃️ Data Added
 

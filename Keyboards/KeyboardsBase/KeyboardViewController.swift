@@ -790,6 +790,9 @@ class KeyboardViewController: UIInputViewController {
   ///  - to: the stackView in which the button is found.
   ///  - width: the width of the padding.
   ///  - key: the key associated with the button.
+  ///
+  ///  Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
+  ///  addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
   func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
     let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
     padding.setTitleColor(.clear, for: .normal)
@@ -808,8 +811,6 @@ class KeyboardViewController: UIInputViewController {
     paddingViews.append(padding)
     stackView.addArrangedSubview(padding)
   }
-  // Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
-  // addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
 
   // MARK: Override UIInputViewController functions
 
@@ -860,6 +861,7 @@ class KeyboardViewController: UIInputViewController {
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
     loadInterface()
+
     self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
   }
 
@@ -977,7 +979,7 @@ class KeyboardViewController: UIInputViewController {
           let btn = UIButton(type: .custom)
           btn.backgroundColor = keyColor
           btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
-          btn.layer.borderWidth = 4
+          btn.layer.borderWidth = 3
           btn.layer.cornerRadius = keyCornerRadius
 
           var key = keyboard[row][col]
