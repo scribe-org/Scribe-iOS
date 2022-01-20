@@ -25,14 +25,14 @@ body:
       label: Screenshots
       description: Please add screenshots if applicable
     validations:
-      required: true
+      required: false
   - type: textarea
     id: contribution
     attributes:
       label: Contribution
       description: Let us know if you'd like to help and how :)
     validations:
-    required: false
+      required: false
   - type: markdown
     attributes:
       value: |
