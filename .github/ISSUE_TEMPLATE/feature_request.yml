@@ -1,8 +1,17 @@
-name: Feature Request
+name: ✨ Feature request
 description: Have a new idea or feature for Scribe-iOS? Please suggest!
-title: '[FEATURE] <description>'
 labels: ['goal: addition']
 body:
+    - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      description: By submitting this issue, you agree to the following
+      options:
+        - label: I have searched open and closed issues for duplicates
+          required: true
+        - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
   - type: textarea
     id: description
     attributes:
@@ -13,18 +22,19 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshot
+      label: Screenshots
       description: Please add screenshots if applicable
     validations:
       required: false
   - type: textarea
-    id: extrainfo
+    id: contribution
     attributes:
-      label: Additional information
-      description: Is there any Solution you tried, Please Include?
+      label: Contribution
+      description: Let us know if you'd like to help and how :)
     validations:
-      required: false
+    required: false
   - type: markdown
     attributes:
       value: |
-        You can Submit your Request Now.
+        Thank you for your contribution! blush
+
