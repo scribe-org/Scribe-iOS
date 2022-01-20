@@ -2,7 +2,7 @@ name: ✨ Feature request
 description: Have a new idea or feature for Scribe-iOS? Please suggest!
 labels: ['goal: addition']
 body:
-    - type: checkboxes
+  - type: checkboxes
     id: terms
     attributes:
       label: Terms
