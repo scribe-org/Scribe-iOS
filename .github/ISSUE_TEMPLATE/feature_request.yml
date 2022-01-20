@@ -25,7 +25,7 @@ body:
       label: Screenshots
       description: Please add screenshots if applicable
     validations:
-      required: false
+      required: true
   - type: textarea
     id: contribution
     attributes:
