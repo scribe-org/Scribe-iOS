@@ -24,7 +24,7 @@ body:
       options:
         - iPhone
         - iPad
-        - Both
+        - iPhone and iPad
     validations:
       required: true
   - type: input
