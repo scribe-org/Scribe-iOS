@@ -7,7 +7,7 @@ body:
     attributes:
       label: Is there an existing issue for this?
       options:
-        - label: I have searched all open issues
+        - label: I have searched all [open issues](https://github.com/scribe-org/Scribe-iOS/issues)
           required: true
   - type: textarea
     attributes:
