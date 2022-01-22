@@ -5,8 +5,8 @@ body:
   - type: input
     id: language
     attributes:
-      label: Language
-      placeholder: List the related languages if applicable.
+      label: Languages
+      placeholder: Tell us which languages this relates to.
     validations:
       required: true
   - type: dropdown
