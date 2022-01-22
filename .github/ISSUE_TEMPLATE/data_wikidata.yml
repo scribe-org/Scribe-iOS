@@ -1,44 +1,41 @@
 name: 🗃️ Data and Wikidata
-description: Want to Report or suggest Data and Wikidata! Please Do
+description: Help Scribe bring free language data to your fingertips.
 labels: Data and Wikidata
 body:
   - type: input
     id: language
     attributes:
       label: Language
-      placeholder: What languages is the issue for ?   
+      placeholder: List the related languages if applicable.
     validations:
       required: true
   - type: input
-    id: wordtype
+    id: word_type
     attributes:
-      label: Wordtype
-      placeholder: |
-            Nouns, 
-            verbs, 
-            translations, 
-            adjectives, 
-            prepositions,
-            etc.
+      label: Word type
+      placeholder: Nouns, verbs, translations, adjectives, prepositions, etc.
   - type: dropdown
     id: browsers
     attributes:
-      label: Does it need to be added to Scribe or it is added to Wikidata? 
+      label: Data procedure
       multiple: true
       options:
-        - ETL: Wikidata to Scribe
-        - ELT: Add to Wikidata
-        - ETL and ELT       
-  - type: input
+        - ETL (Wikidata to Scribe)
+        - ELT (Add to Wikidata)
+        - ETL and ELT
+  - type: textarea
     id: choice
     attributes:
-      label: What do you want ?
-      description: |
-            You can search Wikidata for language data by putting L: at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
-            This is a helpful tip I got from their product owner :)   
+      label: Issue
+      placeholder: Let us know what your idea is!
     validations:
-      required: true         
+      required: true
+  - type: markdown
+    id: note_on_search
+    attributes:
+      value: |
+        ### - You can search Wikidata for language data by putting L: at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
   - type: markdown
     attributes:
       value: |
-        Thank you for supporting Scribe and [Wikidata](https://www.wikidata.org/) create free information platforms!
+        Thank you for supporting Scribe and [Wikidata](https://www.wikidata.org/) to create free information platforms!
