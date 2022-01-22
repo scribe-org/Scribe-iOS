@@ -14,8 +14,31 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
 ### 🎨 Design Changes
 
-- The keyboard buttons have been made slightly wider.
-<!--- All App Store media has been improved to reflect these changes.-->
+<!--- The Scribe app icon has been given a more modern style.-->
+<!--- The app screen has been completely redone to be more appealing.-->
+
+- Vertical spacing has been added between the keys to make them easier to press.
+- The keyboard buttons have been made slightly wider and smaller to reflect the system keyboard.
+- The keyboard command view has been revamped to create an appealing new interface.
+- The keys are now shaded to resemble the system keyboard more.
+  <!--- Keyboard colors in light and dark mode have been updated with fresh new looks.-->
+  <!--- The app texts have been made more opaque to make them easier on the eyes.-->
+  <!--- The colors of the Scribe key icon have been changed to match that of the other keys.-->
+  <!-- - Command button colors now have a slight gradient for a more full appearance. -->
+- Key corners were made less rounded to give them a blockier look.
+- The Scribe command interface is now sized relative to the keyboard.
+<!--- Scribe command buttons are shaded and have borders to make them more apparent on the keyboard.-->
+- Keyboard heights were changed slightly to reflect dynamic sizing of the command interface and be more similar to system keyboards.
+- Translation prompts were changed to just be two digit abbreviations of source and target language.
+  <!--- Colors for noun annotation were updated to improve readability.-->
+  <!--- Noun annotation is now done with a symbol to represent the gender.-->
+  <!--- Preposition annotation is now done with a symbol to represent the case.-->
+- Key characters and command prompts were made slightly smaller for iPads in landscape mode.
+<!--- All App Store media has been redone to reflect these changes.-->
+
+### 🐞 Bug Fixes
+
+- The keyboard colors should not switch randomly between light and dark mode now.
 
 # Scribe 1.1.1
 
@@ -33,8 +56,9 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - The text size for the preview bar in landscape mode for phones was made smaller.
 - The height of the keyboard in landscape mode for phones was made slightly smaller.
+- App store images were updated to combine the dark mode and devices screens.
 
-### 🐛 Bug Fixes
+### 🐞 Bug Fixes
 
 - The keyboard colors now update if the user switches between light and dark mode.
 - Auto-capitalization and switching to the letter keys weren't always triggered after a period.
@@ -74,7 +98,7 @@ Data updates are now all done through a single Python file - update_data.py.
 - Scribe command titles are now in the keyboard language for a more immersive experience.
 - Translate for Russian switches to an English keyboard.
 
-### 🐛 Bug Fixes
+### 🐞 Bug Fixes
 
 - German keyboards had the dollar sign shown on the number keys instead of the euro sign.
 - iPads had a semicolon key that also had apostrophes.
@@ -103,7 +127,7 @@ Data updates are now all done through a single Python file - update_data.py.
 - The keyboard has been made taller for iPhones to make the buttons larger vertically.
 - More space has been added around the buttons to make them better resemble system keyboard spacing.
 
-### 🐛 Bug Fixes
+### 🐞 Bug Fixes
 
 - The select keyboard button wouldn't be able to be long held after an initial button is pressed.
 - Canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
