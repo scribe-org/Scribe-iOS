@@ -1,4 +1,4 @@
-name: 🐞 Bug report
+name: 🐛 Bug report
 description: Report a bug to help us improve Scribe-iOS.
 labels: "bug"
 body:
