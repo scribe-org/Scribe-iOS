@@ -38,7 +38,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        - Including related Wikidata QIDs and PIDs would be very appreciated!
+        - Including related Wikidata [QIDs, PIDs and lexemes](https://www.wikidata.org/wiki/Wikidata:Identifiers) would be very appreciated!
   - type: markdown
     attributes:
       value: |
