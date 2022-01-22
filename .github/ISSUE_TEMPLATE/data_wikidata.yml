@@ -26,6 +26,7 @@ body:
         - ETL (Wikidata to Scribe)
         - ELT (Add to Wikidata)
         - ETL and ELT
+        - Other or not sure
     validations:
       required: true
   - type: textarea
