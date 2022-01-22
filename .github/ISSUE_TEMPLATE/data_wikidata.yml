@@ -1,5 +1,5 @@
 name: 🗃️ Data and Wikidata
-description: Help Scribe bring free language data to your fingertips.
+description: Help Scribe bring language data to your fingertips.
 labels: Data and Wikidata
 body:
   - type: input
@@ -14,6 +14,8 @@ body:
     attributes:
       label: Word type
       placeholder: Nouns, verbs, translations, adjectives, prepositions, etc.
+    validations:
+      required: true
   - type: dropdown
     id: browsers
     attributes:
@@ -27,14 +29,10 @@ body:
     id: choice
     attributes:
       label: Issue
+      description: You can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
       placeholder: Let us know what your idea is!
     validations:
       required: true
-  - type: markdown
-    id: note_on_search
-    attributes:
-      value: |
-        ### - You can search Wikidata for language data by putting L: at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
   - type: markdown
     attributes:
       value: |
