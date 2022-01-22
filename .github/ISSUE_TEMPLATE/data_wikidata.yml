@@ -1,0 +1,44 @@
+name: 🗃️ Data and Wikidata
+description: Want to Report or suggest Data and Wikidata! Please Do
+labels: Data and Wikidata
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: What languages is the issue for ?   
+    validations:
+      required: true
+  - type: input
+    id: wordtype
+    attributes:
+      label: wordtype
+      placeholder: |
+           1. Nouns 
+           2. Verbs 
+           3. Translations 
+           4. Adjectives 
+           5. Prepositions
+           6. Any other
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Does it need to be added to Scribe or it is added to Wikidata? 
+      multiple: true
+      options:
+        - ETL: Wikidata to Scribe
+        - ELT: Add to Wikidata
+        - ETL and ELT       
+  - type: input
+    id: choice
+    attributes:
+      label: What do you want ?
+      description: |
+            You can search Wikidata for language data by putting L: at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
+            This is a helpful tip I got from their product owner :)   
+    validations:
+      required: true         
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for supporting Scribe and [Wikidata](https://www.wikidata.org/) create free information platforms!
