@@ -14,12 +14,12 @@ body:
     attributes:
       label: Wordtype
       placeholder: |
-            Nouns 
-            Verbs 
-            Translations 
-            Adjectives 
-            Prepositions
-            Any other
+            Nouns, 
+            verbs, 
+            translations, 
+            adjectives, 
+            prepositions,
+            any other.
   - type: dropdown
     id: browsers
     attributes:
