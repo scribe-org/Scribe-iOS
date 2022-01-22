@@ -13,7 +13,6 @@ body:
     id: browsers
     attributes:
       label: Data procedure
-      multiple: true
       options:
         - ETL (Wikidata to Scribe)
         - ELT (Add to Wikidata)
