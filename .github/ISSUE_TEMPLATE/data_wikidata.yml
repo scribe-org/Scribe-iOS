@@ -1,5 +1,5 @@
 name: 🗃️ Data and Wikidata
-description: Help Scribe bring language data to your fingertips.
+description: Help Scribe bring open-source language data to your fingertips.
 labels: "data"
 body:
   - type: checkboxes
