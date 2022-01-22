@@ -2,6 +2,15 @@ name: 🗃️ Data and Wikidata
 description: Help Scribe bring language data to your fingertips.
 labels: "data"
 body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I have searched [open and closed issues](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue)
+          required: true
+        - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
   - type: input
     id: language
     attributes:
