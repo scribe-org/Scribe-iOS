@@ -19,7 +19,7 @@ body:
             translations, 
             adjectives, 
             prepositions,
-            any other.
+            etc.
   - type: dropdown
     id: browsers
     attributes:
