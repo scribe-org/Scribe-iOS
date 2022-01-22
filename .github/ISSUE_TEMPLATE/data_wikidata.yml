@@ -1,6 +1,6 @@
 name: 🗃️ Data and Wikidata
 description: Help Scribe bring language data to your fingertips.
-labels: Data and Wikidata
+labels: "data"
 body:
   - type: input
     id: language
@@ -30,11 +30,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Including related Wikidata QIDs and PIDs would be very appreciated!
+        - Including related Wikidata QIDs and PIDs would be very appreciated!
   - type: markdown
     attributes:
       value: |
-        Tip: you can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
+        - Tip: you can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
   - type: markdown
     attributes:
       value: |
