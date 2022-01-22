@@ -29,10 +29,12 @@ body:
       required: true
   - type: markdown
     attributes:
-      description: Including related Wikidata QIDs and PIDs would be very appreciated.
+      value: |
+        Including related Wikidata QIDs and PIDs would be very appreciated!
   - type: markdown
     attributes:
-      description: You can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
+      value: |
+        Tip: you can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
   - type: markdown
     attributes:
       value: |
