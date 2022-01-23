@@ -1,5 +1,5 @@
 name: ❓ Question
-description:  Do you have any question or want to start any discussion. 
+description: Ask a question or start a discussion.
 labels: "question"
 body:
   - type: checkboxes
@@ -14,11 +14,10 @@ body:
   - type: textarea
     id: question
     attributes:
-      label: Question/Discussion
-      placeholder: Tell us what this relates to ?
+      label: Question
     validations:
-      required: true  
+      required: true
   - type: markdown
     attributes:
       value: |
-        Thank you for Contributing!
+        Thanks for your interest in Scribe!
