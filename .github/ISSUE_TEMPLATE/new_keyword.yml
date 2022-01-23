@@ -1,5 +1,5 @@
 name: globe_with_meridians New keyboard 
-description: Help Scribe add keyboard.
+description: Help Scribe adding keyboard.
 labels: "-new keyboard-"
 body:
   - type: checkboxes
@@ -12,39 +12,20 @@ body:
         - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
   - type: textarea
-    id: language
+    id: support
     attributes:
-      label: Languages
-      placeholder: Tell us which languages this relates to.
+      label: Describe what kind of support is needed
+      placeholder: Explain the language a bit including why support is needed for certain word types, and tell us how Scribe can help people type in it.
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: input
+    id: data
     attributes:
-      label: Data procedure
-      options:
-        - ETL (Wikidata to Scribe)
-        - ELT (Add to Wikidata)
-        - ETL and ELT
-        - Other or not sure
-    validations:
-      required: true
-  - type: textarea
-    id: choice
-    attributes:
-      label: Issue
-      placeholder: Let us know what your idea is!
+      label: Data
+      placeholder: What Current amounts of data is present on Wikidata.
     validations:
       required: true
   - type: markdown
     attributes:
       value: |
-        - Including related Wikidata [QIDs, PIDs and lexemes](https://www.wikidata.org/wiki/Wikidata:Identifiers) would be very appreciated!
-  - type: markdown
-    attributes:
-      value: |
-        - Tip: you can search Wikidata for language data by putting `L:` at the start of a [search](https://www.wikidata.org/w/index.php?search=&search=&title=Special%3ASearch&go=Go)
-  - type: markdown
-    attributes:
-      value: |
-        Thank you for supporting free information platforms!
+       Thanks for sharing your interest in bringing another language to Scribe!
