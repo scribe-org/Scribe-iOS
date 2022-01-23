@@ -13,9 +13,7 @@ body:
         - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
         - label: This issue is about one language, and I've changed the title to reflect this.
-          required: true  
-        - label: This issue is about one language, and I've changed the title to reflect this
-          required: true  
+          required: true        - 
   - type: textarea
     id: support
     attributes:
