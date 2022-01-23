@@ -2,7 +2,8 @@
 # Enter this query at https://query.wikidata.org/ and change the language where directed.
 
 SELECT ?wordCategory (COUNT(?wordCategory) as ?wordCategoryCounts) WHERE {
-  # Enter language here.
+  # Enter language QID here.
+  # You can find the QID of the language you want to check by searching for it on https://www.wikidata.org/.
   FILTER( ?language = wd:Q1860 )
 
   # Checking nouns, proper nouns, verbs, adjectives, adverbs, prepositions and conjunctions.
