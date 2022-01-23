@@ -1,0 +1,23 @@
+# This query is to check the totals of a given language on Wikidata.
+# Enter this query at https://query.wikidata.org/ and change the language where directed.
+
+SELECT ?wordCategory (COUNT(?wordCategory) as ?wordCategoryCounts) WHERE {
+  # Enter language here.
+  FILTER( ?language = wd:Q1860 )
+
+  # We want nouns, proper nouns, verbs, adjectives, adverbs, prepositions and conjunctions
+  VALUES ?wordCategories { wd:Q1084 wd:Q147276 wd:Q24905 wd:Q34698 wd:Q380057 wd:Q4833830 wd:Q191536 }
+
+  # Query the lexeme if it's in the above categories of words.
+  ?lexeme a ontolex:LexicalEntry ;
+            dct:language ?language ;
+            wikibase:lexicalCategory ?category ;
+  FILTER(?category = ?wordCategories )
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]" .
+    ?category rdfs:label ?wordCategory .
+  }
+}
+GROUP BY ?wordCategory
+ORDER BY ?wordCategory
