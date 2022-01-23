@@ -1,6 +1,6 @@
 name: 🌐 New keyboard 
-description: Help Scribe adding keyboard.
-labels: "-new keyboard-"
+description: Help Scribe adding a new language keyboard.
+labels: "new keyboard"
 body:
   - type: checkboxes
     id: terms
