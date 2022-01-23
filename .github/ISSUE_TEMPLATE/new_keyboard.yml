@@ -1,6 +1,7 @@
-name: 🌐 New keyboard
-description: Help Scribe add a new language keyboard!
+name: 🌐 New keyboard 
+description: Suggest a new language keyboard for Scribe!
 labels: "new keyboard"
+title: Add <language> keyboard
 body:
   - type: checkboxes
     id: terms
@@ -11,31 +12,25 @@ body:
           required: true
         - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
+        - label: This issue is about one language, and I've changed the title to reflect this.
+          required: true  
+        - label: This issue is about one language, and I've changed the title to reflect this
+          required: true  
   - type: textarea
     id: support
     attributes:
-      label: Language support
-      placeholder: |
-        Tell us about the language and how Scribe can help people type in it.
-        Examples:
-          - The number of noun genders
-          - How verbs are conjugated (ex: like in "language")
-          - Preposition-case relationships
-          - Other grammar rules that are hard
+      label: Describe what kind of support is needed ?
+      placeholder: Explain the language a bit including why support is needed for certain word types, and tell us how Scribe can help people type in it.
     validations:
       required: true
   - type: input
     id: data
     attributes:
       label: Data
-      placeholder: X nouns, Y verbs, etc
+      placeholder: What Current amounts of data is present on Wikidata ?
     validations:
-      required: false
-  # - type: markdown
-  #   attributes:
-  #     value: |
-  #       - You can get this information by running [this query]() after choosing the language.
+      required: true
   - type: markdown
     attributes:
       value: |
-        Thanks for showing interest in bringing another language to Scribe!
+       Thanks for showing interest in bringing another language to Scribe! to Thanks for your interest in adding another Scribe keyboard!
