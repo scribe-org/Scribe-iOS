@@ -31,13 +31,10 @@ body:
     id: data
     attributes:
       label: Available data
+      description: This information is appreciated as it helps us know how much support we can offer for the language. Feel free to leave this blank and we'll do it for you :)
       placeholder: X nouns, Y verbs, etc
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: |
-        - This information is appreciated as it helps us know how much support we can offer for the language. Feel free to leave this blank and we'll do it for you :)
   - type: markdown
     attributes:
       value: |
