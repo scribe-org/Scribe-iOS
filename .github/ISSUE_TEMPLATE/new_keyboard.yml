@@ -27,6 +27,13 @@ body:
           - Other grammar rules that are hard
     validations:
       required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Contribution
+      placeholder: Let us know if you'd like to help and how :)
+    validations:
+      required: false
   # - type: input
   #   id: data
   #   attributes:
