@@ -9,19 +9,24 @@ import UIKit
 // A larger vertical bar than the normal | key for the cursor.
 let previewCursor: String = "│"
 var previewPromptSpacing: String = ""
-var previewState: Bool! = false
+var previewState: Bool = false
 
 var inputWordIsCapitalized: Bool = false
 var wordToReturn: String = ""
 
-var invalidState: Bool! = false
+var invalidState: Bool = false
 var invalidCommandMsg: String = ""
 
-var nounFormToDisplay: String = ""
+// Annotation variables.
+var annotationState: Bool = false
+var nounAnnotationsToDisplay: Int = 0
+var prepAnnotationState: Bool = false
+
+var annotationHeight = CGFloat(0)
 
 // Indicates that the keyboard has switched to another.
 // For example another input method is needed to translate.
-var swtichInput: Bool = false
+var switchInput: Bool = false
 
 // Translate, conjugate, and plural variables.
 var translateBtnLbl: String = ""

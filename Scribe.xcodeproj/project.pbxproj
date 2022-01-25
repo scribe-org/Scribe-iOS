@@ -35,16 +35,10 @@
 		D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
-		D109A233275B6A91005E2271 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
-		D109A234275B6A91005E2271 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
-		D109A235275B6A92005E2271 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
-		D109A236275B6A92005E2271 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
 		D109A237275B6A99005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D109A238275B6A9A005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
-		D12E537427594C1E000205F9 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
-		D12E537527594C1E000205F9 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -56,11 +50,31 @@
 		D1671A75275A1FC000A7C118 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
-		D1671A78275A1FC500A7C118 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
-		D1671A79275A1FC500A7C118 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
-		D18575DA2756690C00BA7F8A /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
-		D18575DB2756690C00BA7F8A /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
+		D17A93DD279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93DE279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93DF279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93E0279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93E1279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93E2279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */; };
+		D17A93E4279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93E5279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93E6279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93E7279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93E8279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93E9279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */; };
+		D17A93EB279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93EC279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93ED279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93EE279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93EF279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93F0279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */; };
+		D17A93F2279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
+		D17A93F3279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
+		D17A93F4279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
+		D17A93F5279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
+		D17A93F6279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
+		D17A93F7279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */; };
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
@@ -69,8 +83,6 @@
 		D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D18EA8A82760D6F5001E1358 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D18EA8A92760D6F5001E1358 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		D18EA8AA2760D6FC001E1358 /* ScribeBtnPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D18575D92756690C00BA7F8A /* ScribeBtnPad.png */; };
-		D18EA8AB2760D6FC001E1358 /* ScribeBtnPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = D12E537327594C1E000205F9 /* ScribeBtnPhone.png */; };
 		D18EA8AC2760D701001E1358 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D190B242274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D190B243274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -85,6 +97,7 @@
 		D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D19474C42740295300AF6EA5 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D19474C32740295300AF6EA5 /* prepositions.json */; };
+		D196B360279A051000228F3F /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196B35F279A051000228F3F /* PrivacyPolicy.swift */; };
 		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1D880CC27860CFA00407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880C927860CFA00407050 /* translations.json */; };
 		D1D880CD27860CFA00407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880CA27860CFA00407050 /* verbs.json */; };
@@ -189,7 +202,6 @@
 		D109A21E275B68B3005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
-		D12E537327594C1E000205F9 /* ScribeBtnPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhone.png; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -198,7 +210,10 @@
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		D18575D92756690C00BA7F8A /* ScribeBtnPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPad.png; sourceTree = "<group>"; };
+		D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadBlack.png; sourceTree = "<group>"; };
+		D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadWhite.png; sourceTree = "<group>"; };
+		D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneBlack.png; sourceTree = "<group>"; };
+		D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneWhite.png; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwedishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D18EA89D2760D4A6001E1358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +225,7 @@
 		D190B28F27426F4900705659 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		D190B29027426F4900705659 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D196B35F279A051000228F3F /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		D1D880C927860CFA00407050 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D1D880CA27860CFA00407050 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
@@ -311,6 +327,7 @@
 			children = (
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				38BD213522D5907F00C6795D /* ViewController.swift */,
+				D196B35F279A051000228F3F /* PrivacyPolicy.swift */,
 				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
@@ -438,8 +455,10 @@
 		D190B25427424F2900705659 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D18575D92756690C00BA7F8A /* ScribeBtnPad.png */,
-				D12E537327594C1E000205F9 /* ScribeBtnPhone.png */,
+				D17A93DC279C4F2C004495E2 /* ScribeBtnPadBlack.png */,
+				D17A93E3279C4F33004495E2 /* ScribeBtnPadWhite.png */,
+				D17A93EA279C4F3A004495E2 /* ScribeBtnPhoneBlack.png */,
+				D17A93F1279C4F41004495E2 /* ScribeBtnPhoneWhite.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -694,8 +713,10 @@
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
-				D12E537427594C1E000205F9 /* ScribeBtnPhone.png in Resources */,
-				D18575DA2756690C00BA7F8A /* ScribeBtnPad.png in Resources */,
+				D17A93F3279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E5279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
+				D17A93EC279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93DE279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,12 +725,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17A93EB279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93F2279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E4279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
-				D109A234275B6A91005E2271 /* ScribeBtnPad.png in Resources */,
-				D109A233275B6A91005E2271 /* ScribeBtnPhone.png in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
+				D17A93DD279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,12 +740,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17A93ED279C4F3A004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93F4279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E6279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880D227860D4700407050 /* verbs.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
-				D109A236275B6A92005E2271 /* ScribeBtnPad.png in Resources */,
-				D109A235275B6A92005E2271 /* ScribeBtnPhone.png in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
+				D17A93DF279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,12 +755,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17A93EF279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93F6279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E8279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
 				D10182122728275B0032A82D /* nouns.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
-				D18575DB2756690C00BA7F8A /* ScribeBtnPad.png in Resources */,
-				D12E537527594C1E000205F9 /* ScribeBtnPhone.png in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
+				D17A93E1279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,9 +774,11 @@
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
-				D1671A79275A1FC500A7C118 /* ScribeBtnPad.png in Resources */,
+				D17A93F5279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E7279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
+				D17A93EE279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93E0279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
-				D1671A78275A1FC500A7C118 /* ScribeBtnPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,12 +786,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18EA8AA2760D6FC001E1358 /* ScribeBtnPad.png in Resources */,
+				D17A93F0279C4F3B004495E2 /* ScribeBtnPhoneBlack.png in Resources */,
+				D17A93F7279C4F41004495E2 /* ScribeBtnPhoneWhite.png in Resources */,
+				D17A93E9279C4F33004495E2 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880E127860D7B00407050 /* translations.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
-				D18EA8AB2760D6FC001E1358 /* ScribeBtnPhone.png in Resources */,
+				D17A93E2279C4F2C004495E2 /* ScribeBtnPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +825,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BD213622D5907F00C6795D /* ViewController.swift in Sources */,
+				D196B360279A051000228F3F /* PrivacyPolicy.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 			);

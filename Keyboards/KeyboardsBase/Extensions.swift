@@ -54,4 +54,10 @@ extension String {
   var isUppercase: Bool {
     return self == self.uppercased()
   }
+
+  func count(of char: Character) -> Int {
+    return reduce(0) {
+      $1 == char ? $0 + 1 : $0
+    }
+  }
 }

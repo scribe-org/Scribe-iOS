@@ -9,11 +9,13 @@ import UIKit
 // A proxy into which text is typed.
 var proxy: UITextDocumentProxy!
 var controllerLanguage = String()
+var controllerLanguageAbbr = String()
 var spaceBar = String()
 
 // Variables for keyboard appearance.
 var keyboardHeight: CGFloat!
 var keyCornerRadius: CGFloat!
+var commandKeyCornerRadius: CGFloat!
 var buttonWidth = CGFloat(0)
 var letterButtonWidth = CGFloat(0)
 var numSymButtonWidth = CGFloat(0)
@@ -84,7 +86,7 @@ enum ShiftButtonState {
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
-var scribeBtnState: Bool! = false
+var scribeBtnState: Bool = false
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
@@ -100,6 +102,25 @@ func checkLandscapeMode() {
     isLandscapeView = true
   } else {
     isLandscapeView = false
+  }
+}
+
+// Gets the abbreviation of the controller language to set translation displays.
+func getControllerLanguageAbbr() -> String {
+  if controllerLanguage == "French" {
+    return "fr"
+  } else if controllerLanguage == "German" {
+    return "de"
+  } else if controllerLanguage == "Portuguese" {
+    return "pt"
+  } else if controllerLanguage == "Russian" {
+    return "ru"
+  } else if controllerLanguage == "Spanish" {
+    return "es"
+  } else if controllerLanguage == "Swedish" {
+    return "sv"
+  } else {
+    return ""
   }
 }
 
@@ -166,6 +187,49 @@ public enum EnglishKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
+/// Provides an English keyboard layout.
+func setENKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = EnglishKeyboardConstants.letterKeysPhone
+    numberKeys = EnglishKeyboardConstants.numberKeysPhone
+    symbolKeys = EnglishKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = EnglishKeyboardConstants.letterKeysPad
+    numberKeys = EnglishKeyboardConstants.numberKeysPad
+    symbolKeys = EnglishKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = EnglishKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = EnglishKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = EnglishKeyboardConstants.aAlternateKeys
+  eAlternateKeys = EnglishKeyboardConstants.eAlternateKeys
+  iAlternateKeys = EnglishKeyboardConstants.iAlternateKeys
+  oAlternateKeys = EnglishKeyboardConstants.oAlternateKeys
+  uAlternateKeys = EnglishKeyboardConstants.uAlternateKeys
+  sAlternateKeys = EnglishKeyboardConstants.sAlternateKeys
+  lAlternateKeys = EnglishKeyboardConstants.lAlternateKeys
+  zAlternateKeys = EnglishKeyboardConstants.zAlternateKeys
+  cAlternateKeys = EnglishKeyboardConstants.cAlternateKeys
+  nAlternateKeys = EnglishKeyboardConstants.nAlternateKeys
+  currencySymbol = "$"
+  currencySymbolAlternates = dollarAlternateKeys
+  spaceBar = "space"
+  invalidCommandMsg = "Not in directory"
+
+  translateBtnLbl = "Translate"
+  translatePrompt = previewPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Conjugate"
+  conjugatePrompt = previewPromptSpacing + "Conjugate: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Plural"
+  pluralPrompt = previewPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
+}
+
 // MARK: French interface variables
 
 public enum FrenchKeyboardConstants {
@@ -226,6 +290,47 @@ public enum FrenchKeyboardConstants {
   static let yAlternateKeys = ["ÿ"]
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let nAlternateKeys = ["ń", "ñ"]
+}
+
+/// Provides a French keyboard layout.
+func setFRKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = FrenchKeyboardConstants.letterKeysPhone
+    numberKeys = FrenchKeyboardConstants.numberKeysPhone
+    symbolKeys = FrenchKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = FrenchKeyboardConstants.letterKeysPad
+    numberKeys = FrenchKeyboardConstants.numberKeysPad
+    symbolKeys = FrenchKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = FrenchKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = FrenchKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = FrenchKeyboardConstants.aAlternateKeys
+  eAlternateKeys = FrenchKeyboardConstants.eAlternateKeys
+  iAlternateKeys = FrenchKeyboardConstants.iAlternateKeys
+  oAlternateKeys = FrenchKeyboardConstants.oAlternateKeys
+  uAlternateKeys = FrenchKeyboardConstants.uAlternateKeys
+  yAlternateKeys = FrenchKeyboardConstants.yAlternateKeys
+  cAlternateKeys = FrenchKeyboardConstants.cAlternateKeys
+  nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
+  currencySymbol = "€"
+  currencySymbolAlternates = euroAlternateKeys
+  spaceBar = "espace"
+  invalidCommandMsg = "Pas dans le répertoire"
+
+  translateBtnLbl = "Traduire"
+  translatePrompt = previewPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Conjuguer"
+  conjugatePrompt = previewPromptSpacing + "Conjuguer: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Pluriel"
+  pluralPrompt = previewPromptSpacing + "Pluriel: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
 }
 
 // MARK: German interface variables
@@ -293,6 +398,50 @@ public enum GermanKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
+/// Provides a German keyboard layout.
+func setDEKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = GermanKeyboardConstants.letterKeysPhone
+    numberKeys = GermanKeyboardConstants.numberKeysPhone
+    symbolKeys = GermanKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = GermanKeyboardConstants.letterKeysPad
+    numberKeys = GermanKeyboardConstants.numberKeysPad
+    symbolKeys = GermanKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = GermanKeyboardConstants.aAlternateKeys
+  eAlternateKeys = GermanKeyboardConstants.eAlternateKeys
+  iAlternateKeys = GermanKeyboardConstants.iAlternateKeys
+  oAlternateKeys = GermanKeyboardConstants.oAlternateKeys
+  uAlternateKeys = GermanKeyboardConstants.uAlternateKeys
+  yAlternateKeys = GermanKeyboardConstants.yAlternateKeys
+  sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
+  lAlternateKeys = GermanKeyboardConstants.lAlternateKeys
+  zAlternateKeys = GermanKeyboardConstants.zAlternateKeys
+  cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
+  nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+  currencySymbol = "€"
+  currencySymbolAlternates = euroAlternateKeys
+  spaceBar = "Leerzeichen"
+  invalidCommandMsg = "Nicht im Verzeichnis"
+
+  translateBtnLbl = "Übersetzen"
+  translatePrompt = previewPromptSpacing + "de -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Konjugieren"
+  conjugatePrompt = previewPromptSpacing + "Konjugieren: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Plural"
+  pluralPrompt = previewPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
+}
+
 // MARK: Portuguese interface variables
 
 public enum PortugueseKeyboardConstants {
@@ -354,6 +503,46 @@ public enum PortugueseKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
+/// Provides a Portuguese keyboard layout.
+func setPTKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = PortugueseKeyboardConstants.letterKeysPhone
+    numberKeys = PortugueseKeyboardConstants.numberKeysPhone
+    symbolKeys = PortugueseKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = PortugueseKeyboardConstants.letterKeysPad
+    numberKeys = PortugueseKeyboardConstants.numberKeysPad
+    symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
+  eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
+  iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
+  oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
+  uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
+  cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
+  nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+  currencySymbol = "$"
+  currencySymbolAlternates = dollarAlternateKeys
+  spaceBar = "espaço"
+  invalidCommandMsg = "Não está no diretório"
+
+  translateBtnLbl = "Traduzir"
+  translatePrompt = previewPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Conjugar"
+  conjugatePrompt = previewPromptSpacing + "Conjugar: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Plural"
+  pluralPrompt = previewPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
+}
+
 // MARK: Russian interface variables
 
 public enum RussianKeyboardConstants {
@@ -408,6 +597,41 @@ public enum RussianKeyboardConstants {
 
   static let еAlternateKeys = ["ë"]
   static let ьAlternateKeys = ["Ъ"]
+}
+
+/// Provides a Russian keyboard layout.
+func setRUKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = RussianKeyboardConstants.letterKeysPhone
+    numberKeys = RussianKeyboardConstants.numberKeysPhone
+    symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = RussianKeyboardConstants.letterKeysPad
+    numberKeys = RussianKeyboardConstants.numberKeysPad
+    symbolKeys = RussianKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = RussianKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
+  еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
+  ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
+  currencySymbol = "₽"
+  currencySymbolAlternates = roubleAlternateKeys
+  spaceBar = "Пробел"
+  invalidCommandMsg = "Нет в каталоге"
+
+  translateBtnLbl = "Перевести"
+  translatePrompt = previewPromptSpacing + "ru -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Спрягать"
+  conjugatePrompt = previewPromptSpacing + "Спрягать: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Множ"
+  pluralPrompt = previewPromptSpacing + "Множ: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
 }
 
 // MARK: Spanish interface variables
@@ -473,6 +697,48 @@ public class SpanishKeyboardConstants {
   static let nAlternateKeys = ["ń"]
 }
 
+/// Provides a Spanish keyboard layout.
+func setESKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = SpanishKeyboardConstants.letterKeysPhone
+    numberKeys = SpanishKeyboardConstants.numberKeysPhone
+    symbolKeys = SpanishKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = SpanishKeyboardConstants.letterKeysPad
+    numberKeys = SpanishKeyboardConstants.numberKeysPad
+    symbolKeys = SpanishKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = SpanishKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = SpanishKeyboardConstants.aAlternateKeys
+  eAlternateKeys = SpanishKeyboardConstants.eAlternateKeys
+  iAlternateKeys = SpanishKeyboardConstants.iAlternateKeys
+  oAlternateKeys = SpanishKeyboardConstants.oAlternateKeys
+  uAlternateKeys = SpanishKeyboardConstants.uAlternateKeys
+  sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
+  dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
+  cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
+  nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+  currencySymbol = "$"
+  currencySymbolAlternates = dollarAlternateKeys
+  spaceBar = "espacio"
+  invalidCommandMsg = "No en el directorio"
+
+  translateBtnLbl = "Traducir"
+  translatePrompt = previewPromptSpacing + "es -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Conjugar"
+  conjugatePrompt = previewPromptSpacing + "Conjugar: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Plural"
+  pluralPrompt = previewPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
+}
+
 // MARK: Swedish interface variables
 
 public class SwedishKeyboardConstants {
@@ -535,4 +801,47 @@ public class SwedishKeyboardConstants {
   static let sAlternateKeys = ["ß", "ś", "š"]
   static let cAlternateKeys = ["ç"]
   static let nAlternateKeys = ["ñ"]
+}
+
+/// Provides a Swedish keyboard layout.
+func setSVKeyboardLayout() {
+  if DeviceType.isPhone {
+    letterKeys = SwedishKeyboardConstants.letterKeysPhone
+    numberKeys = SwedishKeyboardConstants.numberKeysPhone
+    symbolKeys = SwedishKeyboardConstants.symbolKeysPhone
+  } else {
+    letterKeys = SwedishKeyboardConstants.letterKeysPad
+    numberKeys = SwedishKeyboardConstants.numberKeysPad
+    symbolKeys = SwedishKeyboardConstants.symbolKeysPad
+  }
+
+  keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = SwedishKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = SwedishKeyboardConstants.aAlternateKeys
+  eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
+  iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
+  oAlternateKeys = SwedishKeyboardConstants.oAlternateKeys
+  uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
+  äAlternateKeys = SwedishKeyboardConstants.äAlternateKeys
+  öAlternateKeys = SwedishKeyboardConstants.öAlternateKeys
+  sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
+  cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
+  nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
+  currencySymbol = "kr"
+  currencySymbolAlternates = kronaAlternateKeys
+  spaceBar = "mellanslag"
+  invalidCommandMsg = "Inte i katalogen"
+
+  translateBtnLbl = "Översätt"
+  translatePrompt = previewPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + previewCursor
+
+  conjugateBtnLbl = "Konjugera"
+  conjugatePrompt = previewPromptSpacing + "Konjugera: "
+  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+
+  pluralBtnLbl = "Plural"
+  pluralPrompt = previewPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + previewCursor
 }

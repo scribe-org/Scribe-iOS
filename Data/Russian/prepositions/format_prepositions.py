@@ -24,7 +24,7 @@ def convert_cases(case):
     """
     case = case.split(" case")[0]
     if case in ["accusative", "Q146078"]:
-        return "Akk"
+        return "Acc"
     elif case in ["dative", "Q145599"]:
         return "Dat"
     elif case in ["genitive", "Q146233"]:
