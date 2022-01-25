@@ -70,136 +70,133 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr3-T8-7HB" userLabel="ConjLeft">
-                    <rect key="frame" x="3" y="51.5" width="30" height="203.5"/>
+                    <rect key="frame" x="3" y="51.5" width="21.5" height="203.5"/>
                     <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="CBI-02-jwC"/>
-                    </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epX-eh-uqd" userLabel="ConjRight">
-                    <rect key="frame" x="287" y="51.5" width="30" height="203.5"/>
+                    <rect key="frame" x="295.5" y="51.5" width="21.5" height="203.5"/>
                     <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbB-Q5-JYD" userLabel="ConjBtnTL">
-                    <rect key="frame" x="36" y="51.5" width="122.5" height="100.5"/>
+                    <rect key="frame" x="27.5" y="51.5" width="131" height="100.5"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X69-uD-USO" userLabel="ConjBtnTR">
-                    <rect key="frame" x="161.5" y="51.5" width="122.5" height="100.5"/>
+                    <rect key="frame" x="161.5" y="51.5" width="131" height="100.5"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-cy-aGo" userLabel="ConjBtnBL">
-                    <rect key="frame" x="36" y="155" width="122.5" height="100"/>
+                    <rect key="frame" x="27.5" y="155" width="131" height="100"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myP-Mh-fDn" userLabel="ConjBtnBR">
-                    <rect key="frame" x="161.5" y="155" width="122.5" height="100"/>
+                    <rect key="frame" x="161.5" y="155" width="131" height="100"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUl-T5-Lgg" userLabel="ConjLblTL">
-                    <rect key="frame" x="36" y="51.5" width="122.5" height="20"/>
+                    <rect key="frame" x="27.5" y="51.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yf-Ey-fhO" userLabel="ConjLblTR">
-                    <rect key="frame" x="161.5" y="51.5" width="122.5" height="20"/>
+                    <rect key="frame" x="161.5" y="51.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92Z-QS-QCN" userLabel="ConjLblBL">
-                    <rect key="frame" x="36" y="155" width="122.5" height="19.5"/>
+                    <rect key="frame" x="27.5" y="155" width="131" height="19.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6c-Dk-kl5" userLabel="ConjLblBR">
-                    <rect key="frame" x="161.5" y="155" width="122.5" height="19.5"/>
+                    <rect key="frame" x="161.5" y="155" width="131" height="19.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-ij-Hyw" userLabel="FPSBtn">
-                    <rect key="frame" x="36" y="51.5" width="122.5" height="66.5"/>
+                    <rect key="frame" x="27.5" y="51.5" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18n-dD-Eou" userLabel="SPSBtn">
-                    <rect key="frame" x="36" y="120" width="122.5" height="66.5"/>
+                    <rect key="frame" x="27.5" y="120" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kON-8k-vtV" userLabel="TPSBtn">
-                    <rect key="frame" x="36" y="188.5" width="122.5" height="66.5"/>
+                    <rect key="frame" x="27.5" y="188.5" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-72-xUw" userLabel="FPPBtn">
-                    <rect key="frame" x="161.5" y="51.5" width="122.5" height="66.5"/>
+                    <rect key="frame" x="161.5" y="51.5" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-wZ-ogY" userLabel="SPPBtn">
-                    <rect key="frame" x="161.5" y="120" width="122.5" height="66.5"/>
+                    <rect key="frame" x="161.5" y="120" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-XE-qHq" userLabel="TPPBtn">
-                    <rect key="frame" x="161.5" y="188.5" width="122.5" height="66.5"/>
+                    <rect key="frame" x="161.5" y="188.5" width="131" height="66.5"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zF-Cw-FHM" userLabel="FPSLbl">
-                    <rect key="frame" x="36" y="51.5" width="122.5" height="20"/>
+                    <rect key="frame" x="27.5" y="51.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgD-l0-Jm1" userLabel="SPSLbl">
-                    <rect key="frame" x="36" y="120" width="122.5" height="20"/>
+                    <rect key="frame" x="27.5" y="120" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBL-dH-9NG" userLabel="TPSLbl">
-                    <rect key="frame" x="36" y="188.5" width="122.5" height="20"/>
+                    <rect key="frame" x="27.5" y="188.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cle-tW-yE1" userLabel="FPPLbl">
-                    <rect key="frame" x="161.5" y="51.5" width="122.5" height="20"/>
+                    <rect key="frame" x="161.5" y="51.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkU-RQ-53C" userLabel="SPPLbl">
-                    <rect key="frame" x="161.5" y="120" width="122.5" height="20"/>
+                    <rect key="frame" x="161.5" y="120" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDi-9w-xbx" userLabel="TPPLbl">
-                    <rect key="frame" x="161.5" y="188.5" width="122.5" height="20"/>
+                    <rect key="frame" x="161.5" y="188.5" width="131" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
@@ -557,6 +554,7 @@
                 <constraint firstItem="paN-0C-Jg2" firstAttribute="leading" secondItem="CEa-fu-C95" secondAttribute="trailing" constant="2" id="dc2-o2-ZJx"/>
                 <constraint firstItem="IR7-Kd-kHd" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="dgo-9u-kRB"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="height" secondItem="RVF-jy-JTf" secondAttribute="height" multiplier="0.85" id="dyp-Fx-xg3"/>
+                <constraint firstItem="Yr3-T8-7HB" firstAttribute="width" secondItem="MCB-7F-dNd" secondAttribute="width" multiplier="0.4" id="eay-0c-ooI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgS-T1-2rI" secondAttribute="trailing" constant="4" id="egT-nn-Axv"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="height" secondItem="IR7-Kd-kHd" secondAttribute="height" id="ekl-0b-05a"/>
                 <constraint firstItem="Fs3-ee-rCN" firstAttribute="height" secondItem="YX3-es-Zsb" secondAttribute="height" id="f7g-jA-Xwn"/>

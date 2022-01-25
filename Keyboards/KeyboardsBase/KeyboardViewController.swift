@@ -158,24 +158,24 @@ class KeyboardViewController: UIInputViewController {
   func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
     btn.setTitle("", for: .normal)
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
-    if iconName == "delete.left" {
+    if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 1.55, weight: .light, scale: .medium)
     }
     if isLandscapeView == true {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.5, weight: .light, scale: .medium)
-      if iconName == "delete.left" {
+      if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.2, weight: .light, scale: .medium)
       }
     }
     if DeviceType.isPad {
       if isLandscapeView == true {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.75, weight: .light, scale: .medium)
-        if iconName == "delete.left" {
+        if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
           selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.40, weight: .light, scale: .medium)
         }
       } else {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
-        if iconName == "delete.left" {
+        if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
           selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 2.6, weight: .light, scale: .medium)
         }
       }
@@ -470,7 +470,9 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateLblTPP)
 
     deactivateBtn(btn: conjugateShiftLeftBtn)
+    conjugateShiftLeftBtn.tintColor = UIColor.clear
     deactivateBtn(btn: conjugateShiftRightBtn)
+    conjugateShiftRightBtn.tintColor = UIColor.clear
 
     deactivateBtn(btn: conjugateBtnTL)
     deactivateBtn(btn: conjugateBtnBL)
@@ -1195,8 +1197,22 @@ class KeyboardViewController: UIInputViewController {
       activateConjugationDisplay()
       setConjugationState()
 
-      styleBtn(btn: conjugateShiftLeftBtn, title: "⟨", radius: keyCornerRadius)
-      styleBtn(btn: conjugateShiftRightBtn, title: "⟩", radius: keyCornerRadius)
+      styleIconBtn(btn: conjugateShiftLeftBtn, color: keyCharColor, iconName: "chevron.left")
+      conjugateShiftLeftBtn.clipsToBounds = true
+      conjugateShiftLeftBtn.layer.masksToBounds = false
+      conjugateShiftLeftBtn.layer.cornerRadius = keyCornerRadius
+      conjugateShiftLeftBtn.layer.shadowColor = keyShadowColor
+      conjugateShiftLeftBtn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+      conjugateShiftLeftBtn.layer.shadowOpacity = 1.0
+      conjugateShiftLeftBtn.layer.shadowRadius = 0.0
+      styleIconBtn(btn: conjugateShiftRightBtn, color: keyCharColor, iconName: "chevron.right")
+      conjugateShiftRightBtn.clipsToBounds = true
+      conjugateShiftRightBtn.layer.masksToBounds = false
+      conjugateShiftRightBtn.layer.cornerRadius = keyCornerRadius
+      conjugateShiftRightBtn.layer.shadowColor = keyShadowColor
+      conjugateShiftRightBtn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+      conjugateShiftRightBtn.layer.shadowOpacity = 1.0
+      conjugateShiftRightBtn.layer.shadowRadius = 0.0
     }
   }
 

@@ -82,7 +82,7 @@ extension UIColor {
   static let scribeBlueDark = UIColor(red: 100.0/255.0, green: 156.0/255.0, blue: 196.0/255.0, alpha: 1.0)
 
   static let previewRedDark = UIColor(red: 248.0/255.0, green: 89.0/255.0, blue: 94.0/255.0, alpha: 1.0)
-  static let previewBlueDark = UIColor(red: 71.0/255.0, green: 169.0/255.0, blue: 194.0/255.0, alpha: 1.0)
+  static let previewBlueDark = UIColor(red: 32.0/255.0, green: 149.0/255.0, blue: 233.0/255.0, alpha: 1.0)
   static let previewPurpleDark = UIColor(red: 164.0/255.0, green: 92.0/255.0, blue: 255.0/255.0, alpha: 1.0)
   static let previewGreenDark = UIColor(red: 120.0/255.0, green: 188.0/255.0, blue: 97.0/255.0, alpha: 1.0)
   static let previewOrangeDark = UIColor(red: 254.0/255.0, green: 148.0/255.0, blue: 72.0/255.0, alpha: 1.0)
