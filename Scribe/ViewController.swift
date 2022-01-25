@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     } else if displayPrivacyPolicy == true {
       privacyPolicyBtn.setTitle("View Installation", for: .normal)
     }
-    privacyPolicyBtn.setTitleColor(.black, for: .normal)
+    privacyPolicyBtn.setTitleColor(UIColor.keyCharColorLight, for: .normal)
     privacyPolicyBtn.backgroundColor = UIColor.link
     privacyPolicyBtn.addTarget(self, action: #selector(showHidePrivacyPolicy), for: .touchUpInside)
     privacyPolicyBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
@@ -98,10 +98,12 @@ class ViewController: UIViewController {
 
     appTextView.isEditable = false
     appTextView.linkTextAttributes = [
-      NSAttributedString.Key.foregroundColor: UIColor.blue,
+      NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
       NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
     ]
     appTextView.font = .systemFont(ofSize: fontSize)
+    appTextView.textColor = UIColor.keyCharColorLight
+    appTextView.backgroundColor = .white
   }
 
   /// The text for ViewController that includes the globe character.
@@ -162,7 +164,7 @@ class ViewController: UIViewController {
     let githubString = NSMutableAttributedString(string: """
 
 
-    Scribe is a fully open-source app. To report issues or contribute please visit us at\u{0020}
+    Scribe is fully open-source. To report issues or contribute please visit us at\u{0020}
     """)
     let fullInfoText = concatAttributedStrings(left: appTextView.attributedText, right: githubString)
     appTextView.attributedText = NSMutableAttributedString(attributedString: githubString)

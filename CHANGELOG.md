@@ -22,7 +22,7 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 - The keys are now shaded to resemble the system keyboard more.
 - Keyboard colors in light and dark mode have been updated to match system keyboards.
 - The keyboard now always switches to an English input when translating to make the functionality more clear.
-<!--- The app texts and keys have been made less opaque to make them easier on the eyes.-->
+- The app texts and key characters have been made less opaque to make them easier on the eyes.
 - The colors of the Scribe key icon have been changed to match that of the other keys.
 - Key corners were made less rounded to give them a blockier look.
 - The Scribe command interface is now sized relative to the keyboard.
@@ -35,7 +35,7 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 - Preposition annotation is now done with a rectangular symbol to represent the case.
 - Preposition case abbreviations have been changed to match the language of they keyboard.
 - Key characters and command prompts were made slightly smaller for iPads in landscape mode.
-<!-- - The user can now get to the settings by clicking the directions in the app screen. -->
+<!--- The user can now get to the settings by clicking the directions in the app screen. -->
 <!--- All App Store media has been redone to reflect these changes.-->
 
 ### 🐞 Bug Fixes

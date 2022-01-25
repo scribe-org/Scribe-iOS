@@ -139,7 +139,7 @@ class KeyboardViewController: UIInputViewController {
     btn.layer.cornerRadius = radius
     btn.setTitle(title, for: .normal)
     btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    btn.setTitleColor(UIColor.label, for: .normal)
+    btn.setTitleColor(keyCharColor, for: .normal)
 
     if title != "Scribe" {
       btn.layer.shadowColor = keyShadowColor
@@ -311,7 +311,7 @@ class KeyboardViewController: UIInputViewController {
     scribeBtn.setTitle("", for: .normal)
     let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .light, scale: .medium)
     scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
-    scribeBtn.tintColor = UIColor.label
+    scribeBtn.tintColor = keyCharColor
   }
 
   // Shadow elements for the Scribe button and preview bar.
@@ -886,7 +886,7 @@ class KeyboardViewController: UIInputViewController {
             capsKey = key
           }
           let keyToDisplay = shiftButtonState == .normal ? key : capsKey
-          btn.setTitleColor(UIColor.label, for: .normal)
+          btn.setTitleColor(keyCharColor, for: .normal)
           btn.layer.setValue(key, forKey: "original")
           btn.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
           btn.layer.setValue(false, forKey: "isSpecial")
@@ -1004,7 +1004,7 @@ class KeyboardViewController: UIInputViewController {
             previewBarShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
             previewBarShadow.layer.shadowColor = keyShadowColor
 
-            previewBar.textColor = UIColor.label
+            previewBar.textColor = keyCharColor
             previewBar.lineBreakMode = NSLineBreakMode.byWordWrapping
             if previewState == false {
               previewBar.text = ""
@@ -1048,23 +1048,23 @@ class KeyboardViewController: UIInputViewController {
           if key == "selectKeyboard" {
             selectKeyboardButton = btn
             self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-            styleIconBtn(btn: btn, color: UIColor.label, iconName: "globe")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "globe")
           }
 
           if key == "hideKeyboard" {
-            styleIconBtn(btn: btn, color: UIColor.label, iconName: "keyboard.chevron.compact.down")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
           }
 
           if key == "shift" {
-            styleIconBtn(btn: btn, color: UIColor.label, iconName: "shift")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
           }
 
           if key == "return" {
-            styleIconBtn(btn: btn, color: UIColor.label, iconName: "arrow.turn.down.left")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
           }
 
           if key == "delete" {
-            styleIconBtn(btn: btn, color: UIColor.label, iconName: "delete.left")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
           }
 
           // Setting hold-to-select functionality.
@@ -1131,10 +1131,10 @@ class KeyboardViewController: UIInputViewController {
             if key == "shift" {
               if shiftButtonState == .shift {
                 btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.black, iconName: "shift.fill")
+                styleIconBtn(btn: btn, color: UIColor.keyCharColorLight, iconName: "shift.fill")
               } else if shiftButtonState == .caps {
                 btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.black, iconName: "capslock.fill")
+                styleIconBtn(btn: btn, color: UIColor.keyCharColorLight, iconName: "capslock.fill")
               }
             }
           } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
@@ -1186,7 +1186,7 @@ class KeyboardViewController: UIInputViewController {
       scribeBtn.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
       previewBar.backgroundColor = keyColor
-      previewBar.textColor = UIColor.label
+      previewBar.textColor = keyCharColor
 
       deactivateBtn(btn: conjugateBtn)
       deactivateBtn(btn: translateBtn)
@@ -1380,7 +1380,7 @@ class KeyboardViewController: UIInputViewController {
           }
         }
 
-        elem.backgroundColor = UIColor.label
+        elem.backgroundColor = keyCharColor
       }
 
       elem.text = annotationToDisplay
@@ -1442,7 +1442,7 @@ class KeyboardViewController: UIInputViewController {
         } else if nounForm ==  "PL" {
           previewBar.textColor = previewOrange
         } else {
-          previewBar.textColor = UIColor.label
+          previewBar.textColor = keyCharColor
         }
 
         let wordSpacing = String(repeating: " ", count: ( numberOfAnnotations * 7 ) - ( numberOfAnnotations - 1 ) )
@@ -1492,7 +1492,7 @@ class KeyboardViewController: UIInputViewController {
       prepAnnotationState = true
       // Make preview bar font larger for annotation.
       previewBar.font = .systemFont(ofSize: annotationHeight * 0.75)
-      previewBar.textColor = UIColor.label
+      previewBar.textColor = keyCharColor
 
       // Initialize an array of display elements and count how many will be changed.
       // This is initialized based on how many noun annotations have already been assigned (max 2).
@@ -1561,7 +1561,7 @@ class KeyboardViewController: UIInputViewController {
   /// Clears the text found in the preview bar.
   func clearPreviewBar() {
     if previewState == false {
-      previewBar.textColor = UIColor.label
+      previewBar.textColor = keyCharColor
       previewBar.text = " "
     }
 
@@ -1823,7 +1823,7 @@ class KeyboardViewController: UIInputViewController {
         if isAlreadyPluralState != true {
           previewBar.text = previewPromptSpacing + invalidCommandMsg
         }
-        previewBar.textColor = UIColor.label
+        previewBar.textColor = keyCharColor
 
         invalidState = false
         isAlreadyPluralState = false
@@ -2079,7 +2079,7 @@ class KeyboardViewController: UIInputViewController {
         btn.setTitle(char.capitalized, for: .normal)
       }
       btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(UIColor.label, for: .normal)
+      btn.setTitleColor(keyCharColor, for: .normal)
 
       alternatesKeyView.addSubview(btn)
       setBtn(btn: btn, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
