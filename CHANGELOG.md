@@ -30,11 +30,12 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 - Keyboard layouts were changed to reflect dynamic sizing of the command interface and be more similar to system keyboards.
 <!--- The shift conjugation state buttons have been restyled to be more apparent.-->
 - Translation prompts were changed to just be two digit abbreviations of source and target language.
-<!--- Colors for noun annotation were updated to improve readability.-->
+- Colors for noun annotation were updated to improve readability.
 - Noun annotation is now done with a square symbol to represent the gender.
 - Preposition annotation is now done with a rectangular symbol to represent the case.
 - Preposition case abbreviations have been changed to match the language of they keyboard.
 - Key characters and command prompts were made slightly smaller for iPads in landscape mode.
+<!-- - The user can now get to the settings by clicking the directions in the app screen. -->
 <!--- All App Store media has been redone to reflect these changes.-->
 
 ### 🐞 Bug Fixes

@@ -632,7 +632,7 @@ class KeyboardViewController: UIInputViewController {
       a?.layer.cornerRadius = keyCornerRadius / 2
       a?.textAlignment = NSTextAlignment.center
       a?.isUserInteractionEnabled = false
-      a?.font = .systemFont(ofSize: annotationHeight * 0.65)
+      a?.font = .systemFont(ofSize: annotationHeight * 0.70)
       a?.textColor = keyColor
     }
 
@@ -1356,7 +1356,7 @@ class KeyboardViewController: UIInputViewController {
           elem.backgroundColor = previewGreen
         } else if annotation == "PL" {
           // Make text smaller to fit the annotation.
-          elem.font = .systemFont(ofSize: annotationHeight * 0.55)
+          elem.font = .systemFont(ofSize: annotationHeight * 0.60)
           elem.backgroundColor = previewOrange
         }
       } else {
