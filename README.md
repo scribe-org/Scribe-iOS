@@ -47,6 +47,8 @@ The following are combined preview videos for the [App Store](https://apps.apple
 
 https://user-images.githubusercontent.com/24387426/147608257-3e87f20e-328d-466d-a410-c6c44b24d0f8.mp4
 
+#### See also
+
 <details><summary><strong>iPad Pro 4th gen version</strong></summary>
 <p>
 
