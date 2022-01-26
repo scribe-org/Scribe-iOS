@@ -133,7 +133,7 @@ class KeyboardViewController: UIInputViewController {
   ///  - btn: the button to be styled.
   ///  - title: the title to be assigned.
   ///  - radius: the corner radius of the button.
-  func styleBtn(btn: UIButton, title: String, radius: CGFloat) { // titleSize: CGFloat
+  func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
     btn.clipsToBounds = true
     btn.layer.masksToBounds = false
     btn.layer.cornerRadius = radius
@@ -265,9 +265,12 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up the preview bar's color and text alignment.
   func setPreviewBar() {
-    previewBar.backgroundColor = keyColor
+    previewBar.backgroundColor = previewBarColor
+    previewBarBlend.backgroundColor = previewBarColor
+    previewBar.layer.borderColor = previewBarBorderColor
+    previewBar.layer.borderWidth = 1.0
     previewBar.textAlignment = NSTextAlignment.left
-    previewBar.font = .systemFont(ofSize: annotationHeight * 0.65)
+    previewBar.font = .systemFont(ofSize: annotationHeight * 0.7)
     previewBarShadow.isUserInteractionEnabled = false
 
     if DeviceType.isPhone {
@@ -304,18 +307,21 @@ class KeyboardViewController: UIInputViewController {
     }
     setBtn(btn: scribeBtn, color: commandKeyColor, name: "Scribe", canCapitalize: false, isSpecial: false)
     scribeBtnShadow.isUserInteractionEnabled = false
+    scribeBtn.layer.borderColor = previewBarBorderColor
+    scribeBtn.layer.borderWidth = 1.0
   }
 
   /// Changes the Scribe key to an escape key.
   func scribeBtnToEscape() {
     scribeBtn.setTitle("", for: .normal)
-    let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .light, scale: .medium)
+    let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .medium, scale: .medium)
     scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
     scribeBtn.tintColor = keyCharColor
   }
 
   // Shadow elements for the Scribe button and preview bar.
   @IBOutlet var previewBarShadow: UIButton!
+  @IBOutlet var previewBarBlend: UILabel!
   @IBOutlet var scribeBtnShadow: UIButton!
 
   // Buttons used to trigger Scribe command functionality.
@@ -408,9 +414,6 @@ class KeyboardViewController: UIInputViewController {
       conjugateBtnFPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
       conjugateBtnSPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
       conjugateBtnTPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-
-      conjugateShiftLeftBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateShiftRightBtn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
 
       conjugateBtnTL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
       conjugateBtnBL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
@@ -563,17 +566,29 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Assign labels that have been set by SetConjugationLabels functions.
-    conjugateLblFPS!.setTitle("  " + labelFPS, for: .normal)
-    conjugateLblSPS!.setTitle("  " + labelSPS, for: .normal)
-    conjugateLblTPS!.setTitle("  " + labelTPS, for: .normal)
-    conjugateLblFPP!.setTitle("  " + labelFPP, for: .normal)
-    conjugateLblSPP!.setTitle("  " + labelSPP, for: .normal)
-    conjugateLblTPP!.setTitle("  " + labelTPP, for: .normal)
+    conjugateLblFPS.setTitle("  " + labelFPS, for: .normal)
+    conjugateLblSPS.setTitle("  " + labelSPS, for: .normal)
+    conjugateLblTPS.setTitle("  " + labelTPS, for: .normal)
+    conjugateLblFPP.setTitle("  " + labelFPP, for: .normal)
+    conjugateLblSPP.setTitle("  " + labelSPP, for: .normal)
+    conjugateLblTPP.setTitle("  " + labelTPP, for: .normal)
 
-    conjugateLblTL!.setTitle("  " + labelTopLeft, for: .normal)
-    conjugateLblTR!.setTitle("  " + labelTopRight, for: .normal)
-    conjugateLblBL!.setTitle("  " + labelBottomLeft, for: .normal)
-    conjugateLblBR!.setTitle("  " + labelBottomRight, for: .normal)
+    conjugateLblFPS.isUserInteractionEnabled = false
+    conjugateLblSPS.isUserInteractionEnabled = false
+    conjugateLblTPS.isUserInteractionEnabled = false
+    conjugateLblFPP.isUserInteractionEnabled = false
+    conjugateLblSPP.isUserInteractionEnabled = false
+    conjugateLblTPP.isUserInteractionEnabled = false
+
+    conjugateLblTL.setTitle("  " + labelTopLeft, for: .normal)
+    conjugateLblTR.setTitle("  " + labelTopRight, for: .normal)
+    conjugateLblBL.setTitle("  " + labelBottomLeft, for: .normal)
+    conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
+
+    conjugateLblTL.isUserInteractionEnabled = false
+    conjugateLblTR.isUserInteractionEnabled = false
+    conjugateLblBL.isUserInteractionEnabled = false
+    conjugateLblBR.isUserInteractionEnabled = false
 
     if conjugateAlternateView == true {
       allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
@@ -635,7 +650,7 @@ class KeyboardViewController: UIInputViewController {
       a?.textAlignment = NSTextAlignment.center
       a?.isUserInteractionEnabled = false
       a?.font = .systemFont(ofSize: annotationHeight * 0.70)
-      a?.textColor = keyColor
+      a?.textColor = previewBarColor
     }
 
     for a in prepAnnotationDisplay {
@@ -644,7 +659,7 @@ class KeyboardViewController: UIInputViewController {
       a?.textAlignment = NSTextAlignment.center
       a?.isUserInteractionEnabled = false
       a?.font = .systemFont(ofSize: annotationHeight * 0.65)
-      a?.textColor = keyColor
+      a?.textColor = previewBarColor
     }
   }
 
@@ -958,6 +973,7 @@ class KeyboardViewController: UIInputViewController {
 
           if scribeBtnState {
             scribeBtnToEscape()
+            scribeBtn.layer.borderColor = UIColor.clear.cgColor
             scribeBtn.layer.cornerRadius = commandKeyCornerRadius
             scribeBtn.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
@@ -972,6 +988,8 @@ class KeyboardViewController: UIInputViewController {
             scribeBtnShadow.layer.shadowColor = keyShadowColor
 
             previewBar.backgroundColor = UIColor.clear
+            previewBar.layer.borderColor = UIColor.clear.cgColor
+            previewBarBlend.backgroundColor = UIColor.clear
             previewBar.text = ""
             previewBarShadow.backgroundColor = UIColor.clear
 
@@ -979,9 +997,9 @@ class KeyboardViewController: UIInputViewController {
             styleBtn(btn: conjugateBtn, title: conjugateBtnLbl, radius: commandKeyCornerRadius)
             styleBtn(btn: pluralBtn, title: pluralBtnLbl, radius: commandKeyCornerRadius)
 
-            translateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.6)
-            conjugateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.6)
-            pluralBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.6)
+            translateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+            conjugateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+            pluralBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
 
           } else {
             if previewState == true {
@@ -1133,10 +1151,10 @@ class KeyboardViewController: UIInputViewController {
             if key == "shift" {
               if shiftButtonState == .shift {
                 btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.keyCharColorLight, iconName: "shift.fill")
+                styleIconBtn(btn: btn, color: UIColor.label, iconName: "shift.fill")
               } else if shiftButtonState == .caps {
                 btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.keyCharColorLight, iconName: "capslock.fill")
+                styleIconBtn(btn: btn, color: UIColor.label, iconName: "capslock.fill")
               }
             }
           } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
@@ -1187,7 +1205,8 @@ class KeyboardViewController: UIInputViewController {
       scribeBtn.layer.cornerRadius = commandKeyCornerRadius
       scribeBtn.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
-      previewBar.backgroundColor = keyColor
+      previewBar.backgroundColor = previewBarColor
+      previewBarBlend.backgroundColor = previewBarColor
       previewBar.textColor = keyCharColor
 
       deactivateBtn(btn: conjugateBtn)
@@ -1362,6 +1381,13 @@ class KeyboardViewController: UIInputViewController {
           }
         }
 
+        if annotation == "PL" {
+          // Make text smaller to fit the annotation.
+          elem.font = .systemFont(ofSize: annotationHeight * 0.60)
+        } else {
+          elem.font = .systemFont(ofSize: annotationHeight * 0.70)
+        }
+
         if annotation == "F" {
           elem.backgroundColor = previewRed
         } else if annotation == "M" {
@@ -1371,8 +1397,6 @@ class KeyboardViewController: UIInputViewController {
         } else if annotation == "N" {
           elem.backgroundColor = previewGreen
         } else if annotation == "PL" {
-          // Make text smaller to fit the annotation.
-          elem.font = .systemFont(ofSize: annotationHeight * 0.60)
           elem.backgroundColor = previewOrange
         }
       } else {
@@ -1395,10 +1419,9 @@ class KeyboardViewController: UIInputViewController {
             annotationToDisplay = "Инс"
           }
         }
-
+        elem.font = .systemFont(ofSize: annotationHeight * 0.65)
         elem.backgroundColor = keyCharColor
       }
-
       elem.text = annotationToDisplay
     }
   }
@@ -1421,8 +1444,12 @@ class KeyboardViewController: UIInputViewController {
 
     let isNoun = nouns?[wordToCheck] != nil || nouns?[givenWord.lowercased()] != nil
     if isNoun {
+      // Clear the prior annotations to assure that preposition annotations don't persist.
+      hideAnnotations()
+      nounAnnotationsToDisplay = 0
+      
       // Make preview bar font larger for annotation.
-      previewBar.font = .systemFont(ofSize: annotationHeight * 0.75)
+      previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
 
       let nounForm = nouns?[wordToCheck]?["form"] as? String
       if nounForm == "" {
@@ -1470,11 +1497,20 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       }
+      let isPrep = prepositions?[wordToCheck] != nil
+      // Pass the preposition state so that if it's false nounAnnotationsToDisplay can be made 0.
+      if isPrep {
+        prepAnnotationState = true
+      }
     }
   }
 
   /// Annotates the preview bar with the form of a valid selected noun.
   func selectedNounAnnotation() {
+    if scribeBtnState {
+      scribeBtnState = false
+      loadKeys()
+    }
     let selectedWord = proxy.selectedText ?? ""
 
     nounAnnotation(givenWord: selectedWord)
@@ -1503,11 +1539,16 @@ class KeyboardViewController: UIInputViewController {
     inputWordIsCapitalized = firstLetter.isUppercase
     let wordToCheck = givenWord.lowercased()
 
+    // Check if prepAnnotationState has been passed and reset nounAnnotationsToDisplay if not.
+    if prepAnnotationState == false {
+      nounAnnotationsToDisplay = 0
+    }
+
     let isPreposition = prepositions?[wordToCheck] != nil
     if isPreposition {
       prepAnnotationState = true
       // Make preview bar font larger for annotation.
-      previewBar.font = .systemFont(ofSize: annotationHeight * 0.75)
+      previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
       previewBar.textColor = keyCharColor
 
       // Initialize an array of display elements and count how many will be changed.
@@ -1553,6 +1594,11 @@ class KeyboardViewController: UIInputViewController {
 
   /// Annotates the preview bar with the form of a valid selected preposition.
   func selectedPrepositionAnnotation() {
+    if scribeBtnState {
+      scribeBtnState = false
+      loadKeys()
+    }
+    
     if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
       let selectedWord = proxy.selectedText ?? ""
 
@@ -1794,6 +1840,7 @@ class KeyboardViewController: UIInputViewController {
       typedNounAnnotation()
       typedPrepositionAnnotation()
       annotationState = false
+      prepAnnotationState = false
       nounAnnotationsToDisplay = 0
 
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
@@ -1853,6 +1900,7 @@ class KeyboardViewController: UIInputViewController {
           typedNounAnnotation()
           typedPrepositionAnnotation()
           annotationState = false
+          prepAnnotationState = false
           nounAnnotationsToDisplay = 0
         }
       }

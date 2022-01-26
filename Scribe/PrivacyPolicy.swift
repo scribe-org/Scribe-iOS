@@ -3,10 +3,10 @@
 //
 //  The privacy policy for the Scribe app.
 //
+//  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
+//
 
 let privacyPolicyText = """
-Privacy Policy
-
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.
 
 This privacy policy (POLICY) is used to inform the reader of the policies for the access, tracking, collection, retention, use, and disclosure of personal information (USER INFORMATION) and usage data (USER DATA) for all individuals who make use of this SERVICE (USERS).

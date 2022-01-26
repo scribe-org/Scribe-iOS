@@ -28,6 +28,7 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 - The Scribe command interface is now sized relative to the keyboard.
 - Scribe command buttons are shaded to make them more apparent on the keyboard.
 - Keyboard layouts were changed to reflect dynamic sizing of the command interface and be more similar to system keyboards.
+- The preview bar and command element fonts have been bolded to be more readable.
 <!--- The shift conjugation state buttons have been restyled to be more apparent.-->
 - Translation prompts were changed to just be two digit abbreviations of source and target language.
 - Colors for noun annotation were updated to improve readability.
