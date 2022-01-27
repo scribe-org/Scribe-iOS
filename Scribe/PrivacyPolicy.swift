@@ -35,19 +35,23 @@ This SERVICE makes use of third-party services to manipulate some of the third-p
 
 This SERVICE contains links to external websites. If USERS click on a third-party link, they will be directed to a website. Note that these external websites are not operated by this SERVICE. Therefore, USERS are strongly advised to review the privacy policy of these websites. This SERVICE has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party sites or services.
 
-6. Content Notice
+6. Third-Party Images
+
+This SERVICE contains images that are copyrighted by third-parties. Specifically this app includes a copy of the logo for GitHub, Inc. The terms by which this logo is used are found on the following page: https://github.com/logos. This SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation that is common in the open-source community to indicate that there is a link to the GitHub website.
+
+7. Content Notice
 
 This SERVICE allows USERS to access linguistic content (CONTENT). Some of this CONTENT could be deemed inappropriate for children and legal minors. Accessing CONTENT using the SERVICE is done in a way that the information is unavailable unless explicitly known. Specifically, USERS "can" translate words, conjugate verbs, and access other grammatical features of CONTENT that may be sexual, violent, or otherwise inappropriate in nature. USERS "cannot" translate words, conjugate verbs, and access other grammatical features of CONTENT that may be sexual, violent, or otherwise inappropriate in nature if they do not already know about the nature of this CONTENT. SCRIBE takes no responsibility for the access of such CONTENT.
 
-7. Changes
+8. Changes
 
 This POLICY is subject to change. Updates to this POLICY will replace all prior instances, and if deemed material will further be clearly stated in the next applicable update to the SERVICE. SCRIBE encourages the USERS to familiarize themselves with any changes to this POLICY.
 
-8. Contact
+9. Contact
 
 If you have any questions, concerns, or suggestions about this POLICY, do not hesitate to visit https://github.com/scribe-org or contact SCRIBE at scribe.langauge@gmail.com. The person responsible for such inquiries is Andrew Tavis McAllister.
 
-9. Effective Date
+10. Effective Date
 
 This POLICY is effective as of the 22nd of November, 2021.
 """

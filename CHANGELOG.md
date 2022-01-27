@@ -13,13 +13,15 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
 ### ✨ New Features
-<!--- Users can now get to the settings by clicking the directions in the app screen. -->
+
+- Users can now get to Settings by clicking the directions in the app screen.
 
 ### 🎨 Design Changes
 
 <!--- The Scribe app icon has been given a more modern style.-->
 <!--- The logo for Scribe has been reworked to give the app a distinct style.-->
 <!--- The app screen has been completely redone to be more appealing.-->
+
 - Vertical spacing has been added between the keys to make them easier to press.
 - The keyboard buttons have been made slightly wider and smaller to reflect the system keyboard.
 - The keyboard command view has been revamped to create an appealing new interface.
@@ -45,6 +47,10 @@ Scribe's first design sprint with the help of Berlin's Spencer Arney!
 ### 🐞 Bug Fixes
 
 - The keyboard colors should not switch randomly between light and dark mode now.
+
+### ⚖️ Legal
+
+- The privacy policy was updated to reflect the addition of the GitHub, Inc icon into the app.
 
 # Scribe 1.1.1
 
