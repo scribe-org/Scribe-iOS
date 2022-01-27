@@ -157,26 +157,27 @@ class KeyboardViewController: UIInputViewController {
   ///  - The delete key is made slightly larger.
   func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
     btn.setTitle("", for: .normal)
+    let btnsThatAreSlightlyLarger = ["delete.left", "chevron.left", "chevron.right", "shift", "shift.fill", "capslock.fill"]
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
-    if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 1.55, weight: .light, scale: .medium)
+    if btnsThatAreSlightlyLarger.contains(iconName) {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.55, weight: .light, scale: .medium)
     }
     if isLandscapeView == true {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.5, weight: .light, scale: .medium)
-      if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.2, weight: .light, scale: .medium)
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.5, weight: .light, scale: .medium)
+      if btnsThatAreSlightlyLarger.contains(iconName) {
+        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.2, weight: .light, scale: .medium)
       }
     }
     if DeviceType.isPad {
       if isLandscapeView == true {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.75, weight: .light, scale: .medium)
-        if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 3.40, weight: .light, scale: .medium)
+        selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.75, weight: .light, scale: .medium)
+        if btnsThatAreSlightlyLarger.contains(iconName) {
+          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.40, weight: .light, scale: .medium)
         }
       } else {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
-        if iconName == "delete.left" || iconName == "chevron.left" || iconName == "chevron.right" {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: buttonWidth / 2.6, weight: .light, scale: .medium)
+        if btnsThatAreSlightlyLarger.contains(iconName) {
+          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 2.6, weight: .light, scale: .medium)
         }
       }
     }
@@ -314,7 +315,7 @@ class KeyboardViewController: UIInputViewController {
   /// Changes the Scribe key to an escape key.
   func scribeBtnToEscape() {
     scribeBtn.setTitle("", for: .normal)
-    let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .medium, scale: .medium)
+    let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .light, scale: .medium)
     scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
     scribeBtn.tintColor = keyCharColor
   }
@@ -1657,12 +1658,12 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil { // annotate word
+      if proxy.selectedText != nil && previewState != true { // annotate word
         loadKeys()
         selectedNounAnnotation()
         selectedPrepositionAnnotation()
       } else {
-        if previewState == true { // esc
+        if previewState == true { // escape
           scribeBtnState = false
           previewState = false
           getTranslation = false
@@ -1674,7 +1675,7 @@ class KeyboardViewController: UIInputViewController {
           activateBtn(btn: translateBtn)
           activateBtn(btn: conjugateBtn)
           activateBtn(btn: pluralBtn)
-        } else { // esc
+        } else { // escape
           conjugateView = false
           scribeBtnState = false
           previewState = false

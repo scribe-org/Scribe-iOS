@@ -37,30 +37,6 @@
 		D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D109A237275B6A99005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D109A238275B6A9A005E2271 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
-		D115121C27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115121D27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115121E27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115121F27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115122027A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115122127A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */; };
-		D115122227A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122327A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122427A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122527A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122627A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122727A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */; };
-		D115122827A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122927A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122B27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122C27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122D27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */; };
-		D115122E27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
-		D115122F27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
-		D115123027A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
-		D115123127A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
-		D115123227A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
-		D115123327A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -75,6 +51,30 @@
 		D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
+		D183ED2C27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED2D27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED2E27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED2F27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED3027A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED3127A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */; };
+		D183ED3227A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3327A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3427A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3527A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3627A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3727A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */; };
+		D183ED3827A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3927A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3A27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3B27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3C27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3D27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */; };
+		D183ED3E27A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
+		D183ED3F27A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
+		D183ED4027A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
+		D183ED4127A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
+		D183ED4227A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
+		D183ED4327A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */; };
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
@@ -200,10 +200,6 @@
 		D109A21A275B68B3005E2271 /* Portuguese.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Portuguese.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugueseKeyboardViewController.swift; sourceTree = "<group>"; };
 		D109A21E275B68B3005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneWhite.png; sourceTree = "<group>"; };
-		D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadBlack.png; sourceTree = "<group>"; };
-		D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadWhite.png; sourceTree = "<group>"; };
-		D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneBlack.png; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
@@ -214,6 +210,10 @@
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneBlack.png; sourceTree = "<group>"; };
+		D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPhoneWhite.png; sourceTree = "<group>"; };
+		D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadBlack.png; sourceTree = "<group>"; };
+		D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeBtnPadWhite.png; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwedishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D18EA89D2760D4A6001E1358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -455,10 +455,10 @@
 		D190B25427424F2900705659 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D115121927A1F8B8000C9E43 /* ScribeBtnPadBlack.png */,
-				D115121A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png */,
-				D115121B27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png */,
-				D115121827A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png */,
+				D183ED2A27A2D26F00002E47 /* ScribeBtnPadBlack.png */,
+				D183ED2B27A2D26F00002E47 /* ScribeBtnPadWhite.png */,
+				D183ED2827A2D26E00002E47 /* ScribeBtnPhoneBlack.png */,
+				D183ED2927A2D26F00002E47 /* ScribeBtnPhoneWhite.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -709,14 +709,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D115122F27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
-				D115121D27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
-				D115122927A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
-				D115122327A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
+				D183ED3327A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED2D27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
+				D183ED3F27A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
+				D183ED3927A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,12 +726,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
+				D183ED3227A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED3E27A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
-				D115121C27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED2C27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
+				D183ED3827A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
-				D115122827A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
-				D115122E27A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
-				D115122227A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,12 +741,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880D227860D4700407050 /* verbs.json in Resources */,
+				D183ED3427A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED4027A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
-				D115121E27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED2E27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
+				D183ED3A27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
-				D115122A27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
-				D115123027A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
-				D115122427A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,12 +756,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10182122728275B0032A82D /* nouns.json in Resources */,
+				D183ED3627A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED4227A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
-				D115122027A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED3027A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
+				D183ED3C27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
-				D115122C27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
-				D115123227A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
-				D115122627A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,14 +770,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D115123127A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
-				D115121F27A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
-				D115122B27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
-				D115122527A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
+				D183ED3527A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED2F27A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
+				D183ED4127A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
+				D183ED3B27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,12 +787,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880E127860D7B00407050 /* translations.json in Resources */,
+				D183ED3727A2D26F00002E47 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED4327A2D26F00002E47 /* ScribeBtnPadWhite.png in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
-				D115122127A1F8B8000C9E43 /* ScribeBtnPhoneWhite.png in Resources */,
+				D183ED3127A2D26F00002E47 /* ScribeBtnPhoneBlack.png in Resources */,
+				D183ED3D27A2D26F00002E47 /* ScribeBtnPadBlack.png in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
-				D115122D27A1F8B8000C9E43 /* ScribeBtnPadWhite.png in Resources */,
-				D115123327A1F8B8000C9E43 /* ScribeBtnPhoneBlack.png in Resources */,
-				D115122727A1F8B8000C9E43 /* ScribeBtnPadBlack.png in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
