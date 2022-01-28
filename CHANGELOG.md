@@ -12,9 +12,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
+Starting Monday the 24th of January, the entire design of Scribe was reworked to make the experience more aesthetically appealing while adding functionality through efficient composition. We hope you like the result!
+
 ### ✨ New Features
 
 - Users can now get to Settings by clicking the directions in the app screen.
+- All keyboards now switch to an English keyboard for translation, with this being in preparation for when more languages can be translated from.
 
 ### 🎨 Design Changes
 

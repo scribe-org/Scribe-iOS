@@ -151,9 +151,10 @@ class ViewController: UIViewController {
     let scrollbarAppearance = UINavigationBarAppearance()
     scrollbarAppearance.configureWithOpaqueBackground()
 
-    let symbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
-    let settingsSymbol = UIImage(systemName: "gear", withConfiguration: symbolConfig)
-    settingsIcon.image = settingsSymbol
+    let settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+    let settingsSymbol = UIImage(systemName: "gear", withConfiguration: settingsSymbolConfig)
+    let privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
+    let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)
     settingsIcon.tintColor = .white
 
     settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
@@ -201,6 +202,7 @@ class ViewController: UIViewController {
       settingsBtn.isUserInteractionEnabled = true
       settingsIcon.isHidden = false
       settingsCorner.isHidden = false
+      settingsIcon.image = settingsSymbol
 
       appTextView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
@@ -246,8 +248,7 @@ class ViewController: UIViewController {
       setAttributedInfoText()
     } else {
       settingsBtn.isUserInteractionEnabled = false
-      settingsIcon.isHidden = true
-      settingsCorner.isHidden = true
+      settingsIcon.image = privacySymbol
       appTextView.text = ""
       appTextTitle.text = ""
       appTextBackground.backgroundColor = .clear
