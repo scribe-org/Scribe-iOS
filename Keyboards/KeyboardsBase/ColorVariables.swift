@@ -86,11 +86,11 @@ extension UIColor {
   static let keyboardBackColorLight = UIColor(red: 206.0/255.0, green: 210.0/255.0, blue: 217.0/255.0, alpha: 1.0)
   static let keyShadowColorLight = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.35).cgColor
 
-  static let previewRedLight = UIColor(red: 177.0/255.0, green: 27.0/255.0, blue: 39.0/255.0, alpha: 0.90)
-  static let previewBlueLight = UIColor(red: 56.0/255.0, green: 101.0/255.0, blue: 168.0/255.0, alpha: 0.90)
-  static let previewPurpleLight = UIColor(red: 122.0/255.0, green: 5.0/255.0, blue: 147.0/255.0, alpha: 0.90)
-  static let previewGreenLight = UIColor(red: 65.0/255.0, green: 128.0/255.0, blue: 74.0/255.0, alpha: 0.90)
-  static let previewOrangeLight = UIColor(red: 249.0/255.0, green: 106.0/255.0, blue: 78.0/255.0, alpha: 0.90)
+  static let previewRedLight = UIColor(red: 177.0/255.0, green: 27.0/255.0, blue: 39.0/255.0, alpha: 0.9)
+  static let previewBlueLight = UIColor(red: 56.0/255.0, green: 101.0/255.0, blue: 168.0/255.0, alpha: 0.9)
+  static let previewPurpleLight = UIColor(red: 122.0/255.0, green: 5.0/255.0, blue: 147.0/255.0, alpha: 0.9)
+  static let previewGreenLight = UIColor(red: 65.0/255.0, green: 128.0/255.0, blue: 74.0/255.0, alpha: 0.9)
+  static let previewOrangeLight = UIColor(red: 249.0/255.0, green: 106.0/255.0, blue: 78.0/255.0, alpha: 0.9)
 
   // Dark theme.
   static let scribeBlueDark = UIColor(red: 76.0/255.0, green: 173.0/255.0, blue: 230.0/255.0, alpha: 0.9)
@@ -107,9 +107,9 @@ extension UIColor {
   static let keyboardBackColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
   static let keyShadowColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.95).cgColor
 
-  static let previewRedDark = UIColor(red: 248.0/255.0, green: 89.0/255.0, blue: 94.0/255.0, alpha: 0.90)
-  static let previewBlueDark = UIColor(red: 32.0/255.0, green: 149.0/255.0, blue: 233.0/255.0, alpha: 0.90)
-  static let previewPurpleDark = UIColor(red: 164.0/255.0, green: 92.0/255.0, blue: 235.0/255.0, alpha: 0.90)
-  static let previewGreenDark = UIColor(red: 120.0/255.0, green: 188.0/255.0, blue: 97.0/255.0, alpha: 0.90)
-  static let previewOrangeDark = UIColor(red: 254.0/255.0, green: 148.0/255.0, blue: 72.0/255.0, alpha: 0.90)
+  static let previewRedDark = UIColor(red: 248.0/255.0, green: 89.0/255.0, blue: 94.0/255.0, alpha: 0.9)
+  static let previewBlueDark = UIColor(red: 32.0/255.0, green: 149.0/255.0, blue: 233.0/255.0, alpha: 0.9)
+  static let previewPurpleDark = UIColor(red: 164.0/255.0, green: 92.0/255.0, blue: 235.0/255.0, alpha: 0.9)
+  static let previewGreenDark = UIColor(red: 120.0/255.0, green: 188.0/255.0, blue: 97.0/255.0, alpha: 0.9)
+  static let previewOrangeDark = UIColor(red: 254.0/255.0, green: 148.0/255.0, blue: 72.0/255.0, alpha: 0.9)
 }
