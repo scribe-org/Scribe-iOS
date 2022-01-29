@@ -7,6 +7,10 @@
 import UIKit
 
 /// Concatenates attributed strings.
+///
+/// - Parameters
+///  - left: the left attributed string to concatenate.
+///  - right: the right attributed string to concatenate.
 func concatAttributedStrings (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
   let result = NSMutableAttributedString()
   result.append(left)
@@ -15,10 +19,14 @@ func concatAttributedStrings (left: NSAttributedString, right: NSAttributedStrin
 }
 
 /// Returns an attributed text that hyperlinked.
-func addHyperLinksToText(originalText: String, hyperLinks: [String: String]) -> NSMutableAttributedString {
+///
+/// - Parameters
+///  - originalText: the original text that hyperlinks will be added to.
+///  - hyperLinks: a dictionary of strings and the link to which they should link.
+func addHyperLinksToText(originalText: String, hyperLinks: [String: String], fontSize: CGFloat) -> NSMutableAttributedString {
   let style = NSMutableParagraphStyle()
   style.alignment = .left
-  let attributedOriginalText = NSMutableAttributedString(string: originalText)
+  let attributedOriginalText = NSMutableAttributedString(string: originalText, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
   for (hyperLink, urlString) in hyperLinks {
     let linkRange = attributedOriginalText.mutableString.range(of: hyperLink)
     let fullRange = NSRange(location: 0, length: attributedOriginalText.length)
@@ -31,16 +39,16 @@ func addHyperLinksToText(originalText: String, hyperLinks: [String: String]) -> 
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class ViewController: UIViewController {
+  // Variables linked to elements in AppScreen.storyboard.
   @IBOutlet weak var appTextView: UITextView!
-  @IBOutlet weak var appTextTitle: UITextView!
   @IBOutlet weak var appTextBackground: UIView!
 
   @IBOutlet weak var settingsBtn: UIButton!
-  @IBOutlet weak var settingsIcon: UIImageView!
+  @IBOutlet weak var topIconPhone: UIImageView!
+  @IBOutlet weak var topIconPad: UIImageView!
   @IBOutlet weak var settingsCorner: UIImageView!
 
   @IBOutlet weak var GHTextView: UITextView!
-  @IBOutlet weak var GHTextTitle: UITextView!
   @IBOutlet weak var GHTextBackground: UIView!
 
   @IBOutlet weak var GHBtn: UIButton!
@@ -48,234 +56,256 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var privacyTextBackground: UIView!
   @IBOutlet weak var privacyTextView: UITextView!
-  @IBOutlet weak var privacyTextTitle: UITextView!
   @IBOutlet weak var privacyScroll: UIImageView!
 
   @IBOutlet weak var switchView: UIButton!
   @IBOutlet weak var switchViewBackground: UIView!
-  let switchViewColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
   var displayPrivacyPolicy = false
 
+  // Spacing views to size app screen proportionally.
+  @IBOutlet weak var topSpace: UIView!
+  @IBOutlet weak var logoSpace: UIView!
+  @IBOutlet weak var svSpace: UIView!
+  @IBOutlet weak var bottomSpace: UIView!
+
+  /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    checkDarkModeSetColors()
+    setUI()
+  }
+
+  /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    checkDarkModeSetColors()
+    setUI()
+  }
+
+  /// Includes a call to set the UI for the app screen.
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setUI()
+  }
+
+  // Lock the device into portrait mode to avoid resizing issues.
+  var orientations = UIInterfaceOrientationMask.portrait
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+    get { return self.orientations }
+    set { self.orientations = newValue }
+  }
+
+  // The app screen is white content on blue, so match the status bar.
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
 
-  /// Styles a button's appearance including it's shape and text.
-  ///
-  /// - Parameters
-  ///  - btn: the button to be styled.
-  ///  - title: the title to be assigned.
-  ///  - radius: the corner radius of the button.
-  func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
-    btn.clipsToBounds = true
-    btn.layer.masksToBounds = false
-    btn.layer.cornerRadius = radius
-    btn.setTitle(title, for: .normal)
-    btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    btn.setTitleColor(keyCharColor, for: .normal)
-
-    btn.layer.shadowColor = UIColor.keyShadowColorLight
-    btn.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-    btn.layer.shadowOpacity = 1.0
-    btn.layer.shadowRadius = 3.0
+  var fontSize = CGFloat(0)
+  /// Sets the font size for the text in the app screen and corresponding UIImage icons.
+  func setFontSize() {
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      fontSize = UIScreen.main.bounds.width / 30
+    } else if UIDevice.current.userInterfaceIdiom == .pad {
+      fontSize = UIScreen.main.bounds.width / 45
+    }
   }
 
-  /// Sets the functionality of the privacy policy button.
+  /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
+  func setTopIcon() {
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      topIconPhone.isHidden = false
+      topIconPad.isHidden = true
+    } else if UIDevice.current.userInterfaceIdiom == .pad {
+      topIconPhone.isHidden = true
+      topIconPad.isHidden = false
+    }
+  }
+
+  /// Applies a shadow to a given element.
+  ///
+  /// - Parameters
+  ///  - elem: the element to have shadows added to.
+  func applyShadowEffects(elem: AnyObject) {
+    elem.layer.shadowColor = UIColor.keyShadowColorLight
+    elem.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+    elem.layer.shadowOpacity = 1.0
+    elem.layer.shadowRadius = 3.0
+  }
+
+  /// Applies a corner radius to a given element.
+  ///
+  /// - Parameters
+  ///  - elem: the element to have shadows added to.
+  func applyCornerRadius(elem: AnyObject, radius: CGFloat) {
+    elem.layer.masksToBounds = false
+    elem.layer.cornerRadius = radius
+  }
+
+  /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     switchView.titleLabel?.font = .systemFont(ofSize: switchView.frame.height * 0.35)
     if displayPrivacyPolicy == false {
-      styleBtn(btn: switchView, title: "View Privacy Policy", radius: switchView.frame.width / 20)
+      switchView.setTitle("View Privacy Policy", for: .normal)
     } else if displayPrivacyPolicy == true {
-      styleBtn(btn: switchView, title: "View Installation", radius: switchView.frame.width / 20)
+      switchView.setTitle("View Installation", for: .normal)
     }
+    switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(UIColor.keyCharColorLight, for: .normal)
-    switchView.backgroundColor = switchViewColor
+
+    switchView.clipsToBounds = true
+    switchView.backgroundColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
+    applyCornerRadius(elem: switchView, radius: switchView.frame.height * 0.35)
+    applyShadowEffects(elem: switchView)
+
     switchView.addTarget(self, action: #selector(switchAppView), for: .touchUpInside)
     switchView.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
 
+    // Add a white background so that the key press doesn't show the blue app screen background.
     switchViewBackground.backgroundColor = .white
     switchViewBackground.clipsToBounds = true
-    switchViewBackground.layer.masksToBounds = false
-    switchViewBackground.layer.cornerRadius = switchView.frame.width / 20
+    applyCornerRadius(elem: switchViewBackground, radius: switchView.frame.height * 0.35)
   }
 
+  /// Sets the functionality of the button over the keyboard installation guide that opens Settings.
   func setSettingsBtn() {
     settingsBtn.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
     settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 
+  /// Sets the functionality of the button over the keyboard installtion guide that links to Scribe's GitHub.
   func setGHBtn() {
     GHBtn.addTarget(self, action: #selector(openScribeGH), for: .touchUpInside)
     GHBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 
-  /// Sets the font size for the text in the app screen and corresponding UIImage icons.
-  var fontSize = CGFloat(0)
-  func setFontSize() {
-    if UIDevice.current.userInterfaceIdiom == .phone {
-      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-        fontSize = UIScreen.main.bounds.width / 60
-      } else {
-        fontSize = UIScreen.main.bounds.width / 30
-      }
-    } else if UIDevice.current.userInterfaceIdiom == .pad {
-      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-        fontSize = UIScreen.main.bounds.width / 50
-      } else {
-        fontSize = UIScreen.main.bounds.width / 40
-      }
-    }
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    checkDarkModeSetColors()
-  }
-
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    checkDarkModeSetColors()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  /// Creates the full app UI by applying contraints and calling text generation functions.
+  func setUI() {
+    // Set the font size and all button elements.
     setFontSize()
+    setTopIcon()
     setSwitchViewBtn()
     setSettingsBtn()
     setGHBtn()
-    setUI()
-  }
 
-  /// Creates the full text for the app UI that comes from two NSAttributedStrings and also adds attributes.
-  func setUI() {
+    // Height ratios to set corner radii exactly.
+    let installTextToSwitchBtnHeightRatio = appTextBackground.frame.height / switchViewBackground.frame.height
+    let GHTextToSwitchBtnHeightRatio = GHTextBackground.frame.height / switchViewBackground.frame.height
+    let privacyTextToSwitchBtnHeightRatio = privacyTextBackground.frame.height / switchViewBackground.frame.height
+
+    // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
     let scrollbarAppearance = UINavigationBarAppearance()
     scrollbarAppearance.configureWithOpaqueBackground()
 
-    let settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+    // Disable spacing views.
+    for elem in [topSpace, logoSpace, svSpace, bottomSpace] {
+      elem?.isUserInteractionEnabled = false
+      elem?.backgroundColor = .clear
+    }
+
+    // Set configurations for corner icons.
+    var settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+    var privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
+    if UIDevice.current.userInterfaceIdiom == .pad {
+      settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+      privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+    }
     let settingsSymbol = UIImage(systemName: "gear", withConfiguration: settingsSymbolConfig)
-    let privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
     let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)
-    settingsIcon.tintColor = .white
+    topIconPhone.tintColor = .white
+    topIconPad.tintColor = .white
 
     settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    settingsCorner.layer.cornerRadius = appTextBackground.frame.width / 15
+    settingsCorner.layer.cornerRadius = appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
+    settingsCorner.alpha = 0.9
     GHCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    GHCorner.layer.cornerRadius = GHTextBackground.frame.width / 15
+    GHCorner.layer.cornerRadius = GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
+    GHCorner.alpha = 0.9
 
     settingsBtn.clipsToBounds = true
     settingsBtn.layer.masksToBounds = false
-    settingsBtn.layer.cornerRadius = appTextBackground.frame.width / 15
+    settingsBtn.layer.cornerRadius = appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
     GHBtn.clipsToBounds = true
     GHBtn.layer.masksToBounds = false
-    GHBtn.layer.cornerRadius = GHTextBackground.frame.width / 15
+    GHBtn.layer.cornerRadius = GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
 
-    appTextView.isEditable = false
+    // Disable text views.
+    for elem in [appTextView, GHTextView, privacyTextView] {
+      elem?.isUserInteractionEnabled = false
+      elem?.isEditable = false
+      elem?.backgroundColor = .clear
+    }
+
+    // Set backgrounds and corner radii.
     appTextView.isUserInteractionEnabled = false
-    appTextView.backgroundColor = .clear
-    appTextTitle.isEditable = false
-    appTextTitle.isUserInteractionEnabled = false
-    appTextTitle.backgroundColor = .clear
+    appTextBackground.isUserInteractionEnabled = false
     appTextBackground.clipsToBounds = true
-    appTextBackground.layer.masksToBounds = false
-    appTextBackground.layer.cornerRadius = appTextBackground.frame.width / 15
+    applyCornerRadius(elem: appTextBackground, radius: appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio)
 
-    GHTextView.isEditable = false
     GHTextView.isUserInteractionEnabled = false
-    GHTextView.backgroundColor = .clear
-    GHTextTitle.isEditable = false
-    GHTextTitle.isUserInteractionEnabled = false
-    GHTextTitle.backgroundColor = .clear
+    GHTextBackground.isUserInteractionEnabled = false
     GHTextBackground.clipsToBounds = true
-    GHTextBackground.layer.masksToBounds = false
-    GHTextBackground.layer.cornerRadius = GHTextBackground.frame.width / 15
+    applyCornerRadius(elem: GHTextBackground, radius: GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio)
 
-    privacyTextView.isEditable = false
+    // Privacy text allows for user interactions so that the links in the policy can be pressed.
     privacyTextView.backgroundColor = .clear
-    privacyTextTitle.isEditable = false
-    privacyTextTitle.backgroundColor = .clear
-    privacyTextBackground.clipsToBounds = true
-    privacyTextBackground.layer.masksToBounds = false
-    privacyTextBackground.layer.cornerRadius = privacyTextBackground.frame.width / 15
+    applyCornerRadius(elem: privacyTextBackground, radius: privacyTextBackground.frame.height * 0.4 / privacyTextToSwitchBtnHeightRatio)
     privacyScroll.isUserInteractionEnabled = false
 
     if displayPrivacyPolicy == false {
-      settingsBtn.isUserInteractionEnabled = true
-      settingsIcon.isHidden = false
-      settingsCorner.isHidden = false
-      settingsIcon.image = settingsSymbol
+      topIconPhone.image = settingsSymbol
+      topIconPad.image = settingsSymbol
 
+      // Enable installation directions and GitHub notice elements.
+      settingsBtn.isUserInteractionEnabled = true
       appTextView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
-      appTextView.font = .systemFont(ofSize: fontSize)
-      appTextView.textColor = UIColor.keyCharColorLight
       appTextBackground.backgroundColor = .white
-      appTextBackground.layer.shadowColor = UIColor.keyShadowColorLight
-      appTextBackground.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-      appTextBackground.layer.shadowOpacity = 1.0
-      appTextBackground.layer.shadowRadius = 3.0
-
-      appTextTitle.font = .boldSystemFont(ofSize: fontSize * 1.5)
-      appTextTitle.textColor = UIColor.keyCharColorLight
+      applyShadowEffects(elem: appTextBackground)
 
       GHBtn.isUserInteractionEnabled = true
       GHCorner.isHidden = false
-
       GHTextView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
-      GHTextView.font = .systemFont(ofSize: fontSize)
-      GHTextView.textColor = UIColor.keyCharColorLight
       GHTextBackground.backgroundColor = .white
-      GHTextBackground.layer.shadowColor = UIColor.keyShadowColorLight
-      GHTextBackground.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-      GHTextBackground.layer.shadowOpacity = 1.0
-      GHTextBackground.layer.shadowRadius = 3.0
+      applyShadowEffects(elem: GHTextBackground)
 
-      GHTextTitle.font = .boldSystemFont(ofSize: fontSize * 1.5)
-      GHTextTitle.textColor = UIColor.keyCharColorLight
-
-      privacyTextBackground.backgroundColor = .clear
+      // Disable the privacy policy elements.
+      privacyTextView.isUserInteractionEnabled = false
       privacyTextView.backgroundColor = .clear
       privacyTextView.text = ""
-      privacyTextTitle.backgroundColor = .clear
-      privacyTextTitle.text = ""
+      privacyTextBackground.backgroundColor = .clear
 
       privacyScroll.isHidden = true
-      
-      setAttributedInfoText()
+
+      // Set the texts for the fields.
+      setAttributedInstallation()
+      setAttributedGitHubText()
     } else {
+      topIconPhone.image = privacySymbol
+      topIconPad.image = privacySymbol
+
+      // Disable installation directions and GitHub notice elements.
       settingsBtn.isUserInteractionEnabled = false
-      settingsIcon.image = privacySymbol
       appTextView.text = ""
-      appTextTitle.text = ""
       appTextBackground.backgroundColor = .clear
-      appTextBackground.isUserInteractionEnabled = false
 
       GHBtn.isUserInteractionEnabled = false
       GHCorner.isHidden = true
       GHTextView.text = ""
-      GHTextTitle.text = ""
       GHTextBackground.backgroundColor = .clear
-      GHTextBackground.isUserInteractionEnabled = false
 
-      privacyTextBackground.backgroundColor = .white
-      privacyTextBackground.layer.shadowColor = UIColor.keyShadowColorLight
-      privacyTextBackground.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-      privacyTextBackground.layer.shadowOpacity = 1.0
-      privacyTextBackground.layer.shadowRadius = 3.0
-
+      // Enable the privacy policy elements.
+      privacyTextView.isUserInteractionEnabled = true
       privacyTextView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
-      privacyTextView.font = .systemFont(ofSize: fontSize)
-      privacyTextView.textColor = UIColor.keyCharColorLight
-
-      privacyTextTitle.font = .boldSystemFont(ofSize: fontSize * 1.5)
-      privacyTextTitle.textColor = UIColor.keyCharColorLight
+      privacyTextBackground.backgroundColor = .white
+      applyShadowEffects(elem: privacyTextBackground)
 
       privacyScroll.isHidden = false
 
@@ -283,107 +313,124 @@ class ViewController: UIViewController {
     }
   }
 
-  /// The text for ViewController that includes the globe character.
-  func setAttributedInfoText() {
-    appTextTitle.text = "Keyboard Installation"
-
+  /// Formats and returns the text for the installtion guidelines.
+  func setAttributedInstallation() {
     // The down right arrow character as a text attachment.
     let arrowAttachment = NSTextAttachment()
     let selectArrowIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
     arrowAttachment.image = UIImage(systemName: "arrow.turn.down.right", withConfiguration: selectArrowIconConfig)?.withTintColor(.scribeGrey)
-
-    // Wrap the attachment in its own attributed string so we can append it.
-    let arrowString = NSAttributedString(attachment: arrowAttachment)
 
     // The globe character as a text attachment.
     let globeAttachment = NSTextAttachment()
     let selectGlobeIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
     globeAttachment.image = UIImage(systemName: "globe", withConfiguration: selectGlobeIconConfig)?.withTintColor(.scribeGrey)
 
-    // Wrap the attachment in its own attributed string so we can append it.
+    // Wrap the attachments in their own attributed strings so we can append them.
+    let arrowString = NSAttributedString(attachment: arrowAttachment)
     let globeString = NSAttributedString(attachment: globeAttachment)
 
-    // Create an NSMutableAttributedString that we'll append everything to.
-    let startOfString = NSMutableAttributedString(string: """
+    // Create components of the installation text, format their font sizes and add them step by step.
+    let installationTextTitle = NSMutableAttributedString(string: """
+    Keyboard Installation
+    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
+
+    let startOfBody = NSMutableAttributedString(string: """
+    \n
     1.\u{0020}
-    """)
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-    let settingsLink = addHyperLinksToText(originalText: "Open Settings", hyperLinks: ["Open Settings": "<makeTextLink>"])
+    let settingsLink = addHyperLinksToText(originalText: "Open Settings", hyperLinks: ["Open Settings": "<makeTextLink>"], fontSize: fontSize)
 
-    let settingsText = concatAttributedStrings(left: startOfString, right: settingsLink)
+    let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
-    let fullString = NSMutableAttributedString(string: """
-
-
+    let installDirections = NSMutableAttributedString(string: """
+    \n
     2. In General do the following:
 
           Keyboard
 
-    """)
-    fullString.append(NSAttributedString(string: "\n         "))
-    fullString.append(arrowString)
-    fullString.append(NSAttributedString(string: """
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+    installDirections.append(NSAttributedString(string: "\n         "))
+
+    installDirections.append(arrowString)
+
+    installDirections.append(NSMutableAttributedString(string: """
      \u{0020} Keyboards
 
-    """))
-    fullString.append(NSAttributedString(string: "\n                    "))
-    fullString.append(arrowString)
-    fullString.append(NSAttributedString(string: """
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+
+    installDirections.append(NSMutableAttributedString(string: "\n                    ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+
+    installDirections.append(arrowString)
+
+    installDirections.append(NSMutableAttributedString(string: """
       \u{0020} Add New Keyboard
 
      3. Select Scribe and then activate keyboards
 
      4. When typing press\u{0020}
-     """
-    )
-    )
+     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
-    // Add the NSTextAttachment wrapper to our full string, then add some more text.
-    fullString.append(globeString)
-    fullString.append(NSAttributedString(string: """
+    installDirections.append(globeString)
+
+    installDirections.append(NSMutableAttributedString(string: """
     \u{0020}to select keyboards
-    """)
-    )
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
-    let settingsAndFullString = concatAttributedStrings(left: settingsText, right: fullString)
-    appTextView.attributedText = NSMutableAttributedString(attributedString: settingsAndFullString)
+    let installFullDirections = concatAttributedStrings(left: installStart, right: installDirections)
+    appTextView.attributedText = concatAttributedStrings(left: installationTextTitle, right: installFullDirections)
+    appTextView.textColor = UIColor.keyCharColorLight
+  }
 
-    GHTextTitle.text = "Community"
+  /// Formats and returns the text for a notice about Scribe's GitHub.
+  func setAttributedGitHubText() {
+    let GHTextTitle = NSMutableAttributedString(string: """
+    Community
+    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
 
+    // Initialize the main body of the text.
     let GHInfoText = NSMutableAttributedString(string: """
+    \n
     Scribe is fully open-source. To report issues or contribute please visit us at\u{0020}
-    """)
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
     // A second NSAttributedString that includes a link to the GitHub.
-    let ghLink = addHyperLinksToText(originalText: "github.com/scribe-org.", hyperLinks: ["github.com/scribe-org": "https://github.com/scribe-org"])
-    let fullGHInfoText = concatAttributedStrings(left: GHInfoText, right: ghLink)
+    let ghLink = addHyperLinksToText(originalText: "github.com/scribe-org.", hyperLinks: ["github.com/scribe-org": "https://github.com/scribe-org"], fontSize: fontSize)
 
-    GHTextView.attributedText = fullGHInfoText
+    let GHInfoTextToLink = concatAttributedStrings(left: GHTextTitle, right: GHInfoText)
+    GHTextView.attributedText = concatAttributedStrings(left: GHInfoTextToLink, right: ghLink)
+    GHTextView.textColor = UIColor.keyCharColorLight
   }
 
-  /// Formats and returns Scribe privacy policy.
+  /// Formats and returns the text of the Scribe privacy policy.
   func setAttributedPrivacyPolicy() {
-    let privacyPolicyTitle = "Privacy Policy"
-    privacyTextTitle.text = privacyPolicyTitle
+    let privacyTextTitle = NSMutableAttributedString(string: """
+    Privacy Policy
+    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
     
-    let privacyPolicyTextWithLinks = addHyperLinksToText(originalText: privacyPolicyText, hyperLinks: ["https://www.wikidata.org/wiki/Wikidata:Licensing": "https://www.wikidata.org/wiki/Wikidata:Licensing", "https://github.com/huggingface/transformers/blob/master/LICENSE": "https://github.com/huggingface/transformers/blob/master/LICENSE", "https://github.com/scribe-org": "https://github.com/scribe-org", "scribe.langauge@gmail.com": "mailto:scribe.langauge@gmail.com", "https://github.com/logos": "https://github.com/logos"])
+    let privacyPolicyTextWithLinks = addHyperLinksToText(originalText: privacyPolicyText, hyperLinks: ["https://www.wikidata.org/wiki/Wikidata:Licensing": "https://www.wikidata.org/wiki/Wikidata:Licensing", "https://github.com/huggingface/transformers/blob/master/LICENSE": "https://github.com/huggingface/transformers/blob/master/LICENSE", "https://github.com/scribe-org": "https://github.com/scribe-org", "scribe.langauge@gmail.com": "mailto:scribe.langauge@gmail.com", "https://github.com/logos": "https://github.com/logos"], fontSize: fontSize)
 
-    privacyTextView.attributedText = privacyPolicyTextWithLinks
+    privacyTextView.attributedText = concatAttributedStrings(left: privacyTextTitle, right: privacyPolicyTextWithLinks)
+    privacyTextView.textColor = UIColor.keyCharColorLight
   }
 
+  /// Switches the view of the app based on the current view.
   @objc func switchAppView() {
     if displayPrivacyPolicy == false {
       displayPrivacyPolicy = true
     } else {
       displayPrivacyPolicy = false
     }
-    setSwitchViewBtn()
     setUI()
   }
 
+  /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
 
+  /// Function to open Scribe's GitHub page that is targeted by GHBtn.
   @objc func openScribeGH() {
     guard let url = URL(string: "https://github.com/scribe-org") else {
       return
@@ -396,11 +443,15 @@ class ViewController: UIViewController {
     }
   }
 
+  /// Function to change the key coloration given a touch down.
+  ///
+  /// - Parameters
+  ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
     let orginalBackgroundColor = sender.backgroundColor
     sender.backgroundColor = .black
     sender.alpha = 0.2
-    // Bring sender's opacity back up to fully opaque
+    // Bring sender's opacity back up to fully opaque and replace the background color.
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
       sender.backgroundColor = orginalBackgroundColor
       sender.alpha = 1.0
