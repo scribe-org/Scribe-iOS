@@ -9,8 +9,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Thankyou for opening up a issue , Please wait until we get get back to you'
-        pr-message: 'Thank you for opening a PR , Please be patient until the reviewers get back to you'
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "# Welcome!\nThanks so much for opening your first issue :) This bot's here to let you know we'll be with you as soon as we can.\n\nBest regards,\n- The Scribe Team"
+          pr-message: "# Thank you!/nWe appreciate your initiative in contributing to Scribe. This bot's here to say the obvious: we hope this is the first of many PRs to come :)\n\nAll the best,\nThe Scribe Team"
