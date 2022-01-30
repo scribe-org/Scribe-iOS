@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacyDownPointer" translatesAutoresizingMaskIntoConstraints="NO" id="uAP-y9-G5O" userLabel="PrivacyScroll">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacyDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="uAP-y9-G5O" userLabel="PrivacyScroll">
                                 <rect key="frame" x="165" y="643.33333333333337" width="45" height="29.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uAP-y9-G5O" secondAttribute="height" multiplier="111:73" id="xJq-LF-0BF"/>
@@ -117,9 +117,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScribeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Oxz-Zq-2g7">
-                                <rect key="frame" x="73.333333333333329" y="80.666666666666686" width="228.66666666666669" height="110"/>
+                                <rect key="frame" x="73" y="80.666666666666686" width="229" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Oxz-Zq-2g7" secondAttribute="height" multiplier="648:312" id="fLZ-Jn-Qjj"/>
+                                    <constraint firstAttribute="width" secondItem="Oxz-Zq-2g7" secondAttribute="height" multiplier="981:471" id="fLZ-Jn-Qjj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -236,9 +236,9 @@
     </scenes>
     <resources>
         <image name="GitHubCorner" width="1516" height="1516"/>
-        <image name="ScribeLogo" width="648" height="312"/>
+        <image name="ScribeLogo" width="831" height="405"/>
         <image name="linkCornerBackground" width="1024" height="1024"/>
-        <image name="privacyDownPointer" width="111" height="73"/>
+        <image name="privacyDownArrow" width="111" height="73"/>
         <image name="scribeAppBackground" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
