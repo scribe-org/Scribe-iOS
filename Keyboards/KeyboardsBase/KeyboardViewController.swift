@@ -1,7 +1,7 @@
 //
 //  KeyboardViewController.swift
 //
-//  A parent KeyboardViewController class that is inherited by all Scribe keyboards.
+//  Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys.
 //
 
 import UIKit
@@ -12,6 +12,20 @@ let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
 
+/// A class of UIButton keys that allows for the tap area to be increased so that edges between keys can still receive user interactions.
+class KeyboardButton: UIButton {
+  // Properties for the touch area - passing negative values will expand the touch area.
+  var topShift = CGFloat(0)
+  var leftShift = CGFloat(0)
+  var bottomShift = CGFloat(0)
+  var rightShift = CGFloat(0)
+
+  override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+    return bounds.inset(by: UIEdgeInsets(top: topShift, left: leftShift, bottom: bottomShift, right: rightShift)).contains(point)
+  }
+}
+
+/// The parent KeyboardViewController class that is inherited by all Scribe keyboards.
 class KeyboardViewController: UIInputViewController {
   var keyboardView: UIView!
   var keys: [UIButton] = []
@@ -25,13 +39,18 @@ class KeyboardViewController: UIInputViewController {
   var doubleSpacePeriodPossible = false
 
   // Stack views that are populated with they keyboard rows.
+  @IBOutlet weak var stackView0: UIStackView!
   @IBOutlet weak var stackView1: UIStackView!
   @IBOutlet weak var stackView2: UIStackView!
   @IBOutlet weak var stackView3: UIStackView!
-  @IBOutlet weak var stackView4: UIStackView!
 
   /// Sets the keyboard layouts given the chosen keyboard and device type.
   func setKeyboardLayouts() {
+    if switchInput {
+      // Always start in letters with a new keyboard.
+      keyboardState = .letters
+    }
+
     if controllerLanguage == "French" {
       if switchInput {
         setENKeyboardLayout()
@@ -172,12 +191,12 @@ class KeyboardViewController: UIInputViewController {
       if isLandscapeView == true {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.75, weight: .light, scale: .medium)
         if btnsThatAreSlightlyLarger.contains(iconName) {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.40, weight: .light, scale: .medium)
+          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.4, weight: .light, scale: .medium)
         }
       } else {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3, weight: .light, scale: .medium)
         if btnsThatAreSlightlyLarger.contains(iconName) {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 2.6, weight: .light, scale: .medium)
+          selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 2.75, weight: .light, scale: .medium)
         }
       }
     }
@@ -686,23 +705,12 @@ class KeyboardViewController: UIInputViewController {
   ///  - to: the stackView in which the button is found.
   ///  - width: the width of the padding.
   ///  - key: the key associated with the button.
-  ///
-  ///  Place before or after desiredStackView.addArrangedSubview(button) in loadKeys.
-  ///  addPadding(to: desiredStackView, width: buttonWidth/2, key: "desiredKey")
   func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
-    let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 3, height: 5))
+    let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     padding.setTitleColor(.clear, for: .normal)
     padding.alpha = 0.0
     padding.widthAnchor.constraint(equalToConstant: width).isActive = true
-
-    // If we want to use this padding as a key.
-    let keyToDisplay = shiftButtonState == .normal ? key : key.capitalized
-    padding.layer.setValue(key, forKey: "original")
-    padding.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
-    padding.layer.setValue(false, forKey: "isSpecial")
-    padding.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
-    padding.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-    padding.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+    padding.isUserInteractionEnabled = false
 
     paddingViews.append(padding)
     stackView.addArrangedSubview(padding)
@@ -719,7 +727,7 @@ class KeyboardViewController: UIInputViewController {
       if isLandscapeView == true {
         keyboardHeight = 200
       } else {
-        keyboardHeight = 280
+        keyboardHeight = 270
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
@@ -795,7 +803,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
-    // French, German, Portuguese, Russian, Spanish or Swedish
+    // The name of the language keyboard that's referenceing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     setCommandBackground()
@@ -851,8 +859,8 @@ class KeyboardViewController: UIInputViewController {
         keyCornerRadius = buttonWidth / 9
         commandKeyCornerRadius = buttonWidth / 5
       } else {
-        keyCornerRadius = buttonWidth / 5
-        commandKeyCornerRadius = buttonWidth / 2.5
+        keyCornerRadius = buttonWidth / 6
+        commandKeyCornerRadius = buttonWidth / 3
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
@@ -870,10 +878,20 @@ class KeyboardViewController: UIInputViewController {
     }
 
     if !conjugateView { // normal keyboard view
-      stackView1.isUserInteractionEnabled = true
-      stackView2.isUserInteractionEnabled = true
-      stackView3.isUserInteractionEnabled = true
-      stackView4.isUserInteractionEnabled = true
+      for view in [stackView0, stackView1, stackView2, stackView3] {
+        view?.isUserInteractionEnabled = true
+        view?.isLayoutMarginsRelativeArrangement = true
+        
+        if view == stackView0 {
+          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
+        } else if view == stackView1 {
+          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+        } else if view == stackView2 {
+          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+        } else if view == stackView3 {
+          view?.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 5, right: 0)
+        }
+      }
 
       deactivateConjugationDisplay()
 
@@ -881,7 +899,7 @@ class KeyboardViewController: UIInputViewController {
       for row in 0...numRows - 1 {
         for i in 0...keyboard[row].count - 1 {
           // Set up button as a key with its values and properties.
-          let btn = UIButton(type: .custom)
+          let btn = KeyboardButton(type: .custom)
           btn.backgroundColor = keyColor
           btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
           btn.layer.borderWidth = 0
@@ -953,10 +971,6 @@ class KeyboardViewController: UIInputViewController {
             }
           }
 
-          activateBtn(btn: btn)
-          if key == "shift" || key == spaceBar {
-            btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-          }
           // Set up and activate Scribe command buttons.
           styleBtn(btn: scribeBtn, title: "Scribe", radius: commandKeyCornerRadius)
           scribeBtn.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
@@ -1032,30 +1046,36 @@ class KeyboardViewController: UIInputViewController {
             }
             previewBar.sizeToFit()
           }
-
+          
           // Pad before key is added.
+          var leftPadding = CGFloat(0)
           if DeviceType.isPhone && key == "y" && ["German", "Swedish"].contains(controllerLanguage) && switchInput != true {
-            addPadding(to: stackView3, width: buttonWidth / 3, key: "y")
+            leftPadding = buttonWidth / 3
+            addPadding(to: stackView2, width: leftPadding, key: "y")
           }
           if DeviceType.isPhone && key == "a" && (controllerLanguage == "Portuguese" || switchInput == true) {
-            addPadding(to: stackView2, width: buttonWidth / 4, key: "a")
+            leftPadding = buttonWidth / 4
+            addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad && key == "a" && (controllerLanguage == "Portuguese" || switchInput == true) {
-            addPadding(to: stackView2, width: buttonWidth / 3, key: "a")
+            leftPadding = buttonWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad && key == "@" && (controllerLanguage == "Portuguese" || switchInput == true) {
-            addPadding(to: stackView2, width: buttonWidth / 3, key: "@")
+            leftPadding = buttonWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "@")
           }
           if DeviceType.isPad && key == "€" && (controllerLanguage == "Portuguese" || switchInput == true) {
-            addPadding(to: stackView2, width: buttonWidth / 3, key: "€")
+            leftPadding = buttonWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "€")
           }
 
           keys.append(btn)
           switch row {
-          case 0: stackView1.addArrangedSubview(btn)
-          case 1: stackView2.addArrangedSubview(btn)
-          case 2: stackView3.addArrangedSubview(btn)
-          case 3: stackView4.addArrangedSubview(btn)
+          case 0: stackView0.addArrangedSubview(btn)
+          case 1: stackView1.addArrangedSubview(btn)
+          case 2: stackView2.addArrangedSubview(btn)
+          case 3: stackView3.addArrangedSubview(btn)
           default:
             break
           }
@@ -1097,34 +1117,14 @@ class KeyboardViewController: UIInputViewController {
           }
 
           // Pad after key is added.
+          var rightPadding = CGFloat(0)
           if DeviceType.isPhone && key == "m" && ["German", "Swedish"].contains(controllerLanguage) && switchInput != true {
-            addPadding(to: stackView3, width: buttonWidth / 3, key: "m")
+            rightPadding = buttonWidth / 3
+            addPadding(to: stackView2, width: rightPadding, key: "m")
           }
           if DeviceType.isPhone && key == "l" && (controllerLanguage == "Portuguese" || switchInput == true) {
-            addPadding(to: stackView2, width: buttonWidth / 4, key: "l")
-          }
-
-          // Add padding after a key so long as it's not the last in the row.
-          // Still pad if the key is the last, put it's the first iteration on iPads.
-          switch row {
-          case 0:
-            if key != keyboard[row].last || ( key == keyboard[row].last && DeviceType.isPad && i == 0 ) {
-              addPadding(to: stackView1, width: buttonWidth / 10, key: key)
-            }
-          case 1:
-            if key != keyboard[row].last || ( key == keyboard[row].last && DeviceType.isPad && i == 0 ) {
-              addPadding(to: stackView2, width: buttonWidth / 10, key: key)
-            }
-          case 2:
-            if key != keyboard[row].last || ( key == keyboard[row].last && DeviceType.isPad && i == 0 ) {
-              addPadding(to: stackView3, width: buttonWidth / 10, key: key)
-            }
-          case 3:
-            if key != keyboard[row].last || ( key == keyboard[row].last && DeviceType.isPad && i == 0 ) {
-              addPadding(to: stackView4, width: buttonWidth / 10, key: key)
-            }
-          default:
-            break
+            rightPadding = buttonWidth / 4
+            addPadding(to: stackView1, width: rightPadding, key: "l")
           }
 
           // specialKey styling.
@@ -1159,7 +1159,9 @@ class KeyboardViewController: UIInputViewController {
               }
             }
           } else if key == "123" || key == ".?123" || key == "return" || key == "hideKeyboard" {
-            if DeviceType.isPhone {
+            if DeviceType.isPhone && row == 2 {
+              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+            } else if DeviceType.isPhone && row != 2 {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
             } else if controllerLanguage == "Russian" && row == 2 && DeviceType.isPhone {
               btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
@@ -1183,6 +1185,49 @@ class KeyboardViewController: UIInputViewController {
             btn.layer.setValue(key, forKey: "original")
             btn.setTitle(key, for: .normal)
           }
+
+          // Extend button touch areas.
+          var widthOfSpacing = CGFloat(0)
+          if keyboardState == .letters {
+            widthOfSpacing = ( (UIScreen.main.bounds.width - 6.0) - (CGFloat(letterKeys[0].count) * buttonWidth) ) / (CGFloat(letterKeys[0].count) - 1.0)
+          } else {
+            widthOfSpacing = ( (UIScreen.main.bounds.width - 6.0) - (CGFloat(numberKeys[0].count) * numSymButtonWidth) ) / (CGFloat(letterKeys[0].count) - 1.0)
+          }
+
+          switch row {
+          case 0:
+            btn.topShift = -5
+            btn.bottomShift = -6
+          case 1:
+            btn.topShift = -6
+            btn.bottomShift = -6
+          case 2:
+            btn.topShift = -6
+            btn.bottomShift = -6
+          case 3:
+            btn.topShift = -6
+            btn.bottomShift = -5
+          default:
+            break
+          }
+
+          // Pad left and right based on if the button has been shifted.
+          if leftPadding == CGFloat(0) {
+            btn.leftShift = -(widthOfSpacing / 2)
+          } else {
+            btn.leftShift = -(leftPadding)
+          }
+          if rightPadding == CGFloat(0) {
+            btn.rightShift = -(widthOfSpacing / 2)
+          } else {
+            btn.rightShift = -(rightPadding)
+          }
+
+          // Activate keyboard interface buttons.
+          activateBtn(btn: btn)
+          if key == "shift" || key == spaceBar {
+            btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+          }
         }
       }
 
@@ -1197,10 +1242,9 @@ class KeyboardViewController: UIInputViewController {
       }
 
     } else { // conjugate view
-      stackView1.isUserInteractionEnabled = false
-      stackView2.isUserInteractionEnabled = false
-      stackView3.isUserInteractionEnabled = false
-      stackView4.isUserInteractionEnabled = false
+      for view in [stackView0, stackView1, stackView2, stackView3] {
+        view?.isUserInteractionEnabled = false
+      }
 
       scribeBtnToEscape()
       scribeBtn.layer.cornerRadius = commandKeyCornerRadius

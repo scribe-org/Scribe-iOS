@@ -141,6 +141,7 @@ class ViewController: UIViewController {
     elem.layer.cornerRadius = radius
   }
 
+  let switchViewColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     switchView.titleLabel?.font = .systemFont(ofSize: switchView.frame.height * 0.35)
@@ -153,7 +154,7 @@ class ViewController: UIViewController {
     switchView.setTitleColor(UIColor.keyCharColorLight, for: .normal)
 
     switchView.clipsToBounds = true
-    switchView.backgroundColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
+    switchView.backgroundColor = switchViewColor
     applyCornerRadius(elem: switchView, radius: switchView.frame.height * 0.35)
     applyShadowEffects(elem: switchView)
 
@@ -448,13 +449,24 @@ class ViewController: UIViewController {
   /// - Parameters
   ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    let orginalBackgroundColor = sender.backgroundColor
-    sender.backgroundColor = .black
-    sender.alpha = 0.2
-    // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-      sender.backgroundColor = orginalBackgroundColor
-      sender.alpha = 1.0
+    if sender == switchView {
+      sender.backgroundColor = .clear
+      sender.setTitleColor(switchViewColor, for: .normal)
+
+      // Bring sender's background and text colors back to their original values.
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [self] in
+        sender.backgroundColor = switchViewColor
+        sender.setTitleColor(UIColor.keyCharColorLight, for: .normal)
+      }
+    } else {
+      sender.backgroundColor = .black
+      sender.alpha = 0.2
+
+      // Bring sender's opacity back up to fully opaque and replace the background color.
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+        sender.backgroundColor = .clear
+        sender.alpha = 1.0
+      }
     }
   }
 }
