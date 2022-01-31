@@ -21,30 +21,15 @@ The entire layout of Scribe has been reworked to make the experience more aesthe
 
 ### 🎨 Design Changes
 
-- The logo for Scribe has been reworked to give the app a distinct style.
-- The Scribe app icon has been given a more modern style.
+- The logo and icon for Scribe have been reworked to give the app a distinct style.
 - The app screen has been completely redone to be more appealing.
-- Vertical spacing has been added between the keys to make them easier to press.
-- The keyboard buttons have been made slightly wider and smaller to reflect the system keyboard.
-- The keyboard command view has been revamped to create an appealing new interface.
-- The keys are now shaded to resemble the system keyboard more.
-- Keyboard colors in light and dark mode have been updated to match system keyboards.
-- The keyboard now always switches to an English input when translating to make the functionality more clear.
-- The app texts and key characters have been made less opaque to make them easier on the eyes.
-- The colors of the Scribe key icon have been changed to match that of the other keys.
-- Key corners were made less rounded to give them a blockier look.
-- The Scribe command interface is now sized relative to the keyboard.
-- Scribe command buttons are shaded to make them more apparent on the keyboard.
-- Keyboard layouts were changed to reflect dynamic sizing of the command interface and be more similar to system keyboards.
-- The preview bar and command element fonts have been bolded to be more readable.
-- The shift conjugation state buttons have been restyled to be more apparent.
-- Translation prompts were changed to just be two digit abbreviations of source and target language.
+- Keyboard layouts, colors and characters have been changed to match system keyboards.
+- Translation prompts were changed to be two digit abbreviations of source and target language.
 - Colors for noun annotation were updated to improve readability.
 - Noun annotation is now done with a square symbol to represent the gender.
 - Preposition annotation is now done with a rectangular symbol to represent the case.
 - Preposition case abbreviations have been changed to match the language of they keyboard.
-- Key characters and command prompts for iPads were made slightly smaller in landscape mode and larger in portrait mode.
-<!--- All App Store media has been redone to reflect these changes.-->
+- All App Store media has been redone to reflect these changes.
 
 ### 🐞 Bug Fixes
 
