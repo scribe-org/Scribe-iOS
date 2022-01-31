@@ -12,7 +12,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
-Starting Monday the 24th of January, the entire design of Scribe was reworked to make the experience more aesthetically appealing while adding functionality through efficient structures. We hope you like the result!
+The entire layout of Scribe has been reworked to make the experience more aesthetically appealing while adding functionality through efficient design. We hope you like the result!
 
 ### ✨ New Features
 
@@ -21,9 +21,8 @@ Starting Monday the 24th of January, the entire design of Scribe was reworked to
 
 ### 🎨 Design Changes
 
-<!--- The logo for Scribe has been reworked to give the app a distinct style.-->
-<!--- The Scribe app icon has been given a more modern style.-->
-
+- The logo for Scribe has been reworked to give the app a distinct style.
+- The Scribe app icon has been given a more modern style.
 - The app screen has been completely redone to be more appealing.
 - Vertical spacing has been added between the keys to make them easier to press.
 - The keyboard buttons have been made slightly wider and smaller to reflect the system keyboard.
