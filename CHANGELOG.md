@@ -16,7 +16,7 @@ The entire layout of Scribe has been reworked to make the experience more aesthe
 
 ### ✨ New Features
 
-- Users can now get to Settings by clicking the directions in the app screen.
+- Users can now get to Settings by clicking the installation steps in the app screen.
 - All keyboards now switch to an English keyboard for translation, with this being in preparation for when more languages can be translated from.
 
 ### 🎨 Design Changes
@@ -28,7 +28,7 @@ The entire layout of Scribe has been reworked to make the experience more aesthe
 - Colors for noun annotation were updated to improve readability.
 - Noun annotation is now done with a square symbol to represent the gender.
 - Preposition annotation is now done with a rectangular symbol to represent the case.
-- Preposition case abbreviations have been changed to match the language of they keyboard.
+- Preposition case abbreviations have been changed to match the language of the keyboard.
 - All App Store media has been redone to reflect these changes.
 
 ### 🐞 Bug Fixes
