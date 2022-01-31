@@ -88,6 +88,18 @@ class ViewController: UIViewController {
     setUI()
   }
 
+  /// Includes a call to set the UI for the app screen.
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    setUI()
+  }
+
+  /// Includes a call to set the UI for the app screen.
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    setUI()
+  }
+  
   // Lock the device into portrait mode to avoid resizing issues.
   var orientations = UIInterfaceOrientationMask.portrait
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
@@ -104,9 +116,9 @@ class ViewController: UIViewController {
   /// Sets the font size for the text in the app screen and corresponding UIImage icons.
   func setFontSize() {
     if UIDevice.current.userInterfaceIdiom == .phone {
-      fontSize = UIScreen.main.bounds.width / 30
+      fontSize = UIScreen.main.bounds.height / 65
     } else if UIDevice.current.userInterfaceIdiom == .pad {
-      fontSize = UIScreen.main.bounds.width / 45
+      fontSize = UIScreen.main.bounds.height / 60
     }
   }
 
@@ -144,7 +156,6 @@ class ViewController: UIViewController {
   let switchViewColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
-    switchView.titleLabel?.font = .systemFont(ofSize: switchView.frame.height * 0.35)
     if displayPrivacyPolicy == false {
       switchView.setTitle("View Privacy Policy", for: .normal)
     } else if displayPrivacyPolicy == true {
@@ -152,6 +163,7 @@ class ViewController: UIViewController {
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(UIColor.keyCharColorLight, for: .normal)
+    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5)
 
     switchView.clipsToBounds = true
     switchView.backgroundColor = switchViewColor
@@ -207,8 +219,13 @@ class ViewController: UIViewController {
     var settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
     var privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
     if UIDevice.current.userInterfaceIdiom == .pad {
-      settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
-      privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+        settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.05, weight: .medium, scale: .medium)
+        privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+      } else {
+        settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+        privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+      }
     }
     let settingsSymbol = UIImage(systemName: "gear", withConfiguration: settingsSymbolConfig)
     let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)

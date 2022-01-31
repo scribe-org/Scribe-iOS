@@ -46,11 +46,6 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the keyboard layouts given the chosen keyboard and device type.
   func setKeyboardLayouts() {
-    if switchInput {
-      // Always start in letters with a new keyboard.
-      keyboardState = .letters
-    }
-
     if controllerLanguage == "French" {
       if switchInput {
         setENKeyboardLayout()
@@ -176,7 +171,7 @@ class KeyboardViewController: UIInputViewController {
   ///  - The delete key is made slightly larger.
   func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
     btn.setTitle("", for: .normal)
-    let btnsThatAreSlightlyLarger = ["delete.left", "chevron.left", "chevron.right", "shift", "shift.fill", "capslock.fill"]
+    var btnsThatAreSlightlyLarger = ["delete.left", "chevron.left", "chevron.right", "shift", "shift.fill", "capslock.fill"]
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.75, weight: .light, scale: .medium)
     if btnsThatAreSlightlyLarger.contains(iconName) {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 1.55, weight: .light, scale: .medium)
@@ -188,6 +183,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
     if DeviceType.isPad {
+      btnsThatAreSlightlyLarger.append("globe")
       if isLandscapeView == true {
         selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: letterButtonWidth / 3.75, weight: .light, scale: .medium)
         if btnsThatAreSlightlyLarger.contains(iconName) {
@@ -290,7 +286,11 @@ class KeyboardViewController: UIInputViewController {
     previewBar.layer.borderColor = previewBarBorderColor
     previewBar.layer.borderWidth = 1.0
     previewBar.textAlignment = NSTextAlignment.left
-    previewBar.font = .systemFont(ofSize: annotationHeight * 0.7)
+    if DeviceType.isPhone {
+      previewBar.font = .systemFont(ofSize: annotationHeight * 0.7)
+    } else if DeviceType.isPad {
+      previewBar.font = .systemFont(ofSize: annotationHeight * 0.85)
+    }
     previewBarShadow.isUserInteractionEnabled = false
 
     if DeviceType.isPhone {
@@ -307,8 +307,9 @@ class KeyboardViewController: UIInputViewController {
     CommandBackground.isUserInteractionEnabled = false
   }
 
-  // The button used to display Scribe commands.
+  // The button used to display Scribe commands and its shadow.
   @IBOutlet var scribeBtn: UIButton!
+  @IBOutlet var scribeBtnShadow: UIButton!
 
   /// Assigns the icon and sets up the Scribe button.
   func setScribeBtn() {
@@ -326,23 +327,27 @@ class KeyboardViewController: UIInputViewController {
       }
     }
     setBtn(btn: scribeBtn, color: commandKeyColor, name: "Scribe", canCapitalize: false, isSpecial: false)
-    scribeBtnShadow.isUserInteractionEnabled = false
     scribeBtn.layer.borderColor = previewBarBorderColor
     scribeBtn.layer.borderWidth = 1.0
+    scribeBtn.contentMode = .center
+    scribeBtn.imageView?.contentMode = .scaleAspectFit
+    scribeBtnShadow.isUserInteractionEnabled = false
   }
 
   /// Changes the Scribe key to an escape key.
   func scribeBtnToEscape() {
     scribeBtn.setTitle("", for: .normal)
-    let selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .light, scale: .medium)
+    var selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 0.75, weight: .light, scale: .medium)
+    if DeviceType.isPad {
+      selectKeyboardIconConfig = UIImage.SymbolConfiguration(pointSize: annotationHeight * 1.1, weight: .light, scale: .medium)
+    }
     scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
     scribeBtn.tintColor = keyCharColor
   }
 
-  // Shadow elements for the Scribe button and preview bar.
+  // Shadow elements for preview bar.
   @IBOutlet var previewBarShadow: UIButton!
   @IBOutlet var previewBarBlend: UILabel!
-  @IBOutlet var scribeBtnShadow: UIButton!
 
   // Buttons used to trigger Scribe command functionality.
   @IBOutlet var translateBtn: UIButton!
@@ -1012,9 +1017,15 @@ class KeyboardViewController: UIInputViewController {
             styleBtn(btn: conjugateBtn, title: conjugateBtnLbl, radius: commandKeyCornerRadius)
             styleBtn(btn: pluralBtn, title: pluralBtnLbl, radius: commandKeyCornerRadius)
 
-            translateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-            conjugateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-            pluralBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+            if DeviceType.isPhone {
+              translateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+              conjugateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+              pluralBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+            } else if DeviceType.isPad {
+              translateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+              conjugateBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+              pluralBtn.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+            }
 
           } else {
             if previewState == true {
@@ -1428,9 +1439,17 @@ class KeyboardViewController: UIInputViewController {
 
         if annotation == "PL" {
           // Make text smaller to fit the annotation.
-          elem.font = .systemFont(ofSize: annotationHeight * 0.60)
+          if DeviceType.isPhone {
+            elem.font = .systemFont(ofSize: annotationHeight * 0.6)
+          } else if DeviceType.isPad {
+            elem.font = .systemFont(ofSize: annotationHeight * 0.8)
+          }
         } else {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.70)
+          if DeviceType.isPhone {
+            elem.font = .systemFont(ofSize: annotationHeight * 0.70)
+          } else if DeviceType.isPad {
+            elem.font = .systemFont(ofSize: annotationHeight * 0.95)
+          }
         }
 
         if annotation == "F" {
@@ -1464,7 +1483,11 @@ class KeyboardViewController: UIInputViewController {
             annotationToDisplay = "Инс"
           }
         }
-        elem.font = .systemFont(ofSize: annotationHeight * 0.65)
+        if DeviceType.isPhone {
+          elem.font = .systemFont(ofSize: annotationHeight * 0.65)
+        } else if DeviceType.isPad {
+          elem.font = .systemFont(ofSize: annotationHeight * 0.85)
+        }
         elem.backgroundColor = keyCharColor
       }
       elem.text = annotationToDisplay
@@ -1494,7 +1517,11 @@ class KeyboardViewController: UIInputViewController {
       nounAnnotationsToDisplay = 0
       
       // Make preview bar font larger for annotation.
-      previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
+      if DeviceType.isPhone {
+        previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
+      } else if DeviceType.isPad {
+        previewBar.font = .systemFont(ofSize: annotationHeight)
+      }
 
       let nounForm = nouns?[wordToCheck]?["form"] as? String
       if nounForm == "" {
@@ -1593,7 +1620,11 @@ class KeyboardViewController: UIInputViewController {
     if isPreposition {
       prepAnnotationState = true
       // Make preview bar font larger for annotation.
-      previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
+      if DeviceType.isPhone {
+        previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
+      } else if DeviceType.isPad {
+        previewBar.font = .systemFont(ofSize: annotationHeight)
+      }
       previewBar.textColor = keyCharColor
 
       // Initialize an array of display elements and count how many will be changed.
@@ -1737,6 +1768,8 @@ class KeyboardViewController: UIInputViewController {
       previewState = true
       getTranslation = true
       switchInput = true
+      // Always start in letters with a new keyboard.
+      keyboardState = .letters
       loadKeys()
       previewBar.text = translatePromptAndCursor
 
@@ -2027,16 +2060,6 @@ class KeyboardViewController: UIInputViewController {
   ///   - sender: the key that was pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
     sender.backgroundColor = keyPressedColor
-
-    // Scribe key annotation.
-    let senderKey = sender.layer.value(forKey: "original") as? String
-    if senderKey == "Scribe" {
-      sender.alpha = 0.5
-      // Bring sender's opacity back up to fully opaque
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-          sender.alpha = 1.0
-      }
-    }
   }
 
   /// Defines events that occur given multiple presses of a single key.

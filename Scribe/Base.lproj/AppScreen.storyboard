@@ -40,10 +40,13 @@
                                 <rect key="frame" x="18.666666666666657" y="686.33333333333337" width="337.66666666666674" height="55"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QI-f0-YLj" userLabel="SwitchView">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2QI-f0-YLj" userLabel="SwitchView">
                                 <rect key="frame" x="18.666666666666657" y="686.33333333333337" width="337.66666666666674" height="55"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacyDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="uAP-y9-G5O" userLabel="PrivacyScroll">
                                 <rect key="frame" x="165" y="643.33333333333337" width="45" height="29.666666666666629"/>

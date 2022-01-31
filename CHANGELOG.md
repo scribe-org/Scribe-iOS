@@ -50,6 +50,7 @@ Starting Monday the 24th of January, the entire design of Scribe was reworked to
 ### 🐞 Bug Fixes
 
 - The keyboard colors should not switch randomly between light and dark mode now.
+- Removed an additional character from the Spanish iPad keyboard's special keys.
 
 ### ⚖️ Legal
 

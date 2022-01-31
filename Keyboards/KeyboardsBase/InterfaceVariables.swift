@@ -675,7 +675,7 @@ public class SpanishKeyboardConstants {
   ]
 
   static let symbolKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "^", "[", "]", "{", "}", "ᵒ", "ᵃ", "return"],
     ["123", "§", "|", "~", "¶", "\\", "<", ">", "¡", "¿", "123"],
     ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
