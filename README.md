@@ -45,14 +45,14 @@ The following are combined preview videos for the [App Store](https://apps.apple
 
 #### iPhone 6.5" version
 
-https://user-images.githubusercontent.com/24387426/151905623-52d3558a-324e-41d3-a7b2-93320e7d23cc.mp4
+https://user-images.githubusercontent.com/24387426/151907274-85643054-a32a-4cba-83e0-2d76295b1988.mp4
 
 #### See also
 
 <details><summary><strong>iPad Pro 4th gen version</strong></summary>
 <p>
 
-https://user-images.githubusercontent.com/24387426/151905638-ba852b1e-8fc5-4bab-8d68-f58673a0ddb8.mp4
+https://user-images.githubusercontent.com/24387426/151907291-b401811b-16e1-4aa4-b2ad-c9fb9a3b8223.mp4
 
 </p>
 </details>
