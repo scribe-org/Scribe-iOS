@@ -1,10 +1,10 @@
-# All Russian (Q7737) prepositions and their corresponding cases.
+# All Slovak (Q9058) prepositions and their corresponding cases.
 # Enter this query at https://query.wikidata.org/.
 
-SELECT ?preposition ?case WHERE {
+SELECT ?lexeme ?preposition ?case WHERE {
 
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q7737 ;
+    dct:language wd:Q9058 ;
     wikibase:lexicalCategory wd:Q4833830 ;
     wikibase:lemma ?lemma .
 

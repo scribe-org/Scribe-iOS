@@ -1,0 +1,39 @@
+# All Slovak (Q9058) nouns, their plural and their gender.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT DISTINCT ?singular ?plural ?gender WHERE {
+
+  # Nouns and pronouns.
+  VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9058 ;
+    wikibase:lexicalCategory ?noun .
+  FILTER(?noun = ?nounTypes)
+
+  # Optional selection of singular forms.
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?singularForm .
+    ?singularForm ontolex:representation ?singular ;
+      wikibase:grammaticalFeature wd:Q110786 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+  } .
+
+  # Optional selection of plural forms.
+  OPTIONAL {
+    ?lexeme ontolex:lexicalForm ?pluralForm .
+    ?pluralForm ontolex:representation ?plural ;
+      wikibase:grammaticalFeature wd:Q146786 ;
+      wikibase:grammaticalFeature wd:Q131105 ;
+  } .
+
+  # Optional selection of genders.
+  OPTIONAL {
+    ?lexeme wdt:P5185 ?nounGender .
+    FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
+  } .
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?nounGender rdfs:label ?gender .
+  }
+}

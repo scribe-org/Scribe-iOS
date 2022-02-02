@@ -1,0 +1,13 @@
+# All Estonian (Q9072) verbs and the currently implemented tenses for each.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?lexeme ?infinitive  WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9072 ;
+    wikibase:lexicalCategory wd:Q24905 .
+
+  # Infinitive (required)
+  ?lexeme ontolex:lexicalForm ?infinitiveForm .
+  ?infinitiveForm ontolex:representation ?infinitive ;
+    wikibase:grammaticalFeature wd:Q179230 ;
+}

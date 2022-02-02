@@ -1,0 +1,25 @@
+# All Estonian (Q9072) prepositions, postpositions, and their corresponding cases.
+# Enter this query at https://query.wikidata.org/.
+# Note that this query includes postpositions that are also used in Estonian.
+
+SELECT ?lexeme ?preposition ?case WHERE {
+
+  # Prepositions and postpositions.
+  VALUES ?PrePostPositions { wd:Q4833830 wd:Q161873 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9072 ;
+    wikibase:lexicalCategory ?prePost ;
+    wikibase:lemma ?lemma .
+  FILTER(?prePost = ?PrePostPositions)
+
+  # Optional selection of corresponding cases.
+  OPTIONAL {
+    ?lexeme wdt:P5713 ?caseForm .
+  } .
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?lemma rdfs:label ?preposition .
+    ?caseForm rdfs:label ?case .
+  }
+}

@@ -6,8 +6,8 @@ SELECT ?wordCategory (COUNT(?wordCategory) as ?wordCategoryCounts) WHERE {
   # You can find the QID of the language you want to check by searching for it on https://www.wikidata.org/.
   FILTER( ?language = wd:Q1860 )
 
-  # Checking nouns, proper nouns, verbs, adjectives, adverbs, prepositions and conjunctions.
-  VALUES ?wordCategories { wd:Q1084 wd:Q147276 wd:Q24905 wd:Q34698 wd:Q380057 wd:Q4833830 wd:Q191536 }
+  # Checking nouns, proper nouns, verbs, adjectives, adverbs, prepositions, postpositions and conjunctions.
+  VALUES ?wordCategories { wd:Q1084 wd:Q147276 wd:Q24905 wd:Q34698 wd:Q380057 wd:Q4833830 wd:Q161873 wd:Q191536 }
 
   # Query the lexeme if it's in the above categories of words.
   ?lexeme a ontolex:LexicalEntry ;

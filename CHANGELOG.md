@@ -8,7 +8,20 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# Scribe 1.2.0 (WIP)
+# Scribe 1.2.1 (WIP)
+
+### 🗃️ Data Added
+
+### ✨ New Features
+
+<!--- The keyboard switches back to letter keys after all appropriate symbols followed by space.-->
+<!--- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.-->
+
+### 🐞 Bug Fixes
+
+- The Scribe key now switches its icon color with the rest of the keyboard when it changes from color modes.
+
+# Scribe 1.2.0
 
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 

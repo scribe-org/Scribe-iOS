@@ -1,10 +1,11 @@
-# All Russian (Q7737) prepositions and their corresponding cases.
+# All Ukrainian (Q8798) prepositions and their corresponding cases.
 # Enter this query at https://query.wikidata.org/.
 
 SELECT ?preposition ?case WHERE {
 
+  # All German prepositions.
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q7737 ;
+    dct:language wd:Q8798 ;
     wikibase:lexicalCategory wd:Q4833830 ;
     wikibase:lemma ?lemma .
 

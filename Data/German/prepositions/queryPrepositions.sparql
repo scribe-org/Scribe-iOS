@@ -3,7 +3,6 @@
 
 SELECT ?preposition ?case WHERE {
 
-  # All German prepositions.
   ?lexeme a ontolex:LexicalEntry ;
     dct:language wd:Q188 ;
     wikibase:lexicalCategory wd:Q4833830 ;
