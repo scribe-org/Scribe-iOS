@@ -112,6 +112,8 @@
 		D1D880E027860D7B00407050 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DD27860D7B00407050 /* nouns.json */; };
 		D1D880E127860D7B00407050 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DE27860D7B00407050 /* translations.json */; };
 		D1D880E227860D7B00407050 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880DF27860D7B00407050 /* verbs.json */; };
+		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
+		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -827,6 +829,8 @@
 				38BD213622D5907F00C6795D /* ViewController.swift in Sources */,
 				D196B360279A051000228F3F /* PrivacyPolicy.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
+				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
+				D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -115,19 +115,19 @@ class ViewController: UIViewController {
   var fontSize = CGFloat(0)
   /// Sets the font size for the text in the app screen and corresponding UIImage icons.
   func setFontSize() {
-    if UIDevice.current.userInterfaceIdiom == .phone {
+    if DeviceType.isPhone {
       fontSize = UIScreen.main.bounds.height / 65
-    } else if UIDevice.current.userInterfaceIdiom == .pad {
+    } else if DeviceType.isPad {
       fontSize = UIScreen.main.bounds.height / 60
     }
   }
 
   /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
   func setTopIcon() {
-    if UIDevice.current.userInterfaceIdiom == .phone {
+    if DeviceType.isPhone {
       topIconPhone.isHidden = false
       topIconPad.isHidden = true
-    } else if UIDevice.current.userInterfaceIdiom == .pad {
+    } else if DeviceType.isPad {
       topIconPhone.isHidden = true
       topIconPad.isHidden = false
     }
@@ -218,7 +218,7 @@ class ViewController: UIViewController {
     // Set configurations for corner icons.
     var settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
     var privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
-    if UIDevice.current.userInterfaceIdiom == .pad {
+    if DeviceType.isPad {
       if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
         settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.05, weight: .medium, scale: .medium)
         privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)

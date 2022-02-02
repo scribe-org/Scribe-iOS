@@ -6,6 +6,9 @@
 
 import UIKit
 
+// The Scibe key icon that changes based on light and dark mode as well as device.
+var scribeKeyIcon = UIImage(named: "ScribeBtnPhoneBlack.png")
+
 // Initialize all colors.
 var keyColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 var keyCharColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
@@ -29,6 +32,12 @@ var previewOrange = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/25
 /// Determines if the device is in dark mode and sets the color scheme.
 func checkDarkModeSetColors() {
   if UITraitCollection.current.userInterfaceStyle == .light {
+    if DeviceType.isPhone {
+      scribeKeyIcon = UIImage(named: "ScribeBtnPhoneBlack.png")
+    } else if DeviceType.isPad {
+      scribeKeyIcon = UIImage(named: "ScribeBtnPadBlack.png")
+    }
+
     keyColor = UIColor.keyColorLight
     keyCharColor = UIColor.keyCharColorLight
     specialKeyColor = UIColor.specialKeyColorLight
@@ -47,6 +56,12 @@ func checkDarkModeSetColors() {
     previewGreen = UIColor.previewGreenLight
     previewOrange = UIColor.previewOrangeLight
   } else if UITraitCollection.current.userInterfaceStyle == .dark {
+    if DeviceType.isPhone {
+      scribeKeyIcon = UIImage(named: "ScribeBtnPhoneWhite.png")
+    } else if DeviceType.isPad {
+      scribeKeyIcon = UIImage(named: "ScribeBtnPadWhite.png")
+    }
+    
     keyColor = UIColor.keyColorDark
     keyCharColor = UIColor.keyCharColorDark
     specialKeyColor = UIColor.specialKeyColorDark
