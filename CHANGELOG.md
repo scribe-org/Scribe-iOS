@@ -14,12 +14,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!--- The keyboard switches back to letter keys after all appropriate symbols followed by space.-->
-<!--- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.-->
+<!-- - The keyboard switches back to letter keys after all appropriate symbols followed by space. -->
+<!-- - Scribe commands now accept inputs that are followed by a space in case the user accidentally added one. -->
 
 ### 🐞 Bug Fixes
 
-- The Scribe key now switches its icon color with the rest of the keyboard when it changes from color modes.
+- The Scribe key now switches its icon color with the rest of the keyboard when the user changes color modes.
 
 # Scribe 1.2.0
 
