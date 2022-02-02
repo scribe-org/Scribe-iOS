@@ -1,0 +1,13 @@
+# All Hausa (Q56475) verbs.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?lexeme ?verb WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q56475 ;
+    wikibase:lexicalCategory wd:Q24905 ;
+    wikibase:lemma ?verb .
+
+  # BIND(lang(?noun) as ?language)
+  # FILTER(?language = "ha")
+  # FILTER(?language = "ha-arabic")
+}

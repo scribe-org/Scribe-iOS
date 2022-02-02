@@ -1,9 +1,10 @@
-# All Danish (Q9035) verbs and the currently implemented tenses for each.
+# All Norwegian (Q9043) verbs.
 # Enter this query at https://query.wikidata.org/.
+# Note that this query is for Bokmål (Q25167) rather than Nynorsk (Q25164).
 
 SELECT ?lexeme ?infinitive WHERE {
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q9035 ;
+    dct:language wd:Q25167 ;
     wikibase:lexicalCategory wd:Q24905 .
 
   # Infinitive (required)

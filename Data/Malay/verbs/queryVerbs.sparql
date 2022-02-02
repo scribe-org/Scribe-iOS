@@ -1,0 +1,12 @@
+# All Malay (Q9237) verbs.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?lexeme ?verb WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9237 ;
+    wikibase:lexicalCategory wd:Q24905 ;
+    wikibase:lemma ?verb .
+
+  BIND(lang(?noun) as ?language)
+  FILTER(?language = "ms")
+}

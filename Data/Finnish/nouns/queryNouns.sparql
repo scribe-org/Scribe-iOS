@@ -1,12 +1,12 @@
-# All Estonian (Q9072) nouns and their plural.
+# All Finnish (Q1412) nouns and their plural.
 # Enter this query at https://query.wikidata.org/.
 
-SELECT DISTINCT ?singular ?plural WHERE {
+SELECT DISTINCT ?lexeme ?singular ?plural WHERE {
 
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q9072 ;
+    dct:language wd:Q1412 ;
     wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes)
 
@@ -15,7 +15,6 @@ SELECT DISTINCT ?singular ?plural WHERE {
     ?lexeme ontolex:lexicalForm ?singularForm .
     ?singularForm ontolex:representation ?singular ;
       wikibase:grammaticalFeature wd:Q110786 ;
-      wikibase:grammaticalFeature wd:Q131105 ;
   } .
 
   # Optional selection of plural forms.
@@ -23,6 +22,5 @@ SELECT DISTINCT ?singular ?plural WHERE {
     ?lexeme ontolex:lexicalForm ?pluralForm .
     ?pluralForm ontolex:representation ?plural ;
       wikibase:grammaticalFeature wd:Q146786 ;
-      wikibase:grammaticalFeature wd:Q131105 ;
   } .
 }

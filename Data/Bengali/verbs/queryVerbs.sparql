@@ -1,0 +1,9 @@
+# All Bengali (Q9610) verbs.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?lexeme ?verb WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9610 ;
+    wikibase:lexicalCategory wd:Q24905 ;
+    wikibase:lemma ?verb .
+}

@@ -1,0 +1,9 @@
+# All Malayalam (Q36236) verbs.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT ?lexeme ?verb WHERE {
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q36236 ;
+    wikibase:lexicalCategory wd:Q24905 ;
+    wikibase:lemma ?verb .
+}

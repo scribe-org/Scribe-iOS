@@ -1,0 +1,28 @@
+# All Hindustani (Q11051) nouns and their gender.
+# Enter this query at https://query.wikidata.org/.
+# Note the necessity to filter for "ur" to remove Hindustani (hi) words.
+
+SELECT DISTINCT ?noun ?gender WHERE {
+
+  # Nouns and pronouns.
+  VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q11051 ;
+    wikibase:lexicalCategory ?nounType ;
+    wikibase:lemma ?noun .
+  FILTER(?nounType = ?nounTypes)
+
+  # Optional selection of genders.
+  OPTIONAL {
+    ?lexeme wdt:P5185 ?nounGender .
+    FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
+  } .
+
+  BIND(lang(?noun) as ?language)
+  FILTER(?language = "ur")
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?nounGender rdfs:label ?gender .
+  }
+}

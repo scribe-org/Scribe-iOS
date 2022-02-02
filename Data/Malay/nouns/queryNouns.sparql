@@ -1,0 +1,16 @@
+# All Malay (Q9237) nouns.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT DISTINCT ?lexeme ?noun WHERE {
+
+  # Nouns and pronouns.
+  VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9237 ;
+    wikibase:lexicalCategory ?nounType ;
+    wikibase:lemma ?noun .
+  FILTER(?nounType = ?nounTypes)
+
+  BIND(lang(?noun) as ?language)
+  FILTER(?language = "ms")
+}

@@ -1,0 +1,24 @@
+# All Latin (Q397) nouns and their gender.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT DISTINCT ?noun ?gender WHERE {
+
+  # Nouns and pronouns.
+  VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q397 ;
+    wikibase:lexicalCategory ?nounType ;
+    wikibase:lemma ?noun .
+  FILTER(?nounType = ?nounTypes)
+
+  # Optional selection of genders.
+  OPTIONAL {
+    ?lexeme wdt:P5185 ?nounGender .
+    FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
+  } .
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+    ?nounGender rdfs:label ?gender .
+  }
+}

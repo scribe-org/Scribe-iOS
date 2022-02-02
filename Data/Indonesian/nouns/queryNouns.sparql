@@ -1,0 +1,13 @@
+# All Indonesian (Q9240) nouns.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT DISTINCT ?noun WHERE {
+
+  # Nouns and pronouns.
+  VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
+  ?lexeme a ontolex:LexicalEntry ;
+    dct:language wd:Q9240 ;
+    wikibase:lexicalCategory ?nounType ;
+    wikibase:lemma ?noun .
+  FILTER(?nounType = ?nounTypes)
+}
