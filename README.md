@@ -57,7 +57,7 @@ https://user-images.githubusercontent.com/24387426/151907291-b401811b-16e1-4aa4-
 </p>
 </details>
 
-The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new) to check before.
+The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new/choose) to check before.
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
