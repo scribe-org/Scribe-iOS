@@ -61,7 +61,9 @@ The App Store videos, images and text can be found in [Resources/AppStore](https
 
 # Supported Languages [`⇧`](#contents) <a id="supported-languages"></a>
 
-The Scribe team has interest in creating keyboards for all languages of interest. The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/). Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for all current languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and check the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed.
+Scribe's goal is functional, feature-rich keyboards for all languages. Check [Scribe-iOS/Data](https://github.com/scribe-org/Scribe-iOS/tree/main/Data) for queries for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/), and see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed. Feel free to [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
+
+The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
 
 | Languages  |   Nouns | Verbs | Translations | Adjectives | Prepositions |
 | :--------- | ------: | ----: | -----------: | ---------: | -----------: |
