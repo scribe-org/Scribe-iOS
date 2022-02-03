@@ -111,7 +111,7 @@ With the `Conjugate` feature, a user is presented with the grammar charts for an
 
 ### • Noun Plurals [`⇧`](#contents) <a id="noun-plurals"></a>
 
-The `Plural` feature allows a user to enter a noun and then insert its plural when the `return` key is pressed.
+The `Plural` feature allows a user to enter a noun and then insert its plural into the text field when the `return` key is pressed.
 
 ### • Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
 
@@ -157,7 +157,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 # Language Practice [`⇧`](#contents) <a id="language-practice"></a>
 
-A future feature of Scribe is language practice within the app itself. Scribe presents users with information that is directly relevant to their current struggles with a second language. This information can be saved in-app and used to create personalized lessons such as flash cards to reinforce the information that Scribe has provided. Work on this feature will be completed in the [language practice project](https://github.com/scribe-org/Scribe-iOS/projects/7).
+A future feature of Scribe is language practice within the app itself. Scribe presents users with information that is directly relevant to their current struggles with a second language. This information can be saved in-app and used to create personalized lessons such as flashcards to reinforce the information that Scribe has provided. Work on this feature will be completed in the [language practice project](https://github.com/scribe-org/Scribe-iOS/projects/7).
 
 # To-Do [`⇧`](#contents) <a id="to-do"></a>
 

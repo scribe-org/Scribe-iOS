@@ -12,7 +12,7 @@ Current features include:
 
 - With the Conjugate feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-- The Plural feature allows a user to enter a noun and then insert its plural when the return key is pressed.
+- The Plural feature allows a user to enter a noun and then insert its plural into the text field when the return key is pressed.
 
 - Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
 
