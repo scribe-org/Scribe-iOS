@@ -84,7 +84,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 # Scribe 1.1.0
 
-### 🌐 New Keyboards
+### ⌨️ New Keyboards
 
 - Adds Russian, French, Portuguese and Swedish keyboards.
 
@@ -162,7 +162,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - Releasing for iPhone and iPad.
 
-### 🌐 Keyboards
+### ⌨️ Keyboards
 
 - Keyboards for German and Spanish.
 
