@@ -441,17 +441,16 @@ class KeyboardViewController: UIInputViewController {
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
-    let conjugateViewElements = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP,
-                                 conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP]
-    let conjugateViewElementsAlt = [conjugateBtnTL, conjugateBtnBL, conjugateBtnTR, conjugateBtnBR,
-                                    conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
+    let conjugateViewElements: [UIButton] = [conjugateBtnFPS, conjugateBtnSPS, conjugateBtnTPS, conjugateBtnFPP, conjugateBtnSPP, conjugateBtnTPP, conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP]
+    let conjugateViewElementsAlt: [UIButton] = [conjugateBtnTL, conjugateBtnBL, conjugateBtnTR, conjugateBtnBR, conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
+
     if conjugateAlternateView == false {
       for elem in conjugateViewElements {
-        activateBtn(btn: elem!)
+        activateBtn(btn: elem)
       }
 
       for elem in conjugateViewElementsAlt {
-        deactivateBtn(btn: elem!)
+        deactivateBtn(btn: elem)
       }
     }
 
@@ -460,11 +459,11 @@ class KeyboardViewController: UIInputViewController {
 
     if conjugateAlternateView == true {
       for elem in conjugateViewElements {
-        deactivateBtn(btn: elem!)
+        deactivateBtn(btn: elem)
       }
 
       for elem in conjugateViewElementsAlt {
-        activateBtn(btn: elem!)
+        activateBtn(btn: elem)
       }
     }
   }
@@ -495,11 +494,10 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateBtnTR)
     deactivateBtn(btn: conjugateBtnBR)
 
-    let conjugationLbls = [conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
-                           conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
+    let conjugationLbls: [UIButton] = [conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP, conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR]
 
     for lbl in conjugationLbls {
-      lbl!.setTitle("", for: .normal)
+      lbl.setTitle("", for: .normal)
     }
   }
 
@@ -1288,6 +1286,7 @@ class KeyboardViewController: UIInputViewController {
       return
     }
     wordToTranslate = (previewBar?.text!.substring(with: translatePrompt.count..<((previewBar?.text!.count)!-1)))!
+    wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
 
     // Check to see if the input was uppercase to return an uppercase conjugation.
     inputWordIsCapitalized = false
@@ -1315,6 +1314,7 @@ class KeyboardViewController: UIInputViewController {
       return
     }
     verbToConjugate = (previewBar?.text!.substring(with: conjugatePrompt.count..<((previewBar?.text!.count)!-1)))!
+    verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
 
     // Check to see if the input was uppercase to return an uppercase conjugation.
     inputWordIsCapitalized = false
@@ -1370,26 +1370,27 @@ class KeyboardViewController: UIInputViewController {
     if previewBar.text! == pluralPromptAndCursor {
       return
     }
-    var noun = previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1))
+    var noun: String = (previewBar?.text!.substring(with: pluralPrompt.count..<((previewBar?.text!.count)!-1)))!
+    noun = String(noun.trailingSpacesTrimmed)
 
     // Check to see if the input was uppercase to return an uppercase plural.
     inputWordIsCapitalized = false
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      let firstLetter = noun?.substring(toIdx: 1)
-      inputWordIsCapitalized = firstLetter!.isUppercase
-      noun = noun?.lowercased()
+      let firstLetter = noun.substring(toIdx: 1)
+      inputWordIsCapitalized = firstLetter.isUppercase
+      noun = noun.lowercased()
     }
-    let nounInDirectory = nouns?[noun!] != nil
+    let nounInDirectory = nouns?[noun] != nil
     if nounInDirectory {
-      if nouns?[noun!]?["plural"] as? String != "isPlural" {
-        let plural = nouns?[noun!]?["plural"] as! String
+      if nouns?[noun]?["plural"] as? String != "isPlural" {
+        let plural = nouns?[noun]?["plural"] as! String
         if inputWordIsCapitalized == false {
           proxy.insertText(plural + " ")
         } else {
           proxy.insertText(plural.capitalized + " ")
         }
       } else {
-        proxy.insertText(noun! + " ")
+        proxy.insertText(noun + " ")
         previewBar.text = previewPromptSpacing + "Already plural"
         invalidState = true
         isAlreadyPluralState = true
@@ -1629,16 +1630,16 @@ class KeyboardViewController: UIInputViewController {
         return
       }
 
-      let prepositionCase = prepositions?[wordToCheck] as? String
+      let prepositionCase: String = prepositions?[wordToCheck] as! String
 
       var numberOfAnnotations: Int = 0
       var annotationsToAssign: [String] = [String]()
-      if prepositionCase?.count ?? 0 >= 4 { // Would have a slash as they all are three characters long
-        annotationsToAssign = (prepositionCase?.components(separatedBy:"/"))!
+      if prepositionCase.count >= 4 { // Would have a slash as they all are three characters long
+        annotationsToAssign = (prepositionCase.components(separatedBy:"/"))
         numberOfAnnotations = annotationsToAssign.count
       } else {
         numberOfAnnotations = 1
-        annotationsToAssign.append(prepositionCase ?? "")
+        annotationsToAssign.append(prepositionCase )
       }
 
       for i in 0..<numberOfAnnotations {

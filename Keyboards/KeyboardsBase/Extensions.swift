@@ -61,3 +61,16 @@ extension String {
     }
   }
 }
+
+/// Adds the ability to efficiently trim whitespace at the end of a string.
+extension StringProtocol {
+  @inline(__always)
+  var trailingSpacesTrimmed: Self.SubSequence {
+    var view = self[...]
+
+    while view.last?.isWhitespace == true {
+      view = view.dropLast()
+    }
+    return view
+  }
+}
