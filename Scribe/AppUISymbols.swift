@@ -1,7 +1,7 @@
 //
 //  AppUISymbols.swift
 //
-// Symbols needed for the app UI.
+//  Functions returning symbols for the app UI.
 //
 
 import UIKit
