@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="French" customModuleProvider="target">
             <connections>
-                <outlet property="CommandBackground" destination="RVF-jy-JTf" id="vIP-MX-o8v"/>
+                <outlet property="commandBackground" destination="RVF-jy-JTf" id="XVG-eG-Ni3"/>
                 <outlet property="conjugateBtn" destination="rP7-7a-des" id="vj6-fN-JOA"/>
                 <outlet property="conjugateBtnBL" destination="dOA-cy-aGo" id="4wr-ZN-z3p"/>
                 <outlet property="conjugateBtnBR" destination="myP-Mh-fDn" id="6Rv-4d-I5h"/>

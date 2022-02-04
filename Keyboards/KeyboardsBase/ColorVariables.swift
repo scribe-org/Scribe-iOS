@@ -6,7 +6,7 @@
 
 import UIKit
 
-// The Scibe key icon that changes based on light and dark mode as well as device.
+// The Scribe key icon that changes based on light and dark mode as well as device.
 var scribeKeyIcon = UIImage(named: "ScribeBtnPhoneBlack.png")
 
 // Initialize all colors.
@@ -61,7 +61,7 @@ func checkDarkModeSetColors() {
     } else if DeviceType.isPad {
       scribeKeyIcon = UIImage(named: "ScribeBtnPadWhite.png")
     }
-    
+
     keyColor = UIColor.keyColorDark
     keyCharColor = UIColor.keyCharColorDark
     specialKeyColor = UIColor.specialKeyColorDark
@@ -96,7 +96,9 @@ extension UIColor {
 
   static let commandKeyColorLight = UIColor.scribeBlueLight
   static let previewBarColorLight = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-  static let previewBarBorderColorLight = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 206.0/255.0, alpha: 1.0).cgColor
+  static let previewBarBorderColorLight = UIColor(
+    red: 203.0/255.0, green: 203.0/255.0, blue: 206.0/255.0, alpha: 1.0
+  ).cgColor
 
   static let keyboardBackColorLight = UIColor(red: 206.0/255.0, green: 210.0/255.0, blue: 217.0/255.0, alpha: 1.0)
   static let keyShadowColorLight = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.35).cgColor
@@ -117,7 +119,9 @@ extension UIColor {
 
   static let commandKeyColorDark = UIColor.scribeBlueDark
   static let previewBarColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-  static let previewBarBorderColorDark = UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 74.0/255.0, alpha: 1.0).cgColor
+  static let previewBarBorderColorDark = UIColor(
+    red: 70.0/255.0, green: 70.0/255.0, blue: 74.0/255.0, alpha: 1.0
+  ).cgColor
 
   static let keyboardBackColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
   static let keyShadowColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.95).cgColor
