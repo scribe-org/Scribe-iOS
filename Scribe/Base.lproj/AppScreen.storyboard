@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-Jf-rU1" userLabel="PrivTextView">
-                                <rect key="frame" x="35.666666666666657" y="242.66666666666666" width="303.66666666666674" height="362.66666666666674"/>
+                                <rect key="frame" x="35.666666666666657" y="237.66666666666666" width="303.66666666666674" height="372.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -76,7 +76,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-Un-zQg" userLabel="GHTextView">
-                                <rect key="frame" x="35.666666666666657" y="531" width="303.66666666666674" height="74.333333333333371"/>
+                                <rect key="frame" x="35.666666666666657" y="526" width="303.66666666666674" height="84.333333333333371"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -109,7 +109,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w88-X2-5bx" userLabel="AppTextView">
-                                <rect key="frame" x="35.666666666666657" y="242.66666666666663" width="303.66666666666674" height="235"/>
+                                <rect key="frame" x="35.666666666666657" y="237.66666666666663" width="303.66666666666674" height="245"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,8 +139,8 @@
                             <constraint firstItem="fV8-bd-sgm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8Gi-Sj-3b0"/>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="8SI-nP-cSR"/>
                             <constraint firstItem="kI5-w9-te5" firstAttribute="centerX" secondItem="2QI-f0-YLj" secondAttribute="centerX" id="Agy-7t-YcI"/>
-                            <constraint firstItem="QHP-Un-zQg" firstAttribute="top" secondItem="afZ-cI-Uqj" secondAttribute="top" constant="15" id="F2n-tU-RJK"/>
-                            <constraint firstItem="w88-X2-5bx" firstAttribute="top" secondItem="a6P-Fj-0z7" secondAttribute="top" constant="15" id="F3z-NW-qRc"/>
+                            <constraint firstItem="QHP-Un-zQg" firstAttribute="top" secondItem="afZ-cI-Uqj" secondAttribute="top" constant="10" id="F2n-tU-RJK"/>
+                            <constraint firstItem="w88-X2-5bx" firstAttribute="top" secondItem="a6P-Fj-0z7" secondAttribute="top" constant="10" id="F3z-NW-qRc"/>
                             <constraint firstItem="uAP-y9-G5O" firstAttribute="height" secondItem="I5E-HP-H2z" secondAttribute="height" multiplier="0.45" id="GRP-h0-mxu"/>
                             <constraint firstItem="uAP-y9-G5O" firstAttribute="centerX" secondItem="I5E-HP-H2z" secondAttribute="centerX" id="HU1-q4-KDu"/>
                             <constraint firstItem="wNQ-WS-San" firstAttribute="centerY" secondItem="a6P-Fj-0z7" secondAttribute="centerY" id="HdS-uL-ndh"/>
@@ -158,7 +158,7 @@
                             <constraint firstItem="Pec-99-6H5" firstAttribute="trailing" secondItem="h2H-6t-AEh" secondAttribute="trailing" constant="-5" id="TQE-o3-vtc"/>
                             <constraint firstItem="kI5-w9-te5" firstAttribute="top" secondItem="I5E-HP-H2z" secondAttribute="bottom" id="Tgj-au-PtE"/>
                             <constraint firstItem="I5E-HP-H2z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UWV-26-cDg"/>
-                            <constraint firstItem="QHP-Un-zQg" firstAttribute="bottom" secondItem="afZ-cI-Uqj" secondAttribute="bottom" constant="-15" id="UWe-96-ZBf"/>
+                            <constraint firstItem="QHP-Un-zQg" firstAttribute="bottom" secondItem="afZ-cI-Uqj" secondAttribute="bottom" constant="-10" id="UWe-96-ZBf"/>
                             <constraint firstItem="kI5-w9-te5" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.075" id="Uon-y0-Bq0"/>
                             <constraint firstItem="SHS-hN-aPL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vsz-v1-D27"/>
                             <constraint firstItem="h2H-6t-AEh" firstAttribute="width" secondItem="8Mn-6Y-5tR" secondAttribute="width" id="Y2C-gX-WZo"/>
@@ -197,7 +197,7 @@
                             <constraint firstItem="PZJ-cM-o4X" firstAttribute="width" secondItem="a6P-Fj-0z7" secondAttribute="width" id="ryR-Wu-eLW"/>
                             <constraint firstItem="h2H-6t-AEh" firstAttribute="top" secondItem="a6P-Fj-0z7" secondAttribute="top" id="tio-RB-Ybh"/>
                             <constraint firstItem="w88-X2-5bx" firstAttribute="width" secondItem="a6P-Fj-0z7" secondAttribute="width" multiplier="0.9" id="uCv-Ha-Jfd"/>
-                            <constraint firstItem="w88-X2-5bx" firstAttribute="bottom" secondItem="a6P-Fj-0z7" secondAttribute="bottom" constant="-15" id="uGi-aE-Uz5"/>
+                            <constraint firstItem="w88-X2-5bx" firstAttribute="bottom" secondItem="a6P-Fj-0z7" secondAttribute="bottom" constant="-10" id="uGi-aE-Uz5"/>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uVZ-du-Fub"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SHS-hN-aPL" secondAttribute="bottom" id="v1J-29-2OO"/>
                             <constraint firstItem="Oxz-Zq-2g7" firstAttribute="top" secondItem="eyk-EK-raM" secondAttribute="bottom" id="vNz-Be-acs"/>

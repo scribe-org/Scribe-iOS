@@ -17,6 +17,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!-- - The keyboard switches back to letter keys after all appropriate symbols followed by space. -->
 <!-- - Scribe commands now accept inputs that are followed by a space in case the user accidentally added one. -->
 
+### 🎨 Design Changes
+
+- The app screen texts are given slightly more room to expand within their fields.
+
 ### 🐞 Bug Fixes
 
 - The Scribe key now switches its icon color with the rest of the keyboard when the user changes color modes.
