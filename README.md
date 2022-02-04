@@ -148,8 +148,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Autocompletion and correction (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issues)
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
-- Typing symbols and numbers returns to the alphabetic keyboard
-- Typing `.`, `?` or `!` and then `space` capitalizes the keyboard
+- Typing symbols and numbers followed by a space returns keyboard to letters
 - Hold-to-select characters for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>
