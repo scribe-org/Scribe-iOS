@@ -14,8 +14,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- The keyboard switches back to letter keys after all appropriate symbols followed by space. 
-- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one. 
+- The keyboard switches back to letter keys after all appropriate symbols followed by space.
+- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.
 
 ### 🎨 Design Changes
 
@@ -24,6 +24,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - The Scribe key now switches its icon color with the rest of the keyboard when the user changes color modes.
+
+### ♻️ Code Refactoring
+
+<!-- - All lines have been reduced to a reasonable length (120 characters) where able. -->
+<!-- - All functions have been reduced to a reasonable length (40 lines) where able. -->
+<!-- - All functions have been reduced to a reasonable cyclomatic complexity (10 or less) where able. -->
+<!-- - All files have been reduced to a reasonable length (400 lines) where able. -->
 
 # Scribe 1.2.0
 

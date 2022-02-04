@@ -872,7 +872,7 @@ class KeyboardViewController: UIInputViewController {
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
-        
+
         if view == stackView0 {
           view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
         } else if view == stackView1 {
@@ -1043,7 +1043,7 @@ class KeyboardViewController: UIInputViewController {
             }
             previewBar.sizeToFit()
           }
-          
+
           // Pad before key is added.
           var leftPadding = CGFloat(0)
           if DeviceType.isPhone && key == "y" && ["German", "Swedish"].contains(controllerLanguage) && switchInput != true {
@@ -1504,7 +1504,7 @@ class KeyboardViewController: UIInputViewController {
       // Clear the prior annotations to assure that preposition annotations don't persist.
       hideAnnotations()
       nounAnnotationsToDisplay = 0
-      
+
       // Make preview bar font larger for annotation.
       if DeviceType.isPhone {
         previewBar.font = .systemFont(ofSize: annotationHeight * 0.8)
@@ -1521,7 +1521,7 @@ class KeyboardViewController: UIInputViewController {
         var numberOfAnnotations: Int = 0
         var annotationsToAssign: [String] = [String]()
         if nounForm?.count ?? 0 >= 3 { // Would have a slash as the largest is PL
-          annotationsToAssign = (nounForm?.components(separatedBy:"/"))!
+          annotationsToAssign = (nounForm?.components(separatedBy: "/"))!
           numberOfAnnotations = annotationsToAssign.count
         } else {
           numberOfAnnotations = 1
@@ -1635,7 +1635,7 @@ class KeyboardViewController: UIInputViewController {
       var numberOfAnnotations: Int = 0
       var annotationsToAssign: [String] = [String]()
       if prepositionCase.count >= 4 { // Would have a slash as they all are three characters long
-        annotationsToAssign = (prepositionCase.components(separatedBy:"/"))
+        annotationsToAssign = (prepositionCase.components(separatedBy: "/"))
         numberOfAnnotations = annotationsToAssign.count
       } else {
         numberOfAnnotations = 1
@@ -1663,7 +1663,7 @@ class KeyboardViewController: UIInputViewController {
       scribeBtnState = false
       loadKeys()
     }
-    
+
     if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
       let selectedWord = proxy.selectedText ?? ""
 

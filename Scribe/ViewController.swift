@@ -23,11 +23,14 @@ func concatAttributedStrings (left: NSAttributedString, right: NSAttributedStrin
 /// - Parameters
 ///  - originalText: the original text that hyperlinks will be added to.
 ///  - hyperLinks: a dictionary of strings and the link to which they should link.
-func addHyperLinksToText(originalText: String, hyperLinks: [String: String], fontSize: CGFloat) -> NSMutableAttributedString {
+func addHyperLinks(originalText: String, links: [String: String], fontSize: CGFloat) -> NSMutableAttributedString {
   let style = NSMutableParagraphStyle()
   style.alignment = .left
-  let attributedOriginalText = NSMutableAttributedString(string: originalText, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-  for (hyperLink, urlString) in hyperLinks {
+  let attributedOriginalText = NSMutableAttributedString(
+    string: originalText,
+    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+  )
+  for (hyperLink, urlString) in links {
     let linkRange = attributedOriginalText.mutableString.range(of: hyperLink)
     let fullRange = NSRange(location: 0, length: attributedOriginalText.length)
     attributedOriginalText.addAttribute(NSAttributedString.Key.link, value: urlString, range: linkRange)
@@ -99,10 +102,10 @@ class ViewController: UIViewController {
     super.viewWillLayoutSubviews()
     setUI()
   }
-  
+
   // Lock the device into portrait mode to avoid resizing issues.
   var orientations = UIInterfaceOrientationMask.portrait
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     get { return self.orientations }
     set { self.orientations = newValue }
   }
@@ -185,13 +188,13 @@ class ViewController: UIViewController {
     settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 
-  /// Sets the functionality of the button over the keyboard installtion guide that links to Scribe's GitHub.
+  /// Sets the functionality of the button over the keyboard installation guide that links to Scribe's GitHub.
   func setGHBtn() {
     GHBtn.addTarget(self, action: #selector(openScribeGH), for: .touchUpInside)
     GHBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 
-  /// Creates the full app UI by applying contraints and calling text generation functions.
+  /// Creates the full app UI by applying constraints and calling text generation functions.
   func setUI() {
     // Set the font size and all button elements.
     setFontSize()
@@ -257,16 +260,25 @@ class ViewController: UIViewController {
     appTextView.isUserInteractionEnabled = false
     appTextBackground.isUserInteractionEnabled = false
     appTextBackground.clipsToBounds = true
-    applyCornerRadius(elem: appTextBackground, radius: appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio)
+    applyCornerRadius(
+      elem: appTextBackground,
+      radius: appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
+    )
 
     GHTextView.isUserInteractionEnabled = false
     GHTextBackground.isUserInteractionEnabled = false
     GHTextBackground.clipsToBounds = true
-    applyCornerRadius(elem: GHTextBackground, radius: GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio)
+    applyCornerRadius(
+      elem: GHTextBackground,
+      radius: GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
+    )
 
     // Privacy text allows for user interactions so that the links in the policy can be pressed.
     privacyTextView.backgroundColor = .clear
-    applyCornerRadius(elem: privacyTextBackground, radius: privacyTextBackground.frame.height * 0.4 / privacyTextToSwitchBtnHeightRatio)
+    applyCornerRadius(
+      elem: privacyTextBackground,
+      radius: privacyTextBackground.frame.height * 0.4 / privacyTextToSwitchBtnHeightRatio
+    )
     privacyScroll.isUserInteractionEnabled = false
 
     if displayPrivacyPolicy == false {
@@ -331,17 +343,23 @@ class ViewController: UIViewController {
     }
   }
 
-  /// Formats and returns the text for the installtion guidelines.
+  /// Formats and returns the text for the installation guidelines.
   func setAttributedInstallation() {
     // The down right arrow character as a text attachment.
     let arrowAttachment = NSTextAttachment()
     let selectArrowIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
-    arrowAttachment.image = UIImage(systemName: "arrow.turn.down.right", withConfiguration: selectArrowIconConfig)?.withTintColor(.scribeGrey)
+    arrowAttachment.image = UIImage(
+      systemName: "arrow.turn.down.right",
+      withConfiguration: selectArrowIconConfig
+    )?.withTintColor(.scribeGrey)
 
     // The globe character as a text attachment.
     let globeAttachment = NSTextAttachment()
     let selectGlobeIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
-    globeAttachment.image = UIImage(systemName: "globe", withConfiguration: selectGlobeIconConfig)?.withTintColor(.scribeGrey)
+    globeAttachment.image = UIImage(
+      systemName: "globe",
+      withConfiguration: selectGlobeIconConfig
+    )?.withTintColor(.scribeGrey)
 
     // Wrap the attachments in their own attributed strings so we can append them.
     let arrowString = NSAttributedString(attachment: arrowAttachment)
@@ -357,7 +375,11 @@ class ViewController: UIViewController {
     1.\u{0020}
     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-    let settingsLink = addHyperLinksToText(originalText: "Open Settings", hyperLinks: ["Open Settings": "<makeTextLink>"], fontSize: fontSize)
+    let settingsLink = addHyperLinks(
+      originalText: "Open Settings",
+      links: ["Open Settings": "<makeTextLink>"],
+      fontSize: fontSize
+    )
 
     let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
@@ -374,21 +396,25 @@ class ViewController: UIViewController {
     installDirections.append(arrowString)
 
     installDirections.append(NSMutableAttributedString(string: """
-     \u{0020} Keyboards
+    \u{0020} Keyboards
 
     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
-    installDirections.append(NSMutableAttributedString(string: "\n                    ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+    installDirections.append(NSMutableAttributedString(
+        string: "\n                    ",
+        attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+      )
+    )
 
     installDirections.append(arrowString)
 
     installDirections.append(NSMutableAttributedString(string: """
-      \u{0020} Add New Keyboard
+    \u{0020} Add New Keyboard
 
-     3. Select Scribe and then activate keyboards
+    3. Select Scribe and then activate keyboards
 
-     4. When typing press\u{0020}
-     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+    4. When typing press\u{0020}
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
     installDirections.append(globeString)
 
@@ -414,7 +440,11 @@ class ViewController: UIViewController {
     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
     // A second NSAttributedString that includes a link to the GitHub.
-    let ghLink = addHyperLinksToText(originalText: "github.com/scribe-org.", hyperLinks: ["github.com/scribe-org": "https://github.com/scribe-org"], fontSize: fontSize)
+    let ghLink = addHyperLinks(
+      originalText: "github.com/scribe-org.",
+      links: ["github.com/scribe-org": "https://github.com/scribe-org"],
+      fontSize: fontSize
+    )
 
     let GHInfoTextToLink = concatAttributedStrings(left: GHTextTitle, right: GHInfoText)
     GHTextView.attributedText = concatAttributedStrings(left: GHInfoTextToLink, right: ghLink)
@@ -426,8 +456,23 @@ class ViewController: UIViewController {
     let privacyTextTitle = NSMutableAttributedString(string: """
     Privacy Policy
     """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-    
-    let privacyPolicyTextWithLinks = addHyperLinksToText(originalText: privacyPolicyText, hyperLinks: ["https://www.wikidata.org/wiki/Wikidata:Licensing": "https://www.wikidata.org/wiki/Wikidata:Licensing", "https://github.com/huggingface/transformers/blob/master/LICENSE": "https://github.com/huggingface/transformers/blob/master/LICENSE", "https://github.com/scribe-org": "https://github.com/scribe-org", "scribe.langauge@gmail.com": "mailto:scribe.langauge@gmail.com", "https://github.com/logos": "https://github.com/logos"], fontSize: fontSize)
+
+    let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
+    let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
+    let scribeGitHub: String = "https://github.com/scribe-org"
+    let scribeEmail: String = "scribe.langauge@gmail.com"
+    let gitHubLogoLicensing: String = "https://github.com/logos"
+
+    let privacyPolicyTextWithLinks = addHyperLinks(
+      originalText: privacyPolicyText,
+      links: [
+        wikidataDataLicensing: wikidataDataLicensing,
+        huggingFaceLicensing: huggingFaceLicensing,
+        scribeGitHub: scribeGitHub,
+        scribeEmail: "mailto:" + scribeEmail,
+        gitHubLogoLicensing: gitHubLogoLicensing],
+      fontSize: fontSize
+    )
 
     privacyTextView.attributedText = concatAttributedStrings(left: privacyTextTitle, right: privacyPolicyTextWithLinks)
     privacyTextView.textColor = UIColor.keyCharColorLight

@@ -159,7 +159,6 @@ func frConjugationStateRight() {
   }
 }
 
-
 // MARK: German conjugation command variables
 
 func deSetConjugationLabels() {
