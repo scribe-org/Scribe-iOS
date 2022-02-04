@@ -14,8 +14,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!-- - The keyboard switches back to letter keys after all appropriate symbols followed by space. -->
-<!-- - Scribe commands now accept inputs that are followed by a space in case the user accidentally added one. -->
+- The keyboard switches back to letter keys after all appropriate symbols followed by space. 
+- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one. 
 
 ### 🎨 Design Changes
 

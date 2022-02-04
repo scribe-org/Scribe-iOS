@@ -1871,36 +1871,18 @@ class KeyboardViewController: UIInputViewController {
     case spaceBar:
       if previewState != true {
         proxy.insertText(" ")
-        if proxy.documentContextBeforeInput?.suffix(2) == ", " {
-          changeKeyboardToLetterKeys()
-        }
-        if proxy.documentContextBeforeInput?.suffix(2) == ". " {
+        if [". ", "? ", "! "].contains(proxy.documentContextBeforeInput?.suffix(2)) {
           shiftButtonState = .shift
-          changeKeyboardToLetterKeys()
         }
-        if proxy.documentContextBeforeInput?.suffix(2) == "? " {
-          shiftButtonState = .shift
-          changeKeyboardToLetterKeys()
-        }
-        if proxy.documentContextBeforeInput?.suffix(2) == "! " {
-          shiftButtonState = .shift
+        if keyboardState != .letters {
           changeKeyboardToLetterKeys()
         }
       } else {
         previewBar.text! = (previewBar?.text!.insertPriorToCursor(char: " "))!
-        if previewBar.text!.suffix(3) == ", " + previewCursor {
-          changeKeyboardToLetterKeys()
-        }
-        if previewBar.text!.suffix(3) == ". " + previewCursor {
+        if [". " + previewCursor, "? " + previewCursor, "! " + previewCursor].contains(String(previewBar.text!.suffix(3))) {
           shiftButtonState = .shift
-          changeKeyboardToLetterKeys()
         }
-        if previewBar.text!.suffix(3) == "? " + previewCursor {
-          shiftButtonState = .shift
-          changeKeyboardToLetterKeys()
-        }
-        if previewBar.text!.suffix(3) == "! " + previewCursor {
-          shiftButtonState = .shift
+        if keyboardState != .letters {
           changeKeyboardToLetterKeys()
         }
       }
