@@ -1,10 +1,41 @@
 //
 //  PrivacyPolicy.swift
 //
-//  The privacy policy for the Scribe app.
+//  The English privacy policy for the Scribe app.
 //
 //  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
 //
+
+import UIKit
+
+/// Formats and returns the text of the Scribe privacy policy.
+func setAttributedPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
+  let privacyTextTitle = NSMutableAttributedString(string: """
+  Privacy Policy
+  """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
+
+  let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
+  let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
+  let scribeGitHub: String = "https://github.com/scribe-org"
+  let scribeEmail: String = "scribe.langauge@gmail.com"
+  let gitHubLogoLicensing: String = "https://github.com/logos"
+
+  let privacyPolicyTextWithLinks = addHyperLinks(
+    originalText: privacyPolicyText,
+    links: [
+      wikidataDataLicensing: wikidataDataLicensing,
+      huggingFaceLicensing: huggingFaceLicensing,
+      scribeGitHub: scribeGitHub,
+      scribeEmail: "mailto:" + scribeEmail,
+      gitHubLogoLicensing: gitHubLogoLicensing],
+    fontSize: fontSize
+  )
+
+  return concatAttributedStrings(
+    left: privacyTextTitle,
+    right: privacyPolicyTextWithLinks
+  ) as! NSMutableAttributedString
+}
 
 // swiftlint:disable all
 

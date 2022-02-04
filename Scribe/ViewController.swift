@@ -136,7 +136,7 @@ class ViewController: UIViewController {
     }
   }
 
-  /// Applies a shadow to a given element.
+  /// Applies a shadow to a given UI element.
   ///
   /// - Parameters
   ///  - elem: the element to have shadows added to.
@@ -147,7 +147,7 @@ class ViewController: UIViewController {
     elem.layer.shadowRadius = 3.0
   }
 
-  /// Applies a corner radius to a given element.
+  /// Applies a corner radius to a given UI element.
   ///
   /// - Parameters
   ///  - elem: the element to have shadows added to.
@@ -211,27 +211,15 @@ class ViewController: UIViewController {
     // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
     let scrollbarAppearance = UINavigationBarAppearance()
     scrollbarAppearance.configureWithOpaqueBackground()
+    privacyScroll.isUserInteractionEnabled = false
 
     // Disable spacing views.
-    for elem in [topSpace, logoSpace, svSpace, bottomSpace] {
-      elem?.isUserInteractionEnabled = false
-      elem?.backgroundColor = .clear
+    let allSpacingViews: [UIView] = [topSpace, logoSpace, svSpace, bottomSpace]
+    for view in allSpacingViews {
+      view.isUserInteractionEnabled = false
+      view.backgroundColor = .clear
     }
 
-    // Set configurations for corner icons.
-    var settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
-    var privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
-    if DeviceType.isPad {
-      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-        settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.05, weight: .medium, scale: .medium)
-        privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
-      } else {
-        settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
-        privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
-      }
-    }
-    let settingsSymbol = UIImage(systemName: "gear", withConfiguration: settingsSymbolConfig)
-    let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)
     topIconPhone.tintColor = .white
     topIconPad.tintColor = .white
 
@@ -249,15 +237,17 @@ class ViewController: UIViewController {
     GHBtn.layer.masksToBounds = false
     GHBtn.layer.cornerRadius = GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
 
+    let allTextViews: [UITextView] = [appTextView, GHTextView, privacyTextView]
+
     // Disable text views.
-    for elem in [appTextView, GHTextView, privacyTextView] {
-      elem?.isUserInteractionEnabled = false
-      elem?.isEditable = false
-      elem?.backgroundColor = .clear
+    for textView in allTextViews {
+      textView.isUserInteractionEnabled = false
+      textView.isEditable = false
+      textView.backgroundColor = .clear
+      textView.isUserInteractionEnabled = false
     }
 
     // Set backgrounds and corner radii.
-    appTextView.isUserInteractionEnabled = false
     appTextBackground.isUserInteractionEnabled = false
     appTextBackground.clipsToBounds = true
     applyCornerRadius(
@@ -265,7 +255,6 @@ class ViewController: UIViewController {
       radius: appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
     )
 
-    GHTextView.isUserInteractionEnabled = false
     GHTextBackground.isUserInteractionEnabled = false
     GHTextBackground.clipsToBounds = true
     applyCornerRadius(
@@ -273,33 +262,32 @@ class ViewController: UIViewController {
       radius: GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
     )
 
-    // Privacy text allows for user interactions so that the links in the policy can be pressed.
     privacyTextView.backgroundColor = .clear
     applyCornerRadius(
       elem: privacyTextBackground,
       radius: privacyTextBackground.frame.height * 0.4 / privacyTextToSwitchBtnHeightRatio
     )
-    privacyScroll.isUserInteractionEnabled = false
+
+    // Set link attributes for all textViews.
+    for textView in allTextViews {
+      textView.linkTextAttributes = [
+        NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
+        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+      ]
+    }
 
     if displayPrivacyPolicy == false {
+      let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize)
       topIconPhone.image = settingsSymbol
       topIconPad.image = settingsSymbol
 
       // Enable installation directions and GitHub notice elements.
       settingsBtn.isUserInteractionEnabled = true
-      appTextView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-      ]
       appTextBackground.backgroundColor = .white
       applyShadowEffects(elem: appTextBackground)
 
       GHBtn.isUserInteractionEnabled = true
       GHCorner.isHidden = false
-      GHTextView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-      ]
       GHTextBackground.backgroundColor = .white
       applyShadowEffects(elem: GHTextBackground)
 
@@ -312,9 +300,13 @@ class ViewController: UIViewController {
       privacyScroll.isHidden = true
 
       // Set the texts for the fields.
-      setAttributedInstallation()
-      setAttributedGitHubText()
+      appTextView.attributedText = setAttributedInstallation(fontSize: fontSize)
+      appTextView.textColor = UIColor.keyCharColorLight
+
+      GHTextView.attributedText = setAttributedGitHubText(fontSize: fontSize)
+      GHTextView.textColor = UIColor.keyCharColorLight
     } else {
+      let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize)
       topIconPhone.image = privacySymbol
       topIconPad.image = privacySymbol
 
@@ -330,152 +322,14 @@ class ViewController: UIViewController {
 
       // Enable the privacy policy elements.
       privacyTextView.isUserInteractionEnabled = true
-      privacyTextView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-      ]
       privacyTextBackground.backgroundColor = .white
       applyShadowEffects(elem: privacyTextBackground)
 
       privacyScroll.isHidden = false
 
-      setAttributedPrivacyPolicy()
+      privacyTextView.attributedText = setAttributedPrivacyPolicy(fontSize: fontSize)
+      privacyTextView.textColor = UIColor.keyCharColorLight
     }
-  }
-
-  /// Formats and returns the text for the installation guidelines.
-  func setAttributedInstallation() {
-    // The down right arrow character as a text attachment.
-    let arrowAttachment = NSTextAttachment()
-    let selectArrowIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
-    arrowAttachment.image = UIImage(
-      systemName: "arrow.turn.down.right",
-      withConfiguration: selectArrowIconConfig
-    )?.withTintColor(.scribeGrey)
-
-    // The globe character as a text attachment.
-    let globeAttachment = NSTextAttachment()
-    let selectGlobeIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
-    globeAttachment.image = UIImage(
-      systemName: "globe",
-      withConfiguration: selectGlobeIconConfig
-    )?.withTintColor(.scribeGrey)
-
-    // Wrap the attachments in their own attributed strings so we can append them.
-    let arrowString = NSAttributedString(attachment: arrowAttachment)
-    let globeString = NSAttributedString(attachment: globeAttachment)
-
-    // Create components of the installation text, format their font sizes and add them step by step.
-    let installationTextTitle = NSMutableAttributedString(string: """
-    Keyboard Installation
-    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-
-    let startOfBody = NSMutableAttributedString(string: """
-    \n
-    1.\u{0020}
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-
-    let settingsLink = addHyperLinks(
-      originalText: "Open Settings",
-      links: ["Open Settings": "<makeTextLink>"],
-      fontSize: fontSize
-    )
-
-    let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
-
-    let installDirections = NSMutableAttributedString(string: """
-    \n
-    2. In General do the following:
-
-          Keyboard
-
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-
-    installDirections.append(NSAttributedString(string: "\n         "))
-
-    installDirections.append(arrowString)
-
-    installDirections.append(NSMutableAttributedString(string: """
-    \u{0020} Keyboards
-
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
-
-    installDirections.append(NSMutableAttributedString(
-        string: "\n                    ",
-        attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
-      )
-    )
-
-    installDirections.append(arrowString)
-
-    installDirections.append(NSMutableAttributedString(string: """
-    \u{0020} Add New Keyboard
-
-    3. Select Scribe and then activate keyboards
-
-    4. When typing press\u{0020}
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
-
-    installDirections.append(globeString)
-
-    installDirections.append(NSMutableAttributedString(string: """
-    \u{0020}to select keyboards
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
-
-    let installFullDirections = concatAttributedStrings(left: installStart, right: installDirections)
-    appTextView.attributedText = concatAttributedStrings(left: installationTextTitle, right: installFullDirections)
-    appTextView.textColor = UIColor.keyCharColorLight
-  }
-
-  /// Formats and returns the text for a notice about Scribe's GitHub.
-  func setAttributedGitHubText() {
-    let GHTextTitle = NSMutableAttributedString(string: """
-    Community
-    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-
-    // Initialize the main body of the text.
-    let GHInfoText = NSMutableAttributedString(string: """
-    \n
-    Scribe is fully open-source. To report issues or contribute please visit us at\u{0020}
-    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-
-    // A second NSAttributedString that includes a link to the GitHub.
-    let ghLink = addHyperLinks(
-      originalText: "github.com/scribe-org.",
-      links: ["github.com/scribe-org": "https://github.com/scribe-org"],
-      fontSize: fontSize
-    )
-
-    let GHInfoTextToLink = concatAttributedStrings(left: GHTextTitle, right: GHInfoText)
-    GHTextView.attributedText = concatAttributedStrings(left: GHInfoTextToLink, right: ghLink)
-    GHTextView.textColor = UIColor.keyCharColorLight
-  }
-
-  /// Formats and returns the text of the Scribe privacy policy.
-  func setAttributedPrivacyPolicy() {
-    let privacyTextTitle = NSMutableAttributedString(string: """
-    Privacy Policy
-    """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-
-    let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
-    let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
-    let scribeGitHub: String = "https://github.com/scribe-org"
-    let scribeEmail: String = "scribe.langauge@gmail.com"
-    let gitHubLogoLicensing: String = "https://github.com/logos"
-
-    let privacyPolicyTextWithLinks = addHyperLinks(
-      originalText: privacyPolicyText,
-      links: [
-        wikidataDataLicensing: wikidataDataLicensing,
-        huggingFaceLicensing: huggingFaceLicensing,
-        scribeGitHub: scribeGitHub,
-        scribeEmail: "mailto:" + scribeEmail,
-        gitHubLogoLicensing: gitHubLogoLicensing],
-      fontSize: fontSize
-    )
-
-    privacyTextView.attributedText = concatAttributedStrings(left: privacyTextTitle, right: privacyPolicyTextWithLinks)
-    privacyTextView.textColor = UIColor.keyCharColorLight
   }
 
   /// Switches the view of the app based on the current view.

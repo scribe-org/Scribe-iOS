@@ -33,6 +33,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!-- - All functions have been reduced to a reasonable length (40 lines) where able. -->
 <!-- - All functions have been reduced to a reasonable cyclomatic complexity (10 or less) where able. -->
 <!-- - All files have been reduced to a reasonable length (400 lines) where able. -->
+<!-- - All type bodies have been reduced to a reasonable length (200 lines) where able. -->
 <!-- - Scribe has been modularized to be more easily worked with. -->
 <!-- - The app screen's text was moved to a new directory where localizations will be stored. -->
 
