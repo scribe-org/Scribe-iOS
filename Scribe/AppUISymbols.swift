@@ -1,12 +1,12 @@
 //
-//  TextSymbols.swift
+//  AppUISymbols.swift
 //
 // Symbols needed for the app UI.
 //
 
 import UIKit
 
-/// Formats and returns the settings symbol for the app text.
+/// Formats and returns the settings symbol for the app UI.
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
@@ -24,7 +24,7 @@ func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
   return settingsSymbol
 }
 
-/// Formats and returns the privacy symbol for the app text.
+/// Formats and returns the privacy symbol for the app UI.
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
