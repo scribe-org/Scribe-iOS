@@ -9,7 +9,7 @@
 import UIKit
 
 /// Formats and returns the text of the Scribe privacy policy.
-func setAttributedPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
+func setENPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
   let privacyTextTitle = NSMutableAttributedString(string: """
   Privacy Policy
   """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
@@ -34,7 +34,7 @@ func setAttributedPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString 
   return concatAttributedStrings(
     left: privacyTextTitle,
     right: privacyPolicyTextWithLinks
-  ) as! NSMutableAttributedString
+  )
 }
 
 // swiftlint:disable all
