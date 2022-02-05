@@ -1,0 +1,32 @@
+name: 🌐 Localization
+description: Want to localise or discuss about localization across a region?
+labels: "localization"
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I have searched [open and closed issues](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue)
+          required: true
+        - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+  - type: textarea
+    id: support
+    attributes:
+      label: Localization support
+      placeholder: |
+        Tell us how you can help Scribe adding localization.
+    validations:
+      required: true        
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Contribution
+      placeholder: Let us know if you'd like to help and how :)
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in adding another localization to Scribe!
