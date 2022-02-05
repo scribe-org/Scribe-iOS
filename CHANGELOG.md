@@ -24,6 +24,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - The Scribe key now switches its icon color with the rest of the keyboard when the user changes color modes.
+- Annotation are no longer triggered if a user presses space during a command.
 
 ### ♻️ Code Refactoring
 

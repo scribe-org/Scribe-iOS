@@ -2059,11 +2059,14 @@ class KeyboardViewController: UIInputViewController {
           changeKeyboardToLetterKeys()
         }
       }
-      typedNounAnnotation()
-      typedPrepositionAnnotation()
-      annotationState = false
-      prepAnnotationState = false
-      nounAnnotationsToDisplay = 0
+      // Prevent annotations from being triggered during commands.
+      if getConjugation == false && getTranslation == false {
+        typedNounAnnotation()
+        typedPrepositionAnnotation()
+        annotationState = false
+        prepAnnotationState = false
+        nounAnnotationsToDisplay = 0
+      }
 
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearPreviewBar()
