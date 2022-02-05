@@ -53,6 +53,42 @@
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C327AEAD7D0038660B /* AppStyling.swift */; };
+		D17193C727AEC8D80038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193C927AEC8F90038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193CA27AEC9760038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193CB27AEC9770038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193CC27AEC9770038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193CD27AEC9780038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193CE27AEC9780038660B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
+		D17193D227AEC9EC0038660B /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
+		D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193D927AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193DB27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193DC27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193DD27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193DE27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
+		D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E127AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E227AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E327AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E427AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E527AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E627AECAA60038660B /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
+		D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193EA27AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
+		D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F127AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F227AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F327AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
@@ -217,6 +253,12 @@
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17193BF27AEA33A0038660B /* AppTextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyling.swift; sourceTree = "<group>"; };
 		D17193C327AEAD7D0038660B /* AppStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyling.swift; sourceTree = "<group>"; };
+		D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193D727AECA450038660B /* PTInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193E727AECAE60038660B /* ESInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193EF27AECB350038660B /* SVInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVInterfaceVariables.swift; sourceTree = "<group>"; };
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwedishKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				D190B25C2742582500705659 /* Data */,
+				D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */,
 				38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */,
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
@@ -362,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				D109A225275B68F4005E2271 /* Data */,
+				D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */,
 				D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */,
 				D109A20F275B6888005E2271 /* Info.plist */,
 			);
@@ -372,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				D109A226275B68FD005E2271 /* Data */,
+				D17193D727AECA450038660B /* PTInterfaceVariables.swift */,
 				D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */,
 				D109A21E275B68B3005E2271 /* Info.plist */,
 			);
@@ -413,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				D190B25E27425EED00705659 /* Data */,
+				D17193E727AECAE60038660B /* ESInterfaceVariables.swift */,
 				D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */,
 				D1608669270B6D3C00134D48 /* Info.plist */,
 			);
@@ -423,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				D10D36C5275A1B8F00A2EBF1 /* Data */,
+				D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */,
 				D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */,
 				D166FCF1275A197B0047E62B /* Info.plist */,
 			);
@@ -433,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				D18EA8AD2760D720001E1358 /* Data */,
+				D17193EF27AECB350038660B /* SVInterfaceVariables.swift */,
 				D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */,
 				D18EA89D2760D4A6001E1358 /* Info.plist */,
 			);
@@ -855,11 +903,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
+				D17193C927AEC8F90038660B /* FRInterfaceVariables.swift in Sources */,
 				38BD213622D5907F00C6795D /* ViewController.swift in Sources */,
 				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
+				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
+				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
+				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */,
 				D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
@@ -873,11 +926,17 @@
 			files = (
 				38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
+				D17193F227AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D190B242274056D400705659 /* ColorVariables.swift in Sources */,
+				D17193EA27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
+				D17193E227AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D190B2472741B24F00705659 /* CommandVariables.swift in Sources */,
+				D17193D227AEC9EC0038660B /* DEInterfaceVariables.swift in Sources */,
 				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
 				D190B24A2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D190B24E2741B61000705659 /* LoadData.swift in Sources */,
+				D17193CA27AEC9760038660B /* FRInterfaceVariables.swift in Sources */,
+				D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,10 +944,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */,
+				D17193C727AEC8D80038660B /* FRInterfaceVariables.swift in Sources */,
 				D109A237275B6A99005E2271 /* LoadData.swift in Sources */,
 				D109A228275B6A8B005E2271 /* Extensions.swift in Sources */,
+				D17193D927AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
+				D17193E127AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193F127AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */,
 				D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */,
 				D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */,
@@ -899,13 +963,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */,
 				D109A238275B6A9A005E2271 /* LoadData.swift in Sources */,
 				D109A22E275B6A8C005E2271 /* Extensions.swift in Sources */,
 				D109A22D275B6A8C005E2271 /* KeyboardViewController.swift in Sources */,
+				D17193DB27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
+				D17193E327AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193F327AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */,
 				D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */,
+				D17193CB27AEC9770038660B /* FRInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,13 +982,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */,
 				D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D190B243274056D400705659 /* ColorVariables.swift in Sources */,
 				D190B2482741B24F00705659 /* CommandVariables.swift in Sources */,
+				D17193DD27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D190B2442740576600705659 /* Extensions.swift in Sources */,
+				D17193E527AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D190B24B2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D190B24F2741B61000705659 /* LoadData.swift in Sources */,
+				D17193CE27AEC9780038660B /* FRInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,13 +1001,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */,
 				D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */,
 				D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */,
 				D1671A73275A1FC000A7C118 /* InterfaceVariables.swift in Sources */,
+				D17193DC27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */,
+				D17193E427AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D1671A75275A1FC000A7C118 /* KeyboardViewController.swift in Sources */,
 				D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */,
+				D17193CC27AEC9770038660B /* FRInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,13 +1020,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D18EA8A62760D6F5001E1358 /* CommandVariables.swift in Sources */,
 				D18EA8AC2760D701001E1358 /* LoadData.swift in Sources */,
 				D18EA8A92760D6F5001E1358 /* Extensions.swift in Sources */,
 				D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */,
+				D17193DE27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */,
+				D17193E627AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D18EA8A82760D6F5001E1358 /* InterfaceVariables.swift in Sources */,
 				D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */,
+				D17193CD27AEC9780038660B /* FRInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
