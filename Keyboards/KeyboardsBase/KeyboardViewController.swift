@@ -6,128 +6,15 @@
 
 import UIKit
 
-// All data needed for Scribe features for the given language keyboard.
-let nouns = loadJSONToDict(filename: "nouns")
-let verbs = loadJSONToDict(filename: "verbs")
-let translations = loadJSONToDict(filename: "translations")
-let prepositions = loadJSONToDict(filename: "prepositions")
-
-/// Class of UIButton that allows the tap area to be increased so that edges between keys can still receive user input.
-class KeyboardButton: UIButton {
-  // Properties for the touch area - passing negative values will expand the touch area.
-  var topShift = CGFloat(0)
-  var leftShift = CGFloat(0)
-  var bottomShift = CGFloat(0)
-  var rightShift = CGFloat(0)
-
-  override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-    return bounds.inset(by: UIEdgeInsets(
-      top: topShift,
-      left: leftShift,
-      bottom: bottomShift,
-      right: rightShift)
-    ).contains(point)
-  }
-}
-
 /// The parent KeyboardViewController class that is inherited by all Scribe keyboards.
 class KeyboardViewController: UIInputViewController {
   var keyboardView: UIView!
-  var keys: [UIButton] = []
-  var paddingViews: [UIButton] = []
-  @IBOutlet var selectKeyboardButton: UIButton!
-  var backspaceTimer: Timer?
-
-  // Prevents caps lock when the first key wasn't shift.
-  var capsLockPossible = false
-  // Prevents the double space period shortcut when the first key wasn't space.
-  var doubleSpacePeriodPossible = false
 
   // Stack views that are populated with they keyboard rows.
   @IBOutlet weak var stackView0: UIStackView!
   @IBOutlet weak var stackView1: UIStackView!
   @IBOutlet weak var stackView2: UIStackView!
   @IBOutlet weak var stackView3: UIStackView!
-
-  /// Sets the keyboard layouts given the chosen keyboard and device type.
-  func setKeyboardLayouts() {
-    if controllerLanguage == "French" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setFRKeyboardLayout()
-      }
-    } else if controllerLanguage == "German" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setDEKeyboardLayout()
-      }
-    } else if controllerLanguage == "Portuguese" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setPTKeyboardLayout()
-      }
-    } else if controllerLanguage == "Russian" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setRUKeyboardLayout()
-      }
-    } else if controllerLanguage == "Spanish" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setESKeyboardLayout()
-      }
-    } else if controllerLanguage == "Swedish" {
-      if switchInput {
-        setENKeyboardLayout()
-      } else {
-        setSVKeyboardLayout()
-      }
-    }
-
-    allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
-
-    if DeviceType.isPhone {
-      keysWithAlternates += symbolKeysWithAlternatesLeft
-      keysWithAlternates += symbolKeysWithAlternatesRight
-      keysWithAlternates.append(currencySymbol)
-      keysWithAlternatesLeft += symbolKeysWithAlternatesLeft
-      keysWithAlternatesRight += symbolKeysWithAlternatesRight
-      keysWithAlternatesRight.append(currencySymbol)
-    }
-
-    keyAlternatesDict = [
-      "a": aAlternateKeys,
-      "e": eAlternateKeys,
-      "е": еAlternateKeys, // Russian е
-      "i": iAlternateKeys,
-      "o": oAlternateKeys,
-      "u": uAlternateKeys,
-      "ä": äAlternateKeys,
-      "ö": öAlternateKeys,
-      "y": yAlternateKeys,
-      "s": sAlternateKeys,
-      "l": lAlternateKeys,
-      "z": zAlternateKeys,
-      "d": dAlternateKeys,
-      "c": cAlternateKeys,
-      "n": nAlternateKeys,
-      "ь": ьAlternateKeys,
-      "/": backslashAlternateKeys,
-      "?": questionMarkAlternateKeys,
-      "!": exclamationAlternateKeys,
-      "%": percentAlternateKeys,
-      "&": ampersandAlternateKeys,
-      "'": apostropheAlternateKeys,
-      "\"": quotationAlternateKeys,
-      "=": equalSignAlternateKeys,
-      currencySymbol: currencySymbolAlternates
-    ]
-  }
 
   /// Changes the keyboard state such that the letters view will be shown.
   func changeKeyboardToLetterKeys() {
@@ -148,102 +35,24 @@ class KeyboardViewController: UIInputViewController {
     loadKeys()
   }
 
-  /// Styles a button's appearance including it's shape and text.
-  ///
-  /// - Parameters
-  ///  - btn: the button to be styled.
-  ///  - title: the title to be assigned.
-  ///  - radius: the corner radius of the button.
-  func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
-    btn.clipsToBounds = true
-    btn.layer.masksToBounds = false
-    btn.layer.cornerRadius = radius
-    btn.setTitle(title, for: .normal)
-    btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    btn.setTitleColor(keyCharColor, for: .normal)
+  // MARK: Display Activation Functions
 
-    if title != "Scribe" {
-      btn.layer.shadowColor = keyShadowColor
-      btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-      btn.layer.shadowOpacity = 1.0
-      btn.layer.shadowRadius = 0.0
-    }
-  }
+  /// Function to load the keyboard interface into which keyboardView is instantiated.
+  func loadInterface() {
+    let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
+    keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
+    keyboardView.translatesAutoresizingMaskIntoConstraints = true
+    view.addSubview(keyboardView)
 
-  /// Styles btns that have icon keys.
-  ///
-  /// - Parameters
-  ///  - btn: the button to be styled.
-  ///  - iconName: the name of the UIImage systemName icon to be used.
-  ///  - The delete key is made slightly larger.
-  func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
-    btn.setTitle("", for: .normal)
-    var btnsThatAreSlightlyLarger = [
-      "delete.left",
-      "chevron.left",
-      "chevron.right",
-      "shift",
-      "shift.fill",
-      "capslock.fill"
-    ]
-    var selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 1.75,
-      weight: .light,
-      scale: .medium
-    )
-    if btnsThatAreSlightlyLarger.contains(iconName) {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 1.55,
-        weight: .light,
-        scale: .medium
-      )
-    }
-    if isLandscapeView == true {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.5,
-        weight: .light,
-        scale: .medium
-      )
-      if btnsThatAreSlightlyLarger.contains(iconName) {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-          pointSize: letterButtonWidth / 3.2,
-          weight: .light,
-          scale: .medium
-        )
-      }
-    }
-    if DeviceType.isPad {
-      btnsThatAreSlightlyLarger.append("globe")
-      if isLandscapeView == true {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-          pointSize: letterButtonWidth / 3.75,
-          weight: .light,
-          scale: .medium
-        )
-        if btnsThatAreSlightlyLarger.contains(iconName) {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-            pointSize: letterButtonWidth / 3.4,
-            weight: .light,
-            scale: .medium
-          )
-        }
-      } else {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-          pointSize: letterButtonWidth / 3,
-          weight: .light,
-          scale: .medium
-        )
-        if btnsThatAreSlightlyLarger.contains(iconName) {
-          selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-            pointSize: letterButtonWidth / 2.75,
-            weight: .light,
-            scale: .medium
-          )
-        }
-      }
-    }
-    btn.setImage(UIImage(systemName: iconName, withConfiguration: selectKeyboardIconConfig), for: .normal)
-    btn.tintColor = color
+    // Override keyboards switching to others for translation and prior Scribe commands.
+    switchInput = false
+    scribeBtnState = false
+    previewState = false
+
+    // Set height for Scribe command functionality.
+    annotationHeight = nounAnnotation1.frame.size.height
+
+    loadKeys()
   }
 
   /// Activates a button by assigning key touch functions for their given actions.
@@ -269,26 +78,6 @@ class KeyboardViewController: UIInputViewController {
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
     btn.isUserInteractionEnabled = false
   }
-
-  /// Deletes in the proxy or preview bar given the current constraints.
-  func handleDeleteButtonPressed() {
-    if previewState != true {
-      proxy.deleteBackward()
-    } else if !(previewState == true && allPrompts.contains(previewBar.text!)) {
-      guard
-        let text = previewBar.text,
-        !text.isEmpty
-      else {
-        return
-      }
-      previewBar.text = previewBar.text!.deletePriorToCursor()
-    } else {
-      backspaceTimer?.invalidate()
-      backspaceTimer = nil
-    }
-  }
-
-  // MARK: Scribe command elements
 
   /// Sets a button's values that are displayed and inserted into the proxy as well as assigning a color.
   ///
@@ -321,8 +110,94 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: btn)
   }
 
+  // MARK: Override UIInputViewController Functions
+
+  /// Includes adding custom view sizing constraints.
+  override func updateViewConstraints() {
+    super.updateViewConstraints()
+
+    checkLandscapeMode()
+    if DeviceType.isPhone {
+      if isLandscapeView == true {
+        keyboardHeight = 200
+      } else {
+        keyboardHeight = 270
+      }
+    } else if DeviceType.isPad {
+      if isLandscapeView == true {
+        keyboardHeight = 320
+      } else {
+        keyboardHeight = 340
+      }
+    }
+
+    let heightConstraint = NSLayoutConstraint(
+      item: view!,
+      attribute: NSLayoutConstraint.Attribute.height,
+      relatedBy: NSLayoutConstraint.Relation.equal,
+      toItem: nil,
+      attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+      multiplier: 1.0,
+      constant: keyboardHeight
+    )
+    view.addConstraint(heightConstraint)
+
+    keyboardView.frame.size = view.frame.size
+  }
+
+  // Button to be asigned as the select keyboard button if necessary.
+  @IBOutlet var selectKeyboardButton: UIButton!
+
+  /// Includes the following:
+  /// - Assignment of the proxy
+  /// - Loading the Scribe interface
+  /// - Making keys letters
+  /// - Adding the keyboard selector target
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    checkDarkModeSetColors()
+    proxy = textDocumentProxy as UITextDocumentProxy
+    keyboardState = .letters
+    loadInterface()
+
+    self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+  }
+
+  /// Includes hiding the keyboard selector button if it is not needed for the current device.
+  override func viewWillLayoutSubviews() {
+    self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+    super.viewWillLayoutSubviews()
+  }
+
+  /// Includes updateViewConstraints to change the keyboard height given device type and orientation.
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    updateViewConstraints()
+  }
+
+  /// Includes:
+  /// - updateViewConstraints to change the keyboard height
+  /// - A call to loadKeys to reload the display after an orientation change
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    updateViewConstraints()
+    loadKeys()
+  }
+
+  /// Overrides the previous color variables if the user switches between light and dark mode.
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    checkDarkModeSetColors()
+    loadKeys()
+  }
+
+  // MARK: Scribe Command Elements
+
   // The bar that displays language logic or is typed into for Scribe commands.
   @IBOutlet var previewBar: UILabel!
+  @IBOutlet var previewBarShadow: UIButton!
+  @IBOutlet var previewBarBlend: UILabel!
 
   /// Sets up the preview bar's color and text alignment.
   func setPreviewBar() {
@@ -342,6 +217,24 @@ class KeyboardViewController: UIInputViewController {
       previewPromptSpacing = String(repeating: " ", count: 2)
     } else if DeviceType.isPad {
       previewPromptSpacing = String(repeating: " ", count: 5)
+    }
+  }
+
+  /// Deletes in the proxy or preview bar given the current constraints.
+  func handleDeleteButtonPressed() {
+    if previewState != true {
+      proxy.deleteBackward()
+    } else if !(previewState == true && allPrompts.contains(previewBar.text!)) {
+      guard
+        let inputText = previewBar.text,
+        !inputText.isEmpty
+      else {
+        return
+      }
+      previewBar.text = previewBar.text!.deletePriorToCursor()
+    } else {
+      backspaceTimer?.invalidate()
+      backspaceTimer = nil
     }
   }
 
@@ -385,10 +278,6 @@ class KeyboardViewController: UIInputViewController {
     scribeBtn.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
     scribeBtn.tintColor = keyCharColor
   }
-
-  // Shadow elements for preview bar.
-  @IBOutlet var previewBarShadow: UIButton!
-  @IBOutlet var previewBarBlend: UILabel!
 
   // Buttons used to trigger Scribe command functionality.
   @IBOutlet var translateBtn: UIButton!
@@ -772,120 +661,6 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Adds padding to keys to position them.
-  ///
-  /// - Parameters
-  ///  - to: the stackView in which the button is found.
-  ///  - width: the width of the padding.
-  ///  - key: the key associated with the button.
-  func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
-    let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-    padding.setTitleColor(.clear, for: .normal)
-    padding.alpha = 0.0
-    padding.widthAnchor.constraint(equalToConstant: width).isActive = true
-    padding.isUserInteractionEnabled = false
-
-    paddingViews.append(padding)
-    stackView.addArrangedSubview(padding)
-  }
-
-  // MARK: Override UIInputViewController functions
-
-  /// Includes adding custom view sizing constraints.
-  override func updateViewConstraints() {
-    super.updateViewConstraints()
-
-    checkLandscapeMode()
-    if DeviceType.isPhone {
-      if isLandscapeView == true {
-        keyboardHeight = 200
-      } else {
-        keyboardHeight = 270
-      }
-    } else if DeviceType.isPad {
-      if isLandscapeView == true {
-        keyboardHeight = 320
-      } else {
-        keyboardHeight = 340
-      }
-    }
-
-    let heightConstraint = NSLayoutConstraint(
-      item: view!,
-      attribute: NSLayoutConstraint.Attribute.height,
-      relatedBy: NSLayoutConstraint.Relation.equal,
-      toItem: nil,
-      attribute: NSLayoutConstraint.Attribute.notAnAttribute,
-      multiplier: 1.0,
-      constant: keyboardHeight
-    )
-    view.addConstraint(heightConstraint)
-
-    keyboardView.frame.size = view.frame.size
-  }
-
-  /// Includes instantiation of the interface builder given the UINib, adding sub views, and loading keys.
-  func loadInterface() {
-    let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
-    keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
-    keyboardView.translatesAutoresizingMaskIntoConstraints = true
-    view.addSubview(keyboardView)
-
-    // Override keyboards switching to others for translation and prior Scribe commands.
-    switchInput = false
-    scribeBtnState = false
-    previewState = false
-
-    // Set height for Scribe command functionality.
-    annotationHeight = nounAnnotation1.frame.size.height
-
-    loadKeys()
-  }
-
-  /// Includes the following:
-  /// - Assignment of the proxy
-  /// - Loading the Scribe interface
-  /// - Making keys letters
-  /// - Adding the keyboard selector target
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    checkDarkModeSetColors()
-    proxy = textDocumentProxy as UITextDocumentProxy
-    keyboardState = .letters
-    loadInterface()
-
-    self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-  }
-
-  /// Includes hiding the keyboard selector button if it is not needed for the current device.
-  override func viewWillLayoutSubviews() {
-    self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-    super.viewWillLayoutSubviews()
-  }
-
-  /// Includes updateViewConstraints to change the keyboard height given device type and orientation.
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    updateViewConstraints()
-  }
-
-  /// Includes:
-  /// - updateViewConstraints to change the keyboard height
-  /// - A call to loadKeys to reload the display after an orientation change
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    super.viewWillTransition(to: size, with: coordinator)
-    updateViewConstraints()
-    loadKeys()
-  }
-
-  /// Overrides the previous color variables if the user switches between light and dark mode.
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    checkDarkModeSetColors()
-    loadKeys()
-  }
-
   // MARK: Load keys
 
   /// Loads the keys given the current constraints.
@@ -902,7 +677,7 @@ class KeyboardViewController: UIInputViewController {
     invalidState = false
 
     // Clear interface from the last state.
-    keys.forEach {$0.removeFromSuperview()}
+    keyboardKeys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
 
     // Start new keyboard.
@@ -986,7 +761,7 @@ class KeyboardViewController: UIInputViewController {
       for row in 0...numRows - 1 {
         for idx in 0...keyboard[row].count - 1 {
           // Set up button as a key with its values and properties.
-          let btn = KeyboardButton(type: .custom)
+          let btn = KeyboardKey(type: .custom)
           btn.backgroundColor = keyColor
           btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
           btn.layer.borderWidth = 0
@@ -1178,7 +953,7 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
 
-          keys.append(btn)
+          keyboardKeys.append(btn)
           switch row {
           case 0: stackView0.addArrangedSubview(btn)
           case 1: stackView1.addArrangedSubview(btn)
@@ -1384,7 +1159,8 @@ class KeyboardViewController: UIInputViewController {
         break
       }
 
-    } else { // conjugate view
+    } else {
+      // Load conjugation view.
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = false
       }
@@ -1858,7 +1634,7 @@ class KeyboardViewController: UIInputViewController {
     hideAnnotations()
   }
 
-  // MARK: Button actions
+  // MARK: Button Actions
 
   /// Triggers actions based on the press of a key.
   ///

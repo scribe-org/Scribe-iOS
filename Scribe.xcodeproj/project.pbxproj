@@ -137,6 +137,23 @@
 		D171942B27AECEA80038660B /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D171942C27AECEA90038660B /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
+		D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943A27AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
+		D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
+		D171944A27AEFC620038660B /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
+		D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
+		D171945527AF05D40038660B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
@@ -313,6 +330,8 @@
 		D171940F27AECCF50038660B /* RUCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUCommandVariables.swift; sourceTree = "<group>"; };
 		D171941727AECD070038660B /* ESCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESCommandVariables.swift; sourceTree = "<group>"; };
 		D171941F27AECD170038660B /* SVCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVCommandVariables.swift; sourceTree = "<group>"; };
+		D171942E27AEDE110038660B /* KeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKeys.swift; sourceTree = "<group>"; };
+		D171943727AEF0560038660B /* KeyboardStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardStyling.swift; sourceTree = "<group>"; };
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwedishKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -565,6 +584,8 @@
 				D190B2462741B24F00705659 /* CommandVariables.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
+				D171942E27AEDE110038660B /* KeyboardKeys.swift */,
+				D171943727AEF0560038660B /* KeyboardStyling.swift */,
 				D190B2592742565500705659 /* KeyboardViewController.swift */,
 				D190B24D2741B61000705659 /* LoadData.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
@@ -963,6 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
+				D171944A27AEFC620038660B /* LoadData.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D171941827AECD070038660B /* ESCommandVariables.swift in Sources */,
@@ -973,6 +995,8 @@
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
+				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
+				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
@@ -984,6 +1008,8 @@
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
+				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
+				D171945527AF05D40038660B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +1019,8 @@
 			files = (
 				D171942927AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */,
+				D171943A27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D171941A27AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D171940227AECCD10038660B /* DECommandVariables.swift in Sources */,
@@ -1019,6 +1047,8 @@
 			files = (
 				D171942727AECEA60038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942127AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1045,6 +1075,8 @@
 			files = (
 				D171942827AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942327AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1071,6 +1103,8 @@
 			files = (
 				D171942B27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942527AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1097,6 +1131,8 @@
 			files = (
 				D171942A27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942427AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1123,6 +1159,8 @@
 			files = (
 				D171942C27AECEA90038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942627AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
