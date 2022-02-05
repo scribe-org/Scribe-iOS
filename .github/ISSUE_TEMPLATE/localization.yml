@@ -1,5 +1,5 @@
 name: 🌐 Localization
-description: Report issues or offer to help for Scribe localization.
+description: Report issues or offer help for Scribe localizations.
 labels: "localization"
 body:
   - type: checkboxes
