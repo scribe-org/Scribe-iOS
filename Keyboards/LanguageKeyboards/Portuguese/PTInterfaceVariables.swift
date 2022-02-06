@@ -91,14 +91,14 @@ func setPTKeyboardLayout() {
   invalidCommandMsg = "Não está no diretório"
 
   translateKeyLbl = "Traduzir"
-  translatePrompt = previewPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt + previewCursor
+  translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
 
   conjugateKeyLbl = "Conjugar"
-  conjugatePrompt = previewPromptSpacing + "Conjugar: "
-  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+  conjugatePrompt = commandPromptSpacing + "Conjugar: "
+  conjugatePromptAndCursor = conjugatePrompt + commandCursor
 
   pluralKeyLbl = "Plural"
-  pluralPrompt = previewPromptSpacing + "Plural: "
-  pluralPromptAndCursor = pluralPrompt + previewCursor
+  pluralPrompt = commandPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + commandCursor
 }

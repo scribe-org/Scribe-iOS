@@ -47,7 +47,7 @@ enum ShiftButtonState {
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
-var scribeBtnState: Bool = false
+var scribeKeyState: Bool = false
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
@@ -307,14 +307,14 @@ func setENKeyboardLayout() {
   invalidCommandMsg = "Not in directory"
 
   translateKeyLbl = "Translate"
-  translatePrompt = previewPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt + previewCursor
+  translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
 
   conjugateKeyLbl = "Conjugate"
-  conjugatePrompt = previewPromptSpacing + "Conjugate: "
-  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+  conjugatePrompt = commandPromptSpacing + "Conjugate: "
+  conjugatePromptAndCursor = conjugatePrompt + commandCursor
 
   pluralKeyLbl = "Plural"
-  pluralPrompt = previewPromptSpacing + "Plural: "
-  pluralPromptAndCursor = pluralPrompt + previewCursor
+  pluralPrompt = commandPromptSpacing + "Plural: "
+  pluralPromptAndCursor = pluralPrompt + commandCursor
 }

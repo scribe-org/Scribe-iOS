@@ -115,11 +115,11 @@ The `Plural` feature allows a user to enter a noun and then insert its plural in
 
 ### • Word Annotation [`⇧`](#contents) <a id="word-annotation"></a>
 
-Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
+Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
 #### Nouns
 
-Scribe annotates nouns in the preview bar according to the following conventions:
+Scribe annotates nouns in the command bar according to the following conventions:
 
 - Feminine: colored red 🟥 and marked with (F)
 - Masculine: colored blue 🟦 and marked with (M)
@@ -132,7 +132,7 @@ The above form abbreviations are translated into their equivalents in the keyboa
 
 #### Prepositions
 
-Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
+Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
 
 ### • Functionality [`⇧`](#contents) <a id="functionality"></a>
 

@@ -22,7 +22,7 @@ enum DEConjugationState {
 
 var deConjugationState: DEConjugationState = .indicativePresent
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func deGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -31,11 +31,11 @@ func deGetConjugationTitle() -> String {
   }
   switch deConjugationState {
   case .indicativePresent:
-    return previewPromptSpacing + "Präsens: " + verbToDisplay
+    return commandPromptSpacing + "Präsens: " + verbToDisplay
   case .indicativePreterite:
-    return previewPromptSpacing + "Präteritum: " + verbToDisplay
+    return commandPromptSpacing + "Präteritum: " + verbToDisplay
   case .indicativePerfect:
-    return previewPromptSpacing + "Perfekt: " + verbToDisplay
+    return commandPromptSpacing + "Perfekt: " + verbToDisplay
   }
 }
 

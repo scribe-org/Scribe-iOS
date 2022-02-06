@@ -6,7 +6,7 @@
 
 import UIKit
 
-/// Triggers the display of the conjugation view for a valid verb in the preview bar.
+/// Triggers the display of the conjugation view for a valid verb in the command bar.
 func queryConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
   if commandBar.text! == conjugatePromptAndCursor {

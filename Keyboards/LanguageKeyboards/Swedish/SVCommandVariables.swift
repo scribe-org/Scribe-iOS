@@ -27,7 +27,7 @@ enum SVConjugationState {
 
 var svConjugationState: SVConjugationState = .active
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func svGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -36,9 +36,9 @@ func svGetConjugationTitle() -> String {
   }
   switch svConjugationState {
   case .active:
-    return previewPromptSpacing + "Aktiv: " + verbToDisplay
+    return commandPromptSpacing + "Aktiv: " + verbToDisplay
   case .passive:
-    return previewPromptSpacing + "Passiv: " + verbToDisplay
+    return commandPromptSpacing + "Passiv: " + verbToDisplay
   }
 }
 

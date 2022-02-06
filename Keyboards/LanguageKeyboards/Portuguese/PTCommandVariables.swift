@@ -23,7 +23,7 @@ enum PTConjugationState {
 
 var ptConjugationState: PTConjugationState = .indicativePresent
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func ptGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -32,13 +32,13 @@ func ptGetConjugationTitle() -> String {
   }
   switch ptConjugationState {
   case .indicativePresent:
-    return previewPromptSpacing + "Presente: " + verbToDisplay
+    return commandPromptSpacing + "Presente: " + verbToDisplay
   case .pastPerfect:
-    return previewPromptSpacing + "Pretérito Perfeito: " + verbToDisplay
+    return commandPromptSpacing + "Pretérito Perfeito: " + verbToDisplay
   case .pastImperfect:
-    return previewPromptSpacing + "Pretérito Imperfeito: " + verbToDisplay
+    return commandPromptSpacing + "Pretérito Imperfeito: " + verbToDisplay
   case .futureSimple:
-    return previewPromptSpacing + "Futuro Simples: " + verbToDisplay
+    return commandPromptSpacing + "Futuro Simples: " + verbToDisplay
   }
 }
 

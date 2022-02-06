@@ -202,7 +202,7 @@ class ViewController: UIViewController {
     // Set link attributes for all textViews.
     for textView in allTextViews {
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor.previewBlueLight,
+        NSAttributedString.Key.foregroundColor: UIColor.annotateBlueLight,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     }

@@ -18,9 +18,9 @@ let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
 
 // A larger vertical bar than the normal | key for the cursor.
-let previewCursor: String = "│"
-var previewPromptSpacing: String = ""
-var previewState: Bool = false
+let commandCursor: String = "│"
+var commandPromptSpacing: String = ""
+var commandState: Bool = false
 
 // Command input and output variables.
 var inputWordIsCapitalized: Bool = false

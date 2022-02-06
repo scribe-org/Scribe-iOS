@@ -39,7 +39,7 @@ enum RUConjugationState {
 
 var ruConjugationState: RUConjugationState = .present
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func ruGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -48,9 +48,9 @@ func ruGetConjugationTitle() -> String {
   }
   switch ruConjugationState {
   case .present:
-    return previewPromptSpacing + "Настоящее: " + verbToDisplay
+    return commandPromptSpacing + "Настоящее: " + verbToDisplay
   case .past:
-    return previewPromptSpacing + "Прошедшее: " + verbToDisplay
+    return commandPromptSpacing + "Прошедшее: " + verbToDisplay
   }
 }
 

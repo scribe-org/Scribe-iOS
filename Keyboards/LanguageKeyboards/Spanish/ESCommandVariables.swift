@@ -22,7 +22,7 @@ enum ESConjugationState {
 
 var esConjugationState: ESConjugationState = .indicativePresent
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func esGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -31,11 +31,11 @@ func esGetConjugationTitle() -> String {
   }
   switch esConjugationState {
   case .indicativePresent:
-    return previewPromptSpacing + "Presente: " + verbToDisplay
+    return commandPromptSpacing + "Presente: " + verbToDisplay
   case .preterite:
-    return previewPromptSpacing + "Pretérito: " + verbToDisplay
+    return commandPromptSpacing + "Pretérito: " + verbToDisplay
   case .imperfect:
-    return previewPromptSpacing + "Imperfecto: " + verbToDisplay
+    return commandPromptSpacing + "Imperfecto: " + verbToDisplay
   }
 }
 

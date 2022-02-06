@@ -93,14 +93,14 @@ func setFRKeyboardLayout() {
   invalidCommandMsg = "Pas dans le répertoire"
 
   translateKeyLbl = "Traduire"
-  translatePrompt = previewPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt + previewCursor
+  translatePrompt = commandPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
 
   conjugateKeyLbl = "Conjuguer"
-  conjugatePrompt = previewPromptSpacing + "Conjuguer: "
-  conjugatePromptAndCursor = conjugatePrompt + previewCursor
+  conjugatePrompt = commandPromptSpacing + "Conjuguer: "
+  conjugatePromptAndCursor = conjugatePrompt + commandCursor
 
   pluralKeyLbl = "Pluriel"
-  pluralPrompt = previewPromptSpacing + "Pluriel: "
-  pluralPromptAndCursor = pluralPrompt + previewCursor
+  pluralPrompt = commandPromptSpacing + "Pluriel: "
+  pluralPromptAndCursor = pluralPrompt + commandCursor
 }

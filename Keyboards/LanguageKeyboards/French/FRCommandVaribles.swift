@@ -22,7 +22,7 @@ enum FRConjugationState {
 
 var frConjugationState: FRConjugationState = .indicativePresent
 
-/// Sets the title of the preview bar when the keyboard is in conjugate mode.
+/// Sets the title of the command bar when the keyboard is in conjugate mode.
 func frGetConjugationTitle() -> String {
   if inputWordIsCapitalized == true {
     verbToDisplay = verbToConjugate.capitalized
@@ -31,11 +31,11 @@ func frGetConjugationTitle() -> String {
   }
   switch frConjugationState {
   case .indicativePresent:
-    return previewPromptSpacing + "Présent: " + verbToDisplay
+    return commandPromptSpacing + "Présent: " + verbToDisplay
   case .preterite:
-    return previewPromptSpacing + "Passé simple: " + verbToDisplay
+    return commandPromptSpacing + "Passé simple: " + verbToDisplay
   case .imperfect:
-    return previewPromptSpacing + "Imparfait: " + verbToDisplay
+    return commandPromptSpacing + "Imparfait: " + verbToDisplay
   }
 }
 

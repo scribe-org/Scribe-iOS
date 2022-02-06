@@ -84,7 +84,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 ### 🎨 Design Changes
 
-- The text size for the preview bar in landscape mode for phones was made smaller.
+- The text size for the command bar in landscape mode for phones was made smaller.
 - The height of the keyboard in landscape mode for phones was made slightly smaller.
 - App store images were updated to combine the dark mode and devices screens.
 
@@ -108,7 +108,7 @@ Data updates are now all done through a single Python file - update_data.py.
 ### ✨ New Features
 
 - Hold-to-select functionality for symbol keys.
-- The keyboard keys are capitalized if the user deletes at the start of the preview bar.
+- The keyboard keys are capitalized if the user deletes at the start of the command bar.
 - Removes noun-gender annotation for given names to avoid misgendering people.
 - Users are now able to pass upper-case arguments to translate and conjugate.
 
@@ -160,7 +160,7 @@ Data updates are now all done through a single Python file - update_data.py.
 ### 🐞 Bug Fixes
 
 - The select keyboard button wouldn't be able to be long held after an initial button is pressed.
-- Canceling a command would cause the preview bar to read "Not in directory" on a subsequent command.
+- Canceling a command would cause the command bar to read "Not in directory" on a subsequent command.
 - The double space period shortcut was being triggered without intent.
 
 ### ♻️ Code Refactoring
@@ -186,7 +186,7 @@ Data updates are now all done through a single Python file - update_data.py.
 ### ✨ Features
 
 - Keyboard extensions that can be used in any app.
-- Annotation of words in the preview bar including the genders of nouns and cases that follow prepositions.
+- Annotation of words in the command bar including the genders of nouns and cases that follow prepositions.
 - Basic English to keyboard language translations.
 - Querying the plurals of nouns.
 - Conjugations of verbs.
@@ -204,7 +204,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 ### 🎨 Design
 
-- The Scribe key and preview bar where Scribe commands are triggered.
+- The Scribe key and command bar where Scribe commands are triggered.
 - 3x2 conjugation tables from which conjugations can be selected in the `Conjugate` command.
 - The return key is colored Scribe blue when commands are being triggered to let the user know that that is what they need to press to finish the command.
 - Dark mode compatibility.
