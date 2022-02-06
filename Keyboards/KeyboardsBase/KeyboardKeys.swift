@@ -26,3 +26,32 @@ class KeyboardKey: UIButton {
     ).contains(point)
   }
 }
+
+/// Sets a button's values that are displayed and inserted into the proxy as well as assigning a color.
+///
+/// - Parameters
+///   - btn: the button to be set up.
+///   - color: the color to assign to the background.
+///   - name: the name of the value for the key.
+///   - canCapitalize: whether the key receives a special character for the shift state.
+///   - isSpecial: whether the btn should be marked as special to be colored accordingly.
+func setBtn(btn: UIButton, color: UIColor, name: String, canCapitalize: Bool, isSpecial: Bool) {
+  btn.backgroundColor = color
+  btn.layer.setValue(name, forKey: "original")
+
+  let charsWithoutShiftState = ["ß"]
+
+  var capsKey = ""
+  if canCapitalize == true {
+    if !charsWithoutShiftState.contains(name) {
+      capsKey = name.capitalized
+    } else {
+      capsKey = name
+    }
+    let shiftChar = shiftButtonState == .normal ? name : capsKey
+    btn.layer.setValue(shiftChar, forKey: "keyToDisplay")
+  } else {
+    btn.layer.setValue(name, forKey: "keyToDisplay")
+  }
+  btn.layer.setValue(isSpecial, forKey: "isSpecial")
+}

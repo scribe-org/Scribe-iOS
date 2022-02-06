@@ -306,15 +306,15 @@ func setENKeyboardLayout() {
   spaceBar = "space"
   invalidCommandMsg = "Not in directory"
 
-  translateBtnLbl = "Translate"
+  translateKeyLbl = "Translate"
   translatePrompt = previewPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Conjugate"
+  conjugateKeyLbl = "Conjugate"
   conjugatePrompt = previewPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Plural"
+  pluralKeyLbl = "Plural"
   pluralPrompt = previewPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }

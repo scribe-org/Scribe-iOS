@@ -80,15 +80,15 @@ func setRUKeyboardLayout() {
   spaceBar = "Пробел"
   invalidCommandMsg = "Нет в каталоге"
 
-  translateBtnLbl = "Перевести"
+  translateKeyLbl = "Перевести"
   translatePrompt = previewPromptSpacing + "ru -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Спрягать"
+  conjugateKeyLbl = "Спрягать"
   conjugatePrompt = previewPromptSpacing + "Спрягать: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Множ"
+  pluralKeyLbl = "Множ"
   pluralPrompt = previewPromptSpacing + "Множ: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }

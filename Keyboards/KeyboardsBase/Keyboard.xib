@@ -12,17 +12,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="French" customModuleProvider="target">
             <connections>
                 <outlet property="commandBackground" destination="RVF-jy-JTf" id="XVG-eG-Ni3"/>
-                <outlet property="conjugateBtn" destination="rP7-7a-des" id="vj6-fN-JOA"/>
-                <outlet property="conjugateBtnBL" destination="dOA-cy-aGo" id="4wr-ZN-z3p"/>
-                <outlet property="conjugateBtnBR" destination="myP-Mh-fDn" id="6Rv-4d-I5h"/>
-                <outlet property="conjugateBtnFPP" destination="0Sz-72-xUw" id="taU-32-uWh"/>
-                <outlet property="conjugateBtnFPS" destination="rO5-ij-Hyw" id="5oT-mz-6W7"/>
-                <outlet property="conjugateBtnSPP" destination="gnL-wZ-ogY" id="SOA-qf-uaV"/>
-                <outlet property="conjugateBtnSPS" destination="18n-dD-Eou" id="3nz-Kq-nhB"/>
-                <outlet property="conjugateBtnTL" destination="KbB-Q5-JYD" id="fPW-kF-Oq1"/>
-                <outlet property="conjugateBtnTPP" destination="rFZ-XE-qHq" id="dU3-LI-PgT"/>
-                <outlet property="conjugateBtnTPS" destination="kON-8k-vtV" id="Oby-AJ-dpC"/>
-                <outlet property="conjugateBtnTR" destination="X69-uD-USO" id="K0G-sP-D5z"/>
+                <outlet property="commandBar" destination="IR7-Kd-kHd" id="wCv-IH-TWn"/>
+                <outlet property="commandBarBlend" destination="yqE-dJ-4q0" id="GU6-Ua-qVi"/>
+                <outlet property="commandBarShadow" destination="i3q-kx-6Dw" id="KBt-uH-7BZ"/>
+                <outlet property="conjugateKey" destination="rP7-7a-des" id="rpG-nR-hE3"/>
+                <outlet property="conjugateKeyBL" destination="dOA-cy-aGo" id="0S9-XX-U3L"/>
+                <outlet property="conjugateKeyBR" destination="myP-Mh-fDn" id="JDd-iO-3ro"/>
+                <outlet property="conjugateKeyFPP" destination="0Sz-72-xUw" id="Egn-E5-x34"/>
+                <outlet property="conjugateKeyFPS" destination="rO5-ij-Hyw" id="FQW-yS-Xca"/>
+                <outlet property="conjugateKeySPP" destination="gnL-wZ-ogY" id="lHa-Hv-wSt"/>
+                <outlet property="conjugateKeySPS" destination="18n-dD-Eou" id="E7b-Vf-arE"/>
+                <outlet property="conjugateKeyTL" destination="KbB-Q5-JYD" id="1zg-Cc-cW2"/>
+                <outlet property="conjugateKeyTPP" destination="rFZ-XE-qHq" id="1OL-Ow-2aF"/>
+                <outlet property="conjugateKeyTPS" destination="kON-8k-vtV" id="Xhn-N4-PRx"/>
+                <outlet property="conjugateKeyTR" destination="X69-uD-USO" id="eU1-WJ-B2s"/>
                 <outlet property="conjugateLblBL" destination="92Z-QS-QCN" id="jCl-xz-AY1"/>
                 <outlet property="conjugateLblBR" destination="I6c-Dk-kl5" id="4XD-8e-GdE"/>
                 <outlet property="conjugateLblFPP" destination="cle-tW-yE1" id="sQC-k2-ayD"/>
@@ -40,7 +43,7 @@
                 <outlet property="nounAnnotation3" destination="Krh-yp-6sD" id="1Pt-lB-Vde"/>
                 <outlet property="nounAnnotation4" destination="t0f-E9-FK4" id="dOf-wv-YxG"/>
                 <outlet property="nounAnnotation5" destination="DeR-N1-Wrh" id="xsY-Lr-yKC"/>
-                <outlet property="pluralBtn" destination="FgS-T1-2rI" id="Lyz-FR-1IQ"/>
+                <outlet property="pluralKey" destination="FgS-T1-2rI" id="NSp-W5-nas"/>
                 <outlet property="prepAnnotation11" destination="YX3-es-Zsb" id="k31-j4-fXp"/>
                 <outlet property="prepAnnotation12" destination="Fs3-ee-rCN" id="qNO-jt-1oh"/>
                 <outlet property="prepAnnotation13" destination="YVf-nA-mY5" id="tUG-1f-TMM"/>
@@ -53,16 +56,13 @@
                 <outlet property="prepAnnotation32" destination="4HF-e2-LmJ" id="GsS-0t-wHR"/>
                 <outlet property="prepAnnotation33" destination="Cqj-o7-t8G" id="BJd-tB-zoE"/>
                 <outlet property="prepAnnotation34" destination="noQ-Ha-Soo" id="jtc-6P-xMC"/>
-                <outlet property="previewBar" destination="IR7-Kd-kHd" id="55O-fA-s6h"/>
-                <outlet property="previewBarBlend" destination="yqE-dJ-4q0" id="U0L-OY-37w"/>
-                <outlet property="previewBarShadow" destination="i3q-kx-6Dw" id="lrw-KD-UsB"/>
-                <outlet property="scribeBtn" destination="MCB-7F-dNd" id="VGG-wW-Swu"/>
-                <outlet property="scribeBtnShadow" destination="X7p-5k-iDr" id="dCj-bs-tVQ"/>
+                <outlet property="scribeKey" destination="MCB-7F-dNd" id="AzX-VF-3Nj"/>
+                <outlet property="scribeKeyShadow" destination="X7p-5k-iDr" id="aAC-kE-Izu"/>
                 <outlet property="stackView0" destination="xYB-wV-ziM" id="Pj5-7N-gD2"/>
                 <outlet property="stackView1" destination="OeW-Ji-4P7" id="5aZ-h9-14A"/>
                 <outlet property="stackView2" destination="lVo-8I-Rya" id="7sy-kG-jt8"/>
                 <outlet property="stackView3" destination="Y6B-bi-XMS" id="L0A-1w-EdS"/>
-                <outlet property="translateBtn" destination="9j4-80-zkW" id="kE4-oZ-o27"/>
+                <outlet property="translateKey" destination="9j4-80-zkW" id="SeL-fq-Uq3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -82,25 +82,25 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbB-Q5-JYD" userLabel="ConjBtnTL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbB-Q5-JYD" userLabel="ConjKeyTL">
                     <rect key="frame" x="27.5" y="50" width="131" height="101"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X69-uD-USO" userLabel="ConjBtnTR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X69-uD-USO" userLabel="ConjKeyTR">
                     <rect key="frame" x="161.5" y="50" width="131" height="101"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-cy-aGo" userLabel="ConjBtnBL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-cy-aGo" userLabel="ConjKeyBL">
                     <rect key="frame" x="27.5" y="154" width="131" height="101"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myP-Mh-fDn" userLabel="ConjBtnBR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myP-Mh-fDn" userLabel="ConjKeyBR">
                     <rect key="frame" x="161.5" y="154" width="131" height="101"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -130,37 +130,37 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-ij-Hyw" userLabel="FPSBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-ij-Hyw" userLabel="FPSKey">
                     <rect key="frame" x="27.5" y="50" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18n-dD-Eou" userLabel="SPSBtn">
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18n-dD-Eou" userLabel="SPSKey">
                     <rect key="frame" x="27.5" y="119" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kON-8k-vtV" userLabel="TPSBtn">
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kON-8k-vtV" userLabel="TPSKey">
                     <rect key="frame" x="27.5" y="188" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-72-xUw" userLabel="FPPBtn">
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-72-xUw" userLabel="FPPKey">
                     <rect key="frame" x="161.5" y="50" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-wZ-ogY" userLabel="SPPBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-wZ-ogY" userLabel="SPPKey">
                     <rect key="frame" x="161.5" y="119" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-XE-qHq" userLabel="TPPBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-XE-qHq" userLabel="TPPKey">
                     <rect key="frame" x="161.5" y="188" width="131" height="67"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -221,14 +221,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3q-kx-6Dw" userLabel="PrevBarShadow">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3q-kx-6Dw" userLabel="ComBarShadow">
                     <rect key="frame" x="56.5" y="4.5" width="260.5" height="37.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-Kd-kHd" userLabel="PrevBar">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-Kd-kHd" userLabel="CommandBar">
                     <rect key="frame" x="56.5" y="4.5" width="260.5" height="37.5"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -236,21 +236,21 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgS-T1-2rI" userLabel="PluralBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgS-T1-2rI" userLabel="PluralKey">
                     <rect key="frame" x="237" y="4.5" width="80" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP7-7a-des" userLabel="ConjugateBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP7-7a-des" userLabel="ConjugateKey">
                     <rect key="frame" x="150.5" y="4.5" width="79.5" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-80-zkW" userLabel="TranslateBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-80-zkW" userLabel="TranslateKey">
                     <rect key="frame" x="63.5" y="4.5" width="80" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -405,20 +405,20 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7p-5k-iDr" userLabel="ScribeBtnShadow">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7p-5k-iDr" userLabel="ScribeKeyShadow">
                     <rect key="frame" x="3" y="4.5" width="53.5" height="37.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-7F-dNd" userLabel="ScribeBtn">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-7F-dNd" userLabel="ScribeKey" customClass="ScribeKey" customModule="French" customModuleProvider="target">
                     <rect key="frame" x="3" y="4.5" width="53.5" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqE-dJ-4q0" userLabel="PrevBarBlend">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqE-dJ-4q0" userLabel="ComBarBlend">
                     <rect key="frame" x="56.5" y="5.5" width="1" height="35.5"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>

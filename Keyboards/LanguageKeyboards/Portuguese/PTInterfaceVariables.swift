@@ -90,15 +90,15 @@ func setPTKeyboardLayout() {
   spaceBar = "espaço"
   invalidCommandMsg = "Não está no diretório"
 
-  translateBtnLbl = "Traduzir"
+  translateKeyLbl = "Traduzir"
   translatePrompt = previewPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Conjugar"
+  conjugateKeyLbl = "Conjugar"
   conjugatePrompt = previewPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Plural"
+  pluralKeyLbl = "Plural"
   pluralPrompt = previewPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }

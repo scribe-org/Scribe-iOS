@@ -6,7 +6,7 @@
 
 import UIKit
 
-/// Styles a button's appearance including it's shape and text.
+/// Styles a button including it's shape and text.
 ///
 /// - Parameters
 ///  - btn: the button to be styled.
@@ -28,7 +28,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   }
 }
 
-/// Styles btns that have icon keys.
+/// Styles buttons that have icon keys.
 ///
 /// - Parameters
 ///  - btn: the button to be styled.

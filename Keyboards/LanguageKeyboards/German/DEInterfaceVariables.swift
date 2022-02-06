@@ -98,16 +98,15 @@ func setDEKeyboardLayout() {
   spaceBar = "Leerzeichen"
   invalidCommandMsg = "Nicht im Verzeichnis"
 
-  translateBtnLbl = "Übersetzen"
+  translateKeyLbl = "Übersetzen"
   translatePrompt = previewPromptSpacing + "de -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Konjugieren"
+  conjugateKeyLbl = "Konjugieren"
   conjugatePrompt = previewPromptSpacing + "Konjugieren: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Plural"
+  pluralKeyLbl = "Plural"
   pluralPrompt = previewPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }
-

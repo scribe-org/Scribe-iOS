@@ -94,15 +94,15 @@ func setESKeyboardLayout() {
   spaceBar = "espacio"
   invalidCommandMsg = "No en el directorio"
 
-  translateBtnLbl = "Traducir"
+  translateKeyLbl = "Traducir"
   translatePrompt = previewPromptSpacing + "es -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Conjugar"
+  conjugateKeyLbl = "Conjugar"
   conjugatePrompt = previewPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Plural"
+  pluralKeyLbl = "Plural"
   pluralPrompt = previewPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }

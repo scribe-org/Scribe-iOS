@@ -96,15 +96,15 @@ func setSVKeyboardLayout() {
   spaceBar = "mellanslag"
   invalidCommandMsg = "Inte i katalogen"
 
-  translateBtnLbl = "Översätt"
+  translateKeyLbl = "Översätt"
   translatePrompt = previewPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + previewCursor
 
-  conjugateBtnLbl = "Konjugera"
+  conjugateKeyLbl = "Konjugera"
   conjugatePrompt = previewPromptSpacing + "Konjugera: "
   conjugatePromptAndCursor = conjugatePrompt + previewCursor
 
-  pluralBtnLbl = "Plural"
+  pluralKeyLbl = "Plural"
   pluralPrompt = previewPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + previewCursor
 }

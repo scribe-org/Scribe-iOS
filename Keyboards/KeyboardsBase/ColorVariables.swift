@@ -16,8 +16,8 @@ var specialKeyColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/
 var keyPressedColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 
 var commandKeyColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-var previewBarColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-var previewBarBorderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
+var commandBarColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+var commandBarBorderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
 
 var keyboardBackColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 var keyShadowColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
@@ -44,8 +44,8 @@ func checkDarkModeSetColors() {
     keyPressedColor = UIColor.keyPressedColorLight
 
     commandKeyColor = UIColor.commandKeyColorLight
-    previewBarColor = UIColor.previewBarColorLight
-    previewBarBorderColor = UIColor.previewBarBorderColorLight
+    commandBarColor = UIColor.commandBarColorLight
+    commandBarBorderColor = UIColor.commandBarBorderColorLight
 
     keyboardBackColor = UIColor.keyboardBackColorLight
     keyShadowColor = UIColor.keyShadowColorLight
@@ -68,8 +68,8 @@ func checkDarkModeSetColors() {
     keyPressedColor = UIColor.keyPressedColorDark
 
     commandKeyColor = UIColor.commandKeyColorDark
-    previewBarColor = UIColor.previewBarColorDark
-    previewBarBorderColor = UIColor.previewBarBorderColorDark
+    commandBarColor = UIColor.commandBarColorDark
+    commandBarBorderColor = UIColor.commandBarBorderColorDark
 
     keyboardBackColor = UIColor.keyboardBackColorDark
     keyShadowColor = UIColor.keyShadowColorDark
@@ -95,8 +95,8 @@ extension UIColor {
   static let keyPressedColorLight = UIColor(red: 233.0/255.0, green: 233.0/255.0, blue: 233.0/255.0, alpha: 1.0)
 
   static let commandKeyColorLight = UIColor.scribeBlueLight
-  static let previewBarColorLight = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-  static let previewBarBorderColorLight = UIColor(
+  static let commandBarColorLight = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+  static let commandBarBorderColorLight = UIColor(
     red: 203.0/255.0, green: 203.0/255.0, blue: 206.0/255.0, alpha: 1.0
   ).cgColor
 
@@ -118,8 +118,8 @@ extension UIColor {
   static let keyPressedColorDark = UIColor(red: 54.0/255.0, green: 54.0/255.0, blue: 54.0/255.0, alpha: 1.0)
 
   static let commandKeyColorDark = UIColor.scribeBlueDark
-  static let previewBarColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-  static let previewBarBorderColorDark = UIColor(
+  static let commandBarColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+  static let commandBarBorderColorDark = UIColor(
     red: 70.0/255.0, green: 70.0/255.0, blue: 74.0/255.0, alpha: 1.0
   ).cgColor
 

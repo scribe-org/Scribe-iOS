@@ -6,16 +6,16 @@
 
 import UIKit
 
+// Basic keyboard functionality variables.
+var capsLockPossible = false
+var doubleSpacePeriodPossible = false
+var backspaceTimer: Timer?
+
 // All data needed for Scribe commands for the given language keyboard.
 let nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
-
-// Basic keyboard functionality variables.
-var capsLockPossible = false
-var doubleSpacePeriodPossible = false
-var backspaceTimer: Timer?
 
 // A larger vertical bar than the normal | key for the cursor.
 let previewCursor: String = "│"
@@ -45,14 +45,14 @@ let languagesWithCapitalizedNouns = ["German"]
 let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
 
 // MARK: Translate Variables
-var translateBtnLbl: String = ""
+var translateKeyLbl: String = ""
 var translatePrompt: String = ""
 var translatePromptAndCursor: String = ""
 var getTranslation: Bool = false
 var wordToTranslate: String = ""
 
 // MARK: Conjugate Variables
-var conjugateBtnLbl: String = ""
+var conjugateKeyLbl: String = ""
 var conjugatePrompt: String = ""
 var conjugatePromptAndCursor: String = ""
 var getConjugation: Bool = false
@@ -92,7 +92,7 @@ var conjugationToDisplay: String = ""
 var verbConjugated: String = ""
 
 // MARK: Plural Variables
-var pluralBtnLbl: String = ""
+var pluralKeyLbl: String = ""
 var pluralPrompt: String = ""
 var pluralPromptAndCursor: String = ""
 var getPlural: Bool = false
