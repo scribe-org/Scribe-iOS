@@ -217,6 +217,8 @@ class KeyboardKey: UIButton {
       } else if shiftButtonState == .caps {
         self.backgroundColor = keyPressedColor
         styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
+      } else {
+        self.backgroundColor = specialKeyColor
       }
     } else if self.key == "return" && commandState == true {
       // Color the return key depending on if it's being used as enter for commands.

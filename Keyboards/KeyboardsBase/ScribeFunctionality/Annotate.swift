@@ -16,13 +16,13 @@ let formToColorDict: [String: UIColor] = [
 ]
 
 // Dictionary to convert noun annotations into the keyboard language.
-let nounAnnotationConversionDict: [String: [String: [String]]] = [
+let nounAnnotationConversionDict = [
   "Swedish": ["C": "U"],
   "Russian": ["F": "Ж", "M": "М", "N": "Н", "PL": "МН"]
 ]
 
 // Dictionary to convert case annotations into the keyboard language.
-let caseAnnotationConversionDict: [String: [String: [String]]] = [
+let caseAnnotationConversionDict = [
   "German": ["Acc": "Akk"],
   "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
@@ -41,13 +41,13 @@ func hideAnnotations(annotationDisplay: [UILabel]) {
 ///  - elem: the element to change the appearance of to show annotations.
 ///  - annotation: the annotation to set to the element.
 func setNounAnnotation(label: UILabel, annotation: String) {
-  var annotationToDisplay = annotation
+  var annotationToDisplay: String = annotation
 
   if scribeKeyState != true { // Cancel if typing while commands are displayed.
     // Convert annotation into the keyboard language if necessary.
     if nounAnnotationConversionDict[controllerLanguage] != nil {
-      if nounAnnotationConversionDict[controllerLanguage][annotation] != nil {
-        annotationToDisplay = nounAnnotationConversionDict[controllerLanguage][annotation]
+      if nounAnnotationConversionDict[controllerLanguage]?[annotation] != nil {
+        annotationToDisplay = nounAnnotationConversionDict[controllerLanguage]?[annotation] ?? ""
       }
     }
 
@@ -134,11 +134,12 @@ func nounAnnotation(
       if invalidState != true {
         commandBar.text = commandPromptSpacing + wordSpacing + givenWord
       }
+
+      // Check if it's a preposition and pass information to prepositionAnnotation if so.
+      let isPrep = prepositions?[wordToCheck.lowercased()] != nil
+      nounAnnotationsToDisplay = numberOfAnnotations
+      if isPrep { prepAnnotationState = true }
     }
-    // Check if it's a preposition and pass information to prepositionAnnotation if so.
-    let isPrep = prepositions?[wordToCheck.lowercased()] != nil
-    nounAnnotationsToDisplay = numberOfAnnotations
-    if isPrep { prepAnnotationState = true }
   }
 }
 
@@ -183,13 +184,13 @@ func typedNounAnnotation(
 ///  - elem: the element to change the appearance of to show annotations.
 ///  - annotation: the annotation to set to the element.
 func setPrepAnnotation(label: UILabel, annotation: String) {
-  var annotationToDisplay = annotation
+  var annotationToDisplay: String = annotation
 
   if scribeKeyState != true {
     // Convert annotation into the keyboard language if necessary.
     if caseAnnotationConversionDict[controllerLanguage] != nil {
-      if caseAnnotationConversionDict[controllerLanguage][annotation] != nil {
-        annotationToDisplay = caseAnnotationConversionDict[controllerLanguage][annotation]
+      if caseAnnotationConversionDict[controllerLanguage]?[annotation] != nil {
+        annotationToDisplay = caseAnnotationConversionDict[controllerLanguage]?[annotation] ?? ""
       }
     }
 

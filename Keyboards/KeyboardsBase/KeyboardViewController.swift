@@ -60,7 +60,7 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - btn: the button to be activated.
   func activateBtn(btn: UIButton) {
-    btn.addTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
+    btn.addTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
     btn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
     btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
     btn.isUserInteractionEnabled = true
@@ -73,7 +73,7 @@ class KeyboardViewController: UIInputViewController {
   func deactivateBtn(btn: UIButton) {
     btn.setTitle("", for: .normal)
     btn.backgroundColor = UIColor.clear
-    btn.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
+    btn.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
     btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
     btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
     btn.isUserInteractionEnabled = false
@@ -332,7 +332,7 @@ class KeyboardViewController: UIInputViewController {
     for lbl in conjugationLbls {
       lbl!.backgroundColor = UIColor.clear
       lbl!.setTitleColor(specialKeyColor, for: .normal)
-      lbl!.removeTarget(self, action: #selector(keyPressedTouchUp), for: .touchUpInside)
+      lbl!.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
       lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
       lbl!.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
       lbl!.isUserInteractionEnabled = false
@@ -980,7 +980,7 @@ class KeyboardViewController: UIInputViewController {
   ///
   /// - Parameters
   ///   - sender: the button pressed as sender.
-  @IBAction func keyPressedTouchUp(_ sender: UIButton) {
+  @IBAction func executeKeyActions(_ sender: UIButton) {
     guard let originalKey = sender.layer.value(
       forKey: "original"
     ) as? String,
