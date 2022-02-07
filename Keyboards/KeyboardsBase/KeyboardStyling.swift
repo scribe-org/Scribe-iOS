@@ -28,79 +28,100 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   }
 }
 
-/// Styles buttons that have icon keys.
+// The names of symbols whose keys should be slightly larger than the default size.
+var keysThatAreSlightlyLarger: [String] = [
+  "delete.left",
+  "chevron.left",
+  "chevron.right",
+  "shift",
+  "shift.fill",
+  "capslock.fill"
+]
+
+/// Get the icon configurations for keys if the device is an iPhone.
 ///
 /// - Parameters
-///  - btn: the button to be styled.
 ///  - iconName: the name of the UIImage systemName icon to be used.
-///  - The delete key is made slightly larger.
-func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
-  btn.setTitle("", for: .normal)
-  var btnsThatAreSlightlyLarger = [
-    "delete.left",
-    "chevron.left",
-    "chevron.right",
-    "shift",
-    "shift.fill",
-    "capslock.fill"
-  ]
-  var selectKeyboardIconConfig = UIImage.SymbolConfiguration(
+func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
+  var iconConfig = UIImage.SymbolConfiguration(
     pointSize: letterButtonWidth / 1.75,
     weight: .light,
     scale: .medium
   )
-  if btnsThatAreSlightlyLarger.contains(iconName) {
-    selectKeyboardIconConfig = UIImage.SymbolConfiguration(
+  if keysThatAreSlightlyLarger.contains(iconName) {
+    iconConfig = UIImage.SymbolConfiguration(
       pointSize: letterButtonWidth / 1.55,
       weight: .light,
       scale: .medium
     )
   }
   if isLandscapeView == true {
-    selectKeyboardIconConfig = UIImage.SymbolConfiguration(
+    iconConfig = UIImage.SymbolConfiguration(
       pointSize: letterButtonWidth / 3.5,
       weight: .light,
       scale: .medium
     )
-    if btnsThatAreSlightlyLarger.contains(iconName) {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(
+    if keysThatAreSlightlyLarger.contains(iconName) {
+      iconConfig = UIImage.SymbolConfiguration(
         pointSize: letterButtonWidth / 3.2,
         weight: .light,
         scale: .medium
       )
     }
   }
-  if DeviceType.isPad {
-    btnsThatAreSlightlyLarger.append("globe")
-    if isLandscapeView == true {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.75,
+  return iconConfig
+}
+
+/// Get the icon configurations for keys if the device is an iPad.
+///
+/// - Parameters
+///  - iconName: the name of the UIImage systemName icon to be used.
+func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
+  keysThatAreSlightlyLarger.append("globe")
+  var iconConfig = UIImage.SymbolConfiguration(
+    pointSize: letterButtonWidth / 3,
+    weight: .light,
+    scale: .medium
+  )
+  if keysThatAreSlightlyLarger.contains(iconName) {
+    iconConfig = UIImage.SymbolConfiguration(
+      pointSize: letterButtonWidth / 2.75,
+      weight: .light,
+      scale: .medium
+    )
+  }
+  if isLandscapeView == true {
+    iconConfig = UIImage.SymbolConfiguration(
+      pointSize: letterButtonWidth / 3.75,
+      weight: .light,
+      scale: .medium
+    )
+    if keysThatAreSlightlyLarger.contains(iconName) {
+      iconConfig = UIImage.SymbolConfiguration(
+        pointSize: letterButtonWidth / 3.4,
         weight: .light,
         scale: .medium
       )
-      if btnsThatAreSlightlyLarger.contains(iconName) {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-          pointSize: letterButtonWidth / 3.4,
-          weight: .light,
-          scale: .medium
-        )
-      }
-    } else {
-      selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3,
-        weight: .light,
-        scale: .medium
-      )
-      if btnsThatAreSlightlyLarger.contains(iconName) {
-        selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-          pointSize: letterButtonWidth / 2.75,
-          weight: .light,
-          scale: .medium
-        )
-      }
     }
   }
-  btn.setImage(UIImage(systemName: iconName, withConfiguration: selectKeyboardIconConfig), for: .normal)
+  keysThatAreSlightlyLarger.removeAll { $0 == "globe" }
+  return iconConfig
+}
+
+/// Styles buttons that have icon keys.
+///
+/// - Parameters
+///  - btn: the button to be styled.
+///  - color: the tint color for the icon on the key.
+///  - iconName: the name of the UIImage systemName icon to be used.
+func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
+  btn.setTitle("", for: .normal)
+  var iconConfig = getPhoneIconConfig(iconName: iconName)
+  if DeviceType.isPad {
+    iconConfig = getPadIconConfig(iconName: iconName)
+  }
+
+  btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
   btn.tintColor = color
 }
 

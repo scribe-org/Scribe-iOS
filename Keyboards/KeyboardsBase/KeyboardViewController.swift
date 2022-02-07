@@ -114,7 +114,7 @@ class KeyboardViewController: UIInputViewController {
     keyboardView.frame.size = view.frame.size
   }
 
-  // Button to be asigned as the select keyboard button if necessary.
+  // Button to be assigned as the select keyboard button if necessary.
   @IBOutlet var selectKeyboardButton: UIButton!
 
   /// Includes the following:
@@ -171,7 +171,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   // The bar that displays language logic or is typed into for Scribe commands.
-  @IBOutlet var commandBar: UILabel!
+  @IBOutlet var commandBar: CommandBar!
   @IBOutlet var commandBarShadow: UIButton!
   @IBOutlet var commandBarBlend: UILabel!
 
@@ -221,6 +221,8 @@ class KeyboardViewController: UIInputViewController {
   /// Links various UI elements that interact concurrently.
   func linkElements() {
     scribeKey.shadow = scribeKeyShadow
+    commandBar.shadow = commandBarShadow
+    commandBar.blend = commandBarBlend
   }
 
   // Buttons used to trigger Scribe command functionality.
@@ -431,38 +433,25 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
   func setConjugationState() {
-    if controllerLanguage == "French" {
-      commandBar.text = frGetConjugationTitle()
-      frSetConjugationLabels()
+    var conjugationTitleFxn: () -> String = deGetConjugationTitle
+    var conjugationStateFxn: () -> String = deGetConjugationState
+    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
+    if controllerLanguage != "Swedish" {
+      conjugationTitleFxn = keyboardConjTitleDict[controllerLanguage] as! () -> String
+      conjugationStateFxn = keyboardConjStateDict[controllerLanguage] as! () -> String
+      conjugationLabelsFxn = keyboardConjLabelDict[controllerLanguage] as! () -> Void
+    }
 
-      tenseFPS = frGetConjugationState() + "FPS"
-      tenseSPS = frGetConjugationState() + "SPS"
-      tenseTPS = frGetConjugationState() + "TPS"
-      tenseFPP = frGetConjugationState() + "FPP"
-      tenseSPP = frGetConjugationState() + "SPP"
-      tenseTPP = frGetConjugationState() + "TPP"
+    if !["Russian", "Swedish"].contains(controllerLanguage) {
+      commandBar.text = conjugationTitleFxn()
+      conjugationLabelsFxn()
 
-    } else if controllerLanguage == "German" {
-      commandBar.text = deGetConjugationTitle()
-      deSetConjugationLabels()
-
-      tenseFPS = deGetConjugationState() + "FPS"
-      tenseSPS = deGetConjugationState() + "SPS"
-      tenseTPS = deGetConjugationState() + "TPS"
-      tenseFPP = deGetConjugationState() + "FPP"
-      tenseSPP = deGetConjugationState() + "SPP"
-      tenseTPP = deGetConjugationState() + "TPP"
-
-    } else if controllerLanguage == "Portuguese" {
-      commandBar.text = ptGetConjugationTitle()
-      ptSetConjugationLabels()
-
-      tenseFPS = ptGetConjugationState() + "FPS"
-      tenseSPS = ptGetConjugationState() + "SPS"
-      tenseTPS = ptGetConjugationState() + "TPS"
-      tenseFPP = ptGetConjugationState() + "FPP"
-      tenseSPP = ptGetConjugationState() + "SPP"
-      tenseTPP = ptGetConjugationState() + "TPP"
+      tenseFPS = conjugationStateFxn() + "FPS"
+      tenseSPS = conjugationStateFxn() + "SPS"
+      tenseTPS = conjugationStateFxn() + "TPS"
+      tenseFPP = conjugationStateFxn() + "FPP"
+      tenseSPP = conjugationStateFxn() + "SPP"
+      tenseTPP = conjugationStateFxn() + "TPP"
 
     } else if controllerLanguage == "Russian" {
       commandBar.text = ruGetConjugationTitle()
@@ -481,17 +470,6 @@ class KeyboardViewController: UIInputViewController {
         tenseBottomLeft = "pastNeutral"
         tenseBottomRight = "pastPlural"
       }
-
-    } else if controllerLanguage == "Spanish" {
-      commandBar.text = esGetConjugationTitle()
-      esSetConjugationLabels()
-
-      tenseFPS = esGetConjugationState() + "FPS"
-      tenseSPS = esGetConjugationState() + "SPS"
-      tenseTPS = esGetConjugationState() + "TPS"
-      tenseFPP = esGetConjugationState() + "FPP"
-      tenseSPP = esGetConjugationState() + "SPP"
-      tenseTPP = esGetConjugationState() + "TPP"
 
     } else if controllerLanguage == "Swedish" {
       commandBar.text = svGetConjugationTitle()
@@ -512,22 +490,10 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblSPP.setTitle("  " + labelSPP, for: .normal)
     conjugateLblTPP.setTitle("  " + labelTPP, for: .normal)
 
-    conjugateLblFPS.isUserInteractionEnabled = false
-    conjugateLblSPS.isUserInteractionEnabled = false
-    conjugateLblTPS.isUserInteractionEnabled = false
-    conjugateLblFPP.isUserInteractionEnabled = false
-    conjugateLblSPP.isUserInteractionEnabled = false
-    conjugateLblTPP.isUserInteractionEnabled = false
-
     conjugateLblTL.setTitle("  " + labelTopLeft, for: .normal)
     conjugateLblTR.setTitle("  " + labelTopRight, for: .normal)
     conjugateLblBL.setTitle("  " + labelBottomLeft, for: .normal)
     conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
-
-    conjugateLblTL.isUserInteractionEnabled = false
-    conjugateLblTR.isUserInteractionEnabled = false
-    conjugateLblBL.isUserInteractionEnabled = false
-    conjugateLblBR.isUserInteractionEnabled = false
 
     if conjugateAlternateView == true {
       allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
@@ -577,50 +543,71 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var prepAnnotation33: UILabel!
   @IBOutlet var prepAnnotation34: UILabel!
 
+  /// Returns all available annotation labels.
+  func getAnnotationLabels() -> [UILabel] {
+    let nounAnnotationDisplay: [UILabel] = [
+      nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5
+    ]
+
+    let prepAnnotationDisplay: [UILabel] = [
+      prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14,
+      prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24,
+      prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34
+    ]
+
+    return nounAnnotationDisplay + prepAnnotationDisplay
+  }
+
+  /// Returns the noun annotation labels.
+  func getNounAnnotationLabels() -> [UILabel] {
+    let nounAnnotationDisplay: [UILabel] = [
+      nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5
+    ]
+
+    return nounAnnotationDisplay
+  }
+
+  /// Returns the preposition annotation labels given the current number of noun annotations displayed.
+  func getPrepAnnotationLabels() -> [UILabel] {
+    // Initialize an array of display elements and count how many will be changed.
+    // This is initialized based on how many noun annotations have already been assigned (max 2).
+    var prepAnnotationDisplay: [UILabel] = [UILabel]()
+    if nounAnnotationsToDisplay == 0 {
+      prepAnnotationDisplay = [prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14]
+    } else if nounAnnotationsToDisplay == 1 {
+      prepAnnotationDisplay = [prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24]
+    } else if nounAnnotationsToDisplay == 2 {
+      prepAnnotationDisplay = [prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34]
+    }
+    return prepAnnotationDisplay
+  }
+
   /// Styles the labels within the annotation display and removes user interactions.
   func styleAnnotations() {
-    let nounAnnotationDisplay = [nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5]
+    let nounAnnotationDisplay = getNounAnnotationLabels()
 
-    let prepAnnotationDisplay = [
+    let prepAnnotationDisplay: [UILabel] = [
       prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14,
       prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24,
       prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34
     ]
 
     for annotationDisplay in nounAnnotationDisplay {
-      annotationDisplay?.clipsToBounds = true
-      annotationDisplay?.layer.cornerRadius = keyCornerRadius / 2
-      annotationDisplay?.textAlignment = NSTextAlignment.center
-      annotationDisplay?.isUserInteractionEnabled = false
-      annotationDisplay?.font = .systemFont(ofSize: annotationHeight * 0.70)
-      annotationDisplay?.textColor = commandBarColor
+      annotationDisplay.clipsToBounds = true
+      annotationDisplay.layer.cornerRadius = keyCornerRadius / 2
+      annotationDisplay.textAlignment = NSTextAlignment.center
+      annotationDisplay.isUserInteractionEnabled = false
+      annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.70)
+      annotationDisplay.textColor = commandBarColor
     }
 
     for annotationDisplay in prepAnnotationDisplay {
-      annotationDisplay?.clipsToBounds = true
-      annotationDisplay?.layer.cornerRadius = keyCornerRadius / 2
-      annotationDisplay?.textAlignment = NSTextAlignment.center
-      annotationDisplay?.isUserInteractionEnabled = false
-      annotationDisplay?.font = .systemFont(ofSize: annotationHeight * 0.65)
-      annotationDisplay?.textColor = commandBarColor
-    }
-  }
-
-  /// Hides the annotation display so that it can be selectively shown to the user as needed.
-  func hideAnnotations() {
-    let nounAnnotationDisplay = [nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5]
-
-    let prepAnnotationDisplay = [
-      prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14,
-      prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24,
-      prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34
-    ]
-
-    let annotationDisplay = nounAnnotationDisplay + prepAnnotationDisplay
-
-    for idx in 0..<annotationDisplay.count {
-      annotationDisplay[idx]?.backgroundColor = UIColor.clear
-      annotationDisplay[idx]?.text = ""
+      annotationDisplay.clipsToBounds = true
+      annotationDisplay.layer.cornerRadius = keyCornerRadius / 2
+      annotationDisplay.textAlignment = NSTextAlignment.center
+      annotationDisplay.isUserInteractionEnabled = false
+      annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.65)
+      annotationDisplay.textColor = commandBarColor
     }
   }
 
@@ -632,22 +619,16 @@ class KeyboardViewController: UIInputViewController {
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     setCommandBackground()
-    setKeyboardLayouts()
+    setKeyboard()
     linkElements()
     setCommandBar()
     setCommandBtns()
     setConjugationBtns()
     invalidState = false
 
-    scribeKey.set()
-    activateBtn(btn: scribeKey)
-
     // Clear interface from the last state.
     keyboardKeys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
-
-    // Start new keyboard.
-    var keyboard: [[String]]
 
     keyboardView.backgroundColor? = keyboardBackColor
 
@@ -665,7 +646,7 @@ class KeyboardViewController: UIInputViewController {
       numSymButtonWidth = (UIScreen.main.bounds.width - 6) / CGFloat(numberKeys[0].count) * 0.9
     }
 
-    // Derive keyboard given current states.
+    // Derive keyboard given current states and set widths.
     switch keyboardState {
     case .letters:
       keyboard = letterKeys
@@ -682,6 +663,7 @@ class KeyboardViewController: UIInputViewController {
       buttonWidth = numSymButtonWidth
     }
 
+    // Derive corner radii.
     if DeviceType.isPhone {
       if isLandscapeView == true {
         keyCornerRadius = buttonWidth / 9
@@ -702,7 +684,7 @@ class KeyboardViewController: UIInputViewController {
 
     styleAnnotations()
     if annotationState == false {
-      hideAnnotations()
+      hideAnnotations(annotationDisplay: getAnnotationLabels())
     }
 
     if !conjugateView { // normal keyboard view
@@ -710,6 +692,7 @@ class KeyboardViewController: UIInputViewController {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
 
+        // Set edge insets for stack views to provide vertical key spacing.
         if view == stackView0 {
           view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
         } else if view == stackView1 {
@@ -728,97 +711,27 @@ class KeyboardViewController: UIInputViewController {
         for idx in 0...keyboard[row].count - 1 {
           // Set up button as a key with its values and properties.
           let btn = KeyboardKey(type: .custom)
-          btn.backgroundColor = keyColor
-          btn.layer.borderColor = keyboardView.backgroundColor?.cgColor
-          btn.layer.borderWidth = 0
-          btn.layer.cornerRadius = keyCornerRadius
+          btn.row = row
+          btn.idx = idx
+          btn.style()
+          btn.setChar()
+          btn.setCharSize()
 
-          btn.layer.shadowColor = keyShadowColor
-          btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-          btn.layer.shadowOpacity = 1.0
-          btn.layer.shadowRadius = 0.0
-          btn.layer.masksToBounds = false
+          let key: String = btn.key
 
-          var key = keyboard[row][idx]
-          if key == "space" {
-            key = spaceBar
-          }
-          var capsKey = ""
-          if key != "ß" && key != spaceBar {
-            capsKey = keyboard[row][idx].capitalized
-          } else {
-            capsKey = key
-          }
-          let keyToDisplay = shiftButtonState == .normal ? key : capsKey
-          btn.setTitleColor(keyCharColor, for: .normal)
-          btn.layer.setValue(key, forKey: "original")
-          btn.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
-          btn.layer.setValue(false, forKey: "isSpecial")
-          btn.setTitle(keyToDisplay, for: .normal) // set button character
-
-          // Set key character sizes.
-          if DeviceType.isPhone {
-            if isLandscapeView == true {
-              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "123" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
-              } else if key == spaceBar {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
-              } else {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
-              }
-            } else {
-              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "123" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
-              } else if key == spaceBar {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
-              } else {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
-              }
-            }
-          } else if DeviceType.isPad {
-            if isLandscapeView == true {
-              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "hideKeyboard" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.75)
-              } else if key == spaceBar {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4.25)
-              } else if key == ".?123" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4.5)
-              } else {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.75)
-              }
-            } else {
-              if key == "#+=" || key == "ABC" || key == "АБВ" || key == "hideKeyboard" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.25)
-              } else if key == spaceBar {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
-              } else if key == ".?123" {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
-              } else {
-                btn.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
-              }
-            }
-          }
-
-          // Set up and activate Scribe command buttons.
+          // Set up and activate Scribe key.
+          scribeKey.set()
+          activateBtn(btn: scribeKey)
           styleBtn(btn: scribeKey, title: "Scribe", radius: commandKeyCornerRadius)
-          scribeKey.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-          scribeKey.layer.masksToBounds = true
+          scribeKey.setLeftCornerRadius()
           scribeKey.setShadow()
 
           if scribeKeyState {
             scribeKey.toEscape()
-            scribeKey.layer.borderColor = UIColor.clear.cgColor
-            scribeKey.layer.cornerRadius = commandKeyCornerRadius
-            scribeKey.layer.maskedCorners = [
-              .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner
-            ]
+            scribeKey.setFullCornerRadius()
             scribeKey.setEscShadow()
 
-            commandBar.backgroundColor = UIColor.clear
-            commandBar.layer.borderColor = UIColor.clear.cgColor
-            commandBarBlend.backgroundColor = UIColor.clear
-            commandBar.text = ""
-            commandBarShadow.backgroundColor = UIColor.clear
+            commandBar.hide()
 
             styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
             styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
@@ -838,27 +751,12 @@ class KeyboardViewController: UIInputViewController {
             if commandState == true {
               scribeKey.toEscape()
             }
-            scribeKey.setTitle("", for: .normal)
             deactivateBtn(btn: conjugateKey)
             deactivateBtn(btn: translateKey)
             deactivateBtn(btn: pluralKey)
 
-            commandBar.clipsToBounds = true
-            commandBar.layer.cornerRadius = commandKeyCornerRadius
-            commandBar.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            commandBar.setCornerRadiusAndShadow()
 
-            commandBarShadow.backgroundColor = specialKeyColor
-            commandBarShadow.layer.cornerRadius = commandKeyCornerRadius
-            commandBarShadow.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-            commandBarShadow.clipsToBounds = true
-            commandBarShadow.layer.masksToBounds = false
-            commandBarShadow.layer.shadowRadius = 0
-            commandBarShadow.layer.shadowOpacity = 1.0
-            commandBarShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
-            commandBarShadow.layer.shadowColor = keyShadowColor
-
-            commandBar.textColor = keyCharColor
-            commandBar.lineBreakMode = NSLineBreakMode.byWordWrapping
             if commandState == false {
               commandBar.text = ""
             }
@@ -968,77 +866,8 @@ class KeyboardViewController: UIInputViewController {
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
 
-          // specialKey styling.
-          if key == "ABC" || key == "АБВ" {
-            if DeviceType.isPhone {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
-            } else {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
-            }
-            btn.layer.setValue(true, forKey: "isSpecial")
-            btn.backgroundColor = specialKeyColor
-          } else if key == "delete"
-              || key == "#+="
-              || key == "shift"
-              || key == "selectKeyboard" { // key == "undoArrow"
-            if DeviceType.isPhone {
-              // Cancel Russian keyboard key resizing if translating as the keyboard is English.
-              if controllerLanguage == "Russian"
-                && keyboardState == .letters
-                && switchInput != true {
-                btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
-              } else {
-                btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
-              }
-            } else {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
-            }
-            btn.layer.setValue(true, forKey: "isSpecial")
-            btn.backgroundColor = specialKeyColor
-            if key == "shift" {
-              if shiftButtonState == .shift {
-                btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.label, iconName: "shift.fill")
-              } else if shiftButtonState == .caps {
-                btn.backgroundColor = keyPressedColor
-                styleIconBtn(btn: btn, color: UIColor.label, iconName: "capslock.fill")
-              }
-            }
-          } else if key == "123"
-              || key == ".?123"
-              || key == "return"
-              || key == "hideKeyboard" {
-            if DeviceType.isPhone && row == 2 {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
-            } else if DeviceType.isPhone && row != 2 {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
-            } else if controllerLanguage == "Russian" && row == 2 && DeviceType.isPhone {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
-            } else if key == "return"
-                && ( controllerLanguage == "Portuguese" || switchInput == true )
-                && row == 1
-                && DeviceType.isPad {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
-            } else {
-              btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
-            }
-            btn.layer.setValue(true, forKey: "isSpecial")
-            if key == "return" && commandState == true {
-              btn.backgroundColor = commandKeyColor
-            } else {
-              btn.backgroundColor = specialKeyColor
-            }
-            // Only change widths for number and symbol keys for iPhones.
-          } else if (keyboardState == .numbers || keyboardState == .symbols)
-              && row == 2
-              && DeviceType.isPhone {
-            btn.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
-          } else if key != spaceBar {
-            btn.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
-          } else {
-            btn.layer.setValue(key, forKey: "original")
-            btn.setTitle(key, for: .normal)
-          }
+          // Set the width of the key given device and the given key.
+          btn.adjustKeyWidth()
 
           // Extend button touch areas.
           var widthOfSpacing = CGFloat(0)
@@ -1112,8 +941,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
       scribeKey.toEscape()
-      scribeKey.layer.cornerRadius = commandKeyCornerRadius
-      scribeKey.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+      scribeKey.setLeftCornerRadius()
 
       commandBar.backgroundColor = commandBarColor
       commandBarBlend.backgroundColor = commandBarColor
@@ -1126,420 +954,14 @@ class KeyboardViewController: UIInputViewController {
       activateConjugationDisplay()
       setConjugationState()
 
+      styleBtn(btn: conjugateShiftLeftBtn, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: conjugateShiftLeftBtn, color: keyCharColor, iconName: "chevron.left")
-      conjugateShiftLeftBtn.clipsToBounds = true
-      conjugateShiftLeftBtn.layer.masksToBounds = false
-      conjugateShiftLeftBtn.layer.cornerRadius = keyCornerRadius
-      conjugateShiftLeftBtn.layer.shadowColor = keyShadowColor
-      conjugateShiftLeftBtn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-      conjugateShiftLeftBtn.layer.shadowOpacity = 1.0
-      conjugateShiftLeftBtn.layer.shadowRadius = 0.0
+      styleBtn(btn: conjugateShiftRightBtn, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: conjugateShiftRightBtn, color: keyCharColor, iconName: "chevron.right")
-      conjugateShiftRightBtn.clipsToBounds = true
-      conjugateShiftRightBtn.layer.masksToBounds = false
-      conjugateShiftRightBtn.layer.cornerRadius = keyCornerRadius
-      conjugateShiftRightBtn.layer.shadowColor = keyShadowColor
-      conjugateShiftRightBtn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-      conjugateShiftRightBtn.layer.shadowOpacity = 1.0
-      conjugateShiftRightBtn.layer.shadowRadius = 0.0
     }
   }
 
   // MARK: Scribe Commands
-
-  /// Inserts the translation of a valid word in the command bar into the proxy.
-  func queryTranslation() {
-    // Cancel via a return press.
-    if commandBar.text! == translatePromptAndCursor {
-      return
-    }
-    wordToTranslate = (commandBar?.text!.substring(with: translatePrompt.count..<((commandBar?.text!.count)!-1)))!
-    wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
-
-    // Check to see if the input was uppercase to return an uppercase conjugation.
-    inputWordIsCapitalized = false
-    let firstLetter = wordToTranslate.substring(toIdx: 1)
-    inputWordIsCapitalized = firstLetter.isUppercase
-    wordToTranslate = wordToTranslate.lowercased()
-
-    let wordInDirectory = translations?[wordToTranslate] != nil
-    if wordInDirectory {
-      wordToReturn = translations?[wordToTranslate] as! String
-      if inputWordIsCapitalized {
-        proxy.insertText(wordToReturn.capitalized + " ")
-      } else {
-        proxy.insertText(wordToReturn + " ")
-      }
-    } else {
-      invalidState = true
-    }
-  }
-
-  /// Returns a conjugation once a user presses a key in the conjugateView.
-  ///
-  /// - Parameters
-  ///   - keyPressed: the button pressed as sender.
-  ///   - requestedTense: the tense that is triggered by the given key.
-  func returnConjugation(keyPressed: UIButton, requestedTense: String) {
-    // Don't change proxy if they select a conjugation that's missing.
-    if keyPressed.titleLabel?.text == invalidCommandMsg {
-      proxy.insertText("")
-    } else if conjugateAlternateView == false {
-      if deConjugationState != .indicativePerfect {
-        wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
-        if inputWordIsCapitalized == true {
-          proxy.insertText(wordToReturn.capitalized + " ")
-        } else {
-          proxy.insertText(wordToReturn + " ")
-        }
-      } else {
-        proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
-      }
-    } else if conjugateAlternateView == true {
-      wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
-      if inputWordIsCapitalized == true {
-        proxy.insertText(wordToReturn.capitalized + " ")
-      } else {
-        proxy.insertText(wordToReturn + " ")
-      }
-    }
-    commandState = false
-    conjugateView = false
-    loadKeys()
-  }
-
-  /// Inserts the plural of a valid noun in the command bar into the proxy.
-  func queryPlural() {
-    // Cancel via a return press.
-    if commandBar.text! == pluralPromptAndCursor {
-      return
-    }
-    var noun: String = (commandBar?.text!.substring(with: pluralPrompt.count..<((commandBar?.text!.count)!-1)))!
-    noun = String(noun.trailingSpacesTrimmed)
-
-    // Check to see if the input was uppercase to return an uppercase plural.
-    inputWordIsCapitalized = false
-    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      let firstLetter = noun.substring(toIdx: 1)
-      inputWordIsCapitalized = firstLetter.isUppercase
-      noun = noun.lowercased()
-    }
-    let nounInDirectory = nouns?[noun] != nil
-    if nounInDirectory {
-      if nouns?[noun]?["plural"] as? String != "isPlural" {
-        guard let plural = nouns?[noun]?["plural"] as? String else { return }
-        if inputWordIsCapitalized == false {
-          proxy.insertText(plural + " ")
-        } else {
-          proxy.insertText(plural.capitalized + " ")
-        }
-      } else {
-        proxy.insertText(noun + " ")
-        commandBar.text = commandPromptSpacing + "Already plural"
-        invalidState = true
-        isAlreadyPluralState = true
-      }
-    } else {
-      invalidState = true
-    }
-  }
-
-  /// Sets the annotation of an annotation element given parameters.
-  ///
-  /// - Parameters
-  ///  - elem: the element to change the appearance of to show annotations.
-  ///  - annotation: the annotation to set to the element.
-  func setAnnotation(elem: UILabel, annotation: String) {
-    var annotationToDisplay = annotation
-
-    if scribeKeyState != true { // Cancel if typing while commands are displayed.
-      if prepAnnotationState == false {
-        if controllerLanguage == "Swedish" {
-          if annotation == "C" {
-            annotationToDisplay = "U"
-          }
-        } else if controllerLanguage == "Russian" {
-          if annotation == "F" {
-            annotationToDisplay = "Ж"
-          } else if annotation == "M" {
-            annotationToDisplay = "М"
-          } else if annotation == "N" {
-            annotationToDisplay = "Н"
-          } else if annotation == "PL" {
-            annotationToDisplay = "МН"
-          }
-        }
-
-        if annotation == "PL" {
-          // Make text smaller to fit the annotation.
-          if DeviceType.isPhone {
-            elem.font = .systemFont(ofSize: annotationHeight * 0.6)
-          } else if DeviceType.isPad {
-            elem.font = .systemFont(ofSize: annotationHeight * 0.8)
-          }
-        } else {
-          if DeviceType.isPhone {
-            elem.font = .systemFont(ofSize: annotationHeight * 0.70)
-          } else if DeviceType.isPad {
-            elem.font = .systemFont(ofSize: annotationHeight * 0.95)
-          }
-        }
-
-        if annotation == "F" {
-          elem.backgroundColor = annotateRed
-        } else if annotation == "M" {
-          elem.backgroundColor = annotateBlue
-        } else if annotation == "C" {
-          elem.backgroundColor = annotatePurple
-        } else if annotation == "N" {
-          elem.backgroundColor = annotateGreen
-        } else if annotation == "PL" {
-          elem.backgroundColor = annotateOrange
-        }
-      } else {
-        if controllerLanguage == "German" {
-          if annotation == "Acc" {
-            annotationToDisplay = "Akk"
-          }
-        } else if controllerLanguage == "Russian" {
-          if annotation == "Acc" {
-            annotationToDisplay = "Вин"
-          } else if annotation == "Dat" {
-            annotationToDisplay = "Дат"
-          } else if annotation == "Gen" {
-            annotationToDisplay = "Род"
-          } else if annotation == "Loc" {
-            annotationToDisplay = "Мес"
-          } else if annotation == "Pre" {
-            annotationToDisplay = "Пре"
-          } else if annotation == "Ins" {
-            annotationToDisplay = "Инс"
-          }
-        }
-        if DeviceType.isPhone {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.65)
-        } else if DeviceType.isPad {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.85)
-        }
-        elem.backgroundColor = keyCharColor
-      }
-      elem.text = annotationToDisplay
-    }
-  }
-
-  /// Checks if a word is a noun and annotates the command bar if so.
-  ///
-  /// - Parameters
-  ///   - givenWord: a word that is potentially a noun.
-  func nounAnnotation(givenWord: String) {
-    // Check to see if the input was uppercase to return an uppercase annotation.
-    inputWordIsCapitalized = false
-    var wordToCheck: String = ""
-    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      let firstLetter = givenWord.substring(toIdx: 1)
-      inputWordIsCapitalized = firstLetter.isUppercase
-      wordToCheck = givenWord.lowercased()
-    } else {
-      wordToCheck = givenWord
-    }
-
-    let isNoun = nouns?[wordToCheck] != nil || nouns?[givenWord.lowercased()] != nil
-    if isNoun {
-      // Clear the prior annotations to assure that preposition annotations don't persist.
-      hideAnnotations()
-      nounAnnotationsToDisplay = 0
-
-      // Make command bar font larger for annotation.
-      if DeviceType.isPhone {
-        commandBar.font = .systemFont(ofSize: annotationHeight * 0.8)
-      } else if DeviceType.isPad {
-        commandBar.font = .systemFont(ofSize: annotationHeight)
-      }
-
-      let nounForm = nouns?[wordToCheck]?["form"] as? String
-      if nounForm == "" {
-        return
-      } else {
-        // Initialize an array of display elements and count how many will be changed.
-        let nounAnnotationDisplay: [UILabel] = [
-          nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5
-        ]
-        var numberOfAnnotations: Int = 0
-        var annotationsToAssign: [String] = [String]()
-        if nounForm?.count ?? 0 >= 3 { // Would have a slash as the largest is PL
-          annotationsToAssign = (nounForm?.components(separatedBy: "/"))!
-          numberOfAnnotations = annotationsToAssign.count
-        } else {
-          numberOfAnnotations = 1
-          annotationsToAssign.append(nounForm ?? "")
-        }
-
-        // To be passed to preposition annotations.
-        nounAnnotationsToDisplay = numberOfAnnotations
-
-        for idx in 0..<numberOfAnnotations {
-          setAnnotation(elem: nounAnnotationDisplay[idx], annotation: annotationsToAssign[idx])
-        }
-
-        if nounForm == "F" {
-          commandBar.textColor = annotateRed
-        } else if nounForm == "M" {
-          commandBar.textColor = annotateBlue
-        } else if nounForm == "C" {
-          commandBar.textColor = annotatePurple
-        } else if nounForm ==  "N" {
-          commandBar.textColor = annotateGreen
-        } else if nounForm ==  "PL" {
-          commandBar.textColor = annotateOrange
-        } else {
-          commandBar.textColor = keyCharColor
-        }
-
-        let wordSpacing = String(
-          repeating: " ",
-          count: ( numberOfAnnotations * 7 ) - ( numberOfAnnotations - 1 )
-        )
-        if invalidState != true {
-          if inputWordIsCapitalized == false {
-            commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck
-          } else {
-            commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck.capitalized
-          }
-        }
-      }
-      let isPrep = prepositions?[wordToCheck] != nil
-      // Pass the preposition state so that if it's false nounAnnotationsToDisplay can be made 0.
-      if isPrep {
-        prepAnnotationState = true
-      }
-    }
-  }
-
-  /// Annotates the command bar with the form of a valid selected noun.
-  func selectedNounAnnotation() {
-    if scribeKeyState {
-      scribeKeyState = false
-      loadKeys()
-    }
-    let selectedWord = proxy.selectedText ?? ""
-
-    nounAnnotation(givenWord: selectedWord)
-  }
-
-  /// Annotates the command bar with the form of a valid typed noun.
-  func typedNounAnnotation() {
-    if proxy.documentContextBeforeInput != nil {
-      let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-      let lastWordTyped = wordsTyped.secondToLast()
-
-      if lastWordTyped != "" {
-        nounAnnotation(givenWord: lastWordTyped ?? "")
-      }
-    }
-  }
-
-  /// Checks if a word is a preposition and annotates the command bar if so.
-  ///
-  /// - Parameters
-  ///   - givenWord: a word that is potentially a preposition.
-  func prepositionAnnotation(givenWord: String) {
-    // Check to see if the input was uppercase to return an uppercase annotation.
-    inputWordIsCapitalized = false
-    let firstLetter = givenWord.substring(toIdx: 1)
-    inputWordIsCapitalized = firstLetter.isUppercase
-    let wordToCheck = givenWord.lowercased()
-
-    // Check if prepAnnotationState has been passed and reset nounAnnotationsToDisplay if not.
-    if prepAnnotationState == false {
-      nounAnnotationsToDisplay = 0
-    }
-
-    let isPreposition = prepositions?[wordToCheck] != nil
-    if isPreposition {
-      prepAnnotationState = true
-      // Make command bar font larger for annotation.
-      if DeviceType.isPhone {
-        commandBar.font = .systemFont(ofSize: annotationHeight * 0.8)
-      } else if DeviceType.isPad {
-        commandBar.font = .systemFont(ofSize: annotationHeight)
-      }
-      commandBar.textColor = keyCharColor
-
-      // Initialize an array of display elements and count how many will be changed.
-      // This is initialized based on how many noun annotations have already been assigned (max 2).
-      var prepAnnotationDisplay: [UILabel] = [UILabel]()
-      if nounAnnotationsToDisplay == 0 {
-        prepAnnotationDisplay = [prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14]
-      } else if nounAnnotationsToDisplay == 1 {
-        prepAnnotationDisplay = [prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24]
-      } else if nounAnnotationsToDisplay == 2 {
-        prepAnnotationDisplay = [prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34]
-      } else if nounAnnotationsToDisplay > 2 {
-        // Cancel annotation as the limit of noun and preposition labels has been reached.
-        return
-      }
-
-      guard let prepositionCase: String = prepositions?[wordToCheck] as? String else { return }
-
-      var numberOfAnnotations: Int = 0
-      var annotationsToAssign: [String] = [String]()
-      if prepositionCase.count >= 4 { // Would have a slash as they all are three characters long
-        annotationsToAssign = (prepositionCase.components(separatedBy: "/"))
-        numberOfAnnotations = annotationsToAssign.count
-      } else {
-        numberOfAnnotations = 1
-        annotationsToAssign.append(prepositionCase )
-      }
-
-      for idx in 0..<numberOfAnnotations {
-        setAnnotation(elem: prepAnnotationDisplay[idx], annotation: annotationsToAssign[idx])
-      }
-      // Cancel the state to allow for symbol coloration in selection annotation without calling loadKeys.
-      prepAnnotationState = false
-
-      let wordSpacing = String(
-        repeating: " ",
-        count:
-        ( nounAnnotationsToDisplay * 7 )
-        - ( nounAnnotationsToDisplay - 1 )
-        + ( numberOfAnnotations * 9 )
-        - ( numberOfAnnotations - 1 )
-      )
-      if inputWordIsCapitalized == false {
-        commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck
-      } else {
-        commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck.capitalized
-      }
-    }
-  }
-
-  /// Annotates the command bar with the form of a valid selected preposition.
-  func selectedPrepositionAnnotation() {
-    if scribeKeyState {
-      scribeKeyState = false
-      loadKeys()
-    }
-
-    if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
-      let selectedWord = proxy.selectedText ?? ""
-
-      prepositionAnnotation(givenWord: selectedWord)
-    }
-  }
-
-  /// Annotates the command bar with the form of a valid typed preposition.
-  func typedPrepositionAnnotation() {
-    if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
-      if proxy.documentContextBeforeInput != nil {
-        let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        let lastWordTyped = wordsTyped.secondToLast()
-
-        if lastWordTyped != "" {
-          prepositionAnnotation(givenWord: lastWordTyped ?? "")
-        }
-      }
-    }
-  }
 
   /// Clears the text found in the command bar.
   func clearCommandBar() {
@@ -1549,7 +971,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Trigger the removal of the noun or preposition annotations.
-    hideAnnotations()
+    hideAnnotations(annotationDisplay: getAnnotationLabels())
   }
 
   // MARK: Button Actions
@@ -1584,9 +1006,19 @@ class KeyboardViewController: UIInputViewController {
     switch originalKey {
     case "Scribe":
       if proxy.selectedText != nil && commandState != true { // annotate word
+        if scribeKeyState {
+          scribeKeyState = false
+        }
         loadKeys()
-        selectedNounAnnotation()
-        selectedPrepositionAnnotation()
+        selectedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        selectedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
       } else {
         if commandState == true { // escape
           scribeKeyState = false
@@ -1680,33 +1112,43 @@ class KeyboardViewController: UIInputViewController {
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseFPS)
+      loadKeys()
 
     case "secondPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseSPS)
+      loadKeys()
 
     case "thirdPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseTPS)
+      loadKeys()
 
     case "firstPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseFPP)
+      loadKeys()
 
     case "secondPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseSPP)
+      loadKeys()
 
     case "thirdPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseTPP)
+      loadKeys()
 
     case "conjugateTopLeft":
       returnConjugation(keyPressed: sender, requestedTense: tenseTopLeft)
+      loadKeys()
 
     case "conjugateTopRight":
       returnConjugation(keyPressed: sender, requestedTense: tenseTopRight)
+      loadKeys()
 
     case "conjugateBottomLeft":
       returnConjugation(keyPressed: sender, requestedTense: tenseBottomLeft)
+      loadKeys()
 
     case "conjugateBottomRight":
       returnConjugation(keyPressed: sender, requestedTense: tenseBottomRight)
+      loadKeys()
 
     case "delete":
       if shiftButtonState == .shift {
@@ -1753,8 +1195,15 @@ class KeyboardViewController: UIInputViewController {
       }
       // Prevent annotations from being triggered during commands.
       if getConjugation == false && getTranslation == false {
-        typedNounAnnotation()
-        typedPrepositionAnnotation()
+        typedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        typedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
         annotationState = false
         prepAnnotationState = false
         nounAnnotationsToDisplay = 0
@@ -1773,15 +1222,15 @@ class KeyboardViewController: UIInputViewController {
 
     case "return":
       if getTranslation && commandState == true { // translate state
-        queryTranslation()
+        queryTranslation(commandBar: commandBar)
         getTranslation = false
         switchInput = false
       }
       if getConjugation && commandState == true { // conjugate state
         // Reset to the most basic conjugations.
         deConjugationState = .indicativePresent
-        let triggerConjugationState = queryConjugation(commandBar: commandBar)
-        if triggerConjugationState {
+        let triggerConjugationState = triggerConjugation(commandBar: commandBar)
+        if triggerConjugationState == true {
           conjugateView = true
           loadKeys()
         } else {
@@ -1790,7 +1239,7 @@ class KeyboardViewController: UIInputViewController {
         getConjugation = false
       }
       if getPlural && commandState == true { // plural state
-        queryPlural()
+        queryPlural(commandBar: commandBar)
         getPlural = false
       }
       if commandState == false { // normal return button
@@ -1820,8 +1269,15 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
         // Avoid showing noun annotation instead of conjugation state header.
         if conjugateView == false {
-          typedNounAnnotation()
-          typedPrepositionAnnotation()
+          typedNounAnnotation(
+            commandBar: commandBar,
+            nounAnnotationDisplay: getNounAnnotationLabels(),
+            annotationDisplay: getAnnotationLabels()
+          )
+          typedPrepAnnotation(
+            commandBar: commandBar,
+            prepAnnotationDisplay: getPrepAnnotationLabels()
+          )
           annotationState = false
           prepAnnotationState = false
           nounAnnotationsToDisplay = 0

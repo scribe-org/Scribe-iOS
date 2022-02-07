@@ -37,6 +37,8 @@ class ScribeKey: UIButton {
     }
     self.setImage(UIImage(systemName: "xmark", withConfiguration: selectKeyboardIconConfig), for: .normal)
     self.tintColor = keyCharColor
+    self.layer.cornerRadius = commandKeyCornerRadius
+    self.layer.masksToBounds = true
   }
 
   /// Assigns the icon and sets up the Scribe key.
@@ -48,6 +50,17 @@ class ScribeKey: UIButton {
     self.contentMode = .center
     self.imageView?.contentMode = .scaleAspectFit
     self.shadow.isUserInteractionEnabled = false
+  }
+
+  func setLeftCornerRadius() {
+    self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+  }
+
+  func setFullCornerRadius() {
+    self.layer.borderColor = UIColor.clear.cgColor
+    self.layer.maskedCorners = [
+      .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner
+    ]
   }
 
   var shadow: UIButton!

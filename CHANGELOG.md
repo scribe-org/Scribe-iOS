@@ -28,6 +28,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ♻️ Code Refactoring
 
+- Commands buttons are now called keys and the preview bar has been renamed the command bar.
 - Force casts are used as little as possible.
 - All lines have been reduced to a reasonable length (120 characters) where able.
 

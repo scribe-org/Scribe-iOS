@@ -11,7 +11,8 @@ var proxy: UITextDocumentProxy!
 
 // MARK: Display Variables
 
-// Variables for keyboard appearance.
+// Variables for the keyboard and its appearance.
+var keyboard: [[String]] = [[String]]()
 var keyboardHeight: CGFloat!
 var keyCornerRadius: CGFloat!
 var commandKeyCornerRadius: CGFloat!
@@ -23,9 +24,9 @@ var numSymButtonWidth = CGFloat(0)
 var spaceBar = String()
 
 // Arrays for the possible keyboard views that are loaded with their characters.
-var letterKeys = [[String]]()
-var numberKeys = [[String]]()
-var symbolKeys = [[String]]()
+var letterKeys: [[String]] = [[String]]()
+var numberKeys: [[String]] = [[String]]()
+var symbolKeys: [[String]] = [[String]]()
 
 /// States of the keyboard corresponding to layouts found in KeyboardConstants.swift.
 enum KeyboardState {
@@ -70,67 +71,46 @@ func checkLandscapeMode() {
 var controllerLanguage = String()
 var controllerLanguageAbbr = String()
 
+// Dictionary for accessing language abbreviations.
+let languagesAbbrDict: [String: String] = [
+  "French": "fr",
+  "German": "de",
+  "Portuguese": "pt",
+  "Russian": "ru",
+  "Spanish": "es",
+  "Swedish": "sv"
+]
+
 /// Returns the abbreviation of the language for use in commands.
 func getControllerLanguageAbbr() -> String {
-  if controllerLanguage == "French" {
-    return "fr"
-  } else if controllerLanguage == "German" {
-    return "de"
-  } else if controllerLanguage == "Portuguese" {
-    return "pt"
-  } else if controllerLanguage == "Russian" {
-    return "ru"
-  } else if controllerLanguage == "Spanish" {
-    return "es"
-  } else if controllerLanguage == "Swedish" {
-    return "sv"
-  } else {
+  guard let abbreviation = languagesAbbrDict[controllerLanguage] else {
     return ""
+  }
+  return abbreviation
+}
+
+// Dictionary for accessing keyboard abbreviations and layouts.
+let keyboardLayoutDict: [String: () -> Void] = [
+  "French": setFRKeyboardLayout,
+  "German": setDEKeyboardLayout,
+  "Portuguese": setPTKeyboardLayout,
+  "Russian": setRUKeyboardLayout,
+  "Spanish": setESKeyboardLayout,
+  "Swedish": setSVKeyboardLayout
+]
+
+/// Sets the keyboard layouts given the chosen keyboard and device type.
+func setKeyboardLayout() {
+  if switchInput {
+    setENKeyboardLayout()
+  } else {
+    let setLayoutFxn: () -> Void = keyboardLayoutDict[controllerLanguage]!
+    setLayoutFxn()
   }
 }
 
-/// Sets the keyboard layouts given the chosen keyboard and device type.
-func setKeyboardLayouts() {
-  if controllerLanguage == "French" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setFRKeyboardLayout()
-    }
-  } else if controllerLanguage == "German" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setDEKeyboardLayout()
-    }
-  } else if controllerLanguage == "Portuguese" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setPTKeyboardLayout()
-    }
-  } else if controllerLanguage == "Russian" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setRUKeyboardLayout()
-    }
-  } else if controllerLanguage == "Spanish" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setESKeyboardLayout()
-    }
-  } else if controllerLanguage == "Swedish" {
-    if switchInput {
-      setENKeyboardLayout()
-    } else {
-      setSVKeyboardLayout()
-    }
-  }
-
-  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
-
+/// Sets the alternates for certain keys given the chosen keyboard.
+func setKeyboardAlternateKeys() {
   if DeviceType.isPhone {
     keysWithAlternates += symbolKeysWithAlternatesLeft
     keysWithAlternates += symbolKeysWithAlternatesRight
@@ -169,7 +149,13 @@ func setKeyboardLayouts() {
   ]
 }
 
-// MARK: Alternate Key Varibables
+/// Sets the keyboard layout and its alternate keys.
+func setKeyboard() {
+  setKeyboardLayout()
+  setKeyboardAlternateKeys()
+}
+
+// MARK: Alternate Key Variables
 var alternatesKeyView: UIView!
 var keysWithAlternates = [String]()
 
@@ -210,7 +196,6 @@ var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
 var nAlternateKeys = [String]()
 var ьAlternateKeys = [String]()
-
 
 // MARK: English Interface Variables
 // Note: here only until there is an English keyboard.
