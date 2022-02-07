@@ -22,9 +22,30 @@ class CommandBar: UILabel {
   }
 
   var shadow: UIButton!
-
   var blend: UILabel!
 
+  /// Sets up the command bar's color and text alignment.
+  func set() {
+    self.backgroundColor = commandBarColor
+    self.blend.backgroundColor = commandBarColor
+    self.layer.borderColor = commandBarBorderColor
+    self.layer.borderWidth = 1.0
+    self.textAlignment = NSTextAlignment.left
+    if DeviceType.isPhone {
+      self.font = .systemFont(ofSize: annotationHeight * 0.7)
+    } else if DeviceType.isPad {
+      self.font = .systemFont(ofSize: annotationHeight * 0.85)
+    }
+    self.shadow.isUserInteractionEnabled = false
+
+    if DeviceType.isPhone {
+      commandPromptSpacing = String(repeating: " ", count: 2)
+    } else if DeviceType.isPad {
+      commandPromptSpacing = String(repeating: " ", count: 5)
+    }
+  }
+
+  /// Sets up the command bar's radius and shadow.
   func setCornerRadiusAndShadow() {
     self.clipsToBounds = true
     self.layer.cornerRadius = commandKeyCornerRadius
@@ -43,6 +64,7 @@ class CommandBar: UILabel {
     self.shadow.layer.shadowColor = keyShadowColor
   }
 
+  // Hides the command bar when command buttons will be showed.
   func hide() {
     self.backgroundColor = UIColor.clear
     self.layer.borderColor = UIColor.clear.cgColor

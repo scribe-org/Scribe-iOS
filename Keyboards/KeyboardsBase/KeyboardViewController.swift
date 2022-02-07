@@ -175,25 +175,15 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var commandBarShadow: UIButton!
   @IBOutlet var commandBarBlend: UILabel!
 
-  /// Sets up the command bar's color and text alignment.
-  func setCommandBar() {
-    commandBar.backgroundColor = commandBarColor
-    commandBarBlend.backgroundColor = commandBarColor
-    commandBar.layer.borderColor = commandBarBorderColor
-    commandBar.layer.borderWidth = 1.0
-    commandBar.textAlignment = NSTextAlignment.left
-    if DeviceType.isPhone {
-      commandBar.font = .systemFont(ofSize: annotationHeight * 0.7)
-    } else if DeviceType.isPad {
-      commandBar.font = .systemFont(ofSize: annotationHeight * 0.85)
+  /// Clears the text found in the command bar.
+  func clearCommandBar() {
+    if commandState == false {
+      commandBar.textColor = keyCharColor
+      commandBar.text = " "
     }
-    commandBarShadow.isUserInteractionEnabled = false
 
-    if DeviceType.isPhone {
-      commandPromptSpacing = String(repeating: " ", count: 2)
-    } else if DeviceType.isPad {
-      commandPromptSpacing = String(repeating: " ", count: 5)
-    }
+    // Trigger the removal of the noun or preposition annotations.
+    hideAnnotations(annotationDisplay: getAnnotationLabels())
   }
 
   /// Deletes in the proxy or command bar given the current constraints.
@@ -621,7 +611,6 @@ class KeyboardViewController: UIInputViewController {
     setCommandBackground()
     setKeyboard()
     linkElements()
-    setCommandBar()
     setCommandBtns()
     setConjugationBtns()
     invalidState = false
@@ -704,7 +693,51 @@ class KeyboardViewController: UIInputViewController {
         }
       }
 
+      // Set up and activate Scribe key and other command elements.
+      scribeKey.set()
+      activateBtn(btn: scribeKey)
+      styleBtn(btn: scribeKey, title: "Scribe", radius: commandKeyCornerRadius)
+      scribeKey.setLeftCornerRadius()
+      scribeKey.setShadow()
+      commandBar.set()
       deactivateConjugationDisplay()
+
+      if scribeKeyState {
+        scribeKey.toEscape()
+        scribeKey.setFullCornerRadius()
+        scribeKey.setEscShadow()
+
+        commandBar.hide()
+
+        styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
+        styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
+        styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+
+        if DeviceType.isPhone {
+          translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+          conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+        } else if DeviceType.isPad {
+          translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+          conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+        }
+
+      } else {
+        if commandState == true {
+          scribeKey.toEscape()
+        }
+        deactivateBtn(btn: conjugateKey)
+        deactivateBtn(btn: translateKey)
+        deactivateBtn(btn: pluralKey)
+
+        commandBar.setCornerRadiusAndShadow()
+
+        if commandState == false {
+          commandBar.text = ""
+        }
+        commandBar.sizeToFit()
+      }
 
       let numRows = keyboard.count
       for row in 0...numRows - 1 {
@@ -718,50 +751,6 @@ class KeyboardViewController: UIInputViewController {
           btn.setCharSize()
 
           let key: String = btn.key
-
-          // Set up and activate Scribe key.
-          scribeKey.set()
-          activateBtn(btn: scribeKey)
-          styleBtn(btn: scribeKey, title: "Scribe", radius: commandKeyCornerRadius)
-          scribeKey.setLeftCornerRadius()
-          scribeKey.setShadow()
-
-          if scribeKeyState {
-            scribeKey.toEscape()
-            scribeKey.setFullCornerRadius()
-            scribeKey.setEscShadow()
-
-            commandBar.hide()
-
-            styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
-            styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
-            styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
-
-            if DeviceType.isPhone {
-              translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-              conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-              pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-            } else if DeviceType.isPad {
-              translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-              conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-              pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-            }
-
-          } else {
-            if commandState == true {
-              scribeKey.toEscape()
-            }
-            deactivateBtn(btn: conjugateKey)
-            deactivateBtn(btn: translateKey)
-            deactivateBtn(btn: pluralKey)
-
-            commandBar.setCornerRadiusAndShadow()
-
-            if commandState == false {
-              commandBar.text = ""
-            }
-            commandBar.sizeToFit()
-          }
 
           // Pad before key is added.
           var leftPadding = CGFloat(0)
@@ -959,19 +948,6 @@ class KeyboardViewController: UIInputViewController {
       styleBtn(btn: conjugateShiftRightBtn, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: conjugateShiftRightBtn, color: keyCharColor, iconName: "chevron.right")
     }
-  }
-
-  // MARK: Scribe Commands
-
-  /// Clears the text found in the command bar.
-  func clearCommandBar() {
-    if commandState == false {
-      commandBar.textColor = keyCharColor
-      commandBar.text = " "
-    }
-
-    // Trigger the removal of the noun or preposition annotations.
-    hideAnnotations(annotationDisplay: getAnnotationLabels())
   }
 
   // MARK: Button Actions
