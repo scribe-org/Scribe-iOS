@@ -6,6 +6,27 @@
 
 import UIKit
 
+// Dictionary for accessing keyboard conjugation state.
+let formToColorDict: [String: UIColor] = [
+  "F": annotateRed,
+  "M": annotateBlue,
+  "C": annotatePurple,
+  "N": annotateGreen,
+  "PL": annotateOrange
+]
+
+// Dictionary to convert noun annotations into the keyboard language.
+let nounAnnotationConversionDict: [String: [String: [String]]] = [
+  "Swedish": ["C": "U"],
+  "Russian": ["F": "Ж", "M": "М", "N": "Н", "PL": "МН"]
+]
+
+// Dictionary to convert case annotations into the keyboard language.
+let caseAnnotationConversionDict: [String: [String: [String]]] = [
+  "German": ["Acc": "Akk"],
+  "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
+]
+
 /// Hides the annotation display so that it can be selectively shown to the user as needed.
 func hideAnnotations(annotationDisplay: [UILabel]) {
   for idx in 0..<annotationDisplay.count {
@@ -14,86 +35,40 @@ func hideAnnotations(annotationDisplay: [UILabel]) {
   }
 }
 
-/// Sets the annotation of an annotation element given parameters.
+/// Sets the annotation of an noun annotation element given parameters.
 ///
 /// - Parameters
 ///  - elem: the element to change the appearance of to show annotations.
 ///  - annotation: the annotation to set to the element.
-func setAnnotation(elem: UILabel, annotation: String) {
+func setNounAnnotation(label: UILabel, annotation: String) {
   var annotationToDisplay = annotation
 
   if scribeKeyState != true { // Cancel if typing while commands are displayed.
-    if prepAnnotationState == false {
-      if controllerLanguage == "Swedish" {
-        if annotation == "C" {
-          annotationToDisplay = "U"
-        }
-      } else if controllerLanguage == "Russian" {
-        if annotation == "F" {
-          annotationToDisplay = "Ж"
-        } else if annotation == "M" {
-          annotationToDisplay = "М"
-        } else if annotation == "N" {
-          annotationToDisplay = "Н"
-        } else if annotation == "PL" {
-          annotationToDisplay = "МН"
-        }
+    // Convert annotation into the keyboard language if necessary.
+    if nounAnnotationConversionDict[controllerLanguage] != nil {
+      if nounAnnotationConversionDict[controllerLanguage][annotation] != nil {
+        annotationToDisplay = nounAnnotationConversionDict[controllerLanguage][annotation]
       }
+    }
 
-      if annotation == "PL" {
-        // Make text smaller to fit the annotation.
-        if DeviceType.isPhone {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.6)
-        } else if DeviceType.isPad {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.8)
-        }
-      } else {
-        if DeviceType.isPhone {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.70)
-        } else if DeviceType.isPad {
-          elem.font = .systemFont(ofSize: annotationHeight * 0.95)
-        }
-      }
-
-      if annotation == "F" {
-        elem.backgroundColor = annotateRed
-      } else if annotation == "M" {
-        elem.backgroundColor = annotateBlue
-      } else if annotation == "C" {
-        elem.backgroundColor = annotatePurple
-      } else if annotation == "N" {
-        elem.backgroundColor = annotateGreen
-      } else if annotation == "PL" {
-        elem.backgroundColor = annotateOrange
+    if annotation == "PL" {
+      // Make text smaller to fit the annotation.
+      if DeviceType.isPhone {
+        label.font = .systemFont(ofSize: annotationHeight * 0.6)
+      } else if DeviceType.isPad {
+        label.font = .systemFont(ofSize: annotationHeight * 0.8)
       }
     } else {
-      if controllerLanguage == "German" {
-        if annotation == "Acc" {
-          annotationToDisplay = "Akk"
-        }
-      } else if controllerLanguage == "Russian" {
-        if annotation == "Acc" {
-          annotationToDisplay = "Вин"
-        } else if annotation == "Dat" {
-          annotationToDisplay = "Дат"
-        } else if annotation == "Gen" {
-          annotationToDisplay = "Род"
-        } else if annotation == "Loc" {
-          annotationToDisplay = "Мес"
-        } else if annotation == "Pre" {
-          annotationToDisplay = "Пре"
-        } else if annotation == "Ins" {
-          annotationToDisplay = "Инс"
-        }
-      }
       if DeviceType.isPhone {
-        elem.font = .systemFont(ofSize: annotationHeight * 0.65)
+        label.font = .systemFont(ofSize: annotationHeight * 0.70)
       } else if DeviceType.isPad {
-        elem.font = .systemFont(ofSize: annotationHeight * 0.85)
+        label.font = .systemFont(ofSize: annotationHeight * 0.95)
       }
-      elem.backgroundColor = keyCharColor
     }
-    elem.text = annotationToDisplay
+
+    // Assign color and text to the label.
+    label.backgroundColor = formToColorDict[annotation]
+    label.text = annotationToDisplay
   }
 }
 
@@ -106,12 +81,9 @@ func nounAnnotation(
   nounAnnotationDisplay: [UILabel],
   annotationDisplay: [UILabel],
   givenWord: String) {
-  // Check to see if the input was uppercase to return an uppercase annotation.
-  inputWordIsCapitalized = false
+  // Convert the given word to lower case unless nouns are capitalized in the language.
   var wordToCheck: String = ""
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-    let firstLetter = givenWord.substring(toIdx: 1)
-    inputWordIsCapitalized = firstLetter.isUppercase
     wordToCheck = givenWord.lowercased()
   } else {
     wordToCheck = givenWord
@@ -130,38 +102,27 @@ func nounAnnotation(
       commandBar.font = .systemFont(ofSize: annotationHeight)
     }
 
-    let nounForm = nouns?[wordToCheck]?["form"] as? String
+    let nounForm: String = nouns?[wordToCheck]?["form"] as! String
     if nounForm == "" {
       return
     } else {
       // Count how many annotations will be changed.
       var numberOfAnnotations: Int = 0
       var annotationsToAssign: [String] = [String]()
-      if nounForm?.count ?? 0 >= 3 { // Would have a slash as the largest is PL
-        annotationsToAssign = (nounForm?.components(separatedBy: "/"))!
+      if nounForm.count >= 3 { // Would have a slash as the largest is PL
+        annotationsToAssign = (nounForm.components(separatedBy: "/"))
         numberOfAnnotations = annotationsToAssign.count
       } else {
         numberOfAnnotations = 1
-        annotationsToAssign.append(nounForm ?? "")
+        annotationsToAssign.append(nounForm )
       }
-
-      // To be passed to preposition annotations.
-      nounAnnotationsToDisplay = numberOfAnnotations
 
       for idx in 0..<numberOfAnnotations {
-        setAnnotation(elem: nounAnnotationDisplay[idx], annotation: annotationsToAssign[idx])
+        setNounAnnotation(label: nounAnnotationDisplay[idx], annotation: annotationsToAssign[idx])
       }
 
-      if nounForm == "F" {
-        commandBar.textColor = annotateRed
-      } else if nounForm == "M" {
-        commandBar.textColor = annotateBlue
-      } else if nounForm == "C" {
-        commandBar.textColor = annotatePurple
-      } else if nounForm ==  "N" {
-        commandBar.textColor = annotateGreen
-      } else if nounForm ==  "PL" {
-        commandBar.textColor = annotateOrange
+      if formToColorDict[nounForm] != nil {
+        commandBar.textColor = formToColorDict[nounForm]
       } else {
         commandBar.textColor = keyCharColor
       }
@@ -171,19 +132,13 @@ func nounAnnotation(
         count: ( numberOfAnnotations * 7 ) - ( numberOfAnnotations - 1 )
       )
       if invalidState != true {
-        if inputWordIsCapitalized == false {
-          commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck
-        } else {
-          commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck.capitalized
-        }
+        commandBar.text = commandPromptSpacing + wordSpacing + givenWord
       }
     }
-    wordToCheck = wordToCheck.lowercased() // in case it was capitalized for German
-    let isPrep = prepositions?[wordToCheck] != nil
-    // Pass the preposition state so that if it's false nounAnnotationsToDisplay can be made 0.
-    if isPrep {
-      prepAnnotationState = true
-    }
+    // Check if it's a preposition and pass information to prepositionAnnotation if so.
+    let isPrep = prepositions?[wordToCheck.lowercased()] != nil
+    nounAnnotationsToDisplay = numberOfAnnotations
+    if isPrep { prepAnnotationState = true }
   }
 }
 
@@ -222,6 +177,34 @@ func typedNounAnnotation(
   }
 }
 
+/// Sets the annotation of an preposition annotation element given parameters.
+///
+/// - Parameters
+///  - elem: the element to change the appearance of to show annotations.
+///  - annotation: the annotation to set to the element.
+func setPrepAnnotation(label: UILabel, annotation: String) {
+  var annotationToDisplay = annotation
+
+  if scribeKeyState != true {
+    // Convert annotation into the keyboard language if necessary.
+    if caseAnnotationConversionDict[controllerLanguage] != nil {
+      if caseAnnotationConversionDict[controllerLanguage][annotation] != nil {
+        annotationToDisplay = caseAnnotationConversionDict[controllerLanguage][annotation]
+      }
+    }
+
+    if DeviceType.isPhone {
+      label.font = .systemFont(ofSize: annotationHeight * 0.65)
+    } else if DeviceType.isPad {
+      label.font = .systemFont(ofSize: annotationHeight * 0.85)
+    }
+
+    // Assign color and text to the label.
+    label.backgroundColor = keyCharColor
+    label.text = annotationToDisplay
+  }
+}
+
 /// Checks if a word is a preposition and annotates the command bar if so.
 ///
 /// - Parameters
@@ -231,9 +214,6 @@ func prepositionAnnotation(
   prepAnnotationDisplay: [UILabel],
   givenWord: String) {
   // Check to see if the input was uppercase to return an uppercase annotation.
-  inputWordIsCapitalized = false
-  let firstLetter = givenWord.substring(toIdx: 1)
-  inputWordIsCapitalized = firstLetter.isUppercase
   let wordToCheck = givenWord.lowercased()
 
   // Check if prepAnnotationState has been passed and reset nounAnnotationsToDisplay if not.
@@ -265,7 +245,10 @@ func prepositionAnnotation(
     }
 
     for idx in 0..<numberOfAnnotations {
-      setAnnotation(elem: prepAnnotationDisplay[idx], annotation: annotationsToAssign[idx])
+      setPrepAnnotation(
+        label: prepAnnotationDisplay[idx],
+        annotation: annotationsToAssign[idx]
+      )
     }
     // Cancel the state to allow for symbol coloration in selection annotation without calling loadKeys.
     prepAnnotationState = false
@@ -278,11 +261,8 @@ func prepositionAnnotation(
       + ( numberOfAnnotations * 9 )
       - ( numberOfAnnotations - 1 )
     )
-    if inputWordIsCapitalized == false {
-      commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck
-    } else {
-      commandBar.text = commandPromptSpacing + wordSpacing + wordToCheck.capitalized
-    }
+
+    commandBar.text = commandPromptSpacing + wordSpacing + givenWord
   }
 }
 
