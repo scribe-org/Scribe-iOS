@@ -24,20 +24,19 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - The Scribe key now switches its icon color with the rest of the keyboard when the user changes color modes.
-- Annotation are no longer triggered if a user presses space during a command.
+- Annotations are no longer triggered if a user presses space during a command.
 
 ### ♻️ Code Refactoring
 
 - Commands buttons are now called keys and the preview bar has been renamed the command bar.
 - Force casts are used as little as possible.
 - All lines have been reduced to a reasonable length (120 characters) where able.
-
-<!-- - All functions have been reduced to a reasonable length (40 lines) where able. -->
-<!-- - All functions have been reduced to a reasonable cyclomatic complexity (10 or less) where able. -->
-<!-- - All files have been reduced to a reasonable length (400 lines) where able. -->
-<!-- - All type bodies have been reduced to a reasonable length (200 lines) where able. -->
-<!-- - Scribe has been modularized to be more easily worked with. -->
-<!-- - The app screen's text was moved to a new directory where localizations will be stored. -->
+- All functions have been reduced to a reasonable length (40 lines) where able.
+- All functions have been reduced to a reasonable cyclomatic complexity (10 or less) where able.
+- All files have been reduced to a reasonable length (400 lines) where able.
+- All type bodies have been reduced to a reasonable length (200 lines) where able.
+- Scribe has been modularized to be more easily worked with.
+- The app screen's text was moved to a new directory where localizations will be stored.
 
 # Scribe 1.2.0
 
