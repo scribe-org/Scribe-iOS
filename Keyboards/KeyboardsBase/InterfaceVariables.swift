@@ -158,6 +158,16 @@ func setKeyboard() {
 // MARK: Alternate Key Variables
 var alternatesKeyView: UIView!
 var keysWithAlternates = [String]()
+var alternateKeys = [String]()
+
+// Variables for alternate key view appearance.
+var alternateBtnStartX = CGFloat(0)
+var alternatesViewWidth = CGFloat(0)
+var alternateButtonWidth = CGFloat(0)
+var alternatesViewX = CGFloat(0)
+var alternatesViewY = CGFloat(0)
+var alternatesBtnHeight = CGFloat(0)
+var alternatesCharHeight = CGFloat(0)
 
 // The main currency symbol that will receive the alternates view for iPhones.
 var currencySymbol: String = ""

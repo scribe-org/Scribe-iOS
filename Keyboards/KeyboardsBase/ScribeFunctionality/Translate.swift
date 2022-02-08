@@ -7,6 +7,9 @@
 import UIKit
 
 /// Inserts the translation of a valid word in the command bar into the proxy.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
 func queryTranslation(commandBar: UILabel) {
   // Cancel via a return press.
   if commandBar.text! == translatePromptAndCursor {

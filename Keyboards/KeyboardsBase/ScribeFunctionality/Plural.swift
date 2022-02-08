@@ -7,6 +7,9 @@
 import UIKit
 
 /// Inserts the plural of a valid noun in the command bar into the proxy.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
 func queryPlural(commandBar: UILabel) {
   // Cancel via a return press.
   if commandBar.text! == pluralPromptAndCursor {

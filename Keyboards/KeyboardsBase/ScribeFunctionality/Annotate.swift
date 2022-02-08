@@ -28,6 +28,9 @@ let caseAnnotationConversionDict = [
 ]
 
 /// Hides the annotation display so that it can be selectively shown to the user as needed.
+///
+/// - Parameters
+///   - annotationDisplay: the full annotation display elements.
 func hideAnnotations(annotationDisplay: [UILabel]) {
   for idx in 0..<annotationDisplay.count {
     annotationDisplay[idx].backgroundColor = UIColor.clear
@@ -38,7 +41,7 @@ func hideAnnotations(annotationDisplay: [UILabel]) {
 /// Sets the annotation of an noun annotation element given parameters.
 ///
 /// - Parameters
-///  - elem: the element to change the appearance of to show annotations.
+///  - label: the label to change the appearance of to show annotations.
 ///  - annotation: the annotation to set to the element.
 func setNounAnnotation(label: UILabel, annotation: String) {
   var annotationToDisplay: String = annotation
@@ -75,6 +78,9 @@ func setNounAnnotation(label: UILabel, annotation: String) {
 /// Checks if a word is a noun and annotates the command bar if so.
 ///
 /// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - nounAnnotationDisplay: the part of the annotation display that's for nouns.
+///   - annotationDisplay: the full annotation display elements.
 ///   - givenWord: a word that is potentially a noun.
 func nounAnnotation(
   commandBar: UILabel,
@@ -144,6 +150,11 @@ func nounAnnotation(
 }
 
 /// Annotates the command bar with the form of a valid selected noun.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - nounAnnotationDisplay: the part of the annotation display that's for nouns.
+///   - annotationDisplay: the full annotation display elements.
 func selectedNounAnnotation(
   commandBar: UILabel,
   nounAnnotationDisplay: [UILabel],
@@ -159,6 +170,11 @@ func selectedNounAnnotation(
 }
 
 /// Annotates the command bar with the form of a valid typed noun.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - nounAnnotationDisplay: the part of the annotation display that's for nouns.
+///   - annotationDisplay: the full annotation display elements.
 func typedNounAnnotation(
   commandBar: UILabel,
   nounAnnotationDisplay: [UILabel],
@@ -181,7 +197,7 @@ func typedNounAnnotation(
 /// Sets the annotation of an preposition annotation element given parameters.
 ///
 /// - Parameters
-///  - elem: the element to change the appearance of to show annotations.
+///  - label: the label to change the appearance of to show annotations.
 ///  - annotation: the annotation to set to the element.
 func setPrepAnnotation(label: UILabel, annotation: String) {
   var annotationToDisplay: String = annotation
@@ -209,6 +225,8 @@ func setPrepAnnotation(label: UILabel, annotation: String) {
 /// Checks if a word is a preposition and annotates the command bar if so.
 ///
 /// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - prepAnnotationDisplay: the part of the annotation display that's for prepositions.
 ///   - givenWord: a word that is potentially a preposition.
 func prepositionAnnotation(
   commandBar: UILabel,
@@ -268,6 +286,10 @@ func prepositionAnnotation(
 }
 
 /// Annotates the command bar with the form of a valid selected preposition.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - prepAnnotationDisplay: the part of the annotation display that's for prepositions.
 func selectedPrepAnnotation(
   commandBar: UILabel,
   prepAnnotationDisplay: [UILabel]) {
@@ -283,6 +305,10 @@ func selectedPrepAnnotation(
 }
 
 /// Annotates the command bar with the form of a valid typed preposition.
+///
+/// - Parameters
+///   - commandBar: the command bar into which an input was entered.
+///   - prepAnnotationDisplay: the part of the annotation display that's for prepositions.
 func typedPrepAnnotation(
   commandBar: UILabel,
   prepAnnotationDisplay: [UILabel]) {

@@ -17,6 +17,7 @@ class CommandBar: UILabel {
     super.init(coder: coder)
   }
 
+  /// Allows the class to be accessed from Keyboard.xib.
   class func instanceFromNib() -> UIView {
       return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
   }

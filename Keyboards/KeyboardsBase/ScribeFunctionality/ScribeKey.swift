@@ -16,6 +16,7 @@ class ScribeKey: UIButton {
     super.init(coder: coder)
   }
 
+  /// Allows the class to be accessed from Keyboard.xib.
   class func instanceFromNib() -> UIView {
       return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
   }
@@ -52,12 +53,14 @@ class ScribeKey: UIButton {
     self.shadow.isUserInteractionEnabled = false
   }
 
+  /// Sets the corner radius for just the left side of the Scribe key.
   func setLeftCornerRadius() {
     self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
 
+  /// Sets the corner radius for all sides of the Scribe key.
   func setFullCornerRadius() {
-    self.layer.borderColor = UIColor.clear.cgColor
+    self.layer.borderColor = UIColor.clear.cgColor // border is set by the shadow
     self.layer.maskedCorners = [
       .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner
     ]

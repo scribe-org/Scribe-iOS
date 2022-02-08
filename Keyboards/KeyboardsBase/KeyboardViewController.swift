@@ -231,6 +231,9 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: pluralKey)
   }
 
+  @IBOutlet var conjugateShiftLeftBtn: UIButton!
+  @IBOutlet var conjugateShiftRightBtn: UIButton!
+
   // Buttons for the conjugation view.
   @IBOutlet var conjugateKeyFPS: UIButton!
   @IBOutlet var conjugateKeySPS: UIButton!
@@ -239,13 +242,28 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateKeySPP: UIButton!
   @IBOutlet var conjugateKeyTPP: UIButton!
 
-  @IBOutlet var conjugateShiftLeftBtn: UIButton!
-  @IBOutlet var conjugateShiftRightBtn: UIButton!
+  /// Returns all buttons for the 3x2 conjugation display.
+  func get3x2ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyFPS, conjugateKeySPS, conjugateKeyTPS, conjugateKeyFPP, conjugateKeySPP, conjugateKeyTPP
+    ]
+
+    return conjugationButtons
+  }
 
   @IBOutlet var conjugateKeyTL: UIButton!
   @IBOutlet var conjugateKeyTR: UIButton!
   @IBOutlet var conjugateKeyBL: UIButton!
   @IBOutlet var conjugateKeyBR: UIButton!
+
+  /// Returns all buttons for the 2x2 conjugation display
+  func get2x2ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyTL, conjugateKeyTR, conjugateKeyBL, conjugateKeyBR
+    ]
+
+    return conjugationButtons
+  }
 
   // Labels for the conjugation view buttons.
   // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
@@ -256,12 +274,76 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var conjugateLblSPP: UIButton!
   @IBOutlet var conjugateLblTPP: UIButton!
 
+  /// Returns all labels for the 3x2 conjugation display.
+  func get3x2ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP
+    ]
+
+    return conjugationLabels
+  }
+
   @IBOutlet var conjugateLblTL: UIButton!
   @IBOutlet var conjugateLblTR: UIButton!
   @IBOutlet var conjugateLblBL: UIButton!
   @IBOutlet var conjugateLblBR: UIButton!
 
-  /// Sets up all buttons that are associated with the conjugation display.
+  /// Returns all labels for the 2x2 conjugation display.
+  func get2x2ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblTL, conjugateLblTR, conjugateLblBL, conjugateLblBR
+    ]
+
+    return conjugationLabels
+  }
+
+  /// Sets up all buttons and labels that are associated with the 3x2 conjugation display.
+  func setConj3x2View() {
+    setBtn(btn: conjugateKeyFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeySPS, color: keyColor, name: "secondPersonSingular", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTPS, color: keyColor, name: "thirdPersonSingular", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyFPP, color: keyColor, name: "firstPersonPlural", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeySPP, color: keyColor, name: "secondPersonPlural", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTPP, color: keyColor, name: "thirdPersonPlural", canCapitalize: false, isSpecial: false)
+
+    for btn in get3x2ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get3x2ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
+  /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
+  func setConj2x2View() {
+    setBtn(btn: conjugateKeyTL, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTR, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBR, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
+
+    for btn in get2x2ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get2x2ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
+  /// Sets up all buttons and labels for the conjugation view given constraints to determine the dimensions.
   func setConjugationBtns() {
     // Set the conjugation view to 2x2 for Swedish and Russian past tense.
     if controllerLanguage == "Swedish" {
@@ -272,20 +354,14 @@ class KeyboardViewController: UIInputViewController {
       conjugateAlternateView = false
     }
 
-    setBtn(btn: conjugateKeyFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeySPS, color: keyColor, name: "secondPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTPS, color: keyColor, name: "thirdPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyFPP, color: keyColor, name: "firstPersonPlural", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeySPP, color: keyColor, name: "secondPersonPlural", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTPP, color: keyColor, name: "thirdPersonPlural", canCapitalize: false, isSpecial: false)
+    // The base conjugation view is 3x2 for first, second, and third person in singular and plural.
+    if conjugateAlternateView == false {
+      setConj3x2View()
+    } else {
+      setConj2x2View()
+    }
 
-    activateBtn(btn: conjugateKeyFPS)
-    activateBtn(btn: conjugateKeySPS)
-    activateBtn(btn: conjugateKeyTPS)
-    activateBtn(btn: conjugateKeyFPP)
-    activateBtn(btn: conjugateKeySPP)
-    activateBtn(btn: conjugateKeyTPP)
-
+    // Setup the view shift buttons.
     setBtn(
       btn: conjugateShiftLeftBtn,
       color: keyColor,
@@ -304,82 +380,39 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: conjugateShiftLeftBtn)
     activateBtn(btn: conjugateShiftRightBtn)
 
-    setBtn(btn: conjugateKeyTL, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTR, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyBR, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
-
-    activateBtn(btn: conjugateKeyTL)
-    activateBtn(btn: conjugateKeyTR)
-    activateBtn(btn: conjugateKeyBL)
-    activateBtn(btn: conjugateKeyBR)
-
-    let conjugationLbls = [
-      conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
-      conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR
-    ]
-
-    for lbl in conjugationLbls {
-      lbl!.backgroundColor = UIColor.clear
-      lbl!.setTitleColor(specialKeyColor, for: .normal)
-      lbl!.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
-      lbl!.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-      lbl!.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
-      lbl!.isUserInteractionEnabled = false
-    }
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      conjugateKeyFPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeySPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyTPS.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyFPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeySPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyTPP.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-
-      conjugateKeyTL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyBL.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyTR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-      conjugateKeyBR.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
-
-      for lbl in conjugationLbls {
-        lbl!.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+    // Make all labels clear and set their font for if they will be used.
+    let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
+    for lbl in allConjLabels {
+      lbl.backgroundColor = UIColor.clear
+      lbl.setTitleColor(specialKeyColor, for: .normal)
+      lbl.isUserInteractionEnabled = false
+      if DeviceType.isPad {
+        lbl.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
       }
     }
   }
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
-    let conjugateViewElements: [UIButton] = [
-      conjugateKeyFPS, conjugateKeySPS, conjugateKeyTPS, conjugateKeyFPP, conjugateKeySPP, conjugateKeyTPP,
-      conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP
-    ]
-    let conjugateViewElementsAlt: [UIButton] = [
-      conjugateKeyTL, conjugateKeyBL, conjugateKeyTR, conjugateKeyBR,
-      conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR
-    ]
+    activateBtn(btn: conjugateShiftLeftBtn)
+    activateBtn(btn: conjugateShiftRightBtn)
 
     if conjugateAlternateView == false {
-      for elem in conjugateViewElements {
+      for elem in get3x2ConjButtons() {
         activateBtn(btn: elem)
       }
 
-      for elem in conjugateViewElementsAlt {
+      for elem in get2x2ConjButtons() {
         deactivateBtn(btn: elem)
       }
     }
 
-    activateBtn(btn: conjugateShiftLeftBtn)
-    activateBtn(btn: conjugateShiftRightBtn)
-
     if conjugateAlternateView == true {
-      for elem in conjugateViewElements {
+      for elem in get3x2ConjButtons() {
         deactivateBtn(btn: elem)
       }
 
-      for elem in conjugateViewElementsAlt {
+      for elem in get2x2ConjButtons() {
         activateBtn(btn: elem)
       }
     }
@@ -387,55 +420,31 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deactivates all buttons that are associated with the conjugation display.
   func deactivateConjugationDisplay() {
-    deactivateBtn(btn: conjugateKeyFPS)
-    deactivateBtn(btn: conjugateKeySPS)
-    deactivateBtn(btn: conjugateKeyTPS)
-    deactivateBtn(btn: conjugateKeyFPP)
-    deactivateBtn(btn: conjugateKeySPP)
-    deactivateBtn(btn: conjugateKeyTPP)
-
-    deactivateBtn(btn: conjugateLblFPS)
-    deactivateBtn(btn: conjugateLblSPS)
-    deactivateBtn(btn: conjugateLblTPS)
-    deactivateBtn(btn: conjugateLblFPP)
-    deactivateBtn(btn: conjugateLblSPP)
-    deactivateBtn(btn: conjugateLblTPP)
-
     deactivateBtn(btn: conjugateShiftLeftBtn)
     conjugateShiftLeftBtn.tintColor = UIColor.clear
     deactivateBtn(btn: conjugateShiftRightBtn)
     conjugateShiftRightBtn.tintColor = UIColor.clear
 
-    deactivateBtn(btn: conjugateKeyTL)
-    deactivateBtn(btn: conjugateKeyBL)
-    deactivateBtn(btn: conjugateKeyTR)
-    deactivateBtn(btn: conjugateKeyBR)
+    let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
+    let allConjElements: [UIButton] = get3x2ConjButtons() + get2x2ConjButtons() + allConjLabels
 
-    let conjugationLbls: [UIButton] = [
-      conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP,
-      conjugateLblTL, conjugateLblBL, conjugateLblTR, conjugateLblBR
-    ]
+    for elem in allConjElements {
+      deactivateBtn(btn: elem)
+    }
 
-    for lbl in conjugationLbls {
+    for lbl in allConjLabels {
       lbl.setTitle("", for: .normal)
     }
   }
 
-  /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
-  func setConjugationState() {
-    var conjugationTitleFxn: () -> String = deGetConjugationTitle
+  /// Assign the conjugations that will be selectable in the conjugation display.
+  func assignConjStates() {
     var conjugationStateFxn: () -> String = deGetConjugationState
-    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
     if controllerLanguage != "Swedish" {
-      conjugationTitleFxn = keyboardConjTitleDict[controllerLanguage] as! () -> String
       conjugationStateFxn = keyboardConjStateDict[controllerLanguage] as! () -> String
-      conjugationLabelsFxn = keyboardConjLabelDict[controllerLanguage] as! () -> Void
     }
 
     if !["Russian", "Swedish"].contains(controllerLanguage) {
-      commandBar.text = conjugationTitleFxn()
-      conjugationLabelsFxn()
-
       tenseFPS = conjugationStateFxn() + "FPS"
       tenseSPS = conjugationStateFxn() + "SPS"
       tenseTPS = conjugationStateFxn() + "TPS"
@@ -444,9 +453,6 @@ class KeyboardViewController: UIInputViewController {
       tenseTPP = conjugationStateFxn() + "TPP"
 
     } else if controllerLanguage == "Russian" {
-      commandBar.text = ruGetConjugationTitle()
-      ruSetConjugationLabels()
-
       if conjugateAlternateView == false {
         tenseFPS = ruGetConjugationState() + "FPS"
         tenseSPS = ruGetConjugationState() + "SPS"
@@ -462,14 +468,37 @@ class KeyboardViewController: UIInputViewController {
       }
 
     } else if controllerLanguage == "Swedish" {
-      commandBar.text = svGetConjugationTitle()
-      svSetConjugationLabels()
       let swedishTenses = svGetConjugationState()
 
       tenseTopLeft = swedishTenses[0]
       tenseTopRight = swedishTenses[1]
       tenseBottomLeft = swedishTenses[2]
       tenseBottomRight = swedishTenses[3]
+    }
+  }
+
+  /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
+  func setConjugationState() {
+    // Assign the conjugations that will be selectable.
+    assignConjStates()
+
+    // Set the view title and its labels.
+    var conjugationTitleFxn: () -> String = deGetConjugationTitle
+    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
+    if controllerLanguage != "Swedish" {
+      conjugationTitleFxn = keyboardConjTitleDict[controllerLanguage] as! () -> String
+      conjugationLabelsFxn = keyboardConjLabelDict[controllerLanguage] as! () -> Void
+    }
+
+    if !["Russian", "Swedish"].contains(controllerLanguage) {
+      commandBar.text = conjugationTitleFxn()
+      conjugationLabelsFxn()
+    } else if controllerLanguage == "Russian" {
+      commandBar.text = ruGetConjugationTitle()
+      ruSetConjugationLabels()
+    } else if controllerLanguage == "Swedish" {
+      commandBar.text = svGetConjugationTitle()
+      svSetConjugationLabels()
     }
 
     // Assign labels that have been set by SetConjugationLabels functions.
@@ -485,14 +514,12 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblBL.setTitle("  " + labelBottomLeft, for: .normal)
     conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
 
-    if conjugateAlternateView == true {
-      allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
-      allConjugationBtns = [conjugateKeyTL, conjugateKeyTR, conjugateKeyBL, conjugateKeyBR]
-    } else {
+    if conjugateAlternateView == false {
       allTenses = [tenseFPS, tenseSPS, tenseTPS, tenseFPP, tenseSPP, tenseTPP]
-      allConjugationBtns = [
-        conjugateKeyFPS, conjugateKeySPS, conjugateKeyTPS, conjugateKeyFPP, conjugateKeySPP, conjugateKeyTPP
-      ]
+      allConjugationBtns = get3x2ConjButtons()
+    } else {
+      allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
+      allConjugationBtns = get2x2ConjButtons()
     }
 
     // Populate conjugation view buttons.
@@ -1422,31 +1449,23 @@ class KeyboardViewController: UIInputViewController {
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
   }
 
-  /// Sets and styles the view displayed for hold-to-select keys.
+  /// Generates an alternates view to select other characters related to a long held key.
   ///
   /// - Parameters
   ///   - sender: the long press of the given key.
-  @objc func setAlternatesView(sender: UILongPressGestureRecognizer) {
+  func genAlternatesView(sender: UILongPressGestureRecognizer) {
     let tapLocation = sender.location(in: self.view)
 
     // Derive which button was pressed and get its alternates.
-    guard let button = sender.view as? UIButton else { return }
-    let btnPressed = button.layer.value(forKey: "original") as? String
-    let alternateKeys = keyAlternatesDict[btnPressed ?? ""]
-    let numAlternates = CGFloat(alternateKeys!.count)
+    guard let button: UIButton = sender.view as? UIButton else { return }
+    let btnPressed: String = button.layer.value(forKey: "original") as? String ?? ""
+    alternateKeys = keyAlternatesDict[btnPressed ] ?? [""]
+    let numAlternates: CGFloat = CGFloat(alternateKeys.count)
 
-    // Variables for alternate key view appearance.
-    var alternatesViewWidth = CGFloat(0)
-    var alternatesViewX = CGFloat(0)
-    var alternatesViewY = CGFloat(0)
-    let alternateButtonWidth = buttonWidth * 0.9
-    var alternateBtnStartX = CGFloat(0)
-    var alternatesBtnHeight = CGFloat(0)
-    var alternatesCharHeight = CGFloat(0)
-
-    if keysWithAlternatesLeft.contains(btnPressed ?? "") {
+    alternateButtonWidth = buttonWidth * 0.9
+    if keysWithAlternatesLeft.contains(btnPressed ) {
       alternatesViewX = tapLocation.x - 10.0
-    } else if keysWithAlternatesRight.contains(btnPressed ?? "") {
+    } else if keysWithAlternatesRight.contains(btnPressed ) {
       alternatesViewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
     }
 
@@ -1473,24 +1492,34 @@ class KeyboardViewController: UIInputViewController {
       )
     )
 
+    alternatesKeyView.backgroundColor = keyColor
+    alternatesKeyView.layer.cornerRadius = 5
+    alternatesKeyView.layer.borderWidth = 1
+    alternatesKeyView.tag = 1001
+    alternatesKeyView.layer.borderColor = keyShadowColor
+    button.backgroundColor = keyColor
+  }
+
+  /// Sets the characters that can be selected on an alternates view that is generated.
+  ///
+  /// - Parameters
+  ///   - sender: the long press of the given key.
+  @objc func setAlternatesView(sender: UILongPressGestureRecognizer) {
     // Only run this code when the state begins.
     if sender.state != UIGestureRecognizer.State.began {
       return
     }
+
     // If alternateKeysView is already added than remove and then add again.
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
     }
 
-    alternatesKeyView.backgroundColor = keyColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = keyShadowColor
+    genAlternatesView(sender: sender)
 
     alternateBtnStartX = 5.0
-    for char in alternateKeys! {
+    for char in alternateKeys {
       let btn: UIButton = UIButton(
         frame: CGRect(
           x: alternateBtnStartX,
@@ -1514,6 +1543,5 @@ class KeyboardViewController: UIInputViewController {
       alternateBtnStartX += (alternateButtonWidth + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
-    button.backgroundColor = keyColor
   }
 }
