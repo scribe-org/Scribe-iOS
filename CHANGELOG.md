@@ -143,7 +143,7 @@ Data updates are now all done through a single Python file - update_data.py.
 - Combines all conjugation logic into one function that is accessed by each button press case.
 - Combines all noun annotation logic into one function that accessed by child functions.
 
-# Scribe 1.0.1 (December 4th, 2021)
+# Scribe 1.0.1
 
 ### ✨ New Features
 
@@ -167,11 +167,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - The hold-to-select character functions are now combined into one.
 
-### 🚚 File Movement
-
-- Moved the contribution guidelines to the main directory.
-
-# Scribe 1.0.0 (November 30th, 2021)
+# Scribe 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
