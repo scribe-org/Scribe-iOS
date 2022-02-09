@@ -179,7 +179,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 <div align="center">
   <br>
-  <a href="https://tech-news.wikimedia.de/en/homepage/"><img width="300" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikimedia_deutschland_logo.png" alt="Wikimedia Tech News"></a>
+  <a href="https://tech-news.wikimedia.de/en/homepage/"><img height="100"src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikimedia_deutschland_logo.png" alt="Wikimedia Tech News"></a>
   <br>
 </div> -->
 
@@ -187,6 +187,6 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 <div align="center">
   <br>
-  <a href="https://www.wikidata.org/"><img height="150" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikidata_logo.png" alt="Wikidata"></a>
+  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/wikidata_logo.png" alt="Wikidata"></a>
   <br>
 </div>
