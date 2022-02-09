@@ -18,17 +18,6 @@ body:
       placeholder: Tell us which languages this relates to.
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: Data procedure
-      options:
-        - ETL (Wikidata to Scribe)
-        - ELT (Add to Wikidata)
-        - ETL and ELT
-        - Other or not sure
-    validations:
-      required: true
   - type: textarea
     id: choice
     attributes:
