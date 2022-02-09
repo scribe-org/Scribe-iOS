@@ -48,6 +48,7 @@ class KeyboardViewController: UIInputViewController {
     switchInput = false
     scribeKeyState = false
     commandState = false
+    conjugateView = false
 
     // Set height for Scribe command functionality.
     annotationHeight = nounAnnotation1.frame.size.height
