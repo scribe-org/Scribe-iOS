@@ -24,7 +24,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Settings have been added to the top right of the app screen that allows users to access the home screen, privacy policy, contact options, and a description of how Wikidata links to Scribe.
 - App pages other than the home page have a back arrow in the top left (the user can also swipe back). -->
 
-# Scribe 1.2.1 (WIP)
+# Scribe 1.2.1
 
 ### 🗃️ Data Added
 
