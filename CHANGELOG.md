@@ -16,6 +16,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The keyboard switches back to letter keys after all appropriate symbols followed by space.
 - Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.
+- Users can now translate pronouns as these were not originally included.
 
 ### 🎨 Design Changes
 
