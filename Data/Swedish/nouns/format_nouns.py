@@ -37,7 +37,7 @@ def order_annotations(annotation):
     Parameters
     ----------
         annotation : str
-            The annotation to be returned to the user in the preview bar.
+            The annotation to be returned to the user in the command bar.
     """
     single_annotations = ["C", "N", "PL"]
     if annotation in single_annotations:

@@ -1,38 +1,17 @@
-Scribe is a pack of iOS and iPadOS keyboards for language learners. Features include translation (beta), verb conjugation and word annotation that give users the tools needed to communicate with confidence.
+Scribe is a pack of iOS and iPadOS keyboards for language learners. It provides features to help users remember grammar rules so they can effectively communicate without needing to leave their keyboard.
 
-Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from Wikidata and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
+Included Languages
 
-The Scribe team has interest in creating keyboards for all languages of interest. Currently supported languages include French, German, Portuguese, Russian, Spanish and Swedish.
+French, German, Portuguese, Russian, Spanish and Swedish.
 
-Keyboard features are accessed via the Scribe key at the top left of any Scribe keyboard. Pressing this key gives the user three new selectable options: Translate, Conjugate and Plural in the keyboard's language. These keys allow for words to be queried and inserted into the text field followed by a space.
+Current Features
 
-Current features include:
-
-- The (beta) Translate feature can translate single words or phrases from English into the language of the current keyboard when the return key is pressed.
+- The (beta) Translate feature can translate single words or phrases from English into the language of the current keyboard.
 
 - With the Conjugate feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-- The Plural feature allows a user to enter a noun and then insert its plural into the text field when the return key is pressed.
+- The Plural feature allows a user to enter a noun and then insert its plural into the text field.
 
-- Scribe further annotates words in the preview bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
-
-Annotations are presented in the following cases:
-
-Nouns
-
-Scribe annotates nouns in the preview bar according to the following conventions:
-
-- Feminine: colored red and marked with (F)
-- Masculine: colored blue and marked with (M)
-- Common: colored purple and marked with (C)
-- Neutral: colored green and marked with (N)
-- Plural: colored orange and marked with (PL)
-- More than one: marked with all their forms
-
-The above form abbreviations are translated into their equivalents in the keyboard's language.
-
-Prepositions
-
-Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the preview bar if there is a relation in the given language.
+- Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
 
 Being fully open source, the Scribe team loves to get both feedback and contributions. Please don't hesitate to visit us at https://github.com/scribe-org/Scribe-iOS!
