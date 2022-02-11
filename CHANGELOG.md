@@ -22,8 +22,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Characters on keys have been made larger so they reflect the system keyboards better.
 - The app screen corners have been made less round so they fit across more devices.
 - Settings have been added to the top right of the app screen that allows users to access the home screen, privacy policy, contact options, and a description of how Wikidata links to Scribe.
-- App pages other than the home page have a back arrow in the top left (the user can also swipe back).
-- The conjugate right and left buttons wider on iPhone and narrower on iPads by making two different versions (the user can also swipe different pages of the conjugation view). -->
+- App pages other than the home page have a back arrow in the top left (the user can also swipe back). -->
 
 # Scribe 1.2.1 (WIP)
 
@@ -46,6 +45,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The app screen texts are given slightly more room to expand within their fields.
 - The App Store description has been simplified with bullet points.
+- The conjugate view right and left buttons have been made wider.
 
 ### 🐞 Bug Fixes
 

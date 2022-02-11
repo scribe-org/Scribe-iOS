@@ -232,8 +232,8 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: pluralKey)
   }
 
-  @IBOutlet var conjugateShiftLeftBtn: UIButton!
-  @IBOutlet var conjugateShiftRightBtn: UIButton!
+  @IBOutlet var conjugateShiftLeft: UIButton!
+  @IBOutlet var conjugateShiftRight: UIButton!
 
   // Buttons for the conjugation view.
   @IBOutlet var conjugateKeyFPS: UIButton!
@@ -364,22 +364,22 @@ class KeyboardViewController: UIInputViewController {
 
     // Setup the view shift buttons.
     setBtn(
-      btn: conjugateShiftLeftBtn,
+      btn: conjugateShiftLeft,
       color: keyColor,
       name: "shiftConjugateLeft",
       canCapitalize: false,
       isSpecial: false
     )
     setBtn(
-      btn: conjugateShiftRightBtn,
+      btn: conjugateShiftRight,
       color: keyColor,
       name: "shiftConjugateRight",
       canCapitalize: false,
       isSpecial: false
     )
 
-    activateBtn(btn: conjugateShiftLeftBtn)
-    activateBtn(btn: conjugateShiftRightBtn)
+    activateBtn(btn: conjugateShiftLeft)
+    activateBtn(btn: conjugateShiftRight)
 
     // Make all labels clear and set their font for if they will be used.
     let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
@@ -395,8 +395,8 @@ class KeyboardViewController: UIInputViewController {
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
-    activateBtn(btn: conjugateShiftLeftBtn)
-    activateBtn(btn: conjugateShiftRightBtn)
+    activateBtn(btn: conjugateShiftLeft)
+    activateBtn(btn: conjugateShiftRight)
 
     if conjugateAlternateView == false {
       for elem in get3x2ConjButtons() {
@@ -421,10 +421,10 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deactivates all buttons that are associated with the conjugation display.
   func deactivateConjugationDisplay() {
-    deactivateBtn(btn: conjugateShiftLeftBtn)
-    conjugateShiftLeftBtn.tintColor = UIColor.clear
-    deactivateBtn(btn: conjugateShiftRightBtn)
-    conjugateShiftRightBtn.tintColor = UIColor.clear
+    deactivateBtn(btn: conjugateShiftLeft)
+    conjugateShiftLeft.tintColor = UIColor.clear
+    deactivateBtn(btn: conjugateShiftRight)
+    conjugateShiftRight.tintColor = UIColor.clear
 
     let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
     let allConjElements: [UIButton] = get3x2ConjButtons() + get2x2ConjButtons() + allConjLabels
@@ -725,6 +725,7 @@ class KeyboardViewController: UIInputViewController {
       scribeKey.set()
       activateBtn(btn: scribeKey)
       styleBtn(btn: scribeKey, title: "Scribe", radius: commandKeyCornerRadius)
+      scribeKey.setTitle("", for: .normal)
       scribeKey.setLeftCornerRadius()
       scribeKey.setShadow()
       commandBar.set()
@@ -971,10 +972,10 @@ class KeyboardViewController: UIInputViewController {
       activateConjugationDisplay()
       setConjugationState()
 
-      styleBtn(btn: conjugateShiftLeftBtn, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: conjugateShiftLeftBtn, color: keyCharColor, iconName: "chevron.left")
-      styleBtn(btn: conjugateShiftRightBtn, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: conjugateShiftRightBtn, color: keyCharColor, iconName: "chevron.right")
+      styleBtn(btn: conjugateShiftLeft, title: "", radius: keyCornerRadius)
+      styleIconBtn(btn: conjugateShiftLeft, color: keyCharColor, iconName: "chevron.left")
+      styleBtn(btn: conjugateShiftRight, title: "", radius: keyCornerRadius)
+      styleIconBtn(btn: conjugateShiftRight, color: keyCharColor, iconName: "chevron.right")
     }
   }
 
