@@ -10,8 +10,8 @@
 # All other copies of words are dropped -  nouns thus take prescedence over adjectives, adjectives over adverbs, etc.
 
 SELECT ?wordCategory ?word WHERE {
-  # We want nouns, proper nouns, verbs, adjectives, adverbs, prepositions and conjunctions
-  VALUES ?wordCategories { wd:Q1084 wd:Q147276 wd:Q36224 wd:Q24905 wd:Q34698 wd:Q380057 wd:Q4833830 wd:Q161873 wd:Q191536 }
+  # We want nouns, proper nouns, pronouns, personal pronouns, verbs, adjectives, adverbs, prepositions, postpositions, conjunctions and articles.
+  VALUES ?wordCategories { wd:Q1084 wd:Q147276 wd:Q36224 wd:Q468801 wd:Q24905 wd:Q34698 wd:Q380057 wd:Q4833830 wd:Q161873 wd:Q191536 wd:Q103184 }
   ?lexeme a ontolex:LexicalEntry ;
     dct:language wd:Q1860 ;
     wikibase:lexicalCategory ?category ;
