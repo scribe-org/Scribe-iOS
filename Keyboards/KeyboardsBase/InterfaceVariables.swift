@@ -107,6 +107,8 @@ func setKeyboardLayout() {
     let setLayoutFxn: () -> Void = keyboardLayoutDict[controllerLanguage]!
     setLayoutFxn()
   }
+
+  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 }
 
 /// Sets the alternates for certain keys given the chosen keyboard.
