@@ -10,6 +10,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 <!-- # Scribe 1.3.0 (WIP)
 
+Scribe's second design sprint with Spencer Arney to finish key styling and overhaul user onboarding!
+
 ### ⌨️ New Keyboards
 
 - Adds Italian and Danish keyboards.
@@ -20,7 +22,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The app screen fields have been made larger and the text size has also been increased.
 - All letter, number and special keys now pop up after being pressed.
 - Characters on keys have been made larger so they reflect the system keyboards better.
-- The app screen corners have been made less round so they fit across more devices.
+- The app screen view corners have been fixed to work across more devices.
 - Settings have been added to the top right of the app screen that allows users to access the home screen, privacy policy, contact options, and a description of how Wikidata links to Scribe.
 - App pages other than the home page have a back arrow in the top left (the user can also swipe back). -->
 
