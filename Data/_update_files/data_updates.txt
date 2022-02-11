@@ -1,5 +1,6 @@
-- French: 11 nouns
-- German: 152 nouns, 1 verb, 1 preposition
-- Portuguese: 19 nouns
-- Spanish: 13 nouns, 6 verbs
-- Swedish: 68 nouns
+- French: 30 nouns, 1 verb
+- German: 215 nouns
+- Portuguese: 66 nouns
+- Russian: 2 nouns
+- Spanish: 925 nouns, 19 verbs
+- Swedish: 10 nouns, 5 verbs

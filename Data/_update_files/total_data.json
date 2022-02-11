@@ -1,28 +1,28 @@
 {
   "French": {
-    "nouns": 15721,
+    "nouns": 15751,
     "verbs": 1241
   },
   "German": {
-    "nouns": 27678,
+    "nouns": 27893,
     "verbs": 3126,
     "prepositions": 189
   },
   "Portuguese": {
-    "nouns": 4549,
+    "nouns": 4615,
     "verbs": 188
   },
   "Russian": {
-    "nouns": 194385,
+    "nouns": 194387,
     "verbs": 11,
     "prepositions": 12
   },
   "Spanish": {
-    "nouns": 8323,
-    "verbs": 93
+    "nouns": 9248,
+    "verbs": 112
   },
   "Swedish": {
-    "nouns": 41170,
-    "verbs": 4133
+    "nouns": 41180,
+    "verbs": 4138
   }
 }

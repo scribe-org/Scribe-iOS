@@ -17,6 +17,7 @@ Usage
     python update_data.py '[languages_in_quotes]' '[word_types_in_quotes]'
 """
 
+
 import ast
 import json
 import os
@@ -60,19 +61,7 @@ if len(sys.argv) == 2:
             """
         )
 
-    if isinstance(arg, list):
-        if set(arg).issubset(current_languages):
-            languages = arg
-        elif set(arg).issubset(updateable_word_types):
-            word_types = arg
-        else:
-            raise ValueError(
-                f"""An invalid argument '{arg}' was specified.
-                For languages, please choose from those found as keys in total_data.json.
-                For grammatical types, please choose from nouns, verbs or prepositions.
-                """
-            )
-    else:
+    if not isinstance(arg, list):
         raise ValueError(
             f"""The argument type of '{arg}' passed to update_data.py is invalid.
             Only lists are allowed, and can be passed via:
@@ -80,6 +69,17 @@ if len(sys.argv) == 2:
             """
         )
 
+    if set(arg).issubset(current_languages):
+        languages = arg
+    elif set(arg).issubset(updateable_word_types):
+        word_types = arg
+    else:
+        raise ValueError(
+            f"""An invalid argument '{arg}' was specified.
+                For languages, please choose from those found as keys in total_data.json.
+                For grammatical types, please choose from nouns, verbs or prepositions.
+                """
+        )
 elif len(sys.argv) == 3:
     languages = sys.argv[1]
     word_types = sys.argv[2]
@@ -88,9 +88,7 @@ elif len(sys.argv) == 3:
 data_dir_elements = []
 
 for path, _, files in os.walk("."):
-    for name in files:
-        data_dir_elements.append(os.path.join(path, name))
-
+    data_dir_elements.extend(os.path.join(path, name) for name in files)
 data_dir_files = [f for f in os.listdir(".") if os.path.isfile(os.path.join(".", f))]
 
 data_dir_dirs = list(
@@ -103,41 +101,39 @@ data_dir_dirs = list(
 
 # Subset current_languages and updateable_word_types if arguments have been passed.
 languages_update = []
-if languages is not None:
-    if (
-        not isinstance(ast.literal_eval(languages), str)
-        and isinstance(ast.literal_eval(languages), list)
-        and set(ast.literal_eval(languages)).issubset(current_languages)
-    ):
-        languages_update = ast.literal_eval(languages)
-    else:
-        raise ValueError(
-            f"""Invalid languages '{languages}' were specified.
+if languages is None:
+    languages_update = current_languages
+
+elif (
+    not isinstance(ast.literal_eval(languages), str)
+    and isinstance(ast.literal_eval(languages), list)
+    and set(ast.literal_eval(languages)).issubset(current_languages)
+):
+    languages_update = ast.literal_eval(languages)
+else:
+    raise ValueError(
+        f"""Invalid languages '{languages}' were specified.
             Please choose from those found as keys in total_data.json.
             Pass arguments via: python update_data.py '[languages_in_quotes]'
             """
-        )
-else:
-    languages_update = current_languages
-
+    )
 word_types_update = []
-if word_types is not None:
-    if (
-        not isinstance(ast.literal_eval(word_types), str)
-        and isinstance(ast.literal_eval(word_types), list)
-        and set(ast.literal_eval(word_types)).issubset(updateable_word_types)
-    ):
-        word_types_update = ast.literal_eval(word_types)
-    else:
-        raise ValueError(
-            f"""Invalid grammatical types '{word_types}' were specified.
+if word_types is None:
+    word_types_update = updateable_word_types
+
+elif (
+    not isinstance(ast.literal_eval(word_types), str)
+    and isinstance(ast.literal_eval(word_types), list)
+    and set(ast.literal_eval(word_types)).issubset(updateable_word_types)
+):
+    word_types_update = ast.literal_eval(word_types)
+else:
+    raise ValueError(
+        f"""Invalid grammatical types '{word_types}' were specified.
             Please choose from nouns, verbs or prepositions.
             Pass arguments via: python update_data.py '[word_types_in_quotes]'
             """
-        )
-else:
-    word_types_update = updateable_word_types
-
+    )
 # Check to see if the language has all zeroes for its data, meaning it's been added.
 new_language_list = []
 for lang in languages_update:
@@ -149,11 +145,12 @@ for lang in languages_update:
 # Derive queries to be ran.
 possible_queries = []
 for d in data_dir_dirs:
-    for target_type in word_types_update:
-        if "./" + d + "/" + target_type in [
-            e[: len("./" + d + "/" + target_type)] for e in data_dir_elements
-        ]:
-            possible_queries.append(d + "/" + target_type)
+    possible_queries.extend(
+        f"{d}/{target_type}"
+        for target_type in word_types_update
+        if f"./{d}/{target_type}"
+        in [e[: len(f"./{d}/{target_type}")] for e in data_dir_elements]
+    )
 
 queries_to_run_lists = [
     [q for q in possible_queries if q[: len(lang)] in languages_update]
@@ -168,7 +165,7 @@ for q in tqdm(queries_to_run, desc="Data updated", unit="dirs",):
     lang = q.split("/")[0]
     target_type = q.split("/")[1]
     query_name = "query" + target_type.title() + ".sparql"
-    query_path = "./" + q + "/" + query_name
+    query_path = f"./{q}/{query_name}"
 
     with open(query_path) as file:
         query_lines = file.readlines()
@@ -236,12 +233,13 @@ def num_add_commas(num):
     """
     num_str = str(num)
 
-    str_list = [i for i in num_str]
+    str_list = list(num_str)
     str_list = str_list[::-1]
 
     str_list_with_commas = [
-        s + "," if i % 3 == 0 and i != 0 else s for i, s in enumerate(str_list)
+        f"{s}," if i % 3 == 0 and i != 0 else s for i, s in enumerate(str_list)
     ]
+
     str_list_with_commas = str_list_with_commas[::-1]
 
     return "".join(str_list_with_commas)

@@ -6455,6 +6455,10 @@
     "plural": "askar",
     "form": "C"
   },
+  "aska": {
+    "plural": "askor",
+    "form": "C"
+  },
   "askar": {
     "plural": "isPlural",
     "form": "PL"
@@ -6468,6 +6472,10 @@
     "form": "C"
   },
   "askkoppar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "askor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10049,7 +10057,7 @@
   },
   "barstol": {
     "plural": "barstolar",
-    "form": "C/PL"
+    "form": "C"
   },
   "barstolar": {
     "plural": "isPlural",
@@ -13320,6 +13328,14 @@
     "form": "C"
   },
   "bildredaktörer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bildskärm": {
+    "plural": "bildskärmar",
+    "form": "C"
+  },
+  "bildskärmar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17259,6 +17275,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bosättningsområde": {
+    "plural": "bosättningsområden",
+    "form": "N"
+  },
+  "bosättningsområden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bot": {
     "plural": "böter",
     "form": "C"
@@ -21001,7 +21025,7 @@
   },
   "bärstol": {
     "plural": "barstolar",
-    "form": "C"
+    "form": "C/PL"
   },
   "bärsärk": {
     "plural": "bärsärkar",
@@ -33100,12 +33124,8 @@
     "form": "PL"
   },
   "fax": {
-    "plural": "faxar",
-    "form": "C/N"
-  },
-  "faxar": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "fax",
+    "form": "C/N/PL"
   },
   "feber": {
     "plural": "febrar",
@@ -37253,11 +37273,11 @@
   },
   "fordran": {
     "plural": "fordringar",
-    "form": "C"
+    "form": "C/PL"
   },
   "fordring": {
     "plural": "fordringar",
-    "form": "C/PL"
+    "form": "C"
   },
   "fordringar": {
     "plural": "isPlural",
@@ -53834,6 +53854,14 @@
   "hobbyrum": {
     "plural": "hobbyrum",
     "form": "N/PL"
+  },
+  "hobbyverksamhet": {
+    "plural": "hobbyverksamheter",
+    "form": "C"
+  },
+  "hobbyverksamheter": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "hockeylag": {
     "plural": "hockeylag",
@@ -73993,7 +74021,7 @@
   },
   "kull": {
     "plural": "kullar",
-    "form": "C/PL"
+    "form": "C"
   },
   "kullar": {
     "plural": "isPlural",
@@ -74001,7 +74029,7 @@
   },
   "kulle": {
     "plural": "kullar",
-    "form": "C"
+    "form": "C/PL"
   },
   "kulled": {
     "plural": "kulleder",
@@ -75090,6 +75118,10 @@
   "kusthamnar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "kusthav": {
+    "plural": "kusthav",
+    "form": "N/PL"
   },
   "kustlandskap": {
     "plural": "kustlandskap",
@@ -77876,8 +77908,12 @@
     "form": "PL"
   },
   "lag": {
-    "plural": "lag",
-    "form": "C/N/PL"
+    "plural": "lagar",
+    "form": "C/N"
+  },
+  "lagar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lagarbete": {
     "plural": "lagarbeten",
@@ -100026,6 +100062,14 @@
   "ordförande": {
     "plural": "ordförande",
     "form": "C/PL"
+  },
+  "ordförandeland": {
+    "plural": "ordförandeländer",
+    "form": "N"
+  },
+  "ordförandeländer": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "ordförandeskap": {
     "plural": "ordförandeskap",
@@ -139317,10 +139361,10 @@
   },
   "taktik": {
     "plural": "taktiker",
-    "form": "C/PL"
+    "form": "C"
   },
   "taktiker": {
-    "plural": "taktiker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "taktpinnar": {
@@ -153092,8 +153136,8 @@
     "form": "PL"
   },
   "val": {
-    "plural": "valar",
-    "form": "C/N"
+    "plural": "val",
+    "form": "C/N/PL"
   },
   "valack": {
     "plural": "valacker",
@@ -153116,10 +153160,6 @@
     "form": "C"
   },
   "valapparater": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "valar": {
     "plural": "isPlural",
     "form": "PL"
   },

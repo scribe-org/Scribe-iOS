@@ -1261,7 +1261,7 @@
   },
   "aimer": {
     "presFPS": "aime",
-    "presSPS": "aimez",
+    "presSPS": "aimes",
     "presTPS": "aime",
     "presFPP": "aimons",
     "presSPP": "",
@@ -3460,6 +3460,26 @@
     "impTPP": ""
   },
   "bouillir": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
+  "boumer": {
     "presFPS": "",
     "presSPS": "",
     "presTPS": "",

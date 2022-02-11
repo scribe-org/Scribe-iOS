@@ -2049,6 +2049,16 @@
     "passivePresent": "avkortas",
     "passivePreterite": "avkortades"
   },
+  "avkraga": {
+    "imperative": "avkraga",
+    "activeSupine": "avkragat",
+    "activePresent": "avkragar",
+    "activePreterite": "avkragade",
+    "passiveInfinitive": "avkragas",
+    "passiveSupine": "avkragats",
+    "passivePresent": "avkragas",
+    "passivePreterite": "avkragades"
+  },
   "avkriminalisera": {
     "imperative": "avkriminalisera",
     "activeSupine": "avkriminaliserat",
@@ -14869,6 +14879,16 @@
     "passivePresent": "hattas",
     "passivePreterite": "hattades"
   },
+  "haverera": {
+    "imperative": "",
+    "activeSupine": "",
+    "activePresent": "",
+    "activePreterite": "",
+    "passiveInfinitive": "",
+    "passiveSupine": "",
+    "passivePresent": "",
+    "passivePreterite": ""
+  },
   "hedra": {
     "imperative": "hedra",
     "activeSupine": "hedrat",
@@ -21869,6 +21889,16 @@
     "passivePresent": "luggas",
     "passivePreterite": "luggades"
   },
+  "lugna": {
+    "imperative": "lugna",
+    "activeSupine": "lugnat",
+    "activePresent": "lugnar",
+    "activePreterite": "lugnade",
+    "passiveInfinitive": "lugnas",
+    "passiveSupine": "lugnats",
+    "passivePresent": "lugnas",
+    "passivePreterite": "lugnades"
+  },
   "lukta": {
     "imperative": "lukta",
     "activeSupine": "luktat",
@@ -22698,6 +22728,16 @@
     "passiveSupine": "maskindiskats",
     "passivePresent": "maskindiskas",
     "passivePreterite": "maskindiskades"
+  },
+  "massakrera": {
+    "imperative": "massakrera",
+    "activeSupine": "massakrerat",
+    "activePresent": "massakrerar",
+    "activePreterite": "massakrerade",
+    "passiveInfinitive": "massakreras",
+    "passiveSupine": "massakrerats",
+    "passivePresent": "massakreras",
+    "passivePreterite": "massakrerades"
   },
   "massera": {
     "imperative": "massera",
@@ -34898,6 +34938,16 @@
     "passiveSupine": "särbehandlats",
     "passivePresent": "särbehandlas",
     "passivePreterite": "särbehandlades"
+  },
+  "särredovisa": {
+    "imperative": "",
+    "activeSupine": "",
+    "activePresent": "",
+    "activePreterite": "",
+    "passiveInfinitive": "",
+    "passiveSupine": "",
+    "passivePresent": "",
+    "passivePreterite": ""
   },
   "särskilja": {
     "imperative": "särskilj",

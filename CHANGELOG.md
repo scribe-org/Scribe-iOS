@@ -29,6 +29,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 30 nouns, 1 verb
+- German: 215 nouns
+- Portuguese: 66 nouns
+- Russian: 2 nouns
+- Spanish: 925 nouns, 19 verbs
+- Swedish: 10 nouns, 5 verbs
+
 ### ✨ New Features
 
 - The keyboard switches back to letter keys after all appropriate symbols followed by space.

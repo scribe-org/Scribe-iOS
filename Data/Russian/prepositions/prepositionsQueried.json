@@ -1,5 +1,22 @@
 [
   {
+    "preposition": "в"
+  },
+  {
+    "preposition": "въ"
+  },
+  {
+    "preposition": "на",
+    "case": "Q146078"
+  },
+  {
+    "preposition": "на",
+    "case": "Q2114906"
+  },
+  {
+    "preposition": "за"
+  },
+  {
     "preposition": "из",
     "case": "Q146233"
   },
@@ -21,23 +38,6 @@
   },
   {
     "preposition": "минус"
-  },
-  {
-    "preposition": "в"
-  },
-  {
-    "preposition": "въ"
-  },
-  {
-    "preposition": "на",
-    "case": "Q146078"
-  },
-  {
-    "preposition": "на",
-    "case": "Q2114906"
-  },
-  {
-    "preposition": "за"
   },
   {
     "preposition": "после",
