@@ -1,6 +1,6 @@
 name: ❓ Question
 description: Ask a question or start a discussion.
-labels: "question"
+labels: ["question"]
 body:
   - type: checkboxes
     id: terms

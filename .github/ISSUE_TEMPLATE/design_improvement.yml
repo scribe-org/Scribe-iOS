@@ -1,13 +1,13 @@
-name: ✨ Feature request
-description: Have a new idea or feature for Scribe-iOS? Please suggest!
-labels: ["feature"]
+name: 🎨 Design improvement
+description: Make a suggestion for Scribe's UX/UI designs.
+labels: ["design"]
 body:
   - type: checkboxes
     id: terms
     attributes:
       label: Terms
       options:
-        - label: I have searched [open and closed feature requests](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+label%3Afeature)
+        - label: I have searched [open and closed design issues](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+label%3Adesign)
           required: true
         - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true

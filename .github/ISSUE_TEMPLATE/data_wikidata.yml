@@ -1,6 +1,6 @@
 name: 🗃️ Data and Wikidata
 description: Help Scribe bring open-source language data to your fingertips.
-labels: "data"
+labels: ["data"]
 body:
   - type: checkboxes
     id: terms

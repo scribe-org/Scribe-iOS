@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Report a bug to help us improve Scribe-iOS.
-labels: "bug"
+labels: ["bug"]
 body:
   - type: checkboxes
     id: new-bug
@@ -18,7 +18,6 @@ body:
         A concise description of what you're experiencing and what you expected to happen.
     validations:
       required: true
-      body:
   - type: dropdown
     id: device
     attributes:
