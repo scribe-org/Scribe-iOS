@@ -67,12 +67,12 @@ The following table shows the supported languages and the amount of data availab
 
 | Languages  |   Nouns | Verbs | Translations | Adjectives | Prepositions |
 | :--------- | ------: | ----: | -----------: | ---------: | -----------: |
-| French     |  15,751 | 1,242 |       67,609 |          - |            - |
-| German     |  27,893 | 3,126 |       67,609 |          - |          189 |
-| Portuguese |   4,615 |   188 |       67,609 |          - |            - |
-| Russian    | 194,387 |    11 |       67,609 |          - |           12 |
-| Spanish    |   9,248 |   112 |       67,609 |          - |            - |
-| Swedish    |  41,180 | 4,138 |       67,609 |          - |            - |
+| French     |  15,751 | 1,242 |       67,650 |          - |            - |
+| German     |  27,893 | 3,126 |       67,650 |          - |          189 |
+| Portuguese |   4,615 |   188 |       67,650 |          - |            - |
+| Russian    | 194,387 |    11 |       67,650 |          - |           12 |
+| Spanish    |   9,248 |   112 |       67,650 |          - |            - |
+| Swedish    |  41,180 | 4,138 |       67,650 |          - |            - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
