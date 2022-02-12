@@ -1,13 +1,13 @@
-# All Norwegian (Q9043) nouns, their plural and their gender.
+# All Nynorsk (Norwegian) (Q25164) nouns, their plural and their gender.
 # Enter this query at https://query.wikidata.org/.
-# Note that this query is for Bokmål (Q25167) rather than Nynorsk (Q25164).
+# Note that this query is for Nynorsk (Q25164) rather than Bokmål (Q25167).
 
 SELECT DISTINCT ?singular ?plural ?gender WHERE {
 
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q25167 ;
+    dct:language wd:Q25164 ;
     wikibase:lexicalCategory ?noun .
   FILTER(?noun = ?nounTypes)
 

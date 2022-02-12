@@ -1,10 +1,10 @@
-# All Norwegian (Q9043) verbs.
+# All Nynorsk (Norwegian) (Q25164) verbs.
 # Enter this query at https://query.wikidata.org/.
-# Note that this query is for Bokmål (Q25167) rather than Nynorsk (Q25164).
+# Note that this query is for Nynorsk (Q25164) rather than Bokmål (Q25167).
 
 SELECT ?lexeme ?infinitive WHERE {
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q25167 ;
+    dct:language wd:Q25164 ;
     wikibase:lexicalCategory wd:Q24905 .
 
   # Infinitive (required)
