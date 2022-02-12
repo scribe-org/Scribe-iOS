@@ -14,7 +14,7 @@ Scribe's second design sprint with Spencer Arney focussed on key styling and onb
 
 ### ⌨️ New Keyboards
 
-<!-- - Adds Italian and Danish keyboards. -->
+<!-- - Adds an Italian keyboard. -->
 
 ### 🎨 Design Changes
 
