@@ -792,25 +792,25 @@ class KeyboardViewController: UIInputViewController {
           }
           if DeviceType.isPhone
             && key == "a"
-            && (controllerLanguage == "Portuguese" || switchInput == true) {
+            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
             leftPadding = buttonWidth / 4
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "a"
-            && (controllerLanguage == "Portuguese" || switchInput == true) {
+            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "@"
-            && (controllerLanguage == "Portuguese" || switchInput == true) {
+            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "@")
           }
           if DeviceType.isPad
             && key == "€"
-            && (controllerLanguage == "Portuguese" || switchInput == true) {
+            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
@@ -879,7 +879,7 @@ class KeyboardViewController: UIInputViewController {
           }
           if DeviceType.isPhone
             && key == "l"
-            && (controllerLanguage == "Portuguese" || switchInput == true) {
+            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
             rightPadding = buttonWidth / 4
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
@@ -1087,6 +1087,8 @@ class KeyboardViewController: UIInputViewController {
         frConjugationStateLeft()
       } else if controllerLanguage == "German" {
         deConjugationStateLeft()
+      } else if controllerLanguage == "Italian" {
+        itConjugationStateLeft()
       } else if controllerLanguage == "Portuguese" {
         ptConjugationStateLeft()
       } else if controllerLanguage == "Russian" {
@@ -1104,6 +1106,8 @@ class KeyboardViewController: UIInputViewController {
         frConjugationStateRight()
       } else if controllerLanguage == "German" {
         deConjugationStateRight()
+      } else if controllerLanguage == "Italian" {
+        itConjugationStateRight()
       } else if controllerLanguage == "Portuguese" {
         ptConjugationStateRight()
       } else if controllerLanguage == "Russian" {

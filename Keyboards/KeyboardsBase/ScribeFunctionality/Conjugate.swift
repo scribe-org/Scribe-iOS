@@ -10,6 +10,7 @@ import UIKit
 let keyboardConjTitleDict: [String: Any] = [
   "French": frGetConjugationTitle,
   "German": deGetConjugationTitle,
+  "Italian": itGetConjugationTitle,
   "Portuguese": ptGetConjugationTitle,
   "Russian": ruGetConjugationTitle,
   "Spanish": esGetConjugationTitle,
@@ -20,6 +21,7 @@ let keyboardConjTitleDict: [String: Any] = [
 let keyboardConjStateDict: [String: Any] = [
   "French": frGetConjugationState,
   "German": deGetConjugationState,
+  "Italian": itGetConjugationState,
   "Portuguese": ptGetConjugationState,
   "Russian": ruGetConjugationState,
   "Spanish": esGetConjugationState,
@@ -30,6 +32,7 @@ let keyboardConjStateDict: [String: Any] = [
 let keyboardConjLabelDict: [String: Any] = [
   "French": frSetConjugationLabels,
   "German": deSetConjugationLabels,
+  "Italian": itSetConjugationLabels,
   "Portuguese": ptSetConjugationLabels,
   "Russian": ruSetConjugationLabels,
   "Spanish": esSetConjugationLabels,

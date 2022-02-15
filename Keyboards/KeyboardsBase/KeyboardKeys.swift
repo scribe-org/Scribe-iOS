@@ -185,7 +185,7 @@ class KeyboardKey: UIButton {
       || self.key == "return"
       || self.key == "hideKeyboard" {
       if self.key == "return"
-          && ( controllerLanguage == "Portuguese" || switchInput == true )
+          && ( controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true )
           && self.row == 1
           && DeviceType.isPad {
         self.layer.setValue(true, forKey: "isSpecial")
