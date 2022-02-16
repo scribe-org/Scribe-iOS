@@ -65,14 +65,14 @@ Scribe's goal is functional, feature-rich keyboards for all languages. Check [Sc
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
 
-| Languages  |   Nouns | Verbs | Translations | Adjectives | Prepositions |
-| :--------- | ------: | ----: | -----------: | ---------: | -----------: |
-| French     |  15,751 | 1,242 |       67,650 |          - |            - |
-| German     |  27,893 | 3,126 |       67,650 |          - |          189 |
-| Portuguese |   4,615 |   188 |       67,650 |          - |            - |
-| Russian    | 194,387 |    11 |       67,650 |          - |           12 |
-| Spanish    |   9,248 |   112 |       67,650 |          - |            - |
-| Swedish    |  41,180 | 4,138 |       67,650 |          - |            - |
+| Languages  |   Nouns | Verbs | Translations\* | Adjectives† | Prepositions‡ |
+| :--------- | ------: | ----: | -------------: | ----------: | ------------: |
+| French     |  15,751 | 1,242 |         67,650 |           - |             - |
+| German     |  27,893 | 3,126 |         67,650 |           - |           189 |
+| Portuguese |   4,615 |   188 |         67,650 |           - |             - |
+| Russian    | 194,387 |    11 |         67,650 |           - |            12 |
+| Spanish    |   9,248 |   112 |         67,650 |           - |             - |
+| Swedish    |  41,180 | 4,138 |         67,650 |           - |             - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
