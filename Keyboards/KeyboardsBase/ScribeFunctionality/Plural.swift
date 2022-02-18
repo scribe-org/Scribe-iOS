@@ -38,7 +38,7 @@ func queryPlural(commandBar: UILabel) {
       }
     } else {
       proxy.insertText(noun + " ")
-      commandBar.text = commandPromptSpacing + "Already plural"
+      commandBar.text = commandPromptSpacing + isAlreadyPluralMessage
       invalidState = true
       isAlreadyPluralState = true
     }
