@@ -1,0 +1,3094 @@
+{
+  "Israele": {
+    "plural": "",
+    "form": ""
+  },
+  "Nanosonde": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Propulsioni a curvatura": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "accappatoi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "accappatoio": {
+    "plural": "accappatoi",
+    "form": "M"
+  },
+  "acciai": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "acciaio": {
+    "plural": "acciai",
+    "form": "M"
+  },
+  "acqua": {
+    "plural": "acque",
+    "form": "F"
+  },
+  "acque": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "agganci": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aggancio": {
+    "plural": "agganci",
+    "form": "M"
+  },
+  "alimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alimento": {
+    "plural": "alimenti",
+    "form": "M"
+  },
+  "allenamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "allenamento": {
+    "plural": "allenamenti",
+    "form": "M"
+  },
+  "altoparlante": {
+    "plural": "altoparlanti",
+    "form": "M"
+  },
+  "altoparlanti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ambientaccio": {
+    "plural": "ambienti",
+    "form": "M/PL"
+  },
+  "ambiente": {
+    "plural": "ambienti",
+    "form": "M"
+  },
+  "ambienti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ambientino": {
+    "plural": "ambienti",
+    "form": "M/PL"
+  },
+  "americanizzazione": {
+    "plural": "americanizzazioni",
+    "form": "F"
+  },
+  "americanizzazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amica": {
+    "plural": "amiche",
+    "form": "F"
+  },
+  "amiche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amici": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amicizie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amico": {
+    "plural": "amici",
+    "form": "M"
+  },
+  "ammutinamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ammutinamento": {
+    "plural": "ammutinamenti",
+    "form": "M"
+  },
+  "amori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anca": {
+    "plural": "anche",
+    "form": "F"
+  },
+  "anche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "animale": {
+    "plural": "animali",
+    "form": "M"
+  },
+  "animali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "annata": {
+    "plural": "annate",
+    "form": "F"
+  },
+  "annate": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anno": {
+    "plural": "anni",
+    "form": "M"
+  },
+  "ape": {
+    "plural": "api",
+    "form": "F"
+  },
+  "api": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "apicoltore": {
+    "plural": "apicoltori",
+    "form": "M"
+  },
+  "apicoltori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "apicoltura": {
+    "plural": "",
+    "form": "F"
+  },
+  "appartamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "appartamento": {
+    "plural": "appartamenti",
+    "form": "M"
+  },
+  "appigli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "appiglio": {
+    "plural": "appigli",
+    "form": "M"
+  },
+  "applicazione": {
+    "plural": "applicazioni",
+    "form": "F"
+  },
+  "applicazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "apprendista": {
+    "plural": "apprendisti",
+    "form": "M"
+  },
+  "apprendisti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aquilina": {
+    "plural": "aquiline",
+    "form": "F"
+  },
+  "aquiline": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aquilini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aquilino": {
+    "plural": "aquilini",
+    "form": "M"
+  },
+  "arancia": {
+    "plural": "arancie",
+    "form": "F"
+  },
+  "arancie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aria": {
+    "plural": "arie",
+    "form": ""
+  },
+  "arie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arma": {
+    "plural": "arme",
+    "form": "F"
+  },
+  "arme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arnia": {
+    "plural": "arnie",
+    "form": "F"
+  },
+  "arnie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ascella": {
+    "plural": "ascelle",
+    "form": "F"
+  },
+  "ascelle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "asteroide": {
+    "plural": "asteroidi",
+    "form": ""
+  },
+  "asteroidi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "autorità": {
+    "plural": "autorità",
+    "form": "PL"
+  },
+  "autunni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "autunno": {
+    "plural": "autunni",
+    "form": "M"
+  },
+  "ava": {
+    "plural": "ave",
+    "form": "F"
+  },
+  "ave": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "avi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "avo": {
+    "plural": "avi",
+    "form": "M"
+  },
+  "bacchetta": {
+    "plural": "bacchette",
+    "form": "F"
+  },
+  "bacchette": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bacchettina": {
+    "plural": "bacchette",
+    "form": "F/PL"
+  },
+  "banalità": {
+    "plural": "banalità",
+    "form": "PL"
+  },
+  "banana": {
+    "plural": "banane",
+    "form": "F"
+  },
+  "banane": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "barca": {
+    "plural": "barche",
+    "form": "F"
+  },
+  "barche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "barista": {
+    "plural": "bariste",
+    "form": "M"
+  },
+  "bariste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bastie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bastioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bellezza": {
+    "plural": "bellezze",
+    "form": "F"
+  },
+  "bellezze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bergamotta": {
+    "plural": "bergamotte",
+    "form": "F"
+  },
+  "bergamotte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "biancheria": {
+    "plural": "",
+    "form": "F"
+  },
+  "birra": {
+    "plural": "birre",
+    "form": "F"
+  },
+  "birre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "blusa": {
+    "plural": "bluse",
+    "form": "F"
+  },
+  "bluse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bottega": {
+    "plural": "botteghe",
+    "form": "F/PL"
+  },
+  "botteghe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "botteghetta": {
+    "plural": "botteghe",
+    "form": "F"
+  },
+  "brucaiola": {
+    "plural": "brucaiole",
+    "form": "F"
+  },
+  "brucaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "brucaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "brucaiolo": {
+    "plural": "brucaioli",
+    "form": "M"
+  },
+  "bussola": {
+    "plural": "bussole",
+    "form": "F/PL"
+  },
+  "bussole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bussoletta": {
+    "plural": "bussole",
+    "form": "F"
+  },
+  "bussolina": {
+    "plural": "bussole",
+    "form": "F/PL"
+  },
+  "cacca": {
+    "plural": "cacche",
+    "form": "F"
+  },
+  "cacche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cagna": {
+    "plural": "cagne",
+    "form": "M/PL"
+  },
+  "cagne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cagnetta": {
+    "plural": "cagne",
+    "form": "M"
+  },
+  "cagnetto": {
+    "plural": "cagne",
+    "form": "M/PL"
+  },
+  "cagnolina": {
+    "plural": "cagne",
+    "form": "M/PL"
+  },
+  "cagnolino": {
+    "plural": "cagne",
+    "form": "M/PL"
+  },
+  "caloria": {
+    "plural": "calorie",
+    "form": "F"
+  },
+  "calorie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "camicia": {
+    "plural": "camicie",
+    "form": "F"
+  },
+  "camicie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "camminata": {
+    "plural": "",
+    "form": "F"
+  },
+  "campeggi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "campeggio": {
+    "plural": "campeggi",
+    "form": "M"
+  },
+  "cane": {
+    "plural": "cagne",
+    "form": "M/PL"
+  },
+  "caos": {
+    "plural": "",
+    "form": ""
+  },
+  "capezzoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "capezzolo": {
+    "plural": "capezzoli",
+    "form": "M"
+  },
+  "capi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "capo": {
+    "plural": "capi",
+    "form": "M"
+  },
+  "capodanni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "capodanno": {
+    "plural": "capodanni",
+    "form": "M"
+  },
+  "cappelli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cappello": {
+    "plural": "cappelli",
+    "form": "M"
+  },
+  "cappotti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cappotto": {
+    "plural": "cappotti",
+    "form": "M"
+  },
+  "cappucci": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cappuccini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cappuccino": {
+    "plural": "cappuccini",
+    "form": "M"
+  },
+  "cappuccio": {
+    "plural": "cappucci",
+    "form": "M"
+  },
+  "carrozzeria": {
+    "plural": "",
+    "form": "F"
+  },
+  "casa": {
+    "plural": "case",
+    "form": "F"
+  },
+  "caschi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "casco": {
+    "plural": "caschi",
+    "form": "M"
+  },
+  "case": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cassa": {
+    "plural": "casse",
+    "form": "F"
+  },
+  "casse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "castelli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "castello": {
+    "plural": "castelli",
+    "form": "M"
+  },
+  "cazzi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cazzo": {
+    "plural": "cazzi",
+    "form": "M"
+  },
+  "cedri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cedro": {
+    "plural": "cedri",
+    "form": "M"
+  },
+  "cera": {
+    "plural": "cere",
+    "form": "F"
+  },
+  "cerbottane": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cere": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cereale": {
+    "plural": "cereali",
+    "form": "M"
+  },
+  "cereali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cerotti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cerotto": {
+    "plural": "cerotti",
+    "form": "M"
+  },
+  "chiocciolina": {
+    "plural": "chioccioline",
+    "form": "F"
+  },
+  "chioccioline": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "chiocciolini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "chiocciolino": {
+    "plural": "chiocciolini",
+    "form": "M"
+  },
+  "chirurgia": {
+    "plural": "chirurgie",
+    "form": "F"
+  },
+  "chirurgie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cibi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cibo": {
+    "plural": "cibi",
+    "form": "M"
+  },
+  "cifra": {
+    "plural": "cifre",
+    "form": "F"
+  },
+  "cifre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cinghia": {
+    "plural": "cinghie",
+    "form": "F"
+  },
+  "cinghie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "citazione": {
+    "plural": "citazioni",
+    "form": "F"
+  },
+  "citazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cittadini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cognata": {
+    "plural": "cognate",
+    "form": "F"
+  },
+  "cognate": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cognati": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cognato": {
+    "plural": "cognati",
+    "form": "M"
+  },
+  "coinquilina": {
+    "plural": "coinquiline",
+    "form": "F"
+  },
+  "coinquiline": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coinquilini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coinquilino": {
+    "plural": "coinquilini",
+    "form": "M"
+  },
+  "colazione": {
+    "plural": "colazioni",
+    "form": "F"
+  },
+  "colazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "collaboratore": {
+    "plural": "collaboratori",
+    "form": "M"
+  },
+  "collaboratori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "collega": {
+    "plural": "colleghi",
+    "form": "M"
+  },
+  "colleghi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "collera": {
+    "plural": "collere",
+    "form": "F"
+  },
+  "collere": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "colomba": {
+    "plural": "colombe",
+    "form": "F"
+  },
+  "colombe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "combattimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "combattimento": {
+    "plural": "combattimenti",
+    "form": "M"
+  },
+  "compagni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "compagno": {
+    "plural": "compagni",
+    "form": "M"
+  },
+  "compressa": {
+    "plural": "compresse",
+    "form": "F"
+  },
+  "compresse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "concerti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "concerto": {
+    "plural": "concerti",
+    "form": "M"
+  },
+  "concetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "concetto": {
+    "plural": "concetti",
+    "form": "M"
+  },
+  "condizione": {
+    "plural": "condizioni",
+    "form": "F"
+  },
+  "condizioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "confeditrice": {
+    "plural": "confessori",
+    "form": ""
+  },
+  "confessora": {
+    "plural": "confessore",
+    "form": ""
+  },
+  "confessore": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "confessori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "confetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coniuge": {
+    "plural": "coniugi",
+    "form": "M"
+  },
+  "coniugi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "conoscente": {
+    "plural": "conoscenti",
+    "form": "M"
+  },
+  "conoscenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "contatti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "contatto": {
+    "plural": "contatti",
+    "form": "M"
+  },
+  "corda": {
+    "plural": "corde",
+    "form": "F"
+  },
+  "corde": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "corpi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "corpo": {
+    "plural": "corpi",
+    "form": "M"
+  },
+  "corrispondente": {
+    "plural": "corrispondente",
+    "form": "M/PL"
+  },
+  "corsetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "corsetto": {
+    "plural": "corsetti",
+    "form": "M"
+  },
+  "cosa": {
+    "plural": "cose",
+    "form": "F"
+  },
+  "cose": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "costruzione": {
+    "plural": "costruzioni",
+    "form": "F"
+  },
+  "costruzioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "crimine": {
+    "plural": "crimini",
+    "form": "M"
+  },
+  "crimini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cucina": {
+    "plural": "cucine",
+    "form": "F"
+  },
+  "cucine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cuoi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cura": {
+    "plural": "cure",
+    "form": "F"
+  },
+  "cure": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cuscini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cuscino": {
+    "plural": "cuscini",
+    "form": "M"
+  },
+  "destra": {
+    "plural": "",
+    "form": "F"
+  },
+  "dipendente": {
+    "plural": "dipendenti",
+    "form": "M"
+  },
+  "dipendenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dirigente": {
+    "plural": "dirigenti",
+    "form": ""
+  },
+  "dirigenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "discendente": {
+    "plural": "discendenti",
+    "form": "M"
+  },
+  "discendenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "disposizione": {
+    "plural": "disposizioni",
+    "form": "F"
+  },
+  "disposizioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "diti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dito": {
+    "plural": "diti",
+    "form": "M"
+  },
+  "doccia": {
+    "plural": "doccie",
+    "form": "F"
+  },
+  "doccie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "doge": {
+    "plural": "dogi",
+    "form": "M"
+  },
+  "dogi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "donna": {
+    "plural": "donne",
+    "form": "F"
+  },
+  "donne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dragaiola": {
+    "plural": "dragaiole",
+    "form": "F"
+  },
+  "dragaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dragaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dragaiolo": {
+    "plural": "dragaioli",
+    "form": "M"
+  },
+  "dí": {
+    "plural": "dí",
+    "form": "PL"
+  },
+  "effetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "effetto": {
+    "plural": "effetti",
+    "form": "M"
+  },
+  "energia": {
+    "plural": "energie",
+    "form": "F"
+  },
+  "energie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "equipaggi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "equipaggio": {
+    "plural": "equipaggi",
+    "form": "M"
+  },
+  "erba": {
+    "plural": "erbe",
+    "form": "F"
+  },
+  "erbe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "esecuzione": {
+    "plural": "esecuzioni",
+    "form": "F"
+  },
+  "esecuzioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "esercitazione": {
+    "plural": "esercitazioni",
+    "form": "F"
+  },
+  "esercitazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "esperienza": {
+    "plural": "esperienze",
+    "form": "F"
+  },
+  "esperienze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "farfalla": {
+    "plural": "farfalle",
+    "form": "F"
+  },
+  "farfalle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "figliastra": {
+    "plural": "figliastre",
+    "form": "F"
+  },
+  "figliastre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "figliastri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "figliastro": {
+    "plural": "figliastri",
+    "form": "M"
+  },
+  "figliocce": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "figliocci": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "figlioccia": {
+    "plural": "figliocce",
+    "form": "F"
+  },
+  "figlioccio": {
+    "plural": "figliocci",
+    "form": "M"
+  },
+  "film": {
+    "plural": "film",
+    "form": "M/PL"
+  },
+  "filosofia": {
+    "plural": "filosofie",
+    "form": "F"
+  },
+  "filosofie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fine": {
+    "plural": "fini",
+    "form": "F/M"
+  },
+  "fini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fiocchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fiocco": {
+    "plural": "fiocchi",
+    "form": "M"
+  },
+  "fiuti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fiuto": {
+    "plural": "fiuti",
+    "form": ""
+  },
+  "flussi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "flusso": {
+    "plural": "flussi",
+    "form": "M"
+  },
+  "fontana": {
+    "plural": "fontane",
+    "form": "F"
+  },
+  "fontane": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "foresta": {
+    "plural": "foreste",
+    "form": "F"
+  },
+  "foreste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "forma": {
+    "plural": "forme",
+    "form": "F"
+  },
+  "forme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "frasaccia": {
+    "plural": "frasi",
+    "form": "F"
+  },
+  "frase": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "frasetta": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "frasettina": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "frasi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "frasina": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "frasuccia": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "frasucola": {
+    "plural": "frasi",
+    "form": "F/PL"
+  },
+  "fratelli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fratello": {
+    "plural": "fratelli",
+    "form": "M"
+  },
+  "fuochetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fuochetto": {
+    "plural": "fuochi",
+    "form": "M"
+  },
+  "fuochi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fuochino": {
+    "plural": "fuochi",
+    "form": "M/PL"
+  },
+  "fuoco": {
+    "plural": "fuochetti",
+    "form": "M"
+  },
+  "galassia": {
+    "plural": "galassie",
+    "form": ""
+  },
+  "galassie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gamba": {
+    "plural": "gambe",
+    "form": "F"
+  },
+  "gambe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gatti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gatto": {
+    "plural": "gatti",
+    "form": "M"
+  },
+  "gattopardi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gattopardo": {
+    "plural": "gattopardi",
+    "form": "M"
+  },
+  "gelatina": {
+    "plural": "gelatine",
+    "form": "F"
+  },
+  "gelatine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "genitore": {
+    "plural": "genitori",
+    "form": "M"
+  },
+  "genitori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giocattoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giocattolo": {
+    "plural": "giocattoli",
+    "form": "M"
+  },
+  "gioia": {
+    "plural": "",
+    "form": "F"
+  },
+  "giornale": {
+    "plural": "giornali",
+    "form": "M"
+  },
+  "giornali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giorni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giorno": {
+    "plural": "giorni",
+    "form": "M"
+  },
+  "giraffa": {
+    "plural": "giraffe",
+    "form": "F"
+  },
+  "giraffe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giraffina": {
+    "plural": "giraffine",
+    "form": "F"
+  },
+  "giraffine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giraffini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "giraffino": {
+    "plural": "giraffini",
+    "form": "M"
+  },
+  "gola": {
+    "plural": "gole",
+    "form": "F"
+  },
+  "gole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gomma": {
+    "plural": "gomme",
+    "form": "F"
+  },
+  "gomme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gonna": {
+    "plural": "gonne",
+    "form": "F"
+  },
+  "gonne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "guancia": {
+    "plural": "guancie",
+    "form": "F"
+  },
+  "guancie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "guerre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "imbarcazione": {
+    "plural": "imbarcazioni",
+    "form": "F"
+  },
+  "imbarcazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "impacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "impacco": {
+    "plural": "impacchi",
+    "form": "M"
+  },
+  "inscatolamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "inscatolamento": {
+    "plural": "inscatolamenti",
+    "form": "M"
+  },
+  "inseme": {
+    "plural": "insiemi",
+    "form": "M/PL"
+  },
+  "insieme": {
+    "plural": "insiemi",
+    "form": "M"
+  },
+  "insiemi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "istriciaiola": {
+    "plural": "istriciaiole",
+    "form": "F"
+  },
+  "istriciaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "istriciaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "istriciaiolo": {
+    "plural": "istriciaioli",
+    "form": "M"
+  },
+  "lanci": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lancio": {
+    "plural": "lanci",
+    "form": "M"
+  },
+  "lanterna": {
+    "plural": "lanterne",
+    "form": "F"
+  },
+  "lanterne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "latte": {
+    "plural": "latti",
+    "form": "M"
+  },
+  "latti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lavaggi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lavaggio": {
+    "plural": "lavaggi",
+    "form": "M"
+  },
+  "lavori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lavoro": {
+    "plural": "lavori",
+    "form": "M"
+  },
+  "lazzari": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lecaiola": {
+    "plural": "lecaiole",
+    "form": "F"
+  },
+  "lecaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lecaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lecaiolo": {
+    "plural": "lecaioli",
+    "form": "M"
+  },
+  "letti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "libro": {
+    "plural": "",
+    "form": "M"
+  },
+  "lichene": {
+    "plural": "licheni",
+    "form": "M"
+  },
+  "licheni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "linguette": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "linguine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "linimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "linimento": {
+    "plural": "linimenti",
+    "form": "M"
+  },
+  "lista": {
+    "plural": "liste",
+    "form": ""
+  },
+  "liste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lupaiola": {
+    "plural": "lupaiole",
+    "form": "F"
+  },
+  "lupaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lupaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lupaiolo": {
+    "plural": "lupaioli",
+    "form": "M"
+  },
+  "lussi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lusso": {
+    "plural": "lussi",
+    "form": "M"
+  },
+  "lutti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lutto": {
+    "plural": "lutti",
+    "form": "M"
+  },
+  "macchina": {
+    "plural": "macchine",
+    "form": "F"
+  },
+  "macchine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "madrina": {
+    "plural": "madrine",
+    "form": "F"
+  },
+  "madrine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "maglione": {
+    "plural": "maglioni",
+    "form": "M"
+  },
+  "maglioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mani": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mano": {
+    "plural": "mani",
+    "form": "F"
+  },
+  "mappa": {
+    "plural": "mappe",
+    "form": "F"
+  },
+  "mappe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mariti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marito": {
+    "plural": "mariti",
+    "form": "M"
+  },
+  "marroni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mascherina": {
+    "plural": "mascherine",
+    "form": "F"
+  },
+  "mascherine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "masgalani": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "masgalano": {
+    "plural": "masgalani",
+    "form": "M"
+  },
+  "matrigna": {
+    "plural": "matrigne",
+    "form": "F"
+  },
+  "matrigne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mattone": {
+    "plural": "mattoni",
+    "form": ""
+  },
+  "mattoni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mecenate": {
+    "plural": "mecenati",
+    "form": "M"
+  },
+  "mecenati": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "medaglie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mela": {
+    "plural": "mele",
+    "form": "F"
+  },
+  "mele": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "memoria": {
+    "plural": "memorie",
+    "form": "F"
+  },
+  "memorie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mentore": {
+    "plural": "mentori",
+    "form": "M"
+  },
+  "mentori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mergoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "metropoli": {
+    "plural": "metropoli",
+    "form": "F/PL"
+  },
+  "miele": {
+    "plural": "mieli",
+    "form": "M"
+  },
+  "mieli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "miglioramenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "miglioramento": {
+    "plural": "miglioramenti",
+    "form": "M"
+  },
+  "misura": {
+    "plural": "misure",
+    "form": "F"
+  },
+  "misure": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "miti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "modi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "modo": {
+    "plural": "modi",
+    "form": "M"
+  },
+  "mogli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "moglie": {
+    "plural": "mogli",
+    "form": "F"
+  },
+  "momenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "momento": {
+    "plural": "momenti",
+    "form": "M"
+  },
+  "mondi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mondo": {
+    "plural": "mondi",
+    "form": "M"
+  },
+  "montonaiola": {
+    "plural": "montonaiole",
+    "form": "F"
+  },
+  "montonaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "montonaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "montonaiolo": {
+    "plural": "montonaioli",
+    "form": "M"
+  },
+  "mucca": {
+    "plural": "mucche",
+    "form": "F"
+  },
+  "mucche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "muri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "muro": {
+    "plural": "muri",
+    "form": "M"
+  },
+  "musa": {
+    "plural": "muse",
+    "form": "F"
+  },
+  "muse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nascita": {
+    "plural": "nascite",
+    "form": "F"
+  },
+  "nascite": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nazione": {
+    "plural": "nazioni",
+    "form": "F"
+  },
+  "nazioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nebulosa": {
+    "plural": "nebulose",
+    "form": ""
+  },
+  "nebulose": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nei": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neo": {
+    "plural": "nei",
+    "form": "M"
+  },
+  "nicchiaiola": {
+    "plural": "nicchiaiole",
+    "form": "F"
+  },
+  "nicchiaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nicchiaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nicchiaiolo": {
+    "plural": "nicchiaioli",
+    "form": "M"
+  },
+  "nipote": {
+    "plural": "nipoti",
+    "form": "M"
+  },
+  "nipoti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nonna": {
+    "plural": "nonne",
+    "form": "F"
+  },
+  "nonne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nonni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nonno": {
+    "plural": "nonni",
+    "form": "M"
+  },
+  "numeri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "numero": {
+    "plural": "numeri",
+    "form": "M"
+  },
+  "ocaiola": {
+    "plural": "ocaiole",
+    "form": "F"
+  },
+  "ocaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ocaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ocaiolo": {
+    "plural": "ocaioli",
+    "form": "M"
+  },
+  "occhi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "occhiale": {
+    "plural": "occhiali",
+    "form": "M"
+  },
+  "occhiali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "occhio": {
+    "plural": "occhi",
+    "form": "M"
+  },
+  "oceani": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "oceano": {
+    "plural": "oceani",
+    "form": "M"
+  },
+  "odorati": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "odorato": {
+    "plural": "odorati",
+    "form": "M"
+  },
+  "olfatti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "olfatto": {
+    "plural": "olfatti",
+    "form": "M"
+  },
+  "ondaiola": {
+    "plural": "ondaiole",
+    "form": "F"
+  },
+  "ondaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ondaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ondaiolo": {
+    "plural": "ondaioli",
+    "form": "M"
+  },
+  "opere": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ora": {
+    "plural": "ore",
+    "form": "F"
+  },
+  "ore": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orgogli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orgoglio": {
+    "plural": "orgogli",
+    "form": "M"
+  },
+  "ostrica": {
+    "plural": "ostriche",
+    "form": "F"
+  },
+  "ostriche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ottativi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pacchetto": {
+    "plural": "pacchi",
+    "form": "M/PL"
+  },
+  "pacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pacco": {
+    "plural": "pacchi",
+    "form": "M"
+  },
+  "padre": {
+    "plural": "padri",
+    "form": "M"
+  },
+  "padri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "padrini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "padrino": {
+    "plural": "padrini",
+    "form": "M"
+  },
+  "paese": {
+    "plural": "paesi",
+    "form": "M"
+  },
+  "paesi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "palagi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "palla": {
+    "plural": "palle",
+    "form": "F"
+  },
+  "palle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "palma": {
+    "plural": "palme",
+    "form": "F"
+  },
+  "palme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pampano": {
+    "plural": "pampini",
+    "form": "M/PL"
+  },
+  "pampini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pampino": {
+    "plural": "pampini",
+    "form": "M"
+  },
+  "pancia": {
+    "plural": "pancie",
+    "form": "F"
+  },
+  "pancie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pane": {
+    "plural": "pani",
+    "form": "M"
+  },
+  "pani": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "panterina": {
+    "plural": "panterine",
+    "form": "F"
+  },
+  "panterine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "panterini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "panterino": {
+    "plural": "panterini",
+    "form": "M"
+  },
+  "pappa reale": {
+    "plural": "pappe reali",
+    "form": "F"
+  },
+  "pappe reali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pardi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pardo": {
+    "plural": "pardi",
+    "form": "M"
+  },
+  "parola": {
+    "plural": "parole",
+    "form": "F"
+  },
+  "parole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "parte": {
+    "plural": "parti",
+    "form": "F"
+  },
+  "parti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "partiti politici": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "partito politico": {
+    "plural": "partiti politici",
+    "form": "M"
+  },
+  "patrigni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "patrigno": {
+    "plural": "patrigni",
+    "form": "M"
+  },
+  "pavimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pavimento": {
+    "plural": "pavimenti",
+    "form": "M"
+  },
+  "peccataccio": {
+    "plural": "peccati",
+    "form": "M/PL"
+  },
+  "peccati": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "peccatino": {
+    "plural": "peccati",
+    "form": "M/PL"
+  },
+  "peccato": {
+    "plural": "peccati",
+    "form": "M"
+  },
+  "peccatone": {
+    "plural": "peccati",
+    "form": "M/PL"
+  },
+  "peccatuccio": {
+    "plural": "peccati",
+    "form": "M/PL"
+  },
+  "peccatuzzo": {
+    "plural": "peccati",
+    "form": "M/PL"
+  },
+  "pelliccia": {
+    "plural": "pelliccie",
+    "form": "F"
+  },
+  "pelliccie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pellicole cinematografiche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "penna": {
+    "plural": "penne",
+    "form": "F"
+  },
+  "pennacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pennacchio": {
+    "plural": "pennacchi",
+    "form": ""
+  },
+  "penne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "perla": {
+    "plural": "perle",
+    "form": "F"
+  },
+  "perle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "perni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "perno": {
+    "plural": "perni",
+    "form": "M"
+  },
+  "pesca": {
+    "plural": "pesche",
+    "form": "F"
+  },
+  "pesche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pianeta": {
+    "plural": "pianeti",
+    "form": ""
+  },
+  "pianeti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pianta": {
+    "plural": "piante",
+    "form": ""
+  },
+  "piante": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pista": {
+    "plural": "piste",
+    "form": "F"
+  },
+  "piste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pittura": {
+    "plural": "pitture",
+    "form": "F"
+  },
+  "pitture": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pizza": {
+    "plural": "pizze",
+    "form": "F"
+  },
+  "pizze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "poeta": {
+    "plural": "poeti",
+    "form": "PL"
+  },
+  "poetessa": {
+    "plural": "poeti",
+    "form": ""
+  },
+  "poeti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "polacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "polacco": {
+    "plural": "polacchi",
+    "form": ""
+  },
+  "poli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "polo": {
+    "plural": "poli",
+    "form": "M"
+  },
+  "pomodori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pomodoro": {
+    "plural": "pomodori",
+    "form": "M"
+  },
+  "pompa": {
+    "plural": "pompe",
+    "form": "F"
+  },
+  "pompe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "posizione": {
+    "plural": "posizioni",
+    "form": "F"
+  },
+  "posizioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pozione": {
+    "plural": "pozioni",
+    "form": "F"
+  },
+  "pozioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pozzi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pozzo": {
+    "plural": "pozzi",
+    "form": "M"
+  },
+  "presidente": {
+    "plural": "presidenti",
+    "form": ""
+  },
+  "presidenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "probiviri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "probiviro": {
+    "plural": "probiviri",
+    "form": "M"
+  },
+  "prova": {
+    "plural": "prove",
+    "form": "F"
+  },
+  "prove": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "punti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "puntigli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "punto": {
+    "plural": "punti",
+    "form": ""
+  },
+  "reggiseni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "reggiseno": {
+    "plural": "reggiseni",
+    "form": "M"
+  },
+  "rilassamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rilassamento": {
+    "plural": "rilassamenti",
+    "form": "M"
+  },
+  "risaccio": {
+    "plural": "risi",
+    "form": "M/PL"
+  },
+  "risetto": {
+    "plural": "risi",
+    "form": "M/PL"
+  },
+  "risi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "risino": {
+    "plural": "risi",
+    "form": "M/PL"
+  },
+  "riso": {
+    "plural": "risi",
+    "form": "M"
+  },
+  "ritorni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ritorno": {
+    "plural": "ritorni",
+    "form": "M"
+  },
+  "ritratti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ritratto": {
+    "plural": "ritratti",
+    "form": "M"
+  },
+  "rivestimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rivestimento": {
+    "plural": "rivestimenti",
+    "form": "M"
+  },
+  "rosa": {
+    "plural": "rose",
+    "form": "M"
+  },
+  "rose": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ruoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ruolo": {
+    "plural": "ruoli",
+    "form": "M"
+  },
+  "sala": {
+    "plural": "sale",
+    "form": "F"
+  },
+  "sale": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "saletta": {
+    "plural": "sale",
+    "form": "F/PL"
+  },
+  "salettina": {
+    "plural": "sale",
+    "form": "F/PL"
+  },
+  "salotti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "salotto": {
+    "plural": "salotti",
+    "form": "M"
+  },
+  "satellite": {
+    "plural": "satelliti",
+    "form": ""
+  },
+  "satelliti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scacchista": {
+    "plural": "",
+    "form": ""
+  },
+  "scacchiste": {
+    "plural": "",
+    "form": ""
+  },
+  "scacchisti": {
+    "plural": "",
+    "form": ""
+  },
+  "scacco": {
+    "plural": "scacchi",
+    "form": "M"
+  },
+  "schermi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "schermo": {
+    "plural": "schermi",
+    "form": "M"
+  },
+  "scopa": {
+    "plural": "scope",
+    "form": "F"
+  },
+  "scope": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scossa": {
+    "plural": "scosse",
+    "form": "F"
+  },
+  "scosse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scrigni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "scrigno": {
+    "plural": "scrigni",
+    "form": "M"
+  },
+  "seccaggine": {
+    "plural": "seccaggini",
+    "form": "F"
+  },
+  "seccaggini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "secchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "secchiaccio": {
+    "plural": "secchi",
+    "form": "M/PL"
+  },
+  "secchiello": {
+    "plural": "secchi",
+    "form": "M"
+  },
+  "secchietto": {
+    "plural": "secchi",
+    "form": "M/PL"
+  },
+  "secchino": {
+    "plural": "secchi",
+    "form": "M/PL"
+  },
+  "secchio": {
+    "plural": "secchi",
+    "form": "M/PL"
+  },
+  "secchione": {
+    "plural": "secchi",
+    "form": "M/PL"
+  },
+  "secondi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "secondo": {
+    "plural": "secondi",
+    "form": "M"
+  },
+  "segnore": {
+    "plural": "signori",
+    "form": "M"
+  },
+  "segugi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "segugio": {
+    "plural": "segugi",
+    "form": "M"
+  },
+  "selvaiola": {
+    "plural": "selvaiole",
+    "form": "F"
+  },
+  "selvaiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "selvaioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "selvaiolo": {
+    "plural": "selvaioli",
+    "form": "M"
+  },
+  "senni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "senno": {
+    "plural": "senni",
+    "form": "M"
+  },
+  "serenata": {
+    "plural": "serenate",
+    "form": "F"
+  },
+  "serenate": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sguardi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sguardo": {
+    "plural": "sguardi",
+    "form": "M"
+  },
+  "sgurone": {
+    "plural": "sguroni",
+    "form": "M"
+  },
+  "sguroni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sicurezza": {
+    "plural": "sicurezze",
+    "form": "F"
+  },
+  "sicurezze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "siga": {
+    "plural": "sigarette",
+    "form": "F"
+  },
+  "sigaretta": {
+    "plural": "sigarette",
+    "form": "F/PL"
+  },
+  "sigarette": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sigari": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sigaro": {
+    "plural": "sigari",
+    "form": "M"
+  },
+  "signore": {
+    "plural": "signori",
+    "form": "M/PL"
+  },
+  "signori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sinistra": {
+    "plural": "",
+    "form": "F"
+  },
+  "società": {
+    "plural": "società",
+    "form": "F/PL"
+  },
+  "sogni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sogno": {
+    "plural": "sogni",
+    "form": "M"
+  },
+  "somma": {
+    "plural": "somme",
+    "form": "F"
+  },
+  "somme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "sorella": {
+    "plural": "sorelle",
+    "form": "F"
+  },
+  "sorelle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "spada": {
+    "plural": "spade",
+    "form": "F"
+  },
+  "spade": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "spiaggia": {
+    "plural": "spiaggie",
+    "form": "F"
+  },
+  "spiaggie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "stati": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "stato": {
+    "plural": "stati",
+    "form": "M"
+  },
+  "stella": {
+    "plural": "stelle",
+    "form": ""
+  },
+  "stelle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "stivale": {
+    "plural": "stivali",
+    "form": "M"
+  },
+  "stivali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "storia": {
+    "plural": "storie",
+    "form": "F"
+  },
+  "storie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "stringa": {
+    "plural": "stringhe",
+    "form": "F"
+  },
+  "stringhe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "studente": {
+    "plural": "studenti",
+    "form": "M"
+  },
+  "studentessa": {
+    "plural": "studentesse",
+    "form": "F"
+  },
+  "studentesse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "studenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "studi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "studio": {
+    "plural": "studi",
+    "form": "M"
+  },
+  "superficialità": {
+    "plural": "superficialità",
+    "form": "F/PL"
+  },
+  "tacchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tacco": {
+    "plural": "tacchi",
+    "form": "M"
+  },
+  "tartuchina": {
+    "plural": "tartuchine",
+    "form": "F"
+  },
+  "tartuchine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tartuchini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tartuchino": {
+    "plural": "tartuchini",
+    "form": "M"
+  },
+  "tata": {
+    "plural": "tate",
+    "form": "F"
+  },
+  "tate": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tavoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tavolo": {
+    "plural": "tavoli",
+    "form": "M"
+  },
+  "teletrasporti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "teletrasporto": {
+    "plural": "teletrasporti",
+    "form": "M"
+  },
+  "tempi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tempo": {
+    "plural": "tempi",
+    "form": "M"
+  },
+  "terra": {
+    "plural": "terre",
+    "form": "F"
+  },
+  "terrazzi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "terrazzo": {
+    "plural": "terrazzi",
+    "form": "M"
+  },
+  "terre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "testa": {
+    "plural": "teste",
+    "form": "F"
+  },
+  "testa di cazzo": {
+    "plural": "teste di cazzo",
+    "form": ""
+  },
+  "teste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "teste di cazzo": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tomi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "torraiola": {
+    "plural": "torraiole",
+    "form": "F"
+  },
+  "torraiole": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "torraioli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "torraiolo": {
+    "plural": "torraioli",
+    "form": "M"
+  },
+  "torrione": {
+    "plural": "torrioni",
+    "form": "M"
+  },
+  "torrioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "torsi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "torso": {
+    "plural": "torsi",
+    "form": "M"
+  },
+  "trasporti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trasporto": {
+    "plural": "trasporti",
+    "form": "M"
+  },
+  "travestimenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "travestimento": {
+    "plural": "travestimenti",
+    "form": "M"
+  },
+  "tripudi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tripudio": {
+    "plural": "tripudi",
+    "form": "M"
+  },
+  "trotti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trotto": {
+    "plural": "trotti",
+    "form": "M"
+  },
+  "trucchi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trucco": {
+    "plural": "trucchi",
+    "form": "M"
+  },
+  "tubini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tubino": {
+    "plural": "tubini",
+    "form": "M"
+  },
+  "tutore": {
+    "plural": "tutori",
+    "form": "M"
+  },
+  "tutori": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tutrice": {
+    "plural": "tutrici",
+    "form": "F"
+  },
+  "tutrici": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "universi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "universo": {
+    "plural": "universi",
+    "form": "M"
+  },
+  "uomini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "uomo": {
+    "plural": "uomini",
+    "form": "M"
+  },
+  "uova": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "uovo": {
+    "plural": "uova",
+    "form": ""
+  },
+  "vacca": {
+    "plural": "vacche",
+    "form": "F"
+  },
+  "vacche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "valigia": {
+    "plural": "valigie",
+    "form": "F"
+  },
+  "valigie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vasi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vaso": {
+    "plural": "vasi",
+    "form": "M"
+  },
+  "versamenti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "versamento": {
+    "plural": "versamenti",
+    "form": "M"
+  },
+  "vicina": {
+    "plural": "vicine",
+    "form": "F"
+  },
+  "vicine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vicini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vicino": {
+    "plural": "vicini",
+    "form": "M"
+  },
+  "violini": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "violino": {
+    "plural": "violini",
+    "form": "M"
+  },
+  "vita": {
+    "plural": "vite",
+    "form": "F"
+  },
+  "vite": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "volta": {
+    "plural": "volte",
+    "form": "F"
+  },
+  "volte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zenzeri": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zenzero": {
+    "plural": "zenzeri",
+    "form": "M"
+  },
+  "zia": {
+    "plural": "zie",
+    "form": "F"
+  },
+  "zie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zii": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "zio": {
+    "plural": "zii",
+    "form": "M"
+  },
+  "zucca": {
+    "plural": "zucche",
+    "form": "F"
+  },
+  "zucche": {
+    "plural": "isPlural",
+    "form": "PL"
+  }
+}

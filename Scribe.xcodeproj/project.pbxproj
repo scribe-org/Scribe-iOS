@@ -19,6 +19,9 @@
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
 		D1018220272829E70032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821B2728291B0032A82D /* verbs.json */; };
+		D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A827BE7C4500EB9D34 /* translations.json */; };
+		D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A927BE7C4500EB9D34 /* nouns.json */; };
+		D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4AA27BE7C4500EB9D34 /* verbs.json */; };
 		D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */; };
 		D109A212275B6888005E2271 /* French.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */; };
@@ -400,6 +403,9 @@
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D101821B2728291B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		D107A4A827BE7C4500EB9D34 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D107A4A927BE7C4500EB9D34 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
+		D107A4AA27BE7C4500EB9D34 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D109A20B275B6888005E2271 /* French.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = French.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchKeyboardViewController.swift; sourceTree = "<group>"; };
 		D109A20F275B6888005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -593,6 +599,16 @@
 			path = German;
 			sourceTree = "<group>";
 		};
+		D107A4A727BE7C4500EB9D34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D107A4A827BE7C4500EB9D34 /* translations.json */,
+				D107A4A927BE7C4500EB9D34 /* nouns.json */,
+				D107A4AA27BE7C4500EB9D34 /* verbs.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D109A20C275B6888005E2271 /* French */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +794,7 @@
 		D1B81D2027BBB5320085FE5E /* Italian */ = {
 			isa = PBXGroup;
 			children = (
+				D107A4A727BE7C4500EB9D34 /* Data */,
 				D1B81D4927BBBA200085FE5E /* ITCommandVariables.swift */,
 				D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */,
 				D1B81D2127BBB5320085FE5E /* ItalianKeyboardViewController.swift */,
@@ -1129,7 +1146,10 @@
 				D1B81D3627BBB6F50085FE5E /* ScribeKeyPhoneWhite.png in Resources */,
 				D1B81D3827BBB6F50085FE5E /* ScribeKeyPadWhite.png in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
+				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
+				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
 				D1B81D3927BBB6F50085FE5E /* ScribeKeyPhoneBlack.png in Resources */,
+				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
 				D1B81D3727BBB6F50085FE5E /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

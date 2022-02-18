@@ -255,7 +255,7 @@ for lang in list(current_data_df.index):
         if wt in current_data[lang].keys():
             current_data_df.loc[lang, wt] = num_add_commas(current_data[lang][wt])
         elif wt == "translations":
-            current_data_df.loc[lang, wt] = num_add_commas(67609)
+            current_data_df.loc[lang, wt] = num_add_commas(67652)
 
 current_data_df.index.name = "Languages"
 current_data_df.columns = [c.capitalize() for c in current_data_df.columns]

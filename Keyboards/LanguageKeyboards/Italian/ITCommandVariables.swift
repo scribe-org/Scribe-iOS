@@ -47,7 +47,7 @@ func itGetConjugationState() -> String {
   case .preterite:
     return "pret"
   case .imperfect:
-    return "perf"
+    return "imp"
   }
 }
 
