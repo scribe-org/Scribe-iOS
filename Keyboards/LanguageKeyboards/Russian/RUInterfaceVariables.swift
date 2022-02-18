@@ -91,4 +91,5 @@ func setRUKeyboardLayout() {
   pluralKeyLbl = "Множ"
   pluralPrompt = commandPromptSpacing + "Множ: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Уже во множ"
 }

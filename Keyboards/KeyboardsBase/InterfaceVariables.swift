@@ -75,6 +75,7 @@ var controllerLanguageAbbr = String()
 let languagesAbbrDict: [String: String] = [
   "French": "fr",
   "German": "de",
+  "Italian": "it",
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",
@@ -93,6 +94,7 @@ func getControllerLanguageAbbr() -> String {
 let keyboardLayoutDict: [String: () -> Void] = [
   "French": setFRKeyboardLayout,
   "German": setDEKeyboardLayout,
+  "Italian": setITKeyboardLayout,
   "Portuguese": setPTKeyboardLayout,
   "Russian": setRUKeyboardLayout,
   "Spanish": setESKeyboardLayout,
@@ -314,4 +316,5 @@ func setENKeyboardLayout() {
   pluralKeyLbl = "Plural"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Already plural"
 }

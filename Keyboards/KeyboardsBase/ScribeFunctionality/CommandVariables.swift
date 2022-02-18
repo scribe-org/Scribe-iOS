@@ -97,3 +97,4 @@ var pluralPrompt: String = ""
 var pluralPromptAndCursor: String = ""
 var getPlural: Bool = false
 var isAlreadyPluralState: Bool = false
+var isAlreadyPluralMessage: String = ""
