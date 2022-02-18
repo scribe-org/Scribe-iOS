@@ -107,4 +107,5 @@ func setSVKeyboardLayout() {
   pluralKeyLbl = "Plural"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Redan plural"
 }

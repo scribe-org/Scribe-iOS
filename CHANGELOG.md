@@ -14,10 +14,11 @@ Scribe's second design sprint with Spencer Arney focussed on key styling and onb
 
 ### ⌨️ New Keyboards
 
-<!-- - Adds an Italian keyboard. -->
+ - Adds an Italian keyboard. 
 
 ### 🎨 Design Changes
 
+- The messages that tell the user a noun is already plural have been translated to the keyboard's language.
 <!-- - A quick tutorial has been added to the app to show new users how it works. -->
 <!-- - The app screen fields have been made larger and the text size has also been increased. -->
 <!-- - All letter, number and special keys now pop up after being pressed. -->

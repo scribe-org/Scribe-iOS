@@ -316,4 +316,5 @@ func setENKeyboardLayout() {
   pluralKeyLbl = "Plural"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Already plural"
 }

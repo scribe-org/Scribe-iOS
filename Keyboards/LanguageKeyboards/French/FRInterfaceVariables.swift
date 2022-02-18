@@ -103,4 +103,5 @@ func setFRKeyboardLayout() {
   pluralKeyLbl = "Pluriel"
   pluralPrompt = commandPromptSpacing + "Pluriel: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Déjà pluriel"
 }

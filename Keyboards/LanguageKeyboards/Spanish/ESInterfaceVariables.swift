@@ -105,4 +105,5 @@ func setESKeyboardLayout() {
   pluralKeyLbl = "Plural"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Ya en plural"
 }

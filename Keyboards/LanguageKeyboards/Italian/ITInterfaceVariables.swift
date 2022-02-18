@@ -103,4 +103,5 @@ func setITKeyboardLayout() {
   pluralKeyLbl = "Plurale"
   pluralPrompt = commandPromptSpacing + "Plurale: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  isAlreadyPluralMessage = "Già plurale"
 }
