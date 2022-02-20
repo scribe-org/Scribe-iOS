@@ -48,6 +48,7 @@ class KeyboardKey: UIButton {
 
     if self.key == "space" {
       self.key = spaceBar
+      self.layer.setValue(true, forKey: "isSpecial")
     }
     var capsKey = ""
     if self.key != "ß" && self.key != spaceBar {
@@ -63,8 +64,8 @@ class KeyboardKey: UIButton {
     self.setTitle(keyToDisplay, for: .normal) // set button character
   }
 
-  /// Sets the character size of a key if the device is an iPhone given the orientation.
-  func setPhoneCharSize() {
+  /// Sets the character size of a captial key if the device is an iPhone given the orientation.
+  func setPhoneCapCharSize() {
     if isLandscapeView == true {
       if self.key == "#+="
           || self.key == "ABC"
@@ -74,7 +75,7 @@ class KeyboardKey: UIButton {
       } else if self.key == spaceBar {
         self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
+        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.9)
       }
     } else {
       if self.key == "#+="
@@ -90,8 +91,34 @@ class KeyboardKey: UIButton {
     }
   }
 
+  /// Checks if the character is a lower case letter and adjusts it if so.
+  func checkSetPhoneLowerCharSize() {
+    guard let isSpecial = self.layer.value(forKey: "isSpecial") as? Bool else { return }
+
+    if keyboardState == .letters
+        && isSpecial == false
+        && !["123", spaceBar].contains(self.key)
+        && shiftButtonState == .normal {
+      self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
+
+      if isLandscapeView == true {
+        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.4)
+      } else {
+        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.35)
+      }
+    } else {
+      self.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+  }
+
+  /// Sets the character size of a key if the device is an iPhone.
+  func setPhoneCharSize() {
+    setPhoneCapCharSize()
+    checkSetPhoneLowerCharSize()
+  }
+
   /// Sets the character size of a key if the device is an iPad given the orientation.
-  func setPadCharSize() {
+  func setPadCapCharSize() {
     if isLandscapeView == true {
       if self.key == "#+="
           || self.key == "ABC"
@@ -119,6 +146,32 @@ class KeyboardKey: UIButton {
         self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
       }
     }
+  }
+
+  /// Sets the character size of a key if the device is an iPad given the orientation.
+  func checkSetPadLowerCharSize() {
+    guard let isSpecial = self.layer.value(forKey: "isSpecial") as? Bool else { return }
+
+    if keyboardState == .letters
+        && isSpecial == false
+        && ![".?123", spaceBar, "ß", ",", ".", "'", "-"].contains(self.key)
+        && shiftButtonState == .normal {
+      self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
+
+      if isLandscapeView == true {
+        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.35)
+      } else {
+        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.75)
+      }
+    } else {
+      self.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+  }
+
+  /// Sets the character size of a key if the device is an iPad.
+  func setPadCharSize() {
+    setPadCapCharSize()
+    checkSetPadLowerCharSize()
   }
 
   /// Sets the key character sizes depending on device type and orientation.

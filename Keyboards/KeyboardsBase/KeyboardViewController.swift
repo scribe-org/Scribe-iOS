@@ -95,7 +95,7 @@ class KeyboardViewController: UIInputViewController {
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
-        keyboardHeight = 320
+        keyboardHeight = 420
       } else {
         keyboardHeight = 340
       }
@@ -792,25 +792,38 @@ class KeyboardViewController: UIInputViewController {
           }
           if DeviceType.isPhone
             && key == "a"
-            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
+            && (controllerLanguage == "Portuguese"
+                || controllerLanguage == "Italian"
+                || switchInput == true) {
             leftPadding = buttonWidth / 4
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "a"
-            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
+            && (controllerLanguage == "Portuguese"
+                || controllerLanguage == "Italian"
+                || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "@"
-            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
+            && (controllerLanguage == "Portuguese"
+                || controllerLanguage == "Italian"
+                || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "@")
           }
           if DeviceType.isPad
+            && key == "$"
+            && controllerLanguage == "Italian" {
+            leftPadding = buttonWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "$")
+          }
+          if DeviceType.isPad
             && key == "€"
-            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
+            && (controllerLanguage == "Portuguese"
+                || switchInput == true) {
             leftPadding = buttonWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
@@ -879,7 +892,9 @@ class KeyboardViewController: UIInputViewController {
           }
           if DeviceType.isPhone
             && key == "l"
-            && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true) {
+            && (controllerLanguage == "Portuguese"
+                || controllerLanguage == "Italian"
+                || switchInput == true) {
             rightPadding = buttonWidth / 4
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
