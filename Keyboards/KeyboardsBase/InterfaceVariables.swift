@@ -13,12 +13,14 @@ var proxy: UITextDocumentProxy!
 
 // Variables for the keyboard and its appearance.
 var keyboard: [[String]] = [[String]]()
+var allKeys: [String] = [String]()
+var allNonSpecialKeys: [String] = [String]()
 var keyboardHeight: CGFloat!
 var keyCornerRadius: CGFloat!
 var commandKeyCornerRadius: CGFloat!
-var buttonWidth = CGFloat(0)
-var letterButtonWidth = CGFloat(0)
-var numSymButtonWidth = CGFloat(0)
+var keyWidth = CGFloat(0)
+var letterKeyWidth = CGFloat(0)
+var numSymKeyWidth = CGFloat(0)
 
 // Keyboard elements.
 var spaceBar = String()
@@ -161,13 +163,17 @@ func setKeyboard() {
 
 // MARK: Alternate Key Variables
 var alternatesKeyView: UIView!
+var keyCancelled = false
+var keyPopCharView: UIView!
+var keyPopLayer = CAShapeLayer()
+var keyHoldPopLayer = CAShapeLayer()
 var keysWithAlternates = [String]()
 var alternateKeys = [String]()
 
 // Variables for alternate key view appearance.
 var alternateBtnStartX = CGFloat(0)
 var alternatesViewWidth = CGFloat(0)
-var alternateButtonWidth = CGFloat(0)
+var alternateKeyWidth = CGFloat(0)
 var alternatesViewX = CGFloat(0)
 var alternatesViewY = CGFloat(0)
 var alternatesBtnHeight = CGFloat(0)
@@ -275,16 +281,26 @@ public enum EnglishKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
-/// Provides an English keyboard layout.
-func setENKeyboardLayout() {
+/// Gets the keys for the English keyboard.
+func getENKeys() {
   if DeviceType.isPhone {
     letterKeys = EnglishKeyboardConstants.letterKeysPhone
     numberKeys = EnglishKeyboardConstants.numberKeysPhone
     symbolKeys = EnglishKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = []
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   } else {
     letterKeys = EnglishKeyboardConstants.letterKeysPad
     numberKeys = EnglishKeyboardConstants.numberKeysPad
     symbolKeys = EnglishKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = []
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates
@@ -300,6 +316,12 @@ func setENKeyboardLayout() {
   zAlternateKeys = EnglishKeyboardConstants.zAlternateKeys
   cAlternateKeys = EnglishKeyboardConstants.cAlternateKeys
   nAlternateKeys = EnglishKeyboardConstants.nAlternateKeys
+}
+
+/// Provides an English keyboard layout.
+func setENKeyboardLayout() {
+  getENKeys()
+
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"

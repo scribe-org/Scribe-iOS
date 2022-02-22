@@ -44,26 +44,26 @@ var keysThatAreSlightlyLarger: [String] = [
 ///  - iconName: the name of the UIImage systemName icon to be used.
 func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
   var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterButtonWidth / 1.75,
+    pointSize: letterKeyWidth / 1.75,
     weight: .light,
     scale: .medium
   )
   if keysThatAreSlightlyLarger.contains(iconName) {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 1.55,
+      pointSize: letterKeyWidth / 1.55,
       weight: .light,
       scale: .medium
     )
   }
   if isLandscapeView == true {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 3.5,
+      pointSize: letterKeyWidth / 3.5,
       weight: .light,
       scale: .medium
     )
     if keysThatAreSlightlyLarger.contains(iconName) {
       iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.2,
+        pointSize: letterKeyWidth / 3.2,
         weight: .light,
         scale: .medium
       )
@@ -79,26 +79,26 @@ func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
   keysThatAreSlightlyLarger.append("globe")
   var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterButtonWidth / 3,
+    pointSize: letterKeyWidth / 3,
     weight: .light,
     scale: .medium
   )
   if keysThatAreSlightlyLarger.contains(iconName) {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 2.75,
+      pointSize: letterKeyWidth / 2.75,
       weight: .light,
       scale: .medium
     )
   }
   if isLandscapeView == true {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 3.75,
+      pointSize: letterKeyWidth / 3.75,
       weight: .light,
       scale: .medium
     )
     if keysThatAreSlightlyLarger.contains(iconName) {
       iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.4,
+        pointSize: letterKeyWidth / 3.4,
         weight: .light,
         scale: .medium
       )
@@ -140,4 +140,106 @@ func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
 
   paddingViews.append(padding)
   stackView.addArrangedSubview(padding)
+}
+
+// Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
+// The purpose of these is to define which key pop up functions should be ran.
+var centralKeyChars: [String] = [String]()
+var leftKeyChars: [String] = [String]()
+var rightKeyChars: [String] = [String]()
+
+/// Creates the shape that allows left most buttons to pop up after being pressed.
+func leftKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
+  // Starting positions need to be updated.
+//  let horizStart = startX
+//  let vertStart = startY + keyHeight
+
+  // Path is clockwise from bottom left.
+  let path = UIBezierPath()
+
+  return path
+}
+
+/// Creates the shape that allows right most buttons to pop up after being pressed.
+func rightKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
+  // Starting positions need to be updated.
+//  let horizStart = startX
+//  let vertStart = startY + keyHeight
+
+  // Path is clockwise from bottom left.
+  let path = UIBezierPath()
+
+  return path
+}
+
+/// Creates the shape that allows central buttons to pop up after being pressed.
+func centerKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
+  // Starting positions need to be updated.
+  let horizStart = startX
+  let vertStart = startY + keyHeight
+
+  // Path is clockwise from bottom left.
+  let path = UIBezierPath()
+  path.move(to: CGPoint(x: horizStart, y: vertStart))
+
+  // Go up and curve out to the left.
+  path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.95 )))
+  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * 0.4 ), y: vertStart - ( keyHeight * 0.95 )))
+  //  path.addCurve(to: CGPoint(
+  //    x: horizStart  - ( keyWidth * 0.75 / 2 ),
+  //    y: vertStart + ( keyHeight * 1.1 )),
+  //    controlPoint1: CGPoint(x: horizStart - ( keyWidth * 0.75 ), y: vertStart + ( keyHeight * 0.75 )),
+  //    controlPoint2: CGPoint(x: horizStart, y: vertStart + ( keyHeight * 0.75 )))
+
+  // Path to top left, top right and back down.
+  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * 0.4 ), y: vertStart - ( keyHeight * 2.125 )))
+  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 1.4 ), y: vertStart - ( keyHeight * 2.125 )))
+  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 1.4 ), y: vertStart - ( keyHeight * 0.95 )))
+
+  // Curve in to the left and go down to bottom right.
+  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.95 )))
+  //  path.addCurve(to: CGPoint(
+  //    x: horizStart + keyWidth,
+  //    y: vertStart + ( keyHeight * 0.7 )),
+  //    controlPoint1: CGPoint(x: horizStart + keyWidth - ( keyWidth * 0.25 ), y: vertStart + ( keyHeight * 0.75 )),
+  //    controlPoint2: CGPoint(x: horizStart + keyWidth + ( keyWidth * 0.25 ), y: vertStart + ( keyHeight * 0.75 )))
+  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart))
+
+  path.close()
+  return path
+}
+
+/// Creates and styles the pop up animation of a key.
+///
+/// - Parameters
+///   - key: the key pressed.
+///   - layer: the layer to be set.
+///   - char: the character of the key.
+func genKeyPop(key: UIButton, layer: CAShapeLayer, char: String) {
+  // Get the frame in respect to the superview.
+  let frame: CGRect = (key.superview?.convert(key.frame, to: nil))!
+
+  if centralKeyChars.contains(char) {
+    layer.path = centerKeyPopPath(
+      startX: frame.origin.x,
+      startY: frame.origin.y,
+      keyWidth: key.frame.width,
+      keyHeight: key.frame.height).cgPath
+  } else if leftKeyChars.contains(char) {
+    layer.path = leftKeyPopPath(
+      startX: frame.origin.x,
+      startY: frame.origin.y,
+      keyWidth: key.frame.width,
+      keyHeight: key.frame.height).cgPath
+  } else if rightKeyChars.contains(char) {
+    layer.path = rightKeyPopPath(
+      startX: frame.origin.x,
+      startY: frame.origin.y,
+      keyWidth: key.frame.width,
+      keyHeight: key.frame.height).cgPath
+  }
+
+  layer.strokeColor = keyShadowColor
+  layer.fillColor = keyColor.cgColor
+  layer.lineWidth = 1.0
 }

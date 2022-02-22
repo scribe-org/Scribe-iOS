@@ -66,16 +66,26 @@ public class SwedishKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
-/// Provides a Swedish keyboard layout.
-func setSVKeyboardLayout() {
+/// Gets the keys for the Swedish keyboard.
+func getSVKeys() {
   if DeviceType.isPhone {
     letterKeys = SwedishKeyboardConstants.letterKeysPhone
     numberKeys = SwedishKeyboardConstants.numberKeysPhone
     symbolKeys = SwedishKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = []
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   } else {
     letterKeys = SwedishKeyboardConstants.letterKeysPad
     numberKeys = SwedishKeyboardConstants.numberKeysPad
     symbolKeys = SwedishKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = []
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates
@@ -91,6 +101,12 @@ func setSVKeyboardLayout() {
   sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
   cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
   nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a Swedish keyboard layout.
+func setSVKeyboardLayout() {
+  getSVKeys()
+
   currencySymbol = "kr"
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellanslag"
