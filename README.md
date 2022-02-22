@@ -65,15 +65,15 @@ Scribe's goal is functional, feature-rich keyboards for all languages. Check [Sc
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
 
-| Languages  |   Nouns | Verbs | Translations* | Adjectives† | Prepositions‡ |
-| :--------- | ------: | ----: | ------------: | ----------: | ------------: |
-| French     |  15,751 | 1,242 |        67,652 |           - |             - |
-| German     |  27,893 | 3,126 |        67,652 |           - |           189 |
-| Italian    |     773 |    70 |        67,652 |           - |             - |
-| Portuguese |   4,615 |   188 |        67,652 |           - |             - |
-| Russian    | 194,387 |    11 |        67,652 |           - |            12 |
-| Spanish    |   9,248 |   112 |        67,652 |           - |             - |
-| Swedish    |  41,180 | 4,138 |        67,652 |           - |             - |
+| Languages  |   Nouns | Verbs | Translations\* | Adjectives† | Prepositions‡ |
+| :--------- | ------: | ----: | -------------: | ----------: | ------------: |
+| French     |  15,751 | 1,242 |         67,652 |           - |             - |
+| German     |  27,893 | 3,126 |         67,652 |           - |           189 |
+| Italian    |     773 |    70 |         67,652 |           - |             - |
+| Portuguese |   4,615 |   188 |         67,652 |           - |             - |
+| Russian    | 194,387 |    11 |         67,652 |           - |            12 |
+| Spanish    |   9,248 |   112 |         67,652 |           - |             - |
+| Swedish    |  41,180 | 4,138 |         67,652 |           - |             - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
@@ -151,6 +151,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - The double space period shortcut
 - Typing symbols and numbers followed by a space returns keyboard to letters
 - Hold-to-select characters for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
+- Key pop up views for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
 
 </p>
 </details>

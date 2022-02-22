@@ -8,24 +8,34 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# Scribe 1.3.0 (WIP)
+<!--# Scribe 1.4.0 (WIP)-->
+<!---->
+<!--Scribe's second design sprint with Spencer Arney focussed on key styling and onboarding users.-->
+<!---->
+<!--### 🎨 Design Changes-->
+<!---->
+<!--- A quick tutorial has been added to the app to show new users how it works. -->
+<!--- The app screen fields have been made larger and the text size has also been increased. -->
+<!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
 
-Scribe's second design sprint with Spencer Arney focussed on key styling and onboarding users.
+# Scribe 1.3.0 (WIP)
 
 ### ⌨️ New Keyboards
 
 - Adds an Italian keyboard.
+
+### 🗃️ Data Added
+
+- Italian: 773 nouns, 70 verbs
 
 ### 🎨 Design Changes
 
 - The messages that tell the user a noun is already plural have been translated to the keyboard's language.
 - The keyboard height has been increased for landscape mode on iPads.
 - Characters on keys have been made larger so they reflect the system keyboards better.
-  <!-- - A quick tutorial has been added to the app to show new users how it works. -->
-  <!-- - The app screen fields have been made larger and the text size has also been increased. -->
-  <!-- - All letter, number and special keys now pop up after being pressed. -->
-  <!-- - Settings have been added to the top right of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
-  <!-- - App pages other than the home page have a back arrow in the top left (the user can also swipe back). -->
+<!--- All letter, number and special keys now pop up after being pressed. -->
+<!--- Hold to select characters have been redesigned to reflect the addition of keys popping up. -->
+<!--- All App Store media has been redone to reflect these changes.-->
 
 # Scribe 1.2.1
 
