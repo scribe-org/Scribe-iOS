@@ -164,7 +164,8 @@ func setKeyboard() {
 // MARK: Alternate Key Variables
 var alternatesKeyView: UIView!
 var keyCancelled = false
-var keyPopCharView: UIView!
+var keyPopChar = UILabel()
+var keyHoldPopChar = UILabel()
 var keyPopLayer = CAShapeLayer()
 var keyHoldPopLayer = CAShapeLayer()
 var keysWithAlternates = [String]()

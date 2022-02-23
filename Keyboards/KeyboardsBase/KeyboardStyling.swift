@@ -149,31 +149,19 @@ var leftKeyChars: [String] = [String]()
 var rightKeyChars: [String] = [String]()
 
 /// Creates the shape that allows left most buttons to pop up after being pressed.
-func leftKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
-  // Starting positions need to be updated.
-//  let horizStart = startX
-//  let vertStart = startY + keyHeight
-
-  // Path is clockwise from bottom left.
-  let path = UIBezierPath()
-
-  return path
-}
-
-/// Creates the shape that allows right most buttons to pop up after being pressed.
-func rightKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
-  // Starting positions need to be updated.
-//  let horizStart = startX
-//  let vertStart = startY + keyHeight
-
-  // Path is clockwise from bottom left.
-  let path = UIBezierPath()
-
-  return path
-}
-
-/// Creates the shape that allows central buttons to pop up after being pressed.
-func centerKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyHeight: CGFloat) -> UIBezierPath {
+///
+/// - Parameters
+///   - startX: the x-axis starting point.
+///   - startY: the y-axis starting point.
+///   - keyWidth: the width of the key.
+///   - keyHeight: the height of the key.
+///   - char: the character of the key.
+func leftKeyPopPath(
+  startX: CGFloat,
+  startY: CGFloat,
+  keyWidth: CGFloat,
+  keyHeight: CGFloat,
+  char: String) -> UIBezierPath {
   // Starting positions need to be updated.
   let horizStart = startX
   let vertStart = startY + keyHeight
@@ -182,28 +170,118 @@ func centerKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyH
   let path = UIBezierPath()
   path.move(to: CGPoint(x: horizStart, y: vertStart))
 
-  // Go up and curve out to the left.
-  path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.95 )))
-  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * 0.4 ), y: vertStart - ( keyHeight * 0.95 )))
-  //  path.addCurve(to: CGPoint(
-  //    x: horizStart  - ( keyWidth * 0.75 / 2 ),
-  //    y: vertStart + ( keyHeight * 1.1 )),
-  //    controlPoint1: CGPoint(x: horizStart - ( keyWidth * 0.75 ), y: vertStart + ( keyHeight * 0.75 )),
-  //    controlPoint2: CGPoint(x: horizStart, y: vertStart + ( keyHeight * 0.75 )))
+  // Curve up past bottom left, path up, and curve right past the top left.
 
-  // Path to top left, top right and back down.
-  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * 0.4 ), y: vertStart - ( keyHeight * 2.125 )))
-  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 1.4 ), y: vertStart - ( keyHeight * 2.125 )))
-  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 1.4 ), y: vertStart - ( keyHeight * 0.95 )))
+  // Path right, curve down past the top right, and path down.
 
-  // Curve in to the left and go down to bottom right.
-  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.95 )))
-  //  path.addCurve(to: CGPoint(
-  //    x: horizStart + keyWidth,
-  //    y: vertStart + ( keyHeight * 0.7 )),
-  //    controlPoint1: CGPoint(x: horizStart + keyWidth - ( keyWidth * 0.25 ), y: vertStart + ( keyHeight * 0.75 )),
-  //    controlPoint2: CGPoint(x: horizStart + keyWidth + ( keyWidth * 0.25 ), y: vertStart + ( keyHeight * 0.75 )))
-  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart))
+  // Curve in to the left, go down, and curve down past bottom left.
+
+  return path
+}
+
+/// Creates the shape that allows right most buttons to pop up after being pressed.
+///
+/// - Parameters
+///   - startX: the x-axis starting point.
+///   - startY: the y-axis starting point.
+///   - keyWidth: the width of the key.
+///   - keyHeight: the height of the key.
+///   - char: the character of the key.
+func rightKeyPopPath(
+  startX: CGFloat,
+  startY: CGFloat,
+  keyWidth: CGFloat,
+  keyHeight: CGFloat,
+  char: String) -> UIBezierPath {
+  // Starting positions need to be updated.
+  let horizStart = startX
+  let vertStart = startY + keyHeight
+
+  // Path is clockwise from bottom left.
+  let path = UIBezierPath()
+  path.move(to: CGPoint(x: horizStart, y: vertStart))
+
+  // Curve up past bottom left, path up, and curve out to the left.
+
+  // Path up and curve right past the top left.
+
+  // Path right, curve down past the top right, and path down.
+
+  // Curve down past bottom left.
+
+  return path
+}
+
+/// Creates the shape that allows central buttons to pop up after being pressed.
+///
+/// - Parameters
+///   - startX: the x-axis starting point.
+///   - startY: the y-axis starting point.
+///   - keyWidth: the width of the key.
+///   - keyHeight: the height of the key.
+///   - char: the character of the key.
+func centerKeyPopPath(
+  startX: CGFloat,
+  startY: CGFloat,
+  keyWidth: CGFloat,
+  keyHeight: CGFloat,
+  char: String) -> UIBezierPath {
+  // Starting positions need to be updated.
+  let horizStart = startX
+  let vertStart = startY + keyHeight
+  var widthMultiplier = 0.0
+  if DeviceType.isPhone && [".", ",", "?", "!", "'"].contains(char) {
+    widthMultiplier = 0.2
+  } else {
+    widthMultiplier = 0.4
+  }
+
+  // Path is clockwise from bottom left.
+  let path = UIBezierPath()
+  path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
+
+  // Curve up past bottom left, path up, and curve out to the left.
+  path.addCurve(to: CGPoint(
+    x: horizStart,
+    y: vertStart - ( keyHeight * 0.075 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart - ( keyHeight * 0.005 )),
+    controlPoint2: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.005 )))
+  path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.85 )))
+  path.addCurve(to: CGPoint(
+    x: horizStart - ( keyWidth * widthMultiplier ),
+    y: vertStart - ( keyHeight * 1.2 )),
+    controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 )))
+
+  // Path up and curve right past the top left.
+  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.8 )))
+  path.addCurve(to: CGPoint(
+    x: horizStart + ( keyWidth * 0.075 ),
+    y: vertStart - ( keyHeight * 2.125 )),
+    controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 2 )),
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * 0.25 ), y: vertStart - ( keyHeight * 2.125 )))
+
+  // Path right, curve down past the top right, and path down.
+  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart - ( keyHeight * 2.125 )))
+  path.addCurve(to: CGPoint(
+    x: horizStart + ( keyWidth * ( 1 + widthMultiplier ) ),
+    y: vertStart - ( keyHeight * 1.8 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 1.25 ), y: vertStart - ( keyHeight * 2.125 )),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier ) ), y: vertStart - ( keyHeight * 2 )))
+  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier ) ), y: vertStart - ( keyHeight * 1.2 )))
+
+  // Curve in to the left, go down, and curve down past bottom left.
+  path.addCurve(to: CGPoint(
+    x: horizStart + keyWidth,
+    y: vertStart - ( keyHeight * 0.85 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier ) ), y: vertStart - ( keyHeight * 1.05 )),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 )))
+  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
+  path.addCurve(to: CGPoint(
+    x: horizStart + ( keyWidth * 0.925 ),
+    y: vertStart),
+    controlPoint1: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.005 )),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart - ( keyHeight * 0.005 )))
 
   path.close()
   return path
@@ -215,7 +293,55 @@ func centerKeyPopPath( startX: CGFloat, startY: CGFloat, keyWidth: CGFloat, keyH
 ///   - key: the key pressed.
 ///   - layer: the layer to be set.
 ///   - char: the character of the key.
-func genKeyPop(key: UIButton, layer: CAShapeLayer, char: String) {
+///   - displayChar: the character to display on the pop up.
+func genKeyPop(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
+  if DeviceType.isPhone {
+    if shiftButtonState == .shift || shiftButtonState == .caps {
+      if isLandscapeView == true {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
+      } else {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 1)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 1)
+      }
+    } else {
+      if isLandscapeView == true {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2)
+      } else {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 0.9)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 0.9)
+      }
+    }
+  } else if DeviceType.isPad {
+    if shiftButtonState == .shift || shiftButtonState == .caps {
+      if isLandscapeView == true {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 3)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 3)
+      } else {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
+      }
+    } else {
+      if isLandscapeView == true {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.75)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.75)
+      } else {
+        keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
+        keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
+      }
+    }
+  }
+
+  let popLbls: [UILabel] = [keyPopChar, keyHoldPopChar]
+  for lbl in popLbls {
+    lbl.text = displayChar
+    lbl.backgroundColor = .clear
+    lbl.textAlignment = .center
+    lbl.textColor = keyCharColor
+    lbl.sizeToFit()
+  }
+
   // Get the frame in respect to the superview.
   let frame: CGRect = (key.superview?.convert(key.frame, to: nil))!
 
@@ -224,19 +350,28 @@ func genKeyPop(key: UIButton, layer: CAShapeLayer, char: String) {
       startX: frame.origin.x,
       startY: frame.origin.y,
       keyWidth: key.frame.width,
-      keyHeight: key.frame.height).cgPath
+      keyHeight: key.frame.height,
+      char: char).cgPath
+    keyPopChar.center = CGPoint(
+      x: frame.origin.x + key.frame.width / 2,
+      y: frame.origin.y - key.frame.height / 1.75)
+    keyHoldPopChar.center = CGPoint(
+      x: frame.origin.x + key.frame.width / 2,
+      y: frame.origin.y - key.frame.height / 1.75)
   } else if leftKeyChars.contains(char) {
     layer.path = leftKeyPopPath(
       startX: frame.origin.x,
       startY: frame.origin.y,
       keyWidth: key.frame.width,
-      keyHeight: key.frame.height).cgPath
+      keyHeight: key.frame.height,
+      char: char).cgPath
   } else if rightKeyChars.contains(char) {
     layer.path = rightKeyPopPath(
       startX: frame.origin.x,
       startY: frame.origin.y,
       keyWidth: key.frame.width,
-      keyHeight: key.frame.height).cgPath
+      keyHeight: key.frame.height,
+      char: char).cgPath
   }
 
   layer.strokeColor = keyShadowColor
