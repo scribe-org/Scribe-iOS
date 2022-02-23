@@ -1550,6 +1550,13 @@ class KeyboardViewController: UIInputViewController {
     guard let button: UIButton = sender.view as? UIButton else { return }
     let btnPressed: String = button.layer.value(forKey: "original") as? String ?? ""
     alternateKeys = keyAlternatesDict[btnPressed ] ?? [""]
+
+    // Add the original key given its location on the keyboard.
+    if keysWithAlternatesLeft.contains(btnPressed) {
+      alternateKeys.insert(btnPressed, at: 0)
+    } else if keysWithAlternatesRight.contains(btnPressed) {
+      alternateKeys.append(btnPressed)
+    }
     let numAlternates: CGFloat = CGFloat(alternateKeys.count)
 
     alternateKeyWidth = keyWidth * 0.9
@@ -1629,7 +1636,13 @@ class KeyboardViewController: UIInputViewController {
       btn.setTitleColor(keyCharColor, for: .normal)
 
       alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
+      if char == alternateKeys.first && keysWithAlternatesLeft.contains(char) {
+        setBtn(btn: btn, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+      } else if char == alternateKeys.last && keysWithAlternatesRight.contains(char) {
+        setBtn(btn: btn, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+      } else {
+        setBtn(btn: btn, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
+      }
       activateBtn(btn: btn)
 
       alternateBtnStartX += (alternateKeyWidth + 3.0)

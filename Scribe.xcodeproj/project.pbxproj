@@ -256,6 +256,14 @@
 		D1B0719C27C63CE800FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719D27C63CE800FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719E27C63CE900FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
+		D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A227C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A327C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
+		D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
 		D1B81D2227BBB5320085FE5E /* ItalianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B81D2127BBB5320085FE5E /* ItalianKeyboardViewController.swift */; };
 		D1B81D2627BBB5320085FE5E /* Italian.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1B81D1F27BBB5320085FE5E /* Italian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
@@ -471,6 +479,7 @@
 		D1A2DCB027AD37BD0057A10D /* ENAppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAppText.swift; sourceTree = "<group>"; };
 		D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUISymbols.swift; sourceTree = "<group>"; };
 		D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAnimation.swift; sourceTree = "<group>"; };
+		D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAltChars.swift; sourceTree = "<group>"; };
 		D1B81D1F27BBB5320085FE5E /* Italian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Italian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B81D2127BBB5320085FE5E /* ItalianKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1B81D2327BBB5320085FE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -741,6 +750,7 @@
 				D190B240274056D400705659 /* ColorVariables.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
+				D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */,
 				D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */,
 				D171942E27AEDE110038660B /* KeyboardKeys.swift */,
 				D171943727AEF0560038660B /* KeyboardStyling.swift */,
@@ -1225,6 +1235,7 @@
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
+				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */,
 				D171945527AF05D40038660B /* Extensions.swift in Sources */,
 			);
@@ -1240,6 +1251,7 @@
 				D1B81D5527BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D171941A27AECD070038660B /* ESCommandVariables.swift in Sources */,
+				D1B071A227C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D171940227AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171945A27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1277,6 +1289,7 @@
 				D1B81D5427BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171945927AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1314,6 +1327,7 @@
 				D1B81D5727BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171945B27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1351,6 +1365,7 @@
 				D1B81D5927BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171945D27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1388,6 +1403,7 @@
 				D1B81D5827BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171945C27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1425,6 +1441,7 @@
 				D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171945E27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -1462,6 +1479,7 @@
 				D1B81D5627BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */,
 				D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */,
+				D1B071A327C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */,
 				D1B81D3F27BBB7070085FE5E /* KeyboardStyling.swift in Sources */,
 				D1B81D4427BBB71C0085FE5E /* CommandBar.swift in Sources */,
