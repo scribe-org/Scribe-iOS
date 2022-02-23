@@ -68,7 +68,7 @@ func getRUKeys() {
 
     leftKeyChars = ["й", "ф", "1", "-", "[", "_"]
     rightKeyChars = ["х", "э", "0", "\"", "=", "·"]
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = RussianKeyboardConstants.letterKeysPad
     numberKeys = RussianKeyboardConstants.numberKeysPad
@@ -77,7 +77,7 @@ func getRUKeys() {
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]
     rightKeyChars = []
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = RussianKeyboardConstants.keysWithAlternates

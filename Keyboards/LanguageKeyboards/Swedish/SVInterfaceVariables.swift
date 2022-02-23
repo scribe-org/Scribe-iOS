@@ -76,7 +76,7 @@ func getSVKeys() {
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
     rightKeyChars = ["å", "ä", "0", "\"", "=", "·"]
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = SwedishKeyboardConstants.letterKeysPad
     numberKeys = SwedishKeyboardConstants.numberKeysPad
@@ -85,7 +85,7 @@ func getSVKeys() {
 
     leftKeyChars = ["q", "a", "1", "@", "€"]
     rightKeyChars = []
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = SwedishKeyboardConstants.keysWithAlternates

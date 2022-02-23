@@ -103,6 +103,12 @@ let keyboardLayoutDict: [String: () -> Void] = [
   "Swedish": setSVKeyboardLayout
 ]
 
+/// Sets the keyboard layout and its alternate keys.
+func setKeyboard() {
+  setKeyboardLayout()
+  setKeyboardAlternateKeys()
+}
+
 /// Sets the keyboard layouts given the chosen keyboard and device type.
 func setKeyboardLayout() {
   if switchInput {
@@ -114,6 +120,8 @@ func setKeyboardLayout() {
 
   allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 }
+
+// MARK: Alternate Key Variables
 
 /// Sets the alternates for certain keys given the chosen keyboard.
 func setKeyboardAlternateKeys() {
@@ -155,13 +163,6 @@ func setKeyboardAlternateKeys() {
   ]
 }
 
-/// Sets the keyboard layout and its alternate keys.
-func setKeyboard() {
-  setKeyboardLayout()
-  setKeyboardAlternateKeys()
-}
-
-// MARK: Alternate Key Variables
 var alternatesKeyView: UIView!
 var keyCancelled = false
 var keyPopChar = UILabel()
@@ -217,6 +218,24 @@ var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
 var nAlternateKeys = [String]()
 var ьAlternateKeys = [String]()
+
+// MARK: Callout Variables
+
+// Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
+// The purpose of these is to define which key pop up functions should be ran.
+var centralKeyChars: [String] = [String]()
+var leftKeyChars: [String] = [String]()
+var rightKeyChars: [String] = [String]()
+
+// Variables for call out positioning.
+var horizStart = CGFloat(0)
+var vertStart = CGFloat(0)
+var widthMultiplier = CGFloat(0)
+var maxHeightMultiplier = CGFloat(0)
+var maxHeight = CGFloat(0)
+var heightBeforeTopCurves = CGFloat(0)
+var maxHeightCurveControl = CGFloat(0)
+var minHeightCurveControl = CGFloat(0)
 
 // MARK: English Interface Variables
 // Note: here only until there is an English keyboard.
@@ -292,7 +311,7 @@ func getENKeys() {
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
     rightKeyChars = ["p", "0", "\"", "=", "·"]
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = EnglishKeyboardConstants.letterKeysPad
     numberKeys = EnglishKeyboardConstants.numberKeysPad
@@ -301,7 +320,7 @@ func getENKeys() {
 
     leftKeyChars = ["q", "1"]
     rightKeyChars = []
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates

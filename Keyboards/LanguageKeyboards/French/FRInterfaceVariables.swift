@@ -74,7 +74,7 @@ func getFRKeys() {
 
     leftKeyChars = ["a", "q", "1", "-", "[", "_"]
     rightKeyChars = ["p", "m", "0", "\"", "=", "·"]
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = FrenchKeyboardConstants.letterKeysPad
     numberKeys = FrenchKeyboardConstants.numberKeysPad
@@ -83,7 +83,7 @@ func getFRKeys() {
 
     leftKeyChars = ["q", "a", "1", "@", "~"]
     rightKeyChars = []
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates

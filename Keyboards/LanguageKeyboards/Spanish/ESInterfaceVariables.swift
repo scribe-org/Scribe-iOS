@@ -75,7 +75,7 @@ func getESKeys() {
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
     rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = SpanishKeyboardConstants.letterKeysPad
     numberKeys = SpanishKeyboardConstants.numberKeysPad
@@ -84,7 +84,7 @@ func getESKeys() {
 
     leftKeyChars = ["q", "a", "1", "@", "€"]
     rightKeyChars = []
-    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
