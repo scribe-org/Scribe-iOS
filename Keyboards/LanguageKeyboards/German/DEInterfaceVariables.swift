@@ -75,8 +75,8 @@ func getDEKeys() {
     symbolKeys = GermanKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
-    rightKeyChars = []
+    leftKeyChars = ["q", "a", "1", "-", "[", "_"]
+    rightKeyChars = ["ü", "ä", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   } else {
     letterKeys = GermanKeyboardConstants.letterKeysPad
@@ -84,7 +84,7 @@ func getDEKeys() {
     symbolKeys = GermanKeyboardConstants.symbolKeysPad
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
+    leftKeyChars = ["q", "a", "1", "\"", "$"]
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   }

@@ -1498,8 +1498,6 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - sender: the long press of the given key.
   @objc func genHoldPopUpView(sender: UILongPressGestureRecognizer) {
-    let startTime = Date()
-
     // Derive which button was pressed and get its alternates.
     guard let key: UIButton = sender.view as? UIButton else { return }
     let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
@@ -1526,7 +1524,7 @@ class KeyboardViewController: UIInputViewController {
       keyHoldPopChar.removeFromSuperview()
       if !keysWithAlternates.contains(charPressed) {
         executeKeyActions(key)
-      } else if Date() < Calendar.current.date(byAdding: .second, value: 1, to: startTime) ?? Date() {
+      } else if self.view.viewWithTag(1001) == nil {
         executeKeyActions(key)
       }
       keyUntouched(key)

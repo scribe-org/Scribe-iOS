@@ -71,8 +71,8 @@ func getPTKeys() {
     symbolKeys = PortugueseKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
-    rightKeyChars = []
+    leftKeyChars = ["q", "1", "-", "[", "_"]
+    rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   } else {
     letterKeys = PortugueseKeyboardConstants.letterKeysPad
@@ -80,7 +80,7 @@ func getPTKeys() {
     symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
+    leftKeyChars = ["q", "1"]
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   }

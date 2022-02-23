@@ -74,8 +74,8 @@ func getSVKeys() {
     symbolKeys = SwedishKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
-    rightKeyChars = []
+    leftKeyChars = ["q", "a", "1", "-", "[", "_"]
+    rightKeyChars = ["å", "ä", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   } else {
     letterKeys = SwedishKeyboardConstants.letterKeysPad
@@ -83,7 +83,7 @@ func getSVKeys() {
     symbolKeys = SwedishKeyboardConstants.symbolKeysPad
     allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = []
+    leftKeyChars = ["q", "a", "1", "@", "€"]
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) || !rightKeyChars.contains($0) }
   }
