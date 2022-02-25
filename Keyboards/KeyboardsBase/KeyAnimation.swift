@@ -32,7 +32,6 @@ var keyHoldPopLayer = CAShapeLayer()
 /// - Parameters
 ///   - startX: the x-axis starting point.
 ///   - startY: the y-axis starting point.
-///   - keyWidth: the width of the key.
 ///   - keyHeight: the height of the key.
 ///   - char: the character of the key.
 ///   - position: the position of the key.

@@ -127,6 +127,12 @@ class KeyboardViewController: UIInputViewController {
     super.viewDidLoad()
 
     checkDarkModeSetColors()
+    // If alternateKeysView is already added than remove it so it's not colored wrong.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
+    }
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
     loadInterface()
@@ -159,6 +165,12 @@ class KeyboardViewController: UIInputViewController {
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
     checkDarkModeSetColors()
+    // If alternateKeysView is already added than remove it so it's not colored wrong.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
+    }
     loadKeys()
   }
 
@@ -1368,6 +1380,7 @@ class KeyboardViewController: UIInputViewController {
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
     }
   }
 
@@ -1516,6 +1529,7 @@ class KeyboardViewController: UIInputViewController {
       if self.view.viewWithTag(1001) != nil {
         let viewWithTag = self.view.viewWithTag(1001)
         viewWithTag?.removeFromSuperview()
+        alternatesShapeLayer.removeFromSuperlayer()
       }
       keyUntouched(key)
     } else if sender.state == .ended && keyCancelled == false {
@@ -1539,64 +1553,6 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Generates an alternates view to select other characters related to a long held key.
-  ///
-  /// - Parameters
-  ///   - sender: the long press of the given key.
-  func genAlternatesView(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
-    // Derive which button was pressed and get its alternates.
-    guard let button: UIButton = sender.view as? UIButton else { return }
-    let btnPressed: String = button.layer.value(forKey: "original") as? String ?? ""
-    alternateKeys = keyAlternatesDict[btnPressed ] ?? [""]
-
-    // Add the original key given its location on the keyboard.
-    if keysWithAlternatesLeft.contains(btnPressed) {
-      alternateKeys.insert(btnPressed, at: 0)
-    } else if keysWithAlternatesRight.contains(btnPressed) {
-      alternateKeys.append(btnPressed)
-    }
-    let numAlternates: CGFloat = CGFloat(alternateKeys.count)
-
-    alternateKeyWidth = keyWidth * 0.9
-    if keysWithAlternatesLeft.contains(btnPressed ) {
-      alternatesViewX = tapLocation.x - 10.0
-    } else if keysWithAlternatesRight.contains(btnPressed ) {
-      alternatesViewX = tapLocation.x - CGFloat(alternateKeyWidth * numAlternates + (3.0 * numAlternates) - 5.0)
-    }
-
-    if numAlternates > 0 {
-      alternatesViewWidth = CGFloat(alternateKeyWidth * numAlternates + (3.0 * numAlternates) + 5.0)
-    }
-
-    if DeviceType.isPhone {
-      alternatesViewY = tapLocation.y - 50.0
-      alternatesBtnHeight = keyWidth * 1.4
-      alternatesCharHeight = keyWidth / 2
-    } else if DeviceType.isPad {
-      alternatesViewY = tapLocation.y - 100.0
-      alternatesBtnHeight = keyWidth
-      alternatesCharHeight = keyWidth / 3
-    }
-
-    alternatesKeyView = UIView(
-      frame: CGRect(
-        x: alternatesViewX,
-        y: alternatesViewY,
-        width: alternatesViewWidth,
-        height: alternatesBtnHeight
-      )
-    )
-
-    alternatesKeyView.backgroundColor = keyColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = keyShadowColor
-    button.backgroundColor = keyColor
-  }
-
   /// Sets the characters that can be selected on an alternates view that is generated.
   ///
   /// - Parameters
@@ -1611,41 +1567,47 @@ class KeyboardViewController: UIInputViewController {
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
     }
 
     // Remove the hold layer and add the alternates view.
     keyHoldPopLayer.removeFromSuperlayer()
-    genAlternatesView(sender: sender)
+
+    // Derive which button was pressed and get its alternates.
+    guard let key: UIButton = sender.view as? UIButton else { return }
+    genAlternatesView(key: key)
+    self.view.layer.addSublayer(alternatesShapeLayer)
 
     alternateBtnStartX = 5.0
     for char in alternateKeys {
-      let btn: UIButton = UIButton(
+      let alternateKey: KeyboardKey = KeyboardKey(
         frame: CGRect(
           x: alternateBtnStartX,
-          y: 0,
-          width: alternateKeyWidth,
+          y: key.frame.height * 0.15,
+          width: keyWidth,
           height: alternatesBtnHeight
         )
       )
       if shiftButtonState == .normal || char == "ß" {
-        btn.setTitle(char, for: .normal)
+        alternateKey.setTitle(char, for: .normal)
       } else {
-        btn.setTitle(char.capitalized, for: .normal)
+        alternateKey.setTitle(char.capitalized, for: .normal)
       }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(keyCharColor, for: .normal)
+      alternateKey.setCharSize()
+      alternateKey.setTitleColor(keyCharColor, for: .normal)
+      alternateKey.layer.cornerRadius = keyCornerRadius
 
-      alternatesKeyView.addSubview(btn)
+      alternatesKeyView.addSubview(alternateKey)
       if char == alternateKeys.first && keysWithAlternatesLeft.contains(char) {
-        setBtn(btn: btn, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
       } else if char == alternateKeys.last && keysWithAlternatesRight.contains(char) {
-        setBtn(btn: btn, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
       } else {
-        setBtn(btn: btn, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
       }
-      activateBtn(btn: btn)
+      activateBtn(btn: alternateKey)
 
-      alternateBtnStartX += (alternateKeyWidth + 3.0)
+      alternateBtnStartX += (keyWidth + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
   }
