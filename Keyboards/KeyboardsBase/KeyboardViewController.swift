@@ -1579,11 +1579,15 @@ class KeyboardViewController: UIInputViewController {
     self.view.layer.addSublayer(alternatesShapeLayer)
 
     alternateBtnStartX = 5.0
+    var alternatesBtnY = key.frame.height * 0.15
+    if DeviceType.isPad {
+      alternatesBtnY = key.frame.height * 0.2
+    }
     for char in alternateKeys {
       let alternateKey: KeyboardKey = KeyboardKey(
         frame: CGRect(
           x: alternateBtnStartX,
-          y: key.frame.height * 0.15,
+          y: alternatesBtnY,
           width: keyWidth,
           height: alternatesBtnHeight
         )

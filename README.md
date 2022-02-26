@@ -150,8 +150,8 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing symbols and numbers followed by a space returns keyboard to letters
-- Hold-to-select characters for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
-- Key pop up views for letters and symbols [(WIP - see project)](https://github.com/scribe-org/Scribe-iOS/projects/2)
+- Hold-to-select characters for letters and symbols
+- Key pop up views for letters and symbols
 
 </p>
 </details>

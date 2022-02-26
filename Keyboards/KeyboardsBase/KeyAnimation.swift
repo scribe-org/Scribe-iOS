@@ -19,6 +19,7 @@ var widthMultiplier = CGFloat(0)
 var maxHeightMultiplier = CGFloat(0)
 var maxHeight = CGFloat(0)
 var heightBeforeTopCurves = CGFloat(0)
+var maxWidthCurveControl = CGFloat(0)
 var maxHeightCurveControl = CGFloat(0)
 var minHeightCurveControl = CGFloat(0)
 
@@ -158,9 +159,7 @@ func rightKeyPopPath(
                 controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
                 controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl))
   path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.5 )))
-  path.addCurve(to: CGPoint(
-    x: horizStart - ( keyWidth * widthMultiplier ),
-    y: vertStart - ( keyHeight * 1.3 )),
+  path.addCurve(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.3 )),
     controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
     controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 )))
 
