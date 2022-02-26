@@ -86,7 +86,8 @@ func nounAnnotation(
   commandBar: UILabel,
   nounAnnotationDisplay: [UILabel],
   annotationDisplay: [UILabel],
-  givenWord: String) {
+  givenWord: String
+) {
   // Convert the given word to lower case unless nouns are capitalized in the language.
   var wordToCheck: String = ""
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
@@ -158,7 +159,8 @@ func nounAnnotation(
 func selectedNounAnnotation(
   commandBar: UILabel,
   nounAnnotationDisplay: [UILabel],
-  annotationDisplay: [UILabel]) {
+  annotationDisplay: [UILabel]
+) {
   let selectedWord = proxy.selectedText ?? ""
 
   nounAnnotation(
@@ -178,7 +180,8 @@ func selectedNounAnnotation(
 func typedNounAnnotation(
   commandBar: UILabel,
   nounAnnotationDisplay: [UILabel],
-  annotationDisplay: [UILabel]) {
+  annotationDisplay: [UILabel]
+) {
   if proxy.documentContextBeforeInput != nil {
     let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
     let lastWordTyped = wordsTyped.secondToLast()
@@ -231,7 +234,8 @@ func setPrepAnnotation(label: UILabel, annotation: String) {
 func prepositionAnnotation(
   commandBar: UILabel,
   prepAnnotationDisplay: [UILabel],
-  givenWord: String) {
+  givenWord: String
+) {
   // Check to see if the input was uppercase to return an uppercase annotation.
   let wordToCheck = givenWord.lowercased()
 
@@ -292,7 +296,8 @@ func prepositionAnnotation(
 ///   - prepAnnotationDisplay: the part of the annotation display that's for prepositions.
 func selectedPrepAnnotation(
   commandBar: UILabel,
-  prepAnnotationDisplay: [UILabel]) {
+  prepAnnotationDisplay: [UILabel]
+) {
   if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
     let selectedWord = proxy.selectedText ?? ""
 
@@ -311,7 +316,8 @@ func selectedPrepAnnotation(
 ///   - prepAnnotationDisplay: the part of the annotation display that's for prepositions.
 func typedPrepAnnotation(
   commandBar: UILabel,
-  prepAnnotationDisplay: [UILabel]) {
+  prepAnnotationDisplay: [UILabel]
+) {
   if languagesWithCaseDependantOnPrepositions.contains(controllerLanguage) {
     if proxy.documentContextBeforeInput != nil {
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")

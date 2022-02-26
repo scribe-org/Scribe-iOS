@@ -65,16 +65,26 @@ public class SpanishKeyboardConstants {
   static let nAlternateKeys = ["ń"]
 }
 
-/// Provides a Spanish keyboard layout.
-func setESKeyboardLayout() {
+/// Gets the keys for the Spanish keyboard.
+func getESKeys() {
   if DeviceType.isPhone {
     letterKeys = SpanishKeyboardConstants.letterKeysPhone
     numberKeys = SpanishKeyboardConstants.numberKeysPhone
     symbolKeys = SpanishKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "a", "1", "-", "[", "_"]
+    rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = SpanishKeyboardConstants.letterKeysPad
     numberKeys = SpanishKeyboardConstants.numberKeysPad
     symbolKeys = SpanishKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "a", "1", "@", "€"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
@@ -89,6 +99,12 @@ func setESKeyboardLayout() {
   dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
   cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
   nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a Spanish keyboard layout.
+func setESKeyboardLayout() {
+  getESKeys()
+
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espacio"

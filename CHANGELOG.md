@@ -33,11 +33,17 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The messages that tell the user a noun is already plural have been translated to the keyboard's language.
 - The keyboard height has been increased for landscape mode on iPads.
 - Characters on keys have been made larger so they reflect the system keyboards better.
-<!--- All letter, number and special keys now pop up after being pressed. -->
-<!--- Hold to select characters have been redesigned to reflect the addition of keys popping up. -->
+- All letter, number and special keys now pop up after being pressed.
+- Hold to select characters have been redesigned to reflect the addition of keys popping up.
 <!--- All App Store media has been redone to reflect these changes.-->
 
 # Scribe 1.2.1
+
+### ✨ New Features
+
+- The keyboard switches back to letter keys after all appropriate symbols followed by space.
+- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.
+- Users can now translate pronouns as these were not originally included.
 
 ### 🗃️ Data Added
 
@@ -47,12 +53,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Russian: 2 nouns
 - Spanish: 925 nouns, 19 verbs
 - Swedish: 10 nouns, 5 verbs
-
-### ✨ New Features
-
-- The keyboard switches back to letter keys after all appropriate symbols followed by space.
-- Scribe commands now accept inputs that are followed by a space in case the user accidentally added one.
-- Users can now translate pronouns as these were not originally included.
 
 ### 🎨 Design Changes
 

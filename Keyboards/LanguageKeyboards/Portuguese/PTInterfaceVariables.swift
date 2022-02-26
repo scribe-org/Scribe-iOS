@@ -63,16 +63,26 @@ public enum PortugueseKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
-/// Provides a Portuguese keyboard layout.
-func setPTKeyboardLayout() {
+/// Gets the keys for the Portuguese keyboard.
+func getPTKeys() {
   if DeviceType.isPhone {
     letterKeys = PortugueseKeyboardConstants.letterKeysPhone
     numberKeys = PortugueseKeyboardConstants.numberKeysPhone
     symbolKeys = PortugueseKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "1", "-", "[", "_"]
+    rightKeyChars = ["p", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = PortugueseKeyboardConstants.letterKeysPad
     numberKeys = PortugueseKeyboardConstants.numberKeysPad
     symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "1"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
@@ -85,6 +95,12 @@ func setPTKeyboardLayout() {
   uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
   cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
   nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a Portuguese keyboard layout.
+func setPTKeyboardLayout() {
+  getPTKeys()
+
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espaço"

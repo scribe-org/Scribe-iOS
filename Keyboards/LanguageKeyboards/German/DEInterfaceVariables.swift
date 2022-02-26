@@ -67,16 +67,26 @@ public enum GermanKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
-/// Provides a German keyboard layout.
-func setDEKeyboardLayout() {
+/// Gets the keys for the German keyboard.
+func getDEKeys() {
   if DeviceType.isPhone {
     letterKeys = GermanKeyboardConstants.letterKeysPhone
     numberKeys = GermanKeyboardConstants.numberKeysPhone
     symbolKeys = GermanKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "a", "1", "-", "[", "_"]
+    rightKeyChars = ["ü", "ä", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = GermanKeyboardConstants.letterKeysPad
     numberKeys = GermanKeyboardConstants.numberKeysPad
     symbolKeys = GermanKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "a", "1", "\"", "$"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
@@ -93,6 +103,12 @@ func setDEKeyboardLayout() {
   zAlternateKeys = GermanKeyboardConstants.zAlternateKeys
   cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
   nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a German keyboard layout.
+func setDEKeyboardLayout() {
+  getDEKeys()
+
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "Leerzeichen"

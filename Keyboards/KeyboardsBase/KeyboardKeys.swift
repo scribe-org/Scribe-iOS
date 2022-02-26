@@ -64,29 +64,29 @@ class KeyboardKey: UIButton {
     self.setTitle(keyToDisplay, for: .normal) // set button character
   }
 
-  /// Sets the character size of a captial key if the device is an iPhone given the orientation.
+  /// Sets the character size of a capital key if the device is an iPhone given the orientation.
   func setPhoneCapCharSize() {
     if isLandscapeView == true {
       if self.key == "#+="
           || self.key == "ABC"
           || self.key == "АБВ"
           || self.key == "123" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
       } else if self.key == spaceBar {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.9)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.9)
       }
     } else {
       if self.key == "#+="
           || self.key == "ABC"
           || self.key == "АБВ"
           || self.key == "123" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.75)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
       } else if self.key == spaceBar {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.5)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.5)
       }
     }
   }
@@ -102,9 +102,9 @@ class KeyboardKey: UIButton {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView == true {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.4)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.4)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 1.35)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.35)
       }
     } else {
       self.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
@@ -124,26 +124,26 @@ class KeyboardKey: UIButton {
           || self.key == "ABC"
           || self.key == "АБВ"
           || self.key == "hideKeyboard" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.75)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
       } else if self.key == spaceBar {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4.25)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.25)
       } else if self.key == ".?123" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4.5)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.5)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.75)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
       }
     } else {
       if self.key == "#+="
           || self.key == "ABC"
           || self.key == "АБВ"
           || self.key == "hideKeyboard" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.25)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.25)
       } else if self.key == spaceBar {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.5)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
       } else if self.key == ".?123" {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 4)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3)
       }
     }
   }
@@ -159,9 +159,9 @@ class KeyboardKey: UIButton {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView == true {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 3.35)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.35)
       } else {
-        self.titleLabel?.font = .systemFont(ofSize: letterButtonWidth / 2.75)
+        self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.75)
       }
     } else {
       self.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
@@ -187,7 +187,7 @@ class KeyboardKey: UIButton {
   func adjustPhoneKeyWidth() {
     if self.key == "ABC" || self.key == "АБВ" {
       self.layer.setValue(true, forKey: "isSpecial")
-      self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+      self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
     } else if self.key == "delete"
       || self.key == "#+="
       || self.key == "shift"
@@ -197,10 +197,10 @@ class KeyboardKey: UIButton {
         && keyboardState == .letters
         && switchInput != true {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       } else {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
       }
     } else if self.key == "123"
       || self.key == ".?123"
@@ -208,17 +208,17 @@ class KeyboardKey: UIButton {
       || self.key == "hideKeyboard" {
       if self.row == 2 {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
       } else if self.row != 2 {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 2).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
       }
     } else if (keyboardState == .numbers || keyboardState == .symbols)
       && self.row == 2 {
       // Make second row number and symbol keys wider for iPhones.
-      self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.4).isActive = true
+      self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.4).isActive = true
     } else if self.key != spaceBar {
-      self.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
+      self.widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
     }
   }
 
@@ -226,13 +226,13 @@ class KeyboardKey: UIButton {
   func adjustPadKeyWidth() {
     if self.key == "ABC" || self.key == "АБВ" {
       self.layer.setValue(true, forKey: "isSpecial")
-      self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+      self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
     } else if self.key == "delete"
       || self.key == "#+="
       || self.key == "shift"
       || self.key == "selectKeyboard" {
       self.layer.setValue(true, forKey: "isSpecial")
-      self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+      self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
     } else if self.key == "123"
       || self.key == ".?123"
       || self.key == "return"
@@ -242,13 +242,13 @@ class KeyboardKey: UIButton {
           && self.row == 1
           && DeviceType.isPad {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1.5).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
       } else {
         self.layer.setValue(true, forKey: "isSpecial")
-        self.widthAnchor.constraint(equalToConstant: numSymButtonWidth * 1).isActive = true
+        self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       }
     } else if self.key != spaceBar {
-      self.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
+      self.widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
     }
   }
 

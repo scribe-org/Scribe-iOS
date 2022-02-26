@@ -127,6 +127,12 @@ class KeyboardViewController: UIInputViewController {
     super.viewDidLoad()
 
     checkDarkModeSetColors()
+    // If alternateKeysView is already added than remove it so it's not colored wrong.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
+    }
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
     loadInterface()
@@ -159,6 +165,12 @@ class KeyboardViewController: UIInputViewController {
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
     checkDarkModeSetColors()
+    // If alternateKeysView is already added than remove it so it's not colored wrong.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
+    }
     loadKeys()
   }
 
@@ -317,7 +329,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get3x2ConjButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -339,7 +351,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get2x2ConjButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / conjugationFontDivisor)
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -388,7 +400,7 @@ class KeyboardViewController: UIInputViewController {
       lbl.setTitleColor(specialKeyColor, for: .normal)
       lbl.isUserInteractionEnabled = false
       if DeviceType.isPad {
-        lbl.titleLabel?.font =  .systemFont(ofSize: letterButtonWidth / 4)
+        lbl.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / 4)
       }
     }
   }
@@ -643,59 +655,64 @@ class KeyboardViewController: UIInputViewController {
     setConjugationBtns()
     invalidState = false
 
+    let specialKeys = [
+      "shift", "delete", "ABC", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
+    ]
+    allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+
     // Clear interface from the last state.
     keyboardKeys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
 
     keyboardView.backgroundColor? = keyboardBackColor
 
-    // buttonWidth determined per keyboard by the top row.
+    // keyWidth determined per keyboard by the top row.
     if isLandscapeView == true {
       if DeviceType.isPhone {
-        letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.5
-        numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.5
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.5
+        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.5
       } else if DeviceType.isPad {
-        letterButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.2
-        numSymButtonWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.2
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.2
+        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.2
       }
     } else {
-      letterButtonWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
-      numSymButtonWidth = (UIScreen.main.bounds.width - 6) / CGFloat(numberKeys[0].count) * 0.9
+      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
+      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(numberKeys[0].count) * 0.9
     }
 
     // Derive keyboard given current states and set widths.
     switch keyboardState {
     case .letters:
       keyboard = letterKeys
-      buttonWidth = letterButtonWidth
+      keyWidth = letterKeyWidth
       // Auto-capitalization if the cursor is at the start of the proxy.
       if proxy.documentContextBeforeInput?.count == 0 {
         shiftButtonState = .shift
       }
     case .numbers:
       keyboard = numberKeys
-      buttonWidth = numSymButtonWidth
+      keyWidth = numSymKeyWidth
     case .symbols:
       keyboard = symbolKeys
-      buttonWidth = numSymButtonWidth
+      keyWidth = numSymKeyWidth
     }
 
     // Derive corner radii.
     if DeviceType.isPhone {
       if isLandscapeView == true {
-        keyCornerRadius = buttonWidth / 9
-        commandKeyCornerRadius = buttonWidth / 5
+        keyCornerRadius = keyWidth / 9
+        commandKeyCornerRadius = keyWidth / 5
       } else {
-        keyCornerRadius = buttonWidth / 6
-        commandKeyCornerRadius = buttonWidth / 3
+        keyCornerRadius = keyWidth / 6
+        commandKeyCornerRadius = keyWidth / 3
       }
     } else if DeviceType.isPad {
       if isLandscapeView == true {
-        keyCornerRadius = buttonWidth / 12
-        commandKeyCornerRadius = buttonWidth / 7.5
+        keyCornerRadius = keyWidth / 12
+        commandKeyCornerRadius = keyWidth / 7.5
       } else {
-        keyCornerRadius = buttonWidth / 9
-        commandKeyCornerRadius = buttonWidth / 5
+        keyCornerRadius = keyWidth / 9
+        commandKeyCornerRadius = keyWidth / 5
       }
     }
 
@@ -787,7 +804,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "y"
             && ["German", "Swedish"].contains(controllerLanguage)
             && switchInput != true {
-            leftPadding = buttonWidth / 3
+            leftPadding = keyWidth / 3
             addPadding(to: stackView2, width: leftPadding, key: "y")
           }
           if DeviceType.isPhone
@@ -795,7 +812,7 @@ class KeyboardViewController: UIInputViewController {
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
                 || switchInput == true) {
-            leftPadding = buttonWidth / 4
+            leftPadding = keyWidth / 4
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
@@ -803,7 +820,7 @@ class KeyboardViewController: UIInputViewController {
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
                 || switchInput == true) {
-            leftPadding = buttonWidth / 3
+            leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
@@ -811,20 +828,20 @@ class KeyboardViewController: UIInputViewController {
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
                 || switchInput == true) {
-            leftPadding = buttonWidth / 3
+            leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "@")
           }
           if DeviceType.isPad
             && key == "$"
             && controllerLanguage == "Italian" {
-            leftPadding = buttonWidth / 3
+            leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "$")
           }
           if DeviceType.isPad
             && key == "€"
             && (controllerLanguage == "Portuguese"
                 || switchInput == true) {
-            leftPadding = buttonWidth / 3
+            leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
 
@@ -870,15 +887,16 @@ class KeyboardViewController: UIInputViewController {
             styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
           }
 
-          // Setting hold-to-select functionality.
-          let longPressGesture = UILongPressGestureRecognizer(
+          // Setting key pop functionality.
+          let keyHoldPop = UILongPressGestureRecognizer(
             target: self,
-            action: #selector(setAlternatesView(sender:))
+            action: #selector(genHoldPopUpView(sender:))
           )
-          longPressGesture.minimumPressDuration = 1.2
+          keyHoldPop.minimumPressDuration = 0.125
 
-          if keysWithAlternates.contains(key) {
-            btn.addGestureRecognizer(longPressGesture)
+         if allNonSpecialKeys.contains(key) {
+            btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
+            btn.addGestureRecognizer(keyHoldPop)
           }
 
           // Pad after key is added.
@@ -887,7 +905,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "m"
             && ["German", "Swedish"].contains(controllerLanguage)
             && switchInput != true {
-            rightPadding = buttonWidth / 3
+            rightPadding = keyWidth / 3
             addPadding(to: stackView2, width: rightPadding, key: "m")
           }
           if DeviceType.isPhone
@@ -895,7 +913,7 @@ class KeyboardViewController: UIInputViewController {
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
                 || switchInput == true) {
-            rightPadding = buttonWidth / 4
+            rightPadding = keyWidth / 4
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
 
@@ -907,14 +925,14 @@ class KeyboardViewController: UIInputViewController {
           if keyboardState == .letters {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(letterKeys[0].count) * buttonWidth)
+              - (CGFloat(letterKeys[0].count) * keyWidth)
               ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
           } else {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(numberKeys[0].count) * numSymButtonWidth)
+              - (CGFloat(numberKeys[0].count) * numSymKeyWidth)
               ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
@@ -1362,6 +1380,7 @@ class KeyboardViewController: UIInputViewController {
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
     }
   }
 
@@ -1470,55 +1489,68 @@ class KeyboardViewController: UIInputViewController {
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
   }
 
-  /// Generates an alternates view to select other characters related to a long held key.
+  /// Generates a pop up of the key pressed.
+  ///
+  /// - Parameters
+  ///   - key: the key pressed.
+  @objc func genPopUpView(key: UIButton) {
+    let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
+    let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
+    genKeyPop(key: key, layer: keyPopLayer, char: charPressed, displayChar: displayChar)
+
+    self.view.layer.addSublayer(keyPopLayer)
+    self.view.addSubview(keyPopChar)
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
+      keyPopLayer.removeFromSuperlayer()
+      keyPopChar.removeFromSuperview()
+    }
+  }
+
+  /// Generates a pop up of the key long pressed.
   ///
   /// - Parameters
   ///   - sender: the long press of the given key.
-  func genAlternatesView(sender: UILongPressGestureRecognizer) {
-    let tapLocation = sender.location(in: self.view)
-
+  @objc func genHoldPopUpView(sender: UILongPressGestureRecognizer) {
     // Derive which button was pressed and get its alternates.
-    guard let button: UIButton = sender.view as? UIButton else { return }
-    let btnPressed: String = button.layer.value(forKey: "original") as? String ?? ""
-    alternateKeys = keyAlternatesDict[btnPressed ] ?? [""]
-    let numAlternates: CGFloat = CGFloat(alternateKeys.count)
+    guard let key: UIButton = sender.view as? UIButton else { return }
+    let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
+    let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
+    genKeyPop(key: key, layer: keyHoldPopLayer, char: charPressed, displayChar: displayChar)
 
-    alternateButtonWidth = buttonWidth * 0.9
-    if keysWithAlternatesLeft.contains(btnPressed ) {
-      alternatesViewX = tapLocation.x - 10.0
-    } else if keysWithAlternatesRight.contains(btnPressed ) {
-      alternatesViewX = tapLocation.x - CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) - 5.0)
+    if sender.state == .began {
+      self.view.layer.addSublayer(keyHoldPopLayer)
+      self.view.addSubview(keyHoldPopChar)
+      keyCancelled = false
+    } else if sender.state == .changed {
+      // Remove the key hold pop up and alternates view if user cancels.
+      keyHoldPopLayer.removeFromSuperlayer()
+      keyHoldPopChar.removeFromSuperview()
+      keyCancelled = true
+      if self.view.viewWithTag(1001) != nil {
+        let viewWithTag = self.view.viewWithTag(1001)
+        viewWithTag?.removeFromSuperview()
+        alternatesShapeLayer.removeFromSuperlayer()
+      }
+      keyUntouched(key)
+    } else if sender.state == .ended && keyCancelled == false {
+      // Remove the key hold pop up and execute key only if the alternates view isn't present.
+      keyHoldPopLayer.removeFromSuperlayer()
+      keyHoldPopChar.removeFromSuperview()
+      if !keysWithAlternates.contains(charPressed) {
+        executeKeyActions(key)
+      } else if self.view.viewWithTag(1001) == nil {
+        executeKeyActions(key)
+      }
+      keyUntouched(key)
     }
 
-    if numAlternates > 0 {
-      alternatesViewWidth = CGFloat(alternateButtonWidth * numAlternates + (3.0 * numAlternates) + 5.0)
+    if keysWithAlternates.contains(charPressed) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        self.setAlternatesView(sender: sender)
+        keyHoldPopLayer.removeFromSuperlayer()
+        keyHoldPopChar.removeFromSuperview()
+      }
     }
-
-    if DeviceType.isPhone {
-      alternatesViewY = tapLocation.y - 50.0
-      alternatesBtnHeight = buttonWidth * 1.4
-      alternatesCharHeight = buttonWidth / 2
-    } else if DeviceType.isPad {
-      alternatesViewY = tapLocation.y - 100.0
-      alternatesBtnHeight = buttonWidth
-      alternatesCharHeight = buttonWidth / 3
-    }
-
-    alternatesKeyView = UIView(
-      frame: CGRect(
-        x: alternatesViewX,
-        y: alternatesViewY,
-        width: alternatesViewWidth,
-        height: alternatesBtnHeight
-      )
-    )
-
-    alternatesKeyView.backgroundColor = keyColor
-    alternatesKeyView.layer.cornerRadius = 5
-    alternatesKeyView.layer.borderWidth = 1
-    alternatesKeyView.tag = 1001
-    alternatesKeyView.layer.borderColor = keyShadowColor
-    button.backgroundColor = keyColor
   }
 
   /// Sets the characters that can be selected on an alternates view that is generated.
@@ -1535,33 +1567,51 @@ class KeyboardViewController: UIInputViewController {
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
     }
 
-    genAlternatesView(sender: sender)
+    // Remove the hold layer and add the alternates view.
+    keyHoldPopLayer.removeFromSuperlayer()
+
+    // Derive which button was pressed and get its alternates.
+    guard let key: UIButton = sender.view as? UIButton else { return }
+    genAlternatesView(key: key)
+    self.view.layer.addSublayer(alternatesShapeLayer)
 
     alternateBtnStartX = 5.0
+    var alternatesBtnY = key.frame.height * 0.15
+    if DeviceType.isPad {
+      alternatesBtnY = key.frame.height * 0.2
+    }
     for char in alternateKeys {
-      let btn: UIButton = UIButton(
+      let alternateKey: KeyboardKey = KeyboardKey(
         frame: CGRect(
           x: alternateBtnStartX,
-          y: 0,
-          width: alternateButtonWidth,
+          y: alternatesBtnY,
+          width: keyWidth,
           height: alternatesBtnHeight
         )
       )
       if shiftButtonState == .normal || char == "ß" {
-        btn.setTitle(char, for: .normal)
+        alternateKey.setTitle(char, for: .normal)
       } else {
-        btn.setTitle(char.capitalized, for: .normal)
+        alternateKey.setTitle(char.capitalized, for: .normal)
       }
-      btn.titleLabel?.font = .systemFont(ofSize: alternatesCharHeight)
-      btn.setTitleColor(keyCharColor, for: .normal)
+      alternateKey.setCharSize()
+      alternateKey.setTitleColor(keyCharColor, for: .normal)
+      alternateKey.layer.cornerRadius = keyCornerRadius
 
-      alternatesKeyView.addSubview(btn)
-      setBtn(btn: btn, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
-      activateBtn(btn: btn)
+      alternatesKeyView.addSubview(alternateKey)
+      if char == alternateKeys.first && keysWithAlternatesLeft.contains(char) {
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+      } else if char == alternateKeys.last && keysWithAlternatesRight.contains(char) {
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+      } else {
+        setBtn(btn: alternateKey, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
+      }
+      activateBtn(btn: alternateKey)
 
-      alternateBtnStartX += (alternateButtonWidth + 3.0)
+      alternateBtnStartX += (keyWidth + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
   }

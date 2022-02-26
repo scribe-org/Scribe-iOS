@@ -58,16 +58,26 @@ public enum RussianKeyboardConstants {
   static let ьAlternateKeys = ["Ъ"]
 }
 
-/// Provides a Russian keyboard layout.
-func setRUKeyboardLayout() {
+/// Gets the keys for the Russian keyboard.
+func getRUKeys() {
   if DeviceType.isPhone {
     letterKeys = RussianKeyboardConstants.letterKeysPhone
     numberKeys = RussianKeyboardConstants.numberKeysPhone
     symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["й", "ф", "1", "-", "[", "_"]
+    rightKeyChars = ["х", "э", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = RussianKeyboardConstants.letterKeysPad
     numberKeys = RussianKeyboardConstants.numberKeysPad
     symbolKeys = RussianKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["й", "ф", "1", "@", "$"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
@@ -75,6 +85,12 @@ func setRUKeyboardLayout() {
   keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
   еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
   ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
+}
+
+/// Provides a Russian keyboard layout.
+func setRUKeyboardLayout() {
+  getRUKeys()
+
   currencySymbol = "₽"
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "Пробел"

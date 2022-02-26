@@ -64,16 +64,26 @@ public enum FrenchKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
-/// Provides a French keyboard layout.
-func setFRKeyboardLayout() {
+/// Gets the keys for the French keyboard.
+func getFRKeys() {
   if DeviceType.isPhone {
     letterKeys = FrenchKeyboardConstants.letterKeysPhone
     numberKeys = FrenchKeyboardConstants.numberKeysPhone
     symbolKeys = FrenchKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["a", "q", "1", "-", "[", "_"]
+    rightKeyChars = ["p", "m", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = FrenchKeyboardConstants.letterKeysPad
     numberKeys = FrenchKeyboardConstants.numberKeysPad
     symbolKeys = FrenchKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "a", "1", "@", "~"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = FrenchKeyboardConstants.keysWithAlternates
@@ -87,6 +97,12 @@ func setFRKeyboardLayout() {
   yAlternateKeys = FrenchKeyboardConstants.yAlternateKeys
   cAlternateKeys = FrenchKeyboardConstants.cAlternateKeys
   nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a French keyboard layout.
+func setFRKeyboardLayout() {
+  getFRKeys()
+
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "espace"

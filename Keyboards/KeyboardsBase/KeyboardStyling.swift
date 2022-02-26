@@ -44,26 +44,26 @@ var keysThatAreSlightlyLarger: [String] = [
 ///  - iconName: the name of the UIImage systemName icon to be used.
 func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
   var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterButtonWidth / 1.75,
+    pointSize: letterKeyWidth / 1.75,
     weight: .light,
     scale: .medium
   )
   if keysThatAreSlightlyLarger.contains(iconName) {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 1.55,
+      pointSize: letterKeyWidth / 1.55,
       weight: .light,
       scale: .medium
     )
   }
   if isLandscapeView == true {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 3.5,
+      pointSize: letterKeyWidth / 3.5,
       weight: .light,
       scale: .medium
     )
     if keysThatAreSlightlyLarger.contains(iconName) {
       iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.2,
+        pointSize: letterKeyWidth / 3.2,
         weight: .light,
         scale: .medium
       )
@@ -79,26 +79,26 @@ func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
   keysThatAreSlightlyLarger.append("globe")
   var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterButtonWidth / 3,
+    pointSize: letterKeyWidth / 3,
     weight: .light,
     scale: .medium
   )
   if keysThatAreSlightlyLarger.contains(iconName) {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 2.75,
+      pointSize: letterKeyWidth / 2.75,
       weight: .light,
       scale: .medium
     )
   }
   if isLandscapeView == true {
     iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterButtonWidth / 3.75,
+      pointSize: letterKeyWidth / 3.75,
       weight: .light,
       scale: .medium
     )
     if keysThatAreSlightlyLarger.contains(iconName) {
       iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterButtonWidth / 3.4,
+        pointSize: letterKeyWidth / 3.4,
         weight: .light,
         scale: .medium
       )

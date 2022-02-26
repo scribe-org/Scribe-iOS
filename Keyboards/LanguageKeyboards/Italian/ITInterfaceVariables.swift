@@ -64,16 +64,26 @@ public enum ItalianKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
-/// Provides a Italian keyboard layout.
-func setITKeyboardLayout() {
+/// Gets the keys for the Italian keyboard.
+func getITKeys() {
   if DeviceType.isPhone {
     letterKeys = ItalianKeyboardConstants.letterKeysPhone
     numberKeys = ItalianKeyboardConstants.numberKeysPhone
     symbolKeys = ItalianKeyboardConstants.symbolKeysPhone
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "1", "-", "[", "_"]
+    rightKeyChars = ["p", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     letterKeys = ItalianKeyboardConstants.letterKeysPad
     numberKeys = ItalianKeyboardConstants.numberKeysPad
     symbolKeys = ItalianKeyboardConstants.symbolKeysPad
+    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["q", "1"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
   keysWithAlternates = ItalianKeyboardConstants.keysWithAlternates
@@ -87,6 +97,12 @@ func setITKeyboardLayout() {
   sAlternateKeys = ItalianKeyboardConstants.sAlternateKeys
   cAlternateKeys = ItalianKeyboardConstants.cAlternateKeys
   nAlternateKeys = ItalianKeyboardConstants.nAlternateKeys
+}
+
+/// Provides a Italian keyboard layout.
+func setITKeyboardLayout() {
+  getITKeys()
+
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "spazio"
