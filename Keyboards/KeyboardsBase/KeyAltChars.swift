@@ -77,8 +77,8 @@ let exclamationAlternateKeys = ["¡"]
 let percentAlternateKeys = ["‰"]
 let ampersandAlternateKeys = ["§"]
 var symbolKeysWithAlternatesRight = ["'", "\"", "="]
-let apostropheAlternateKeys = ["`", "´", "'"]
-let quotationAlternateKeys = ["«", "»", "„", "“", "\""]
+let apostropheAlternateKeys = ["`", "‘", "’"]
+let quotationAlternateKeys = ["«", "»", "„", "“", "”"]
 let equalSignAlternateKeys = ["≈", "±", "≠"]
 var keysWithAlternatesLeft = [String]()
 var keysWithAlternatesRight = [String]()
