@@ -35,7 +35,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Characters on keys have been made larger so they reflect the system keyboards better.
 - All letter, number and special keys now pop up after being pressed.
 - Hold to select characters have been redesigned to reflect the addition of keys popping up.
-<!--- All App Store media has been redone to reflect these changes.-->
+- All App Store media has been redone to reflect these changes.
 
 # Scribe 1.2.1
 
