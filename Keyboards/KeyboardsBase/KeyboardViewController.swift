@@ -1526,11 +1526,6 @@ class KeyboardViewController: UIInputViewController {
       keyHoldPopLayer.removeFromSuperlayer()
       keyHoldPopChar.removeFromSuperview()
       keyCancelled = true
-      if self.view.viewWithTag(1001) != nil {
-        let viewWithTag = self.view.viewWithTag(1001)
-        viewWithTag?.removeFromSuperview()
-        alternatesShapeLayer.removeFromSuperlayer()
-      }
       keyUntouched(key)
     } else if sender.state == .ended && keyCancelled == false {
       // Remove the key hold pop up and execute key only if the alternates view isn't present.
@@ -1569,9 +1564,6 @@ class KeyboardViewController: UIInputViewController {
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
-
-    // Remove the hold layer and add the alternates view.
-    keyHoldPopLayer.removeFromSuperlayer()
 
     // Derive which button was pressed and get its alternates.
     guard let key: UIButton = sender.view as? UIButton else { return }
