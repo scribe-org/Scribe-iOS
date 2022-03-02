@@ -109,15 +109,12 @@ var ьAlternateKeys = [String]()
 ///   - numAlternates: the number of alternate characters to display.
 ///   - side: the side of the keyboard that the key is found.
 func setAlternatesPathState(
-  startX: CGFloat,
   startY: CGFloat,
+  keyWidth: CGFloat,
   keyHeight: CGFloat,
   numAlternates: CGFloat,
   side: String
 ) {
-  // Starting positions need to be updated.
-  horizStart = startX
-  vertStart = startY + keyHeight
   if DeviceType.isPad {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.05
@@ -169,8 +166,12 @@ func alternateKeysPathLeft(
   keyHeight: CGFloat,
   numAlternates: CGFloat
 ) -> UIBezierPath {
+  // Starting positions need to be updated.
+  horizStart = startX
+  vertStart = startY + keyHeight
+
   setAlternatesPathState(
-    startX: startX, startY: startY, keyHeight: keyHeight, numAlternates: numAlternates, side: "left"
+    startY: startY, keyWidth: keyWidth, keyHeight: keyHeight, numAlternates: numAlternates, side: "left"
   )
 
   // Path is clockwise from bottom left.
@@ -235,8 +236,12 @@ func alternateKeysPathRight(
   keyHeight: CGFloat,
   numAlternates: CGFloat
 ) -> UIBezierPath {
+  // Starting positions need to be updated.
+  horizStart = startX
+  vertStart = startY + keyHeight
+
   setAlternatesPathState(
-    startX: startX, startY: startY, keyHeight: keyHeight, numAlternates: numAlternates, side: "right"
+    startY: startY, keyWidth: keyWidth, keyHeight: keyHeight, numAlternates: numAlternates, side: "right"
   )
 
   // Path is clockwise from bottom left.
@@ -295,6 +300,7 @@ func alternateKeysPathRight(
 func genAlternatesView(key: UIButton) {
   // Get the frame in respect to the superview.
   let frame: CGRect = (key.superview?.convert(key.frame, to: nil))!
+  let width = key.frame.width
 
   // Derive which button was pressed and get its alternates.
   let char: String = key.layer.value(forKey: "original") as? String ?? ""
@@ -312,16 +318,16 @@ func genAlternatesView(key: UIButton) {
     alternatesViewX = frame.origin.x - 4.0
     alternatesShapeLayer.path = alternateKeysPathLeft(
       startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: key.frame.width, keyHeight: key.frame.height, numAlternates: numAlternates).cgPath
+      keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates).cgPath
   } else if keysWithAlternatesRight.contains(char ) {
-    alternatesViewX = frame.origin.x + keyWidth - CGFloat(keyWidth * numAlternates + ( 3.0 * numAlternates ) + 2.0)
+    alternatesViewX = frame.origin.x + width - CGFloat(width * numAlternates + ( 3.0 * numAlternates ) + 2.0)
     alternatesShapeLayer.path = alternateKeysPathRight(
       startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: key.frame.width, keyHeight: key.frame.height, numAlternates: numAlternates).cgPath
+      keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates).cgPath
   }
 
   if numAlternates > 0 {
-    alternatesViewWidth = CGFloat(keyWidth * numAlternates + ( 3.0 * numAlternates ) + 8.0)
+    alternatesViewWidth = CGFloat(width * numAlternates + ( 3.0 * numAlternates ) + 8.0)
   }
 
   alternatesViewY = frame.origin.y - key.frame.height * 1.135

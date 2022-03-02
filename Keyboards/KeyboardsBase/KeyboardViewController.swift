@@ -1580,7 +1580,7 @@ class KeyboardViewController: UIInputViewController {
         frame: CGRect(
           x: alternateBtnStartX,
           y: alternatesBtnY,
-          width: keyWidth,
+          width: key.frame.width,
           height: alternatesBtnHeight
         )
       )
@@ -1603,7 +1603,7 @@ class KeyboardViewController: UIInputViewController {
       }
       activateBtn(btn: alternateKey)
 
-      alternateBtnStartX += (keyWidth + 3.0)
+      alternateBtnStartX += (key.frame.width + 3.0)
     }
     self.view.addSubview(alternatesKeyView)
   }

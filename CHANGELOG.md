@@ -26,7 +26,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The alternate characters of apostrophes and quotation marks have been fixed.
 - Key alternate views now stay if the key is canceled as they were disapearing too easily.
-<!-- - The width of alternate character callouts for certain keys has been fixed for iPhones. -->
+- The width of alternate character callouts for certain keys has been fixed for iPhones. 
 
 # Scribe 1.3.0
 
