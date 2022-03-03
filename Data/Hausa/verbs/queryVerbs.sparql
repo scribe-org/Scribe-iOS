@@ -7,7 +7,7 @@ SELECT ?lexeme ?verb WHERE {
     wikibase:lexicalCategory wd:Q24905 ;
     wikibase:lemma ?verb .
 
-  # BIND(lang(?noun) as ?language)
-  # FILTER(?language = "ha")
+  BIND(lang(?verb) as ?language)
+  FILTER(?language = "ha")
   # FILTER(?language = "ha-arabic")
 }
