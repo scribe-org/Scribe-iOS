@@ -17,8 +17,8 @@ SELECT DISTINCT ?noun ?gender WHERE {
     FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
   } .
 
-  # BIND(lang(?noun) as ?language)
-  # FILTER(?language = "ha")
+  BIND(lang(?noun) as ?language)
+  FILTER(?language = "ha")
   # FILTER(?language = "ha-arabic")
 
   SERVICE wikibase:label {
