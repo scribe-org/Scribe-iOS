@@ -1,4 +1,4 @@
-# All Japanese (Q5287) nouns.
+# All Mandarin Chinese (Q727694) nouns.
 # Enter this query at https://query.wikidata.org/.
 
 SELECT DISTINCT ?lexeme ?noun WHERE {
@@ -6,12 +6,8 @@ SELECT DISTINCT ?lexeme ?noun WHERE {
   # Nouns and pronouns.
   VALUES ?nounTypes { wd:Q1084 wd:Q147276 }
   ?lexeme a ontolex:LexicalEntry ;
-    dct:language wd:Q5287 ;
+    dct:language wd:Q727694 ;
     wikibase:lexicalCategory ?nounType ;
     wikibase:lemma ?noun .
   FILTER(?nounType = ?nounTypes)
-
-  BIND(lang(?noun) as ?language)
-  FILTER(?language = "ja-hira")
-  # FILTER(?language = "ja")
 }
