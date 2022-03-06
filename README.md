@@ -39,7 +39,7 @@ See the [presentation slides](https://docs.google.com/presentation/d/16ld_rCbwJC
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
-  - [Functionality](#functionality)
+  - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Contributing](#contributing)
 <!-- - [Featured By](#featured-by) -->
@@ -140,7 +140,7 @@ The above form abbreviations are translated into their equivalents in the keyboa
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
 
-### • Functionality [`⇧`](#contents) <a id="functionality"></a>
+### • Base Functionality [`⇧`](#contents) <a id="base-functionality"></a>
 
 The goal is for Scribe to have all the functionality of system keyboards. See the [Base Keyboard Features project](https://github.com/scribe-org/Scribe-iOS/projects/6) if interested in helping.
 
