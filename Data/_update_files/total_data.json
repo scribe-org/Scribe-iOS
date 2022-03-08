@@ -1,32 +1,32 @@
 {
   "French": {
-    "nouns": 15751,
+    "nouns": 15783,
     "verbs": 1241
   },
   "German": {
-    "nouns": 27893,
-    "verbs": 3126,
+    "nouns": 28065,
+    "verbs": 3130,
     "prepositions": 189
   },
   "Italian": {
-    "nouns": 773,
+    "nouns": 783,
     "verbs": 70
   },
   "Portuguese": {
-    "nouns": 4615,
+    "nouns": 4658,
     "verbs": 188
   },
   "Russian": {
-    "nouns": 194387,
+    "nouns": 194394,
     "verbs": 11,
     "prepositions": 12
   },
   "Spanish": {
-    "nouns": 9248,
+    "nouns": 9436,
     "verbs": 112
   },
   "Swedish": {
-    "nouns": 41180,
+    "nouns": 41186,
     "verbs": 4138
   }
 }

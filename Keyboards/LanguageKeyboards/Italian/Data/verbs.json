@@ -459,6 +459,26 @@
     "impSPP": "",
     "impTPP": ""
   },
+  "dovere": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
   "emettere": {
     "presFPS": "",
     "presSPS": "",

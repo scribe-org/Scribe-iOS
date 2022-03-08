@@ -13,7 +13,7 @@
   },
   "ABC": {
     "plural": "ABCs",
-    "form": ""
+    "form": "M"
   },
   "ABCs": {
     "plural": "isPlural",
@@ -244,6 +244,14 @@
     "form": "PL"
   },
   "Antilles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Antiochien": {
+    "plural": "Antiochiens",
+    "form": "M"
+  },
+  "Antiochiens": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1133,7 +1141,7 @@
   },
   "Clermontoise": {
     "plural": "Clermontoises",
-    "form": ""
+    "form": "F"
   },
   "Clermontoises": {
     "plural": "isPlural",
@@ -1534,6 +1542,22 @@
   "Europe": {
     "plural": "",
     "form": "F"
+  },
+  "Européen": {
+    "plural": "Européens",
+    "form": "M"
+  },
+  "Européenne": {
+    "plural": "Européennes",
+    "form": "F"
+  },
+  "Européennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Européens": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Fidjien": {
     "plural": "Fidjiens",
@@ -2411,6 +2435,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kyiv": {
+    "plural": "",
+    "form": ""
+  },
   "Kyoto": {
     "plural": "",
     "form": "F"
@@ -2733,7 +2761,7 @@
   },
   "M.": {
     "plural": "MM.",
-    "form": "PL"
+    "form": "M/PL"
   },
   "MM.": {
     "plural": "isPlural",
@@ -2897,7 +2925,7 @@
   },
   "Mandolocien": {
     "plural": "Mandolociens",
-    "form": ""
+    "form": "M"
   },
   "Mandolocienne": {
     "plural": "Mandolociennes",
@@ -3465,7 +3493,7 @@
   },
   "Néandertal": {
     "plural": "Néandertals",
-    "form": ""
+    "form": "M"
   },
   "Néandertals": {
     "plural": "isPlural",
@@ -5307,14 +5335,6 @@
     "plural": "abandons",
     "form": "M"
   },
-  "abandonnément": {
-    "plural": "abandonnéments",
-    "form": "M"
-  },
-  "abandonnéments": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "abandons": {
     "plural": "isPlural",
     "form": "PL"
@@ -5377,7 +5397,7 @@
   },
   "abc": {
     "plural": "ABCs",
-    "form": "PL"
+    "form": "M/PL"
   },
   "abcd": {
     "plural": "abcds",
@@ -5977,7 +5997,7 @@
   },
   "actionnaire": {
     "plural": "actionnaires",
-    "form": ""
+    "form": "F/M"
   },
   "actionnaires": {
     "plural": "isPlural",
@@ -6221,7 +6241,7 @@
   },
   "adultère": {
     "plural": "adultères",
-    "form": "F"
+    "form": "M"
   },
   "adultères": {
     "plural": "isPlural",
@@ -6229,7 +6249,7 @@
   },
   "adverbe": {
     "plural": "adverbes",
-    "form": "F"
+    "form": "M"
   },
   "adverbes": {
     "plural": "isPlural",
@@ -6937,7 +6957,7 @@
   },
   "allergène": {
     "plural": "allergènes",
-    "form": "F"
+    "form": "M"
   },
   "allergènes": {
     "plural": "isPlural",
@@ -7141,7 +7161,15 @@
   },
   "amant": {
     "plural": "amants",
-    "form": ""
+    "form": "M"
+  },
+  "amante": {
+    "plural": "amantes",
+    "form": "F"
+  },
+  "amantes": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "amants": {
     "plural": "isPlural",
@@ -7273,7 +7301,15 @@
   },
   "amiral": {
     "plural": "amiraux",
-    "form": ""
+    "form": "M"
+  },
+  "amirale": {
+    "plural": "amirales",
+    "form": "F"
+  },
+  "amirales": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "amiraux": {
     "plural": "isPlural",
@@ -7421,7 +7457,7 @@
   },
   "an": {
     "plural": "ans",
-    "form": ""
+    "form": "M"
   },
   "anachronisme": {
     "plural": "anachronismes",
@@ -7549,7 +7585,7 @@
   },
   "ancêtre": {
     "plural": "ancêtres",
-    "form": ""
+    "form": "F/M"
   },
   "ancêtres": {
     "plural": "isPlural",
@@ -7877,7 +7913,7 @@
   },
   "antiaryanisme": {
     "plural": "antiaryanismes",
-    "form": ""
+    "form": "M"
   },
   "antiaryanismes": {
     "plural": "isPlural",
@@ -8020,8 +8056,12 @@
     "form": "PL"
   },
   "aperture": {
-    "plural": "",
-    "form": ""
+    "plural": "apertures",
+    "form": "F"
+  },
+  "apertures": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "aphoriste": {
     "plural": "aphoristes",
@@ -8249,7 +8289,7 @@
   },
   "appétit": {
     "plural": "appétits",
-    "form": ""
+    "form": "M"
   },
   "appétits": {
     "plural": "isPlural",
@@ -8281,7 +8321,7 @@
   },
   "apôtre": {
     "plural": "apôtres",
-    "form": ""
+    "form": "M"
   },
   "apôtres": {
     "plural": "isPlural",
@@ -8569,7 +8609,7 @@
   },
   "argent": {
     "plural": "argents",
-    "form": ""
+    "form": "M"
   },
   "argenterie": {
     "plural": "argenteries",
@@ -8665,7 +8705,7 @@
   },
   "armille": {
     "plural": "armilles",
-    "form": ""
+    "form": "F"
   },
   "armilles": {
     "plural": "isPlural",
@@ -8969,7 +9009,7 @@
   },
   "aryanisation": {
     "plural": "aryanisations",
-    "form": ""
+    "form": "F"
   },
   "aryanisations": {
     "plural": "isPlural",
@@ -8985,7 +9025,7 @@
   },
   "aryanité": {
     "plural": "aryanités",
-    "form": ""
+    "form": "F"
   },
   "aryanités": {
     "plural": "isPlural",
@@ -9113,7 +9153,7 @@
   },
   "assesseur": {
     "plural": "assesseurs",
-    "form": ""
+    "form": "M"
   },
   "assesseurs": {
     "plural": "isPlural",
@@ -9249,7 +9289,7 @@
   },
   "assureur": {
     "plural": "assureurs",
-    "form": ""
+    "form": "M"
   },
   "assureurs": {
     "plural": "isPlural",
@@ -9305,7 +9345,7 @@
   },
   "astronaute": {
     "plural": "astronautes",
-    "form": "M"
+    "form": "F/M"
   },
   "astronautes": {
     "plural": "isPlural",
@@ -9377,7 +9417,7 @@
   },
   "athlète": {
     "plural": "athlètes",
-    "form": ""
+    "form": "F/M"
   },
   "athlètes": {
     "plural": "isPlural",
@@ -9465,7 +9505,7 @@
   },
   "attentat": {
     "plural": "attentats",
-    "form": ""
+    "form": "M"
   },
   "attentats": {
     "plural": "isPlural",
@@ -9529,7 +9569,7 @@
   },
   "attribut": {
     "plural": "attributs",
-    "form": ""
+    "form": "M"
   },
   "attribution": {
     "plural": "attributions",
@@ -9589,7 +9629,7 @@
   },
   "audace": {
     "plural": "audaces",
-    "form": "M"
+    "form": "F"
   },
   "audaces": {
     "plural": "isPlural",
@@ -9621,7 +9661,7 @@
   },
   "audit": {
     "plural": "audits",
-    "form": ""
+    "form": "M"
   },
   "auditeur": {
     "plural": "auditeurs",
@@ -9965,7 +10005,7 @@
   },
   "autre": {
     "plural": "autres",
-    "form": ""
+    "form": "F/M"
   },
   "autres": {
     "plural": "isPlural",
@@ -10045,7 +10085,7 @@
   },
   "avant-plan": {
     "plural": "avant-plans",
-    "form": ""
+    "form": "M"
   },
   "avant-plans": {
     "plural": "isPlural",
@@ -10189,7 +10229,7 @@
   },
   "avis": {
     "plural": "avis",
-    "form": "PL"
+    "form": "M/PL"
   },
   "avocat": {
     "plural": "avocats",
@@ -10313,7 +10353,7 @@
   },
   "babysitting": {
     "plural": "babysittings",
-    "form": ""
+    "form": "M"
   },
   "babysittings": {
     "plural": "isPlural",
@@ -10573,7 +10613,7 @@
   },
   "bambi": {
     "plural": "bambis",
-    "form": ""
+    "form": "M"
   },
   "bambis": {
     "plural": "isPlural",
@@ -10645,15 +10685,19 @@
   },
   "banderole": {
     "plural": "banderoles",
-    "form": "F/PL"
+    "form": "F"
   },
   "banderoles": {
     "plural": "isPlural",
     "form": "PL"
   },
   "banderolle": {
-    "plural": "banderoles",
+    "plural": "banderolles",
     "form": "F"
+  },
+  "banderolles": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "bandes": {
     "plural": "isPlural",
@@ -10661,7 +10705,7 @@
   },
   "bandit": {
     "plural": "bandits",
-    "form": ""
+    "form": "M"
   },
   "bandits": {
     "plural": "isPlural",
@@ -10753,7 +10797,7 @@
   },
   "baraban": {
     "plural": "barabans",
-    "form": ""
+    "form": "M"
   },
   "barabans": {
     "plural": "isPlural",
@@ -11117,7 +11161,7 @@
   },
   "beignet": {
     "plural": "beignets",
-    "form": ""
+    "form": "M"
   },
   "beignets": {
     "plural": "isPlural",
@@ -11265,7 +11309,7 @@
   },
   "bibliothécaire": {
     "plural": "bibliothécaires",
-    "form": ""
+    "form": "F/M"
   },
   "bibliothécaires": {
     "plural": "isPlural",
@@ -11325,7 +11369,7 @@
   },
   "bien-fondé": {
     "plural": "bien-fondés",
-    "form": ""
+    "form": "M"
   },
   "bien-fondés": {
     "plural": "isPlural",
@@ -11529,7 +11573,7 @@
   },
   "bioculturalisme": {
     "plural": "bioculturalismes",
-    "form": ""
+    "form": "M"
   },
   "bioculturalismes": {
     "plural": "isPlural",
@@ -11745,7 +11789,7 @@
   },
   "bitcoin": {
     "plural": "bitcoins",
-    "form": ""
+    "form": "M"
   },
   "bitcoins": {
     "plural": "isPlural",
@@ -11785,7 +11829,7 @@
   },
   "biélorusse": {
     "plural": "biélorusses",
-    "form": ""
+    "form": "M"
   },
   "biélorusses": {
     "plural": "isPlural",
@@ -11877,7 +11921,7 @@
   },
   "bleu": {
     "plural": "bleus",
-    "form": ""
+    "form": "M"
   },
   "bleu-jaune": {
     "plural": "bleu-jaunes",
@@ -11949,7 +11993,7 @@
   },
   "blondie": {
     "plural": "blondies",
-    "form": ""
+    "form": "M"
   },
   "blondies": {
     "plural": "isPlural",
@@ -12201,7 +12245,7 @@
   },
   "boss": {
     "plural": "boss",
-    "form": "PL"
+    "form": "F/M/PL"
   },
   "botanique": {
     "plural": "botaniques",
@@ -12421,7 +12465,7 @@
   },
   "boum": {
     "plural": "boums",
-    "form": ""
+    "form": "F/M"
   },
   "boums": {
     "plural": "isPlural",
@@ -12577,7 +12621,7 @@
   },
   "bouton": {
     "plural": "boutons",
-    "form": ""
+    "form": "M"
   },
   "boutonnière": {
     "plural": "boutonnières",
@@ -12693,7 +12737,7 @@
   },
   "branlebas": {
     "plural": "branlebas",
-    "form": "PL"
+    "form": "M/PL"
   },
   "braquage": {
     "plural": "braquages",
@@ -12777,7 +12821,7 @@
   },
   "bric-à-brac": {
     "plural": "bric-à-bracs",
-    "form": ""
+    "form": "M"
   },
   "bric-à-bracs": {
     "plural": "isPlural",
@@ -12801,7 +12845,7 @@
   },
   "bricoleur": {
     "plural": "bricoleurs",
-    "form": ""
+    "form": "M"
   },
   "bricoleurs": {
     "plural": "isPlural",
@@ -12820,6 +12864,14 @@
     "form": "M"
   },
   "brigandages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "brillant": {
+    "plural": "brillants",
+    "form": "M"
+  },
+  "brillants": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -12929,7 +12981,7 @@
   },
   "bronzé": {
     "plural": "bronzés",
-    "form": ""
+    "form": "M"
   },
   "bronzés": {
     "plural": "isPlural",
@@ -13125,7 +13177,7 @@
   },
   "bum": {
     "plural": "bums",
-    "form": ""
+    "form": "M"
   },
   "bums": {
     "plural": "isPlural",
@@ -13137,7 +13189,7 @@
   },
   "bureaucrate": {
     "plural": "bureaucrates",
-    "form": ""
+    "form": "F/M"
   },
   "bureaucrates": {
     "plural": "isPlural",
@@ -13157,7 +13209,7 @@
   },
   "bus": {
     "plural": "bus",
-    "form": "PL"
+    "form": "M/PL"
   },
   "business": {
     "plural": "business",
@@ -13205,7 +13257,7 @@
   },
   "bâtisseur": {
     "plural": "bâtisseurs",
-    "form": ""
+    "form": "M"
   },
   "bâtisseurs": {
     "plural": "isPlural",
@@ -13253,7 +13305,7 @@
   },
   "bémol": {
     "plural": "bémols",
-    "form": ""
+    "form": "M"
   },
   "bémols": {
     "plural": "isPlural",
@@ -13557,7 +13609,7 @@
   },
   "calamar": {
     "plural": "calamars",
-    "form": ""
+    "form": "M"
   },
   "calamars": {
     "plural": "isPlural",
@@ -13773,7 +13825,7 @@
   },
   "cancre": {
     "plural": "cancres",
-    "form": ""
+    "form": "F/M"
   },
   "cancres": {
     "plural": "isPlural",
@@ -13869,7 +13921,7 @@
   },
   "cannelloni": {
     "plural": "cannellonis",
-    "form": ""
+    "form": "M"
   },
   "cannellonis": {
     "plural": "isPlural",
@@ -13933,7 +13985,7 @@
   },
   "capitaine": {
     "plural": "capitaines",
-    "form": ""
+    "form": "F/M"
   },
   "capitaines": {
     "plural": "isPlural",
@@ -14161,7 +14213,7 @@
   },
   "cargaison": {
     "plural": "cargaisons",
-    "form": ""
+    "form": "F"
   },
   "cargaisons": {
     "plural": "isPlural",
@@ -14347,14 +14399,6 @@
     "plural": "cas",
     "form": "M/PL"
   },
-  "cas contact": {
-    "plural": "cas contact",
-    "form": "PL"
-  },
-  "cas de contact": {
-    "plural": "cas de contact",
-    "form": "PL"
-  },
   "cascade": {
     "plural": "cascades",
     "form": "F"
@@ -14389,7 +14433,7 @@
   },
   "casin": {
     "plural": "casins",
-    "form": ""
+    "form": "M"
   },
   "casino": {
     "plural": "casinos",
@@ -14421,7 +14465,7 @@
   },
   "casse-pied": {
     "plural": "casse-pieds",
-    "form": ""
+    "form": "F/M"
   },
   "casse-pieds": {
     "plural": "isPlural",
@@ -15029,7 +15073,7 @@
   },
   "chandeleur": {
     "plural": "chandeleurs",
-    "form": ""
+    "form": "M"
   },
   "chandeleurs": {
     "plural": "isPlural",
@@ -15089,7 +15133,7 @@
   },
   "chanson": {
     "plural": "chansons",
-    "form": ""
+    "form": "F"
   },
   "chansons": {
     "plural": "isPlural",
@@ -15237,7 +15281,7 @@
   },
   "chariot": {
     "plural": "chariots",
-    "form": ""
+    "form": "M"
   },
   "chariots": {
     "plural": "isPlural",
@@ -15341,7 +15385,7 @@
   },
   "chasseur": {
     "plural": "chasseurs",
-    "form": ""
+    "form": "M"
   },
   "chasseurs": {
     "plural": "isPlural",
@@ -15601,7 +15645,7 @@
   },
   "chiffon": {
     "plural": "chiffons",
-    "form": ""
+    "form": "M"
   },
   "chiffonnier": {
     "plural": "chiffonniers",
@@ -15745,7 +15789,7 @@
   },
   "choix": {
     "plural": "choix",
-    "form": "PL"
+    "form": "M/PL"
   },
   "choléra": {
     "plural": "choléras",
@@ -15765,7 +15809,7 @@
   },
   "chorégraphe": {
     "plural": "chorégraphes",
-    "form": ""
+    "form": "F/M"
   },
   "chorégraphes": {
     "plural": "isPlural",
@@ -15796,8 +15840,12 @@
     "form": "M"
   },
   "chouchou": {
-    "plural": "",
-    "form": ""
+    "plural": "chouchous",
+    "form": "M"
+  },
+  "chouchous": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "choucroute": {
     "plural": "choucroutes",
@@ -16089,7 +16137,7 @@
   },
   "cinéaste": {
     "plural": "cinéastes",
-    "form": ""
+    "form": "F/M"
   },
   "cinéastes": {
     "plural": "isPlural",
@@ -16205,7 +16253,7 @@
   },
   "cisgenrisme": {
     "plural": "cisgenrismes",
-    "form": ""
+    "form": "M"
   },
   "cisgenrismes": {
     "plural": "isPlural",
@@ -16295,6 +16343,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "civil": {
+    "plural": "civils",
+    "form": "M"
+  },
   "civilisation": {
     "plural": "civilisations",
     "form": "F"
@@ -16308,6 +16360,10 @@
     "form": "M"
   },
   "civilisés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "civils": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16463,6 +16519,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cliché": {
+    "plural": "clichés",
+    "form": "M"
+  },
+  "clichés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "client": {
     "plural": "clients",
     "form": "M"
@@ -16553,7 +16617,7 @@
   },
   "clip": {
     "plural": "clips",
-    "form": ""
+    "form": "M"
   },
   "clips": {
     "plural": "isPlural",
@@ -16585,7 +16649,7 @@
   },
   "clocher": {
     "plural": "clochers",
-    "form": ""
+    "form": "M"
   },
   "clochers": {
     "plural": "isPlural",
@@ -16653,7 +16717,7 @@
   },
   "clé": {
     "plural": "clés",
-    "form": ""
+    "form": "F"
   },
   "clémence": {
     "plural": "clémences",
@@ -16712,6 +16776,14 @@
     "form": "F"
   },
   "coalitions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cocaïne": {
+    "plural": "cocaïnes",
+    "form": "F"
+  },
+  "cocaïnes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16797,7 +16869,7 @@
   },
   "coffre": {
     "plural": "coffres",
-    "form": "F"
+    "form": "M"
   },
   "coffres": {
     "plural": "isPlural",
@@ -16917,7 +16989,7 @@
   },
   "coin": {
     "plural": "coins",
-    "form": ""
+    "form": "M"
   },
   "coins": {
     "plural": "isPlural",
@@ -16925,7 +16997,7 @@
   },
   "coke": {
     "plural": "cokes",
-    "form": ""
+    "form": "F/M"
   },
   "cokes": {
     "plural": "isPlural",
@@ -17033,7 +17105,7 @@
   },
   "collectivisme": {
     "plural": "collectivismes",
-    "form": ""
+    "form": "M"
   },
   "collectivismes": {
     "plural": "isPlural",
@@ -17089,7 +17161,7 @@
   },
   "collègue": {
     "plural": "collègues",
-    "form": ""
+    "form": "F/M"
   },
   "collègues": {
     "plural": "isPlural",
@@ -17321,7 +17393,7 @@
   },
   "commando": {
     "plural": "commandos",
-    "form": ""
+    "form": "M"
   },
   "commandos": {
     "plural": "isPlural",
@@ -17373,7 +17445,7 @@
   },
   "commissaire": {
     "plural": "commissaires",
-    "form": ""
+    "form": "F/M"
   },
   "commissaires": {
     "plural": "isPlural",
@@ -17549,7 +17621,7 @@
   },
   "compatriote": {
     "plural": "compatriotes",
-    "form": ""
+    "form": "F/M"
   },
   "compatriotes": {
     "plural": "isPlural",
@@ -17793,7 +17865,7 @@
   },
   "comte": {
     "plural": "comtes",
-    "form": ""
+    "form": "M"
   },
   "comtes": {
     "plural": "isPlural",
@@ -17829,7 +17901,7 @@
   },
   "comédien": {
     "plural": "comédiens",
-    "form": ""
+    "form": "M"
   },
   "comédiens": {
     "plural": "isPlural",
@@ -17841,7 +17913,7 @@
   },
   "con": {
     "plural": "cons",
-    "form": ""
+    "form": "M"
   },
   "concassage": {
     "plural": "concassages",
@@ -17865,7 +17937,7 @@
   },
   "concepteur": {
     "plural": "concepteurs",
-    "form": ""
+    "form": "M"
   },
   "concepteurs": {
     "plural": "isPlural",
@@ -17981,7 +18053,7 @@
   },
   "concours": {
     "plural": "concours",
-    "form": "PL"
+    "form": "M/PL"
   },
   "concrétisation": {
     "plural": "concrétisations",
@@ -18040,8 +18112,8 @@
     "form": "PL"
   },
   "conditions-cadres": {
-    "plural": "",
-    "form": ""
+    "plural": "isPlural",
+    "form": "PL"
   },
   "condottière": {
     "plural": "condottières",
@@ -18109,7 +18181,7 @@
   },
   "confetti": {
     "plural": "confettis",
-    "form": ""
+    "form": "M"
   },
   "confettis": {
     "plural": "isPlural",
@@ -18509,7 +18581,7 @@
   },
   "consommé": {
     "plural": "consommés",
-    "form": ""
+    "form": "M"
   },
   "consommés": {
     "plural": "isPlural",
@@ -18597,7 +18669,7 @@
   },
   "constructivisme": {
     "plural": "constructivismes",
-    "form": ""
+    "form": "M"
   },
   "constructivismes": {
     "plural": "isPlural",
@@ -18613,7 +18685,7 @@
   },
   "consultant": {
     "plural": "consultants",
-    "form": ""
+    "form": "M"
   },
   "consultants": {
     "plural": "isPlural",
@@ -18629,7 +18701,7 @@
   },
   "consulting": {
     "plural": "consultings",
-    "form": ""
+    "form": "M"
   },
   "consultings": {
     "plural": "isPlural",
@@ -18729,7 +18801,7 @@
   },
   "continent": {
     "plural": "continents",
-    "form": ""
+    "form": "M"
   },
   "continents": {
     "plural": "isPlural",
@@ -18913,7 +18985,7 @@
   },
   "contribuable": {
     "plural": "contribuables",
-    "form": ""
+    "form": "F/M"
   },
   "contribuables": {
     "plural": "isPlural",
@@ -19141,7 +19213,7 @@
   },
   "coquelet": {
     "plural": "coquelets",
-    "form": ""
+    "form": "M"
   },
   "coquelets": {
     "plural": "isPlural",
@@ -19341,7 +19413,7 @@
   },
   "corridor": {
     "plural": "corridors",
-    "form": ""
+    "form": "M"
   },
   "corridors": {
     "plural": "isPlural",
@@ -19385,7 +19457,7 @@
   },
   "corsaire": {
     "plural": "corsaires",
-    "form": ""
+    "form": "M"
   },
   "corsaires": {
     "plural": "isPlural",
@@ -19393,7 +19465,7 @@
   },
   "corso": {
     "plural": "corsos",
-    "form": ""
+    "form": "M"
   },
   "corsos": {
     "plural": "isPlural",
@@ -19553,7 +19625,7 @@
   },
   "coulé": {
     "plural": "coulés",
-    "form": ""
+    "form": "M"
   },
   "coulés": {
     "plural": "isPlural",
@@ -19813,7 +19885,7 @@
   },
   "covergirl": {
     "plural": "covergirls",
-    "form": ""
+    "form": "F"
   },
   "covergirls": {
     "plural": "isPlural",
@@ -20015,10 +20087,6 @@
     "plural": "crises",
     "form": "F"
   },
-  "crise sanitaire": {
-    "plural": "",
-    "form": ""
-  },
   "crises": {
     "plural": "isPlural",
     "form": "PL"
@@ -20081,7 +20149,7 @@
   },
   "croiseur": {
     "plural": "croiseurs",
-    "form": ""
+    "form": "M"
   },
   "croiseurs": {
     "plural": "isPlural",
@@ -20173,7 +20241,7 @@
   },
   "crustacé": {
     "plural": "crustacés",
-    "form": ""
+    "form": "M"
   },
   "crustacés": {
     "plural": "isPlural",
@@ -20353,7 +20421,7 @@
   },
   "cuiseur": {
     "plural": "cuiseurs",
-    "form": ""
+    "form": "M"
   },
   "cuiseurs": {
     "plural": "isPlural",
@@ -20362,14 +20430,6 @@
   "cuisine": {
     "plural": "cuisines",
     "form": "F"
-  },
-  "cuisiner": {
-    "plural": "cuisiners",
-    "form": ""
-  },
-  "cuisiners": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "cuisines": {
     "plural": "isPlural",
@@ -20425,7 +20485,7 @@
   },
   "cuistre": {
     "plural": "cuistres",
-    "form": ""
+    "form": "F/M"
   },
   "cuistres": {
     "plural": "isPlural",
@@ -20833,7 +20893,7 @@
   },
   "côlon": {
     "plural": "côlons",
-    "form": ""
+    "form": "M"
   },
   "côlons": {
     "plural": "isPlural",
@@ -21133,7 +21193,7 @@
   },
   "demi-sœur": {
     "plural": "demi-sœurs",
-    "form": ""
+    "form": "F"
   },
   "demi-sœurs": {
     "plural": "isPlural",
@@ -21283,21 +21343,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "desert": {
-    "plural": "deserts",
-    "form": ""
-  },
-  "deserts": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "design": {
     "plural": "designs",
     "form": "M"
   },
   "designer": {
     "plural": "designers",
-    "form": ""
+    "form": "F/M"
   },
   "designers": {
     "plural": "isPlural",
@@ -21312,6 +21364,14 @@
     "form": "M"
   },
   "dessaisissements": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dessert": {
+    "plural": "desserts",
+    "form": "M"
+  },
+  "desserts": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -21433,7 +21493,7 @@
   },
   "diagnostic": {
     "plural": "diagnostics",
-    "form": ""
+    "form": "M"
   },
   "diagnostics": {
     "plural": "isPlural",
@@ -21560,12 +21620,8 @@
     "form": "PL"
   },
   "diesel": {
-    "plural": "diesels",
-    "form": ""
-  },
-  "diesels": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "diésels",
+    "form": "M"
   },
   "dieu": {
     "plural": "dieux",
@@ -21829,7 +21885,7 @@
   },
   "directeur": {
     "plural": "directeurs",
-    "form": ""
+    "form": "M"
   },
   "directeurs": {
     "plural": "isPlural",
@@ -21885,7 +21941,7 @@
   },
   "disciple": {
     "plural": "disciples",
-    "form": ""
+    "form": "F/M"
   },
   "disciples": {
     "plural": "isPlural",
@@ -21909,7 +21965,7 @@
   },
   "discothécaire": {
     "plural": "discothécaires",
-    "form": ""
+    "form": "F/M"
   },
   "discothécaires": {
     "plural": "isPlural",
@@ -21953,7 +22009,7 @@
   },
   "diseur": {
     "plural": "diseurs",
-    "form": ""
+    "form": "M"
   },
   "diseurs": {
     "plural": "isPlural",
@@ -22129,7 +22185,7 @@
   },
   "diva": {
     "plural": "divas",
-    "form": ""
+    "form": "F"
   },
   "divas": {
     "plural": "isPlural",
@@ -22212,6 +22268,14 @@
     "form": "F"
   },
   "dizaines": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "diésel": {
+    "plural": "diésels",
+    "form": "M/PL"
+  },
+  "diésels": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -22389,7 +22453,7 @@
   },
   "donjon": {
     "plural": "donjons",
-    "form": ""
+    "form": "M"
   },
   "donjons": {
     "plural": "isPlural",
@@ -22412,6 +22476,14 @@
     "form": "F"
   },
   "donzelles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "dopage": {
+    "plural": "dopages",
+    "form": "M"
+  },
+  "dopages": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -22573,7 +22645,7 @@
   },
   "dragon": {
     "plural": "dragons",
-    "form": ""
+    "form": "M"
   },
   "dragons": {
     "plural": "isPlural",
@@ -22613,7 +22685,7 @@
   },
   "dramaturge": {
     "plural": "dramaturges",
-    "form": ""
+    "form": "F/M"
   },
   "dramaturges": {
     "plural": "isPlural",
@@ -22661,7 +22733,7 @@
   },
   "dressoir": {
     "plural": "dressoirs",
-    "form": ""
+    "form": "M"
   },
   "dressoirs": {
     "plural": "isPlural",
@@ -22765,7 +22837,7 @@
   },
   "dupe": {
     "plural": "dupes",
-    "form": ""
+    "form": "F"
   },
   "duperie": {
     "plural": "duperies",
@@ -22873,7 +22945,7 @@
   },
   "débit": {
     "plural": "débits",
-    "form": ""
+    "form": "M"
   },
   "débiteur": {
     "plural": "débiteurs",
@@ -23065,7 +23137,7 @@
   },
   "déclin": {
     "plural": "déclins",
-    "form": ""
+    "form": "M"
   },
   "déclins": {
     "plural": "isPlural",
@@ -23205,7 +23277,7 @@
   },
   "défascisation": {
     "plural": "défascisations",
-    "form": ""
+    "form": "F"
   },
   "défascisations": {
     "plural": "isPlural",
@@ -23317,7 +23389,7 @@
   },
   "défroqué": {
     "plural": "défroqués",
-    "form": ""
+    "form": "M"
   },
   "défroqués": {
     "plural": "isPlural",
@@ -23525,7 +23597,7 @@
   },
   "démocrate": {
     "plural": "démocrates",
-    "form": ""
+    "form": "F/M"
   },
   "démocrates": {
     "plural": "isPlural",
@@ -23704,7 +23776,7 @@
     "form": "PL"
   },
   "dépens": {
-    "plural": "dépens",
+    "plural": "isPlural",
     "form": "PL"
   },
   "dépense": {
@@ -23765,7 +23837,7 @@
   },
   "dépositaire": {
     "plural": "dépositaires",
-    "form": ""
+    "form": "F/M"
   },
   "dépositaires": {
     "plural": "isPlural",
@@ -24129,7 +24201,7 @@
   },
   "détective": {
     "plural": "détectives",
-    "form": ""
+    "form": "F/M"
   },
   "détectives": {
     "plural": "isPlural",
@@ -24265,7 +24337,7 @@
   },
   "e-shop": {
     "plural": "e-shops",
-    "form": ""
+    "form": "M"
   },
   "e-shops": {
     "plural": "isPlural",
@@ -24380,6 +24452,14 @@
     "form": "F"
   },
   "embouchures": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "embrun": {
+    "plural": "embruns",
+    "form": "M"
+  },
+  "embruns": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -25173,7 +25253,7 @@
   },
   "ergothérapeute": {
     "plural": "ergothérapeutes",
-    "form": ""
+    "form": "F/M"
   },
   "ergothérapeutes": {
     "plural": "isPlural",
@@ -25585,7 +25665,7 @@
   },
   "ethnomanie": {
     "plural": "ethnomanies",
-    "form": ""
+    "form": "F"
   },
   "ethnomanies": {
     "plural": "isPlural",
@@ -25625,7 +25705,7 @@
   },
   "ex-ministre": {
     "plural": "ex-ministres",
-    "form": ""
+    "form": "F/M"
   },
   "ex-ministres": {
     "plural": "isPlural",
@@ -25836,6 +25916,14 @@
     "form": "F"
   },
   "exonérations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "exoplanète": {
+    "plural": "exoplanètes",
+    "form": "F"
+  },
+  "exoplanètes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26341,7 +26429,7 @@
   },
   "fan": {
     "plural": "fans",
-    "form": ""
+    "form": "F/M"
   },
   "fanatisme": {
     "plural": "fanatismes",
@@ -26483,6 +26571,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "faubourg": {
+    "plural": "faubourgs",
+    "form": "M"
+  },
+  "faubourgs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "faucon": {
     "plural": "faucons",
     "form": "M"
@@ -26509,7 +26605,7 @@
   },
   "faussaire": {
     "plural": "faussaires",
-    "form": ""
+    "form": "F/M"
   },
   "faussaires": {
     "plural": "isPlural",
@@ -26845,7 +26941,7 @@
   },
   "fieu": {
     "plural": "fieux",
-    "form": ""
+    "form": "M"
   },
   "fieux": {
     "plural": "isPlural",
@@ -27491,6 +27587,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "forclusion": {
+    "plural": "forclusions",
+    "form": "F"
+  },
+  "forclusions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "formalité": {
     "plural": "formalités",
     "form": "F"
@@ -27870,6 +27974,10 @@
   "frangins": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "franglais": {
+    "plural": "franglais",
+    "form": "M/PL"
   },
   "français": {
     "plural": "français",
@@ -28401,11 +28509,11 @@
   },
   "gamin": {
     "plural": "gamins",
-    "form": ""
+    "form": "M"
   },
   "gamine": {
     "plural": "gamines",
-    "form": ""
+    "form": "F"
   },
   "gamines": {
     "plural": "isPlural",
@@ -28505,11 +28613,11 @@
   },
   "garde": {
     "plural": "gardes",
-    "form": ""
+    "form": "F/M"
   },
   "garde-magasin": {
     "plural": "gardes-magasin",
-    "form": ""
+    "form": "F/M"
   },
   "gardes": {
     "plural": "isPlural",
@@ -28521,7 +28629,7 @@
   },
   "gardeur": {
     "plural": "gardeurs",
-    "form": ""
+    "form": "M"
   },
   "gardeurs": {
     "plural": "isPlural",
@@ -28537,7 +28645,7 @@
   },
   "gare": {
     "plural": "gares",
-    "form": ""
+    "form": "F"
   },
   "gares": {
     "plural": "isPlural",
@@ -28561,7 +28669,7 @@
   },
   "gars": {
     "plural": "gars",
-    "form": "PL"
+    "form": "M/PL"
   },
   "garçon": {
     "plural": "garçons",
@@ -28569,7 +28677,7 @@
   },
   "garçonne": {
     "plural": "garçonnes",
-    "form": ""
+    "form": "F"
   },
   "garçonnes": {
     "plural": "isPlural",
@@ -28641,7 +28749,7 @@
   },
   "gaze": {
     "plural": "gazes",
-    "form": ""
+    "form": "F"
   },
   "gazes": {
     "plural": "isPlural",
@@ -28649,7 +28757,7 @@
   },
   "gazette": {
     "plural": "gazettes",
-    "form": ""
+    "form": "F"
   },
   "gazettes": {
     "plural": "isPlural",
@@ -28703,9 +28811,17 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gencive": {
+    "plural": "gencives",
+    "form": "F"
+  },
+  "gencives": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gendarme": {
     "plural": "gendarmes",
-    "form": ""
+    "form": "F/M"
   },
   "gendarmes": {
     "plural": "isPlural",
@@ -28736,12 +28852,16 @@
     "form": "PL"
   },
   "gens": {
-    "plural": "gens",
+    "plural": "gentes",
+    "form": "F"
+  },
+  "gentes": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "gentilhomme": {
     "plural": "gentilshommes",
-    "form": ""
+    "form": "M"
   },
   "gentilshommes": {
     "plural": "isPlural",
@@ -28821,7 +28941,7 @@
   },
   "gifle": {
     "plural": "gifles",
-    "form": ""
+    "form": "F"
   },
   "gifles": {
     "plural": "isPlural",
@@ -28845,7 +28965,7 @@
   },
   "gilet": {
     "plural": "gilets",
-    "form": ""
+    "form": "M"
   },
   "gilets": {
     "plural": "isPlural",
@@ -28853,7 +28973,7 @@
   },
   "gingembre": {
     "plural": "gingembres",
-    "form": ""
+    "form": "M"
   },
   "gingembres": {
     "plural": "isPlural",
@@ -28877,7 +28997,7 @@
   },
   "girolle": {
     "plural": "girolles",
-    "form": ""
+    "form": "F"
   },
   "girolles": {
     "plural": "isPlural",
@@ -28973,7 +29093,7 @@
   },
   "glaçon": {
     "plural": "glaçons",
-    "form": ""
+    "form": "M"
   },
   "glaçons": {
     "plural": "isPlural",
@@ -29085,7 +29205,7 @@
   },
   "gobinisme": {
     "plural": "gobinismes",
-    "form": ""
+    "form": "M"
   },
   "gobinismes": {
     "plural": "isPlural",
@@ -29141,7 +29261,7 @@
   },
   "gorge": {
     "plural": "gorges",
-    "form": ""
+    "form": "F"
   },
   "gorges": {
     "plural": "isPlural",
@@ -29165,7 +29285,7 @@
   },
   "gosse": {
     "plural": "gosses",
-    "form": ""
+    "form": "F/M"
   },
   "gosses": {
     "plural": "isPlural",
@@ -29173,7 +29293,7 @@
   },
   "goudron": {
     "plural": "goudrons",
-    "form": ""
+    "form": "M"
   },
   "goudrons": {
     "plural": "isPlural",
@@ -29193,7 +29313,7 @@
   },
   "gourmandise": {
     "plural": "gourmandises",
-    "form": ""
+    "form": "F"
   },
   "gourmandises": {
     "plural": "isPlural",
@@ -29213,7 +29333,7 @@
   },
   "goutte": {
     "plural": "gouttes",
-    "form": ""
+    "form": "F"
   },
   "gouttes": {
     "plural": "isPlural",
@@ -29285,7 +29405,7 @@
   },
   "graffiti": {
     "plural": "graffitis",
-    "form": ""
+    "form": "M"
   },
   "graffitis": {
     "plural": "isPlural",
@@ -29317,7 +29437,7 @@
   },
   "grammaire": {
     "plural": "grammaires",
-    "form": ""
+    "form": "F"
   },
   "grammaires": {
     "plural": "isPlural",
@@ -29349,7 +29469,7 @@
   },
   "grandeur": {
     "plural": "grandeurs",
-    "form": ""
+    "form": "F"
   },
   "grandeurs": {
     "plural": "isPlural",
@@ -29409,7 +29529,7 @@
   },
   "gratitude": {
     "plural": "gratitudes",
-    "form": ""
+    "form": "F"
   },
   "gratitudes": {
     "plural": "isPlural",
@@ -29457,7 +29577,7 @@
   },
   "gray": {
     "plural": "grays",
-    "form": ""
+    "form": "M"
   },
   "grays": {
     "plural": "isPlural",
@@ -29613,7 +29733,7 @@
   },
   "grève": {
     "plural": "grèves",
-    "form": ""
+    "form": "F"
   },
   "grèves": {
     "plural": "isPlural",
@@ -29661,7 +29781,7 @@
   },
   "gueule": {
     "plural": "gueules",
-    "form": ""
+    "form": "F"
   },
   "gueules": {
     "plural": "isPlural",
@@ -29693,7 +29813,7 @@
   },
   "guinguette": {
     "plural": "guinguettes",
-    "form": ""
+    "form": "F"
   },
   "guinguettes": {
     "plural": "isPlural",
@@ -29905,7 +30025,7 @@
   },
   "générique": {
     "plural": "génériques",
-    "form": ""
+    "form": "M"
   },
   "génériques": {
     "plural": "isPlural",
@@ -29965,7 +30085,7 @@
   },
   "géodésie": {
     "plural": "géodésies",
-    "form": ""
+    "form": "F"
   },
   "géodésies": {
     "plural": "isPlural",
@@ -29981,7 +30101,7 @@
   },
   "géographie": {
     "plural": "géographies",
-    "form": ""
+    "form": "F"
   },
   "géographies": {
     "plural": "isPlural",
@@ -30061,7 +30181,7 @@
   },
   "géométrie": {
     "plural": "géométries",
-    "form": ""
+    "form": "F"
   },
   "géométries": {
     "plural": "isPlural",
@@ -30109,7 +30229,7 @@
   },
   "géothermie": {
     "plural": "géothermies",
-    "form": ""
+    "form": "F"
   },
   "géothermies": {
     "plural": "isPlural",
@@ -30117,7 +30237,7 @@
   },
   "gérant": {
     "plural": "gérants",
-    "form": ""
+    "form": "M"
   },
   "gérants": {
     "plural": "isPlural",
@@ -30133,7 +30253,7 @@
   },
   "gérontologie": {
     "plural": "gérontologies",
-    "form": ""
+    "form": "F"
   },
   "gérontologies": {
     "plural": "isPlural",
@@ -30149,7 +30269,7 @@
   },
   "gêne": {
     "plural": "gênes",
-    "form": ""
+    "form": "F"
   },
   "gênes": {
     "plural": "isPlural",
@@ -30165,7 +30285,7 @@
   },
   "habilité": {
     "plural": "habilités",
-    "form": ""
+    "form": "F"
   },
   "habilités": {
     "plural": "isPlural",
@@ -30213,7 +30333,7 @@
   },
   "habitude": {
     "plural": "habitudes",
-    "form": ""
+    "form": "F"
   },
   "habitudes": {
     "plural": "isPlural",
@@ -30221,7 +30341,7 @@
   },
   "hacking": {
     "plural": "hackings",
-    "form": ""
+    "form": "M"
   },
   "hackings": {
     "plural": "isPlural",
@@ -30237,7 +30357,7 @@
   },
   "haine": {
     "plural": "haines",
-    "form": ""
+    "form": "F"
   },
   "haines": {
     "plural": "isPlural",
@@ -30309,7 +30429,7 @@
   },
   "handicap": {
     "plural": "handicaps",
-    "form": ""
+    "form": "M"
   },
   "handicaps": {
     "plural": "isPlural",
@@ -30329,7 +30449,7 @@
   },
   "haquenée": {
     "plural": "haquenées",
-    "form": ""
+    "form": "F"
   },
   "haquenées": {
     "plural": "isPlural",
@@ -30369,7 +30489,7 @@
   },
   "harpe": {
     "plural": "harpes",
-    "form": ""
+    "form": "F"
   },
   "harpes": {
     "plural": "isPlural",
@@ -30403,6 +30523,14 @@
     "plural": "hauts",
     "form": "M"
   },
+  "haut-parleur": {
+    "plural": "haut-parleurs",
+    "form": "M/PL"
+  },
+  "haut-parleurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hautboïste": {
     "plural": "hautboïstes",
     "form": "F/M"
@@ -30420,12 +30548,8 @@
     "form": "PL"
   },
   "hautparleur": {
-    "plural": "hautparleurs",
-    "form": ""
-  },
-  "hautparleurs": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "haut-parleurs",
+    "form": "M"
   },
   "hauts": {
     "plural": "isPlural",
@@ -30473,7 +30597,7 @@
   },
   "henry": {
     "plural": "henrys",
-    "form": ""
+    "form": "M"
   },
   "henrys": {
     "plural": "isPlural",
@@ -30533,7 +30657,7 @@
   },
   "hexagone": {
     "plural": "hexagones",
-    "form": ""
+    "form": "M"
   },
   "hexagones": {
     "plural": "isPlural",
@@ -30605,7 +30729,7 @@
   },
   "historien": {
     "plural": "historiens",
-    "form": ""
+    "form": "M"
   },
   "historienne": {
     "plural": "historiennes",
@@ -30645,7 +30769,7 @@
   },
   "hiérarchie": {
     "plural": "hiérarchies",
-    "form": ""
+    "form": "F"
   },
   "hiérarchies": {
     "plural": "isPlural",
@@ -30661,7 +30785,7 @@
   },
   "hockey": {
     "plural": "hockeys",
-    "form": ""
+    "form": "M"
   },
   "hockeys": {
     "plural": "isPlural",
@@ -30669,7 +30793,7 @@
   },
   "hold-up": {
     "plural": "hold-ups",
-    "form": ""
+    "form": "M"
   },
   "hold-ups": {
     "plural": "isPlural",
@@ -30685,7 +30809,7 @@
   },
   "home": {
     "plural": "homes",
-    "form": ""
+    "form": "M"
   },
   "homes": {
     "plural": "isPlural",
@@ -30801,7 +30925,7 @@
   },
   "horizon": {
     "plural": "horizons",
-    "form": ""
+    "form": "M"
   },
   "horizons": {
     "plural": "isPlural",
@@ -30841,7 +30965,7 @@
   },
   "horreur": {
     "plural": "horreurs",
-    "form": ""
+    "form": "F"
   },
   "horreurs": {
     "plural": "isPlural",
@@ -30849,7 +30973,7 @@
   },
   "hors-la-loi": {
     "plural": "hors-la-lois",
-    "form": ""
+    "form": "F/M"
   },
   "hors-la-lois": {
     "plural": "isPlural",
@@ -30865,7 +30989,7 @@
   },
   "horticulture": {
     "plural": "horticultures",
-    "form": ""
+    "form": "F"
   },
   "horticultures": {
     "plural": "isPlural",
@@ -30897,7 +31021,7 @@
   },
   "hotdog": {
     "plural": "hotdogs",
-    "form": ""
+    "form": "M"
   },
   "hotdogs": {
     "plural": "isPlural",
@@ -30921,7 +31045,7 @@
   },
   "huis": {
     "plural": "huis",
-    "form": "PL"
+    "form": "M/PL"
   },
   "huissier": {
     "plural": "huissiers",
@@ -31073,7 +31197,7 @@
   },
   "hygiène": {
     "plural": "hygiènes",
-    "form": ""
+    "form": "F"
   },
   "hygiènes": {
     "plural": "isPlural",
@@ -31129,7 +31253,7 @@
   },
   "hypothermie": {
     "plural": "hypothermies",
-    "form": ""
+    "form": "F"
   },
   "hypothermies": {
     "plural": "isPlural",
@@ -31301,7 +31425,7 @@
   },
   "hôte": {
     "plural": "hôtes",
-    "form": ""
+    "form": "M"
   },
   "hôtel": {
     "plural": "hôtels",
@@ -31341,7 +31465,7 @@
   },
   "ichthyologie": {
     "plural": "ichthyologies",
-    "form": ""
+    "form": "F"
   },
   "ichthyologies": {
     "plural": "isPlural",
@@ -31433,7 +31557,7 @@
   },
   "idiote": {
     "plural": "idiotes",
-    "form": ""
+    "form": "F"
   },
   "idiotes": {
     "plural": "isPlural",
@@ -31461,7 +31585,7 @@
   },
   "idéal": {
     "plural": "idéaux",
-    "form": ""
+    "form": "M"
   },
   "idéaux": {
     "plural": "isPlural",
@@ -31625,7 +31749,7 @@
   },
   "immigré": {
     "plural": "immigrés",
-    "form": ""
+    "form": "M"
   },
   "immigrés": {
     "plural": "isPlural",
@@ -31649,7 +31773,7 @@
   },
   "immunothérapie": {
     "plural": "immunothérapies",
-    "form": ""
+    "form": "F"
   },
   "immunothérapies": {
     "plural": "isPlural",
@@ -31853,7 +31977,7 @@
   },
   "imprudence": {
     "plural": "imprudences",
-    "form": ""
+    "form": "F"
   },
   "imprudences": {
     "plural": "isPlural",
@@ -31909,7 +32033,7 @@
   },
   "impériale": {
     "plural": "impériales",
-    "form": ""
+    "form": "F"
   },
   "impériales": {
     "plural": "isPlural",
@@ -31925,7 +32049,7 @@
   },
   "inaptitude": {
     "plural": "inaptitudes",
-    "form": ""
+    "form": "F"
   },
   "inaptitudes": {
     "plural": "isPlural",
@@ -31957,7 +32081,7 @@
   },
   "incapable": {
     "plural": "incapables",
-    "form": ""
+    "form": "F/M"
   },
   "incapables": {
     "plural": "isPlural",
@@ -31989,7 +32113,7 @@
   },
   "incertitude": {
     "plural": "incertitudes",
-    "form": ""
+    "form": "F"
   },
   "incertitudes": {
     "plural": "isPlural",
@@ -31997,7 +32121,7 @@
   },
   "incident": {
     "plural": "incidents",
-    "form": ""
+    "form": "M"
   },
   "incidents": {
     "plural": "isPlural",
@@ -32225,7 +32349,7 @@
   },
   "indoeuropéanité": {
     "plural": "indoeuropéanités",
-    "form": ""
+    "form": "F"
   },
   "indoeuropéanités": {
     "plural": "isPlural",
@@ -32257,7 +32381,7 @@
   },
   "industrie": {
     "plural": "industries",
-    "form": ""
+    "form": "F"
   },
   "industries": {
     "plural": "isPlural",
@@ -32273,7 +32397,7 @@
   },
   "inertie": {
     "plural": "inerties",
-    "form": ""
+    "form": "F"
   },
   "inerties": {
     "plural": "isPlural",
@@ -32481,7 +32605,7 @@
   },
   "ingérence": {
     "plural": "ingérences",
-    "form": ""
+    "form": "F"
   },
   "ingérences": {
     "plural": "isPlural",
@@ -32505,7 +32629,7 @@
   },
   "initiale": {
     "plural": "initiales",
-    "form": ""
+    "form": "F"
   },
   "initiales": {
     "plural": "isPlural",
@@ -32907,14 +33031,6 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "interference": {
-    "plural": "interferences",
-    "form": ""
-  },
-  "interferences": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "interférence": {
     "plural": "interférences",
     "form": "F"
@@ -33165,7 +33281,7 @@
   },
   "invalide": {
     "plural": "invalides",
-    "form": ""
+    "form": "F/M"
   },
   "invalides": {
     "plural": "isPlural",
@@ -33285,7 +33401,7 @@
   },
   "inédit": {
     "plural": "inédits",
-    "form": ""
+    "form": "M"
   },
   "inédits": {
     "plural": "isPlural",
@@ -33381,7 +33497,7 @@
   },
   "islam": {
     "plural": "islams",
-    "form": ""
+    "form": "M"
   },
   "islamologue": {
     "plural": "islamologues",
@@ -33421,7 +33537,7 @@
   },
   "isoloir": {
     "plural": "isoloirs",
-    "form": ""
+    "form": "M"
   },
   "isoloirs": {
     "plural": "isPlural",
@@ -33453,7 +33569,7 @@
   },
   "ivoire": {
     "plural": "ivoires",
-    "form": ""
+    "form": "M"
   },
   "ivoires": {
     "plural": "isPlural",
@@ -33461,7 +33577,7 @@
   },
   "ivresse": {
     "plural": "ivresses",
-    "form": ""
+    "form": "F"
   },
   "ivresses": {
     "plural": "isPlural",
@@ -33493,11 +33609,11 @@
   },
   "jais": {
     "plural": "jais",
-    "form": "PL"
+    "form": "M/PL"
   },
   "jalousie": {
     "plural": "jalousies",
-    "form": ""
+    "form": "F"
   },
   "jalousies": {
     "plural": "isPlural",
@@ -33569,7 +33685,7 @@
   },
   "jarretelle": {
     "plural": "jarretelles",
-    "form": ""
+    "form": "F"
   },
   "jarretelles": {
     "plural": "isPlural",
@@ -33604,16 +33720,16 @@
     "form": "M"
   },
   "jazzman": {
-    "plural": "jazzmans",
-    "form": ""
+    "plural": "jazzmen",
+    "form": "M"
   },
-  "jazzmans": {
+  "jazzmen": {
     "plural": "isPlural",
     "form": "PL"
   },
   "je-sais-tout": {
     "plural": "je-sais-touts",
-    "form": ""
+    "form": "F/M"
   },
   "je-sais-touts": {
     "plural": "isPlural",
@@ -33709,7 +33825,7 @@
   },
   "joue": {
     "plural": "joues",
-    "form": ""
+    "form": "F"
   },
   "joues": {
     "plural": "isPlural",
@@ -33733,7 +33849,7 @@
   },
   "joueuse": {
     "plural": "joueuses",
-    "form": ""
+    "form": "F"
   },
   "joueuses": {
     "plural": "isPlural",
@@ -33797,7 +33913,7 @@
   },
   "juge": {
     "plural": "juges",
-    "form": ""
+    "form": "F/M"
   },
   "juge-substitut": {
     "plural": "juge-substituts",
@@ -33977,7 +34093,7 @@
   },
   "kamikaze": {
     "plural": "kamikazes",
-    "form": ""
+    "form": "F/M"
   },
   "kamikazes": {
     "plural": "isPlural",
@@ -33993,7 +34109,7 @@
   },
   "katal": {
     "plural": "katals",
-    "form": ""
+    "form": "M"
   },
   "katals": {
     "plural": "isPlural",
@@ -34093,7 +34209,7 @@
   },
   "kinésithérapeute": {
     "plural": "kinésithérapeutes",
-    "form": ""
+    "form": "F/M"
   },
   "kinésithérapeutes": {
     "plural": "isPlural",
@@ -34107,11 +34223,11 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "kitchen": {
-    "plural": "kitchens",
-    "form": ""
+  "kitchenette": {
+    "plural": "kitchenettes",
+    "form": "F"
   },
-  "kitchens": {
+  "kitchenettes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -34689,7 +34805,7 @@
   },
   "lexicographe": {
     "plural": "lexicographes",
-    "form": ""
+    "form": "F/M"
   },
   "lexicographes": {
     "plural": "isPlural",
@@ -34777,7 +34893,7 @@
   },
   "libraire": {
     "plural": "libraires",
-    "form": ""
+    "form": "F/M"
   },
   "libraires": {
     "plural": "isPlural",
@@ -35193,7 +35309,7 @@
   },
   "locataire": {
     "plural": "locataires",
-    "form": ""
+    "form": "F/M"
   },
   "locataires": {
     "plural": "isPlural",
@@ -35453,7 +35569,7 @@
   },
   "ludothécaire": {
     "plural": "ludothécaires",
-    "form": ""
+    "form": "F/M"
   },
   "ludothécaires": {
     "plural": "isPlural",
@@ -36004,7 +36120,11 @@
     "form": "PL"
   },
   "maitresse": {
-    "plural": "maîtresses",
+    "plural": "maitresses",
+    "form": "F"
+  },
+  "maitresses": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "maitrise": {
@@ -36077,7 +36197,7 @@
   },
   "malade": {
     "plural": "malades",
-    "form": ""
+    "form": "F/M"
   },
   "malades": {
     "plural": "isPlural",
@@ -36173,7 +36293,7 @@
   },
   "mama": {
     "plural": "mamas",
-    "form": ""
+    "form": "M"
   },
   "maman": {
     "plural": "mamans",
@@ -36213,7 +36333,7 @@
   },
   "mammographie": {
     "plural": "mammographies",
-    "form": ""
+    "form": "F"
   },
   "mammographies": {
     "plural": "isPlural",
@@ -36221,7 +36341,7 @@
   },
   "mammouth": {
     "plural": "mammouths",
-    "form": ""
+    "form": "M"
   },
   "mammouths": {
     "plural": "isPlural",
@@ -36277,7 +36397,7 @@
   },
   "mandrin": {
     "plural": "mandrins",
-    "form": ""
+    "form": "M"
   },
   "mandrins": {
     "plural": "isPlural",
@@ -36405,7 +36525,7 @@
   },
   "manufacture": {
     "plural": "manufactures",
-    "form": ""
+    "form": "F"
   },
   "manufactures": {
     "plural": "isPlural",
@@ -36437,7 +36557,7 @@
   },
   "manœuvre": {
     "plural": "manœuvres",
-    "form": ""
+    "form": "F/M"
   },
   "manœuvres": {
     "plural": "isPlural",
@@ -36445,7 +36565,7 @@
   },
   "maquette": {
     "plural": "maquettes",
-    "form": ""
+    "form": "F"
   },
   "maquettes": {
     "plural": "isPlural",
@@ -36577,7 +36697,7 @@
   },
   "mare": {
     "plural": "mares",
-    "form": ""
+    "form": "F"
   },
   "mares": {
     "plural": "isPlural",
@@ -36593,7 +36713,7 @@
   },
   "marguerite": {
     "plural": "marguerites",
-    "form": ""
+    "form": "F"
   },
   "marguerites": {
     "plural": "isPlural",
@@ -36617,7 +36737,7 @@
   },
   "marine": {
     "plural": "marines",
-    "form": ""
+    "form": "F"
   },
   "marines": {
     "plural": "isPlural",
@@ -36665,7 +36785,7 @@
   },
   "marketing": {
     "plural": "marketings",
-    "form": ""
+    "form": "M"
   },
   "marketings": {
     "plural": "isPlural",
@@ -36725,7 +36845,7 @@
   },
   "marquise": {
     "plural": "marquises",
-    "form": ""
+    "form": "F"
   },
   "marquises": {
     "plural": "isPlural",
@@ -36733,7 +36853,7 @@
   },
   "marraine": {
     "plural": "marraines",
-    "form": ""
+    "form": "F"
   },
   "marraines": {
     "plural": "isPlural",
@@ -36777,7 +36897,7 @@
   },
   "martyre": {
     "plural": "martyres",
-    "form": ""
+    "form": "M"
   },
   "martyres": {
     "plural": "isPlural",
@@ -36801,7 +36921,7 @@
   },
   "maréchal": {
     "plural": "maréchaux",
-    "form": ""
+    "form": "M"
   },
   "maréchal-ferrant": {
     "plural": "maréchaux-ferrants",
@@ -36845,7 +36965,7 @@
   },
   "massacre": {
     "plural": "massacres",
-    "form": ""
+    "form": "M"
   },
   "massacres": {
     "plural": "isPlural",
@@ -36861,7 +36981,7 @@
   },
   "masse": {
     "plural": "masses",
-    "form": ""
+    "form": "F"
   },
   "masses": {
     "plural": "isPlural",
@@ -36901,7 +37021,7 @@
   },
   "massé": {
     "plural": "massés",
-    "form": ""
+    "form": "M"
   },
   "massés": {
     "plural": "isPlural",
@@ -36941,7 +37061,7 @@
   },
   "matelot": {
     "plural": "matelots",
-    "form": ""
+    "form": "M"
   },
   "matelots": {
     "plural": "isPlural",
@@ -37261,7 +37381,7 @@
   },
   "mentor": {
     "plural": "mentors",
-    "form": ""
+    "form": "M"
   },
   "mentors": {
     "plural": "isPlural",
@@ -37285,11 +37405,11 @@
   },
   "mer": {
     "plural": "mers",
-    "form": ""
+    "form": "F"
   },
   "mercenaire": {
     "plural": "mercenaires",
-    "form": ""
+    "form": "F/M"
   },
   "mercenaires": {
     "plural": "isPlural",
@@ -37337,7 +37457,7 @@
   },
   "merle": {
     "plural": "merles",
-    "form": ""
+    "form": "M"
   },
   "merles": {
     "plural": "isPlural",
@@ -37377,7 +37497,7 @@
   },
   "mesclun": {
     "plural": "mescluns",
-    "form": ""
+    "form": "M"
   },
   "mescluns": {
     "plural": "isPlural",
@@ -37421,7 +37541,7 @@
   },
   "messer": {
     "plural": "messers",
-    "form": ""
+    "form": "M"
   },
   "messers": {
     "plural": "isPlural",
@@ -37563,11 +37683,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mie": {
+    "plural": "mies",
+    "form": "F"
+  },
   "miel": {
     "plural": "miels",
     "form": "M"
   },
   "miels": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mies": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37581,7 +37709,7 @@
   },
   "migrant": {
     "plural": "migrants",
-    "form": ""
+    "form": "M"
   },
   "migrants": {
     "plural": "isPlural",
@@ -37616,6 +37744,14 @@
     "form": "M"
   },
   "milieux": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "militaire": {
+    "plural": "militaires",
+    "form": "F/M"
+  },
+  "militaires": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37829,7 +37965,7 @@
   },
   "minuscule": {
     "plural": "minuscules",
-    "form": ""
+    "form": "F"
   },
   "minuscules": {
     "plural": "isPlural",
@@ -37925,7 +38061,7 @@
   },
   "miss": {
     "plural": "miss",
-    "form": "PL"
+    "form": "F/PL"
   },
   "missile": {
     "plural": "missiles",
@@ -38001,7 +38137,7 @@
   },
   "mixture": {
     "plural": "mixtures",
-    "form": ""
+    "form": "F"
   },
   "mixtures": {
     "plural": "isPlural",
@@ -38065,7 +38201,7 @@
   },
   "modestie": {
     "plural": "modesties",
-    "form": ""
+    "form": "F"
   },
   "modesties": {
     "plural": "isPlural",
@@ -38133,7 +38269,7 @@
   },
   "mohican": {
     "plural": "mohicans",
-    "form": ""
+    "form": "M"
   },
   "mohicans": {
     "plural": "isPlural",
@@ -38153,7 +38289,7 @@
   },
   "moisson": {
     "plural": "moissons",
-    "form": ""
+    "form": "F"
   },
   "moissons": {
     "plural": "isPlural",
@@ -38177,7 +38313,7 @@
   },
   "mole": {
     "plural": "moles",
-    "form": ""
+    "form": "F"
   },
   "moles": {
     "plural": "isPlural",
@@ -38217,7 +38353,7 @@
   },
   "monarque": {
     "plural": "monarques",
-    "form": ""
+    "form": "M"
   },
   "monarques": {
     "plural": "isPlural",
@@ -38329,7 +38465,7 @@
   },
   "monsieur": {
     "plural": "MM.",
-    "form": ""
+    "form": "M"
   },
   "monstre": {
     "plural": "monstres",
@@ -38521,7 +38657,7 @@
   },
   "motif": {
     "plural": "motifs",
-    "form": ""
+    "form": "M"
   },
   "motifs": {
     "plural": "isPlural",
@@ -38553,11 +38689,11 @@
   },
   "moto": {
     "plural": "motos",
-    "form": ""
+    "form": "F"
   },
   "motocross": {
     "plural": "motocross",
-    "form": "PL"
+    "form": "M/PL"
   },
   "motos": {
     "plural": "isPlural",
@@ -38621,7 +38757,7 @@
   },
   "mousquetaire": {
     "plural": "mousquetaires",
-    "form": ""
+    "form": "F/M"
   },
   "mousquetaires": {
     "plural": "isPlural",
@@ -38649,7 +38785,7 @@
   },
   "moustache": {
     "plural": "moustaches",
-    "form": ""
+    "form": "F"
   },
   "moustaches": {
     "plural": "isPlural",
@@ -38753,7 +38889,7 @@
   },
   "mulâtre": {
     "plural": "mulâtres",
-    "form": ""
+    "form": "F/M"
   },
   "mulâtres": {
     "plural": "isPlural",
@@ -38825,7 +38961,7 @@
   },
   "musher": {
     "plural": "mushers",
-    "form": ""
+    "form": "M"
   },
   "mushers": {
     "plural": "isPlural",
@@ -39093,7 +39229,7 @@
   },
   "médecine": {
     "plural": "médecines",
-    "form": ""
+    "form": "F"
   },
   "médecines": {
     "plural": "isPlural",
@@ -39137,7 +39273,7 @@
   },
   "médiathèque": {
     "plural": "médiathèques",
-    "form": ""
+    "form": "F"
   },
   "médiathèques": {
     "plural": "isPlural",
@@ -39145,7 +39281,7 @@
   },
   "médiathécaire": {
     "plural": "médiathécaires",
-    "form": ""
+    "form": "F/M"
   },
   "médiathécaires": {
     "plural": "isPlural",
@@ -39193,7 +39329,7 @@
   },
   "méduse": {
     "plural": "méduses",
-    "form": ""
+    "form": "F"
   },
   "méduses": {
     "plural": "isPlural",
@@ -39225,7 +39361,7 @@
   },
   "mégarde": {
     "plural": "mégardes",
-    "form": ""
+    "form": "F"
   },
   "mégardes": {
     "plural": "isPlural",
@@ -39241,7 +39377,7 @@
   },
   "mégrétisme": {
     "plural": "mégrétismes",
-    "form": ""
+    "form": "M"
   },
   "mégrétismes": {
     "plural": "isPlural",
@@ -39289,7 +39425,7 @@
   },
   "mélodie": {
     "plural": "mélodies",
-    "form": ""
+    "form": "F"
   },
   "mélodies": {
     "plural": "isPlural",
@@ -39369,7 +39505,7 @@
   },
   "méridienne": {
     "plural": "méridiennes",
-    "form": ""
+    "form": "F"
   },
   "méridiennes": {
     "plural": "isPlural",
@@ -39409,7 +39545,7 @@
   },
   "métallo": {
     "plural": "métallos",
-    "form": ""
+    "form": "F/M"
   },
   "métallos": {
     "plural": "isPlural",
@@ -39433,7 +39569,7 @@
   },
   "métamorphose": {
     "plural": "métamorphoses",
-    "form": ""
+    "form": "F"
   },
   "métamorphoses": {
     "plural": "isPlural",
@@ -39469,7 +39605,7 @@
   },
   "méteil": {
     "plural": "méteils",
-    "form": ""
+    "form": "M"
   },
   "méteils": {
     "plural": "isPlural",
@@ -39601,7 +39737,7 @@
   },
   "môme": {
     "plural": "mômes",
-    "form": ""
+    "form": "F/M"
   },
   "mômes": {
     "plural": "isPlural",
@@ -39649,7 +39785,7 @@
   },
   "nanomètre": {
     "plural": "nanomètres",
-    "form": ""
+    "form": "M"
   },
   "nanomètres": {
     "plural": "isPlural",
@@ -39665,7 +39801,7 @@
   },
   "nappe": {
     "plural": "nappes",
-    "form": ""
+    "form": "F"
   },
   "nappes": {
     "plural": "isPlural",
@@ -39709,7 +39845,7 @@
   },
   "national": {
     "plural": "nationaux",
-    "form": ""
+    "form": "M"
   },
   "nationalité": {
     "plural": "nationalités",
@@ -39745,7 +39881,7 @@
   },
   "nature": {
     "plural": "natures",
-    "form": ""
+    "form": "F"
   },
   "naturel": {
     "plural": "naturels",
@@ -39841,7 +39977,7 @@
   },
   "nerf": {
     "plural": "nerfs",
-    "form": ""
+    "form": "M"
   },
   "nerfs": {
     "plural": "isPlural",
@@ -39929,7 +40065,7 @@
   },
   "neuropédiatrie": {
     "plural": "neuropédiatries",
-    "form": ""
+    "form": "F"
   },
   "neuropédiatries": {
     "plural": "isPlural",
@@ -39989,7 +40125,7 @@
   },
   "niche": {
     "plural": "niches",
-    "form": ""
+    "form": "F"
   },
   "niches": {
     "plural": "isPlural",
@@ -40037,7 +40173,7 @@
   },
   "noblesse": {
     "plural": "noblesses",
-    "form": ""
+    "form": "F"
   },
   "noblesses": {
     "plural": "isPlural",
@@ -40045,7 +40181,7 @@
   },
   "noce": {
     "plural": "noces",
-    "form": ""
+    "form": "F"
   },
   "noces": {
     "plural": "isPlural",
@@ -40061,7 +40197,7 @@
   },
   "noir": {
     "plural": "noirs",
-    "form": ""
+    "form": "M"
   },
   "noirs": {
     "plural": "isPlural",
@@ -40093,7 +40229,7 @@
   },
   "nomadisme": {
     "plural": "nomadismes",
-    "form": ""
+    "form": "M"
   },
   "nomadismes": {
     "plural": "isPlural",
@@ -40129,7 +40265,7 @@
   },
   "non-respect": {
     "plural": "non-respects",
-    "form": ""
+    "form": "M"
   },
   "non-respects": {
     "plural": "isPlural",
@@ -40153,7 +40289,7 @@
   },
   "nonidi": {
     "plural": "nonidis",
-    "form": ""
+    "form": "M"
   },
   "nonidis": {
     "plural": "isPlural",
@@ -40193,7 +40329,7 @@
   },
   "norme": {
     "plural": "normes",
-    "form": ""
+    "form": "F"
   },
   "normes": {
     "plural": "isPlural",
@@ -40233,7 +40369,7 @@
   },
   "notice": {
     "plural": "notices",
-    "form": ""
+    "form": "F"
   },
   "notices": {
     "plural": "isPlural",
@@ -40281,7 +40417,7 @@
   },
   "nouveau-né": {
     "plural": "nouveau-nés",
-    "form": ""
+    "form": "M"
   },
   "nouveau-nés": {
     "plural": "isPlural",
@@ -40297,7 +40433,7 @@
   },
   "nouvelle": {
     "plural": "nouvelles",
-    "form": ""
+    "form": "F"
   },
   "nouvelles": {
     "plural": "isPlural",
@@ -40377,7 +40513,7 @@
   },
   "nue": {
     "plural": "nues",
-    "form": ""
+    "form": "F/M"
   },
   "nues": {
     "plural": "isPlural",
@@ -40441,7 +40577,7 @@
   },
   "nuque": {
     "plural": "nuques",
-    "form": ""
+    "form": "F"
   },
   "nuques": {
     "plural": "isPlural",
@@ -40457,7 +40593,7 @@
   },
   "nymphe": {
     "plural": "nymphes",
-    "form": ""
+    "form": "F"
   },
   "nymphes": {
     "plural": "isPlural",
@@ -40533,7 +40669,7 @@
   },
   "négociateur": {
     "plural": "négociateurs",
-    "form": ""
+    "form": "M"
   },
   "négociateurs": {
     "plural": "isPlural",
@@ -40549,7 +40685,7 @@
   },
   "négritude": {
     "plural": "négritudes",
-    "form": ""
+    "form": "F"
   },
   "négritudes": {
     "plural": "isPlural",
@@ -40777,7 +40913,7 @@
   },
   "occident": {
     "plural": "occidents",
-    "form": ""
+    "form": "M"
   },
   "occidentalisme": {
     "plural": "occidentalismes",
@@ -40789,7 +40925,7 @@
   },
   "occidentalité": {
     "plural": "occidentalités",
-    "form": ""
+    "form": "F"
   },
   "occidentalités": {
     "plural": "isPlural",
@@ -40817,7 +40953,7 @@
   },
   "occupant": {
     "plural": "occupants",
-    "form": ""
+    "form": "M"
   },
   "occupants": {
     "plural": "isPlural",
@@ -40849,7 +40985,7 @@
   },
   "octidi": {
     "plural": "octidis",
-    "form": ""
+    "form": "M"
   },
   "octidis": {
     "plural": "isPlural",
@@ -40873,7 +41009,7 @@
   },
   "octroi": {
     "plural": "octrois",
-    "form": ""
+    "form": "M"
   },
   "octrois": {
     "plural": "isPlural",
@@ -40913,7 +41049,7 @@
   },
   "odeur": {
     "plural": "odeurs",
-    "form": ""
+    "form": "F"
   },
   "odeurs": {
     "plural": "isPlural",
@@ -41053,7 +41189,7 @@
   },
   "olympiade": {
     "plural": "olympiades",
-    "form": ""
+    "form": "F"
   },
   "olympiades": {
     "plural": "isPlural",
@@ -41077,7 +41213,7 @@
   },
   "ombre": {
     "plural": "ombres",
-    "form": ""
+    "form": "F"
   },
   "ombres": {
     "plural": "isPlural",
@@ -41173,7 +41309,7 @@
   },
   "ophtalmopédatrie": {
     "plural": "ophtalmopédatries",
-    "form": ""
+    "form": "F"
   },
   "ophtalmopédatries": {
     "plural": "isPlural",
@@ -41181,7 +41317,7 @@
   },
   "opinion": {
     "plural": "opinions",
-    "form": ""
+    "form": "F"
   },
   "opinions": {
     "plural": "isPlural",
@@ -41189,7 +41325,7 @@
   },
   "opium": {
     "plural": "opiums",
-    "form": ""
+    "form": "M"
   },
   "opiums": {
     "plural": "isPlural",
@@ -41353,7 +41489,7 @@
   },
   "oratoire": {
     "plural": "oratoires",
-    "form": ""
+    "form": "M"
   },
   "oratoires": {
     "plural": "isPlural",
@@ -41409,7 +41545,7 @@
   },
   "ordure": {
     "plural": "ordures",
-    "form": ""
+    "form": "F"
   },
   "ordures": {
     "plural": "isPlural",
@@ -41417,7 +41553,7 @@
   },
   "oreille": {
     "plural": "oreilles",
-    "form": ""
+    "form": "F"
   },
   "oreilles": {
     "plural": "isPlural",
@@ -41625,7 +41761,7 @@
   },
   "orpheline": {
     "plural": "orphelines",
-    "form": ""
+    "form": "F"
   },
   "orphelines": {
     "plural": "isPlural",
@@ -41789,7 +41925,7 @@
   },
   "ottomane": {
     "plural": "ottomanes",
-    "form": ""
+    "form": "F"
   },
   "ottomanes": {
     "plural": "isPlural",
@@ -41817,7 +41953,7 @@
   },
   "ourson": {
     "plural": "oursons",
-    "form": ""
+    "form": "M"
   },
   "oursons": {
     "plural": "isPlural",
@@ -41841,7 +41977,7 @@
   },
   "outre-mer": {
     "plural": "outre-mers",
-    "form": ""
+    "form": "M"
   },
   "outre-mers": {
     "plural": "isPlural",
@@ -41945,7 +42081,7 @@
   },
   "pagaille": {
     "plural": "pagailles",
-    "form": ""
+    "form": "F"
   },
   "pagailles": {
     "plural": "isPlural",
@@ -41987,15 +42123,7 @@
     "plural": "pains",
     "form": "M"
   },
-  "pain de mie": {
-    "plural": "pains de mie",
-    "form": ""
-  },
   "pains": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "pains de mie": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42005,7 +42133,7 @@
   },
   "paire": {
     "plural": "paires",
-    "form": ""
+    "form": "F"
   },
   "paires": {
     "plural": "isPlural",
@@ -42017,7 +42145,7 @@
   },
   "paix": {
     "plural": "paix",
-    "form": "PL"
+    "form": "F/PL"
   },
   "pal": {
     "plural": "pals",
@@ -42269,7 +42397,7 @@
   },
   "panosse": {
     "plural": "panosses",
-    "form": ""
+    "form": "F"
   },
   "panosses": {
     "plural": "isPlural",
@@ -42301,7 +42429,7 @@
   },
   "panthéon": {
     "plural": "panthéons",
-    "form": ""
+    "form": "M"
   },
   "panthéons": {
     "plural": "isPlural",
@@ -42453,7 +42581,7 @@
   },
   "paradoxe": {
     "plural": "paradoxes",
-    "form": ""
+    "form": "M"
   },
   "paradoxes": {
     "plural": "isPlural",
@@ -42533,7 +42661,7 @@
   },
   "paravent": {
     "plural": "paravents",
-    "form": ""
+    "form": "M"
   },
   "paravents": {
     "plural": "isPlural",
@@ -42545,7 +42673,7 @@
   },
   "parcelle": {
     "plural": "parcelles",
-    "form": ""
+    "form": "F"
   },
   "parcelles": {
     "plural": "isPlural",
@@ -42631,14 +42759,6 @@
     "plural": "parfums",
     "form": "M"
   },
-  "parfume": {
-    "plural": "parfumes",
-    "form": ""
-  },
-  "parfumes": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "parfumeur": {
     "plural": "parfumeurs",
     "form": "M"
@@ -42709,7 +42829,7 @@
   },
   "paroisse": {
     "plural": "paroisses",
-    "form": ""
+    "form": "F"
   },
   "paroisses": {
     "plural": "isPlural",
@@ -42741,7 +42861,7 @@
   },
   "parquet": {
     "plural": "parquets",
-    "form": ""
+    "form": "M"
   },
   "parquets": {
     "plural": "isPlural",
@@ -42753,7 +42873,7 @@
   },
   "partenaire": {
     "plural": "partenaires",
-    "form": ""
+    "form": "F/M"
   },
   "partenaires": {
     "plural": "isPlural",
@@ -42789,7 +42909,7 @@
   },
   "participant": {
     "plural": "participants",
-    "form": ""
+    "form": "M"
   },
   "participants": {
     "plural": "isPlural",
@@ -42833,7 +42953,7 @@
   },
   "partisan": {
     "plural": "partisans",
-    "form": ""
+    "form": "M"
   },
   "partisans": {
     "plural": "isPlural",
@@ -42873,7 +42993,7 @@
   },
   "parèdre": {
     "plural": "parèdres",
-    "form": ""
+    "form": "F/M"
   },
   "parèdres": {
     "plural": "isPlural",
@@ -42917,7 +43037,7 @@
   },
   "passagère": {
     "plural": "passagères",
-    "form": ""
+    "form": "F"
   },
   "passagères": {
     "plural": "isPlural",
@@ -42965,7 +43085,7 @@
   },
   "passeport": {
     "plural": "passeports",
-    "form": ""
+    "form": "M"
   },
   "passeports": {
     "plural": "isPlural",
@@ -43041,7 +43161,7 @@
   },
   "pater": {
     "plural": "paters",
-    "form": ""
+    "form": "M"
   },
   "paternel": {
     "plural": "paternels",
@@ -43093,7 +43213,7 @@
   },
   "patiente": {
     "plural": "patientes",
-    "form": ""
+    "form": "F"
   },
   "patientes": {
     "plural": "isPlural",
@@ -43105,7 +43225,7 @@
   },
   "patineuse": {
     "plural": "patineuses",
-    "form": ""
+    "form": "F"
   },
   "patineuses": {
     "plural": "isPlural",
@@ -43133,7 +43253,7 @@
   },
   "patriarche": {
     "plural": "patriarches",
-    "form": ""
+    "form": "M"
   },
   "patriarches": {
     "plural": "isPlural",
@@ -43149,11 +43269,7 @@
   },
   "patrimoine": {
     "plural": "patrimoines",
-    "form": ""
-  },
-  "patrimoine sensoriel": {
-    "plural": "",
-    "form": ""
+    "form": "M"
   },
   "patrimoines": {
     "plural": "isPlural",
@@ -43161,7 +43277,7 @@
   },
   "patriote": {
     "plural": "patriotes",
-    "form": ""
+    "form": "F/M"
   },
   "patriotes": {
     "plural": "isPlural",
@@ -43233,7 +43349,7 @@
   },
   "pavillon": {
     "plural": "pavillons",
-    "form": ""
+    "form": "M"
   },
   "pavillons": {
     "plural": "isPlural",
@@ -43249,7 +43365,7 @@
   },
   "payeur": {
     "plural": "payeurs",
-    "form": ""
+    "form": "M"
   },
   "payeurs": {
     "plural": "isPlural",
@@ -43325,7 +43441,7 @@
   },
   "peintre": {
     "plural": "peintres",
-    "form": ""
+    "form": "F/M"
   },
   "peintres": {
     "plural": "isPlural",
@@ -43341,7 +43457,7 @@
   },
   "pellicule": {
     "plural": "pellicules",
-    "form": ""
+    "form": "F"
   },
   "pellicules": {
     "plural": "isPlural",
@@ -43349,7 +43465,7 @@
   },
   "pendule": {
     "plural": "pendules",
-    "form": ""
+    "form": "F/M"
   },
   "pendules": {
     "plural": "isPlural",
@@ -43361,7 +43477,7 @@
   },
   "pensionnaire": {
     "plural": "pensionnaires",
-    "form": ""
+    "form": "F/M"
   },
   "pensionnaires": {
     "plural": "isPlural",
@@ -43477,7 +43593,7 @@
   },
   "perle": {
     "plural": "perles",
-    "form": ""
+    "form": "F"
   },
   "perles": {
     "plural": "isPlural",
@@ -43485,7 +43601,7 @@
   },
   "permanence": {
     "plural": "permanences",
-    "form": ""
+    "form": "F"
   },
   "permanences": {
     "plural": "isPlural",
@@ -43541,7 +43657,7 @@
   },
   "perruque": {
     "plural": "perruques",
-    "form": ""
+    "form": "F"
   },
   "perruques": {
     "plural": "isPlural",
@@ -43645,7 +43761,7 @@
   },
   "perte": {
     "plural": "pertes",
-    "form": ""
+    "form": "F"
   },
   "pertes": {
     "plural": "isPlural",
@@ -43653,7 +43769,7 @@
   },
   "pertinence": {
     "plural": "pertinences",
-    "form": ""
+    "form": "F"
   },
   "pertinences": {
     "plural": "isPlural",
@@ -43669,7 +43785,7 @@
   },
   "perverse": {
     "plural": "perverses",
-    "form": ""
+    "form": "F"
   },
   "perverses": {
     "plural": "isPlural",
@@ -43701,7 +43817,7 @@
   },
   "petawatt": {
     "plural": "petawatts",
-    "form": ""
+    "form": "M"
   },
   "petawatts": {
     "plural": "isPlural",
@@ -43721,7 +43837,7 @@
   },
   "petite-fille": {
     "plural": "petite-filles",
-    "form": ""
+    "form": "F"
   },
   "petite-filles": {
     "plural": "isPlural",
@@ -43755,6 +43871,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "phallus": {
+    "plural": "phallus",
+    "form": "M/PL"
+  },
   "phare": {
     "plural": "phares",
     "form": "M"
@@ -43765,7 +43885,7 @@
   },
   "pharmacie": {
     "plural": "pharmacies",
-    "form": ""
+    "form": "F"
   },
   "pharmacien": {
     "plural": "pharmaciens",
@@ -43813,7 +43933,7 @@
   },
   "phase": {
     "plural": "phases",
-    "form": ""
+    "form": "F"
   },
   "phases": {
     "plural": "isPlural",
@@ -43821,7 +43941,7 @@
   },
   "philatélie": {
     "plural": "philatélies",
-    "form": ""
+    "form": "F"
   },
   "philatélies": {
     "plural": "isPlural",
@@ -43909,11 +44029,11 @@
   },
   "photo": {
     "plural": "photos",
-    "form": ""
+    "form": "F"
   },
   "photographe": {
     "plural": "photographes",
-    "form": ""
+    "form": "F/M"
   },
   "photographes": {
     "plural": "isPlural",
@@ -43921,7 +44041,7 @@
   },
   "photographie": {
     "plural": "photographies",
-    "form": ""
+    "form": "F"
   },
   "photographies": {
     "plural": "isPlural",
@@ -43937,7 +44057,7 @@
   },
   "photométrie": {
     "plural": "photométries",
-    "form": ""
+    "form": "F"
   },
   "photométries": {
     "plural": "isPlural",
@@ -44009,7 +44129,7 @@
   },
   "physicien": {
     "plural": "physiciens",
-    "form": ""
+    "form": "M"
   },
   "physiciens": {
     "plural": "isPlural",
@@ -44053,7 +44173,7 @@
   },
   "physionomie": {
     "plural": "physionomies",
-    "form": ""
+    "form": "F"
   },
   "physionomies": {
     "plural": "isPlural",
@@ -44065,7 +44185,7 @@
   },
   "physiothérapeute": {
     "plural": "physiothérapeutes",
-    "form": ""
+    "form": "F/M"
   },
   "physiothérapeutes": {
     "plural": "isPlural",
@@ -44165,7 +44285,7 @@
   },
   "pichet": {
     "plural": "pichets",
-    "form": ""
+    "form": "M"
   },
   "pichets": {
     "plural": "isPlural",
@@ -44173,7 +44293,7 @@
   },
   "pickpocket": {
     "plural": "pickpockets",
-    "form": ""
+    "form": "F/M"
   },
   "pickpockets": {
     "plural": "isPlural",
@@ -44193,7 +44313,7 @@
   },
   "pierre": {
     "plural": "pierres",
-    "form": ""
+    "form": "F"
   },
   "pierres": {
     "plural": "isPlural",
@@ -44257,7 +44377,7 @@
   },
   "pilote": {
     "plural": "pilotes",
-    "form": ""
+    "form": "F/M"
   },
   "pilotes": {
     "plural": "isPlural",
@@ -44285,7 +44405,7 @@
   },
   "pince": {
     "plural": "pinces",
-    "form": ""
+    "form": "F"
   },
   "pinces": {
     "plural": "isPlural",
@@ -44301,7 +44421,7 @@
   },
   "pingpong": {
     "plural": "pingpongs",
-    "form": ""
+    "form": "M"
   },
   "pingpongs": {
     "plural": "isPlural",
@@ -44353,7 +44473,7 @@
   },
   "pipi": {
     "plural": "pipis",
-    "form": ""
+    "form": "M"
   },
   "pipis": {
     "plural": "isPlural",
@@ -44393,7 +44513,7 @@
   },
   "piqué": {
     "plural": "piqués",
-    "form": ""
+    "form": "M"
   },
   "piqués": {
     "plural": "isPlural",
@@ -44401,7 +44521,7 @@
   },
   "pirate": {
     "plural": "pirates",
-    "form": ""
+    "form": "F/M"
   },
   "pirates": {
     "plural": "isPlural",
@@ -44409,7 +44529,7 @@
   },
   "pirogue": {
     "plural": "pirogues",
-    "form": ""
+    "form": "F"
   },
   "pirogues": {
     "plural": "isPlural",
@@ -44441,7 +44561,7 @@
   },
   "pistache": {
     "plural": "pistaches",
-    "form": ""
+    "form": "F"
   },
   "pistaches": {
     "plural": "isPlural",
@@ -44569,7 +44689,7 @@
   },
   "placébo": {
     "plural": "placébos",
-    "form": ""
+    "form": "M"
   },
   "placébos": {
     "plural": "isPlural",
@@ -44665,7 +44785,7 @@
   },
   "plan": {
     "plural": "plans",
-    "form": ""
+    "form": "M"
   },
   "planche": {
     "plural": "planches",
@@ -44729,7 +44849,7 @@
   },
   "planète": {
     "plural": "planètes",
-    "form": ""
+    "form": "F"
   },
   "planète océan": {
     "plural": "planètes océan",
@@ -44777,7 +44897,7 @@
   },
   "plastique": {
     "plural": "plastiques",
-    "form": ""
+    "form": "M"
   },
   "plastiques": {
     "plural": "isPlural",
@@ -44841,7 +44961,7 @@
   },
   "pleur": {
     "plural": "pleurs",
-    "form": ""
+    "form": "M"
   },
   "pleurs": {
     "plural": "isPlural",
@@ -44881,7 +45001,7 @@
   },
   "pluche": {
     "plural": "pluches",
-    "form": ""
+    "form": "F"
   },
   "pluches": {
     "plural": "isPlural",
@@ -44889,7 +45009,7 @@
   },
   "pluie": {
     "plural": "pluies",
-    "form": ""
+    "form": "F"
   },
   "pluies": {
     "plural": "isPlural",
@@ -45055,6 +45175,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pointille": {
+    "plural": "pointilles",
+    "form": "F"
+  },
   "pointilles": {
     "plural": "isPlural",
     "form": "PL"
@@ -45125,7 +45249,7 @@
   },
   "poivre": {
     "plural": "poivres",
-    "form": ""
+    "form": "M"
   },
   "poivres": {
     "plural": "isPlural",
@@ -45181,7 +45305,7 @@
   },
   "politesse": {
     "plural": "politesses",
-    "form": ""
+    "form": "F"
   },
   "politesses": {
     "plural": "isPlural",
@@ -45327,14 +45451,6 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "pomologue": {
-    "plural": "pomologues",
-    "form": "F/M"
-  },
-  "pomologues": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "pompe": {
     "plural": "pompes",
     "form": "F"
@@ -45401,7 +45517,7 @@
   },
   "pool": {
     "plural": "pools",
-    "form": ""
+    "form": "M"
   },
   "pools": {
     "plural": "isPlural",
@@ -45409,7 +45525,7 @@
   },
   "pop": {
     "plural": "pops",
-    "form": ""
+    "form": "F"
   },
   "pops": {
     "plural": "isPlural",
@@ -45445,7 +45561,7 @@
   },
   "porcelaine": {
     "plural": "porcelaines",
-    "form": ""
+    "form": "F"
   },
   "porcelaines": {
     "plural": "isPlural",
@@ -45457,7 +45573,7 @@
   },
   "pornographe": {
     "plural": "pornographes",
-    "form": ""
+    "form": "F/M"
   },
   "pornographes": {
     "plural": "isPlural",
@@ -45509,7 +45625,7 @@
   },
   "porte": {
     "plural": "portes",
-    "form": ""
+    "form": "F"
   },
   "porte-assiettes": {
     "plural": "",
@@ -45524,8 +45640,8 @@
     "form": "PL"
   },
   "porte-jarretelles": {
-    "plural": "",
-    "form": ""
+    "plural": "porte-jarretelles",
+    "form": "M/PL"
   },
   "porte-manteau": {
     "plural": "",
@@ -45541,7 +45657,7 @@
   },
   "porte-parole": {
     "plural": "porte-paroles",
-    "form": ""
+    "form": "F/M"
   },
   "porte-paroles": {
     "plural": "isPlural",
@@ -45565,7 +45681,7 @@
   },
   "portefeuille": {
     "plural": "portefeuilles",
-    "form": ""
+    "form": "M"
   },
   "portefeuilles": {
     "plural": "isPlural",
@@ -45581,7 +45697,7 @@
   },
   "portemonnaie": {
     "plural": "portemonnaies",
-    "form": ""
+    "form": "M"
   },
   "portemonnaies": {
     "plural": "isPlural",
@@ -45601,7 +45717,7 @@
   },
   "porteuse": {
     "plural": "porteuses",
-    "form": ""
+    "form": "F"
   },
   "porteuses": {
     "plural": "isPlural",
@@ -45609,7 +45725,7 @@
   },
   "portevoix": {
     "plural": "portevoix",
-    "form": "PL"
+    "form": "M/PL"
   },
   "portier": {
     "plural": "portiers",
@@ -45709,11 +45825,11 @@
   },
   "post mortem": {
     "plural": "",
-    "form": ""
+    "form": "M"
   },
   "poste": {
     "plural": "postes",
-    "form": ""
+    "form": "F/M"
   },
   "postes": {
     "plural": "isPlural",
@@ -45793,7 +45909,7 @@
   },
   "pote": {
     "plural": "potes",
-    "form": ""
+    "form": "F/M"
   },
   "potentialité": {
     "plural": "potentialités",
@@ -45901,7 +46017,7 @@
   },
   "poulpe": {
     "plural": "poulpes",
-    "form": ""
+    "form": "M"
   },
   "poulpes": {
     "plural": "isPlural",
@@ -45933,7 +46049,7 @@
   },
   "poursuite": {
     "plural": "poursuites",
-    "form": ""
+    "form": "F"
   },
   "poursuites": {
     "plural": "isPlural",
@@ -45957,11 +46073,11 @@
   },
   "pousse": {
     "plural": "pousses",
-    "form": ""
+    "form": "F"
   },
   "poussepousse": {
     "plural": "poussepousses",
-    "form": ""
+    "form": "M"
   },
   "poussepousses": {
     "plural": "isPlural",
@@ -46001,7 +46117,7 @@
   },
   "poème": {
     "plural": "poèmes",
-    "form": ""
+    "form": "M"
   },
   "poèmes": {
     "plural": "isPlural",
@@ -46017,7 +46133,7 @@
   },
   "poésie": {
     "plural": "poésies",
-    "form": ""
+    "form": "F"
   },
   "poésies": {
     "plural": "isPlural",
@@ -46049,7 +46165,7 @@
   },
   "prairie": {
     "plural": "prairies",
-    "form": ""
+    "form": "F"
   },
   "prairies": {
     "plural": "isPlural",
@@ -46057,7 +46173,7 @@
   },
   "pratique": {
     "plural": "pratiques",
-    "form": ""
+    "form": "F"
   },
   "pratiques": {
     "plural": "isPlural",
@@ -46121,11 +46237,11 @@
   },
   "presto": {
     "plural": "prestos",
-    "form": ""
+    "form": "M"
   },
   "prestolet": {
     "plural": "prestolets",
-    "form": ""
+    "form": "M"
   },
   "prestolets": {
     "plural": "isPlural",
@@ -46277,7 +46393,7 @@
   },
   "prix": {
     "plural": "prix",
-    "form": "PL"
+    "form": "M/PL"
   },
   "prière": {
     "plural": "prières",
@@ -46649,7 +46765,7 @@
   },
   "propagande": {
     "plural": "propagandes",
-    "form": ""
+    "form": "F"
   },
   "propagandes": {
     "plural": "isPlural",
@@ -46689,7 +46805,7 @@
   },
   "prophétie": {
     "plural": "prophéties",
-    "form": ""
+    "form": "F"
   },
   "prophéties": {
     "plural": "isPlural",
@@ -46781,7 +46897,7 @@
   },
   "prosodie": {
     "plural": "prosodies",
-    "form": ""
+    "form": "F"
   },
   "prosodies": {
     "plural": "isPlural",
@@ -46821,7 +46937,7 @@
   },
   "prostate": {
     "plural": "prostates",
-    "form": ""
+    "form": "F"
   },
   "prostates": {
     "plural": "isPlural",
@@ -46921,7 +47037,7 @@
   },
   "providence": {
     "plural": "providences",
-    "form": ""
+    "form": "F"
   },
   "providences": {
     "plural": "isPlural",
@@ -46929,7 +47045,7 @@
   },
   "province": {
     "plural": "provinces",
-    "form": ""
+    "form": "F"
   },
   "provinces": {
     "plural": "isPlural",
@@ -47169,7 +47285,7 @@
   },
   "préfète": {
     "plural": "préfètes",
-    "form": ""
+    "form": "F"
   },
   "préfètes": {
     "plural": "isPlural",
@@ -47177,7 +47293,7 @@
   },
   "préférence": {
     "plural": "préférences",
-    "form": ""
+    "form": "F"
   },
   "préférences": {
     "plural": "isPlural",
@@ -47233,7 +47349,7 @@
   },
   "prémium": {
     "plural": "prémiums",
-    "form": ""
+    "form": "M"
   },
   "prémiums": {
     "plural": "isPlural",
@@ -47273,7 +47389,7 @@
   },
   "prérogative": {
     "plural": "prérogatives",
-    "form": ""
+    "form": "F"
   },
   "prérogatives": {
     "plural": "isPlural",
@@ -47297,7 +47413,7 @@
   },
   "présentateur": {
     "plural": "présentateurs",
-    "form": ""
+    "form": "M"
   },
   "présentateurs": {
     "plural": "isPlural",
@@ -47341,7 +47457,7 @@
   },
   "présidence": {
     "plural": "présidences",
-    "form": ""
+    "form": "F"
   },
   "présidences": {
     "plural": "isPlural",
@@ -47349,7 +47465,7 @@
   },
   "président": {
     "plural": "présidents",
-    "form": ""
+    "form": "M"
   },
   "présidente": {
     "plural": "présidentes",
@@ -47457,7 +47573,7 @@
   },
   "prééminence": {
     "plural": "prééminences",
-    "form": ""
+    "form": "F"
   },
   "prééminences": {
     "plural": "isPlural",
@@ -47469,7 +47585,7 @@
   },
   "prêt-à-porter": {
     "plural": "prêt-à-porters",
-    "form": ""
+    "form": "M"
   },
   "prêt-à-porters": {
     "plural": "isPlural",
@@ -47521,7 +47637,7 @@
   },
   "psychanalyste": {
     "plural": "psychanalystes",
-    "form": ""
+    "form": "F/M"
   },
   "psychanalystes": {
     "plural": "isPlural",
@@ -47537,7 +47653,7 @@
   },
   "psychiatrie": {
     "plural": "psychiatries",
-    "form": ""
+    "form": "F"
   },
   "psychiatries": {
     "plural": "isPlural",
@@ -47697,7 +47813,7 @@
   },
   "pudeur": {
     "plural": "pudeurs",
-    "form": ""
+    "form": "F"
   },
   "pudeurs": {
     "plural": "isPlural",
@@ -47781,7 +47897,7 @@
   },
   "putain": {
     "plural": "putains",
-    "form": ""
+    "form": "F"
   },
   "putains": {
     "plural": "isPlural",
@@ -47909,7 +48025,7 @@
   },
   "pédagogue": {
     "plural": "pédagogues",
-    "form": ""
+    "form": "F/M"
   },
   "pédagogues": {
     "plural": "isPlural",
@@ -47917,7 +48033,7 @@
   },
   "pédale": {
     "plural": "pédales",
-    "form": ""
+    "form": "F"
   },
   "pédales": {
     "plural": "isPlural",
@@ -47933,7 +48049,7 @@
   },
   "pédiatrie": {
     "plural": "pédiatries",
-    "form": ""
+    "form": "F"
   },
   "pédiatries": {
     "plural": "isPlural",
@@ -47941,7 +48057,7 @@
   },
   "pédicure": {
     "plural": "pédicures",
-    "form": ""
+    "form": "F"
   },
   "pédicures": {
     "plural": "isPlural",
@@ -47949,7 +48065,7 @@
   },
   "pédigrée": {
     "plural": "pédigrées",
-    "form": ""
+    "form": "M"
   },
   "pédigrées": {
     "plural": "isPlural",
@@ -48009,7 +48125,7 @@
   },
   "pélican": {
     "plural": "pélicans",
-    "form": ""
+    "form": "M"
   },
   "pélicans": {
     "plural": "isPlural",
@@ -48037,7 +48153,7 @@
   },
   "pénombre": {
     "plural": "pénombres",
-    "form": ""
+    "form": "F"
   },
   "pénombres": {
     "plural": "isPlural",
@@ -48077,7 +48193,7 @@
   },
   "pérestroïka": {
     "plural": "pérestroïkas",
-    "form": ""
+    "form": "F"
   },
   "pérestroïkas": {
     "plural": "isPlural",
@@ -48125,7 +48241,7 @@
   },
   "périphérie": {
     "plural": "périphéries",
-    "form": ""
+    "form": "F"
   },
   "périphéries": {
     "plural": "isPlural",
@@ -48165,7 +48281,7 @@
   },
   "péséta": {
     "plural": "pésétas",
-    "form": ""
+    "form": "F"
   },
   "pésétas": {
     "plural": "isPlural",
@@ -48257,7 +48373,7 @@
   },
   "quadrillionième": {
     "plural": "quadrillionièmes",
-    "form": ""
+    "form": "F/M"
   },
   "quadrillionièmes": {
     "plural": "isPlural",
@@ -48397,7 +48513,7 @@
   },
   "queue": {
     "plural": "queues",
-    "form": ""
+    "form": "F"
   },
   "queues": {
     "plural": "isPlural",
@@ -48413,7 +48529,7 @@
   },
   "quincailler": {
     "plural": "quincaillers",
-    "form": ""
+    "form": "M"
   },
   "quincaillers": {
     "plural": "isPlural",
@@ -48429,7 +48545,7 @@
   },
   "quintessence": {
     "plural": "quintessences",
-    "form": ""
+    "form": "F"
   },
   "quintessences": {
     "plural": "isPlural",
@@ -48517,7 +48633,7 @@
   },
   "quête": {
     "plural": "quêtes",
-    "form": ""
+    "form": "F"
   },
   "quêtes": {
     "plural": "isPlural",
@@ -49139,19 +49255,11 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "rebel": {
-    "plural": "rebels",
-    "form": ""
-  },
   "rebelle": {
     "plural": "rebelles",
-    "form": "M"
+    "form": "F/M"
   },
   "rebelles": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "rebels": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -50524,6 +50632,14 @@
     "form": "F"
   },
   "ronces": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rondeau": {
+    "plural": "rondeaux",
+    "form": "M"
+  },
+  "rondeaux": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -51967,6 +52083,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sacoche": {
+    "plural": "sacoches",
+    "form": "F"
+  },
+  "sacoches": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sacrifice": {
     "plural": "sacrifices",
     "form": "M"
@@ -52001,7 +52125,7 @@
   },
   "sagefemme": {
     "plural": "sagefemmes",
-    "form": ""
+    "form": "F"
   },
   "sagefemmes": {
     "plural": "isPlural",
@@ -52229,7 +52353,7 @@
   },
   "sans-culotte": {
     "plural": "sans-culottes",
-    "form": ""
+    "form": "M"
   },
   "sans-culottes": {
     "plural": "isPlural",
@@ -53721,7 +53845,7 @@
   },
   "sociétaire": {
     "plural": "sociétaires",
-    "form": ""
+    "form": "F/M"
   },
   "sociétaires": {
     "plural": "isPlural",
@@ -54089,7 +54213,7 @@
   },
   "sottise": {
     "plural": "sottises",
-    "form": ""
+    "form": "F"
   },
   "sottises": {
     "plural": "isPlural",
@@ -54109,7 +54233,7 @@
   },
   "soubrette": {
     "plural": "soubrettes",
-    "form": ""
+    "form": "F"
   },
   "soubrettes": {
     "plural": "isPlural",
@@ -54141,7 +54265,7 @@
   },
   "souffle": {
     "plural": "souffles",
-    "form": ""
+    "form": "M"
   },
   "souffles": {
     "plural": "isPlural",
@@ -54269,7 +54393,7 @@
   },
   "sous-chef": {
     "plural": "sous-chefs",
-    "form": ""
+    "form": "M"
   },
   "sous-chefs": {
     "plural": "isPlural",
@@ -54309,7 +54433,7 @@
   },
   "sous-préfet": {
     "plural": "sous-préfets",
-    "form": ""
+    "form": "M"
   },
   "sous-préfets": {
     "plural": "isPlural",
@@ -54389,11 +54513,11 @@
   },
   "soutien": {
     "plural": "soutiens",
-    "form": ""
+    "form": "M"
   },
   "soutien-gorge": {
     "plural": "soutien-gorges",
-    "form": ""
+    "form": "M"
   },
   "soutien-gorges": {
     "plural": "isPlural",
@@ -54477,7 +54601,7 @@
   },
   "spectre": {
     "plural": "spectres",
-    "form": ""
+    "form": "M"
   },
   "spectres": {
     "plural": "isPlural",
@@ -54485,7 +54609,7 @@
   },
   "spectroscopie": {
     "plural": "spectroscopies",
-    "form": ""
+    "form": "F"
   },
   "spectroscopies": {
     "plural": "isPlural",
@@ -54493,7 +54617,7 @@
   },
   "sperme": {
     "plural": "spermes",
-    "form": ""
+    "form": "M"
   },
   "spermes": {
     "plural": "isPlural",
@@ -54661,7 +54785,7 @@
   },
   "stagiaire": {
     "plural": "stagiaires",
-    "form": ""
+    "form": "F/M"
   },
   "stagiaires": {
     "plural": "isPlural",
@@ -54749,7 +54873,7 @@
   },
   "statuquo": {
     "plural": "statuquos",
-    "form": ""
+    "form": "M"
   },
   "statuquos": {
     "plural": "isPlural",
@@ -54781,7 +54905,7 @@
   },
   "stimulus": {
     "plural": "stimulus",
-    "form": "PL"
+    "form": "M/PL"
   },
   "stockage": {
     "plural": "stockages",
@@ -54917,7 +55041,7 @@
   },
   "stéradian": {
     "plural": "stéradians",
-    "form": ""
+    "form": "M"
   },
   "stéradians": {
     "plural": "isPlural",
@@ -55001,7 +55125,7 @@
   },
   "substitute": {
     "plural": "substitutes",
-    "form": ""
+    "form": "F"
   },
   "substitutes": {
     "plural": "isPlural",
@@ -55153,7 +55277,7 @@
   },
   "sultan": {
     "plural": "sultans",
-    "form": ""
+    "form": "M"
   },
   "sultans": {
     "plural": "isPlural",
@@ -55177,7 +55301,7 @@
   },
   "supermarché": {
     "plural": "supermarchés",
-    "form": ""
+    "form": "M"
   },
   "supermarchés": {
     "plural": "isPlural",
@@ -55233,7 +55357,7 @@
   },
   "suppléant": {
     "plural": "suppléants",
-    "form": ""
+    "form": "M"
   },
   "suppléants": {
     "plural": "isPlural",
@@ -55385,7 +55509,7 @@
   },
   "surprise": {
     "plural": "surprises",
-    "form": ""
+    "form": "F"
   },
   "surprises": {
     "plural": "isPlural",
@@ -55401,11 +55525,11 @@
   },
   "sursis": {
     "plural": "sursis",
-    "form": "PL"
+    "form": "M/PL"
   },
   "surtaxe": {
     "plural": "surtaxes",
-    "form": ""
+    "form": "F"
   },
   "surtaxes": {
     "plural": "isPlural",
@@ -55421,7 +55545,7 @@
   },
   "surveillant": {
     "plural": "surveillants",
-    "form": ""
+    "form": "M"
   },
   "surveillants": {
     "plural": "isPlural",
@@ -55489,7 +55613,7 @@
   },
   "sympathie": {
     "plural": "sympathies",
-    "form": ""
+    "form": "F"
   },
   "sympathies": {
     "plural": "isPlural",
@@ -55497,7 +55621,7 @@
   },
   "symphonie": {
     "plural": "symphonies",
-    "form": ""
+    "form": "F"
   },
   "symphonies": {
     "plural": "isPlural",
@@ -55537,7 +55661,7 @@
   },
   "syndique": {
     "plural": "syndiques",
-    "form": ""
+    "form": "F"
   },
   "syndiques": {
     "plural": "isPlural",
@@ -55565,7 +55689,7 @@
   },
   "synthèse": {
     "plural": "synthèses",
-    "form": ""
+    "form": "F"
   },
   "synthèses": {
     "plural": "isPlural",
@@ -55685,7 +55809,7 @@
   },
   "séducteur": {
     "plural": "séducteurs",
-    "form": ""
+    "form": "M"
   },
   "séducteurs": {
     "plural": "isPlural",
@@ -55741,7 +55865,7 @@
   },
   "séminaire": {
     "plural": "séminaires",
-    "form": ""
+    "form": "M"
   },
   "séminaires": {
     "plural": "isPlural",
@@ -55777,7 +55901,7 @@
   },
   "sénateur": {
     "plural": "sénateurs",
-    "form": ""
+    "form": "M"
   },
   "sénateurs": {
     "plural": "isPlural",
@@ -55789,7 +55913,7 @@
   },
   "sénatus-consulte": {
     "plural": "sénatus-consultes",
-    "form": ""
+    "form": "M"
   },
   "sénatus-consultes": {
     "plural": "isPlural",
@@ -55829,7 +55953,7 @@
   },
   "séquence": {
     "plural": "séquences",
-    "form": ""
+    "form": "F"
   },
   "séquences": {
     "plural": "isPlural",
@@ -55845,7 +55969,7 @@
   },
   "séquoia": {
     "plural": "séquoias",
-    "form": ""
+    "form": "M"
   },
   "séquoias": {
     "plural": "isPlural",
@@ -55877,7 +56001,7 @@
   },
   "sérigraphe": {
     "plural": "sérigraphes",
-    "form": ""
+    "form": "F/M"
   },
   "sérigraphes": {
     "plural": "isPlural",
@@ -55885,7 +56009,7 @@
   },
   "sérénade": {
     "plural": "sérénades",
-    "form": ""
+    "form": "F"
   },
   "sérénades": {
     "plural": "isPlural",
@@ -55957,7 +56081,7 @@
   },
   "tablette": {
     "plural": "tablettes",
-    "form": ""
+    "form": "F"
   },
   "tablettes": {
     "plural": "isPlural",
@@ -55973,7 +56097,7 @@
   },
   "taboulé": {
     "plural": "taboulés",
-    "form": ""
+    "form": "M"
   },
   "taboulés": {
     "plural": "isPlural",
@@ -56097,7 +56221,7 @@
   },
   "tamtam": {
     "plural": "tamtams",
-    "form": ""
+    "form": "M"
   },
   "tamtams": {
     "plural": "isPlural",
@@ -56257,7 +56381,7 @@
   },
   "taxe": {
     "plural": "taxes",
-    "form": ""
+    "form": "F"
   },
   "taxe carbone": {
     "plural": "",
@@ -56313,7 +56437,7 @@
   },
   "tchétchène": {
     "plural": "tchétchènes",
-    "form": ""
+    "form": "M"
   },
   "tchétchènes": {
     "plural": "isPlural",
@@ -56377,7 +56501,7 @@
   },
   "teinte": {
     "plural": "teintes",
-    "form": ""
+    "form": "F"
   },
   "teintes": {
     "plural": "isPlural",
@@ -56405,7 +56529,7 @@
   },
   "température": {
     "plural": "températures",
-    "form": ""
+    "form": "F"
   },
   "température de surface de la mer": {
     "plural": "température de surface de la mer",
@@ -56421,7 +56545,7 @@
   },
   "tempête": {
     "plural": "tempêtes",
-    "form": ""
+    "form": "F"
   },
   "tempêtes": {
     "plural": "isPlural",
@@ -56445,7 +56569,7 @@
   },
   "tendresse": {
     "plural": "tendresses",
-    "form": ""
+    "form": "F"
   },
   "tendresses": {
     "plural": "isPlural",
@@ -56461,7 +56585,7 @@
   },
   "tennis": {
     "plural": "tennis",
-    "form": "PL"
+    "form": "F/M/PL"
   },
   "tennisman": {
     "plural": "tennismans",
@@ -56473,7 +56597,7 @@
   },
   "tenniswoman": {
     "plural": "tenniswomans",
-    "form": ""
+    "form": "F"
   },
   "tenniswomans": {
     "plural": "isPlural",
@@ -56497,7 +56621,7 @@
   },
   "tentative": {
     "plural": "tentatives",
-    "form": ""
+    "form": "F"
   },
   "tentatives": {
     "plural": "isPlural",
@@ -56669,7 +56793,7 @@
   },
   "testicule": {
     "plural": "testicules",
-    "form": ""
+    "form": "M"
   },
   "testicules": {
     "plural": "isPlural",
@@ -56841,7 +56965,7 @@
   },
   "thérapie": {
     "plural": "thérapies",
-    "form": ""
+    "form": "F"
   },
   "thérapies": {
     "plural": "isPlural",
@@ -56853,7 +56977,7 @@
   },
   "thésaurus": {
     "plural": "thésaurus",
-    "form": "PL"
+    "form": "M/PL"
   },
   "théâtre": {
     "plural": "théâtres",
@@ -56901,7 +57025,7 @@
   },
   "tige": {
     "plural": "tiges",
-    "form": ""
+    "form": "F"
   },
   "tiges": {
     "plural": "isPlural",
@@ -56933,7 +57057,7 @@
   },
   "timbale": {
     "plural": "timbales",
-    "form": ""
+    "form": "F"
   },
   "timbales": {
     "plural": "isPlural",
@@ -56975,13 +57099,17 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "tirebouchon": {
-    "plural": "tirebouchons",
-    "form": ""
+  "tire-bouchon": {
+    "plural": "tire-bouchons",
+    "form": "M/PL"
   },
-  "tirebouchons": {
+  "tire-bouchons": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "tirebouchon": {
+    "plural": "tire-bouchons",
+    "form": "M"
   },
   "tiroir": {
     "plural": "tiroirs",
@@ -57029,7 +57157,7 @@
   },
   "titulaire": {
     "plural": "titulaires",
-    "form": ""
+    "form": "F/M"
   },
   "titulaires": {
     "plural": "isPlural",
@@ -57053,7 +57181,7 @@
   },
   "toile": {
     "plural": "toiles",
-    "form": ""
+    "form": "F"
   },
   "toiles": {
     "plural": "isPlural",
@@ -57329,7 +57457,7 @@
   },
   "tourillon": {
     "plural": "tourillons",
-    "form": ""
+    "form": "M"
   },
   "tourillons": {
     "plural": "isPlural",
@@ -57377,11 +57505,11 @@
   },
   "tournedos": {
     "plural": "tournedos",
-    "form": "PL"
+    "form": "M/PL"
   },
   "tournesol": {
     "plural": "tournesols",
-    "form": ""
+    "form": "M"
   },
   "tournesols": {
     "plural": "isPlural",
@@ -57389,7 +57517,7 @@
   },
   "tourneur": {
     "plural": "tourneurs",
-    "form": ""
+    "form": "M"
   },
   "tourneurs": {
     "plural": "isPlural",
@@ -57397,7 +57525,7 @@
   },
   "tourneuse": {
     "plural": "tourneurs",
-    "form": "PL"
+    "form": "M/PL"
   },
   "tournevis": {
     "plural": "tournevis",
@@ -57421,7 +57549,7 @@
   },
   "tournus": {
     "plural": "tournus",
-    "form": "PL"
+    "form": "M/PL"
   },
   "tournée": {
     "plural": "tournées",
@@ -57445,7 +57573,7 @@
   },
   "tout-puissant": {
     "plural": "tout-puissants",
-    "form": ""
+    "form": "M"
   },
   "tout-puissants": {
     "plural": "isPlural",
@@ -57461,7 +57589,7 @@
   },
   "toxicomane": {
     "plural": "toxicomanes",
-    "form": ""
+    "form": "F/M"
   },
   "toxicomanes": {
     "plural": "isPlural",
@@ -57641,7 +57769,7 @@
   },
   "traine": {
     "plural": "traines",
-    "form": ""
+    "form": "F"
   },
   "traines": {
     "plural": "isPlural",
@@ -57715,11 +57843,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tram": {
+    "plural": "trams",
+    "form": "M"
+  },
   "trampoliniste": {
     "plural": "trampolinistes",
     "form": "F/M"
   },
   "trampolinistes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trams": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tramway": {
+    "plural": "tramways",
+    "form": "M"
+  },
+  "tramways": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -57877,7 +58021,7 @@
   },
   "transracialité": {
     "plural": "transracialités",
-    "form": ""
+    "form": "F"
   },
   "transracialités": {
     "plural": "isPlural",
@@ -58021,7 +58165,7 @@
   },
   "tresse": {
     "plural": "tresses",
-    "form": ""
+    "form": "F"
   },
   "tresses": {
     "plural": "isPlural",
@@ -58089,7 +58233,7 @@
   },
   "tributaire": {
     "plural": "tributaires",
-    "form": ""
+    "form": "F/M"
   },
   "tributaires": {
     "plural": "isPlural",
@@ -58103,17 +58247,9 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "trichrome": {
-    "plural": "trichromes",
-    "form": ""
-  },
-  "trichromes": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "tridi": {
     "plural": "tridis",
-    "form": ""
+    "form": "M"
   },
   "tridis": {
     "plural": "isPlural",
@@ -58169,7 +58305,7 @@
   },
   "trimestre": {
     "plural": "trimestres",
-    "form": ""
+    "form": "M"
   },
   "trimestres": {
     "plural": "isPlural",
@@ -58201,7 +58337,7 @@
   },
   "triple": {
     "plural": "triples",
-    "form": ""
+    "form": "M"
   },
   "triples": {
     "plural": "isPlural",
@@ -58373,7 +58509,7 @@
   },
   "trémolo": {
     "plural": "trémolos",
-    "form": ""
+    "form": "M"
   },
   "trémolos": {
     "plural": "isPlural",
@@ -58445,7 +58581,7 @@
   },
   "tulipe": {
     "plural": "tulipes",
-    "form": ""
+    "form": "F"
   },
   "tulipes": {
     "plural": "isPlural",
@@ -58533,7 +58669,7 @@
   },
   "typographe": {
     "plural": "typographes",
-    "form": ""
+    "form": "F/M"
   },
   "typographes": {
     "plural": "isPlural",
@@ -58773,7 +58909,7 @@
   },
   "ultraviolet": {
     "plural": "ultraviolets",
-    "form": ""
+    "form": "M"
   },
   "ultraviolets": {
     "plural": "isPlural",
@@ -58793,7 +58929,7 @@
   },
   "uni": {
     "plural": "unis",
-    "form": ""
+    "form": "F"
   },
   "unicité": {
     "plural": "unicités",
@@ -58885,7 +59021,7 @@
   },
   "urgence": {
     "plural": "urgences",
-    "form": ""
+    "form": "F"
   },
   "urgences": {
     "plural": "isPlural",
@@ -58893,7 +59029,7 @@
   },
   "urne": {
     "plural": "urnes",
-    "form": ""
+    "form": "F"
   },
   "urnes": {
     "plural": "isPlural",
@@ -58909,7 +59045,7 @@
   },
   "us": {
     "plural": "us",
-    "form": "PL"
+    "form": "M/PL"
   },
   "usage": {
     "plural": "usages",
@@ -59017,7 +59153,7 @@
   },
   "vagabonde": {
     "plural": "vagabondes",
-    "form": ""
+    "form": "F"
   },
   "vagabondes": {
     "plural": "isPlural",
@@ -59109,7 +59245,7 @@
   },
   "valise": {
     "plural": "valises",
-    "form": ""
+    "form": "F"
   },
   "valises": {
     "plural": "isPlural",
@@ -59125,7 +59261,7 @@
   },
   "vallée": {
     "plural": "vallées",
-    "form": ""
+    "form": "F"
   },
   "vallées": {
     "plural": "isPlural",
@@ -59165,7 +59301,7 @@
   },
   "vampire": {
     "plural": "vampires",
-    "form": ""
+    "form": "F/M"
   },
   "vampires": {
     "plural": "isPlural",
@@ -59317,7 +59453,7 @@
   },
   "vedette": {
     "plural": "vedettes",
-    "form": ""
+    "form": "F"
   },
   "vedettes": {
     "plural": "isPlural",
@@ -59328,14 +59464,6 @@
     "form": "F"
   },
   "veilles": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "veillesse": {
-    "plural": "veillesses",
-    "form": ""
-  },
-  "veillesses": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -59361,7 +59489,7 @@
   },
   "vendange": {
     "plural": "vendanges",
-    "form": ""
+    "form": "F"
   },
   "vendanges": {
     "plural": "isPlural",
@@ -59437,7 +59565,7 @@
   },
   "ventre": {
     "plural": "ventres",
-    "form": ""
+    "form": "M"
   },
   "ventres": {
     "plural": "isPlural",
@@ -59529,7 +59657,7 @@
   },
   "verlan": {
     "plural": "verlans",
-    "form": ""
+    "form": "M"
   },
   "verlans": {
     "plural": "isPlural",
@@ -59537,7 +59665,7 @@
   },
   "vermillon": {
     "plural": "vermillons",
-    "form": ""
+    "form": "M"
   },
   "vermillons": {
     "plural": "isPlural",
@@ -59637,7 +59765,7 @@
   },
   "vertige": {
     "plural": "vertiges",
-    "form": ""
+    "form": "M"
   },
   "vertiges": {
     "plural": "isPlural",
@@ -59669,7 +59797,7 @@
   },
   "vestiaire": {
     "plural": "vestiaires",
-    "form": ""
+    "form": "M"
   },
   "vestiaires": {
     "plural": "isPlural",
@@ -59677,7 +59805,7 @@
   },
   "vestige": {
     "plural": "vestiges",
-    "form": ""
+    "form": "M"
   },
   "vestiges": {
     "plural": "isPlural",
@@ -59685,7 +59813,7 @@
   },
   "veto": {
     "plural": "vetos",
-    "form": ""
+    "form": "M"
   },
   "vetos": {
     "plural": "isPlural",
@@ -59693,7 +59821,7 @@
   },
   "veuf": {
     "plural": "veufs",
-    "form": ""
+    "form": "M"
   },
   "veufs": {
     "plural": "isPlural",
@@ -59709,7 +59837,7 @@
   },
   "veuve": {
     "plural": "veuves",
-    "form": ""
+    "form": "F"
   },
   "veuves": {
     "plural": "isPlural",
@@ -59745,7 +59873,7 @@
   },
   "vice-juge": {
     "plural": "vice-juges",
-    "form": ""
+    "form": "F/M"
   },
   "vice-juges": {
     "plural": "isPlural",
@@ -59813,7 +59941,7 @@
   },
   "vidoir": {
     "plural": "vidoirs",
-    "form": ""
+    "form": "M"
   },
   "vidoirs": {
     "plural": "isPlural",
@@ -59849,7 +59977,7 @@
   },
   "vieillesse": {
     "plural": "vieillesses",
-    "form": ""
+    "form": "F"
   },
   "vieillesses": {
     "plural": "isPlural",
@@ -59873,7 +60001,7 @@
   },
   "vierge": {
     "plural": "vierges",
-    "form": ""
+    "form": "F/M"
   },
   "vierges": {
     "plural": "isPlural",
@@ -59885,7 +60013,7 @@
   },
   "vigeur": {
     "plural": "vigeurs",
-    "form": ""
+    "form": "F"
   },
   "vigeurs": {
     "plural": "isPlural",
@@ -59925,7 +60053,7 @@
   },
   "vignette": {
     "plural": "vignettes",
-    "form": ""
+    "form": "F"
   },
   "vignettes": {
     "plural": "isPlural",
@@ -60045,7 +60173,7 @@
   },
   "violet": {
     "plural": "violets",
-    "form": ""
+    "form": "M"
   },
   "violets": {
     "plural": "isPlural",
@@ -60057,7 +60185,7 @@
   },
   "violoncelle": {
     "plural": "violoncelles",
-    "form": ""
+    "form": "M"
   },
   "violoncelles": {
     "plural": "isPlural",
@@ -60105,7 +60233,7 @@
   },
   "virole": {
     "plural": "viroles",
-    "form": ""
+    "form": "F"
   },
   "viroles": {
     "plural": "isPlural",
@@ -60137,7 +60265,7 @@
   },
   "virus": {
     "plural": "virus",
-    "form": "PL"
+    "form": "M/PL"
   },
   "visage": {
     "plural": "visages",
@@ -60165,7 +60293,7 @@
   },
   "visio-conférence": {
     "plural": "visio-conférences",
-    "form": ""
+    "form": "F"
   },
   "visio-conférences": {
     "plural": "isPlural",
@@ -60177,7 +60305,7 @@
   },
   "visionnaire": {
     "plural": "visionnaires",
-    "form": ""
+    "form": "F/M"
   },
   "visionnaires": {
     "plural": "isPlural",
@@ -60189,7 +60317,7 @@
   },
   "visite": {
     "plural": "visites",
-    "form": ""
+    "form": "F"
   },
   "visites": {
     "plural": "isPlural",
@@ -60205,7 +60333,7 @@
   },
   "vitamine": {
     "plural": "vitamines",
-    "form": ""
+    "form": "F"
   },
   "vitamines": {
     "plural": "isPlural",
@@ -60345,7 +60473,7 @@
   },
   "voisine": {
     "plural": "voisines",
-    "form": "M/PL"
+    "form": "F/M/PL"
   },
   "voisines": {
     "plural": "isPlural",
@@ -60353,7 +60481,7 @@
   },
   "voiture": {
     "plural": "voitures",
-    "form": ""
+    "form": "F"
   },
   "voitures": {
     "plural": "isPlural",
@@ -60425,7 +60553,7 @@
   },
   "voleur": {
     "plural": "voleurs",
-    "form": ""
+    "form": "M"
   },
   "voleurs": {
     "plural": "isPlural",
@@ -60765,7 +60893,7 @@
   },
   "weber": {
     "plural": "webers",
-    "form": ""
+    "form": "M"
   },
   "webers": {
     "plural": "isPlural",
@@ -60785,7 +60913,7 @@
   },
   "wharf": {
     "plural": "wharfs",
-    "form": ""
+    "form": "M"
   },
   "wharfs": {
     "plural": "isPlural",
@@ -60805,7 +60933,7 @@
   },
   "wikignome": {
     "plural": "wikignomes",
-    "form": ""
+    "form": "F/M"
   },
   "wikignomes": {
     "plural": "isPlural",
@@ -60825,7 +60953,7 @@
   },
   "xénomanie": {
     "plural": "xénomanies",
-    "form": ""
+    "form": "F"
   },
   "xénomanies": {
     "plural": "isPlural",
@@ -60889,7 +61017,7 @@
   },
   "zettamètre": {
     "plural": "zettamètres",
-    "form": ""
+    "form": "M"
   },
   "zettamètres": {
     "plural": "isPlural",
@@ -60897,7 +61025,7 @@
   },
   "zig-zig": {
     "plural": "zig-zigs",
-    "form": ""
+    "form": "M"
   },
   "zig-zigs": {
     "plural": "isPlural",
@@ -60913,7 +61041,7 @@
   },
   "zodiaque": {
     "plural": "zodiaques",
-    "form": ""
+    "form": "M"
   },
   "zodiaques": {
     "plural": "isPlural",
@@ -61329,7 +61457,7 @@
   },
   "échelon": {
     "plural": "échelons",
-    "form": ""
+    "form": "M"
   },
   "échelons": {
     "plural": "isPlural",
@@ -61481,7 +61609,7 @@
   },
   "économat": {
     "plural": "économats",
-    "form": ""
+    "form": "M"
   },
   "économats": {
     "plural": "isPlural",
@@ -61777,7 +61905,7 @@
   },
   "égoïste": {
     "plural": "égoïstes",
-    "form": ""
+    "form": "F/M"
   },
   "égoïstes": {
     "plural": "isPlural",
@@ -62025,7 +62153,7 @@
   },
   "élève": {
     "plural": "élèves",
-    "form": ""
+    "form": "F/M"
   },
   "élèves": {
     "plural": "isPlural",

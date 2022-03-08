@@ -17,6 +17,13 @@
     "preposition": "за"
   },
   {
+    "preposition": "около",
+    "case": "Q146233"
+  },
+  {
+    "preposition": "минус"
+  },
+  {
     "preposition": "из",
     "case": "Q146233"
   },
@@ -31,13 +38,6 @@
   {
     "preposition": "по",
     "case": "Q2114906"
-  },
-  {
-    "preposition": "около",
-    "case": "Q146233"
-  },
-  {
-    "preposition": "минус"
   },
   {
     "preposition": "после",

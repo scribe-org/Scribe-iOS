@@ -22815,6 +22815,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "civilbefolkning": {
+    "plural": "civilbefolkningar",
+    "form": "C"
+  },
+  "civilbefolkningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "civilekonom": {
     "plural": "civilekonomer",
     "form": "C"
@@ -27313,7 +27321,7 @@
   },
   "dragg": {
     "plural": "draggar",
-    "form": "C/PL"
+    "form": "C"
   },
   "draggar": {
     "plural": "isPlural",
@@ -27837,7 +27845,7 @@
   },
   "drägg": {
     "plural": "draggar",
-    "form": "C"
+    "form": "C/PL"
   },
   "dräkt": {
     "plural": "dräkter",
@@ -32045,7 +32053,7 @@
   },
   "fader": {
     "plural": "fäder",
-    "form": "C/PL"
+    "form": "C"
   },
   "fadermördare": {
     "plural": "fadermördare",
@@ -32553,7 +32561,7 @@
   },
   "far": {
     "plural": "fäder",
-    "form": "C"
+    "form": "C/PL"
   },
   "fara": {
     "plural": "faror",
@@ -33124,8 +33132,12 @@
     "form": "PL"
   },
   "fax": {
-    "plural": "fax",
-    "form": "C/N/PL"
+    "plural": "faxar",
+    "form": "C/N"
+  },
+  "faxar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "feber": {
     "plural": "febrar",
@@ -37273,11 +37285,11 @@
   },
   "fordran": {
     "plural": "fordringar",
-    "form": "C/PL"
+    "form": "C"
   },
   "fordring": {
     "plural": "fordringar",
-    "form": "C"
+    "form": "C/PL"
   },
   "fordringar": {
     "plural": "isPlural",
@@ -86504,8 +86516,8 @@
     "form": "PL"
   },
   "mark": {
-    "plural": "mark",
-    "form": "C/PL"
+    "plural": "marker",
+    "form": "C"
   },
   "markatta": {
     "plural": "markattor",
@@ -86520,6 +86532,10 @@
     "form": "C"
   },
   "markegångar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "marker": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -106381,7 +106397,7 @@
   },
   "praktik": {
     "plural": "praktiker",
-    "form": "C/PL"
+    "form": "C"
   },
   "praktikant": {
     "plural": "praktikanter",
@@ -106392,7 +106408,7 @@
     "form": "PL"
   },
   "praktiker": {
-    "plural": "praktiker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "praktikplats": {
@@ -125091,6 +125107,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "skär": {
+    "plural": "skär",
+    "form": "N/PL"
+  },
   "skära": {
     "plural": "skäror",
     "form": "C"
@@ -139361,10 +139381,10 @@
   },
   "taktik": {
     "plural": "taktiker",
-    "form": "C"
+    "form": "C/PL"
   },
   "taktiker": {
-    "plural": "isPlural",
+    "plural": "taktiker",
     "form": "C/PL"
   },
   "taktpinnar": {
@@ -153136,8 +153156,8 @@
     "form": "PL"
   },
   "val": {
-    "plural": "val",
-    "form": "C/N/PL"
+    "plural": "valar",
+    "form": "C/N"
   },
   "valack": {
     "plural": "valacker",
@@ -153160,6 +153180,10 @@
     "form": "C"
   },
   "valapparater": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "valar": {
     "plural": "isPlural",
     "form": "PL"
   },
