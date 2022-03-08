@@ -22,6 +22,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 32 nouns, 5 verbs
+- German: 172 nouns, 4 verbs
+- Italian: 10 nouns, 1 verb
+- Portuguese: 43 nouns, 1 verb
+- Russian: 7 nouns
+- Spanish: 188 nouns, 1,825 verbs
+- Swedish: 6 nouns
+
 ### 🐞 Bug Fixes
 
 - The alternate characters of apostrophes and quotation marks have been fixed.
