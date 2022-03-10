@@ -892,7 +892,7 @@ class KeyboardViewController: UIInputViewController {
             target: self,
             action: #selector(genHoldPopUpView(sender:))
           )
-          keyHoldPop.minimumPressDuration = 0.125
+          keyHoldPop.minimumPressDuration = 0.1
 
          if allNonSpecialKeys.contains(key) {
             btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
@@ -1540,7 +1540,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     if keysWithAlternates.contains(charPressed) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
         self.setAlternatesView(sender: sender)
         keyHoldPopLayer.removeFromSuperlayer()
         keyHoldPopChar.removeFromSuperview()
