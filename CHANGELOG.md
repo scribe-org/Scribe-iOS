@@ -22,6 +22,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 3 nouns
+- German: 28 nouns
+- Portuguese: 2 nouns
+- Spanish: 13 nouns, 66 verbs
+- Swedish: 1 noun
+
 ### 🎨 Design Changes
 
 - Key alternate views appear more quickly.
