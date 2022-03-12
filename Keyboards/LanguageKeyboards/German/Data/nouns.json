@@ -1,4 +1,16 @@
 {
+  "-grafie": {
+    "plural": "-grafien",
+    "form": "F"
+  },
+  "-grafien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "-graphie": {
+    "plural": "-grafien",
+    "form": "F"
+  },
   "A-Saite": {
     "plural": "A-Saiten",
     "form": "F"
@@ -6663,6 +6675,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Array": {
+    "plural": "Arrays",
+    "form": "M/N"
+  },
+  "Arrays": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Arrestzelle": {
     "plural": "Arrestzellen",
     "form": "F"
@@ -9479,6 +9499,10 @@
     "plural": "Bachelorstudien",
     "form": "N"
   },
+  "Back End": {
+    "plural": "Backends",
+    "form": "N"
+  },
   "Backblech": {
     "plural": "Backbleche",
     "form": "N"
@@ -9492,6 +9516,14 @@
     "form": "F"
   },
   "Backen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Backend": {
+    "plural": "Backends",
+    "form": "N"
+  },
+  "Backends": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10740,18 +10772,14 @@
     "form": "PL"
   },
   "Bauer": {
-    "plural": "Bauern",
-    "form": "M/N"
+    "plural": "Bauer",
+    "form": "M/N/PL"
   },
   "Bauerin": {
     "plural": "Bauerinnen",
     "form": "F"
   },
   "Bauerinnen": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Bauern": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16748,7 +16776,7 @@
     "form": "PL"
   },
   "Brand": {
-    "plural": "Brände",
+    "plural": "Brands",
     "form": "M"
   },
   "Brandanschlag": {
@@ -16778,6 +16806,10 @@
   "Brandmelder": {
     "plural": "Brandmelder",
     "form": "M/PL"
+  },
+  "Brands": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Brandschutzgrund": {
     "plural": "Brandschutzgründe",
@@ -17552,10 +17584,6 @@
     "form": "F"
   },
   "Brutzeiten": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Brände": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -23565,6 +23593,10 @@
   },
   "Dreher": {
     "plural": "Dreher",
+    "form": "M/PL"
+  },
+  "Drehkörper": {
+    "plural": "Drehkörper",
     "form": "M/PL"
   },
   "Drehmoment": {
@@ -33692,12 +33724,8 @@
     "form": "PL"
   },
   "Fotografie": {
-    "plural": "Fotografien",
+    "plural": "Photographien",
     "form": "F"
-  },
-  "Fotografien": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Fotografin": {
     "plural": "Fotografinnen",
@@ -34427,9 +34455,21 @@
     "plural": "Fronten",
     "form": "F"
   },
+  "Front End": {
+    "plural": "Front Ends",
+    "form": "N"
+  },
+  "Front Ends": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Fronten": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Frontend": {
+    "plural": "Front Ends",
+    "form": "N"
   },
   "Frosch": {
     "plural": "Frösche",
@@ -37212,12 +37252,8 @@
     "form": "PL"
   },
   "Geografie": {
-    "plural": "Geografien",
+    "plural": "Geographien",
     "form": "F"
-  },
-  "Geografien": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Geografin": {
     "plural": "Geografinnen",
@@ -38908,7 +38944,7 @@
     "form": "F"
   },
   "Gluten": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Gläser": {
@@ -44711,6 +44747,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Hyperlink": {
+    "plural": "Hyperlinks",
+    "form": "M"
+  },
+  "Hyperlinks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Hyperonym": {
     "plural": "Hyperonyme",
     "form": "N"
@@ -49608,12 +49652,8 @@
     "form": "PL"
   },
   "Kartograph": {
-    "plural": "Kartographen",
+    "plural": "Kartografen",
     "form": "M"
-  },
-  "Kartographen": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Kartographin": {
     "plural": "Kartographinnen",
@@ -50980,12 +51020,8 @@
     "form": "N/PL"
   },
   "Kipferl": {
-    "plural": "Kipferln",
-    "form": "N"
-  },
-  "Kipferln": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "Kipferl",
+    "form": "N/PL"
   },
   "Kipppunkt": {
     "plural": "Kipppunkte",
@@ -54467,6 +54503,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kranz": {
+    "plural": "Kränze",
+    "form": "M"
+  },
   "Kranzwirtschaft": {
     "plural": "Kranzwirtschaften",
     "form": "F"
@@ -55152,6 +55192,10 @@
     "form": "PL"
   },
   "Krämpfe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Kränze": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -57476,8 +57520,12 @@
     "form": "M"
   },
   "Laute": {
-    "plural": "isPlural",
+    "plural": "Lauten",
     "form": "F/PL"
+  },
+  "Lauten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Lautmalerei": {
     "plural": "Lautmalereien",
@@ -59281,7 +59329,7 @@
   },
   "Link": {
     "plural": "Links",
-    "form": "M"
+    "form": "M/N"
   },
   "Links": {
     "plural": "isPlural",
@@ -61028,12 +61076,8 @@
     "form": "PL"
   },
   "Mangel": {
-    "plural": "Mangeln",
+    "plural": "Mängel",
     "form": "F/M"
-  },
-  "Mangeln": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Mangelware": {
     "plural": "Mangelwaren",
@@ -61232,8 +61276,8 @@
     "form": "PL"
   },
   "Mark": {
-    "plural": "noPlural",
-    "form": "F/N"
+    "plural": "Mark",
+    "form": "F/N/PL"
   },
   "Marke": {
     "plural": "Marken",
@@ -64340,8 +64384,8 @@
     "form": "PL"
   },
   "Model": {
-    "plural": "Model",
-    "form": "M/N/PL"
+    "plural": "Models",
+    "form": "M/N"
   },
   "Modell": {
     "plural": "Modelle",
@@ -64356,6 +64400,10 @@
     "form": "N"
   },
   "Modellsysteme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Models": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65524,7 +65572,7 @@
     "form": "PL"
   },
   "Mutter": {
-    "plural": "Muttern",
+    "plural": "Mütter",
     "form": "F"
   },
   "Muttergesellschaft": {
@@ -65538,10 +65586,6 @@
   "Mutterglück": {
     "plural": "noPlural",
     "form": "N"
-  },
-  "Muttern": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Muttersprache": {
     "plural": "Muttersprachen",
@@ -65640,6 +65684,10 @@
     "form": "F"
   },
   "Mähnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Mängel": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65908,8 +65956,8 @@
     "form": "PL"
   },
   "Münster": {
-    "plural": "noPlural",
-    "form": "M/N"
+    "plural": "Münster",
+    "form": "M/N/PL"
   },
   "Münze": {
     "plural": "Münzen",
@@ -65930,6 +65978,10 @@
   "Müsliriegel": {
     "plural": "Müsliriegel",
     "form": "M/PL"
+  },
+  "Mütter": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Mütze": {
     "plural": "Mützen",
@@ -69483,6 +69535,14 @@
     "plural": "Oberwachtmeister",
     "form": "M/PL"
   },
+  "Oberwelt": {
+    "plural": "Oberwelten",
+    "form": "F"
+  },
+  "Oberwelten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Oberärzte": {
     "plural": "isPlural",
     "form": "PL"
@@ -69756,7 +69816,7 @@
     "form": "PL"
   },
   "Ofen": {
-    "plural": "noPlural",
+    "plural": "Öfen",
     "form": "M/N"
   },
   "Ofenheizung": {
@@ -73563,6 +73623,14 @@
     "plural": "noPlural",
     "form": "F"
   },
+  "Photographie": {
+    "plural": "Photographien",
+    "form": "F"
+  },
+  "Photographien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Photon": {
     "plural": "Photonen",
     "form": "N"
@@ -74199,6 +74267,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Plörre": {
+    "plural": "Plörren",
+    "form": "F"
+  },
+  "Plörren": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Plünderung": {
     "plural": "Plünderungen",
     "form": "F"
@@ -74408,7 +74484,7 @@
     "form": "M/PL"
   },
   "Polen": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Polin": {
@@ -78564,10 +78640,10 @@
     "form": "N/PL"
   },
   "Regiment": {
-    "plural": "Regimenter",
+    "plural": "Regimente",
     "form": "N"
   },
-  "Regimenter": {
+  "Regimente": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -79624,6 +79700,18 @@
     "form": "N"
   },
   "Reviere": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Reviewer": {
+    "plural": "Reviewer",
+    "form": "M/PL"
+  },
+  "Reviewerin": {
+    "plural": "Reviewerinnen",
+    "form": "F"
+  },
+  "Reviewerinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -80804,8 +80892,12 @@
     "form": "PL"
   },
   "Rutsche": {
-    "plural": "isPlural",
+    "plural": "Rutschen",
     "form": "F/PL"
+  },
+  "Rutschen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Räder": {
     "plural": "isPlural",
@@ -91227,6 +91319,14 @@
     "plural": "Sticker",
     "form": "M/PL"
   },
+  "Stickerei": {
+    "plural": "Stickereien",
+    "form": "F"
+  },
+  "Stickereien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Stickgarn": {
     "plural": "Stickgarne",
     "form": "N"
@@ -96451,11 +96551,19 @@
     "plural": "Tonzeichen",
     "form": "N/PL"
   },
+  "Tool": {
+    "plural": "Tools",
+    "form": "N"
+  },
   "Toolkit": {
     "plural": "Toolkits",
     "form": "M/N"
   },
   "Toolkits": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Tools": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -111788,6 +111896,10 @@
     "form": "M"
   },
   "Äxte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Öfen": {
     "plural": "isPlural",
     "form": "PL"
   },

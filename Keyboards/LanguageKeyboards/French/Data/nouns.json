@@ -2387,6 +2387,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kiévien": {
+    "plural": "Kiéviens",
+    "form": "M"
+  },
+  "Kiévienne": {
+    "plural": "Kiéviennes",
+    "form": "F"
+  },
+  "Kiéviennes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Kiéviens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Kosovar": {
     "plural": "Kosovars",
     "form": "M"
@@ -3801,7 +3817,7 @@
   },
   "Philippine": {
     "plural": "Philippines",
-    "form": "F/PL"
+    "form": "F"
   },
   "Philippines": {
     "plural": "isPlural",
@@ -5477,11 +5493,11 @@
   },
   "abonné": {
     "plural": "abonnées",
-    "form": "M"
+    "form": "M/PL"
   },
   "abonnée": {
     "plural": "abonnées",
-    "form": "M/PL"
+    "form": "M"
   },
   "abonnées": {
     "plural": "isPlural",
@@ -6883,12 +6899,8 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "alimens": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "aliment": {
-    "plural": "alimens",
+    "plural": "aliments",
     "form": "M"
   },
   "alimentation": {
@@ -6896,6 +6908,10 @@
     "form": "F"
   },
   "alimentations": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aliments": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10685,19 +10701,15 @@
   },
   "banderole": {
     "plural": "banderoles",
-    "form": "F"
+    "form": "F/PL"
   },
   "banderoles": {
     "plural": "isPlural",
     "form": "PL"
   },
   "banderolle": {
-    "plural": "banderolles",
+    "plural": "banderoles",
     "form": "F"
-  },
-  "banderolles": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "bandes": {
     "plural": "isPlural",
@@ -27409,7 +27421,7 @@
   },
   "foi": {
     "plural": "fois",
-    "form": "F"
+    "form": "F/PL"
   },
   "foie": {
     "plural": "foies",
@@ -27436,7 +27448,7 @@
     "form": "PL"
   },
   "fois": {
-    "plural": "isPlural",
+    "plural": "fois",
     "form": "F/PL"
   },
   "folie": {

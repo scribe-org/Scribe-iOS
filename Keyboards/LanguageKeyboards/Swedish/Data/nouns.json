@@ -1845,10 +1845,10 @@
   },
   "akustik": {
     "plural": "akustiker",
-    "form": "C"
+    "form": "C/PL"
   },
   "akustiker": {
-    "plural": "isPlural",
+    "plural": "akustiker",
     "form": "C/PL"
   },
   "akut": {
@@ -27321,7 +27321,7 @@
   },
   "dragg": {
     "plural": "draggar",
-    "form": "C"
+    "form": "C/PL"
   },
   "draggar": {
     "plural": "isPlural",
@@ -27845,7 +27845,7 @@
   },
   "drägg": {
     "plural": "draggar",
-    "form": "C/PL"
+    "form": "C"
   },
   "dräkt": {
     "plural": "dräkter",
@@ -32053,7 +32053,7 @@
   },
   "fader": {
     "plural": "fäder",
-    "form": "C"
+    "form": "C/PL"
   },
   "fadermördare": {
     "plural": "fadermördare",
@@ -32561,7 +32561,7 @@
   },
   "far": {
     "plural": "fäder",
-    "form": "C/PL"
+    "form": "C"
   },
   "fara": {
     "plural": "faror",
@@ -67581,10 +67581,10 @@
   },
   "klinik": {
     "plural": "kliniker",
-    "form": "C"
+    "form": "C/PL"
   },
   "kliniker": {
-    "plural": "isPlural",
+    "plural": "kliniker",
     "form": "C/PL"
   },
   "klinkergolv": {
@@ -108801,15 +108801,11 @@
   },
   "puls": {
     "plural": "pulsar",
-    "form": "C/PL"
-  },
-  "pulsar": {
-    "plural": "pulsarer",
     "form": "C"
   },
-  "pulsarer": {
+  "pulsar": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "C/PL"
   },
   "pulsåder": {
     "plural": "pulsådror",
@@ -152957,7 +152953,7 @@
   },
   "vadd": {
     "plural": "vaddar",
-    "form": "C"
+    "form": "C/PL"
   },
   "vaddar": {
     "plural": "isPlural",
@@ -157609,7 +157605,7 @@
   },
   "vädd": {
     "plural": "vaddar",
-    "form": "C/PL"
+    "form": "C"
   },
   "väder": {
     "plural": "väder",
@@ -160415,11 +160411,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "yrkesman": {
+    "plural": "yrkesmän",
+    "form": "C"
+  },
   "yrkesmilitär": {
     "plural": "yrkesmilitärer",
     "form": "C"
   },
   "yrkesmilitärer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "yrkesmän": {
     "plural": "isPlural",
     "form": "PL"
   },

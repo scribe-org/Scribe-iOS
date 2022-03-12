@@ -804,8 +804,8 @@
     "form": "M/PL"
   },
   "animalzinho": {
-    "plural": "animais",
-    "form": "M/PL"
+    "plural": "animálculos",
+    "form": "M"
   },
   "animalão": {
     "plural": "animais",
@@ -814,6 +814,10 @@
   "animálculo": {
     "plural": "animais",
     "form": "M/PL"
+  },
+  "animálculos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "aniversário": {
     "plural": "aniversários",
@@ -2205,7 +2209,7 @@
   },
   "bola": {
     "plural": "bolas",
-    "form": "F"
+    "form": "F/PL"
   },
   "bolachada": {
     "plural": "bolachadas",
@@ -2231,10 +2235,6 @@
     "plural": "bolas",
     "form": "F/PL"
   },
-  "bolinhas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "bolo": {
     "plural": "bolos",
     "form": "M"
@@ -2256,7 +2256,7 @@
     "form": "PL"
   },
   "bolão": {
-    "plural": "bolinhas",
+    "plural": "bolas",
     "form": "F"
   },
   "bomba": {
@@ -2347,13 +2347,17 @@
     "plural": "borrachas",
     "form": "F/PL"
   },
+  "borrachinhas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "borrachona": {
     "plural": "borrachas",
     "form": "F/PL"
   },
   "borrachão": {
-    "plural": "borrachas",
-    "form": "F/PL"
+    "plural": "borrachinhas",
+    "form": "F"
   },
   "borralheira": {
     "plural": "borralheiras",
@@ -2420,7 +2424,7 @@
     "form": "PL"
   },
   "briga": {
-    "plural": "brigazinhas",
+    "plural": "brigas",
     "form": "F"
   },
   "brigas": {
@@ -2430,10 +2434,6 @@
   "brigazinha": {
     "plural": "brigas",
     "form": "F/PL"
-  },
-  "brigazinhas": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "brigazona": {
     "plural": "brigas",
@@ -2449,7 +2449,7 @@
   },
   "brigão": {
     "plural": "brigas",
-    "form": "F"
+    "form": "F/PL"
   },
   "brilhância": {
     "plural": "brilhâncias",
@@ -4203,9 +4203,13 @@
     "plural": "comidas",
     "form": "F/PL"
   },
+  "comidazinhas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "comidinha": {
-    "plural": "comidas",
-    "form": "F/PL"
+    "plural": "comidazinhas",
+    "form": "F"
   },
   "comidona": {
     "plural": "comidas",
@@ -7357,7 +7361,7 @@
   },
   "facto": {
     "plural": "factos",
-    "form": "M"
+    "form": "M/PL"
   },
   "factor": {
     "plural": "factores",
@@ -7484,16 +7488,12 @@
     "form": "PL"
   },
   "fato": {
-    "plural": "fatos",
+    "plural": "factos",
     "form": "M"
   },
   "fator": {
     "plural": "factores",
     "form": "M/PL"
-  },
-  "fatos": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "faxina": {
     "plural": "faxinas",
@@ -7661,7 +7661,7 @@
   },
   "figura": {
     "plural": "figurinhas",
-    "form": "F/PL"
+    "form": "F"
   },
   "figuraça": {
     "plural": "figurinhas",
@@ -7669,7 +7669,7 @@
   },
   "figurinha": {
     "plural": "figurinhas",
-    "form": "F"
+    "form": "F/PL"
   },
   "figurinhas": {
     "plural": "isPlural",
@@ -7816,6 +7816,14 @@
     "form": "F"
   },
   "florestas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fofoca": {
+    "plural": "fofocas",
+    "form": "F"
+  },
+  "fofocas": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10061,15 +10069,15 @@
   },
   "leitura": {
     "plural": "leituras",
-    "form": "F/PL"
+    "form": "F"
   },
   "leituras": {
     "plural": "isPlural",
     "form": "PL"
   },
   "leiturinha": {
-    "plural": "leituras",
-    "form": "F/PL"
+    "plural": "leiturões",
+    "form": "F"
   },
   "leiturona": {
     "plural": "leituras",
@@ -10077,7 +10085,11 @@
   },
   "leiturão": {
     "plural": "leituras",
-    "form": "F"
+    "form": "F/PL"
+  },
+  "leiturões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lenha": {
     "plural": "lenhas",
@@ -15569,7 +15581,7 @@
   },
   "roda": {
     "plural": "rodas",
-    "form": "F/PL"
+    "form": "F"
   },
   "rodada": {
     "plural": "rodadas",
@@ -15592,8 +15604,8 @@
     "form": "PL"
   },
   "rodinha": {
-    "plural": "rodas",
-    "form": "F/PL"
+    "plural": "rodões",
+    "form": "F"
   },
   "rodona": {
     "plural": "rodas",
@@ -15601,7 +15613,11 @@
   },
   "rodão": {
     "plural": "rodas",
-    "form": "F"
+    "form": "F/PL"
+  },
+  "rodões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "roleta": {
     "plural": "roletas",
@@ -16596,22 +16612,18 @@
     "form": "M"
   },
   "sítio eletrónico": {
-    "plural": "sítios eletrônicos",
+    "plural": "sítios eletrónicos",
     "form": "M"
   },
   "sítio eletrônico": {
     "plural": "sítios eletrónicos",
-    "form": "M"
+    "form": "M/PL"
   },
   "sítios": {
     "plural": "isPlural",
     "form": "PL"
   },
   "sítios eletrónicos": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "sítios eletrônicos": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17267,13 +17279,9 @@
     "plural": "torres",
     "form": "F/PL"
   },
-  "torrezonas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "torrinha": {
-    "plural": "torrezonas",
-    "form": "F"
+    "plural": "torres",
+    "form": "F/PL"
   },
   "torrão": {
     "plural": "torrões",

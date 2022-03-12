@@ -107,6 +107,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Cataluña": {
+    "plural": "",
+    "form": "F"
+  },
   "Chile": {
     "plural": "Chiles",
     "form": ""
@@ -283,6 +287,14 @@
     "plural": "Honduras",
     "form": "PL"
   },
+  "Hungría": {
+    "plural": "",
+    "form": "F"
+  },
+  "Inglaterra": {
+    "plural": "",
+    "form": ""
+  },
   "Italia": {
     "plural": "Italias",
     "form": ""
@@ -298,6 +310,10 @@
   "Jaimes": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Japón": {
+    "plural": "",
+    "form": "M"
   },
   "Jerusalén": {
     "plural": "",
@@ -338,6 +354,10 @@
   "Libias": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Londres": {
+    "plural": "",
+    "form": ""
   },
   "Maguncia": {
     "plural": "",
@@ -3680,6 +3700,14 @@
     "form": "M"
   },
   "ascos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "asedio": {
+    "plural": "asedios",
+    "form": "M"
+  },
+  "asedios": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17751,10 +17779,6 @@
     "plural": "gatos",
     "form": "M"
   },
-  "gatas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "gatera": {
     "plural": "gateras",
     "form": "F"
@@ -17772,8 +17796,8 @@
     "form": "PL"
   },
   "gato": {
-    "plural": "gatas",
-    "form": "M"
+    "plural": "gatos",
+    "form": "M/PL"
   },
   "gatos": {
     "plural": "isPlural",
@@ -21592,7 +21616,7 @@
     "form": "PL"
   },
   "liofilice": {
-    "plural": "liofilicéis",
+    "plural": "liofilicemos",
     "form": "PL"
   },
   "liofilicemos": {
@@ -21605,7 +21629,7 @@
   },
   "liofilicé": {
     "plural": "liofilicéis",
-    "form": ""
+    "form": "PL"
   },
   "liofilicéis": {
     "plural": "isPlural",
@@ -21616,12 +21640,12 @@
     "form": "PL"
   },
   "liofiliza": {
-    "plural": "liofilicéis",
+    "plural": "liofilicemos",
     "form": "PL"
   },
   "liofilizaba": {
-    "plural": "liofilicéis",
-    "form": "PL"
+    "plural": "liofilicemos",
+    "form": ""
   },
   "liofilizabas": {
     "plural": "liofilicéis",
@@ -21632,7 +21656,7 @@
     "form": "PL"
   },
   "liofilizaras": {
-    "plural": "liofilicemos",
+    "plural": "liofilicéis",
     "form": "PL"
   },
   "liofilizare": {
@@ -21652,7 +21676,7 @@
     "form": "PL"
   },
   "liofilizaré": {
-    "plural": "liofilicéis",
+    "plural": "liofilicemos",
     "form": "PL"
   },
   "liofilizaría": {
@@ -21660,7 +21684,7 @@
     "form": "PL"
   },
   "liofilizarías": {
-    "plural": "liofilicemos",
+    "plural": "liofilicéis",
     "form": "PL"
   },
   "liofilizas": {
@@ -21676,20 +21700,20 @@
     "form": "PL"
   },
   "liofilizaste": {
-    "plural": "liofilicemos",
-    "form": ""
+    "plural": "liofilicéis",
+    "form": "PL"
   },
   "liofilizo": {
     "plural": "liofilicéis",
     "form": "PL"
   },
   "liofilizá": {
-    "plural": "liofilicéis",
+    "plural": "liofilicemos",
     "form": "PL"
   },
   "liofilizó": {
     "plural": "liofilicéis",
-    "form": "PL"
+    "form": ""
   },
   "liquen": {
     "plural": "líquenes",
@@ -25022,6 +25046,18 @@
   "nemotecnias": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "neonata": {
+    "plural": "neonatas",
+    "form": "PL"
+  },
+  "neonatas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "neonato": {
+    "plural": "neonatas",
+    "form": ""
   },
   "nepalés": {
     "plural": "",
@@ -28911,6 +28947,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "prehistoria": {
+    "plural": "prehistorias",
+    "form": "F"
+  },
+  "prehistorias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "prejuicio": {
     "plural": "prejuicios",
     "form": "M"
@@ -32416,6 +32460,14 @@
     "form": "F"
   },
   "sanidades": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "santo": {
+    "plural": "santos",
+    "form": "M"
+  },
+  "santos": {
     "plural": "isPlural",
     "form": "PL"
   },
