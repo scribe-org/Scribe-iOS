@@ -1521,7 +1521,7 @@ class KeyboardViewController: UIInputViewController {
       self.view.layer.addSublayer(keyHoldPopLayer)
       self.view.addSubview(keyHoldPopChar)
       keyCancelled = false
-    } else if sender.state == .changed {
+    } else if sender.state == .cancelled {
       // Remove the key hold pop up and alternates view if user cancels.
       keyHoldPopLayer.removeFromSuperlayer()
       keyHoldPopChar.removeFromSuperview()
@@ -1540,7 +1540,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     if keysWithAlternates.contains(charPressed) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
         self.setAlternatesView(sender: sender)
         keyHoldPopLayer.removeFromSuperlayer()
         keyHoldPopChar.removeFromSuperview()
