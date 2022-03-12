@@ -22,8 +22,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+### 🎨 Design Changes
+
+- Key alternate views appear more quickly.
+
 ### 🐞 Bug Fixes
-- Key alternate views now stay if the key is canceled as they were disappearing too easily.
+
+- Key long press cancellation was switched from changed to cancel to avoid unnecessary cancels.
 
 # Scribe 1.3.1
 
