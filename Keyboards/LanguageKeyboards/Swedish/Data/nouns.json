@@ -10057,7 +10057,7 @@
   },
   "barstol": {
     "plural": "barstolar",
-    "form": "C"
+    "form": "C/PL"
   },
   "barstolar": {
     "plural": "isPlural",
@@ -21025,7 +21025,7 @@
   },
   "bärstol": {
     "plural": "barstolar",
-    "form": "C/PL"
+    "form": "C"
   },
   "bärsärk": {
     "plural": "bärsärkar",
@@ -33132,12 +33132,8 @@
     "form": "PL"
   },
   "fax": {
-    "plural": "faxar",
-    "form": "C/N"
-  },
-  "faxar": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "fax",
+    "form": "C/N/PL"
   },
   "feber": {
     "plural": "febrar",
@@ -106397,7 +106393,7 @@
   },
   "praktik": {
     "plural": "praktiker",
-    "form": "C"
+    "form": "C/PL"
   },
   "praktikant": {
     "plural": "praktikanter",
@@ -106408,7 +106404,7 @@
     "form": "PL"
   },
   "praktiker": {
-    "plural": "isPlural",
+    "plural": "praktiker",
     "form": "C/PL"
   },
   "praktikplats": {
@@ -108801,11 +108797,15 @@
   },
   "puls": {
     "plural": "pulsar",
-    "form": "C"
+    "form": "C/PL"
   },
   "pulsar": {
+    "plural": "pulsarer",
+    "form": "C"
+  },
+  "pulsarer": {
     "plural": "isPlural",
-    "form": "C/PL"
+    "form": "PL"
   },
   "pulsåder": {
     "plural": "pulsådror",
@@ -140665,10 +140665,10 @@
   },
   "teknik": {
     "plural": "tekniker",
-    "form": "C/PL"
+    "form": "C"
   },
   "tekniker": {
-    "plural": "tekniker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "teknikföretag": {
@@ -152953,7 +152953,7 @@
   },
   "vadd": {
     "plural": "vaddar",
-    "form": "C/PL"
+    "form": "C"
   },
   "vaddar": {
     "plural": "isPlural",
@@ -157605,7 +157605,7 @@
   },
   "vädd": {
     "plural": "vaddar",
-    "form": "C"
+    "form": "C/PL"
   },
   "väder": {
     "plural": "väder",

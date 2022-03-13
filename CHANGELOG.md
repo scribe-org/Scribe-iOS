@@ -22,6 +22,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 2 nouns
+- Portuguese: 2 nouns
+- Spanish: 3 nouns, 59 verbs
+
 ### 🐞 Bug Fixes
 
 - Key long press for alternate characters has had cancellation removed to avoid buggy performance.

@@ -3817,7 +3817,7 @@
   },
   "Philippine": {
     "plural": "Philippines",
-    "form": "F"
+    "form": "F/PL"
   },
   "Philippines": {
     "plural": "isPlural",
@@ -5493,11 +5493,11 @@
   },
   "abonné": {
     "plural": "abonnées",
-    "form": "M/PL"
+    "form": "M"
   },
   "abonnée": {
     "plural": "abonnées",
-    "form": "M"
+    "form": "M/PL"
   },
   "abonnées": {
     "plural": "isPlural",
@@ -6899,8 +6899,12 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alimens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aliment": {
-    "plural": "aliments",
+    "plural": "alimens",
     "form": "M"
   },
   "alimentation": {
@@ -6908,10 +6912,6 @@
     "form": "F"
   },
   "alimentations": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "aliments": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27421,7 +27421,7 @@
   },
   "foi": {
     "plural": "fois",
-    "form": "F/PL"
+    "form": "F"
   },
   "foie": {
     "plural": "foies",
@@ -27448,7 +27448,7 @@
     "form": "PL"
   },
   "fois": {
-    "plural": "fois",
+    "plural": "isPlural",
     "form": "F/PL"
   },
   "folie": {
@@ -45463,6 +45463,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pomologue": {
+    "plural": "pomologues",
+    "form": "F/M"
+  },
+  "pomologues": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "pompe": {
     "plural": "pompes",
     "form": "F"
@@ -59617,7 +59625,7 @@
   },
   "ver": {
     "plural": "vers",
-    "form": "M/PL"
+    "form": "M"
   },
   "verbe": {
     "plural": "verbes",
@@ -59740,7 +59748,7 @@
     "form": "PL"
   },
   "vers": {
-    "plural": "vers",
+    "plural": "isPlural",
     "form": "M/PL"
   },
   "versement": {

@@ -17779,6 +17779,10 @@
     "plural": "gatos",
     "form": "M"
   },
+  "gatas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gatera": {
     "plural": "gateras",
     "form": "F"
@@ -17796,8 +17800,8 @@
     "form": "PL"
   },
   "gato": {
-    "plural": "gatos",
-    "form": "M/PL"
+    "plural": "gatas",
+    "form": "M"
   },
   "gatos": {
     "plural": "isPlural",
@@ -21616,103 +21620,103 @@
     "form": "PL"
   },
   "liofilice": {
-    "plural": "liofilicemos",
-    "form": "PL"
+    "plural": "liofilizan",
+    "form": ""
   },
   "liofilicemos": {
     "plural": "isPlural",
     "form": "PL"
   },
   "liofilices": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilicé": {
-    "plural": "liofilicéis",
-    "form": "PL"
-  },
-  "liofilicéis": {
-    "plural": "isPlural",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilicés": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofiliza": {
-    "plural": "liofilicemos",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizaba": {
-    "plural": "liofilicemos",
-    "form": ""
+    "plural": "liofilizan",
+    "form": "PL"
   },
   "liofilizabas": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
+    "form": "PL"
+  },
+  "liofilizan": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "liofilizara": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizaras": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizare": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizares": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizará": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizarás": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizaré": {
-    "plural": "liofilicemos",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizaría": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizarías": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizas": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizase": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizases": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizaste": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizo": {
-    "plural": "liofilicéis",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizá": {
-    "plural": "liofilicemos",
+    "plural": "liofilizan",
     "form": "PL"
   },
   "liofilizó": {
-    "plural": "liofilicéis",
+    "plural": "liofilicemos",
     "form": ""
   },
   "liquen": {
@@ -23964,6 +23968,14 @@
     "form": "M"
   },
   "miramientos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mirasol": {
+    "plural": "mirasoles",
+    "form": "M"
+  },
+  "mirasoles": {
     "plural": "isPlural",
     "form": "PL"
   },
