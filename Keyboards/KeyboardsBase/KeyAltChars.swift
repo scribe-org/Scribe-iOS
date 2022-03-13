@@ -48,7 +48,6 @@ func setKeyboardAlternateKeys() {
 
 var alternatesKeyView: UIView!
 var alternatesShapeLayer = CAShapeLayer()
-var keyCancelled = false
 var keysWithAlternates = [String]()
 var alternateKeys = [String]()
 

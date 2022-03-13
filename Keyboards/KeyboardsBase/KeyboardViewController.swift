@@ -892,7 +892,7 @@ class KeyboardViewController: UIInputViewController {
             target: self,
             action: #selector(genHoldPopUpView(sender:))
           )
-          keyHoldPop.minimumPressDuration = 0.1
+          keyHoldPop.minimumPressDuration = 0.125
 
          if allNonSpecialKeys.contains(key) {
             btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
@@ -1515,19 +1515,23 @@ class KeyboardViewController: UIInputViewController {
     guard let key: UIButton = sender.view as? UIButton else { return }
     let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
     let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
-    genKeyPop(key: key, layer: keyHoldPopLayer, char: charPressed, displayChar: displayChar)
 
-    if sender.state == .began {
+    // Timer is short as the alternates view gets canceled by sender.state.changed.
+    _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { (timer) in
+      if keysWithAlternates.contains(charPressed) {
+        self.setAlternatesView(sender: sender)
+        keyHoldPopLayer.removeFromSuperlayer()
+        keyHoldPopChar.removeFromSuperview()
+      }
+    }
+
+    switch(sender.state) {
+    case .began:
+      genKeyPop(key: key, layer: keyHoldPopLayer, char: charPressed, displayChar: displayChar)
       self.view.layer.addSublayer(keyHoldPopLayer)
       self.view.addSubview(keyHoldPopChar)
-      keyCancelled = false
-    } else if sender.state == .cancelled {
-      // Remove the key hold pop up and alternates view if user cancels.
-      keyHoldPopLayer.removeFromSuperlayer()
-      keyHoldPopChar.removeFromSuperview()
-      keyCancelled = true
-      keyUntouched(key)
-    } else if sender.state == .ended && keyCancelled == false {
+
+    case .ended:
       // Remove the key hold pop up and execute key only if the alternates view isn't present.
       keyHoldPopLayer.removeFromSuperlayer()
       keyHoldPopChar.removeFromSuperview()
@@ -1537,14 +1541,9 @@ class KeyboardViewController: UIInputViewController {
         executeKeyActions(key)
       }
       keyUntouched(key)
-    }
 
-    if keysWithAlternates.contains(charPressed) {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-        self.setAlternatesView(sender: sender)
-        keyHoldPopLayer.removeFromSuperlayer()
-        keyHoldPopChar.removeFromSuperview()
-      }
+    default:
+      break
     }
   }
 
@@ -1558,17 +1557,9 @@ class KeyboardViewController: UIInputViewController {
       return
     }
 
-    // If alternateKeysView is already added than remove and then add again.
-    if self.view.viewWithTag(1001) != nil {
-      let viewWithTag = self.view.viewWithTag(1001)
-      viewWithTag?.removeFromSuperview()
-      alternatesShapeLayer.removeFromSuperlayer()
-    }
-
     // Derive which button was pressed and get its alternates.
     guard let key: UIButton = sender.view as? UIButton else { return }
     genAlternatesView(key: key)
-    self.view.layer.addSublayer(alternatesShapeLayer)
 
     alternateBtnStartX = 5.0
     var alternatesBtnY = key.frame.height * 0.15
@@ -1605,6 +1596,15 @@ class KeyboardViewController: UIInputViewController {
 
       alternateBtnStartX += (key.frame.width + 3.0)
     }
+
+    // If alternateKeysView is already added than remove and then add again.
+    if self.view.viewWithTag(1001) != nil {
+      let viewWithTag = self.view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
+    }
+
+    self.view.layer.addSublayer(alternatesShapeLayer)
     self.view.addSubview(alternatesKeyView)
   }
 }
