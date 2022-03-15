@@ -26,6 +26,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The App Store description has been updated with a reference to Wikidata and grammar improvements.
 - The open-source images in the App Store has been updated to reference open data and Wikidata.
 
+### ⚖️ Legal
+
+- The privacy policy was updated to reflect the addition of the Wikidata logo into the app.
+
 # Scribe 1.3.3
 
 ### 🗃️ Data Added
