@@ -24,6 +24,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Captions for App Store images have been updated.
 - The App Store description has been updated with a reference to Wikidata.
+- The open-source image in the App Store has been updated to reference open data and Wikidata.
 
 # Scribe 1.3.3
 

@@ -72,7 +72,8 @@ This SERVICE contains links to external websites. If USERS click on a third-part
 
 6. Third-Party Images
 
-This SERVICE contains images that are copyrighted by third-parties. Specifically this app includes a copy of the logo for GitHub, Inc. The terms by which this logo is used are found on the following page: https://github.com/logos. This SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation that is common in the open-source community to indicate that there is a link to the GitHub website.
+This SERVICE contains images that are copyrighted by third-parties. Specifically this app includes a copy of the logos of GitHub, Inc and Wikidata, trademarked by Wikimedia Foundation, Inc. The terms by which the GitHub logo can be used are found on https://github.com/logos, and the terms for the Wikidata logo are found on the following Wikimedia page: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. This
+SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation of the GitHub logo that is common in the open-source community to indicate that there is a link to the GitHub website.
 
 7. Content Notice
 
