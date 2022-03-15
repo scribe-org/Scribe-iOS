@@ -18,13 +18,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- The app screen fields have been made larger and the text size has also been increased. -->
 <!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
 
-# Next release
+# Scribe 1.3.4
 
 ### 🎨 Design Changes
 
 - Captions for App Store images have been updated.
-- The App Store description has been updated with a reference to Wikidata.
-- The open-source image in the App Store has been updated to reference open data and Wikidata.
+- The App Store description has been updated with a reference to Wikidata and grammar improvements.
+- The open-source images in the App Store has been updated to reference open data and Wikidata.
 
 # Scribe 1.3.3
 
