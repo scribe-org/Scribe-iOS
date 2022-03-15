@@ -1517,7 +1517,7 @@ class KeyboardViewController: UIInputViewController {
     let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
 
     // Timer is short as the alternates view gets canceled by sender.state.changed.
-    _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { (timer) in
+    _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { (_) in
       if keysWithAlternates.contains(charPressed) {
         self.setAlternatesView(sender: sender)
         keyHoldPopLayer.removeFromSuperlayer()
@@ -1525,7 +1525,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    switch(sender.state) {
+    switch sender.state {
     case .began:
       genKeyPop(key: key, layer: keyHoldPopLayer, char: charPressed, displayChar: displayChar)
       self.view.layer.addSublayer(keyHoldPopLayer)
