@@ -10,4 +10,21 @@ SELECT DISTINCT ?noun WHERE {
     wikibase:lexicalCategory ?nounType ;
     wikibase:lemma ?noun .
   FILTER(?nounType = ?nounTypes)
+
+  # Values to be filtered out when selecting nominative cases.
+  # VALUES ?nonNominativeCases { wd:Q146078 wd:Q145599 wd:Q202142 wd:Q192997 wd:Q185077 }
+
+  # Optional selection of nominative singular forms.
+  # OPTIONAL {
+  #   ?lexeme ontolex:lexicalForm ?singularForm .
+  #   ?singularForm ontolex:representation ?singular ;
+  #     wikibase:grammaticalFeature wd:Q110786 ;
+  # } .
+
+  # Optional selection of nominative plural forms.
+  # OPTIONAL {
+  #   ?lexeme ontolex:lexicalForm ?pluralForm .
+  #   ?pluralForm ontolex:representation ?plural ;
+  #     wikibase:grammaticalFeature wd:Q146786 ;
+  # } .
 }
