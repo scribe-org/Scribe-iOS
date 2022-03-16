@@ -27,4 +27,15 @@ SELECT DISTINCT ?noun WHERE {
   #   ?pluralForm ontolex:representation ?plural ;
   #     wikibase:grammaticalFeature wd:Q146786 ;
   # } .
+
+  # Optional selection of genders.
+  # OPTIONAL {
+  #   ?lexeme wdt:P5185 ?nounGender .
+  #   FILTER NOT EXISTS { ?lexeme wdt:P31 wd:Q202444 . }
+  # } .
+
+  #   SERVICE wikibase:label {
+  #   bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+  #   ?nounGender rdfs:label ?gender .
+  # }
 }
