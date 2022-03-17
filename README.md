@@ -172,7 +172,7 @@ Work that is in progress or could be implemented is tracked in the [Issues](http
 
 ### Ways to Help
 
-- Join us in the [Discussions](https://github.com/scribe-org/Scribe-iOS/discussions)!
+- Join us in the [Discussions](https://github.com/scribe-org/Scribe-iOS/discussions) 👋
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature)
 - Helping add [new keyboards](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22+)
