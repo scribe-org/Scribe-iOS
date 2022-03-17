@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: ❓ Question
+    url: https://github.com/scribe-org/Scribe-iOS/discussions
+    about: Join us in the Scribe-iOS community Discussions!
