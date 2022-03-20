@@ -106,7 +106,7 @@ func setITKeyboardLayout() {
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "spazio"
-  invalidCommandMsg = "Non nella directory"
+  invalidCommandMsg = "Non in Wikidata"
 
   translateKeyLbl = "Tradurre"
   translatePrompt = commandPromptSpacing + "it -› \(getControllerLanguageAbbr()): "

@@ -110,7 +110,7 @@ func setSVKeyboardLayout() {
   currencySymbol = "kr"
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellanslag"
-  invalidCommandMsg = "Inte i katalogen"
+  invalidCommandMsg = "Inte i Wikidata"
 
   translateKeyLbl = "Översätt"
   translatePrompt = commandPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "

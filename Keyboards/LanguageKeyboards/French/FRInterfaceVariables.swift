@@ -106,7 +106,7 @@ func setFRKeyboardLayout() {
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "espace"
-  invalidCommandMsg = "Pas dans le répertoire"
+  invalidCommandMsg = "Pas dans Wikidata"
 
   translateKeyLbl = "Traduire"
   translatePrompt = commandPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "

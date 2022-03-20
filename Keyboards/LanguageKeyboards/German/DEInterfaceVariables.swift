@@ -112,7 +112,7 @@ func setDEKeyboardLayout() {
   currencySymbol = "€"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "Leerzeichen"
-  invalidCommandMsg = "Nicht im Verzeichnis"
+  invalidCommandMsg = "Nicht in Wikidata"
 
   translateKeyLbl = "Übersetzen"
   translatePrompt = commandPromptSpacing + "de -› \(getControllerLanguageAbbr()): "

@@ -94,7 +94,7 @@ func setRUKeyboardLayout() {
   currencySymbol = "₽"
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "Пробел"
-  invalidCommandMsg = "Нет в каталоге"
+  invalidCommandMsg = "Нет в Викиданных"
 
   translateKeyLbl = "Перевести"
   translatePrompt = commandPromptSpacing + "ru -› \(getControllerLanguageAbbr()): "

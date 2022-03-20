@@ -23,6 +23,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - Captions and text spacing for App Store images have been updated.
+- "Not in directory" messages have been changed to "Not in Wikidata" to further signal affiliation with the service.
 
 # Scribe 1.3.4
 

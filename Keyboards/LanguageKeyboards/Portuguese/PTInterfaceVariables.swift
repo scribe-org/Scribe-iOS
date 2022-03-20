@@ -104,7 +104,7 @@ func setPTKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espaço"
-  invalidCommandMsg = "Não está no diretório"
+  invalidCommandMsg = "Não está no Wikidata"
 
   translateKeyLbl = "Traduzir"
   translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "

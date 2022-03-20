@@ -108,7 +108,7 @@ func setESKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espacio"
-  invalidCommandMsg = "No en el directorio"
+  invalidCommandMsg = "No en Wikidata"
 
   translateKeyLbl = "Traducir"
   translatePrompt = commandPromptSpacing + "es -› \(getControllerLanguageAbbr()): "
