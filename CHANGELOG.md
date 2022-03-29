@@ -20,6 +20,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # Next Update
 
+### 🗃️ Data Added
+
 ### 🎨 Design Changes
 
 - Captions and text spacing for App Store images have been updated.
