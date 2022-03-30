@@ -8,7 +8,7 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-<!--# Scribe 1.4.0 (WIP)-->
+<!--# Scribe-iOS 1.4.0 (WIP)-->
 <!---->
 <!--Scribe's second design sprint with Spencer Arney focussed on key styling and onboarding users.-->
 <!---->
@@ -31,7 +31,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The data files have been moved to a new directory within the organization on GitHub.
 
-# Scribe 1.3.4
+# Scribe-iOS 1.3.4
 
 ### 🎨 Design Changes
 
@@ -43,7 +43,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The privacy policy was updated to reflect the addition of the Wikidata logo into the app.
 
-# Scribe 1.3.3
+# Scribe-iOS 1.3.3
 
 ### 🗃️ Data Added
 
@@ -55,7 +55,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Key long press for alternate characters has had cancellation removed to avoid buggy performance.
 
-# Scribe 1.3.2
+# Scribe-iOS 1.3.2
 
 ### 🗃️ Data Added
 
@@ -73,7 +73,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Key long press cancellation was switched from changed to cancel to avoid unnecessary cancels.
 
-# Scribe 1.3.1
+# Scribe-iOS 1.3.1
 
 ### 🗃️ Data Added
 
@@ -91,7 +91,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Key alternate views now stay if the key is canceled as they were disappearing too easily.
 - The width of alternate character callouts for certain keys has been fixed for iPhones.
 
-# Scribe 1.3.0
+# Scribe-iOS 1.3.0
 
 ### ⌨️ New Keyboards
 
@@ -110,7 +110,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Hold to select characters have been redesigned to reflect the addition of keys popping up.
 - All App Store media has been redone to reflect these changes.
 
-# Scribe 1.2.1
+# Scribe-iOS 1.2.1
 
 ### ✨ New Features
 
@@ -150,7 +150,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Scribe has been modularized to be more easily worked with.
 - The app screen's text was moved to a new directory where localizations will be stored.
 
-# Scribe 1.2.0
+# Scribe-iOS 1.2.0
 
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
@@ -182,7 +182,7 @@ The entire layout of Scribe has been reworked to make the experience more aesthe
 
 - The privacy policy was updated to reflect the addition of the GitHub, Inc icon into the app.
 
-# Scribe 1.1.1
+# Scribe-iOS 1.1.1
 
 ### 🗃️ Data Added
 
@@ -211,7 +211,7 @@ Data updates are now all done through a single Python file - update_data.py.
 - Queries were refactored to reduce their total characters so they can be sent through query APIs.
 - Command variables were edited to interact with new formatting from query refactoring.
 
-# Scribe 1.1.0
+# Scribe-iOS 1.1.0
 
 ### ⌨️ New Keyboards
 
@@ -255,7 +255,7 @@ Data updates are now all done through a single Python file - update_data.py.
 - Combines all conjugation logic into one function that is accessed by each button press case.
 - Combines all noun annotation logic into one function that accessed by child functions.
 
-# Scribe 1.0.1
+# Scribe-iOS 1.0.1
 
 ### ✨ New Features
 
@@ -279,7 +279,7 @@ Data updates are now all done through a single Python file - update_data.py.
 
 - The hold-to-select character functions are now combined into one.
 
-# Scribe 1.0.0
+# Scribe-iOS 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
