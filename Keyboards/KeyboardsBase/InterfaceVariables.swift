@@ -1,5 +1,5 @@
 //
-//  InterfaceVariables.swift.swift
+//  InterfaceVariables.swift
 //
 //  Variables associated with the base keyboard interface.
 //
