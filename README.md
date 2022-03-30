@@ -18,7 +18,9 @@
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 
-<!-- Also available on [Android](https://github.com/scribe-org/Scribe-Android) and [Desktop](https://github.com/scribe-org/Scribe-Desktop). -->
+WIP: also available on [Android](https://github.com/scribe-org/Scribe-Android).
+
+<!-- and [Desktop](https://github.com/scribe-org/Scribe-Desktop). -->
 
 ### Language learning keyboards for iOS
 
