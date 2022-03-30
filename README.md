@@ -28,7 +28,7 @@ WIP: also available on [Android](https://github.com/scribe-org/Scribe-Android).
 
 Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
 
-See the [presentation slides](https://docs.google.com/presentation/d/16ld_rCbwJCiAdRrfhF-Fq9Wm_ciHCbk_HCzGQs6TB1Q/edit?usp=sharing) for [Wikidata Data Reuse Days 2022](https://diff.wikimedia.org/event/wikidata-data-reuse-days-2022/) and the articles referencing Scribe in the [Featured By](#featured-by) section for a full description of the project. Those interested in contributing are also welcome to join us in the [discussions](https://github.com/scribe-org/Scribe-iOS/discussions)!
+See the [presentation slides](https://docs.google.com/presentation/d/16ld_rCbwJCiAdRrfhF-Fq9Wm_ciHCbk_HCzGQs6TB1Q/edit?usp=sharing) for [Wikidata Data Reuse Days 2022](https://diff.wikimedia.org/event/wikidata-data-reuse-days-2022/) and the articles about Scribe in the [Featured By](#featured-by) section for a full description of the project. Those interested in contributing are also welcome to join us in the [discussions](https://github.com/scribe-org/Scribe-iOS/discussions)!
 
 # **Contents**<a id="contents"></a>
 
