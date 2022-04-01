@@ -6,28 +6,6 @@
 
 import UIKit
 
-// Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
-// The purpose of these is to define which key pop up functions should be ran.
-var centralKeyChars: [String] = [String]()
-var leftKeyChars: [String] = [String]()
-var rightKeyChars: [String] = [String]()
-
-// Variables for call out positioning.
-var horizStart = CGFloat(0)
-var vertStart = CGFloat(0)
-var widthMultiplier = CGFloat(0)
-var maxHeightMultiplier = CGFloat(0)
-var maxHeight = CGFloat(0)
-var heightBeforeTopCurves = CGFloat(0)
-var maxWidthCurveControl = CGFloat(0)
-var maxHeightCurveControl = CGFloat(0)
-var minHeightCurveControl = CGFloat(0)
-
-var keyPopChar = UILabel()
-var keyHoldPopChar = UILabel()
-var keyPopLayer = CAShapeLayer()
-var keyHoldPopLayer = CAShapeLayer()
-
 /// Creates the shape that allows left most buttons to pop up after being pressed.
 ///
 /// - Parameters
@@ -44,8 +22,7 @@ func setPopPathState(
   position: String
 ) {
   // Starting positions need to be updated.
-  horizStart = startX
-  vertStart = startY + keyHeight
+  horizStart = startX; vertStart = startY + keyHeight
   if DeviceType.isPad {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.05
@@ -101,31 +78,39 @@ func leftKeyPopPath(
   path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
 
   // Curve up past bottom left, path up, and curve right past the top left.
-  path.addCurve(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl)
+    )
   path.addLine(to: CGPoint(x: horizStart, y: heightBeforeTopCurves))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * 0.35 ), y: maxHeight),
-                controlPoint1: CGPoint(x: horizStart, y: maxHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.2 ), y: maxHeight))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * 0.35 ), y: maxHeight),
+    controlPoint1: CGPoint(x: horizStart, y: maxHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.2 ), y: maxHeight)
+  )
 
   // Path right, curve down past the top right, and path down.
   path.addLine(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier * 0.35 )), y: maxHeight))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: heightBeforeTopCurves * 1.15),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier * 0.75 )), y: maxHeight),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: maxHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: heightBeforeTopCurves * 1.15),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier * 0.75 )), y: maxHeight),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: maxHeightCurveControl)
+  )
   path.addLine(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.3 )))
 
   // Curve in to the left, go down, and curve down past bottom left.
-  path.addCurve(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.5 )),
-                controlPoint1: CGPoint(
-                  x: horizStart + ( keyWidth * ( 1 + widthMultiplier )),
-                  y: vertStart - ( keyHeight * 1.05 )),
-                controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 )))
+  path.addCurve(
+    to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.5 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.05 )),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 ))
+  )
   path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
-                controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
+    controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl)
+  )
 
   path.close()
   return path
@@ -151,35 +136,44 @@ func rightKeyPopPath(
   )
 
   // Path is clockwise from bottom left.
-  let path = UIBezierPath()
-  path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
+  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
 
   // Curve up past bottom left, path up, and curve out to the left.
-  path.addCurve(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl)
+  )
   path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.5 )))
-  path.addCurve(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.3 )),
+  path.addCurve(
+    to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.3 )),
     controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
-    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 )))
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 ))
+  )
 
   // Path up and curve right past the top left.
   path.addLine(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: heightBeforeTopCurves))
-  path.addCurve(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier  * 0.35 ), y: maxHeight),
-                controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: maxHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier * 0.75 ), y: maxHeight))
+  path.addCurve(
+    to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier  * 0.35 ), y: maxHeight),
+    controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: maxHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier * 0.75 ), y: maxHeight)
+  )
 
   // Path right, curve down past the top right, and path down.
   path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 0.5 ), y: maxHeight))
-  path.addCurve(to: CGPoint(x: horizStart + keyWidth, y: heightBeforeTopCurves),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.95 ), y: maxHeight),
-                controlPoint2: CGPoint(x: horizStart + keyWidth, y: maxHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + keyWidth, y: heightBeforeTopCurves),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.95 ), y: maxHeight),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: maxHeightCurveControl)
+  )
   path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
 
   // Curve down past bottom left.
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
-                controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
+    controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl)
+  )
 
   path.close()
   return path
@@ -205,43 +199,50 @@ func centerKeyPopPath(
   )
 
   // Path is clockwise from bottom left.
-  let path = UIBezierPath()
-  path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
+  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
 
   // Curve up past bottom left, path up, and curve out to the left.
-  path.addCurve(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl)
+  )
   path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.85 )))
-  path.addCurve(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.2 )),
-                controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
-                controlPoint2: CGPoint(
-                  x: horizStart - ( keyWidth * widthMultiplier ),
-                  y: vertStart - ( keyHeight * 1.05 )))
+  path.addCurve(
+    to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.2 )),
+    controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 ))
+  )
 
   // Path up and curve right past the top left.
   path.addLine(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: heightBeforeTopCurves))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: maxHeight),
-                controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: maxHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart - ( keyWidth * 0.25 ), y: maxHeight))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: maxHeight),
+    controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: maxHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart - ( keyWidth * 0.25 ), y: maxHeight)
+  )
 
   // Path right, curve down past the top right, and path down.
   path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: maxHeight))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: heightBeforeTopCurves),
-                controlPoint1: CGPoint(x: horizStart + ( keyWidth * 1.25 ), y: maxHeight),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: maxHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: heightBeforeTopCurves),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 1.25 ), y: maxHeight),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: maxHeightCurveControl)
+  )
   path.addLine(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.2 )))
 
   // Curve in to the left, go down, and curve down past bottom left.
-  path.addCurve(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.85 )),
-                controlPoint1: CGPoint(
-                  x: horizStart + ( keyWidth * ( 1 + widthMultiplier )),
-                  y: vertStart - ( keyHeight * 1.05 )),
-                controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 )))
+  path.addCurve(
+    to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.85 )),
+    controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.05 )),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 ))
+  )
   path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
-  path.addCurve(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
-                controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
-                controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl))
+  path.addCurve(
+    to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
+    controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl)
+  )
 
   path.close()
   return path

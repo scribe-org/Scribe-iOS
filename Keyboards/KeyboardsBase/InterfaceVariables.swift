@@ -121,6 +121,28 @@ func setKeyboardLayout() {
   allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
 }
 
+// Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
+// The purpose of these is to define which key pop up functions should be ran.
+var centralKeyChars: [String] = [String]()
+var leftKeyChars: [String] = [String]()
+var rightKeyChars: [String] = [String]()
+
+// Variables for call out positioning.
+var horizStart = CGFloat(0)
+var vertStart = CGFloat(0)
+var widthMultiplier = CGFloat(0)
+var maxHeightMultiplier = CGFloat(0)
+var maxHeight = CGFloat(0)
+var heightBeforeTopCurves = CGFloat(0)
+var maxWidthCurveControl = CGFloat(0)
+var maxHeightCurveControl = CGFloat(0)
+var minHeightCurveControl = CGFloat(0)
+
+var keyPopChar = UILabel()
+var keyHoldPopChar = UILabel()
+var keyPopLayer = CAShapeLayer()
+var keyHoldPopLayer = CAShapeLayer()
+
 // MARK: English Interface Variables
 // Note: here only until there is an English keyboard.
 
