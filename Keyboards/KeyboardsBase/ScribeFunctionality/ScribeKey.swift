@@ -45,7 +45,7 @@ class ScribeKey: UIButton {
   /// Assigns the icon and sets up the Scribe key.
   func set() {
     self.setImage(scribeKeyIcon, for: .normal)
-    setBtn(btn: self, color: commandKeyColor, name: "Scribe", canCapitalize: false, isSpecial: false)
+    setBtn(btn: self, color: commandKeyColor, name: "Scribe", canCap: false, isSpecial: false)
     self.layer.borderColor = commandBarBorderColor
     self.layer.borderWidth = 1.0
     self.contentMode = .center

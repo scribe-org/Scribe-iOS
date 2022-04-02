@@ -235,9 +235,9 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
-    setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canCapitalize: false, isSpecial: false)
-    setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canCapitalize: false, isSpecial: false)
+    setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canCap: false, isSpecial: false)
+    setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canCap: false, isSpecial: false)
 
     activateBtn(btn: translateKey)
     activateBtn(btn: conjugateKey)
@@ -312,12 +312,12 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x2 conjugation display.
   func setConj3x2View() {
-    setBtn(btn: conjugateKeyFPS, color: keyColor, name: "firstPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeySPS, color: keyColor, name: "secondPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTPS, color: keyColor, name: "thirdPersonSingular", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyFPP, color: keyColor, name: "firstPersonPlural", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeySPP, color: keyColor, name: "secondPersonPlural", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTPP, color: keyColor, name: "thirdPersonPlural", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyFPS, color: keyColor, name: "firstPersonSingular", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeySPS, color: keyColor, name: "secondPersonSingular", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTPS, color: keyColor, name: "thirdPersonSingular", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyFPP, color: keyColor, name: "firstPersonPlural", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeySPP, color: keyColor, name: "secondPersonPlural", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTPP, color: keyColor, name: "thirdPersonPlural", canCap: false, isSpecial: false)
 
     for btn in get3x2ConjButtons() {
       activateBtn(btn: btn)
@@ -336,10 +336,10 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
   func setConj2x2View() {
-    setBtn(btn: conjugateKeyTL, color: keyColor, name: "conjugateTopLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyTR, color: keyColor, name: "conjugateTopRight", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyBL, color: keyColor, name: "conjugateBottomLeft", canCapitalize: false, isSpecial: false)
-    setBtn(btn: conjugateKeyBR, color: keyColor, name: "conjugateBottomRight", canCapitalize: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTL, color: keyColor, name: "conjugateTopLeft", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyTR, color: keyColor, name: "conjugateTopRight", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBL, color: keyColor, name: "conjugateBottomLeft", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBR, color: keyColor, name: "conjugateBottomRight", canCap: false, isSpecial: false)
 
     for btn in get2x2ConjButtons() {
       activateBtn(btn: btn)
@@ -379,14 +379,14 @@ class KeyboardViewController: UIInputViewController {
       btn: conjugateShiftLeft,
       color: keyColor,
       name: "shiftConjugateLeft",
-      canCapitalize: false,
+      canCap: false,
       isSpecial: false
     )
     setBtn(
       btn: conjugateShiftRight,
       color: keyColor,
       name: "shiftConjugateRight",
-      canCapitalize: false,
+      canCap: false,
       isSpecial: false
     )
 
@@ -1586,11 +1586,11 @@ class KeyboardViewController: UIInputViewController {
 
       alternatesKeyView.addSubview(alternateKey)
       if char == alternateKeys.first && keysWithAlternatesLeft.contains(char) {
-        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCap: true, isSpecial: false)
       } else if char == alternateKeys.last && keysWithAlternatesRight.contains(char) {
-        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCap: true, isSpecial: false)
       } else {
-        setBtn(btn: alternateKey, color: keyColor, name: char, canCapitalize: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: keyColor, name: char, canCap: true, isSpecial: false)
       }
       activateBtn(btn: alternateKey)
 
