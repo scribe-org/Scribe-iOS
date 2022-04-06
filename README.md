@@ -85,7 +85,7 @@ The following table shows the supported languages and the amount of data availab
 
 `‡` Only for languages for which preposition annotation is needed.
 
-Updates to the above data can be done using [Scribe-Data/data/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/data/update_data.py).
+Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
 
 # Setup [`⇧`](#contents) <a id="setup"></a>
 
