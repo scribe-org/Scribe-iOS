@@ -3467,6 +3467,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Alte": {
+    "plural": "Alte",
+    "form": "F/PL"
+  },
+  "Alten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Altenpfleger": {
     "plural": "Altenpfleger",
     "form": "M/PL"
@@ -3481,7 +3489,7 @@
   },
   "Alter": {
     "plural": "Alter",
-    "form": "N/PL"
+    "form": "M/N/PL"
   },
   "Alteration": {
     "plural": "Alterationen",
@@ -5867,6 +5875,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Aprilwetter": {
+    "plural": "Aprilwetter",
+    "form": "N/PL"
+  },
   "Aquakultur": {
     "plural": "Aquakulturen",
     "form": "F"
@@ -6704,7 +6716,7 @@
     "form": "PL"
   },
   "Arsen": {
-    "plural": "noPlural",
+    "plural": "isPlural",
     "form": "N/PL"
   },
   "Arsenik": {
@@ -10676,7 +10688,7 @@
     "form": "M/PL"
   },
   "Bau": {
-    "plural": "Bauten",
+    "plural": "Baue",
     "form": "M"
   },
   "Bauabschnitt": {
@@ -10756,6 +10768,10 @@
     "form": "N"
   },
   "Baudenkmäler": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Baue": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11064,10 +11080,6 @@
     "form": "F"
   },
   "Bauteileigenschaften": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Bauten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11418,6 +11430,14 @@
   "Beerpong": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Beet": {
+    "plural": "Beete",
+    "form": "N"
+  },
+  "Beete": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Befall": {
     "plural": "Befälle",
@@ -16576,10 +16596,10 @@
     "form": "PL"
   },
   "Boot": {
-    "plural": "Boote",
+    "plural": "Boots",
     "form": "M/N"
   },
-  "Boote": {
+  "Boots": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16780,7 +16800,7 @@
     "form": "PL"
   },
   "Brand": {
-    "plural": "Brände",
+    "plural": "Brands",
     "form": "M"
   },
   "Brandanschlag": {
@@ -16810,6 +16830,10 @@
   "Brandmelder": {
     "plural": "Brandmelder",
     "form": "M/PL"
+  },
+  "Brands": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Brandschutzgrund": {
     "plural": "Brandschutzgründe",
@@ -17584,10 +17608,6 @@
     "form": "F"
   },
   "Brutzeiten": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Brände": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26111,6 +26131,22 @@
     "plural": "Einverständnisse",
     "form": "N"
   },
+  "Einverständniserklärung": {
+    "plural": "Einverständniserklärungen",
+    "form": "F"
+  },
+  "Einverständniserklärungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Einverständniserklärungsformular": {
+    "plural": "Einverständniserklärungsformulare",
+    "form": "N"
+  },
+  "Einverständniserklärungsformulare": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Einverständnisse": {
     "plural": "isPlural",
     "form": "PL"
@@ -29316,6 +29352,14 @@
     "form": "F"
   },
   "Erstimpfungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Erstkontakt": {
+    "plural": "Erstkontakte",
+    "form": "M"
+  },
+  "Erstkontakte": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -32678,6 +32722,14 @@
   "Firmengruppen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Firmenmuseen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Firmenmusem": {
+    "plural": "Firmenmuseen",
+    "form": "N"
   },
   "Firmensitz": {
     "plural": "Firmensitze",
@@ -37431,6 +37483,14 @@
     "plural": "Gepäckträger",
     "form": "M/PL"
   },
+  "Gerade": {
+    "plural": "Geraden",
+    "form": "F"
+  },
+  "Geraden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Geradlinigkeit": {
     "plural": "Geradlinigkeiten",
     "form": "F"
@@ -38375,6 +38435,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Geviert": {
+    "plural": "Gevierte",
+    "form": "N"
+  },
+  "Gevierte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Gewalt": {
     "plural": "Gewalten",
     "form": "F"
@@ -38956,7 +39024,7 @@
     "form": "F"
   },
   "Gluten": {
-    "plural": "noPlural",
+    "plural": "isPlural",
     "form": "N/PL"
   },
   "Gläser": {
@@ -39296,18 +39364,18 @@
     "form": "PL"
   },
   "Graf": {
-    "plural": "Grafe",
+    "plural": "Grafen",
     "form": "M/N"
-  },
-  "Grafe": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Grafem": {
     "plural": "Grafeme",
     "form": "N"
   },
   "Grafeme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Grafen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39654,6 +39722,10 @@
   "Grobfassungen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Groll": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Groschen": {
     "plural": "Groschen",
@@ -43216,8 +43288,12 @@
     "form": "F"
   },
   "Hexen": {
-    "plural": "isPlural",
+    "plural": "Hexene",
     "form": "N/PL"
+  },
+  "Hexene": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Hexenmeister": {
     "plural": "Hexenmeister",
@@ -49660,8 +49736,12 @@
     "form": "PL"
   },
   "Kartograph": {
-    "plural": "Kartografen",
+    "plural": "Kartographen",
     "form": "M"
+  },
+  "Kartographen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kartographin": {
     "plural": "Kartographinnen",
@@ -57647,6 +57727,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Lebensform": {
+    "plural": "Lebensformen",
+    "form": "F"
+  },
+  "Lebensformen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Lebensjahr": {
     "plural": "Lebensjahre",
     "form": "N"
@@ -57750,6 +57838,10 @@
   "Lebenswissenschaften": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Lebenszeichen": {
+    "plural": "Lebenszeichen",
+    "form": "N/PL"
   },
   "Lebenszeit": {
     "plural": "Lebenszeiten",
@@ -58908,6 +59000,14 @@
     "form": "M"
   },
   "Lichtschutzfaktoren": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Lichtschwert": {
+    "plural": "Lichtschwerter",
+    "form": "N"
+  },
+  "Lichtschwerter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65795,6 +65895,14 @@
     "plural": "Möbel",
     "form": "N/PL"
   },
+  "Möbelstück": {
+    "plural": "Möbelstücke",
+    "form": "N"
+  },
+  "Möbelstücke": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Möchtegernkanzler": {
     "plural": "Möchtegernkanzler",
     "form": "M/PL"
@@ -65978,6 +66086,10 @@
   "Mütter": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Mütterchen": {
+    "plural": "Mütterchen",
+    "form": "N/PL"
   },
   "Mütze": {
     "plural": "Mützen",
@@ -70787,6 +70899,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Orthogon": {
+    "plural": "Orthogone",
+    "form": "N"
+  },
+  "Orthogone": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Ortschaft": {
     "plural": "Ortschaften",
     "form": "F"
@@ -73359,6 +73479,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Pfuhl": {
+    "plural": "Pfuhle",
+    "form": "M"
+  },
+  "Pfuhle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Pfund": {
     "plural": "Pfunde",
     "form": "N"
@@ -73939,6 +74067,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Pixel": {
+    "plural": "Pixel",
+    "form": "N/PL"
+  },
   "Pjöngjang": {
     "plural": "noPlural",
     "form": "N"
@@ -74484,7 +74616,7 @@
     "form": "M/PL"
   },
   "Polen": {
-    "plural": "noPlural",
+    "plural": "isPlural",
     "form": "N/PL"
   },
   "Polin": {
@@ -75140,7 +75272,7 @@
     "form": "M"
   },
   "Preußen": {
-    "plural": "noPlural",
+    "plural": "isPlural",
     "form": "N/PL"
   },
   "Preußin": {
@@ -76618,6 +76750,10 @@
   "Pötte": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Pünktchen": {
+    "plural": "Pünktchen",
+    "form": "N/PL"
   },
   "Pünktlichkeit": {
     "plural": "noPlural",
@@ -80888,8 +81024,12 @@
     "form": "PL"
   },
   "Rutsche": {
-    "plural": "isPlural",
+    "plural": "Rutschen",
     "form": "F/PL"
+  },
+  "Rutschen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Räder": {
     "plural": "isPlural",
@@ -83047,6 +83187,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Schiefertafel": {
+    "plural": "Schiefertafeln",
+    "form": "F"
+  },
+  "Schiefertafeln": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Schiene": {
     "plural": "Schienen",
     "form": "F"
@@ -84176,12 +84324,8 @@
     "form": "PL"
   },
   "Schnitte": {
-    "plural": "Schnitten",
-    "form": "F/PL"
-  },
-  "Schnitten": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Schnittlauch": {
     "plural": "noPlural",
@@ -85182,6 +85326,14 @@
   "Schwester": {
     "plural": "Schwestern",
     "form": "F"
+  },
+  "Schwesterchen": {
+    "plural": "Schwesterchen",
+    "form": "N/PL"
+  },
+  "Schwesterherz": {
+    "plural": "noPlural",
+    "form": "N"
   },
   "Schwestern": {
     "plural": "isPlural",
@@ -87584,8 +87736,12 @@
     "form": "PL"
   },
   "Skelett": {
-    "plural": "noPlural",
+    "plural": "Skelette",
     "form": "F/N"
+  },
+  "Skelette": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Ski": {
     "plural": "Skis",
@@ -91603,6 +91759,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Stirnseite": {
+    "plural": "Stirnseiten",
+    "form": "F"
+  },
+  "Stirnseiten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Stockholm": {
     "plural": "noPlural",
     "form": "N"
@@ -92650,6 +92814,10 @@
   "Stücke": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Stühlchen": {
+    "plural": "Stühlchen",
+    "form": "N/PL"
   },
   "Stühle": {
     "plural": "isPlural",
@@ -93860,8 +94028,12 @@
     "form": "PL"
   },
   "Tag": {
-    "plural": "Tags",
+    "plural": "Tage",
     "form": "M/N"
+  },
+  "Tage": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tagebau": {
     "plural": "Tagebaue",
@@ -93934,10 +94106,6 @@
   "Tagfalter": {
     "plural": "Tagfalter",
     "form": "M/PL"
-  },
-  "Tags": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Tagundnachtgleiche": {
     "plural": "Tagundnachtgleichen",
@@ -94706,6 +94874,10 @@
   "Teebaumöle": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Teebeutel": {
+    "plural": "Teebeutel",
+    "form": "M/PL"
   },
   "Teebäume": {
     "plural": "isPlural",
@@ -96015,6 +96187,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Tischchen": {
+    "plural": "Tischchen",
+    "form": "N/PL"
+  },
   "Tischdecke": {
     "plural": "Tischdecken",
     "form": "F"
@@ -96800,10 +96976,10 @@
     "form": "PL"
   },
   "Trabant": {
-    "plural": "Trabanten",
+    "plural": "Trabants",
     "form": "M"
   },
-  "Trabanten": {
+  "Trabants": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -97819,6 +97995,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Tropfen": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Tropfenbildverarbeitungsverfahren": {
     "plural": "Tropfenbildverarbeitungsverfahren",
     "form": "N/PL"
@@ -98350,6 +98530,10 @@
   "Tülle": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Tümpel": {
+    "plural": "Tümpel",
+    "form": "M/PL"
   },
   "Tür": {
     "plural": "Türen",
@@ -99255,9 +99439,17 @@
     "plural": "Universitätskliniken",
     "form": "F"
   },
+  "Universitätsklinika": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Universitätskliniken": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Universitätsklinikum": {
+    "plural": "Universitätsklinika",
+    "form": "N"
   },
   "Universum": {
     "plural": "Universen",
@@ -101260,6 +101452,14 @@
     "form": "N"
   },
   "Verhöre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Verjüngung": {
+    "plural": "Verjüngungen",
+    "form": "F"
+  },
+  "Verjüngungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -105438,6 +105638,10 @@
   "Weihbischöfe": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Weiher": {
+    "plural": "Weiher",
+    "form": "M/PL"
   },
   "Weihnachten": {
     "plural": "Weihnachten",
@@ -112080,6 +112284,14 @@
     "form": "M"
   },
   "Überblicke": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Überbrückung": {
+    "plural": "Überbrückungen",
+    "form": "F"
+  },
+  "Überbrückungen": {
     "plural": "isPlural",
     "form": "PL"
   },

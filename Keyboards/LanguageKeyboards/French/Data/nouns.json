@@ -3817,7 +3817,7 @@
   },
   "Philippine": {
     "plural": "Philippines",
-    "form": "F/PL"
+    "form": "F"
   },
   "Philippines": {
     "plural": "isPlural",
@@ -20735,6 +20735,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cystite": {
+    "plural": "cystites",
+    "form": "F"
+  },
+  "cystites": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "câble": {
     "plural": "câbles",
     "form": "M"
@@ -21040,6 +21048,22 @@
     "form": "F"
   },
   "danseuses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "daron": {
+    "plural": "darons",
+    "form": "M"
+  },
+  "daronne": {
+    "plural": "daronnes",
+    "form": "F"
+  },
+  "daronnes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "darons": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27227,6 +27251,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "flaque": {
+    "plural": "flaques",
+    "form": "F"
+  },
+  "flaques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "flatterie": {
     "plural": "flatteries",
     "form": "F"
@@ -27421,7 +27453,7 @@
   },
   "foi": {
     "plural": "fois",
-    "form": "F"
+    "form": "F/PL"
   },
   "foie": {
     "plural": "foies",
@@ -27448,7 +27480,7 @@
     "form": "PL"
   },
   "fois": {
-    "plural": "isPlural",
+    "plural": "fois",
     "form": "F/PL"
   },
   "folie": {
@@ -27509,7 +27541,7 @@
   },
   "fond": {
     "plural": "fonds",
-    "form": "M/PL"
+    "form": "M"
   },
   "fondateur": {
     "plural": "fondateurs",
@@ -27552,7 +27584,7 @@
     "form": "PL"
   },
   "fonds": {
-    "plural": "fonds",
+    "plural": "isPlural",
     "form": "M/PL"
   },
   "fondue": {
@@ -27983,6 +28015,14 @@
     "plural": "frangins",
     "form": "M"
   },
+  "frangine": {
+    "plural": "frangines",
+    "form": "F"
+  },
+  "frangines": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "frangins": {
     "plural": "isPlural",
     "form": "PL"
@@ -28008,6 +28048,10 @@
     "form": "M"
   },
   "fratricides": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fratries": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -29311,6 +29355,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gouille": {
+    "plural": "gouilles",
+    "form": "F"
+  },
+  "gouilles": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "goupille": {
     "plural": "goupilles",
     "form": "F"
@@ -29976,6 +30028,22 @@
     "form": "M"
   },
   "génies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "géniteur": {
+    "plural": "géniteurs",
+    "form": "M"
+  },
+  "géniteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "génitrice": {
+    "plural": "génitrices",
+    "form": "F"
+  },
+  "génitrices": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -38968,6 +39036,22 @@
     "form": "PL"
   },
   "muscs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "museur": {
+    "plural": "museurs",
+    "form": "M"
+  },
+  "museurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "museuse": {
+    "plural": "museuses",
+    "form": "F"
+  },
+  "museuses": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48387,6 +48471,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "quadrilatère": {
+    "plural": "quadrilatères",
+    "form": "M"
+  },
+  "quadrilatères": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "quadrillion": {
     "plural": "quadrillions",
     "form": "M"
@@ -49428,6 +49520,14 @@
     "form": "M"
   },
   "recruteurs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rectangle": {
+    "plural": "rectangles",
+    "form": "M"
+  },
+  "rectangles": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53935,6 +54035,14 @@
     "plural": "soignants",
     "form": "M"
   },
+  "soignante": {
+    "plural": "soignantes",
+    "form": "F"
+  },
+  "soignantes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "soignants": {
     "plural": "isPlural",
     "form": "PL"
@@ -58211,6 +58319,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "triangulaire": {
+    "plural": "triangulaires",
+    "form": "F"
+  },
+  "triangulaires": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "triangulation": {
     "plural": "triangulations",
     "form": "F"
@@ -59625,7 +59741,7 @@
   },
   "ver": {
     "plural": "vers",
-    "form": "M"
+    "form": "M/PL"
   },
   "verbe": {
     "plural": "verbes",
@@ -59748,7 +59864,7 @@
     "form": "PL"
   },
   "vers": {
-    "plural": "isPlural",
+    "plural": "vers",
     "form": "M/PL"
   },
   "versement": {
@@ -62792,6 +62908,14 @@
     "form": "F"
   },
   "étanchéités": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "étang": {
+    "plural": "étangs",
+    "form": "M"
+  },
+  "étangs": {
     "plural": "isPlural",
     "form": "PL"
   },

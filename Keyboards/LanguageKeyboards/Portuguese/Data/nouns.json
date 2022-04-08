@@ -2195,6 +2195,10 @@
     "plural": "bocarras",
     "form": "F/PL"
   },
+  "boconas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bocão": {
     "plural": "bocarras",
     "form": "F"
@@ -2292,8 +2296,8 @@
     "form": "PL"
   },
   "boquinha": {
-    "plural": "bocarras",
-    "form": "F/PL"
+    "plural": "boconas",
+    "form": "F"
   },
   "boquita": {
     "plural": "bocarras",
@@ -3443,6 +3447,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cavalinho": {
+    "plural": "cavalinhos",
+    "form": "M/PL"
+  },
+  "cavalinhos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cavalo": {
+    "plural": "cavalinhos",
+    "form": "M/PL"
+  },
+  "cavalão": {
+    "plural": "cavalinhos",
+    "form": "M"
+  },
   "caveira": {
     "plural": "caveiras",
     "form": "F"
@@ -3750,6 +3770,34 @@
   "choques": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "chuva": {
+    "plural": "chuvaradas",
+    "form": "F/PL"
+  },
+  "chuvarada": {
+    "plural": "chuvaradas",
+    "form": "F/PL"
+  },
+  "chuvaradas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "chuvinha": {
+    "plural": "chuvaradas",
+    "form": "F/PL"
+  },
+  "chuvisco": {
+    "plural": "chuvaradas",
+    "form": "F/PL"
+  },
+  "chuvona": {
+    "plural": "chuvaradas",
+    "form": "F/PL"
+  },
+  "chuvão": {
+    "plural": "chuvaradas",
+    "form": "F"
   },
   "chá": {
     "plural": "chás",
@@ -7379,10 +7427,6 @@
     "plural": "facas",
     "form": "F/PL"
   },
-  "facões": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "fada": {
     "plural": "fadas",
     "form": "F"
@@ -7456,8 +7500,8 @@
     "form": "PL"
   },
   "faquinha": {
-    "plural": "facões",
-    "form": "F"
+    "plural": "facas",
+    "form": "F/PL"
   },
   "farda": {
     "plural": "fardas",
@@ -7673,7 +7717,7 @@
   },
   "figurinha": {
     "plural": "figurinhas",
-    "form": "F"
+    "form": "F/PL"
   },
   "figurinhas": {
     "plural": "isPlural",
@@ -7685,7 +7729,7 @@
   },
   "figurão": {
     "plural": "figurinhas",
-    "form": "F/PL"
+    "form": "F"
   },
   "filamento": {
     "plural": "filamentos",
@@ -13765,7 +13809,7 @@
   },
   "portinha": {
     "plural": "portões",
-    "form": "F/PL"
+    "form": "F"
   },
   "porto": {
     "plural": "portos",
@@ -13785,7 +13829,7 @@
   },
   "portão": {
     "plural": "portões",
-    "form": "F/M"
+    "form": "F/M/PL"
   },
   "portões": {
     "plural": "isPlural",
@@ -14569,7 +14613,7 @@
   },
   "quartinho": {
     "plural": "quartos",
-    "form": "M"
+    "form": "M/PL"
   },
   "quarto": {
     "plural": "quartos",
@@ -14580,12 +14624,8 @@
     "form": "PL"
   },
   "quartão": {
-    "plural": "quartões",
+    "plural": "quartos",
     "form": "M"
-  },
-  "quartões": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "queda": {
     "plural": "quedas",
@@ -14859,8 +14899,12 @@
     "plural": "reações",
     "form": "F"
   },
+  "reais": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "real": {
-    "plural": "réis",
+    "plural": "reais",
     "form": "M"
   },
   "realidade": {
@@ -15744,10 +15788,6 @@
     "form": "M"
   },
   "rádios": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "réis": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17279,13 +17319,9 @@
     "plural": "torres",
     "form": "F"
   },
-  "torrezinhas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "torrezona": {
-    "plural": "torrezinhas",
-    "form": "F"
+    "plural": "torres",
+    "form": "F/PL"
   },
   "torrinha": {
     "plural": "torres",

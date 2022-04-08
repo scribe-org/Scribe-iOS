@@ -5939,6 +5939,16 @@
     "passivePresent": "demonteras",
     "passivePreterite": "demonterades"
   },
+  "denazifiera": {
+    "imperative": "denazifiera",
+    "activeSupine": "denazifierat",
+    "activePresent": "denazifierar",
+    "activePreterite": "denazifierade",
+    "passiveInfinitive": "denazifieras",
+    "passiveSupine": "denazifierats",
+    "passivePresent": "denazifieras",
+    "passivePreterite": "denazifierades"
+  },
   "depilera": {
     "imperative": "depilera",
     "activeSupine": "depilerat",

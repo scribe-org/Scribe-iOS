@@ -22,6 +22,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 31 nouns, 2 verbs
+- German: 53 nouns, 9 verbs
+- Italian: 1 noun, 1 verb
+- Portuguese: 9 nouns, 1 verb
+- Russian: 3 nouns
+- Spanish: 876 nouns, 1203 verbs
+- Swedish: 8 nouns, 1 verb
+
 ### 🎨 Design Changes
 
 - Captions and text spacing for App Store images have been updated.

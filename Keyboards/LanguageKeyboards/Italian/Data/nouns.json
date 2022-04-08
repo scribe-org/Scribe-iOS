@@ -813,15 +813,19 @@
   },
   "confeditrice": {
     "plural": "confessori",
-    "form": ""
+    "form": "PL"
+  },
+  "confeditrici": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "confessora": {
-    "plural": "confessore",
+    "plural": "confeditrici",
     "form": ""
   },
   "confessore": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "confessori",
+    "form": ""
   },
   "confessori": {
     "plural": "isPlural",

@@ -27321,7 +27321,7 @@
   },
   "dragg": {
     "plural": "draggar",
-    "form": "C/PL"
+    "form": "C"
   },
   "draggar": {
     "plural": "isPlural",
@@ -27845,7 +27845,7 @@
   },
   "drägg": {
     "plural": "draggar",
-    "form": "C"
+    "form": "C/PL"
   },
   "dräkt": {
     "plural": "dräkter",
@@ -55343,6 +55343,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "huvudflöde": {
+    "plural": "huvudflöden",
+    "form": "N"
+  },
+  "huvudflöden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "huvudförhandling": {
     "plural": "huvudförhandlingar",
     "form": "C"
@@ -67577,10 +67585,10 @@
   },
   "klinik": {
     "plural": "kliniker",
-    "form": "C/PL"
+    "form": "C"
   },
   "kliniker": {
-    "plural": "kliniker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "klinkergolv": {
@@ -86512,8 +86520,8 @@
     "form": "PL"
   },
   "mark": {
-    "plural": "marker",
-    "form": "C"
+    "plural": "mark",
+    "form": "C/PL"
   },
   "markatta": {
     "plural": "markattor",
@@ -86528,10 +86536,6 @@
     "form": "C"
   },
   "markegångar": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "marker": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -108797,15 +108801,11 @@
   },
   "puls": {
     "plural": "pulsar",
-    "form": "C/PL"
-  },
-  "pulsar": {
-    "plural": "pulsarer",
     "form": "C"
   },
-  "pulsarer": {
+  "pulsar": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "C/PL"
   },
   "pulsåder": {
     "plural": "pulsådror",
@@ -109611,6 +109611,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "pöl": {
+    "plural": "pölar",
+    "form": "C"
+  },
+  "pölar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "qatarier": {
     "plural": "qatarier",
     "form": "C/PL"
@@ -110360,8 +110368,8 @@
     "form": "PL"
   },
   "ras": {
-    "plural": "ras",
-    "form": "C/N/PL"
+    "plural": "raser",
+    "form": "C/N"
   },
   "rasbiolog": {
     "plural": "rasbiologer",
@@ -110374,6 +110382,10 @@
   "raseborgare": {
     "plural": "raseborgare",
     "form": "C/PL"
+  },
+  "raser": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "raseriutbrott": {
     "plural": "raseriutbrott",
@@ -110956,6 +110968,14 @@
     "form": "C"
   },
   "reduktioner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "reduktionspliktens": {
+    "plural": "reduktionsplikternas",
+    "form": "C"
+  },
+  "reduktionsplikternas": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -111660,6 +111680,14 @@
     "form": "C"
   },
   "rekryteringsprocesser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rektangel": {
+    "plural": "rektanglar",
+    "form": "C"
+  },
+  "rektanglar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -139377,10 +139405,10 @@
   },
   "taktik": {
     "plural": "taktiker",
-    "form": "C/PL"
+    "form": "C"
   },
   "taktiker": {
-    "plural": "taktiker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "taktpinnar": {
@@ -140665,10 +140693,10 @@
   },
   "teknik": {
     "plural": "tekniker",
-    "form": "C"
+    "form": "C/PL"
   },
   "tekniker": {
-    "plural": "isPlural",
+    "plural": "tekniker",
     "form": "C/PL"
   },
   "teknikföretag": {
@@ -145259,11 +145287,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "triangel": {
+    "plural": "trianglar",
+    "form": "C"
+  },
   "triangelpunkt": {
     "plural": "triangelpunkter",
     "form": "C"
   },
   "triangelpunkter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "trianglar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -152953,7 +152989,7 @@
   },
   "vadd": {
     "plural": "vaddar",
-    "form": "C"
+    "form": "C/PL"
   },
   "vaddar": {
     "plural": "isPlural",
@@ -153152,8 +153188,8 @@
     "form": "PL"
   },
   "val": {
-    "plural": "valar",
-    "form": "C/N"
+    "plural": "val",
+    "form": "C/N/PL"
   },
   "valack": {
     "plural": "valacker",
@@ -153176,10 +153212,6 @@
     "form": "C"
   },
   "valapparater": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "valar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -157605,7 +157637,7 @@
   },
   "vädd": {
     "plural": "vaddar",
-    "form": "C/PL"
+    "form": "C"
   },
   "väder": {
     "plural": "väder",
