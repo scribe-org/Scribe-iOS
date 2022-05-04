@@ -385,7 +385,7 @@
   },
   "bottega": {
     "plural": "botteghe",
-    "form": "F/PL"
+    "form": "F"
   },
   "botteghe": {
     "plural": "isPlural",
@@ -393,7 +393,7 @@
   },
   "botteghetta": {
     "plural": "botteghe",
-    "form": "F"
+    "form": "F/PL"
   },
   "brucaiola": {
     "plural": "brucaiole",
@@ -2343,6 +2343,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ponte": {
+    "plural": "ponti",
+    "form": "M"
+  },
+  "ponti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "posizione": {
     "plural": "posizioni",
     "form": "F"
@@ -3029,6 +3037,14 @@
   },
   "uovo": {
     "plural": "uova",
+    "form": ""
+  },
+  "urla": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "urlo": {
+    "plural": "urla",
     "form": ""
   },
   "vacca": {

@@ -2495,6 +2495,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Agrarwesen": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Agrarwirtschaft": {
     "plural": "Agrarwirtschaften",
     "form": "F"
@@ -2520,6 +2524,10 @@
     "form": "PL"
   },
   "Agrarökonomie": {
+    "plural": "noPlural",
+    "form": "F"
+  },
+  "Agrikultur": {
     "plural": "noPlural",
     "form": "F"
   },
@@ -16596,10 +16604,10 @@
     "form": "PL"
   },
   "Boot": {
-    "plural": "Boots",
+    "plural": "Boote",
     "form": "M/N"
   },
-  "Boots": {
+  "Boote": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16800,7 +16808,7 @@
     "form": "PL"
   },
   "Brand": {
-    "plural": "Brands",
+    "plural": "Brände",
     "form": "M"
   },
   "Brandanschlag": {
@@ -16831,15 +16839,19 @@
     "plural": "Brandmelder",
     "form": "M/PL"
   },
-  "Brands": {
-    "plural": "isPlural",
-    "form": "PL"
+  "Brandsatz": {
+    "plural": "Brandsätze",
+    "form": "M"
   },
   "Brandschutzgrund": {
     "plural": "Brandschutzgründe",
     "form": "M"
   },
   "Brandschutzgründe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Brandsätze": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17608,6 +17620,10 @@
     "form": "F"
   },
   "Brutzeiten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Brände": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31003,6 +31019,14 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Fallschirm": {
+    "plural": "Fallschirme",
+    "form": "M"
+  },
+  "Fallschirme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Fallstrick": {
     "plural": "Fallstricke",
     "form": "M"
@@ -33500,7 +33524,7 @@
     "form": "PL"
   },
   "Fonds": {
-    "plural": "Fonds",
+    "plural": "isPlural",
     "form": "M/PL"
   },
   "Fonetik": {
@@ -34100,6 +34124,14 @@
     "form": "F"
   },
   "Frauenärztinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Frechdachs": {
+    "plural": "Frechdachse",
+    "form": "M"
+  },
+  "Frechdachse": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -36519,6 +36551,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Geheime Staatspolizei": {
+    "plural": "Geheime Staatspolizeien",
+    "form": "F"
+  },
+  "Geheime Staatspolizeien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Geheimgesellschaft": {
     "plural": "Geheimgesellschaften",
     "form": "F"
@@ -38259,6 +38299,14 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Gestapo": {
+    "plural": "Gestapos",
+    "form": "F"
+  },
+  "Gestapos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Gestein": {
     "plural": "Gesteine",
     "form": "N"
@@ -38292,6 +38340,14 @@
     "form": "N"
   },
   "Gesträuche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gestrüpp": {
+    "plural": "Gestrüppe",
+    "form": "N"
+  },
+  "Gestrüppe": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39052,6 +39108,14 @@
     "form": "F"
   },
   "Glückskatzen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Glückspilz": {
+    "plural": "Glückspilze",
+    "form": "M"
+  },
+  "Glückspilze": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43288,12 +43352,8 @@
     "form": "F"
   },
   "Hexen": {
-    "plural": "Hexene",
-    "form": "N/PL"
-  },
-  "Hexene": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "N/PL"
   },
   "Hexenmeister": {
     "plural": "Hexenmeister",
@@ -43342,6 +43402,10 @@
   "Hickorybäume": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Hieb": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Hierarchie": {
     "plural": "Hierarchien",
@@ -48884,14 +48948,18 @@
     "form": "N"
   },
   "Kameruner": {
-    "plural": "Kameruner",
-    "form": "F/M/PL"
+    "plural": "Kamerunern",
+    "form": "F/M"
   },
   "Kamerunerin": {
     "plural": "Kamerunerinnen",
     "form": "F"
   },
   "Kamerunerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Kamerunern": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49079,6 +49147,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kanister": {
+    "plural": "Kanister",
+    "form": "M/PL"
+  },
   "Kannada": {
     "plural": "noPlural",
     "form": "N"
@@ -49086,6 +49158,14 @@
   "Kanne": {
     "plural": "Kannen",
     "form": "F"
+  },
+  "Kannelierung": {
+    "plural": "Kannelierungen",
+    "form": "F"
+  },
+  "Kannelierungen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kannen": {
     "plural": "isPlural",
@@ -53991,6 +54071,10 @@
     "plural": "Kopfkissen",
     "form": "N/PL"
   },
+  "Kopfnüsse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Kopfschmerz": {
     "plural": "Kopfschmerzen",
     "form": "M"
@@ -56178,6 +56262,10 @@
   "Kängurus": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Kännchen": {
+    "plural": "Kännchen",
+    "form": "N/PL"
   },
   "Kärnten": {
     "plural": "noPlural",
@@ -64208,8 +64296,12 @@
     "form": "N"
   },
   "Mittelfeld": {
-    "plural": "noPlural",
+    "plural": "Mittelfelder",
     "form": "N"
+  },
+  "Mittelfelder": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Mittelfeldspieler": {
     "plural": "Mittelfeldspieler",
@@ -64555,6 +64647,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Modulhandbuch": {
+    "plural": "Modulhandbücher",
+    "form": "N"
+  },
+  "Modulhandbücher": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Modus": {
     "plural": "Modi",
     "form": "M"
@@ -64664,6 +64764,14 @@
     "form": "F"
   },
   "Molltonleitern": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Molotowcocktail": {
+    "plural": "Molotowcocktails",
+    "form": "M"
+  },
+  "Molotowcocktails": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65667,8 +65775,12 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Muttchen": {
+    "plural": "Muttchen",
+    "form": "N/PL"
+  },
   "Mutter": {
-    "plural": "Mütter",
+    "plural": "Muttern",
     "form": "F"
   },
   "Muttergesellschaft": {
@@ -65682,6 +65794,10 @@
   "Mutterglück": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Muttern": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Muttersprache": {
     "plural": "Muttersprachen",
@@ -65862,6 +65978,10 @@
   "Mäuler": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Mäuschen": {
+    "plural": "Mäuschen",
+    "form": "N/PL"
   },
   "Mäuse": {
     "plural": "isPlural",
@@ -66060,8 +66180,8 @@
     "form": "PL"
   },
   "Münster": {
-    "plural": "noPlural",
-    "form": "M/N"
+    "plural": "Münster",
+    "form": "M/N/PL"
   },
   "Münze": {
     "plural": "Münzen",
@@ -66082,10 +66202,6 @@
   "Müsliriegel": {
     "plural": "Müsliriegel",
     "form": "M/PL"
-  },
-  "Mütter": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Mütterchen": {
     "plural": "Mütterchen",
@@ -68479,6 +68595,10 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Nichtsnutz": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Nichtumsetzung": {
     "plural": "Nichtumsetzungen",
     "form": "F"
@@ -69924,7 +70044,7 @@
     "form": "PL"
   },
   "Ofen": {
-    "plural": "noPlural",
+    "plural": "Öfen",
     "form": "M/N"
   },
   "Ofenheizung": {
@@ -73936,12 +74056,8 @@
     "form": "PL"
   },
   "Pilot": {
-    "plural": "Piloten",
+    "plural": "noPlural",
     "form": "M"
-  },
-  "Piloten": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Pilotengewerkschaft": {
     "plural": "Pilotengewerkschaften",
@@ -75272,7 +75388,7 @@
     "form": "M"
   },
   "Preußen": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Preußin": {
@@ -76571,6 +76687,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Pult": {
+    "plural": "Pulte",
+    "form": "N"
+  },
+  "Pulte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Pulver": {
     "plural": "Pulver",
     "form": "N/PL"
@@ -77720,8 +77844,12 @@
     "form": "PL"
   },
   "Raps": {
-    "plural": "isPlural",
+    "plural": "Rapse",
     "form": "M/PL"
+  },
+  "Rapse": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Rapsöl": {
     "plural": "Rapsöle",
@@ -81024,12 +81152,8 @@
     "form": "PL"
   },
   "Rutsche": {
-    "plural": "Rutschen",
-    "form": "F/PL"
-  },
-  "Rutschen": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Räder": {
     "plural": "isPlural",
@@ -82523,6 +82647,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Saum": {
+    "plural": "Säume",
+    "form": "M"
+  },
   "Saunagang": {
     "plural": "Saunagänge",
     "form": "M"
@@ -83723,6 +83851,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Schleim": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Schlesien": {
     "plural": "noPlural",
     "form": "N"
@@ -84024,12 +84156,8 @@
     "form": "M"
   },
   "Schmiede": {
-    "plural": "Schmieden",
-    "form": "F/PL"
-  },
-  "Schmieden": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "Schmiedin": {
     "plural": "Schmiedinnen",
@@ -84324,8 +84452,12 @@
     "form": "PL"
   },
   "Schnitte": {
-    "plural": "isPlural",
+    "plural": "Schnitten",
     "form": "F/PL"
+  },
+  "Schnitten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Schnittlauch": {
     "plural": "noPlural",
@@ -90219,6 +90351,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Staatspolizei": {
+    "plural": "Staatspolizeien",
+    "form": "F"
+  },
+  "Staatspolizeien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Staatspräsident": {
     "plural": "Staatspräsidenten",
     "form": "M"
@@ -92211,7 +92351,27 @@
     "plural": "Streiks",
     "form": "M"
   },
+  "Streikaufruf": {
+    "plural": "Streikaufrufe",
+    "form": "M"
+  },
+  "Streikaufrufe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Streikbrecher": {
+    "plural": "Streikbrecher",
+    "form": "M/PL"
+  },
   "Streiks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Streiktag": {
+    "plural": "Streiktage",
+    "form": "M"
+  },
+  "Streiktage": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -92963,6 +93123,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Subtraktion": {
+    "plural": "Subtraktionen",
+    "form": "F"
+  },
+  "Subtraktionen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Subtraktionsregel": {
     "plural": "Subtraktionsregeln",
     "form": "F"
@@ -93631,6 +93799,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Säume": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Säure": {
     "plural": "Säuren",
     "form": "F"
@@ -94028,12 +94200,8 @@
     "form": "PL"
   },
   "Tag": {
-    "plural": "Tage",
+    "plural": "Tags",
     "form": "M/N"
-  },
-  "Tage": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Tagebau": {
     "plural": "Tagebaue",
@@ -94106,6 +94274,10 @@
   "Tagfalter": {
     "plural": "Tagfalter",
     "form": "M/PL"
+  },
+  "Tags": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tagundnachtgleiche": {
     "plural": "Tagundnachtgleichen",
@@ -94698,6 +94870,10 @@
   "Taufsteine": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Taugenichts": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Tauprozess": {
     "plural": "Tauprozesse",
@@ -112088,6 +112264,10 @@
     "form": "M"
   },
   "Äxte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Öfen": {
     "plural": "isPlural",
     "form": "PL"
   },

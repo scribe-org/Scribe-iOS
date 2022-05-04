@@ -18,6 +18,17 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- The app screen fields have been made larger and the text size has also been increased. -->
 <!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
 
+# Scribe-iOS 1.3.6
+
+### 🗃️ Data Added
+
+- French: 220 nouns, 248 verbs
+- German: 45 nouns, 73 verbs
+- Italian: 4 nouns
+- Portuguese: 218 nouns, 1 verb
+- Spanish: 6650 nouns, 70 verbs
+- Swedish: 512 nouns, 9 verbs
+
 # Scribe-iOS 1.3.5
 
 ### 🗃️ Data Added

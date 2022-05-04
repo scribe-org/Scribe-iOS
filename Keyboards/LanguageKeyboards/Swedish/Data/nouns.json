@@ -15,6 +15,14 @@
     "plural": "A-lag",
     "form": "N/PL"
   },
+  "A-traktor": {
+    "plural": "A-traktorer",
+    "form": "C"
+  },
+  "A-traktorer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "A-vitamin": {
     "plural": "A-vitaminer",
     "form": "N"
@@ -915,6 +923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "adoptionslagstiftning": {
+    "plural": "adoptionslagstiftningar",
+    "form": "C"
+  },
+  "adoptionslagstiftningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "adoptionsutredning": {
     "plural": "adoptionsutredningar",
     "form": "C"
@@ -980,6 +996,14 @@
     "form": "C"
   },
   "adresslappar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "adressuppgift": {
+    "plural": "adressuppgifter",
+    "form": "C"
+  },
+  "adressuppgifter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1238,6 +1262,14 @@
   "affärsman": {
     "plural": "affärsmän",
     "form": "C"
+  },
+  "affärsmetod": {
+    "plural": "affärsmetoder",
+    "form": "C"
+  },
+  "affärsmetoder": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "affärsmän": {
     "plural": "isPlural",
@@ -1671,6 +1703,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aktieköp": {
+    "plural": "aktieköp",
+    "form": "N/PL"
+  },
   "aktielägenhet": {
     "plural": "aktielägenheter",
     "form": "C"
@@ -1755,6 +1791,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aktivering": {
+    "plural": "aktiveringar",
+    "form": "C"
+  },
+  "aktiveringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aktivist": {
     "plural": "aktivister",
     "form": "C"
@@ -1768,6 +1812,18 @@
     "form": "C"
   },
   "aktiviteter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "aktivitetsansvar": {
+    "plural": "aktivitetsansvar",
+    "form": "N/PL"
+  },
+  "aktivitetsbegränsning": {
+    "plural": "aktivitetsbegränsningar",
+    "form": "C"
+  },
+  "aktivitetsbegränsningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1845,10 +1901,10 @@
   },
   "akustik": {
     "plural": "akustiker",
-    "form": "C/PL"
+    "form": "C"
   },
   "akustiker": {
-    "plural": "akustiker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "akut": {
@@ -2163,6 +2219,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alkobom": {
+    "plural": "alkobommar",
+    "form": "C"
+  },
+  "alkobommar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "alkohol": {
     "plural": "alkoholer",
     "form": "C"
@@ -2188,6 +2252,14 @@
     "form": "C"
   },
   "alkoholförgiftningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alkoholförsäljning": {
+    "plural": "alkoholförsäljningar",
+    "form": "C"
+  },
+  "alkoholförsäljningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2235,6 +2307,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "alkohollag": {
+    "plural": "alkohollagar",
+    "form": "C"
+  },
+  "alkohollagar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alkohollagstiftning": {
+    "plural": "alkohollagstiftningar",
+    "form": "C"
+  },
+  "alkohollagstiftningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "alkoholmissbrukare": {
     "plural": "alkoholmissbrukare",
     "form": "C/PL"
@@ -2249,6 +2337,26 @@
   },
   "alkoholproblem": {
     "plural": "alkoholproblem",
+    "form": "N/PL"
+  },
+  "alkoholservering": {
+    "plural": "alkoholserveringar",
+    "form": "C"
+  },
+  "alkoholserveringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alkoholskatt": {
+    "plural": "alkoholskatter",
+    "form": "C"
+  },
+  "alkoholskatter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "alkoholtillstånd": {
+    "plural": "alkoholtillstånd",
     "form": "N/PL"
   },
   "alkoläsk": {
@@ -2404,6 +2512,14 @@
     "form": "C"
   },
   "allmänningsskogar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "allmännytta": {
+    "plural": "allmännyttor",
+    "form": "C"
+  },
+  "allmännyttor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2819,6 +2935,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ambulansflyg": {
+    "plural": "ambulansflyg",
+    "form": "N/PL"
+  },
+  "ambulansflygtransport": {
+    "plural": "ambulansflygtransporter",
+    "form": "C"
+  },
+  "ambulansflygtransporter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ambulansförare": {
     "plural": "ambulansförare",
     "form": "C/PL"
@@ -2843,6 +2971,14 @@
     "plural": "ambulanssjukvårdare",
     "form": "C/PL"
   },
+  "ambulanstransport": {
+    "plural": "ambulanstransporter",
+    "form": "C"
+  },
+  "ambulanstransporter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "amerikan": {
     "plural": "amerikaner",
     "form": "C"
@@ -2852,6 +2988,14 @@
     "form": "C/PL"
   },
   "amerikaner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amfibieregemente": {
+    "plural": "amfibieregementen",
+    "form": "N"
+  },
+  "amfibieregementen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2891,6 +3035,18 @@
     "plural": "amorbågar",
     "form": "C"
   },
+  "amortering": {
+    "plural": "amorteringar",
+    "form": "C"
+  },
+  "amorteringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amorteringskrav": {
+    "plural": "amorteringskrav",
+    "form": "N/PL"
+  },
   "amplitud": {
     "plural": "amplituder",
     "form": "C"
@@ -2920,6 +3076,14 @@
     "form": "C"
   },
   "analfabeter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "analfabetism": {
+    "plural": "analfabetismer",
+    "form": "C"
+  },
+  "analfabetismer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2960,6 +3124,14 @@
     "form": "C"
   },
   "analysgrupper": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "analystid": {
+    "plural": "analystider",
+    "form": "C"
+  },
+  "analystider": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3111,6 +3283,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "andelstal": {
+    "plural": "andelstal",
+    "form": "N/PL"
+  },
   "andemening": {
     "plural": "andemeningar",
     "form": "C"
@@ -3148,6 +3324,14 @@
     "form": "C"
   },
   "andningsdepressioner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "andningsmask": {
+    "plural": "andningsmasker",
+    "form": "C"
+  },
+  "andningsmasker": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3243,6 +3427,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "andrahandsröstning": {
+    "plural": "andrahandsröstningar",
+    "form": "C"
+  },
+  "andrahandsröstningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "andrahandsuthyrning": {
     "plural": "andrahandsuthyrningar",
     "form": "C"
@@ -3318,6 +3510,10 @@
   "androloger": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "andrum": {
+    "plural": "andrum",
+    "form": "N/PL"
   },
   "anekdot": {
     "plural": "anekdoter",
@@ -3494,6 +3690,10 @@
   "anhängare": {
     "plural": "anhängare",
     "form": "C/PL"
+  },
+  "anhörigstöd": {
+    "plural": "anhörigstöd",
+    "form": "N/PL"
   },
   "anilinfärg": {
     "plural": "anilinfärger",
@@ -3689,7 +3889,7 @@
   },
   "anmälan": {
     "plural": "anmälningar",
-    "form": "C/PL"
+    "form": "C"
   },
   "anmälare": {
     "plural": "anmälare",
@@ -3697,7 +3897,7 @@
   },
   "anmälning": {
     "plural": "anmälningar",
-    "form": "C"
+    "form": "C/PL"
   },
   "anmälningar": {
     "plural": "isPlural",
@@ -3719,6 +3919,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "anmälningsplikt": {
+    "plural": "anmälningsplikter",
+    "form": "C"
+  },
+  "anmälningsplikter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anmärkning": {
     "plural": "anmärkningar",
     "form": "C"
@@ -3736,6 +3944,14 @@
     "form": "C"
   },
   "annandagar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "annektering": {
+    "plural": "annekteringar",
+    "form": "C"
+  },
+  "annekteringar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3819,6 +4035,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "anonymisering": {
+    "plural": "anonymiseringar",
+    "form": "C"
+  },
+  "anonymiseringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anordnarbidrag": {
     "plural": "anordnarbidrag",
     "form": "N/PL"
@@ -3868,6 +4092,14 @@
     "form": "C"
   },
   "anpassningsgrupper": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anrikningsgrad": {
+    "plural": "anrikningsgrader",
+    "form": "C"
+  },
+  "anrikningsgrader": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3991,6 +4223,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "anskaffning": {
+    "plural": "anskaffningar",
+    "form": "C"
+  },
+  "anskaffningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "anslag": {
     "plural": "anslag",
     "form": "N/PL"
@@ -4068,6 +4308,14 @@
     "form": "C"
   },
   "anstaltsplaceringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "anstaltsplats": {
+    "plural": "anstaltsplatser",
+    "form": "C"
+  },
+  "anstaltsplatser": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -4154,6 +4402,14 @@
   "anställningsvillkor": {
     "plural": "anställningsvillkor",
     "form": "N/PL"
+  },
+  "anståndstid": {
+    "plural": "anståndstider",
+    "form": "C"
+  },
+  "anståndstider": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "ansvar": {
     "plural": "ansvar",
@@ -4295,6 +4551,30 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "antibiotikaresistens": {
+    "plural": "antibiotikaresistenser",
+    "form": "C"
+  },
+  "antibiotikaresistenser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "antidopningsarbete": {
+    "plural": "antidopningsarbeten",
+    "form": "N"
+  },
+  "antidopningsarbeten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "antidopningsenhet": {
+    "plural": "antidopningsenheter",
+    "form": "C"
+  },
+  "antidopningsenheter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "antidotbehandling": {
     "plural": "antidotbehandlingar",
     "form": "C"
@@ -4374,6 +4654,10 @@
   "antikroppar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "antikroppstest": {
+    "plural": "antikroppstest",
+    "form": "N/PL"
   },
   "antikvariat": {
     "plural": "antikvariat",
@@ -4571,6 +4855,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "apanage": {
+    "plural": "apanage",
+    "form": "N/PL"
+  },
   "apelsin": {
     "plural": "apelsiner",
     "form": "C"
@@ -4688,6 +4976,14 @@
     "form": "C"
   },
   "apotekskedjor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "apoteksmarknad": {
+    "plural": "apoteksmarknader",
+    "form": "C"
+  },
+  "apoteksmarknader": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5003,6 +5299,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "arbetsförhållande": {
+    "plural": "arbetsförhållanden",
+    "form": "N"
+  },
+  "arbetsförhållanden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "arbetsförmedlare": {
     "plural": "arbetsförmedlare",
     "form": "C/PL"
@@ -5022,6 +5326,10 @@
   "arbetsförmågor": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "arbetsgivaransvar": {
+    "plural": "arbetsgivaransvar",
+    "form": "N/PL"
   },
   "arbetsgivaravgift": {
     "plural": "arbetsgivaravgifter",
@@ -5108,6 +5416,14 @@
     "form": "C"
   },
   "arbetskonflikter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arbetskostnad": {
+    "plural": "arbetskostnader",
+    "form": "C"
+  },
+  "arbetskostnader": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5287,6 +5603,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "arbetsmarknadsregion": {
+    "plural": "arbetsmarknadsregioner",
+    "form": "C"
+  },
+  "arbetsmarknadsregioner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "arbetsmarknadsutbildning": {
     "plural": "arbetsmarknadsutbildningar",
     "form": "C"
@@ -5314,6 +5638,22 @@
   "arbetsmiljö": {
     "plural": "arbetsmiljöer",
     "form": "C"
+  },
+  "arbetsmiljöansvar": {
+    "plural": "arbetsmiljöansvar",
+    "form": "N/PL"
+  },
+  "arbetsmiljöarbete": {
+    "plural": "arbetsmiljöarbeten",
+    "form": "N"
+  },
+  "arbetsmiljöarbeten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arbetsmiljöbrott": {
+    "plural": "arbetsmiljöbrott",
+    "form": "N/PL"
   },
   "arbetsmiljöer": {
     "plural": "isPlural",
@@ -5348,6 +5688,34 @@
     "form": "C"
   },
   "arbetsmiljöinspektörer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arbetsmiljökunskap": {
+    "plural": "arbetsmiljökunskaper",
+    "form": "C"
+  },
+  "arbetsmiljökunskaper": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arbetsmiljölag": {
+    "plural": "arbetsmiljölagar",
+    "form": "C"
+  },
+  "arbetsmiljölagar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arbetsmiljölyft": {
+    "plural": "arbetsmiljölyft",
+    "form": "N/PL"
+  },
+  "arbetsmiljöstrategi": {
+    "plural": "arbetsmiljöstrategier",
+    "form": "C"
+  },
+  "arbetsmiljöstrategier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5833,7 +6201,7 @@
   },
   "arm": {
     "plural": "armar",
-    "form": "C/PL"
+    "form": "C"
   },
   "armar": {
     "plural": "isPlural",
@@ -7335,6 +7703,14 @@
     "plural": "avgiftsförvaltare",
     "form": "C/PL"
   },
+  "avgiftsstruktur": {
+    "plural": "avgiftsstrukturer",
+    "form": "C"
+  },
+  "avgiftsstrukturer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "avgiftssystem": {
     "plural": "avgiftssystem",
     "form": "N/PL"
@@ -7423,6 +7799,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "avgörande": {
+    "plural": "avgöranden",
+    "form": "N"
+  },
+  "avgöranden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "avhandling": {
     "plural": "avhandlingar",
     "form": "C"
@@ -7442,6 +7826,10 @@
   "avhoppare": {
     "plural": "avhoppare",
     "form": "C/PL"
+  },
+  "avhopparprogram": {
+    "plural": "avhopparprogram",
+    "form": "N/PL"
   },
   "avi": {
     "plural": "avier",
@@ -7543,8 +7931,24 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "avloppslösning": {
+    "plural": "avloppslösningar",
+    "form": "C"
+  },
+  "avloppslösningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "avloppsnät": {
     "plural": "avloppsnät",
+    "form": "N/PL"
+  },
+  "avloppsreningsverk": {
+    "plural": "avloppsreningsverk",
+    "form": "N/PL"
+  },
+  "avloppsvatten": {
+    "plural": "avloppsvatten",
     "form": "N/PL"
   },
   "avlyssning": {
@@ -8272,6 +8676,14 @@
     "form": "C"
   },
   "baddräkter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "badgäst": {
+    "plural": "badgäster",
+    "form": "C"
+  },
+  "badgäster": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -9046,6 +9458,14 @@
   "banarbetare": {
     "plural": "banarbetare",
     "form": "C/PL"
+  },
+  "banavgift": {
+    "plural": "banavgifter",
+    "form": "C"
+  },
+  "banavgifter": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "banbrytare": {
     "plural": "banbrytare",
@@ -10057,7 +10477,7 @@
   },
   "barstol": {
     "plural": "barstolar",
-    "form": "C/PL"
+    "form": "C"
   },
   "barstolar": {
     "plural": "isPlural",
@@ -11471,6 +11891,34 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "beredskapsarbete": {
+    "plural": "beredskapsarbeten",
+    "form": "N"
+  },
+  "beredskapsarbeten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "beredskapsflygplats": {
+    "plural": "beredskapsflygplatser",
+    "form": "C"
+  },
+  "beredskapsflygplatser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "beredskapsförmåga": {
+    "plural": "beredskapsförmågor",
+    "form": "C"
+  },
+  "beredskapsförmågor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "beredskapslager": {
+    "plural": "beredskapslager",
+    "form": "N/PL"
+  },
   "beredskapsläge": {
     "plural": "beredskapslägen",
     "form": "N"
@@ -12135,6 +12583,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "beställare": {
+    "plural": "beställare",
+    "form": "C/PL"
+  },
   "beställning": {
     "plural": "beställningar",
     "form": "C"
@@ -12258,6 +12710,14 @@
   "besöksförbud": {
     "plural": "besöksförbud",
     "form": "N/PL"
+  },
+  "besöksnäring": {
+    "plural": "besöksnäringar",
+    "form": "C"
+  },
+  "besöksnäringar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "beta": {
     "plural": "betor",
@@ -12935,6 +13395,10 @@
     "plural": "bidrag",
     "form": "N/PL"
   },
+  "bidragsfusk": {
+    "plural": "bidragsfusk",
+    "form": "N/PL"
+  },
   "bidragsfuskare": {
     "plural": "bidragsfuskare",
     "form": "C/PL"
@@ -13551,6 +14015,14 @@
     "plural": "biljettförsäljare",
     "form": "C/PL"
   },
+  "biljettförsäljning": {
+    "plural": "biljettförsäljningar",
+    "form": "C"
+  },
+  "biljettförsäljningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "biljettinkomst": {
     "plural": "biljettinkomster",
     "form": "C"
@@ -14071,6 +14543,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "biogödsel": {
+    "plural": "biogödsel",
+    "form": "N/PL"
+  },
   "biokemist": {
     "plural": "biokemister",
     "form": "C"
@@ -14326,6 +14802,10 @@
   "biståndsinsatser": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "biståndsmedel": {
+    "plural": "biståndsmedel",
+    "form": "N/PL"
   },
   "biståndsminister": {
     "plural": "biståndsministrar",
@@ -15012,6 +15492,14 @@
     "form": "C"
   },
   "blodkorvar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "blodkropp": {
+    "plural": "blodkroppar",
+    "form": "C"
+  },
+  "blodkroppar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15802,6 +16290,14 @@
   "bodelningar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "bodelningsbeslut": {
+    "plural": "bodelningsbeslut",
+    "form": "N/PL"
+  },
+  "bodelningsförrättare": {
+    "plural": "bodelningsförrättare",
+    "form": "C/PL"
   },
   "boende": {
     "plural": "boenden",
@@ -17103,6 +17599,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bostadsbyggande": {
+    "plural": "bostadsbygganden",
+    "form": "N"
+  },
+  "bostadsbygganden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "bostadsbyggnad": {
     "plural": "bostadsbyggnader",
     "form": "C"
@@ -17136,6 +17640,14 @@
     "form": "C"
   },
   "bostadsförmedlingar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bostadsförsörjning": {
+    "plural": "bostadsförsörjningar",
+    "form": "C"
+  },
+  "bostadsförsörjningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17800,6 +18312,14 @@
     "form": "PL"
   },
   "brasor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "brassestol": {
+    "plural": "brassestolar",
+    "form": "C"
+  },
+  "brassestolar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -20311,6 +20831,14 @@
     "plural": "byggare",
     "form": "C/PL"
   },
+  "byggbransch": {
+    "plural": "byggbranscher",
+    "form": "C"
+  },
+  "byggbranscher": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "byggchef": {
     "plural": "byggchefer",
     "form": "C"
@@ -21025,7 +21553,7 @@
   },
   "bärstol": {
     "plural": "barstolar",
-    "form": "C"
+    "form": "C/PL"
   },
   "bärsärk": {
     "plural": "bärsärkar",
@@ -21342,6 +21870,10 @@
   "bönestunder": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "böneutrop": {
+    "plural": "böneutrop",
+    "form": "N/PL"
   },
   "bönhörelse": {
     "plural": "bönhörelser",
@@ -23043,8 +23575,32 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "coronakris": {
+    "plural": "coronakriser",
+    "form": "C"
+  },
+  "coronakriser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coronapandemi": {
+    "plural": "coronapandemier",
+    "form": "C"
+  },
+  "coronapandemier": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "coronastöd": {
+    "plural": "coronastöd",
+    "form": "N/PL"
+  },
   "coronavirus": {
     "plural": "coronavirus",
+    "form": "N/PL"
+  },
+  "covidtest": {
+    "plural": "covidtest",
     "form": "N/PL"
   },
   "croissant": {
@@ -23583,6 +24139,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "dagpendlare": {
+    "plural": "dagpendlare",
+    "form": "C/PL"
+  },
   "dagrar": {
     "plural": "isPlural",
     "form": "PL"
@@ -24051,6 +24611,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "danstillstånd": {
+    "plural": "danstillstånd",
+    "form": "N/PL"
+  },
   "danstävling": {
     "plural": "danstävlingar",
     "form": "C"
@@ -24170,6 +24734,14 @@
   "datagrafiker": {
     "plural": "datagrafiker",
     "form": "C/PL"
+  },
+  "datahall": {
+    "plural": "datahallar",
+    "form": "C"
+  },
+  "datahallar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "dataingenjör": {
     "plural": "dataingenjörer",
@@ -24915,6 +25487,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "delredovisning": {
+    "plural": "delredovisningar",
+    "form": "C"
+  },
+  "delredovisningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "delstat": {
     "plural": "delstater",
     "form": "C"
@@ -24967,6 +25547,14 @@
     "plural": "deltagare",
     "form": "C/PL"
   },
+  "deltavariant": {
+    "plural": "deltavarianter",
+    "form": "C"
+  },
+  "deltavarianter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "deltavingar": {
     "plural": "isPlural",
     "form": "PL"
@@ -24992,6 +25580,14 @@
     "form": "C"
   },
   "deltidsanställningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "deltidsbrandman": {
+    "plural": "deltidsbrandmän",
+    "form": "C"
+  },
+  "deltidsbrandmän": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -26131,6 +26727,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "diskrimineringslagstiftning": {
+    "plural": "diskrimineringslagstiftningar",
+    "form": "C"
+  },
+  "diskrimineringslagstiftningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "diskställ": {
     "plural": "diskställ",
     "form": "N/PL"
@@ -26540,6 +27144,14 @@
     "form": "C"
   },
   "djurparker": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "djurplågeri": {
+    "plural": "djurplågerier",
+    "form": "N"
+  },
+  "djurplågerier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27123,6 +27735,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "donationsregister": {
+    "plural": "donationsregister",
+    "form": "N/PL"
+  },
   "donationsverksamhet": {
     "plural": "donationsverksamheter",
     "form": "C"
@@ -27645,6 +28261,10 @@
   },
   "drivmedel": {
     "plural": "drivmedel",
+    "form": "N/PL"
+  },
+  "drivmedelspris": {
+    "plural": "drivmedelspris",
     "form": "N/PL"
   },
   "drivmedelsskatt": {
@@ -29831,6 +30451,22 @@
     "plural": "elektricitetsverk",
     "form": "N/PL"
   },
+  "elektrifiering": {
+    "plural": "elektrifieringar",
+    "form": "C"
+  },
+  "elektrifieringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "elektrifieringsstrategi": {
+    "plural": "elektrifieringsstrategier",
+    "form": "C"
+  },
+  "elektrifieringsstrategier": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "elektriker": {
     "plural": "elektriker",
     "form": "C/PL"
@@ -29966,6 +30602,14 @@
   "elfordon": {
     "plural": "elfordon",
     "form": "N/PL"
+  },
+  "elförsörjning": {
+    "plural": "elförsörjningar",
+    "form": "C"
+  },
+  "elförsörjningar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "elgitarr": {
     "plural": "elgitarrer",
@@ -30139,6 +30783,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "elräkning": {
+    "plural": "elräkningar",
+    "form": "C"
+  },
+  "elräkningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "elsparkcykel": {
     "plural": "elsparkcyklar",
     "form": "C"
@@ -30162,6 +30814,10 @@
   "elströmmar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "elsystem": {
+    "plural": "elsystem",
+    "form": "N/PL"
   },
   "eltandborstar": {
     "plural": "isPlural",
@@ -30351,6 +31007,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "energiförsörjning": {
+    "plural": "energiförsörjningar",
+    "form": "C"
+  },
+  "energiförsörjningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "energikälla": {
     "plural": "energikällor",
     "form": "C"
@@ -30428,6 +31092,14 @@
     "form": "C"
   },
   "engelsmän": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "engångsartikel": {
+    "plural": "engångsartiklar",
+    "form": "C"
+  },
+  "engångsartiklar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -30934,6 +31606,14 @@
   "epitafium": {
     "plural": "epitafier",
     "form": "N"
+  },
+  "epitelcell": {
+    "plural": "epitelceller",
+    "form": "C"
+  },
+  "epitelceller": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "epitet": {
     "plural": "epitet",
@@ -31603,6 +32283,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "exekution": {
+    "plural": "exekutioner",
+    "form": "C"
+  },
+  "exekutioner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "exekutör": {
     "plural": "exekutörer",
     "form": "C"
@@ -31747,6 +32435,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "exploatering": {
+    "plural": "exploateringar",
+    "form": "C"
+  },
+  "exploateringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "explosion": {
     "plural": "explosioner",
     "form": "C"
@@ -31794,6 +32490,14 @@
   "exportföretag": {
     "plural": "exportföretag",
     "form": "N/PL"
+  },
+  "exportkontroll": {
+    "plural": "exportkontroller",
+    "form": "C"
+  },
+  "exportkontroller": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "exportmarknad": {
     "plural": "exportmarknader",
@@ -32671,6 +33375,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "farsa": {
+    "plural": "farsor",
+    "form": "C"
+  },
   "farsgubbar": {
     "plural": "isPlural",
     "form": "PL"
@@ -32678,6 +33386,10 @@
   "farsgubbe": {
     "plural": "farsgubbar",
     "form": "C"
+  },
+  "farsor": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "farsot": {
     "plural": "farsoter",
@@ -32718,6 +33430,14 @@
   "farthållare": {
     "plural": "farthållare",
     "form": "C/PL"
+  },
+  "fartområde": {
+    "plural": "fartområden",
+    "form": "N"
+  },
+  "fartområden": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "fartrand": {
     "plural": "fartränder",
@@ -32856,6 +33576,14 @@
     "form": "C"
   },
   "fastighetsbeteckningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "fastighetsbildning": {
+    "plural": "fastighetsbildningar",
+    "form": "C"
+  },
+  "fastighetsbildningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33132,8 +33860,12 @@
     "form": "PL"
   },
   "fax": {
-    "plural": "fax",
-    "form": "C/N/PL"
+    "plural": "faxar",
+    "form": "C/N"
+  },
+  "faxar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "feber": {
     "plural": "febrar",
@@ -34359,6 +35091,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "finansförvaltning": {
+    "plural": "finansförvaltningar",
+    "form": "C"
+  },
+  "finansförvaltningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "finansiering": {
     "plural": "finansieringar",
     "form": "C"
@@ -35414,6 +36154,14 @@
   "fjärrtåg": {
     "plural": "fjärrtåg",
     "form": "N/PL"
+  },
+  "fjärrundervisning": {
+    "plural": "fjärrundervisningar",
+    "form": "C"
+  },
+  "fjärrundervisningar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "fjärsing": {
     "plural": "fjärsingar",
@@ -37263,6 +38011,14 @@
     "plural": "fordon",
     "form": "N/PL"
   },
+  "fordonsbränsle": {
+    "plural": "fordonsbränslen",
+    "form": "N"
+  },
+  "fordonsbränslen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "fordonslackerare": {
     "plural": "fordonslackerare",
     "form": "C/PL"
@@ -37270,6 +38026,18 @@
   "fordonsmekaniker": {
     "plural": "fordonsmekaniker",
     "form": "C/PL"
+  },
+  "fordonsregister": {
+    "plural": "fordonsregister",
+    "form": "N/PL"
+  },
+  "fordonsskatt": {
+    "plural": "fordonsskatter",
+    "form": "C"
+  },
+  "fordonsskatter": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "fordonstekniker": {
     "plural": "fordonstekniker",
@@ -41439,6 +42207,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "förarbete": {
+    "plural": "förarbeten",
+    "form": "N"
+  },
+  "förarbeten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "förarbevis": {
+    "plural": "förarbevis",
+    "form": "N/PL"
+  },
   "förare": {
     "plural": "förare",
     "form": "C/PL"
@@ -41959,6 +42739,14 @@
     "plural": "företag",
     "form": "N/PL"
   },
+  "företagande": {
+    "plural": "företaganden",
+    "form": "N"
+  },
+  "företaganden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "företagare": {
     "plural": "företagare",
     "form": "C/PL"
@@ -42050,6 +42838,10 @@
   "företagssköterskor": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "företagsstöd": {
+    "plural": "företagsstöd",
+    "form": "N/PL"
   },
   "företagssäljare": {
     "plural": "företagssäljare",
@@ -42639,6 +43431,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "förlossningsskada": {
+    "plural": "förlossningsskador",
+    "form": "C"
+  },
+  "förlossningsskador": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "förlossningssmärta": {
     "plural": "förlossningssmärtor",
     "form": "C"
@@ -42820,6 +43620,14 @@
     "form": "C"
   },
   "förmåner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "förmånsbeskattning": {
+    "plural": "förmånsbeskattningar",
+    "form": "C"
+  },
+  "förmånsbeskattningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -43030,6 +43838,10 @@
   "förreglingar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "förrädare": {
+    "plural": "förrädare",
+    "form": "C/PL"
   },
   "förrätt": {
     "plural": "förrätter",
@@ -43459,6 +44271,10 @@
     "plural": "förstahandskontrakt",
     "form": "N/PL"
   },
+  "förstahandsval": {
+    "plural": "förstahandsval",
+    "form": "N/PL"
+  },
   "förstaplats": {
     "plural": "förstaplatser",
     "form": "C"
@@ -43644,6 +44460,14 @@
     "form": "C"
   },
   "försvarsbudgetar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "försvarsförmåga": {
+    "plural": "försvarsförmågor",
+    "form": "C"
+  },
+  "försvarsförmågor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -44167,6 +44991,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "förvar": {
+    "plural": "förvar",
+    "form": "N/PL"
+  },
   "förvaring": {
     "plural": "förvaringar",
     "form": "C"
@@ -44303,6 +45131,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "föräldraförsäkring": {
+    "plural": "föräldraförsäkringar",
+    "form": "C"
+  },
+  "föräldraförsäkringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "föräldrahem": {
     "plural": "föräldrahem",
     "form": "N/PL"
@@ -44328,6 +45164,14 @@
     "form": "N"
   },
   "föräldramöten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "föräldrapenning": {
+    "plural": "föräldrapenningar",
+    "form": "C"
+  },
+  "föräldrapenningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -45415,6 +46259,14 @@
     "plural": "generalsekreterare",
     "form": "C/PL"
   },
+  "generalstab": {
+    "plural": "generalstaber",
+    "form": "C"
+  },
+  "generalstaber": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "generalstrejk": {
     "plural": "generalstrejker",
     "form": "C"
@@ -46115,6 +46967,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "giltighet": {
+    "plural": "giltigheter",
+    "form": "C"
+  },
+  "giltigheter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "giltighetstid": {
     "plural": "giltighetstider",
     "form": "C"
@@ -46548,6 +47408,22 @@
     "form": "C"
   },
   "glavar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "glesbygd": {
+    "plural": "glesbygder",
+    "form": "C"
+  },
+  "glesbygder": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "glesbygdsaspekt": {
+    "plural": "glesbygdsaspekter",
+    "form": "C"
+  },
+  "glesbygdsaspekter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48079,6 +48955,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "grundidé": {
+    "plural": "grundidéer",
+    "form": "C"
+  },
+  "grundidéer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "grundkrav": {
     "plural": "grundkrav",
     "form": "N/PL"
@@ -48499,11 +49383,31 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gruvhål": {
+    "plural": "gruvhål",
+    "form": "N/PL"
+  },
   "gruvingenjör": {
     "plural": "gruvingenjörer",
     "form": "C"
   },
   "gruvingenjörer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gruvnation": {
+    "plural": "gruvnationer",
+    "form": "C"
+  },
+  "gruvnationer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gruvnäring": {
+    "plural": "gruvnäringar",
+    "form": "C"
+  },
+  "gruvnäringar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -48695,6 +49599,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gränsbygd": {
+    "plural": "gränsbygder",
+    "form": "C"
+  },
+  "gränsbygder": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gränsdragning": {
     "plural": "gränsdragningar",
     "form": "C"
@@ -48739,6 +49651,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gränspendlare": {
+    "plural": "gränspendlare",
+    "form": "C/PL"
+  },
   "gränspolis": {
     "plural": "gränspoliser",
     "form": "C"
@@ -48754,6 +49670,14 @@
   "gränspåle": {
     "plural": "gränspålar",
     "form": "C"
+  },
+  "gränsrestriktion": {
+    "plural": "gränsrestriktioner",
+    "form": "C"
+  },
+  "gränsrestriktioner": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "gränsskikt": {
     "plural": "gränsskikt",
@@ -50707,6 +51631,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "habitat": {
+    "plural": "habitat",
+    "form": "N/PL"
+  },
   "hacka": {
     "plural": "hackor",
     "form": "C"
@@ -51514,6 +52442,10 @@
   "handelsgymnasieexamina": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "handelshinder": {
+    "plural": "handelshinder",
+    "form": "N/PL"
   },
   "handelshögskola": {
     "plural": "handelshögskolor",
@@ -55447,6 +56379,10 @@
     "plural": "huvudmän",
     "form": "C"
   },
+  "huvudmannaskap": {
+    "plural": "huvudmannaskap",
+    "form": "N/PL"
+  },
   "huvudmoment": {
     "plural": "huvudmoment",
     "form": "N/PL"
@@ -55577,6 +56513,10 @@
   },
   "huvudskepp": {
     "plural": "huvudskepp",
+    "form": "N/PL"
+  },
+  "huvudskyddsombud": {
+    "plural": "huvudskyddsombud",
     "form": "N/PL"
   },
   "huvudskål": {
@@ -56016,6 +56956,14 @@
     "form": "C"
   },
   "hyresskulder": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hyressättning": {
+    "plural": "hyressättningar",
+    "form": "C"
+  },
+  "hyressättningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -56475,6 +57423,10 @@
     "plural": "hälsosamtal",
     "form": "N/PL"
   },
+  "hälsotillstånd": {
+    "plural": "hälsotillstånd",
+    "form": "N/PL"
+  },
   "hälsotrend": {
     "plural": "hälsotrender",
     "form": "C"
@@ -56820,6 +57772,14 @@
     "form": "C"
   },
   "hästlängder": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "hästnäring": {
+    "plural": "hästnäringar",
+    "form": "C"
+  },
+  "hästnäringar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -57227,6 +58187,14 @@
     "plural": "hårrörskärl",
     "form": "N/PL"
   },
+  "hårsalong": {
+    "plural": "hårsalonger",
+    "form": "C"
+  },
+  "hårsalonger": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "hårsida": {
     "plural": "hårsidor",
     "form": "C"
@@ -57362,6 +58330,14 @@
   "högerpolitiker": {
     "plural": "högerpolitiker",
     "form": "C/PL"
+  },
+  "högerpopulist": {
+    "plural": "högerpopulister",
+    "form": "C"
+  },
+  "högerpopulister": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "högerregering": {
     "plural": "högerregeringar",
@@ -57543,6 +58519,10 @@
     "plural": "högskoleprogram",
     "form": "N/PL"
   },
+  "högskoleprov": {
+    "plural": "högskoleprov",
+    "form": "N/PL"
+  },
   "högskolereform": {
     "plural": "högskolereformer",
     "form": "C"
@@ -57604,6 +58584,14 @@
     "form": "C"
   },
   "högstadieskolor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "högsäsong": {
+    "plural": "högsäsonger",
+    "form": "C"
+  },
+  "högsäsonger": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -57813,6 +58801,10 @@
   },
   "hönshus": {
     "plural": "hönshus",
+    "form": "N/PL"
+  },
+  "hönsägg": {
+    "plural": "hönsägg",
     "form": "N/PL"
   },
   "hörbarhet": {
@@ -58775,6 +59767,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "incitament": {
+    "plural": "incitament",
+    "form": "N/PL"
+  },
   "indelning": {
     "plural": "indelningar",
     "form": "C"
@@ -59195,9 +60191,17 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "influens": {
+    "plural": "influenser",
+    "form": "C"
+  },
   "influensa": {
     "plural": "influensor",
     "form": "C"
+  },
+  "influenser": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "influensor": {
     "plural": "isPlural",
@@ -59579,6 +60583,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "injektionsbehandling": {
+    "plural": "injektionsbehandlingar",
+    "form": "C"
+  },
+  "injektionsbehandlingar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "injektionskanyl": {
     "plural": "injektionskanyler",
     "form": "C"
@@ -59872,6 +60884,14 @@
     "form": "C"
   },
   "inlåningsräntor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "inlåsningseffekt": {
+    "plural": "inlåsningseffekter",
+    "form": "C"
+  },
+  "inlåsningseffekter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -60183,6 +61203,14 @@
     "plural": "inreseförbud",
     "form": "N/PL"
   },
+  "inreseregel": {
+    "plural": "inreseregler",
+    "form": "C"
+  },
+  "inreseregler": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "inresetillstånd": {
     "plural": "inresetillstånd",
     "form": "N/PL"
@@ -60327,11 +61355,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "insatspolis": {
+    "plural": "insatspoliser",
+    "form": "C"
+  },
+  "insatspoliser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "insatsstyrka": {
     "plural": "insatsstyrkor",
     "form": "C"
   },
   "insatsstyrkor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "insatsvara": {
+    "plural": "insatsvaror",
+    "form": "C"
+  },
+  "insatsvaror": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -61175,6 +62219,10 @@
     "plural": "inträdesprov",
     "form": "N/PL"
   },
+  "intrång": {
+    "plural": "intrång",
+    "form": "N/PL"
+  },
   "intyg": {
     "plural": "intyg",
     "form": "N/PL"
@@ -61327,6 +62375,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "investeringsavtal": {
+    "plural": "investeringsavtal",
+    "form": "N/PL"
+  },
   "investeringsbank": {
     "plural": "investeringsbanker",
     "form": "C"
@@ -61347,9 +62399,21 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "investeringsobjekt": {
+    "plural": "investeringsobjekt",
+    "form": "N/PL"
+  },
   "investeringsrådgivare": {
     "plural": "investeringsrådgivare",
     "form": "C/PL"
+  },
+  "investeringsutrymme": {
+    "plural": "investeringsutrymmen",
+    "form": "N"
+  },
+  "investeringsutrymmen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "invigning": {
     "plural": "invigningar",
@@ -63635,6 +64699,14 @@
     "plural": "järnvägsnät",
     "form": "N/PL"
   },
+  "järnvägsområde": {
+    "plural": "järnvägsområden",
+    "form": "N"
+  },
+  "järnvägsområden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "järnvägsspår": {
     "plural": "järnvägsspår",
     "form": "N/PL"
@@ -63666,6 +64738,10 @@
   "järnvägstjänstemän": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "järnvägsunderhåll": {
+    "plural": "järnvägsunderhåll",
+    "form": "N/PL"
   },
   "järnvägsvagn": {
     "plural": "järnvägsvagnar",
@@ -64088,6 +65164,14 @@
     "form": "C"
   },
   "kaftaner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kafé": {
+    "plural": "kaféer",
+    "form": "N"
+  },
+  "kaféer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65031,11 +66115,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kansli": {
+    "plural": "kanslier",
+    "form": "N"
+  },
   "kanslichef": {
     "plural": "kanslichefer",
     "form": "C"
   },
   "kanslichefer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kanslier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65148,6 +66240,14 @@
     "form": "C"
   },
   "kapaciteter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kapacitetsbrist": {
+    "plural": "kapacitetsbrister",
+    "form": "C"
+  },
+  "kapacitetsbrister": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -66464,6 +67564,14 @@
     "form": "C"
   },
   "kemiingenjörer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kemikalieskatt": {
+    "plural": "kemikalieskatter",
+    "form": "C"
+  },
+  "kemikalieskatter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -69935,6 +71043,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kompetensförsörjning": {
+    "plural": "kompetensförsörjningar",
+    "form": "C"
+  },
+  "kompetensförsörjningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kompis": {
     "plural": "kompisar",
     "form": "C"
@@ -70424,6 +71540,14 @@
     "form": "C"
   },
   "konkurrensfördelar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "konkurrenskraft": {
+    "plural": "konkurrenskrafter",
+    "form": "C"
+  },
+  "konkurrenskrafter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -70931,6 +72055,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "konsultationsordning": {
+    "plural": "konsultationsordningar",
+    "form": "C"
+  },
+  "konsultationsordningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "konsultbolag": {
     "plural": "konsultbolag",
     "form": "N/PL"
@@ -70959,6 +72091,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "konsumentköplag": {
+    "plural": "konsumentköplagar",
+    "form": "C"
+  },
+  "konsumentköplagar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "konsumentminister": {
     "plural": "konsumentministrar",
     "form": "C"
@@ -70974,6 +72114,10 @@
   "konsumentombudsmän": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "konsumentskydd": {
+    "plural": "konsumentskydd",
+    "form": "N/PL"
   },
   "konsumentvägledare": {
     "plural": "konsumentvägledare",
@@ -71002,6 +72146,10 @@
   "kontakter": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "kontaktformulär": {
+    "plural": "kontaktformulär",
+    "form": "N/PL"
   },
   "kontaktledningstekniker": {
     "plural": "kontaktledningstekniker",
@@ -71100,6 +72248,14 @@
     "form": "C"
   },
   "kontantbetalningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kontanthantering": {
+    "plural": "kontanthanteringar",
+    "form": "C"
+  },
+  "kontanthanteringar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -71327,6 +72483,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kontrollbesök": {
+    "plural": "kontrollbesök",
+    "form": "N/PL"
+  },
   "kontrollbord": {
     "plural": "kontrollbord",
     "form": "N/PL"
@@ -71380,6 +72540,14 @@
     "form": "C"
   },
   "kontrollsiffror": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "kontrollstation": {
+    "plural": "kontrollstationer",
+    "form": "C"
+  },
+  "kontrollstationer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -71553,6 +72721,10 @@
   },
   "kopparmynt": {
     "plural": "kopparmynt",
+    "form": "N/PL"
+  },
+  "kopparnät": {
+    "plural": "kopparnät",
     "form": "N/PL"
   },
   "kopparorm": {
@@ -72219,6 +73391,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kostnadsökning": {
+    "plural": "kostnadsökningar",
+    "form": "C"
+  },
+  "kostnadsökningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kostråd": {
     "plural": "kostråd",
     "form": "N/PL"
@@ -72378,6 +73558,10 @@
   "kraftmätningar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "kraftnät": {
+    "plural": "kraftnät",
+    "form": "N/PL"
   },
   "kraftsamling": {
     "plural": "kraftsamlingar",
@@ -72847,6 +74031,10 @@
     "plural": "krigsmän",
     "form": "C"
   },
+  "krigsmateriel": {
+    "plural": "krigsmateriel",
+    "form": "N/PL"
+  },
   "krigsmiljö": {
     "plural": "krigsmiljöer",
     "form": "C"
@@ -73015,6 +74203,14 @@
     "plural": "kriser",
     "form": "C"
   },
+  "krisberedskap": {
+    "plural": "krisberedskaper",
+    "form": "C"
+  },
+  "krisberedskaper": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kriser": {
     "plural": "isPlural",
     "form": "PL"
@@ -73041,6 +74237,10 @@
   },
   "krissamtal": {
     "plural": "krissamtal",
+    "form": "N/PL"
+  },
+  "krisstöd": {
+    "plural": "krisstöd",
     "form": "N/PL"
   },
   "kristall": {
@@ -76075,6 +77275,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "kylvara": {
+    "plural": "kylvaror",
+    "form": "C"
+  },
+  "kylvaror": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kynolog": {
     "plural": "kynologer",
     "form": "C"
@@ -77883,6 +79091,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "laddinfrastruktur": {
+    "plural": "laddinfrastrukturer",
+    "form": "C"
+  },
+  "laddinfrastrukturer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "laddning": {
     "plural": "laddningar",
     "form": "C"
@@ -78016,6 +79232,14 @@
     "form": "C"
   },
   "lagfarter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lagföring": {
+    "plural": "lagföringar",
+    "form": "C"
+  },
+  "lagföringar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -79567,6 +80791,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ledtid": {
+    "plural": "ledtider",
+    "form": "C"
+  },
+  "ledtider": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ledtråd": {
     "plural": "ledtrådar",
     "form": "C"
@@ -79960,6 +81192,14 @@
     "form": "C"
   },
   "lerskiffrar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "lertavla": {
+    "plural": "lertavlor",
+    "form": "C"
+  },
+  "lertavlor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -80395,6 +81635,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "likvärdighet": {
+    "plural": "likvärdigheter",
+    "form": "C"
+  },
+  "likvärdigheter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "likör": {
     "plural": "likörer",
     "form": "C"
@@ -80696,6 +81944,14 @@
     "form": "C"
   },
   "linser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "linslus": {
+    "plural": "linslöss",
+    "form": "C"
+  },
+  "linslöss": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -81227,6 +82483,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "livsmedelsfabrik": {
+    "plural": "livsmedelsfabriker",
+    "form": "C"
+  },
+  "livsmedelsfabriker": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "livsmedelsfärg": {
     "plural": "livsmedelsfärger",
     "form": "C"
@@ -81260,6 +82524,14 @@
     "form": "C"
   },
   "livsmedelslagar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "livsmedelsstrategi": {
+    "plural": "livsmedelsstrategier",
+    "form": "C"
+  },
+  "livsmedelsstrategier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -82303,6 +83575,14 @@
     "plural": "luftrenare",
     "form": "C/PL"
   },
+  "luftrening": {
+    "plural": "luftreningar",
+    "form": "C"
+  },
+  "luftreningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "luftrot": {
     "plural": "luftrötter",
     "form": "C"
@@ -83311,6 +84591,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "läkarlegitimation": {
+    "plural": "läkarlegitimationer",
+    "form": "C"
+  },
+  "läkarlegitimationer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "läkarmottagning": {
     "plural": "läkarmottagningar",
     "form": "C"
@@ -83763,9 +85051,17 @@
     "plural": "läror",
     "form": "C"
   },
+  "lärande": {
+    "plural": "läranden",
+    "form": "N"
+  },
   "lärandemål": {
     "plural": "lärandemål",
     "form": "N/PL"
+  },
+  "läranden": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lärarassistent": {
     "plural": "lärarassistenter",
@@ -86520,8 +87816,8 @@
     "form": "PL"
   },
   "mark": {
-    "plural": "mark",
-    "form": "C/PL"
+    "plural": "marker",
+    "form": "C"
   },
   "markatta": {
     "plural": "markattor",
@@ -86539,6 +87835,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "marker": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "markering": {
     "plural": "markeringar",
     "form": "C"
@@ -86550,6 +87850,14 @@
   "markförhandlare": {
     "plural": "markförhandlare",
     "form": "C/PL"
+  },
+  "markis": {
+    "plural": "markiser",
+    "form": "C"
+  },
+  "markiser": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "marklov": {
     "plural": "marklov",
@@ -87155,6 +88463,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "masteruppsats": {
+    "plural": "masteruppsatser",
+    "form": "C"
+  },
+  "masteruppsatser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "masurbjörk": {
     "plural": "masurbjörkar",
     "form": "C"
@@ -87256,6 +88572,14 @@
     "form": "PL"
   },
   "matcher": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "matchning": {
+    "plural": "matchningar",
+    "form": "C"
+  },
+  "matchningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -89435,6 +90759,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "miljöbalk": {
+    "plural": "miljöbalkar",
+    "form": "C"
+  },
+  "miljöbalkar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "miljöbil": {
     "plural": "miljöbilar",
     "form": "C"
@@ -89452,6 +90784,14 @@
     "form": "C"
   },
   "miljödomstolar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "miljöeffekt": {
+    "plural": "miljöeffekter",
+    "form": "C"
+  },
+  "miljöeffekter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -89908,6 +91248,14 @@
     "form": "C"
   },
   "minnesböcker": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "minnesdag": {
+    "plural": "minnesdagar",
+    "form": "C"
+  },
+  "minnesdagar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -90475,6 +91823,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mjältar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mjälte": {
+    "plural": "mjältar",
+    "form": "C"
+  },
   "mjölbaggar": {
     "plural": "isPlural",
     "form": "PL"
@@ -90819,6 +92175,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mobilisering": {
+    "plural": "mobiliseringar",
+    "form": "C"
+  },
+  "mobiliseringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "mobilitetshubb": {
     "plural": "mobilitetshubbar",
     "form": "C"
@@ -90858,6 +92222,14 @@
   "mobiltelefonsamtal": {
     "plural": "mobiltelefonsamtal",
     "form": "N/PL"
+  },
+  "mobiltäckning": {
+    "plural": "mobiltäckningar",
+    "form": "C"
+  },
+  "mobiltäckningar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "mode": {
     "plural": "moden",
@@ -91326,6 +92698,10 @@
   "monoteister": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "monster": {
+    "plural": "monster",
+    "form": "N/PL"
   },
   "monsun": {
     "plural": "monsuner",
@@ -93451,6 +94827,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "människorättsaktivist": {
+    "plural": "människorättsaktivister",
+    "form": "C"
+  },
+  "människorättsaktivister": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "människorättsgrupp": {
     "plural": "människorättsgrupper",
     "form": "C"
@@ -93836,6 +95220,14 @@
     "form": "C"
   },
   "målkameror": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "målkonflikt": {
+    "plural": "målkonflikter",
+    "form": "C"
+  },
+  "målkonflikter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -95784,6 +97176,14 @@
     "form": "C"
   },
   "nedskrivningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nedskräpning": {
+    "plural": "nedskräpningar",
+    "form": "C"
+  },
+  "nedskräpningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -97988,6 +99388,14 @@
     "form": "N"
   },
   "nätfisken": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "näthandel": {
+    "plural": "näthandlar",
+    "form": "C"
+  },
+  "näthandlar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -101963,6 +103371,14 @@
     "plural": "pappskallar",
     "form": "C"
   },
+  "papptallrik": {
+    "plural": "papptallrikar",
+    "form": "C"
+  },
+  "papptallrikar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "paprika": {
     "plural": "paprikor",
     "form": "C"
@@ -103571,6 +104987,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "personalbrist": {
+    "plural": "personalbrister",
+    "form": "C"
+  },
+  "personalbrister": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "personalchef": {
     "plural": "personalchefer",
     "form": "C"
@@ -103594,6 +105018,10 @@
   "personalingångar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "personalliggare": {
+    "plural": "personalliggare",
+    "form": "C/PL"
   },
   "personalläkare": {
     "plural": "personalläkare",
@@ -104819,6 +106247,14 @@
     "plural": "plastpåsar",
     "form": "C"
   },
+  "plastpåseskatt": {
+    "plural": "plastpåseskatter",
+    "form": "C"
+  },
+  "plastpåseskatter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "plaststol": {
     "plural": "plaststolar",
     "form": "C"
@@ -104990,6 +106426,14 @@
   "plockare": {
     "plural": "plockare",
     "form": "C/PL"
+  },
+  "plog": {
+    "plural": "plogar",
+    "form": "C"
+  },
+  "plogar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "plogbil": {
     "plural": "plogbilar",
@@ -105908,6 +107352,14 @@
     "form": "C"
   },
   "populationer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "populationsstudie": {
+    "plural": "populationsstudier",
+    "form": "C"
+  },
+  "populationsstudier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -106947,6 +108399,14 @@
     "plural": "primärvårdsläkare",
     "form": "C/PL"
   },
+  "primärvårdsreform": {
+    "plural": "primärvårdsreformer",
+    "form": "C"
+  },
+  "primärvårdsreformer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "primör": {
     "plural": "primörer",
     "form": "C"
@@ -107192,6 +108652,14 @@
     "form": "C"
   },
   "prisvinster": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "prisökning": {
+    "plural": "prisökningar",
+    "form": "C"
+  },
+  "prisökningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -108801,11 +110269,15 @@
   },
   "puls": {
     "plural": "pulsar",
-    "form": "C"
+    "form": "C/PL"
   },
   "pulsar": {
+    "plural": "pulsarer",
+    "form": "C"
+  },
+  "pulsarer": {
     "plural": "isPlural",
-    "form": "C/PL"
+    "form": "PL"
   },
   "pulsåder": {
     "plural": "pulsådror",
@@ -109602,6 +111074,14 @@
   "påverkan": {
     "plural": "påverkningar",
     "form": "C"
+  },
+  "påverkansoperation": {
+    "plural": "påverkansoperationer",
+    "form": "C"
+  },
+  "påverkansoperationer": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "påverkare": {
     "plural": "påverkare",
@@ -111091,6 +112571,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "regelkrångel": {
+    "plural": "regelkrångel",
+    "form": "N/PL"
+  },
   "regelsystem": {
     "plural": "regelsystem",
     "form": "N/PL"
@@ -111599,11 +113083,23 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "rekommendationsbrev": {
+    "plural": "rekommendationsbrev",
+    "form": "N/PL"
+  },
   "rekonstruktion": {
     "plural": "rekonstruktioner",
     "form": "C"
   },
   "rekonstruktioner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "rekonstruktionsfilm": {
+    "plural": "rekonstruktionsfilmer",
+    "form": "C"
+  },
+  "rekonstruktionsfilmer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -112075,6 +113571,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "renägare": {
+    "plural": "renägare",
+    "form": "C/PL"
+  },
   "renässansbyggnad": {
     "plural": "renässansbyggnader",
     "form": "C"
@@ -112271,6 +113771,10 @@
     "plural": "reseapotek",
     "form": "N/PL"
   },
+  "reseavdrag": {
+    "plural": "reseavdrag",
+    "form": "N/PL"
+  },
   "reseberättelse": {
     "plural": "reseberättelser",
     "form": "C"
@@ -112296,6 +113800,14 @@
     "form": "C"
   },
   "resebiljetter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "resebransch": {
+    "plural": "resebranscher",
+    "form": "C"
+  },
+  "resebranscher": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -112364,6 +113876,14 @@
     "form": "C"
   },
   "resenärer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "reserestriktion": {
+    "plural": "reserestriktioner",
+    "form": "C"
+  },
+  "reserestriktioner": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -112546,6 +114066,14 @@
   "restaurang": {
     "plural": "restauranger",
     "form": "C"
+  },
+  "restaurangbransch": {
+    "plural": "restaurangbranscher",
+    "form": "C"
+  },
+  "restaurangbranscher": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "restaurangbyggnad": {
     "plural": "restaurangbyggnader",
@@ -113296,6 +114824,14 @@
     "form": "C"
   },
   "rikshor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "riksintresse": {
+    "plural": "riksintressen",
+    "form": "N"
+  },
+  "riksintressen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -115459,6 +116995,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "rättsfall": {
+    "plural": "rättsfall",
+    "form": "N/PL"
+  },
   "rättsintyg": {
     "plural": "rättsintyg",
     "form": "N/PL"
@@ -115582,6 +117122,10 @@
   "rättsvetare": {
     "plural": "rättsvetare",
     "form": "C/PL"
+  },
+  "rättsväsen": {
+    "plural": "rättsväsen",
+    "form": "N/PL"
   },
   "rättvisa": {
     "plural": "rättvisor",
@@ -116271,6 +117815,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sabbatsår": {
+    "plural": "sabbatsår",
+    "form": "N/PL"
+  },
   "sabel": {
     "plural": "sablar",
     "form": "C"
@@ -116899,6 +118447,14 @@
     "plural": "sambor",
     "form": "C"
   },
+  "samboförhållande": {
+    "plural": "samboförhållanden",
+    "form": "N"
+  },
+  "samboförhållanden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "sambor": {
     "plural": "isPlural",
     "form": "PL"
@@ -117056,6 +118612,14 @@
     "form": "C"
   },
   "samhällsfrågor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "samhällsfunktion": {
+    "plural": "samhällsfunktioner",
+    "form": "C"
+  },
+  "samhällsfunktioner": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -117496,6 +119060,14 @@
     "form": "C"
   },
   "samrådsgrupper": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "samrådsprocess": {
+    "plural": "samrådsprocesser",
+    "form": "C"
+  },
+  "samrådsprocesser": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -119300,6 +120872,22 @@
     "form": "C"
   },
   "serveringsskålar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "serveringsställe": {
+    "plural": "serveringsställen",
+    "form": "N"
+  },
+  "serveringsställen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "serveringstid": {
+    "plural": "serveringstider",
+    "form": "C"
+  },
+  "serveringstider": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -121155,6 +122743,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sjuktal": {
+    "plural": "sjuktal",
+    "form": "N/PL"
+  },
   "sjukvårdare": {
     "plural": "sjukvårdare",
     "form": "C/PL"
@@ -121360,6 +122952,14 @@
     "form": "C"
   },
   "självdeklarationer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "självförsörjning": {
+    "plural": "självförsörjningar",
+    "form": "C"
+  },
+  "självförsörjningar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -122679,6 +124279,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "skiftning": {
+    "plural": "skiftningar",
+    "form": "C"
+  },
+  "skiftningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "skikt": {
     "plural": "skikt",
     "form": "N/PL"
@@ -123106,6 +124714,10 @@
   "skogsbrand": {
     "plural": "skogsbränder",
     "form": "C"
+  },
+  "skogsbruk": {
+    "plural": "skogsbruk",
+    "form": "N/PL"
   },
   "skogsbruksingenjör": {
     "plural": "skogsbruksingenjörer",
@@ -123667,6 +125279,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "skolmiljö": {
+    "plural": "skolmiljöer",
+    "form": "C"
+  },
+  "skolmiljöer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "skolminister": {
     "plural": "skolministrar",
     "form": "C"
@@ -123688,6 +125308,14 @@
     "form": "C/PL"
   },
   "skolor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "skolpersonal": {
+    "plural": "skolpersonaler",
+    "form": "C"
+  },
+  "skolpersonaler": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -123887,6 +125515,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "skolval": {
+    "plural": "skolval",
+    "form": "N/PL"
+  },
   "skolvecka": {
     "plural": "skolveckor",
     "form": "C"
@@ -123946,6 +125578,14 @@
   "skolår": {
     "plural": "skolår",
     "form": "N/PL"
+  },
+  "skolöppning": {
+    "plural": "skolöppningar",
+    "form": "C"
+  },
+  "skolöppningar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "skolöverläkare": {
     "plural": "skolöverläkare",
@@ -125495,6 +127135,14 @@
     "plural": "skönhetsideal",
     "form": "N/PL"
   },
+  "skönhetssalong": {
+    "plural": "skönhetssalonger",
+    "form": "C"
+  },
+  "skönhetssalonger": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "skönhetstävling": {
     "plural": "skönhetstävlingar",
     "form": "C"
@@ -125732,6 +127380,14 @@
     "form": "PL"
   },
   "slakter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "slakteri": {
+    "plural": "slakterier",
+    "form": "N"
+  },
+  "slakterier": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -127843,6 +129499,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "snorrar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "snorre": {
+    "plural": "snorrar",
+    "form": "C"
+  },
   "snorungar": {
     "plural": "isPlural",
     "form": "PL"
@@ -128408,6 +130072,14 @@
     "form": "C"
   },
   "socialtjänster": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "socialtjänstlag": {
+    "plural": "socialtjänstlagar",
+    "form": "C"
+  },
+  "socialtjänstlagar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -129847,6 +131519,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "specialbehörighet": {
+    "plural": "specialbehörigheter",
+    "form": "C"
+  },
+  "specialbehörigheter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "specialbibliotek": {
     "plural": "specialbibliotek",
     "form": "N/PL"
@@ -130248,6 +131928,14 @@
     "form": "C"
   },
   "spelplaner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "spelregel": {
+    "plural": "spelregler",
+    "form": "C"
+  },
+  "spelregler": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -131391,6 +133079,14 @@
     "plural": "språng",
     "form": "N/PL"
   },
+  "språngbräda": {
+    "plural": "språngbrädor",
+    "form": "C"
+  },
+  "språngbrädor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "språngmarsch": {
     "plural": "språngmarscher",
     "form": "C"
@@ -132130,6 +133826,10 @@
   "stammar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "stamnät": {
+    "plural": "stamnät",
+    "form": "N/PL"
   },
   "stamområde": {
     "plural": "stamområden",
@@ -134107,6 +135807,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "straffrabatt": {
+    "plural": "straffrabatter",
+    "form": "C"
+  },
+  "straffrabatter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "straffskärpning": {
     "plural": "straffskärpningar",
     "form": "C"
@@ -134219,6 +135927,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "strandskydd": {
+    "plural": "strandskydd",
+    "form": "N/PL"
+  },
   "strandsnäcka": {
     "plural": "strandsnäckor",
     "form": "C"
@@ -134328,6 +136040,14 @@
     "form": "C/PL"
   },
   "strejker": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "strejkvakt": {
+    "plural": "strejkvakter",
+    "form": "C"
+  },
+  "strejkvakter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -135127,6 +136847,10 @@
     "plural": "studieledare",
     "form": "C/PL"
   },
+  "studielån": {
+    "plural": "studielån",
+    "form": "N/PL"
+  },
   "studieort": {
     "plural": "studieorter",
     "form": "C"
@@ -135190,6 +136914,10 @@
   "studiesalar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "studiestöd": {
+    "plural": "studiestöd",
+    "form": "N/PL"
   },
   "studietid": {
     "plural": "studietider",
@@ -137851,6 +139579,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "syrra": {
+    "plural": "syrror",
+    "form": "C"
+  },
+  "syrror": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "syrsa": {
     "plural": "syrsor",
     "form": "C"
@@ -138121,6 +139857,10 @@
   },
   "säkerhetsföretag": {
     "plural": "säkerhetsföretag",
+    "form": "N/PL"
+  },
+  "säkerhetshot": {
+    "plural": "säkerhetshot",
     "form": "N/PL"
   },
   "säkerhetsinvestering": {
@@ -138456,6 +140196,14 @@
     "form": "PL"
   },
   "sänkor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "särbo": {
+    "plural": "särbor",
+    "form": "C"
+  },
+  "särbor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -140383,6 +142131,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "taxonomi": {
+    "plural": "taxonomier",
+    "form": "C"
+  },
+  "taxonomier": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "te": {
     "plural": "teer",
     "form": "N"
@@ -141571,6 +143327,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "testcenter": {
+    "plural": "testcenter",
+    "form": "N/PL"
+  },
   "tester": {
     "plural": "isPlural",
     "form": "PL"
@@ -141583,6 +143343,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "testintyg": {
+    "plural": "testintyg",
+    "form": "N/PL"
+  },
   "testmetod": {
     "plural": "testmetoder",
     "form": "C"
@@ -141591,11 +143355,27 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "testning": {
+    "plural": "testningar",
+    "form": "C"
+  },
+  "testningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "testperson": {
     "plural": "testpersoner",
     "form": "C"
   },
   "testpersoner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "teststation": {
+    "plural": "teststationer",
+    "form": "C"
+  },
+  "teststationer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -142055,6 +143835,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tidsplan": {
+    "plural": "tidsplaner",
+    "form": "C"
+  },
+  "tidsplaner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tidsresa": {
     "plural": "tidsresor",
     "form": "C"
@@ -142283,6 +144071,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tillgänglighetsredogörelse": {
+    "plural": "tillgänglighetsredogörelser",
+    "form": "C"
+  },
+  "tillgänglighetsredogörelser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tillgång": {
     "plural": "tillgångar",
     "form": "C"
@@ -142375,6 +144171,14 @@
     "plural": "tillstånd",
     "form": "N/PL"
   },
+  "tillståndsprocess": {
+    "plural": "tillståndsprocesser",
+    "form": "C"
+  },
+  "tillståndsprocesser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tillståndsprövning": {
     "plural": "tillståndsprövningar",
     "form": "C"
@@ -142396,6 +144200,14 @@
     "form": "C"
   },
   "tillsyningsmän": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "tillsynsavgift": {
+    "plural": "tillsynsavgifter",
+    "form": "C"
+  },
+  "tillsynsavgifter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -142462,6 +144274,10 @@
   "tillträden": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "tillträdesförbud": {
+    "plural": "tillträdesförbud",
+    "form": "N/PL"
   },
   "tilltugg": {
     "plural": "tilltugg",
@@ -142541,6 +144357,10 @@
   },
   "tilläggsbidrag": {
     "plural": "tilläggsbidrag",
+    "form": "N/PL"
+  },
+  "tilläggsdirektiv": {
+    "plural": "tilläggsdirektiv",
     "form": "N/PL"
   },
   "tilläggsförsäkring": {
@@ -143311,6 +145131,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tjänsteinkomst": {
+    "plural": "tjänsteinkomster",
+    "form": "C"
+  },
+  "tjänsteinkomster": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tjänstekvinna": {
     "plural": "tjänstekvinnor",
     "form": "C"
@@ -143330,6 +145158,10 @@
   "tjänsteman": {
     "plural": "tjänstemän",
     "form": "C"
+  },
+  "tjänstemannaansvar": {
+    "plural": "tjänstemannaansvar",
+    "form": "N/PL"
   },
   "tjänstemannafack": {
     "plural": "tjänstemannafack",
@@ -143394,6 +145226,10 @@
   "tjänstgöringar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "tjänstgöringsintyg": {
+    "plural": "tjänstgöringsintyg",
+    "form": "N/PL"
   },
   "tjänstledighet": {
     "plural": "tjänstledigheter",
@@ -147727,6 +149563,14 @@
     "plural": "tvångsarbetare",
     "form": "C/PL"
   },
+  "tvångsdelning": {
+    "plural": "tvångsdelningar",
+    "form": "C"
+  },
+  "tvångsdelningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tvångsföreställning": {
     "plural": "tvångsföreställningar",
     "form": "C"
@@ -149891,6 +151735,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "universitetsforskning": {
+    "plural": "universitetsforskningar",
+    "form": "C"
+  },
+  "universitetsforskningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "universitetsinstitution": {
     "plural": "universitetsinstitutioner",
     "form": "C"
@@ -151319,6 +153171,10 @@
     "plural": "utbildningsprogram",
     "form": "N/PL"
   },
+  "utbildningssjukhus": {
+    "plural": "utbildningssjukhus",
+    "form": "N/PL"
+  },
   "utbildningssystem": {
     "plural": "utbildningssystem",
     "form": "N/PL"
@@ -151620,6 +153476,14 @@
     "form": "C"
   },
   "utfyllnader": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "utfyllnadsmassa": {
+    "plural": "utfyllnadsmassor",
+    "form": "C"
+  },
+  "utfyllnadsmassor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -151972,6 +153836,14 @@
     "form": "C"
   },
   "utlänningskontroller": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "utlänningslag": {
+    "plural": "utlänningslagar",
+    "form": "C"
+  },
+  "utlänningslagar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -152903,6 +154775,10 @@
     "plural": "vaccinationsbevis",
     "form": "N/PL"
   },
+  "vaccinationsintyg": {
+    "plural": "vaccinationsintyg",
+    "form": "N/PL"
+  },
   "vaccinationspass": {
     "plural": "vaccinationspass",
     "form": "N/PL"
@@ -152989,7 +154865,7 @@
   },
   "vadd": {
     "plural": "vaddar",
-    "form": "C/PL"
+    "form": "C"
   },
   "vaddar": {
     "plural": "isPlural",
@@ -153188,8 +155064,8 @@
     "form": "PL"
   },
   "val": {
-    "plural": "val",
-    "form": "C/N/PL"
+    "plural": "valar",
+    "form": "C/N"
   },
   "valack": {
     "plural": "valacker",
@@ -153212,6 +155088,10 @@
     "form": "C"
   },
   "valapparater": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "valar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -153256,6 +155136,14 @@
     "form": "C"
   },
   "valframgångar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "valfrihet": {
+    "plural": "valfriheter",
+    "form": "C"
+  },
+  "valfriheter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -153775,6 +155663,10 @@
     "plural": "vapenbrott",
     "form": "N/PL"
   },
+  "vapendirektiv": {
+    "plural": "vapendirektiv",
+    "form": "N/PL"
+  },
   "vapendragare": {
     "plural": "vapendragare",
     "form": "C/PL"
@@ -153794,6 +155686,14 @@
   "vapenhus": {
     "plural": "vapenhus",
     "form": "N/PL"
+  },
+  "vapenlicens": {
+    "plural": "vapenlicenser",
+    "form": "C"
+  },
+  "vapenlicenser": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "vapenrock": {
     "plural": "vapenrockar",
@@ -153952,6 +155852,14 @@
     "form": "C"
   },
   "vargjakter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vargstam": {
+    "plural": "vargstammar",
+    "form": "C"
+  },
+  "vargstammar": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -154203,6 +156111,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vattenbruk": {
+    "plural": "vattenbruk",
+    "form": "N/PL"
+  },
   "vattencykel": {
     "plural": "vattencyklar",
     "form": "C"
@@ -154268,6 +156180,14 @@
     "form": "N"
   },
   "vattenflöden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vattenfråga": {
+    "plural": "vattenfrågor",
+    "form": "C"
+  },
+  "vattenfrågor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -154523,6 +156443,18 @@
     "plural": "vattenskallar",
     "form": "C"
   },
+  "vattenskoter": {
+    "plural": "vattenskotrar",
+    "form": "C"
+  },
+  "vattenskoterförare": {
+    "plural": "vattenskoterförare",
+    "form": "C/PL"
+  },
+  "vattenskotrar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vattensköldpadda": {
     "plural": "vattensköldpaddor",
     "form": "C"
@@ -154576,6 +156508,14 @@
     "form": "C"
   },
   "vattensängar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vattentjänst": {
+    "plural": "vattentjänster",
+    "form": "C"
+  },
+  "vattentjänster": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -154718,6 +156658,10 @@
   "veckonummer": {
     "plural": "veckonummer",
     "form": "N/PL"
+  },
+  "veckopendlare": {
+    "plural": "veckopendlare",
+    "form": "C/PL"
   },
   "veckor": {
     "plural": "isPlural",
@@ -154938,6 +156882,14 @@
   "ventil": {
     "plural": "ventiler",
     "form": "C"
+  },
+  "ventilation": {
+    "plural": "ventilationer",
+    "form": "C"
+  },
+  "ventilationer": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "ventilationsmontör": {
     "plural": "ventilationsmontörer",
@@ -155535,6 +157487,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "viceguvernör": {
+    "plural": "viceguvernörer",
+    "form": "C"
+  },
+  "viceguvernörer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vicekonung": {
     "plural": "vicekonungar",
     "form": "C"
@@ -155967,6 +157927,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "viljeförklaring": {
+    "plural": "viljeförklaringar",
+    "form": "C"
+  },
+  "viljeförklaringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "viljemänniska": {
     "plural": "viljemänniskor",
     "form": "C"
@@ -156212,6 +158180,14 @@
     "form": "C"
   },
   "vindkantringar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vindkraft": {
+    "plural": "vindkrafter",
+    "form": "C"
+  },
+  "vindkrafter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -156667,6 +158643,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vinterspel": {
+    "plural": "vinterspel",
+    "form": "N/PL"
+  },
   "vintersport": {
     "plural": "vintersporter",
     "form": "C"
@@ -156782,6 +158762,10 @@
   "virkesmätare": {
     "plural": "virkesmätare",
     "form": "C/PL"
+  },
+  "virkesupplag": {
+    "plural": "virkesupplag",
+    "form": "N/PL"
   },
   "virkkrok": {
     "plural": "virkkrokar",
@@ -157311,6 +159295,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "vokalljud": {
+    "plural": "vokalljud",
+    "form": "N/PL"
+  },
   "vokalmöte": {
     "plural": "vokalmöten",
     "form": "N"
@@ -157637,7 +159625,7 @@
   },
   "vädd": {
     "plural": "vaddar",
-    "form": "C"
+    "form": "C/PL"
   },
   "väder": {
     "plural": "väder",
@@ -157958,6 +159946,14 @@
   "vägnät": {
     "plural": "vägnät",
     "form": "N/PL"
+  },
+  "vägområde": {
+    "plural": "vägområden",
+    "form": "N"
+  },
+  "vägområden": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "vägrare": {
     "plural": "vägrare",
@@ -159811,6 +161807,14 @@
     "plural": "vårdnadshavare",
     "form": "C/PL"
   },
+  "vårdnadstvist": {
+    "plural": "vårdnadstvister",
+    "form": "C"
+  },
+  "vårdnadstvister": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "vårdnadsutredning": {
     "plural": "vårdnadsutredningar",
     "form": "C"
@@ -159896,6 +161900,14 @@
     "form": "C"
   },
   "vårmånader": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vårproposition": {
+    "plural": "vårpropositioner",
+    "form": "C"
+  },
+  "vårpropositioner": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -160411,6 +162423,10 @@
     "plural": "yrkeskompetenser",
     "form": "C"
   },
+  "yrkeskompetensbevis": {
+    "plural": "yrkeskompetensbevis",
+    "form": "N/PL"
+  },
   "yrkeskompetenser": {
     "plural": "isPlural",
     "form": "PL"
@@ -160556,6 +162572,14 @@
     "form": "C"
   },
   "yrkesvägledningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "yrkesämne": {
+    "plural": "yrkesämnen",
+    "form": "N"
+  },
+  "yrkesämnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -161952,8 +163976,12 @@
     "form": "PL"
   },
   "ärm": {
-    "plural": "armar",
+    "plural": "ärmar",
     "form": "C"
+  },
+  "ärmar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "ärmlinning": {
     "plural": "ärmlinningar",
@@ -162239,6 +164267,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "åklagarbeslut": {
+    "plural": "åklagarbeslut",
+    "form": "N/PL"
+  },
   "åklagare": {
     "plural": "åklagare",
     "form": "C/PL"
@@ -162290,6 +164322,14 @@
   "ålder": {
     "plural": "åldrar",
     "form": "C"
+  },
+  "ålderdom": {
+    "plural": "ålderdomar",
+    "form": "C"
+  },
+  "ålderdomar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "ålderdomshem": {
     "plural": "ålderdomshem",
@@ -162530,6 +164570,10 @@
   "ångpannor": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "ångpassagerarfartyg": {
+    "plural": "ångpassagerarfartyg",
+    "form": "N/PL"
   },
   "ångslup": {
     "plural": "ångslupar",
@@ -163646,6 +165690,10 @@
   "önskningar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "öppenvårdsbesök": {
+    "plural": "öppenvårdsbesök",
+    "form": "N/PL"
   },
   "öppenvårdsmottagning": {
     "plural": "öppenvårdsmottagningar",

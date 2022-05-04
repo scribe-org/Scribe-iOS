@@ -10419,6 +10419,16 @@
     "passivePresent": "fördubblas",
     "passivePreterite": "fördubblades"
   },
+  "fördyra": {
+    "imperative": "fördyra",
+    "activeSupine": "fördyrat",
+    "activePresent": "fördyrar",
+    "activePreterite": "fördyrade",
+    "passiveInfinitive": "fördyras",
+    "passiveSupine": "fördyrats",
+    "passivePresent": "fördyras",
+    "passivePreterite": "fördyrades"
+  },
   "fördärva": {
     "imperative": "fördärva",
     "activeSupine": "fördärvat",
@@ -15719,6 +15729,16 @@
     "passivePresent": "",
     "passivePreterite": ""
   },
+  "hänföra": {
+    "imperative": "hänför",
+    "activeSupine": "hänfört",
+    "activePresent": "hänför",
+    "activePreterite": "hänförde",
+    "passiveInfinitive": "hänföras",
+    "passiveSupine": "hänförts",
+    "passivePresent": "hänförs",
+    "passivePreterite": "hänfördes"
+  },
   "hänga": {
     "imperative": "häng",
     "activeSupine": "hängt",
@@ -18749,6 +18769,16 @@
     "passivePresent": "klottras",
     "passivePreterite": "klottrades"
   },
+  "klubba": {
+    "imperative": "klubba",
+    "activeSupine": "klubbat",
+    "activePresent": "klubbar",
+    "activePreterite": "klubbade",
+    "passiveInfinitive": "klubbas",
+    "passiveSupine": "klubbats",
+    "passivePresent": "klubbas",
+    "passivePreterite": "klubbades"
+  },
   "klucka": {
     "imperative": "klucka",
     "activeSupine": "kluckat",
@@ -19078,6 +19108,16 @@
     "passiveSupine": "knivmördats",
     "passivePresent": "knivmördas",
     "passivePreterite": "knivmördades"
+  },
+  "knivskära": {
+    "imperative": "knivskär",
+    "activeSupine": "knivskurit",
+    "activePresent": "knivskär",
+    "activePreterite": "knivskar",
+    "passiveInfinitive": "knivskäras",
+    "passiveSupine": "knivskurits",
+    "passivePresent": "knivskärs",
+    "passivePreterite": "knivskars"
   },
   "knixa": {
     "imperative": "knixa",
@@ -24538,6 +24578,16 @@
     "passiveSupine": "närmats",
     "passivePresent": "närmas",
     "passivePreterite": "närmades"
+  },
+  "näta": {
+    "imperative": "näta",
+    "activeSupine": "nätat",
+    "activePresent": "nätar",
+    "activePreterite": "nätade",
+    "passiveInfinitive": "nätas",
+    "passiveSupine": "nätats",
+    "passivePresent": "nätas",
+    "passivePreterite": "nätades"
   },
   "nätverka": {
     "imperative": "nätverka",
@@ -30399,6 +30449,16 @@
     "passivePresent": "skildras",
     "passivePreterite": "skildrades"
   },
+  "skilja": {
+    "imperative": "skilj",
+    "activeSupine": "skilt",
+    "activePresent": "skiljer",
+    "activePreterite": "skilde",
+    "passiveInfinitive": "skiljas",
+    "passiveSupine": "skilts",
+    "passivePresent": "skils",
+    "passivePreterite": "skildes"
+  },
   "skimra": {
     "imperative": "skimra",
     "activeSupine": "skimrat",
@@ -32938,6 +32998,16 @@
     "passiveSupine": "spillts",
     "passivePresent": "spills",
     "passivePreterite": "spilldes"
+  },
+  "spinna": {
+    "imperative": "spinn",
+    "activeSupine": "spunnit",
+    "activePresent": "spinner",
+    "activePreterite": "spann",
+    "passiveInfinitive": "spinnas",
+    "passiveSupine": "spunnits",
+    "passivePresent": "spinns",
+    "passivePreterite": "spanns"
   },
   "spionera": {
     "imperative": "spionera",
@@ -38009,6 +38079,16 @@
     "passivePresent": "utbryts",
     "passivePreterite": "utbröts"
   },
+  "utbyta": {
+    "imperative": "utbyt",
+    "activeSupine": "utbytt",
+    "activePresent": "utbyter",
+    "activePreterite": "utbytte",
+    "passiveInfinitive": "utbytas",
+    "passiveSupine": "utbytts",
+    "passivePresent": "utbytes",
+    "passivePreterite": "utbyttes"
+  },
   "utdöma": {
     "imperative": "utdöm",
     "activeSupine": "utdömt",
@@ -38278,6 +38358,16 @@
     "passiveSupine": "utmätts",
     "passivePresent": "utmäts",
     "passivePreterite": "utmättes"
+  },
+  "utmåla": {
+    "imperative": "utmåla",
+    "activeSupine": "utmålat",
+    "activePresent": "utmålar",
+    "activePreterite": "utmålade",
+    "passiveInfinitive": "utmålas",
+    "passiveSupine": "utmålats",
+    "passivePresent": "utmålas",
+    "passivePreterite": "utmålades"
   },
   "utnyttja": {
     "imperative": "utnyttja",
