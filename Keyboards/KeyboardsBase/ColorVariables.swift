@@ -120,7 +120,7 @@ extension UIColor {
   static let commandKeyColorDark = UIColor.scribeBlueDark
   static let commandBarColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
   static let commandBarBorderColorDark = UIColor(
-    red: 70.0/255.0, green: 70.0/255.0, blue: 74.0/255.0, alpha: 1.0
+    red: 75.0/255.0, green: 75.0/255.0, blue: 75.0/255.0, alpha: 1.0
   ).cgColor
 
   static let keyboardBackColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
