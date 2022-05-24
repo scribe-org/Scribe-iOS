@@ -20,9 +20,15 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # Scribe-iOS 1.3.7
 
+### 🗃️ Data Added
+
 ### 🎨 Design Changes
 
 - Minor update to the command bar border color.
+
+### ⚖️ Legal
+
+- The privacy policy was updated to add the MIT licensed original source code.
 
 # Scribe-iOS 1.3.6
 
