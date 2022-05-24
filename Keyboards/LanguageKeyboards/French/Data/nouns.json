@@ -491,6 +491,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Bavière": {
+    "plural": "Bavières",
+    "form": "F"
+  },
+  "Bavières": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Beausoleillois": {
     "plural": "Beausoleillois",
     "form": "M/PL"
@@ -3829,7 +3837,7 @@
   },
   "Philippine": {
     "plural": "Philippines",
-    "form": "F/PL"
+    "form": "F"
   },
   "Philippines": {
     "plural": "isPlural",
@@ -5048,6 +5056,14 @@
     "form": "F/M"
   },
   "Turkmènes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Turque": {
+    "plural": "Turques",
+    "form": "F"
+  },
+  "Turques": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7272,6 +7288,14 @@
     "form": "F"
   },
   "ambitions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "amblyopie": {
+    "plural": "amblyopies",
+    "form": "F"
+  },
+  "amblyopies": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15263,6 +15287,14 @@
     "plural": "chants",
     "form": "M"
   },
+  "chantage": {
+    "plural": "chantages",
+    "form": "M"
+  },
+  "chantages": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "chanterelle": {
     "plural": "chanterelles",
     "form": "F"
@@ -15612,12 +15644,12 @@
     "form": "PL"
   },
   "chauve-souris": {
-    "plural": "isPlural",
-    "form": "F/PL"
+    "plural": "chauvesouris",
+    "form": "F"
   },
   "chauvesouris": {
-    "plural": "chauve-souris",
-    "form": "F"
+    "plural": "isPlural",
+    "form": "F/PL"
   },
   "chaîne": {
     "plural": "chaînes",
@@ -16303,6 +16335,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "cinématographie": {
+    "plural": "cinématographies",
+    "form": "F"
+  },
+  "cinématographies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "cirage": {
     "plural": "cirages",
     "form": "M"
@@ -16908,6 +16948,14 @@
     "form": "F"
   },
   "coalitions": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cobalt": {
+    "plural": "cobalts",
+    "form": "M"
+  },
+  "cobalts": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -25027,6 +25075,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "endémie": {
+    "plural": "endémies",
+    "form": "F"
+  },
+  "endémies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "enfance": {
     "plural": "enfances",
     "form": "F"
@@ -29119,6 +29175,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gaufre": {
+    "plural": "gaufres",
+    "form": "F/M"
+  },
+  "gaufres": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gaulois": {
     "plural": "gaulois",
     "form": "M/PL"
@@ -29244,6 +29308,14 @@
     "form": "M"
   },
   "gentilshommes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "gentilé": {
+    "plural": "gentilés",
+    "form": "M"
+  },
+  "gentilés": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -31456,6 +31528,14 @@
     "form": "F"
   },
   "houes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "huche": {
+    "plural": "huches",
+    "form": "F"
+  },
+  "huches": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35983,6 +36063,14 @@
     "plural": "lois",
     "form": "F"
   },
+  "loir": {
+    "plural": "loirs",
+    "form": "M"
+  },
+  "loirs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "lois": {
     "plural": "isPlural",
     "form": "PL"
@@ -37728,6 +37816,14 @@
     "form": "M"
   },
   "matériels": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mauve": {
+    "plural": "mauves",
+    "form": "F"
+  },
+  "mauves": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39716,6 +39812,14 @@
     "form": "M"
   },
   "mécanismes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "mécanographie": {
+    "plural": "mécanographies",
+    "form": "F"
+  },
+  "mécanographies": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -42376,6 +42480,14 @@
     "form": ""
   },
   "orques": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "orteil": {
+    "plural": "orteils",
+    "form": "M"
+  },
+  "orteils": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -53403,6 +53515,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "saucisse": {
+    "plural": "saucisses",
+    "form": "F"
+  },
+  "saucisses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "saufconduit": {
     "plural": "saufconduits",
     "form": "M"
@@ -56571,6 +56691,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "synesthésie": {
+    "plural": "synesthésies",
+    "form": "F"
+  },
+  "synesthésies": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "synonyme": {
     "plural": "synonymes",
     "form": "M"
@@ -57419,6 +57547,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tempi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "temple": {
     "plural": "temples",
     "form": "M"
@@ -57426,6 +57558,10 @@
   "temples": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "tempo": {
+    "plural": "tempi",
+    "form": "M"
   },
   "temps": {
     "plural": "temps",

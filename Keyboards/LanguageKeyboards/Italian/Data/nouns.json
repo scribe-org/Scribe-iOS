@@ -207,6 +207,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aquila": {
+    "plural": "aquile",
+    "form": "F"
+  },
+  "aquile": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aquilina": {
     "plural": "aquiline",
     "form": "F"
@@ -385,7 +393,7 @@
   },
   "bottega": {
     "plural": "botteghe",
-    "form": "F"
+    "form": "F/PL"
   },
   "botteghe": {
     "plural": "isPlural",
@@ -393,7 +401,23 @@
   },
   "botteghetta": {
     "plural": "botteghe",
-    "form": "F/PL"
+    "form": "F"
+  },
+  "bozzetti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bozzetto": {
+    "plural": "bozzetti",
+    "form": "M"
+  },
+  "bozzi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bozzo": {
+    "plural": "bozzi",
+    "form": "M"
   },
   "brucaiola": {
     "plural": "brucaiole",
@@ -1115,6 +1139,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "fava": {
+    "plural": "fave",
+    "form": "F"
+  },
+  "fave": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "figliastra": {
     "plural": "figliastre",
     "form": "F"
@@ -1407,6 +1439,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "grotta": {
+    "plural": "grotte",
+    "form": "F"
+  },
+  "grotte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "guancia": {
     "plural": "guancie",
     "form": "F"
@@ -1572,6 +1612,14 @@
     "form": ""
   },
   "liste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "loggia": {
+    "plural": "loggie",
+    "form": "F"
+  },
+  "loggie": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2259,6 +2307,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "petti": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "petto": {
+    "plural": "petti",
+    "form": "M"
+  },
   "pianeta": {
     "plural": "pianeti",
     "form": ""
@@ -2411,6 +2467,14 @@
     "plural": "punti",
     "form": ""
   },
+  "rami": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "ramo": {
+    "plural": "rami",
+    "form": "M"
+  },
   "reggiseni": {
     "plural": "isPlural",
     "form": "PL"
@@ -2491,6 +2555,14 @@
     "plural": "sale",
     "form": "F"
   },
+  "salcicce": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "salciccia": {
+    "plural": "salcicce",
+    "form": ""
+  },
   "sale": {
     "plural": "isPlural",
     "form": "PL"
@@ -2503,6 +2575,14 @@
     "plural": "sale",
     "form": "F/PL"
   },
+  "salmone": {
+    "plural": "salmoni",
+    "form": "M"
+  },
+  "salmoni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "salotti": {
     "plural": "isPlural",
     "form": "PL"
@@ -2510,6 +2590,14 @@
   "salotto": {
     "plural": "salotti",
     "form": "M"
+  },
+  "santoregge": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "santoreggia": {
+    "plural": "santoregge",
+    "form": "F"
   },
   "satellite": {
     "plural": "satelliti",
@@ -3102,6 +3190,14 @@
   "violino": {
     "plural": "violini",
     "form": "M"
+  },
+  "vista": {
+    "plural": "viste",
+    "form": "F"
+  },
+  "viste": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "vita": {
     "plural": "vite",

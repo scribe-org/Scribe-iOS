@@ -88,7 +88,7 @@
     "form": "N"
   },
   "Aas": {
-    "plural": "Aase",
+    "plural": "Äser",
     "form": "N"
   },
   "Aasbande": {
@@ -96,10 +96,6 @@
     "form": "F"
   },
   "Aasbanden": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Aase": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -1800,7 +1796,7 @@
     "form": "PL"
   },
   "Acht": {
-    "plural": "noPlural",
+    "plural": "Achten",
     "form": "F"
   },
   "Achteck": {
@@ -1832,6 +1828,10 @@
     "form": "F"
   },
   "Achtelpausen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Achten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2719,9 +2719,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Akt": {
+    "plural": "Akte",
+    "form": "M"
+  },
   "Akte": {
     "plural": "Akten",
-    "form": "F"
+    "form": "F/PL"
   },
   "Akten": {
     "plural": "isPlural",
@@ -10696,7 +10700,7 @@
     "form": "M/PL"
   },
   "Bau": {
-    "plural": "Baue",
+    "plural": "Bauten",
     "form": "M"
   },
   "Bauabschnitt": {
@@ -10734,6 +10738,14 @@
   "Bauch": {
     "plural": "Bäuche",
     "form": "M"
+  },
+  "Bauchgefühl": {
+    "plural": "Bauchgefühle",
+    "form": "N"
+  },
+  "Bauchgefühle": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Bauchkrampf": {
     "plural": "Bauchkrämpfe",
@@ -10779,10 +10791,6 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "Baue": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "Bauelement": {
     "plural": "Bauelemente",
     "form": "N"
@@ -10792,18 +10800,14 @@
     "form": "PL"
   },
   "Bauer": {
-    "plural": "Bauern",
-    "form": "M/N"
+    "plural": "Bauer",
+    "form": "M/N/PL"
   },
   "Bauerin": {
     "plural": "Bauerinnen",
     "form": "F"
   },
   "Bauerinnen": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Bauern": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11088,6 +11092,10 @@
     "form": "F"
   },
   "Bauteileigenschaften": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Bauten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15616,7 +15624,7 @@
     "form": "F"
   },
   "Bitten": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Bittermandelöl": {
@@ -15744,6 +15752,14 @@
     "form": "N"
   },
   "Blaueisenerze": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Blaufuß": {
+    "plural": "Blaufüße",
+    "form": "M"
+  },
+  "Blaufüße": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -16626,6 +16642,10 @@
   "Bor": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Bord": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Borg": {
     "plural": "Borg",
@@ -19238,6 +19258,10 @@
   "CO-Konzentrationen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "CO2": {
+    "plural": "noPlural",
+    "form": "N"
   },
   "CO₂": {
     "plural": "noPlural",
@@ -23427,6 +23451,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Dorn": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Dorpat": {
     "plural": "noPlural",
     "form": "N"
@@ -26472,6 +26500,14 @@
     "form": "N"
   },
   "Eiscafés": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Eiscreme": {
+    "plural": "Eiscremes",
+    "form": "F"
+  },
+  "Eiscremes": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -33579,6 +33615,14 @@
     "plural": "Formen",
     "form": "F"
   },
+  "Format": {
+    "plural": "Formate",
+    "form": "N"
+  },
+  "Formate": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Formatierungszeichen": {
     "plural": "Formatierungszeichen",
     "form": "N/PL"
@@ -34211,6 +34255,18 @@
     "plural": "Freikorps",
     "form": "N/PL"
   },
+  "Freiland": {
+    "plural": "noPlural",
+    "form": "N"
+  },
+  "Freilandlabor": {
+    "plural": "Freilandlabore",
+    "form": "N"
+  },
+  "Freilandlabore": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Freilichtbühne": {
     "plural": "Freilichtbühnen",
     "form": "F"
@@ -34569,6 +34625,10 @@
   },
   "Frosch": {
     "plural": "Frösche",
+    "form": "M"
+  },
+  "Frost": {
+    "plural": "noPlural",
     "form": "M"
   },
   "Frucht": {
@@ -36984,6 +37044,14 @@
     "form": "F"
   },
   "Gemüsesuppen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gemüt": {
+    "plural": "Gemüter",
+    "form": "N"
+  },
+  "Gemüter": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39428,18 +39496,18 @@
     "form": "PL"
   },
   "Graf": {
-    "plural": "Grafen",
+    "plural": "Grafe",
     "form": "M/N"
+  },
+  "Grafe": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Grafem": {
     "plural": "Grafeme",
     "form": "N"
   },
   "Grafeme": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Grafen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39662,6 +39730,10 @@
   "Greifvögel": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Greis": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Gremien": {
     "plural": "isPlural",
@@ -41827,6 +41899,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Harmonik": {
+    "plural": "Harmoniken",
+    "form": "F"
+  },
+  "Harmoniken": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Harnsäure": {
     "plural": "Harnsäuren",
     "form": "F"
@@ -43352,8 +43432,12 @@
     "form": "F"
   },
   "Hexen": {
-    "plural": "isPlural",
+    "plural": "Hexene",
     "form": "N/PL"
+  },
+  "Hexene": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Hexenmeister": {
     "plural": "Hexenmeister",
@@ -43610,6 +43694,10 @@
   "Hintergründe": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Hinterhalt": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Hinterhaus": {
     "plural": "Hinterhäuser",
@@ -44708,8 +44796,12 @@
     "form": "M/N"
   },
   "Humor": {
-    "plural": "noPlural",
+    "plural": "Humore",
     "form": "M"
+  },
+  "Humore": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Humpen": {
     "plural": "Humpen",
@@ -48108,8 +48200,12 @@
     "form": "N/PL"
   },
   "Journal": {
-    "plural": "Journals",
+    "plural": "Journale",
     "form": "N"
+  },
+  "Journale": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Journalist": {
     "plural": "Journalisten",
@@ -48124,10 +48220,6 @@
     "form": "F"
   },
   "Journalistinnen": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Journals": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -49839,6 +49931,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Karussell": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Karwoche": {
     "plural": "Karwochen",
     "form": "F"
@@ -51344,8 +51440,12 @@
     "form": "N"
   },
   "Kitze": {
-    "plural": "isPlural",
+    "plural": "Kitzen",
     "form": "F/PL"
+  },
+  "Kitzen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kiwi": {
     "plural": "Kiwis",
@@ -56767,11 +56867,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Labor": {
+    "plural": "Labore",
+    "form": "N"
+  },
   "Laborbedingung": {
     "plural": "Laborbedingungen",
     "form": "F"
   },
   "Laborbedingungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Labore": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -59175,6 +59283,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Lieblingsessen": {
+    "plural": "Lieblingsessen",
+    "form": "N/PL"
+  },
   "Lieblingsfarbe": {
     "plural": "Lieblingsfarben",
     "form": "F"
@@ -59384,6 +59496,14 @@
     "form": "F"
   },
   "Limetten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Limit": {
+    "plural": "Limite",
+    "form": "N"
+  },
+  "Limite": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -61622,6 +61742,14 @@
   "Marschall": {
     "plural": "Marschälle",
     "form": "M"
+  },
+  "Marschkapelle": {
+    "plural": "Marschkapellen",
+    "form": "F"
+  },
+  "Marschkapellen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Marschälle": {
     "plural": "isPlural",
@@ -64268,7 +64396,7 @@
     "form": "PL"
   },
   "Mitte": {
-    "plural": "noPlural",
+    "plural": "Mitten",
     "form": "F/N"
   },
   "Mitteilung": {
@@ -64296,12 +64424,8 @@
     "form": "N"
   },
   "Mittelfeld": {
-    "plural": "Mittelfelder",
+    "plural": "noPlural",
     "form": "N"
-  },
-  "Mittelfelder": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Mittelfeldspieler": {
     "plural": "Mittelfeldspieler",
@@ -64400,6 +64524,10 @@
     "form": "F"
   },
   "Mittelwellen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Mitten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -65780,7 +65908,7 @@
     "form": "N/PL"
   },
   "Mutter": {
-    "plural": "Muttern",
+    "plural": "Mütter",
     "form": "F"
   },
   "Muttergesellschaft": {
@@ -65794,10 +65922,6 @@
   "Mutterglück": {
     "plural": "noPlural",
     "form": "N"
-  },
-  "Muttern": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Muttersprache": {
     "plural": "Muttersprachen",
@@ -66180,8 +66304,8 @@
     "form": "PL"
   },
   "Münster": {
-    "plural": "Münster",
-    "form": "M/N/PL"
+    "plural": "noPlural",
+    "form": "M/N"
   },
   "Münze": {
     "plural": "Münzen",
@@ -66202,6 +66326,10 @@
   "Müsliriegel": {
     "plural": "Müsliriegel",
     "form": "M/PL"
+  },
+  "Mütter": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Mütterchen": {
     "plural": "Mütterchen",
@@ -71935,11 +72063,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Parade": {
+    "plural": "Paraden",
+    "form": "F"
+  },
   "Paradebeispiel": {
     "plural": "Paradebeispiele",
     "form": "N"
   },
   "Paradebeispiele": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Paraden": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -72332,6 +72468,14 @@
     "form": "F"
   },
   "Partitivzahlen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Partitur": {
+    "plural": "Partituren",
+    "form": "F"
+  },
+  "Partituren": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -74027,6 +74171,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Picknick": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Piepvogel": {
     "plural": "Piepvögel",
     "form": "M"
@@ -74056,8 +74204,12 @@
     "form": "PL"
   },
   "Pilot": {
-    "plural": "noPlural",
+    "plural": "Piloten",
     "form": "M"
+  },
+  "Piloten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Pilotengewerkschaft": {
     "plural": "Pilotengewerkschaften",
@@ -74732,7 +74884,7 @@
     "form": "M/PL"
   },
   "Polen": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Polin": {
@@ -82919,6 +83071,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Schall": {
+    "plural": "Schalle",
+    "form": "M"
+  },
+  "Schalle": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Schallplatte": {
     "plural": "Schallplatten",
     "form": "F"
@@ -83803,6 +83963,10 @@
     "plural": "Schlamassel",
     "form": "M/N/PL"
   },
+  "Schlamm": {
+    "plural": "Schlämme",
+    "form": "M"
+  },
   "Schlange": {
     "plural": "Schlangen",
     "form": "F"
@@ -83968,6 +84132,10 @@
     "form": "M/PL"
   },
   "Schläge": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Schlämme": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -84156,8 +84324,12 @@
     "form": "M"
   },
   "Schmiede": {
-    "plural": "isPlural",
+    "plural": "Schmieden",
     "form": "F/PL"
+  },
+  "Schmieden": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Schmiedin": {
     "plural": "Schmiedinnen",
@@ -84735,6 +84907,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Schreihals": {
+    "plural": "Schreihälse",
+    "form": "M"
+  },
+  "Schreihälse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Schrein": {
     "plural": "Schreine",
     "form": "M"
@@ -85030,6 +85210,10 @@
   "Schulzimmer": {
     "plural": "Schulzimmer",
     "form": "N/PL"
+  },
+  "Schurke": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Schuss": {
     "plural": "Schüsse",
@@ -89043,6 +89227,10 @@
     "plural": "Späße",
     "form": "M"
   },
+  "Spaßvogel": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Specht": {
     "plural": "Spechte",
     "form": "M"
@@ -89580,6 +89768,14 @@
     "form": "N"
   },
   "Spielzeuge": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Spieß": {
+    "plural": "Spieße",
+    "form": "M"
+  },
+  "Spieße": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -94200,8 +94396,12 @@
     "form": "PL"
   },
   "Tag": {
-    "plural": "Tags",
+    "plural": "Tage",
     "form": "M/N"
+  },
+  "Tage": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tagebau": {
     "plural": "Tagebaue",
@@ -94274,10 +94474,6 @@
   "Tagfalter": {
     "plural": "Tagfalter",
     "form": "M/PL"
-  },
-  "Tags": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Tagundnachtgleiche": {
     "plural": "Tagundnachtgleichen",
@@ -97152,10 +97348,10 @@
     "form": "PL"
   },
   "Trabant": {
-    "plural": "Trabants",
+    "plural": "Trabanten",
     "form": "M"
   },
-  "Trabants": {
+  "Trabanten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -105919,6 +106115,14 @@
     "plural": "Weine",
     "form": "M"
   },
+  "Wein-Rose": {
+    "plural": "Wein-Rosen",
+    "form": "F"
+  },
+  "Wein-Rosen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Weinanbau": {
     "plural": "noPlural",
     "form": "M"
@@ -108007,6 +108211,10 @@
     "plural": "Witze",
     "form": "M"
   },
+  "Witzbold": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Witze": {
     "plural": "isPlural",
     "form": "PL"
@@ -109567,6 +109775,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Zeisig": {
+    "plural": "Zeisige",
+    "form": "M"
+  },
+  "Zeisige": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Zeit": {
     "plural": "Zeiten",
     "form": "F"
@@ -109996,8 +110212,12 @@
     "form": "N"
   },
   "Zeuge": {
-    "plural": "isPlural",
+    "plural": "Zeugen",
     "form": "M/PL"
+  },
+  "Zeugen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Zeugin": {
     "plural": "Zeuginnen",
@@ -112200,6 +112420,10 @@
     "form": "F"
   },
   "Ärztinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Äser": {
     "plural": "isPlural",
     "form": "PL"
   },

@@ -22,6 +22,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 34 nouns
+- German: 56 nouns, 112 verbs
+- Italian: 24 nouns, 1 verb
+- Portuguese: 169 nouns, 290 verbs
+- Russian: 2 nouns
+- Spanish: 3216 nouns, 267 verbs
+- Swedish: 287 nouns, 13 verbs
+
 ### 🎨 Design Changes
 
 - Minor update to the command bar border color.
