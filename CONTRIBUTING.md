@@ -32,11 +32,9 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 3. Open the Scribe-iOS directory in Xcode
 4. In order to [run Scribe on an emulator](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device):
 
-   4.1 In the top bar, make sure that Scribe is selected as the scheme and not one of the sub-apps for each keyboard
-
-   4.2 Select a device to run the app on
-
-   4.3 Press the play button marked "Start the active scheme"
+   - In the top bar, make sure that Scribe is selected as the scheme and not one of the sub-apps for each keyboard
+   - Select a device to run the app on
+   - Press the play button marked "Start the active scheme"
 
 From there code edits that are made will be reflected in the app each time the active scheme is restarted.
 
