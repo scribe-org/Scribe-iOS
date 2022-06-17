@@ -26,7 +26,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
 
 Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
 
-The [Contributing](#contributing) section has information for those interested, with the articles and presentations in [Featured In](#featured-in) also being a good resource for learning more about Scribe. Those interested in contributing are also welcome to join us in the [discussions](https://github.com/scribe-org/Scribe-iOS/discussions)!
+The [contributing](#contributing) section has information for those interested, with the articles and presentations in [featured by](#featured-by) also being a good resource for learning more about Scribe. Those interested in contributing are also welcome to join us in the [discussions](https://github.com/scribe-org/Scribe-iOS/discussions)!
 
 # **Contents**<a id="contents"></a>
 
@@ -41,7 +41,7 @@ The [Contributing](#contributing) section has information for those interested, 
   - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Contributing](#contributing)
-- [Featured In](#featured-in)
+- [Featured By](#featured-by)
 
 # Preview Videos [`⇧`](#contents) <a id="preview-videos"></a>
 
@@ -166,7 +166,9 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 # Contributing [`⇧`](#contents) <a id="contributing"></a>
 
-Work that is in progress or could be implemented is tracked in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) and [Projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Also check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
+Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) and [projects](https://github.com/scribe-org/Scribe-iOS/projects). Please see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. This document has all necessary information and also includes steps to set up a development environment.
+
+Those interested can further check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
 
 ### Ways to Help
 
@@ -179,9 +181,9 @@ Work that is in progress or could be implemented is tracked in the [Issues](http
 
 ### Data Edits
 
-Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the queries themselves will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
+Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
-# Featured In [`⇧`](#contents) <a id="featured-in"></a>
+# Featured By [`⇧`](#contents) <a id="featured-by"></a>
 
 <details><summary><strong>Articles and Presentations on Scribe</strong></summary>
 <p>
