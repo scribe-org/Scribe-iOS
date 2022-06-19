@@ -31,8 +31,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: iOS version
-      placeholder: "iOS/iPadOS vX.Y.Z"
+      label: versions
+      placeholder: "What are the OS and Scribe versions?"
     validations:
       required: false
   - type: markdown
