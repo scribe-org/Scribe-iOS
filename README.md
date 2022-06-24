@@ -235,6 +235,15 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 # Powered By
 
+<details><summary><strong>List of referenced codes</strong></summary>
+<p>
+
+- https://github.com/EthanSK/CustomKeyboard
+  - License: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
+
+</p>
+</details>
+
 <div align="center">
   <br>
   <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikidata_logo.png" alt="Wikidata"></a>
