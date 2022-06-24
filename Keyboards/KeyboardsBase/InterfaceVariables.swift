@@ -251,7 +251,7 @@ func setENKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
-  invalidCommandMsg = "Not in directory"
+  invalidCommandMsg = "Not in Wikidata"
 
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
