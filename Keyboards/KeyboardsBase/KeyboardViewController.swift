@@ -1271,6 +1271,12 @@ class KeyboardViewController: UIInputViewController {
       if getConjugation && commandState == true { // conjugate state
         // Reset to the most basic conjugations.
         deConjugationState = .indicativePresent
+        frConjugationState = .indicativePresent
+        ptConjugationState = .indicativePresent
+        esConjugationState = .indicativePresent
+        itConjugationState = .present
+        ruConjugationState = .present
+        svConjugationState = .active
         let triggerConjugationState = triggerConjugation(commandBar: commandBar)
         if triggerConjugationState == true {
           conjugateView = true
