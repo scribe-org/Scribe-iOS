@@ -8,9 +8,9 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-<!--# Scribe-iOS 1.4.0 (WIP)-->
+<!--# Scribe-iOS 1.4.0-->
 <!---->
-<!--Scribe's second design sprint with Spencer Arney focussed on key styling and onboarding users.-->
+<!--Scribe's third design sprint with Spencer Arney focussed on the app screen and onboarding users.-->
 <!---->
 <!--### 🎨 Design Changes-->
 <!---->
@@ -36,7 +36,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🎨 Design Changes
 
-- The App Store images have been updated to be more professional.
+Scribe's second design sprint with Spencer Arney focussed on the App Store media:
+
+- The App Store images have been updated to be more professional and drive discovery.
 - Some App Store images have been replaced with ones that better show app features.
 - Section headers for App Store videos have been changed to match the new image style.
 
