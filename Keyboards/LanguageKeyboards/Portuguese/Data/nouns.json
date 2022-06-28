@@ -829,7 +829,7 @@
   },
   "amor": {
     "plural": "amores",
-    "form": "M/PL"
+    "form": "M"
   },
   "amores": {
     "plural": "isPlural",
@@ -849,7 +849,7 @@
   },
   "amorzão": {
     "plural": "amores",
-    "form": "M"
+    "form": "M/PL"
   },
   "ampulheta": {
     "plural": "ampulhetas",
@@ -1075,6 +1075,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "aprovação": {
+    "plural": "aprovações",
+    "form": "F"
+  },
+  "aprovações": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ar": {
     "plural": "ares",
     "form": "M"
@@ -1180,11 +1188,7 @@
     "form": "PL"
   },
   "arqueóloga": {
-    "plural": "arqueólogas",
-    "form": ""
-  },
-  "arqueólogas": {
-    "plural": "isPlural",
+    "plural": "arqueólogos",
     "form": "PL"
   },
   "arqueólogo": {
@@ -1328,16 +1332,16 @@
     "form": "PL"
   },
   "aspecto": {
-    "plural": "aspetos",
+    "plural": "aspectos",
     "form": "M/PL"
   },
-  "aspeto": {
-    "plural": "aspetos",
-    "form": "M"
-  },
-  "aspetos": {
+  "aspectos": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "aspeto": {
+    "plural": "aspectos",
+    "form": "M"
   },
   "aspirador": {
     "plural": "aspiradores",
@@ -3355,6 +3359,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "capitã": {
+    "plural": "capitães",
+    "form": "PL"
+  },
+  "capitães": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "capitão": {
+    "plural": "capitães",
+    "form": ""
+  },
   "capítulo": {
     "plural": "capítulos",
     "form": "M"
@@ -3608,16 +3624,12 @@
     "form": "F/PL"
   },
   "cartão": {
-    "plural": "cartões",
-    "form": "F/M"
+    "plural": "cartas",
+    "form": "F/M/PL"
   },
   "cartícula": {
     "plural": "cartas",
     "form": "F"
-  },
-  "cartões": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "caráter": {
     "plural": "caráteres",
@@ -4663,6 +4675,10 @@
     "plural": "comidas",
     "form": "F/PL"
   },
+  "comidazinhas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "comidinha": {
     "plural": "comidas",
     "form": "F/PL"
@@ -4672,8 +4688,8 @@
     "form": "F/PL"
   },
   "comidão": {
-    "plural": "comidas",
-    "form": "F/PL"
+    "plural": "comidazinhas",
+    "form": "F"
   },
   "comissão": {
     "plural": "comissões",
@@ -5181,7 +5197,11 @@
   },
   "contribuidor": {
     "plural": "contribuidores",
-    "form": "M"
+    "form": ""
+  },
+  "contribuidora": {
+    "plural": "contribuidores",
+    "form": "PL"
   },
   "contribuidores": {
     "plural": "isPlural",
@@ -5964,6 +5984,14 @@
     "form": "F"
   },
   "decisões": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "declaração": {
+    "plural": "declarações",
+    "form": "F"
+  },
+  "declarações": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7043,6 +7071,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "electrão": {
+    "plural": "eletrões",
+    "form": "M"
+  },
   "eleição": {
     "plural": "eleições",
     "form": "F"
@@ -7069,7 +7101,7 @@
   },
   "eletrão": {
     "plural": "eletrões",
-    "form": "M"
+    "form": "M/PL"
   },
   "eletrões": {
     "plural": "isPlural",
@@ -7082,6 +7114,10 @@
   "elogios": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "eléctron": {
+    "plural": "eletrões",
+    "form": "M/PL"
   },
   "elétron": {
     "plural": "eletrões",
@@ -7161,7 +7197,7 @@
   },
   "empresária": {
     "plural": "empresárias",
-    "form": "PL"
+    "form": ""
   },
   "empresárias": {
     "plural": "isPlural",
@@ -7169,7 +7205,7 @@
   },
   "empresário": {
     "plural": "empresárias",
-    "form": ""
+    "form": "PL"
   },
   "empréstimo": {
     "plural": "empréstimos",
@@ -8137,7 +8173,7 @@
   },
   "facto": {
     "plural": "factos",
-    "form": "M"
+    "form": "M/PL"
   },
   "factor": {
     "plural": "factores",
@@ -8272,16 +8308,12 @@
     "form": "PL"
   },
   "fato": {
-    "plural": "fatos",
+    "plural": "factos",
     "form": "M"
   },
   "fator": {
     "plural": "factores",
     "form": "M/PL"
-  },
-  "fatos": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "fava": {
     "plural": "favas",
@@ -8473,7 +8505,7 @@
   },
   "figura": {
     "plural": "figurinhas",
-    "form": "F/PL"
+    "form": "F"
   },
   "figuraça": {
     "plural": "figurinhas",
@@ -8481,7 +8513,7 @@
   },
   "figurinha": {
     "plural": "figurinhas",
-    "form": "F"
+    "form": "F/PL"
   },
   "figurinhas": {
     "plural": "isPlural",
@@ -8503,12 +8535,40 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "filha": {
+    "plural": "filhinhas",
+    "form": "PL"
+  },
+  "filhinha": {
+    "plural": "filhinhas",
+    "form": "PL"
+  },
+  "filhinhas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "filhinho": {
+    "plural": "filhinhas",
+    "form": "PL"
+  },
+  "filho": {
+    "plural": "filhinhas",
+    "form": ""
+  },
+  "filhona": {
+    "plural": "filhinhas",
+    "form": "PL"
+  },
   "filhote": {
     "plural": "filhotes",
     "form": "M"
   },
   "filhotes": {
     "plural": "isPlural",
+    "form": "PL"
+  },
+  "filhão": {
+    "plural": "filhinhas",
     "form": "PL"
   },
   "filmagem": {
@@ -8624,7 +8684,7 @@
     "form": "PL"
   },
   "flor": {
-    "plural": "flores",
+    "plural": "florzonas",
     "form": "F"
   },
   "flores": {
@@ -8641,11 +8701,15 @@
   },
   "florzinha": {
     "plural": "flores",
-    "form": "F/PL"
+    "form": "F"
   },
   "florzona": {
     "plural": "flores",
     "form": "F/PL"
+  },
+  "florzonas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "foco": {
     "plural": "focos",
@@ -9331,6 +9395,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "gelo": {
+    "plural": "gelos",
+    "form": "M"
+  },
+  "gelos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "geléia": {
     "plural": "geleias",
     "form": "F/PL"
@@ -9711,6 +9783,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "guitarrista": {
+    "plural": "guitarristas",
+    "form": ""
+  },
+  "guitarristas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "gula": {
     "plural": "gulas",
     "form": "F"
@@ -10052,12 +10132,8 @@
     "form": "PL"
   },
   "idéia": {
-    "plural": "idéias",
-    "form": "F"
-  },
-  "idéias": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "ideias",
+    "form": "F/PL"
   },
   "iglu": {
     "plural": "iglus",
@@ -10068,8 +10144,8 @@
     "form": "PL"
   },
   "igreja": {
-    "plural": "igrejinhas",
-    "form": "F"
+    "plural": "igrejas",
+    "form": "F/PL"
   },
   "igrejas": {
     "plural": "isPlural",
@@ -10078,10 +10154,6 @@
   "igrejinha": {
     "plural": "igrejas",
     "form": "F"
-  },
-  "igrejinhas": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "igrejona": {
     "plural": "igrejas",
@@ -10272,6 +10344,14 @@
     "form": "F"
   },
   "indústrias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "infantaria": {
+    "plural": "infantarias",
+    "form": "F"
+  },
+  "infantarias": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10511,6 +10591,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "introdução": {
+    "plural": "introduções",
+    "form": "F"
+  },
+  "introduções": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "intromissão": {
     "plural": "intromissões",
     "form": "F"
@@ -10582,6 +10670,10 @@
   "irmãos": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "ião": {
+    "plural": "íons",
+    "form": "M"
   },
   "jabuti": {
     "plural": "jabutis",
@@ -10717,7 +10809,11 @@
   },
   "jogador": {
     "plural": "jogadores",
-    "form": "M"
+    "form": "PL"
+  },
+  "jogadora": {
+    "plural": "jogadores",
+    "form": ""
   },
   "jogadores": {
     "plural": "isPlural",
@@ -10745,7 +10841,7 @@
   },
   "jornal": {
     "plural": "jornais",
-    "form": "M/PL"
+    "form": "M"
   },
   "jornalzinho": {
     "plural": "jornais",
@@ -10753,7 +10849,7 @@
   },
   "jornalzão": {
     "plural": "jornais",
-    "form": "M"
+    "form": "M/PL"
   },
   "jovem": {
     "plural": "jovens",
@@ -11052,8 +11148,8 @@
     "form": "PL"
   },
   "leitura": {
-    "plural": "leituras",
-    "form": "F/PL"
+    "plural": "leiturões",
+    "form": "F"
   },
   "leituras": {
     "plural": "isPlural",
@@ -11070,6 +11166,10 @@
   "leiturão": {
     "plural": "leituras",
     "form": "F"
+  },
+  "leiturões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lenha": {
     "plural": "lenhas",
@@ -11573,14 +11673,30 @@
   },
   "macaca": {
     "plural": "macacos",
-    "form": "M/PL"
+    "form": "PL"
   },
   "macaco": {
     "plural": "macacos",
     "form": "M"
   },
+  "macacona": {
+    "plural": "macacos",
+    "form": "PL"
+  },
   "macacos": {
     "plural": "isPlural",
+    "form": "PL"
+  },
+  "macacão": {
+    "plural": "macacos",
+    "form": "PL"
+  },
+  "macaquinha": {
+    "plural": "macacos",
+    "form": "PL"
+  },
+  "macaquinho": {
+    "plural": "macacos",
     "form": "PL"
   },
   "machado": {
@@ -12907,9 +13023,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "mágica": {
+    "plural": "mágicos",
+    "form": "PL"
+  },
   "mágico": {
     "plural": "mágicos",
-    "form": "M"
+    "form": ""
   },
   "mágicos": {
     "plural": "isPlural",
@@ -13028,6 +13148,18 @@
     "form": "F"
   },
   "najas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "nanómetro": {
+    "plural": "nanômetros",
+    "form": "M"
+  },
+  "nanômetro": {
+    "plural": "nanômetros",
+    "form": "M/PL"
+  },
+  "nanômetros": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13151,6 +13283,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "neutrão": {
+    "plural": "neutrões",
+    "form": "M"
+  },
+  "neutrões": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "nicho": {
     "plural": "nichos",
     "form": "M"
@@ -13231,9 +13371,13 @@
     "plural": "notas",
     "form": "F/PL"
   },
+  "notonas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "notão": {
-    "plural": "notas",
-    "form": "F/PL"
+    "plural": "notonas",
+    "form": "F"
   },
   "notícia": {
     "plural": "notícias",
@@ -13295,6 +13439,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "nêutron": {
+    "plural": "neutrões",
+    "form": "M/PL"
+  },
   "níveis": {
     "plural": "isPlural",
     "form": "PL"
@@ -13332,8 +13480,12 @@
     "form": "PL"
   },
   "objecção": {
-    "plural": "objeções",
-    "form": "F/PL"
+    "plural": "objecções",
+    "form": "F"
+  },
+  "objecções": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "objetivo": {
     "plural": "objetivos",
@@ -14940,11 +15092,7 @@
     "form": "PL"
   },
   "político": {
-    "plural": "políticos",
-    "form": ""
-  },
-  "políticos": {
-    "plural": "isPlural",
+    "plural": "políticas",
     "form": "PL"
   },
   "pomada": {
@@ -14976,6 +15124,14 @@
     "form": "M"
   },
   "pontos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "popularidade": {
+    "plural": "popularidades",
+    "form": "F"
+  },
+  "popularidades": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15345,7 +15501,7 @@
   },
   "prima": {
     "plural": "primos",
-    "form": ""
+    "form": "PL"
   },
   "primata": {
     "plural": "primatas",
@@ -15385,7 +15541,7 @@
   },
   "primão": {
     "plural": "primos",
-    "form": "PL"
+    "form": ""
   },
   "princesa": {
     "plural": "princesas",
@@ -15627,11 +15783,19 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "protão": {
+    "plural": "protões",
+    "form": "M"
+  },
   "protótipo": {
     "plural": "protótipos",
     "form": "M"
   },
   "protótipos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "protões": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -15694,6 +15858,10 @@
   "príncipes": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "próton": {
+    "plural": "protões",
+    "form": "M/PL"
   },
   "publicação": {
     "plural": "publicações",
@@ -16747,6 +16915,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "responsabilidade": {
+    "plural": "responsabilidades",
+    "form": "F"
+  },
+  "responsabilidades": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "resposta": {
     "plural": "respostas",
     "form": "F"
@@ -17323,6 +17499,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "secretaria": {
+    "plural": "secretarias",
+    "form": "F"
+  },
+  "secretarias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "secretária": {
     "plural": "secretárias",
     "form": ""
@@ -17790,6 +17974,14 @@
   "som": {
     "plural": "sons",
     "form": "M"
+  },
+  "sonho": {
+    "plural": "sonhos",
+    "form": "M"
+  },
+  "sonhos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "sons": {
     "plural": "isPlural",
@@ -19780,12 +19972,8 @@
     "form": "M"
   },
   "vidrão": {
-    "plural": "vidrões",
-    "form": "M"
-  },
-  "vidrões": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "vidrinhos",
+    "form": "M/PL"
   },
   "vigor": {
     "plural": "vigores",
@@ -19896,6 +20084,14 @@
     "form": "F"
   },
   "voadoras": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "vocalista": {
+    "plural": "vocalistas",
+    "form": ""
+  },
+  "vocalistas": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -20168,6 +20364,14 @@
     "form": "M"
   },
   "índios": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "íon": {
+    "plural": "íons",
+    "form": "M/PL"
+  },
+  "íons": {
     "plural": "isPlural",
     "form": "PL"
   },

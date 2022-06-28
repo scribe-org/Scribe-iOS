@@ -10501,7 +10501,7 @@
   },
   "barstol": {
     "plural": "barstolar",
-    "form": "C/PL"
+    "form": "C"
   },
   "barstolar": {
     "plural": "isPlural",
@@ -21629,7 +21629,7 @@
   },
   "bärstol": {
     "plural": "barstolar",
-    "form": "C"
+    "form": "C/PL"
   },
   "bärsärk": {
     "plural": "bärsärkar",
@@ -28037,7 +28037,7 @@
   },
   "dragg": {
     "plural": "draggar",
-    "form": "C/PL"
+    "form": "C"
   },
   "draggar": {
     "plural": "isPlural",
@@ -28577,7 +28577,7 @@
   },
   "drägg": {
     "plural": "draggar",
-    "form": "C"
+    "form": "C/PL"
   },
   "dräkt": {
     "plural": "dräkter",
@@ -30766,6 +30766,10 @@
   "elgrillar": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "elgräsklippare": {
+    "plural": "elgräsklippare",
+    "form": "C/PL"
   },
   "elit": {
     "plural": "eliter",
@@ -69069,10 +69073,10 @@
   },
   "klinik": {
     "plural": "kliniker",
-    "form": "C/PL"
+    "form": "C"
   },
   "kliniker": {
-    "plural": "kliniker",
+    "plural": "isPlural",
     "form": "C/PL"
   },
   "klinkergolv": {
@@ -80312,8 +80316,12 @@
     "form": "PL"
   },
   "landslag": {
-    "plural": "landslag",
-    "form": "C/N/PL"
+    "plural": "landslagar",
+    "form": "C/N"
+  },
+  "landslagar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "landslagsläkare": {
     "plural": "landslagsläkare",
@@ -92025,7 +92033,7 @@
   },
   "miss": {
     "plural": "missar",
-    "form": "C"
+    "form": "C/PL"
   },
   "missanpassning": {
     "plural": "missanpassningar",
@@ -92061,7 +92069,7 @@
   },
   "misse": {
     "plural": "missar",
-    "form": "C/PL"
+    "form": "C"
   },
   "missfärgning": {
     "plural": "missfärgningar",
@@ -93579,11 +93587,19 @@
     "plural": "morrhår",
     "form": "N/PL"
   },
+  "morsa": {
+    "plural": "morsor",
+    "form": "C"
+  },
   "morsgris": {
     "plural": "morsgrisar",
     "form": "C"
   },
   "morsgrisar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "morsor": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -94212,6 +94228,14 @@
     "form": "C"
   },
   "multikörningar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "multiplikation": {
+    "plural": "multiplikationer",
+    "form": "C"
+  },
+  "multiplikationer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -112544,8 +112568,8 @@
     "form": "PL"
   },
   "ras": {
-    "plural": "ras",
-    "form": "C/N/PL"
+    "plural": "raser",
+    "form": "C/N"
   },
   "rasbiolog": {
     "plural": "rasbiologer",
@@ -112558,6 +112582,10 @@
   "raseborgare": {
     "plural": "raseborgare",
     "form": "C/PL"
+  },
+  "raser": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "raseriutbrott": {
     "plural": "raseriutbrott",
@@ -114732,6 +114760,14 @@
     "form": "N/PL"
   },
   "resor": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "respiration": {
+    "plural": "respirationer",
+    "form": "C"
+  },
+  "respirationer": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -151193,7 +151229,7 @@
   },
   "tätort": {
     "plural": "tätorter",
-    "form": "C/PL"
+    "form": "C"
   },
   "tätorter": {
     "plural": "isPlural",
@@ -151225,7 +151261,7 @@
   },
   "tätört": {
     "plural": "tätorter",
-    "form": "C"
+    "form": "C/PL"
   },
   "tävling": {
     "plural": "tävlingar",
@@ -156140,8 +156176,8 @@
     "form": "PL"
   },
   "val": {
-    "plural": "valar",
-    "form": "C/N"
+    "plural": "val",
+    "form": "C/N/PL"
   },
   "valack": {
     "plural": "valacker",
@@ -156164,10 +156200,6 @@
     "form": "C"
   },
   "valapparater": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "valar": {
     "plural": "isPlural",
     "form": "PL"
   },

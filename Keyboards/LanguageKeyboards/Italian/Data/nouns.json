@@ -263,6 +263,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "arpeggi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "arpeggio": {
+    "plural": "arpeggi",
+    "form": "M"
+  },
   "ascella": {
     "plural": "ascelle",
     "form": "F"
@@ -391,6 +399,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bombi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "bombo": {
+    "plural": "bombi",
+    "form": "M"
+  },
   "bottega": {
     "plural": "botteghe",
     "form": "F/PL"
@@ -491,6 +507,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "camicetta": {
+    "plural": "camicette",
+    "form": "F"
+  },
+  "camicette": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "camicia": {
     "plural": "camicie",
     "form": "F"
@@ -514,6 +538,14 @@
   "cane": {
     "plural": "cagne",
     "form": "M/PL"
+  },
+  "cantina": {
+    "plural": "cantine",
+    "form": "F"
+  },
+  "cantine": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "caos": {
     "plural": "",
@@ -714,6 +746,14 @@
   "cittadini": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "clavicembali": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "clavicembalo": {
+    "plural": "clavicembali",
+    "form": "M"
   },
   "cognata": {
     "plural": "cognate",
@@ -1063,6 +1103,14 @@
     "plural": "dragaioli",
     "form": "M"
   },
+  "drappeggi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "drappeggio": {
+    "plural": "drappeggi",
+    "form": "M"
+  },
   "dubbi": {
     "plural": "isPlural",
     "form": "PL"
@@ -1178,6 +1226,14 @@
   "figlioccio": {
     "plural": "figliocci",
     "form": "M"
+  },
+  "filigrana": {
+    "plural": "filigrane",
+    "form": "F"
+  },
+  "filigrane": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "film": {
     "plural": "film",
@@ -1663,6 +1719,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "macedonia": {
+    "plural": "macedonie",
+    "form": "F"
+  },
+  "macedonie": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "madrina": {
     "plural": "madrine",
     "form": "F"
@@ -2104,6 +2168,22 @@
     "form": "M"
   },
   "paesi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "pagina": {
+    "plural": "pagine",
+    "form": "F"
+  },
+  "pagine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "paglia": {
+    "plural": "paglie",
+    "form": "F"
+  },
+  "paglie": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2847,6 +2927,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "stagione": {
+    "plural": "stagioni",
+    "form": "F"
+  },
+  "stagioni": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "stati": {
     "plural": "isPlural",
     "form": "PL"
@@ -2939,6 +3027,22 @@
     "plural": "tartuchini",
     "form": "M"
   },
+  "tasca": {
+    "plural": "tasche",
+    "form": "F"
+  },
+  "tasche": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "taschina": {
+    "plural": "taschine",
+    "form": "F"
+  },
+  "taschine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "tata": {
     "plural": "tate",
     "form": "F"
@@ -2962,6 +3066,14 @@
   "teletrasporto": {
     "plural": "teletrasporti",
     "form": "M"
+  },
+  "tema": {
+    "plural": "temi",
+    "form": "M"
+  },
+  "temi": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "tempi": {
     "plural": "isPlural",
@@ -3002,6 +3114,14 @@
   "teste di cazzo": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "titoli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "titolo": {
+    "plural": "titoli",
+    "form": "M"
   },
   "tomi": {
     "plural": "isPlural",
@@ -3103,6 +3223,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "tè": {
+    "plural": "",
+    "form": "M"
+  },
   "universi": {
     "plural": "isPlural",
     "form": "PL"
@@ -3159,6 +3283,14 @@
     "plural": "vasi",
     "form": "M"
   },
+  "veli": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "velo": {
+    "plural": "veli",
+    "form": "M"
+  },
   "versamenti": {
     "plural": "isPlural",
     "form": "PL"
@@ -3166,6 +3298,14 @@
   "versamento": {
     "plural": "versamenti",
     "form": "M"
+  },
+  "versione": {
+    "plural": "versioni",
+    "form": "F"
+  },
+  "versioni": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "vicina": {
     "plural": "vicine",
