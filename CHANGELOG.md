@@ -22,10 +22,15 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+### 🐞 Bug Fixes
+
+- Verb conjugation tables now always return to their base conjugation each time the command is used.
+
 ### 🎨 Design Changes
 
-<!-- - The App Store images have been updated to be more professional.
-- Some App Store images have been replaced with ones that better show app features. -->
+- The App Store images have been updated to be more professional.
+- Some App Store images have been replaced with ones that better show app features.
+- Section headers for App Store videos have been changed to match the new image style.
 
 # Scribe-iOS 1.3.7
 
