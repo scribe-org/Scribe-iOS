@@ -240,8 +240,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 <details><summary><strong>List of referenced codes</strong></summary>
 <p>
 
-- https://github.com/EthanSK/CustomKeyboard
-  - License: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
+- [CustomKeyboard](https://github.com/EthanSK/CustomKeyboard) by [EthanSK](https://github.com/EthanSK) ([License](https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE))
 
 </p>
 </details>
