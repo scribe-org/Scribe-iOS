@@ -18,6 +18,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- The app screen fields have been made larger and the text size has also been increased. -->
 <!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
 
+# Scribe-iOS 1.3.9
+
+### 🎨 Design Changes
+
+- The content for the App Store images has been centered more exactly.
+
 # Scribe-iOS 1.3.8
 
 ### 🗃️ Data Added
