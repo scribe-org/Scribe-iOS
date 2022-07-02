@@ -111,19 +111,19 @@ func setESKeyboardLayout() {
   invalidCommandMsg = "No en Wikidata"
 
   translateKeyLbl = "Traducir"
-  translatePlaceholder = "Ingrese la palabra"
+  translatePlaceholder = "Ingrese una palabra"
   translatePrompt = commandPromptSpacing + "es -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Conjugar"
-  conjugatePlaceholder = "Ingresar verbo"
+  conjugatePlaceholder = "Ingresar un verbo"
   conjugatePrompt = commandPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
-  pluralPlaceholder = "Ingrese sustantivo"
+  pluralPlaceholder = "Ingrese un sustantivo"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
