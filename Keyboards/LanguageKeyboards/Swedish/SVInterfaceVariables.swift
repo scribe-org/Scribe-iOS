@@ -113,19 +113,19 @@ func setSVKeyboardLayout() {
   invalidCommandMsg = "Inte i Wikidata"
 
   translateKeyLbl = "Översätt"
-  translatePlaceholder = "Skriv in ord"
+  translatePlaceholder = "Ange ett ord"
   translatePrompt = commandPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Konjugera"
-  conjugatePlaceholder = "Ange verb"
+  conjugatePlaceholder = "Ange ett verb"
   conjugatePrompt = commandPromptSpacing + "Konjugera: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
-  pluralPlaceholder = "Ange substantiv"
+  pluralPlaceholder = "Ange ett substantiv"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
