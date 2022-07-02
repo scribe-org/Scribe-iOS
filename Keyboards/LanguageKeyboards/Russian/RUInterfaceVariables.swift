@@ -97,15 +97,21 @@ func setRUKeyboardLayout() {
   invalidCommandMsg = "Нет в Викиданных"
 
   translateKeyLbl = "Перевести"
+  translatePlaceholder = "Введите слово"
   translatePrompt = commandPromptSpacing + "ru -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Спрягать"
+  conjugatePlaceholder = "Введите глагол"
   conjugatePrompt = commandPromptSpacing + "Спрягать: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Множ"
+  pluralPlaceholder = "Введите существительное"
   pluralPrompt = commandPromptSpacing + "Множ: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
   isAlreadyPluralMessage = "Уже во множ"
 }

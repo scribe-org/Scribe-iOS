@@ -109,15 +109,21 @@ func setITKeyboardLayout() {
   invalidCommandMsg = "Non in Wikidata"
 
   translateKeyLbl = "Tradurre"
+  translatePlaceholder = "Inserisci una parola"
   translatePrompt = commandPromptSpacing + "it -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Coniugare"
+  conjugatePlaceholder = "Inserisci un verbo"
   conjugatePrompt = commandPromptSpacing + "Coniugare: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Plurale"
+  pluralPlaceholder = "Inserisci un nome"
   pluralPrompt = commandPromptSpacing + "Plurale: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
   isAlreadyPluralMessage = "Già plurale"
 }

@@ -115,15 +115,21 @@ func setDEKeyboardLayout() {
   invalidCommandMsg = "Nicht in Wikidata"
 
   translateKeyLbl = "Übersetzen"
+  translatePlaceholder = "Wort engeben"
   translatePrompt = commandPromptSpacing + "de -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Konjugieren"
+  conjugatePlaceholder = "Verb eingeben"
   conjugatePrompt = commandPromptSpacing + "Konjugieren: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
+  pluralPlaceholder = "Nomen eingeben"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
   isAlreadyPluralMessage = "Schon Plural"
 }
