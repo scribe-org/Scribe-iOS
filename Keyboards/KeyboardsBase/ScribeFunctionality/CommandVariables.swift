@@ -47,14 +47,18 @@ let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
 // MARK: Translate Variables
 var translateKeyLbl: String = ""
 var translatePrompt: String = ""
+var translatePlaceholder: String = ""
 var translatePromptAndCursor: String = ""
+var translatePromptAndPlaceholder: String = ""
 var getTranslation: Bool = false
 var wordToTranslate: String = ""
 
 // MARK: Conjugate Variables
 var conjugateKeyLbl: String = ""
 var conjugatePrompt: String = ""
+var conjugatePlaceholder: String = ""
 var conjugatePromptAndCursor: String = ""
+var conjugatePromptAndPlaceholder: String = ""
 var getConjugation: Bool = false
 var conjugateView: Bool = false
 var conjugateAlternateView: Bool = false
@@ -94,7 +98,9 @@ var verbConjugated: String = ""
 // MARK: Plural Variables
 var pluralKeyLbl: String = ""
 var pluralPrompt: String = ""
+var pluralPlaceholder: String = ""
 var pluralPromptAndCursor: String = ""
+var pluralPromptAndPlaceholder: String = ""
 var getPlural: Bool = false
 var isAlreadyPluralState: Bool = false
 var isAlreadyPluralMessage: String = ""
