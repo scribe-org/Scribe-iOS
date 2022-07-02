@@ -107,19 +107,19 @@ func setPTKeyboardLayout() {
   invalidCommandMsg = "Não está no Wikidata"
 
   translateKeyLbl = "Traduzir"
-  translatePlaceholder = "Digite a palavra"
+  translatePlaceholder = "Digite uma palavra"
   translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Conjugar"
-  conjugatePlaceholder = "Digite o verbo"
+  conjugatePlaceholder = "Digite um verbo"
   conjugatePrompt = commandPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
-  pluralPlaceholder = "Digite o substantivo"
+  pluralPlaceholder = "Digite um substantivo"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
