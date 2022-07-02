@@ -109,19 +109,19 @@ func setFRKeyboardLayout() {
   invalidCommandMsg = "Pas dans Wikidata"
 
   translateKeyLbl = "Traduire"
-  translatePlaceholder = "Entrez le mot"
+  translatePlaceholder = "Entrez un mot"
   translatePrompt = commandPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
 
   conjugateKeyLbl = "Conjuguer"
-  conjugatePlaceholder = "Entrez le verbe"
+  conjugatePlaceholder = "Entrez un verbe"
   conjugatePrompt = commandPromptSpacing + "Conjuguer: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
 
   pluralKeyLbl = "Pluriel"
-  pluralPlaceholder = "Entrez le nom"
+  pluralPlaceholder = "Entrez un nom"
   pluralPrompt = commandPromptSpacing + "Pluriel: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
