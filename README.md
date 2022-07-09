@@ -16,7 +16,7 @@
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 
-<a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/Resources/GitHub/Images/app_store_badge.png' height='60px'/></a>
+<a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/app_store_badge.png' height='60px'/></a>
 
 Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned).
 
@@ -65,7 +65,7 @@ https://user-images.githubusercontent.com/24387426/176200444-7b85488b-55a9-40d9-
 </p>
 </details>
 
-The App Store videos, images and text can be found in [Resources/AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/Resources/AppStore/). Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new/choose) to check before.
+The App Store videos, images and text can be found in the [AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/AppStore) directory. Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new/choose) to check before.
 
 <a id="supported-languages"></a>
 
