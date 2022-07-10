@@ -1091,7 +1091,7 @@ class KeyboardViewController: UIInputViewController {
       // Always start in letters with a new keyboard.
       keyboardState = .letters
       loadKeys()
-      commandBar.text = translatePromptAndCursor
+      commandBar.text = translatePromptAndPlaceholder
 
     // Switch to conjugate state.
     case "Conjugate":
@@ -1099,7 +1099,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getConjugation = true
       loadKeys()
-      commandBar.text = conjugatePromptAndCursor
+      commandBar.text = conjugatePromptAndPlaceholder
 
     // Switch to plural state.
     case "Plural":
@@ -1112,7 +1112,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getPlural = true
       loadKeys()
-      commandBar.text = pluralPromptAndCursor
+      commandBar.text = pluralPromptAndPlaceholder
 
     // Move displayed conjugations to the left in order if able.
     case "shiftConjugateLeft":
@@ -1193,6 +1193,8 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "delete":
+      // Inserting the placeholder when commandBar text is deleted
+      commandBar.conditionallyPlacePlaceholder()
       if shiftButtonState == .shift {
         shiftButtonState = .normal
         loadKeys()
@@ -1214,6 +1216,7 @@ class KeyboardViewController: UIInputViewController {
       clearCommandBar()
 
     case spaceBar:
+      commandBar.conditionallyRemovePlaceholder()
       if commandState != true {
         proxy.insertText(" ")
         if [". ", "? ", "! "].contains(proxy.documentContextBeforeInput?.suffix(2)) {
@@ -1356,6 +1359,7 @@ class KeyboardViewController: UIInputViewController {
 
     case "'":
       // Change back to letter keys.
+      commandBar.conditionallyRemovePlaceholder()
       if commandState != true {
         proxy.insertText("'")
       } else {
@@ -1371,6 +1375,7 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     default:
+      commandBar.conditionallyRemovePlaceholder()
       if shiftButtonState == .shift {
         shiftButtonState = .normal
         loadKeys()
@@ -1474,6 +1479,7 @@ class KeyboardViewController: UIInputViewController {
     // Prevent the command state prompt from being deleted.
     if commandState == true && allPrompts.contains((commandBar?.text!)!) {
       gesture.state = .cancelled
+      commandBar.conditionallyPlacePlaceholder()
     }
     if gesture.state == .began {
       backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
