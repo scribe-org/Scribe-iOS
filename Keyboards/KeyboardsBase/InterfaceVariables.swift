@@ -118,7 +118,7 @@ func setKeyboardLayout() {
     setLayoutFxn()
   }
 
-  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
+  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor, translatePromptAndPlaceholder, conjugatePromptAndPlaceholder, pluralPromptAndPlaceholder]
 }
 
 // Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
