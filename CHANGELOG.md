@@ -8,7 +8,7 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-<!--# Scribe-iOS 1.4.0-->
+<!--# Scribe-iOS 1.5.0-->
 <!---->
 <!--Scribe's third design sprint with Spencer Arney focussed on the app screen and onboarding users.-->
 <!---->
@@ -18,11 +18,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- The app screen fields have been made larger and the text size has also been increased. -->
 <!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
 
-# Scribe-iOS 1.4.0 (WIP)
+# Scribe-iOS 1.4.0
 
 ### ✨ New Features
 
 - Commands now include a greyed out prompt that tells the user to enter a specific word.
+
+### 🗃️ Data Added
 
 ### 🎨 Design Changes
 
