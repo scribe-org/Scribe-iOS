@@ -85,7 +85,7 @@ class CommandBar: UILabel {
     }
   }
   
-  func conditionallyPlacePlaceholder() {
+  func conditionallyAddPlaceholder() {
     if commandState == true {
       if getTranslation == true && self.text == translatePromptAndCursor {
         self.text = translatePromptAndPlaceholder

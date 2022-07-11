@@ -112,18 +112,18 @@ func setFRKeyboardLayout() {
   translatePlaceholder = "Entrez un mot"
   translatePrompt = commandPromptSpacing + "fr -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
 
   conjugateKeyLbl = "Conjuguer"
   conjugatePlaceholder = "Entrez un verbe"
   conjugatePrompt = commandPromptSpacing + "Conjuguer: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
-  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
 
   pluralKeyLbl = "Pluriel"
   pluralPlaceholder = "Entrez un nom"
   pluralPrompt = commandPromptSpacing + "Pluriel: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
-  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   isAlreadyPluralMessage = "Déjà pluriel"
 }

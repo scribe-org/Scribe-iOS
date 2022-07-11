@@ -1193,8 +1193,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "delete":
-      // Inserting the placeholder when commandBar text is deleted
-      commandBar.conditionallyPlacePlaceholder()
+      
       if shiftButtonState == .shift {
         shiftButtonState = .normal
         loadKeys()
@@ -1214,6 +1213,8 @@ class KeyboardViewController: UIInputViewController {
         }
       }
       clearCommandBar()
+      // Inserting the placeholder when commandBar text is deleted
+      commandBar.conditionallyAddPlaceholder()
 
     case spaceBar:
       commandBar.conditionallyRemovePlaceholder()
@@ -1479,7 +1480,7 @@ class KeyboardViewController: UIInputViewController {
     // Prevent the command state prompt from being deleted.
     if commandState == true && allPrompts.contains((commandBar?.text!)!) {
       gesture.state = .cancelled
-      commandBar.conditionallyPlacePlaceholder()
+      commandBar.conditionallyAddPlaceholder()
     }
     if gesture.state == .began {
       backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
