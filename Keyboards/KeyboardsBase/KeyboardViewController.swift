@@ -1193,7 +1193,6 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "delete":
-      
       if shiftButtonState == .shift {
         shiftButtonState = .normal
         loadKeys()
