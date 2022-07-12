@@ -29,6 +29,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The content for the App Store images has been centered more exactly.
+- Key pressed colors have been made darker to be more distinct from base key colors.
 
 # Scribe-iOS 1.3.8
 
