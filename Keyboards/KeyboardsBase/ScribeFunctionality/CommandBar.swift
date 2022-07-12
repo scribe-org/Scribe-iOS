@@ -72,4 +72,28 @@ class CommandBar: UILabel {
     self.shadow.backgroundColor = UIColor.clear
     self.blend.backgroundColor = UIColor.clear
   }
+  
+  func conditionallyRemovePlaceholder() {
+    if commandState == true {
+      if getTranslation == true && self.text == translatePromptAndPlaceholder {
+        self.text = translatePromptAndCursor
+      } else if getConjugation == true && self.text == conjugatePromptAndPlaceholder {
+        self.text = conjugatePromptAndCursor
+      } else if getPlural == true && self.text == pluralPromptAndPlaceholder {
+        self.text = pluralPromptAndCursor
+      }
+    }
+  }
+  
+  func conditionallyAddPlaceholder() {
+    if commandState == true {
+      if getTranslation == true && self.text == translatePromptAndCursor {
+        self.text = translatePromptAndPlaceholder
+      } else if getConjugation == true && self.text == conjugatePromptAndCursor {
+        self.text = conjugatePromptAndPlaceholder
+      } else if getPlural == true && self.text == pluralPromptAndCursor {
+        self.text = pluralPromptAndPlaceholder
+      }
+    }
+  }
 }

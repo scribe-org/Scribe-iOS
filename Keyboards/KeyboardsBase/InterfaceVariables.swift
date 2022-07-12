@@ -118,7 +118,7 @@ func setKeyboardLayout() {
     setLayoutFxn()
   }
 
-  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor]
+  allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor, translatePromptAndPlaceholder, conjugatePromptAndPlaceholder, pluralPromptAndPlaceholder]
 }
 
 // Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
@@ -256,13 +256,16 @@ func setENKeyboardLayout() {
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
 
   conjugateKeyLbl = "Conjugate"
   conjugatePrompt = commandPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   isAlreadyPluralMessage = "Already plural"
 }

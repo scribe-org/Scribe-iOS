@@ -110,18 +110,18 @@ func setPTKeyboardLayout() {
   translatePlaceholder = "Digite uma palavra"
   translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
 
   conjugateKeyLbl = "Conjugar"
   conjugatePlaceholder = "Digite um verbo"
   conjugatePrompt = commandPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
-  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
   pluralPlaceholder = "Digite um substantivo"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
-  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   isAlreadyPluralMessage = "Já plural"
 }

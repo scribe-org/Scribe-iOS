@@ -116,18 +116,18 @@ func setSVKeyboardLayout() {
   translatePlaceholder = "Ange ett ord"
   translatePrompt = commandPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor + translatePlaceholder
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
 
   conjugateKeyLbl = "Konjugera"
   conjugatePlaceholder = "Ange ett verb"
   conjugatePrompt = commandPromptSpacing + "Konjugera: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
-  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + conjugatePlaceholder
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
 
   pluralKeyLbl = "Plural"
   pluralPlaceholder = "Ange ett substantiv"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
-  pluralPromptAndPlaceholder = pluralPromptAndCursor + pluralPlaceholder
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   isAlreadyPluralMessage = "Redan plural"
 }
