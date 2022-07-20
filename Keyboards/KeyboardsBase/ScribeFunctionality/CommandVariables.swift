@@ -40,6 +40,7 @@ var switchInput: Bool = false
 
 // Prompts and saving groups of languages.
 var allPrompts: [String] = [""]
+var allColoredPrompts: [NSAttributedString] = []
 
 let languagesWithCapitalizedNouns = ["German"]
 let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
@@ -50,6 +51,7 @@ var translatePrompt: String = ""
 var translatePlaceholder: String = ""
 var translatePromptAndCursor: String = ""
 var translatePromptAndPlaceholder: String = ""
+var translatePromptAndColorPlaceholder = NSMutableAttributedString()
 var getTranslation: Bool = false
 var wordToTranslate: String = ""
 
@@ -59,6 +61,7 @@ var conjugatePrompt: String = ""
 var conjugatePlaceholder: String = ""
 var conjugatePromptAndCursor: String = ""
 var conjugatePromptAndPlaceholder: String = ""
+var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
 var getConjugation: Bool = false
 var conjugateView: Bool = false
 var conjugateAlternateView: Bool = false
@@ -101,6 +104,7 @@ var pluralPrompt: String = ""
 var pluralPlaceholder: String = ""
 var pluralPromptAndCursor: String = ""
 var pluralPromptAndPlaceholder: String = ""
+var pluralPromptAndColorPlaceholder = NSMutableAttributedString()
 var getPlural: Bool = false
 var isAlreadyPluralState: Bool = false
 var isAlreadyPluralMessage: String = ""

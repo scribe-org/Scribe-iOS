@@ -4,6 +4,8 @@
 //  Constants and functions to load the German Scribe keyboard.
 //
 
+import UIKit
+
 public enum GermanKeyboardConstants {
 
   // Keyboard key layouts.
@@ -119,17 +121,23 @@ func setDEKeyboardLayout() {
   translatePrompt = commandPromptSpacing + "de -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   conjugateKeyLbl = "Konjugieren"
   conjugatePlaceholder = "Verb eingeben"
   conjugatePrompt = commandPromptSpacing + "Konjugieren: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   pluralKeyLbl = "Plural"
   pluralPlaceholder = "Nomen eingeben"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   isAlreadyPluralMessage = "Schon Plural"
 }

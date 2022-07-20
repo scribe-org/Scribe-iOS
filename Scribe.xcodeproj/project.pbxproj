@@ -444,7 +444,7 @@
 		D17193BF27AEA33A0038660B /* AppTextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyling.swift; sourceTree = "<group>"; };
 		D17193C327AEAD7D0038660B /* AppStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyling.swift; sourceTree = "<group>"; };
 		D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRInterfaceVariables.swift; sourceTree = "<group>"; };
-		D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEInterfaceVariables.swift; sourceTree = "<group>"; };
+		D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = DEInterfaceVariables.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D17193D727AECA450038660B /* PTInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193E727AECAE60038660B /* ESInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESInterfaceVariables.swift; sourceTree = "<group>"; };
@@ -572,7 +572,9 @@
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				38BD213122D5907E00C6795D /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		38BD213122D5907E00C6795D /* Products */ = {
 			isa = PBXGroup;

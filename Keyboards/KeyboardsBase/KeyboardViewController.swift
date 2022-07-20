@@ -203,7 +203,7 @@ class KeyboardViewController: UIInputViewController {
   func handleDeleteButtonPressed() {
     if commandState != true {
       proxy.deleteBackward()
-    } else if !(commandState == true && allPrompts.contains(commandBar.text!)) {
+    } else if !(commandState == true && (allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!))) {
       guard
         let inputText = commandBar.text,
         !inputText.isEmpty
@@ -1091,7 +1091,7 @@ class KeyboardViewController: UIInputViewController {
       // Always start in letters with a new keyboard.
       keyboardState = .letters
       loadKeys()
-      commandBar.text = translatePromptAndPlaceholder
+      commandBar.attributedText = translatePromptAndColorPlaceholder
 
     // Switch to conjugate state.
     case "Conjugate":
@@ -1099,7 +1099,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getConjugation = true
       loadKeys()
-      commandBar.text = conjugatePromptAndPlaceholder
+      commandBar.attributedText = conjugatePromptAndColorPlaceholder
 
     // Switch to plural state.
     case "Plural":
@@ -1112,7 +1112,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getPlural = true
       loadKeys()
-      commandBar.text = pluralPromptAndPlaceholder
+      commandBar.attributedText = pluralPromptAndColorPlaceholder
 
     // Move displayed conjugations to the left in order if able.
     case "shiftConjugateLeft":
@@ -1198,9 +1198,12 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
       // Prevent the command state prompt from being deleted.
-      if commandState == true && allPrompts.contains((commandBar?.text!)!) {
+      if commandState == true && (allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!)) {
         shiftButtonState = .shift // Auto-capitalization
         loadKeys()
+        // function call required due to return
+        // else placeholder is never added on last delete action
+        commandBar.conditionallyAddPlaceholder()
         return
       }
       handleDeleteButtonPressed()
