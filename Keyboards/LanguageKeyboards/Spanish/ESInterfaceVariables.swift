@@ -6,7 +6,7 @@
 
 import UIKit
 
-public class SpanishKeyboardConstants {
+public enum SpanishKeyboardConstants {
 
   // Keyboard key layouts.
   static let letterKeysPhone = [
