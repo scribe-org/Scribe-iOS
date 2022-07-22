@@ -4,6 +4,8 @@
 //  Constants and functions to load the Italian Scribe keyboard.
 //
 
+import UIKit
+
 public enum ItalianKeyboardConstants {
 
   // Keyboard key layouts.
@@ -113,17 +115,23 @@ func setITKeyboardLayout() {
   translatePrompt = commandPromptSpacing + "it -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   conjugateKeyLbl = "Coniugare"
   conjugatePlaceholder = "Inserisci un verbo"
   conjugatePrompt = commandPromptSpacing + "Coniugare: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   pluralKeyLbl = "Plurale"
   pluralPlaceholder = "Inserisci un nome"
   pluralPrompt = commandPromptSpacing + "Plurale: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   isAlreadyPluralMessage = "Già plurale"
 }

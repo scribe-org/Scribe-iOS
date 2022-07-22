@@ -75,11 +75,11 @@ class CommandBar: UILabel {
   
   func conditionallyRemovePlaceholder() {
     if commandState == true {
-      if getTranslation == true && self.text == translatePromptAndPlaceholder {
-        self.text = translatePromptAndCursor
-      } else if getConjugation == true && self.text == conjugatePromptAndPlaceholder {
+      if getTranslation == true && (self.attributedText?.isEqual(to: translatePromptAndColorPlaceholder) ?? false) {
+        self.attributedText = NSAttributedString(string: translatePromptAndCursor)
+      } else if getConjugation == true && (self.attributedText?.isEqual(to: conjugatePromptAndColorPlaceholder) ?? false) {
         self.text = conjugatePromptAndCursor
-      } else if getPlural == true && self.text == pluralPromptAndPlaceholder {
+      } else if getPlural == true && (self.attributedText?.isEqual(to: pluralPromptAndColorPlaceholder) ?? false) {
         self.text = pluralPromptAndCursor
       }
     }
@@ -87,13 +87,27 @@ class CommandBar: UILabel {
   
   func conditionallyAddPlaceholder() {
     if commandState == true {
-      if getTranslation == true && self.text == translatePromptAndCursor {
-        self.text = translatePromptAndPlaceholder
-      } else if getConjugation == true && self.text == conjugatePromptAndCursor {
-        self.text = conjugatePromptAndPlaceholder
-      } else if getPlural == true && self.text == pluralPromptAndCursor {
-        self.text = pluralPromptAndPlaceholder
+      // self.text check required as attributed text changes to text when shiftButtonState == .shift
+      if getTranslation == true && (self.text == translatePromptAndCursor || self.text == translatePromptAndPlaceholder) {
+        self.attributedText = colorizePrompt(for: translatePromptAndPlaceholder)
+      } else if getConjugation == true && (self.text == conjugatePromptAndCursor || self.text == conjugatePromptAndPlaceholder) {
+        self.attributedText = colorizePrompt(for: conjugatePromptAndPlaceholder)
+      } else if getPlural == true && (self.text == pluralPromptAndCursor || self.text == pluralPromptAndPlaceholder) {
+        self.attributedText = colorizePrompt(for: pluralPromptAndPlaceholder)
       }
     }
+  }
+  
+  func colorizePrompt(for prompt: String) -> NSMutableAttributedString {
+    let colorPrompt = NSMutableAttributedString(string: prompt)
+    if getTranslation == true {
+      colorPrompt.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+    } else if getConjugation == true {
+      colorPrompt.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+    } else if getPlural == true {
+      colorPrompt.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+    }
+    
+    return colorPrompt
   }
 }

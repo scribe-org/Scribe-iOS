@@ -4,7 +4,9 @@
 //  Constants and functions to load the Swedish Scribe keyboard.
 //
 
-public class SwedishKeyboardConstants {
+import UIKit
+
+public enum SwedishKeyboardConstants {
 
   // Keyboard key layouts.
   static let letterKeysPhone = [
@@ -117,17 +119,23 @@ func setSVKeyboardLayout() {
   translatePrompt = commandPromptSpacing + "sv -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   conjugateKeyLbl = "Konjugera"
   conjugatePlaceholder = "Ange ett verb"
   conjugatePrompt = commandPromptSpacing + "Konjugera: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   pluralKeyLbl = "Plural"
   pluralPlaceholder = "Ange ett substantiv"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   isAlreadyPluralMessage = "Redan plural"
 }

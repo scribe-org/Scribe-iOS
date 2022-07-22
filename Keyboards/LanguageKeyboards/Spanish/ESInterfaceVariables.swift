@@ -4,7 +4,9 @@
 //  Constants and functions to load the Spanish Scribe keyboard.
 //
 
-public class SpanishKeyboardConstants {
+import UIKit
+
+public enum SpanishKeyboardConstants {
 
   // Keyboard key layouts.
   static let letterKeysPhone = [
@@ -115,17 +117,23 @@ func setESKeyboardLayout() {
   translatePrompt = commandPromptSpacing + "es -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   conjugateKeyLbl = "Conjugar"
   conjugatePlaceholder = "Ingresar un verbo"
   conjugatePrompt = commandPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   pluralKeyLbl = "Plural"
   pluralPlaceholder = "Ingrese un sustantivo"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   isAlreadyPluralMessage = "Ya en plural"
 }
