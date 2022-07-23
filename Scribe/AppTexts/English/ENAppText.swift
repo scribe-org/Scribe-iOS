@@ -111,7 +111,7 @@ func getENGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
   // A second NSAttributedString that includes a link to the GitHub.
   let ghLink = addHyperLinks(
     originalText: "github.com/scribe-org.",
-    links: ["github.com/scribe-org": "https://github.com/scribe-org"],
+    links: ["github.com/scribe-org": "https://github.com/scribe-org/Scribe-iOS"],
     fontSize: fontSize
   )
 
