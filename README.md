@@ -34,8 +34,8 @@ The [contributing](#contributing) section has information for those interested, 
 
 - [Preview Videos](#preview-videos)
 - [Contributing](#contributing)
-- [Supported Languages](#supported-languages)
 - [Setup](#setup)
+- [Supported Languages](#supported-languages)
 - [Keyboard Features](#keyboard-features)
   - [Translation](#translation)
   - [Verb Conjugation](#verb-conjugation)
@@ -89,6 +89,17 @@ Those interested can further check the [`-next release-`](https://github.com/scr
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
+<a id="setup"></a>
+
+# Setup [`⇧`](#contents)
+
+Users access Scribe language keyboards through the following:
+
+- Download Scribe from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+- Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
+- Select Scribe and choose from the available language keyboards
+- When typing press `🌐` to select keyboards
+
 <a id="supported-languages"></a>
 
 # Supported Languages [`⇧`](#contents)
@@ -114,17 +125,6 @@ The following table shows the supported languages and the amount of data availab
 `‡` Only for languages for which preposition annotation is needed.
 
 Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
-
-<a id="setup"></a>
-
-# Setup [`⇧`](#contents)
-
-Users access Scribe language keyboards through the following:
-
-- Download Scribe from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
-- Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard
-- Select Scribe and choose from the available language keyboards
-- When typing press `🌐` to select keyboards
 
 <a id="keyboard-features"></a>
 
