@@ -22,7 +22,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- Commands now include a greyed out prompt that tells the user to enter a specific word.
+- Commands now include a greyed out prompt that tells the user to enter a specific word type.
 - The link to GitHub in the app now goes to the iOS repo instead of the organization.
 
 ### 🗃️ Data Added
