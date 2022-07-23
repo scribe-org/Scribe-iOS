@@ -302,7 +302,7 @@ class ViewController: UIViewController {
 
   /// Function to open Scribe's GitHub page that is targeted by GHBtn.
   @objc func openScribeGH() {
-    guard let url = URL(string: "https://github.com/scribe-org") else {
+    guard let url = URL(string: "https://github.com/scribe-org/Scribe-iOS") else {
       return
     }
 
