@@ -59,7 +59,7 @@ func getArrowIcon(fontSize: CGFloat) -> NSAttributedString {
   let arrowAttachment = NSTextAttachment()
   let selectArrowIconConfig = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .medium, scale: .medium)
   arrowAttachment.image = UIImage(
-    systemName: "arrowtriangle.right.fill",
+    systemName: "arrow.turn.down.left",
     withConfiguration: selectArrowIconConfig
   )?.withTintColor(.scribeGrey)
 
