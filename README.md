@@ -18,8 +18,6 @@
 
 <a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/app_store_badge.png' height='60px'/></a>
 
-Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned).
-
 ### iOS app with keyboards for language learners
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
@@ -27,6 +25,8 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
 Scribe is fully open-source and does not collect usage data or ask for system access. Feature data is sourced from [Wikidata](https://www.wikidata.org/) and stored in-app, meaning Scribe is a highly responsive experience that does not require an internet connection.
 
 The [contributing](#contributing) section has information for those interested, with the articles and presentations in [featured by](#featured-by) also being a good resource for learning more about Scribe.
+
+Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned).
 
 <a id="contents"></a>
 
