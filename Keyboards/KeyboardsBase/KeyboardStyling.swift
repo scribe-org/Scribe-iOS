@@ -35,7 +35,8 @@ var keysThatAreSlightlyLarger: [String] = [
   "chevron.right",
   "shift",
   "shift.fill",
-  "capslock.fill"
+  "capslock.fill",
+  "arrowtriangle.right.fill"
 ]
 
 /// Get the icon configurations for keys if the device is an iPhone.

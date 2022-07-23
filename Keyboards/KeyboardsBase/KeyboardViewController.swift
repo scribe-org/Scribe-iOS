@@ -880,7 +880,7 @@ class KeyboardViewController: UIInputViewController {
           }
 
           if key == "return" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
           }
 
           if key == "delete" {
