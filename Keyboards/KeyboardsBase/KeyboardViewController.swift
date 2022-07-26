@@ -222,7 +222,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var scribeKeyShadow: UIButton!
 
   /// Links various UI elements that interact concurrently.
-  func linkElements() {
+  func linkShadowBlendElements() {
     scribeKey.shadow = scribeKeyShadow
     commandBar.shadow = commandBarShadow
     commandBar.blend = commandBarBlend
@@ -650,7 +650,7 @@ class KeyboardViewController: UIInputViewController {
 
     setCommandBackground()
     setKeyboard()
-    linkElements()
+    linkShadowBlendElements()
     setCommandBtns()
     setConjugationBtns()
     invalidState = false
@@ -778,9 +778,9 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: pluralKey)
 
         commandBar.setCornerRadiusAndShadow()
-
         if commandState == false {
           commandBar.text = ""
+          commandBar.textColor = keyCharColor
         }
         commandBar.sizeToFit()
       }
@@ -857,8 +857,8 @@ class KeyboardViewController: UIInputViewController {
 
           // Special key styling.
           if key == "delete" {
-            let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(keyLongPressed(_:)))
-            btn.addGestureRecognizer(longPressRecognizer)
+            let deleteLongPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(deleteLongPressed(_:)))
+            btn.addGestureRecognizer(deleteLongPressRecognizer)
           }
 
           if key == "selectKeyboard" {
@@ -1201,8 +1201,8 @@ class KeyboardViewController: UIInputViewController {
       if commandState == true && (allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!)) {
         shiftButtonState = .shift // Auto-capitalization
         loadKeys()
-        // function call required due to return
-        // else placeholder is never added on last delete action
+        // Function call required due to return.
+        // Not including means placeholder is never added on last delete action.
         commandBar.conditionallyAddPlaceholder()
         return
       }
@@ -1215,7 +1215,7 @@ class KeyboardViewController: UIInputViewController {
         }
       }
       clearCommandBar()
-      // Inserting the placeholder when commandBar text is deleted
+      // Inserting the placeholder when commandBar text is deleted.
       commandBar.conditionallyAddPlaceholder()
 
     case spaceBar:
@@ -1474,11 +1474,11 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Defines the criteria under which a key is long pressed.
+  /// Defines the criteria under which delete is long pressed.
   ///
   /// - Parameters
   ///   - gesture: the gesture that was received.
-  @objc func keyLongPressed(_ gesture: UIGestureRecognizer) {
+  @objc func deleteLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the command state prompt from being deleted.
     if commandState == true && allPrompts.contains((commandBar?.text!)!) {
       gesture.state = .cancelled

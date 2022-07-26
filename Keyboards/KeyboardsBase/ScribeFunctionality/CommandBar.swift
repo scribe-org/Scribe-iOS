@@ -50,7 +50,6 @@ class CommandBar: UILabel {
     self.clipsToBounds = true
     self.layer.cornerRadius = commandKeyCornerRadius
     self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-    self.textColor = keyCharColor
     self.lineBreakMode = NSLineBreakMode.byWordWrapping
 
     self.shadow.backgroundColor = specialKeyColor
@@ -72,22 +71,22 @@ class CommandBar: UILabel {
     self.shadow.backgroundColor = UIColor.clear
     self.blend.backgroundColor = UIColor.clear
   }
-  
+
+  // Removes the placeholder text for a command and replaces it with just the prompt and cursor.
   func conditionallyRemovePlaceholder() {
-    if commandState == true {
-      if getTranslation == true && (self.attributedText?.isEqual(to: translatePromptAndColorPlaceholder) ?? false) {
-        self.attributedText = NSAttributedString(string: translatePromptAndCursor)
-      } else if getConjugation == true && (self.attributedText?.isEqual(to: conjugatePromptAndColorPlaceholder) ?? false) {
-        self.text = conjugatePromptAndCursor
-      } else if getPlural == true && (self.attributedText?.isEqual(to: pluralPromptAndColorPlaceholder) ?? false) {
-        self.text = pluralPromptAndCursor
-      }
+    if self.text == translatePromptAndPlaceholder {
+      self.text = translatePromptAndCursor
+    } else if self.text == conjugatePromptAndPlaceholder {
+      self.text = conjugatePromptAndCursor
+    } else if self.text == pluralPromptAndPlaceholder {
+      self.text = pluralPromptAndCursor
     }
   }
-  
+
+  // Changes the command bar text to an attributed string with a placeholder if there is no entered characters.
   func conditionallyAddPlaceholder() {
     if commandState == true {
-      // self.text check required as attributed text changes to text when shiftButtonState == .shift
+      // self.text check required as attributed text changes to text when shiftButtonState == .shift.
       if getTranslation == true && (self.text == translatePromptAndCursor || self.text == translatePromptAndPlaceholder) {
         self.attributedText = colorizePrompt(for: translatePromptAndPlaceholder)
       } else if getConjugation == true && (self.text == conjugatePromptAndCursor || self.text == conjugatePromptAndPlaceholder) {
@@ -97,7 +96,8 @@ class CommandBar: UILabel {
       }
     }
   }
-  
+
+  // Changes the color of the placeholder text to indicate that it is temporary.
   func colorizePrompt(for prompt: String) -> NSMutableAttributedString {
     let colorPrompt = NSMutableAttributedString(string: prompt)
     if getTranslation == true {
@@ -107,7 +107,7 @@ class CommandBar: UILabel {
     } else if getPlural == true {
       colorPrompt.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
     }
-    
+
     return colorPrompt
   }
 }

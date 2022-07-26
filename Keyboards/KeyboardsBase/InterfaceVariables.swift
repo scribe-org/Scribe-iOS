@@ -118,7 +118,10 @@ func setKeyboardLayout() {
     setLayoutFxn()
   }
 
+  // Variable type is String.
   allPrompts = [translatePromptAndCursor, conjugatePromptAndCursor, pluralPromptAndCursor, translatePromptAndPlaceholder, conjugatePromptAndPlaceholder, pluralPromptAndPlaceholder]
+
+  // Variable type is NSAttributedString.
   allColoredPrompts = [translatePromptAndColorPlaceholder, conjugatePromptAndColorPlaceholder, pluralPromptAndColorPlaceholder]
 }
 
