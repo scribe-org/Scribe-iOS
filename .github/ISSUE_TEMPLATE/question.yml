@@ -1,0 +1,24 @@
+name: ❓ Questions and everything else
+description: We'd love to hear from you!
+labels: ["question"]
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I have searched [open and closed issues](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue)
+          required: true
+        - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      placeholder: Ask a question, start a discussion, or anything else that's on your mind :)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your contribution!
