@@ -12,10 +12,10 @@ body:
         - label: I agree to follow Scribe-iOS' [Code of Conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
   - type: textarea
-    id: question
+    id: issue
     attributes:
-      label: Question
-      placeholder: Ask a question, start a discussion, or anything else that's on your mind :)
+      label: Issue
+      placeholder: Ask a question, start a discussion, create an issue...
     validations:
       required: true
   - type: markdown
