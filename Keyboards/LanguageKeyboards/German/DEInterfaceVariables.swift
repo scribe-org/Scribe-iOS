@@ -117,7 +117,7 @@ func setDEKeyboardLayout() {
   invalidCommandMsg = "Nicht in Wikidata"
 
   translateKeyLbl = "Übersetzen"
-  translatePlaceholder = "Wort engeben"
+  translatePlaceholder = "Wort eingeben"
   translatePrompt = commandPromptSpacing + "de -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder

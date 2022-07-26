@@ -121,7 +121,7 @@ func setESKeyboardLayout() {
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   conjugateKeyLbl = "Conjugar"
-  conjugatePlaceholder = "Ingresar un verbo"
+  conjugatePlaceholder = "Ingrese un verbo"
   conjugatePrompt = commandPromptSpacing + "Conjugar: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
