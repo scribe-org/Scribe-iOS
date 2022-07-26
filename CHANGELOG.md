@@ -28,9 +28,17 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 141 nouns, 5 verbs
+- German: 203 nouns, 88 verbs
+- Italian: 3316 nouns
+- Portuguese: 3 nouns
+- Spanish: 2282 nouns, 66 verbs
+- Swedish: 14 nouns, 114 verbs
+
 ### 🎨 Design Changes
 
 - The content for the App Store images has been centered more exactly.
+- The app store image for translation has been changed to reflect the new enter key design.
 - Key pressed colors have been made darker to be more distinct from base key colors.
 
 # Scribe-iOS 1.3.8

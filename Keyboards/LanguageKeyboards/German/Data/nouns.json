@@ -447,6 +447,14 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Abecedarien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Abecedarium": {
+    "plural": "Abecedarien",
+    "form": "N"
+  },
   "Abend": {
     "plural": "Abende",
     "form": "M"
@@ -1636,6 +1644,14 @@
     "form": "F"
   },
   "Abteilungsleitungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Abtreibung": {
+    "plural": "Abtreibungen",
+    "form": "F"
+  },
+  "Abtreibungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -4619,9 +4635,17 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Animationsfilm": {
+    "plural": "Animationsfilme",
+    "form": "M"
+  },
+  "Animationsfilme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Anime": {
     "plural": "Animes",
-    "form": "M"
+    "form": "M/N"
   },
   "Animes": {
     "plural": "isPlural",
@@ -5299,6 +5323,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Antigravitation": {
+    "plural": "Antigravitationen",
+    "form": "F"
+  },
+  "Antigravitationen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Antigua und Barbuda": {
     "plural": "noPlural",
     "form": "N"
@@ -5316,6 +5348,14 @@
     "form": "F"
   },
   "Antikensammlungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Antikonzeption": {
+    "plural": "Antikonzeptionen",
+    "form": "F"
+  },
+  "Antikonzeptionen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6236,6 +6276,14 @@
     "form": "PL"
   },
   "Arbeitsmärkte": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Arbeitsniederlegung": {
+    "plural": "Arbeitsniederlegungen",
+    "form": "F"
+  },
+  "Arbeitsniederlegungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7518,6 +7566,10 @@
   "Atlantikküsten": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Atlas": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Atmen": {
     "plural": "noPlural",
@@ -9435,6 +9487,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Autofahren": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Autoheizung": {
     "plural": "Autoheizungen",
     "form": "F"
@@ -10019,6 +10075,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Baguette": {
+    "plural": "Baguettes",
+    "form": "N"
+  },
+  "Baguettes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Bahamas": {
     "plural": "isPlural",
     "form": "PL"
@@ -10595,6 +10659,10 @@
     "plural": "Banner",
     "form": "N/PL"
   },
+  "Bar": {
+    "plural": "Bar",
+    "form": "F/N/PL"
+  },
   "Barbados": {
     "plural": "noPlural",
     "form": "N"
@@ -10626,6 +10694,14 @@
   "Barcelona": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Barett": {
+    "plural": "Baretts",
+    "form": "N"
+  },
+  "Baretts": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Bargeld": {
     "plural": "noPlural",
@@ -10936,7 +11012,7 @@
     "form": "M/PL"
   },
   "Bau": {
-    "plural": "Baue",
+    "plural": "Bauten",
     "form": "M"
   },
   "Bauabschnitt": {
@@ -11024,10 +11100,6 @@
     "form": "N"
   },
   "Baudenkmäler": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Baue": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -11344,6 +11416,10 @@
     "form": "F"
   },
   "Bauteileigenschaften": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Bauten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13243,6 +13319,18 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Berliner": {
+    "plural": "Berliner",
+    "form": "M/PL"
+  },
+  "Berlinerin": {
+    "plural": "Berlinerinnen",
+    "form": "F"
+  },
+  "Berlinerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Bern": {
     "plural": "noPlural",
     "form": "N"
@@ -15023,6 +15111,14 @@
     "plural": "Biere",
     "form": "N"
   },
+  "Bierabend": {
+    "plural": "Bierabende",
+    "form": "M"
+  },
+  "Bierabende": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Bierausschank": {
     "plural": "noPlural",
     "form": "M"
@@ -15984,7 +16080,7 @@
     "form": "F"
   },
   "Bitten": {
-    "plural": "isPlural",
+    "plural": "noPlural",
     "form": "N/PL"
   },
   "Bittermandelöl": {
@@ -16643,6 +16739,18 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Blümchen": {
+    "plural": "Blümchen",
+    "form": "N/PL"
+  },
+  "Blümchenkaffee": {
+    "plural": "Blümchenkaffees",
+    "form": "M"
+  },
+  "Blümchenkaffees": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Blüte": {
     "plural": "Blüten",
     "form": "F"
@@ -16995,11 +17103,15 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "Boot": {
-    "plural": "Boote",
+  "Bonsai": {
+    "plural": "noPlural",
     "form": "M/N"
   },
-  "Boote": {
+  "Boot": {
+    "plural": "Boots",
+    "form": "M/N"
+  },
+  "Boots": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -19303,6 +19415,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Béret": {
+    "plural": "Bérets",
+    "form": "N"
+  },
+  "Bérets": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Bö": {
     "plural": "Böen",
     "form": "F"
@@ -20522,6 +20642,14 @@
   "Computer": {
     "plural": "Computer",
     "form": "M/PL"
+  },
+  "Computerausdruck": {
+    "plural": "Computerausdrucke",
+    "form": "M"
+  },
+  "Computerausdrucke": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Computerfenster": {
     "plural": "Computerfenster",
@@ -21961,7 +22089,7 @@
   },
   "Demo": {
     "plural": "Demos",
-    "form": "F"
+    "form": "F/N"
   },
   "Demokratie": {
     "plural": "Demokratien",
@@ -22372,12 +22500,8 @@
     "form": "N"
   },
   "Deutsche": {
-    "plural": "Deutschen",
+    "plural": "noPlural",
     "form": "F/M/N"
-  },
-  "Deutschen": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Deutschkurs": {
     "plural": "Deutschkurse",
@@ -23428,6 +23552,14 @@
     "form": "F"
   },
   "Diözesen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Dock": {
+    "plural": "Docks",
+    "form": "N"
+  },
+  "Docks": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -27572,8 +27704,12 @@
     "form": "PL"
   },
   "Elster": {
-    "plural": "noPlural",
+    "plural": "Elstern",
     "form": "F"
+  },
+  "Elstern": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Elsässer": {
     "plural": "Elsässer",
@@ -27787,6 +27923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Emoticon": {
+    "plural": "Emoticons",
+    "form": "N"
+  },
+  "Emoticons": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Emotion": {
     "plural": "Emotionen",
     "form": "F"
@@ -27842,6 +27986,22 @@
   "Empfänglichkeit": {
     "plural": "noPlural",
     "form": "F"
+  },
+  "Empfängnis": {
+    "plural": "Empfängnisse",
+    "form": "F"
+  },
+  "Empfängnisse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Empfängnisverhütung": {
+    "plural": "Empfängnisverhütungen",
+    "form": "F"
+  },
+  "Empfängnisverhütungen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Empore": {
     "plural": "Emporen",
@@ -30267,6 +30427,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Espressi": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Espresso": {
+    "plural": "Espressi",
+    "form": "M/N"
+  },
+  "Espressomaschine": {
+    "plural": "Espressomaschinen",
+    "form": "F"
+  },
+  "Espressomaschinen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Ess-Stäbchen": {
     "plural": "Ess-Stäbchen",
     "form": "N/PL"
@@ -31039,6 +31215,14 @@
     "plural": "Fachärzte",
     "form": "M"
   },
+  "Fachausdruck": {
+    "plural": "Fachausdrücke",
+    "form": "M"
+  },
+  "Fachausdrücke": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Fachbegriff": {
     "plural": "Fachbegriffe",
     "form": "M"
@@ -31263,6 +31447,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Fahren": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Fahrer": {
     "plural": "Fahrer",
     "form": "M/PL"
@@ -31443,6 +31631,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Fahrschein": {
+    "plural": "Fahrscheine",
+    "form": "M"
+  },
+  "Fahrscheine": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Fahrscheinkontrolle": {
+    "plural": "Fahrscheinkontrollen",
+    "form": "F"
+  },
+  "Fahrscheinkontrollen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Fahrsicherheit": {
     "plural": "noPlural",
     "form": "F"
@@ -31566,6 +31770,10 @@
   "Faktoren": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Faktum": {
+    "plural": "Fakten",
+    "form": "N"
   },
   "Fakultät": {
     "plural": "Fakultäten",
@@ -32603,6 +32811,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Fernsprecher": {
+    "plural": "Fernsprecher",
+    "form": "M/PL"
+  },
   "Ferse": {
     "plural": "Fersen",
     "form": "F"
@@ -33591,6 +33803,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Flaschenpfand": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Flaschenöffner": {
     "plural": "Flaschenöffner",
     "form": "M/PL"
@@ -34439,6 +34655,14 @@
     "plural": "Forschungszentren",
     "form": "N"
   },
+  "Forst": {
+    "plural": "Forsten",
+    "form": "M"
+  },
+  "Forsten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Forstpflanze": {
     "plural": "Forstpflanzen",
     "form": "F"
@@ -34712,6 +34936,14 @@
     "form": "N"
   },
   "Franks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Franzmann": {
+    "plural": "Franzmänner",
+    "form": "M"
+  },
+  "Franzmänner": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -35595,6 +35827,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Funk": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Funke": {
     "plural": "Funken",
     "form": "M"
@@ -35616,6 +35852,14 @@
     "form": "F"
   },
   "Funkstörungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Funktelefon": {
+    "plural": "Funktelefone",
+    "form": "N"
+  },
+  "Funktelefone": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -37591,6 +37835,10 @@
     "plural": "noPlural",
     "form": "F"
   },
+  "Gelb": {
+    "plural": "Gelb",
+    "form": "N/PL"
+  },
   "Gelbbauchunke": {
     "plural": "Gelbbauchunken",
     "form": "F"
@@ -37852,6 +38100,14 @@
     "form": "N"
   },
   "Gemüter": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gemütlichkeit": {
+    "plural": "Gemütlichkeiten",
+    "form": "F"
+  },
+  "Gemütlichkeiten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -39835,6 +40091,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Gleichgültigkeit": {
+    "plural": "Gleichgültigkeiten",
+    "form": "F"
+  },
+  "Gleichgültigkeiten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Gleichheit": {
     "plural": "Gleichheiten",
     "form": "F"
@@ -40571,6 +40835,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Gravitation": {
+    "plural": "Gravitationen",
+    "form": "F"
+  },
+  "Gravitationen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Gravitationsanomalie": {
+    "plural": "Gravitationsanomalien",
+    "form": "F"
+  },
+  "Gravitationsanomalien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Gravitationsfeld": {
     "plural": "Gravitationsfelder",
     "form": "N"
@@ -40582,6 +40862,14 @@
   "Gravitationsgesetz": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Gravitationslinse": {
+    "plural": "Gravitationslinsen",
+    "form": "F"
+  },
+  "Gravitationslinsen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Green": {
     "plural": "Greens",
@@ -42902,6 +43190,14 @@
   "Hassium": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Hassrede": {
+    "plural": "Hassreden",
+    "form": "F"
+  },
+  "Hassreden": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Hatespeech": {
     "plural": "Hatespeeches",
@@ -45324,12 +45620,8 @@
     "form": "PL"
   },
   "Homburg": {
-    "plural": "Homburgs",
+    "plural": "noPlural",
     "form": "M/N"
-  },
-  "Homburgs": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Hommage": {
     "plural": "Hommagen",
@@ -49007,6 +49299,38 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Jazzband": {
+    "plural": "Jazzbands",
+    "form": "F"
+  },
+  "Jazzbands": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Jazzclub": {
+    "plural": "Jazzclubs",
+    "form": "M"
+  },
+  "Jazzclubs": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Jazzfest": {
+    "plural": "Jazzfeste",
+    "form": "N"
+  },
+  "Jazzfeste": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Jazzfestival": {
+    "plural": "Jazzfestivals",
+    "form": "N"
+  },
+  "Jazzfestivals": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Jazzmusiker": {
     "plural": "Jazzmusiker",
     "form": "M/PL"
@@ -49314,6 +49638,14 @@
   "Jugend": {
     "plural": "noPlural",
     "form": "F"
+  },
+  "Jugendgang": {
+    "plural": "Jugendgangs",
+    "form": "F"
+  },
+  "Jugendgangs": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Jugendherberge": {
     "plural": "Jugendherbergen",
@@ -50119,6 +50451,14 @@
     "plural": "Kami",
     "form": "M/PL"
   },
+  "Kamikaze": {
+    "plural": "Kamikazes",
+    "form": "M"
+  },
+  "Kamikazes": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Kamille": {
     "plural": "Kamillen",
     "form": "F"
@@ -50290,6 +50630,22 @@
   "Kaninchen": {
     "plural": "Kaninchen",
     "form": "N/PL"
+  },
+  "Kaninchenbau": {
+    "plural": "Kaninchenbaue",
+    "form": "M"
+  },
+  "Kaninchenbaue": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Kaninchenloch": {
+    "plural": "Kaninchenlöcher",
+    "form": "N"
+  },
+  "Kaninchenlöcher": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Kaninchenohr": {
     "plural": "Kaninchenohren",
@@ -50603,6 +50959,14 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Karaokebar": {
+    "plural": "Karaokebars",
+    "form": "F"
+  },
+  "Karaokebars": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Karat": {
     "plural": "Karate",
     "form": "N"
@@ -50859,6 +51223,14 @@
     "plural": "Karten",
     "form": "F"
   },
+  "Kartei": {
+    "plural": "Karteien",
+    "form": "F"
+  },
+  "Karteien": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Karteileiche": {
     "plural": "Karteileichen",
     "form": "F"
@@ -50866,6 +51238,10 @@
   "Karteileichen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Karteireiter": {
+    "plural": "Karteireiter",
+    "form": "M/PL"
   },
   "Karten": {
     "plural": "isPlural",
@@ -54575,6 +54951,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kondom": {
+    "plural": "Kondome",
+    "form": "N"
+  },
+  "Kondome": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Konferenz": {
     "plural": "Konferenzen",
     "form": "F"
@@ -55115,6 +55499,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Kontrazeption": {
+    "plural": "noPlural",
+    "form": "F"
+  },
   "Kontrolle": {
     "plural": "Kontrollen",
     "form": "F"
@@ -55560,6 +55948,14 @@
     "form": "M"
   },
   "Kosenamen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Kosmodrom": {
+    "plural": "Kosmodrome",
+    "form": "N"
+  },
+  "Kosmodrome": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -59020,8 +59416,12 @@
     "form": "M"
   },
   "Laute": {
-    "plural": "isPlural",
+    "plural": "Lauten",
     "form": "F/PL"
+  },
+  "Lauten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Lautmalerei": {
     "plural": "Lautmalereien",
@@ -59326,6 +59726,14 @@
   "Leergut": {
     "plural": "Leergüter",
     "form": "N"
+  },
+  "Leergutautomat": {
+    "plural": "Leergutautomaten",
+    "form": "M"
+  },
+  "Leergutautomaten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Leergüter": {
     "plural": "isPlural",
@@ -63003,6 +63411,18 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Marsbewohner": {
+    "plural": "Marsbewohner",
+    "form": "M/PL"
+  },
+  "Marsbewohnerin": {
+    "plural": "Marsbewohnerinnen",
+    "form": "F"
+  },
+  "Marsbewohnerinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Marsch": {
     "plural": "Märsche",
     "form": "M"
@@ -63039,9 +63459,21 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Marsianer": {
+    "plural": "Marsianer",
+    "form": "M/PL"
+  },
   "Marsmaulwurf": {
     "plural": "noPlural",
     "form": "M"
+  },
+  "Marsmensch": {
+    "plural": "Marsmenschen",
+    "form": "M"
+  },
+  "Marsmenschen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Martin": {
     "plural": "Martins",
@@ -63938,6 +64370,14 @@
   "Mehrkämpfe": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Mehrweg": {
+    "plural": "noPlural",
+    "form": "M"
+  },
+  "Mehrwegpfand": {
+    "plural": "noPlural",
+    "form": "N"
   },
   "Mehrwertsteuer": {
     "plural": "Mehrwertsteuern",
@@ -65071,6 +65511,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Milchmädchen": {
+    "plural": "Milchmädchen",
+    "form": "N/PL"
+  },
+  "Milchmädchenrechnung": {
+    "plural": "Milchmädchenrechnungen",
+    "form": "F"
+  },
+  "Milchmädchenrechnungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Milchpulver": {
     "plural": "Milchpulver",
     "form": "N/PL"
@@ -65732,12 +66184,8 @@
     "form": "N"
   },
   "Mittelfeld": {
-    "plural": "Mittelfelder",
+    "plural": "noPlural",
     "form": "N"
-  },
-  "Mittelfelder": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Mittelfeldspieler": {
     "plural": "Mittelfeldspieler",
@@ -65963,6 +66411,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Mobiltelefon": {
+    "plural": "Mobiltelefone",
+    "form": "N"
+  },
+  "Mobiltelefone": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Modalität": {
     "plural": "Modalitäten",
     "form": "F"
@@ -66008,8 +66464,8 @@
     "form": "PL"
   },
   "Model": {
-    "plural": "Models",
-    "form": "M/N"
+    "plural": "Model",
+    "form": "M/N/PL"
   },
   "Modell": {
     "plural": "Modelle",
@@ -66024,10 +66480,6 @@
     "form": "N"
   },
   "Modellsysteme": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "Models": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -66102,6 +66554,14 @@
   "Mogadischu": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Mokka": {
+    "plural": "Mokkas",
+    "form": "M"
+  },
+  "Mokkas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Mol": {
     "plural": "Mole",
@@ -67620,14 +68080,26 @@
     "form": "PL"
   },
   "Münster": {
-    "plural": "noPlural",
-    "form": "M/N"
+    "plural": "Münster",
+    "form": "M/N/PL"
   },
   "Münze": {
     "plural": "Münzen",
     "form": "F"
   },
   "Münzen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Münzfernsprecher": {
+    "plural": "Münzfernsprecher",
+    "form": "M/PL"
+  },
+  "Münztelefon": {
+    "plural": "Münztelefone",
+    "form": "N"
+  },
+  "Münztelefone": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -69939,6 +70411,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Neutronenstern": {
+    "plural": "Neutronensterne",
+    "form": "N"
+  },
+  "Neutronensterne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Neutronenstreuung": {
     "plural": "noPlural",
     "form": "F"
@@ -70084,6 +70564,14 @@
     "form": "PL"
   },
   "Niederlande": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Niederlegung": {
+    "plural": "Niederlegungen",
+    "form": "F"
+  },
+  "Niederlegungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -70475,6 +70963,18 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Nordmazedonier": {
+    "plural": "Nordmazedonier",
+    "form": "M/PL"
+  },
+  "Nordmazedonierin": {
+    "plural": "Nordmazedonierinnen",
+    "form": "F"
+  },
+  "Nordmazedonierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Nordnordosten": {
     "plural": "noPlural",
     "form": "M"
@@ -70776,6 +71276,14 @@
     "form": "F"
   },
   "Nullzeiten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Numerale": {
+    "plural": "Numeralia",
+    "form": "N"
+  },
+  "Numeralia": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -71883,6 +72391,10 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Olymp": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Olympiade": {
     "plural": "Olympiaden",
     "form": "F"
@@ -71906,6 +72418,18 @@
   "Olympiastadion": {
     "plural": "Olympiastadien",
     "form": "N"
+  },
+  "Olympier": {
+    "plural": "Olympier",
+    "form": "M/PL"
+  },
+  "Olympierin": {
+    "plural": "Olympierinnen",
+    "form": "F"
+  },
+  "Olympierinnen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Oma": {
     "plural": "Omas",
@@ -74743,6 +75267,14 @@
     "plural": "Pfande",
     "form": "N"
   },
+  "Pfandautomat": {
+    "plural": "Pfandautomaten",
+    "form": "M"
+  },
+  "Pfandautomaten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Pfande": {
     "plural": "isPlural",
     "form": "PL"
@@ -74998,6 +75530,10 @@
   "Pflanzenreiche": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Pflanzensamen": {
+    "plural": "Pflanzensamen",
+    "form": "M/PL"
   },
   "Pflanzenöl": {
     "plural": "Pflanzenöle",
@@ -75423,6 +75959,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Photonentorpedo": {
+    "plural": "Photonentorpedos",
+    "form": "M"
+  },
+  "Photonentorpedos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Photosynthese": {
     "plural": "noPlural",
     "form": "F"
@@ -75796,6 +76340,14 @@
     "form": "N"
   },
   "Planeten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Planetensystem": {
+    "plural": "Planetensysteme",
+    "form": "N"
+  },
+  "Planetensysteme": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -77743,6 +78295,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Protostern": {
+    "plural": "Protosterne",
+    "form": "M"
+  },
+  "Protosterne": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Proverb": {
     "plural": "Proverbien",
     "form": "N"
@@ -77944,6 +78504,14 @@
     "form": "F"
   },
   "Präsenzpflichten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Präservativ": {
+    "plural": "Präservative",
+    "form": "N"
+  },
+  "Präservative": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -78792,8 +79360,12 @@
     "form": "M"
   },
   "Quaste": {
-    "plural": "isPlural",
+    "plural": "Quasten",
     "form": "F/PL"
+  },
+  "Quasten": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Quatsch": {
     "plural": "noPlural",
@@ -78892,6 +79464,14 @@
     "form": "F"
   },
   "Quersummen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Quickie": {
+    "plural": "Quickies",
+    "form": "M"
+  },
+  "Quickies": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -79448,8 +80028,12 @@
     "form": "PL"
   },
   "Raps": {
-    "plural": "isPlural",
+    "plural": "Rapse",
     "form": "M/PL"
+  },
+  "Rapse": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Rapsöl": {
     "plural": "Rapsöle",
@@ -79683,6 +80267,14 @@
     "plural": "Räume",
     "form": "M"
   },
+  "Raumdock": {
+    "plural": "Raumdocks",
+    "form": "N"
+  },
+  "Raumdocks": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Raumer": {
     "plural": "Raumer",
     "form": "M/PL"
@@ -79700,6 +80292,14 @@
     "form": "N"
   },
   "Raumfahrzeuge": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Raumflotte": {
+    "plural": "Raumflotten",
+    "form": "F"
+  },
+  "Raumflotten": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -79835,6 +80435,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Rebe": {
+    "plural": "Reben",
+    "form": "F"
+  },
   "Rebell": {
     "plural": "Rebellen",
     "form": "M"
@@ -79856,6 +80460,18 @@
     "form": "F"
   },
   "Rebellionen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Reben": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Rebensaft": {
+    "plural": "Rebensäfte",
+    "form": "M"
+  },
+  "Rebensäfte": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -80739,6 +81355,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Reif": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Reifen": {
     "plural": "Reifen",
     "form": "M/PL"
@@ -80978,6 +81598,10 @@
   "Reizungen": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Reißverschluss": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Rekapitalisierungsmaßnahme": {
     "plural": "Rekapitalisierungsmaßnahmen",
@@ -82784,8 +83408,12 @@
     "form": "PL"
   },
   "Rutsche": {
-    "plural": "isPlural",
+    "plural": "Rutschen",
     "form": "F/PL"
+  },
+  "Rutschen": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Räder": {
     "plural": "isPlural",
@@ -83502,6 +84130,10 @@
   "Saiteninstrumente": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Sake": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Sakko": {
     "plural": "Sakkos",
@@ -85555,6 +86187,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Schließfach": {
+    "plural": "Schließfächer",
+    "form": "N"
+  },
+  "Schließfächer": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Schließung": {
     "plural": "Schließungen",
     "form": "F"
@@ -86874,6 +87514,14 @@
   "Schuß": {
     "plural": "Schüsse",
     "form": "M"
+  },
+  "Schwachkopf": {
+    "plural": "Schwachköpfe",
+    "form": "M"
+  },
+  "Schwachköpfe": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Schwachsinn": {
     "plural": "noPlural",
@@ -89632,12 +90280,8 @@
     "form": "PL"
   },
   "Skelett": {
-    "plural": "Skelette",
+    "plural": "noPlural",
     "form": "F/N"
-  },
-  "Skelette": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "Ski": {
     "plural": "Skis",
@@ -92011,14 +92655,6 @@
     "plural": "noPlural",
     "form": "N"
   },
-  "StVO": {
-    "plural": "noPlural",
-    "form": "F"
-  },
-  "StVZO": {
-    "plural": "noPlural",
-    "form": "F"
-  },
   "Staat": {
     "plural": "Staaten",
     "form": "M"
@@ -92751,6 +93387,14 @@
     "plural": "Stars",
     "form": "M"
   },
+  "Starfleet": {
+    "plural": "Starfleets",
+    "form": "F"
+  },
+  "Starfleets": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Starkregen": {
     "plural": "Starkregen",
     "form": "M/PL"
@@ -93279,6 +93923,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Sternenflotte": {
+    "plural": "Sternenflotten",
+    "form": "F"
+  },
+  "Sternenflotten": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Sternenhimmel": {
     "plural": "Sternenhimmel",
     "form": "M/PL"
@@ -93308,6 +93960,14 @@
     "form": "N"
   },
   "Sternenschiffe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Sternensystem": {
+    "plural": "Sternensysteme",
+    "form": "N"
+  },
+  "Sternensysteme": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -94631,6 +95291,10 @@
     "plural": "Stühle",
     "form": "M"
   },
+  "Stuhlgang": {
+    "plural": "noPlural",
+    "form": "M"
+  },
   "Stuhllehne": {
     "plural": "Stuhllehnen",
     "form": "F"
@@ -95127,6 +95791,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Sumo": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Sumpf": {
     "plural": "Sümpfe",
     "form": "M"
@@ -95294,6 +95962,14 @@
   "Sushi": {
     "plural": "Sushis",
     "form": "N"
+  },
+  "Sushibar": {
+    "plural": "Sushibars",
+    "form": "F"
+  },
+  "Sushibars": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Sushis": {
     "plural": "isPlural",
@@ -95977,7 +96653,7 @@
   },
   "Tab": {
     "plural": "Tabs",
-    "form": "N"
+    "form": "M/N"
   },
   "Tabak": {
     "plural": "Tabake",
@@ -96030,6 +96706,14 @@
   "Tabu": {
     "plural": "Tabus",
     "form": "N"
+  },
+  "Tabulator": {
+    "plural": "Tabulatoren",
+    "form": "M"
+  },
+  "Tabulatoren": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tabus": {
     "plural": "isPlural",
@@ -96112,6 +96796,22 @@
     "form": "M"
   },
   "Tagebaue": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Tagedieb": {
+    "plural": "Tagediebe",
+    "form": "M"
+  },
+  "Tagediebe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Tagediebin": {
+    "plural": "Tagediebinnen",
+    "form": "F"
+  },
+  "Tagediebinnen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -96644,7 +97344,7 @@
     "form": "PL"
   },
   "Tau": {
-    "plural": "noPlural",
+    "plural": "Taus",
     "form": "M/N"
   },
   "Taube": {
@@ -96780,14 +97480,22 @@
     "form": "PL"
   },
   "Taugenichts": {
-    "plural": "noPlural",
+    "plural": "Taugenichtse",
     "form": "M"
+  },
+  "Taugenichtse": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tauprozess": {
     "plural": "Tauprozesse",
     "form": "M"
   },
   "Tauprozesse": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Taus": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -97200,6 +97908,14 @@
     "form": "N"
   },
   "Telegramme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Teleskop": {
+    "plural": "Teleskope",
+    "form": "N"
+  },
+  "Teleskope": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -99815,6 +100531,14 @@
     "plural": "Trickbetrüger",
     "form": "M/PL"
   },
+  "Trickfilm": {
+    "plural": "Trickfilme",
+    "form": "M"
+  },
+  "Trickfilme": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Tricks": {
     "plural": "isPlural",
     "form": "PL"
@@ -100378,6 +101102,14 @@
   "Tunesien": {
     "plural": "noPlural",
     "form": "N"
+  },
+  "Tunichtgut": {
+    "plural": "Tunichtgute",
+    "form": "M"
+  },
+  "Tunichtgute": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "Tunnel": {
     "plural": "Tunnels",
@@ -102951,6 +103683,14 @@
     "plural": "noPlural",
     "form": "F"
   },
+  "Venusrakete": {
+    "plural": "Venusraketen",
+    "form": "F"
+  },
+  "Venusraketen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Verabredung": {
     "plural": "Verabredungen",
     "form": "F"
@@ -103660,6 +104400,14 @@
     "form": "N"
   },
   "Verhöre": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Verhütung": {
+    "plural": "Verhütungen",
+    "form": "F"
+  },
+  "Verhütungen": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -105787,6 +106535,10 @@
     "plural": "noPlural",
     "form": "F"
   },
+  "Vollpfosten": {
+    "plural": "Vollpfosten",
+    "form": "M/PL"
+  },
   "Vollsperrung": {
     "plural": "Vollsperrungen",
     "form": "F"
@@ -107343,6 +108095,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Waschen": {
+    "plural": "noPlural",
+    "form": "N"
+  },
   "Waschhandschuh": {
     "plural": "Waschhandschuhe",
     "form": "M"
@@ -108503,11 +109259,55 @@
     "plural": "noPlural",
     "form": "M"
   },
+  "Weltraumabenteuer": {
+    "plural": "Weltraumabenteuer",
+    "form": "N/PL"
+  },
+  "Weltraumagentur": {
+    "plural": "Weltraumagenturen",
+    "form": "F"
+  },
+  "Weltraumagenturen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Weltraumbahnhof": {
+    "plural": "Weltraumbahnhöfe",
+    "form": "M"
+  },
+  "Weltraumbahnhöfe": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Weltraumbehörde": {
+    "plural": "Weltraumbehörden",
+    "form": "F"
+  },
+  "Weltraumbehörden": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Weltraumforschung": {
     "plural": "Weltraumforschungen",
     "form": "F"
   },
   "Weltraumforschungen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Weltraumstation": {
+    "plural": "Weltraumstationen",
+    "form": "F"
+  },
+  "Weltraumstationen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "Weltraumteleskop": {
+    "plural": "Weltraumteleskope",
+    "form": "N"
+  },
+  "Weltraumteleskope": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -111099,6 +111899,10 @@
     "plural": "noPlural",
     "form": "N"
   },
+  "Yakuza": {
+    "plural": "Yakuza",
+    "form": "F/PL"
+  },
   "Ybbs": {
     "plural": "noPlural",
     "form": "M"
@@ -113179,6 +113983,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "Zukunftsmusik": {
+    "plural": "noPlural",
+    "form": "F"
+  },
   "Zukünfte": {
     "plural": "isPlural",
     "form": "PL"
@@ -113890,6 +114698,10 @@
   "Zwischenzeiten": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "Zwist": {
+    "plural": "noPlural",
+    "form": "M"
   },
   "Zwitter": {
     "plural": "Zwitter",

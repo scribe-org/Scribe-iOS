@@ -7,6 +7,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "China": {
+    "plural": "Chinas",
+    "form": "F"
+  },
+  "Chinas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "Estado": {
     "plural": "Estados",
     "form": "M"
@@ -1332,16 +1340,16 @@
     "form": "PL"
   },
   "aspecto": {
-    "plural": "aspectos",
+    "plural": "aspetos",
     "form": "M/PL"
   },
-  "aspectos": {
+  "aspeto": {
+    "plural": "aspetos",
+    "form": "M"
+  },
+  "aspetos": {
     "plural": "isPlural",
     "form": "PL"
-  },
-  "aspeto": {
-    "plural": "aspectos",
-    "form": "M"
   },
   "aspirador": {
     "plural": "aspiradores",
@@ -2041,10 +2049,14 @@
   },
   "bandeirinha": {
     "plural": "bandeiras",
-    "form": "F/PL"
+    "form": "F"
+  },
+  "bandeirinhas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "bandeirola": {
-    "plural": "bandeiras",
+    "plural": "bandeirinhas",
     "form": "F"
   },
   "bandeirona": {
@@ -4675,10 +4687,6 @@
     "plural": "comidas",
     "form": "F/PL"
   },
-  "comidazinhas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "comidinha": {
     "plural": "comidas",
     "form": "F/PL"
@@ -4688,8 +4696,8 @@
     "form": "F/PL"
   },
   "comidão": {
-    "plural": "comidazinhas",
-    "form": "F"
+    "plural": "comidas",
+    "form": "F/PL"
   },
   "comissão": {
     "plural": "comissões",
@@ -8684,7 +8692,7 @@
     "form": "PL"
   },
   "flor": {
-    "plural": "florzonas",
+    "plural": "flores",
     "form": "F"
   },
   "flores": {
@@ -8701,15 +8709,11 @@
   },
   "florzinha": {
     "plural": "flores",
-    "form": "F"
+    "form": "F/PL"
   },
   "florzona": {
     "plural": "flores",
     "form": "F/PL"
-  },
-  "florzonas": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "foco": {
     "plural": "focos",
@@ -10841,7 +10845,7 @@
   },
   "jornal": {
     "plural": "jornais",
-    "form": "M"
+    "form": "M/PL"
   },
   "jornalzinho": {
     "plural": "jornais",
@@ -10849,7 +10853,7 @@
   },
   "jornalzão": {
     "plural": "jornais",
-    "form": "M/PL"
+    "form": "M"
   },
   "jovem": {
     "plural": "jovens",
@@ -11148,8 +11152,8 @@
     "form": "PL"
   },
   "leitura": {
-    "plural": "leiturões",
-    "form": "F"
+    "plural": "leituras",
+    "form": "F/PL"
   },
   "leituras": {
     "plural": "isPlural",
@@ -11157,19 +11161,19 @@
   },
   "leiturinha": {
     "plural": "leituras",
-    "form": "F/PL"
+    "form": "F"
+  },
+  "leiturinhas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "leiturona": {
     "plural": "leituras",
     "form": "F/PL"
   },
   "leiturão": {
-    "plural": "leituras",
+    "plural": "leiturinhas",
     "form": "F"
-  },
-  "leiturões": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "lenha": {
     "plural": "lenhas",
@@ -12792,16 +12796,20 @@
     "form": "PL"
   },
   "moscona": {
-    "plural": "moscas",
+    "plural": "moscões",
     "form": "F/PL"
   },
   "moscão": {
-    "plural": "moscas",
+    "plural": "moscões",
     "form": "F"
+  },
+  "moscões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "mosquinha": {
     "plural": "moscas",
-    "form": "F/PL"
+    "form": "F"
   },
   "mosquiteiro": {
     "plural": "mosquiteiros",
@@ -13371,13 +13379,9 @@
     "plural": "notas",
     "form": "F/PL"
   },
-  "notonas": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
   "notão": {
-    "plural": "notonas",
-    "form": "F"
+    "plural": "notas",
+    "form": "F/PL"
   },
   "notícia": {
     "plural": "notícias",
@@ -13480,12 +13484,8 @@
     "form": "PL"
   },
   "objecção": {
-    "plural": "objecções",
-    "form": "F"
-  },
-  "objecções": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "objeções",
+    "form": "F/PL"
   },
   "objetivo": {
     "plural": "objetivos",
@@ -15092,7 +15092,11 @@
     "form": "PL"
   },
   "político": {
-    "plural": "políticas",
+    "plural": "políticos",
+    "form": ""
+  },
+  "políticos": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "pomada": {
@@ -17600,6 +17604,14 @@
     "form": "M"
   },
   "semanários": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "semente": {
+    "plural": "sementes",
+    "form": "F"
+  },
+  "sementes": {
     "plural": "isPlural",
     "form": "PL"
   },

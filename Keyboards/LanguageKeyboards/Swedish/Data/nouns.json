@@ -9875,6 +9875,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "bark": {
+    "plural": "barkar",
+    "form": "C"
+  },
+  "barkar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "barkass": {
     "plural": "barkasser",
     "form": "C"
@@ -10501,7 +10509,7 @@
   },
   "barstol": {
     "plural": "barstolar",
-    "form": "C"
+    "form": "C/PL"
   },
   "barstolar": {
     "plural": "isPlural",
@@ -21629,7 +21637,7 @@
   },
   "bärstol": {
     "plural": "barstolar",
-    "form": "C/PL"
+    "form": "C"
   },
   "bärsärk": {
     "plural": "bärsärkar",
@@ -43351,6 +43359,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "förhandlingsledare": {
+    "plural": "förhandlingsledare",
+    "form": "C/PL"
+  },
   "förhandlingsposition": {
     "plural": "förhandlingspositioner",
     "form": "C"
@@ -57875,6 +57887,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "här": {
+    "plural": "härar",
+    "form": "C"
+  },
   "härad": {
     "plural": "härad",
     "form": "N/PL"
@@ -57906,6 +57922,10 @@
   "häradsåklagare": {
     "plural": "häradsåklagare",
     "form": "C/PL"
+  },
+  "härar": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "härbärge": {
     "plural": "härbärgen",
@@ -76251,6 +76271,14 @@
     "plural": "kungar",
     "form": "C"
   },
+  "kungadöme": {
+    "plural": "kungadömen",
+    "form": "N"
+  },
+  "kungadömen": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "kungafamilj": {
     "plural": "kungafamiljer",
     "form": "C"
@@ -79163,6 +79191,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "köp": {
+    "plural": "köp",
+    "form": "N/PL"
+  },
   "köpare": {
     "plural": "köpare",
     "form": "C/PL"
@@ -80316,12 +80348,8 @@
     "form": "PL"
   },
   "landslag": {
-    "plural": "landslagar",
-    "form": "C/N"
-  },
-  "landslagar": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "landslag",
+    "form": "C/N/PL"
   },
   "landslagsläkare": {
     "plural": "landslagsläkare",
@@ -83108,6 +83136,14 @@
     "form": "C"
   },
   "livssyner": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "livstid": {
+    "plural": "livstider",
+    "form": "C"
+  },
+  "livstider": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -100875,6 +100911,10 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ok": {
+    "plural": "ok",
+    "form": "N/PL"
+  },
   "oklarhet": {
     "plural": "oklarheter",
     "form": "C"
@@ -110989,15 +111029,11 @@
   },
   "puls": {
     "plural": "pulsar",
-    "form": "C/PL"
-  },
-  "pulsar": {
-    "plural": "pulsarer",
     "form": "C"
   },
-  "pulsarer": {
+  "pulsar": {
     "plural": "isPlural",
-    "form": "PL"
+    "form": "C/PL"
   },
   "pulsåder": {
     "plural": "pulsådror",
@@ -112471,6 +112507,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "rap": {
+    "plural": "rapar",
+    "form": "C"
+  },
+  "rapar": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rapp": {
     "plural": "rapp",
     "form": "N/PL"
@@ -112568,8 +112612,8 @@
     "form": "PL"
   },
   "ras": {
-    "plural": "raser",
-    "form": "C/N"
+    "plural": "ras",
+    "form": "C/N/PL"
   },
   "rasbiolog": {
     "plural": "rasbiologer",
@@ -112582,10 +112626,6 @@
   "raseborgare": {
     "plural": "raseborgare",
     "form": "C/PL"
-  },
-  "raser": {
-    "plural": "isPlural",
-    "form": "PL"
   },
   "raseriutbrott": {
     "plural": "raseriutbrott",
@@ -155099,6 +155139,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "utredningsinsats": {
+    "plural": "utredningsinsatser",
+    "form": "C"
+  },
+  "utredningsinsatser": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "utredningsteam": {
     "plural": "utredningsteam",
     "form": "N/PL"
@@ -155977,7 +156025,7 @@
   },
   "vadd": {
     "plural": "vaddar",
-    "form": "C/PL"
+    "form": "C"
   },
   "vaddar": {
     "plural": "isPlural",
@@ -160757,7 +160805,7 @@
   },
   "vädd": {
     "plural": "vaddar",
-    "form": "C"
+    "form": "C/PL"
   },
   "väder": {
     "plural": "väder",
@@ -165346,6 +165394,14 @@
   "åkare": {
     "plural": "åkare",
     "form": "C/PL"
+  },
+  "åkattraktion": {
+    "plural": "åkattraktioner",
+    "form": "C"
+  },
+  "åkattraktioner": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "åker": {
     "plural": "åkrar",

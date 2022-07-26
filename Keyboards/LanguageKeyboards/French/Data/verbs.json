@@ -242,7 +242,7 @@
   "aboutir": {
     "presFPS": "",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "aboutit",
     "presFPP": "",
     "presSPP": "",
     "presTPP": "",
@@ -2279,6 +2279,26 @@
     "impSPP": "",
     "impTPP": ""
   },
+  "appertiser": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
   "applaudir": {
     "presFPS": "",
     "presSPS": "",
@@ -3480,6 +3500,26 @@
     "impTPP": ""
   },
   "avoisiner": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
+  "avorter": {
     "presFPS": "",
     "presSPS": "",
     "presTPS": "",
@@ -7919,6 +7959,26 @@
     "impSPP": "",
     "impTPP": ""
   },
+  "discriminer": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
   "discréditer": {
     "presFPS": "",
     "presSPS": "",
@@ -8180,9 +8240,9 @@
     "impTPP": ""
   },
   "distribuer": {
-    "presFPS": "",
+    "presFPS": "distribue",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "distribue",
     "presFPP": "",
     "presSPP": "",
     "presTPP": "",
@@ -10160,9 +10220,9 @@
     "impTPP": ""
   },
   "désigner": {
-    "presFPS": "",
+    "presFPS": "désigne",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "désigne",
     "presFPP": "",
     "presSPP": "",
     "presTPP": "",
@@ -12140,9 +12200,9 @@
     "impTPP": ""
   },
   "exister": {
-    "presFPS": "",
+    "presFPS": "existe",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "existe",
     "presFPP": "",
     "presSPP": "",
     "presTPP": "",
@@ -13700,6 +13760,26 @@
     "impTPP": ""
   },
   "grader": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
+  "graisser": {
     "presFPS": "",
     "presSPS": "",
     "presTPS": "",
@@ -16465,7 +16545,7 @@
     "presTPS": "",
     "presFPP": "",
     "presSPP": "",
-    "presTPP": "",
+    "presTPP": "mangent",
     "pretFPS": "",
     "pretSPS": "",
     "pretTPS": "",
@@ -16520,7 +16600,7 @@
     "impTPP": ""
   },
   "manquer": {
-    "presFPS": "",
+    "presFPS": "manque",
     "presSPS": "",
     "presTPS": "",
     "presFPP": "",
@@ -17140,6 +17220,26 @@
     "impTPP": ""
   },
   "mourir": {
+    "presFPS": "",
+    "presSPS": "",
+    "presTPS": "",
+    "presFPP": "",
+    "presSPP": "",
+    "presTPP": "",
+    "pretFPS": "",
+    "pretSPS": "",
+    "pretTPS": "",
+    "pretFPP": "",
+    "pretSPP": "",
+    "pretTPP": "",
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
+  },
+  "multiplier": {
     "presFPS": "",
     "presSPS": "",
     "presTPS": "",
@@ -22960,12 +23060,12 @@
     "impTPP": ""
   },
   "représenter": {
-    "presFPS": "",
+    "presFPS": "représente",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "représente",
     "presFPP": "",
     "presSPP": "",
-    "presTPP": "",
+    "presTPP": "représentent",
     "pretFPS": "",
     "pretSPS": "",
     "pretTPS": "",
@@ -25620,9 +25720,9 @@
     "impTPP": ""
   },
   "signaler": {
-    "presFPS": "",
+    "presFPS": "signale",
     "presSPS": "",
-    "presTPS": "",
+    "presTPS": "signale",
     "presFPP": "",
     "presSPP": "",
     "presTPP": "",
@@ -25665,7 +25765,7 @@
     "presTPS": "",
     "presFPP": "",
     "presSPP": "",
-    "presTPP": "",
+    "presTPP": "signifient",
     "pretFPS": "",
     "pretSPS": "",
     "pretTPS": "",
@@ -28020,7 +28120,7 @@
     "impTPP": ""
   },
   "tuer": {
-    "presFPS": "",
+    "presFPS": "tue",
     "presSPS": "",
     "presTPS": "",
     "presFPP": "",
@@ -29240,7 +29340,7 @@
     "impTPP": ""
   },
   "éloigner": {
-    "presFPS": "",
+    "presFPS": "éloigne",
     "presSPS": "",
     "presTPS": "",
     "presFPP": "",
@@ -29988,16 +30088,16 @@
     "presTPP": "sont",
     "pretFPS": "",
     "pretSPS": "",
-    "pretTPS": "",
+    "pretTPS": "fut",
     "pretFPP": "",
     "pretSPP": "",
     "pretTPP": "",
-    "impFPS": "étais",
-    "impSPS": "étais",
-    "impTPS": "était",
-    "impFPP": "étions",
-    "impSPP": "étiez",
-    "impTPP": "étaient"
+    "impFPS": "",
+    "impSPS": "",
+    "impTPS": "",
+    "impFPP": "",
+    "impSPP": "",
+    "impTPP": ""
   },
   "ôter": {
     "presFPS": "",
