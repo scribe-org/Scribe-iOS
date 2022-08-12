@@ -176,10 +176,52 @@ class KeyboardViewController: UIInputViewController {
 
   // MARK: Scribe Command Elements
 
+  // Partitions for autocomplete and autosuggest
+  @IBOutlet var leftAutoPartition: UILabel!
+  @IBOutlet var rightAutoPartition: UILabel!
+
+  /// Sets the user interaction potential of the partitions for autocomplete and autosuggest.
+  func setAutoActionPartitions() {
+    leftAutoPartition.isUserInteractionEnabled = false
+    leftAutoPartition.backgroundColor = .clear
+    rightAutoPartition.isUserInteractionEnabled = false
+    rightAutoPartition.backgroundColor = .clear
+  }
+
+  /// Shows the partitions for autocomplete and autosuggest.
+  func conditionallyShowAutoActionPartitions() {
+    if commandState == false && scribeKeyState == false && conjugateView == false {
+      if UITraitCollection.current.userInterfaceStyle == .light {
+        if removeLeftAutoActionPartition == true {
+          leftAutoPartition.backgroundColor = .clear
+        } else {
+          leftAutoPartition.backgroundColor = specialKeyColor
+        }
+        rightAutoPartition.backgroundColor = specialKeyColor
+      } else if UITraitCollection.current.userInterfaceStyle == .dark {
+        if removeLeftAutoActionPartition == true {
+          leftAutoPartition.backgroundColor = .clear
+        } else {
+          leftAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        }
+        rightAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+      }
+    }
+
+    removeLeftAutoActionPartition = false // reset partition removal
+  }
+
+  /// Hides the partitions for autocomplete and autosuggest.
+  /// Note: this function is called during command mode when the commandBar is viewable.
+  func hideAutoActionPartitions() {
+    leftAutoPartition.backgroundColor = .clear
+    rightAutoPartition.backgroundColor = .clear
+  }
+
   // The background for the Scribe command elements.
   @IBOutlet var commandBackground: UILabel!
   func setCommandBackground() {
-    commandBackground.backgroundColor = keyboardBackColor
+    commandBackground.backgroundColor = keyboardBgColor
     commandBackground.isUserInteractionEnabled = false
   }
 
@@ -192,7 +234,7 @@ class KeyboardViewController: UIInputViewController {
   func clearCommandBar() {
     if commandState == false {
       commandBar.textColor = keyCharColor
-      commandBar.text = " "
+      commandBar.text = ""
     }
 
     // Trigger the removal of the noun or preposition annotations.
@@ -242,6 +284,33 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: translateKey)
     activateBtn(btn: conjugateKey)
     activateBtn(btn: pluralKey)
+  }
+
+  /// Sets up command buttons to execute autocomplete and autosuggest.
+  func conditionallySetAutoActionBtns() {
+    deactivateBtn(btn: translateKey)
+    deactivateBtn(btn: conjugateKey)
+    deactivateBtn(btn: pluralKey)
+
+    if autoAction1Visible == true {
+      setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+      activateBtn(btn: translateKey)
+    }
+    if autoAction2Visible == true {
+      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+      activateBtn(btn: conjugateKey)
+    }
+
+    setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+    activateBtn(btn: pluralKey)
+
+    translateKey.layer.shadowColor = UIColor.clear.cgColor
+    conjugateKey.layer.shadowColor = UIColor.clear.cgColor
+    pluralKey.layer.shadowColor = UIColor.clear.cgColor
+
+    // Reset autocorrect and autosuggest button visibility.
+    autoAction1Visible = true
+    autoAction2Visible = true
   }
 
   @IBOutlet var conjugateShiftLeft: UIButton!
@@ -628,7 +697,7 @@ class KeyboardViewController: UIInputViewController {
       annotationDisplay.textAlignment = NSTextAlignment.center
       annotationDisplay.isUserInteractionEnabled = false
       annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.70)
-      annotationDisplay.textColor = commandBarColor
+      annotationDisplay.textColor = keyboardBgColor
     }
 
     for annotationDisplay in prepAnnotationDisplay {
@@ -637,7 +706,7 @@ class KeyboardViewController: UIInputViewController {
       annotationDisplay.textAlignment = NSTextAlignment.center
       annotationDisplay.isUserInteractionEnabled = false
       annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.65)
-      annotationDisplay.textColor = commandBarColor
+      annotationDisplay.textColor = keyboardBgColor
     }
   }
 
@@ -653,6 +722,7 @@ class KeyboardViewController: UIInputViewController {
     linkShadowBlendElements()
     setCommandBtns()
     setConjugationBtns()
+    setAutoActionPartitions()
     invalidState = false
 
     let specialKeys = [
@@ -664,7 +734,7 @@ class KeyboardViewController: UIInputViewController {
     keyboardKeys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
 
-    keyboardView.backgroundColor? = keyboardBackColor
+    keyboardView.backgroundColor? = keyboardBgColor
 
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView == true {
@@ -743,9 +813,8 @@ class KeyboardViewController: UIInputViewController {
       activateBtn(btn: scribeKey)
       styleBtn(btn: scribeKey, title: "Scribe", radius: commandKeyCornerRadius)
       scribeKey.setTitle("", for: .normal)
-      scribeKey.setLeftCornerRadius()
-      scribeKey.setShadow()
-      commandBar.set()
+      commandBar.set() // set here so text spacing is appropriate
+      conditionallyShowAutoActionPartitions()
       deactivateConjugationDisplay()
 
       if scribeKeyState {
@@ -754,6 +823,7 @@ class KeyboardViewController: UIInputViewController {
         scribeKey.setEscShadow()
 
         commandBar.hide()
+        hideAutoActionPartitions()
 
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
@@ -770,19 +840,27 @@ class KeyboardViewController: UIInputViewController {
         }
 
       } else {
-        if commandState == true {
-          scribeKey.toEscape()
-        }
         deactivateBtn(btn: conjugateKey)
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
+        
+        if commandState == true {
+          scribeKey.setLeftCornerRadius()
+          scribeKey.setShadow()
+          scribeKey.toEscape()
 
-        commandBar.setCornerRadiusAndShadow()
-        if commandState == false {
+          commandBar.set()
+          commandBar.setCornerRadiusAndShadow()
+          commandBar.textColor = keyCharColor
+          hideAutoActionPartitions()
+        } else {
+          scribeKey.setFullCornerRadius()
+          scribeKey.setEscShadow()
           commandBar.text = ""
           commandBar.textColor = keyCharColor
+          commandBar.hide()
+          // conditionallySetAutoActionBtns()
         }
-        commandBar.sizeToFit()
       }
 
       let numRows = keyboard.count
@@ -1390,6 +1468,9 @@ class KeyboardViewController: UIInputViewController {
         commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
       }
     }
+    // Add partitions if the keyboard states dictate.
+    conditionallyShowAutoActionPartitions()
+
     // Remove alternates view if it's present.
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
