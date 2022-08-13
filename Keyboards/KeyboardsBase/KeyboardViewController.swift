@@ -288,25 +288,27 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
-    deactivateBtn(btn: translateKey)
-    deactivateBtn(btn: conjugateKey)
-    deactivateBtn(btn: pluralKey)
+    if commandState == false && scribeKeyState == false && conjugateView == false {
+      deactivateBtn(btn: translateKey)
+      deactivateBtn(btn: conjugateKey)
+      deactivateBtn(btn: pluralKey)
 
-    if autoAction1Visible == true {
-      setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
-      activateBtn(btn: translateKey)
+      if autoAction1Visible == true {
+        setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        activateBtn(btn: translateKey)
+      }
+      if autoAction2Visible == true {
+        setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+        activateBtn(btn: conjugateKey)
+      }
+
+      setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+      activateBtn(btn: pluralKey)
+
+      translateKey.layer.shadowColor = UIColor.clear.cgColor
+      conjugateKey.layer.shadowColor = UIColor.clear.cgColor
+      pluralKey.layer.shadowColor = UIColor.clear.cgColor
     }
-    if autoAction2Visible == true {
-      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-      activateBtn(btn: conjugateKey)
-    }
-
-    setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-    activateBtn(btn: pluralKey)
-
-    translateKey.layer.shadowColor = UIColor.clear.cgColor
-    conjugateKey.layer.shadowColor = UIColor.clear.cgColor
-    pluralKey.layer.shadowColor = UIColor.clear.cgColor
 
     // Reset autocorrect and autosuggest button visibility.
     autoAction1Visible = true
@@ -817,6 +819,10 @@ class KeyboardViewController: UIInputViewController {
       conditionallyShowAutoActionPartitions()
       deactivateConjugationDisplay()
 
+      styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
+      styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
+      styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+
       if scribeKeyState {
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()
@@ -824,10 +830,6 @@ class KeyboardViewController: UIInputViewController {
 
         commandBar.hide()
         hideAutoActionPartitions()
-
-        styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
-        styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
-        styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
 
         if DeviceType.isPhone {
           translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
@@ -859,7 +861,6 @@ class KeyboardViewController: UIInputViewController {
           commandBar.text = ""
           commandBar.textColor = keyCharColor
           commandBar.hide()
-          // conditionallySetAutoActionBtns()
         }
       }
 
@@ -1470,6 +1471,7 @@ class KeyboardViewController: UIInputViewController {
     }
     // Add partitions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
+    conditionallySetAutoActionBtns()
 
     // Remove alternates view if it's present.
     if self.view.viewWithTag(1001) != nil {
