@@ -19,7 +19,7 @@ var commandKeyColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/
 var commandBarColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 var commandBarBorderColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
 
-var keyboardBackColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+var keyboardBgColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 var keyShadowColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
 
 // annotate colors.
@@ -47,7 +47,7 @@ func checkDarkModeSetColors() {
     commandBarColor = UIColor.commandBarColorLight
     commandBarBorderColor = UIColor.commandBarBorderColorLight
 
-    keyboardBackColor = UIColor.keyboardBackColorLight
+    keyboardBgColor = UIColor.keyboardBgColorLight
     keyShadowColor = UIColor.keyShadowColorLight
 
     annotateRed = UIColor.annotateRedLight
@@ -71,7 +71,7 @@ func checkDarkModeSetColors() {
     commandBarColor = UIColor.commandBarColorDark
     commandBarBorderColor = UIColor.commandBarBorderColorDark
 
-    keyboardBackColor = UIColor.keyboardBackColorDark
+    keyboardBgColor = UIColor.keyboardBgColorDark
     keyShadowColor = UIColor.keyShadowColorDark
 
     annotateRed = UIColor.annotateRedDark
@@ -100,7 +100,7 @@ extension UIColor {
     red: 203.0/255.0, green: 203.0/255.0, blue: 206.0/255.0, alpha: 1.0
   ).cgColor
 
-  static let keyboardBackColorLight = UIColor(red: 206.0/255.0, green: 210.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+  static let keyboardBgColorLight = UIColor(red: 206.0/255.0, green: 210.0/255.0, blue: 217.0/255.0, alpha: 1.0)
   static let keyShadowColorLight = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.35).cgColor
 
   static let annotateRedLight = UIColor(red: 177.0/255.0, green: 27.0/255.0, blue: 39.0/255.0, alpha: 0.9)
@@ -123,7 +123,7 @@ extension UIColor {
     red: 75.0/255.0, green: 75.0/255.0, blue: 75.0/255.0, alpha: 1.0
   ).cgColor
 
-  static let keyboardBackColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+  static let keyboardBgColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
   static let keyShadowColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.95).cgColor
 
   static let annotateRedDark = UIColor(red: 248.0/255.0, green: 89.0/255.0, blue: 94.0/255.0, alpha: 0.9)

@@ -33,7 +33,7 @@ let caseAnnotationConversionDict = [
 ///   - annotationDisplay: the full annotation display elements.
 func hideAnnotations(annotationDisplay: [UILabel]) {
   for idx in 0..<annotationDisplay.count {
-    annotationDisplay[idx].backgroundColor = UIColor.clear
+    annotationDisplay[idx].backgroundColor = .clear
     annotationDisplay[idx].text = ""
   }
 }
@@ -98,6 +98,11 @@ func nounAnnotation(
 
   let isNoun = nouns?[wordToCheck] != nil || nouns?[givenWord.lowercased()] != nil
   if isNoun {
+    autoAction1Visible = false
+    if DeviceType.isPhone && wordToCheck.count > 4 {
+      removeLeftAutoActionPartition = true
+      autoAction2Visible = false
+    }
     // Clear the prior annotations to assure that preposition annotations don't persist.
     hideAnnotations(annotationDisplay: annotationDisplay)
     nounAnnotationsToDisplay = 0
@@ -121,7 +126,7 @@ func nounAnnotation(
         numberOfAnnotations = annotationsToAssign.count
       } else {
         numberOfAnnotations = 1
-        annotationsToAssign.append(nounForm )
+        annotationsToAssign.append(nounForm)
       }
 
       for idx in 0..<numberOfAnnotations {
@@ -247,6 +252,11 @@ func prepositionAnnotation(
   let isPreposition = prepositions?[wordToCheck] != nil
   if isPreposition {
     prepAnnotationState = true
+    autoAction1Visible = false
+    if DeviceType.isPhone && wordToCheck.count > 3 {
+      removeLeftAutoActionPartition = true
+      autoAction2Visible = false
+    }
     // Make command bar font larger for annotation.
     if DeviceType.isPhone {
       commandBar.font = .systemFont(ofSize: annotationHeight * 0.8)
