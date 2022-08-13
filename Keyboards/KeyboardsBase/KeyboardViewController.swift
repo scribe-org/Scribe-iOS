@@ -210,6 +210,63 @@ class KeyboardViewController: UIInputViewController {
 
     removeLeftAutoActionPartition = false // reset partition removal
   }
+  
+  /// Generates the array for the three autocomplete words.
+  func getAutocompleteWords() {
+    let keysOfNouns = Array(nouns!.keys).sorted()
+    completionWords = [" ", " ", " "]
+    if proxy.documentContextBeforeInput?.count != 0 {
+      if let inString = proxy.documentContextBeforeInput {
+        // To only focus on the current word as prefix in autocomplete.
+        currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
+        let stringOptions = keysOfNouns.filter { item in
+            return item.lowercased().hasPrefix(currentPrefix.lowercased())
+        }
+
+        var i = 0
+        if stringOptions.count <= 3 {
+          while i < stringOptions.count {
+            completionWords[i] = pastStringInTextProxy.isEmpty ? stringOptions[i] : stringOptions[i].lowercased() // Lowercase if it is the first word.
+            i += 1
+          }
+        } else {
+            while i < 3 {
+              completionWords[i] = pastStringInTextProxy.isEmpty ? stringOptions[i] : stringOptions[i].lowercased()
+                i += 1
+            }
+        }
+      } else {
+        getDefualtAutoCompleteWords(keysOfNouns)
+      }
+    } else {
+      // For getting words on launch. When the user has not typed anything in the proxy.
+      getDefualtAutoCompleteWords(keysOfNouns)
+    }
+  }
+  
+  /// Section to suggest words on launch before the user starts typing.
+  /// Replace this section when we add the most common used words.
+  func getDefualtAutoCompleteWords(_ keys: [String]) {
+    var i = 0
+    var threeWords = [String]()
+    while i < 3 {
+        threeWords.append(keys[i])
+        i += 1
+    }
+    completionWords = threeWords
+  }
+  
+  /// Function to clear the text proxy when inserting using Auto Action.
+  /// Else, the completion is appended after the typed text.
+  func clearPrefixFromTextFieldProxy() {
+    if currentPrefix != "" {
+      if proxy.documentContextBeforeInput?.count != 0 {
+        for _ in 0...currentPrefix.count - 1 {
+          proxy.deleteBackward()
+        }
+      }
+    }
+  }
 
   /// Hides the partitions for autocomplete and autosuggest.
   /// Note: this function is called during command mode when the commandBar is viewable.
@@ -288,6 +345,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
+    getAutocompleteWords()
     if commandState == false && scribeKeyState == false && conjugateView == false {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
@@ -295,17 +353,17 @@ class KeyboardViewController: UIInputViewController {
 
       if autoAction1Visible == true {
         setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
-        styleBtn(btn: translateKey, title: "Random", radius: commandKeyCornerRadius)
+        styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
       if autoAction2Visible == true {
         setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-        styleBtn(btn: conjugateKey, title: "Buch", radius: commandKeyCornerRadius)
+        styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
         activateBtn(btn: conjugateKey)
       }
 
       setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-      styleBtn(btn: pluralKey, title: "Leben", radius: commandKeyCornerRadius)
+      styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
       activateBtn(btn: pluralKey)
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -1275,8 +1333,11 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "AutoAction1":
+      clearPrefixFromTextFieldProxy()
       proxy.insertText(translateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
+      currentPrefix = ""
+      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
       if getConjugation == false && getTranslation == false {
@@ -1295,8 +1356,11 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "AutoAction2":
+      clearPrefixFromTextFieldProxy()
       proxy.insertText(conjugateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
+      currentPrefix = ""
+      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
       if getConjugation == false && getTranslation == false {
@@ -1315,8 +1379,11 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "AutoAction3":
+      clearPrefixFromTextFieldProxy()
       proxy.insertText(pluralKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
+      currentPrefix = ""
+      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
       if getConjugation == false && getTranslation == false {
@@ -1355,6 +1422,7 @@ class KeyboardViewController: UIInputViewController {
           shiftButtonState = .shift
           loadKeys()
         }
+        pastStringInTextProxy = ""
       }
       clearCommandBar()
       // Inserting the placeholder when commandBar text is deleted.
