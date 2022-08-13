@@ -210,7 +210,7 @@ class KeyboardViewController: UIInputViewController {
 
     removeLeftAutoActionPartition = false // reset partition removal
   }
-  
+
   /// Generates the array for the three autocomplete words.
   func getAutocompleteWords() {
     completionWords = [" ", " ", " "]
@@ -235,17 +235,17 @@ class KeyboardViewController: UIInputViewController {
             }
         }
       } else {
-        getDefualtAutoCompleteWords(autocompleteWords)
+        getDefaultAutoCompleteWords(autocompleteWords)
       }
     } else {
       // For getting words on launch. When the user has not typed anything in the proxy.
-      getDefualtAutoCompleteWords(autocompleteWords)
+      getDefaultAutoCompleteWords(autocompleteWords)
     }
   }
-  
+
   /// Section to suggest words on launch before the user starts typing.
   /// Replace this section when we add the most common used words.
-  func getDefualtAutoCompleteWords(_ keys: [String]) {
+  func getDefaultAutoCompleteWords(_ keys: [String]) {
     var i = 0
     var threeWords = [String]()
     while i < 3 {
@@ -254,7 +254,7 @@ class KeyboardViewController: UIInputViewController {
     }
     completionWords = threeWords
   }
-  
+
   /// Function to clear the text proxy when inserting using Auto Action.
   /// Else, the completion is appended after the typed text.
   func clearPrefixFromTextFieldProxy() {
@@ -904,7 +904,7 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: conjugateKey)
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
-        
+
         if commandState == true {
           scribeKey.setLeftCornerRadius()
           scribeKey.setShadow()
