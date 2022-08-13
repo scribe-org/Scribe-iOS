@@ -19,6 +19,9 @@ let nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
+var currentPrefix: String = ""
+var pastStringInTextProxy: String = ""
+var completionWords = [String]()
 
 // A larger vertical bar than the normal | key for the cursor.
 let commandCursor: String = "│"
