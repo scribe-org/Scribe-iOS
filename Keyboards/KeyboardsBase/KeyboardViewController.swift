@@ -213,13 +213,12 @@ class KeyboardViewController: UIInputViewController {
   
   /// Generates the array for the three autocomplete words.
   func getAutocompleteWords() {
-    let keysOfNouns = Array(nouns!.keys).sorted()
     completionWords = [" ", " ", " "]
     if proxy.documentContextBeforeInput?.count != 0 {
       if let inString = proxy.documentContextBeforeInput {
         // To only focus on the current word as prefix in autocomplete.
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
-        let stringOptions = keysOfNouns.filter { item in
+        let stringOptions = autocompleteWords.filter { item in
             return item.lowercased().hasPrefix(currentPrefix.lowercased())
         }
 
@@ -236,11 +235,11 @@ class KeyboardViewController: UIInputViewController {
             }
         }
       } else {
-        getDefualtAutoCompleteWords(keysOfNouns)
+        getDefualtAutoCompleteWords(autocompleteWords)
       }
     } else {
       // For getting words on launch. When the user has not typed anything in the proxy.
-      getDefualtAutoCompleteWords(keysOfNouns)
+      getDefualtAutoCompleteWords(autocompleteWords)
     }
   }
   
