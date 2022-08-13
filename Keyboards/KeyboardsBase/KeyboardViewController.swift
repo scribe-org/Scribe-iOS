@@ -295,14 +295,17 @@ class KeyboardViewController: UIInputViewController {
 
       if autoAction1Visible == true {
         setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        styleBtn(btn: translateKey, title: "Random", radius: commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
       if autoAction2Visible == true {
         setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+        styleBtn(btn: conjugateKey, title: "Buch", radius: commandKeyCornerRadius)
         activateBtn(btn: conjugateKey)
       }
 
       setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+      styleBtn(btn: pluralKey, title: "Leben", radius: commandKeyCornerRadius)
       activateBtn(btn: pluralKey)
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -819,28 +822,27 @@ class KeyboardViewController: UIInputViewController {
       conditionallyShowAutoActionPartitions()
       deactivateConjugationDisplay()
 
-      styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
-      styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
-      styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+      if DeviceType.isPhone {
+        translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+      } else if DeviceType.isPad {
+        translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+      }
 
       if scribeKeyState {
+        styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
+        styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
+        styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()
         scribeKey.setEscShadow()
 
         commandBar.hide()
         hideAutoActionPartitions()
-
-        if DeviceType.isPhone {
-          translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-          conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-          pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-        } else if DeviceType.isPad {
-          translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-          conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-          pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-        }
-
       } else {
         deactivateBtn(btn: conjugateKey)
         deactivateBtn(btn: translateKey)
@@ -861,6 +863,7 @@ class KeyboardViewController: UIInputViewController {
           commandBar.text = ""
           commandBar.textColor = keyCharColor
           commandBar.hide()
+          conditionallySetAutoActionBtns()
         }
       }
 
@@ -1270,6 +1273,66 @@ class KeyboardViewController: UIInputViewController {
     case "conjugateBottomRight":
       returnConjugation(keyPressed: sender, requestedTense: tenseBottomRight)
       loadKeys()
+
+    case "AutoAction1":
+      proxy.insertText(translateKey.titleLabel?.text ?? "")
+      proxy.insertText(" ")
+      clearCommandBar()
+      // Prevent annotations from being triggered during commands.
+      if getConjugation == false && getTranslation == false {
+        typedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        typedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
+        annotationState = false
+        prepAnnotationState = false
+        nounAnnotationsToDisplay = 0
+      }
+
+    case "AutoAction2":
+      proxy.insertText(conjugateKey.titleLabel?.text ?? "")
+      proxy.insertText(" ")
+      clearCommandBar()
+      // Prevent annotations from being triggered during commands.
+      if getConjugation == false && getTranslation == false {
+        typedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        typedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
+        annotationState = false
+        prepAnnotationState = false
+        nounAnnotationsToDisplay = 0
+      }
+
+    case "AutoAction3":
+      proxy.insertText(pluralKey.titleLabel?.text ?? "")
+      proxy.insertText(" ")
+      clearCommandBar()
+      // Prevent annotations from being triggered during commands.
+      if getConjugation == false && getTranslation == false {
+        typedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        typedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
+        annotationState = false
+        prepAnnotationState = false
+        nounAnnotationsToDisplay = 0
+      }
 
     case "delete":
       if shiftButtonState == .shift {
