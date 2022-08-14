@@ -103,11 +103,11 @@ extension UIColor {
   static let keyboardBgColorLight = UIColor(red: 206.0/255.0, green: 210.0/255.0, blue: 217.0/255.0, alpha: 1.0)
   static let keyShadowColorLight = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.35).cgColor
 
-  static let annotateRedLight = UIColor(red: 177.0/255.0, green: 27.0/255.0, blue: 39.0/255.0, alpha: 0.9)
-  static let annotateBlueLight = UIColor(red: 56.0/255.0, green: 101.0/255.0, blue: 168.0/255.0, alpha: 0.9)
-  static let annotatePurpleLight = UIColor(red: 122.0/255.0, green: 5.0/255.0, blue: 147.0/255.0, alpha: 0.9)
-  static let annotateGreenLight = UIColor(red: 65.0/255.0, green: 128.0/255.0, blue: 74.0/255.0, alpha: 0.9)
-  static let annotateOrangeLight = UIColor(red: 249.0/255.0, green: 106.0/255.0, blue: 78.0/255.0, alpha: 0.9)
+  static let annotateRedLight = UIColor(red: 160.0/255.0, green: 24.0/255.0, blue: 35.0/255.0, alpha: 0.9)
+  static let annotateBlueLight = UIColor(red: 51.0/255.0, green: 92.0/255.0, blue: 153.0/255.0, alpha: 0.9)
+  static let annotatePurpleLight = UIColor(red: 113.0/255.0, green: 5.0/255.0, blue: 138.0/255.0, alpha: 0.9)
+  static let annotateGreenLight = UIColor(red: 62.0/255.0, green: 122.0/255.0, blue: 71.0/255.0, alpha: 0.9)
+  static let annotateOrangeLight = UIColor(red: 248.0/255.0, green: 90.0/255.0, blue: 58.0/255.0, alpha: 0.9)
 
   // Dark theme.
   static let scribeBlueDark = UIColor(red: 76.0/255.0, green: 173.0/255.0, blue: 230.0/255.0, alpha: 0.9)
@@ -126,9 +126,9 @@ extension UIColor {
   static let keyboardBgColorDark = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
   static let keyShadowColorDark = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.95).cgColor
 
-  static let annotateRedDark = UIColor(red: 248.0/255.0, green: 89.0/255.0, blue: 94.0/255.0, alpha: 0.9)
-  static let annotateBlueDark = UIColor(red: 32.0/255.0, green: 149.0/255.0, blue: 233.0/255.0, alpha: 0.9)
-  static let annotatePurpleDark = UIColor(red: 164.0/255.0, green: 92.0/255.0, blue: 235.0/255.0, alpha: 0.9)
-  static let annotateGreenDark = UIColor(red: 120.0/255.0, green: 188.0/255.0, blue: 97.0/255.0, alpha: 0.9)
-  static let annotateOrangeDark = UIColor(red: 254.0/255.0, green: 148.0/255.0, blue: 72.0/255.0, alpha: 0.9)
+  static let annotateRedDark = UIColor(red: 252.0/255.0, green: 95.0/255.0, blue: 108.0/255.0, alpha: 0.9)
+  static let annotateBlueDark = UIColor(red: 51.0/255.0, green: 158.0/255.0, blue: 235.0/255.0, alpha: 0.9)
+  static let annotatePurpleDark = UIColor(red: 173.0/255.0, green: 110.0/255.0, blue: 237.0/255.0, alpha: 0.9)
+  static let annotateGreenDark = UIColor(red: 133.0/255.0, green: 194.0/255.0, blue: 112.0/255.0, alpha: 0.9)
+  static let annotateOrangeDark = UIColor(red: 254.0/255.0, green: 160.0/255.0, blue: 93.0/255.0, alpha: 0.9)
 }
