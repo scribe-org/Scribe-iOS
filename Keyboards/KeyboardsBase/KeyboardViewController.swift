@@ -225,12 +225,20 @@ class KeyboardViewController: UIInputViewController {
         var i = 0
         if stringOptions.count <= 3 {
           while i < stringOptions.count {
-            completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
+            if shiftButtonState == .caps {
+              completionWords[i] = stringOptions[i].uppercased()
+            } else {
+              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
+            }
             i += 1
           }
         } else {
             while i < 3 {
-              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased()
+              if shiftButtonState == .caps {
+                completionWords[i] = stringOptions[i].uppercased()
+              } else {
+                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
+              }
                 i += 1
             }
         }
