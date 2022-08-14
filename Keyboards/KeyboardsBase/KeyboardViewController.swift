@@ -225,12 +225,12 @@ class KeyboardViewController: UIInputViewController {
         var i = 0
         if stringOptions.count <= 3 {
           while i < stringOptions.count {
-            completionWords[i] = pastStringInTextProxy.isEmpty ? stringOptions[i] : stringOptions[i].lowercased() // Lowercase if it is the first word.
+            completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
             i += 1
           }
         } else {
             while i < 3 {
-              completionWords[i] = pastStringInTextProxy.isEmpty ? stringOptions[i] : stringOptions[i].lowercased()
+              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i] : stringOptions[i].lowercased()
                 i += 1
             }
         }
