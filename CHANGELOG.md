@@ -8,15 +8,18 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-<!--# Scribe-iOS 1.5.0-->
-<!---->
-<!--Scribe's third design sprint with Spencer Arney focussed on the app screen and onboarding users.-->
-<!---->
-<!--### 🎨 Design Changes-->
-<!---->
-<!--- A quick tutorial has been added to the app to show new users how it works. -->
-<!--- The app screen fields have been made larger and the text size has also been increased. -->
-<!--- Settings have been added to the top left of the app screen that allows users to access the home screen, language practice section, keyboard settings, privacy policy, contact options, and a description of how Wikidata links to Scribe. -->
+# Scribe-iOS 1.5.0
+
+### ✨ New Features
+
+- Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered.
+- Scribe now includes a baseline autosuggest feature that suggests words from a list of most common words in the language.
+
+### 🗃️ Data Added
+
+### 🎨 Design Changes
+
+- The annotation colors have been changed to match the new backgrounds.
 
 # Scribe-iOS 1.4.0
 
