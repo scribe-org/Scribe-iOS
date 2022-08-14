@@ -266,6 +266,27 @@ class KeyboardViewController: UIInputViewController {
       }
     }
   }
+  
+  /// Function that changes variables pastStringInTextProxy and secondaryPastStringOnDelete.
+  /// Allows for autocomplete to work when delete is pressed by reversing the changes in the above variables.
+  func changePastTextsFromProxy() {
+    if proxy.documentContextBeforeInput?.count == 0 {
+      pastStringInTextProxy = ""
+      secondaryPastStringOnDelete = ""
+    } else {
+      let stringInProxy = proxy.documentContextBeforeInput!
+      if pastStringInTextProxy == stringInProxy {
+        pastStringInTextProxy = secondaryPastStringOnDelete
+        
+        if !secondaryPastStringOnDelete.isEmpty {
+          secondaryPastStringOnDelete.removeLast()
+        }
+        while !secondaryPastStringOnDelete.isEmpty && !secondaryPastStringOnDelete.hasSuffix(" ") {
+          secondaryPastStringOnDelete.removeLast()
+        }
+      } else { return }
+    }
+  }
 
   /// Hides the partitions for autocomplete and autosuggest.
   /// Note: this function is called during command mode when the commandBar is viewable.
@@ -299,6 +320,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
+    changePastTextsFromProxy()
     if commandState != true {
       proxy.deleteBackward()
     } else if !(commandState == true && (allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!))) {
@@ -1336,6 +1358,7 @@ class KeyboardViewController: UIInputViewController {
       proxy.insertText(translateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
       currentPrefix = ""
+      secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
@@ -1359,6 +1382,7 @@ class KeyboardViewController: UIInputViewController {
       proxy.insertText(conjugateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
       currentPrefix = ""
+      secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
@@ -1382,6 +1406,7 @@ class KeyboardViewController: UIInputViewController {
       proxy.insertText(pluralKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
       currentPrefix = ""
+      secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
       // Prevent annotations from being triggered during commands.
@@ -1426,6 +1451,7 @@ class KeyboardViewController: UIInputViewController {
       clearCommandBar()
       // Inserting the placeholder when commandBar text is deleted.
       commandBar.conditionallyAddPlaceholder()
+      conditionallySetAutoActionBtns()
 
     case spaceBar:
       commandBar.conditionallyRemovePlaceholder()
@@ -1450,6 +1476,11 @@ class KeyboardViewController: UIInputViewController {
           changeKeyboardToLetterKeys()
         }
       }
+      
+      secondaryPastStringOnDelete = pastStringInTextProxy
+      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
+      conditionallySetAutoActionBtns()
+      
       // Prevent annotations from being triggered during commands.
       if getConjugation == false && getTranslation == false {
         typedNounAnnotation(
@@ -1470,9 +1501,7 @@ class KeyboardViewController: UIInputViewController {
         clearCommandBar()
       }
       doubleSpacePeriodPossible = true
-      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      conditionallySetAutoActionBtns()
-
+      
     case "selectKeyboard":
       self.advanceToNextInputMode()
 
