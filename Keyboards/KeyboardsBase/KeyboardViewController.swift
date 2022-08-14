@@ -1470,6 +1470,8 @@ class KeyboardViewController: UIInputViewController {
         clearCommandBar()
       }
       doubleSpacePeriodPossible = true
+      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
+      conditionallySetAutoActionBtns()
 
     case "selectKeyboard":
       self.advanceToNextInputMode()
