@@ -1,5 +1,7 @@
 # Changelog
 
+See the [releases for Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/releases) for an up to date list of versions and their release dates. Versions that are marked as released may yet to be in the App Store if it's within the 48 hour submission review period.
+
 Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.MINOR.PATCH version where increments are made of the:
 
 - MAJOR version when we make incompatible API changes
@@ -12,8 +14,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered.
-- Scribe now includes a baseline autosuggest feature that suggests words from a list of most common words in the language.
+<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered.
+- Scribe now includes a baseline autosuggest feature that suggests words from a list of most common words in the language. -->
 
 ### 🗃️ Data Added
 
