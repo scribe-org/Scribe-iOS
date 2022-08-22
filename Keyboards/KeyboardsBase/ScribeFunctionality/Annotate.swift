@@ -99,10 +99,7 @@ func nounAnnotation(
   let isNoun = nouns?[wordToCheck] != nil || nouns?[givenWord.lowercased()] != nil
   if isNoun {
     autoAction1Visible = false
-    if DeviceType.isPhone && wordToCheck.count > 4 {
-      removeLeftAutoActionPartition = true
-      autoAction2Visible = false
-    }
+
     // Clear the prior annotations to assure that preposition annotations don't persist.
     hideAnnotations(annotationDisplay: annotationDisplay)
     nounAnnotationsToDisplay = 0
@@ -253,10 +250,7 @@ func prepositionAnnotation(
   if isPreposition {
     prepAnnotationState = true
     autoAction1Visible = false
-    if DeviceType.isPhone && wordToCheck.count > 3 {
-      removeLeftAutoActionPartition = true
-      autoAction2Visible = false
-    }
+
     // Make command bar font larger for annotation.
     if DeviceType.isPhone {
       commandBar.font = .systemFont(ofSize: annotationHeight * 0.8)

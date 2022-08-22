@@ -385,11 +385,10 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
-      if autoAction2Visible == true {
-        setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-        styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
-        activateBtn(btn: conjugateKey)
-      }
+      
+      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+      styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
+      activateBtn(btn: conjugateKey)
 
       setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
       styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
@@ -402,7 +401,6 @@ class KeyboardViewController: UIInputViewController {
 
     // Reset autocorrect and autosuggest button visibility.
     autoAction1Visible = true
-    autoAction2Visible = true
   }
 
   @IBOutlet var conjugateShiftLeft: UIButton!

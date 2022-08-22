@@ -10,7 +10,6 @@ import UIKit
 var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible: Bool = true
-var autoAction2Visible: Bool = true
 var removeLeftAutoActionPartition = false
 var backspaceTimer: Timer?
 
