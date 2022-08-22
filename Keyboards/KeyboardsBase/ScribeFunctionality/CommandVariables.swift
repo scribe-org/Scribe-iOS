@@ -10,7 +10,6 @@ import UIKit
 var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible: Bool = true
-var removeLeftAutoActionPartition = false
 var backspaceTimer: Timer?
 
 // All data needed for Scribe commands for the given language keyboard.

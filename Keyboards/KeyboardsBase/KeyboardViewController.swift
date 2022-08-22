@@ -192,23 +192,13 @@ class KeyboardViewController: UIInputViewController {
   func conditionallyShowAutoActionPartitions() {
     if commandState == false && scribeKeyState == false && conjugateView == false {
       if UITraitCollection.current.userInterfaceStyle == .light {
-        if removeLeftAutoActionPartition == true {
-          leftAutoPartition.backgroundColor = .clear
-        } else {
-          leftAutoPartition.backgroundColor = specialKeyColor
-        }
+        leftAutoPartition.backgroundColor = specialKeyColor
         rightAutoPartition.backgroundColor = specialKeyColor
       } else if UITraitCollection.current.userInterfaceStyle == .dark {
-        if removeLeftAutoActionPartition == true {
-          leftAutoPartition.backgroundColor = .clear
-        } else {
-          leftAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        }
+        leftAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         rightAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
       }
     }
-
-    removeLeftAutoActionPartition = false // reset partition removal
   }
 
   /// Generates the array for the three autocomplete words.
@@ -226,18 +216,20 @@ class KeyboardViewController: UIInputViewController {
         if stringOptions.count <= 3 {
           while i < stringOptions.count {
             if shiftButtonState == .caps {
+              // Capital autocomplete if the user starts typing capitalized.
               completionWords[i] = stringOptions[i].uppercased()
             } else {
-              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i] // Capital autocomplete if the user starts typing capitalized.
+              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i]
             }
             i += 1
           }
         } else {
             while i < 3 {
               if shiftButtonState == .caps {
+                // Capital autocomplete if the user starts typing capitalized.
                 completionWords[i] = stringOptions[i].uppercased()
               } else {
-                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i] // Capital autocomplete if the user starts typing capitalized.
+                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i]
               }
                 i += 1
             }
@@ -251,8 +243,8 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Section to suggest words on launch before the user starts typing.
-  /// Replace this section when we add the most common used words.
+  /// Suggests words on launch before the user starts typing.
+  /// Note: replace this section when we add the most common used words.
   func getDefaultAutoCompleteWords(_ keys: [String]) {
     var i = 0
     var threeWords = [String]()
@@ -263,8 +255,8 @@ class KeyboardViewController: UIInputViewController {
     completionWords = threeWords
   }
 
-  /// Function to clear the text proxy when inserting using Auto Action.
-  /// Else, the completion is appended after the typed text.
+  /// Clears the text proxy when inserting using an auto action.
+  /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
     if currentPrefix != "" {
       if proxy.documentContextBeforeInput?.count != 0 {
@@ -275,8 +267,8 @@ class KeyboardViewController: UIInputViewController {
     }
   }
   
-  /// Function that changes variables pastStringInTextProxy and secondaryPastStringOnDelete.
-  /// Allows for autocomplete to work when delete is pressed by reversing the changes in the above variables.
+  /// Changes variables pastStringInTextProxy and secondaryPastStringOnDelete.
+  /// Note: allows for autocomplete to work when delete is pressed by reversing the changes in the above variables.
   func changePastTextsFromProxy() {
     if proxy.documentContextBeforeInput?.count == 0 {
       pastStringInTextProxy = ""
@@ -297,7 +289,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Hides the partitions for autocomplete and autosuggest.
-  /// Note: this function is called during command mode when the commandBar is viewable.
+  /// Note: this function is called during command mode when the commandBar is viewable and the Scribe key state.
   func hideAutoActionPartitions() {
     leftAutoPartition.backgroundColor = .clear
     rightAutoPartition.backgroundColor = .clear
