@@ -60,6 +60,10 @@ extension String {
       $1 == char ? $0 + 1 : $0
     }
   }
+  
+  func capitalizingFirstLetter() -> String {
+    return prefix(1).uppercased() + self.lowercased().dropFirst()
+  }
 }
 
 /// Adds the ability to efficiently trim whitespace at the end of a string.
