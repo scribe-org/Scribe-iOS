@@ -45,6 +45,7 @@ var annotationState: Bool = false
 var nounAnnotationsToDisplay: Int = 0
 var prepAnnotationState: Bool = false
 var annotationHeight = CGFloat(0)
+var annotationDisplayWord: String = ""
 
 // Indicates that the keyboard has switched to another input language.
 // For example another input method is needed to translate.

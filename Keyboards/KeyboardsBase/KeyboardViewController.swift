@@ -228,7 +228,7 @@ class KeyboardViewController: UIInputViewController {
             if shiftButtonState == .caps {
               completionWords[i] = stringOptions[i].uppercased()
             } else {
-              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
+              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i] // Capital autocomplete if the user starts typing capitalized.
             }
             i += 1
           }
@@ -237,7 +237,7 @@ class KeyboardViewController: UIInputViewController {
               if shiftButtonState == .caps {
                 completionWords[i] = stringOptions[i].uppercased()
               } else {
-                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i].lowercased() // Capital autocomplete if the user starts typing capitalized.
+                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i] // Capital autocomplete if the user starts typing capitalized.
               }
                 i += 1
             }

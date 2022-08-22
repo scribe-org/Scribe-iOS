@@ -140,8 +140,22 @@ func nounAnnotation(
         repeating: " ",
         count: ( numberOfAnnotations * 7 ) - ( numberOfAnnotations - 1 )
       )
+
       if invalidState != true {
-        commandBar.text = commandPromptSpacing + wordSpacing + givenWord
+        if DeviceType.isPhone {
+          if commandPromptSpacing.count + wordSpacing.count > 9 {
+            annotationDisplayWord = givenWord.prefix(2) + "..."
+            if commandPromptSpacing.count + wordSpacing.count > 15 {
+              annotationDisplayWord = givenWord.prefix(1) + ""
+            }
+          } else {
+            annotationDisplayWord = givenWord
+          }
+        } else if DeviceType.isPad {
+          annotationDisplayWord = givenWord
+        }
+
+        commandBar.text = commandPromptSpacing + wordSpacing + annotationDisplayWord
       }
 
       // Check if it's a preposition and pass information to prepositionAnnotation if so.
@@ -289,7 +303,26 @@ func prepositionAnnotation(
       - ( numberOfAnnotations - 1 )
     )
 
-    commandBar.text = commandPromptSpacing + wordSpacing + givenWord
+    if DeviceType.isPhone {
+      if commandPromptSpacing.count + wordSpacing.count > 9 && givenWord.count > 3 {
+        annotationDisplayWord = givenWord.prefix(3) + "..."
+        if commandPromptSpacing.count + wordSpacing.count > 14 && givenWord.count > 2 {
+          annotationDisplayWord = givenWord.prefix(1) + "..."
+        }
+        if commandPromptSpacing.count + wordSpacing.count > 18 {
+          annotationDisplayWord = givenWord.prefix(1) + ""
+        }
+        if commandPromptSpacing.count + wordSpacing.count > 22 {
+          annotationDisplayWord = ""
+        }
+      } else {
+        annotationDisplayWord = givenWord
+      }
+    } else if DeviceType.isPad {
+      annotationDisplayWord = givenWord
+    }
+
+    commandBar.text = commandPromptSpacing + wordSpacing + annotationDisplayWord
   }
 }
 
