@@ -925,6 +925,7 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
 
+        commandBar.textColor = keyCharColor
         if commandState == true {
           scribeKey.setLeftCornerRadius()
           scribeKey.setShadow()
@@ -932,13 +933,13 @@ class KeyboardViewController: UIInputViewController {
 
           commandBar.set()
           commandBar.setCornerRadiusAndShadow()
-          commandBar.textColor = keyCharColor
+          commandBar.conditionallyAddPlaceholder() // set in case of color mode switch
           hideAutoActionPartitions()
         } else {
           scribeKey.setFullCornerRadius()
           scribeKey.setEscShadow()
+          
           commandBar.text = ""
-          commandBar.textColor = keyCharColor
           commandBar.hide()
           conditionallySetAutoActionBtns()
         }
