@@ -135,7 +135,9 @@ class KeyboardViewController: UIInputViewController {
     }
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
+    keyboardLoad = true
     loadInterface()
+    keyboardLoad = false
 
     self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
   }
@@ -171,7 +173,9 @@ class KeyboardViewController: UIInputViewController {
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
+    keyboardLoad = true
     loadKeys()
+    keyboardLoad = false
   }
 
   // MARK: Scribe Command Elements
@@ -183,9 +187,7 @@ class KeyboardViewController: UIInputViewController {
   /// Sets the user interaction potential of the partitions for autocomplete and autosuggest.
   func setAutoActionPartitions() {
     leftAutoPartition.isUserInteractionEnabled = false
-    leftAutoPartition.backgroundColor = .clear
     rightAutoPartition.isUserInteractionEnabled = false
-    rightAutoPartition.backgroundColor = .clear
   }
 
   /// Shows the partitions for autocomplete and autosuggest.
@@ -799,24 +801,30 @@ class KeyboardViewController: UIInputViewController {
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
-    setCommandBackground()
+    // Actions to be done only on initial loads.
+    if keyboardLoad == true {
+      commandBar.textColor = keyCharColor
+      commandBar.conditionallyAddPlaceholder() // in case of color mode change during commands
+      keyboardView.backgroundColor? = keyboardBgColor
+
+      linkShadowBlendElements()
+      setAutoActionPartitions()
+
+      let specialKeys = [
+        "shift", "delete", "ABC", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
+      ]
+      allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+    }
+
     setKeyboard()
-    linkShadowBlendElements()
+    setCommandBackground()
     setCommandBtns()
     setConjugationBtns()
-    setAutoActionPartitions()
     invalidState = false
-
-    let specialKeys = [
-      "shift", "delete", "ABC", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
-    ]
-    allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
 
     // Clear interface from the last state.
     keyboardKeys.forEach {$0.removeFromSuperview()}
     paddingViews.forEach {$0.removeFromSuperview()}
-
-    keyboardView.backgroundColor? = keyboardBgColor
 
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView == true {
@@ -925,7 +933,6 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
 
-        commandBar.textColor = keyCharColor
         if commandState == true {
           scribeKey.setLeftCornerRadius()
           scribeKey.setShadow()
@@ -933,7 +940,6 @@ class KeyboardViewController: UIInputViewController {
 
           commandBar.set()
           commandBar.setCornerRadiusAndShadow()
-          commandBar.conditionallyAddPlaceholder() // set in case of color mode switch
           hideAutoActionPartitions()
         } else {
           scribeKey.setFullCornerRadius()
@@ -1251,6 +1257,7 @@ class KeyboardViewController: UIInputViewController {
       // Always start in letters with a new keyboard.
       keyboardState = .letters
       loadKeys()
+      commandBar.textColor = keyCharColor
       commandBar.attributedText = translatePromptAndColorPlaceholder
 
     // Switch to conjugate state.
@@ -1259,6 +1266,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getConjugation = true
       loadKeys()
+      commandBar.textColor = keyCharColor
       commandBar.attributedText = conjugatePromptAndColorPlaceholder
 
     // Switch to plural state.
@@ -1272,6 +1280,7 @@ class KeyboardViewController: UIInputViewController {
       commandState = true
       getPlural = true
       loadKeys()
+      commandBar.textColor = keyCharColor
       commandBar.attributedText = pluralPromptAndColorPlaceholder
 
     // Move displayed conjugations to the left in order if able.
