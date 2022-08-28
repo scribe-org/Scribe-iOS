@@ -10,11 +10,11 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# Scribe-iOS 1.5.0
+# Scribe-iOS 2.0.0
 
 ### ✨ New Features
 
-<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered.
+<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as conjugations of common verbs.
 - Scribe now includes a baseline autosuggest feature that suggests words words derived from Wikipedia as following a given word. -->
 
 ### 🗃️ Data Added
