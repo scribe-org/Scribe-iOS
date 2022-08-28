@@ -15,13 +15,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 <!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered.
-- Scribe now includes a baseline autosuggest feature that suggests words from a list of most common words in the language. -->
+- Scribe now includes a baseline autosuggest feature that suggests words words derived from Wikipedia as following a given word. -->
 
 ### 🗃️ Data Added
 
 ### 🎨 Design Changes
 
+<!-- - Noun and preposition annotation has been updated to not show the given word to save space for autocomplete and autosuggest. -->
+
 - The annotation colors have been changed to match the new backgrounds.
+- The App Store images have been updated to reflect autosuggest data based on Wikipedia.
 
 # Scribe-iOS 1.4.0
 
