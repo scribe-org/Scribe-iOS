@@ -14,8 +14,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as conjugations of common verbs.
-- Scribe now includes a baseline autosuggest feature that suggests words words derived from Wikipedia as following a given word. -->
+<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
+- Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. -->
 
 ### 🗃️ Data Added
 
@@ -25,6 +25,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The annotation colors have been changed to match the new backgrounds.
 - The App Store images have been updated to reflect autosuggest data based on Wikipedia.
+
+### ♻️ Code Refactoring
+
+- Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
+- Code was refactored to work with the new enum style of command state management.
 
 # Scribe-iOS 1.4.0
 

@@ -133,5 +133,5 @@ func setFRKeyboardLayout() {
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  isAlreadyPluralMessage = "Déjà pluriel"
+  alreadyPluralMsg = "Déjà pluriel"
 }

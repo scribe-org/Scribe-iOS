@@ -133,5 +133,5 @@ func setITKeyboardLayout() {
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  isAlreadyPluralMessage = "Già plurale"
+  alreadyPluralMsg = "Già plurale"
 }

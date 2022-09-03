@@ -137,5 +137,5 @@ func setSVKeyboardLayout() {
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  isAlreadyPluralMessage = "Redan plural"
+  alreadyPluralMsg = "Redan plural"
 }

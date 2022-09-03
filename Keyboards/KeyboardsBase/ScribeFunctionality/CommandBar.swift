@@ -85,13 +85,13 @@ class CommandBar: UILabel {
 
   // Changes the command bar text to an attributed string with a placeholder if there is no entered characters.
   func conditionallyAddPlaceholder() {
-    if commandState == true {
+    if [.translate, .conjugate, .plural].contains(commandState) {
       // self.text check required as attributed text changes to text when shiftButtonState == .shift.
-      if getTranslation == true && (self.text == translatePromptAndCursor || self.text == translatePromptAndPlaceholder) {
+      if commandState == .translate && (self.text == translatePromptAndCursor || self.text == translatePromptAndPlaceholder) {
         self.attributedText = colorizePrompt(for: translatePromptAndPlaceholder)
-      } else if getConjugation == true && (self.text == conjugatePromptAndCursor || self.text == conjugatePromptAndPlaceholder) {
+      } else if commandState == .conjugate && (self.text == conjugatePromptAndCursor || self.text == conjugatePromptAndPlaceholder) {
         self.attributedText = colorizePrompt(for: conjugatePromptAndPlaceholder)
-      } else if getPlural == true && (self.text == pluralPromptAndCursor || self.text == pluralPromptAndPlaceholder) {
+      } else if commandState == .plural && (self.text == pluralPromptAndCursor || self.text == pluralPromptAndPlaceholder) {
         self.attributedText = colorizePrompt(for: pluralPromptAndPlaceholder)
       }
     }
@@ -100,11 +100,11 @@ class CommandBar: UILabel {
   // Changes the color of the placeholder text to indicate that it is temporary.
   func colorizePrompt(for prompt: String) -> NSMutableAttributedString {
     let colorPrompt = NSMutableAttributedString(string: prompt)
-    if getTranslation == true {
+    if commandState == .translate {
       colorPrompt.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-    } else if getConjugation == true {
+    } else if commandState == .conjugate {
       colorPrompt.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-    } else if getPlural == true {
+    } else if commandState == .plural {
       colorPrompt.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
     }
 

@@ -12,7 +12,7 @@ import UIKit
 ///   - commandBar: the command bar into which an input was entered.
 func queryPlural(commandBar: UILabel) {
   // Cancel via a return press.
-  if commandBar.text! == pluralPromptAndCursor {
+  if commandBar.text! == pluralPromptAndCursor || commandBar.text! == pluralPromptAndPlaceholder {
     return
   }
   var noun: String = (commandBar.text!.substring(
@@ -38,11 +38,9 @@ func queryPlural(commandBar: UILabel) {
       }
     } else {
       proxy.insertText(noun + " ")
-      commandBar.text = commandPromptSpacing + isAlreadyPluralMessage
-      invalidState = true
-      isAlreadyPluralState = true
+      commandState = .alreadyPlural
     }
   } else {
-    invalidState = true
+    commandState = .invalid
   }
 }

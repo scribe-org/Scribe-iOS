@@ -44,11 +44,8 @@ class KeyboardViewController: UIInputViewController {
     keyboardView.translatesAutoresizingMaskIntoConstraints = true
     view.addSubview(keyboardView)
 
-    // Override keyboards switching to others for translation and prior Scribe commands.
-    switchInput = false
-    scribeKeyState = false
-    commandState = false
-    conjugateView = false
+    // Override prior command states from previous sessions.
+    commandState = .idle
 
     // Set height for Scribe command functionality.
     annotationHeight = nounAnnotation1.frame.size.height
@@ -192,7 +189,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Shows the partitions for autocomplete and autosuggest.
   func conditionallyShowAutoActionPartitions() {
-    if commandState == false && scribeKeyState == false && conjugateView == false {
+    if commandState == .idle {
       if UITraitCollection.current.userInterfaceStyle == .light {
         leftAutoPartition.backgroundColor = specialKeyColor
         rightAutoPartition.backgroundColor = specialKeyColor
@@ -311,7 +308,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Clears the text found in the command bar.
   func clearCommandBar() {
-    if commandState == false {
+    if [.idle, .select].contains(commandState) {
       commandBar.textColor = keyCharColor
       commandBar.text = ""
     }
@@ -323,9 +320,9 @@ class KeyboardViewController: UIInputViewController {
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
     changePastTextsFromProxy()
-    if commandState != true {
+    if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
       proxy.deleteBackward()
-    } else if !(commandState == true && (allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!))) {
+    } else if !([.translate, .conjugate, .plural].contains(commandState) && (allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!))) {
       guard
         let inputText = commandBar.text,
         !inputText.isEmpty
@@ -369,7 +366,7 @@ class KeyboardViewController: UIInputViewController {
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
     getAutocompleteWords()
-    if commandState == false && scribeKeyState == false && conjugateView == false {
+    if commandState == .idle {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: pluralKey)
@@ -811,7 +808,7 @@ class KeyboardViewController: UIInputViewController {
       setAutoActionPartitions()
 
       let specialKeys = [
-        "shift", "delete", "ABC", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
+        "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
       ]
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
     }
@@ -820,7 +817,6 @@ class KeyboardViewController: UIInputViewController {
     setCommandBackground()
     setCommandBtns()
     setConjugationBtns()
-    invalidState = false
 
     // Clear interface from the last state.
     keyboardKeys.forEach {$0.removeFromSuperview()}
@@ -881,7 +877,7 @@ class KeyboardViewController: UIInputViewController {
       hideAnnotations(annotationDisplay: getAnnotationLabels())
     }
 
-    if !conjugateView { // normal keyboard view
+    if commandState != .selectConjugation { // normal keyboard view
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
@@ -917,7 +913,7 @@ class KeyboardViewController: UIInputViewController {
         pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
       }
 
-      if scribeKeyState {
+      if commandState == .select {
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
@@ -933,7 +929,7 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
 
-        if commandState == true {
+        if [.translate, .conjugate, .plural].contains(commandState) {
           scribeKey.setLeftCornerRadius()
           scribeKey.setShadow()
           scribeKey.toEscape()
@@ -941,7 +937,15 @@ class KeyboardViewController: UIInputViewController {
           commandBar.set()
           commandBar.setCornerRadiusAndShadow()
           hideAutoActionPartitions()
-        } else {
+        } else if [.alreadyPlural, .invalid].contains(commandState) {
+          // Command bar as a view for invalid messages with a Scribe key to allow for new commands.
+          scribeKey.setLeftCornerRadius()
+          scribeKey.setShadow()
+
+          commandBar.set()
+          commandBar.setCornerRadiusAndShadow()
+          hideAutoActionPartitions()
+        } else if commandState == .idle {
           scribeKey.setFullCornerRadius()
           scribeKey.setEscShadow()
           
@@ -969,7 +973,7 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone
             && key == "y"
             && ["German", "Swedish"].contains(controllerLanguage)
-            && switchInput != true {
+            && commandState != .translate {
             leftPadding = keyWidth / 3
             addPadding(to: stackView2, width: leftPadding, key: "y")
           }
@@ -977,7 +981,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "a"
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
-                || switchInput == true) {
+                || commandState == .translate) {
             leftPadding = keyWidth / 4
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
@@ -985,7 +989,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "a"
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
-                || switchInput == true) {
+                || commandState == .translate) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
@@ -993,7 +997,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "@"
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
-                || switchInput == true) {
+                || commandState == .translate) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "@")
           }
@@ -1006,7 +1010,7 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPad
             && key == "€"
             && (controllerLanguage == "Portuguese"
-                || switchInput == true) {
+                || commandState == .translate) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
@@ -1046,7 +1050,11 @@ class KeyboardViewController: UIInputViewController {
           }
 
           if key == "return" {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: commandState ? "arrowtriangle.right.fill" : "arrow.turn.down.left")
+            if [.translate, .conjugate, .plural].contains(commandState) {
+              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
+            } else {
+              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+            }
           }
 
           if key == "delete" {
@@ -1070,7 +1078,7 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone
             && key == "m"
             && ["German", "Swedish"].contains(controllerLanguage)
-            && switchInput != true {
+              && commandState != .translate {
             rightPadding = keyWidth / 3
             addPadding(to: stackView2, width: rightPadding, key: "m")
           }
@@ -1078,7 +1086,7 @@ class KeyboardViewController: UIInputViewController {
             && key == "l"
             && (controllerLanguage == "Portuguese"
                 || controllerLanguage == "Italian"
-                || switchInput == true) {
+                || commandState == .translate) {
             rightPadding = keyWidth / 4
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
@@ -1209,9 +1217,9 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil && commandState != true { // annotate word
-        if scribeKeyState {
-          scribeKeyState = false
+      if proxy.selectedText != nil && [.idle, .select, .alreadyPlural, .invalid].contains(commandState) { // annotate word
+        if [.select, .alreadyPlural, .invalid].contains(commandState) {
+          commandState = .idle
         }
         loadKeys()
         selectedNounAnnotation(
@@ -1224,36 +1232,22 @@ class KeyboardViewController: UIInputViewController {
           prepAnnotationDisplay: getPrepAnnotationLabels()
         )
       } else {
-        if commandState == true { // escape
-          scribeKeyState = false
-          commandState = false
-          getTranslation = false
-          getConjugation = false
-          getPlural = false
-          switchInput = false
-        } else if scribeKeyState == false && conjugateView != true { // ScribeKey
-          scribeKeyState = true
+        if [.translate, .conjugate, .selectConjugation, .plural].contains(commandState) { // escape
+          commandState = .idle
+        } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
+          commandState = .select
           activateBtn(btn: translateKey)
           activateBtn(btn: conjugateKey)
           activateBtn(btn: pluralKey)
         } else { // escape
-          conjugateView = false
-          scribeKeyState = false
-          commandState = false
-          getTranslation = false
-          getConjugation = false
-          getPlural = false
-          switchInput = false
+          commandState = .idle
         }
         loadKeys()
       }
 
     // Switch to translate state.
     case "Translate":
-      scribeKeyState = false
-      commandState = true
-      getTranslation = true
-      switchInput = true
+      commandState = .translate
       // Always start in letters with a new keyboard.
       keyboardState = .letters
       loadKeys()
@@ -1262,23 +1256,19 @@ class KeyboardViewController: UIInputViewController {
 
     // Switch to conjugate state.
     case "Conjugate":
-      scribeKeyState = false
-      commandState = true
-      getConjugation = true
+      commandState = .conjugate
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = conjugatePromptAndColorPlaceholder
 
     // Switch to plural state.
     case "Plural":
-      scribeKeyState = false
+      commandState = .plural
       if controllerLanguage == "German" { // capitalize for nouns
         if shiftButtonState == .normal {
           shiftButtonState = .shift
         }
       }
-      commandState = true
-      getPlural = true
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = pluralPromptAndColorPlaceholder
@@ -1369,21 +1359,19 @@ class KeyboardViewController: UIInputViewController {
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
-      // Prevent annotations from being triggered during commands.
-      if getConjugation == false && getTranslation == false {
-        typedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        typedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
-        annotationState = false
-        prepAnnotationState = false
-        nounAnnotationsToDisplay = 0
-      }
+
+      typedNounAnnotation(
+        commandBar: commandBar,
+        nounAnnotationDisplay: getNounAnnotationLabels(),
+        annotationDisplay: getAnnotationLabels()
+      )
+      typedPrepAnnotation(
+        commandBar: commandBar,
+        prepAnnotationDisplay: getPrepAnnotationLabels()
+      )
+      annotationState = false
+      prepAnnotationState = false
+      nounAnnotationsToDisplay = 0
 
     case "AutoAction2":
       clearPrefixFromTextFieldProxy()
@@ -1393,21 +1381,19 @@ class KeyboardViewController: UIInputViewController {
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
-      // Prevent annotations from being triggered during commands.
-      if getConjugation == false && getTranslation == false {
-        typedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        typedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
-        annotationState = false
-        prepAnnotationState = false
-        nounAnnotationsToDisplay = 0
-      }
+
+      typedNounAnnotation(
+        commandBar: commandBar,
+        nounAnnotationDisplay: getNounAnnotationLabels(),
+        annotationDisplay: getAnnotationLabels()
+      )
+      typedPrepAnnotation(
+        commandBar: commandBar,
+        prepAnnotationDisplay: getPrepAnnotationLabels()
+      )
+      annotationState = false
+      prepAnnotationState = false
+      nounAnnotationsToDisplay = 0
 
     case "AutoAction3":
       clearPrefixFromTextFieldProxy()
@@ -1417,53 +1403,52 @@ class KeyboardViewController: UIInputViewController {
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       clearCommandBar()
-      // Prevent annotations from being triggered during commands.
-      if getConjugation == false && getTranslation == false {
-        typedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        typedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
-        annotationState = false
-        prepAnnotationState = false
-        nounAnnotationsToDisplay = 0
-      }
+
+      typedNounAnnotation(
+        commandBar: commandBar,
+        nounAnnotationDisplay: getNounAnnotationLabels(),
+        annotationDisplay: getAnnotationLabels()
+      )
+      typedPrepAnnotation(
+        commandBar: commandBar,
+        prepAnnotationDisplay: getPrepAnnotationLabels()
+      )
+      annotationState = false
+      prepAnnotationState = false
+      nounAnnotationsToDisplay = 0
 
     case "delete":
-      if shiftButtonState == .shift {
-        shiftButtonState = .normal
-        loadKeys()
-      }
-      // Prevent the command state prompt from being deleted.
-      if commandState == true && (allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!)) {
-        shiftButtonState = .shift // Auto-capitalization
-        loadKeys()
-        // Function call required due to return.
-        // Not including means placeholder is never added on last delete action.
-        commandBar.conditionallyAddPlaceholder()
-        return
-      }
-      handleDeleteButtonPressed()
-      // Auto-capitalization if delete goes to the start of the proxy.
-      if proxy.documentContextBeforeInput == nil && commandState != true {
-        if keyboardState == .letters && shiftButtonState == .normal {
-          shiftButtonState = .shift
+      if ![.translate, .conjugate, .plural].contains(commandState) {
+        // Control shift state on delete.
+        if keyboardState == .letters && shiftButtonState == .shift && proxy.documentContextBeforeInput != nil {
+          shiftButtonState = .normal
           loadKeys()
+        } else if keyboardState == .letters && shiftButtonState == .normal && proxy.documentContextBeforeInput == nil {
+          autoCapAtStartOfProxy()
+          pastStringInTextProxy = ""
         }
-        pastStringInTextProxy = ""
+      } else {
+        // Prevent the command state prompt from being deleted.
+        if allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!) {
+          shiftButtonState = .shift // Auto-capitalization
+          loadKeys()
+          // Function call required due to return.
+          // Not including means placeholder is never added on last delete action.
+          commandBar.conditionallyAddPlaceholder()
+          return
+        }
       }
+
+      handleDeleteButtonPressed()
       clearCommandBar()
+
       // Inserting the placeholder when commandBar text is deleted.
       commandBar.conditionallyAddPlaceholder()
       conditionallySetAutoActionBtns()
 
     case spaceBar:
       commandBar.conditionallyRemovePlaceholder()
-      if commandState != true {
+      if ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.insertText(" ")
         if [". ", "? ", "! "].contains(proxy.documentContextBeforeInput?.suffix(2)) {
           shiftButtonState = .shift
@@ -1488,22 +1473,19 @@ class KeyboardViewController: UIInputViewController {
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       conditionallySetAutoActionBtns()
-      
-      // Prevent annotations from being triggered during commands.
-      if getConjugation == false && getTranslation == false {
-        typedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        typedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
-        annotationState = false
-        prepAnnotationState = false
-        nounAnnotationsToDisplay = 0
-      }
+
+      typedNounAnnotation(
+        commandBar: commandBar,
+        nounAnnotationDisplay: getNounAnnotationLabels(),
+        annotationDisplay: getAnnotationLabels()
+      )
+      typedPrepAnnotation(
+        commandBar: commandBar,
+        prepAnnotationDisplay: getPrepAnnotationLabels()
+      )
+      annotationState = false
+      prepAnnotationState = false
+      nounAnnotationsToDisplay = 0
 
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearCommandBar()
@@ -1517,12 +1499,12 @@ class KeyboardViewController: UIInputViewController {
       self.dismissKeyboard()
 
     case "return":
-      if getTranslation && commandState == true { // translate state
+      if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
+        proxy.insertText("\n")
+        clearCommandBar()
+      } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
-        getTranslation = false
-        switchInput = false
-      }
-      if getConjugation && commandState == true { // conjugate state
+      } else if commandState == .conjugate {
         // Reset to the most basic conjugations.
         deConjugationState = .indicativePresent
         frConjugationState = .indicativePresent
@@ -1531,59 +1513,47 @@ class KeyboardViewController: UIInputViewController {
         itConjugationState = .present
         ruConjugationState = .present
         svConjugationState = .active
-        let triggerConjugationState = triggerConjugation(commandBar: commandBar)
-        if triggerConjugationState == true {
-          conjugateView = true
+        let triggerConjugationTbl = triggerConjugation(commandBar: commandBar)
+        if triggerConjugationTbl == true {
+          commandState = .selectConjugation
           loadKeys()
+          return // go to conjugation view
         } else {
-          invalidState = true
+          commandState = .invalid
         }
-        getConjugation = false
-      }
-      if getPlural && commandState == true { // plural state
+      } else if commandState == .plural {
         queryPlural(commandBar: commandBar)
-        getPlural = false
       }
-      if commandState == false { // normal return button
-        proxy.insertText("\n")
-        clearCommandBar()
-      } else if invalidState == true { // invalid state
-        commandState = false
 
-        // Return to the original input method if it has been switched away from.
-        if switchInput == true {
-          switchInput = false
-          loadKeys()
-        }
-
+      if [.invalid, .alreadyPlural].contains(commandState) { // invalid state
+        loadKeys()
         autoCapAtStartOfProxy()
-        if isAlreadyPluralState != true {
+
+        if commandState == .invalid {
           commandBar.text = commandPromptSpacing + invalidCommandMsg
+        } else if commandState == .alreadyPlural {
+          commandBar.text = commandPromptSpacing + alreadyPluralMsg
         }
         commandBar.textColor = keyCharColor
-
-        invalidState = false
-        isAlreadyPluralState = false
-      } else {
-        commandState = false
+        return
+      } else if [.translate, .plural].contains(commandState) { // functional commands above
+        commandState = .idle
         clearCommandBar()
         autoCapAtStartOfProxy()
         loadKeys()
-        // Avoid showing noun annotation instead of conjugation state header.
-        if conjugateView == false {
-          typedNounAnnotation(
-            commandBar: commandBar,
-            nounAnnotationDisplay: getNounAnnotationLabels(),
-            annotationDisplay: getAnnotationLabels()
-          )
-          typedPrepAnnotation(
-            commandBar: commandBar,
-            prepAnnotationDisplay: getPrepAnnotationLabels()
-          )
-          annotationState = false
-          prepAnnotationState = false
-          nounAnnotationsToDisplay = 0
-        }
+
+        typedNounAnnotation(
+          commandBar: commandBar,
+          nounAnnotationDisplay: getNounAnnotationLabels(),
+          annotationDisplay: getAnnotationLabels()
+        )
+        typedPrepAnnotation(
+          commandBar: commandBar,
+          prepAnnotationDisplay: getPrepAnnotationLabels()
+        )
+        annotationState = false
+        prepAnnotationState = false
+        nounAnnotationsToDisplay = 0
       }
 
     case "123":
@@ -1611,7 +1581,7 @@ class KeyboardViewController: UIInputViewController {
     case "'":
       // Change back to letter keys.
       commandBar.conditionallyRemovePlaceholder()
-      if commandState != true {
+      if ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.insertText("'")
       } else {
         commandBar.text! = (commandBar.text!.insertPriorToCursor(char: "'"))
@@ -1631,13 +1601,20 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .normal
         loadKeys()
       }
-      if commandState == false {
+      if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
         proxy.insertText(keyToDisplay)
         clearCommandBar()
       } else {
         commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
       }
     }
+
+    // Cancel already plural and invalid states after another key press.
+    if [.alreadyPlural, .invalid].contains(commandState) {
+      commandState = .idle
+      loadKeys()
+    }
+
     // Add partitions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
     conditionallySetAutoActionBtns()
@@ -1691,12 +1668,12 @@ class KeyboardViewController: UIInputViewController {
 
     // To make sure that the user can still use the double space period shortcut after numbers and symbols.
     let punctuationThatCancelsShortcut = ["?", "!", ",", ".", ":", ";", "-"]
-    if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && commandState == false {
+    if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && ![.translate, .conjugate, .plural].contains(commandState) {
       let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
       if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
         originalKey = "Cancel shortcut"
       }
-    } else if commandState == true {
+    } else if [.translate, .conjugate, .plural].contains(commandState) {
       let charBeforeSpace = String(Array((commandBar?.text!)!).secondToLast()!)
       if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
         originalKey = "Cancel shortcut"
@@ -1708,14 +1685,14 @@ class KeyboardViewController: UIInputViewController {
       && proxy.documentContextBeforeInput?.count != 1
       && doubleSpacePeriodPossible == true {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
-      if proxy.documentContextBeforeInput?.suffix(2) != "  " && commandState == false {
+      if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.deleteBackward()
         proxy.insertText(". ")
         keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
-      } else if commandBar.text!.suffix(2) != "  " && commandState == true {
+      } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
         commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
         commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
         keyboardState = .letters
@@ -1732,7 +1709,7 @@ class KeyboardViewController: UIInputViewController {
   ///   - gesture: the gesture that was received.
   @objc func deleteLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the command state prompt from being deleted.
-    if commandState == true && allPrompts.contains((commandBar?.text!)!) {
+    if [.translate, .conjugate, .plural].contains(commandState) && allPrompts.contains((commandBar?.text!)!) {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
