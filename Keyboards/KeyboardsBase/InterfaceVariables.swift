@@ -60,10 +60,17 @@ enum CommandState {
   case invalid
 }
 
+/// States of the keyboard corresponding to which auto actions should be presented.
+enum AutoActionState {
+  case complete
+  case suggest
+}
+
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
 var commandState: CommandState = .idle
+var autoActionState: AutoActionState = .suggest
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
@@ -269,6 +276,7 @@ func setENKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
   invalidCommandMsg = "Not in Wikidata"
+  baseAutosuggestions = ["I", "I'm", "we"]
 
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "

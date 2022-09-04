@@ -200,6 +200,13 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Hides the partitions for autocomplete and autosuggest.
+  /// Note: this function is called during command mode when the commandBar is viewable and the Scribe key state.
+  func hideAutoActionPartitions() {
+    leftAutoPartition.backgroundColor = .clear
+    rightAutoPartition.backgroundColor = .clear
+  }
+
   /// Generates the array for the three autocomplete words.
   func getAutocompleteWords() {
     completionWords = [" ", " ", " "]
@@ -207,6 +214,12 @@ class KeyboardViewController: UIInputViewController {
       if let inString = proxy.documentContextBeforeInput {
         // To only focus on the current word as prefix in autocomplete.
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
+
+        // Post commands pastStringInTextProxy is "", so take last word.
+        if currentPrefix.contains(" ") {
+          currentPrefix = currentPrefix.components(separatedBy: " ").last ?? ""
+        }
+
         let stringOptions = autocompleteWords.filter { item in
             return item.lowercased().hasPrefix(currentPrefix.lowercased())
         }
@@ -215,43 +228,49 @@ class KeyboardViewController: UIInputViewController {
         if stringOptions.count <= 3 {
           while i < stringOptions.count {
             if shiftButtonState == .caps {
-              // Capital autocomplete if the user starts typing capitalized.
               completionWords[i] = stringOptions[i].uppercased()
+            } else if currentPrefix.isCaptalized {
+              completionWords[i] = stringOptions[i].capitalize()
             } else {
-              completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i]
+              completionWords[i] = stringOptions[i]
             }
             i += 1
           }
         } else {
-            while i < 3 {
-              if shiftButtonState == .caps {
-                // Capital autocomplete if the user starts typing capitalized.
-                completionWords[i] = stringOptions[i].uppercased()
-              } else {
-                completionWords[i] = currentPrefix == currentPrefix.capitalized ? stringOptions[i].capitalizingFirstLetter() : stringOptions[i]
-              }
-                i += 1
+          while i < 3 {
+            if shiftButtonState == .caps {
+              completionWords[i] = stringOptions[i].uppercased()
+            } else if currentPrefix.isCaptalized {
+              completionWords[i] = stringOptions[i].capitalize()
+            } else {
+              completionWords[i] = stringOptions[i]
             }
+            i += 1
+          }
         }
       } else {
-        getDefaultAutoCompleteWords(autocompleteWords)
+        getDefaultAutoSuggestions()
       }
     } else {
-      // For getting words on launch. When the user has not typed anything in the proxy.
-      getDefaultAutoCompleteWords(autocompleteWords)
+      // For getting words on launch when the user hasn't typed anything in the proxy.
+      getDefaultAutoSuggestions()
     }
   }
 
   /// Suggests words on launch before the user starts typing.
-  /// Note: replace this section when we add the most common used words.
-  func getDefaultAutoCompleteWords(_ keys: [String]) {
+  func getDefaultAutoSuggestions() {
     var i = 0
-    var threeWords = [String]()
+    completionWords = [String]()
     while i < 3 {
-        threeWords.append(keys[i])
-        i += 1
+      if shiftButtonState == .shift {
+        completionWords.append(baseAutosuggestions[i].capitalize())
+      } else if shiftButtonState == .caps {
+        completionWords.append(baseAutosuggestions[i].uppercased())
+      } else {
+        completionWords.append(baseAutosuggestions[i])
+      }
+      i += 1
     }
-    completionWords = threeWords
   }
 
   /// Clears the text proxy when inserting using an auto action.
@@ -285,13 +304,6 @@ class KeyboardViewController: UIInputViewController {
         }
       } else { return }
     }
-  }
-
-  /// Hides the partitions for autocomplete and autosuggest.
-  /// Note: this function is called during command mode when the commandBar is viewable and the Scribe key state.
-  func hideAutoActionPartitions() {
-    leftAutoPartition.backgroundColor = .clear
-    rightAutoPartition.backgroundColor = .clear
   }
 
   // The background for the Scribe command elements.
@@ -365,7 +377,11 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
-    getAutocompleteWords()
+    if autoActionState == .suggest {
+      getDefaultAutoSuggestions()
+    } else {
+      getAutocompleteWords()
+    }
     if commandState == .idle {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
@@ -951,7 +967,10 @@ class KeyboardViewController: UIInputViewController {
           
           commandBar.text = ""
           commandBar.hide()
-          conditionallySetAutoActionBtns()
+          // Set autosuggestions on keyboard's first load.
+          if keyboardLoad == true {
+            conditionallySetAutoActionBtns()
+          }
         }
       }
 
@@ -1212,9 +1231,6 @@ class KeyboardViewController: UIInputViewController {
       doubleSpacePeriodPossible = false
     }
 
-    // Reset the Russian verbs view after a selection.
-    ruConjugationState = .present
-
     switch originalKey {
     case "Scribe":
       if proxy.selectedText != nil && [.idle, .select, .alreadyPlural, .invalid].contains(commandState) { // annotate word
@@ -1313,45 +1329,56 @@ class KeyboardViewController: UIInputViewController {
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseFPS)
+      autoActionState = .suggest
       loadKeys()
 
     case "secondPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseSPS)
+      autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: tenseTPS)
+      autoActionState = .suggest
       loadKeys()
 
     case "firstPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseFPP)
+      autoActionState = .suggest
       loadKeys()
 
     case "secondPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseSPP)
+      autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: tenseTPP)
+      autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopLeft":
       returnConjugation(keyPressed: sender, requestedTense: tenseTopLeft)
+      autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopRight":
       returnConjugation(keyPressed: sender, requestedTense: tenseTopRight)
+      autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomLeft":
       returnConjugation(keyPressed: sender, requestedTense: tenseBottomLeft)
+      autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomRight":
       returnConjugation(keyPressed: sender, requestedTense: tenseBottomRight)
+      autoActionState = .suggest
       loadKeys()
 
     case "AutoAction1":
+      autoActionState = .suggest
       clearPrefixFromTextFieldProxy()
       proxy.insertText(translateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
@@ -1374,6 +1401,7 @@ class KeyboardViewController: UIInputViewController {
       nounAnnotationsToDisplay = 0
 
     case "AutoAction2":
+      autoActionState = .suggest
       clearPrefixFromTextFieldProxy()
       proxy.insertText(conjugateKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
@@ -1396,6 +1424,7 @@ class KeyboardViewController: UIInputViewController {
       nounAnnotationsToDisplay = 0
 
     case "AutoAction3":
+      autoActionState = .suggest
       clearPrefixFromTextFieldProxy()
       proxy.insertText(pluralKey.titleLabel?.text ?? "")
       proxy.insertText(" ")
@@ -1443,10 +1472,12 @@ class KeyboardViewController: UIInputViewController {
       clearCommandBar()
 
       // Inserting the placeholder when commandBar text is deleted.
+      autoActionState = .complete
       commandBar.conditionallyAddPlaceholder()
       conditionallySetAutoActionBtns()
 
     case spaceBar:
+      autoActionState = .suggest
       commandBar.conditionallyRemovePlaceholder()
       if ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.insertText(" ")
@@ -1537,6 +1568,7 @@ class KeyboardViewController: UIInputViewController {
         commandBar.textColor = keyCharColor
         return
       } else if [.translate, .plural].contains(commandState) { // functional commands above
+        autoActionState = .suggest
         commandState = .idle
         clearCommandBar()
         autoCapAtStartOfProxy()
@@ -1596,6 +1628,7 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     default:
+      autoActionState = .complete
       commandBar.conditionallyRemovePlaceholder()
       if shiftButtonState == .shift {
         shiftButtonState = .normal
@@ -1664,6 +1697,7 @@ class KeyboardViewController: UIInputViewController {
       shiftButtonState = .caps
       loadKeys()
       clearCommandBar()
+      conditionallySetAutoActionBtns()
     }
 
     // To make sure that the user can still use the double space period shortcut after numbers and symbols.
