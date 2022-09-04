@@ -31,12 +31,10 @@ var completionWords = [String]()
 // A larger vertical bar than the normal | key for the cursor.
 let commandCursor: String = "│"
 var commandPromptSpacing: String = ""
-var commandState: Bool = false
 
 // Command input and output variables.
 var inputWordIsCapitalized: Bool = false
 var wordToReturn: String = ""
-var invalidState: Bool = false
 var invalidCommandMsg: String = ""
 
 // Annotation variables.
@@ -45,10 +43,6 @@ var nounAnnotationsToDisplay: Int = 0
 var prepAnnotationState: Bool = false
 var annotationHeight = CGFloat(0)
 var annotationDisplayWord: String = ""
-
-// Indicates that the keyboard has switched to another input language.
-// For example another input method is needed to translate.
-var switchInput: Bool = false
 
 // Prompts and saving groups of languages.
 var allPrompts: [String] = [""]
@@ -64,7 +58,6 @@ var translatePlaceholder: String = ""
 var translatePromptAndCursor: String = ""
 var translatePromptAndPlaceholder: String = ""
 var translatePromptAndColorPlaceholder = NSMutableAttributedString()
-var getTranslation: Bool = false
 var wordToTranslate: String = ""
 
 // MARK: Conjugate Variables
@@ -74,8 +67,6 @@ var conjugatePlaceholder: String = ""
 var conjugatePromptAndCursor: String = ""
 var conjugatePromptAndPlaceholder: String = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
-var getConjugation: Bool = false
-var conjugateView: Bool = false
 var conjugateAlternateView: Bool = false
 
 var allTenses = [String]()
@@ -117,6 +108,4 @@ var pluralPlaceholder: String = ""
 var pluralPromptAndCursor: String = ""
 var pluralPromptAndPlaceholder: String = ""
 var pluralPromptAndColorPlaceholder = NSMutableAttributedString()
-var getPlural: Bool = false
-var isAlreadyPluralState: Bool = false
-var isAlreadyPluralMessage: String = ""
+var alreadyPluralMsg: String = ""

@@ -45,14 +45,13 @@ let keyboardConjLabelDict: [String: Any] = [
 ///   - commandBar: the command bar into which an input was entered.
 func triggerConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
-  if commandBar.text! == conjugatePromptAndCursor {
+  if commandBar.text! == conjugatePromptAndCursor || commandBar.text! == conjugatePromptAndPlaceholder {
     return false
   }
   verbToConjugate = (commandBar.text!.substring(with: conjugatePrompt.count..<(commandBar.text!.count) - 1))
   verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
-  inputWordIsCapitalized = false
   let firstLetter = verbToConjugate.substring(toIdx: 1)
   inputWordIsCapitalized = firstLetter.isUppercase
   verbToConjugate = verbToConjugate.lowercased()
@@ -88,6 +87,5 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
       proxy.insertText(wordToReturn + " ")
     }
   }
-  commandState = false
-  conjugateView = false
+  commandState = .idle
 }

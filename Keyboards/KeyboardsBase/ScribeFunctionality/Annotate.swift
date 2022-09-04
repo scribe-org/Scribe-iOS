@@ -46,7 +46,7 @@ func hideAnnotations(annotationDisplay: [UILabel]) {
 func setNounAnnotation(label: UILabel, annotation: String) {
   var annotationToDisplay: String = annotation
 
-  if scribeKeyState != true { // Cancel if typing while commands are displayed.
+  if ![.translate, .conjugate, .plural].contains(commandState) { // Cancel if typing while commands are displayed.
     // Convert annotation into the keyboard language if necessary.
     if nounAnnotationConversionDict[controllerLanguage] != nil {
       if nounAnnotationConversionDict[controllerLanguage]?[annotation] != nil {
@@ -141,7 +141,7 @@ func nounAnnotation(
         count: ( numberOfAnnotations * 7 ) - ( numberOfAnnotations - 1 )
       )
 
-      if invalidState != true {
+      if ![.alreadyPlural, .invalid].contains(commandState) {
         if DeviceType.isPhone {
           if commandPromptSpacing.count + wordSpacing.count > 9 {
             annotationDisplayWord = givenWord.prefix(2) + "..."
@@ -221,7 +221,7 @@ func typedNounAnnotation(
 func setPrepAnnotation(label: UILabel, annotation: String) {
   var annotationToDisplay: String = annotation
 
-  if scribeKeyState != true {
+  if commandState == .idle {
     // Convert annotation into the keyboard language if necessary.
     if caseAnnotationConversionDict[controllerLanguage] != nil {
       if caseAnnotationConversionDict[controllerLanguage]?[annotation] != nil {

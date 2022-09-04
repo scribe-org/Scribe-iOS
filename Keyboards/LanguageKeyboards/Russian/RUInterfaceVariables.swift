@@ -121,5 +121,5 @@ func setRUKeyboardLayout() {
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  isAlreadyPluralMessage = "Уже во множ"
+  alreadyPluralMsg = "Уже во множ"
 }

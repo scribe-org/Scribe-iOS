@@ -48,10 +48,22 @@ enum ShiftButtonState {
   case caps
 }
 
+/// States of the keyboard corresponding to which commands the user is executing.
+enum CommandState {
+  case idle
+  case select
+  case translate
+  case conjugate
+  case selectConjugation
+  case plural
+  case alreadyPlural
+  case invalid
+}
+
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
-var scribeKeyState: Bool = false
+var commandState: CommandState = .idle
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
@@ -112,7 +124,7 @@ func setKeyboard() {
 
 /// Sets the keyboard layouts given the chosen keyboard and device type.
 func setKeyboardLayout() {
-  if switchInput {
+  if commandState == .translate {
     setENKeyboardLayout()
   } else {
     let setLayoutFxn: () -> Void = keyboardLayoutDict[controllerLanguage]!
@@ -278,5 +290,5 @@ func setENKeyboardLayout() {
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  isAlreadyPluralMessage = "Already plural"
+  alreadyPluralMsg = "Already plural"
 }

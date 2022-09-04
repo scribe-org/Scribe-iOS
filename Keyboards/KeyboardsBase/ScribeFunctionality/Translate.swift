@@ -12,7 +12,7 @@ import UIKit
 ///   - commandBar: the command bar into which an input was entered.
 func queryTranslation(commandBar: UILabel) {
   // Cancel via a return press.
-  if commandBar.text! == translatePromptAndCursor {
+  if commandBar.text! == translatePromptAndCursor || commandBar.text! == translatePromptAndPlaceholder {
     return
   }
   wordToTranslate = (commandBar.text!.substring(
@@ -35,6 +35,6 @@ func queryTranslation(commandBar: UILabel) {
       proxy.insertText(wordToReturn + " ")
     }
   } else {
-    invalidState = true
+    commandState = .invalid
   }
 }

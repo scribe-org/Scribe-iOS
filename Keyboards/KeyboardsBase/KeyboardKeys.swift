@@ -195,7 +195,7 @@ class KeyboardKey: UIButton {
       // Cancel Russian keyboard key resizing if translating as the keyboard is English.
       if controllerLanguage == "Russian"
         && keyboardState == .letters
-        && switchInput != true {
+        && commandState != .translate {
         self.layer.setValue(true, forKey: "isSpecial")
         self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       } else {
@@ -238,7 +238,7 @@ class KeyboardKey: UIButton {
       || self.key == "return"
       || self.key == "hideKeyboard" {
       if self.key == "return"
-          && ( controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || switchInput == true )
+          && ( controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate )
           && self.row == 1
           && DeviceType.isPad {
         self.layer.setValue(true, forKey: "isSpecial")
@@ -273,7 +273,7 @@ class KeyboardKey: UIButton {
       } else {
         self.backgroundColor = specialKeyColor
       }
-    } else if self.key == "return" && commandState == true {
+    } else if self.key == "return" && [.translate, .conjugate, .plural].contains(commandState) {
       // Color the return key depending on if it's being used as enter for commands.
       self.backgroundColor = commandKeyColor
     } else if isSpecial == true {
