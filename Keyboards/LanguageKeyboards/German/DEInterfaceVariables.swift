@@ -115,6 +115,7 @@ func setDEKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "Leerzeichen"
   invalidCommandMsg = "Nicht in Wikidata"
+  baseAutosuggestions = ["ich", "die", "das"]
 
   translateKeyLbl = "Übersetzen"
   translatePlaceholder = "Wort eingeben"

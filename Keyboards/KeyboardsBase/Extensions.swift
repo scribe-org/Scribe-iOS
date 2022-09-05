@@ -55,13 +55,17 @@ extension String {
     return self == self.uppercased()
   }
 
+  var isCaptalized: Bool {
+    return self == prefix(1).uppercased() + self.lowercased().dropFirst()
+  }
+
   func count(of char: Character) -> Int {
     return reduce(0) {
       $1 == char ? $0 + 1 : $0
     }
   }
   
-  func capitalizingFirstLetter() -> String {
+  func capitalize() -> String {
     return prefix(1).uppercased() + self.lowercased().dropFirst()
   }
 }

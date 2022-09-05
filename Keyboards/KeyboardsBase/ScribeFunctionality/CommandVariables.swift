@@ -21,7 +21,8 @@ let prepositions = loadJSONToDict(filename: "prepositions")
 // Words that should not be included in autocomplete should be added to the string below.
 let autocompleteWords = nouns!.keys.filter(
   { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
-).sorted()
+).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
+var baseAutosuggestions = [String]()
 
 var currentPrefix: String = ""
 var pastStringInTextProxy: String = ""

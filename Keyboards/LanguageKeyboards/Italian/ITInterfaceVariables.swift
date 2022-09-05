@@ -109,6 +109,7 @@ func setITKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "spazio"
   invalidCommandMsg = "Non in Wikidata"
+  baseAutosuggestions = ["ho", "non", "ma"]
 
   translateKeyLbl = "Tradurre"
   translatePlaceholder = "Inserisci una parola"
