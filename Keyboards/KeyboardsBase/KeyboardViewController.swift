@@ -284,27 +284,6 @@ class KeyboardViewController: UIInputViewController {
       }
     }
   }
-  
-  /// Changes variables pastStringInTextProxy and secondaryPastStringOnDelete.
-  /// Note: allows for autocomplete to work when delete is pressed by reversing the changes in the above variables.
-  func changePastTextsFromProxy() {
-    if proxy.documentContextBeforeInput?.count == 0 {
-      pastStringInTextProxy = ""
-      secondaryPastStringOnDelete = ""
-    } else {
-      let stringInProxy = proxy.documentContextBeforeInput!
-      if pastStringInTextProxy == stringInProxy {
-        pastStringInTextProxy = secondaryPastStringOnDelete
-        
-        if !secondaryPastStringOnDelete.isEmpty {
-          secondaryPastStringOnDelete.removeLast()
-        }
-        while !secondaryPastStringOnDelete.isEmpty && !secondaryPastStringOnDelete.hasSuffix(" ") {
-          secondaryPastStringOnDelete.removeLast()
-        }
-      } else { return }
-    }
-  }
 
   // The background for the Scribe command elements.
   @IBOutlet var commandBackground: UILabel!
@@ -331,10 +310,9 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
-    changePastTextsFromProxy()
     if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
       proxy.deleteBackward()
-    } else if !([.translate, .conjugate, .plural].contains(commandState) && (allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!))) {
+    } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!)) {
       guard
         let inputText = commandBar.text,
         !inputText.isEmpty
@@ -1456,8 +1434,14 @@ class KeyboardViewController: UIInputViewController {
           autoCapAtStartOfProxy()
           pastStringInTextProxy = ""
         }
+
+        handleDeleteButtonPressed()
+        clearCommandBar()
+
+        autoActionState = .complete
+        conditionallySetAutoActionBtns()
       } else {
-        // Prevent the command state prompt from being deleted.
+        // Shift state if the user presses delete when the prompt is present.
         if allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!) {
           shiftButtonState = .shift // Auto-capitalization
           loadKeys()
@@ -1466,15 +1450,12 @@ class KeyboardViewController: UIInputViewController {
           commandBar.conditionallyAddPlaceholder()
           return
         }
+
+        handleDeleteButtonPressed()
+
+        // Inserting the placeholder when commandBar text is deleted.
+        commandBar.conditionallyAddPlaceholder()
       }
-
-      handleDeleteButtonPressed()
-      clearCommandBar()
-
-      // Inserting the placeholder when commandBar text is deleted.
-      autoActionState = .complete
-      commandBar.conditionallyAddPlaceholder()
-      conditionallySetAutoActionBtns()
 
     case spaceBar:
       autoActionState = .suggest
