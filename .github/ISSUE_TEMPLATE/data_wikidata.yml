@@ -19,9 +19,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: choice
+    id: description
     attributes:
-      label: Issue
+      label: Description
       placeholder: Let us know what your idea is!
     validations:
       required: true
