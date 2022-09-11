@@ -114,6 +114,7 @@ func setSVKeyboardLayout() {
   spaceBar = "mellanslag"
   invalidCommandMsg = "Inte i Wikidata"
   baseAutosuggestions = ["jag", "det", "men"]
+  numericAutosuggestions = ["jag", "det", "och"]
 
   translateKeyLbl = "Översätt"
   translatePlaceholder = "Ange ett ord"

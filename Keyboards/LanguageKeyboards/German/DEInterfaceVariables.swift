@@ -116,6 +116,7 @@ func setDEKeyboardLayout() {
   spaceBar = "Leerzeichen"
   invalidCommandMsg = "Nicht in Wikidata"
   baseAutosuggestions = ["ich", "die", "das"]
+  numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
 
   translateKeyLbl = "Übersetzen"
   translatePlaceholder = "Wort eingeben"

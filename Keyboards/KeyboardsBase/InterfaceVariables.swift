@@ -277,6 +277,7 @@ func setENKeyboardLayout() {
   spaceBar = "space"
   invalidCommandMsg = "Not in Wikidata"
   baseAutosuggestions = ["I", "I'm", "we"]
+  numericAutosuggestions = ["is", "to", "and"]
 
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "

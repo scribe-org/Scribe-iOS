@@ -110,6 +110,7 @@ func setFRKeyboardLayout() {
   spaceBar = "espace"
   invalidCommandMsg = "Pas dans Wikidata"
   baseAutosuggestions = ["je", "il", "le"]
+  numericAutosuggestions = ["je", "que", "c’est"]
 
   translateKeyLbl = "Traduire"
   translatePlaceholder = "Entrez un mot"

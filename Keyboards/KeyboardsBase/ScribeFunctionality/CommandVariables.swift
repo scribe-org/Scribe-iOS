@@ -23,6 +23,7 @@ let autocompleteWords = nouns!.keys.filter(
   { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
 ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
 var baseAutosuggestions = [String]()
+var numericAutosuggestions = [String]()
 
 var currentPrefix: String = ""
 var pastStringInTextProxy: String = ""

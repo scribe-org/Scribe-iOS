@@ -110,6 +110,7 @@ func setITKeyboardLayout() {
   spaceBar = "spazio"
   invalidCommandMsg = "Non in Wikidata"
   baseAutosuggestions = ["ho", "non", "ma"]
+  numericAutosuggestions = ["utenti", "anni", "e"]
 
   translateKeyLbl = "Tradurre"
   translatePlaceholder = "Inserisci una parola"

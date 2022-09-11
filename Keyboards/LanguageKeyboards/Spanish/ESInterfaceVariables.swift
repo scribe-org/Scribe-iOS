@@ -112,6 +112,7 @@ func setESKeyboardLayout() {
   spaceBar = "espacio"
   invalidCommandMsg = "No en Wikidata"
   baseAutosuggestions = ["el", "la", "no"]
+  numericAutosuggestions = ["que", "de", "en"]
 
   translateKeyLbl = "Traducir"
   translatePlaceholder = "Ingrese una palabra"
