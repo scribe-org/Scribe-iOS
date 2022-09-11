@@ -1314,7 +1314,6 @@ class KeyboardViewController: UIInputViewController {
         conditionallyDisplayAnnotation()
       }
 
-    // Switch to translate state.
     case "Translate":
       commandState = .translate
       // Always start in letters with a new keyboard.
@@ -1323,14 +1322,12 @@ class KeyboardViewController: UIInputViewController {
       commandBar.textColor = keyCharColor
       commandBar.attributedText = translatePromptAndColorPlaceholder
 
-    // Switch to conjugate state.
     case "Conjugate":
       commandState = .conjugate
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = conjugatePromptAndColorPlaceholder
 
-    // Switch to plural state.
     case "Plural":
       commandState = .plural
       if controllerLanguage == "German" { // capitalize for nouns
@@ -1342,12 +1339,10 @@ class KeyboardViewController: UIInputViewController {
       commandBar.textColor = keyCharColor
       commandBar.attributedText = pluralPromptAndColorPlaceholder
 
-    // Move displayed conjugations to the left in order if able.
     case "shiftConjugateLeft":
       conjugationStateLeft()
       loadKeys()
 
-    // Move displayed conjugations to the right in order if able.
     case "shiftConjugateRight":
       conjugationStateRight()
       loadKeys()
