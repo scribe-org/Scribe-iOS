@@ -207,8 +207,8 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
 
-  /// Generates the array for the three autocomplete words.
-  func getAutocompleteWords() {
+  /// Generates an array of the three autocomplete words.
+  func getAutocompletions() {
     completionWords = [" ", " ", " "]
     if proxy.documentContextBeforeInput?.count != 0 {
       if let inString = proxy.documentContextBeforeInput {
@@ -249,16 +249,16 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       } else {
-        getDefaultAutoSuggestions()
+        getDefaultAutosuggestions()
       }
     } else {
       // For getting words on launch when the user hasn't typed anything in the proxy.
-      getDefaultAutoSuggestions()
+      getDefaultAutosuggestions()
     }
   }
 
-  /// Suggests words on launch before the user starts typing.
-  func getDefaultAutoSuggestions() {
+  /// Generates an array of three words that serve as baseline autosuggestions.
+  func getDefaultAutosuggestions() {
     var i = 0
     completionWords = [String]()
     while i < 3 {
@@ -273,6 +273,44 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Generates an array of the three autosuggest words.
+  func getAutosuggestions() {}
+
+  /// Sets up command buttons to execute autocomplete and autosuggest.
+  func conditionallySetAutoActionBtns() {
+    if autoActionState == .suggest {
+      getDefaultAutosuggestions()
+    } else {
+      getAutocompletions()
+    }
+    if commandState == .idle {
+      deactivateBtn(btn: translateKey)
+      deactivateBtn(btn: conjugateKey)
+      deactivateBtn(btn: pluralKey)
+
+      if autoAction1Visible == true {
+        setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
+        activateBtn(btn: translateKey)
+      }
+
+      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+      styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
+      activateBtn(btn: conjugateKey)
+
+      setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+      styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
+      activateBtn(btn: pluralKey)
+
+      translateKey.layer.shadowColor = UIColor.clear.cgColor
+      conjugateKey.layer.shadowColor = UIColor.clear.cgColor
+      pluralKey.layer.shadowColor = UIColor.clear.cgColor
+    }
+
+    // Reset autocorrect and autosuggest button visibility.
+    autoAction1Visible = true
+  }
+
   /// Clears the text proxy when inserting using an auto action.
   /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
@@ -283,6 +321,22 @@ class KeyboardViewController: UIInputViewController {
         }
       }
     }
+  }
+
+  /// Inserts the word that appears on the given auto action key and executes all following actions.
+  ///
+  /// - Parameters
+  ///   - keyPressed: the auto action button that was executed.
+  func executeAutoAction(keyPressed: UIButton) {
+    autoActionState = .suggest
+    clearPrefixFromTextFieldProxy()
+    proxy.insertText(keyPressed.titleLabel?.text ?? "")
+    proxy.insertText(" ")
+    currentPrefix = ""
+    secondaryPastStringOnDelete = pastStringInTextProxy
+    pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
+    clearCommandBar()
+    conditionallyDisplayAnnotation()
   }
 
   // The background for the Scribe command elements.
@@ -353,45 +407,10 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: pluralKey)
   }
 
-  /// Sets up command buttons to execute autocomplete and autosuggest.
-  func conditionallySetAutoActionBtns() {
-    if autoActionState == .suggest {
-      getDefaultAutoSuggestions()
-    } else {
-      getAutocompleteWords()
-    }
-    if commandState == .idle {
-      deactivateBtn(btn: translateKey)
-      deactivateBtn(btn: conjugateKey)
-      deactivateBtn(btn: pluralKey)
-
-      if autoAction1Visible == true {
-        setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
-        styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
-        activateBtn(btn: translateKey)
-      }
-      
-      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-      styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
-      activateBtn(btn: conjugateKey)
-
-      setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-      styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
-      activateBtn(btn: pluralKey)
-
-      translateKey.layer.shadowColor = UIColor.clear.cgColor
-      conjugateKey.layer.shadowColor = UIColor.clear.cgColor
-      pluralKey.layer.shadowColor = UIColor.clear.cgColor
-    }
-
-    // Reset autocorrect and autosuggest button visibility.
-    autoAction1Visible = true
-  }
-
+  // Buttons and functions for the conjugation view.
   @IBOutlet var conjugateShiftLeft: UIButton!
   @IBOutlet var conjugateShiftRight: UIButton!
 
-  // Buttons for the conjugation view.
   @IBOutlet var conjugateKeyFPS: UIButton!
   @IBOutlet var conjugateKeySPS: UIButton!
   @IBOutlet var conjugateKeyTPS: UIButton!
@@ -783,6 +802,22 @@ class KeyboardViewController: UIInputViewController {
       annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.65)
       annotationDisplay.textColor = keyboardBgColor
     }
+  }
+
+  /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
+  func conditionallyDisplayAnnotation() {
+    typedNounAnnotation(
+      commandBar: commandBar,
+      nounAnnotationDisplay: getNounAnnotationLabels(),
+      annotationDisplay: getAnnotationLabels()
+    )
+    typedPrepAnnotation(
+      commandBar: commandBar,
+      prepAnnotationDisplay: getPrepAnnotationLabels()
+    )
+    annotationState = false
+    prepAnnotationState = false
+    nounAnnotationsToDisplay = 0
   }
 
   // MARK: Load keys
@@ -1239,6 +1274,46 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
 
+    case "return":
+      if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
+        proxy.insertText("\n")
+        clearCommandBar()
+      } else if commandState == .translate {
+        queryTranslation(commandBar: commandBar)
+      } else if commandState == .conjugate {
+        resetConjugationState()
+        let triggerConjugationTbl = triggerConjugation(commandBar: commandBar)
+        if triggerConjugationTbl == true {
+          commandState = .selectConjugation
+          loadKeys()
+          return // go to conjugation view
+        } else {
+          commandState = .invalid
+        }
+      } else if commandState == .plural {
+        queryPlural(commandBar: commandBar)
+      }
+
+      if [.invalid, .alreadyPlural].contains(commandState) { // invalid state
+        loadKeys()
+        autoCapAtStartOfProxy()
+
+        if commandState == .invalid {
+          commandBar.text = commandPromptSpacing + invalidCommandMsg
+        } else if commandState == .alreadyPlural {
+          commandBar.text = commandPromptSpacing + alreadyPluralMsg
+        }
+        commandBar.textColor = keyCharColor
+        return
+      } else if [.translate, .plural].contains(commandState) { // functional commands above
+        autoActionState = .suggest
+        commandState = .idle
+        clearCommandBar()
+        autoCapAtStartOfProxy()
+        loadKeys()
+        conditionallyDisplayAnnotation()
+      }
+
     // Switch to translate state.
     case "Translate":
       commandState = .translate
@@ -1269,40 +1344,12 @@ class KeyboardViewController: UIInputViewController {
 
     // Move displayed conjugations to the left in order if able.
     case "shiftConjugateLeft":
-      if controllerLanguage == "French" {
-        frConjugationStateLeft()
-      } else if controllerLanguage == "German" {
-        deConjugationStateLeft()
-      } else if controllerLanguage == "Italian" {
-        itConjugationStateLeft()
-      } else if controllerLanguage == "Portuguese" {
-        ptConjugationStateLeft()
-      } else if controllerLanguage == "Russian" {
-        ruConjugationStateLeft()
-      } else if controllerLanguage == "Spanish" {
-        esConjugationStateLeft()
-      } else if controllerLanguage == "Swedish" {
-        svConjugationStateLeft()
-      }
+      conjugationStateLeft()
       loadKeys()
 
     // Move displayed conjugations to the right in order if able.
     case "shiftConjugateRight":
-      if controllerLanguage == "French" {
-        frConjugationStateRight()
-      } else if controllerLanguage == "German" {
-        deConjugationStateRight()
-      } else if controllerLanguage == "Italian" {
-        itConjugationStateRight()
-      } else if controllerLanguage == "Portuguese" {
-        ptConjugationStateRight()
-      } else if controllerLanguage == "Russian" {
-        ruConjugationStateRight()
-      } else if controllerLanguage == "Spanish" {
-        esConjugationStateRight()
-      } else if controllerLanguage == "Swedish" {
-        svConjugationStateRight()
-      }
+      conjugationStateRight()
       loadKeys()
 
     case "firstPersonSingular":
@@ -1356,73 +1403,13 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "AutoAction1":
-      autoActionState = .suggest
-      clearPrefixFromTextFieldProxy()
-      proxy.insertText(translateKey.titleLabel?.text ?? "")
-      proxy.insertText(" ")
-      currentPrefix = ""
-      secondaryPastStringOnDelete = pastStringInTextProxy
-      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      clearCommandBar()
-
-      typedNounAnnotation(
-        commandBar: commandBar,
-        nounAnnotationDisplay: getNounAnnotationLabels(),
-        annotationDisplay: getAnnotationLabels()
-      )
-      typedPrepAnnotation(
-        commandBar: commandBar,
-        prepAnnotationDisplay: getPrepAnnotationLabels()
-      )
-      annotationState = false
-      prepAnnotationState = false
-      nounAnnotationsToDisplay = 0
+      executeAutoAction(keyPressed: translateKey)
 
     case "AutoAction2":
-      autoActionState = .suggest
-      clearPrefixFromTextFieldProxy()
-      proxy.insertText(conjugateKey.titleLabel?.text ?? "")
-      proxy.insertText(" ")
-      currentPrefix = ""
-      secondaryPastStringOnDelete = pastStringInTextProxy
-      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      clearCommandBar()
-
-      typedNounAnnotation(
-        commandBar: commandBar,
-        nounAnnotationDisplay: getNounAnnotationLabels(),
-        annotationDisplay: getAnnotationLabels()
-      )
-      typedPrepAnnotation(
-        commandBar: commandBar,
-        prepAnnotationDisplay: getPrepAnnotationLabels()
-      )
-      annotationState = false
-      prepAnnotationState = false
-      nounAnnotationsToDisplay = 0
+      executeAutoAction(keyPressed: conjugateKey)
 
     case "AutoAction3":
-      autoActionState = .suggest
-      clearPrefixFromTextFieldProxy()
-      proxy.insertText(pluralKey.titleLabel?.text ?? "")
-      proxy.insertText(" ")
-      currentPrefix = ""
-      secondaryPastStringOnDelete = pastStringInTextProxy
-      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      clearCommandBar()
-
-      typedNounAnnotation(
-        commandBar: commandBar,
-        nounAnnotationDisplay: getNounAnnotationLabels(),
-        annotationDisplay: getAnnotationLabels()
-      )
-      typedPrepAnnotation(
-        commandBar: commandBar,
-        prepAnnotationDisplay: getPrepAnnotationLabels()
-      )
-      annotationState = false
-      prepAnnotationState = false
-      nounAnnotationsToDisplay = 0
+      executeAutoAction(keyPressed: pluralKey)
 
     case "delete":
       if ![.translate, .conjugate, .plural].contains(commandState) {
@@ -1485,111 +1472,12 @@ class KeyboardViewController: UIInputViewController {
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
       conditionallySetAutoActionBtns()
-
-      typedNounAnnotation(
-        commandBar: commandBar,
-        nounAnnotationDisplay: getNounAnnotationLabels(),
-        annotationDisplay: getAnnotationLabels()
-      )
-      typedPrepAnnotation(
-        commandBar: commandBar,
-        prepAnnotationDisplay: getPrepAnnotationLabels()
-      )
-      annotationState = false
-      prepAnnotationState = false
-      nounAnnotationsToDisplay = 0
+      conditionallyDisplayAnnotation()
 
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
         clearCommandBar()
       }
       doubleSpacePeriodPossible = true
-      
-    case "selectKeyboard":
-      self.advanceToNextInputMode()
-
-    case "hideKeyboard":
-      self.dismissKeyboard()
-
-    case "return":
-      if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
-        proxy.insertText("\n")
-        clearCommandBar()
-      } else if commandState == .translate {
-        queryTranslation(commandBar: commandBar)
-      } else if commandState == .conjugate {
-        // Reset to the most basic conjugations.
-        deConjugationState = .indicativePresent
-        frConjugationState = .indicativePresent
-        ptConjugationState = .indicativePresent
-        esConjugationState = .indicativePresent
-        itConjugationState = .present
-        ruConjugationState = .present
-        svConjugationState = .active
-        let triggerConjugationTbl = triggerConjugation(commandBar: commandBar)
-        if triggerConjugationTbl == true {
-          commandState = .selectConjugation
-          loadKeys()
-          return // go to conjugation view
-        } else {
-          commandState = .invalid
-        }
-      } else if commandState == .plural {
-        queryPlural(commandBar: commandBar)
-      }
-
-      if [.invalid, .alreadyPlural].contains(commandState) { // invalid state
-        loadKeys()
-        autoCapAtStartOfProxy()
-
-        if commandState == .invalid {
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
-        } else if commandState == .alreadyPlural {
-          commandBar.text = commandPromptSpacing + alreadyPluralMsg
-        }
-        commandBar.textColor = keyCharColor
-        return
-      } else if [.translate, .plural].contains(commandState) { // functional commands above
-        autoActionState = .suggest
-        commandState = .idle
-        clearCommandBar()
-        autoCapAtStartOfProxy()
-        loadKeys()
-
-        typedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        typedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
-        annotationState = false
-        prepAnnotationState = false
-        nounAnnotationsToDisplay = 0
-      }
-
-    case "123":
-      changeKeyboardToNumberKeys()
-      clearCommandBar()
-
-    case ".?123":
-      changeKeyboardToNumberKeys()
-      clearCommandBar()
-
-    case "#+=":
-      changeKeyboardToSymbolKeys()
-      clearCommandBar()
-
-    case "ABC":
-      changeKeyboardToLetterKeys()
-      clearCommandBar()
-      autoCapAtStartOfProxy()
-
-    case "АБВ":
-      changeKeyboardToLetterKeys()
-      clearCommandBar()
-      autoCapAtStartOfProxy()
 
     case "'":
       // Change back to letter keys.
@@ -1607,6 +1495,25 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
       clearCommandBar()
       capsLockPossible = true
+
+    case "123", ".?123":
+      changeKeyboardToNumberKeys()
+      clearCommandBar()
+
+    case "#+=":
+      changeKeyboardToSymbolKeys()
+      clearCommandBar()
+
+    case "ABC", "АБВ":
+      changeKeyboardToLetterKeys()
+      clearCommandBar()
+      autoCapAtStartOfProxy()
+
+    case "selectKeyboard":
+      self.advanceToNextInputMode()
+
+    case "hideKeyboard":
+      self.dismissKeyboard()
 
     default:
       autoActionState = .complete
