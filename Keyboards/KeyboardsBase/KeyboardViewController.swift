@@ -274,12 +274,26 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Generates an array of the three autosuggest words.
-  func getAutosuggestions() {}
+  func getAutosuggestions() {
+    let dummySuggestions = [
+      "Buch": ["lesen", "kaufen", "schenken"],
+      "ich": ["habe", "bin", "kann"],
+      "mit": ["mir", "dir", "ihr"]
+    ]
+    
+    let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
+    if dummySuggestions.keys.contains(prefix) {
+      completionWords = dummySuggestions[prefix] ?? [String]()
+    }
+    if completionWords.isEmpty {
+      getDefaultAutosuggestions()
+    }
+  }
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
     if autoActionState == .suggest {
-      getDefaultAutosuggestions()
+      getAutosuggestions()
     } else {
       getAutocompletions()
     }
@@ -295,11 +309,11 @@ class KeyboardViewController: UIInputViewController {
       }
 
       setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-      styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
+      styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
       setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-      styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
+      styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
       activateBtn(btn: pluralKey)
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
