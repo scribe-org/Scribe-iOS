@@ -274,12 +274,60 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Generates an array of the three autosuggest words.
-  func getAutosuggestions() {}
+  func getAutosuggestions() {
+    let dummySuggestions = [
+      "Buch": ["lesen", "kaufen", "schenken"],
+      "ich": ["habe", "bin", "kann"],
+      "mit": ["mir", "dir", "ihr"]
+    ]
+    
+    let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
+    
+    /// We have to consider these different cases as the key always has to match.
+    /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
+    if dummySuggestions.keys.contains(prefix.lowercased()) {
+      if let suggestions = dummySuggestions[prefix.lowercased()] {
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            completionWords.append(suggestions[i])
+          }
+          i += 1
+        }
+      } else {
+        getDefaultAutosuggestions()
+      }
+    } else if dummySuggestions.keys.contains(prefix.capitalize()) {
+      if let suggestions = dummySuggestions[prefix.capitalize()] {
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            completionWords.append(suggestions[i])
+          }
+          i += 1
+        }
+      } else {
+        getDefaultAutosuggestions()
+      }
+    } else {
+      getDefaultAutosuggestions()
+    }
+  }
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
     if autoActionState == .suggest {
-      getDefaultAutosuggestions()
+      getAutosuggestions()
     } else {
       getAutocompletions()
     }
@@ -295,11 +343,11 @@ class KeyboardViewController: UIInputViewController {
       }
 
       setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
-      styleBtn(btn: conjugateKey, title: completionWords[1], radius: commandKeyCornerRadius)
+      styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
       setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-      styleBtn(btn: pluralKey, title: completionWords[2], radius: commandKeyCornerRadius)
+      styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
       activateBtn(btn: pluralKey)
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
