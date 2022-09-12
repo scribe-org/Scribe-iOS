@@ -282,10 +282,44 @@ class KeyboardViewController: UIInputViewController {
     ]
     
     let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
-    if dummySuggestions.keys.contains(prefix) {
-      completionWords = dummySuggestions[prefix] ?? [String]()
-    }
-    if completionWords.isEmpty {
+    
+    /// We have to consider these different cases as the key always has to match.
+    /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
+    if dummySuggestions.keys.contains(prefix.lowercased()) {
+      if let suggestions = dummySuggestions[prefix.lowercased()] {
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            completionWords.append(suggestions[i])
+          }
+          i += 1
+        }
+      } else {
+        getDefaultAutosuggestions()
+      }
+    } else if dummySuggestions.keys.contains(prefix.capitalize()) {
+      if let suggestions = dummySuggestions[prefix.capitalize()] {
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            completionWords.append(suggestions[i])
+          }
+          i += 1
+        }
+      } else {
+        getDefaultAutosuggestions()
+      }
+    } else {
       getDefaultAutosuggestions()
     }
   }
