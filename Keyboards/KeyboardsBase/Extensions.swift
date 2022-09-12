@@ -68,6 +68,10 @@ extension String {
   func capitalize() -> String {
     return prefix(1).uppercased() + self.lowercased().dropFirst()
   }
+
+  var isNumeric : Bool {
+      return Double(self) != nil
+  }
 }
 
 /// Adds the ability to efficiently trim whitespace at the end of a string.

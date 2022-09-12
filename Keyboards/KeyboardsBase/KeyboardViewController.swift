@@ -283,44 +283,48 @@ class KeyboardViewController: UIInputViewController {
     
     let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
     
-    /// We have to consider these different cases as the key always has to match.
-    /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-    if dummySuggestions.keys.contains(prefix.lowercased()) {
-      if let suggestions = dummySuggestions[prefix.lowercased()] {
-        completionWords = [String]()
-        var i = 0
-        while i < 3 {
-          if shiftButtonState == .shift {
-            completionWords.append(suggestions[i].capitalize())
-          } else if shiftButtonState == .caps {
-            completionWords.append(suggestions[i].uppercased())
-          } else {
-            completionWords.append(suggestions[i])
-          }
-          i += 1
-        }
-      } else {
-        getDefaultAutosuggestions()
-      }
-    } else if dummySuggestions.keys.contains(prefix.capitalize()) {
-      if let suggestions = dummySuggestions[prefix.capitalize()] {
-        completionWords = [String]()
-        var i = 0
-        while i < 3 {
-          if shiftButtonState == .shift {
-            completionWords.append(suggestions[i].capitalize())
-          } else if shiftButtonState == .caps {
-            completionWords.append(suggestions[i].uppercased())
-          } else {
-            completionWords.append(suggestions[i])
-          }
-          i += 1
-        }
-      } else {
-        getDefaultAutosuggestions()
-      }
+    if prefix.isNumeric {
+      completionWords = numericAutosuggestions
     } else {
-      getDefaultAutosuggestions()
+      /// We have to consider these different cases as the key always has to match.
+      /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
+      if dummySuggestions.keys.contains(prefix.lowercased()) {
+        if let suggestions = dummySuggestions[prefix.lowercased()] {
+          completionWords = [String]()
+          var i = 0
+          while i < 3 {
+            if shiftButtonState == .shift {
+              completionWords.append(suggestions[i].capitalize())
+            } else if shiftButtonState == .caps {
+              completionWords.append(suggestions[i].uppercased())
+            } else {
+              completionWords.append(suggestions[i])
+            }
+            i += 1
+          }
+        } else {
+          getDefaultAutosuggestions()
+        }
+      } else if dummySuggestions.keys.contains(prefix.capitalize()) {
+        if let suggestions = dummySuggestions[prefix.capitalize()] {
+          completionWords = [String]()
+          var i = 0
+          while i < 3 {
+            if shiftButtonState == .shift {
+              completionWords.append(suggestions[i].capitalize())
+            } else if shiftButtonState == .caps {
+              completionWords.append(suggestions[i].uppercased())
+            } else {
+              completionWords.append(suggestions[i])
+            }
+            i += 1
+          }
+        } else {
+          getDefaultAutosuggestions()
+        }
+      } else {
+        getDefaultAutosuggestions()
+      }
     }
   }
 
@@ -1466,6 +1470,7 @@ class KeyboardViewController: UIInputViewController {
         }
 
         handleDeleteButtonPressed()
+        autoCapAtStartOfProxy()
         clearCommandBar()
 
         autoActionState = .complete
@@ -1579,7 +1584,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
     }
 
-    // Add partitions if the keyboard states dictate.
+    // Add partitions and show auto actions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
     conditionallySetAutoActionBtns()
 
@@ -1665,6 +1670,8 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
       clearCommandBar()
+      // Show auto actions if the keyboard states dictate.
+      conditionallySetAutoActionBtns()
     }
   }
 
