@@ -25,6 +25,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The annotation colors have been changed to match the new backgrounds.
 - The App Store images have been updated to reflect autosuggest data based on Wikipedia.
+- Delete key features pressed state style similar to the native keyboard
 
 ### ♻️ Code Refactoring
 
