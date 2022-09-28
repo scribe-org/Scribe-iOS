@@ -11,6 +11,7 @@ var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible: Bool = true
 var backspaceTimer: Timer?
+var scribeKeyHeight = CGFloat(0)
 
 // All data needed for Scribe commands for the given language keyboard.
 let nouns = loadJSONToDict(filename: "nouns")
@@ -41,9 +42,9 @@ var invalidCommandMsg: String = ""
 
 // Annotation variables.
 var annotationState: Bool = false
-var nounAnnotationsToDisplay: Int = 0
-var prepAnnotationState: Bool = false
-var annotationHeight = CGFloat(0)
+var annotationBtns: [UIButton] = [UIButton]()
+var annotationColors: [UIColor] = [UIColor]()
+var annotationSeperators: [UIView] = [UIView]()
 var annotationDisplayWord: String = ""
 
 // Prompts and saving groups of languages.
