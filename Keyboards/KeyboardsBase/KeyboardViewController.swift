@@ -1468,7 +1468,6 @@ class KeyboardViewController: UIInputViewController {
       executeAutoAction(keyPressed: pluralKey)
 
     case "delete":
-      styleDeleteButton(sender, isPressed: false)
       if ![.translate, .conjugate, .plural].contains(commandState) {
         // Control shift state on delete.
         if keyboardState == .letters && shiftButtonState == .shift && proxy.documentContextBeforeInput != nil {
@@ -1626,9 +1625,6 @@ class KeyboardViewController: UIInputViewController {
   ///   - sender: the key that was pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
     sender.backgroundColor = keyPressedColor
-    if (sender as? KeyboardKey)?.key == "delete" {
-      styleDeleteButton(sender, isPressed: true)
-    }
   }
 
   /// Defines events that occur given multiple presses of a single key.
@@ -1705,10 +1701,7 @@ class KeyboardViewController: UIInputViewController {
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
-      if let button = gesture.view as? UIButton {
-        button.backgroundColor = specialKeyColor
-        styleDeleteButton(button, isPressed: false)
-      }
+      (gesture.view as! UIButton).backgroundColor = specialKeyColor
     }
   }
 

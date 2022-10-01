@@ -126,15 +126,6 @@ func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
   btn.tintColor = color
 }
 
-/// Sets icon of delete button for pressed or non-pressed state.
-/// - Parameters:
-///   - button: The delete button.
-///   - isPressed: Determines if icon for pressed or non-pressed state will be set.
-func styleDeleteButton(_ button: UIButton, isPressed: Bool) {
-  styleIconBtn(btn: button, color: keyCharColor,
-               iconName: isPressed ? "delete.left.fill" : "delete.left")
-}
-
 /// Adds padding to keys to position them.
 ///
 /// - Parameters
