@@ -1814,6 +1814,7 @@ class KeyboardViewController: UIInputViewController {
       }
     } else if originalKey == "delete" {
       // Change the icon of the delete button to be filled in.
+      sender.backgroundColor = keyPressedColor
       styleDeleteButton(sender, isPressed: true)
     } else {
       sender.backgroundColor = keyPressedColor
