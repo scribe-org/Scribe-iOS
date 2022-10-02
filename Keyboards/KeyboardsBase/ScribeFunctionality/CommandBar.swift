@@ -8,6 +8,23 @@ import UIKit
 
 /// A custom UILabel used to house all the functionality of the command bar.
 class CommandBar: UILabel {
+
+  // MARK: - Internal Properties
+
+  /// Button that is shown on the trailing edge of the command bar.
+  let infoButton = UIButton(type: .system)
+  /// The tap handler triggered when tapping `trailingButton`.
+  var infoButtonTapHandler: (() -> Void)?
+  /// Determines whether or not the trailing `infoButton` should be shown on the command bar.
+  var isShowingInfoButton: Bool = false {
+    didSet {
+      infoButton.isHidden = !isShowingInfoButton
+      isUserInteractionEnabled = isShowingInfoButton
+    }
+  }
+
+  // MARK: - Initializer
+
   override init(frame: CGRect) {
     super.init(frame: frame)
   }
@@ -20,12 +37,15 @@ class CommandBar: UILabel {
   class func instanceFromNib() -> UIView {
       return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
   }
-
+  
   var shadow: UIButton!
   var blend: UILabel!
 
+  // MARK: - Internal methods
+
   /// Sets up the command bar's color and text alignment.
   func set() {
+    addInfoButton()
     self.backgroundColor = commandBarColor
     self.blend.backgroundColor = commandBarColor
     self.layer.borderColor = commandBarBorderColor
@@ -43,6 +63,29 @@ class CommandBar: UILabel {
     } else if DeviceType.isPad {
       commandPromptSpacing = String(repeating: " ", count: 5)
     }
+  }
+
+  /// Adds info button to Command Bar.
+  private func addInfoButton() {
+    infoButton.removeFromSuperview()
+    infoButton.isHidden = true
+    infoButton.setImage(UIImage(systemName: "info.circle.fill"), for: .normal)
+    infoButton.tintColor = commandKeyColor
+    infoButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+    infoButton.translatesAutoresizingMaskIntoConstraints = false
+
+    addSubview(infoButton)
+    NSLayoutConstraint.activate([
+      infoButton.heightAnchor.constraint(equalTo: heightAnchor),
+      infoButton.widthAnchor.constraint(equalTo: heightAnchor),
+      infoButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+      infoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+    ])
+  }
+
+  /// Triggered when tapping on `trailingButton`.
+  @objc func tappedButton() {
+    infoButtonTapHandler?()
   }
 
   /// Sets up the command bar's radius and shadow.

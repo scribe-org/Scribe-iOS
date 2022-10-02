@@ -48,6 +48,11 @@ class KeyboardViewController: UIInputViewController {
     commandState = .idle
 
     loadKeys()
+
+    // Set tap handler for info button on CommandBar
+    commandBar.infoButtonTapHandler = {
+      print("Tapped Info Button!")
+    }
   }
 
   /// Activates a button by assigning key touch functions for their given actions.
@@ -1247,8 +1252,12 @@ class KeyboardViewController: UIInputViewController {
 
         if commandState == .invalid {
           commandBar.text = commandPromptSpacing + invalidCommandMsg
-        } else if commandState == .alreadyPlural {
-          commandBar.text = commandPromptSpacing + alreadyPluralMsg
+          commandBar.isShowingInfoButton = true
+        } else {
+          commandBar.isShowingInfoButton = false
+          if commandState == .alreadyPlural {
+            commandBar.text = commandPromptSpacing + alreadyPluralMsg
+          }
         }
         commandBar.textColor = keyCharColor
         return
