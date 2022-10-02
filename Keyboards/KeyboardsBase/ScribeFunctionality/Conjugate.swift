@@ -43,7 +43,7 @@ let keyboardConjLabelDict: [String: Any] = [
 ///
 /// - Parameters
 ///   - commandBar: the command bar into which an input was entered.
-func triggerConjugation(commandBar: UILabel) -> Bool {
+func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
   if commandBar.text! == conjugatePromptAndCursor || commandBar.text! == conjugatePromptAndPlaceholder {
     return false
@@ -69,7 +69,10 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
   if keyPressed.titleLabel?.text == invalidCommandMsg {
     proxy.insertText("")
   } else if conjugateAlternateView == false {
-    if deConjugationState != .indicativePerfect {
+    if commandState == .selectCaseConjugation {
+      wordToReturn = keyPressed.titleLabel?.text ?? ""
+      proxy.insertText(wordToReturn + " ")
+    } else if deConjugationState != .indicativePerfect {
       wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
       if inputWordIsCapitalized == true {
         proxy.insertText(wordToReturn.capitalized + " ")
@@ -91,7 +94,7 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
 }
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
-func resetConjugationState() {
+func resetVerbConjugationState() {
   if controllerLanguage == "French" {
     frConjugationState = .indicativePresent
   } else if controllerLanguage == "German" {
@@ -106,6 +109,32 @@ func resetConjugationState() {
     esConjugationState = .indicativePresent
   } else if controllerLanguage == "Swedish" {
     svConjugationState = .active
+  }
+}
+
+/// Returns the conjugation state to its initial conjugation based on the keyboard language.
+func resetCaseConjugationState() {
+  // The case conjugation display starts on the left most case.
+  if controllerLanguage == "German" {
+    if prepAnnotationForm.contains("Acc") {
+      deCaseConjugationState = .accusative
+    } else if prepAnnotationForm.contains("Dat") {
+      deCaseConjugationState = .dative
+    } else {
+      deCaseConjugationState = .genitive
+    }
+  } else if controllerLanguage == "Russian" {
+    if prepAnnotationForm.contains("Acc") {
+      ruCaseConjugationState = .accusative
+    } else if prepAnnotationForm.contains("Dat") {
+      ruCaseConjugationState = .dative
+    } else if prepAnnotationForm.contains("Gen") {
+      ruCaseConjugationState = .genitive
+    } else if prepAnnotationForm.contains("Pre") {
+      ruCaseConjugationState = .prepositional
+    } else {
+      ruCaseConjugationState = .instrumental
+    }
   }
 }
 
