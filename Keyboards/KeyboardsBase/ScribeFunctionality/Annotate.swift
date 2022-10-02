@@ -56,18 +56,18 @@ class Annotation: UIButton {
 
   func styleSingleAnnotation() {
     self.style()
-    self.layer.cornerRadius = commandKeyCornerRadius
+    self.layer.cornerRadius = commandKeyCornerRadius / 2.5
   }
 
   func styleLeftAnnotation() {
     self.style()
-    self.layer.cornerRadius = commandKeyCornerRadius
+    self.layer.cornerRadius = commandKeyCornerRadius / 2.5
     self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
 
   func styleRightAnnotation() {
     self.style()
-    self.layer.cornerRadius = commandKeyCornerRadius
+    self.layer.cornerRadius = commandKeyCornerRadius / 2.5
     self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
   }

@@ -54,7 +54,7 @@ enum ShiftButtonState {
 /// States of the keyboard corresponding to which commands the user is executing.
 enum CommandState {
   case idle
-  case select
+  case selectCommand
   case translate
   case conjugate
   case selectConjugation

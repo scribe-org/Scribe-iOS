@@ -409,7 +409,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Clears the text found in the command bar.
   func clearCommandBar() {
-    if [.idle, .select].contains(commandState) {
+    if [.idle, .selectCommand].contains(commandState) {
       commandBar.textColor = keyCharColor
       commandBar.text = ""
     }
@@ -417,7 +417,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
-    if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
+    if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
       proxy.deleteBackward()
     } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!)) {
       guard
@@ -897,7 +897,7 @@ class KeyboardViewController: UIInputViewController {
         pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.475)
       }
 
-      if commandState == .select {
+      if commandState == .selectCommand {
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
@@ -1201,8 +1201,8 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil && [.idle, .select, .alreadyPlural, .invalid].contains(commandState) { // annotate word
-        if [.select, .alreadyPlural, .invalid].contains(commandState) {
+      if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) { // annotate word
+        if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
           commandState = .idle
         }
         loadKeys()
@@ -1211,7 +1211,7 @@ class KeyboardViewController: UIInputViewController {
         if [.translate, .conjugate, .selectConjugation, .plural].contains(commandState) { // escape
           commandState = .idle
         } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
-          commandState = .select
+          commandState = .selectCommand
           activateBtn(btn: translateKey)
           activateBtn(btn: conjugateKey)
           activateBtn(btn: pluralKey)
@@ -1481,7 +1481,7 @@ class KeyboardViewController: UIInputViewController {
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
           let numAnnotations = annotationsToAssign.count
 
-          for i in 0...numAnnotations - 1 {
+          for i in 0..<numAnnotations {
             let annotationBtn = Annotation()
             var annotationSep = UIView()
             var annotationToDisplay: String = annotationsToAssign[i]
@@ -1747,7 +1747,7 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .normal
         loadKeys()
       }
-      if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
+      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
         proxy.insertText(keyToDisplay)
         clearCommandBar()
       } else {
