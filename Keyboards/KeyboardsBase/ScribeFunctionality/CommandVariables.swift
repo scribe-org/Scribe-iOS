@@ -14,7 +14,7 @@ var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
 
 // All data needed for Scribe commands for the given language keyboard.
-let nouns = loadJSONToDict(filename: "nouns")
+var nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
