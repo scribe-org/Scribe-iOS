@@ -1369,6 +1369,7 @@ class KeyboardViewController: UIInputViewController {
       return
 
     case "delete":
+      styleDeleteButton(sender, isPressed: false)
       if ![.translate, .conjugate, .plural].contains(commandState) {
         // Control shift state on delete.
         if keyboardState == .letters && shiftButtonState == .shift && proxy.documentContextBeforeInput != nil {
@@ -1903,7 +1904,10 @@ class KeyboardViewController: UIInputViewController {
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
-      (gesture.view as! UIButton).backgroundColor = specialKeyColor
+      if let button = gesture.view as? UIButton {
+        button.backgroundColor = specialKeyColor
+        styleDeleteButton(button, isPressed: false)
+      }
     }
   }
 
