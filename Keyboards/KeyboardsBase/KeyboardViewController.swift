@@ -378,7 +378,7 @@ class KeyboardViewController: UIInputViewController {
     // Only delete characters for autocomplete, not autosuggest.
     if currentPrefix != "" && autoActionState != .suggest {
       if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0...currentPrefix.count - 1 {
+        for _ in 0..<currentPrefix.count {
           proxy.deleteBackward()
         }
       }
@@ -831,6 +831,12 @@ class KeyboardViewController: UIInputViewController {
       setAutoActionPartitions()
 
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+
+      // Make sure that Scribe shows up in auto actions.
+      nouns?["Scribe"] = [
+        "plural": "Scribes",
+        "form": ""
+      ] as AnyObject
     }
 
     setKeyboard()
@@ -982,8 +988,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
       let numRows = keyboard.count
-      for row in 0...numRows - 1 {
-        for idx in 0...keyboard[row].count - 1 {
+      for row in 0..<numRows {
+        for idx in 0..<keyboard[row].count {
           // Set up button as a key with its values and properties.
           let btn = KeyboardKey(type: .custom)
           btn.row = row
@@ -1409,7 +1415,7 @@ class KeyboardViewController: UIInputViewController {
       executeAutoAction(keyPressed: pluralKey)
 
     case "GetAnnotationInfo":
-      for i in 0...annotationBtns.count - 1 {
+      for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
       let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
@@ -1430,6 +1436,15 @@ class KeyboardViewController: UIInputViewController {
       } else {
         return
       }
+
+    case "ScribeAnnotation":
+      for i in 0..<annotationBtns.count {
+        annotationBtns[i].backgroundColor = annotationColors[i]
+      }
+      let emojisToSelectFrom: String = "🥳🎉"
+      let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      sender.setTitle(emojis, for: .normal)
+      return
 
     case "delete":
       styleDeleteButton(sender, isPressed: false)
@@ -1523,7 +1538,32 @@ class KeyboardViewController: UIInputViewController {
         "PL": annotateOrange
       ]
       
-      if isNoun && isPrep {
+      if lastWordTyped == "Scribe" || lastWordTyped == "scribe" {
+        // Thank the user :)
+        annotationState = true
+        activateAnnotationBtn = true
+        autoAction1Visible = false
+
+        let annotationBtn = Annotation()
+        annotationBtn.setAnnotationSize(width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+        annotationBtn.setAnnotationLoc(
+          minX: translateKey.frame.origin.x
+            + ( translateKey.frame.width / 2 )
+            - ( annotationFieldWidth / 2 ),
+          maxY: scribeKey.frame.origin.y
+        )
+        annotationBtn.styleSingleAnnotation()
+
+        let emojisToSelectFrom: String = "🥳🎉"
+        let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+        annotationBtn.setTitle(emojis, for: .normal)
+        self.view.addSubview(annotationBtn)
+        annotationBtns.append(annotationBtn)
+        annotationColors.append(commandKeyColor)
+
+        activateBtn(btn: annotationBtn)
+        setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
+      } else if isNoun && isPrep {
         let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
         prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
 
@@ -1651,7 +1691,7 @@ class KeyboardViewController: UIInputViewController {
 
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
           let numAnnotations = annotationsToAssign.count
-          for i in 0...numAnnotations - 1 {
+          for i in 0..<numAnnotations {
             let annotationBtn = Annotation()
             var annotationSep = UIView()
             var annotationToDisplay: String = annotationsToAssign[i]
@@ -1724,7 +1764,7 @@ class KeyboardViewController: UIInputViewController {
 
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
           let numAnnotations = annotationsToAssign.count
-          for i in 0...numAnnotations - 1 {
+          for i in 0..<numAnnotations {
             let annotationBtn = Annotation()
             var annotationSep = UIView()
             var annotationToDisplay: String = annotationsToAssign[i]
