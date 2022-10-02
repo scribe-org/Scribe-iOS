@@ -47,9 +47,6 @@ class KeyboardViewController: UIInputViewController {
     // Override prior command states from previous sessions.
     commandState = .idle
 
-    // Set height for Scribe command functionality.
-    annotationHeight = nounAnnotation1.frame.size.height
-
     loadKeys()
 
     // Set tap handler for info button on CommandBar
@@ -137,6 +134,7 @@ class KeyboardViewController: UIInputViewController {
     }
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
+    annotationState = false
     keyboardLoad = true
     loadInterface()
     keyboardLoad = false
@@ -154,6 +152,9 @@ class KeyboardViewController: UIInputViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateViewConstraints()
+    keyboardLoad = true
+    loadKeys()
+    keyboardLoad = false
   }
 
   /// Includes:
@@ -162,7 +163,9 @@ class KeyboardViewController: UIInputViewController {
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
     updateViewConstraints()
+    keyboardLoad = true
     loadKeys()
+    keyboardLoad = false
   }
 
   /// Overrides the previous color variables if the user switches between light and dark mode.
@@ -175,6 +178,7 @@ class KeyboardViewController: UIInputViewController {
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
+    annotationState = false
     keyboardLoad = true
     loadKeys()
     keyboardLoad = false
@@ -371,7 +375,8 @@ class KeyboardViewController: UIInputViewController {
   /// Clears the text proxy when inserting using an auto action.
   /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
-    if currentPrefix != "" {
+    // Only delete characters for autocomplete, not autosuggest.
+    if currentPrefix != "" && autoActionState != .suggest {
       if proxy.documentContextBeforeInput?.count != 0 {
         for _ in 0...currentPrefix.count - 1 {
           proxy.deleteBackward()
@@ -385,7 +390,6 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - keyPressed: the auto action button that was executed.
   func executeAutoAction(keyPressed: UIButton) {
-    autoActionState = .suggest
     clearPrefixFromTextFieldProxy()
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
     proxy.insertText(" ")
@@ -410,18 +414,15 @@ class KeyboardViewController: UIInputViewController {
 
   /// Clears the text found in the command bar.
   func clearCommandBar() {
-    if [.idle, .select].contains(commandState) {
+    if [.idle, .selectCommand].contains(commandState) {
       commandBar.textColor = keyCharColor
       commandBar.text = ""
     }
-
-    // Trigger the removal of the noun or preposition annotations.
-    hideAnnotations(annotationDisplay: getAnnotationLabels())
   }
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
-    if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
+    if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
       proxy.deleteBackward()
     } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!)) {
       guard
@@ -770,111 +771,9 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // Labels to annotate noun genders.
-  @IBOutlet var nounAnnotation1: UILabel!
-  @IBOutlet var nounAnnotation2: UILabel!
-  @IBOutlet var nounAnnotation3: UILabel!
-  @IBOutlet var nounAnnotation4: UILabel!
-  @IBOutlet var nounAnnotation5: UILabel!
-
-  // Labels to annotate preposition cases.
-  // There are multiple versions to account for when a word is both a noun and a preposition.
-  // In this case a shifted set is used - the noun annotations precede those of prepositions.
-  @IBOutlet var prepAnnotation11: UILabel!
-  @IBOutlet var prepAnnotation12: UILabel!
-  @IBOutlet var prepAnnotation13: UILabel!
-  @IBOutlet var prepAnnotation14: UILabel!
-  @IBOutlet var prepAnnotation21: UILabel!
-  @IBOutlet var prepAnnotation22: UILabel!
-  @IBOutlet var prepAnnotation23: UILabel!
-  @IBOutlet var prepAnnotation24: UILabel!
-  @IBOutlet var prepAnnotation31: UILabel!
-  @IBOutlet var prepAnnotation32: UILabel!
-  @IBOutlet var prepAnnotation33: UILabel!
-  @IBOutlet var prepAnnotation34: UILabel!
-
-  /// Returns all available annotation labels.
-  func getAnnotationLabels() -> [UILabel] {
-    let nounAnnotationDisplay: [UILabel] = [
-      nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5
-    ]
-
-    let prepAnnotationDisplay: [UILabel] = [
-      prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14,
-      prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24,
-      prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34
-    ]
-
-    return nounAnnotationDisplay + prepAnnotationDisplay
-  }
-
-  /// Returns the noun annotation labels.
-  func getNounAnnotationLabels() -> [UILabel] {
-    let nounAnnotationDisplay: [UILabel] = [
-      nounAnnotation1, nounAnnotation2, nounAnnotation3, nounAnnotation4, nounAnnotation5
-    ]
-
-    return nounAnnotationDisplay
-  }
-
-  /// Returns the preposition annotation labels given the current number of noun annotations displayed.
-  func getPrepAnnotationLabels() -> [UILabel] {
-    // Initialize an array of display elements and count how many will be changed.
-    // This is initialized based on how many noun annotations have already been assigned (max 2).
-    var prepAnnotationDisplay: [UILabel] = [UILabel]()
-    if nounAnnotationsToDisplay == 0 {
-      prepAnnotationDisplay = [prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14]
-    } else if nounAnnotationsToDisplay == 1 {
-      prepAnnotationDisplay = [prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24]
-    } else if nounAnnotationsToDisplay == 2 {
-      prepAnnotationDisplay = [prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34]
-    }
-    return prepAnnotationDisplay
-  }
-
-  /// Styles the labels within the annotation display and removes user interactions.
-  func styleAnnotations() {
-    let nounAnnotationDisplay = getNounAnnotationLabels()
-
-    let prepAnnotationDisplay: [UILabel] = [
-      prepAnnotation11, prepAnnotation12, prepAnnotation13, prepAnnotation14,
-      prepAnnotation21, prepAnnotation22, prepAnnotation23, prepAnnotation24,
-      prepAnnotation31, prepAnnotation32, prepAnnotation33, prepAnnotation34
-    ]
-
-    for annotationDisplay in nounAnnotationDisplay {
-      annotationDisplay.clipsToBounds = true
-      annotationDisplay.layer.cornerRadius = keyCornerRadius / 2
-      annotationDisplay.textAlignment = NSTextAlignment.center
-      annotationDisplay.isUserInteractionEnabled = false
-      annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.70)
-      annotationDisplay.textColor = keyboardBgColor
-    }
-
-    for annotationDisplay in prepAnnotationDisplay {
-      annotationDisplay.clipsToBounds = true
-      annotationDisplay.layer.cornerRadius = keyCornerRadius / 2
-      annotationDisplay.textAlignment = NSTextAlignment.center
-      annotationDisplay.isUserInteractionEnabled = false
-      annotationDisplay.font = .systemFont(ofSize: annotationHeight * 0.65)
-      annotationDisplay.textColor = keyboardBgColor
-    }
-  }
-
   /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
   func conditionallyDisplayAnnotation() {
-    typedNounAnnotation(
-      commandBar: commandBar,
-      nounAnnotationDisplay: getNounAnnotationLabels(),
-      annotationDisplay: getAnnotationLabels()
-    )
-    typedPrepAnnotation(
-      commandBar: commandBar,
-      prepAnnotationDisplay: getPrepAnnotationLabels()
-    )
-    annotationState = false
-    prepAnnotationState = false
-    nounAnnotationsToDisplay = 0
+    typedWordAnnotation()
   }
 
   // MARK: Load keys
@@ -886,16 +785,17 @@ class KeyboardViewController: UIInputViewController {
 
     // Actions to be done only on initial loads.
     if keyboardLoad == true {
+      shiftButtonState = .shift
       commandBar.textColor = keyCharColor
       commandBar.conditionallyAddPlaceholder() // in case of color mode change during commands
       keyboardView.backgroundColor? = keyboardBgColor
 
+      // Set height for Scribe command functionality and annotation elements.
+      scribeKeyHeight = scribeKey.frame.size.height
+
       linkShadowBlendElements()
       setAutoActionPartitions()
 
-      let specialKeys = [
-        "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
-      ]
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
     }
 
@@ -903,6 +803,14 @@ class KeyboardViewController: UIInputViewController {
     setCommandBackground()
     setCommandBtns()
     setConjugationBtns()
+
+    // Clear annotation state if a keyboard state change dictates it.
+    if annotationState == false {
+      annotationBtns.forEach { $0.removeFromSuperview() }
+      annotationBtns.removeAll()
+      annotationSeperators.forEach { $0.removeFromSuperview() }
+      annotationSeperators.removeAll()
+    }
 
     // Clear interface from the last state.
     keyboardKeys.forEach {$0.removeFromSuperview()}
@@ -958,11 +866,6 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    styleAnnotations()
-    if annotationState == false {
-      hideAnnotations(annotationDisplay: getAnnotationLabels())
-    }
-
     if commandState != .selectConjugation { // normal keyboard view
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
@@ -990,16 +893,16 @@ class KeyboardViewController: UIInputViewController {
       deactivateConjugationDisplay()
 
       if DeviceType.isPhone {
-        translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.65)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.435)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.435)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.435)
       } else if DeviceType.isPad {
-        translateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: annotationHeight * 0.9)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.475)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.475)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.475)
       }
 
-      if commandState == .select {
+      if commandState == .selectCommand {
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
         styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
@@ -1303,25 +1206,17 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil && [.idle, .select, .alreadyPlural, .invalid].contains(commandState) { // annotate word
-        if [.select, .alreadyPlural, .invalid].contains(commandState) {
+      if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) { // annotate word
+        if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
           commandState = .idle
         }
         loadKeys()
-        selectedNounAnnotation(
-          commandBar: commandBar,
-          nounAnnotationDisplay: getNounAnnotationLabels(),
-          annotationDisplay: getAnnotationLabels()
-        )
-        selectedPrepAnnotation(
-          commandBar: commandBar,
-          prepAnnotationDisplay: getPrepAnnotationLabels()
-        )
+        selectedWordAnnotation()
       } else {
         if [.translate, .conjugate, .selectConjugation, .plural].contains(commandState) { // escape
           commandState = .idle
         } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
-          commandState = .select
+          commandState = .selectCommand
           activateBtn(btn: translateKey)
           activateBtn(btn: conjugateKey)
           activateBtn(btn: pluralKey)
@@ -1467,6 +1362,12 @@ class KeyboardViewController: UIInputViewController {
     case "AutoAction3":
       executeAutoAction(keyPressed: pluralKey)
 
+    case "GetAnnotationInfo":
+      for i in 0...annotationBtns.count - 1 {
+        annotationBtns[i].backgroundColor = annotationColors[i]
+      }
+      return
+
     case "delete":
       if ![.translate, .conjugate, .plural].contains(commandState) {
         // Control shift state on delete.
@@ -1528,7 +1429,283 @@ class KeyboardViewController: UIInputViewController {
       
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      conditionallySetAutoActionBtns()
+
+      let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+      let lastWordTyped = wordsTyped.secondToLast()
+      var wordToCheck: String = ""
+      if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+        wordToCheck = lastWordTyped!.lowercased()
+      } else {
+        wordToCheck = lastWordTyped!
+      }
+
+      let isNoun = nouns?[wordToCheck] != nil
+      let isPrep = prepositions?[wordToCheck.lowercased()] != nil
+
+      var annotationsToAssign: [String] = [String]()
+      annotationBtns = [UIButton]()
+      annotationColors = [UIColor]()
+      annotationSeperators = [UIView]()
+
+      let annotationFieldWidth = translateKey.frame.width * 0.85
+      var annotationHeight: CGFloat = 0.0
+      annotationHeight = scribeKeyHeight
+
+      nounFormToColorDict = [
+        "F": annotateRed,
+        "M": annotateBlue,
+        "C": annotatePurple,
+        "N": annotateGreen,
+        "PL": annotateOrange
+      ]
+      
+      if isNoun && isPrep {
+        let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
+        let prepAnnotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
+
+        var annotationsToAssign: [String] = [String]()
+        if nounAnnotationForm != "" {
+          if !nounAnnotationForm.contains("/") {
+            annotationsToAssign.append(nounAnnotationForm)
+          } else {
+            for a in nounAnnotationForm.components(separatedBy: "/") {
+              annotationsToAssign.append(a)
+            }
+          }
+        }
+        if prepAnnotationForm != "" {
+          if !prepAnnotationForm.contains("/") {
+            annotationsToAssign.append(prepAnnotationForm)
+          } else {
+            for a in prepAnnotationForm.components(separatedBy: "/") {
+              annotationsToAssign.append(a)
+            }
+          }
+        }
+
+        if annotationsToAssign.count > 0 {
+          annotationState = true
+          autoAction1Visible = false
+
+          let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
+          let numAnnotations = annotationsToAssign.count
+
+          for i in 0..<numAnnotations {
+            let annotationBtn = Annotation()
+            var annotationSep = UIView()
+            var annotationToDisplay: String = annotationsToAssign[i]
+
+            if nounFormToColorDict.keys.contains(annotationToDisplay) {
+              if numAnnotations > 3 {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+              } else if numAnnotations > 2 {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+              } else {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.6)
+              }
+            } else {
+              if numAnnotations > 3 {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+              } else if numAnnotations == 1 {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+              } else {
+                annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.5)
+              }
+            }
+
+            annotationBtn.setAnnotationLoc(
+              minX: translateKey.frame.origin.x
+                + ( translateKey.frame.width / 2 )
+                - ( annotationFieldWidth / 2 )
+                + ( annotationWidth * CGFloat(i) ),
+              maxY: scribeKey.frame.origin.y
+            )
+            if numAnnotations == 1 {
+              annotationBtn.styleSingleAnnotation()
+            } else if i == 0 {
+              annotationBtn.styleLeftAnnotation()
+            } else if i == numAnnotations - 1 {
+              annotationBtn.styleRightAnnotation()
+            } else {
+              annotationBtn.styleMiddleAnnotation()
+            }
+
+            // Convert the annotation into the keyboard language.
+            if nounFormToColorDict.keys.contains(annotationToDisplay) {
+              if nounAnnotationConversionDict[controllerLanguage] != nil {
+                if nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                  annotationToDisplay = nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+                }
+              }
+            } else {
+              if prepAnnotationConversionDict[controllerLanguage] != nil {
+                if prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                  annotationToDisplay = prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+                }
+              }
+            }
+
+            annotationBtn.setTitle(annotationToDisplay, for: .normal)
+            self.view.addSubview(annotationBtn)
+            annotationBtns.append(annotationBtn)
+            if nounFormToColorDict.keys.contains(annotationToDisplay) {
+              annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+            } else {
+              annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
+            }
+            activateBtn(btn: annotationBtn)
+            setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
+
+            if i != 0 {
+              annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+              annotationSep.isUserInteractionEnabled = false
+              annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+              self.view.addSubview(annotationSep)
+              annotationSeperators.append(annotationSep)
+            }
+          }
+        } else {
+          return
+        }
+      } else if isNoun {
+        let annotationForm: String = nouns?[wordToCheck]?["form"] as! String
+        if annotationForm == "" {
+          return
+        } else {
+          annotationState = true
+          autoAction1Visible = false
+
+          if !annotationForm.contains("/") {
+            annotationsToAssign.append(annotationForm)
+          } else {
+            annotationsToAssign = (annotationForm.components(separatedBy: "/"))
+          }
+
+          let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
+          let numAnnotations = annotationsToAssign.count
+          for i in 0...numAnnotations - 1 {
+            let annotationBtn = Annotation()
+            var annotationSep = UIView()
+            var annotationToDisplay: String = annotationsToAssign[i]
+
+            if numAnnotations > 3 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+            } else if numAnnotations > 2 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+            } else {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.6)
+            }
+
+            annotationBtn.setAnnotationLoc(
+              minX: translateKey.frame.origin.x
+                + ( translateKey.frame.width / 2 )
+                - ( annotationFieldWidth / 2 )
+                + ( annotationWidth * CGFloat(i) ),
+              maxY: scribeKey.frame.origin.y
+            )
+            if numAnnotations == 1 {
+              annotationBtn.styleSingleAnnotation()
+            } else if i == 0 {
+              annotationBtn.styleLeftAnnotation()
+            } else if i == numAnnotations - 1 {
+              annotationBtn.styleRightAnnotation()
+            } else {
+              annotationBtn.styleMiddleAnnotation()
+            }
+
+            // Convert the annotation into the keyboard language.
+            if nounAnnotationConversionDict[controllerLanguage] != nil {
+              if nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                annotationToDisplay = nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+              }
+            }
+
+            annotationBtn.setTitle(annotationToDisplay, for: .normal)
+            self.view.addSubview(annotationBtn)
+            annotationBtns.append(annotationBtn)
+            annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+            activateBtn(btn: annotationBtn)
+            setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
+
+            if i != 0 {
+              annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+              annotationSep.isUserInteractionEnabled = false
+              annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+              self.view.addSubview(annotationSep)
+              annotationSeperators.append(annotationSep)
+            }
+          }
+        }
+      } else if isPrep {
+        let annotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
+        if annotationForm == "" {
+          return
+        } else {
+          annotationState = true
+          autoAction1Visible = false
+
+          if !annotationForm.contains("/") {
+            annotationsToAssign.append(annotationForm)
+          } else {
+            annotationsToAssign = (annotationForm.components(separatedBy: "/"))          }
+
+          let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
+          let numAnnotations = annotationsToAssign.count
+          for i in 0...numAnnotations - 1 {
+            let annotationBtn = Annotation()
+            var annotationSep = UIView()
+            var annotationToDisplay: String = annotationsToAssign[i]
+
+            if numAnnotations > 3 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+            } else if numAnnotations == 1 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+            } else {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.5)
+            }
+
+            annotationBtn.setAnnotationLoc(
+              minX: translateKey.frame.origin.x
+                + ( translateKey.frame.width / 2 )
+                - ( annotationFieldWidth / 2 )
+                + ( annotationWidth * CGFloat(i) ),
+              maxY: scribeKey.frame.origin.y
+            )
+            if numAnnotations == 1 {
+              annotationBtn.styleSingleAnnotation()
+            } else if i == 0 {
+              annotationBtn.styleLeftAnnotation()
+            } else if i == numAnnotations - 1 {
+              annotationBtn.styleRightAnnotation()
+            } else {
+              annotationBtn.styleMiddleAnnotation()
+            }
+
+            // Convert the annotation into the keyboard language.
+            if prepAnnotationConversionDict[controllerLanguage] != nil {
+              if prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                annotationToDisplay = prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+              }
+            }
+
+            annotationBtn.setTitle(annotationToDisplay, for: .normal)
+            self.view.addSubview(annotationBtn)
+            annotationBtns.append(annotationBtn)
+            annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
+            activateBtn(btn: annotationBtn)
+            setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
+
+            if i != 0 {
+              annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+              annotationSep.isUserInteractionEnabled = false
+              annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+              self.view.addSubview(annotationSep)
+              annotationSeperators.append(annotationSep)
+            }
+          }
+        }
+      }
+
       conditionallyDisplayAnnotation()
 
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
@@ -1579,7 +1756,7 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .normal
         loadKeys()
       }
-      if [.idle, .select, .alreadyPlural, .invalid].contains(commandState) {
+      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
         proxy.insertText(keyToDisplay)
         clearCommandBar()
       } else {
@@ -1596,6 +1773,14 @@ class KeyboardViewController: UIInputViewController {
     // Add partitions and show auto actions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
     conditionallySetAutoActionBtns()
+
+    if annotationState == false {
+      annotationBtns.forEach { $0.removeFromSuperview() }
+      annotationBtns.removeAll()
+      annotationSeperators.forEach { $0.removeFromSuperview() }
+      annotationSeperators.removeAll()
+    }
+    annotationState = false
 
     // Remove alternates view if it's present.
     if self.view.viewWithTag(1001) != nil {
@@ -1624,7 +1809,24 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - sender: the key that was pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = keyPressedColor
+    guard let originalKey = sender.layer.value(
+      forKey: "original"
+    ) as? String else {
+      return
+    }
+
+    if originalKey == "GetAnnotationInfo" {
+      // Blink each btn in the annotation display if one is pressed.
+      for btn in annotationBtns {
+        btn.backgroundColor = keyPressedColor
+      }
+    } else if originalKey == "delete" {
+      // Change the icon of the delete button to be filled in.
+      sender.backgroundColor = keyPressedColor
+      styleDeleteButton(sender, isPressed: true)
+    } else {
+      sender.backgroundColor = keyPressedColor
+    }
   }
 
   /// Defines events that occur given multiple presses of a single key.
@@ -1705,7 +1907,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Resets key coloration after they have been annotated to by keyPressedColor.
+  /// Resets key coloration after they have been changed to keyPressedColor.
   ///
   /// - Parameters
   ///   - sender: the key that was pressed.

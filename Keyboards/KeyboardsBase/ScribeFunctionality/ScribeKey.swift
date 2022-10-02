@@ -25,13 +25,13 @@ class ScribeKey: UIButton {
   func toEscape() {
     self.setTitle("", for: .normal)
     var selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-      pointSize: annotationHeight * 0.75,
+      pointSize: scribeKeyHeight * 0.515,
       weight: .light,
       scale: .medium
     )
     if DeviceType.isPad {
       selectKeyboardIconConfig = UIImage.SymbolConfiguration(
-        pointSize: annotationHeight * 1.1,
+        pointSize: scribeKeyHeight * 0.6,
         weight: .light,
         scale: .medium
       )

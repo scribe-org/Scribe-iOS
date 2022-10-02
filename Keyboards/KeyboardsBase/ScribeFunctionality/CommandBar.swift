@@ -52,9 +52,9 @@ class CommandBar: UILabel {
     self.layer.borderWidth = 1.0
     self.textAlignment = NSTextAlignment.left
     if DeviceType.isPhone {
-      self.font = .systemFont(ofSize: annotationHeight * 0.7)
+      self.font = .systemFont(ofSize: scribeKeyHeight * 0.4725)
     } else if DeviceType.isPad {
-      self.font = .systemFont(ofSize: annotationHeight * 0.85)
+      self.font = .systemFont(ofSize: scribeKeyHeight * 0.57375)
     }
     self.shadow.isUserInteractionEnabled = false
 
