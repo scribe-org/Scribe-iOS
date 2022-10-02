@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		38BD213E22D5908100C6795D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
 		38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */; };
-		38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
@@ -23,9 +23,9 @@
 		D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A927BE7C4500EB9D34 /* nouns.json */; };
 		D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4AA27BE7C4500EB9D34 /* verbs.json */; };
 		D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */; };
-		D109A212275B6888005E2271 /* French.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A21C275B68B3005E2271 /* PortugueseKeyboardViewController.swift */; };
-		D109A221275B68B3005E2271 /* Portuguese.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D109A21A275B68B3005E2271 /* Portuguese.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A21A275B68B3005E2271 /* Portuguese.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D109A228275B6A8B005E2271 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
@@ -72,8 +72,8 @@
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
-		D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D1671A67275A1E8700A7C118 /* Russian.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D1671A73275A1FC000A7C118 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
@@ -200,7 +200,7 @@
 		D171946A27AF31770038660B /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
 		D171946B27AF31770038660B /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
-		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D18EA8A62760D6F5001E1358 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
@@ -265,7 +265,7 @@
 		D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
 		D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
 		D1B81D2227BBB5320085FE5E /* ItalianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B81D2127BBB5320085FE5E /* ItalianKeyboardViewController.swift */; };
-		D1B81D2627BBB5320085FE5E /* Italian.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1B81D1F27BBB5320085FE5E /* Italian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1B81D1F27BBB5320085FE5E /* Italian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D1B81D2B27BBB6830085FE5E /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D1B81D2C27BBB6880085FE5E /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
@@ -384,21 +384,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		38BD215722D592CA00C6795D /* Embed App Extensions */ = {
+		38BD215722D592CA00C6795D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed App Extensions */,
-				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed App Extensions */,
-				38BD215322D592CA00C6795D /* German.appex in Embed App Extensions */,
-				D109A221275B68B3005E2271 /* Portuguese.appex in Embed App Extensions */,
-				D160866C270B6D3C00134D48 /* Spanish.appex in Embed App Extensions */,
-				D109A212275B6888005E2271 /* French.appex in Embed App Extensions */,
-				D1671A67275A1E8700A7C118 /* Russian.appex in Embed App Extensions */,
+				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */,
+				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
+				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
+				D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */,
+				D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */,
+				D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */,
+				D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -751,9 +751,9 @@
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
 				D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */,
+				D171943727AEF0560038660B /* KeyboardStyling.swift */,
 				D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */,
 				D171942E27AEDE110038660B /* KeyboardKeys.swift */,
-				D171943727AEF0560038660B /* KeyboardStyling.swift */,
 				D190B2592742565500705659 /* KeyboardViewController.swift */,
 				D190B24D2741B61000705659 /* LoadData.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
@@ -857,7 +857,7 @@
 				38BD212C22D5907E00C6795D /* Sources */,
 				38BD212D22D5907E00C6795D /* Frameworks */,
 				38BD212E22D5907E00C6795D /* Resources */,
-				38BD215722D592CA00C6795D /* Embed App Extensions */,
+				38BD215722D592CA00C6795D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -1001,7 +1001,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					38BD212F22D5907E00C6795D = {
@@ -1179,6 +1179,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D103B184273C356E00B97121 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1694,6 +1695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1717,6 +1719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

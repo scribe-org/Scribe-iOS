@@ -14,6 +14,9 @@ var proxy: UITextDocumentProxy!
 // Variables for the keyboard and its appearance.
 var keyboard: [[String]] = [[String]]()
 var allKeys: [String] = [String]()
+let specialKeys = [
+  "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
+]
 var allNonSpecialKeys: [String] = [String]()
 var keyboardHeight: CGFloat!
 var keyCornerRadius: CGFloat!
@@ -51,7 +54,7 @@ enum ShiftButtonState {
 /// States of the keyboard corresponding to which commands the user is executing.
 enum CommandState {
   case idle
-  case select
+  case selectCommand
   case translate
   case conjugate
   case selectConjugation
