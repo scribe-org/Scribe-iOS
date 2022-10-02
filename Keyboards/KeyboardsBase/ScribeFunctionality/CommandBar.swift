@@ -70,7 +70,7 @@ class CommandBar: UILabel {
     infoButton.removeFromSuperview()
     infoButton.isHidden = true
     infoButton.setImage(UIImage(systemName: "info.circle.fill"), for: .normal)
-    infoButton.tintColor = commandKeyColor
+    infoButton.tintColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
     infoButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     infoButton.translatesAutoresizingMaskIntoConstraints = false
 
