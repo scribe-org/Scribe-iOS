@@ -55,7 +55,7 @@ extension String {
     return self == self.uppercased()
   }
 
-  var isCaptalized: Bool {
+  var isCapitalized: Bool {
     return self == prefix(1).uppercased() + self.lowercased().dropFirst()
   }
 
