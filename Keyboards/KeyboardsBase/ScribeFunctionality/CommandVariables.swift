@@ -46,7 +46,7 @@ var activateAnnotationBtn: Bool = false
 var prepAnnotationForm: String = ""
 var annotationBtns: [UIButton] = [UIButton]()
 var annotationColors: [UIColor] = [UIColor]()
-var annotationSeperators: [UIView] = [UIView]()
+var annotationSeparators: [UIView] = [UIView]()
 var annotationDisplayWord: String = ""
 
 // Prompts and saving groups of languages.

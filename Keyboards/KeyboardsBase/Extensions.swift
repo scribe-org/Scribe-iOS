@@ -64,7 +64,7 @@ extension String {
       $1 == char ? $0 + 1 : $0
     }
   }
-  
+
   func capitalize() -> String {
     return prefix(1).uppercased() + self.lowercased().dropFirst()
   }

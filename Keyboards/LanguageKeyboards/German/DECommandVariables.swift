@@ -72,7 +72,7 @@ func deGetConjugationState() -> String {
 }
 
 /// Returns the appropriate key in the verbs dictionary to access conjugations.
-func deSetCaseCojugations() {
+func deSetCaseConjugations() {
   switch deCaseConjugationState {
   case .accusative:
     conjFPS = "mich"

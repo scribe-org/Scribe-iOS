@@ -90,7 +90,7 @@ func ruGetConjugationState() -> String {
 }
 
 /// Returns the appropriate key in the verbs dictionary to access conjugations.
-func ruSetCaseCojugations() {
+func ruSetCaseConjugations() {
   switch ruCaseConjugationState {
   case .accusative:
     conjFPS = "меня"
