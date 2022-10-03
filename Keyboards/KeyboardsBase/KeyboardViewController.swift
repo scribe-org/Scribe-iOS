@@ -238,7 +238,7 @@ class KeyboardViewController: UIInputViewController {
           while i < stringOptions.count {
             if shiftButtonState == .caps {
               completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCaptalized {
+            } else if currentPrefix.isCapitalized {
               completionWords[i] = stringOptions[i].capitalize()
             } else {
               completionWords[i] = stringOptions[i]
@@ -249,7 +249,7 @@ class KeyboardViewController: UIInputViewController {
           while i < 3 {
             if shiftButtonState == .caps {
               completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCaptalized {
+            } else if currentPrefix.isCapitalized {
               completionWords[i] = stringOptions[i].capitalize()
             } else {
               completionWords[i] = stringOptions[i]
@@ -289,9 +289,9 @@ class KeyboardViewController: UIInputViewController {
       "ich": ["habe", "bin", "kann"],
       "mit": ["mir", "dir", "ihr"]
     ]
-    
+
     let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
-    
+
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
     } else {
@@ -776,12 +776,12 @@ class KeyboardViewController: UIInputViewController {
     // Set the view title and its labels.
     var conjugationTitleFxn: () -> String = deGetCaseConjugationTitle
     var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
-    var conjugationsFxn: () -> Void = deSetCaseCojugations
+    var conjugationsFxn: () -> Void = deSetCaseConjugations
 
     if controllerLanguage == "Russian" {
       conjugationTitleFxn = ruGetCaseConjugationTitle
       conjugationLabelsFxn = ruSetConjugationLabels
-      conjugationsFxn = ruSetCaseCojugations
+      conjugationsFxn = ruSetCaseConjugations
     }
 
     commandBar.text = conjugationTitleFxn()
@@ -848,8 +848,8 @@ class KeyboardViewController: UIInputViewController {
     if annotationState == false {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
-      annotationSeperators.forEach { $0.removeFromSuperview() }
-      annotationSeperators.removeAll()
+      annotationSeparators.forEach { $0.removeFromSuperview() }
+      annotationSeparators.removeAll()
     }
 
     // Clear interface from the last state.
@@ -977,7 +977,7 @@ class KeyboardViewController: UIInputViewController {
         } else if commandState == .idle {
           scribeKey.setFullCornerRadius()
           scribeKey.setEscShadow()
-          
+
           commandBar.text = ""
           commandBar.hide()
           // Set autosuggestions on keyboard's first load.
@@ -1505,7 +1505,7 @@ class KeyboardViewController: UIInputViewController {
           changeKeyboardToLetterKeys()
         }
       }
-      
+
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
 
@@ -1524,7 +1524,7 @@ class KeyboardViewController: UIInputViewController {
       var annotationsToAssign: [String] = [String]()
       annotationBtns = [UIButton]()
       annotationColors = [UIColor]()
-      annotationSeperators = [UIView]()
+      annotationSeparators = [UIView]()
 
       let annotationFieldWidth = translateKey.frame.width * 0.85
       var annotationHeight: CGFloat = 0.0
@@ -1537,7 +1537,7 @@ class KeyboardViewController: UIInputViewController {
         "N": annotateGreen,
         "PL": annotateOrange
       ]
-      
+
       if lastWordTyped == "Scribe" || lastWordTyped == "scribe" {
         // Thank the user :)
         annotationState = true
@@ -1658,7 +1658,7 @@ class KeyboardViewController: UIInputViewController {
             } else {
               annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
             }
-            
+
             if activateAnnotationBtn {
               activateBtn(btn: annotationBtn)
             }
@@ -1669,7 +1669,7 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         } else {
@@ -1732,7 +1732,7 @@ class KeyboardViewController: UIInputViewController {
             self.view.addSubview(annotationBtn)
             annotationBtns.append(annotationBtn)
             annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
-            
+
             if activateAnnotationBtn {
               activateBtn(btn: annotationBtn)
             }
@@ -1743,7 +1743,7 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         }
@@ -1816,7 +1816,7 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         }
@@ -1893,8 +1893,8 @@ class KeyboardViewController: UIInputViewController {
     if annotationState == false {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
-      annotationSeperators.forEach { $0.removeFromSuperview() }
-      annotationSeperators.removeAll()
+      annotationSeparators.forEach { $0.removeFromSuperview() }
+      annotationSeparators.removeAll()
     }
     annotationState = false
     activateAnnotationBtn = false

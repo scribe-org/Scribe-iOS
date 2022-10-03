@@ -55,7 +55,7 @@ extension String {
     return self == self.uppercased()
   }
 
-  var isCaptalized: Bool {
+  var isCapitalized: Bool {
     return self == prefix(1).uppercased() + self.lowercased().dropFirst()
   }
 
@@ -64,7 +64,7 @@ extension String {
       $1 == char ? $0 + 1 : $0
     }
   }
-  
+
   func capitalize() -> String {
     return prefix(1).uppercased() + self.lowercased().dropFirst()
   }
