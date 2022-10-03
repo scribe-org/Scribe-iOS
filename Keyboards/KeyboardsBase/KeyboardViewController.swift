@@ -238,7 +238,7 @@ class KeyboardViewController: UIInputViewController {
           while i < stringOptions.count {
             if shiftButtonState == .caps {
               completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCaptalized {
+            } else if currentPrefix.isCapitalized {
               completionWords[i] = stringOptions[i].capitalize()
             } else {
               completionWords[i] = stringOptions[i]
@@ -249,7 +249,7 @@ class KeyboardViewController: UIInputViewController {
           while i < 3 {
             if shiftButtonState == .caps {
               completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCaptalized {
+            } else if currentPrefix.isCapitalized {
               completionWords[i] = stringOptions[i].capitalize()
             } else {
               completionWords[i] = stringOptions[i]
