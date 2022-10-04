@@ -111,10 +111,10 @@ func deSetCaseConjugations() {
   case .genitivePossesive:
     conjFPS = "meine"
     conjSPS = "deine"
-    conjTPS = "seine/ihre"
+    conjTPS = "seine/ihre/seine"
     conjFPP = "unsere"
     conjSPP = "eure"
-    conjTPP = "ihre"
+    conjTPP = "ihre/Ihre"
   }
 }
 
