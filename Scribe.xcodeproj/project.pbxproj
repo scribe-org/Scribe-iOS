@@ -73,6 +73,13 @@
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4728E9D86C00301919 /* autosuggestions.json */; };
+		D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4928E9D89100301919 /* autosuggestions.json */; };
+		D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4D28E9D8B400301919 /* autosuggestions.json */; };
+		D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
+		D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5228E9D8D700301919 /* autosuggestions.json */; };
+		D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5528E9D8E500301919 /* autosuggestions.json */; };
+		D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5828E9D8F300301919 /* autosuggestions.json */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -438,6 +445,13 @@
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D163CA4728E9D86C00301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4928E9D89100301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4B28E9D8A200301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4D28E9D8B400301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5228E9D8D700301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5528E9D8E500301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5828E9D8F300301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D166FCF1275A197B0047E62B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -623,6 +637,7 @@
 				D107A4A827BE7C4500EB9D34 /* translations.json */,
 				D107A4A927BE7C4500EB9D34 /* nouns.json */,
 				D107A4AA27BE7C4500EB9D34 /* verbs.json */,
+				D163CA4B28E9D8A200301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -657,6 +672,7 @@
 				D1D880CB27860CFA00407050 /* nouns.json */,
 				D1D880C927860CFA00407050 /* translations.json */,
 				D1D880CA27860CFA00407050 /* verbs.json */,
+				D163CA4728E9D86C00301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -667,6 +683,7 @@
 				D1D880D127860D4700407050 /* nouns.json */,
 				D1D880D027860D4700407050 /* translations.json */,
 				D1D880CF27860D4600407050 /* verbs.json */,
+				D163CA4D28E9D8B400301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -678,6 +695,7 @@
 				D1D880D727860D6300407050 /* prepositions.json */,
 				D1D880D827860D6300407050 /* translations.json */,
 				D1D880D627860D6300407050 /* verbs.json */,
+				D163CA5228E9D8D700301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -738,6 +756,7 @@
 				D1D880DD27860D7B00407050 /* nouns.json */,
 				D1D880DE27860D7B00407050 /* translations.json */,
 				D1D880DF27860D7B00407050 /* verbs.json */,
+				D163CA5828E9D8F300301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -779,6 +798,7 @@
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
 				D19474C32740295300AF6EA5 /* prepositions.json */,
+				D163CA4928E9D89100301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -789,6 +809,7 @@
 				D101820F2728275B0032A82D /* nouns.json */,
 				D10182102728275B0032A82D /* verbs.json */,
 				D11E3B6A27299C8000FBE62C /* translations.json */,
+				D163CA5528E9D8E500301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1071,6 +1092,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */,
 				D19E416027A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
 				D19E416627A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
@@ -1088,6 +1110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
+				D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D19E416B27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
@@ -1103,6 +1126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880D227860D4700407050 /* verbs.json in Resources */,
+				D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D19E416D27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
@@ -1118,6 +1142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10182122728275B0032A82D /* nouns.json in Resources */,
+				D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D19E416F27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
@@ -1132,6 +1157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */,
 				D19E416227A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
 				D19E416827A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
@@ -1149,6 +1175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880E127860D7B00407050 /* translations.json in Resources */,
+				D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D19E417027A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
@@ -1164,6 +1191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B81D3627BBB6F50085FE5E /* ScribeKeyPhoneWhite.png in Resources */,
+				D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */,
 				D1B81D3827BBB6F50085FE5E /* ScribeKeyPadWhite.png in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,

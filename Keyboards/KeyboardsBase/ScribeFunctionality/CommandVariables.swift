@@ -14,7 +14,7 @@ var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
 
 // All data needed for Scribe commands for the given language keyboard.
-let nouns = loadJSONToDict(filename: "nouns")
+var nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
@@ -42,9 +42,11 @@ var invalidCommandMsg: String = ""
 
 // Annotation variables.
 var annotationState: Bool = false
+var activateAnnotationBtn: Bool = false
+var prepAnnotationForm: String = ""
 var annotationBtns: [UIButton] = [UIButton]()
 var annotationColors: [UIColor] = [UIColor]()
-var annotationSeperators: [UIView] = [UIView]()
+var annotationSeparators: [UIView] = [UIView]()
 var annotationDisplayWord: String = ""
 
 // Prompts and saving groups of languages.
@@ -72,15 +74,15 @@ var conjugatePromptAndPlaceholder: String = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
 var conjugateAlternateView: Bool = false
 
-var allTenses = [String]()
+var allConjugations = [String]()
 var allConjugationBtns = [UIButton]()
 
-var tenseFPS: String = ""
-var tenseSPS: String = ""
-var tenseTPS: String = ""
-var tenseFPP: String = ""
-var tenseSPP: String = ""
-var tenseTPP: String = ""
+var conjFPS: String = ""
+var conjSPS: String = ""
+var conjTPS: String = ""
+var conjFPP: String = ""
+var conjSPP: String = ""
+var conjTPP: String = ""
 
 var labelFPS: String = ""
 var labelSPS: String = ""
@@ -89,10 +91,10 @@ var labelFPP: String = ""
 var labelSPP: String = ""
 var labelTPP: String = ""
 
-var tenseTopLeft: String = ""
-var tenseTopRight: String = ""
-var tenseBottomLeft: String = ""
-var tenseBottomRight: String = ""
+var conjTopLeft: String = ""
+var conjTopRight: String = ""
+var conjBottomLeft: String = ""
+var conjBottomRight: String = ""
 
 var labelTopLeft: String = ""
 var labelTopRight: String = ""
@@ -101,6 +103,7 @@ var labelBottomRight: String = ""
 
 var verbToConjugate: String = ""
 var verbToDisplay: String = ""
+var wordToDisplay: String = ""
 var conjugationToDisplay: String = ""
 var verbConjugated: String = ""
 

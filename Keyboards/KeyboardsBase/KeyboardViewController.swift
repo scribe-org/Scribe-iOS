@@ -289,9 +289,9 @@ class KeyboardViewController: UIInputViewController {
       "ich": ["habe", "bin", "kann"],
       "mit": ["mir", "dir", "ihr"]
     ]
-    
+
     let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
-    
+
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
     } else {
@@ -378,7 +378,7 @@ class KeyboardViewController: UIInputViewController {
     // Only delete characters for autocomplete, not autosuggest.
     if currentPrefix != "" && autoActionState != .suggest {
       if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0...currentPrefix.count - 1 {
+        for _ in 0..<currentPrefix.count {
           proxy.deleteBackward()
         }
       }
@@ -671,50 +671,50 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Assign the conjugations that will be selectable in the conjugation display.
-  func assignConjStates() {
+  /// Assign the verb conjugations that will be selectable in the conjugation display.
+  func assignVerbConjStates() {
     var conjugationStateFxn: () -> String = deGetConjugationState
     if controllerLanguage != "Swedish" {
       conjugationStateFxn = keyboardConjStateDict[controllerLanguage] as! () -> String
     }
 
     if !["Russian", "Swedish"].contains(controllerLanguage) {
-      tenseFPS = conjugationStateFxn() + "FPS"
-      tenseSPS = conjugationStateFxn() + "SPS"
-      tenseTPS = conjugationStateFxn() + "TPS"
-      tenseFPP = conjugationStateFxn() + "FPP"
-      tenseSPP = conjugationStateFxn() + "SPP"
-      tenseTPP = conjugationStateFxn() + "TPP"
+      conjFPS = conjugationStateFxn() + "FPS"
+      conjSPS = conjugationStateFxn() + "SPS"
+      conjTPS = conjugationStateFxn() + "TPS"
+      conjFPP = conjugationStateFxn() + "FPP"
+      conjSPP = conjugationStateFxn() + "SPP"
+      conjTPP = conjugationStateFxn() + "TPP"
 
     } else if controllerLanguage == "Russian" {
       if conjugateAlternateView == false {
-        tenseFPS = ruGetConjugationState() + "FPS"
-        tenseSPS = ruGetConjugationState() + "SPS"
-        tenseTPS = ruGetConjugationState() + "TPS"
-        tenseFPP = ruGetConjugationState() + "FPP"
-        tenseSPP = ruGetConjugationState() + "SPP"
-        tenseTPP = ruGetConjugationState() + "TPP"
+        conjFPS = ruGetConjugationState() + "FPS"
+        conjSPS = ruGetConjugationState() + "SPS"
+        conjTPS = ruGetConjugationState() + "TPS"
+        conjFPP = ruGetConjugationState() + "FPP"
+        conjSPP = ruGetConjugationState() + "SPP"
+        conjTPP = ruGetConjugationState() + "TPP"
       } else {
-        tenseTopLeft = "pastMasculine"
-        tenseTopRight = "pastFeminine"
-        tenseBottomLeft = "pastNeutral"
-        tenseBottomRight = "pastPlural"
+        conjTopLeft = "pastMasculine"
+        conjTopRight = "pastFeminine"
+        conjBottomLeft = "pastNeutral"
+        conjBottomRight = "pastPlural"
       }
 
     } else if controllerLanguage == "Swedish" {
       let swedishTenses = svGetConjugationState()
 
-      tenseTopLeft = swedishTenses[0]
-      tenseTopRight = swedishTenses[1]
-      tenseBottomLeft = swedishTenses[2]
-      tenseBottomRight = swedishTenses[3]
+      conjTopLeft = swedishTenses[0]
+      conjTopRight = swedishTenses[1]
+      conjBottomLeft = swedishTenses[2]
+      conjBottomRight = swedishTenses[3]
     }
   }
 
   /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
-  func setConjugationState() {
+  func setVerbConjugationState() {
     // Assign the conjugations that will be selectable.
-    assignConjStates()
+    assignVerbConjStates()
 
     // Set the view title and its labels.
     var conjugationTitleFxn: () -> String = deGetConjugationTitle
@@ -749,25 +749,59 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
 
     if conjugateAlternateView == false {
-      allTenses = [tenseFPS, tenseSPS, tenseTPS, tenseFPP, tenseSPP, tenseTPP]
+      allConjugations = [conjFPS, conjSPS, conjTPS, conjFPP, conjSPP, conjTPP]
       allConjugationBtns = get3x2ConjButtons()
     } else {
-      allTenses = [tenseTopLeft, tenseTopRight, tenseBottomLeft, tenseBottomRight]
+      allConjugations = [conjTopLeft, conjTopRight, conjBottomLeft, conjBottomRight]
       allConjugationBtns = get2x2ConjButtons()
     }
 
     // Populate conjugation view buttons.
-    for index in 0..<allTenses.count {
-      if verbs?[verbToConjugate]![allTenses[index]] as? String == "" {
+    for index in 0..<allConjugations.count {
+      if verbs?[verbToConjugate]![allConjugations[index]] as? String == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
-        conjugationToDisplay = verbs?[verbToConjugate]![allTenses[index]] as! String
+        conjugationToDisplay = verbs?[verbToConjugate]![allConjugations[index]] as! String
         if inputWordIsCapitalized && deConjugationState != .indicativePerfect {
           conjugationToDisplay = conjugationToDisplay.capitalized
         }
         styleBtn(btn: allConjugationBtns[index], title: conjugationToDisplay, radius: keyCornerRadius)
       }
+    }
+  }
+
+  /// Sets the label of the conjugation state and assigns pronoun conjugations for the given case.
+  func setCaseConjugationState() {
+    // Set the view title and its labels.
+    var conjugationTitleFxn: () -> String = deGetCaseConjugationTitle
+    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
+    var conjugationsFxn: () -> Void = deSetCaseConjugations
+
+    if controllerLanguage == "Russian" {
+      conjugationTitleFxn = ruGetCaseConjugationTitle
+      conjugationLabelsFxn = ruSetConjugationLabels
+      conjugationsFxn = ruSetCaseConjugations
+    }
+
+    commandBar.text = conjugationTitleFxn()
+    conjugationLabelsFxn()
+    conjugationsFxn()
+
+    // Assign labels that have been set by SetConjugationLabels functions.
+    conjugateLblFPS.setTitle("  " + labelFPS, for: .normal)
+    conjugateLblSPS.setTitle("  " + labelSPS, for: .normal)
+    conjugateLblTPS.setTitle("  " + labelTPS, for: .normal)
+    conjugateLblFPP.setTitle("  " + labelFPP, for: .normal)
+    conjugateLblSPP.setTitle("  " + labelSPP, for: .normal)
+    conjugateLblTPP.setTitle("  " + labelTPP, for: .normal)
+
+    allConjugations = [conjFPS, conjSPS, conjTPS, conjFPP, conjSPP, conjTPP]
+    allConjugationBtns = get3x2ConjButtons()
+
+    // Populate conjugation view buttons.
+    for index in 0..<allConjugations.count {
+      styleBtn(btn: allConjugationBtns[index], title: allConjugations[index], radius: keyCornerRadius)
     }
   }
 
@@ -797,6 +831,12 @@ class KeyboardViewController: UIInputViewController {
       setAutoActionPartitions()
 
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+
+      // Make sure that Scribe shows up in auto actions.
+      nouns?["Scribe"] = [
+        "plural": "Scribes",
+        "form": ""
+      ] as AnyObject
     }
 
     setKeyboard()
@@ -808,8 +848,8 @@ class KeyboardViewController: UIInputViewController {
     if annotationState == false {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
-      annotationSeperators.forEach { $0.removeFromSuperview() }
-      annotationSeperators.removeAll()
+      annotationSeparators.forEach { $0.removeFromSuperview() }
+      annotationSeparators.removeAll()
     }
 
     // Clear interface from the last state.
@@ -866,7 +906,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if commandState != .selectConjugation { // normal keyboard view
+    if ![.selectVerbConjugation, .selectCaseConjugation].contains(commandState) { // normal keyboard view
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
@@ -937,7 +977,7 @@ class KeyboardViewController: UIInputViewController {
         } else if commandState == .idle {
           scribeKey.setFullCornerRadius()
           scribeKey.setEscShadow()
-          
+
           commandBar.text = ""
           commandBar.hide()
           // Set autosuggestions on keyboard's first load.
@@ -948,8 +988,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
       let numRows = keyboard.count
-      for row in 0...numRows - 1 {
-        for idx in 0...keyboard[row].count - 1 {
+      for row in 0..<numRows {
+        for idx in 0..<keyboard[row].count {
           // Set up button as a key with its values and properties.
           let btn = KeyboardKey(type: .custom)
           btn.row = row
@@ -1158,23 +1198,31 @@ class KeyboardViewController: UIInputViewController {
       }
 
       scribeKey.toEscape()
+      scribeKey.setShadow()
       scribeKey.setLeftCornerRadius()
 
       commandBar.backgroundColor = commandBarColor
       commandBarBlend.backgroundColor = commandBarColor
       commandBar.textColor = keyCharColor
+      commandBar.set()
+      commandBar.setCornerRadiusAndShadow()
+      hideAutoActionPartitions()
 
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: pluralKey)
 
       activateConjugationDisplay()
-      setConjugationState()
-
       styleBtn(btn: conjugateShiftLeft, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: conjugateShiftLeft, color: keyCharColor, iconName: "chevron.left")
       styleBtn(btn: conjugateShiftRight, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: conjugateShiftRight, color: keyCharColor, iconName: "chevron.right")
+
+      if commandState == .selectVerbConjugation {
+        setVerbConjugationState()
+      } else {
+        setCaseConjugationState()
+      }
     }
   }
 
@@ -1213,7 +1261,11 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
         selectedWordAnnotation()
       } else {
-        if [.translate, .conjugate, .selectConjugation, .plural].contains(commandState) { // escape
+        if [.translate,
+            .conjugate,
+            .selectVerbConjugation,
+            .selectCaseConjugation,
+            .plural].contains(commandState) { // escape
           commandState = .idle
         } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
           commandState = .selectCommand
@@ -1233,12 +1285,12 @@ class KeyboardViewController: UIInputViewController {
       } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
-        resetConjugationState()
-        let triggerConjugationTbl = triggerConjugation(commandBar: commandBar)
+        resetVerbConjugationState()
+        let triggerConjugationTbl = triggerVerbConjugation(commandBar: commandBar)
         if triggerConjugationTbl == true {
-          commandState = .selectConjugation
-          loadKeys()
-          return // go to conjugation view
+          commandState = .selectVerbConjugation
+          loadKeys() // go to conjugation view
+          return
         } else {
           commandState = .invalid
         }
@@ -1304,52 +1356,52 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "firstPersonSingular":
-      returnConjugation(keyPressed: sender, requestedTense: tenseFPS)
+      returnConjugation(keyPressed: sender, requestedTense: conjFPS)
       autoActionState = .suggest
       loadKeys()
 
     case "secondPersonSingular":
-      returnConjugation(keyPressed: sender, requestedTense: tenseSPS)
+      returnConjugation(keyPressed: sender, requestedTense: conjSPS)
       autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonSingular":
-      returnConjugation(keyPressed: sender, requestedTense: tenseTPS)
+      returnConjugation(keyPressed: sender, requestedTense: conjTPS)
       autoActionState = .suggest
       loadKeys()
 
     case "firstPersonPlural":
-      returnConjugation(keyPressed: sender, requestedTense: tenseFPP)
+      returnConjugation(keyPressed: sender, requestedTense: conjFPP)
       autoActionState = .suggest
       loadKeys()
 
     case "secondPersonPlural":
-      returnConjugation(keyPressed: sender, requestedTense: tenseSPP)
+      returnConjugation(keyPressed: sender, requestedTense: conjSPP)
       autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonPlural":
-      returnConjugation(keyPressed: sender, requestedTense: tenseTPP)
+      returnConjugation(keyPressed: sender, requestedTense: conjTPP)
       autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopLeft":
-      returnConjugation(keyPressed: sender, requestedTense: tenseTopLeft)
+      returnConjugation(keyPressed: sender, requestedTense: conjTopLeft)
       autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopRight":
-      returnConjugation(keyPressed: sender, requestedTense: tenseTopRight)
+      returnConjugation(keyPressed: sender, requestedTense: conjTopRight)
       autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomLeft":
-      returnConjugation(keyPressed: sender, requestedTense: tenseBottomLeft)
+      returnConjugation(keyPressed: sender, requestedTense: conjBottomLeft)
       autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomRight":
-      returnConjugation(keyPressed: sender, requestedTense: tenseBottomRight)
+      returnConjugation(keyPressed: sender, requestedTense: conjBottomRight)
       autoActionState = .suggest
       loadKeys()
 
@@ -1363,9 +1415,35 @@ class KeyboardViewController: UIInputViewController {
       executeAutoAction(keyPressed: pluralKey)
 
     case "GetAnnotationInfo":
-      for i in 0...annotationBtns.count - 1 {
+      for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
+      let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+      let lastWordTyped = wordsTyped.secondToLast()
+      var wordToCheck: String = ""
+      if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+        wordToCheck = lastWordTyped!.lowercased()
+      } else {
+        wordToCheck = lastWordTyped!
+      }
+
+      let isPrep = prepositions?[wordToCheck.lowercased()] != nil
+      if isPrep {
+        resetCaseConjugationState()
+        commandState = .selectCaseConjugation
+        loadKeys() // go to conjugation view
+        return
+      } else {
+        return
+      }
+
+    case "ScribeAnnotation":
+      for i in 0..<annotationBtns.count {
+        annotationBtns[i].backgroundColor = annotationColors[i]
+      }
+      let emojisToSelectFrom: String = "🥳🎉"
+      let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      sender.setTitle(emojis, for: .normal)
       return
 
     case "delete":
@@ -1427,7 +1505,7 @@ class KeyboardViewController: UIInputViewController {
           changeKeyboardToLetterKeys()
         }
       }
-      
+
       secondaryPastStringOnDelete = pastStringInTextProxy
       pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
 
@@ -1446,7 +1524,7 @@ class KeyboardViewController: UIInputViewController {
       var annotationsToAssign: [String] = [String]()
       annotationBtns = [UIButton]()
       annotationColors = [UIColor]()
-      annotationSeperators = [UIView]()
+      annotationSeparators = [UIView]()
 
       let annotationFieldWidth = translateKey.frame.width * 0.85
       var annotationHeight: CGFloat = 0.0
@@ -1459,10 +1537,35 @@ class KeyboardViewController: UIInputViewController {
         "N": annotateGreen,
         "PL": annotateOrange
       ]
-      
-      if isNoun && isPrep {
+
+      if lastWordTyped == "Scribe" || lastWordTyped == "scribe" {
+        // Thank the user :)
+        annotationState = true
+        activateAnnotationBtn = true
+        autoAction1Visible = false
+
+        let annotationBtn = Annotation()
+        annotationBtn.setAnnotationSize(width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+        annotationBtn.setAnnotationLoc(
+          minX: translateKey.frame.origin.x
+            + ( translateKey.frame.width / 2 )
+            - ( annotationFieldWidth / 2 ),
+          maxY: scribeKey.frame.origin.y
+        )
+        annotationBtn.styleSingleAnnotation()
+
+        let emojisToSelectFrom: String = "🥳🎉"
+        let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+        annotationBtn.setTitle(emojis, for: .normal)
+        self.view.addSubview(annotationBtn)
+        annotationBtns.append(annotationBtn)
+        annotationColors.append(commandKeyColor)
+
+        activateBtn(btn: annotationBtn)
+        setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
+      } else if isNoun && isPrep {
         let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
-        let prepAnnotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
+        prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
 
         var annotationsToAssign: [String] = [String]()
         if nounAnnotationForm != "" {
@@ -1486,6 +1589,7 @@ class KeyboardViewController: UIInputViewController {
 
         if annotationsToAssign.count > 0 {
           annotationState = true
+          activateAnnotationBtn = true
           autoAction1Visible = false
 
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
@@ -1554,7 +1658,10 @@ class KeyboardViewController: UIInputViewController {
             } else {
               annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
             }
-            activateBtn(btn: annotationBtn)
+
+            if activateAnnotationBtn {
+              activateBtn(btn: annotationBtn)
+            }
             setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
 
             if i != 0 {
@@ -1562,29 +1669,29 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         } else {
           return
         }
       } else if isNoun {
-        let annotationForm: String = nouns?[wordToCheck]?["form"] as! String
-        if annotationForm == "" {
+        let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
+        if nounAnnotationForm == "" {
           return
         } else {
           annotationState = true
           autoAction1Visible = false
 
-          if !annotationForm.contains("/") {
-            annotationsToAssign.append(annotationForm)
+          if !nounAnnotationForm.contains("/") {
+            annotationsToAssign.append(nounAnnotationForm)
           } else {
-            annotationsToAssign = (annotationForm.components(separatedBy: "/"))
+            annotationsToAssign = (nounAnnotationForm.components(separatedBy: "/"))
           }
 
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
           let numAnnotations = annotationsToAssign.count
-          for i in 0...numAnnotations - 1 {
+          for i in 0..<numAnnotations {
             let annotationBtn = Annotation()
             var annotationSep = UIView()
             var annotationToDisplay: String = annotationsToAssign[i]
@@ -1625,7 +1732,10 @@ class KeyboardViewController: UIInputViewController {
             self.view.addSubview(annotationBtn)
             annotationBtns.append(annotationBtn)
             annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
-            activateBtn(btn: annotationBtn)
+
+            if activateAnnotationBtn {
+              activateBtn(btn: annotationBtn)
+            }
             setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
 
             if i != 0 {
@@ -1633,26 +1743,28 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         }
       } else if isPrep {
-        let annotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
-        if annotationForm == "" {
+        prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
+        if prepAnnotationForm == "" {
           return
         } else {
           annotationState = true
+          activateAnnotationBtn = true
           autoAction1Visible = false
 
-          if !annotationForm.contains("/") {
-            annotationsToAssign.append(annotationForm)
+          if !prepAnnotationForm.contains("/") {
+            annotationsToAssign.append(prepAnnotationForm)
           } else {
-            annotationsToAssign = (annotationForm.components(separatedBy: "/"))          }
+            annotationsToAssign = prepAnnotationForm.components(separatedBy: "/")
+          }
 
           let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
           let numAnnotations = annotationsToAssign.count
-          for i in 0...numAnnotations - 1 {
+          for i in 0..<numAnnotations {
             let annotationBtn = Annotation()
             var annotationSep = UIView()
             var annotationToDisplay: String = annotationsToAssign[i]
@@ -1693,7 +1805,10 @@ class KeyboardViewController: UIInputViewController {
             self.view.addSubview(annotationBtn)
             annotationBtns.append(annotationBtn)
             annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
-            activateBtn(btn: annotationBtn)
+
+            if activateAnnotationBtn {
+              activateBtn(btn: annotationBtn)
+            }
             setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
 
             if i != 0 {
@@ -1701,7 +1816,7 @@ class KeyboardViewController: UIInputViewController {
               annotationSep.isUserInteractionEnabled = false
               annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
               self.view.addSubview(annotationSep)
-              annotationSeperators.append(annotationSep)
+              annotationSeparators.append(annotationSep)
             }
           }
         }
@@ -1778,10 +1893,11 @@ class KeyboardViewController: UIInputViewController {
     if annotationState == false {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
-      annotationSeperators.forEach { $0.removeFromSuperview() }
-      annotationSeperators.removeAll()
+      annotationSeparators.forEach { $0.removeFromSuperview() }
+      annotationSeparators.removeAll()
     }
     annotationState = false
+    activateAnnotationBtn = false
 
     // Remove alternates view if it's present.
     if self.view.viewWithTag(1001) != nil {
