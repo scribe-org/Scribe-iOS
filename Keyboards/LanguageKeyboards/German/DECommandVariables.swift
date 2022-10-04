@@ -23,8 +23,10 @@ enum DEConjugationState {
 /// What the conjugation state is for the case conjugate feature.
 enum DECaseConjugationState {
   case accusative
+  case accusativePossesive
   case dative
-  case genitive
+  case dativePossesive
+  case genitivePossesive
 }
 
 var deConjugationState: DEConjugationState = .indicativePresent
@@ -52,10 +54,14 @@ func deGetCaseConjugationTitle() -> String {
   switch deCaseConjugationState {
   case .accusative:
     return commandPromptSpacing + "Akkusativ Pronomen"
+  case .accusativePossesive:
+    return commandPromptSpacing + "Akkusativ Possessiv + (en/e/(e)s/e)"
   case .dative:
     return commandPromptSpacing + "Dativ Pronomen"
-  case .genitive:
-    return commandPromptSpacing + "Genitiv Possessivpronomen"
+  case .dativePossesive:
+    return commandPromptSpacing + "Dativ Possessiv + (em/er/em/en)"
+  case .genitivePossesive:
+    return commandPromptSpacing + "Genitiv Possessiv + (s/r/s/r)"
   }
 }
 
@@ -81,6 +87,13 @@ func deSetCaseConjugations() {
     conjFPP = "uns"
     conjSPP = "euch"
     conjTPP = "sie/Sie"
+  case .accusativePossesive:
+    conjFPS = "mein"
+    conjSPS = "dein"
+    conjTPS = "sein/ihr/sein"
+    conjFPP = "unser"
+    conjSPP = "eur"
+    conjTPP = "ihr/Ihr"
   case .dative:
     conjFPS = "mir"
     conjSPS = "dir"
@@ -88,25 +101,37 @@ func deSetCaseConjugations() {
     conjFPP = "uns"
     conjSPP = "euch"
     conjTPP = "ihnen/Ihnen"
-  case .genitive:
-    conjFPS = "meine(s/r)"
-    conjSPS = "deine(s/r)"
-    conjTPS = "seine(s/r)/ihre(s/r)"
-    conjFPP = "unsere(s/r)"
-    conjSPP = "eure(s/r)"
-    conjTPP = "ihre(s/r)"
+  case .dativePossesive:
+    conjFPS = "mein"
+    conjSPS = "dein"
+    conjTPS = "sein/ihr/sein"
+    conjFPP = "unser"
+    conjSPP = "eur"
+    conjTPP = "ihr/Ihr"
+  case .genitivePossesive:
+    conjFPS = "meine"
+    conjSPS = "deine"
+    conjTPS = "seine/ihre"
+    conjFPP = "unsere"
+    conjSPP = "eure"
+    conjTPP = "ihre"
   }
 }
 
 /// Action associated with the left view switch button of the conjugation state.
 func deConjugationStateLeft() {
   if commandState == .selectCaseConjugation {
-    if deCaseConjugationState == .accusative {
+    switch deCaseConjugationState {
+    case .accusative:
       return
-    } else if deCaseConjugationState == .dative {
+    case .accusativePossesive:
       deCaseConjugationState = .accusative
-    } else if deCaseConjugationState == .genitive {
+    case .dative:
+      deCaseConjugationState = .accusativePossesive
+    case .dativePossesive:
       deCaseConjugationState = .dative
+    case .genitivePossesive:
+      deCaseConjugationState = .dativePossesive
     }
   } else {
     if deConjugationState == .indicativePresent {
@@ -124,11 +149,16 @@ func deConjugationStateLeft() {
 /// Action associated with the right view switch button of the conjugation state.
 func deConjugationStateRight() {
   if commandState == .selectCaseConjugation {
-    if deCaseConjugationState == .accusative {
+    switch deCaseConjugationState {
+    case .accusative:
+      deCaseConjugationState = .accusativePossesive
+    case .accusativePossesive:
       deCaseConjugationState = .dative
-    } else if deCaseConjugationState == .dative {
-      deCaseConjugationState = .genitive
-    } else if deCaseConjugationState == .genitive {
+    case .dative:
+      deCaseConjugationState = .dativePossesive
+    case .dativePossesive:
+      deCaseConjugationState = .genitivePossesive
+    case .genitivePossesive:
       return
     }
   } else {

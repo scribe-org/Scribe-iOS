@@ -121,7 +121,7 @@ func resetCaseConjugationState() {
     } else if prepAnnotationForm.contains("Dat") {
       deCaseConjugationState = .dative
     } else {
-      deCaseConjugationState = .genitive
+      deCaseConjugationState = .genitivePossesive
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {
