@@ -586,7 +586,9 @@
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				38BD213122D5907E00C6795D /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		38BD213122D5907E00C6795D /* Products */ = {
 			isa = PBXGroup;
