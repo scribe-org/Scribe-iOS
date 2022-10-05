@@ -164,7 +164,9 @@ func deConjugationStateRight() {
     switch deConjugationState {
     case .indicativePresent:
       deConjugationState = .indicativePreterite
-    case .indicativePreterite, .indicativePerfect:
+    case .indicativePreterite:
+      deConjugationState = .indicativePerfect
+    case .indicativePerfect:
       break
     }
   }
