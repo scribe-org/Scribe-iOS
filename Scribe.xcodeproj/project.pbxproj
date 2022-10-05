@@ -126,13 +126,13 @@
 		D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
-		D17193F827AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FA27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
+		D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FA27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
 		D171940027AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D171940127AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D171940227AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
@@ -276,7 +276,7 @@
 		D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D1B81D2B27BBB6830085FE5E /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D1B81D2C27BBB6880085FE5E /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
-		D1B81D2D27BBB68B0085FE5E /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
+		D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
 		D1B81D2E27BBB69B0085FE5E /* PTCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940727AECCE50038660B /* PTCommandVariables.swift */; };
 		D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
 		D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940F27AECCF50038660B /* RUCommandVariables.swift */; };
@@ -463,7 +463,7 @@
 		D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193E727AECAE60038660B /* ESInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193EF27AECB350038660B /* SVInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVInterfaceVariables.swift; sourceTree = "<group>"; };
-		D17193F727AECC930038660B /* FRCommandVaribles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRCommandVaribles.swift; sourceTree = "<group>"; };
+		D17193F727AECC930038660B /* FRCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRCommandVariables.swift; sourceTree = "<group>"; };
 		D17193FF27AECCD10038660B /* DECommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECommandVariables.swift; sourceTree = "<group>"; };
 		D171940727AECCE50038660B /* PTCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCommandVariables.swift; sourceTree = "<group>"; };
 		D171940F27AECCF50038660B /* RUCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUCommandVariables.swift; sourceTree = "<group>"; };
@@ -648,7 +648,7 @@
 			isa = PBXGroup;
 			children = (
 				D109A225275B68F4005E2271 /* Data */,
-				D17193F727AECC930038660B /* FRCommandVaribles.swift */,
+				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */,
 				D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */,
 				D109A20F275B6888005E2271 /* Info.plist */,
@@ -1240,7 +1240,7 @@
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
 				D171941827AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D171940027AECCD10038660B /* DECommandVariables.swift in Sources */,
-				D17193F827AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
 				D17193C927AEC8F90038660B /* FRInterfaceVariables.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1288,7 +1288,7 @@
 				D171945A27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D17193F227AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D1B81D4C27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
-				D17193FA27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FA27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171946727AF31770038660B /* Conjugate.swift in Sources */,
 				D111E9AC27AFE78600746F92 /* Plural.swift in Sources */,
 				D190B242274056D400705659 /* ColorVariables.swift in Sources */,
@@ -1319,7 +1319,7 @@
 				D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D1B81D5427BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1357,7 +1357,7 @@
 				D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D1B81D5727BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1395,7 +1395,7 @@
 				D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D1B81D5927BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1433,7 +1433,7 @@
 				D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D1B81D5827BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1471,7 +1471,7 @@
 				D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
@@ -1529,7 +1529,7 @@
 				D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */,
 				D1B81D2227BBB5320085FE5E /* ItalianKeyboardViewController.swift in Sources */,
 				D1B81D3E27BBB7040085FE5E /* KeyboardViewController.swift in Sources */,
-				D1B81D2D27BBB68B0085FE5E /* FRCommandVaribles.swift in Sources */,
+				D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */,
 				D1B81D3C27BBB6FF0085FE5E /* InterfaceVariables.swift in Sources */,
 				D1B81D3127BBB6A60085FE5E /* RUInterfaceVariables.swift in Sources */,
 				D1B81D4627BBB71C0085FE5E /* ScribeKey.swift in Sources */,

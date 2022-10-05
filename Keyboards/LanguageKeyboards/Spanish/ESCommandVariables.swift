@@ -53,25 +53,24 @@ func esGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func esConjugationStateLeft() {
-  if esConjugationState == .indicativePresent {
-    return
-  } else if esConjugationState == .preterite {
+  switch esConjugationState {
+  case .indicativePresent:
+    break
+  case .preterite:
     esConjugationState = .indicativePresent
-    return
-  } else if esConjugationState == .imperfect {
+  case .imperfect:
     esConjugationState = .preterite
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func esConjugationStateRight() {
-  if esConjugationState == .indicativePresent {
+  switch esConjugationState {
+  case .indicativePresent:
     esConjugationState = .preterite
-  } else if esConjugationState == .preterite {
+  case .preterite:
     esConjugationState = .imperfect
-    return
-  } else if esConjugationState == .imperfect {
-    return
+  case .imperfect:
+    break
   }
 }

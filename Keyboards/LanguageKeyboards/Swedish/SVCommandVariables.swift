@@ -54,19 +54,20 @@ func svGetConjugationState() -> [String] {
 
 /// Action associated with the left view switch button of the conjugation state.
 func svConjugationStateLeft() {
-  if svConjugationState == .active {
-    return
-  } else if svConjugationState == .passive {
+  switch svConjugationState {
+  case .active:
+    break
+  case .passive:
     svConjugationState = .active
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func svConjugationStateRight() {
-  if svConjugationState == .active {
+  switch svConjugationState {
+  case .active:
     svConjugationState = .passive
-  } else if svConjugationState == .passive {
-    return
+  case .passive:
+    break
   }
 }

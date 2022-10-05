@@ -53,25 +53,24 @@ func itGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func itConjugationStateLeft() {
-  if itConjugationState == .present {
-    return
-  } else if itConjugationState == .preterite {
+  switch itConjugationState {
+  case .present:
+    break
+  case .preterite:
     itConjugationState = .present
-    return
-  } else if itConjugationState == .imperfect {
+  case .imperfect:
     itConjugationState = .preterite
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func itConjugationStateRight() {
-  if itConjugationState == .present {
+  switch itConjugationState {
+  case .present:
     itConjugationState = .preterite
-  } else if itConjugationState == .preterite {
+  case .preterite:
     itConjugationState = .imperfect
-    return
-  } else if itConjugationState == .imperfect {
-    return
+  case .imperfect:
+    break
   }
 }

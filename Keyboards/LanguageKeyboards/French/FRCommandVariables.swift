@@ -1,5 +1,5 @@
 //
-//  FRCommandVaribles.swift
+//  FRCommandVariables.swift
 //
 //  Variables associated with Scribe commands for the French keyboard.
 //
@@ -53,25 +53,24 @@ func frGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func frConjugationStateLeft() {
-  if frConjugationState == .indicativePresent {
-    return
-  } else if frConjugationState == .preterite {
+  switch frConjugationState {
+  case .indicativePresent:
+    break
+  case .preterite:
     frConjugationState = .indicativePresent
-    return
-  } else if frConjugationState == .imperfect {
+  case .imperfect:
     frConjugationState = .preterite
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func frConjugationStateRight() {
-  if frConjugationState == .indicativePresent {
+  switch frConjugationState {
+  case .indicativePresent:
     frConjugationState = .preterite
-  } else if frConjugationState == .preterite {
+  case .preterite:
     frConjugationState = .imperfect
-    return
-  } else if frConjugationState == .imperfect {
-    return
+  case .imperfect:
+    break
   }
 }
