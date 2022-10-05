@@ -67,15 +67,15 @@ func ruGetConjugationTitle() -> String {
 func ruGetCaseConjugationTitle() -> String {
   switch ruCaseConjugationState {
   case .accusative:
-    return commandPromptSpacing + "Винительный местоимения"
+    return commandPromptSpacing + "Винительные местоимения"
   case .dative:
-    return commandPromptSpacing + "Дательный местоимения"
+    return commandPromptSpacing + "Дательные местоимения"
   case .genitive:
-    return commandPromptSpacing + "Родительный местоимения"
+    return commandPromptSpacing + "Родительные местоимения"
   case .instrumental:
-    return commandPromptSpacing + "Твори́тельный местоимения"
+    return commandPromptSpacing + "Творительные местоимения"
   case .prepositional:
-    return commandPromptSpacing + "Предло́жный местоимения"
+    return commandPromptSpacing + "Предложные местоимения"
   }
 }
 
