@@ -16,13 +16,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 <!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
 - Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. -->
+
 - Preposition annotations can now be clicked to display a case pronoun display from which pronouns can be selected.
 
 ### 🗃️ Data Added
 
 ### 🎨 Design Changes
 
-- Noun and preposition annotation has been updated to not show the given word to save space for autocomplete and autosuggest. 
+- Noun and preposition annotation has been updated to not show the given word to save space for autocomplete and autosuggest.
 - The annotation colors have been changed to match the new backgrounds.
 - The App Store images have been updated to reflect autosuggest data based on Wikipedia.
 - The delete key features a pressed state style similar to the native keyboard.
@@ -32,6 +33,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
 - Code was refactored to work with the new enum style of command state management.
+- Enums are now used to control switching between conjugations.
 
 # Scribe-iOS 1.4.0
 
