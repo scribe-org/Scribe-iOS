@@ -133,23 +133,24 @@ func ruSetCaseConjugations() {
 /// Action associated with the left view switch button of the conjugation state.
 func ruConjugationStateLeft() {
   if commandState == .selectCaseConjugation {
-    if ruCaseConjugationState == .accusative {
-      return
-    } else if ruCaseConjugationState == .dative {
+    switch ruCaseConjugationState {
+    case .accusative:
+      break
+    case .dative:
       ruCaseConjugationState = .accusative
-    } else if ruCaseConjugationState == .genitive {
+    case .genitive:
       ruCaseConjugationState = .dative
-    } else if ruCaseConjugationState == .instrumental {
+    case .instrumental:
       ruCaseConjugationState = .genitive
-    } else if ruCaseConjugationState == .prepositional {
+    case .prepositional:
       ruCaseConjugationState = .instrumental
     }
   } else {
-    if ruConjugationState == .present {
-      return
-    } else if ruConjugationState == .past {
+    switch ruConjugationState {
+    case .present:
+      break
+    case .past:
       ruConjugationState = .present
-      return
     }
   }
 }
@@ -157,23 +158,24 @@ func ruConjugationStateLeft() {
 /// Action associated with the right view switch button of the conjugation state.
 func ruConjugationStateRight() {
   if commandState == .selectCaseConjugation {
-    if ruCaseConjugationState == .accusative {
+    switch ruCaseConjugationState {
+    case .accusative:
       ruCaseConjugationState = .dative
-    } else if ruCaseConjugationState == .dative {
+    case .dative:
       ruCaseConjugationState = .genitive
-    } else if ruCaseConjugationState == .genitive {
+    case .genitive:
       ruCaseConjugationState = .instrumental
-    } else if ruCaseConjugationState == .instrumental {
+    case .instrumental:
       ruCaseConjugationState = .prepositional
-    } else if ruCaseConjugationState == .prepositional {
-      return
+    case .prepositional:
+      break
     }
   } else {
-    if ruConjugationState == .present {
+    switch ruConjugationState {
+    case .present:
       ruConjugationState = .past
-      return
-    } else if ruConjugationState == .past {
-      return
+    case .past:
+      break
     }
   }
 }

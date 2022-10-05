@@ -123,7 +123,7 @@ func deConjugationStateLeft() {
   if commandState == .selectCaseConjugation {
     switch deCaseConjugationState {
     case .accusative:
-      return
+      break
     case .accusativePossesive:
       deCaseConjugationState = .accusative
     case .dative:
@@ -134,14 +134,13 @@ func deConjugationStateLeft() {
       deCaseConjugationState = .dativePossesive
     }
   } else {
-    if deConjugationState == .indicativePresent {
-      return
-    } else if deConjugationState == .indicativePreterite {
+    switch deConjugationState {
+    case .indicativePresent:
+      break
+    case .indicativePreterite:
       deConjugationState = .indicativePresent
-      return
-    } else if deConjugationState == .indicativePerfect {
+    case .indicativePerfect:
       deConjugationState = .indicativePreterite
-      return
     }
   }
 }
@@ -159,16 +158,14 @@ func deConjugationStateRight() {
     case .dativePossesive:
       deCaseConjugationState = .genitivePossesive
     case .genitivePossesive:
-      return
+      break
     }
   } else {
-    if deConjugationState == .indicativePresent {
+    switch deConjugationState {
+    case .indicativePresent:
       deConjugationState = .indicativePreterite
-    } else if deConjugationState == .indicativePreterite {
-      deConjugationState = .indicativePerfect
-      return
-    } else if deConjugationState == .indicativePerfect {
-      return
+    case .indicativePreterite, .indicativePerfect:
+      break
     }
   }
 }
