@@ -116,12 +116,12 @@ func setRUKeyboardLayout() {
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
-  pluralKeyLbl = "Множ"
+  pluralKeyLbl = "Множ-ое"
   pluralPlaceholder = "Введите существительное"
-  pluralPrompt = commandPromptSpacing + "Множ: "
+  pluralPrompt = commandPromptSpacing + "Множ-ое: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  alreadyPluralMsg = "Уже во множ"
+  alreadyPluralMsg = "Уже во множ-ом"
 }
