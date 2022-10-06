@@ -291,7 +291,6 @@ class KeyboardViewController: UIInputViewController {
     } else {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-      /// ignore: comment to create a fake commit due to git problems
       if let autosuggestions = autosuggestions {
         if autosuggestions.keys.contains(prefix.lowercased()) {
           let suggestions = autosuggestions[prefix.lowercased()] as! [String]
