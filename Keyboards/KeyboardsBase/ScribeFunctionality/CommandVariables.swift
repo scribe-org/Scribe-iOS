@@ -18,6 +18,7 @@ var nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
+let autosuggestions = loadJSONToDict(filename: "autosuggestions")
 
 // Words that should not be included in autocomplete should be added to the string below.
 let autocompleteWords = nouns!.keys.filter(

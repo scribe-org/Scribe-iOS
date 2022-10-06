@@ -284,12 +284,6 @@ class KeyboardViewController: UIInputViewController {
 
   /// Generates an array of the three autosuggest words.
   func getAutosuggestions() {
-    let dummySuggestions = [
-      "Buch": ["lesen", "kaufen", "schenken"],
-      "ich": ["habe", "bin", "kann"],
-      "mit": ["mir", "dir", "ihr"]
-    ]
-
     let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
 
     if prefix.isNumeric {
@@ -297,8 +291,9 @@ class KeyboardViewController: UIInputViewController {
     } else {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-      if dummySuggestions.keys.contains(prefix.lowercased()) {
-        if let suggestions = dummySuggestions[prefix.lowercased()] {
+      if let autosuggestions = autosuggestions {
+        if autosuggestions.keys.contains(prefix.lowercased()) {
+          let suggestions = autosuggestions[prefix.lowercased()] as! [String]
           completionWords = [String]()
           var i = 0
           while i < 3 {
@@ -311,11 +306,8 @@ class KeyboardViewController: UIInputViewController {
             }
             i += 1
           }
-        } else {
-          getDefaultAutosuggestions()
-        }
-      } else if dummySuggestions.keys.contains(prefix.capitalize()) {
-        if let suggestions = dummySuggestions[prefix.capitalize()] {
+        } else if autosuggestions.keys.contains(prefix.capitalize()) {
+          let suggestions = autosuggestions[prefix.capitalize()] as! [String]
           completionWords = [String]()
           var i = 0
           while i < 3 {
@@ -392,6 +384,7 @@ class KeyboardViewController: UIInputViewController {
   func executeAutoAction(keyPressed: UIButton) {
     clearPrefixFromTextFieldProxy()
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
+    autoActionState = .suggest
     proxy.insertText(" ")
     currentPrefix = ""
     secondaryPastStringOnDelete = pastStringInTextProxy
