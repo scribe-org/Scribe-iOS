@@ -14,9 +14,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
-- Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. -->
-
+ - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language. 
+ - Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. 
 - Preposition annotations can now be clicked to display a case pronoun display from which pronouns can be selected.
 
 ### 🗃️ Data Added

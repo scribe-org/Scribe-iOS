@@ -21,9 +21,7 @@ let prepositions = loadJSONToDict(filename: "prepositions")
 let autosuggestions = loadJSONToDict(filename: "autosuggestions")
 
 // Words that should not be included in autocomplete should be added to the string below.
-let autocompleteWords = nouns!.keys.filter(
-  { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
-).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
+var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
 var numericAutosuggestions = [String]()
 

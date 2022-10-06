@@ -15,6 +15,7 @@ func setENPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
   """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
 
   let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
+  let wikipediaDataLicensing: String = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
   let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
   let scribeGitHub: String = "https://github.com/scribe-org"
   let scribeEmail: String = "scribe.langauge@gmail.com"
@@ -26,6 +27,7 @@ func setENPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
     originalText: privacyPolicyText,
     links: [
       wikidataDataLicensing: wikidataDataLicensing,
+      wikipediaDataLicensing: wikipediaDataLicensing,
       huggingFaceLicensing: huggingFaceLicensing,
       scribeGitHub: scribeGitHub,
       scribeEmail: "mailto:" + scribeEmail,
@@ -64,7 +66,7 @@ USERS contacting SCRIBE to ask that their USER INFORMATION and USER DATA not be 
 
 3. Third-Party Data
 
-This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata, which states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-ShareAlike License." The policy in regards to the third-party data used can be found at https://www.wikidata.org/wiki/Wikidata:Licensing.
+This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata and Wikipedia. Wikidata states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-Share Alike License." The policy detailing Wikidata data usage can be found at https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia states that text data, the type of data used by the SERVICE, "... can be used under the terms of the Creative Commons Attribution Share-Alike license". The policy detailing Wikipedia data usage can be found at https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content.
 
 4. Third-Party Source Code
 

@@ -302,7 +302,11 @@ class KeyboardViewController: UIInputViewController {
             } else if shiftButtonState == .caps {
               completionWords.append(suggestions[i].uppercased())
             } else {
-              completionWords.append(suggestions[i])
+              if !(nouns?.keys.contains(suggestions[i]) ?? true) {
+                completionWords.append(suggestions[i].lowercased())
+              } else {
+                completionWords.append(suggestions[i])
+              }
             }
             i += 1
           }
@@ -830,6 +834,27 @@ class KeyboardViewController: UIInputViewController {
         "plural": "Scribes",
         "form": ""
       ] as AnyObject
+
+      var uniqueAutosuggestKeys: [String] = [String]()
+      for elem in Array(autosuggestions!.keys) {
+        if elem.count > 2 && !nouns!.keys.contains(elem) {
+          if autosuggestions!.keys.contains(elem.lowercased())
+              && !uniqueAutosuggestKeys.contains(elem.lowercased()) {
+            uniqueAutosuggestKeys.append(elem.lowercased())
+          } else if
+              elem.count > 2
+              && elem.isCapitalized
+              && !uniqueAutosuggestKeys.contains(elem)
+              && !uniqueAutosuggestKeys.contains(elem.lowercased()) {
+            uniqueAutosuggestKeys.append(elem)
+          }
+        }
+      }
+      autocompleteWords = Array(nouns!.keys) + uniqueAutosuggestKeys
+      autocompleteWords = autocompleteWords.filter(
+        { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
+      ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
+      autocompleteWords = autocompleteWords.unique()
     }
 
     setKeyboard()
