@@ -83,13 +83,19 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
       proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
     }
   } else if conjugateAlternateView == true {
-    wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
-    if inputWordIsCapitalized == true {
-      proxy.insertText(wordToReturn.capitalized + " ")
-    } else {
+    if commandState == .selectCaseConjugation {
+      wordToReturn = keyPressed.titleLabel?.text ?? ""
       proxy.insertText(wordToReturn + " ")
+    } else {
+      wordToReturn = verbs?[verbToConjugate]![requestedTense] as! String
+      if inputWordIsCapitalized == true {
+        proxy.insertText(wordToReturn.capitalized + " ")
+      } else {
+        proxy.insertText(wordToReturn + " ")
+      }
     }
   }
+  autoActionState = .suggest
   commandState = .idle
 }
 
@@ -121,7 +127,7 @@ func resetCaseConjugationState() {
     } else if prepAnnotationForm.contains("Dat") {
       deCaseConjugationState = .dative
     } else {
-      deCaseConjugationState = .genitivePossesive
+      deCaseConjugationState = .genitive
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {

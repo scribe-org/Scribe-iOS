@@ -95,6 +95,23 @@ var labelFPP: String = ""
 var labelSPP: String = ""
 var labelTPP: String = ""
 
+var conjSingle: String = ""
+var labelSingle: String = ""
+
+var conjTop: String = ""
+var conjMiddle: String = ""
+var conjBottom: String = ""
+
+var labelTop: String = ""
+var labelMiddle: String = ""
+var labelBottom: String = ""
+
+var conjLeft: String = ""
+var conjRight: String = ""
+
+var labelLeft: String = ""
+var labelRight: String = ""
+
 var conjTopLeft: String = ""
 var conjTopRight: String = ""
 var conjBottomLeft: String = ""

@@ -32,8 +32,6 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
   wordToCheck = proxy.selectedText ?? ""
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
     wordToCheck = wordToCheck.lowercased()
-  } else {
-    wordToCheck = wordToCheck.capitalize()
   }
 
   isNoun = nouns?[wordToCheck] != nil
@@ -88,7 +86,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     }
     
     if isPrep {
-      let prepAnnotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
+      prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
       if prepAnnotationForm != "" {
         if !prepAnnotationForm.contains("/") {
           annotationsToAssign.append(prepAnnotationForm)
@@ -195,7 +193,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       wordToCheck = lastWordTyped!.lowercased()
     } else {
-      wordToCheck = lastWordTyped!.capitalize()
+      wordToCheck = lastWordTyped!
     }
 
     isNoun = nouns?[wordToCheck] != nil
@@ -250,7 +248,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       }
       
       if isPrep {
-        let prepAnnotationForm: String = prepositions?[wordToCheck.lowercased()] as! String
+        prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
         if prepAnnotationForm != "" {
           if !prepAnnotationForm.contains("/") {
             annotationsToAssign.append(prepAnnotationForm)

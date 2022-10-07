@@ -581,6 +581,11 @@ class KeyboardViewController: UIInputViewController {
       conjugateAlternateView = true
     } else if controllerLanguage == "Russian" && ruConjugationState == .past {
       conjugateAlternateView = true
+    } else if
+      commandState == .selectCaseConjugation
+      && controllerLanguage == "German"
+      && [.accusative, .dative, .genitive].contains(deCaseConjugationState) {
+      conjugateAlternateView = true
     } else {
       conjugateAlternateView = false
     }
@@ -629,22 +634,22 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: conjugateShiftRight)
 
     if conjugateAlternateView == false {
-      for elem in get3x2ConjButtons() {
-        activateBtn(btn: elem)
+      for btn in get3x2ConjButtons() {
+        activateBtn(btn: btn)
       }
 
-      for elem in get2x2ConjButtons() {
-        deactivateBtn(btn: elem)
+      for btn in get2x2ConjButtons() {
+        deactivateBtn(btn: btn)
       }
     }
 
     if conjugateAlternateView == true {
-      for elem in get3x2ConjButtons() {
-        deactivateBtn(btn: elem)
+      for btn in get3x2ConjButtons() {
+        deactivateBtn(btn: btn)
       }
 
-      for elem in get2x2ConjButtons() {
-        activateBtn(btn: elem)
+      for btn in get2x2ConjButtons() {
+        activateBtn(btn: btn)
       }
     }
   }
@@ -732,7 +737,7 @@ class KeyboardViewController: UIInputViewController {
       svSetConjugationLabels()
     }
 
-    // Assign labels that have been set by SetConjugationLabels functions.
+    // Assign labels that have been set by SetConjugationLabels function.
     conjugateLblFPS.setTitle("  " + labelFPS, for: .normal)
     conjugateLblSPS.setTitle("  " + labelSPS, for: .normal)
     conjugateLblTPS.setTitle("  " + labelTPS, for: .normal)
@@ -772,7 +777,7 @@ class KeyboardViewController: UIInputViewController {
   func setCaseConjugationState() {
     // Set the view title and its labels.
     var conjugationTitleFxn: () -> String = deGetCaseConjugationTitle
-    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
+    var conjugationLabelsFxn: () -> Void = deSetCaseConjugationLabels
     var conjugationsFxn: () -> Void = deSetCaseConjugations
 
     if controllerLanguage == "Russian" {
@@ -785,7 +790,7 @@ class KeyboardViewController: UIInputViewController {
     conjugationLabelsFxn()
     conjugationsFxn()
 
-    // Assign labels that have been set by SetConjugationLabels functions.
+    // Assign labels that have been set by SetCaseConjugationLabels function.
     conjugateLblFPS.setTitle("  " + labelFPS, for: .normal)
     conjugateLblSPS.setTitle("  " + labelSPS, for: .normal)
     conjugateLblTPS.setTitle("  " + labelTPS, for: .normal)
@@ -793,8 +798,18 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblSPP.setTitle("  " + labelSPP, for: .normal)
     conjugateLblTPP.setTitle("  " + labelTPP, for: .normal)
 
-    allConjugations = [conjFPS, conjSPS, conjTPS, conjFPP, conjSPP, conjTPP]
-    allConjugationBtns = get3x2ConjButtons()
+    conjugateLblTL.setTitle("  " + labelTopLeft, for: .normal)
+    conjugateLblTR.setTitle("  " + labelTopRight, for: .normal)
+    conjugateLblBL.setTitle("  " + labelBottomLeft, for: .normal)
+    conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
+
+    if controllerLanguage == "German" && ![.accusative, .dative, .genitive].contains(deCaseConjugationState) {
+      allConjugations = [conjFPS, conjSPS, conjTPS, conjFPP, conjSPP, conjTPP]
+      allConjugationBtns = get3x2ConjButtons()
+    } else {
+      allConjugations = [conjTopLeft, conjTopRight, conjBottomLeft, conjBottomRight]
+      allConjugationBtns = get2x2ConjButtons()
+    }
 
     // Populate conjugation view buttons.
     for index in 0..<allConjugations.count {
@@ -1377,52 +1392,42 @@ class KeyboardViewController: UIInputViewController {
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: conjFPS)
-      autoActionState = .suggest
       loadKeys()
 
     case "secondPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: conjSPS)
-      autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonSingular":
       returnConjugation(keyPressed: sender, requestedTense: conjTPS)
-      autoActionState = .suggest
       loadKeys()
 
     case "firstPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: conjFPP)
-      autoActionState = .suggest
       loadKeys()
 
     case "secondPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: conjSPP)
-      autoActionState = .suggest
       loadKeys()
 
     case "thirdPersonPlural":
       returnConjugation(keyPressed: sender, requestedTense: conjTPP)
-      autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopLeft":
       returnConjugation(keyPressed: sender, requestedTense: conjTopLeft)
-      autoActionState = .suggest
       loadKeys()
 
     case "conjugateTopRight":
       returnConjugation(keyPressed: sender, requestedTense: conjTopRight)
-      autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomLeft":
       returnConjugation(keyPressed: sender, requestedTense: conjBottomLeft)
-      autoActionState = .suggest
       loadKeys()
 
     case "conjugateBottomRight":
       returnConjugation(keyPressed: sender, requestedTense: conjBottomRight)
-      autoActionState = .suggest
       loadKeys()
 
     case "AutoAction1":
