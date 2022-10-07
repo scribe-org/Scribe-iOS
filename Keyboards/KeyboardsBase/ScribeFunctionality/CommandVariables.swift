@@ -47,6 +47,11 @@ var annotationBtns: [UIButton] = [UIButton]()
 var annotationColors: [UIColor] = [UIColor]()
 var annotationSeparators: [UIView] = [UIView]()
 var annotationDisplayWord: String = ""
+var wordToCheck: String = ""
+var wordsTyped: [String] = [String]()
+var annotationsToAssign: [String] = [String]()
+var isNoun: Bool = false
+var isPrep: Bool = false
 
 // Prompts and saving groups of languages.
 var allPrompts: [String] = [""]
