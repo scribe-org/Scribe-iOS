@@ -14,9 +14,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language. 
- - Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. 
+- Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
+- Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word.
 - Preposition annotations can now be clicked to display a case pronoun display from which pronouns can be selected.
+  <!-- - Users are able to select subjects and objects from the display to exactly specify which pronoun they need. -->
 
 ### 🗃️ Data Added
 
@@ -24,15 +25,19 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Noun and preposition annotation has been updated to not show the given word to save space for autocomplete and autosuggest.
 - The annotation colors have been changed to match the new backgrounds.
-- The App Store images have been updated to reflect autosuggest data based on Wikipedia.
 - The delete key features a pressed state style similar to the native keyboard.
 - The message indicating that the word isn't in Wikidata now comes with an information icon (action pending).
+- The App Store images have been updated to reflect autosuggest data based on Wikipedia.
+- iPhone 6.7" versions have been added to the App Store.
+- Other minor changes to images ont the App Store.
+<!-- - The App Store videos have been updated to reflect the changes for the new version. -->
 
 ### ♻️ Code Refactoring
 
 - Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
 - Code was refactored to work with the new enum style of command state management.
 - Enums are now used to control switching between conjugations.
+<!-- - Enums are now used to control switching between different conjugation displays. -->
 
 # Scribe-iOS 1.4.0
 
