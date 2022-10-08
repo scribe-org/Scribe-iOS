@@ -468,7 +468,7 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: pluralKey)
   }
 
-  // Buttons and functions for the conjugation view.
+  // MARK: Conjugation Variables and Functions
   @IBOutlet var conjugateShiftLeft: UIButton!
   @IBOutlet var conjugateShiftRight: UIButton!
 
@@ -488,20 +488,6 @@ class KeyboardViewController: UIInputViewController {
     return conjugationButtons
   }
 
-  @IBOutlet var conjugateKeyTL: UIButton!
-  @IBOutlet var conjugateKeyTR: UIButton!
-  @IBOutlet var conjugateKeyBL: UIButton!
-  @IBOutlet var conjugateKeyBR: UIButton!
-
-  /// Returns all buttons for the 2x2 conjugation display
-  func get2x2ConjButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      conjugateKeyTL, conjugateKeyTR, conjugateKeyBL, conjugateKeyBR
-    ]
-
-    return conjugationButtons
-  }
-
   // Labels for the conjugation view buttons.
   // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
   @IBOutlet var conjugateLblFPS: UIButton!
@@ -515,20 +501,6 @@ class KeyboardViewController: UIInputViewController {
   func get3x2ConjLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
       conjugateLblFPS, conjugateLblSPS, conjugateLblTPS, conjugateLblFPP, conjugateLblSPP, conjugateLblTPP
-    ]
-
-    return conjugationLabels
-  }
-
-  @IBOutlet var conjugateLblTL: UIButton!
-  @IBOutlet var conjugateLblTR: UIButton!
-  @IBOutlet var conjugateLblBL: UIButton!
-  @IBOutlet var conjugateLblBR: UIButton!
-
-  /// Returns all labels for the 2x2 conjugation display.
-  func get2x2ConjLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      conjugateLblTL, conjugateLblTR, conjugateLblBL, conjugateLblBR
     ]
 
     return conjugationLabels
@@ -558,6 +530,34 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  @IBOutlet var conjugateKeyTL: UIButton!
+  @IBOutlet var conjugateKeyTR: UIButton!
+  @IBOutlet var conjugateKeyBL: UIButton!
+  @IBOutlet var conjugateKeyBR: UIButton!
+
+  /// Returns all buttons for the 2x2 conjugation display
+  func get2x2ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyTL, conjugateKeyTR, conjugateKeyBL, conjugateKeyBR
+    ]
+
+    return conjugationButtons
+  }
+
+  @IBOutlet var conjugateLblTL: UIButton!
+  @IBOutlet var conjugateLblTR: UIButton!
+  @IBOutlet var conjugateLblBL: UIButton!
+  @IBOutlet var conjugateLblBR: UIButton!
+
+  /// Returns all labels for the 2x2 conjugation display.
+  func get2x2ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblTL, conjugateLblTR, conjugateLblBL, conjugateLblBR
+    ]
+
+    return conjugationLabels
+  }
+
   /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
   func setConj2x2View() {
     setBtn(btn: conjugateKeyTL, color: keyColor, name: "conjugateTopLeft", canCap: false, isSpecial: false)
@@ -575,6 +575,138 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get2x2ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
+  @IBOutlet var conjugateKeyTop: UIButton!
+  @IBOutlet var conjugateKeyMiddle: UIButton!
+  @IBOutlet var conjugateKeyBottom: UIButton!
+
+  /// Returns all buttons for the 3x1 conjugation display
+  func get3x1ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyTop, conjugateKeyMiddle, conjugateKeyBottom
+    ]
+
+    return conjugationButtons
+  }
+
+  @IBOutlet var conjugateLblTop: UIButton!
+  @IBOutlet var conjugateLblMiddle: UIButton!
+  @IBOutlet var conjugateLblBottom: UIButton!
+
+  /// Returns all labels for the 3x1 conjugation display.
+  func get3x1ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblTop, conjugateLblMiddle, conjugateLblBottom
+    ]
+
+    return conjugationLabels
+  }
+
+  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
+  func setConj3x1View() {
+    setBtn(btn: conjugateKeyTop, color: keyColor, name: "conjugateTop", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyMiddle, color: keyColor, name: "conjugateMiddle", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBottom, color: keyColor, name: "conjugateBottom", canCap: false, isSpecial: false)
+
+    for btn in get3x1ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get3x1ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
+  @IBOutlet var conjugateKeyLeft: UIButton!
+  @IBOutlet var conjugateKeyRight: UIButton!
+
+  /// Returns all buttons for the 1x2 conjugation display
+  func get1x2ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyLeft, conjugateKeyRight
+    ]
+
+    return conjugationButtons
+  }
+
+  @IBOutlet var conjugateLblLeft: UIButton!
+  @IBOutlet var conjugateLblRight: UIButton!
+
+  /// Returns all labels for the 1x2 conjugation display.
+  func get1x2ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblLeft, conjugateLblRight
+    ]
+
+    return conjugationLabels
+  }
+
+  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
+  func setConj1x2View() {
+    setBtn(btn: conjugateKeyLeft, color: keyColor, name: "conjugateLeft", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyRight, color: keyColor, name: "conjugateRight", canCap: false, isSpecial: false)
+
+    for btn in get1x2ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get1x2ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
+  @IBOutlet var conjugateKeySingle: UIButton!
+
+  /// Returns all buttons for the 1x1 conjugation display
+  func get1x1ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeySingle
+    ]
+
+    return conjugationButtons
+  }
+
+  @IBOutlet var conjugateLblSingle: UIButton!
+
+  /// Returns all labels for the 1x2 conjugation display.
+  func get1x1ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblSingle
+    ]
+
+    return conjugationLabels
+  }
+
+  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
+  func setConj1x1View() {
+    setBtn(btn: conjugateKeySingle, color: keyColor, name: "conjugateSingle", canCap: false, isSpecial: false)
+
+    for btn in get1x1ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get1x1ConjButtons() {
         btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
@@ -667,8 +799,19 @@ class KeyboardViewController: UIInputViewController {
     deactivateBtn(btn: conjugateShiftRight)
     conjugateShiftRight.tintColor = UIColor.clear
 
-    let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
-    let allConjElements: [UIButton] = get3x2ConjButtons() + get2x2ConjButtons() + allConjLabels
+    let allConjButtons: [UIButton] =
+      get3x2ConjButtons()
+      + get2x2ConjButtons()
+      + get3x1ConjButtons()
+      + get1x2ConjButtons()
+      + get1x1ConjButtons()
+    let allConjLabels: [UIButton] =
+      get3x2ConjLabels()
+      + get2x2ConjLabels()
+      + get3x1ConjLabels()
+      + get1x2ConjLabels()
+      + get1x1ConjLabels()
+    let allConjElements: [UIButton] = allConjButtons + allConjLabels
 
     for elem in allConjElements {
       deactivateBtn(btn: elem)
@@ -830,7 +973,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: Load keys
+  // MARK: Load Keys
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
@@ -1624,7 +1767,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: Key press functions
+  // MARK: Key Press Functions
 
   /// Auto-capitalization if the cursor is at the start of the proxy.
   func autoCapAtStartOfProxy() {
