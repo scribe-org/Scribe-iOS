@@ -151,9 +151,13 @@ func deGetCaseConjugationTitle() -> String {
     switch deCaseGenderConjugationState {
     case .none:
       return "" // placeholder
-    case .accusativePersonal2PS, .accusativePersonal3PS, .accusativePossesive2PS, .accusativePossesive3PS,
-        .dativePersonal2PS, .dativePersonal3PS, .dativePossesive2PS, .dativePossesive3PS,
-        .genitivePersonal2PS, .genitivePersonal3PS, .genitivePossesive2PS, .genitivePossesive3PS:
+    case .accusativePersonal2PS, .accusativePossesive2PS,
+        .dativePersonal2PS, .dativePossesive2PS,
+        .genitivePersonal2PS, .genitivePossesive2PS:
+      return commandPromptSpacing + "Formalität des Subjekts?"
+    case .accusativePersonal3PS, .accusativePossesive3PS,
+        .dativePersonal3PS, .dativePossesive3PS,
+        .genitivePersonal3PS, .genitivePossesive3PS:
       return commandPromptSpacing + "Geschlecht des Subjekts?"
     case .accusativePossesive1PS, .accusativePossesive2PSInformal, .accusativePossesive2PSFormal,
         .accusativePossesive3PSMasculine, .accusativePossesive3PSFeminine, .accusativePossesive3PSNeutral,
@@ -221,12 +225,12 @@ func deSetCaseConjugations() {
     conjSPP = "euer"
     conjTPP = "ihrer"
   case .accusativePossesive, .dativePossesive, .genitivePossesive:
-    conjFPS = "mein+"
-    conjSPS = "dein+/Ihr+"
-    conjTPS = "sein+/ihr+/sein+"
-    conjFPP = "unser+"
-    conjSPP = "euer+"
-    conjTPP = "ihr+"
+    conjFPS = "mein∗"
+    conjSPS = "dein∗/Ihr∗"
+    conjTPS = "sein∗/ihr∗/sein∗"
+    conjFPP = "unser∗"
+    conjSPP = "euer∗"
+    conjTPP = "ihr∗"
   }
 }
 
@@ -257,12 +261,12 @@ func deSetCaseGenderConjugations() {
     conjMiddle = "ihrer"
     conjBottom = "seiner"
   case .accusativePossesive2PS, .dativePossesive2PS, .genitivePossesive2PS:
-    conjLeft = "dein+"
-    conjRight = "Ihr+"
+    conjLeft = "dein∗"
+    conjRight = "Ihr∗"
   case .accusativePossesive3PS, .dativePossesive3PS, .genitivePossesive3PS:
-    conjTop = "sein+"
-    conjMiddle = "ihr+"
-    conjBottom = "sein+"
+    conjTop = "sein∗"
+    conjMiddle = "ihr∗"
+    conjBottom = "sein∗"
   case .accusativePossesive1PS:
     conjTopLeft = "meinen"
     conjTopRight = "meine"
