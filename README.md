@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeAppLogo.png" width=512 height=230 alt="Scribe Logo"></a>
+  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeAppLogo.png" width=410 height=184 alt="Scribe Logo"></a>
 </div>
 
 <ol></ol>
@@ -40,7 +40,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
-  - [Pronoun](#pronoun-selection)
+  - [Pronoun Selection](#pronoun-selection)
   - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Featured By](#featured-by)
