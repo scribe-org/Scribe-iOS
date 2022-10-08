@@ -530,6 +530,53 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  @IBOutlet var conjugateKeyTop: UIButton!
+  @IBOutlet var conjugateKeyMiddle: UIButton!
+  @IBOutlet var conjugateKeyBottom: UIButton!
+
+  /// Returns all buttons for the 3x1 conjugation display
+  func get3x1ConjButtons() -> [UIButton] {
+    let conjugationButtons: [UIButton] = [
+      conjugateKeyTop, conjugateKeyMiddle, conjugateKeyBottom
+    ]
+
+    return conjugationButtons
+  }
+
+  @IBOutlet var conjugateLblTop: UIButton!
+  @IBOutlet var conjugateLblMiddle: UIButton!
+  @IBOutlet var conjugateLblBottom: UIButton!
+
+  /// Returns all labels for the 3x1 conjugation display.
+  func get3x1ConjLabels() -> [UIButton] {
+    let conjugationLabels: [UIButton] = [
+      conjugateLblTop, conjugateLblMiddle, conjugateLblBottom
+    ]
+
+    return conjugationLabels
+  }
+
+  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
+  func setConj3x1View() {
+    setBtn(btn: conjugateKeyTop, color: keyColor, name: "conjugateTop", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyMiddle, color: keyColor, name: "conjugateMiddle", canCap: false, isSpecial: false)
+    setBtn(btn: conjugateKeyBottom, color: keyColor, name: "conjugateBottom", canCap: false, isSpecial: false)
+
+    for btn in get3x1ConjButtons() {
+      activateBtn(btn: btn)
+    }
+
+    if DeviceType.isPad {
+      var conjugationFontDivisor = 3.5
+      if isLandscapeView {
+        conjugationFontDivisor = 4
+      }
+      for btn in get3x1ConjButtons() {
+        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+      }
+    }
+  }
+
   @IBOutlet var conjugateKeyTL: UIButton!
   @IBOutlet var conjugateKeyTR: UIButton!
   @IBOutlet var conjugateKeyBL: UIButton!
@@ -575,53 +622,6 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get2x2ConjButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
-
-  @IBOutlet var conjugateKeyTop: UIButton!
-  @IBOutlet var conjugateKeyMiddle: UIButton!
-  @IBOutlet var conjugateKeyBottom: UIButton!
-
-  /// Returns all buttons for the 3x1 conjugation display
-  func get3x1ConjButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      conjugateKeyTop, conjugateKeyMiddle, conjugateKeyBottom
-    ]
-
-    return conjugationButtons
-  }
-
-  @IBOutlet var conjugateLblTop: UIButton!
-  @IBOutlet var conjugateLblMiddle: UIButton!
-  @IBOutlet var conjugateLblBottom: UIButton!
-
-  /// Returns all labels for the 3x1 conjugation display.
-  func get3x1ConjLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      conjugateLblTop, conjugateLblMiddle, conjugateLblBottom
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
-  func setConj3x1View() {
-    setBtn(btn: conjugateKeyTop, color: keyColor, name: "conjugateTop", canCap: false, isSpecial: false)
-    setBtn(btn: conjugateKeyMiddle, color: keyColor, name: "conjugateMiddle", canCap: false, isSpecial: false)
-    setBtn(btn: conjugateKeyBottom, color: keyColor, name: "conjugateBottom", canCap: false, isSpecial: false)
-
-    for btn in get3x1ConjButtons() {
-      activateBtn(btn: btn)
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get3x1ConjButtons() {
         btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
@@ -716,20 +716,20 @@ class KeyboardViewController: UIInputViewController {
   func setConjugationBtns() {
     // Set the conjugation view to 2x2 for Swedish and Russian past tense.
     if controllerLanguage == "Swedish" {
-      conjugateAlternateView = true
+      conjugateDimensions = .view2x2
     } else if controllerLanguage == "Russian" && ruConjugationState == .past {
-      conjugateAlternateView = true
+      conjugateDimensions = .view2x2
     } else if
       commandState == .selectCaseConjugation
       && controllerLanguage == "German"
       && [.accusative, .dative, .genitive].contains(deCaseConjugationState) {
-      conjugateAlternateView = true
+      conjugateDimensions = .view2x2
     } else {
-      conjugateAlternateView = false
+      conjugateDimensions = .view3x2
     }
 
     // The base conjugation view is 3x2 for first, second, and third person in singular and plural.
-    if conjugateAlternateView == false {
+    if conjugateDimensions == .view3x2 {
       setConj3x2View()
     } else {
       setConj2x2View()
@@ -755,7 +755,12 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: conjugateShiftRight)
 
     // Make all labels clear and set their font for if they will be used.
-    let allConjLabels: [UIButton] = get3x2ConjLabels() + get2x2ConjLabels()
+    let allConjLabels: [UIButton] =
+      get3x2ConjLabels()
+      + get3x1ConjLabels()
+      + get2x2ConjLabels()
+      + get1x2ConjLabels()
+      + get1x1ConjLabels()
     for lbl in allConjLabels {
       lbl.backgroundColor = UIColor.clear
       lbl.setTitleColor(specialKeyColor, for: .normal)
@@ -771,7 +776,7 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: conjugateShiftLeft)
     activateBtn(btn: conjugateShiftRight)
 
-    if conjugateAlternateView == false {
+    if conjugateDimensions == .view3x2 {
       for btn in get3x2ConjButtons() {
         activateBtn(btn: btn)
       }
@@ -781,7 +786,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if conjugateAlternateView == true {
+    if conjugateDimensions == .view2x2 {
       for btn in get3x2ConjButtons() {
         deactivateBtn(btn: btn)
       }
@@ -801,14 +806,14 @@ class KeyboardViewController: UIInputViewController {
 
     let allConjButtons: [UIButton] =
       get3x2ConjButtons()
-      + get2x2ConjButtons()
       + get3x1ConjButtons()
+      + get2x2ConjButtons()
       + get1x2ConjButtons()
       + get1x1ConjButtons()
     let allConjLabels: [UIButton] =
       get3x2ConjLabels()
-      + get2x2ConjLabels()
       + get3x1ConjLabels()
+      + get2x2ConjLabels()
       + get1x2ConjLabels()
       + get1x1ConjLabels()
     let allConjElements: [UIButton] = allConjButtons + allConjLabels
@@ -838,7 +843,7 @@ class KeyboardViewController: UIInputViewController {
       conjTPP = conjugationStateFxn() + "TPP"
 
     } else if controllerLanguage == "Russian" {
-      if conjugateAlternateView == false {
+      if conjugateDimensions == .view3x2 {
         conjFPS = ruGetConjugationState() + "FPS"
         conjSPS = ruGetConjugationState() + "SPS"
         conjTPS = ruGetConjugationState() + "TPS"
@@ -899,7 +904,7 @@ class KeyboardViewController: UIInputViewController {
     conjugateLblBL.setTitle("  " + labelBottomLeft, for: .normal)
     conjugateLblBR.setTitle("  " + labelBottomRight, for: .normal)
 
-    if conjugateAlternateView == false {
+    if conjugateDimensions == .view3x2 {
       allConjugations = [conjFPS, conjSPS, conjTPS, conjFPP, conjSPP, conjTPP]
       allConjugationBtns = get3x2ConjButtons()
     } else {

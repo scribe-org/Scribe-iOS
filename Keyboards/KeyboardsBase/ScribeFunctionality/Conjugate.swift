@@ -68,7 +68,7 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
   // Don't change proxy if they select a conjugation that's missing.
   if keyPressed.titleLabel?.text == invalidCommandMsg {
     proxy.insertText("")
-  } else if conjugateAlternateView == false {
+  } else if conjugateDimensions == .view3x2 {
     if commandState == .selectCaseConjugation {
       wordToReturn = keyPressed.titleLabel?.text ?? ""
       proxy.insertText(wordToReturn + " ")
@@ -82,7 +82,7 @@ func returnConjugation(keyPressed: UIButton, requestedTense: String) {
     } else {
       proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
     }
-  } else if conjugateAlternateView == true {
+  } else if conjugateDimensions == .view2x2 {
     if commandState == .selectCaseConjugation {
       wordToReturn = keyPressed.titleLabel?.text ?? ""
       proxy.insertText(wordToReturn + " ")

@@ -76,7 +76,17 @@ var conjugatePlaceholder: String = ""
 var conjugatePromptAndCursor: String = ""
 var conjugatePromptAndPlaceholder: String = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
-var conjugateAlternateView: Bool = false
+
+/// What the view of the conjugation display to display to the user.
+enum ConjugateDimensions {
+  case view3x2
+  case view3x1
+  case view2x2
+  case view1x2
+  case view1x1
+}
+
+var conjugateDimensions: ConjugateDimensions = .view3x2
 
 var allConjugations = [String]()
 var allConjugationBtns = [UIButton]()

@@ -84,7 +84,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
         }
       }
     }
-    
+
     if isPrep {
       activateAnnotationBtn = true
       prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
@@ -98,7 +98,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
         }
       }
     }
-    
+
     if annotationsToAssign.count > 0 {
       annotationState = true
       autoAction1Visible = false
@@ -210,7 +210,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
     let annotationFieldWidth = KVC.translateKey.frame.width * 0.85
     var annotationHeight: CGFloat = 0.0
     annotationHeight = scribeKeyHeight
-    
+
     if lastWordTyped == "Scribe" || lastWordTyped == "scribe" {
       // Thank the user :)
       annotationState = true
@@ -249,7 +249,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
           }
         }
       }
-      
+
       if isPrep {
         activateAnnotationBtn = true
         prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
@@ -263,7 +263,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
           }
         }
       }
-      
+
       if annotationsToAssign.count > 0 {
         annotationState = true
         autoAction1Visible = false
