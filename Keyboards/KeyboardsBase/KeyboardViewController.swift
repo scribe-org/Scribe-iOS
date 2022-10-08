@@ -386,6 +386,12 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - keyPressed: the auto action button that was executed.
   func executeAutoAction(keyPressed: UIButton) {
+    // Remove all prior annotations.
+    annotationBtns.forEach { $0.removeFromSuperview() }
+    annotationBtns.removeAll()
+    annotationSeparators.forEach { $0.removeFromSuperview() }
+    annotationSeparators.removeAll()
+
     clearPrefixFromTextFieldProxy()
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
     autoActionState = .suggest
