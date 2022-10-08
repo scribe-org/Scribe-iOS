@@ -85,6 +85,12 @@ Work that is in progress or could be implemented is tracked in the [issues](http
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
+### Designs
+
+<a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
+
+The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464) are made using [Figma](https://www.figma.com). Those with interest in contributing can [open a design issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) to make suggestions. Design related issues are marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
+
 <a id="setup"></a>
 
 # Setup [`⇧`](#contents)
@@ -104,21 +110,19 @@ Scribe's goal is functional, feature-rich keyboards for all languages. Check [sc
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
 
-| Languages  |   Nouns | Verbs | Translations\* | Adjectives† | Prepositions‡ |
-| :--------- | ------: | ----: | -------------: | ----------: | ------------: |
-| French     |  16,374 | 1,506 |         67,652 |           - |             - |
-| German     |  28,948 | 3,469 |         67,652 |           - |           187 |
-| Italian    |   4,163 |    73 |         67,652 |           - |             - |
-| Portuguese |   5,112 |   495 |         67,652 |           - |             - |
-| Russian    | 194,401 |    11 |         67,652 |           - |            12 |
-| Spanish    |  23,269 | 3,783 |         67,652 |           - |             - |
-| Swedish    |  42,016 | 4,274 |         67,652 |           - |             - |
+| Languages  |   Nouns | Verbs | Translations\* | Prepositions† |
+| :--------- | ------: | ----: | -------------: | ------------: |
+| French     |  16,374 | 1,506 |         67,652 |             - |
+| German     |  28,948 | 3,469 |         67,652 |           187 |
+| Italian    |   4,163 |    73 |         67,652 |             - |
+| Portuguese |   5,112 |   495 |         67,652 |             - |
+| Russian    | 194,401 |    11 |         67,652 |            12 |
+| Spanish    |  23,269 | 3,783 |         67,652 |             - |
+| Swedish    |  42,016 | 4,274 |         67,652 |             - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
-`†` Adjective-preposition support is in progress [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/86).
-
-`‡` Only for languages for which preposition annotation is needed.
+`†` Only for languages for which preposition annotation is needed.
 
 Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
 
@@ -188,7 +192,9 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Dynamic layouts for cross-device performance
 - Portrait and landscape modes
 - Dark mode compatibility
-- Autocompletion and correction (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issues)
+- Autocompletion based on [Wikidata](https://www.wikidata.org/) sourced words
+- Autosuggestion based on [Wikipedia](https://www.wikipedia.org/) derived relationships
+- Autocorrection (WIP - see [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issue)
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing symbols and numbers followed by a space returns keyboard to letters
@@ -246,6 +252,9 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 <div align="center">
   <br>
-  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikidata_logo.png" alt="Wikidata"></a>
+  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikidata_logo.png" alt="Wikidata logo"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.wikipedia.org/"><img height="190" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikipedia_logo.png" alt="Wikipedia logo"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
 </div>
