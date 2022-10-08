@@ -40,6 +40,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
+  - [Pronoun](#pronoun-selection)
   - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Featured By](#featured-by)
@@ -64,8 +65,6 @@ https://user-images.githubusercontent.com/24387426/176200444-7b85488b-55a9-40d9-
 </p>
 </details>
 
-The App Store videos, images and text can be found in the [AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/AppStore) directory. Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new/choose) to check before.
-
 <a id="contributing"></a>
 
 # Contributing [`⇧`](#contents)
@@ -89,7 +88,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 <a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
 
-The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464) are made using [Figma](https://www.figma.com). Those with interest in contributing can [open a design issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) to make suggestions. Design related issues are marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
+The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464) are made using [Figma](https://www.figma.com). The App Store videos, images and text can be found in the [AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/AppStore) directory. Those with interest in contributing can [open a design issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) to make suggestions! Design related issues are marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
 
 <a id="setup"></a>
 
@@ -160,7 +159,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural in
 
 ### • Word Annotation [`⇧`](#contents)
 
-Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
+Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, after commands or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
 #### Nouns
 
@@ -178,6 +177,12 @@ The above form abbreviations are translated into their equivalents in the keyboa
 #### Prepositions
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
+
+<a id="pronoun-selection"></a>
+
+### • Pronoun Selection [`⇧`](#contents)
+
+Annotations for pronoun cases can also be clicked to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to always make the correct choice.
 
 <a id="base-functionality"></a>
 
