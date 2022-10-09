@@ -1,6 +1,7 @@
 # OS Files
 ##########
 .DS_Store
+OriginalVideos/
 
 ## Xcode Files
 project.xcworkspace
