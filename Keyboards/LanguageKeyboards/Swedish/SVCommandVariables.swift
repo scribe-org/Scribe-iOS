@@ -5,17 +5,22 @@
 //
 
 func svSetConjugationLabels() {
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
   switch svConjugationState {
   case .active:
-    labelTopLeft = "imperativ"
-    labelTopRight = "liggande"
-    labelBottomLeft = "presens"
-    labelBottomRight = "dåtid"
+    formLabelsDict["TL"] = "imperativ"
+    formLabelsDict["TR"] = "liggande"
+    formLabelsDict["BL"] = "presens"
+    formLabelsDict["BR"] = "dåtid"
   case .passive:
-    labelTopLeft = "infinitiv"
-    labelTopRight = "liggande"
-    labelBottomLeft = "presens"
-    labelBottomRight = "dåtid"
+    formLabelsDict["TL"] = "infinitiv"
+    formLabelsDict["TR"] = "liggande"
+    formLabelsDict["BL"] = "presens"
+    formLabelsDict["BR"] = "dåtid"
   }
 }
 

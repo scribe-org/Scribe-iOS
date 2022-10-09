@@ -5,12 +5,17 @@
 //
 
 func esSetConjugationLabels() {
-  labelFPS = "yo"
-  labelSPS = "tú"
-  labelTPS = "él/ella/Ud."
-  labelFPP = "nosotros"
-  labelSPP = "vosotros"
-  labelTPP = "ellos/ellas/Uds."
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "yo"
+  formLabelsDict["SPS"] = "tú"
+  formLabelsDict["TPS"] = "él/ella/Ud."
+  formLabelsDict["FPP"] = "nosotros"
+  formLabelsDict["SPP"] = "vosotros"
+  formLabelsDict["TPP"] = "ellos/ellas/Uds."
 }
 
 /// What the conjugation state is for the conjugate feature.

@@ -5,29 +5,39 @@
 //
 
 func ruSetConjugationLabels() {
-  labelFPS = "я"
-  labelSPS = "ты"
-  labelTPS = "он/она/оно"
-  labelFPP = "мы"
-  labelSPP = "вы"
-  labelTPP = "они"
-  labelTopLeft = ""
-  labelTopRight = ""
-  labelBottomLeft = ""
-  labelBottomRight = ""
-
-  if ruConjugationState == .past {
-    labelFPS = ""
-    labelSPS = ""
-    labelTPS = ""
-    labelFPP = ""
-    labelSPP = ""
-    labelTPP = ""
-    labelTopLeft = "я/ты/он"
-    labelTopRight = "я/ты/она"
-    labelBottomLeft = "оно"
-    labelBottomRight = "мы/вы/они"
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
   }
+  
+  switch ruConjugationState {
+  case .present:
+    formLabelsDict["FPS"] = "я"
+    formLabelsDict["SPS"] = "ты"
+    formLabelsDict["TPS"] = "он/она/оно"
+    formLabelsDict["FPP"] = "мы"
+    formLabelsDict["SPP"] = "вы"
+    formLabelsDict["TPP"] = "они"
+  case .past:
+    formLabelsDict["TL"] = "я/ты/он"
+    formLabelsDict["TR"] = "я/ты/она"
+    formLabelsDict["BL"] = "оно"
+    formLabelsDict["BR"] = "мы/вы/они"
+  }
+}
+
+func ruSetCaseDeclensionLabels() {
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "я"
+  formLabelsDict["SPS"] = "ты"
+  formLabelsDict["TPS"] = "он/она/оно"
+  formLabelsDict["FPP"] = "мы"
+  formLabelsDict["SPP"] = "вы"
+  formLabelsDict["TPP"] = "они"
 }
 
 /// What the conjugation state is for the conjugate feature.
@@ -37,7 +47,7 @@ enum RUConjugationState {
 }
 
 /// What the conjugation state is for the case conjugate feature.
-enum RUCaseConjugationState {
+enum RUCaseDeclensionState {
   case accusative
   case dative
   case genitive
@@ -46,7 +56,7 @@ enum RUCaseConjugationState {
 }
 
 var ruConjugationState: RUConjugationState = .present
-var ruCaseConjugationState: RUCaseConjugationState = .accusative
+var ruCaseDeclensionState: RUCaseDeclensionState = .accusative
 
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
 func ruGetConjugationTitle() -> String {
@@ -64,8 +74,8 @@ func ruGetConjugationTitle() -> String {
 }
 
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
-func ruGetCaseConjugationTitle() -> String {
-  switch ruCaseConjugationState {
+func ruGetCaseDeclensionTitle() -> String {
+  switch ruCaseDeclensionState {
   case .accusative:
     return commandPromptSpacing + "Винительные местоимения"
   case .dative:
@@ -90,60 +100,60 @@ func ruGetConjugationState() -> String {
 }
 
 /// Returns the appropriate key in the verbs dictionary to access conjugations.
-func ruSetCaseConjugations() {
-  switch ruCaseConjugationState {
+func ruSetCaseDeclensions() {
+  switch ruCaseDeclensionState {
   case .accusative:
-    conjFPS = "меня"
-    conjSPS = "тебя"
-    conjTPS = "его/её/его"
-    conjFPP = "нас"
-    conjSPP = "вас"
-    conjTPP = "их"
+    formFPS = "меня"
+    formSPS = "тебя"
+    formTPS = "его/её/его"
+    formFPP = "нас"
+    formSPP = "вас"
+    formTPP = "их"
   case .dative:
-    conjFPS = "мне"
-    conjSPS = "тебе"
-    conjTPS = "ему/ей/ему"
-    conjFPP = "нам"
-    conjSPP = "вам"
-    conjTPP = "им"
+    formFPS = "мне"
+    formSPS = "тебе"
+    formTPS = "ему/ей/ему"
+    formFPP = "нам"
+    formSPP = "вам"
+    formTPP = "им"
   case .genitive:
-    conjFPS = "меня"
-    conjSPS = "тебя"
-    conjTPS = "его/её/его"
-    conjFPP = "нас"
-    conjSPP = "вас"
-    conjTPP = "их"
+    formFPS = "меня"
+    formSPS = "тебя"
+    formTPS = "его/её/его"
+    formFPP = "нас"
+    formSPP = "вас"
+    formTPP = "их"
   case .instrumental:
-    conjFPS = "мной"
-    conjSPS = "тобой"
-    conjTPS = "им/ей/им"
-    conjFPP = "нами"
-    conjSPP = "вами"
-    conjTPP = "ими"
+    formFPS = "мной"
+    formSPS = "тобой"
+    formTPS = "им/ей/им"
+    formFPP = "нами"
+    formSPP = "вами"
+    formTPP = "ими"
   case .prepositional:
-    conjFPS = "мне"
-    conjSPS = "тебе"
-    conjTPS = "нём/ней/нём"
-    conjFPP = "нас"
-    conjSPP = "вас"
-    conjTPP = "них"
+    formFPS = "мне"
+    formSPS = "тебе"
+    formTPS = "нём/ней/нём"
+    formFPP = "нас"
+    formSPP = "вас"
+    formTPP = "них"
   }
 }
 
 /// Action associated with the left view switch button of the conjugation state.
 func ruConjugationStateLeft() {
-  if commandState == .selectCaseConjugation {
-    switch ruCaseConjugationState {
+  if commandState == .selectCaseDeclension {
+    switch ruCaseDeclensionState {
     case .accusative:
       break
     case .dative:
-      ruCaseConjugationState = .accusative
+      ruCaseDeclensionState = .accusative
     case .genitive:
-      ruCaseConjugationState = .dative
+      ruCaseDeclensionState = .dative
     case .instrumental:
-      ruCaseConjugationState = .genitive
+      ruCaseDeclensionState = .genitive
     case .prepositional:
-      ruCaseConjugationState = .instrumental
+      ruCaseDeclensionState = .instrumental
     }
   } else {
     switch ruConjugationState {
@@ -157,16 +167,16 @@ func ruConjugationStateLeft() {
 
 /// Action associated with the right view switch button of the conjugation state.
 func ruConjugationStateRight() {
-  if commandState == .selectCaseConjugation {
-    switch ruCaseConjugationState {
+  if commandState == .selectCaseDeclension {
+    switch ruCaseDeclensionState {
     case .accusative:
-      ruCaseConjugationState = .dative
+      ruCaseDeclensionState = .dative
     case .dative:
-      ruCaseConjugationState = .genitive
+      ruCaseDeclensionState = .genitive
     case .genitive:
-      ruCaseConjugationState = .instrumental
+      ruCaseDeclensionState = .instrumental
     case .instrumental:
-      ruCaseConjugationState = .prepositional
+      ruCaseDeclensionState = .prepositional
     case .prepositional:
       break
     }

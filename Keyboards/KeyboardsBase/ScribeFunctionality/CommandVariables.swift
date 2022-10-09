@@ -78,7 +78,7 @@ var conjugatePromptAndPlaceholder: String = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
 
 /// What the view of the conjugation display to display to the user.
-enum ConjugateDimensions {
+enum FormsDisplayDimensions {
   case view3x2
   case view3x1
   case view2x2
@@ -86,51 +86,50 @@ enum ConjugateDimensions {
   case view1x1
 }
 
-var conjugateDimensions: ConjugateDimensions = .view3x2
+var formsDisplayDimensions: FormsDisplayDimensions = .view3x2
 
 var allConjugations = [String]()
 var allConjugationBtns = [UIButton]()
 
-var conjFPS: String = ""
-var conjSPS: String = ""
-var conjTPS: String = ""
-var conjFPP: String = ""
-var conjSPP: String = ""
-var conjTPP: String = ""
+var formFPS: String = ""
+var formSPS: String = ""
+var formTPS: String = ""
+var formFPP: String = ""
+var formSPP: String = ""
+var formTPP: String = ""
 
-var labelFPS: String = ""
-var labelSPS: String = ""
-var labelTPS: String = ""
-var labelFPP: String = ""
-var labelSPP: String = ""
-var labelTPP: String = ""
+var formTop: String = ""
+var formMiddle: String = ""
+var formBottom: String = ""
 
-var conjSingle: String = ""
-var labelSingle: String = ""
+var formTopLeft: String = ""
+var formTopRight: String = ""
+var formBottomLeft: String = ""
+var formBottomRight: String = ""
 
-var conjTop: String = ""
-var conjMiddle: String = ""
-var conjBottom: String = ""
+var formLeft: String = ""
+var formRight: String = ""
 
-var labelTop: String = ""
-var labelMiddle: String = ""
-var labelBottom: String = ""
+var formSingle: String = ""
 
-var conjLeft: String = ""
-var conjRight: String = ""
-
-var labelLeft: String = ""
-var labelRight: String = ""
-
-var conjTopLeft: String = ""
-var conjTopRight: String = ""
-var conjBottomLeft: String = ""
-var conjBottomRight: String = ""
-
-var labelTopLeft: String = ""
-var labelTopRight: String = ""
-var labelBottomLeft: String = ""
-var labelBottomRight: String = ""
+var formLabelsDict: [String: String] = [
+  "FPS": "",
+  "SPS": "",
+  "TPS": "",
+  "FPP": "",
+  "SPP": "",
+  "TPP": "",
+  "Top": "",
+  "Bottom": "",
+  "Middle": "",
+  "TL": "",
+  "TR": "",
+  "BL": "",
+  "BR": "",
+  "Left": "",
+  "Right": "",
+  "Single": ""
+]
 
 var verbToConjugate: String = ""
 var verbToDisplay: String = ""

@@ -17,7 +17,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
 - Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word.
 - Preposition annotations can now be clicked to display a case pronoun display from which pronouns can be selected.
-  <!-- - Users are able to select subjects and objects from the display to exactly specify which pronoun they need. -->
+  - Users are able to select subjects and objects from the display to exactly specify which pronoun they need. 
 
 ### 🗃️ Data Added
 
@@ -37,7 +37,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
 - Code was refactored to work with the new enum style of command state management.
 - Enums are now used to control switching between conjugations.
-<!-- - Enums are now used to control switching between different conjugation displays. -->
+- Enums are now used to control switching between different conjugation displays. 
 
 # Scribe-iOS 1.4.0
 

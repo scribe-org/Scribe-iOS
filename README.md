@@ -182,7 +182,7 @@ Scribe also annotates the grammatical cases (accusative, dative, etc) of preposi
 
 ### • Pronoun Selection [`⇧`](#contents)
 
-Annotations for pronoun cases can also be clicked to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to always make the correct choice.
+Annotations for pronoun cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
 
 <a id="base-functionality"></a>
 

@@ -5,12 +5,17 @@
 //
 
 func frSetConjugationLabels() {
-  labelFPS = "je"
-  labelSPS = "tu"
-  labelTPS = "il/elle"
-  labelFPP = "nous"
-  labelSPP = "vous"
-  labelTPP = "ils/elles"
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "je"
+  formLabelsDict["SPS"] = "tu"
+  formLabelsDict["TPS"] = "il/elle"
+  formLabelsDict["FPP"] = "nous"
+  formLabelsDict["SPP"] = "vous"
+  formLabelsDict["TPP"] = "ils/elles"
 }
 
 /// What the conjugation state is for the conjugate feature.
