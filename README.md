@@ -49,7 +49,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
 
 # Preview Videos [`⇧`](#contents)
 
-The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
+The following are the preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
 #### iPhone 6.5" version
 
@@ -182,7 +182,7 @@ Scribe also annotates the grammatical cases (accusative, dative, etc) of preposi
 
 ### • Pronoun Selection [`⇧`](#contents)
 
-Annotations for pronoun cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
+Annotations for pronoun cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will also provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
 
 <a id="base-functionality"></a>
 
