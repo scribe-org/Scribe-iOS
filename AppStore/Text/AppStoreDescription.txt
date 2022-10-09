@@ -14,4 +14,6 @@ Current Features
 
 - Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
 
+- For languages with pronoun declension, Scribe also allows for the case annotation to be clicked and then the user can select the pronoun they want based on case, subject and object.
+
 Being fully open-source including data from Wikidata, the Scribe team loves to get both feedback and contributions. Please don't hesitate to visit us at https://github.com/scribe-org/Scribe-iOS!
