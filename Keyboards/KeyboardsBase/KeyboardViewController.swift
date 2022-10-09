@@ -284,7 +284,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Generates an array of the three autosuggest words.
   func getAutosuggestions() {
-    let prefix = pastStringInTextProxy.replacingOccurrences(of: secondaryPastStringOnDelete, with: "").replacingOccurrences(of: " ", with: "")
+    let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
@@ -397,9 +397,6 @@ class KeyboardViewController: UIInputViewController {
     autoActionState = .suggest
     proxy.insertText(" ")
     currentPrefix = ""
-    secondaryPastStringOnDelete = pastStringInTextProxy
-    pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-    clearCommandBar()
     conditionallyDisplayAnnotation()
   }
 
@@ -414,14 +411,6 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var commandBar: CommandBar!
   @IBOutlet var commandBarShadow: UIButton!
   @IBOutlet var commandBarBlend: UILabel!
-
-  /// Clears the text found in the command bar.
-  func clearCommandBar() {
-    if [.idle, .selectCommand].contains(commandState) {
-      commandBar.textColor = keyCharColor
-      commandBar.text = ""
-    }
-  }
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
@@ -1541,7 +1530,6 @@ class KeyboardViewController: UIInputViewController {
     case "return":
       if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
         proxy.insertText("\n")
-        clearCommandBar()
       } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
@@ -1576,7 +1564,6 @@ class KeyboardViewController: UIInputViewController {
       } else if [.translate, .plural].contains(commandState) { // functional commands above
         autoActionState = .suggest
         commandState = .idle
-        clearCommandBar()
         autoCapAtStartOfProxy()
         loadKeys()
         conditionallyDisplayAnnotation()
@@ -1685,6 +1672,12 @@ class KeyboardViewController: UIInputViewController {
       executeAutoAction(keyPressed: pluralKey)
 
     case "GetAnnotationInfo":
+      // Remove all prior annotations.
+      annotationBtns.forEach { $0.removeFromSuperview() }
+      annotationBtns.removeAll()
+      annotationSeparators.forEach { $0.removeFromSuperview() }
+      annotationSeparators.removeAll()
+
       for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
@@ -1730,9 +1723,13 @@ class KeyboardViewController: UIInputViewController {
 
         handleDeleteButtonPressed()
         autoCapAtStartOfProxy()
-        clearCommandBar()
 
-        autoActionState = .complete
+        // Check if the last character is a space such that the user is deleting multiple spaces and suggest is so.
+        if proxy.documentContextBeforeInput?.suffix(" ".count) == " " {
+          autoActionState = .suggest
+        } else {
+          autoActionState = .complete
+        }
         conditionallySetAutoActionBtns()
       } else {
         // Shift state if the user presses delete when the prompt is present.
@@ -1776,13 +1773,15 @@ class KeyboardViewController: UIInputViewController {
         }
       }
 
-      secondaryPastStringOnDelete = pastStringInTextProxy
-      pastStringInTextProxy = proxy.documentContextBeforeInput ?? ""
-      conditionallyDisplayAnnotation()
-
       if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
-        clearCommandBar()
+        // Remove all prior annotations.
+        annotationBtns.forEach { $0.removeFromSuperview() }
+        annotationBtns.removeAll()
+        annotationSeparators.forEach { $0.removeFromSuperview() }
+        annotationSeparators.removeAll()
       }
+      
+      conditionallyDisplayAnnotation()
       doubleSpacePeriodPossible = true
 
     case "'":
@@ -1794,25 +1793,20 @@ class KeyboardViewController: UIInputViewController {
         commandBar.text! = (commandBar.text!.insertPriorToCursor(char: "'"))
       }
       changeKeyboardToLetterKeys()
-      clearCommandBar()
 
     case "shift":
       shiftButtonState = shiftButtonState == .normal ? .shift : .normal
       loadKeys()
-      clearCommandBar()
       capsLockPossible = true
 
     case "123", ".?123":
       changeKeyboardToNumberKeys()
-      clearCommandBar()
 
     case "#+=":
       changeKeyboardToSymbolKeys()
-      clearCommandBar()
 
     case "ABC", "АБВ":
       changeKeyboardToLetterKeys()
-      clearCommandBar()
       autoCapAtStartOfProxy()
 
     case "selectKeyboard":
@@ -1830,7 +1824,6 @@ class KeyboardViewController: UIInputViewController {
       }
       if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
         proxy.insertText(keyToDisplay)
-        clearCommandBar()
       } else {
         commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
       }
@@ -1916,7 +1909,6 @@ class KeyboardViewController: UIInputViewController {
     if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible == true {
       shiftButtonState = .caps
       loadKeys()
-      clearCommandBar()
       conditionallySetAutoActionBtns()
     }
 
@@ -1953,7 +1945,6 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .shift
         loadKeys()
       }
-      clearCommandBar()
       // Show auto actions if the keyboard states dictate.
       conditionallySetAutoActionBtns()
     }

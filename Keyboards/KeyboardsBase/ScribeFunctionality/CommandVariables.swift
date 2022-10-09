@@ -27,7 +27,6 @@ var numericAutosuggestions = [String]()
 
 var currentPrefix: String = ""
 var pastStringInTextProxy: String = ""
-var secondaryPastStringOnDelete: String = ""
 var completionWords = [String]()
 
 // A larger vertical bar than the normal | key for the cursor.
