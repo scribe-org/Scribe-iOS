@@ -25,7 +25,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The [contributing](#contributing) section has information for those interested, with the articles and presentations in [featured by](#featured-by) also being good resources for learning more about Scribe.
 
-Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned).
+Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP), [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned), and for the data processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data).
 
 <a id="contents"></a>
 
