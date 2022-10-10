@@ -22,6 +22,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 307 nouns, 39 verbs
+- German: 282 nouns, 73 verbs
+- Italian: 4,236 nouns
+- Portuguese: 64 nouns
+- Russian: 7 nouns, 1 preposition
+- Spanish: 1,387 nouns, 9 verbs
+- Swedish: 702 nouns, 120 verbs
+
 ### 🎨 Design Changes
 
 - Noun and preposition annotation has been updated to not show the word being annotated.

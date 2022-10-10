@@ -99,6 +99,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "abordagem": {
+    "plural": "abordagens",
+    "form": "F"
+  },
+  "abordagens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "aborto": {
     "plural": "abortos",
     "form": "M"
@@ -1340,16 +1348,16 @@
     "form": "PL"
   },
   "aspecto": {
-    "plural": "aspetos",
+    "plural": "aspectos",
     "form": "M/PL"
   },
-  "aspeto": {
-    "plural": "aspetos",
-    "form": "M"
-  },
-  "aspetos": {
+  "aspectos": {
     "plural": "isPlural",
     "form": "PL"
+  },
+  "aspeto": {
+    "plural": "aspectos",
+    "form": "M"
   },
   "aspirador": {
     "plural": "aspiradores",
@@ -1369,7 +1377,7 @@
   },
   "assaltante": {
     "plural": "assaltantes",
-    "form": "M"
+    "form": ""
   },
   "assaltantes": {
     "plural": "isPlural",
@@ -1479,12 +1487,24 @@
     "plural": "isPlural",
     "form": "PL"
   },
-  "astrônomo": {
-    "plural": "astrônomos",
-    "form": "M"
+  "astrónoma": {
+    "plural": "astrónomas",
+    "form": ""
   },
-  "astrônomos": {
+  "astrónomas": {
     "plural": "isPlural",
+    "form": "PL"
+  },
+  "astrónomo": {
+    "plural": "astrónomas",
+    "form": "PL"
+  },
+  "astrônoma": {
+    "plural": "astrónomas",
+    "form": "PL"
+  },
+  "astrônomo": {
+    "plural": "astrónomas",
     "form": "PL"
   },
   "ataque": {
@@ -1720,6 +1740,14 @@
     "form": "M"
   },
   "avaliadores": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "avaliação": {
+    "plural": "avaliações",
+    "form": "F"
+  },
+  "avaliações": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -2049,14 +2077,10 @@
   },
   "bandeirinha": {
     "plural": "bandeiras",
-    "form": "F"
-  },
-  "bandeirinhas": {
-    "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "bandeirola": {
-    "plural": "bandeirinhas",
+    "plural": "bandeiras",
     "form": "F"
   },
   "bandeirona": {
@@ -2747,9 +2771,13 @@
     "plural": "brigas",
     "form": "F/PL"
   },
+  "brigonas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "briguinha": {
-    "plural": "brigas",
-    "form": "F/PL"
+    "plural": "brigonas",
+    "form": "F"
   },
   "brigão": {
     "plural": "brigas",
@@ -2808,12 +2836,16 @@
     "form": "PL"
   },
   "buraco": {
-    "plural": "buracões",
-    "form": "M/PL"
+    "plural": "buracos",
+    "form": "M"
   },
   "buraco negro": {
     "plural": "buracos negros",
     "form": "M"
+  },
+  "buracos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "buracos negros": {
     "plural": "isPlural",
@@ -3519,6 +3551,14 @@
     "plural": "carnes",
     "form": "F"
   },
+  "carneiro": {
+    "plural": "carneiros",
+    "form": "M"
+  },
+  "carneiros": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "carnes": {
     "plural": "isPlural",
     "form": "PL"
@@ -3589,7 +3629,7 @@
   },
   "carro": {
     "plural": "carrinhos",
-    "form": "M"
+    "form": "M/PL"
   },
   "carroça": {
     "plural": "carroças",
@@ -3609,13 +3649,21 @@
   },
   "carrão": {
     "plural": "carrinhos",
-    "form": "M/PL"
+    "form": "M"
   },
   "carta": {
     "plural": "cartas",
     "form": "F/PL"
   },
   "cartas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "carteira": {
+    "plural": "carteiras",
+    "form": "F"
+  },
+  "carteiras": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -3637,11 +3685,11 @@
   },
   "cartão": {
     "plural": "cartas",
-    "form": "F/M/PL"
+    "form": "F/M"
   },
   "cartícula": {
     "plural": "cartas",
-    "form": "F"
+    "form": "F/PL"
   },
   "caráter": {
     "plural": "caráteres",
@@ -3984,6 +4032,14 @@
     "form": "F"
   },
   "cercas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "cerco": {
+    "plural": "cercos",
+    "form": "M"
+  },
+  "cercos": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -5204,11 +5260,15 @@
     "form": "PL"
   },
   "contribuidor": {
-    "plural": "contribuidores",
+    "plural": "contribuidoras",
     "form": ""
   },
   "contribuidora": {
     "plural": "contribuidores",
+    "form": ""
+  },
+  "contribuidoras": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "contribuidores": {
@@ -5240,6 +5300,14 @@
     "form": "M"
   },
   "conventos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "convenção": {
+    "plural": "convenções",
+    "form": "F"
+  },
+  "convenções": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -6603,6 +6671,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "diplomacia": {
+    "plural": "diplomacias",
+    "form": "F"
+  },
+  "diplomacias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "dique": {
     "plural": "diques",
     "form": "M"
@@ -7847,9 +7923,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "estrangeira": {
+    "plural": "estrangeiros",
+    "form": "PL"
+  },
   "estrangeiro": {
     "plural": "estrangeiros",
-    "form": "M"
+    "form": ""
   },
   "estrangeiros": {
     "plural": "isPlural",
@@ -7860,6 +7940,14 @@
     "form": "M"
   },
   "estratos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "estratégia": {
+    "plural": "estratégias",
+    "form": "F"
+  },
+  "estratégias": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -7940,6 +8028,14 @@
     "form": "PL"
   },
   "estupradores": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "estupro": {
+    "plural": "estupros",
+    "form": "M"
+  },
+  "estupros": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -8296,6 +8392,14 @@
     "form": "F"
   },
   "fardas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "farmácia": {
+    "plural": "farmácias",
+    "form": ""
+  },
+  "farmácias": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -9805,10 +9909,30 @@
   },
   "guri": {
     "plural": "guris",
-    "form": "M"
+    "form": ""
+  },
+  "guria": {
+    "plural": "guris",
+    "form": "PL"
+  },
+  "guriazinha": {
+    "plural": "guris",
+    "form": "PL"
+  },
+  "guriazona": {
+    "plural": "guris",
+    "form": "PL"
   },
   "guris": {
     "plural": "isPlural",
+    "form": "PL"
+  },
+  "gurizinho": {
+    "plural": "guris",
+    "form": "PL"
+  },
+  "gurizão": {
+    "plural": "guris",
     "form": "PL"
   },
   "gás": {
@@ -9867,9 +9991,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "herdeira": {
+    "plural": "herdeiros",
+    "form": "PL"
+  },
   "herdeiro": {
     "plural": "herdeiros",
-    "form": "M"
+    "form": ""
   },
   "herdeiros": {
     "plural": "isPlural",
@@ -10217,7 +10345,7 @@
   },
   "imigrante": {
     "plural": "imigrantes",
-    "form": "M"
+    "form": ""
   },
   "imigrantes": {
     "plural": "isPlural",
@@ -10295,6 +10423,14 @@
     "plural": "imóveis",
     "form": "M"
   },
+  "inanição": {
+    "plural": "inanições",
+    "form": "F"
+  },
+  "inanições": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "incesto": {
     "plural": "incestos",
     "form": "M"
@@ -10348,6 +10484,14 @@
     "form": "F"
   },
   "indústrias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "inequação": {
+    "plural": "inequações",
+    "form": "F"
+  },
+  "inequações": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10552,6 +10696,14 @@
     "form": "M"
   },
   "interesses": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "interferência": {
+    "plural": "interferências",
+    "form": "F"
+  },
+  "interferências": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -10800,8 +10952,12 @@
     "form": "PL"
   },
   "jibóia": {
-    "plural": "jiboias",
-    "form": "F/PL"
+    "plural": "jibóias",
+    "form": "F"
+  },
+  "jibóias": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "jipe": {
     "plural": "jipes",
@@ -11161,19 +11317,23 @@
   },
   "leiturinha": {
     "plural": "leituras",
-    "form": "F"
-  },
-  "leiturinhas": {
-    "plural": "isPlural",
-    "form": "PL"
+    "form": "F/PL"
   },
   "leiturona": {
     "plural": "leituras",
     "form": "F/PL"
   },
   "leiturão": {
-    "plural": "leiturinhas",
+    "plural": "leituras",
     "form": "F"
+  },
+  "lenda": {
+    "plural": "lendas",
+    "form": "F"
+  },
+  "lendas": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "lenha": {
     "plural": "lenhas",
@@ -11919,6 +12079,22 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "maquiagem": {
+    "plural": "maquiagens",
+    "form": "F"
+  },
+  "maquiagens": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "maquilagem": {
+    "plural": "maquiagens",
+    "form": "F/PL"
+  },
+  "maquilhagem": {
+    "plural": "maquiagens",
+    "form": "F/PL"
+  },
   "maquinista": {
     "plural": "maquinistas",
     "form": "M"
@@ -12301,11 +12477,11 @@
   },
   "meninona": {
     "plural": "meninas",
-    "form": "PL"
+    "form": ""
   },
   "meninão": {
     "plural": "meninas",
-    "form": ""
+    "form": "PL"
   },
   "mente": {
     "plural": "mentes",
@@ -12789,26 +12965,26 @@
   },
   "mosca": {
     "plural": "moscas",
-    "form": "F/PL"
+    "form": "F"
   },
   "moscas": {
     "plural": "isPlural",
     "form": "PL"
   },
   "moscona": {
-    "plural": "moscões",
+    "plural": "moscas",
     "form": "F/PL"
   },
   "moscão": {
-    "plural": "moscões",
-    "form": "F"
+    "plural": "moscas",
+    "form": "F/PL"
   },
   "moscões": {
     "plural": "isPlural",
     "form": "PL"
   },
   "mosquinha": {
-    "plural": "moscas",
+    "plural": "moscões",
     "form": "F"
   },
   "mosquiteiro": {
@@ -12912,8 +13088,12 @@
     "form": "F/PL"
   },
   "mulheraça": {
-    "plural": "mulheres",
+    "plural": "mulheraças",
     "form": "F"
+  },
+  "mulheraças": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "mulheres": {
     "plural": "isPlural",
@@ -12933,7 +13113,7 @@
   },
   "mulherão": {
     "plural": "mulheres",
-    "form": "F/PL"
+    "form": "F"
   },
   "multiplicação": {
     "plural": "multiplicações",
@@ -13264,6 +13444,14 @@
     "form": "F"
   },
   "necessidades": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "negociação": {
+    "plural": "negociações",
+    "form": "F"
+  },
+  "negociações": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -13843,6 +14031,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "ovelha": {
+    "plural": "ovelhas",
+    "form": "F"
+  },
+  "ovelhas": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "ovo": {
     "plural": "ovos",
     "form": "M"
@@ -13995,9 +14191,21 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "palhacinha": {
+    "plural": "palhaços",
+    "form": "PL"
+  },
+  "palhacinho": {
+    "plural": "palhaços",
+    "form": "PL"
+  },
+  "palhaça": {
+    "plural": "palhaços",
+    "form": "PL"
+  },
   "palhaço": {
     "plural": "palhaços",
-    "form": "M"
+    "form": ""
   },
   "palhaços": {
     "plural": "isPlural",
@@ -14061,7 +14269,7 @@
   },
   "pano": {
     "plural": "paninhos",
-    "form": "M/PL"
+    "form": "M"
   },
   "pantera": {
     "plural": "panteras",
@@ -14073,7 +14281,7 @@
   },
   "panão": {
     "plural": "paninhos",
-    "form": "M"
+    "form": "M/PL"
   },
   "papa": {
     "plural": "papas",
@@ -15505,7 +15713,7 @@
   },
   "prima": {
     "plural": "primos",
-    "form": "PL"
+    "form": ""
   },
   "primata": {
     "plural": "primatas",
@@ -15524,11 +15732,15 @@
     "form": "PL"
   },
   "priminha": {
-    "plural": "primos",
-    "form": "PL"
+    "plural": "priminhos",
+    "form": ""
   },
   "priminho": {
     "plural": "primos",
+    "form": "PL"
+  },
+  "priminhos": {
+    "plural": "isPlural",
     "form": "PL"
   },
   "primo": {
@@ -15545,7 +15757,7 @@
   },
   "primão": {
     "plural": "primos",
-    "form": ""
+    "form": "PL"
   },
   "princesa": {
     "plural": "princesas",
@@ -15564,12 +15776,16 @@
     "form": "F/PL"
   },
   "principezinho": {
-    "plural": "príncipes",
-    "form": "M/PL"
+    "plural": "principezões",
+    "form": "M"
   },
   "principezão": {
     "plural": "príncipes",
-    "form": "M"
+    "form": "M/PL"
+  },
+  "principezões": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "princípio": {
     "plural": "princípios",
@@ -15857,7 +16073,7 @@
   },
   "príncipe": {
     "plural": "príncipes",
-    "form": "M/PL"
+    "form": "M"
   },
   "príncipes": {
     "plural": "isPlural",
@@ -16271,6 +16487,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "radiografia": {
+    "plural": "radiografias",
+    "form": "F"
+  },
+  "radiografias": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "rainha": {
     "plural": "rainhas",
     "form": "F"
@@ -16363,8 +16587,12 @@
     "plural": "reações",
     "form": "F"
   },
+  "reais": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "real": {
-    "plural": "réis",
+    "plural": "reais",
     "form": "M"
   },
   "realidade": {
@@ -16943,6 +17171,14 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "restauração": {
+    "plural": "restaurações",
+    "form": "F"
+  },
+  "restaurações": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
   "resto": {
     "plural": "restos",
     "form": "M"
@@ -17102,6 +17338,14 @@
   "risco": {
     "plural": "risco",
     "form": "M/PL"
+  },
+  "ritmo": {
+    "plural": "ritmos",
+    "form": "M"
+  },
+  "ritmos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "rituais": {
     "plural": "isPlural",
@@ -17296,10 +17540,6 @@
     "form": "M"
   },
   "rádios": {
-    "plural": "isPlural",
-    "form": "PL"
-  },
-  "réis": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -17629,15 +17869,11 @@
   },
   "senador": {
     "plural": "senadores",
-    "form": "M"
+    "form": "PL"
   },
   "senadora": {
-    "plural": "senadoras",
-    "form": "F"
-  },
-  "senadoras": {
-    "plural": "isPlural",
-    "form": "PL"
+    "plural": "senadores",
+    "form": ""
   },
   "senadores": {
     "plural": "isPlural",
@@ -17680,6 +17916,14 @@
     "form": "M"
   },
   "sentimentos": {
+    "plural": "isPlural",
+    "form": "PL"
+  },
+  "separação": {
+    "plural": "separações",
+    "form": "F"
+  },
+  "separações": {
     "plural": "isPlural",
     "form": "PL"
   },
@@ -18275,9 +18519,13 @@
     "plural": "isPlural",
     "form": "PL"
   },
+  "sócia": {
+    "plural": "sócios",
+    "form": "PL"
+  },
   "sócio": {
     "plural": "sócios",
-    "form": "M"
+    "form": ""
   },
   "sócios": {
     "plural": "isPlural",
@@ -19834,6 +20082,14 @@
   "venerável": {
     "plural": "veneráveis",
     "form": "M"
+  },
+  "vento": {
+    "plural": "ventos",
+    "form": "M"
+  },
+  "ventos": {
+    "plural": "isPlural",
+    "form": "PL"
   },
   "verbete": {
     "plural": "verbetes",
