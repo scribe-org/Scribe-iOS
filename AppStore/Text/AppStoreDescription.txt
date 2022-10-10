@@ -1,10 +1,10 @@
-Scribe is a pack of iOS and iPadOS keyboards for language learners. It provides features to help users remember grammar rules so they can effectively communicate without ever leaving their keyboard.
+Scribe is a pack of iOS and iPadOS keyboards for language learners! It provides features to help users remember grammar rules so they can effectively communicate without ever leaving their keyboard.
 
-Included Languages
+Included Languages:
 
 French, German, Italian, Portuguese, Russian, Spanish and Swedish.
 
-Current Features
+Current Features:
 
 - The (beta) Translate feature can translate single words or phrases from English into the language of the current keyboard.
 
