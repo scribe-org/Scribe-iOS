@@ -31,6 +31,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
 - Code was refactored to work with the new enum style of command state management.
+- Refactored `ColorVariables.swift` to colors asset file.
 
 # Scribe-iOS 1.4.0
 
