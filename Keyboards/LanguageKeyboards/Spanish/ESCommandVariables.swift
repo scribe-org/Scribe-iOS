@@ -5,12 +5,17 @@
 //
 
 func esSetConjugationLabels() {
-  labelFPS = "yo"
-  labelSPS = "tú"
-  labelTPS = "él/ella/Ud."
-  labelFPP = "nosotros"
-  labelSPP = "vosotros"
-  labelTPP = "ellos/ellas/Uds."
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "yo"
+  formLabelsDict["SPS"] = "tú"
+  formLabelsDict["TPS"] = "él/ella/Ud."
+  formLabelsDict["FPP"] = "nosotros"
+  formLabelsDict["SPP"] = "vosotros"
+  formLabelsDict["TPP"] = "ellos/ellas/Uds."
 }
 
 /// What the conjugation state is for the conjugate feature.
@@ -53,25 +58,24 @@ func esGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func esConjugationStateLeft() {
-  if esConjugationState == .indicativePresent {
-    return
-  } else if esConjugationState == .preterite {
+  switch esConjugationState {
+  case .indicativePresent:
+    break
+  case .preterite:
     esConjugationState = .indicativePresent
-    return
-  } else if esConjugationState == .imperfect {
+  case .imperfect:
     esConjugationState = .preterite
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func esConjugationStateRight() {
-  if esConjugationState == .indicativePresent {
+  switch esConjugationState {
+  case .indicativePresent:
     esConjugationState = .preterite
-  } else if esConjugationState == .preterite {
+  case .preterite:
     esConjugationState = .imperfect
-    return
-  } else if esConjugationState == .imperfect {
-    return
+  case .imperfect:
+    break
   }
 }

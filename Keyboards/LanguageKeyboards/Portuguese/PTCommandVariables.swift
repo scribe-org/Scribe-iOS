@@ -5,12 +5,17 @@
 //
 
 func ptSetConjugationLabels() {
-  labelFPS = "eu"
-  labelSPS = "tu"
-  labelTPS = "ele/ela/você"
-  labelFPP = "nós"
-  labelSPP = "vós"
-  labelTPP = "eles/elas/vocês"
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "eu"
+  formLabelsDict["SPS"] = "tu"
+  formLabelsDict["TPS"] = "ele/ela/você"
+  formLabelsDict["FPP"] = "nós"
+  formLabelsDict["SPP"] = "vós"
+  formLabelsDict["TPP"] = "eles/elas/vocês"
 }
 
 /// What the conjugation state is for the conjugate feature.
@@ -58,31 +63,28 @@ func ptGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func ptConjugationStateLeft() {
-  if ptConjugationState == .indicativePresent {
-    return
-  } else if ptConjugationState == .pastPerfect {
+  switch ptConjugationState {
+  case .indicativePresent:
+    break
+  case .pastPerfect:
     ptConjugationState = .indicativePresent
-    return
-  } else if ptConjugationState == .pastImperfect {
+  case .pastImperfect:
     ptConjugationState = .pastPerfect
-    return
-  } else if ptConjugationState == .futureSimple {
+  case .futureSimple:
     ptConjugationState = .pastImperfect
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func ptConjugationStateRight() {
-  if ptConjugationState == .indicativePresent {
+  switch ptConjugationState {
+  case .indicativePresent:
     ptConjugationState = .pastPerfect
-  } else if ptConjugationState == .pastPerfect {
+  case .pastPerfect:
     ptConjugationState = .pastImperfect
-    return
-  } else if ptConjugationState == .pastImperfect {
+  case .pastImperfect:
     ptConjugationState = .futureSimple
-    return
-  } else if ptConjugationState == .futureSimple {
-    return
+  case .futureSimple:
+    break
   }
 }

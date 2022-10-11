@@ -57,7 +57,8 @@ enum CommandState {
   case selectCommand
   case translate
   case conjugate
-  case selectConjugation
+  case selectVerbConjugation
+  case selectCaseDeclension
   case plural
   case alreadyPlural
   case invalid

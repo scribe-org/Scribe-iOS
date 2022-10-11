@@ -14,21 +14,19 @@ var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
 
 // All data needed for Scribe commands for the given language keyboard.
-let nouns = loadJSONToDict(filename: "nouns")
+var nouns = loadJSONToDict(filename: "nouns")
 let verbs = loadJSONToDict(filename: "verbs")
 let translations = loadJSONToDict(filename: "translations")
 let prepositions = loadJSONToDict(filename: "prepositions")
+let autosuggestions = loadJSONToDict(filename: "autosuggestions")
 
 // Words that should not be included in autocomplete should be added to the string below.
-let autocompleteWords = nouns!.keys.filter(
-  { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
-).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
+var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
 var numericAutosuggestions = [String]()
 
 var currentPrefix: String = ""
 var pastStringInTextProxy: String = ""
-var secondaryPastStringOnDelete: String = ""
 var completionWords = [String]()
 
 // A larger vertical bar than the normal | key for the cursor.
@@ -42,10 +40,17 @@ var invalidCommandMsg: String = ""
 
 // Annotation variables.
 var annotationState: Bool = false
+var activateAnnotationBtn: Bool = false
+var prepAnnotationForm: String = ""
 var annotationBtns: [UIButton] = [UIButton]()
 var annotationColors: [UIColor] = [UIColor]()
-var annotationSeperators: [UIView] = [UIView]()
+var annotationSeparators: [UIView] = [UIView]()
 var annotationDisplayWord: String = ""
+var wordToCheck: String = ""
+var wordsTyped: [String] = [String]()
+var annotationsToAssign: [String] = [String]()
+var isNoun: Bool = false
+var isPrep: Bool = false
 
 // Prompts and saving groups of languages.
 var allPrompts: [String] = [""]
@@ -70,37 +75,64 @@ var conjugatePlaceholder: String = ""
 var conjugatePromptAndCursor: String = ""
 var conjugatePromptAndPlaceholder: String = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
-var conjugateAlternateView: Bool = false
 
-var allTenses = [String]()
+/// What the view of the conjugation display to display to the user.
+enum FormsDisplayDimensions {
+  case view3x2
+  case view3x1
+  case view2x2
+  case view1x2
+  case view1x1
+}
+
+var formsDisplayDimensions: FormsDisplayDimensions = .view3x2
+
+var allConjugations = [String]()
 var allConjugationBtns = [UIButton]()
 
-var tenseFPS: String = ""
-var tenseSPS: String = ""
-var tenseTPS: String = ""
-var tenseFPP: String = ""
-var tenseSPP: String = ""
-var tenseTPP: String = ""
+var formFPS: String = ""
+var formSPS: String = ""
+var formTPS: String = ""
+var formFPP: String = ""
+var formSPP: String = ""
+var formTPP: String = ""
 
-var labelFPS: String = ""
-var labelSPS: String = ""
-var labelTPS: String = ""
-var labelFPP: String = ""
-var labelSPP: String = ""
-var labelTPP: String = ""
+var formTop: String = ""
+var formMiddle: String = ""
+var formBottom: String = ""
 
-var tenseTopLeft: String = ""
-var tenseTopRight: String = ""
-var tenseBottomLeft: String = ""
-var tenseBottomRight: String = ""
+var formTopLeft: String = ""
+var formTopRight: String = ""
+var formBottomLeft: String = ""
+var formBottomRight: String = ""
 
-var labelTopLeft: String = ""
-var labelTopRight: String = ""
-var labelBottomLeft: String = ""
-var labelBottomRight: String = ""
+var formLeft: String = ""
+var formRight: String = ""
+
+var formSingle: String = ""
+
+var formLabelsDict: [String: String] = [
+  "FPS": "",
+  "SPS": "",
+  "TPS": "",
+  "FPP": "",
+  "SPP": "",
+  "TPP": "",
+  "Top": "",
+  "Bottom": "",
+  "Middle": "",
+  "TL": "",
+  "TR": "",
+  "BL": "",
+  "BR": "",
+  "Left": "",
+  "Right": "",
+  "Single": ""
+]
 
 var verbToConjugate: String = ""
 var verbToDisplay: String = ""
+var wordToDisplay: String = ""
 var conjugationToDisplay: String = ""
 var verbConjugated: String = ""
 

@@ -14,24 +14,51 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!-- - Scribe now includes a baseline autocomplete feature that suggests the next possible noun based on the current word being entered as well as the most common words in the keyboard language.
-- Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word. -->
+- Scribe now includes a baseline Wikidata and Wikipedia based autocomplete feature.
+  - Suggestions include the next possible noun as well as the most common words in the keyboard language.
+- Scribe now includes a baseline autosuggest feature that suggests words derived from Wikipedia that most often follow a given word.
+- Preposition annotations can now be clicked to display a case pronoun display from which pronouns can be selected.
+  - Users are able to select from the display based on subjects and objects to exactly specify which pronoun they need.
 
 ### 🗃️ Data Added
 
+- French: 307 nouns, 39 verbs
+- German: 282 nouns, 73 verbs
+- Italian: 4,236 nouns
+- Portuguese: 64 nouns
+- Russian: 7 nouns, 1 preposition
+- Spanish: 1,387 nouns, 9 verbs
+- Swedish: 702 nouns, 120 verbs
+
 ### 🎨 Design Changes
 
-<!-- - Noun and preposition annotation has been updated to not show the given word to save space for autocomplete and autosuggest. -->
-
+- Noun and preposition annotation has been updated to not show the word being annotated.
+  - This saves space above the keyboard for autocomplete and autosuggest.
 - The annotation colors have been changed to match the new backgrounds.
-- The App Store images have been updated to reflect autosuggest data based on Wikipedia.
-- Delete key features pressed state style similar to the native keyboard
+- The delete key features a pressed state style similar to the native keyboard.
+- New layouts for pronoun declination have been added to the keyboards.
+- The message indicating that the word isn't in Wikidata now comes with an information icon (action pending).
+- The App Store images have been updated to reflect the new Wikipedia based autosuggest.
+- The App Store videos have been updated to reflect the changes for the new version.
+- iPhone 6.7" images and videos have been added to the App Store.
+- Other minor changes to images for the App Store.
+
+### 🌐 Localization
+
+- Russian keyboard command names and messages were corrected.
+
+### ⚖️ Legal
+
+- The privacy policy was updated to add information about the Wikipedia text data terms of use.
 
 ### ♻️ Code Refactoring
 
 - Boolean states for commands were converted into a single enum to make keyboard states much simpler to work with.
 - Code was refactored to work with the new enum style of command state management.
-- Refactored `ColorVariables.swift` to colors asset file.
+- Enums are now used to control switching between conjugations.
+- Enums are now used to control switching between different conjugation displays.
+- Light and dark mode colors are now defined in `Assets.xcassets` and accessed via `ScribeColor.getter:color` or `UIColor`'s new convenience initializer.
+- Variants of the Scribe key icon are placed into `Assets.xcassets`, making it unnecessary to check for light/dark mode and device type in code.
 
 # Scribe-iOS 1.4.0
 

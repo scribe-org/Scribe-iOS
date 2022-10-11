@@ -1,10 +1,10 @@
-Scribe is a pack of iOS and iPadOS keyboards for language learners. It provides features to help users remember grammar rules so they can effectively communicate without ever leaving their keyboard.
+Scribe is a pack of iOS and iPadOS keyboards for language learners! It provides features to help users remember grammar rules so they can effectively communicate without ever leaving their keyboard.
 
-Included Languages
+Included Languages:
 
 French, German, Italian, Portuguese, Russian, Spanish and Swedish.
 
-Current Features
+Current Features:
 
 - The (beta) Translate feature can translate single words or phrases from English into the language of the current keyboard.
 
@@ -13,5 +13,7 @@ Current Features
 - The Plural feature allows a user to enter a noun and then insert its plural into the text field.
 
 - Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
+
+- For languages with pronoun declension, Scribe also allows for the case annotation to be clicked and then the user can select the pronoun they want based on case, subject and object.
 
 Being fully open-source including data from Wikidata, the Scribe team loves to get both feedback and contributions. Please don't hesitate to visit us at https://github.com/scribe-org/Scribe-iOS!

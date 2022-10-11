@@ -15,37 +15,22 @@
 		38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		CE13788C28F5890A00E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13788D28F5891600E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13788E28F5891900E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13788F28F5891900E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13789028F5891B00E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13789128F5891B00E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13789228F5891C00E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE13789428F5891E00E1CBC2 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */; };
-		CE1378BA28F58E3D00E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378BB28F58E3E00E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378BC28F58E3F00E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378BD28F58E4000E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378BE28F58E4100E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378BF28F58E4200E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1378C028F58E4300E1CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		CE1FA6E828ECD224001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6EA28ECD2F0001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6EB28ECD9B1001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6EC28ECD9B5001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6ED28ECD9B6001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6EF28ECD9B8001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6F028ECD9B9001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6F128ECD9BA001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6F228ECD9BB001E10E4 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */; };
-		CE1FA6F328ECD9BE001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F428ECD9BF001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F528ECD9C0001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F628ECD9C1001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F728ECD9C2001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F828ECD9C2001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
-		CE1FA6F928ECD9C3001E10E4 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */; };
+		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C728F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C828F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C928F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CA28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CB28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CD28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CE28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CF28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D028F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D128F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D228F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
@@ -59,11 +44,13 @@
 		D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A21A275B68B3005E2271 /* Portuguese.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D109A228275B6A8B005E2271 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D109A22D275B6A8C005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D109A22E275B6A8C005E2271 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
@@ -99,14 +86,23 @@
 		D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
+		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4728E9D86C00301919 /* autosuggestions.json */; };
+		D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4928E9D89100301919 /* autosuggestions.json */; };
+		D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4D28E9D8B400301919 /* autosuggestions.json */; };
+		D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
+		D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5228E9D8D700301919 /* autosuggestions.json */; };
+		D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5528E9D8E500301919 /* autosuggestions.json */; };
+		D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5828E9D8F300301919 /* autosuggestions.json */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D1671A73275A1FC000A7C118 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1671A75275A1FC000A7C118 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
+		D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
@@ -146,13 +142,13 @@
 		D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
-		D17193F827AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FA27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
-		D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
+		D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FA27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
+		D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
 		D171940027AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D171940127AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D171940227AECCD10038660B /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
@@ -229,11 +225,14 @@
 		D18EA89C2760D4A6001E1358 /* SwedishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
+		D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D18EA8A62760D6F5001E1358 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D18EA8A82760D6F5001E1358 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D18EA8A92760D6F5001E1358 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D18EA8AC2760D701001E1358 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
+		D190B242274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
+		D190B243274056D400705659 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D190B2442740576600705659 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D190B2472741B24F00705659 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D190B2482741B24F00705659 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
@@ -269,7 +268,7 @@
 		D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D1B81D2B27BBB6830085FE5E /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D1B81D2C27BBB6880085FE5E /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */; };
-		D1B81D2D27BBB68B0085FE5E /* FRCommandVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVaribles.swift */; };
+		D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
 		D1B81D2E27BBB69B0085FE5E /* PTCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940727AECCE50038660B /* PTCommandVariables.swift */; };
 		D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
 		D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940F27AECCF50038660B /* RUCommandVariables.swift */; };
@@ -278,6 +277,7 @@
 		D1B81D3327BBB6AD0085FE5E /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1B81D3427BBB6B30085FE5E /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
 		D1B81D3527BBB6B50085FE5E /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
+		D1B81D3A27BBB6F90085FE5E /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D1B81D3C27BBB6FF0085FE5E /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1B81D3D27BBB7020085FE5E /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
@@ -410,9 +410,8 @@
 		38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorVariables.swift; sourceTree = "<group>"; };
-		CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
-		CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
+		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
+		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
 		D101820F2728275B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
@@ -436,6 +435,13 @@
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D163CA4728E9D86C00301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4928E9D89100301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4B28E9D8A200301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA4D28E9D8B400301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5228E9D8D700301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5528E9D8E500301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D163CA5828E9D8F300301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D166FCF1275A197B0047E62B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -447,7 +453,7 @@
 		D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193E727AECAE60038660B /* ESInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193EF27AECB350038660B /* SVInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVInterfaceVariables.swift; sourceTree = "<group>"; };
-		D17193F727AECC930038660B /* FRCommandVaribles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRCommandVaribles.swift; sourceTree = "<group>"; };
+		D17193F727AECC930038660B /* FRCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRCommandVariables.swift; sourceTree = "<group>"; };
 		D17193FF27AECCD10038660B /* DECommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECommandVariables.swift; sourceTree = "<group>"; };
 		D171940727AECCE50038660B /* PTCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCommandVariables.swift; sourceTree = "<group>"; };
 		D171940F27AECCF50038660B /* RUCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUCommandVariables.swift; sourceTree = "<group>"; };
@@ -461,6 +467,7 @@
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SwedishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwedishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D18EA89D2760D4A6001E1358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D190B240274056D400705659 /* ColorVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVariables.swift; sourceTree = "<group>"; };
 		D190B2462741B24F00705659 /* CommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandVariables.swift; sourceTree = "<group>"; };
 		D190B2492741B31F00705659 /* InterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceVariables.swift; sourceTree = "<group>"; };
 		D190B24D2741B61000705659 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
@@ -565,7 +572,9 @@
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				38BD213122D5907E00C6795D /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		38BD213122D5907E00C6795D /* Products */ = {
 			isa = PBXGroup;
@@ -610,11 +619,11 @@
 			path = German;
 			sourceTree = "<group>";
 		};
-		CE1FA6E628ECD205001E10E4 /* Colors */ = {
+		CE1378C128F5D7AC00E1CBC2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FA6E728ECD224001E10E4 /* ScribeColor.swift */,
-				CE1FA6E928ECD2F0001E10E4 /* UIColor+ScribeColors.swift */,
+				CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */,
+				CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -625,6 +634,7 @@
 				D107A4A827BE7C4500EB9D34 /* translations.json */,
 				D107A4A927BE7C4500EB9D34 /* nouns.json */,
 				D107A4AA27BE7C4500EB9D34 /* verbs.json */,
+				D163CA4B28E9D8A200301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -633,7 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				D109A225275B68F4005E2271 /* Data */,
-				D17193F727AECC930038660B /* FRCommandVaribles.swift */,
+				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D17193C527AEC8D20038660B /* FRInterfaceVariables.swift */,
 				D109A20D275B6888005E2271 /* FrenchKeyboardViewController.swift */,
 				D109A20F275B6888005E2271 /* Info.plist */,
@@ -659,6 +669,7 @@
 				D1D880CB27860CFA00407050 /* nouns.json */,
 				D1D880C927860CFA00407050 /* translations.json */,
 				D1D880CA27860CFA00407050 /* verbs.json */,
+				D163CA4728E9D86C00301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -669,6 +680,7 @@
 				D1D880D127860D4700407050 /* nouns.json */,
 				D1D880D027860D4700407050 /* translations.json */,
 				D1D880CF27860D4600407050 /* verbs.json */,
+				D163CA4D28E9D8B400301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -680,6 +692,7 @@
 				D1D880D727860D6300407050 /* prepositions.json */,
 				D1D880D827860D6300407050 /* translations.json */,
 				D1D880D627860D6300407050 /* verbs.json */,
+				D163CA5228E9D8D700301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -740,6 +753,7 @@
 				D1D880DD27860D7B00407050 /* nouns.json */,
 				D1D880DE27860D7B00407050 /* translations.json */,
 				D1D880DF27860D7B00407050 /* verbs.json */,
+				D163CA5828E9D8F300301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -747,10 +761,10 @@
 		D190B2452741B1FE00705659 /* KeyboardsBase */ = {
 			isa = PBXGroup;
 			children = (
+				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				D171945627AF23680038660B /* ScribeFunctionality */,
-				CE1FA6E628ECD205001E10E4 /* Colors */,
+				D190B240274056D400705659 /* ColorVariables.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
-				CE13788B28F5890A00E1CBC2 /* ColorVariables.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
 				D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */,
 				D171943727AEF0560038660B /* KeyboardStyling.swift */,
@@ -770,6 +784,7 @@
 				D101821B2728291B0032A82D /* verbs.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
 				D19474C32740295300AF6EA5 /* prepositions.json */,
+				D163CA4928E9D89100301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -780,6 +795,7 @@
 				D101820F2728275B0032A82D /* nouns.json */,
 				D10182102728275B0032A82D /* verbs.json */,
 				D11E3B6A27299C8000FBE62C /* translations.json */,
+				D163CA5528E9D8E500301919 /* autosuggestions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1062,11 +1078,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
-				CE1378BB28F58E3E00E1CBC2 /* Assets.xcassets in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1076,10 +1092,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
+				D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
-				CE1378BA28F58E3D00E1CBC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,10 +1104,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880D227860D4700407050 /* verbs.json in Resources */,
+				D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
-				CE1378BD28F58E4000E1CBC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,10 +1116,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10182122728275B0032A82D /* nouns.json in Resources */,
+				D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
-				CE1378BF28F58E4200E1CBC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,11 +1127,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */,
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
-				CE1378BE28F58E4100E1CBC2 /* Assets.xcassets in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1125,10 +1141,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D880E127860D7B00407050 /* translations.json in Resources */,
+				D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
-				CE1378C028F58E4300E1CBC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,11 +1152,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
 				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
-				CE1378BC28F58E3F00E1CBC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,13 +1191,13 @@
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171944A27AEFC620038660B /* LoadData.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
-				CE1FA6E828ECD224001E10E4 /* ScribeColor.swift in Sources */,
+				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
 				D171941827AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D171940027AECCD10038660B /* DECommandVariables.swift in Sources */,
-				D17193F827AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
 				D17193C927AEC8F90038660B /* FRInterfaceVariables.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1192,13 +1208,12 @@
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
-				CE1FA6EA28ECD2F0001E10E4 /* UIColor+ScribeColors.swift in Sources */,
+				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
 				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
-				CE13788C28F5890A00E1CBC2 /* ColorVariables.swift in Sources */,
 				D1B81D5327BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */,
@@ -1206,6 +1221,7 @@
 				D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */,
 				D111E9A227AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
+				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -1221,21 +1237,20 @@
 				D171942927AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */,
 				D171943A27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5527BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D171941A27AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D1B071A227C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F828ECD9C2001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13788E28F5891900E1CBC2 /* ColorVariables.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D171940227AECCD10038660B /* DECommandVariables.swift in Sources */,
-				CE1FA6ED28ECD9B6001E10E4 /* ScribeColor.swift in Sources */,
 				D171945A27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D17193F227AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				D1B81D4C27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
-				D17193FA27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FA27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171946727AF31770038660B /* Conjugate.swift in Sources */,
 				D111E9AC27AFE78600746F92 /* Plural.swift in Sources */,
+				D190B242274056D400705659 /* ColorVariables.swift in Sources */,
 				D17193EA27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D111E9B427AFE79500746F92 /* Translate.swift in Sources */,
 				D17193E227AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
@@ -1245,6 +1260,7 @@
 				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
 				D190B24A2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D190B24E2741B61000705659 /* LoadData.swift in Sources */,
+				CE1378CE28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193CA27AEC9760038660B /* FRInterfaceVariables.swift in Sources */,
 				D111E9A427AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
@@ -1261,15 +1277,13 @@
 				D171942727AECEA60038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942127AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5427BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193F927AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F928ECD9C3001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13788D28F5891600E1CBC2 /* ColorVariables.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				CE1FA6EB28ECD9B1001E10E4 /* ScribeColor.swift in Sources */,
 				D171945927AF237C0038660B /* ScribeKey.swift in Sources */,
 				D109A20E275B6888005E2271 /* FrenchKeyboardViewController.swift in Sources */,
 				D1B81D4B27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1286,9 +1300,11 @@
 				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
 				D17193E127AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F127AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378CD28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */,
 				D111E9A327AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */,
+				D109A229275B6A8B005E2271 /* ColorVariables.swift in Sources */,
 				D1B0719827C63CE600FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941927AECD070038660B /* ESCommandVariables.swift in Sources */,
 			);
@@ -1301,15 +1317,13 @@
 				D171942827AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942327AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C828F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5727BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FB27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F628ECD9C1001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13789028F5891B00E1CBC2 /* ColorVariables.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				CE1FA6F028ECD9B9001E10E4 /* ScribeColor.swift in Sources */,
 				D171945B27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D109A21D275B68B3005E2271 /* PortugueseKeyboardViewController.swift in Sources */,
 				D1B81D4E27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1326,8 +1340,10 @@
 				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
 				D17193E327AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F327AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D028F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */,
 				D111E9A527AFE4F300746F92 /* CommandBar.swift in Sources */,
+				D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */,
 				D17193CB27AEC9770038660B /* FRInterfaceVariables.swift in Sources */,
 				D1B0719C27C63CE800FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941B27AECD070038660B /* ESCommandVariables.swift in Sources */,
@@ -1341,21 +1357,20 @@
 				D171942B27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942527AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378CA28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5927BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FD27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F428ECD9BF001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13789228F5891C00E1CBC2 /* ColorVariables.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				CE1FA6EC28ECD9B5001E10E4 /* ScribeColor.swift in Sources */,
 				D171945D27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */,
 				D1B81D5027BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
 				D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D171946A27AF31770038660B /* Conjugate.swift in Sources */,
 				D111E9AF27AFE78600746F92 /* Plural.swift in Sources */,
+				D190B243274056D400705659 /* ColorVariables.swift in Sources */,
 				D190B2482741B24F00705659 /* CommandVariables.swift in Sources */,
 				D111E9B727AFE79500746F92 /* Translate.swift in Sources */,
 				D171940527AECCD10038660B /* DECommandVariables.swift in Sources */,
@@ -1365,6 +1380,7 @@
 				D190B2442740576600705659 /* Extensions.swift in Sources */,
 				D17193E527AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D228F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D190B24B2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D111E9A727AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D190B24F2741B61000705659 /* LoadData.swift in Sources */,
@@ -1381,15 +1397,13 @@
 				D171942A27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942427AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C928F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5827BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FC27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F528ECD9C0001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13789128F5891B00E1CBC2 /* ColorVariables.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				CE1FA6F128ECD9BA001E10E4 /* ScribeColor.swift in Sources */,
 				D171945C27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */,
 				D1B81D4F27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1406,8 +1420,10 @@
 				D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */,
 				D17193E427AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D128F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D1671A75275A1FC000A7C118 /* KeyboardViewController.swift in Sources */,
 				D111E9A627AFE4F300746F92 /* CommandBar.swift in Sources */,
+				D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */,
 				D17193CC27AEC9770038660B /* FRInterfaceVariables.swift in Sources */,
 				D1B0719B27C63CE700FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941C27AECD070038660B /* ESCommandVariables.swift in Sources */,
@@ -1421,15 +1437,13 @@
 				D171942C27AECEA90038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942627AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378CB28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
-				D17193FE27AECC930038660B /* FRCommandVaribles.swift in Sources */,
+				D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F328ECD9BE001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13789428F5891E00E1CBC2 /* ColorVariables.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				CE1FA6F228ECD9BB001E10E4 /* ScribeColor.swift in Sources */,
 				D171945E27AF237C0038660B /* ScribeKey.swift in Sources */,
 				D18EA8A62760D6F5001E1358 /* CommandVariables.swift in Sources */,
 				D1B81D5127BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1443,8 +1457,10 @@
 				D171940E27AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D17193DE27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */,
+				D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */,
 				D17193E627AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D18EA8A82760D6F5001E1358 /* InterfaceVariables.swift in Sources */,
 				D111E9A827AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */,
@@ -1461,15 +1477,13 @@
 				D1B81D3427BBB6B30085FE5E /* SVCommandVariables.swift in Sources */,
 				D1B81D3327BBB6AD0085FE5E /* ESInterfaceVariables.swift in Sources */,
 				D1B81D3527BBB6B50085FE5E /* SVInterfaceVariables.swift in Sources */,
+				CE1378C728F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5627BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */,
 				D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */,
 				D1B071A327C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
-				CE1FA6F728ECD9C2001E10E4 /* UIColor+ScribeColors.swift in Sources */,
-				CE13788F28F5891900E1CBC2 /* ColorVariables.swift in Sources */,
 				D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */,
 				D1B81D3F27BBB7070085FE5E /* KeyboardStyling.swift in Sources */,
-				CE1FA6EF28ECD9B8001E10E4 /* ScribeColor.swift in Sources */,
 				D1B81D4427BBB71C0085FE5E /* CommandBar.swift in Sources */,
 				D1B81D3227BBB6AA0085FE5E /* ESCommandVariables.swift in Sources */,
 				D1B81D4D27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
@@ -1481,11 +1495,13 @@
 				D1B81D4027BBB70C0085FE5E /* LoadData.swift in Sources */,
 				D1B81D4227BBB71C0085FE5E /* CommandVariables.swift in Sources */,
 				D1B81D4727BBB71C0085FE5E /* Translate.swift in Sources */,
+				D1B81D3A27BBB6F90085FE5E /* ColorVariables.swift in Sources */,
 				D1B81D4827BBB71C0085FE5E /* Plural.swift in Sources */,
 				D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */,
 				D1B81D2227BBB5320085FE5E /* ItalianKeyboardViewController.swift in Sources */,
 				D1B81D3E27BBB7040085FE5E /* KeyboardViewController.swift in Sources */,
-				D1B81D2D27BBB68B0085FE5E /* FRCommandVaribles.swift in Sources */,
+				CE1378CF28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
+				D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */,
 				D1B81D3C27BBB6FF0085FE5E /* InterfaceVariables.swift in Sources */,
 				D1B81D3127BBB6A60085FE5E /* RUInterfaceVariables.swift in Sources */,
 				D1B81D4627BBB71C0085FE5E /* ScribeKey.swift in Sources */,
@@ -1687,7 +1703,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1711,7 +1727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1735,7 +1751,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.german;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1760,7 +1776,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.german;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1785,7 +1801,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1810,7 +1826,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1834,7 +1850,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1859,7 +1875,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1884,7 +1900,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.spanish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1909,7 +1925,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.spanish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1934,7 +1950,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.russian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1959,7 +1975,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.russian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1984,7 +2000,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.swedish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2009,7 +2025,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.swedish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2034,7 +2050,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.italian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2059,7 +2075,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.italian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
