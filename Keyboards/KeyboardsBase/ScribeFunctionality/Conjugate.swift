@@ -269,14 +269,19 @@ func resetCaseDeclensionState() {
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {
+      conjViewShiftButtonsState = .leftInactive
       ruCaseDeclensionState = .accusative
     } else if prepAnnotationForm.contains("Dat") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .dative
     } else if prepAnnotationForm.contains("Gen") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .genitive
     } else if prepAnnotationForm.contains("Pre") {
+      conjViewShiftButtonsState = .rightInactive
       ruCaseDeclensionState = .prepositional
     } else {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .instrumental
     }
   }
