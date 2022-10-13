@@ -792,7 +792,7 @@ class KeyboardViewController: UIInputViewController {
       + get1x1FormDisplayLabels()
     for lbl in allFormDisplayLabels {
       lbl.backgroundColor = UIColor.clear
-      lbl.setTitleColor(specialKeyColor, for: .normal)
+      lbl.setTitleColor(UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : commandBarColor, for: .normal)
       lbl.isUserInteractionEnabled = false
       if DeviceType.isPad {
         lbl.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / 4)

@@ -16,6 +16,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
 
+### 🎨 Design Changes
+
+- The labels for conjugations and declinations have been made darker in dark mode to be more readable.
+
 # Scribe-iOS 2.0.0
 
 ### ✨ New Features
