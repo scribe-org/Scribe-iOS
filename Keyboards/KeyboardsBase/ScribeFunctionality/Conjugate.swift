@@ -230,10 +230,12 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   }
   autoActionState = .suggest
   commandState = .idle
+  conjViewShiftButtonsState = .bothInactive
 }
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
+  conjViewShiftButtonsState = .leftInactive
   if controllerLanguage == "French" {
     frConjugationState = .indicativePresent
   } else if controllerLanguage == "German" {
@@ -256,22 +258,30 @@ func resetCaseDeclensionState() {
   // The case conjugation display starts on the left most case.
   if controllerLanguage == "German" {
     if prepAnnotationForm.contains("Acc") {
+      conjViewShiftButtonsState = .leftInactive
       deCaseDeclensionState = .accusative
     } else if prepAnnotationForm.contains("Dat") {
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     } else {
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {
+      conjViewShiftButtonsState = .leftInactive
       ruCaseDeclensionState = .accusative
     } else if prepAnnotationForm.contains("Dat") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .dative
     } else if prepAnnotationForm.contains("Gen") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .genitive
     } else if prepAnnotationForm.contains("Pre") {
+      conjViewShiftButtonsState = .rightInactive
       ruCaseDeclensionState = .prepositional
     } else {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .instrumental
     }
   }
