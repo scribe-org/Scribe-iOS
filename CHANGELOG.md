@@ -10,6 +10,12 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
+# Scribe-iOS 2.1.0
+
+### ✨ New Features
+
+- The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
+
 # Scribe-iOS 2.0.0
 
 ### ✨ New Features

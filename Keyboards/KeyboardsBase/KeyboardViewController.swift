@@ -775,11 +775,13 @@ class KeyboardViewController: UIInputViewController {
     if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
       activateBtn(btn: shiftFormsDisplayLeft)
     } else {
-      deactivateBtn(btn: shiftFormsDisplayLeft)
+      shiftFormsDisplayLeft.isUserInteractionEnabled = false
     }
     if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
       activateBtn(btn: shiftFormsDisplayRight)
-    } else { deactivateBtn(btn: shiftFormsDisplayRight)}
+    } else {
+      shiftFormsDisplayRight.isUserInteractionEnabled = false
+    }
 
     // Make all labels clear and set their font for if they will be used.
     let allFormDisplayLabels: [UIButton] =
@@ -803,11 +805,13 @@ class KeyboardViewController: UIInputViewController {
     if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
       activateBtn(btn: shiftFormsDisplayLeft)
     } else {
-      deactivateBtn(btn: shiftFormsDisplayLeft)
+      shiftFormsDisplayLeft.isUserInteractionEnabled = false
     }
     if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
       activateBtn(btn: shiftFormsDisplayRight)
-    } else { deactivateBtn(btn: shiftFormsDisplayRight)}
+    } else {
+      shiftFormsDisplayRight.isUserInteractionEnabled = false
+    }
 
     switch formsDisplayDimensions {
     case .view3x2:

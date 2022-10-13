@@ -463,8 +463,8 @@ func deConjugationStateLeft() {
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitivePossesive:
-      deCaseDeclensionState = .genitivePersonal
       conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .genitivePersonal
     }
   } else {
     switch deConjugationState {
