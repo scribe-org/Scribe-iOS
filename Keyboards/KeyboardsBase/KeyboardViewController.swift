@@ -772,8 +772,14 @@ class KeyboardViewController: UIInputViewController {
       isSpecial: false
     )
 
-    activateBtn(btn: shiftFormsDisplayLeft)
-    activateBtn(btn: shiftFormsDisplayRight)
+    if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayLeft)
+    } else {
+      deactivateBtn(btn: shiftFormsDisplayLeft)
+    }
+    if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayRight)
+    } else { deactivateBtn(btn: shiftFormsDisplayRight)}
 
     // Make all labels clear and set their font for if they will be used.
     let allFormDisplayLabels: [UIButton] =
@@ -794,8 +800,14 @@ class KeyboardViewController: UIInputViewController {
 
   /// Activates all buttons that are associated with the conjugation display.
   func activateConjugationDisplay() {
-    activateBtn(btn: shiftFormsDisplayLeft)
-    activateBtn(btn: shiftFormsDisplayRight)
+    if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayLeft)
+    } else {
+      deactivateBtn(btn: shiftFormsDisplayLeft)
+    }
+    if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayRight)
+    } else { deactivateBtn(btn: shiftFormsDisplayRight)}
 
     switch formsDisplayDimensions {
     case .view3x2:
@@ -1461,9 +1473,13 @@ class KeyboardViewController: UIInputViewController {
 
       activateConjugationDisplay()
       styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: shiftFormsDisplayLeft, color: keyCharColor, iconName: "chevron.left")
+      styleIconBtn(btn: shiftFormsDisplayLeft,
+                   color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                   iconName: "chevron.left")
       styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: shiftFormsDisplayRight, color: keyCharColor, iconName: "chevron.right")
+      styleIconBtn(btn: shiftFormsDisplayRight,
+                   color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                   iconName: "chevron.right")
 
       if commandState == .selectVerbConjugation {
         setVerbConjugationState()
@@ -1681,16 +1697,19 @@ class KeyboardViewController: UIInputViewController {
       for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
-      let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-      let lastWordTyped = wordsTyped.secondToLast()
-      var wordToCheck: String = ""
-      if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-        wordToCheck = lastWordTyped!.lowercased()
+      
+      if let wordSelected = proxy.selectedText {
+        wordToCheck = wordSelected
       } else {
-        wordToCheck = lastWordTyped!
+        wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+        let lastWordTyped = wordsTyped.secondToLast()
+        if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+          wordToCheck = lastWordTyped!.lowercased()
+        } else {
+          wordToCheck = lastWordTyped!
+        }
       }
-
-      let isPrep = prepositions?[wordToCheck.lowercased()] != nil
+      isPrep = prepositions?[wordToCheck.lowercased()] != nil
       if isPrep {
         resetCaseDeclensionState()
         commandState = .selectCaseDeclension
