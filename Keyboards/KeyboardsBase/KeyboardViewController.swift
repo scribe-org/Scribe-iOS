@@ -265,6 +265,19 @@ class KeyboardViewController: UIInputViewController {
       getDefaultAutosuggestions()
     }
   }
+  
+  /// Currently only works for German language.
+  func getAutosuggestionsOnPronouns() {
+    let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
+
+    completionWords = [String]()
+    var i = 0
+    while i < 3 {
+      let suggestion = verbs?[wordsAfterPronounsArray[i]]?[pronounsToPresentTenseDict[prefix]!] as! String
+      completionWords.append(suggestion)
+      i += 1
+    }
+  }
 
   /// Generates an array of three words that serve as baseline autosuggestions.
   func getDefaultAutosuggestions() {
@@ -288,6 +301,8 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
+    } else if controllerLanguage == "German" && pronounsToPresentTenseDict.keys.contains(prefix) {
+      getAutosuggestionsOnPronouns()
     } else {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
