@@ -118,7 +118,7 @@ func setDEKeyboardLayout() {
   baseAutosuggestions = ["ich", "die", "das"]
   numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
   wordsAfterPronounsArray = ["haben", "sein", "können"]
-  pronounsToPresentTenseDict = [
+  pronounAutosuggestionsDict = [
     "ich": "presFPS",
     "du": "presSPS",
     "er": "presTPS",
