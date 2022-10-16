@@ -67,10 +67,13 @@ func ptConjugationStateLeft() {
   case .indicativePresent:
     break
   case .pastPerfect:
+    conjViewShiftButtonsState = .leftInactive
     ptConjugationState = .indicativePresent
   case .pastImperfect:
+    conjViewShiftButtonsState = .bothActive
     ptConjugationState = .pastPerfect
   case .futureSimple:
+    conjViewShiftButtonsState = .bothActive
     ptConjugationState = .pastImperfect
   }
 }
@@ -79,10 +82,13 @@ func ptConjugationStateLeft() {
 func ptConjugationStateRight() {
   switch ptConjugationState {
   case .indicativePresent:
+    conjViewShiftButtonsState = .bothActive
     ptConjugationState = .pastPerfect
   case .pastPerfect:
+    conjViewShiftButtonsState = .bothActive
     ptConjugationState = .pastImperfect
   case .pastImperfect:
+    conjViewShiftButtonsState = .rightInactive
     ptConjugationState = .futureSimple
   case .futureSimple:
     break

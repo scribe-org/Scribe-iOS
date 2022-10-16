@@ -10,6 +10,21 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
+# Scribe-iOS 2.1.0
+
+### ✨ New Features
+
+- The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
+
+### 🎨 Design Changes
+
+- The labels for conjugations and declinations have been made darker in dark mode to be more readable.
+
+### ♻️ Code Refactoring
+
+- Loading JSONs for language data is now handled by SwiftyJSON, with the code being refactored to implement it.
+  - This is a first step in refining the data loading process to better handle large amounts of data.
+
 # Scribe-iOS 2.0.0
 
 ### ✨ New Features

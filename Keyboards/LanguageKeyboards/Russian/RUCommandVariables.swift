@@ -147,12 +147,16 @@ func ruConjugationStateLeft() {
     case .accusative:
       break
     case .dative:
+      conjViewShiftButtonsState = .leftInactive
       ruCaseDeclensionState = .accusative
     case .genitive:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .dative
     case .instrumental:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .genitive
     case .prepositional:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .instrumental
     }
   } else {
@@ -160,6 +164,7 @@ func ruConjugationStateLeft() {
     case .present:
       break
     case .past:
+      conjViewShiftButtonsState = .leftInactive
       ruConjugationState = .present
     }
   }
@@ -170,12 +175,16 @@ func ruConjugationStateRight() {
   if commandState == .selectCaseDeclension {
     switch ruCaseDeclensionState {
     case .accusative:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .dative
     case .dative:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .genitive
     case .genitive:
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .instrumental
     case .instrumental:
+      conjViewShiftButtonsState = .rightInactive
       ruCaseDeclensionState = .prepositional
     case .prepositional:
       break
@@ -183,6 +192,7 @@ func ruConjugationStateRight() {
   } else {
     switch ruConjugationState {
     case .present:
+      conjViewShiftButtonsState = .rightInactive
       ruConjugationState = .past
     case .past:
       break

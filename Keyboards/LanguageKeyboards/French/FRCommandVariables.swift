@@ -62,8 +62,10 @@ func frConjugationStateLeft() {
   case .indicativePresent:
     break
   case .preterite:
+    conjViewShiftButtonsState = .leftInactive
     frConjugationState = .indicativePresent
   case .imperfect:
+    conjViewShiftButtonsState = .bothActive
     frConjugationState = .preterite
   }
 }
@@ -72,8 +74,10 @@ func frConjugationStateLeft() {
 func frConjugationStateRight() {
   switch frConjugationState {
   case .indicativePresent:
+    conjViewShiftButtonsState = .bothActive
     frConjugationState = .preterite
   case .preterite:
+    conjViewShiftButtonsState = .rightInactive
     frConjugationState = .imperfect
   case .imperfect:
     break

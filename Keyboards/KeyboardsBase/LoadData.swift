@@ -5,20 +5,15 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 /// Loads a JSON file that contains grammatical information into a dictionary.
 ///
 /// - Parameters
 ///  - filename: the name of the JSON file to be loaded.
-func loadJSONToDict(filename fileName: String) -> [String: AnyObject]? {
-  if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-    do {
-      let data = try Data(contentsOf: url)
-      let jsonData = try JSONSerialization.jsonObject(with: data)
-      return jsonData as? [String: AnyObject]
-    } catch {
-      print("error:\(error)")
-    }
-  }
-  return nil
+func loadJSON(filename fileName: String) -> JSON {
+  let url = Bundle.main.url(forResource: fileName, withExtension: "json")!
+  let data = NSData(contentsOf: url)
+  let jsonData = try! JSON(data: data! as Data)
+  return jsonData
 }

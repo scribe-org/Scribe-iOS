@@ -191,7 +191,7 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   inputWordIsCapitalized = firstLetter.isUppercase
   verbToConjugate = verbToConjugate.lowercased()
 
-  return verbs?[verbToConjugate] != nil
+  return verbs[verbToConjugate].exists()
 }
 
 /// Returns a conjugation once a user presses a key in the conjugateView or triggers a declension.
@@ -211,17 +211,17 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
     if deConjugationState != .indicativePerfect {
-      wordToReturn = verbs?[verbToConjugate]![requestedForm] as! String
+      wordToReturn = verbs[verbToConjugate][requestedForm].string ?? ""
       if inputWordIsCapitalized == true {
         proxy.insertText(wordToReturn.capitalized + " ")
       } else {
         proxy.insertText(wordToReturn + " ")
       }
     } else {
-      proxy.insertText(verbs?[verbToConjugate]!["pastParticiple"] as! String + " ")
+      proxy.insertText(verbs[verbToConjugate]["pastParticiple"].string ?? "" + " ")
     }
   } else if formsDisplayDimensions == .view2x2 {
-    wordToReturn = verbs?[verbToConjugate]![requestedForm] as! String
+    wordToReturn = verbs[verbToConjugate][requestedForm].string ?? ""
     if inputWordIsCapitalized == true {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {
@@ -230,10 +230,12 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   }
   autoActionState = .suggest
   commandState = .idle
+  conjViewShiftButtonsState = .bothInactive
 }
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
+  conjViewShiftButtonsState = .leftInactive
   if controllerLanguage == "French" {
     frConjugationState = .indicativePresent
   } else if controllerLanguage == "German" {
@@ -256,22 +258,30 @@ func resetCaseDeclensionState() {
   // The case conjugation display starts on the left most case.
   if controllerLanguage == "German" {
     if prepAnnotationForm.contains("Acc") {
+      conjViewShiftButtonsState = .leftInactive
       deCaseDeclensionState = .accusative
     } else if prepAnnotationForm.contains("Dat") {
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     } else {
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {
+      conjViewShiftButtonsState = .leftInactive
       ruCaseDeclensionState = .accusative
     } else if prepAnnotationForm.contains("Dat") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .dative
     } else if prepAnnotationForm.contains("Gen") {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .genitive
     } else if prepAnnotationForm.contains("Pre") {
+      conjViewShiftButtonsState = .rightInactive
       ruCaseDeclensionState = .prepositional
     } else {
+      conjViewShiftButtonsState = .bothActive
       ruCaseDeclensionState = .instrumental
     }
   }

@@ -14,11 +14,11 @@ var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
 
 // All data needed for Scribe commands for the given language keyboard.
-var nouns = loadJSONToDict(filename: "nouns")
-let verbs = loadJSONToDict(filename: "verbs")
-let translations = loadJSONToDict(filename: "translations")
-let prepositions = loadJSONToDict(filename: "prepositions")
-let autosuggestions = loadJSONToDict(filename: "autosuggestions")
+var nouns = loadJSON(filename: "nouns")
+let verbs = loadJSON(filename: "verbs")
+let translations = loadJSON(filename: "translations")
+let prepositions = loadJSON(filename: "prepositions")
+let autosuggestions = loadJSON(filename: "autosuggestions")
 
 // Words that should not be included in autocomplete should be added to the string below.
 var autocompleteWords = [String]()

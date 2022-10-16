@@ -89,13 +89,18 @@
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1608668270B6D3C00134D48 /* SpanishKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4728E9D86C00301919 /* autosuggestions.json */; };
 		D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4928E9D89100301919 /* autosuggestions.json */; };
 		D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4D28E9D8B400301919 /* autosuggestions.json */; };
 		D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
 		D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5228E9D8D700301919 /* autosuggestions.json */; };
 		D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5528E9D8E500301919 /* autosuggestions.json */; };
 		D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA5828E9D8F300301919 /* autosuggestions.json */; };
+		D1658E3A28F8FE2700CB5ACD /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3928F8FE2700CB5ACD /* autosuggestions.json */; };
+		D1658E3C28F8FEC600CB5ACD /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3B28F8FEC600CB5ACD /* prepositions.json */; };
+		D1658E3F28F8FEE100CB5ACD /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3D28F8FEDA00CB5ACD /* prepositions.json */; };
+		D1658E4128F8FEF900CB5ACD /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E4028F8FEF900CB5ACD /* prepositions.json */; };
+		D1658E4328F8FF1400CB5ACD /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E4228F8FF1400CB5ACD /* prepositions.json */; };
+		D1658E4528F8FF3100CB5ACD /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E4428F8FF3100CB5ACD /* prepositions.json */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RussianKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -247,6 +252,14 @@
 		D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */; };
 		D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */; };
+		D1A3EEF028F8D84A00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */; };
+		D1A3EEF228F8D85000896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF128F8D85000896C65 /* SwiftyJSON */; };
+		D1A3EEF428F8D85600896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF328F8D85600896C65 /* SwiftyJSON */; };
+		D1A3EEF628F8D85A00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF528F8D85A00896C65 /* SwiftyJSON */; };
+		D1A3EEF828F8D85F00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF728F8D85F00896C65 /* SwiftyJSON */; };
+		D1A3EEFA28F8D86400896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF928F8D86400896C65 /* SwiftyJSON */; };
+		D1A3EEFC28F8D86900896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEFB28F8D86900896C65 /* SwiftyJSON */; };
+		D1A3EEFE28F8DF1B00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */; };
 		D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719827C63CE600FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719927C63CE600FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
@@ -435,13 +448,18 @@
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* SpanishKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D163CA4728E9D86C00301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA4928E9D89100301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA4B28E9D8A200301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA4D28E9D8B400301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA5228E9D8D700301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA5528E9D8E500301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
 		D163CA5828E9D8F300301919 /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D1658E3928F8FE2700CB5ACD /* autosuggestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autosuggestions.json; sourceTree = "<group>"; };
+		D1658E3B28F8FEC600CB5ACD /* prepositions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D1658E3D28F8FEDA00CB5ACD /* prepositions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D1658E4028F8FEF900CB5ACD /* prepositions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D1658E4228F8FF1400CB5ACD /* prepositions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
+		D1658E4428F8FF3100CB5ACD /* prepositions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D166FCF1275A197B0047E62B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RussianKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RussianKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RussianKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -506,6 +524,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEFE28F8DF1B00896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +532,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEF228F8D85000896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +540,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEF028F8D84A00896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +548,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEF628F8D85A00896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEFA28F8D86400896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +564,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEF828F8D85F00896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +572,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEFC28F8D86900896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +580,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A3EEF428F8D85600896C65 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +597,7 @@
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				38BD213122D5907E00C6795D /* Products */,
+				D1A3EEED28F8D3EA00896C65 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -635,6 +662,7 @@
 				D107A4A927BE7C4500EB9D34 /* nouns.json */,
 				D107A4AA27BE7C4500EB9D34 /* verbs.json */,
 				D163CA4B28E9D8A200301919 /* autosuggestions.json */,
+				D1658E3D28F8FEDA00CB5ACD /* prepositions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -669,7 +697,8 @@
 				D1D880CB27860CFA00407050 /* nouns.json */,
 				D1D880C927860CFA00407050 /* translations.json */,
 				D1D880CA27860CFA00407050 /* verbs.json */,
-				D163CA4728E9D86C00301919 /* autosuggestions.json */,
+				D1658E3928F8FE2700CB5ACD /* autosuggestions.json */,
+				D1658E3B28F8FEC600CB5ACD /* prepositions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -681,6 +710,7 @@
 				D1D880D027860D4700407050 /* translations.json */,
 				D1D880CF27860D4600407050 /* verbs.json */,
 				D163CA4D28E9D8B400301919 /* autosuggestions.json */,
+				D1658E4028F8FEF900CB5ACD /* prepositions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -754,6 +784,7 @@
 				D1D880DE27860D7B00407050 /* translations.json */,
 				D1D880DF27860D7B00407050 /* verbs.json */,
 				D163CA5828E9D8F300301919 /* autosuggestions.json */,
+				D1658E4428F8FF3100CB5ACD /* prepositions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -796,6 +827,7 @@
 				D10182102728275B0032A82D /* verbs.json */,
 				D11E3B6A27299C8000FBE62C /* translations.json */,
 				D163CA5528E9D8E500301919 /* autosuggestions.json */,
+				D1658E4228F8FF1400CB5ACD /* prepositions.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -816,6 +848,13 @@
 				D1A2DCB027AD37BD0057A10D /* ENAppText.swift */,
 			);
 			path = English;
+			sourceTree = "<group>";
+		};
+		D1A3EEED28F8D3EA00896C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D1B81D2027BBB5320085FE5E /* Italian */ = {
@@ -878,6 +917,9 @@
 				D1B81D2527BBB5320085FE5E /* PBXTargetDependency */,
 			);
 			name = Scribe;
+			packageProductDependencies = (
+				D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */,
+			);
 			productName = EmojiKeyboard;
 			productReference = 38BD213022D5907E00C6795D /* Scribe.app */;
 			productType = "com.apple.product-type.application";
@@ -895,6 +937,9 @@
 			dependencies = (
 			);
 			name = German;
+			packageProductDependencies = (
+				D1A3EEF128F8D85000896C65 /* SwiftyJSON */,
+			);
 			productName = typEmoji;
 			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -912,6 +957,9 @@
 			dependencies = (
 			);
 			name = French;
+			packageProductDependencies = (
+				D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */,
+			);
 			productName = French;
 			productReference = D109A20B275B6888005E2271 /* French.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -929,6 +977,9 @@
 			dependencies = (
 			);
 			name = Portuguese;
+			packageProductDependencies = (
+				D1A3EEF528F8D85A00896C65 /* SwiftyJSON */,
+			);
 			productName = Portuguese;
 			productReference = D109A21A275B68B3005E2271 /* Portuguese.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -946,6 +997,9 @@
 			dependencies = (
 			);
 			name = Spanish;
+			packageProductDependencies = (
+				D1A3EEF928F8D86400896C65 /* SwiftyJSON */,
+			);
 			productName = CustomKeyboard2Extension;
 			productReference = D1608665270B6D3C00134D48 /* Spanish.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -963,6 +1017,9 @@
 			dependencies = (
 			);
 			name = Russian;
+			packageProductDependencies = (
+				D1A3EEF728F8D85F00896C65 /* SwiftyJSON */,
+			);
 			productName = Russian;
 			productReference = D1671A60275A1E8700A7C118 /* Russian.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -980,6 +1037,9 @@
 			dependencies = (
 			);
 			name = Swedish;
+			packageProductDependencies = (
+				D1A3EEFB28F8D86900896C65 /* SwiftyJSON */,
+			);
 			productName = Swedish;
 			productReference = D18EA8992760D4A6001E1358 /* Swedish.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -997,6 +1057,9 @@
 			dependencies = (
 			);
 			name = Italian;
+			packageProductDependencies = (
+				D1A3EEF328F8D85600896C65 /* SwiftyJSON */,
+			);
 			productName = Italian;
 			productReference = D1B81D1F27BBB5320085FE5E /* Italian.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -1047,6 +1110,9 @@
 				Base,
 			);
 			mainGroup = 38BD212722D5907E00C6795D;
+			packageReferences = (
+				D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 38BD213122D5907E00C6795D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1092,10 +1158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
-				D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */,
+				D1658E3A28F8FE2700CB5ACD /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
+				D1658E3C28F8FEC600CB5ACD /* prepositions.json in Resources */,
+				D19E415927A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1176,8 @@
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
+				D1658E4128F8FEF900CB5ACD /* prepositions.json in Resources */,
+				D19E415B27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1190,8 @@
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
+				D1658E4328F8FF1400CB5ACD /* prepositions.json in Resources */,
+				D19E415D27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1145,6 +1217,8 @@
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
+				D1658E4528F8FF3100CB5ACD /* prepositions.json in Resources */,
+				D19E415E27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,6 +1231,8 @@
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
 				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
+				D1658E3F28F8FEE100CB5ACD /* prepositions.json in Resources */,
+				D1B81D3727BBB6F50085FE5E /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1707,6 +1783,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1731,6 +1810,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2170,6 +2252,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEF128F8D85000896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEF328F8D85600896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEF528F8D85A00896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEF728F8D85F00896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEF928F8D86400896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEFB28F8D86900896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38BD212822D5907E00C6795D /* Project object */;
 }

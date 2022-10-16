@@ -62,8 +62,10 @@ func esConjugationStateLeft() {
   case .indicativePresent:
     break
   case .preterite:
+    conjViewShiftButtonsState = .leftInactive
     esConjugationState = .indicativePresent
   case .imperfect:
+    conjViewShiftButtonsState = .bothActive
     esConjugationState = .preterite
   }
 }
@@ -72,8 +74,10 @@ func esConjugationStateLeft() {
 func esConjugationStateRight() {
   switch esConjugationState {
   case .indicativePresent:
+    conjViewShiftButtonsState = .bothActive
     esConjugationState = .preterite
   case .preterite:
+    conjViewShiftButtonsState = .rightInactive
     esConjugationState = .imperfect
   case .imperfect:
     break
