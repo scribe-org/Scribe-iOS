@@ -291,41 +291,37 @@ class KeyboardViewController: UIInputViewController {
     } else {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-      if let autosuggestions = autosuggestions {
-        if autosuggestions.keys.contains(prefix.lowercased()) {
-          let suggestions = autosuggestions[prefix.lowercased()] as! [String]
-          completionWords = [String]()
-          var i = 0
-          while i < 3 {
-            if shiftButtonState == .shift {
-              completionWords.append(suggestions[i].capitalize())
-            } else if shiftButtonState == .caps {
-              completionWords.append(suggestions[i].uppercased())
-            } else {
-              if !(nouns?.keys.contains(suggestions[i]) ?? true) {
-                completionWords.append(suggestions[i].lowercased())
-              } else {
-                completionWords.append(suggestions[i])
-              }
-            }
-            i += 1
-          }
-        } else if autosuggestions.keys.contains(prefix.capitalize()) {
-          let suggestions = autosuggestions[prefix.capitalize()] as! [String]
-          completionWords = [String]()
-          var i = 0
-          while i < 3 {
-            if shiftButtonState == .shift {
-              completionWords.append(suggestions[i].capitalize())
-            } else if shiftButtonState == .caps {
-              completionWords.append(suggestions[i].uppercased())
+      if autosuggestions[prefix.lowercased()].exists() {
+        let suggestions: [String] = autosuggestions[prefix.lowercased()].rawValue as! [String]
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            if !nouns[suggestions[i]].exists() {
+              completionWords.append(suggestions[i].lowercased())
             } else {
               completionWords.append(suggestions[i])
             }
-            i += 1
           }
-        } else {
-          getDefaultAutosuggestions()
+          i += 1
+        }
+      } else if autosuggestions[prefix.capitalize()].exists() {
+        let suggestions: [String] = autosuggestions[prefix.capitalize()].rawValue as! [String]
+        completionWords = [String]()
+        var i = 0
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords.append(suggestions[i].capitalize())
+          } else if shiftButtonState == .caps {
+            completionWords.append(suggestions[i].uppercased())
+          } else {
+            completionWords.append(suggestions[i])
+          }
+          i += 1
         }
       } else {
         getDefaultAutosuggestions()
@@ -969,11 +965,11 @@ class KeyboardViewController: UIInputViewController {
 
     // Populate conjugation view buttons.
     for index in 0..<allConjugations.count {
-      if verbs?[verbToConjugate]![allConjugations[index]] as? String == "" {
+      if verbs[verbToConjugate][allConjugations[index]].string == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
-        conjugationToDisplay = verbs?[verbToConjugate]![allConjugations[index]] as! String
+        conjugationToDisplay = verbs[verbToConjugate][allConjugations[index]].string!
         if inputWordIsCapitalized && deConjugationState != .indicativePerfect {
           conjugationToDisplay = conjugationToDisplay.capitalized
         }
@@ -1075,15 +1071,15 @@ class KeyboardViewController: UIInputViewController {
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
 
       // Make sure that Scribe shows up in auto actions.
-      nouns?["Scribe"] = [
+      nouns["Scribe"] = [
         "plural": "Scribes",
         "form": ""
-      ] as AnyObject
+      ]
 
       var uniqueAutosuggestKeys: [String] = [String]()
-      for elem in Array(autosuggestions!.keys) {
-        if elem.count > 2 && !nouns!.keys.contains(elem) {
-          if autosuggestions!.keys.contains(elem.lowercased())
+      for elem in autosuggestions.dictionaryValue.keys {
+        if elem.count > 2 && !nouns[elem].exists() {
+          if autosuggestions[elem.lowercased()].exists()
               && !uniqueAutosuggestKeys.contains(elem.lowercased()) {
             uniqueAutosuggestKeys.append(elem.lowercased())
           } else if
@@ -1095,7 +1091,7 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       }
-      autocompleteWords = Array(nouns!.keys) + uniqueAutosuggestKeys
+      autocompleteWords = Array(nouns.dictionaryValue.keys) + uniqueAutosuggestKeys
       autocompleteWords = autocompleteWords.filter(
         { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
       ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
@@ -1713,7 +1709,7 @@ class KeyboardViewController: UIInputViewController {
           wordToCheck = lastWordTyped!
         }
       }
-      isPrep = prepositions?[wordToCheck.lowercased()] != nil
+      isPrep = prepositions[wordToCheck.lowercased()].exists()
       if isPrep {
         resetCaseDeclensionState()
         commandState = .selectCaseDeclension

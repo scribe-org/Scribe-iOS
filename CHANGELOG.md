@@ -20,6 +20,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The labels for conjugations and declinations have been made darker in dark mode to be more readable.
 
+### ♻️ Code Refactoring
+
+- Loading JSONs for language data is now handled by SwiftyJSON, with the code being refactored to implement it.
+  - This is a first step in refining the data loading process to better handle large amounts of data.
+
 # Scribe-iOS 2.0.0
 
 ### ✨ New Features
