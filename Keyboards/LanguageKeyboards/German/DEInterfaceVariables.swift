@@ -117,6 +117,17 @@ func setDEKeyboardLayout() {
   invalidCommandMsg = "Nicht in Wikidata"
   baseAutosuggestions = ["ich", "die", "das"]
   numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
+  wordsAfterPronounsArray = ["haben", "sein", "können"]
+  pronounAutosuggestionsDict = [
+    "ich": "presFPS",
+    "du": "presSPS",
+    "er": "presTPS",
+    "sie": "presTPS",
+    "es": "presTPS",
+    "wir": "presFPP",
+    "ihr": "presSPP",
+    "Sie": "presTPP"
+  ]
 
   translateKeyLbl = "Übersetzen"
   translatePlaceholder = "Wort eingeben"

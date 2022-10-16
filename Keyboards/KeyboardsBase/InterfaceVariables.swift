@@ -291,6 +291,16 @@ func setENKeyboardLayout() {
   invalidCommandMsg = "Not in Wikidata"
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
+  wordsAfterPronounsArray = ["have", "be", "can"]
+  pronounAutosuggestionsDict = [
+    "I": "presFPS",
+    "you": "presSPS",
+    "he": "presTPS",
+    "she": "presTPS",
+    "it": "presTPS",
+    "we": "presFPP",
+    "they": "presTPP"
+  ]
 
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
