@@ -266,15 +266,22 @@ class KeyboardViewController: UIInputViewController {
     }
   }
   
-  /// Currently only works for German language.
-  func getAutosuggestionsOnPronouns() {
+  /// Gets consistent autosguestions for all prnouns in the given language.
+  /// Note: currently only works for German language.
+  func getPronounAutosuggestions() {
     let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
 
     completionWords = [String]()
     var i = 0
     while i < 3 {
-      let suggestion = verbs?[wordsAfterPronounsArray[i]]?[pronounsToPresentTenseDict[prefix]!] as! String
-      completionWords.append(suggestion)
+      let suggestion = verbs[wordsAfterPronounsArray[i]][pronounAutosuggestionsDict[prefix.lowercased()]!].string ?? ""
+      if shiftButtonState == .shift {
+        completionWords.append(suggestion.capitalize())
+      } else if shiftButtonState == .caps {
+        completionWords.append(suggestion.uppercased())
+      } else {
+        completionWords.append(suggestion)
+      }
       i += 1
     }
   }
@@ -301,8 +308,8 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if controllerLanguage == "German" && pronounsToPresentTenseDict.keys.contains(prefix) {
-      getAutosuggestionsOnPronouns()
+    } else if controllerLanguage == "German" && pronounAutosuggestionsDict.keys.contains(prefix.lowercased()) {
+      getPronounAutosuggestions()
     } else {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
