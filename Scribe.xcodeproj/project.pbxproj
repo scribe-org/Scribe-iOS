@@ -31,6 +31,13 @@
 		CE1378D128F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
 		CE1378D228F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
 		CE1378D328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
@@ -1082,6 +1089,7 @@
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
+				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
@@ -1095,6 +1103,7 @@
 				D163CA4828E9D86C00301919 /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
+				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1107,6 +1116,7 @@
 				D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
+				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1119,6 +1129,7 @@
 				D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
+				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1131,6 +1142,7 @@
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
+				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 			);
@@ -1144,6 +1156,7 @@
 				D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
+				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1156,6 +1169,7 @@
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
 				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
+				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
