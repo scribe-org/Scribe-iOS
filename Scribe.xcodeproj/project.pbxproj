@@ -15,6 +15,29 @@
 		38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C728F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C828F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378C928F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CA28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CB28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
+		CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CD28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CE28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378CF28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D028F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D128F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D228F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE1378D328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
+		CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D10182122728275B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101820F2728275B0032A82D /* nouns.json */; };
 		D10182132728275B0032A82D /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D10182102728275B0032A82D /* verbs.json */; };
 		D101821D2728291B0032A82D /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D101821A2728291B0032A82D /* nouns.json */; };
@@ -234,30 +257,6 @@
 		D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D19474C42740295300AF6EA5 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D19474C32740295300AF6EA5 /* prepositions.json */; };
 		D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */; };
-		D19E415927A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415A27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415B27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415C27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415D27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415E27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D19E415F27A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416027A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416127A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416227A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416327A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416427A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
-		D19E416527A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416627A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416727A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416827A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416927A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416A27A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D19E416B27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D19E416C27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D19E416D27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D19E416E27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D19E416F27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D19E417027A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
 		D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */; };
 		D1A3EEF028F8D84A00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */; };
@@ -298,10 +297,6 @@
 		D1B81D3327BBB6AD0085FE5E /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1B81D3427BBB6B30085FE5E /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
 		D1B81D3527BBB6B50085FE5E /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
-		D1B81D3627BBB6F50085FE5E /* ScribeKeyPhoneWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */; };
-		D1B81D3727BBB6F50085FE5E /* ScribeKeyPadBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */; };
-		D1B81D3827BBB6F50085FE5E /* ScribeKeyPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */; };
-		D1B81D3927BBB6F50085FE5E /* ScribeKeyPhoneBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */; };
 		D1B81D3A27BBB6F90085FE5E /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		D1B81D3C27BBB6FF0085FE5E /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
@@ -435,6 +430,8 @@
 		38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
+		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
 		D101820F2728275B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		D10182102728275B0032A82D /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
 		D101821A2728291B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
@@ -504,10 +501,6 @@
 		D190B29027426F4900705659 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D19474C32740295300AF6EA5 /* prepositions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prepositions.json; sourceTree = "<group>"; };
 		D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENPrivacyPolicy.swift; sourceTree = "<group>"; };
-		D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeKeyPadBlack.png; sourceTree = "<group>"; };
-		D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeKeyPhoneBlack.png; sourceTree = "<group>"; };
-		D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeKeyPhoneWhite.png; sourceTree = "<group>"; };
-		D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScribeKeyPadWhite.png; sourceTree = "<group>"; };
 		D1A2DCB027AD37BD0057A10D /* ENAppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAppText.swift; sourceTree = "<group>"; };
 		D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUISymbols.swift; sourceTree = "<group>"; };
 		D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAnimation.swift; sourceTree = "<group>"; };
@@ -660,6 +653,15 @@
 			path = German;
 			sourceTree = "<group>";
 		};
+		CE1378C128F5D7AC00E1CBC2 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */,
+				CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		D107A4A727BE7C4500EB9D34 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,7 +799,7 @@
 		D190B2452741B1FE00705659 /* KeyboardsBase */ = {
 			isa = PBXGroup;
 			children = (
-				D190B25427424F2900705659 /* Images */,
+				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				D171945627AF23680038660B /* ScribeFunctionality */,
 				D190B240274056D400705659 /* ColorVariables.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
@@ -811,17 +813,6 @@
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
 			);
 			path = KeyboardsBase;
-			sourceTree = "<group>";
-		};
-		D190B25427424F2900705659 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				D19E415527A7709C00C18CC3 /* ScribeKeyPadBlack.png */,
-				D19E415827A7709C00C18CC3 /* ScribeKeyPadWhite.png */,
-				D19E415627A7709C00C18CC3 /* ScribeKeyPhoneBlack.png */,
-				D19E415727A7709C00C18CC3 /* ScribeKeyPhoneWhite.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		D190B25C2742582500705659 /* Data */ = {
@@ -1161,14 +1152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */,
-				D19E416027A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
-				D19E416627A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
+				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
-				D19E416C27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
-				D19E415A27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1180,10 +1168,8 @@
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
 				D1658E3A28F8FE2700CB5ACD /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
-				D19E416B27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
-				D19E416527A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
-				D19E415F27A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
+				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
 				D1658E3C28F8FEC600CB5ACD /* prepositions.json in Resources */,
 				D19E415927A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
@@ -1197,10 +1183,8 @@
 				D1D880D227860D4700407050 /* verbs.json in Resources */,
 				D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
-				D19E416D27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
-				D19E416727A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
-				D19E416127A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
+				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
 				D1658E4128F8FEF900CB5ACD /* prepositions.json in Resources */,
 				D19E415B27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
@@ -1214,10 +1198,8 @@
 				D10182122728275B0032A82D /* nouns.json in Resources */,
 				D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
-				D19E416F27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
-				D19E416927A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
-				D19E416327A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
+				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				D1658E4328F8FF1400CB5ACD /* prepositions.json in Resources */,
 				D19E415D27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
@@ -1229,14 +1211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D163CA5428E9D8D900301919 /* autosuggestions.json in Resources */,
-				D19E416227A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
-				D19E416827A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
+				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
-				D19E416E27A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
-				D19E415C27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1248,10 +1227,8 @@
 				D1D880E127860D7B00407050 /* translations.json in Resources */,
 				D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
-				D19E417027A7709D00C18CC3 /* ScribeKeyPadWhite.png in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
-				D19E416A27A7709D00C18CC3 /* ScribeKeyPhoneWhite.png in Resources */,
-				D19E416427A7709D00C18CC3 /* ScribeKeyPhoneBlack.png in Resources */,
+				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
 				D1658E4528F8FF3100CB5ACD /* prepositions.json in Resources */,
 				D19E415E27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
@@ -1262,13 +1239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B81D3627BBB6F50085FE5E /* ScribeKeyPhoneWhite.png in Resources */,
 				D163CA5128E9D8C200301919 /* autosuggestions.json in Resources */,
-				D1B81D3827BBB6F50085FE5E /* ScribeKeyPadWhite.png in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
 				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
-				D1B81D3927BBB6F50085FE5E /* ScribeKeyPhoneBlack.png in Resources */,
+				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
 				D1658E3F28F8FEE100CB5ACD /* prepositions.json in Resources */,
 				D1B81D3727BBB6F50085FE5E /* ScribeKeyPadBlack.png in Resources */,
@@ -1306,6 +1281,7 @@
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171944A27AEFC620038660B /* LoadData.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
+				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
@@ -1322,6 +1298,7 @@
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
+				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
@@ -1350,6 +1327,7 @@
 				D171942927AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */,
 				D171943A27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5527BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D171941A27AECD070038660B /* ESCommandVariables.swift in Sources */,
@@ -1372,6 +1350,7 @@
 				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
 				D190B24A2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D190B24E2741B61000705659 /* LoadData.swift in Sources */,
+				CE1378CE28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193CA27AEC9760038660B /* FRInterfaceVariables.swift in Sources */,
 				D111E9A427AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
@@ -1388,6 +1367,7 @@
 				D171942727AECEA60038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942127AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5427BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */,
@@ -1410,6 +1390,7 @@
 				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
 				D17193E127AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F127AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378CD28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D109A22C275B6A8B005E2271 /* CommandVariables.swift in Sources */,
 				D111E9A327AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D109A22A275B6A8B005E2271 /* InterfaceVariables.swift in Sources */,
@@ -1426,6 +1407,7 @@
 				D171942827AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942327AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C828F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5727BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */,
@@ -1448,6 +1430,7 @@
 				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
 				D17193E327AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F327AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D028F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D109A230275B6A8C005E2271 /* InterfaceVariables.swift in Sources */,
 				D111E9A527AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */,
@@ -1464,6 +1447,7 @@
 				D171942B27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942527AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378CA28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5927BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */,
@@ -1486,6 +1470,7 @@
 				D190B2442740576600705659 /* Extensions.swift in Sources */,
 				D17193E527AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F527AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D228F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D190B24B2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D111E9A727AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D190B24F2741B61000705659 /* LoadData.swift in Sources */,
@@ -1502,6 +1487,7 @@
 				D171942A27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942427AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378C928F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5827BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */,
@@ -1524,6 +1510,7 @@
 				D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */,
 				D17193E427AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F427AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D128F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D1671A75275A1FC000A7C118 /* KeyboardViewController.swift in Sources */,
 				D111E9A627AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */,
@@ -1540,6 +1527,7 @@
 				D171942C27AECEA90038660B /* DEInterfaceVariables.swift in Sources */,
 				D171942627AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				CE1378CB28F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */,
@@ -1562,6 +1550,7 @@
 				D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */,
 				D17193E627AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F627AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				CE1378D328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D18EA8A82760D6F5001E1358 /* InterfaceVariables.swift in Sources */,
 				D111E9A827AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */,
@@ -1578,6 +1567,7 @@
 				D1B81D3427BBB6B30085FE5E /* SVCommandVariables.swift in Sources */,
 				D1B81D3327BBB6AD0085FE5E /* ESInterfaceVariables.swift in Sources */,
 				D1B81D3527BBB6B50085FE5E /* SVInterfaceVariables.swift in Sources */,
+				CE1378C728F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D1B81D5627BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */,
 				D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */,
@@ -1600,6 +1590,7 @@
 				D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */,
 				D1B81D2227BBB5320085FE5E /* ItalianKeyboardViewController.swift in Sources */,
 				D1B81D3E27BBB7040085FE5E /* KeyboardViewController.swift in Sources */,
+				CE1378CF28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */,
 				D1B81D3C27BBB6FF0085FE5E /* InterfaceVariables.swift in Sources */,
 				D1B81D3127BBB6A60085FE5E /* RUInterfaceVariables.swift in Sources */,

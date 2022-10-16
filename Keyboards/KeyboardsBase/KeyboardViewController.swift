@@ -124,8 +124,6 @@ class KeyboardViewController: UIInputViewController {
   /// - Adding the keyboard selector target
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    checkDarkModeSetColors()
     // If alternateKeysView is already added than remove it so it's not colored wrong.
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)
@@ -171,7 +169,6 @@ class KeyboardViewController: UIInputViewController {
   /// Overrides the previous color variables if the user switches between light and dark mode.
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
-    checkDarkModeSetColors()
     // If alternateKeysView is already added than remove it so it's not colored wrong.
     if self.view.viewWithTag(1001) != nil {
       let viewWithTag = self.view.viewWithTag(1001)

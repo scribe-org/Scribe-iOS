@@ -40,14 +40,12 @@ class ViewController: UIViewController {
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
-    checkDarkModeSetColors()
     setCurrentUI()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
-    checkDarkModeSetColors()
     setCurrentUI()
   }
 
@@ -101,7 +99,7 @@ class ViewController: UIViewController {
       switchView.setTitle("View Installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    switchView.setTitleColor(UIColor.keyCharColorLight, for: .normal)
+    switchView.setTitleColor(.init(.keyChar).light, for: .normal)
     switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5)
 
     switchView.clipsToBounds = true
@@ -202,7 +200,7 @@ class ViewController: UIViewController {
     // Set link attributes for all textViews.
     for textView in allTextViews {
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor.annotateBlueLight,
+        NSAttributedString.Key.foregroundColor: UIColor(.annotateBlue).light,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     }
@@ -234,10 +232,10 @@ class ViewController: UIViewController {
 
     // Set the texts for the fields.
     appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    appTextView.textColor = UIColor.keyCharColorLight
+    appTextView.textColor = .init(.keyChar).light
 
     GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-    GHTextView.textColor = UIColor.keyCharColorLight
+    GHTextView.textColor = .init(.keyChar).light
   }
 
   /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
@@ -264,7 +262,7 @@ class ViewController: UIViewController {
     privacyScroll.isHidden = false
 
     privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
-    privacyTextView.textColor = UIColor.keyCharColorLight
+    privacyTextView.textColor = .init(.keyChar).light
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
@@ -325,7 +323,7 @@ class ViewController: UIViewController {
       // Bring sender's background and text colors back to their original values.
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [self] in
         sender.backgroundColor = switchViewColor
-        sender.setTitleColor(UIColor.keyCharColorLight, for: .normal)
+        sender.setTitleColor(.init(.keyChar).light, for: .normal)
       }
     } else {
       sender.backgroundColor = .black
