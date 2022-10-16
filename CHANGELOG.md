@@ -10,7 +10,7 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# Scribe-iOS 2.1.0
+# [Unreleased] Scribe-iOS 2.1.0
 
 ### ✨ New Features
 
@@ -24,6 +24,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Loading JSONs for language data is now handled by SwiftyJSON, with the code being refactored to implement it.
   - This is a first step in refining the data loading process to better handle large amounts of data.
+- Light and dark mode colors are now defined in `Assets.xcassets` and accessed via `ScribeColor.getter:color` or `UIColor`'s new convenience initializer.
+- Variants of the Scribe key icon are placed into `Assets.xcassets`, making it unnecessary to check for light/dark mode and device type in code.
 
 # Scribe-iOS 2.0.0
 
@@ -72,8 +74,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Code was refactored to work with the new enum style of command state management.
 - Enums are now used to control switching between conjugations.
 - Enums are now used to control switching between different conjugation displays.
-- Light and dark mode colors are now defined in `Assets.xcassets` and accessed via `ScribeColor.getter:color` or `UIColor`'s new convenience initializer.
-- Variants of the Scribe key icon are placed into `Assets.xcassets`, making it unnecessary to check for light/dark mode and device type in code.
 
 # Scribe-iOS 1.4.0
 
