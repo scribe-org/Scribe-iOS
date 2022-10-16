@@ -292,14 +292,14 @@ func setENKeyboardLayout() {
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
   wordsAfterPronounsArray = ["have", "be", "can"]
-  pronounsToPresentTenseDict = [
+  pronounAutosuggestionsDict = [
     "I": "presFPS",
-    "we": "presFPP",
-    "you": "presFPP",
+    "you": "presSPS",
     "he": "presTPS",
-    "they": "presTPP",
     "she": "presTPS",
-    "it": "presTPS"
+    "it": "presTPS",
+    "we": "presFPP",
+    "they": "presTPP"
   ]
 
   translateKeyLbl = "Translate"
