@@ -271,7 +271,7 @@ class KeyboardViewController: UIInputViewController {
     completionWords = [String]()
     var i = 0
     while i < 3 {
-      let suggestion = verbs[wordsAfterPronounsArray[i]][pronounAutosuggestionsDict[prefix.lowercased()]!].string ?? ""
+      let suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? ""
       if shiftButtonState == .shift {
         completionWords.append(suggestion.capitalize())
       } else if shiftButtonState == .caps {
@@ -305,7 +305,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if controllerLanguage == "German" && pronounAutosuggestionsDict.keys.contains(prefix.lowercased()) {
+    } else if controllerLanguage == "German" && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       /// We have to consider these different cases as the key always has to match.

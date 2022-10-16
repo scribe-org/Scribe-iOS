@@ -291,8 +291,8 @@ func setENKeyboardLayout() {
   invalidCommandMsg = "Not in Wikidata"
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
-  wordsAfterPronounsArray = ["have", "be", "can"]
-  pronounAutosuggestionsDict = [
+  verbsAfterPronounsArray = ["have", "be", "can"]
+  pronounAutosuggestionTenses = [
     "I": "presFPS",
     "you": "presSPS",
     "he": "presTPS",

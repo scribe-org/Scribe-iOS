@@ -24,8 +24,8 @@ let autosuggestions = loadJSON(filename: "autosuggestions")
 var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
 var numericAutosuggestions = [String]()
-var pronounAutosuggestionsDict: [String: String] = [:]
-var wordsAfterPronounsArray = [String]()
+var pronounAutosuggestionTenses: [String: String] = [:]
+var verbsAfterPronounsArray = [String]()
 
 var currentPrefix: String = ""
 var pastStringInTextProxy: String = ""
