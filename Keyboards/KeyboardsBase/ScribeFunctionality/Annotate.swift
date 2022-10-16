@@ -34,8 +34,8 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     wordToCheck = wordToCheck.lowercased()
   }
 
-  isNoun = nouns?[wordToCheck] != nil
-  isPrep = prepositions?[wordToCheck.lowercased()] != nil
+  isNoun = nouns[wordToCheck].exists()
+  isPrep = prepositions[wordToCheck.lowercased()].exists()
 
   annotationsToAssign = [String]()
   annotationBtns = [UIButton]()
@@ -73,7 +73,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
   } else {
     if isNoun {
-      let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
+      let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
       if nounAnnotationForm != "" {
         if !nounAnnotationForm.contains("/") {
           annotationsToAssign.append(nounAnnotationForm)
@@ -87,7 +87,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
 
     if isPrep {
       activateAnnotationBtn = true
-      prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
+      prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
       if prepAnnotationForm != "" {
         if !prepAnnotationForm.contains("/") {
           annotationsToAssign.append(prepAnnotationForm)
@@ -199,8 +199,8 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       wordToCheck = lastWordTyped!
     }
 
-    isNoun = nouns?[wordToCheck] != nil
-    isPrep = prepositions?[wordToCheck.lowercased()] != nil
+    isNoun = nouns[wordToCheck].exists()
+    isPrep = prepositions[wordToCheck.lowercased()].exists()
 
     annotationsToAssign = [String]()
     annotationBtns = [UIButton]()
@@ -238,7 +238,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
     } else {
       if isNoun {
-        let nounAnnotationForm: String = nouns?[wordToCheck]?["form"] as! String
+        let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
         if nounAnnotationForm != "" {
           if !nounAnnotationForm.contains("/") {
             annotationsToAssign.append(nounAnnotationForm)
@@ -252,7 +252,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
 
       if isPrep {
         activateAnnotationBtn = true
-        prepAnnotationForm = prepositions?[wordToCheck.lowercased()] as! String
+        prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
         if prepAnnotationForm != "" {
           if !prepAnnotationForm.contains("/") {
             annotationsToAssign.append(prepAnnotationForm)

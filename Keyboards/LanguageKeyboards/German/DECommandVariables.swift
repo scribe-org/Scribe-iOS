@@ -442,20 +442,28 @@ func deConjugationStateLeft() {
     case .accusative:
       break
     case .accusativePersonal:
+      conjViewShiftButtonsState = .leftInactive
       deCaseDeclensionState = .accusative
     case .accusativePossesive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePersonal
     case .dative:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePossesive
     case .dativePersonal:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     case .dativePossesive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePersonal
     case .genitive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePossesive
     case .genitivePersonal:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitivePossesive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
     }
   } else {
@@ -463,8 +471,10 @@ func deConjugationStateLeft() {
     case .indicativePresent:
       break
     case .indicativePreterite:
+      conjViewShiftButtonsState = .leftInactive
       deConjugationState = .indicativePresent
     case .indicativePerfect:
+      conjViewShiftButtonsState = .bothActive
       deConjugationState = .indicativePreterite
     }
   }
@@ -475,20 +485,28 @@ func deConjugationStateRight() {
   if commandState == .selectCaseDeclension && deCaseVariantDeclensionState == .disabled {
     switch deCaseDeclensionState {
     case .accusative:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePersonal
     case .accusativePersonal:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePossesive
     case .accusativePossesive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     case .dative:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePersonal
     case .dativePersonal:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePossesive
     case .dativePossesive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitive:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
     case .genitivePersonal:
+      conjViewShiftButtonsState = .rightInactive
       deCaseDeclensionState = .genitivePossesive
     case .genitivePossesive:
       break
@@ -496,8 +514,10 @@ func deConjugationStateRight() {
   } else {
     switch deConjugationState {
     case .indicativePresent:
+      conjViewShiftButtonsState = .bothActive
       deConjugationState = .indicativePreterite
     case .indicativePreterite:
+      conjViewShiftButtonsState = .rightInactive
       deConjugationState = .indicativePerfect
     case .indicativePerfect:
       break

@@ -63,6 +63,7 @@ func svConjugationStateLeft() {
   case .active:
     break
   case .passive:
+    conjViewShiftButtonsState = .leftInactive
     svConjugationState = .active
   }
 }
@@ -71,6 +72,7 @@ func svConjugationStateLeft() {
 func svConjugationStateRight() {
   switch svConjugationState {
   case .active:
+    conjViewShiftButtonsState = .rightInactive
     svConjugationState = .passive
   case .passive:
     break

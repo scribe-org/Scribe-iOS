@@ -70,11 +70,20 @@ enum AutoActionState {
   case suggest
 }
 
+/// States for which conjugation table view shift button should be active.
+enum ConjViewShiftButtonsState {
+  case bothActive
+  case bothInactive
+  case leftInactive
+  case rightInactive
+}
+
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
+var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
