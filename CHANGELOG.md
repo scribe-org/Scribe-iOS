@@ -15,6 +15,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 - The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
+- Autosuggestions for pronouns have been improved for some languages.
+- The keyboards shift state is disabled by pressing an autocompletion or autosuggestion.
 
 ### 🎨 Design Changes
 

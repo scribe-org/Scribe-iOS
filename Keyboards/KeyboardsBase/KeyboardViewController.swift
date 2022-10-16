@@ -412,6 +412,10 @@ class KeyboardViewController: UIInputViewController {
     autoActionState = .suggest
     proxy.insertText(" ")
     currentPrefix = ""
+    if shiftButtonState == .shift {
+      shiftButtonState = .normal
+      loadKeys()
+    }
     conditionallyDisplayAnnotation()
   }
 
