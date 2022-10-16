@@ -1,8 +1,5 @@
 //
 //  ScribeColor.swift
-//  Scribe
-//
-//  Created by Michael Steudter - @misteu on 04.10.22.
 //
 
 import UIKit

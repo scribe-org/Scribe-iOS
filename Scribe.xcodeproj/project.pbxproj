@@ -656,6 +656,7 @@
 		CE1378C128F5D7AC00E1CBC2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				D190B240274056D400705659 /* ColorVariables.swift */,
 				CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */,
 				CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */,
 			);
@@ -801,7 +802,6 @@
 			children = (
 				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				D171945627AF23680038660B /* ScribeFunctionality */,
-				D190B240274056D400705659 /* ColorVariables.swift */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,
 				D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */,
@@ -1172,7 +1172,6 @@
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
 				D1658E3C28F8FEC600CB5ACD /* prepositions.json in Resources */,
-				D19E415927A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,7 +1186,6 @@
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
 				D1658E4128F8FEF900CB5ACD /* prepositions.json in Resources */,
-				D19E415B27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,7 +1200,6 @@
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				D1658E4328F8FF1400CB5ACD /* prepositions.json in Resources */,
-				D19E415D27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,7 +1228,6 @@
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
 				D1658E4528F8FF3100CB5ACD /* prepositions.json in Resources */,
-				D19E415E27A7709D00C18CC3 /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1246,7 +1242,6 @@
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
 				D1658E3F28F8FEE100CB5ACD /* prepositions.json in Resources */,
-				D1B81D3727BBB6F50085FE5E /* ScribeKeyPadBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
