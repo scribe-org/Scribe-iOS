@@ -2,4 +2,4 @@
 //  FrenchQWERTYKeyboardViewController.swift
 //
 
-class FrenchQWERYKeyboardViewController: KeyboardViewController {}
+class FrenchQWERTYKeyboardViewController: KeyboardViewController {}
