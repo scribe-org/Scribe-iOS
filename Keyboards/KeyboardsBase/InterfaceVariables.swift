@@ -108,7 +108,8 @@ var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict: [String: String] = [
-  "French": "fr",
+  "French_AZERTY": "fr",
+  "French_QWERTY": "fr",
   "German": "de",
   "Italian": "it",
   "Portuguese": "pt",
@@ -127,7 +128,9 @@ func getControllerLanguageAbbr() -> String {
 
 // Dictionary for accessing keyboard abbreviations and layouts.
 let keyboardLayoutDict: [String: () -> Void] = [
-  "French": setFRKeyboardLayout,
+  // Layouts for French checked within setFRKeyboardLayout.
+  "French_AZERTY": setFRKeyboardLayout,
+  "French_QWERTY": setFRKeyboardLayout,
   "German": setDEKeyboardLayout,
   "Italian": setITKeyboardLayout,
   "Portuguese": setPTKeyboardLayout,
