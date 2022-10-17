@@ -51,7 +51,11 @@ class KeyboardKey: UIButton {
       self.layer.setValue(true, forKey: "isSpecial")
     }
     var capsKey = ""
-    if self.key != "ß" && self.key != "´" && self.key != spaceBar {
+    if self.key != "ß"
+        && self.key != "´"
+        && self.key != spaceBar
+        && self.key != "ABC"
+        && self.key != "АБВ" {
       capsKey = keyboard[self.row][self.idx].capitalized
     } else {
       capsKey = self.key

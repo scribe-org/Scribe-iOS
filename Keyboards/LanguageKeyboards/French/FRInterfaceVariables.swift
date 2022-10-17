@@ -10,11 +10,12 @@ import UIKit
 func setFRKeyboardLayout() {
   if controllerLanguage == "French_AZERTY" {
     getFRAZERTYKeys()
+    currencySymbol = "€"
   } else if controllerLanguage == "French_QWERTY" {
     getFRQWERTYKeys()
+    currencySymbol = "$"
   }
 
-  currencySymbol = "$"
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "espace"
   invalidCommandMsg = "Pas dans Wikidata"
