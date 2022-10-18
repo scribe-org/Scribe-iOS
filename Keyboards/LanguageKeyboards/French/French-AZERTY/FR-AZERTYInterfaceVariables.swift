@@ -1,5 +1,5 @@
 //
-//  FRInterfaceVariables.swift
+//  FR-AZERTYInterfaceVariables.swift
 //
 //  Constants and functions to load the AZERTY French Scribe keyboard.
 //

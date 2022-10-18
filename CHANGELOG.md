@@ -14,7 +14,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ⌨️ New Keyboards
 
-- Adds a QWERTY French keyboard for Canadian French.
+- Adds a QWERTY keyboard option for French.
 
 ### ✨ New Features
 
