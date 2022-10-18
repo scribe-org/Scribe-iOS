@@ -12,6 +12,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Unreleased] Scribe-iOS 2.1.0
 
+### ⌨️ New Keyboards
+
+- Adds a QWERTY keyboard option for French.
+
 ### ✨ New Features
 
 - The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
@@ -21,6 +25,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The labels for conjugations and declinations have been made darker in dark mode to be more readable.
+- French keyboards are now named based on their keyboard style.
+
+### 🐞 Bug Fixes
+
+- The accent character on the French letters keyboard is now the correct character.
+- Indentation has been removed from all Scribe JSON files to reduce their filesize, speed up the load times and mitigate crashes.
 
 ### ♻️ Code Refactoring
 
