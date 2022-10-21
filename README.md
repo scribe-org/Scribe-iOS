@@ -14,6 +14,8 @@
 [![language](https://img.shields.io/badge/Swift-5-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+[![twitter](https://img.shields.io/badge/Tweet-1DA1F2.svg?logo=twitter&logoColor=ffffff)](https://twitter.com/intent/tweet?text=Check%20out%20@scribe_org%20for%20typing%20in%20your%20second%20language!%20%23languagelearning%20https://github.com/scribe-org/Scribe-iOS)
+[![reddit](https://img.shields.io/badge/Post-FF6314.svg?logo=reddit&logoColor=ffffff)](http://www.reddit.com/submit?url=https://github.com/scribe-org/Scribe-iOS&title=Scribe%20iOS%20keyboards%20for%20language%20learners)
 
 <a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/app_store_badge.png' height='60px'/></a>
 
