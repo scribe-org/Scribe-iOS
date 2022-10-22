@@ -271,7 +271,7 @@ class KeyboardViewController: UIInputViewController {
     completionWords = [String]()
     var i = 0
     while i < 3 {
-      let suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? ""
+      let suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? verbsAfterPronounsArray[i]
       if shiftButtonState == .shift {
         completionWords.append(suggestion.capitalize())
       } else if shiftButtonState == .caps {
