@@ -27,7 +27,7 @@ func setFRKeyboardLayout() {
     "tu": "presSPS",
     "il": "presTPS",
     "elle": "presTPS",
-    "on": "presFPP",
+    "on": "presTPS",
     "nous": "presFPP",
     "vous": "presSPS",
     "ils": "presTPP",
