@@ -21,6 +21,18 @@ func setFRKeyboardLayout() {
   invalidCommandMsg = "Pas dans Wikidata"
   baseAutosuggestions = ["je", "il", "le"]
   numericAutosuggestions = ["je", "que", "c’est"]
+  verbsAfterPronounsArray = ["être", "avoir", "ne"]
+  pronounAutosuggestionTenses = [
+    "je": "presFPS",
+    "tu": "presSPS",
+    "il": "presTPS",
+    "elle": "presTPS",
+    "on": "presTPS",
+    "nous": "presFPP",
+    "vous": "presSPS",
+    "ils": "presTPP",
+    "elles": "presTPP"
+  ]
 
   translateKeyLbl = "Traduire"
   translatePlaceholder = "Entrez un mot"
