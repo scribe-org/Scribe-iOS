@@ -249,6 +249,16 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 # Powered By
 
+### Contributors
+
+Many thanks to all the contributors to Scribe-iOS!
+
+<a href="https://github.com/scribe-org/Scribe-iOS/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=scribe-org/Scribe-iOS" />
+</a>
+
+### Code
+
 <details><summary><strong>List of referenced codes</strong></summary>
 <p>
 
@@ -256,6 +266,8 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 </p>
 </details>
+
+### Wikimedia Communities
 
 <div align="center">
   <br>
