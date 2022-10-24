@@ -251,7 +251,7 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 ### Contributors
 
-Many thanks to all the contributors to Scribe-iOS!
+Many thanks to all the Scribe-iOS contributors! 🚀
 
 <a href="https://github.com/scribe-org/Scribe-iOS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=scribe-org/Scribe-iOS" />
