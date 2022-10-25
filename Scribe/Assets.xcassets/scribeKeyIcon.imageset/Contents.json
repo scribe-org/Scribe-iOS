@@ -1,0 +1,36 @@
+{
+  "images" : [
+    {
+      "filename" : "ScribeKeyPhoneBlack.png",
+      "idiom" : "iphone"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "ScribeKeyPhoneWhite.png",
+      "idiom" : "iphone"
+    },
+    {
+      "filename" : "ScribeKeyPadBlack.png",
+      "idiom" : "ipad"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "ScribeKeyPadWhite.png",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

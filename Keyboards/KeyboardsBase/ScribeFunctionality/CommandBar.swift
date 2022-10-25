@@ -37,7 +37,7 @@ class CommandBar: UILabel {
   class func instanceFromNib() -> UIView {
       return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
   }
-  
+
   var shadow: UIButton!
   var blend: UILabel!
 

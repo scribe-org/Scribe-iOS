@@ -5,12 +5,17 @@
 //
 
 func itSetConjugationLabels() {
-  labelFPS = "io"
-  labelSPS = "tu"
-  labelTPS = "lei/lui"
-  labelFPP = "noi"
-  labelSPP = "voi"
-  labelTPP = "loro"
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
+  formLabelsDict["FPS"] = "io"
+  formLabelsDict["SPS"] = "tu"
+  formLabelsDict["TPS"] = "lei/lui"
+  formLabelsDict["FPP"] = "noi"
+  formLabelsDict["SPP"] = "voi"
+  formLabelsDict["TPP"] = "loro"
 }
 
 /// What the conjugation state is for the conjugate feature.
@@ -53,25 +58,28 @@ func itGetConjugationState() -> String {
 
 /// Action associated with the left view switch button of the conjugation state.
 func itConjugationStateLeft() {
-  if itConjugationState == .present {
-    return
-  } else if itConjugationState == .preterite {
+  switch itConjugationState {
+  case .present:
+    break
+  case .preterite:
+    conjViewShiftButtonsState = .leftInactive
     itConjugationState = .present
-    return
-  } else if itConjugationState == .imperfect {
+  case .imperfect:
+    conjViewShiftButtonsState = .bothActive
     itConjugationState = .preterite
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func itConjugationStateRight() {
-  if itConjugationState == .present {
+  switch itConjugationState {
+  case .present:
+    conjViewShiftButtonsState = .bothActive
     itConjugationState = .preterite
-  } else if itConjugationState == .preterite {
+  case .preterite:
+    conjViewShiftButtonsState = .rightInactive
     itConjugationState = .imperfect
-    return
-  } else if itConjugationState == .imperfect {
-    return
+  case .imperfect:
+    break
   }
 }

@@ -27,10 +27,10 @@ func queryPlural(commandBar: UILabel) {
     inputWordIsCapitalized = firstLetter.isUppercase
     noun = noun.lowercased()
   }
-  let nounInDirectory = nouns?[noun] != nil
+  let nounInDirectory = nouns[noun].exists()
   if nounInDirectory {
-    if nouns?[noun]?["plural"] as? String != "isPlural" {
-      guard let plural = nouns?[noun]?["plural"] as? String else { return }
+    if nouns[noun]["plural"].string != "isPlural" {
+      guard let plural: String = nouns[noun]["plural"].string else { return }
       if inputWordIsCapitalized == false {
         proxy.insertText(plural + " ")
       } else {

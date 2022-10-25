@@ -5,17 +5,22 @@
 //
 
 func svSetConjugationLabels() {
+  // Reset all form labels prior to assignment.
+  for k in formLabelsDict.keys {
+    formLabelsDict[k] = ""
+  }
+  
   switch svConjugationState {
   case .active:
-    labelTopLeft = "imperativ"
-    labelTopRight = "liggande"
-    labelBottomLeft = "presens"
-    labelBottomRight = "dåtid"
+    formLabelsDict["TL"] = "imperativ"
+    formLabelsDict["TR"] = "liggande"
+    formLabelsDict["BL"] = "presens"
+    formLabelsDict["BR"] = "dåtid"
   case .passive:
-    labelTopLeft = "infinitiv"
-    labelTopRight = "liggande"
-    labelBottomLeft = "presens"
-    labelBottomRight = "dåtid"
+    formLabelsDict["TL"] = "infinitiv"
+    formLabelsDict["TR"] = "liggande"
+    formLabelsDict["BL"] = "presens"
+    formLabelsDict["BR"] = "dåtid"
   }
 }
 
@@ -54,19 +59,22 @@ func svGetConjugationState() -> [String] {
 
 /// Action associated with the left view switch button of the conjugation state.
 func svConjugationStateLeft() {
-  if svConjugationState == .active {
-    return
-  } else if svConjugationState == .passive {
+  switch svConjugationState {
+  case .active:
+    break
+  case .passive:
+    conjViewShiftButtonsState = .leftInactive
     svConjugationState = .active
-    return
   }
 }
 
 /// Action associated with the right view switch button of the conjugation state.
 func svConjugationStateRight() {
-  if svConjugationState == .active {
+  switch svConjugationState {
+  case .active:
+    conjViewShiftButtonsState = .rightInactive
     svConjugationState = .passive
-  } else if svConjugationState == .passive {
-    return
+  case .passive:
+    break
   }
 }

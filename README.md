@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeAppLogo.png" width=512 height=230 alt="Scribe Logo"></a>
+  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeAppLogo.png" width=410 height=184 alt="Scribe Logo"></a>
 </div>
 
 <ol></ol>
@@ -14,6 +14,8 @@
 [![language](https://img.shields.io/badge/Swift-5-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+[![twitter](https://img.shields.io/badge/Tweet-1DA1F2.svg?logo=twitter&logoColor=ffffff)](https://twitter.com/intent/tweet?text=Check%20out%20@scribe_org%20for%20typing%20in%20your%20second%20language!%20%23languagelearning%20https://github.com/scribe-org/Scribe-iOS)
+[![reddit](https://img.shields.io/badge/Post-FF6314.svg?logo=reddit&logoColor=ffffff)](http://www.reddit.com/submit?url=https://github.com/scribe-org/Scribe-iOS&title=Scribe%20iOS%20keyboards%20for%20language%20learners)
 
 <a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/app_store_badge.png' height='60px'/></a>
 
@@ -25,7 +27,7 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 The [contributing](#contributing) section has information for those interested, with the articles and presentations in [featured by](#featured-by) also being good resources for learning more about Scribe.
 
-Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) and [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned).
+Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP), [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned) and for the data processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data).
 
 <a id="contents"></a>
 
@@ -40,6 +42,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
   - [Verb Conjugation](#verb-conjugation)
   - [Noun Plurals](#noun-plurals)
   - [Word Annotation](#word-annotation)
+  - [Pronoun Selection](#pronoun-selection)
   - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Featured By](#featured-by)
@@ -48,23 +51,21 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP) 
 
 # Preview Videos [`⇧`](#contents)
 
-The following are combined preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
+The following are the preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
 #### iPhone 6.5" version
 
-https://user-images.githubusercontent.com/24387426/176200294-e9ce0ed0-f861-4ca4-8281-5c53d01048d3.mp4
+https://user-images.githubusercontent.com/24387426/194840842-f1668216-94a5-4f3d-8aac-a536db54b0d8.mp4
 
 #### See also
 
 <details><summary><strong>iPad Pro 4th gen version</strong></summary>
 <p>
 
-https://user-images.githubusercontent.com/24387426/176200444-7b85488b-55a9-40d9-aa8a-915a77ae2c7f.mp4
+https://user-images.githubusercontent.com/24387426/194840915-c9a9ea88-4718-4bdf-904d-8fc13b08af5a.mp4
 
 </p>
 </details>
-
-The App Store videos, images and text can be found in the [AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/AppStore) directory. Contributions to improve them are welcome, but please [open an issue](https://github.com/scribe-org/Scribe-iOS/issues/new/choose) to check before.
 
 <a id="contributing"></a>
 
@@ -74,16 +75,22 @@ Work that is in progress or could be implemented is tracked in the [issues](http
 
 ### Ways to Help
 
-- [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
 - [Localization](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Alocalization) for the app and App Store 🌐
 - [Documentation](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
+- [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
 
 ### Data Edits
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
+
+### Designs
+
+<a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
+
+The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464) are made using [Figma](https://www.figma.com). The App Store videos, images and text can be found in the [AppStore](https://github.com/scribe-org/Scribe-iOS/blob/main/AppStore) directory. Those with interest in contributing can [open a design issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) to make suggestions! Design related issues are marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
 
 <a id="setup"></a>
 
@@ -104,21 +111,19 @@ Scribe's goal is functional, feature-rich keyboards for all languages. Check [sc
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
 
-| Languages  |   Nouns | Verbs | Translations\* | Adjectives† | Prepositions‡ |
-| :--------- | ------: | ----: | -------------: | ----------: | ------------: |
-| French     |  16,374 | 1,506 |         67,652 |           - |             - |
-| German     |  28,948 | 3,469 |         67,652 |           - |           187 |
-| Italian    |   4,163 |    73 |         67,652 |           - |             - |
-| Portuguese |   5,112 |   495 |         67,652 |           - |             - |
-| Russian    | 194,401 |    11 |         67,652 |           - |            12 |
-| Spanish    |  23,269 | 3,783 |         67,652 |           - |             - |
-| Swedish    |  42,016 | 4,274 |         67,652 |           - |             - |
+| Languages  |   Nouns | Verbs | Translations\* | Prepositions† |
+| :--------- | ------: | ----: | -------------: | ------------: |
+| French     |  16,681 | 1,545 |         67,652 |             - |
+| German     |  29,230 | 3,542 |         67,652 |           187 |
+| Italian    |   8,399 |    73 |         67,652 |             - |
+| Portuguese |   5,176 |   495 |         67,652 |             - |
+| Russian    | 194,408 |    11 |         67,652 |            13 |
+| Spanish    |  24,656 | 3,792 |         67,652 |             - |
+| Swedish    |  42,718 | 4,394 |         67,652 |             - |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
-`†` Adjective-preposition support is in progress [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/86).
-
-`‡` Only for languages for which preposition annotation is needed.
+`†` Only for languages for which preposition annotation is needed.
 
 Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
 
@@ -156,7 +161,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural in
 
 ### • Word Annotation [`⇧`](#contents)
 
-Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
+Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, after commands or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
 #### Nouns
 
@@ -175,6 +180,12 @@ The above form abbreviations are translated into their equivalents in the keyboa
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
 
+<a id="pronoun-selection"></a>
+
+### • Pronoun Selection [`⇧`](#contents)
+
+Annotations for preposition cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will also provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
+
 <a id="base-functionality"></a>
 
 ### • Base Functionality [`⇧`](#contents)
@@ -188,7 +199,9 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Dynamic layouts for cross-device performance
 - Portrait and landscape modes
 - Dark mode compatibility
-- Autocompletion and correction (WIP - see [Autocomplete](https://github.com/scribe-org/Scribe-iOS/issues/3) and [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issues)
+- Autocompletion based on [Wikidata](https://www.wikidata.org/) sourced words
+- Autosuggestion based on [Wikipedia](https://www.wikipedia.org/) derived relationships
+- Autocorrection (WIP - see [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issue)
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing symbols and numbers followed by a space returns keyboard to letters
@@ -236,6 +249,16 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 # Powered By
 
+### Contributors
+
+Many thanks to all the Scribe-iOS contributors! 🚀
+
+<a href="https://github.com/scribe-org/Scribe-iOS/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=scribe-org/Scribe-iOS" />
+</a>
+
+### Code
+
 <details><summary><strong>List of referenced codes</strong></summary>
 <p>
 
@@ -244,8 +267,13 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 </p>
 </details>
 
+### Wikimedia Communities
+
 <div align="center">
   <br>
-  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikidata_logo.png" alt="Wikidata"></a>
+  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikidata_logo.png" alt="Wikidata logo"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.wikipedia.org/"><img height="190" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/wikipedia_logo.png" alt="Wikipedia logo"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
 </div>

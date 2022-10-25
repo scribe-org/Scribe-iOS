@@ -62,7 +62,8 @@ enum CommandState {
   case selectCommand
   case translate
   case conjugate
-  case selectConjugation
+  case selectVerbConjugation
+  case selectCaseDeclension
   case plural
   case alreadyPlural
   case invalid
@@ -74,11 +75,20 @@ enum AutoActionState {
   case suggest
 }
 
+/// States for which conjugation table view shift button should be active.
+enum ConjViewShiftButtonsState {
+  case bothActive
+  case bothInactive
+  case leftInactive
+  case rightInactive
+}
+
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
+var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
 
 // Variables and functions to determine display parameters.
 struct DeviceType {
@@ -103,7 +113,8 @@ var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict: [String: String] = [
-  "French": "fr",
+  "French_AZERTY": "fr",
+  "French_QWERTY": "fr",
   "German": "de",
   "Italian": "it",
   "Portuguese": "pt",
@@ -122,7 +133,9 @@ func getControllerLanguageAbbr() -> String {
 
 // Dictionary for accessing keyboard abbreviations and layouts.
 let keyboardLayoutDict: [String: () -> Void] = [
-  "French": setFRKeyboardLayout,
+  // Layouts for French checked within setFRKeyboardLayout.
+  "French_AZERTY": setFRKeyboardLayout,
+  "French_QWERTY": setFRKeyboardLayout,
   "German": setDEKeyboardLayout,
   "Italian": setITKeyboardLayout,
   "Portuguese": setPTKeyboardLayout,
@@ -286,6 +299,16 @@ func setENKeyboardLayout() {
   invalidCommandMsg = "Not in Wikidata"
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
+  verbsAfterPronounsArray = ["have", "be", "can"]
+  pronounAutosuggestionTenses = [
+    "I": "presFPS",
+    "you": "presSPS",
+    "he": "presTPS",
+    "she": "presTPS",
+    "it": "presTPS",
+    "we": "presFPP",
+    "they": "presTPP"
+  ]
 
   translateKeyLbl = "Translate"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "

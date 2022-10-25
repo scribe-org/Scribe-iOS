@@ -28,6 +28,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: keyboard-variant
+    attributes:
+      label: Keyboard variants
+      placeholder: |
+        Are there any variants in keyboard layout for this language that Scribe should keep in mind?
+        For instance, French has two notable variants that are used in different countries:
+          - French QWERTY keyboard used in Canada
+          - French AZERTY keyboard used in France
+    validations:
+      required: true
+  - type: textarea
     id: contribution
     attributes:
       label: Contribution

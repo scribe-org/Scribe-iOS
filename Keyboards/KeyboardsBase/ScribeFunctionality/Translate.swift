@@ -26,9 +26,9 @@ func queryTranslation(commandBar: UILabel) {
   inputWordIsCapitalized = firstLetter.isUppercase
   wordToTranslate = wordToTranslate.lowercased()
 
-  let wordInDirectory = translations?[wordToTranslate] != nil
+  let wordInDirectory = translations[wordToTranslate].exists()
   if wordInDirectory {
-    wordToReturn = translations?[wordToTranslate] as! String
+    wordToReturn = translations[wordToTranslate].string ?? ""
     if inputWordIsCapitalized {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {

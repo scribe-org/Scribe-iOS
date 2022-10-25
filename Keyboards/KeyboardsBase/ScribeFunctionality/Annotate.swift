@@ -7,7 +7,13 @@
 import UIKit
 
 // Dictionary for accessing keyboard conjugation state.
-var nounFormToColorDict: [String: UIColor] = [:]
+var nounFormToColorDict: [String: UIColor] = [
+  "F": annotateRed,
+  "M": annotateBlue,
+  "C": annotatePurple,
+  "N": annotateGreen,
+  "PL": annotateOrange
+]
 
 // Dictionary to convert noun annotations into the keyboard language.
 let nounAnnotationConversionDict = [
@@ -22,15 +28,331 @@ let prepAnnotationConversionDict = [
 ]
 
 /// Annotates a word after it's selected and the Scribe key is pressed.
-func selectedWordAnnotation() {
-//  let selectedWord = proxy.selectedText ?? ""
+func selectedWordAnnotation(_ KVC: KeyboardViewController) {
+  wordToCheck = proxy.selectedText ?? ""
+  if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+    wordToCheck = wordToCheck.lowercased()
+  }
+
+  isNoun = nouns[wordToCheck].exists()
+  isPrep = prepositions[wordToCheck.lowercased()].exists()
+
+  annotationsToAssign = [String]()
+  annotationBtns = [UIButton]()
+  annotationColors = [UIColor]()
+  annotationSeparators = [UIView]()
+
+  let annotationFieldWidth = KVC.translateKey.frame.width * 0.85
+  var annotationHeight: CGFloat = 0.0
+  annotationHeight = scribeKeyHeight
+
+  if wordToCheck == "Scribe" || wordToCheck == "scribe" {
+    // Thank the user :)
+    annotationState = true
+    activateAnnotationBtn = true
+    autoAction1Visible = false
+
+    let annotationBtn = Annotation()
+    annotationBtn.setAnnotationSize(width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+    annotationBtn.setAnnotationLoc(
+      minX: KVC.translateKey.frame.origin.x
+      + ( KVC.translateKey.frame.width / 2 )
+        - ( annotationFieldWidth / 2 ),
+      maxY: KVC.scribeKey.frame.origin.y
+    )
+    annotationBtn.styleSingleAnnotation()
+
+    let emojisToSelectFrom: String = "🥳🎉"
+    let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+    annotationBtn.setTitle(emojis, for: .normal)
+    KVC.view.addSubview(annotationBtn)
+    annotationBtns.append(annotationBtn)
+    annotationColors.append(commandKeyColor)
+
+    KVC.activateBtn(btn: annotationBtn)
+    setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
+  } else {
+    if isNoun {
+      let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
+      if nounAnnotationForm != "" {
+        if !nounAnnotationForm.contains("/") {
+          annotationsToAssign.append(nounAnnotationForm)
+        } else {
+          for a in nounAnnotationForm.components(separatedBy: "/") {
+            annotationsToAssign.append(a)
+          }
+        }
+      }
+    }
+
+    if isPrep {
+      activateAnnotationBtn = true
+      prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
+      if prepAnnotationForm != "" {
+        if !prepAnnotationForm.contains("/") {
+          annotationsToAssign.append(prepAnnotationForm)
+        } else {
+          for a in prepAnnotationForm.components(separatedBy: "/") {
+            annotationsToAssign.append(a)
+          }
+        }
+      }
+    }
+
+    if annotationsToAssign.count > 0 {
+      annotationState = true
+      autoAction1Visible = false
+
+      let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
+      let numAnnotations = annotationsToAssign.count
+
+      for i in 0..<numAnnotations {
+        let annotationBtn = Annotation()
+        var annotationSep = UIView()
+        var annotationToDisplay: String = annotationsToAssign[i]
+
+        if nounFormToColorDict.keys.contains(annotationToDisplay) {
+          if numAnnotations > 3 {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+          } else if numAnnotations > 2 {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+          } else {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.6)
+          }
+        } else {
+          if numAnnotations > 3 {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+          } else if numAnnotations == 1 {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+          } else {
+            annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.5)
+          }
+        }
+
+        annotationBtn.setAnnotationLoc(
+          minX: KVC.translateKey.frame.origin.x
+          + ( KVC.translateKey.frame.width / 2 )
+            - ( annotationFieldWidth / 2 )
+            + ( annotationWidth * CGFloat(i) ),
+          maxY: KVC.scribeKey.frame.origin.y
+        )
+        if numAnnotations == 1 {
+          annotationBtn.styleSingleAnnotation()
+        } else if i == 0 {
+          annotationBtn.styleLeftAnnotation()
+        } else if i == numAnnotations - 1 {
+          annotationBtn.styleRightAnnotation()
+        } else {
+          annotationBtn.styleMiddleAnnotation()
+        }
+
+        // Convert the annotation into the keyboard language.
+        if nounFormToColorDict.keys.contains(annotationToDisplay) {
+          if nounAnnotationConversionDict[controllerLanguage] != nil {
+            if nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+              annotationToDisplay = nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+            }
+          }
+        } else {
+          if prepAnnotationConversionDict[controllerLanguage] != nil {
+            if prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+              annotationToDisplay = prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+            }
+          }
+        }
+
+        annotationBtn.setTitle(annotationToDisplay, for: .normal)
+        KVC.view.addSubview(annotationBtn)
+        annotationBtns.append(annotationBtn)
+        if nounFormToColorDict.keys.contains(annotationToDisplay) {
+          annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+        } else {
+          annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
+        }
+        if activateAnnotationBtn {
+          KVC.activateBtn(btn: annotationBtn)
+        }
+        setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
+
+        if i != 0 {
+          annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+          annotationSep.isUserInteractionEnabled = false
+          annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+          KVC.view.addSubview(annotationSep)
+          annotationSeparators.append(annotationSep)
+        }
+      }
+    } else {
+      return
+    }
+  }
 }
 
 /// Annotates a typed word after a space or auto action.
-func typedWordAnnotation() {
-  if proxy.documentContextBeforeInput != nil {
-//    let wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-//    let lastWordTyped = wordsTyped.secondToLast()
+func typedWordAnnotation(_ KVC: KeyboardViewController) {
+  if proxy.documentContextBeforeInput?.count != 0 {
+    wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
+    let lastWordTyped = wordsTyped.secondToLast()
+    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+      wordToCheck = lastWordTyped!.lowercased()
+    } else {
+      wordToCheck = lastWordTyped!
+    }
+
+    isNoun = nouns[wordToCheck].exists()
+    isPrep = prepositions[wordToCheck.lowercased()].exists()
+
+    annotationsToAssign = [String]()
+    annotationBtns = [UIButton]()
+    annotationColors = [UIColor]()
+    annotationSeparators = [UIView]()
+
+    let annotationFieldWidth = KVC.translateKey.frame.width * 0.85
+    var annotationHeight: CGFloat = 0.0
+    annotationHeight = scribeKeyHeight
+
+    if lastWordTyped == "Scribe" || lastWordTyped == "scribe" {
+      // Thank the user :)
+      annotationState = true
+      activateAnnotationBtn = true
+      autoAction1Visible = false
+
+      let annotationBtn = Annotation()
+      annotationBtn.setAnnotationSize(width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+      annotationBtn.setAnnotationLoc(
+        minX: KVC.translateKey.frame.origin.x
+        + ( KVC.translateKey.frame.width / 2 )
+          - ( annotationFieldWidth / 2 ),
+        maxY: KVC.scribeKey.frame.origin.y
+      )
+      annotationBtn.styleSingleAnnotation()
+
+      let emojisToSelectFrom: String = "🥳🎉"
+      let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      annotationBtn.setTitle(emojis, for: .normal)
+      KVC.view.addSubview(annotationBtn)
+      annotationBtns.append(annotationBtn)
+      annotationColors.append(commandKeyColor)
+
+      KVC.activateBtn(btn: annotationBtn)
+      setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
+    } else {
+      if isNoun {
+        let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
+        if nounAnnotationForm != "" {
+          if !nounAnnotationForm.contains("/") {
+            annotationsToAssign.append(nounAnnotationForm)
+          } else {
+            for a in nounAnnotationForm.components(separatedBy: "/") {
+              annotationsToAssign.append(a)
+            }
+          }
+        }
+      }
+
+      if isPrep {
+        activateAnnotationBtn = true
+        prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
+        if prepAnnotationForm != "" {
+          if !prepAnnotationForm.contains("/") {
+            annotationsToAssign.append(prepAnnotationForm)
+          } else {
+            for a in prepAnnotationForm.components(separatedBy: "/") {
+              annotationsToAssign.append(a)
+            }
+          }
+        }
+      }
+
+      if annotationsToAssign.count > 0 {
+        annotationState = true
+        autoAction1Visible = false
+
+        let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
+        let numAnnotations = annotationsToAssign.count
+
+        for i in 0..<numAnnotations {
+          let annotationBtn = Annotation()
+          var annotationSep = UIView()
+          var annotationToDisplay: String = annotationsToAssign[i]
+
+          if nounFormToColorDict.keys.contains(annotationToDisplay) {
+            if numAnnotations > 3 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+            } else if numAnnotations > 2 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+            } else {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.6)
+            }
+          } else {
+            if numAnnotations > 3 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4)
+            } else if numAnnotations == 1 {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+            } else {
+              annotationBtn.setAnnotationSize(width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.5)
+            }
+          }
+
+          annotationBtn.setAnnotationLoc(
+            minX: KVC.translateKey.frame.origin.x
+            + ( KVC.translateKey.frame.width / 2 )
+              - ( annotationFieldWidth / 2 )
+              + ( annotationWidth * CGFloat(i) ),
+            maxY: KVC.scribeKey.frame.origin.y
+          )
+          if numAnnotations == 1 {
+            annotationBtn.styleSingleAnnotation()
+          } else if i == 0 {
+            annotationBtn.styleLeftAnnotation()
+          } else if i == numAnnotations - 1 {
+            annotationBtn.styleRightAnnotation()
+          } else {
+            annotationBtn.styleMiddleAnnotation()
+          }
+
+          // Convert the annotation into the keyboard language.
+          if nounFormToColorDict.keys.contains(annotationToDisplay) {
+            if nounAnnotationConversionDict[controllerLanguage] != nil {
+              if nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                annotationToDisplay = nounAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+              }
+            }
+          } else {
+            if prepAnnotationConversionDict[controllerLanguage] != nil {
+              if prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] != nil {
+                annotationToDisplay = prepAnnotationConversionDict[controllerLanguage]?[annotationsToAssign[i]] ?? ""
+              }
+            }
+          }
+
+          annotationBtn.setTitle(annotationToDisplay, for: .normal)
+          KVC.view.addSubview(annotationBtn)
+          annotationBtns.append(annotationBtn)
+          if nounFormToColorDict.keys.contains(annotationToDisplay) {
+            annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+          } else {
+            annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
+          }
+          if activateAnnotationBtn {
+            KVC.activateBtn(btn: annotationBtn)
+          }
+          setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canCap: false, isSpecial: false)
+
+          if i != 0 {
+            annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+            annotationSep.isUserInteractionEnabled = false
+            annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+            KVC.view.addSubview(annotationSep)
+            annotationSeparators.append(annotationSep)
+          }
+        }
+      } else {
+        return
+      }
+    }
+  } else {
+    return
   }
 }
 
@@ -48,10 +370,12 @@ class Annotation: UIButton {
     self.layer.masksToBounds = false
     self.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     self.setTitleColor(UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor, for: .normal)
-    self.layer.shadowColor = keyShadowColor
-    self.layer.shadowOffset = CGSize(width: 0, height: 1.2)
-    self.layer.shadowOpacity = 1.0
-    self.layer.shadowRadius = 0
+    if activateAnnotationBtn {
+      self.layer.shadowColor = keyShadowColor
+      self.layer.shadowOffset = CGSize(width: 0, height: 1.25)
+      self.layer.shadowOpacity = 1.0
+      self.layer.shadowRadius = 0
+    }
   }
 
   func styleSingleAnnotation() {

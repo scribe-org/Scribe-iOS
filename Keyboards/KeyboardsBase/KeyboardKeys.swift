@@ -51,7 +51,14 @@ class KeyboardKey: UIButton {
       self.layer.setValue(true, forKey: "isSpecial")
     }
     var capsKey = ""
+    
     if self.key != "ß" && self.key != spaceBar && self.key != languageTextForSpaceBar {
+    if self.key != "ß"
+        && self.key != "´"
+        && self.key != spaceBar
+        && self.key != languageTextForSpacebar
+        && self.key != "ABC"
+        && self.key != "АБВ" {
       capsKey = keyboard[self.row][self.idx].capitalized
     } else {
       capsKey = self.key
@@ -108,7 +115,7 @@ class KeyboardKey: UIButton {
 
     if keyboardState == .letters
         && isSpecial == false
-        && !["123", spaceBar].contains(self.key)
+        && !["123", "´", spaceBar].contains(self.key)
         && shiftButtonState == .normal {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
@@ -165,7 +172,7 @@ class KeyboardKey: UIButton {
 
     if keyboardState == .letters
         && isSpecial == false
-        && ![".?123", spaceBar, "ß", ",", ".", "'", "-"].contains(self.key)
+        && ![".?123", spaceBar, "ß", "´", ",", ".", "'", "-"].contains(self.key)
         && shiftButtonState == .normal {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 

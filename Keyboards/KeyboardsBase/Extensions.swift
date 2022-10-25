@@ -17,6 +17,13 @@ extension Array {
   }
 }
 
+extension Sequence where Iterator.Element: Hashable {
+  func unique() -> [Iterator.Element] {
+    var seen: [Iterator.Element: Bool] = [:]
+    return self.filter { seen.updateValue(true, forKey: $0) == nil }
+  }
+}
+
 /// Extensions to String to allow for easier indexing, substring extraction and checking for certain characteristics.
 extension String {
   func index(fromIdx: Int) -> Index {
@@ -64,7 +71,7 @@ extension String {
       $1 == char ? $0 + 1 : $0
     }
   }
-  
+
   func capitalize() -> String {
     return prefix(1).uppercased() + self.lowercased().dropFirst()
   }
