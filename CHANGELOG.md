@@ -26,6 +26,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The labels for conjugations and declinations have been made darker in dark mode to be more readable.
 - French keyboards are now named based on their keyboard style.
+- Keyboards will now display the language followed by "(Scribe)" for a second before showing the language's word for space, similar to the system keyboards
 
 ### 🐞 Bug Fixes
 
