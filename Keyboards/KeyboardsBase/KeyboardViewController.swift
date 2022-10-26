@@ -220,6 +220,11 @@ class KeyboardViewController: UIInputViewController {
       if let inString = proxy.documentContextBeforeInput {
         // To only focus on the current word as prefix in autocomplete.
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
+        
+        if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
+           currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
+          currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(\#\/]"#, with: "", options: .regularExpression)
+        }
 
         // Post commands pastStringInTextProxy is "", so take last word.
         if currentPrefix.contains(" ") {
