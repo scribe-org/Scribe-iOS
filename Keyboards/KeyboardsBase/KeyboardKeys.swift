@@ -2,6 +2,7 @@
 //  KeyboardKey.swift
 //
 //  Classes and variables that define keys for Scribe keyboards.
+//
 
 import UIKit
 
@@ -47,16 +48,15 @@ class KeyboardKey: UIButton {
     self.key = keyboard[self.row][self.idx]
 
     if self.key == "space" {
-      self.key = hasShownKeyboardLanguage ? spaceBar : languageTextForSpaceBar
+      self.key = showKeyboardLanguage ? languageTextForSpaceBar : spaceBar
       self.layer.setValue(true, forKey: "isSpecial")
     }
     var capsKey = ""
-    
-    if self.key != "ß" && self.key != spaceBar && self.key != languageTextForSpaceBar {
+
     if self.key != "ß"
         && self.key != "´"
         && self.key != spaceBar
-        && self.key != languageTextForSpacebar
+        && self.key != languageTextForSpaceBar
         && self.key != "ABC"
         && self.key != "АБВ" {
       capsKey = keyboard[self.row][self.idx].capitalized
@@ -69,17 +69,16 @@ class KeyboardKey: UIButton {
     self.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
     self.layer.setValue(false, forKey: "isSpecial")
     self.setTitle(keyToDisplay, for: .normal) // set button character
-      
-      if !hasShownKeyboardLanguage && self.key == languageTextForSpaceBar {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
 
-              self.layer.setValue(spaceBar, forKey: "original")
-              self.layer.setValue(spaceBar, forKey: "keyToDisplay")
-              self.setTitle(spaceBar, for: .normal)
-              
-              hasShownKeyboardLanguage = true
-          }
+    if showKeyboardLanguage && self.key == languageTextForSpaceBar {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        self.layer.setValue(spaceBar, forKey: "original")
+        self.layer.setValue(spaceBar, forKey: "keyToDisplay")
+        self.setTitle(spaceBar, for: .normal)
+
+        showKeyboardLanguage = false
       }
+    }
   }
 
   /// Sets the character size of a capital key if the device is an iPhone given the orientation.
