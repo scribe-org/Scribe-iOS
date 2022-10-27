@@ -15,19 +15,19 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ⌨️ New Keyboards
 
 - Adds a QWERTY keyboard option for French.
-- Autocomplete now functions after quotes, slashes and hashtags.
 
 ### ✨ New Features
 
 - The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
 - Autosuggestions for pronouns have been improved for some languages.
 - The keyboards shift state is disabled by pressing an autocompletion or autosuggestion.
+- Autocomplete now functions after quotes, slashes and hashtags.
 
 ### 🎨 Design Changes
 
 - The labels for conjugations and declinations have been made darker in dark mode to be more readable.
 - French keyboards are now named based on their keyboard style.
-- Keyboards will now display the language followed by "(Scribe)" for a second before showing the language's word for space, similar to the system keyboards
+- Keyboards will now display the language followed by "(Scribe)" for a second before showing the language's word for space, similar to the system keyboards.
 
 ### 🐞 Bug Fixes
 

@@ -18,6 +18,7 @@ func setFRKeyboardLayout() {
 
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "espace"
+  language = "Français"
   invalidCommandMsg = "Pas dans Wikidata"
   baseAutosuggestions = ["je", "il", "le"]
   numericAutosuggestions = ["je", "que", "c’est"]
