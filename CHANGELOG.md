@@ -15,6 +15,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ⌨️ New Keyboards
 
 - Adds a QWERTY keyboard option for French.
+- Autocomplete now functions after quotes, slashes and hashtags.
 
 ### ✨ New Features
 

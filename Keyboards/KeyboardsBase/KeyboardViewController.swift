@@ -223,7 +223,7 @@ class KeyboardViewController: UIInputViewController {
         
         if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
            currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
-          currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(\#\/]"#, with: "", options: .regularExpression)
+          currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
         }
 
         // Post commands pastStringInTextProxy is "", so take last word.
