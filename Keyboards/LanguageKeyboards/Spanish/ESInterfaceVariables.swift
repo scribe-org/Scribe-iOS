@@ -111,7 +111,6 @@ func setESKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espacio"
   language = "Español"
-  hasShownKeyboardLanguage = false
   invalidCommandMsg = "No en Wikidata"
   baseAutosuggestions = ["el", "la", "no"]
   numericAutosuggestions = ["que", "de", "en"]
