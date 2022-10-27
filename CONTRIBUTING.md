@@ -40,6 +40,18 @@ From there code edits that are made will be reflected in the app each time the a
 
 Again, those new to Swift or wanting to work on their Swift skills are more than welcome to contribute! Scribe itself was developed as a way to learn Swift and iOS coding. The team would be happy to help you on your development journey :)
 
+  
+
+### A note on debugging
+To get breakpoints and the debugger to work as you'd expect them to:
+
+- Go up to the top bar where your schemes are (this is a bit to the right of the play button) and change it **from** Scribe to the language of the keyboard you'd like to test. Choose a device as normal.
+- Hit the play button (or ⌘-R)
+- When you get a window telling you to "choose an app to run," don't choose Scribe as you might expect, instead scroll down and select Xcode Previews
+- Occasionally you'll be met with just a black screen, in which case you can press Home (or ⇧-⌘-H) and then open the app back up and it should work
+
+  
+
 <a id="issues-projects"></a>
 
 # Issues and projects [`⇧`](#contents)
