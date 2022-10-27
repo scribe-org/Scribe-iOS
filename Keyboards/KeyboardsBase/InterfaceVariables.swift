@@ -28,6 +28,11 @@ var keyboardLoad = false
 
 // Keyboard elements.
 var spaceBar = String()
+var language = String()
+var languageTextForSpaceBar: String {
+    "\(language) (Scribe)"
+}
+var showKeyboardLanguage = false
 
 // Arrays for the possible keyboard views that are loaded with their characters.
 var letterKeys: [[String]] = [[String]]()

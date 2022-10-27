@@ -1097,6 +1097,9 @@ class KeyboardViewController: UIInputViewController {
       setAutoActionPartitions()
 
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+      
+      // Show the name of the keyboard to the user.
+      showKeyboardLanguage = true
 
       // Make sure that Scribe shows up in auto actions.
       nouns["Scribe"] = [
@@ -1462,7 +1465,7 @@ class KeyboardViewController: UIInputViewController {
 
           // Activate keyboard interface buttons.
           activateBtn(btn: btn)
-          if key == "shift" || key == spaceBar {
+          if key == "shift" || key == spaceBar || key == languageTextForSpaceBar {
             btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
           }
         }
@@ -1539,7 +1542,7 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = false
     }
     // Disable the possibility of a double space period call.
-    if originalKey != spaceBar {
+    if originalKey != spaceBar && originalKey != languageTextForSpaceBar {
       doubleSpacePeriodPossible = false
     }
 
@@ -1795,7 +1798,7 @@ class KeyboardViewController: UIInputViewController {
         commandBar.conditionallyAddPlaceholder()
       }
 
-    case spaceBar:
+    case spaceBar, languageTextForSpaceBar:
       autoActionState = .suggest
       commandBar.conditionallyRemovePlaceholder()
       if ![.translate, .conjugate, .plural].contains(commandState) {
@@ -1974,7 +1977,7 @@ class KeyboardViewController: UIInputViewController {
     }
     // Double space period shortcut.
     if touch.tapCount == 2
-      && originalKey == spaceBar
+      && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
       && proxy.documentContextBeforeInput?.count != 1
       && doubleSpacePeriodPossible == true {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
