@@ -97,7 +97,6 @@ func setRUKeyboardLayout() {
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "Пробел"
   language = "Pусский"
-  hasShownKeyboardLanguage = false
   invalidCommandMsg = "Нет в Викиданных"
   baseAutosuggestions = ["я", "а", "в"]
   numericAutosuggestions = ["в", "и", "я"]
