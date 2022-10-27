@@ -1092,6 +1092,9 @@ class KeyboardViewController: UIInputViewController {
       setAutoActionPartitions()
 
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
+      
+      // Show the name of the keyboard to the user.
+      showKeyboardLanguage = true
 
       // Make sure that Scribe shows up in auto actions.
       nouns["Scribe"] = [
