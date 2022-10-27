@@ -2,7 +2,6 @@
 //  KeyboardKey.swift
 //
 //  Classes and variables that define keys for Scribe keyboards.
-//
 
 import UIKit
 
@@ -48,15 +47,13 @@ class KeyboardKey: UIButton {
     self.key = keyboard[self.row][self.idx]
 
     if self.key == "space" {
-      self.key = showKeyboardLanguage ? languageTextForSpaceBar : spaceBar
+      self.key = spaceBar
       self.layer.setValue(true, forKey: "isSpecial")
     }
     var capsKey = ""
-
     if self.key != "ß"
         && self.key != "´"
         && self.key != spaceBar
-        && self.key != languageTextForSpaceBar
         && self.key != "ABC"
         && self.key != "АБВ" {
       capsKey = keyboard[self.row][self.idx].capitalized
@@ -69,16 +66,6 @@ class KeyboardKey: UIButton {
     self.layer.setValue(keyToDisplay, forKey: "keyToDisplay")
     self.layer.setValue(false, forKey: "isSpecial")
     self.setTitle(keyToDisplay, for: .normal) // set button character
-
-    if showKeyboardLanguage && self.key == languageTextForSpaceBar {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-        self.layer.setValue(spaceBar, forKey: "original")
-        self.layer.setValue(spaceBar, forKey: "keyToDisplay")
-        self.setTitle(spaceBar, for: .normal)
-
-        showKeyboardLanguage = false
-      }
-    }
   }
 
   /// Sets the character size of a capital key if the device is an iPhone given the orientation.
@@ -89,7 +76,7 @@ class KeyboardKey: UIButton {
           || self.key == "АБВ"
           || self.key == "123" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
-      } else if self.key == spaceBar || self.key == languageTextForSpaceBar {
+      } else if self.key == spaceBar {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
       } else {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.9)
@@ -100,7 +87,7 @@ class KeyboardKey: UIButton {
           || self.key == "АБВ"
           || self.key == "123" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
-      } else if self.key == spaceBar || self.key == languageTextForSpaceBar {
+      } else if self.key == spaceBar {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2)
       } else {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.5)
@@ -142,7 +129,7 @@ class KeyboardKey: UIButton {
           || self.key == "АБВ"
           || self.key == "hideKeyboard" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
-      } else if self.key == spaceBar || self.key == languageTextForSpaceBar {
+      } else if self.key == spaceBar {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.25)
       } else if self.key == ".?123" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.5)
@@ -155,7 +142,7 @@ class KeyboardKey: UIButton {
           || self.key == "АБВ"
           || self.key == "hideKeyboard" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.25)
-      } else if self.key == spaceBar || self.key == languageTextForSpaceBar {
+      } else if self.key == spaceBar {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
       } else if self.key == ".?123" {
         self.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
@@ -234,7 +221,7 @@ class KeyboardKey: UIButton {
       && self.row == 2 {
       // Make second row number and symbol keys wider for iPhones.
       self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.4).isActive = true
-    } else if self.key != spaceBar && self.key != languageTextForSpaceBar {
+    } else if self.key != spaceBar {
       self.widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
     }
   }
@@ -264,7 +251,7 @@ class KeyboardKey: UIButton {
         self.layer.setValue(true, forKey: "isSpecial")
         self.widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       }
-    } else if self.key != spaceBar && self.key != languageTextForSpaceBar {
+    } else if self.key != spaceBar {
       self.widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
     }
   }
