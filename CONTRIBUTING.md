@@ -41,6 +41,7 @@ From there code edits that are made will be reflected in the app each time the a
 Again, those new to Swift or wanting to work on their Swift skills are more than welcome to contribute! Scribe itself was developed as a way to learn Swift and iOS coding. The team would be happy to help you on your development journey :)
 
   
+<a id="a-note-on-debugging"></a>
 
 ### A note on debugging
 To get breakpoints and the debugger to work as you'd expect them to:

@@ -73,6 +73,9 @@ https://user-images.githubusercontent.com/24387426/194840915-c9a9ea88-4718-4bdf-
 
 Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) and [projects](https://github.com/scribe-org/Scribe-iOS/projects). Please also see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Those interested can further check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
 
+### ⚠️ Note on Debugging ⚠️
+
+Because this is a keyboard, the Xcode debugger doesn't work exactly how you might expect if you were debugging a regular app. Please see [A note on debugging](./CONTRIBUTING.md#a-note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md)
 ### Ways to Help
 
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
