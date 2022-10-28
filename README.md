@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeAppLogo.png" width=410 height=184 alt="Scribe Logo"></a>
+  <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeLogoRounded.png" width=410 height=184 alt="Scribe Logo"></a>
 </div>
 
 <ol></ol>
