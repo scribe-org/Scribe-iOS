@@ -22,6 +22,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Autosuggestions for pronouns have been improved for some languages.
 - The keyboards shift state is disabled by pressing an autocompletion or autosuggestion.
 - Autocomplete now functions after quotes, slashes and hashtags.
+- Scribe can now access unordered names in the user's contacts to present them as autocompletions.
 
 ### 🎨 Design Changes
 

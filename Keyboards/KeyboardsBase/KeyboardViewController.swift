@@ -1089,14 +1089,13 @@ class KeyboardViewController: UIInputViewController {
       commandBar.textColor = keyCharColor
       commandBar.conditionallyAddPlaceholder() // in case of color mode change during commands
       keyboardView.backgroundColor? = keyboardBgColor
+      allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
 
       // Set height for Scribe command functionality and annotation elements.
       scribeKeyHeight = scribeKey.frame.size.height
 
       linkShadowBlendElements()
       setAutoActionPartitions()
-
-      allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
       
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
@@ -1106,6 +1105,14 @@ class KeyboardViewController: UIInputViewController {
         "plural": "Scribes",
         "form": ""
       ]
+
+      // Access UILexicon words.
+      var lexiconWords: [String] = [String]()
+      self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
+        for item in userLexicon.entries {
+          lexiconWords.append(item.documentText)
+        }
+      }
 
       var uniqueAutosuggestKeys: [String] = [String]()
       for elem in autosuggestions.dictionaryValue.keys {
@@ -1122,7 +1129,8 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       }
-      autocompleteWords = Array(nouns.dictionaryValue.keys) + uniqueAutosuggestKeys
+
+      autocompleteWords = Array(nouns.dictionaryValue.keys) + uniqueAutosuggestKeys + lexiconWords
       autocompleteWords = autocompleteWords.filter(
         { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
       ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
