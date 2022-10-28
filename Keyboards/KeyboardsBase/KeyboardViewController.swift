@@ -2018,9 +2018,28 @@ class KeyboardViewController: UIInputViewController {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
+
+    // Delete is sped up based on the number of deletes that have been completed.
+    var deleteCount = 0
     if gesture.state == .began {
       backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+        deleteCount += 1
         self.handleDeleteButtonPressed()
+
+        if deleteCount == 20 {
+          backspaceTimer?.invalidate()
+          backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.07, repeats: true) { (_) in
+            deleteCount += 1
+            self.handleDeleteButtonPressed()
+
+            if deleteCount == 50 {
+              backspaceTimer?.invalidate()
+              backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true) { (_) in
+                self.handleDeleteButtonPressed()
+              }
+            }
+          }
+        }
       }
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()
