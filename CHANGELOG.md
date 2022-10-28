@@ -19,7 +19,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 - The left and right buttons in the conjugation and declination views are disabled now if pressing them will not lead to a change in the view.
-- Autosuggestions for pronouns have been improved for some languages.
+- Autosuggestions for pronouns have been improved for German, French and Spanish.
 - The keyboards shift state is disabled by pressing an autocompletion or autosuggestion.
 - Autocomplete now functions after quotes, slashes and hashtags.
 - Scribe can now access unordered names in the user's contacts to present them as autocompletions.
