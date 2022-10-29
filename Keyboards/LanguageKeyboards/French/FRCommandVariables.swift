@@ -22,7 +22,7 @@ func frSetConjugationLabels() {
 enum FRConjugationState {
   case indicativePresent
   case preterite
-  case imperfect
+//  case imperfect
 }
 
 var frConjugationState: FRConjugationState = .indicativePresent
@@ -39,8 +39,8 @@ func frGetConjugationTitle() -> String {
     return commandPromptSpacing + "Présent: " + verbToDisplay
   case .preterite:
     return commandPromptSpacing + "Passé simple: " + verbToDisplay
-  case .imperfect:
-    return commandPromptSpacing + "Imparfait: " + verbToDisplay
+//  case .imperfect:
+//    return commandPromptSpacing + "Imparfait: " + verbToDisplay
   }
 }
 
@@ -51,8 +51,8 @@ func frGetConjugationState() -> String {
     return "pres"
   case .preterite:
     return "pret"
-  case .imperfect:
-    return "imp"
+//  case .imperfect:
+//    return "imp"
   }
 }
 
@@ -64,9 +64,9 @@ func frConjugationStateLeft() {
   case .preterite:
     conjViewShiftButtonsState = .leftInactive
     frConjugationState = .indicativePresent
-  case .imperfect:
-    conjViewShiftButtonsState = .bothActive
-    frConjugationState = .preterite
+//  case .imperfect:
+//    conjViewShiftButtonsState = .bothActive
+//    frConjugationState = .preterite
   }
 }
 
@@ -74,12 +74,13 @@ func frConjugationStateLeft() {
 func frConjugationStateRight() {
   switch frConjugationState {
   case .indicativePresent:
-    conjViewShiftButtonsState = .bothActive
+    conjViewShiftButtonsState = .rightInactive // .bothActive
     frConjugationState = .preterite
   case .preterite:
-    conjViewShiftButtonsState = .rightInactive
-    frConjugationState = .imperfect
-  case .imperfect:
+//    conjViewShiftButtonsState = .rightInactive
     break
+//    frConjugationState = .imperfect
+//  case .imperfect:
+//    break
   }
 }
