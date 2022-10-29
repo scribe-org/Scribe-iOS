@@ -24,6 +24,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Autocomplete now functions after quotes, slashes and hashtags.
 - Scribe can now access unordered names in the user's contacts to present them as autocompletions.
 - The delete button now speeds up as the user holds it.
+- Typing a period, comma, question mark or exlamation point now removes a space before them if there is one.
 
 ### 🎨 Design Changes
 

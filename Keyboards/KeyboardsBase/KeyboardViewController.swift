@@ -1852,6 +1852,16 @@ class KeyboardViewController: UIInputViewController {
       }
       changeKeyboardToLetterKeys()
 
+    case ",", ".", "!", "?":
+      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+        if proxy.documentContextBeforeInput?.last == " " {
+          proxy.deleteBackward()
+        }
+        proxy.insertText(keyToDisplay)
+      } else {
+        commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
+      }
+
     case "shift":
       shiftButtonState = shiftButtonState == .normal ? .shift : .normal
       loadKeys()
