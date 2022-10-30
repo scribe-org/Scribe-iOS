@@ -1,6 +1,6 @@
 # Contributing to Scribe-iOS
 
-Thank you for your consideration in contributing to Scribe-iOS!
+Thank you for your interest in contributing to Scribe-iOS!
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
