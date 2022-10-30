@@ -4,7 +4,7 @@
 
 <!-- Please replace the empty checkboxes [ ] below with checked ones [x] accordingly. -->
 
-- [ ] This pull request is on a [separate branch](https://docs.github.com/en/get-started/quickstart/github-flow) and not my main branch
+- [ ] This pull request is on a [separate branch](https://docs.github.com/en/get-started/quickstart/github-flow) and not the main branch
 - [ ] I have updated the [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) with a description of my changes for the upcoming release <!-- ... or I'll send a commit with this now 🙃 -->
 
 ---
