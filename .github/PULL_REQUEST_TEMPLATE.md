@@ -2,7 +2,7 @@
 
 ### Contributor checklist
 
-<!-- Replace the empty checkboxes [ ] below with checked ones [x] accordingly. -->
+<!-- Please replace the empty checkboxes [ ] below with checked ones [x] accordingly. -->
 
 - [ ] This pull request is on a [separate branch](https://docs.github.com/en/get-started/quickstart/github-flow) and not my main branch
 - [ ] I have updated the [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) with a description of my changes for the upcoming release <!-- ... or I'll send a commit with this now 🙃 -->
@@ -20,6 +20,6 @@ Also, please describe shortly how you tested that your change actually works.
 ### Related issue
 
 <!--- Scribe-iOS prefers that pull requests be related to already open issues. -->
-<!--- Please link to the issue here: -->
+<!--- If applicable, please link to the issue by replacing ISSUE_NUMBER with the appropriate number below. -->
 
 #ISSUE_NUMBER
