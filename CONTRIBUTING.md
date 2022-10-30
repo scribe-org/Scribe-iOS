@@ -1,10 +1,10 @@
 # Contributing to Scribe-iOS
 
-Thank you for your consideration in contributing to this project!
+Thank you for your consideration in contributing to this Scribe-iOS!
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, and in accordance with this project's [code of conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing patches and features.
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, and in accordance with this project's [code of conduct](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing changes and features.
 
 <a id="contents"></a>
 
@@ -28,14 +28,15 @@ Following these guidelines helps to communicate that you respect the time of the
 Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) coding language. Those new to Swift or wanting to develop their skills are more than welcome to contribute! The first step on your Swift journey would be to read through the [Swift documentation](https://docs.swift.org/swift-book/index.html). The general steps to setting up a development environment are:
 
 1. Download [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
-2. [Fork](http://help.github.com/fork-a-repo/) a copy of the Scribe-iOS repository
+2. [Fork](http://help.github.com/fork-a-repo/) a copy of the [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS) repository
    - Alternatively you can [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository
 3. Open the Scribe-iOS directory in Xcode
 4. In order to [run Scribe on an emulator](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device):
 
-   - In the top bar, make sure that Scribe is selected as the scheme and not one of the sub-apps for each keyboard
+   - In the top bar select Scribe as the scheme
+     - If you're debugging you'll need to select the keyboard your debugging as the scheme (see the [note on debugging](#note-on-debugging) below)
    - Select a device to run the app on
-   - Press the play button marked "Start the active scheme"
+   - Press the run button marked "Start the active scheme"
 
 From there code edits that are made will be reflected in the app each time the active scheme is restarted.
 
