@@ -45,13 +45,13 @@ Again, those new to Swift or wanting to work on their Swift skills are more than
 
 ### Note on debugging
 
-The Xcode debugger doesn't work exactly as expected for Scribe as the keyboards themselves and extensions. To get breakpoints and the debugger to work as you'd expect them to:
+The Xcode debugger often doesn't work as expected for Scribe as the keyboards themselves and extensions. To get breakpoints and the debugger to work as you'd expect them to:
 
 - Go up to the top bar where your schemes are (this is a bit to the right of the play button) and change it **from** Scribe to the language of the keyboard you'd like to debug
 - Choose a device as normal
 - Hit the play button (or ⌘-R) to start the active scheme
 - When you get a window telling you to "choose an app to run," don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
-- Occasionally you'll be met with just a black screen, in which case you can press Home (or ⇧-⌘-H) and then open the app back up and it should work
+- Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for testing
 
 <a id="issues-projects"></a>
 

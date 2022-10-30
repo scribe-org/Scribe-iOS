@@ -75,7 +75,7 @@ Work that is in progress or could be implemented is tracked in the [issues](http
 
 ### ⚠️ Note on Debugging ⚠️
 
-Because Scribe is a keyboard extension, the Xcode debugger doesn't work exactly how you might expect if you were debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
+Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
 
 ### Ways to Help
 
