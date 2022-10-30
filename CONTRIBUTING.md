@@ -31,10 +31,11 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 2. [Fork](http://help.github.com/fork-a-repo/) a copy of the [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS) repository
    - Alternatively you can [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository
 3. Open the Scribe-iOS directory in Xcode
-4. In order to [run Scribe on an emulator](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device):
+4. In order to run Scribe on an emulator:
 
+   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
-     - If you're debugging you'll need to select the keyboard your debugging as the scheme (see the [note on debugging](#note-on-debugging) below)
+     - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
    - Select a device to run the app on
    - Press the run button marked "Start the active scheme"
 
@@ -48,7 +49,7 @@ Again, those new to Swift or wanting to work on their Swift skills are more than
 
 The Xcode debugger often doesn't work as expected for Scribe as the keyboards themselves are extensions. To get breakpoints and the debugger to work as you'd expect them to:
 
-- Go up to the top bar where your schemes are (this is a bit to the right of the run button) and change it from Scribe to the language of the keyboard you'd like to debug [(see an image of this)](https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/select_scheme_for_debugging.png)
+- Go up to the top bar where your schemes are (this is a bit to the right of the run button) and change it from Scribe to the language of the keyboard you'd like to debug [(see a screenshot of this)](https://raw.githubusercontent.com/scribe-org/Scribe-iOS/main/.github/resources/images/select_scheme_for_debugging.png)
 - Choose a device as normal
 - Hit the run button (or ⌘-R) to start the active scheme
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
