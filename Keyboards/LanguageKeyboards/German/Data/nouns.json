@@ -9579,6 +9579,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Autobus": {
+"plural": "Autobusse",
+"form": "M"
+},
+"Autobusse": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Autofahren": {
 "plural": "noPlural",
 "form": "N"
@@ -9899,6 +9907,14 @@
 "plural": "Backends",
 "form": "N"
 },
+"Back-up": {
+"plural": "Back-ups",
+"form": "M/N"
+},
+"Back-ups": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Backblech": {
 "plural": "Backbleche",
 "form": "N"
@@ -9986,6 +10002,10 @@
 "Backstuben": {
 "plural": "isPlural",
 "form": "PL"
+},
+"Backup": {
+"plural": "Back-ups",
+"form": "M/N"
 },
 "Backwerk": {
 "plural": "Backwerke",
@@ -16192,7 +16212,7 @@
 "form": "F"
 },
 "Bitten": {
-"plural": "noPlural",
+"plural": "isPlural",
 "form": "N/PL"
 },
 "Bittermandelöl": {
@@ -18003,6 +18023,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Broccoli": {
+"plural": "Broccoli",
+"form": "M/PL"
+},
 "Brokat": {
 "plural": "Brokate",
 "form": "M"
@@ -18010,6 +18034,10 @@
 "Brokate": {
 "plural": "isPlural",
 "form": "PL"
+},
+"Brokkoli": {
+"plural": "Brokkoli",
+"form": "M/PL"
 },
 "Brom": {
 "plural": "noPlural",
@@ -26045,7 +26073,7 @@
 },
 "Eichen": {
 "plural": "isPlural",
-"form": "PL"
+"form": "N/PL"
 },
 "Eichhörnchen": {
 "plural": "Eichhörnchen",
@@ -31407,6 +31435,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"FAQ": {
+"plural": "FAQs",
+"form": "F"
+},
+"FAQs": {
+"plural": "isPlural",
+"form": "PL"
+},
 "FDP": {
 "plural": "noPlural",
 "form": "F"
@@ -31704,6 +31740,14 @@
 "form": "F"
 },
 "Fahrgemeinschaften": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Fahrgerät": {
+"plural": "Fahrgeräte",
+"form": "N"
+},
+"Fahrgeräte": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -32755,6 +32799,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Feldwebel": {
+"plural": "Feldwebel",
+"form": "M/PL"
+},
 "Feldzug": {
 "plural": "Feldzüge",
 "form": "M"
@@ -32796,7 +32844,7 @@
 "form": "PL"
 },
 "Fels": {
-"plural": "noPlural",
+"plural": "Felsen",
 "form": "M"
 },
 "Felsen": {
@@ -37751,6 +37799,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Gefährt": {
+"plural": "Gefährte",
+"form": "N"
+},
+"Gefährte": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Gefängnis": {
 "plural": "Gefängnisse",
 "form": "N"
@@ -40207,6 +40263,10 @@
 "plural": "noPlural",
 "form": "N"
 },
+"Gier": {
+"plural": "noPlural",
+"form": "F"
+},
 "Gießkanne": {
 "plural": "Gießkannen",
 "form": "F"
@@ -40604,7 +40664,7 @@
 "form": "F"
 },
 "Gluten": {
-"plural": "isPlural",
+"plural": "noPlural",
 "form": "N/PL"
 },
 "Gläser": {
@@ -40960,18 +41020,18 @@
 "form": "PL"
 },
 "Graf": {
-"plural": "Grafen",
+"plural": "Grafe",
 "form": "M/N"
+},
+"Grafe": {
+"plural": "isPlural",
+"form": "PL"
 },
 "Grafem": {
 "plural": "Grafeme",
 "form": "N"
 },
 "Grafeme": {
-"plural": "isPlural",
-"form": "PL"
-},
-"Grafen": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -44407,6 +44467,10 @@
 "plural": "Helfer",
 "form": "M/PL"
 },
+"Helikopter": {
+"plural": "Helikopter",
+"form": "M/PL"
+},
 "Helikoptereltern": {
 "plural": "isPlural",
 "form": "PL"
@@ -45407,6 +45471,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Hirse": {
+"plural": "Hirsen",
+"form": "F"
+},
+"Hirsen": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Hispanist": {
 "plural": "Hispanisten",
 "form": "M"
@@ -45996,12 +46068,8 @@
 "form": "PL"
 },
 "Homburg": {
-"plural": "Homburgs",
+"plural": "noPlural",
 "form": "M/N"
-},
-"Homburgs": {
-"plural": "isPlural",
-"form": "PL"
 },
 "Hommage": {
 "plural": "Hommagen",
@@ -50383,6 +50451,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Kabelsalat": {
+"plural": "Kabelsalate",
+"form": "M"
+},
+"Kabelsalate": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Kabeltrasse": {
 "plural": "Kabeltrassen",
 "form": "F"
@@ -50876,14 +50952,18 @@
 "form": "N"
 },
 "Kameruner": {
-"plural": "Kameruner",
-"form": "F/M/PL"
+"plural": "Kamerunern",
+"form": "F/M"
 },
 "Kamerunerin": {
 "plural": "Kamerunerinnen",
 "form": "F"
 },
 "Kamerunerinnen": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Kamerunern": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -52967,6 +53047,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Kfz": {
+"plural": "Kfz",
+"form": "N/PL"
+},
 "Khaki": {
 "plural": "noPlural",
 "form": "M/N"
@@ -54752,7 +54836,7 @@
 "form": "F"
 },
 "Kolben": {
-"plural": "isPlural",
+"plural": "Kolben",
 "form": "M/PL"
 },
 "Kolibri": {
@@ -62331,6 +62415,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Lokation": {
+"plural": "Lokationen",
+"form": "F"
+},
+"Lokationen": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Lokativ": {
 "plural": "Lokative",
 "form": "M"
@@ -64565,7 +64657,7 @@
 },
 "Maß": {
 "plural": "Maße",
-"form": "N"
+"form": "F/N"
 },
 "Maße": {
 "plural": "Maßen",
@@ -65224,16 +65316,12 @@
 "form": "PL"
 },
 "Meme": {
-"plural": "Memes",
+"plural": "isPlural",
 "form": "N/PL"
 },
 "Memel": {
 "plural": "noPlural",
 "form": "F/N"
-},
-"Memes": {
-"plural": "isPlural",
-"form": "PL"
 },
 "Mendelevium": {
 "plural": "noPlural",
@@ -68724,8 +68812,8 @@
 "form": "PL"
 },
 "Münster": {
-"plural": "noPlural",
-"form": "M/N"
+"plural": "Münster",
+"form": "M/N/PL"
 },
 "Münze": {
 "plural": "Münzen",
@@ -71995,6 +72083,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Nuttenstängel": {
+"plural": "Nuttenstängel",
+"form": "M/PL"
+},
 "Nutzeneffekt": {
 "plural": "Nutzeneffekte",
 "form": "M"
@@ -73119,11 +73211,19 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Omnibus": {
+"plural": "Omnibusse",
+"form": "M"
+},
 "Omnibusbahnhofsvorsteherassistentenhilfsanwärterlehrling": {
 "plural": "Omnibusbahnhofsvorsteherassistentenhilfsanwärterlehrlinge",
 "form": "M"
 },
 "Omnibusbahnhofsvorsteherassistentenhilfsanwärterlehrlinge": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Omnibusse": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -74402,6 +74502,10 @@
 "Pankreaschirurgie": {
 "plural": "noPlural",
 "form": "F"
+},
+"Panne": {
+"plural": "noPlural",
+"form": "M"
 },
 "Panorama": {
 "plural": "Panoramen",
@@ -78220,7 +78324,7 @@
 "form": "M"
 },
 "Preußen": {
-"plural": "noPlural",
+"plural": "isPlural",
 "form": "N/PL"
 },
 "Preußin": {
@@ -80792,12 +80896,8 @@
 "form": "PL"
 },
 "Raps": {
-"plural": "Rapse",
-"form": "M/PL"
-},
-"Rapse": {
 "plural": "isPlural",
-"form": "PL"
+"form": "M/PL"
 },
 "Rapsöl": {
 "plural": "Rapsöle",
@@ -86443,6 +86543,10 @@
 "plural": "Schifffahrten",
 "form": "F"
 },
+"Schiffchen": {
+"plural": "Schiffchen",
+"form": "N/PL"
+},
 "Schiffe": {
 "plural": "isPlural",
 "form": "PL"
@@ -86971,6 +87075,14 @@
 "plural": "noPlural",
 "form": "N"
 },
+"Schleuder": {
+"plural": "Schleudern",
+"form": "F"
+},
+"Schleudern": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Schleuse": {
 "plural": "Schleusen",
 "form": "F"
@@ -87288,8 +87400,12 @@
 "form": "M"
 },
 "Schmiede": {
-"plural": "isPlural",
+"plural": "Schmieden",
 "form": "F/PL"
+},
+"Schmieden": {
+"plural": "isPlural",
+"form": "PL"
 },
 "Schmiedin": {
 "plural": "Schmiedinnen",
@@ -87655,6 +87771,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Schnäbelchen": {
+"plural": "Schnäbelchen",
+"form": "N/PL"
+},
 "Schnäppchen": {
 "plural": "Schnäppchen",
 "form": "N/PL"
@@ -87976,6 +88096,14 @@
 "form": "PL"
 },
 "Schrotte": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Schrottkarre": {
+"plural": "Schrottkarren",
+"form": "F"
+},
+"Schrottkarren": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -89935,6 +90063,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Sellerie": {
+"plural": "Sellerien",
+"form": "N"
+},
+"Sellerien": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Seltenerdmetall": {
 "plural": "Seltenerdmetalle",
 "form": "N"
@@ -91132,12 +91268,8 @@
 "form": "PL"
 },
 "Skelett": {
-"plural": "Skelette",
+"plural": "noPlural",
 "form": "F/N"
-},
-"Skelette": {
-"plural": "isPlural",
-"form": "PL"
 },
 "Ski": {
 "plural": "Skis",
@@ -91304,6 +91436,14 @@
 "form": "M"
 },
 "Smithsonite": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Smombie": {
+"plural": "Smombies",
+"form": "M"
+},
+"Smombies": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -94614,6 +94754,10 @@
 "Steine": {
 "plural": "isPlural",
 "form": "PL"
+},
+"Steingut": {
+"plural": "noPlural",
+"form": "N"
 },
 "Steinkohle": {
 "plural": "Steinkohlen",
@@ -99091,6 +99235,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"Tenno": {
+"plural": "Tennos",
+"form": "M"
+},
+"Tennos": {
+"plural": "isPlural",
+"form": "PL"
+},
 "Teplitz": {
 "plural": "noPlural",
 "form": "N"
@@ -100756,10 +100908,10 @@
 "form": "PL"
 },
 "Trabant": {
-"plural": "Trabanten",
+"plural": "Trabants",
 "form": "M"
 },
-"Trabanten": {
+"Trabants": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -104614,6 +104766,10 @@
 "Vegetationszonen": {
 "plural": "isPlural",
 "form": "PL"
+},
+"Vehikel": {
+"plural": "Vehikel",
+"form": "N/PL"
 },
 "Vektor": {
 "plural": "Vektoren",
@@ -110104,8 +110260,12 @@
 "form": "PL"
 },
 "Weißkohl": {
-"plural": "noPlural",
+"plural": "Weißkohle",
 "form": "M"
+},
+"Weißkohle": {
+"plural": "isPlural",
+"form": "PL"
 },
 "Weißrussisch": {
 "plural": "noPlural",
@@ -113332,6 +113492,14 @@
 "form": "F"
 },
 "Zargen": {
+"plural": "isPlural",
+"form": "PL"
+},
+"Zarin": {
+"plural": "Zarinnen",
+"form": "F"
+},
+"Zarinnen": {
 "plural": "isPlural",
 "form": "PL"
 },

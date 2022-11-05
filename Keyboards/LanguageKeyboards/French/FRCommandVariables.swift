@@ -22,7 +22,8 @@ func frSetConjugationLabels() {
 enum FRConjugationState {
   case indicativePresent
   case preterite
-//  case imperfect
+  case imperfect
+  case future
 }
 
 var frConjugationState: FRConjugationState = .indicativePresent
@@ -39,8 +40,10 @@ func frGetConjugationTitle() -> String {
     return commandPromptSpacing + "Présent: " + verbToDisplay
   case .preterite:
     return commandPromptSpacing + "Passé simple: " + verbToDisplay
-//  case .imperfect:
-//    return commandPromptSpacing + "Imparfait: " + verbToDisplay
+  case .imperfect:
+    return commandPromptSpacing + "Imparfait: " + verbToDisplay
+  case .future:
+    return commandPromptSpacing + "Futur: " + verbToDisplay
   }
 }
 
@@ -51,8 +54,10 @@ func frGetConjugationState() -> String {
     return "pres"
   case .preterite:
     return "pret"
-//  case .imperfect:
-//    return "imp"
+  case .imperfect:
+    return "imp"
+  case .future:
+    return "fut"
   }
 }
 
@@ -64,9 +69,12 @@ func frConjugationStateLeft() {
   case .preterite:
     conjViewShiftButtonsState = .leftInactive
     frConjugationState = .indicativePresent
-//  case .imperfect:
-//    conjViewShiftButtonsState = .bothActive
-//    frConjugationState = .preterite
+  case .imperfect:
+    conjViewShiftButtonsState = .bothActive
+    frConjugationState = .preterite
+  case .future:
+    conjViewShiftButtonsState = .bothActive
+    frConjugationState = .imperfect
   }
 }
 
@@ -74,13 +82,15 @@ func frConjugationStateLeft() {
 func frConjugationStateRight() {
   switch frConjugationState {
   case .indicativePresent:
-    conjViewShiftButtonsState = .rightInactive // .bothActive
+    conjViewShiftButtonsState = .bothActive
     frConjugationState = .preterite
   case .preterite:
-//    conjViewShiftButtonsState = .rightInactive
+    conjViewShiftButtonsState = .bothActive
+    frConjugationState = .imperfect
+  case .imperfect:
+    conjViewShiftButtonsState = .rightInactive
+    frConjugationState = .future
+  case .future:
     break
-//    frConjugationState = .imperfect
-//  case .imperfect:
-//    break
   }
 }

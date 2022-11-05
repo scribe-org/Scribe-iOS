@@ -24,11 +24,19 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Autocomplete now functions after quotes, slashes and hashtags.
 - Scribe can now access unordered names in the user's contacts to present them as autocompletions.
 - The delete button now speeds up as the user holds it.
-- Typing a period, comma, question mark or exlamation point now removes a space before them if there is one.
+- Typing a period, comma, question mark or exclamation point now removes a space before them if there is one.
 
 ### 🗃️ Data Added
 
-- Thousands of new French verb conjugations have been added!
+Thousands of new French verb conjugations have been added!
+
+- French: 134 nouns, 3905 verbs
+- German: 42 nouns, 15 verbs
+- Italian: 247 nouns
+- Portuguese: 15 nouns
+- Russian: 11 nouns
+- Spanish: 2472 nouns, 244 verbs
+- Swedish: 89 nouns
 
 ### 🎨 Design Changes
 
@@ -39,7 +47,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - The accent character on the French letters keyboard is now the correct character.
-- Indentation has been removed from all Scribe JSON files to reduce their filesize, speed up the load times and mitigate crashes.
+- Indentation has been removed from all Scribe JSON files to reduce their file size, speed up the load times and mitigate crashes.
 
 ### ♻️ Code Refactoring
 

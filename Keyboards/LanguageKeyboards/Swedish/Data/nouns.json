@@ -3941,7 +3941,7 @@
 },
 "anmälan": {
 "plural": "anmälningar",
-"form": "C/PL"
+"form": "C"
 },
 "anmälare": {
 "plural": "anmälare",
@@ -3949,7 +3949,7 @@
 },
 "anmälning": {
 "plural": "anmälningar",
-"form": "C"
+"form": "C/PL"
 },
 "anmälningar": {
 "plural": "isPlural",
@@ -10661,7 +10661,7 @@
 },
 "barstol": {
 "plural": "barstolar",
-"form": "C/PL"
+"form": "C"
 },
 "barstolar": {
 "plural": "isPlural",
@@ -12326,6 +12326,10 @@
 "bergsklättringar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"bergskollegium": {
+"plural": "bergskollegium",
+"form": "N/PL"
 },
 "bergskrabba": {
 "plural": "bergskrabbor",
@@ -16176,6 +16180,14 @@
 "form": "C"
 },
 "blomsterbutiker": {
+"plural": "isPlural",
+"form": "PL"
+},
+"blomsterdekoratör": {
+"plural": "blomsterdekoratörer",
+"form": "C"
+},
+"blomsterdekoratörer": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -21471,6 +21483,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"byggnadsingenjör": {
+"plural": "byggnadsingenjörer",
+"form": "C"
+},
+"byggnadsingenjörer": {
+"plural": "isPlural",
+"form": "PL"
+},
 "byggnadskommission": {
 "plural": "byggnadskommissioner",
 "form": "C"
@@ -21600,6 +21620,14 @@
 "form": "C"
 },
 "byggstilar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"byggställning": {
+"plural": "byggställningar",
+"form": "C"
+},
+"byggställningar": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -22081,7 +22109,7 @@
 },
 "bärstol": {
 "plural": "barstolar",
-"form": "C"
+"form": "C/PL"
 },
 "bärsärk": {
 "plural": "bärsärkar",
@@ -26487,6 +26515,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"desant": {
+"plural": "desanter",
+"form": "C"
+},
+"desanter": {
+"plural": "isPlural",
+"form": "PL"
+},
 "design": {
 "plural": "designer",
 "form": "C"
@@ -27180,6 +27216,14 @@
 "form": "C"
 },
 "direktlinjer": {
+"plural": "isPlural",
+"form": "PL"
+},
+"direktsändning": {
+"plural": "direktsändningar",
+"form": "C"
+},
+"direktsändningar": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -28551,6 +28595,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"drabant": {
+"plural": "drabanter",
+"form": "C"
+},
+"drabanter": {
+"plural": "isPlural",
+"form": "PL"
+},
 "drag": {
 "plural": "drag",
 "form": "N/PL"
@@ -28565,7 +28617,7 @@
 },
 "dragg": {
 "plural": "draggar",
-"form": "C"
+"form": "C/PL"
 },
 "draggar": {
 "plural": "isPlural",
@@ -29117,7 +29169,7 @@
 },
 "drägg": {
 "plural": "draggar",
-"form": "C/PL"
+"form": "C"
 },
 "dräkt": {
 "plural": "dräkter",
@@ -29792,6 +29844,14 @@
 "form": "C"
 },
 "dynamor": {
+"plural": "isPlural",
+"form": "PL"
+},
+"dynasti": {
+"plural": "dynastier",
+"form": "C"
+},
+"dynastier": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -34087,6 +34147,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"fanjunkare": {
+"plural": "fanjunkarere",
+"form": "C"
+},
+"fanjunkarere": {
+"plural": "isPlural",
+"form": "PL"
+},
 "fanor": {
 "plural": "isPlural",
 "form": "PL"
@@ -34386,6 +34454,10 @@
 "fasta": {
 "plural": "fastor",
 "form": "C"
+},
+"fastebrev": {
+"plural": "fastebrev",
+"form": "N/PL"
 },
 "fastemånad": {
 "plural": "fastemånader",
@@ -39173,11 +39245,11 @@
 },
 "fordran": {
 "plural": "fordringar",
-"form": "C"
+"form": "C/PL"
 },
 "fordring": {
 "plural": "fordringar",
-"form": "C/PL"
+"form": "C"
 },
 "fordringar": {
 "plural": "isPlural",
@@ -41755,11 +41827,23 @@
 "plural": "fräknar",
 "form": "C/PL"
 },
+"frälse": {
+"plural": "frälsen",
+"form": "N"
+},
 "frälsegård": {
 "plural": "frälsegårdar",
 "form": "C"
 },
 "frälsegårdar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"frälsehemman": {
+"plural": "frälsehemman",
+"form": "N/PL"
+},
+"frälsen": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -42632,6 +42716,14 @@
 "form": "C"
 },
 "fältundersökningar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"fältväbel": {
+"plural": "fältväblar",
+"form": "C"
+},
+"fältväblar": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -46723,6 +46815,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"gala": {
+"plural": "galor",
+"form": "C"
+},
 "galaföreställning": {
 "plural": "galaföreställningar",
 "form": "C"
@@ -46860,6 +46956,10 @@
 "form": "C"
 },
 "galopptävlingar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"galor": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -48266,6 +48366,10 @@
 "getväpplingar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"gevaldiger": {
+"plural": "gevaldiger",
+"form": "C/PL"
 },
 "gevär": {
 "plural": "gevär",
@@ -49808,6 +49912,14 @@
 "form": "C"
 },
 "grapefrukter": {
+"plural": "isPlural",
+"form": "PL"
+},
+"gratial": {
+"plural": "gratialer",
+"form": "C"
+},
+"gratialer": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -54811,6 +54923,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"hejderidare": {
+"plural": "hejderidare",
+"form": "C/PL"
+},
 "hejduk": {
 "plural": "hejdukar",
 "form": "C"
@@ -54862,6 +54978,10 @@
 "helgdagar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"helgeandshus": {
+"plural": "helgeandshus",
+"form": "N/PL"
 },
 "helgedom": {
 "plural": "helgedomar",
@@ -55750,6 +55870,10 @@
 "hinderlöpningar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"hinderslöshetsbetyg": {
+"plural": "hinderslöshetsbetyg",
+"form": "N/PL"
 },
 "hindersprövning": {
 "plural": "hindersprövningar",
@@ -62388,6 +62512,14 @@
 "form": "C"
 },
 "inkvarteringsbostäder": {
+"plural": "isPlural",
+"form": "PL"
+},
+"inkvisitor": {
+"plural": "inkvisitorer",
+"form": "C"
+},
+"inkvisitorer": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -70163,6 +70295,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"klimatbov": {
+"plural": "klimatbovar",
+"form": "C"
+},
+"klimatbovar": {
+"plural": "isPlural",
+"form": "PL"
+},
 "klimatdeklaration": {
 "plural": "klimatdeklarationer",
 "form": "C"
@@ -71147,6 +71287,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"knapadel": {
+"plural": "knapadelar",
+"form": "C"
+},
+"knapadelar": {
+"plural": "isPlural",
+"form": "PL"
+},
 "knapar": {
 "plural": "isPlural",
 "form": "PL"
@@ -71644,6 +71792,14 @@
 "form": "C"
 },
 "kobblar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"kobra": {
+"plural": "kobror",
+"form": "C"
+},
+"kobror": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -76419,6 +76575,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"kronolänsman": {
+"plural": "kronolänsmän",
+"form": "C"
+},
+"kronolänsmän": {
+"plural": "isPlural",
+"form": "PL"
+},
 "kronor": {
 "plural": "isPlural",
 "form": "PL"
@@ -77812,6 +77976,14 @@
 "form": "C"
 },
 "kungsgårdar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"kungskobra": {
+"plural": "kungskobror",
+"form": "C"
+},
+"kungskobror": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -79537,6 +79709,10 @@
 },
 "kyrkvaktmästare": {
 "plural": "kyrkvaktmästare",
+"form": "C/PL"
+},
+"kyrkväktare": {
+"plural": "kyrkväktare",
 "form": "C/PL"
 },
 "kyskhet": {
@@ -81575,6 +81751,10 @@
 "plural": "länder",
 "form": "N"
 },
+"landbonde": {
+"plural": "landbönder",
+"form": "C"
+},
 "landborg": {
 "plural": "landborgar",
 "form": "C"
@@ -81596,6 +81776,10 @@
 "form": "C"
 },
 "landbryggor": {
+"plural": "isPlural",
+"form": "PL"
+},
+"landbönder": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -81868,8 +82052,12 @@
 "form": "PL"
 },
 "landslag": {
-"plural": "landslag",
-"form": "C/N/PL"
+"plural": "landslagar",
+"form": "C/N"
+},
+"landslagar": {
+"plural": "isPlural",
+"form": "PL"
 },
 "landslagsläkare": {
 "plural": "landslagsläkare",
@@ -87138,6 +87326,14 @@
 "länsläkare": {
 "plural": "länsläkare",
 "form": "C/PL"
+},
+"länsman": {
+"plural": "länsmän",
+"form": "C"
+},
+"länsmän": {
+"plural": "isPlural",
+"form": "PL"
 },
 "länspolismästare": {
 "plural": "länspolismästare",
@@ -93927,6 +94123,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"missiv": {
+"plural": "missiver",
+"form": "C"
+},
+"missiver": {
+"plural": "isPlural",
+"form": "PL"
+},
 "missljud": {
 "plural": "missljud",
 "form": "N/PL"
@@ -94530,6 +94734,10 @@
 "mobilmaster": {
 "plural": "isPlural",
 "form": "PL"
+},
+"mobilnätverk": {
+"plural": "mobilnätverk",
+"form": "N/PL"
 },
 "mobilsamtal": {
 "plural": "mobilsamtal",
@@ -97155,6 +97363,10 @@
 "plural": "mäklarhus",
 "form": "N/PL"
 },
+"mäklarkontor": {
+"plural": "mäklarkontor",
+"form": "N/PL"
+},
 "mäktighet": {
 "plural": "mäktigheter",
 "form": "C"
@@ -97270,6 +97482,10 @@
 "mänskor": {
 "plural": "isPlural",
 "form": "PL"
+},
+"märgben": {
+"plural": "märgben",
+"form": "N/PL"
 },
 "märgelgrav": {
 "plural": "märgelgravar",
@@ -100282,6 +100498,14 @@
 "noaord": {
 "plural": "noaord",
 "form": "N/PL"
+},
+"nock": {
+"plural": "nockar",
+"form": "C"
+},
+"nockar": {
+"plural": "isPlural",
+"form": "PL"
 },
 "nocturne": {
 "plural": "nocturner",
@@ -103967,6 +104191,14 @@
 "plural": "ordnar",
 "form": "C"
 },
+"ordensledamot": {
+"plural": "ordensledamöter",
+"form": "C"
+},
+"ordensledamöter": {
+"plural": "isPlural",
+"form": "PL"
+},
 "ordensstjärna": {
 "plural": "ordensstjärnor",
 "form": "C"
@@ -106821,7 +107053,7 @@
 },
 "pasta": {
 "plural": "pastor",
-"form": "C/PL"
+"form": "C"
 },
 "pastasallad": {
 "plural": "pastasallader",
@@ -106848,8 +107080,8 @@
 "form": "PL"
 },
 "pastor": {
-"plural": "pastorer",
-"form": "C"
+"plural": "isPlural",
+"form": "C/PL"
 },
 "pastoralexamen": {
 "plural": "pastoralexamina",
@@ -106862,10 +107094,6 @@
 "pastorat": {
 "plural": "pastorat",
 "form": "N/PL"
-},
-"pastorer": {
-"plural": "isPlural",
-"form": "PL"
 },
 "patent": {
 "plural": "patent",
@@ -107508,6 +107736,14 @@
 "form": "C"
 },
 "pergamentsurkunder": {
+"plural": "isPlural",
+"form": "PL"
+},
+"pergola": {
+"plural": "pergolor",
+"form": "C"
+},
+"pergolor": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -110569,7 +110805,7 @@
 },
 "praktik": {
 "plural": "praktiker",
-"form": "C"
+"form": "C/PL"
 },
 "praktikant": {
 "plural": "praktikanter",
@@ -110580,7 +110816,7 @@
 "form": "PL"
 },
 "praktiker": {
-"plural": "isPlural",
+"plural": "praktiker",
 "form": "C/PL"
 },
 "praktikperiod": {
@@ -119995,6 +120231,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"rättsverkning": {
+"plural": "rättsverkningar",
+"form": "C"
+},
+"rättsverkningar": {
+"plural": "isPlural",
+"form": "PL"
+},
 "rättsvetare": {
 "plural": "rättsvetare",
 "form": "C/PL"
@@ -121108,6 +121352,14 @@
 "form": "C"
 },
 "salladslökar": {
+"plural": "isPlural",
+"form": "PL"
+},
+"sallat": {
+"plural": "sallatar",
+"form": "C"
+},
+"sallatar": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -124048,6 +124300,14 @@
 "form": "C"
 },
 "sexleksaker": {
+"plural": "isPlural",
+"form": "PL"
+},
+"sexman": {
+"plural": "sexmän",
+"form": "C"
+},
+"sexmän": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -129862,6 +130122,18 @@
 "skämskudde": {
 "plural": "skämskuddar",
 "form": "C"
+},
+"skämt": {
+"plural": "skämt",
+"form": "N/PL"
+},
+"skämtbild": {
+"plural": "skämtbilder",
+"form": "C"
+},
+"skämtbilder": {
+"plural": "isPlural",
+"form": "PL"
 },
 "skämttecknare": {
 "plural": "skämttecknare",
@@ -137315,6 +137587,22 @@
 "plural": "stater",
 "form": "C"
 },
+"statare": {
+"plural": "statare",
+"form": "C/PL"
+},
+"statartorp": {
+"plural": "statartorp",
+"form": "N/PL"
+},
+"statdräng": {
+"plural": "statdrängar",
+"form": "C"
+},
+"statdrängar": {
+"plural": "isPlural",
+"form": "PL"
+},
 "stater": {
 "plural": "isPlural",
 "form": "PL"
@@ -138022,6 +138310,10 @@
 "stenåldrar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"sterbhus": {
+"plural": "sterbhus",
+"form": "N/PL"
 },
 "stereoanläggning": {
 "plural": "stereoanläggningar",
@@ -140051,6 +140343,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"studentprotest": {
+"plural": "studentprotester",
+"form": "C"
+},
+"studentprotester": {
+"plural": "isPlural",
+"form": "PL"
+},
 "studentskiva": {
 "plural": "studentskivor",
 "form": "C"
@@ -140134,6 +140434,14 @@
 "studieförbund": {
 "plural": "studieförbund",
 "form": "N/PL"
+},
+"studiegrupp": {
+"plural": "studiegrupper",
+"form": "C"
+},
+"studiegrupper": {
+"plural": "isPlural",
+"form": "PL"
 },
 "studiehandbok": {
 "plural": "studiehandböcker",
@@ -141836,6 +142144,14 @@
 "form": "C"
 },
 "svampsåser": {
+"plural": "isPlural",
+"form": "PL"
+},
+"svamptur": {
+"plural": "svampturer",
+"form": "C"
+},
+"svampturer": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -144795,6 +145111,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"tallriksmodell": {
+"plural": "tallriksmodeller",
+"form": "C"
+},
+"tallriksmodeller": {
+"plural": "isPlural",
+"form": "PL"
+},
 "tallsiska": {
 "plural": "tallsiskor",
 "form": "C"
@@ -146658,6 +146982,14 @@
 "termosar": {
 "plural": "isPlural",
 "form": "PL"
+},
+"terrarier": {
+"plural": "isPlural",
+"form": "PL"
+},
+"terrarium": {
+"plural": "terrarier",
+"form": "N"
 },
 "terrass": {
 "plural": "terrasser",
@@ -156623,6 +156955,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"urtima ting": {
+"plural": "urtima ting",
+"form": "N/PL"
+},
 "urtyp": {
 "plural": "urtyper",
 "form": "C"
@@ -157019,6 +157355,14 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"utbytestermin": {
+"plural": "utbytesterminer",
+"form": "C"
+},
+"utbytesterminer": {
+"plural": "isPlural",
+"form": "PL"
+},
 "utböling": {
 "plural": "utbölingar",
 "form": "C"
@@ -157075,6 +157419,10 @@
 "plural": "isPlural",
 "form": "PL"
 },
+"utekök": {
+"plural": "utekök",
+"form": "N/PL"
+},
 "uteliggare": {
 "plural": "uteliggare",
 "form": "C/PL"
@@ -157084,6 +157432,14 @@
 "form": "C"
 },
 "utemiljöer": {
+"plural": "isPlural",
+"form": "PL"
+},
+"utemöbel": {
+"plural": "utemöbler",
+"form": "C"
+},
+"utemöbler": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -158653,7 +159009,7 @@
 },
 "vadd": {
 "plural": "vaddar",
-"form": "C/PL"
+"form": "C"
 },
 "vaddar": {
 "plural": "isPlural",
@@ -158860,8 +159216,8 @@
 "form": "PL"
 },
 "val": {
-"plural": "valar",
-"form": "C/N"
+"plural": "val",
+"form": "C/N/PL"
 },
 "valack": {
 "plural": "valacker",
@@ -158884,10 +159240,6 @@
 "form": "C"
 },
 "valapparater": {
-"plural": "isPlural",
-"form": "PL"
-},
-"valar": {
 "plural": "isPlural",
 "form": "PL"
 },
@@ -163537,7 +163889,7 @@
 },
 "vädd": {
 "plural": "vaddar",
-"form": "C"
+"form": "C/PL"
 },
 "väder": {
 "plural": "väder",
@@ -169426,6 +169778,10 @@
 "öden": {
 "plural": "isPlural",
 "form": "PL"
+},
+"ödetorp": {
+"plural": "ödetorp",
+"form": "N/PL"
 },
 "ödla": {
 "plural": "ödlor",
