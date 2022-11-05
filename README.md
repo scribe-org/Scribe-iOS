@@ -88,6 +88,32 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
 
+### Road Map
+
+<details><summary><strong>Click here to see the current Scribe road map 🗺️</strong></summary>
+<p>
+
+The following outlines the plan for Scribe's development, which includes steps across applications and data solutions.
+
+- Scribe-iOS v2.2.0
+  - Rework the data solution to use SQLite
+  - Main issue: [Scribe-iOS #96](https://github.com/scribe-org/Scribe-iOS/issues/96)
+- Scribe-iOS v2.3.0
+  - Rework iOS app interface and add menu
+  - Main issue: [Scribe-iOS #16](https://github.com/scribe-org/Scribe-iOS/issues/16)
+- Scribe-iOS v2.4.0 and Scribe-Data v2.2.0
+  - Expand translation data and add English keyboard
+  - Main issues: [Scribe-iOS #7](https://github.com/scribe-org/Scribe-iOS/issues/7) and [Scribe-Data #23](https://github.com/scribe-org/Scribe-Data/issues/23)
+- Scribe-iOS v3.0.0 and Scribe-Data v3.0.0
+  - Downloadable language packs for Scribe keyboards
+  - Main issue: [Scribe-iOS #89](https://github.com/scribe-org/Scribe-iOS/issues/89)
+- Scribe-iOS v4.0.0
+  - Machine learning based autosuggest and adding autocorrect
+  - Main issue: [Scribe-iOS #2](https://github.com/scribe-org/Scribe-iOS/issues/2)
+
+</p>
+</details>
+
 ### Data Edits
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
