@@ -26,6 +26,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The delete button now speeds up as the user holds it.
 - Typing a period, comma, question mark or exlamation point now removes a space before them if there is one.
 
+### 🗃️ Data Added
+
+- Thousands of new French verb conjugations have been added!
+
 ### 🎨 Design Changes
 
 - The labels for conjugations and declinations have been made darker in dark mode to be more readable.

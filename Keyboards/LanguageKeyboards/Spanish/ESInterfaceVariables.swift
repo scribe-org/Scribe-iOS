@@ -114,6 +114,20 @@ func setESKeyboardLayout() {
   invalidCommandMsg = "No en Wikidata"
   baseAutosuggestions = ["el", "la", "no"]
   numericAutosuggestions = ["que", "de", "en"]
+  verbsAfterPronounsArray = ["ser", "REFLEXIVE_PRONOUN", "no"]
+  pronounAutosuggestionTenses = [
+    "yo": "presFPS",
+    "tú": "presSPS",
+    "él": "presTPS",
+    "ella": "presTPS",
+    "nosotros": "presFPP",
+    "nosotras": "presFPP",
+    "vosotros": "presSPP",
+    "vosotras": "presSPP",
+    "ellos": "presTPP",
+    "ellas": "presTPP",
+    "ustedes": "presTPP"
+  ]
 
   translateKeyLbl = "Traducir"
   translatePlaceholder = "Ingrese una palabra"

@@ -30,7 +30,7 @@ func setFRKeyboardLayout() {
     "elle": "presTPS",
     "on": "presTPS",
     "nous": "presFPP",
-    "vous": "presSPS",
+    "vous": "presSPP",
     "ils": "presTPP",
     "elles": "presTPP"
   ]

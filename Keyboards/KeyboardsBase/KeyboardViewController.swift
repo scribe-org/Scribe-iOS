@@ -269,14 +269,17 @@ class KeyboardViewController: UIInputViewController {
   }
   
   /// Gets consistent autosguestions for all prnouns in the given language.
-  /// Note: currently only works for German and French languages.
+  /// Note: currently only works for German, Spanish and French languages.
   func getPronounAutosuggestions() {
     let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
 
     completionWords = [String]()
     var i = 0
     while i < 3 {
-      let suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? verbsAfterPronounsArray[i]
+      var suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? verbsAfterPronounsArray[i]
+      if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "Spanish" {
+        suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
+      }
       if shiftButtonState == .shift {
         completionWords.append(suggestion.capitalize())
       } else if shiftButtonState == .caps {
@@ -310,7 +313,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if ["German", "French_AZERTY", "French_QWERTY"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if [ "French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       /// We have to consider these different cases as the key always has to match.
