@@ -10,7 +10,9 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Unreleased] Scribe-iOS 2.1.0
+# [Unreleased] Scribe-iOS 2.2.0
+
+# Scribe-iOS 2.1.0
 
 ### ⌨️ New Keyboards
 
