@@ -104,6 +104,8 @@ The following outlines the plan for Scribe's development, which includes steps a
 - Scribe-iOS v2.4.0 and Scribe-Data v2.2.0
   - Expand translation data and add English keyboard
   - Main issues: [Scribe-iOS #7](https://github.com/scribe-org/Scribe-iOS/issues/7) and [Scribe-Data #23](https://github.com/scribe-org/Scribe-Data/issues/23)
+- Scribe-Android v1.0.0
+  - Release an MVP for [Scribe-Android](https://github.com/scribe-org/Scribe-Android)
 - Scribe-iOS v3.0.0 and Scribe-Data v3.0.0
   - Downloadable language packs for Scribe keyboards
   - Main issue: [Scribe-iOS #89](https://github.com/scribe-org/Scribe-iOS/issues/89)
