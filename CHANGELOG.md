@@ -12,6 +12,20 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Unreleased] Scribe-iOS 2.2.0
 
+### 🗃️ Data Added
+
+### ✨ New Features
+
+<!-- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes. -->
+<!-- Emoji autosuggestions are now available as the user types. -->
+
+### 🎨 Design Changes
+
+- The resolution of the Scribe key has been improved.
+- Scribe blue for dark mode has been made darker to fit the keyboard better.
+- The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
+- The app icon has been made more modern and glossy and the direct shadow has been removed.
+
 # Scribe-iOS 2.1.0
 
 ### ⌨️ New Keyboards

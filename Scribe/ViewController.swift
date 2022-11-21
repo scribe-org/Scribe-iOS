@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     }
   }
 
-  let switchViewColor = UIColor(red: 241.0/255.0, green: 204.0/255.0, blue: 131.0/255.0, alpha: 1.0)
+  let switchViewColor = UIColor(red: 253.0/255.0, green: 179.0/255.0, blue: 33.0/255.0, alpha: 1.0)
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
