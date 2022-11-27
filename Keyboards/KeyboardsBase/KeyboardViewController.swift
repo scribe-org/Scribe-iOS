@@ -369,7 +369,7 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: pluralKey)
 
       if autoAction1Visible == true {
-        setBtn(btn: translateKey, color: keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        setBtn(btn: translateKey, color: currentPrefix == completionWords[0] ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
         styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
