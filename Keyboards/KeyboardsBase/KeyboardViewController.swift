@@ -701,7 +701,7 @@ class KeyboardViewController: UIInputViewController {
 
   @IBOutlet var formLblSingle: UIButton!
 
-  /// Returns all labels for the 1x2 conjugation display.
+  /// Returns all labels for the 1x1 conjugation display.
   func get1x1FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
       formLblSingle
@@ -710,7 +710,7 @@ class KeyboardViewController: UIInputViewController {
     return conjugationLabels
   }
 
-  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
+  /// Sets up all buttons and labels that are associated with the 1x1 conjugation display.
   func setFormDisplay1x1View() {
     setBtn(btn: formKeySingle, color: keyColor, name: "formSingle", canCap: false, isSpecial: false)
 
