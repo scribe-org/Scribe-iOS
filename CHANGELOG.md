@@ -15,10 +15,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🗃️ Data Added
 
 ### ✨ New Features
-- Added highlight for autocompletion if it is the word typed
 
 <!-- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes. -->
 <!-- Emoji autosuggestions are now available as the user types. -->
+
+- Added highlight for autocompletion if it is the word typed.
 
 ### 🎨 Design Changes
 
