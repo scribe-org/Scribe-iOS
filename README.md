@@ -6,12 +6,12 @@
 [![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
 --->
 
-[![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&labelColor=5B5B5B&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
-[![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
-[![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/issues)
-[![language](https://img.shields.io/badge/Swift-5-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
-[![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
-[![coc](https://img.shields.io/badge/coc-Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+[![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+[![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver&label=%20)](https://github.com/scribe-org/Scribe-iOS/releases/)
+[![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS?label=%20&logo=github)](https://github.com/scribe-org/Scribe-iOS/issues)
+[![language](https://img.shields.io/badge/Swift%205-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
+[![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg?label=%20)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
+[![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
 [![twitter](https://img.shields.io/badge/Tweet-1DA1F2.svg?logo=twitter&logoColor=ffffff)](https://twitter.com/intent/tweet?text=Check%20out%20@scribe_org%20for%20typing%20in%20your%20second%20language!%20%23languagelearning%20https://github.com/scribe-org/Scribe-iOS)
 [![reddit](https://img.shields.io/badge/Post-FF6314.svg?logo=reddit&logoColor=ffffff)](http://www.reddit.com/submit?url=https://github.com/scribe-org/Scribe-iOS&title=Scribe%20iOS%20keyboards%20for%20language%20learners)
 
