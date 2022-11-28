@@ -6,7 +6,7 @@
 [![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
 --->
 
-[![platforms](https://img.shields.io/badge/platforms-iOS%20│%20iPadOS-999999.svg?logo=apple&logoColor=ffffff)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
+[![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&labelColor=5c5c5c&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS)](https://github.com/scribe-org/Scribe-iOS/issues)
 [![language](https://img.shields.io/badge/Swift-5-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
