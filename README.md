@@ -91,25 +91,13 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 <details><summary><strong>Click here to see the current Scribe road map 🗺️</strong></summary>
 <p>
 
-The following outlines the plan for Scribe's development, which includes steps across applications and data solutions.
+The following outlines the plan for Scribe's development as detailed in its [projects](https://github.com/orgs/scribe-org/projects) including steps across applications and data solutions. The projects listed in order of importance are:
 
-- Scribe-iOS v2.2.0
-  - Rework the data solution to use SQLite
-  - Main issue: [Scribe-iOS #96](https://github.com/scribe-org/Scribe-iOS/issues/96)
-- Scribe-iOS v2.3.0
-  - Rework Scribe-iOS app interface and add menu
-  - Main issue: [Scribe-iOS #16](https://github.com/scribe-org/Scribe-iOS/issues/16)
-- Scribe-iOS v3.0.0 and Scribe-Data v3.0.0
-  - Expand translation data and add English keyboard
-  - Main issues: [Scribe-iOS #7](https://github.com/scribe-org/Scribe-iOS/issues/7) and [Scribe-Data #23](https://github.com/scribe-org/Scribe-Data/issues/23)
-- Scribe-Android v1.0.0
-  - Release an MVP for [Scribe-Android](https://github.com/scribe-org/Scribe-Android)
-- Scribe-iOS v4.0.0 and Scribe-Data v4.0.0
-  - Downloadable language packs for Scribe keyboards
-  - Main issue: [Scribe-iOS #89](https://github.com/scribe-org/Scribe-iOS/issues/89)
-- Scribe-iOS v5.0.0
-  - Machine learning based autosuggest and autocorrect
-  - Main issue: [Scribe-iOS #2](https://github.com/scribe-org/Scribe-iOS/issues/2)
+1. [Update Scribe's Data Solution](https://github.com/orgs/scribe-org/projects/3)
+2. [Add Emoji Autosuggestions](https://github.com/orgs/scribe-org/projects/2)
+3. [Scribe-iOS App Revamp](https://github.com/orgs/scribe-org/projects/1)
+4. [Expand Translation and Add English Keyboard](https://github.com/orgs/scribe-org/projects/1)
+5. [Scribe-Android MVP](https://github.com/orgs/scribe-org/projects/5)
 
 </p>
 </details>
