@@ -195,9 +195,9 @@ Annotations for preposition cases can also be pressed to provide a conjugation d
 
 ### • Base Functionality [`⇧`](#contents)
 
-The goal is for Scribe to have all the functionality of system keyboards. See the [Base Keyboard Features project](https://github.com/scribe-org/Scribe-iOS/projects/6) if interested in helping.
+The goal is for Scribe to have all the functionality of system keyboards. See the [issues](https://github.com/scribe-org/Scribe-iOS/issues/) if interested in helping.
 
-<details><summary><strong>Current features</strong></summary>
+<details><summary><strong>Current base features include:</strong></summary>
 <p>
 
 - iPhone and iPad support
@@ -264,7 +264,7 @@ Many thanks to all the Scribe-iOS contributors! 🚀
 
 ### Code
 
-<details><summary><strong>List of referenced codes</strong></summary>
+<details><summary><strong>List of referenced code</strong></summary>
 <p>
 
 - [CustomKeyboard](https://github.com/EthanSK/CustomKeyboard) by [EthanSK](https://github.com/EthanSK) ([License](https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE))
