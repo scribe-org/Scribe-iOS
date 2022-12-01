@@ -5,7 +5,7 @@
 <!-- Please replace the empty checkboxes [ ] below with checked ones [x] accordingly. -->
 
 - [ ] This pull request is on a [separate branch](https://docs.github.com/en/get-started/quickstart/github-flow) and not the main branch
-- [ ] I have updated the [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) with a description of my changes for the upcoming release <!-- ... or I'll send a commit with this now 🙃 -->
+- [ ] I have updated the [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) with a description of my changes for the upcoming release (if necessary) <!-- ... or I'll send a commit with this now 🙃 -->
 
 ---
 
@@ -21,5 +21,6 @@ Also, please describe shortly how you tested that your change actually works.
 
 <!--- Scribe-iOS prefers that pull requests be related to already open issues. -->
 <!--- If applicable, please link to the issue by replacing ISSUE_NUMBER with the appropriate number below. -->
+<!--- Feel free to delete this section if this does not apply. -->
 
 #ISSUE_NUMBER
