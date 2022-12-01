@@ -36,12 +36,6 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP),
 - [Setup](#setup)
 - [Supported Languages](#supported-languages)
 - [Keyboard Features](#keyboard-features)
-  - [Translation](#translation)
-  - [Verb Conjugation](#verb-conjugation)
-  - [Noun Plurals](#noun-plurals)
-  - [Word Annotation](#word-annotation)
-  - [Pronoun Selection](#pronoun-selection)
-  - [Base Functionality](#base-functionality)
 - [Language Practice](#language-practice)
 - [Featured By](#featured-by)
 
@@ -86,7 +80,7 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
 
-### • Road Map[`⇧`](#contents)
+### • Road Map [`⇧`](#contents)
 
 <details><summary><strong>Click here to see the current Scribe road map 🗺️</strong></summary>
 <p>
@@ -119,11 +113,10 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 Users access Scribe language keyboards through the following:
 
 - Download **Scribe - Language Keyboards** from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
-- <details><summary>Open Settings, and navigate to General -> Keyboard -> Keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198514330-f24d9818-3917-4898-8898-6730cdb5ac67.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514334-29e25e2d-a0fa-4a0e-bb83-cfbb6321975d.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514337-782354bf-6629-4296-95a7-dcfc94bab59d.jpeg" height="300">
-</kbd></details>
+- <details><summary>Open Settings, and navigate to General -> Keyboard -> Keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198514330-f24d9818-3917-4898-8898-6730cdb5ac67.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514334-29e25e2d-a0fa-4a0e-bb83-cfbb6321975d.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514337-782354bf-6629-4296-95a7-dcfc94bab59d.jpeg" height="300"></kbd></details>
 - <details><summary>Tap add New Keyboard and select Scribe</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164351-44d16a60-9a44-450e-9b55-6a6d7ee0265d.jpeg" height="300"></kbd></details>
 - <details><summary>Choose from the available language keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198461014-a3ecbfaf-43b8-4773-8992-3e5707043fb8.jpeg" height="300"></kbd></details>
-- <details><summary>When typing pretty much anywhere, press `🌐` to select keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164365-ed14cc87-a2c7-4353-9264-26819483b3b2.jpeg" height="300"></kbd></details>
+- <details><summary>When typing pretty much anywhere, press 🌐 to select keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164365-ed14cc87-a2c7-4353-9264-26819483b3b2.jpeg" height="300"></kbd></details>
 
 For more information on features and use cases, see [Keyboard Features](#keyboard-features) below!
 
@@ -159,8 +152,6 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 **Current features include:**
 
-<a id="translation"></a>
-
 ### • Translation [`⇧`](#contents)
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
@@ -169,19 +160,13 @@ Those interested in improving this feature can see the [Translation project](htt
 
 As of now translations are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
-<a id="verb-conjugation"></a>
-
 ### • Verb Conjugation [`⇧`](#contents)
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-<a id="noun-plurals"></a>
-
 ### • Noun Plurals [`⇧`](#contents)
 
 The `Plural` feature allows a user to enter a noun and then insert its plural into the text field when the `return` key is pressed.
-
-<a id="word-annotation"></a>
 
 ### • Word Annotation [`⇧`](#contents)
 
@@ -204,13 +189,9 @@ The above form abbreviations are translated into their equivalents in the keyboa
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
 
-<a id="pronoun-selection"></a>
-
 ### • Pronoun Selection [`⇧`](#contents)
 
 Annotations for preposition cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will also provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
-
-<a id="base-functionality"></a>
 
 ### • Base Functionality [`⇧`](#contents)
 
