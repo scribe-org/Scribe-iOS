@@ -7,81 +7,23 @@
 
 import UIKit
 
-enum InformationToolTipData {
-  
-  static let wikiDataExplanation = "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia."
-  
-  static let wikiDataContationOrigin = "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!"
-  
-  static let howToContribute = "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
-  
-  static func getContent() -> [String] {
-    [
-      InformationToolTipData.wikiDataExplanation,
-      InformationToolTipData.wikiDataContationOrigin,
-      InformationToolTipData.howToContribute
-    ]
-  }
-
-}
-
-protocol ViewThemeable {
-  var backgroundColor: UIColor { get set }
-  var textFont: UIFont? { get set }
-  var textColor: UIColor? { get set }
-  var textAlignment: NSTextAlignment? { get set }
-  var cornerRadius: CGFloat? { get set }
-  var masksToBounds: Bool? { get set }
-  var maskedCorners: CACornerMask? { get set }
-}
-
-protocol ToolTipViewUpdatable {
-//  var didUpdateText: ( (NSMutableAttributedString) -> Void)? { get set}
-
-  func updateNext()
-  func updatePrevious()
-  func updateText(index: Int)
-}
-
-protocol ToolTipViewDatasourceable {
-  var theme: ViewThemeable { get set }
-  
-  func getCurrentText() -> NSMutableAttributedString
-}
-
-struct ToolTipViewDatasource: ToolTipViewDatasourceable {
-
-  var theme: ViewThemeable
-  private var content: NSMutableAttributedString
-  
-  // MARK: - Init
-  
-  init(content: NSMutableAttributedString, theme: ViewThemeable) {
-    self.content = content
-    self.theme = theme
-  }
-
-  func getCurrentText() -> NSMutableAttributedString {
-    content
-  }
-
-}
-
-struct ToolTipViewTheme: ViewThemeable {
-  var backgroundColor: UIColor
-  var textFont: UIFont?
-  var textColor: UIColor?
-  var textAlignment: NSTextAlignment?
-  var cornerRadius: CGFloat?
-  var masksToBounds: Bool?
-  var maskedCorners: CACornerMask?
-}
-
 final class ToolTipView: UIView, ToolTipViewUpdatable {
-
+  
+  var didUpdatePage: ( (ConjViewShiftButtonsState) -> Void)?
+  
   // MARK: - Private propeties
     
-  private var currentIndex: Int = 0
+  private var currentIndex: Int = 0 {
+    didSet {
+      if currentIndex == datasources.count - 1 {
+        didUpdatePage?(.rightInactive)
+      } else if currentIndex == 0 {
+        didUpdatePage?(.leftInactive)
+      } else {
+        didUpdatePage?(.bothActive)
+      }
+    }
+  }
   private var datasources: [ToolTipViewDatasourceable]
   
   // MARK: - Private UI
@@ -152,12 +94,22 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     let tempCurrentIndex = currentIndex + 1
     updateText(index: tempCurrentIndex)
     pageControl.currentPage += 1
+    
+//    if pageControl.currentPage == datasources.count - 1 {
+//      didUpdatePage?(.rightInactive)
+//    }
+
   }
   
   func updatePrevious() {
     let tempCurrentIndex = max(0, currentIndex - 1)
     updateText(index: tempCurrentIndex)
     pageControl.currentPage -= 1
+    
+//    if pageControl.currentPage == 0 {
+//      didUpdatePage?(.leftInactive)
+//    }
+
   }
   
   func updateText(index: Int) {

@@ -53,9 +53,9 @@ class KeyboardViewController: UIInputViewController {
 
     // Set tap handler for info button on CommandBar
     commandBar.infoButtonTapHandler = { [weak self] in
-      print("Tapped Info Button!")
       commandState = .displayInformation
-      resetCaseDeclensionState()
+      //resetCaseDeclensionState()
+      conjViewShiftButtonsState = .leftInactive
       self?.loadKeys()
     }
   }
@@ -218,6 +218,8 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
   
+  
+  // Logic to create tooltip
   func createInformationStateDatasource(text: String, backgroundColor: UIColor) -> ToolTipViewDatasource {
     let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: UIColor.black, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
     let content = getENTooltipContent(content: text, fontSize: 10)
@@ -232,6 +234,8 @@ class KeyboardViewController: UIInputViewController {
       createInformationStateDatasource(text: text, backgroundColor: backgroundColors[index])
     })
     tipView = ToolTipView(datasources: datasources)
+    
+    bindTooltipview()
 
     guard let tipView = tipView else { return }
     tipView.translatesAutoresizingMaskIntoConstraints = false
@@ -241,6 +245,39 @@ class KeyboardViewController: UIInputViewController {
     tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 5).isActive = true
     tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
     
+  }
+  
+  private func bindTooltipview() {
+    tipView?.didUpdatePage = { [weak self] currentState in
+      conjViewShiftButtonsState = currentState
+      
+      guard let weakSelf = self else { return }
+      
+      switch currentState {
+      case .rightInactive:
+        weakSelf.shiftFormsDisplayRight.isUserInteractionEnabled = false
+      case .leftInactive:
+        weakSelf.shiftFormsDisplayLeft.isUserInteractionEnabled = false
+      case .bothActive:
+        weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayLeft)
+        weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayRight)
+      default:
+        break
+      }
+      
+      weakSelf.styleShiftButtons()
+    }
+  }
+  
+  private func styleShiftButtons() {
+    styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
+    styleIconBtn(btn: shiftFormsDisplayLeft,
+                 color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                 iconName: "chevron.left")
+    styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
+    styleIconBtn(btn: shiftFormsDisplayRight,
+                 color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                 iconName: "chevron.right")
   }
 
   /// Generates an array of the three autocomplete words.
