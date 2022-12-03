@@ -16,6 +16,8 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet weak var stackView2: UIStackView!
   @IBOutlet weak var stackView3: UIStackView!
 
+  private var tipView: ToolTipView?
+
   /// Changes the keyboard state such that the letters view will be shown.
   func changeKeyboardToLetterKeys() {
     keyboardState = .letters
@@ -50,8 +52,11 @@ class KeyboardViewController: UIInputViewController {
     loadKeys()
 
     // Set tap handler for info button on CommandBar
-    commandBar.infoButtonTapHandler = {
+    commandBar.infoButtonTapHandler = { [weak self] in
       print("Tapped Info Button!")
+      commandState = .displayInformation
+      resetCaseDeclensionState()
+      self?.loadKeys()
     }
   }
 
@@ -211,6 +216,31 @@ class KeyboardViewController: UIInputViewController {
   func hideAutoActionPartitions() {
     leftAutoPartition.backgroundColor = .clear
     rightAutoPartition.backgroundColor = .clear
+  }
+  
+  func createInformationStateDatasource(text: String, backgroundColor: UIColor) -> ToolTipViewDatasource {
+    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: UIColor.black, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
+    let content = getENTooltipContent(content: text, fontSize: 10)
+
+    return ToolTipViewDatasource(content: content, theme: theme)
+  }
+  
+  func setInformationState() {
+    let contentData: [String] = InformationToolTipData.getContent()
+    let backgroundColors: [UIColor] = [#colorLiteral(red: 0.6392156863, green: 0.7764705882, blue: 0.1921568627, alpha: 1), #colorLiteral(red: 0.6274509804, green: 0.7333333333, blue: 0.9098039216, alpha: 1),  #colorLiteral(red: 0.9725490196, green: 0.8666666667, blue: 0.3960784314, alpha: 1)]
+    let datasources = contentData.enumerated().compactMap({ index, text in
+      createInformationStateDatasource(text: text, backgroundColor: backgroundColors[index])
+    })
+    tipView = ToolTipView(datasources: datasources)
+
+    guard let tipView = tipView else { return }
+    tipView.translatesAutoresizingMaskIntoConstraints = false
+    formKeySingle.addSubview(tipView)
+    tipView.leadingAnchor.constraint(equalTo: formKeySingle.leadingAnchor, constant: 5).isActive = true
+    tipView.trailingAnchor.constraint(equalTo: formKeySingle.trailingAnchor, constant: -5).isActive = true
+    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 5).isActive = true
+    tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
+    
   }
 
   /// Generates an array of the three autocomplete words.
@@ -765,6 +795,9 @@ class KeyboardViewController: UIInputViewController {
       && controllerLanguage == "German"
       && [.accusative, .dative, .genitive].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
+    }else if
+      commandState == .displayInformation {
+      formsDisplayDimensions = .view1x1
     } else {
       formsDisplayDimensions = .view3x2
     }
@@ -780,7 +813,8 @@ class KeyboardViewController: UIInputViewController {
     case .view1x2:
       setFormDisplay1x2View()
     case .view1x1:
-      break // placeholder
+      setFormDisplay1x1View()
+      //break // placeholder
     }
 
     // Setup the view shift buttons.
@@ -1207,7 +1241,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if ![.selectVerbConjugation, .selectCaseDeclension].contains(commandState) { // normal keyboard view
+    if ![.selectVerbConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) { // normal keyboard view
       for view in [stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
@@ -1525,6 +1559,8 @@ class KeyboardViewController: UIInputViewController {
 
       if commandState == .selectVerbConjugation {
         setVerbConjugationState()
+      } else if commandState == .displayInformation {
+        setInformationState()
       } else {
         setCaseDeclensionState()
       }
@@ -1653,12 +1689,21 @@ class KeyboardViewController: UIInputViewController {
       commandBar.attributedText = pluralPromptAndColorPlaceholder
 
     case "shiftFormsDisplayLeft":
-      conjugationStateLeft()
-      loadKeys()
+      if commandState == .displayInformation {
+        tipView?.updatePrevious()
+      } else {
+        conjugationStateLeft()
+        loadKeys()
+      }
 
     case "shiftFormsDisplayRight":
-      conjugationStateRight()
-      loadKeys()
+      if commandState == .displayInformation {
+        tipView?.updateNext()
+      } else {
+        conjugationStateRight()
+        loadKeys()
+      }
+      
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedForm: formFPS)
@@ -1925,6 +1970,13 @@ class KeyboardViewController: UIInputViewController {
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
+
+    // Remove tipview if it's present.
+    if formsDisplayDimensions != .view1x1, tipView != nil {
+      tipView?.removeFromSuperview()
+      tipView = nil
+    }
+
   }
 
   // MARK: Key Press Functions
