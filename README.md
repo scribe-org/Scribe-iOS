@@ -82,7 +82,7 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 
 ### • Road Map [`⇧`](#contents)
 
-Scribe organizes its issues into a [main project](https://github.com/orgs/scribe-org/projects/1) and [branch projects](https://github.com/orgs/scribe-org/projects?query=is%3Aopen). The Scribe road map can be followed in the [main project](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which branch projects they're included in if applicable.
+Scribe organizes its issues into a [project board](https://github.com/orgs/scribe-org/projects/1). The Scribe road map can be followed in the [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in if applicable.
 
 ### • Data Edits [`⇧`](#contents)
 
