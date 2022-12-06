@@ -82,19 +82,7 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 
 ### • Road Map [`⇧`](#contents)
 
-<details><summary><strong>Click here to see the current Scribe road map 🗺️</strong></summary>
-<p>
-
-The following outlines the plan for Scribe's development as detailed in its [projects](https://github.com/orgs/scribe-org/projects) including steps across applications and data solutions. The projects listed in order of importance are:
-
-1. [Update Scribe's Data Solution](https://github.com/orgs/scribe-org/projects/3)
-2. [Add Emoji Autosuggestions](https://github.com/orgs/scribe-org/projects/2)
-3. [Scribe-iOS App Revamp](https://github.com/orgs/scribe-org/projects/1)
-4. [Expand Translation and Add English Keyboard](https://github.com/orgs/scribe-org/projects/1)
-5. [Scribe-Android MVP](https://github.com/orgs/scribe-org/projects/5)
-
-</p>
-</details>
+Scribe organizes its issues into a [main project](https://github.com/orgs/scribe-org/projects/1) and branch projects. The Scribe road map can be followed in the [main project](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which branch projects they're included in if applicable.
 
 ### • Data Edits [`⇧`](#contents)
 
@@ -154,9 +142,7 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 ### • Translation [`⇧`](#contents)
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed.
-
-Those interested in improving this feature can see the [Translation project](https://github.com/scribe-org/Scribe-iOS/projects/1). The goal is that `Translate` will provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
 As of now translations are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
