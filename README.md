@@ -71,7 +71,7 @@ After your first few pull requests organization members would be happy to discus
 
 Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
 
-### • Ways to Help [`⇧`](#contents)
+### Ways to Help [`⇧`](#contents)
 
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
@@ -80,15 +80,15 @@ Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expec
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
 
-### • Road Map [`⇧`](#contents)
+### Road Map [`⇧`](#contents)
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
 
-### • Data Edits [`⇧`](#contents)
+### Data Edits [`⇧`](#contents)
 
 Scribe does not accept direct edits to the grammar JSON files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed and ran before an update. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
-### • Designs [`⇧`](#contents)
+### Designs [`⇧`](#contents)
 
 <a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
 
@@ -104,7 +104,7 @@ Users access Scribe language keyboards through the following:
 - <details><summary>Open Settings, and navigate to General -> Keyboard -> Keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198514330-f24d9818-3917-4898-8898-6730cdb5ac67.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514334-29e25e2d-a0fa-4a0e-bb83-cfbb6321975d.jpeg" height="300"></kbd><kbd><img src="https://user-images.githubusercontent.com/82060372/198514337-782354bf-6629-4296-95a7-dcfc94bab59d.jpeg" height="300"></kbd></details>
 - <details><summary>Tap add New Keyboard and select Scribe</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164351-44d16a60-9a44-450e-9b55-6a6d7ee0265d.jpeg" height="300"></kbd></details>
 - <details><summary>Choose from the available language keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198461014-a3ecbfaf-43b8-4773-8992-3e5707043fb8.jpeg" height="300"></kbd></details>
-- <details><summary>When typing pretty much anywhere, press 🌐 to select keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164365-ed14cc87-a2c7-4353-9264-26819483b3b2.jpeg" height="300"></kbd></details>
+- <details><summary>When typing press 🌐 to select keyboards</summary><kbd><img src="https://user-images.githubusercontent.com/82060372/198164365-ed14cc87-a2c7-4353-9264-26819483b3b2.jpeg" height="300"></kbd></details>
 
 For more information on features and use cases, see [Keyboard Features](#keyboard-features) below!
 
@@ -140,21 +140,21 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 **Current features include:**
 
-### • Translation [`⇧`](#contents)
+### Translation [`⇧`](#contents)
 
 The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
 As of now translations are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
 
-### • Verb Conjugation [`⇧`](#contents)
+### Verb Conjugation [`⇧`](#contents)
 
 With the `Conjugate` feature, a user is presented with the grammar charts for an entered verb instead of the keyboard. Pressing an example in the charts inserts the chosen conjugation into the text field.
 
-### • Noun Plurals [`⇧`](#contents)
+### Noun Plurals [`⇧`](#contents)
 
 The `Plural` feature allows a user to enter a noun and then insert its plural into the text field when the `return` key is pressed.
 
-### • Word Annotation [`⇧`](#contents)
+### Word Annotation [`⇧`](#contents)
 
 Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, after commands or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
@@ -175,11 +175,11 @@ The above form abbreviations are translated into their equivalents in the keyboa
 
 Scribe also annotates the grammatical cases (accusative, dative, etc) of prepositions in the command bar if there is a relation in the given language.
 
-### • Pronoun Selection [`⇧`](#contents)
+### Pronoun Selection [`⇧`](#contents)
 
 Annotations for preposition cases can also be pressed to provide a conjugation display where the user can select the proper pronoun for the given case. The conjugation view will also provide appropriate interfaces to subset the available pronouns based on the desired subject and object combinations to help the user make the correct choice.
 
-### • Base Functionality [`⇧`](#contents)
+### Base Functionality [`⇧`](#contents)
 
 The goal is for Scribe to have all the functionality of system keyboards. See the [issues](https://github.com/scribe-org/Scribe-iOS/issues/) if interested in helping.
 
@@ -242,7 +242,7 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 ### Contributors
 
-Many thanks to all the Scribe-iOS contributors! 🚀
+Many thanks to all the [Scribe-iOS contributors](https://github.com/scribe-org/Scribe-iOS/graphs/contributors)! 🚀
 
 <a href="https://github.com/scribe-org/Scribe-iOS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=scribe-org/Scribe-iOS" />
