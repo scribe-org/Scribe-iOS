@@ -7,6 +7,11 @@
 import UIKit
 
 /// Formats and returns the title of the installation guidelines.
+func getENTooltipContent(content: String, fontSize: CGFloat) -> NSMutableAttributedString {
+  NSMutableAttributedString(string: content, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize * 1.5)])
+}
+
+/// Formats and returns the title of the installation guidelines.
 func getENInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
   return NSMutableAttributedString(string: """
   Keyboard Installation
