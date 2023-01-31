@@ -16,8 +16,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- Added action to command bar information icon
+<!-- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes. -->
+<!-- Emoji autosuggestions are now available as the user types. -->
 
+- Added action to command bar information icon.
 - Added highlight for autocompletion if it is the word typed.
 
 ### 🎨 Design Changes
