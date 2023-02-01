@@ -219,19 +219,17 @@ class KeyboardViewController: UIInputViewController {
   }
   
   
-  // Logic to create tooltip
-  func createInformationStateDatasource(text: String, backgroundColor: UIColor) -> ToolTipViewDatasource {
-    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: UIColor.black, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
-    let content = getENTooltipContent(content: text, fontSize: 10)
+  // Logic to create notification tooltip.
+  func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
+    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
 
-    return ToolTipViewDatasource(content: content, theme: theme)
+    return ToolTipViewDatasource(content: text, theme: theme)
   }
   
   func setInformationState() {
-    let contentData: [String] = InformationToolTipData.getContent()
-    let backgroundColors: [UIColor] = [#colorLiteral(red: 0.6392156863, green: 0.7764705882, blue: 0.1921568627, alpha: 1), #colorLiteral(red: 0.6274509804, green: 0.7333333333, blue: 0.9098039216, alpha: 1),  #colorLiteral(red: 0.9725490196, green: 0.8666666667, blue: 0.3960784314, alpha: 1)]
+    let contentData: [NSMutableAttributedString] = InformationToolTipData.getContent()
     let datasources = contentData.enumerated().compactMap({ index, text in
-      createInformationStateDatasource(text: text, backgroundColor: backgroundColors[index])
+      createInformationStateDatasource(text: text, backgroundColor: keyColor)
     })
     tipView = ToolTipView(datasources: datasources)
     
@@ -240,11 +238,15 @@ class KeyboardViewController: UIInputViewController {
     guard let tipView = tipView else { return }
     tipView.translatesAutoresizingMaskIntoConstraints = false
     formKeySingle.addSubview(tipView)
-    tipView.leadingAnchor.constraint(equalTo: formKeySingle.leadingAnchor, constant: 5).isActive = true
-    tipView.trailingAnchor.constraint(equalTo: formKeySingle.trailingAnchor, constant: -5).isActive = true
-    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 5).isActive = true
+    tipView.leadingAnchor.constraint(
+      equalTo: formKeySingle.leadingAnchor, constant: DeviceType.isPhone ? 15: 40
+    ).isActive = true
+    tipView.trailingAnchor.constraint(
+      equalTo: formKeySingle.trailingAnchor, constant: DeviceType.isPhone ? -15: -40
+    ).isActive = true
+    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 8).isActive = true
     tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
-    
+    styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
   }
   
   private func bindTooltipview() {
@@ -268,7 +270,8 @@ class KeyboardViewController: UIInputViewController {
       weakSelf.styleShiftButtons()
     }
   }
-  
+
+  /// Styles the shift buttons for the displayInformation states.
   private func styleShiftButtons() {
     styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
     styleIconBtn(btn: shiftFormsDisplayLeft,
@@ -809,7 +812,7 @@ class KeyboardViewController: UIInputViewController {
       && deCaseVariantDeclensionState != .disabled {
       switch deCaseVariantDeclensionState {
       case .disabled:
-        break // placeholder
+        break
       case .accusativePersonalSPS, .dativePersonalSPS, .genitivePersonalSPS,
           .accusativePossesiveSPS, .dativePossesiveSPS, .genitivePossesiveSPS:
         formsDisplayDimensions = .view1x2
@@ -832,7 +835,7 @@ class KeyboardViewController: UIInputViewController {
       && controllerLanguage == "German"
       && [.accusative, .dative, .genitive].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
-    }else if
+    } else if
       commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
     } else {
@@ -851,7 +854,6 @@ class KeyboardViewController: UIInputViewController {
       setFormDisplay1x2View()
     case .view1x1:
       setFormDisplay1x1View()
-      //break // placeholder
     }
 
     // Setup the view shift buttons.
@@ -945,7 +947,7 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: btn)
       }
     case .view1x1:
-      break // placeholder
+      break
     }
   }
 
@@ -1134,7 +1136,7 @@ class KeyboardViewController: UIInputViewController {
       allConjugations = [formLeft, formRight]
       allConjugationBtns = get1x2FormDisplayButtons()
     case .view1x1:
-      break // placeholder
+      break
     }
 
     // Populate conjugation view buttons.

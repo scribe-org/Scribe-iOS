@@ -1,8 +1,5 @@
 //
 //  ToolTipView.swift
-//  Scribe
-//
-//  Created by Gabriel Moraes on 26/11/22.
 //
 
 import UIKit
@@ -45,7 +42,6 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     }
     
     tempLabel.attributedText = datasource.getCurrentText()
-
     tempLabel.numberOfLines = 0
     
     return tempLabel
@@ -61,6 +57,10 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     pageControl.currentPage = 0
     pageControl.numberOfPages = datasources.count
     super.init(frame: CGRect.zero)
+
+    let datasource = getCurrentDatasource()
+    pageControl.pageIndicatorTintColor = datasource.theme.textColor?.withAlphaComponent(0.3)
+    pageControl.currentPageIndicatorTintColor = datasource.theme.textColor
     buildHierarchy()
     setupConstraints()
     configureViews()
@@ -94,22 +94,12 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     let tempCurrentIndex = currentIndex + 1
     updateText(index: tempCurrentIndex)
     pageControl.currentPage += 1
-    
-//    if pageControl.currentPage == datasources.count - 1 {
-//      didUpdatePage?(.rightInactive)
-//    }
-
   }
   
   func updatePrevious() {
     let tempCurrentIndex = max(0, currentIndex - 1)
     updateText(index: tempCurrentIndex)
     pageControl.currentPage -= 1
-    
-//    if pageControl.currentPage == 0 {
-//      didUpdatePage?(.leftInactive)
-//    }
-
   }
   
   func updateText(index: Int) {
@@ -137,8 +127,6 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
       self?.backgroundColor = newDatasource.theme.backgroundColor
     }, completion: nil)
   }
-  
-  
 }
 
 extension ToolTipView {
@@ -165,7 +153,5 @@ extension ToolTipView {
   func configureViews() {
     let datasource = getCurrentDatasource()
     backgroundColor = datasource.theme.backgroundColor
-    
   }
-  
 }
