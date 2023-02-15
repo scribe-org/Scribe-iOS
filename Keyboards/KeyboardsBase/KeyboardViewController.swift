@@ -365,6 +365,10 @@ class KeyboardViewController: UIInputViewController {
   func getDefaultAutosuggestions() {
     var i = 0
     completionWords = [String]()
+    if allowUndo {
+      completionWords.append(previousWord)
+      i += 1
+    }
     while i < 3 {
       if shiftButtonState == .shift {
         completionWords.append(baseAutosuggestions[i].capitalize())
@@ -392,6 +396,10 @@ class KeyboardViewController: UIInputViewController {
         let suggestions: [String] = autosuggestions[prefix.lowercased()].rawValue as! [String]
         completionWords = [String]()
         var i = 0
+        if allowUndo {
+          completionWords.append(previousWord)
+          i += 1
+        }
         while i < 3 {
           if shiftButtonState == .shift {
             completionWords.append(suggestions[i].capitalize())
@@ -410,6 +418,10 @@ class KeyboardViewController: UIInputViewController {
         let suggestions: [String] = autosuggestions[prefix.capitalize()].rawValue as! [String]
         completionWords = [String]()
         var i = 0
+        if allowUndo {
+          completionWords.append(previousWord)
+          i += 1
+        }
         while i < 3 {
           if shiftButtonState == .shift {
             completionWords.append(suggestions[i].capitalize())
@@ -439,7 +451,10 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: pluralKey)
 
       if autoAction1Visible == true {
-        setBtn(btn: translateKey, color: currentPrefix == completionWords[0] ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        if currentPrefix == completionWords[0] || completionWords[1] == " " {
+          shouldHighlightFirstCompletion = true
+        }
+        setBtn(btn: translateKey, color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
         styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
@@ -484,6 +499,17 @@ class KeyboardViewController: UIInputViewController {
     annotationBtns.removeAll()
     annotationSeparators.forEach { $0.removeFromSuperview() }
     annotationSeparators.removeAll()
+    
+    // If user doesn't want the completion and wants what they typed back,
+    // Completion is made the currentPrefix to be removed from the proxy.
+    // Then autoActionButton title is inserted like normal.
+    if allowUndo && completionWords.contains(previousWord) {
+      // Auto Action state has to be .complete else clearPrefixFromTextFieldProxy() won't work.
+      autoActionState = .complete
+      currentPrefix = (proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? "") + " "
+      previousWord = ""
+      allowUndo = false
+    }
 
     clearPrefixFromTextFieldProxy()
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
@@ -1894,6 +1920,15 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case spaceBar, languageTextForSpaceBar:
+      if completionWords[1] == " " {
+        previousWord = currentPrefix
+        clearPrefixFromTextFieldProxy()
+        proxy.insertText(completionWords[0])
+        autoActionState = .suggest
+        currentPrefix = ""
+        shouldHighlightFirstCompletion = false
+        allowUndo = true
+      }
       autoActionState = .suggest
       commandBar.conditionallyRemovePlaceholder()
       if ![.translate, .conjugate, .plural].contains(commandState) {

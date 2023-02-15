@@ -9,7 +9,10 @@ import UIKit
 // Basic keyboard functionality variables.
 var capsLockPossible = false
 var doubleSpacePeriodPossible = false
-var autoAction1Visible: Bool = true
+var autoAction1Visible = true
+var shouldHighlightFirstCompletion = false
+var allowUndo = false
+var previousWord = ""
 var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
 
