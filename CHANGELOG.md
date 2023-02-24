@@ -21,6 +21,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Added action to command bar information icon.
 - Added highlight for autocompletion if it is the word typed.
+- If a word is the only autosuggestion, hitting the spacebar inserts the suggestion. Added undo functionality if the user does not want the completion.
 
 ### 🎨 Design Changes
 
