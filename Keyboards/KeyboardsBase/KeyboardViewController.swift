@@ -451,6 +451,8 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: pluralKey)
 
       if autoAction1Visible == true {
+        allowUndo = false
+        shouldHighlightFirstCompletion = false
         if currentPrefix == completionWords[0] || completionWords[1] == " " {
           shouldHighlightFirstCompletion = true
         }
@@ -1920,7 +1922,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case spaceBar, languageTextForSpaceBar:
-      if completionWords[1] == " " {
+      if completionWords[1] == " " && previousWord != completionWords[0] {
         previousWord = currentPrefix
         clearPrefixFromTextFieldProxy()
         proxy.insertText(completionWords[0])
