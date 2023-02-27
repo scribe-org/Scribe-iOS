@@ -1,0 +1,3 @@
+Scribe es actualizado regularmente para añadir nuevos teclados, funciones y datos de lenguaje.
+
+Esta versión incluye:
