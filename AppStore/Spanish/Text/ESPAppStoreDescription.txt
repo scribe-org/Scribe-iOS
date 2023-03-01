@@ -1,0 +1,17 @@
+¡Scribe es un paquete de teclados para iOS y iPadOS para estudiantes de lenguajes! Tiene funciones que ayudan a los usuarios a recorder reglas gramaticales para que puedan comunicarse efectivamente sin tener que salir de su teclado.
+
+Lenguajes incluidos:
+Alemán, Español, Francés, Italiano, Portugués, Ruso y Sueco.
+
+Funciones actuales:
+- Función Traducir (beta): puede traducir palabras o frases de Inglés al lenguaje seleccionado en el teclado.
+
+- Función Conjugar: en vez de un teclado, el usuario es presentado con una tabla con las conjugaciones para el verbo introducido. Al seleccionar uno de los casos, el verbo se introduce con la conjugación seleccionada en el campo de texto.
+
+- Función Plural: permite al usuario introducir un sustantivo e insertar su plural en el campo de texto.
+
+- Scribe muestra también género y preposiciones para los sustantivos en la barra de comandos, para ayudar a los usuarios entender el contexto de lo que estén escribiendo. Esto se muestran una vez que el usuario ha escrito una palabra y ha presionado la tecla de espacio o cuando selecciona la palabra y presiona la tecla 'Scribe'.
+
+- Para lenguajes que tienen declinación de pronombres, Scribe también permite seleccionar el caso y después el usuario puede seleccionar el pronombre que desea de acuerdo con el caso, predicado y objeto.
+
+Al ser un proyecto de Código Abierto, incluyendo datos provenientes de Wikidata, el equipo de Scribe realmente aprecia las contribuciones y retroalimentación. Por favor, visítanos en https://github.com/scribe-org/Scribe-iOS
