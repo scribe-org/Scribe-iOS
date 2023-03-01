@@ -19,7 +19,7 @@
 <details><summary>🌐 Language</summary>
 <p>
 
-- [Open a localization issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=localization&template=localization.yml) to start working on a new readme language
+- [Open a localization issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=localization&template=localization.yml) to add a new readme to the [README](https://github.com/scribe-org/Scribe-iOS/tree/main/README) directory
 
 </p>
 </details>
