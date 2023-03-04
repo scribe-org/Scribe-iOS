@@ -1,34 +1,9 @@
 {
 "Gesicht": [
 {
-"emoji": "😀",
+"emoji": "😂",
 "is_base": false,
-"rank": 61
-},
-{
-"emoji": "😃",
-"is_base": false,
-"rank": 50
-},
-{
-"emoji": "😄",
-"is_base": false,
-"rank": 56
-},
-{
-"emoji": "😁",
-"is_base": false,
-"rank": 12
-},
-{
-"emoji": "😆",
-"is_base": false,
-"rank": 22
-},
-{
-"emoji": "😅",
-"is_base": false,
-"rank": 15
+"rank": 1
 },
 {
 "emoji": "🤣",
@@ -36,678 +11,13 @@
 "rank": 3
 },
 {
-"emoji": "😂",
-"is_base": false,
-"rank": 1
-},
-{
-"emoji": "🙂",
-"is_base": false,
-"rank": 28
-},
-{
-"emoji": "🙃",
-"is_base": false,
-"rank": 69
-},
-{
-"emoji": "🫠",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "😉",
-"is_base": false,
-"rank": 24
-},
-{
-"emoji": "😊",
-"is_base": false,
-"rank": 10
-},
-{
-"emoji": "😇",
-"is_base": false,
-"rank": 77
-},
-{
-"emoji": "😍",
-"is_base": false,
-"rank": 9
-},
-{
-"emoji": "🤩",
-"is_base": false,
-"rank": 68
-},
-{
-"emoji": "😘",
-"is_base": false,
-"rank": 7
-},
-{
-"emoji": "😗",
-"is_base": false,
-"rank": 168
-},
-{
-"emoji": "😚",
-"is_base": false,
-"rank": 89
-},
-{
-"emoji": "😙",
-"is_base": false,
-"rank": 164
-},
-{
-"emoji": "😋",
-"is_base": false,
-"rank": 39
-},
-{
-"emoji": "😛",
-"is_base": false,
-"rank": 148
-},
-{
-"emoji": "😜",
-"is_base": false,
-"rank": 53
-},
-{
-"emoji": "😝",
-"is_base": false,
-"rank": 109
-},
-{
-"emoji": "🤑",
-"is_base": false,
-"rank": 166
-},
-{
-"emoji": "🤗",
-"is_base": false,
-"rank": 23
-},
-{
-"emoji": "🫢",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫣",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤔",
-"is_base": false,
-"rank": 26
-},
-{
-"emoji": "🫡",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤐",
-"is_base": false,
-"rank": 243
-},
-{
-"emoji": "😐",
-"is_base": false,
-"rank": 74
-},
-{
-"emoji": "😑",
-"is_base": false,
-"rank": 95
-},
-{
-"emoji": "😶",
-"is_base": false,
-"rank": 160
-},
-{
-"emoji": "🫥",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "😏",
-"is_base": false,
-"rank": 40
-},
-{
-"emoji": "😒",
-"is_base": false,
-"rank": 76
-},
-{
-"emoji": "🙄",
-"is_base": false,
-"rank": 21
-},
-{
-"emoji": "😬",
-"is_base": false,
-"rank": 70
-},
-{
-"emoji": "🤥",
-"is_base": false,
-"rank": 435
-},
-{
-"emoji": "🫨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "😌",
-"is_base": false,
-"rank": 66
-},
-{
-"emoji": "😔",
-"is_base": false,
-"rank": 34
-},
-{
-"emoji": "😪",
-"is_base": false,
-"rank": 188
-},
-{
-"emoji": "🤤",
-"is_base": false,
-"rank": 57
-},
-{
-"emoji": "😴",
-"is_base": false,
-"rank": 72
-},
-{
-"emoji": "😷",
-"is_base": false,
-"rank": 156
-},
-{
-"emoji": "🤒",
-"is_base": false,
-"rank": 390
-},
-{
-"emoji": "🤕",
-"is_base": false,
-"rank": 270
-},
-{
-"emoji": "🤢",
-"is_base": false,
-"rank": 103
-},
-{
-"emoji": "🤧",
-"is_base": false,
-"rank": 222
-},
-{
-"emoji": "😵",
-"is_base": false,
-"rank": 218
-},
-{
-"emoji": "🤠",
-"is_base": false,
-"rank": 145
-},
-{
-"emoji": "😎",
-"is_base": false,
-"rank": 31
-},
-{
-"emoji": "🤓",
-"is_base": false,
-"rank": 157
-},
-{
-"emoji": "😕",
-"is_base": false,
-"rank": 121
-},
-{
-"emoji": "🫤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "😟",
-"is_base": false,
-"rank": 141
-},
-{
-"emoji": "🙁",
-"is_base": false,
-"rank": 186
-},
-{
-"emoji": "😮",
-"is_base": false,
-"rank": 181
-},
-{
-"emoji": "😯",
-"is_base": false,
-"rank": 229
-},
-{
-"emoji": "😲",
-"is_base": false,
-"rank": 111
-},
-{
-"emoji": "😳",
-"is_base": false,
-"rank": 29
-},
-{
-"emoji": "🥹",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "😦",
-"is_base": false,
-"rank": 348
-},
-{
-"emoji": "😧",
-"is_base": false,
-"rank": 289
-},
-{
-"emoji": "😨",
-"is_base": false,
-"rank": 267
-},
-{
-"emoji": "😰",
-"is_base": false,
-"rank": 213
-},
-{
-"emoji": "😥",
-"is_base": false,
-"rank": 106
-},
-{
-"emoji": "😢",
-"is_base": false,
-"rank": 41
-},
-{
 "emoji": "😭",
 "is_base": false,
 "rank": 5
-},
-{
-"emoji": "😱",
-"is_base": false,
-"rank": 71
-},
-{
-"emoji": "😖",
-"is_base": false,
-"rank": 161
-},
-{
-"emoji": "😣",
-"is_base": false,
-"rank": 142
-},
-{
-"emoji": "😞",
-"is_base": false,
-"rank": 84
-},
-{
-"emoji": "😓",
-"is_base": false,
-"rank": 138
-},
-{
-"emoji": "😩",
-"is_base": false,
-"rank": 44
-},
-{
-"emoji": "😫",
-"is_base": false,
-"rank": 110
-},
-{
-"emoji": "😤",
-"is_base": false,
-"rank": 102
-},
-{
-"emoji": "😡",
-"is_base": false,
-"rank": 51
-},
-{
-"emoji": "😠",
-"is_base": false,
-"rank": 144
-},
-{
-"emoji": "👿",
-"is_base": false,
-"rank": 278
-},
-{
-"emoji": "💀",
-"is_base": false,
-"rank": 63
-},
-{
-"emoji": "🤡",
-"is_base": false,
-"rank": 152
-},
-{
-"emoji": "👹",
-"is_base": false,
-"rank": 260
-},
-{
-"emoji": "👺",
-"is_base": false,
-"rank": 402
-},
-{
-"emoji": "👻",
-"is_base": false,
-"rank": 276
-},
-{
-"emoji": "👽",
-"is_base": false,
-"rank": 299
-},
-{
-"emoji": "👾",
-"is_base": false,
-"rank": 637
-},
-{
-"emoji": "🤖",
-"is_base": false,
-"rank": 525
-},
-{
-"emoji": "😺",
-"is_base": false,
-"rank": 240
-},
-{
-"emoji": "😸",
-"is_base": false,
-"rank": 197
-},
-{
-"emoji": "😹",
-"is_base": false,
-"rank": 131
-},
-{
-"emoji": "😻",
-"is_base": false,
-"rank": 146
-},
-{
-"emoji": "😼",
-"is_base": false,
-"rank": 378
-},
-{
-"emoji": "😽",
-"is_base": false,
-"rank": 265
-},
-{
-"emoji": "🙀",
-"is_base": false,
-"rank": 360
-},
-{
-"emoji": "😿",
-"is_base": false,
-"rank": 317
-},
-{
-"emoji": "😾",
-"is_base": false,
-"rank": 291
-},
-{
-"emoji": "👀",
-"is_base": false,
-"rank": 38
-},
-{
-"emoji": "👶",
-"is_base": true,
-"rank": 214
-},
-{
-"emoji": "👦",
-"is_base": true,
-"rank": 374
-},
-{
-"emoji": "👧",
-"is_base": true,
-"rank": 339
-},
-{
-"emoji": "👱",
-"is_base": true,
-"rank": 680
-},
-{
-"emoji": "👴",
-"is_base": true,
-"rank": 559
-},
-{
-"emoji": "👵",
-"is_base": true,
-"rank": 562
-},
-{
-"emoji": "🙍",
-"is_base": true,
-"rank": 738
-},
-{
-"emoji": "💁",
-"is_base": true,
-"rank": 247
-},
-{
-"emoji": "🤦",
-"is_base": true,
-"rank": 18
-},
-{
-"emoji": "👮",
-"is_base": true,
-"rank": 398
-},
-{
-"emoji": "👷",
-"is_base": true,
-"rank": 893
-},
-{
-"emoji": "👸",
-"is_base": true,
-"rank": 371
-},
-{
-"emoji": "👲",
-"is_base": true,
-"rank": 1225
-},
-{
-"emoji": "👼",
-"is_base": true,
-"rank": 334
-},
-{
-"emoji": "🐵",
-"is_base": false,
-"rank": 553
-},
-{
-"emoji": "🦍",
-"is_base": false,
-"rank": 412
-},
-{
-"emoji": "🐶",
-"is_base": false,
-"rank": 169
-},
-{
-"emoji": "🐺",
-"is_base": false,
-"rank": 502
-},
-{
-"emoji": "🦊",
-"is_base": false,
-"rank": 470
-},
-{
-"emoji": "🐱",
-"is_base": false,
-"rank": 255
-},
-{
-"emoji": "🦁",
-"is_base": false,
-"rank": 368
-},
-{
-"emoji": "🐯",
-"is_base": false,
-"rank": 537
-},
-{
-"emoji": "🐴",
-"is_base": false,
-"rank": 473
-},
-{
-"emoji": "🦄",
-"is_base": false,
-"rank": 306
-},
-{
-"emoji": "🦌",
-"is_base": false,
-"rank": 628
-},
-{
-"emoji": "🐮",
-"is_base": false,
-"rank": 595
-},
-{
-"emoji": "🐷",
-"is_base": false,
-"rank": 245
-},
-{
-"emoji": "🐭",
-"is_base": false,
-"rank": 719
-},
-{
-"emoji": "🐹",
-"is_base": false,
-"rank": 813
-},
-{
-"emoji": "🐰",
-"is_base": false,
-"rank": 137
-},
-{
-"emoji": "🐻",
-"is_base": false,
-"rank": 274
-},
-{
-"emoji": "🐼",
-"is_base": false,
-"rank": 400
-},
-{
-"emoji": "🐸",
-"is_base": false,
-"rank": 283
-},
-{
-"emoji": "🐲",
-"is_base": false,
-"rank": 780
-},
-{
-"emoji": "🌚",
-"is_base": false,
-"rank": 189
-},
-{
-"emoji": "🌛",
-"is_base": false,
-"rank": 449
-},
-{
-"emoji": "🌜",
-"is_base": false,
-"rank": 458
-},
-{
-"emoji": "🌝",
-"is_base": false,
-"rank": 252
-},
-{
-"emoji": "🌞",
-"is_base": false,
-"rank": 75
-},
-{
-"emoji": "🗿",
-"is_base": false,
-"rank": 463
 }
 ],
 "lol": [
 {
-"emoji": "😀",
-"is_base": false,
-"rank": 61
-},
-{
 "emoji": "😃",
 "is_base": false,
 "rank": 50
@@ -718,27 +28,12 @@
 "rank": 56
 },
 {
-"emoji": "😺",
+"emoji": "😀",
 "is_base": false,
-"rank": 240
+"rank": 61
 }
 ],
 "lustig": [
-{
-"emoji": "😀",
-"is_base": false,
-"rank": 61
-},
-{
-"emoji": "😃",
-"is_base": false,
-"rank": 50
-},
-{
-"emoji": "😄",
-"is_base": false,
-"rank": 56
-},
 {
 "emoji": "😁",
 "is_base": false,
@@ -750,9 +45,9 @@
 "rank": 15
 },
 {
-"emoji": "😺",
+"emoji": "😃",
 "is_base": false,
-"rank": 240
+"rank": 50
 }
 ],
 "lächeln": [
@@ -794,11 +89,6 @@
 "emoji": "💦",
 "is_base": false,
 "rank": 126
-},
-{
-"emoji": "💧",
-"is_base": false,
-"rank": 241
 }
 ],
 "schwitzen": [
@@ -815,14 +105,14 @@
 ],
 "lachen": [
 {
-"emoji": "🤣",
-"is_base": false,
-"rank": 3
-},
-{
 "emoji": "😂",
 "is_base": false,
 "rank": 1
+},
+{
+"emoji": "🤣",
+"is_base": false,
+"rank": 3
 },
 {
 "emoji": "😹",
@@ -966,23 +256,18 @@
 "emoji": "😻",
 "is_base": false,
 "rank": 146
-},
-{
-"emoji": "🩷",
-"is_base": false,
-"rank": null
 }
 ],
 "Augen": [
 {
-"emoji": "🤩",
-"is_base": false,
-"rank": 68
-},
-{
 "emoji": "👀",
 "is_base": false,
 "rank": 38
+},
+{
+"emoji": "🤩",
+"is_base": false,
+"rank": 68
 }
 ],
 "Grinsen": [
@@ -999,19 +284,14 @@
 "rank": 68
 },
 {
-"emoji": "💫",
+"emoji": "🌟",
 "is_base": false,
-"rank": 217
+"rank": 104
 },
 {
 "emoji": "⭐",
 "is_base": false,
 "rank": 127
-},
-{
-"emoji": "🌟",
-"is_base": false,
-"rank": 104
 }
 ],
 "überwältigt": [
@@ -1028,49 +308,14 @@
 "rank": 7
 },
 {
-"emoji": "😗",
-"is_base": false,
-"rank": 168
-},
-{
-"emoji": "😙",
-"is_base": false,
-"rank": 164
-},
-{
 "emoji": "💋",
 "is_base": false,
 "rank": 62
 },
 {
-"emoji": "💏",
+"emoji": "😙",
 "is_base": false,
-"rank": 443
-},
-{
-"emoji": "💏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏿",
-"is_base": false,
-"rank": null
+"rank": 164
 }
 ],
 "berührt": [
@@ -1089,27 +334,27 @@
 ],
 "erleichtert": [
 {
-"emoji": "🥲",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "😌",
 "is_base": false,
 "rank": 66
 },
 {
-"emoji": "😥",
-"is_base": false,
-"rank": 106
-},
-{
 "emoji": "😤",
 "is_base": false,
 "rank": 102
+},
+{
+"emoji": "😥",
+"is_base": false,
+"rank": 106
 }
 ],
 "stolz": [
+{
+"emoji": "🦚",
+"is_base": false,
+"rank": 757
+},
 {
 "emoji": "🥲",
 "is_base": false,
@@ -1119,19 +364,9 @@
 "emoji": "🥹",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦚",
-"is_base": false,
-"rank": 757
 }
 ],
 "Träne": [
-{
-"emoji": "🥲",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "😢",
 "is_base": false,
@@ -1141,6 +376,11 @@
 "emoji": "😿",
 "is_base": false,
 "rank": 317
+},
+{
+"emoji": "🥲",
+"is_base": false,
+"rank": null
 }
 ],
 "lecker": [
@@ -1152,14 +392,14 @@
 ],
 "Auge": [
 {
-"emoji": "🤪",
-"is_base": false,
-"rank": 59
-},
-{
 "emoji": "👀",
 "is_base": false,
 "rank": 38
+},
+{
+"emoji": "🤪",
+"is_base": false,
+"rank": 59
 }
 ],
 "groß": [
@@ -1194,118 +434,23 @@
 "emoji": "🤏🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🤏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Geld": [
-{
-"emoji": "🤑",
-"is_base": false,
-"rank": 166
-},
-{
-"emoji": "🫰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🏦",
-"is_base": false,
-"rank": 952
-},
-{
-"emoji": "🧧",
-"is_base": false,
-"rank": 1043
-},
 {
 "emoji": "💰",
 "is_base": false,
 "rank": 88
 },
 {
-"emoji": "🪙",
+"emoji": "🤑",
 "is_base": false,
-"rank": null
-},
-{
-"emoji": "💴",
-"is_base": false,
-"rank": 801
-},
-{
-"emoji": "💵",
-"is_base": false,
-"rank": 333
-},
-{
-"emoji": "💶",
-"is_base": false,
-"rank": 797
-},
-{
-"emoji": "💷",
-"is_base": false,
-"rank": 1017
+"rank": 166
 },
 {
 "emoji": "💸",
 "is_base": false,
 "rank": 233
-},
-{
-"emoji": "💱",
-"is_base": false,
-"rank": 1241
-},
-{
-"emoji": "💲",
-"is_base": false,
-"rank": 312
-},
-{
-"emoji": "🫰🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Zunge": [
@@ -1477,14 +622,14 @@
 ],
 "Mund": [
 {
-"emoji": "🤐",
-"is_base": false,
-"rank": 243
-},
-{
 "emoji": "👄",
 "is_base": false,
 "rank": 173
+},
+{
+"emoji": "🤐",
+"is_base": false,
+"rank": 243
 }
 ],
 "Reißverschluss": [
@@ -1604,11 +749,6 @@
 ],
 "müde": [
 {
-"emoji": "😪",
-"is_base": false,
-"rank": 188
-},
-{
 "emoji": "😩",
 "is_base": false,
 "rank": 44
@@ -1619,9 +759,9 @@
 "rank": 110
 },
 {
-"emoji": "🥱",
+"emoji": "😪",
 "is_base": false,
-"rank": null
+"rank": 188
 }
 ],
 "sabbern": [
@@ -1664,11 +804,6 @@
 "rank": 156
 },
 {
-"emoji": "🏥",
-"is_base": false,
-"rank": 684
-},
-{
 "emoji": "💉",
 "is_base": false,
 "rank": 193
@@ -1677,11 +812,6 @@
 "emoji": "💊",
 "is_base": false,
 "rank": 428
-},
-{
-"emoji": "🩺",
-"is_base": false,
-"rank": null
 }
 ],
 "Krankheit": [
@@ -1705,14 +835,14 @@
 ],
 "krank": [
 {
-"emoji": "🤒",
-"is_base": false,
-"rank": 390
-},
-{
 "emoji": "🤮",
 "is_base": false,
 "rank": 101
+},
+{
+"emoji": "🤒",
+"is_base": false,
+"rank": 390
 },
 {
 "emoji": "🏥",
@@ -1795,6 +925,11 @@
 ],
 "heiß": [
 {
+"emoji": "🔥",
+"is_base": false,
+"rank": 16
+},
+{
 "emoji": "🥵",
 "is_base": false,
 "rank": 83
@@ -1803,11 +938,6 @@
 "emoji": "☕",
 "is_base": false,
 "rank": 124
-},
-{
-"emoji": "🔥",
-"is_base": false,
-"rank": 16
 }
 ],
 "Hitzschlag": [
@@ -1845,14 +975,14 @@
 "rank": 159
 },
 {
-"emoji": "🧊",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "⛄",
 "is_base": false,
 "rank": 658
+},
+{
+"emoji": "🧊",
+"is_base": false,
+"rank": null
 }
 ],
 "angetrunken": [
@@ -1911,19 +1041,14 @@
 "rank": 145
 },
 {
-"emoji": "👲",
-"is_base": true,
-"rank": 1225
+"emoji": "🎩",
+"is_base": false,
+"rank": 567
 },
 {
 "emoji": "👒",
 "is_base": false,
 "rank": 744
-},
-{
-"emoji": "🎩",
-"is_base": false,
-"rank": 567
 }
 ],
 "Feiern": [
@@ -1935,22 +1060,17 @@
 ],
 "Party": [
 {
-"emoji": "🥳",
-"is_base": false,
-"rank": 30
-},
-{
 "emoji": "🎉",
 "is_base": false,
 "rank": 11
 },
 {
-"emoji": "🪅",
+"emoji": "🥳",
 "is_base": false,
-"rank": null
+"rank": 30
 },
 {
-"emoji": "🪩",
+"emoji": "🪅",
 "is_base": false,
 "rank": null
 }
@@ -2032,14 +1152,14 @@
 ],
 "enttäuscht": [
 {
-"emoji": "🫤",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "😥",
 "is_base": false,
 "rank": 106
+},
+{
+"emoji": "🫤",
+"is_base": false,
+"rank": null
 }
 ],
 "langweilig": [
@@ -2075,14 +1195,9 @@
 ],
 "traurig": [
 {
-"emoji": "🙁",
+"emoji": "😭",
 "is_base": false,
-"rank": 186
-},
-{
-"emoji": "🥹",
-"is_base": false,
-"rank": null
+"rank": 5
 },
 {
 "emoji": "😢",
@@ -2090,22 +1205,17 @@
 "rank": 41
 },
 {
-"emoji": "😭",
-"is_base": false,
-"rank": 5
-},
-{
 "emoji": "😞",
 "is_base": false,
 "rank": 84
-},
-{
-"emoji": "😿",
-"is_base": false,
-"rank": 317
 }
 ],
 "erstaunt": [
+{
+"emoji": "😲",
+"is_base": false,
+"rank": 111
+},
 {
 "emoji": "😮",
 "is_base": false,
@@ -2115,11 +1225,6 @@
 "emoji": "😯",
 "is_base": false,
 "rank": 229
-},
-{
-"emoji": "😲",
-"is_base": false,
-"rank": 111
 }
 ],
 "überrascht": [
@@ -2275,49 +1380,14 @@
 "rank": 51
 },
 {
-"emoji": "🍎",
-"is_base": false,
-"rank": 244
-},
-{
-"emoji": "❓",
-"is_base": false,
-"rank": 237
-},
-{
 "emoji": "❗",
 "is_base": false,
 "rank": 105
 },
 {
-"emoji": "⭕",
-"is_base": false,
-"rank": 307
-},
-{
 "emoji": "🔴",
 "is_base": false,
 "rank": 114
-},
-{
-"emoji": "🟥",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🔺",
-"is_base": false,
-"rank": 640
-},
-{
-"emoji": "🔻",
-"is_base": false,
-"rank": 521
-},
-{
-"emoji": "🚩",
-"is_base": false,
-"rank": 212
 }
 ],
 "wütend": [
@@ -2360,14 +1430,14 @@
 ],
 "Fantasy": [
 {
-"emoji": "👿",
-"is_base": false,
-"rank": 278
-},
-{
 "emoji": "👻",
 "is_base": false,
 "rank": 276
+},
+{
+"emoji": "👿",
+"is_base": false,
+"rank": 278
 },
 {
 "emoji": "🧌",
@@ -2450,49 +1520,9 @@
 "rank": 402
 },
 {
-"emoji": "🗾",
-"is_base": false,
-"rank": 1135
-},
-{
-"emoji": "🏣",
-"is_base": false,
-"rank": 1276
-},
-{
-"emoji": "🏯",
-"is_base": false,
-"rank": 1053
-},
-{
-"emoji": "🚅",
-"is_base": false,
-"rank": 1111
-},
-{
-"emoji": "🎋",
-"is_base": false,
-"rank": 665
-},
-{
 "emoji": "🎍",
 "is_base": false,
 "rank": 649
-},
-{
-"emoji": "🎑",
-"is_base": false,
-"rank": 1071
-},
-{
-"emoji": "🎴",
-"is_base": false,
-"rank": 998
-},
-{
-"emoji": "🎌",
-"is_base": false,
-"rank": 1031
 }
 ],
 "Märchen": [
@@ -2502,34 +1532,14 @@
 "rank": 260
 },
 {
-"emoji": "👺",
-"is_base": false,
-"rank": 402
-},
-{
 "emoji": "👻",
 "is_base": false,
 "rank": 276
 },
 {
-"emoji": "👸",
-"is_base": true,
-"rank": 371
-},
-{
 "emoji": "👼",
 "is_base": true,
 "rank": 334
-},
-{
-"emoji": "🧌",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🐉",
-"is_base": false,
-"rank": 648
 }
 ],
 "Monster": [
@@ -2544,19 +1554,9 @@
 "rank": 402
 },
 {
-"emoji": "👾",
-"is_base": false,
-"rank": 637
-},
-{
 "emoji": "🤖",
 "is_base": false,
 "rank": 525
-},
-{
-"emoji": "🧌",
-"is_base": false,
-"rank": null
 }
 ],
 "Ungeheuer": [
@@ -2651,16 +1651,6 @@
 ],
 "Katze": [
 {
-"emoji": "😺",
-"is_base": false,
-"rank": 240
-},
-{
-"emoji": "😸",
-"is_base": false,
-"rank": 197
-},
-{
 "emoji": "😹",
 "is_base": false,
 "rank": 131
@@ -2671,44 +1661,9 @@
 "rank": 146
 },
 {
-"emoji": "😼",
+"emoji": "😸",
 "is_base": false,
-"rank": 378
-},
-{
-"emoji": "😽",
-"is_base": false,
-"rank": 265
-},
-{
-"emoji": "🙀",
-"is_base": false,
-"rank": 360
-},
-{
-"emoji": "😿",
-"is_base": false,
-"rank": 317
-},
-{
-"emoji": "😾",
-"is_base": false,
-"rank": 291
-},
-{
-"emoji": "🐱",
-"is_base": false,
-"rank": 255
-},
-{
-"emoji": "🐈",
-"is_base": false,
-"rank": 285
-},
-{
-"emoji": "🐈‍⬛",
-"is_base": false,
-"rank": null
+"rank": 197
 }
 ],
 "ironisch": [
@@ -2725,34 +1680,14 @@
 "rank": 54
 },
 {
-"emoji": "🙉",
-"is_base": false,
-"rank": 347
-},
-{
 "emoji": "🙊",
 "is_base": false,
 "rank": 150
 },
 {
-"emoji": "🐵",
+"emoji": "🙉",
 "is_base": false,
-"rank": 553
-},
-{
-"emoji": "🐒",
-"is_base": false,
-"rank": 358
-},
-{
-"emoji": "🦍",
-"is_base": false,
-"rank": 412
-},
-{
-"emoji": "🦧",
-"is_base": false,
-"rank": null
+"rank": 347
 }
 ],
 "verboten": [
@@ -2760,11 +1695,6 @@
 "emoji": "🙈",
 "is_base": false,
 "rank": 54
-},
-{
-"emoji": "🙉",
-"is_base": false,
-"rank": 347
 },
 {
 "emoji": "🙊",
@@ -2775,26 +1705,6 @@
 "emoji": "🙅",
 "is_base": true,
 "rank": 250
-},
-{
-"emoji": "⛔",
-"is_base": false,
-"rank": 668
-},
-{
-"emoji": "🚯",
-"is_base": false,
-"rank": 1317
-},
-{
-"emoji": "🚱",
-"is_base": false,
-"rank": 1371
-},
-{
-"emoji": "🚷",
-"is_base": false,
-"rank": 1218
 }
 ],
 "Brief": [
@@ -2804,76 +1714,21 @@
 "rank": 231
 },
 {
-"emoji": "📯",
+"emoji": "📮",
 "is_base": false,
-"rank": 986
+"rank": 540
 },
 {
 "emoji": "📧",
 "is_base": false,
 "rank": 971
-},
-{
-"emoji": "📮",
-"is_base": false,
-"rank": 540
 }
 ],
 "Herz": [
 {
-"emoji": "💌",
-"is_base": false,
-"rank": 231
-},
-{
-"emoji": "💘",
-"is_base": false,
-"rank": 139
-},
-{
-"emoji": "💝",
-"is_base": false,
-"rank": 134
-},
-{
-"emoji": "💓",
-"is_base": false,
-"rank": 67
-},
-{
 "emoji": "💕",
 "is_base": false,
 "rank": 13
-},
-{
-"emoji": "💟",
-"is_base": false,
-"rank": 259
-},
-{
-"emoji": "🩷",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💛",
-"is_base": false,
-"rank": 108
-},
-{
-"emoji": "💚",
-"is_base": false,
-"rank": 85
-},
-{
-"emoji": "💙",
-"is_base": false,
-"rank": 49
-},
-{
-"emoji": "🩵",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "💜",
@@ -2881,141 +1736,16 @@
 "rank": 33
 },
 {
-"emoji": "🤎",
+"emoji": "💙",
 "is_base": false,
-"rank": null
-},
-{
-"emoji": "🖤",
-"is_base": false,
-"rank": 87
-},
-{
-"emoji": "🩶",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤍",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏",
-"is_base": false,
-"rank": 443
-},
-{
-"emoji": "💑",
-"is_base": false,
-"rank": 597
-},
-{
-"emoji": "💒",
-"is_base": false,
-"rank": 647
-},
-{
-"emoji": "🩺",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏿",
-"is_base": false,
-"rank": null
+"rank": 49
 }
 ],
 "Liebe": [
 {
-"emoji": "💌",
+"emoji": "💕",
 "is_base": false,
-"rank": 231
-},
-{
-"emoji": "💘",
-"is_base": false,
-"rank": 139
+"rank": 13
 },
 {
 "emoji": "💖",
@@ -3026,56 +1756,6 @@
 "emoji": "💗",
 "is_base": false,
 "rank": 43
-},
-{
-"emoji": "💓",
-"is_base": false,
-"rank": 67
-},
-{
-"emoji": "💞",
-"is_base": false,
-"rank": 47
-},
-{
-"emoji": "💕",
-"is_base": false,
-"rank": 13
-},
-{
-"emoji": "🫶",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🏩",
-"is_base": false,
-"rank": 763
-},
-{
-"emoji": "🫶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Liebesbrief": [
@@ -3097,54 +1777,9 @@
 "rank": 275
 },
 {
-"emoji": "🏹",
-"is_base": false,
-"rank": 594
-},
-{
 "emoji": "🔙",
 "is_base": false,
 "rank": 568
-},
-{
-"emoji": "🔚",
-"is_base": false,
-"rank": 1006
-},
-{
-"emoji": "🔛",
-"is_base": false,
-"rank": 742
-},
-{
-"emoji": "🔜",
-"is_base": false,
-"rank": 663
-},
-{
-"emoji": "⏪",
-"is_base": false,
-"rank": 1082
-},
-{
-"emoji": "🔼",
-"is_base": false,
-"rank": 1136
-},
-{
-"emoji": "⏫",
-"is_base": false,
-"rank": 1262
-},
-{
-"emoji": "🔽",
-"is_base": false,
-"rank": 702
-},
-{
-"emoji": "⏬",
-"is_base": false,
-"rank": 936
 }
 ],
 "Schleife": [
@@ -3162,16 +1797,6 @@
 "emoji": "👒",
 "is_base": false,
 "rank": 744
-},
-{
-"emoji": "➰",
-"is_base": false,
-"rank": 1023
-},
-{
-"emoji": "➿",
-"is_base": false,
-"rank": 1170
 }
 ],
 "Valentinstag": [
@@ -3237,14 +1862,14 @@
 ],
 "süß": [
 {
-"emoji": "🩷",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🧁",
 "is_base": false,
 "rank": 234
+},
+{
+"emoji": "🩷",
+"is_base": false,
+"rank": null
 }
 ],
 "orange": [
@@ -3296,16 +1921,6 @@
 "emoji": "📗",
 "is_base": false,
 "rank": 1001
-},
-{
-"emoji": "🟢",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟩",
-"is_base": false,
-"rank": null
 }
 ],
 "blau": [
@@ -3315,34 +1930,9 @@
 "rank": 49
 },
 {
-"emoji": "🫐",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "📘",
-"is_base": false,
-"rank": 880
-},
-{
-"emoji": "🆙",
-"is_base": false,
-"rank": 824
-},
-{
 "emoji": "🔵",
 "is_base": false,
 "rank": 286
-},
-{
-"emoji": "🟦",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🔷",
-"is_base": false,
-"rank": 644
 },
 {
 "emoji": "🔹",
@@ -3420,26 +2010,6 @@
 "emoji": "🦹🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦹🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦹🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦹🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦹🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "schwarz": [
@@ -3447,11 +2017,6 @@
 "emoji": "🖤",
 "is_base": false,
 "rank": 87
-},
-{
-"emoji": "🐈‍⬛",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "⚫",
@@ -3462,16 +2027,6 @@
 "emoji": "⬛",
 "is_base": false,
 "rank": 565
-},
-{
-"emoji": "◾",
-"is_base": false,
-"rank": 847
-},
-{
-"emoji": "🔲",
-"is_base": false,
-"rank": 1055
 }
 ],
 "grau": [
@@ -3497,21 +2052,6 @@
 ],
 "weiß": [
 {
-"emoji": "🤍",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "❔",
-"is_base": false,
-"rank": 1005
-},
-{
-"emoji": "❕",
-"is_base": false,
-"rank": 743
-},
-{
 "emoji": "⚪",
 "is_base": false,
 "rank": 392
@@ -3522,14 +2062,9 @@
 "rank": 695
 },
 {
-"emoji": "◽",
+"emoji": "❕",
 "is_base": false,
-"rank": 1018
-},
-{
-"emoji": "🔳",
-"is_base": false,
-"rank": 1268
+"rank": 743
 }
 ],
 "Kussabdruck": [
@@ -3574,9 +2109,9 @@
 ],
 "Comic": [
 {
-"emoji": "💢",
-"is_base": false,
-"rank": 195
+"emoji": "💪",
+"is_base": true,
+"rank": 35
 },
 {
 "emoji": "💥",
@@ -3584,69 +2119,9 @@
 "rank": 92
 },
 {
-"emoji": "💫",
-"is_base": false,
-"rank": 217
-},
-{
 "emoji": "💦",
 "is_base": false,
 "rank": 126
-},
-{
-"emoji": "💨",
-"is_base": false,
-"rank": 207
-},
-{
-"emoji": "💭",
-"is_base": false,
-"rank": 335
-},
-{
-"emoji": "💤",
-"is_base": false,
-"rank": 135
-},
-{
-"emoji": "💪",
-"is_base": true,
-"rank": 35
-},
-{
-"emoji": "🦸",
-"is_base": false,
-"rank": 670
-},
-{
-"emoji": "💣",
-"is_base": false,
-"rank": 242
-},
-{
-"emoji": "🦸🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Wut": [
@@ -3735,26 +2210,6 @@
 ],
 "Unterhaltung": [
 {
-"emoji": "💬",
-"is_base": false,
-"rank": 375
-},
-{
-"emoji": "🎪",
-"is_base": false,
-"rank": 752
-},
-{
-"emoji": "🎫",
-"is_base": false,
-"rank": 782
-},
-{
-"emoji": "🎭",
-"is_base": false,
-"rank": 551
-},
-{
 "emoji": "🎤",
 "is_base": false,
 "rank": 219
@@ -3768,16 +2223,6 @@
 "emoji": "🎥",
 "is_base": false,
 "rank": 308
-},
-{
-"emoji": "🎬",
-"is_base": false,
-"rank": 363
-},
-{
-"emoji": "🎦",
-"is_base": false,
-"rank": 1132
 }
 ],
 "Gedankenblase": [
@@ -3824,29 +2269,9 @@
 ],
 "Hand": [
 {
-"emoji": "👋",
+"emoji": "👍",
 "is_base": true,
-"rank": 100
-},
-{
-"emoji": "🤚",
-"is_base": true,
-"rank": 331
-},
-{
-"emoji": "✋",
-"is_base": true,
-"rank": 171
-},
-{
-"emoji": "🫱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲",
-"is_base": false,
-"rank": null
+"rank": 4
 },
 {
 "emoji": "👌",
@@ -3857,121 +2282,6 @@
 "emoji": "🤞",
 "is_base": true,
 "rank": 55
-},
-{
-"emoji": "🤟",
-"is_base": false,
-"rank": 178
-},
-{
-"emoji": "🤘",
-"is_base": true,
-"rank": 132
-},
-{
-"emoji": "🤙",
-"is_base": true,
-"rank": 149
-},
-{
-"emoji": "🖕",
-"is_base": true,
-"rank": 112
-},
-{
-"emoji": "👍",
-"is_base": true,
-"rank": 4
-},
-{
-"emoji": "👎",
-"is_base": true,
-"rank": 199
-},
-{
-"emoji": "👊",
-"is_base": true,
-"rank": 118
-},
-{
-"emoji": "🧤",
-"is_base": false,
-"rank": 807
-},
-{
-"emoji": "🫱🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Winken": [
@@ -4011,11 +2321,6 @@
 ],
 "rechts": [
 {
-"emoji": "🫱",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "👉",
 "is_base": true,
 "rank": 42
@@ -4026,37 +2331,12 @@
 "rank": 663
 },
 {
-"emoji": "🫱🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿",
+"emoji": "🫱",
 "is_base": false,
 "rank": null
 }
 ],
 "links": [
-{
-"emoji": "🫲",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "👈",
 "is_base": true,
@@ -4071,31 +2351,6 @@
 "emoji": "🔚",
 "is_base": false,
 "rank": 1006
-},
-{
-"emoji": "🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫲🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "abweisen": [
@@ -4111,21 +2366,6 @@
 },
 {
 "emoji": "🫳🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏿",
 "is_base": false,
 "rank": null
 }
@@ -4145,171 +2385,6 @@
 "emoji": "🤌",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "wegscheuchen": [
@@ -4325,21 +2400,6 @@
 },
 {
 "emoji": "🫳🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏿",
 "is_base": false,
 "rank": null
 }
@@ -4359,21 +2419,6 @@
 "emoji": "🫳🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫳🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫳🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "anbieten": [
@@ -4389,21 +2434,6 @@
 },
 {
 "emoji": "🫴🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
 "is_base": false,
 "rank": null
 }
@@ -4423,21 +2453,6 @@
 "emoji": "🫴🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "einladen": [
@@ -4453,21 +2468,6 @@
 },
 {
 "emoji": "🫴🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
 "is_base": false,
 "rank": null
 }
@@ -4487,21 +2487,6 @@
 "emoji": "🫴🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "locken": [
@@ -4517,21 +2502,6 @@
 },
 {
 "emoji": "🫴🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫴🏿",
 "is_base": false,
 "rank": null
 }
@@ -4551,51 +2521,6 @@
 "emoji": "🫷🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫷🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "stopp": [
@@ -4611,51 +2536,6 @@
 },
 {
 "emoji": "🫷🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫷🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫸🏿",
 "is_base": false,
 "rank": null
 }
@@ -4708,21 +2588,6 @@
 "emoji": "🤌🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🤌🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤌🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "unbedeutend": [
@@ -4738,21 +2603,6 @@
 },
 {
 "emoji": "🤏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏿",
 "is_base": false,
 "rank": null
 }
@@ -4772,21 +2622,6 @@
 "emoji": "🤏🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🤏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Wenig-Geste": [
@@ -4804,53 +2639,18 @@
 "emoji": "🤏🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🤏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤏🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Finger": [
-{
-"emoji": "🤞",
-"is_base": true,
-"rank": 55
-},
-{
-"emoji": "🤘",
-"is_base": true,
-"rank": 132
-},
-{
-"emoji": "👈",
-"is_base": true,
-"rank": 97
-},
 {
 "emoji": "👉",
 "is_base": true,
 "rank": 42
 },
 {
-"emoji": "👆",
+"emoji": "🤞",
 "is_base": true,
-"rank": 228
-},
-{
-"emoji": "🖕",
-"is_base": true,
-"rank": 112
+"rank": 55
 },
 {
 "emoji": "👇",
@@ -4885,21 +2685,6 @@
 "emoji": "🫰🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫰🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "teuer": [
@@ -4917,21 +2702,6 @@
 "emoji": "🫰🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫰🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫰🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Ich-liebe-dich-Geste": [
@@ -4947,21 +2717,6 @@
 },
 {
 "emoji": "🤟🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤟🏿",
 "is_base": false,
 "rank": null
 }
@@ -4986,26 +2741,6 @@
 },
 {
 "emoji": "🧑🏻‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
 "is_base": false,
 "rank": null
 }
@@ -5038,24 +2773,19 @@
 ],
 "Handrückseite": [
 {
-"emoji": "👈",
-"is_base": true,
-"rank": 97
-},
-{
 "emoji": "👉",
 "is_base": true,
 "rank": 42
 },
 {
-"emoji": "👆",
-"is_base": true,
-"rank": 228
-},
-{
 "emoji": "👇",
 "is_base": true,
 "rank": 64
+},
+{
+"emoji": "👈",
+"is_base": true,
+"rank": 97
 }
 ],
 "aufwärts": [
@@ -5065,19 +2795,14 @@
 "rank": 228
 },
 {
-"emoji": "🔼",
-"is_base": false,
-"rank": 1136
-},
-{
-"emoji": "⏫",
-"is_base": false,
-"rank": 1262
-},
-{
 "emoji": "🔺",
 "is_base": false,
 "rank": 640
+},
+{
+"emoji": "🔼",
+"is_base": false,
+"rank": 1136
 }
 ],
 "Mittelfinger": [
@@ -5094,14 +2819,14 @@
 "rank": 64
 },
 {
-"emoji": "🔽",
-"is_base": false,
-"rank": 702
-},
-{
 "emoji": "🔻",
 "is_base": false,
 "rank": 521
+},
+{
+"emoji": "🔽",
+"is_base": false,
+"rank": 702
 }
 ],
 "du": [
@@ -5117,21 +2842,6 @@
 },
 {
 "emoji": "🫵🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏿",
 "is_base": false,
 "rank": null
 }
@@ -5151,21 +2861,6 @@
 "emoji": "🫵🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "zeigen": [
@@ -5181,21 +2876,6 @@
 },
 {
 "emoji": "🫵🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫵🏿",
 "is_base": false,
 "rank": null
 }
@@ -5228,19 +2908,14 @@
 ],
 "Faust": [
 {
-"emoji": "✊",
-"is_base": true,
-"rank": 230
-},
-{
 "emoji": "👊",
 "is_base": true,
 "rank": 118
 },
 {
-"emoji": "🤛",
+"emoji": "✊",
 "is_base": true,
-"rank": 389
+"rank": 230
 },
 {
 "emoji": "🤜",
@@ -5269,274 +2944,14 @@
 "rank": 27
 },
 {
-"emoji": "🫶",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "👐",
-"is_base": true,
-"rank": 302
-},
-{
 "emoji": "🤝",
 "is_base": true,
 "rank": 136
 },
 {
-"emoji": "🧑‍🤝‍🧑",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
+"emoji": "👐",
+"is_base": true,
+"rank": 302
 }
 ],
 "Klatschen": [
@@ -5573,21 +2988,6 @@
 "emoji": "🫶🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫶🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "offen": [
@@ -5605,56 +3005,21 @@
 "emoji": "📬",
 "is_base": false,
 "rank": 769
-},
-{
-"emoji": "📭",
-"is_base": false,
-"rank": 1352
-},
-{
-"emoji": "📂",
-"is_base": false,
-"rank": 1198
-},
-{
-"emoji": "🔓",
-"is_base": false,
-"rank": 888
 }
 ],
 "beten": [
-{
-"emoji": "🤲",
-"is_base": false,
-"rank": 226
-},
 {
 "emoji": "🙏",
 "is_base": true,
 "rank": 6
 },
 {
+"emoji": "🤲",
+"is_base": false,
+"rank": 226
+},
+{
 "emoji": "🤲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤲🏿",
 "is_base": false,
 "rank": null
 }
@@ -5674,96 +3039,6 @@
 "emoji": "🫱🏻‍🫲🏽",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏾",
-"is_base": false,
-"rank": null
 }
 ],
 "Handschlag": [
@@ -5781,96 +3056,6 @@
 "emoji": "🫱🏻‍🫲🏽",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏾",
-"is_base": false,
-"rank": null
 }
 ],
 "Vereinbarung": [
@@ -5886,96 +3071,6 @@
 },
 {
 "emoji": "🫱🏻‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏻‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏼‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏽‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏾‍🫲🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫱🏿‍🫲🏾",
 "is_base": false,
 "rank": null
 }
@@ -6062,14 +3157,14 @@
 ],
 "Smartphone": [
 {
-"emoji": "🤳",
-"is_base": true,
-"rank": 563
-},
-{
 "emoji": "📱",
 "is_base": false,
 "rank": 294
+},
+{
+"emoji": "🤳",
+"is_base": true,
+"rank": 563
 }
 ],
 "stark": [
@@ -6099,176 +3194,6 @@
 },
 {
 "emoji": "🦻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦮",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🐕‍🦺",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦽",
 "is_base": false,
 "rank": null
 }
@@ -6307,21 +3232,6 @@
 "emoji": "🦵🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Treten": [
@@ -6337,51 +3247,6 @@
 },
 {
 "emoji": "🦵🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏿",
 "is_base": false,
 "rank": null
 }
@@ -6401,56 +3266,21 @@
 "emoji": "🦵🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦵🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦵🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Fuß": [
-{
-"emoji": "🦶",
-"is_base": false,
-"rank": 636
-},
 {
 "emoji": "👣",
 "is_base": false,
 "rank": 490
 },
 {
+"emoji": "🦶",
+"is_base": false,
+"rank": 636
+},
+{
 "emoji": "🦶🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏿",
 "is_base": false,
 "rank": null
 }
@@ -6470,34 +3300,9 @@
 "emoji": "🦶🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦶🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦶🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Körperteil": [
-{
-"emoji": "👂",
-"is_base": true,
-"rank": 469
-},
-{
-"emoji": "👃",
-"is_base": true,
-"rank": 471
-},
 {
 "emoji": "👅",
 "is_base": false,
@@ -6507,6 +3312,11 @@
 "emoji": "👄",
 "is_base": false,
 "rank": 173
+},
+{
+"emoji": "👂",
+"is_base": true,
+"rank": 469
 }
 ],
 "Ohr": [
@@ -6522,26 +3332,6 @@
 },
 {
 "emoji": "🧏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏿",
 "is_base": false,
 "rank": null
 }
@@ -6561,51 +3351,6 @@
 "emoji": "🦻🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦻🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Hörgerät": [
@@ -6621,21 +3366,6 @@
 },
 {
 "emoji": "🦻🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏿",
 "is_base": false,
 "rank": null
 }
@@ -6655,21 +3385,6 @@
 "emoji": "🦻🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦻🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "taub": [
@@ -6685,51 +3400,6 @@
 },
 {
 "emoji": "🦻🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦻🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏿",
 "is_base": false,
 "rank": null
 }
@@ -6865,14 +3535,14 @@
 ],
 "Knochen": [
 {
-"emoji": "🦴",
-"is_base": false,
-"rank": 517
-},
-{
 "emoji": "🍖",
 "is_base": false,
 "rank": 501
+},
+{
+"emoji": "🦴",
+"is_base": false,
+"rank": 517
 },
 {
 "emoji": "🩻",
@@ -6920,72 +3590,22 @@
 "rank": 214
 },
 {
-"emoji": "🤱",
-"is_base": false,
-"rank": 585
-},
-{
-"emoji": "🧑‍🍼",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🍼",
 "is_base": false,
 "rank": 262
 },
 {
-"emoji": "🤱🏻",
+"emoji": "🤱",
 "is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍼",
-"is_base": false,
-"rank": null
+"rank": 585
 }
 ],
 "geschlechtsneutral": [
+{
+"emoji": "🧓",
+"is_base": false,
+"rank": 803
+},
 {
 "emoji": "🧒",
 "is_base": false,
@@ -6995,206 +3615,6 @@
 "emoji": "🧑",
 "is_base": false,
 "rank": 1039
-},
-{
-"emoji": "🧓",
-"is_base": false,
-"rank": 803
-},
-{
-"emoji": "🧒🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "jung": [
@@ -7212,24 +3632,14 @@
 "emoji": "🧒🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧒🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Kind": [
+{
+"emoji": "🍼",
+"is_base": false,
+"rank": 262
+},
 {
 "emoji": "🧒",
 "is_base": false,
@@ -7239,36 +3649,6 @@
 "emoji": "👪",
 "is_base": true,
 "rank": 1004
-},
-{
-"emoji": "🍼",
-"is_base": false,
-"rank": 262
-},
-{
-"emoji": "🧒🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧒🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Junge": [
@@ -7300,169 +3680,9 @@
 "emoji": "🧑🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦲",
-"is_base": false,
-"rank": null
 }
 ],
 "Person": [
-{
-"emoji": "🧑",
-"is_base": false,
-"rank": 1039
-},
-{
-"emoji": "🧔",
-"is_base": false,
-"rank": 810
-},
-{
-"emoji": "🤵",
-"is_base": true,
-"rank": 839
-},
-{
-"emoji": "👰",
-"is_base": true,
-"rank": 573
-},
-{
-"emoji": "🧑‍🍼",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🤸",
 "is_base": true,
@@ -7474,226 +3694,16 @@
 "rank": 566
 },
 {
-"emoji": "🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦰",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦱",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍼",
-"is_base": false,
-"rank": null
+"emoji": "👰",
+"is_base": true,
+"rank": 573
 }
 ],
 "Mann": [
 {
-"emoji": "👨",
-"is_base": true,
-"rank": 589
-},
-{
-"emoji": "👴",
-"is_base": true,
-"rank": 559
-},
-{
-"emoji": "👲",
-"is_base": true,
-"rank": 1225
-},
-{
 "emoji": "🕺",
 "is_base": true,
 "rank": 238
-},
-{
-"emoji": "👫",
-"is_base": true,
-"rank": 511
 },
 {
 "emoji": "💏",
@@ -7701,59 +3711,9 @@
 "rank": 443
 },
 {
-"emoji": "💑",
-"is_base": false,
-"rank": 597
-},
-{
-"emoji": "💏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏿",
-"is_base": false,
-"rank": null
+"emoji": "👫",
+"is_base": true,
+"rank": 511
 }
 ],
 "Bart": [
@@ -7771,33 +3731,13 @@
 "emoji": "🧔🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧔🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧔🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Frau": [
 {
-"emoji": "👩",
+"emoji": "💃",
 "is_base": true,
-"rank": 429
-},
-{
-"emoji": "👵",
-"is_base": true,
-"rank": 562
+"rank": 117
 },
 {
 "emoji": "🤰",
@@ -7805,74 +3745,9 @@
 "rank": 350
 },
 {
-"emoji": "💃",
+"emoji": "👩",
 "is_base": true,
-"rank": 117
-},
-{
-"emoji": "👫",
-"is_base": true,
-"rank": 511
-},
-{
-"emoji": "💏",
-"is_base": false,
-"rank": 443
-},
-{
-"emoji": "💑",
-"is_base": false,
-"rank": 597
-},
-{
-"emoji": "💏🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💏🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏿",
-"is_base": false,
-"rank": null
+"rank": 429
 }
 ],
 "alt": [
@@ -7888,21 +3763,6 @@
 },
 {
 "emoji": "🧓🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧓🏿",
 "is_base": false,
 "rank": null
 }
@@ -7930,26 +3790,26 @@
 ],
 "x": [
 {
-"emoji": "🙅",
-"is_base": true,
-"rank": 250
-},
-{
 "emoji": "❌",
 "is_base": false,
 "rank": 194
+},
+{
+"emoji": "🙅",
+"is_base": true,
+"rank": 250
 }
 ],
 "o": [
 {
-"emoji": "🙆",
-"is_base": true,
-"rank": 369
-},
-{
 "emoji": "⭕",
 "is_base": false,
 "rank": 307
+},
+{
+"emoji": "🙆",
+"is_base": true,
+"rank": 369
 }
 ],
 "Hilfe": [
@@ -7998,21 +3858,6 @@
 },
 {
 "emoji": "🧏🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧏🏿",
 "is_base": false,
 "rank": null
 }
@@ -8088,21 +3933,6 @@
 "emoji": "🧑🏼‍🎓",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎓",
-"is_base": false,
-"rank": null
 }
 ],
 "Student": [
@@ -8118,21 +3948,6 @@
 },
 {
 "emoji": "🧑🏼‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎓",
 "is_base": false,
 "rank": null
 }
@@ -8152,21 +3967,6 @@
 "emoji": "🧑🏼‍🎓",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎓",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎓",
-"is_base": false,
-"rank": null
 }
 ],
 "Dozent": [
@@ -8182,21 +3982,6 @@
 },
 {
 "emoji": "🧑🏼‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏫",
 "is_base": false,
 "rank": null
 }
@@ -8216,21 +4001,6 @@
 "emoji": "🧑🏼‍🏫",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏫",
-"is_base": false,
-"rank": null
 }
 ],
 "Lehrer(in)": [
@@ -8246,21 +4016,6 @@
 },
 {
 "emoji": "🧑🏼‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏫",
 "is_base": false,
 "rank": null
 }
@@ -8280,21 +4035,6 @@
 "emoji": "🧑🏼‍🏫",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏫",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏫",
-"is_base": false,
-"rank": null
 }
 ],
 "Bauer": [
@@ -8310,21 +4050,6 @@
 },
 {
 "emoji": "🧑🏼‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🌾",
 "is_base": false,
 "rank": null
 }
@@ -8344,21 +4069,6 @@
 "emoji": "🧑🏼‍🌾",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🌾",
-"is_base": false,
-"rank": null
 }
 ],
 "Farmer": [
@@ -8374,21 +4084,6 @@
 },
 {
 "emoji": "🧑🏼‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🌾",
 "is_base": false,
 "rank": null
 }
@@ -8408,21 +4103,6 @@
 "emoji": "🧑🏼‍🌾",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🌾",
-"is_base": false,
-"rank": null
 }
 ],
 "Landwirt": [
@@ -8438,21 +4118,6 @@
 },
 {
 "emoji": "🧑🏼‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🌾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🌾",
 "is_base": false,
 "rank": null
 }
@@ -8472,21 +4137,6 @@
 "emoji": "🧑🏼‍🍳",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🍳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍳",
-"is_base": false,
-"rank": null
 }
 ],
 "Koch/Köchin": [
@@ -8502,21 +4152,6 @@
 },
 {
 "emoji": "🧑🏼‍🍳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🍳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍳",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍳",
 "is_base": false,
 "rank": null
 }
@@ -8536,21 +4171,6 @@
 "emoji": "🧑🏼‍🔧",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔧",
-"is_base": false,
-"rank": null
 }
 ],
 "Klempner": [
@@ -8568,56 +4188,21 @@
 "emoji": "🧑🏼‍🔧",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔧",
-"is_base": false,
-"rank": null
 }
 ],
 "Mechaniker": [
-{
-"emoji": "🧑‍🔧",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🧰",
 "is_base": false,
 "rank": 1205
 },
 {
+"emoji": "🧑‍🔧",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔧",
 "is_base": false,
 "rank": null
 }
@@ -8637,21 +4222,6 @@
 "emoji": "🧑🏼‍🔧",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔧",
-"is_base": false,
-"rank": null
 }
 ],
 "Arbeiter": [
@@ -8669,56 +4239,21 @@
 "emoji": "🧑🏼‍🏭",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏭",
-"is_base": false,
-"rank": null
 }
 ],
 "Fabrik": [
-{
-"emoji": "🧑‍🏭",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🏭",
 "is_base": false,
 "rank": 1284
 },
 {
+"emoji": "🧑‍🏭",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏭",
 "is_base": false,
 "rank": null
 }
@@ -8738,21 +4273,6 @@
 "emoji": "🧑🏼‍🏭",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏭",
-"is_base": false,
-"rank": null
 }
 ],
 "industriell": [
@@ -8768,21 +4288,6 @@
 },
 {
 "emoji": "🧑🏼‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏭",
 "is_base": false,
 "rank": null
 }
@@ -8802,21 +4307,6 @@
 "emoji": "🧑🏼‍🏭",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🏭",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🏭",
-"is_base": false,
-"rank": null
 }
 ],
 "Architekt": [
@@ -8832,21 +4322,6 @@
 },
 {
 "emoji": "🧑🏼‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💼",
 "is_base": false,
 "rank": null
 }
@@ -8866,21 +4341,6 @@
 "emoji": "🧑🏼‍💼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💼",
-"is_base": false,
-"rank": null
 }
 ],
 "Business": [
@@ -8896,21 +4356,6 @@
 },
 {
 "emoji": "🧑🏼‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💼",
 "is_base": false,
 "rank": null
 }
@@ -8930,21 +4375,6 @@
 "emoji": "🧑🏼‍💼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💼",
-"is_base": false,
-"rank": null
 }
 ],
 "Biologe": [
@@ -8960,21 +4390,6 @@
 },
 {
 "emoji": "🧑🏼‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
 "is_base": false,
 "rank": null
 }
@@ -8994,21 +4409,6 @@
 "emoji": "🧑🏼‍🔬",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
-"is_base": false,
-"rank": null
 }
 ],
 "Ingenieur": [
@@ -9024,21 +4424,6 @@
 },
 {
 "emoji": "🧑🏼‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
 "is_base": false,
 "rank": null
 }
@@ -9058,56 +4443,21 @@
 "emoji": "🧑🏼‍🔬",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
-"is_base": false,
-"rank": null
 }
 ],
 "Wissenschaftler": [
-{
-"emoji": "🧑‍🔬",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🥼",
 "is_base": false,
 "rank": 1168
 },
 {
+"emoji": "🧑‍🔬",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
 "is_base": false,
 "rank": null
 }
@@ -9127,21 +4477,6 @@
 "emoji": "🧑🏼‍🔬",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🔬",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🔬",
-"is_base": false,
-"rank": null
 }
 ],
 "Entwickler": [
@@ -9157,21 +4492,6 @@
 },
 {
 "emoji": "🧑🏼‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
 "is_base": false,
 "rank": null
 }
@@ -9191,21 +4511,6 @@
 "emoji": "🧑🏼‍💻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
-"is_base": false,
-"rank": null
 }
 ],
 "IT-Experte/IT-Expertin": [
@@ -9221,21 +4526,6 @@
 },
 {
 "emoji": "🧑🏼‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
 "is_base": false,
 "rank": null
 }
@@ -9255,21 +4545,6 @@
 "emoji": "🧑🏼‍💻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
-"is_base": false,
-"rank": null
 }
 ],
 "Software": [
@@ -9285,21 +4560,6 @@
 },
 {
 "emoji": "🧑🏼‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
 "is_base": false,
 "rank": null
 }
@@ -9319,21 +4579,6 @@
 "emoji": "🧑🏼‍💻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍💻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍💻",
-"is_base": false,
-"rank": null
 }
 ],
 "Entertainer": [
@@ -9349,21 +4594,6 @@
 },
 {
 "emoji": "🧑🏼‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
 "is_base": false,
 "rank": null
 }
@@ -9383,21 +4613,6 @@
 "emoji": "🧑🏼‍🎤",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
-"is_base": false,
-"rank": null
 }
 ],
 "Sänger(in)": [
@@ -9413,21 +4628,6 @@
 },
 {
 "emoji": "🧑🏼‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
 "is_base": false,
 "rank": null
 }
@@ -9447,21 +4647,6 @@
 "emoji": "🧑🏼‍🎤",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
-"is_base": false,
-"rank": null
 }
 ],
 "Star": [
@@ -9479,56 +4664,21 @@
 "emoji": "🧑🏼‍🎤",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎤",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎤",
-"is_base": false,
-"rank": null
 }
 ],
 "Künstler": [
-{
-"emoji": "🧑‍🎨",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🎨",
 "is_base": false,
 "rank": 405
 },
 {
+"emoji": "🧑‍🎨",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎨",
 "is_base": false,
 "rank": null
 }
@@ -9548,56 +4698,21 @@
 "emoji": "🧑🏼‍🎨",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎨",
-"is_base": false,
-"rank": null
 }
 ],
 "Palette": [
-{
-"emoji": "🧑‍🎨",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🎨",
 "is_base": false,
 "rank": 405
 },
 {
+"emoji": "🧑‍🎨",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎨",
 "is_base": false,
 "rank": null
 }
@@ -9617,21 +4732,6 @@
 "emoji": "🧑🏼‍🚀",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚀",
-"is_base": false,
-"rank": null
 }
 ],
 "Astronaut(in)": [
@@ -9649,56 +4749,21 @@
 "emoji": "🧑🏼‍🚀",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚀",
-"is_base": false,
-"rank": null
 }
 ],
 "Rakete": [
-{
-"emoji": "🧑‍🚀",
-"is_base": false,
-"rank": null
-},
 {
 "emoji": "🚀",
 "is_base": false,
 "rank": 200
 },
 {
+"emoji": "🧑‍🚀",
+"is_base": false,
+"rank": null
+},
+{
 "emoji": "🧑🏻‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚀",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚀",
 "is_base": false,
 "rank": null
 }
@@ -9718,21 +4783,6 @@
 "emoji": "🧑🏼‍🚒",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚒",
-"is_base": false,
-"rank": null
 }
 ],
 "Feuerwehrmann": [
@@ -9748,21 +4798,6 @@
 },
 {
 "emoji": "🧑🏼‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚒",
 "is_base": false,
 "rank": null
 }
@@ -9782,24 +4817,14 @@
 "emoji": "🧑🏼‍🚒",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🚒",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🚒",
-"is_base": false,
-"rank": null
 }
 ],
 "Polizei": [
+{
+"emoji": "🚨",
+"is_base": false,
+"rank": 175
+},
 {
 "emoji": "👮",
 "is_base": true,
@@ -9809,16 +4834,6 @@
 "emoji": "🚓",
 "is_base": false,
 "rank": 791
-},
-{
-"emoji": "🚔",
-"is_base": false,
-"rank": 808
-},
-{
-"emoji": "🚨",
-"is_base": false,
-"rank": 175
 }
 ],
 "Polizist(in)": [
@@ -9878,21 +4893,6 @@
 "emoji": "🥷🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🥷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Kämpfer": [
@@ -9908,26 +4908,6 @@
 },
 {
 "emoji": "🥷🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏿",
 "is_base": false,
 "rank": null
 }
@@ -9947,21 +4927,6 @@
 "emoji": "🥷🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🥷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "vermummt": [
@@ -9977,21 +4942,6 @@
 },
 {
 "emoji": "🥷🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥷🏿",
 "is_base": false,
 "rank": null
 }
@@ -10037,21 +4987,6 @@
 "emoji": "🫅🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫅🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "königlich": [
@@ -10067,21 +5002,6 @@
 },
 {
 "emoji": "🫅🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏿",
 "is_base": false,
 "rank": null
 }
@@ -10101,21 +5021,6 @@
 "emoji": "🫅🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫅🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Monarchin": [
@@ -10133,21 +5038,6 @@
 "emoji": "🫅🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫅🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫅🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Prinz": [
@@ -10159,14 +5049,14 @@
 ],
 "Krone": [
 {
-"emoji": "👸",
-"is_base": true,
-"rank": 371
-},
-{
 "emoji": "👑",
 "is_base": false,
 "rank": 90
+},
+{
+"emoji": "👸",
+"is_base": true,
+"rank": 371
 }
 ],
 "Prinzessin": [
@@ -10205,21 +5095,6 @@
 "emoji": "🧕🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧕🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Kopftuch": [
@@ -10235,21 +5110,6 @@
 },
 {
 "emoji": "🧕🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏿",
 "is_base": false,
 "rank": null
 }
@@ -10269,21 +5129,6 @@
 "emoji": "🧕🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧕🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Tichel": [
@@ -10299,21 +5144,6 @@
 },
 {
 "emoji": "🧕🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧕🏿",
 "is_base": false,
 "rank": null
 }
@@ -10373,56 +5203,6 @@
 "emoji": "🫄",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫃🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "aufgebläht": [
@@ -10438,51 +5218,6 @@
 },
 {
 "emoji": "🫃🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏿",
 "is_base": false,
 "rank": null
 }
@@ -10502,51 +5237,6 @@
 "emoji": "🫃🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🫃🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "dick": [
@@ -10562,51 +5252,6 @@
 },
 {
 "emoji": "🫃🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫃🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫄🏿",
 "is_base": false,
 "rank": null
 }
@@ -10626,21 +5271,6 @@
 "emoji": "🤱🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🤱🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Stillen": [
@@ -10656,21 +5286,6 @@
 },
 {
 "emoji": "🤱🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🤱🏿",
 "is_base": false,
 "rank": null
 }
@@ -10690,21 +5305,6 @@
 "emoji": "🧑🏼‍🍼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍼",
-"is_base": false,
-"rank": null
 }
 ],
 "stillend": [
@@ -10720,21 +5320,6 @@
 },
 {
 "emoji": "🧑🏼‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🍼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🍼",
 "is_base": false,
 "rank": null
 }
@@ -10755,6 +5340,11 @@
 ],
 "Weihnachten": [
 {
+"emoji": "🎄",
+"is_base": false,
+"rank": 433
+},
+{
 "emoji": "🎅",
 "is_base": true,
 "rank": 911
@@ -10763,41 +5353,6 @@
 "emoji": "🤶",
 "is_base": true,
 "rank": 1172
-},
-{
-"emoji": "🧑‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🎄",
-"is_base": false,
-"rank": 433
-},
-{
-"emoji": "🧑🏻‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎄",
-"is_base": false,
-"rank": null
 }
 ],
 "Weihnachtsmann": [
@@ -10829,21 +5384,6 @@
 "emoji": "🧑🏼‍🎄",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏽‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🎄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🎄",
-"is_base": false,
-"rank": null
 }
 ],
 "Held": [
@@ -10859,21 +5399,6 @@
 },
 {
 "emoji": "🦸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
 "is_base": false,
 "rank": null
 }
@@ -10893,21 +5418,6 @@
 "emoji": "🦸🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Superheld(in)": [
@@ -10923,21 +5433,6 @@
 },
 {
 "emoji": "🦸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
 "is_base": false,
 "rank": null
 }
@@ -10957,21 +5452,6 @@
 "emoji": "🦸🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Superkraft": [
@@ -10987,21 +5467,6 @@
 },
 {
 "emoji": "🦸🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
 "is_base": false,
 "rank": null
 }
@@ -11021,21 +5486,6 @@
 "emoji": "🦸🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦸🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦸🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Bösewicht": [
@@ -11053,24 +5503,14 @@
 "emoji": "🦹🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🦹🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦹🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦹🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Hexe": [
+{
+"emoji": "🧹",
+"is_base": false,
+"rank": 692
+},
 {
 "emoji": "🧙",
 "is_base": false,
@@ -11078,36 +5518,6 @@
 },
 {
 "emoji": "🪄",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧹",
-"is_base": false,
-"rank": 692
-},
-{
-"emoji": "🧙🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏿",
 "is_base": false,
 "rank": null
 }
@@ -11127,21 +5537,6 @@
 "emoji": "🧙🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧙🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Magier(in)": [
@@ -11157,21 +5552,6 @@
 },
 {
 "emoji": "🧙🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏿",
 "is_base": false,
 "rank": null
 }
@@ -11191,26 +5571,6 @@
 "emoji": "🧙🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧙🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Zauberin": [
@@ -11226,26 +5586,6 @@
 },
 {
 "emoji": "🧙🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧙🏿",
 "is_base": false,
 "rank": null
 }
@@ -11265,21 +5605,6 @@
 "emoji": "🧚🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧚🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Oberon": [
@@ -11295,21 +5620,6 @@
 },
 {
 "emoji": "🧚🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏿",
 "is_base": false,
 "rank": null
 }
@@ -11329,26 +5639,6 @@
 "emoji": "🧚🏻",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧚🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Titania": [
@@ -11364,21 +5654,6 @@
 },
 {
 "emoji": "🧚🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧚🏿",
 "is_base": false,
 "rank": null
 }
@@ -11398,93 +5673,38 @@
 "emoji": "🧛🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧛🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Untoter": [
-{
-"emoji": "🧛",
-"is_base": false,
-"rank": 865
-},
 {
 "emoji": "🧟",
 "is_base": false,
 "rank": 548
 },
 {
+"emoji": "🧛",
+"is_base": false,
+"rank": 865
+},
+{
 "emoji": "🧛🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏿",
 "is_base": false,
 "rank": null
 }
 ],
 "Vampir": [
 {
-"emoji": "🧛",
-"is_base": false,
-"rank": 865
-},
-{
 "emoji": "🦇",
 "is_base": false,
 "rank": 587
 },
 {
+"emoji": "🧛",
+"is_base": false,
+"rank": 865
+},
+{
 "emoji": "🧛🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧛🏿",
 "is_base": false,
 "rank": null
 }
@@ -11504,21 +5724,6 @@
 "emoji": "🧜🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧜🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Wasserfrau": [
@@ -11536,21 +5741,6 @@
 "emoji": "🧜🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧜🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Wassermann": [
@@ -11560,39 +5750,14 @@
 "rank": 683
 },
 {
-"emoji": "🏺",
-"is_base": false,
-"rank": 1235
-},
-{
 "emoji": "♒",
 "is_base": false,
 "rank": 958
 },
 {
-"emoji": "🧜🏻",
+"emoji": "🏺",
 "is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏿",
-"is_base": false,
-"rank": null
+"rank": 1235
 }
 ],
 "Wassermensch": [
@@ -11608,21 +5773,6 @@
 },
 {
 "emoji": "🧜🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧜🏿",
 "is_base": false,
 "rank": null
 }
@@ -11642,21 +5792,6 @@
 "emoji": "🧝🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧝🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Elben": [
@@ -11672,21 +5807,6 @@
 },
 {
 "emoji": "🧝🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏿",
 "is_base": false,
 "rank": null
 }
@@ -11706,21 +5826,6 @@
 "emoji": "🧝🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧝🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Elf(e)": [
@@ -11738,21 +5843,6 @@
 "emoji": "🧝🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧝🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "magisch": [
@@ -11768,21 +5858,6 @@
 },
 {
 "emoji": "🧝🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧝🏿",
 "is_base": false,
 "rank": null
 }
@@ -11886,21 +5961,6 @@
 "emoji": "🧍🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧍🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧍🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧍🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "stehen": [
@@ -11916,21 +5976,6 @@
 },
 {
 "emoji": "🧍🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧍🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧍🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧍🏿",
 "is_base": false,
 "rank": null
 }
@@ -11950,21 +5995,6 @@
 "emoji": "🧎🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧎🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧎🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧎🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "kniend": [
@@ -11980,21 +6010,6 @@
 },
 {
 "emoji": "🧎🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧎🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧎🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧎🏿",
 "is_base": false,
 "rank": null
 }
@@ -12014,31 +6029,6 @@
 "emoji": "🦯",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧑🏻‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦯",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦯",
-"is_base": false,
-"rank": null
 }
 ],
 "Rollstuhl": [
@@ -12054,51 +6044,6 @@
 },
 {
 "emoji": "🧑🏻‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦽",
 "is_base": false,
 "rank": null
 }
@@ -12129,74 +6074,14 @@
 "rank": 120
 },
 {
-"emoji": "🤺",
-"is_base": false,
-"rank": 699
-},
-{
-"emoji": "🏇",
-"is_base": true,
-"rank": 793
-},
-{
-"emoji": "🏂",
-"is_base": true,
-"rank": 972
-},
-{
-"emoji": "🏊",
-"is_base": true,
-"rank": 620
-},
-{
-"emoji": "🤽",
-"is_base": true,
-"rank": 1126
-},
-{
-"emoji": "🤾",
-"is_base": true,
-"rank": 981
-},
-{
 "emoji": "🏀",
 "is_base": false,
 "rank": 344
 },
 {
-"emoji": "🏈",
-"is_base": false,
-"rank": 530
-},
-{
-"emoji": "🏉",
-"is_base": false,
-"rank": 873
-},
-{
-"emoji": "🎾",
-"is_base": false,
-"rank": 722
-},
-{
 "emoji": "🥊",
 "is_base": false,
 "rank": 453
-},
-{
-"emoji": "🥅",
-"is_base": false,
-"rank": 975
-},
-{
-"emoji": "🎽",
-"is_base": false,
-"rank": 994
-},
-{
-"emoji": "🏁",
-"is_base": false,
-"rank": 468
 }
 ],
 "Tanz": [
@@ -12259,21 +6144,6 @@
 "emoji": "🧖🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧖🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧖🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧖🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Sauna": [
@@ -12289,21 +6159,6 @@
 },
 {
 "emoji": "🧖🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧖🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧖🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧖🏿",
 "is_base": false,
 "rank": null
 }
@@ -12323,21 +6178,6 @@
 "emoji": "🧗🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧗🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧗🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧗🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Bergsteiger(in)": [
@@ -12353,21 +6193,6 @@
 },
 {
 "emoji": "🧗🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧗🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧗🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧗🏿",
 "is_base": false,
 "rank": null
 }
@@ -12496,19 +6321,14 @@
 ],
 "Boot": [
 {
-"emoji": "🚣",
-"is_base": true,
-"rank": 896
-},
-{
 "emoji": "⛵",
 "is_base": false,
 "rank": 685
 },
 {
-"emoji": "🛶",
-"is_base": false,
-"rank": 1092
+"emoji": "🚣",
+"is_base": true,
+"rank": 896
 },
 {
 "emoji": "🚤",
@@ -12544,19 +6364,9 @@
 ],
 "Wasser": [
 {
-"emoji": "🏊",
-"is_base": true,
-"rank": 620
-},
-{
-"emoji": "🤽",
-"is_base": true,
-"rank": 1126
-},
-{
-"emoji": "🐃",
+"emoji": "💧",
 "is_base": false,
-"rank": 764
+"rank": 241
 },
 {
 "emoji": "🍉",
@@ -12564,19 +6374,9 @@
 "rank": 325
 },
 {
-"emoji": "💧",
-"is_base": false,
-"rank": 241
-},
-{
-"emoji": "🚰",
-"is_base": false,
-"rank": 1038
-},
-{
-"emoji": "🚱",
-"is_base": false,
-"rank": 1371
+"emoji": "🏊",
+"is_base": true,
+"rank": 620
 }
 ],
 "Radfahren": [
@@ -12725,21 +6525,6 @@
 "emoji": "🧘🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧘🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧘🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧘🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Yoga": [
@@ -12757,57 +6542,42 @@
 "emoji": "🧘🏼",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧘🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧘🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧘🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Bad": [
 {
-"emoji": "🛀",
-"is_base": true,
-"rank": 707
-},
-{
 "emoji": "🛁",
 "is_base": false,
 "rank": 700
+},
+{
+"emoji": "🛀",
+"is_base": true,
+"rank": 707
 }
 ],
 "Badewanne": [
 {
-"emoji": "🛀",
-"is_base": true,
-"rank": 707
-},
-{
 "emoji": "🛁",
 "is_base": false,
 "rank": 700
+},
+{
+"emoji": "🛀",
+"is_base": true,
+"rank": 707
 }
 ],
 "Badezimmer": [
 {
-"emoji": "🛀",
-"is_base": true,
-"rank": 707
-},
-{
 "emoji": "🛁",
 "is_base": false,
 "rank": 700
+},
+{
+"emoji": "🛀",
+"is_base": true,
+"rank": 707
 },
 {
 "emoji": "🪥",
@@ -12824,9 +6594,9 @@
 ],
 "Paar": [
 {
-"emoji": "🧑‍🤝‍🧑",
-"is_base": false,
-"rank": null
+"emoji": "👫",
+"is_base": true,
+"rank": 511
 },
 {
 "emoji": "👭",
@@ -12834,139 +6604,9 @@
 "rank": 586
 },
 {
-"emoji": "👫",
-"is_base": true,
-"rank": 511
-},
-{
 "emoji": "👬",
 "is_base": true,
 "rank": 740
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏻‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏼‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🤝‍🧑🏿",
-"is_base": false,
-"rank": null
 }
 ],
 "Frauen": [
@@ -12996,21 +6636,6 @@
 },
 {
 "emoji": "💑🏼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏾",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "💑🏿",
 "is_base": false,
 "rank": null
 }
@@ -13080,14 +6705,14 @@
 ],
 "Abdruck": [
 {
-"emoji": "👣",
-"is_base": false,
-"rank": 490
-},
-{
 "emoji": "🐾",
 "is_base": false,
 "rank": 198
+},
+{
+"emoji": "👣",
+"is_base": false,
+"rank": 490
 }
 ],
 "Fußabdruck": [
@@ -13113,19 +6738,9 @@
 ],
 "Tier": [
 {
-"emoji": "🐵",
+"emoji": "🐰",
 "is_base": false,
-"rank": 553
-},
-{
-"emoji": "🐒",
-"is_base": false,
-"rank": 358
-},
-{
-"emoji": "🦍",
-"is_base": false,
-"rank": 412
+"rank": 137
 },
 {
 "emoji": "🐶",
@@ -13133,324 +6748,9 @@
 "rank": 169
 },
 {
-"emoji": "🐕",
-"is_base": false,
-"rank": 216
-},
-{
-"emoji": "🐩",
-"is_base": false,
-"rank": 698
-},
-{
-"emoji": "🐺",
-"is_base": false,
-"rank": 502
-},
-{
-"emoji": "🦊",
-"is_base": false,
-"rank": 470
-},
-{
-"emoji": "🐱",
-"is_base": false,
-"rank": 255
-},
-{
-"emoji": "🐈",
-"is_base": false,
-"rank": 285
-},
-{
-"emoji": "🐯",
-"is_base": false,
-"rank": 537
-},
-{
-"emoji": "🐅",
-"is_base": false,
-"rank": 675
-},
-{
-"emoji": "🐆",
-"is_base": false,
-"rank": 741
-},
-{
-"emoji": "🐴",
-"is_base": false,
-"rank": 473
-},
-{
-"emoji": "🫎",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🫏",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🐎",
-"is_base": false,
-"rank": 437
-},
-{
-"emoji": "🦌",
-"is_base": false,
-"rank": 628
-},
-{
-"emoji": "🐮",
-"is_base": false,
-"rank": 595
-},
-{
-"emoji": "🐂",
-"is_base": false,
-"rank": 603
-},
-{
-"emoji": "🐃",
-"is_base": false,
-"rank": 764
-},
-{
-"emoji": "🐄",
-"is_base": false,
-"rank": 507
-},
-{
-"emoji": "🐷",
-"is_base": false,
-"rank": 245
-},
-{
-"emoji": "🐖",
-"is_base": false,
-"rank": 424
-},
-{
-"emoji": "🐗",
-"is_base": false,
-"rank": 960
-},
-{
-"emoji": "🐽",
-"is_base": false,
-"rank": 503
-},
-{
-"emoji": "🐑",
-"is_base": false,
-"rank": 410
-},
-{
-"emoji": "🐐",
-"is_base": false,
-"rank": 366
-},
-{
-"emoji": "🐪",
-"is_base": false,
-"rank": 745
-},
-{
-"emoji": "🐫",
-"is_base": false,
-"rank": 805
-},
-{
-"emoji": "🐘",
-"is_base": false,
-"rank": 606
-},
-{
-"emoji": "🦏",
-"is_base": false,
-"rank": 1044
-},
-{
-"emoji": "🐭",
-"is_base": false,
-"rank": 719
-},
-{
-"emoji": "🐁",
-"is_base": false,
-"rank": 641
-},
-{
-"emoji": "🐀",
-"is_base": false,
-"rank": 522
-},
-{
-"emoji": "🐹",
-"is_base": false,
-"rank": 813
-},
-{
-"emoji": "🐰",
-"is_base": false,
-"rank": 137
-},
-{
-"emoji": "🐇",
-"is_base": false,
-"rank": 211
-},
-{
-"emoji": "🦇",
-"is_base": false,
-"rank": 587
-},
-{
-"emoji": "🐻",
-"is_base": false,
-"rank": 274
-},
-{
-"emoji": "🐨",
-"is_base": false,
-"rank": 691
-},
-{
-"emoji": "🐼",
-"is_base": false,
-"rank": 400
-},
-{
 "emoji": "🐾",
 "is_base": false,
 "rank": 198
-},
-{
-"emoji": "🐔",
-"is_base": false,
-"rank": 314
-},
-{
-"emoji": "🐓",
-"is_base": false,
-"rank": 452
-},
-{
-"emoji": "🐣",
-"is_base": false,
-"rank": 256
-},
-{
-"emoji": "🐤",
-"is_base": false,
-"rank": 547
-},
-{
-"emoji": "🐥",
-"is_base": false,
-"rank": 246
-},
-{
-"emoji": "🐧",
-"is_base": false,
-"rank": 526
-},
-{
-"emoji": "🐸",
-"is_base": false,
-"rank": 283
-},
-{
-"emoji": "🐊",
-"is_base": false,
-"rank": 500
-},
-{
-"emoji": "🐢",
-"is_base": false,
-"rank": 297
-},
-{
-"emoji": "🐍",
-"is_base": false,
-"rank": 373
-},
-{
-"emoji": "🐲",
-"is_base": false,
-"rank": 780
-},
-{
-"emoji": "🐉",
-"is_base": false,
-"rank": 648
-},
-{
-"emoji": "🐳",
-"is_base": false,
-"rank": 515
-},
-{
-"emoji": "🐋",
-"is_base": false,
-"rank": 778
-},
-{
-"emoji": "🐬",
-"is_base": false,
-"rank": 523
-},
-{
-"emoji": "🐟",
-"is_base": false,
-"rank": 282
-},
-{
-"emoji": "🐠",
-"is_base": false,
-"rank": 448
-},
-{
-"emoji": "🐡",
-"is_base": false,
-"rank": 856
-},
-{
-"emoji": "🐙",
-"is_base": false,
-"rank": 411
-},
-{
-"emoji": "🐚",
-"is_base": false,
-"rank": 580
-},
-{
-"emoji": "🐌",
-"is_base": false,
-"rank": 643
-},
-{
-"emoji": "🐛",
-"is_base": false,
-"rank": 544
-},
-{
-"emoji": "🐜",
-"is_base": false,
-"rank": 632
-},
-{
-"emoji": "🐝",
-"is_base": false,
-"rank": 284
-},
-{
-"emoji": "🐞",
-"is_base": false,
-"rank": 552
 }
 ],
 "Gorilla": [
@@ -13477,11 +6777,6 @@
 "emoji": "🐕",
 "is_base": false,
 "rank": 216
-},
-{
-"emoji": "🐕‍🦺",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "🐩",
@@ -13627,19 +6922,9 @@
 ],
 "Sternzeichen": [
 {
-"emoji": "🦁",
+"emoji": "🐟",
 "is_base": false,
-"rank": 368
-},
-{
-"emoji": "🐂",
-"is_base": false,
-"rank": 603
-},
-{
-"emoji": "🐏",
-"is_base": false,
-"rank": 775
+"rank": 282
 },
 {
 "emoji": "🐐",
@@ -13647,101 +6932,16 @@
 "rank": 366
 },
 {
-"emoji": "🐍",
+"emoji": "🦁",
 "is_base": false,
-"rank": 373
-},
-{
-"emoji": "🐟",
-"is_base": false,
-"rank": 282
-},
-{
-"emoji": "🦂",
-"is_base": false,
-"rank": 815
-},
-{
-"emoji": "🦀",
-"is_base": false,
-"rank": 447
-},
-{
-"emoji": "♈",
-"is_base": false,
-"rank": 631
-},
-{
-"emoji": "♉",
-"is_base": false,
-"rank": 860
-},
-{
-"emoji": "♊",
-"is_base": false,
-"rank": 885
-},
-{
-"emoji": "♋",
-"is_base": false,
-"rank": 854
-},
-{
-"emoji": "♌",
-"is_base": false,
-"rank": 941
-},
-{
-"emoji": "♍",
-"is_base": false,
-"rank": 984
-},
-{
-"emoji": "♎",
-"is_base": false,
-"rank": 978
-},
-{
-"emoji": "♏",
-"is_base": false,
-"rank": 967
-},
-{
-"emoji": "♐",
-"is_base": false,
-"rank": 867
-},
-{
-"emoji": "♑",
-"is_base": false,
-"rank": 1064
-},
-{
-"emoji": "♒",
-"is_base": false,
-"rank": 958
-},
-{
-"emoji": "♓",
-"is_base": false,
-"rank": 1000
+"rank": 368
 }
 ],
 "Tierkreis": [
 {
-"emoji": "🦁",
+"emoji": "🐟",
 "is_base": false,
-"rank": 368
-},
-{
-"emoji": "🐂",
-"is_base": false,
-"rank": 603
-},
-{
-"emoji": "🐏",
-"is_base": false,
-"rank": 775
+"rank": 282
 },
 {
 "emoji": "🐐",
@@ -13749,24 +6949,9 @@
 "rank": 366
 },
 {
-"emoji": "🐍",
+"emoji": "🦁",
 "is_base": false,
-"rank": 373
-},
-{
-"emoji": "🐟",
-"is_base": false,
-"rank": 282
-},
-{
-"emoji": "🦂",
-"is_base": false,
-"rank": 815
-},
-{
-"emoji": "🦀",
-"is_base": false,
-"rank": 447
+"rank": 368
 }
 ],
 "Tiger": [
@@ -13797,14 +6982,14 @@
 ],
 "Pferd": [
 {
-"emoji": "🐴",
-"is_base": false,
-"rank": 473
-},
-{
 "emoji": "🐎",
 "is_base": false,
 "rank": 437
+},
+{
+"emoji": "🐴",
+"is_base": false,
+"rank": 473
 },
 {
 "emoji": "🎠",
@@ -13943,14 +7128,14 @@
 ],
 "Büffel": [
 {
-"emoji": "🦬",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🐃",
 "is_base": false,
 "rank": 764
+},
+{
+"emoji": "🦬",
+"is_base": false,
+"rank": null
 }
 ],
 "Herde": [
@@ -13969,14 +7154,14 @@
 ],
 "Kuh": [
 {
-"emoji": "🐮",
-"is_base": false,
-"rank": 595
-},
-{
 "emoji": "🐄",
 "is_base": false,
 "rank": 507
+},
+{
+"emoji": "🐮",
+"is_base": false,
+"rank": 595
 }
 ],
 "Kuhgesicht": [
@@ -14024,11 +7209,6 @@
 "rank": 424
 },
 {
-"emoji": "🐗",
-"is_base": false,
-"rank": 960
-},
-{
 "emoji": "🐽",
 "is_base": false,
 "rank": 503
@@ -14064,26 +7244,26 @@
 ],
 "Schaf": [
 {
-"emoji": "🐏",
-"is_base": false,
-"rank": 775
-},
-{
 "emoji": "🐑",
 "is_base": false,
 "rank": 410
+},
+{
+"emoji": "🐏",
+"is_base": false,
+"rank": 775
 }
 ],
 "Widder": [
 {
-"emoji": "🐏",
-"is_base": false,
-"rank": 775
-},
-{
 "emoji": "♈",
 "is_base": false,
 "rank": 631
+},
+{
+"emoji": "🐏",
+"is_base": false,
+"rank": 775
 }
 ],
 "Steinbock": [
@@ -14248,14 +7428,14 @@
 ],
 "Maus": [
 {
-"emoji": "🐭",
-"is_base": false,
-"rank": 719
-},
-{
 "emoji": "🐁",
 "is_base": false,
 "rank": 641
+},
+{
+"emoji": "🐭",
+"is_base": false,
+"rank": 719
 }
 ],
 "Mäusegesicht": [
@@ -14503,24 +7683,14 @@
 ],
 "Geflügel": [
 {
-"emoji": "🦃",
-"is_base": false,
-"rank": 519
-},
-{
-"emoji": "🐔",
-"is_base": false,
-"rank": 314
-},
-{
 "emoji": "🐥",
 "is_base": false,
 "rank": 246
 },
 {
-"emoji": "🪿",
+"emoji": "🐔",
 "is_base": false,
-"rank": null
+"rank": 314
 },
 {
 "emoji": "🍗",
@@ -14558,6 +7728,11 @@
 ],
 "Küken": [
 {
+"emoji": "🐥",
+"is_base": false,
+"rank": 246
+},
+{
 "emoji": "🐣",
 "is_base": false,
 "rank": 256
@@ -14566,11 +7741,6 @@
 "emoji": "🐤",
 "is_base": false,
 "rank": 547
-},
-{
-"emoji": "🐥",
-"is_base": false,
-"rank": 246
 }
 ],
 "schlüpfen": [
@@ -14601,11 +7771,6 @@
 ],
 "Vogel": [
 {
-"emoji": "🐦",
-"is_base": false,
-"rank": 396
-},
-{
 "emoji": "🦅",
 "is_base": false,
 "rank": 322
@@ -14616,34 +7781,9 @@
 "rank": 324
 },
 {
-"emoji": "🦢",
+"emoji": "🐦",
 "is_base": false,
-"rank": 922
-},
-{
-"emoji": "🦉",
-"is_base": false,
-"rank": 602
-},
-{
-"emoji": "🦚",
-"is_base": false,
-"rank": 757
-},
-{
-"emoji": "🦜",
-"is_base": false,
-"rank": 409
-},
-{
-"emoji": "🪽",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🪿",
-"is_base": false,
-"rank": null
+"rank": 396
 }
 ],
 "Pinguin": [
@@ -14775,14 +7915,14 @@
 ],
 "tropisch": [
 {
-"emoji": "🦩",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🥭",
 "is_base": false,
 "rank": 542
+},
+{
+"emoji": "🦩",
+"is_base": false,
+"rank": null
 }
 ],
 "Pfau": [
@@ -14923,14 +8063,14 @@
 ],
 "Drache": [
 {
-"emoji": "🐲",
-"is_base": false,
-"rank": 780
-},
-{
 "emoji": "🐉",
 "is_base": false,
 "rank": 648
+},
+{
+"emoji": "🐲",
+"is_base": false,
+"rank": 780
 }
 ],
 "Drachengesicht": [
@@ -14956,26 +8096,26 @@
 ],
 "Dino": [
 {
-"emoji": "🦕",
-"is_base": false,
-"rank": 593
-},
-{
 "emoji": "🦖",
 "is_base": false,
 "rank": 472
+},
+{
+"emoji": "🦕",
+"is_base": false,
+"rank": 593
 }
 ],
 "Dinosaurier": [
 {
-"emoji": "🦕",
-"is_base": false,
-"rank": 593
-},
-{
 "emoji": "🦖",
 "is_base": false,
 "rank": 472
+},
+{
+"emoji": "🦕",
+"is_base": false,
+"rank": 593
 }
 ],
 "Diplodocus": [
@@ -14987,14 +8127,14 @@
 ],
 "Saurier": [
 {
-"emoji": "🦕",
-"is_base": false,
-"rank": 593
-},
-{
 "emoji": "🦖",
 "is_base": false,
 "rank": 472
+},
+{
+"emoji": "🦕",
+"is_base": false,
+"rank": 593
 }
 ],
 "Sauropode": [
@@ -15054,11 +8194,6 @@
 "emoji": "🐠",
 "is_base": false,
 "rank": 448
-},
-{
-"emoji": "🐡",
-"is_base": false,
-"rank": 856
 },
 {
 "emoji": "🍥",
@@ -15256,16 +8391,6 @@
 "rank": 632
 },
 {
-"emoji": "🪲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🪳",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🦟",
 "is_base": false,
 "rank": 735
@@ -15308,14 +8433,14 @@
 ],
 "Käfer": [
 {
-"emoji": "🪲",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🐞",
 "is_base": false,
 "rank": 552
+},
+{
+"emoji": "🪲",
+"is_base": false,
+"rank": null
 }
 ],
 "Glückskäfer": [
@@ -15500,96 +8625,36 @@
 ],
 "Blume": [
 {
-"emoji": "🌸",
-"is_base": false,
-"rank": 78
-},
-{
-"emoji": "💮",
-"is_base": false,
-"rank": 638
-},
-{
-"emoji": "🪷",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🌹",
 "is_base": false,
 "rank": 46
 },
 {
-"emoji": "🥀",
+"emoji": "🌸",
 "is_base": false,
-"rank": 221
-},
-{
-"emoji": "🌺",
-"is_base": false,
-"rank": 130
+"rank": 78
 },
 {
 "emoji": "🌻",
 "is_base": false,
 "rank": 115
-},
-{
-"emoji": "🌼",
-"is_base": false,
-"rank": 154
-},
-{
-"emoji": "🌷",
-"is_base": false,
-"rank": 133
-},
-{
-"emoji": "🪻",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🎴",
-"is_base": false,
-"rank": 998
 }
 ],
 "Blüte": [
 {
-"emoji": "🌸",
-"is_base": false,
-"rank": 78
-},
-{
 "emoji": "🌹",
 "is_base": false,
 "rank": 46
 },
 {
-"emoji": "🌺",
+"emoji": "🌸",
 "is_base": false,
-"rank": 130
+"rank": 78
 },
 {
 "emoji": "🌻",
 "is_base": false,
 "rank": 115
-},
-{
-"emoji": "🌼",
-"is_base": false,
-"rank": 154
-},
-{
-"emoji": "🌷",
-"is_base": false,
-"rank": 133
-},
-{
-"emoji": "🪻",
-"is_base": false,
-"rank": null
 }
 ],
 "Kirschblüte": [
@@ -15613,79 +8678,19 @@
 ],
 "Pflanze": [
 {
-"emoji": "🌸",
-"is_base": false,
-"rank": 78
-},
-{
 "emoji": "🌹",
 "is_base": false,
 "rank": 46
 },
 {
-"emoji": "🌺",
+"emoji": "🌸",
 "is_base": false,
-"rank": 130
+"rank": 78
 },
 {
 "emoji": "🌻",
 "is_base": false,
 "rank": 115
-},
-{
-"emoji": "🌼",
-"is_base": false,
-"rank": 154
-},
-{
-"emoji": "🌷",
-"is_base": false,
-"rank": 133
-},
-{
-"emoji": "🪴",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🌲",
-"is_base": false,
-"rank": 393
-},
-{
-"emoji": "🌳",
-"is_base": false,
-"rank": 346
-},
-{
-"emoji": "🌴",
-"is_base": false,
-"rank": 296
-},
-{
-"emoji": "🌵",
-"is_base": false,
-"rank": 364
-},
-{
-"emoji": "🌾",
-"is_base": false,
-"rank": 379
-},
-{
-"emoji": "🍁",
-"is_base": false,
-"rank": 225
-},
-{
-"emoji": "🍂",
-"is_base": false,
-"rank": 357
-},
-{
-"emoji": "🍃",
-"is_base": false,
-"rank": 180
 }
 ],
 "Blumenstempel": [
@@ -15746,14 +8751,14 @@
 ],
 "Sonne": [
 {
-"emoji": "🌻",
-"is_base": false,
-"rank": 115
-},
-{
 "emoji": "🌞",
 "is_base": false,
 "rank": 75
+},
+{
+"emoji": "🌻",
+"is_base": false,
+"rank": 115
 },
 {
 "emoji": "⛅",
@@ -15805,16 +8810,6 @@
 ],
 "Haus": [
 {
-"emoji": "🪴",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🛖",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🏠",
 "is_base": false,
 "rank": 209
@@ -15823,6 +8818,11 @@
 "emoji": "🏡",
 "is_base": false,
 "rank": 220
+},
+{
+"emoji": "🪴",
+"is_base": false,
+"rank": null
 }
 ],
 "nutzlos": [
@@ -15855,14 +8855,9 @@
 ],
 "Baum": [
 {
-"emoji": "🌲",
+"emoji": "🏡",
 "is_base": false,
-"rank": 393
-},
-{
-"emoji": "🌳",
-"is_base": false,
-"rank": 346
+"rank": 220
 },
 {
 "emoji": "🌴",
@@ -15870,19 +8865,9 @@
 "rank": 296
 },
 {
-"emoji": "🏡",
+"emoji": "🌳",
 "is_base": false,
-"rank": 220
-},
-{
-"emoji": "🎄",
-"is_base": false,
-"rank": 433
-},
-{
-"emoji": "🎋",
-"is_base": false,
-"rank": 665
+"rank": 346
 }
 ],
 "Nadelbaum": [
@@ -15894,9 +8879,9 @@
 ],
 "Laub": [
 {
-"emoji": "🌳",
+"emoji": "🍃",
 "is_base": false,
-"rank": 346
+"rank": 180
 },
 {
 "emoji": "🍁",
@@ -15904,14 +8889,9 @@
 "rank": 225
 },
 {
-"emoji": "🍂",
+"emoji": "🌳",
 "is_base": false,
-"rank": 357
-},
-{
-"emoji": "🍃",
-"is_base": false,
-"rank": 180
+"rank": 346
 }
 ],
 "Laubbaum": [
@@ -15954,11 +8934,6 @@
 "rank": 379
 },
 {
-"emoji": "🍙",
-"is_base": false,
-"rank": 976
-},
-{
 "emoji": "🍚",
 "is_base": false,
 "rank": 524
@@ -15983,14 +8958,14 @@
 "rank": 174
 },
 {
-"emoji": "🍂",
-"is_base": false,
-"rank": 357
-},
-{
 "emoji": "🍃",
 "is_base": false,
 "rank": 180
+},
+{
+"emoji": "🍂",
+"is_base": false,
+"rank": 357
 }
 ],
 "Kräuter": [
@@ -16056,6 +9031,11 @@
 ],
 "Blatt": [
 {
+"emoji": "🍃",
+"is_base": false,
+"rank": 180
+},
+{
 "emoji": "🍁",
 "is_base": false,
 "rank": 225
@@ -16064,11 +9044,6 @@
 "emoji": "🍂",
 "is_base": false,
 "rank": 357
-},
-{
-"emoji": "🍃",
-"is_base": false,
-"rank": 180
 }
 ],
 "Herbst": [
@@ -16164,59 +9139,9 @@
 ],
 "Frucht": [
 {
-"emoji": "🍇",
+"emoji": "🍓",
 "is_base": false,
-"rank": 295
-},
-{
-"emoji": "🍈",
-"is_base": false,
-"rank": 604
-},
-{
-"emoji": "🍉",
-"is_base": false,
-"rank": 325
-},
-{
-"emoji": "🍊",
-"is_base": false,
-"rank": 266
-},
-{
-"emoji": "🍋",
-"is_base": false,
-"rank": 310
-},
-{
-"emoji": "🍌",
-"is_base": false,
-"rank": 300
-},
-{
-"emoji": "🍍",
-"is_base": false,
-"rank": 466
-},
-{
-"emoji": "🥭",
-"is_base": false,
-"rank": 542
-},
-{
-"emoji": "🍎",
-"is_base": false,
-"rank": 244
-},
-{
-"emoji": "🍏",
-"is_base": false,
-"rank": 345
-},
-{
-"emoji": "🍐",
-"is_base": false,
-"rank": 654
+"rank": 170
 },
 {
 "emoji": "🍑",
@@ -16227,73 +9152,13 @@
 "emoji": "🍒",
 "is_base": false,
 "rank": 191
-},
-{
-"emoji": "🍓",
-"is_base": false,
-"rank": 170
-},
-{
-"emoji": "🥝",
-"is_base": false,
-"rank": 635
-},
-{
-"emoji": "🥑",
-"is_base": false,
-"rank": 464
 }
 ],
 "Obst": [
 {
-"emoji": "🍇",
+"emoji": "🍓",
 "is_base": false,
-"rank": 295
-},
-{
-"emoji": "🍈",
-"is_base": false,
-"rank": 604
-},
-{
-"emoji": "🍉",
-"is_base": false,
-"rank": 325
-},
-{
-"emoji": "🍊",
-"is_base": false,
-"rank": 266
-},
-{
-"emoji": "🍋",
-"is_base": false,
-"rank": 310
-},
-{
-"emoji": "🍌",
-"is_base": false,
-"rank": 300
-},
-{
-"emoji": "🍍",
-"is_base": false,
-"rank": 466
-},
-{
-"emoji": "🍎",
-"is_base": false,
-"rank": 244
-},
-{
-"emoji": "🍏",
-"is_base": false,
-"rank": 345
-},
-{
-"emoji": "🍐",
-"is_base": false,
-"rank": 654
+"rank": 170
 },
 {
 "emoji": "🍑",
@@ -16304,16 +9169,6 @@
 "emoji": "🍒",
 "is_base": false,
 "rank": 191
-},
-{
-"emoji": "🍓",
-"is_base": false,
-"rank": 170
-},
-{
-"emoji": "🥝",
-"is_base": false,
-"rank": 635
 }
 ],
 "Traube": [
@@ -16489,39 +9344,19 @@
 ],
 "Gemüse": [
 {
-"emoji": "🍅",
-"is_base": false,
-"rank": 372
-},
-{
 "emoji": "🍆",
 "is_base": false,
 "rank": 165
 },
 {
-"emoji": "🥕",
+"emoji": "🍅",
 "is_base": false,
-"rank": 444
-},
-{
-"emoji": "🫑",
-"is_base": false,
-"rank": null
+"rank": 372
 },
 {
 "emoji": "🥒",
 "is_base": false,
 "rank": 419
-},
-{
-"emoji": "🥬",
-"is_base": false,
-"rank": 690
-},
-{
-"emoji": "🫛",
-"is_base": false,
-"rank": null
 }
 ],
 "Tomate": [
@@ -16533,6 +9368,11 @@
 ],
 "Lebensmittel": [
 {
+"emoji": "🏪",
+"is_base": false,
+"rank": 1083
+},
+{
 "emoji": "🫒",
 "is_base": false,
 "rank": null
@@ -16541,11 +9381,6 @@
 "emoji": "🫘",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🏪",
-"is_base": false,
-"rank": 1083
 }
 ],
 "Olive": [
@@ -16578,9 +9413,9 @@
 ],
 "Essen": [
 {
-"emoji": "🥔",
+"emoji": "🥓",
 "is_base": false,
-"rank": 460
+"rank": 418
 },
 {
 "emoji": "🥒",
@@ -16588,34 +9423,9 @@
 "rank": 419
 },
 {
-"emoji": "🥜",
+"emoji": "🥔",
 "is_base": false,
-"rank": 492
-},
-{
-"emoji": "🫘",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🥞",
-"is_base": false,
-"rank": 488
-},
-{
-"emoji": "🥓",
-"is_base": false,
-"rank": 418
-},
-{
-"emoji": "🥘",
-"is_base": false,
-"rank": 882
-},
-{
-"emoji": "🥗",
-"is_base": false,
-"rank": 555
+"rank": 460
 }
 ],
 "Kartoffel": [
@@ -16704,14 +9514,14 @@
 ],
 "Salat": [
 {
-"emoji": "🥬",
-"is_base": false,
-"rank": 690
-},
-{
 "emoji": "🥗",
 "is_base": false,
 "rank": 555
+},
+{
+"emoji": "🥬",
+"is_base": false,
+"rank": 690
 }
 ],
 "Spinat": [
@@ -16737,6 +9547,11 @@
 ],
 "Geschmack": [
 {
+"emoji": "🧂",
+"is_base": false,
+"rank": 912
+},
+{
 "emoji": "🧄",
 "is_base": false,
 "rank": null
@@ -16745,11 +9560,6 @@
 "emoji": "🧅",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "🧂",
-"is_base": false,
-"rank": 912
 }
 ],
 "Knoblauch": [
@@ -16916,24 +9726,14 @@
 ],
 "Frühstück": [
 {
-"emoji": "🥐",
-"is_base": false,
-"rank": 572
-},
-{
-"emoji": "🥖",
-"is_base": false,
-"rank": 697
-},
-{
-"emoji": "🥯",
-"is_base": false,
-"rank": 811
-},
-{
 "emoji": "🥚",
 "is_base": false,
 "rank": 311
+},
+{
+"emoji": "🥐",
+"is_base": false,
+"rank": 572
 },
 {
 "emoji": "🥣",
@@ -17081,34 +9881,14 @@
 ],
 "Restaurant": [
 {
-"emoji": "🍖",
-"is_base": false,
-"rank": 501
-},
-{
-"emoji": "🍗",
-"is_base": false,
-"rank": 361
-},
-{
 "emoji": "🍔",
 "is_base": false,
 "rank": 355
 },
 {
-"emoji": "🍢",
+"emoji": "🍗",
 "is_base": false,
-"rank": 832
-},
-{
-"emoji": "🍣",
-"is_base": false,
-"rank": 554
-},
-{
-"emoji": "🍤",
-"is_base": false,
-"rank": 549
+"rank": 361
 },
 {
 "emoji": "🍡",
@@ -17427,11 +10207,6 @@
 ],
 "Schokolade": [
 {
-"emoji": "🫕",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🍫",
 "is_base": false,
 "rank": 268
@@ -17440,6 +10215,11 @@
 "emoji": "🍮",
 "is_base": false,
 "rank": 761
+},
+{
+"emoji": "🫕",
+"is_base": false,
+"rank": null
 }
 ],
 "schweizerisch": [
@@ -17570,14 +10350,14 @@
 ],
 "dampfend": [
 {
-"emoji": "🍜",
-"is_base": false,
-"rank": 395
-},
-{
 "emoji": "☕",
 "is_base": false,
 "rank": 124
+},
+{
+"emoji": "🍜",
+"is_base": false,
+"rank": 395
 }
 ],
 "Eiernudeln": [
@@ -17857,6 +10637,11 @@
 ],
 "Eis": [
 {
+"emoji": "🍨",
+"is_base": false,
+"rank": 329
+},
+{
 "emoji": "🍦",
 "is_base": false,
 "rank": 352
@@ -17865,11 +10650,6 @@
 "emoji": "🍧",
 "is_base": false,
 "rank": 482
-},
-{
-"emoji": "🍨",
-"is_base": false,
-"rank": 329
 }
 ],
 "Softeis": [
@@ -18055,14 +10835,14 @@
 ],
 "Süßigkeit": [
 {
-"emoji": "🍬",
-"is_base": false,
-"rank": 326
-},
-{
 "emoji": "🍭",
 "is_base": false,
 "rank": 281
+},
+{
+"emoji": "🍬",
+"is_base": false,
+"rank": 326
 }
 ],
 "Lolli": [
@@ -18161,46 +10941,26 @@
 ],
 "trinken": [
 {
-"emoji": "🍼",
-"is_base": false,
-"rank": 262
-},
-{
 "emoji": "☕",
 "is_base": false,
 "rank": 124
-},
-{
-"emoji": "🫖",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🍶",
-"is_base": false,
-"rank": 749
 },
 {
 "emoji": "🍾",
 "is_base": false,
 "rank": 223
+},
+{
+"emoji": "🍼",
+"is_base": false,
+"rank": 262
 }
 ],
 "Getränk": [
 {
-"emoji": "🥛",
-"is_base": false,
-"rank": 541
-},
-{
 "emoji": "☕",
 "is_base": false,
 "rank": 124
-},
-{
-"emoji": "🍶",
-"is_base": false,
-"rank": 749
 },
 {
 "emoji": "🥂",
@@ -18208,31 +10968,21 @@
 "rank": 155
 },
 {
-"emoji": "🫗",
+"emoji": "🥛",
 "is_base": false,
-"rank": null
-},
-{
-"emoji": "🧃",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧉",
-"is_base": false,
-"rank": null
+"rank": 541
 }
 ],
 "Glas": [
 {
-"emoji": "🥛",
-"is_base": false,
-"rank": 541
-},
-{
 "emoji": "🍷",
 "is_base": false,
 "rank": 187
+},
+{
+"emoji": "🥛",
+"is_base": false,
+"rank": 541
 },
 {
 "emoji": "🫗",
@@ -18261,17 +11011,12 @@
 "rank": 124
 },
 {
-"emoji": "🫖",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🍵",
 "is_base": false,
 "rank": 505
 },
 {
-"emoji": "🧋",
+"emoji": "🫖",
 "is_base": false,
 "rank": null
 }
@@ -18299,14 +11044,14 @@
 ],
 "Flasche": [
 {
-"emoji": "🍶",
-"is_base": false,
-"rank": 749
-},
-{
 "emoji": "🍾",
 "is_base": false,
 "rank": 223
+},
+{
+"emoji": "🍶",
+"is_base": false,
+"rank": 749
 }
 ],
 "Sake": [
@@ -18339,14 +11084,14 @@
 ],
 "Sekt": [
 {
-"emoji": "🍾",
-"is_base": false,
-"rank": 223
-},
-{
 "emoji": "🥂",
 "is_base": false,
 "rank": 155
+},
+{
+"emoji": "🍾",
+"is_base": false,
+"rank": 223
 }
 ],
 "Bar": [
@@ -18354,16 +11099,6 @@
 "emoji": "🍷",
 "is_base": false,
 "rank": 187
-},
-{
-"emoji": "🍸",
-"is_base": false,
-"rank": 420
-},
-{
-"emoji": "🍹",
-"is_base": false,
-"rank": 351
 },
 {
 "emoji": "🍺",
@@ -18392,14 +11127,14 @@
 ],
 "Cocktail": [
 {
-"emoji": "🍸",
-"is_base": false,
-"rank": 420
-},
-{
 "emoji": "🍹",
 "is_base": false,
 "rank": 351
+},
+{
+"emoji": "🍸",
+"is_base": false,
+"rank": 420
 }
 ],
 "Cocktailglas": [
@@ -18411,14 +11146,14 @@
 ],
 "Bier": [
 {
-"emoji": "🍺",
-"is_base": false,
-"rank": 203
-},
-{
 "emoji": "🍻",
 "is_base": false,
 "rank": 140
+},
+{
+"emoji": "🍺",
+"is_base": false,
+"rank": 203
 }
 ],
 "Bierkrug": [
@@ -18604,14 +11339,14 @@
 ],
 "Messer": [
 {
-"emoji": "🍴",
-"is_base": false,
-"rank": 459
-},
-{
 "emoji": "🔪",
 "is_base": false,
 "rank": 288
+},
+{
+"emoji": "🍴",
+"is_base": false,
+"rank": 459
 }
 ],
 "Löffel": [
@@ -18698,26 +11433,26 @@
 "rank": 336
 },
 {
-"emoji": "🏤",
-"is_base": false,
-"rank": 1335
-},
-{
 "emoji": "🏰",
 "is_base": false,
 "rank": 767
+},
+{
+"emoji": "🏤",
+"is_base": false,
+"rank": 1335
 }
 ],
 "Weltkugel": [
 {
-"emoji": "🌍",
-"is_base": false,
-"rank": 336
-},
-{
 "emoji": "🌎",
 "is_base": false,
 "rank": 319
+},
+{
+"emoji": "🌍",
+"is_base": false,
+"rank": 336
 },
 {
 "emoji": "🌏",
@@ -18769,9 +11504,9 @@
 ],
 "Karte": [
 {
-"emoji": "🗾",
+"emoji": "💳",
 "is_base": false,
-"rank": 1135
+"rank": 576
 },
 {
 "emoji": "🎴",
@@ -18779,9 +11514,9 @@
 "rank": 998
 },
 {
-"emoji": "💳",
+"emoji": "🗾",
 "is_base": false,
-"rank": 576
+"rank": 1135
 }
 ],
 "Himmelsrichtung": [
@@ -18800,14 +11535,14 @@
 ],
 "magnetisch": [
 {
-"emoji": "🧭",
-"is_base": false,
-"rank": 1119
-},
-{
 "emoji": "🧲",
 "is_base": false,
 "rank": 1015
+},
+{
+"emoji": "🧭",
+"is_base": false,
+"rank": 1119
 }
 ],
 "Navigation": [
@@ -18859,6 +11594,11 @@
 ],
 "Wetter": [
 {
+"emoji": "🌈",
+"is_base": false,
+"rank": 107
+},
+{
 "emoji": "🌋",
 "is_base": false,
 "rank": 727
@@ -18867,11 +11607,6 @@
 "emoji": "🌁",
 "is_base": false,
 "rank": 1103
-},
-{
-"emoji": "🌈",
-"is_base": false,
-"rank": 107
 }
 ],
 "Fuji": [
@@ -18925,14 +11660,14 @@
 ],
 "Stein": [
 {
-"emoji": "🪨",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🥌",
 "is_base": false,
 "rank": 1200
+},
+{
+"emoji": "🪨",
+"is_base": false,
+"rank": null
 }
 ],
 "Feuerholz": [
@@ -18994,59 +11729,14 @@
 "rank": 209
 },
 {
-"emoji": "🏥",
-"is_base": false,
-"rank": 684
-},
-{
-"emoji": "🏦",
-"is_base": false,
-"rank": 952
-},
-{
-"emoji": "🏨",
-"is_base": false,
-"rank": 871
-},
-{
-"emoji": "🏩",
-"is_base": false,
-"rank": 763
-},
-{
-"emoji": "🏪",
-"is_base": false,
-"rank": 1083
-},
-{
 "emoji": "🏫",
 "is_base": false,
 "rank": 655
 },
 {
-"emoji": "🏬",
+"emoji": "🏥",
 "is_base": false,
-"rank": 1149
-},
-{
-"emoji": "🏭",
-"is_base": false,
-"rank": 1284
-},
-{
-"emoji": "🏯",
-"is_base": false,
-"rank": 1053
-},
-{
-"emoji": "🏰",
-"is_base": false,
-"rank": 767
-},
-{
-"emoji": "⛪",
-"is_base": false,
-"rank": 784
+"rank": 684
 }
 ],
 "Zuhause": [
@@ -19072,14 +11762,9 @@
 ],
 "Post": [
 {
-"emoji": "🏣",
+"emoji": "📬",
 "is_base": false,
-"rank": 1276
-},
-{
-"emoji": "🏤",
-"is_base": false,
-"rank": 1335
+"rank": 769
 },
 {
 "emoji": "📯",
@@ -19090,21 +11775,6 @@
 "emoji": "📫",
 "is_base": false,
 "rank": 1187
-},
-{
-"emoji": "📪",
-"is_base": false,
-"rank": 1329
-},
-{
-"emoji": "📬",
-"is_base": false,
-"rank": 769
-},
-{
-"emoji": "📭",
-"is_base": false,
-"rank": 1352
 }
 ],
 "Postgebäude": [
@@ -19123,6 +11793,11 @@
 ],
 "Medizin": [
 {
+"emoji": "💊",
+"is_base": false,
+"rank": 428
+},
+{
 "emoji": "🏥",
 "is_base": false,
 "rank": 684
@@ -19131,45 +11806,30 @@
 "emoji": "🩸",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "💊",
-"is_base": false,
-"rank": 428
-},
-{
-"emoji": "🩺",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🩻",
-"is_base": false,
-"rank": null
 }
 ],
 "Bank": [
 {
-"emoji": "🏦",
-"is_base": false,
-"rank": 952
-},
-{
 "emoji": "💸",
 "is_base": false,
 "rank": 233
+},
+{
+"emoji": "🏦",
+"is_base": false,
+"rank": 952
 }
 ],
 "Hotel": [
 {
-"emoji": "🏨",
-"is_base": false,
-"rank": 871
-},
-{
 "emoji": "🏩",
 "is_base": false,
 "rank": 763
+},
+{
+"emoji": "🏨",
+"is_base": false,
+"rank": 871
 }
 ],
 "übernachten": [
@@ -19181,14 +11841,14 @@
 ],
 "Unterkunft": [
 {
-"emoji": "🏨",
-"is_base": false,
-"rank": 871
-},
-{
 "emoji": "🏩",
 "is_base": false,
 "rank": 763
+},
+{
+"emoji": "🏨",
+"is_base": false,
+"rank": 871
 }
 ],
 "Stundenhotel": [
@@ -19200,6 +11860,11 @@
 ],
 "einkaufen": [
 {
+"emoji": "🛒",
+"is_base": false,
+"rank": 196
+},
+{
 "emoji": "🏪",
 "is_base": false,
 "rank": 1083
@@ -19208,11 +11873,6 @@
 "emoji": "🏬",
 "is_base": false,
 "rank": 1149
-},
-{
-"emoji": "🛒",
-"is_base": false,
-"rank": 196
 }
 ],
 "Geschäft": [
@@ -19276,14 +11936,14 @@
 ],
 "Bauwerk": [
 {
-"emoji": "🏯",
-"is_base": false,
-"rank": 1053
-},
-{
 "emoji": "🏰",
 "is_base": false,
 "rank": 767
+},
+{
+"emoji": "🏯",
+"is_base": false,
+"rank": 1053
 }
 ],
 "japanisch": [
@@ -19295,19 +11955,14 @@
 ],
 "Schloss": [
 {
-"emoji": "🏯",
+"emoji": "🔒",
 "is_base": false,
-"rank": 1053
+"rank": 614
 },
 {
 "emoji": "🏰",
 "is_base": false,
 "rank": 767
-},
-{
-"emoji": "🔒",
-"is_base": false,
-"rank": 614
 },
 {
 "emoji": "🔓",
@@ -19350,14 +12005,14 @@
 ],
 "Amerika": [
 {
-"emoji": "🗽",
-"is_base": false,
-"rank": 720
-},
-{
 "emoji": "🏈",
 "is_base": false,
 "rank": 530
+},
+{
+"emoji": "🗽",
+"is_base": false,
+"rank": 720
 }
 ],
 "Freiheit": [
@@ -19397,31 +12052,21 @@
 ],
 "Kreuz": [
 {
-"emoji": "⛪",
-"is_base": false,
-"rank": 784
-},
-{
 "emoji": "❎",
 "is_base": false,
 "rank": 781
+},
+{
+"emoji": "⛪",
+"is_base": false,
+"rank": 784
 }
 ],
 "Religion": [
 {
-"emoji": "⛪",
+"emoji": "🛐",
 "is_base": false,
-"rank": 784
-},
-{
-"emoji": "🕌",
-"is_base": false,
-"rank": 777
-},
-{
-"emoji": "🕍",
-"is_base": false,
-"rank": 1310
+"rank": 455
 },
 {
 "emoji": "🕋",
@@ -19432,33 +12077,18 @@
 "emoji": "📿",
 "is_base": false,
 "rank": 711
-},
-{
-"emoji": "🛐",
-"is_base": false,
-"rank": 455
-},
-{
-"emoji": "🕎",
-"is_base": false,
-"rank": 1236
-},
-{
-"emoji": "🪯",
-"is_base": false,
-"rank": null
 }
 ],
 "Islam": [
 {
-"emoji": "🕌",
-"is_base": false,
-"rank": 777
-},
-{
 "emoji": "🕋",
 "is_base": false,
 "rank": 686
+},
+{
+"emoji": "🕌",
+"is_base": false,
+"rank": 777
 }
 ],
 "Moschee": [
@@ -19470,26 +12100,26 @@
 ],
 "Moslem": [
 {
-"emoji": "🕌",
-"is_base": false,
-"rank": 777
-},
-{
 "emoji": "🕋",
 "is_base": false,
 "rank": 686
+},
+{
+"emoji": "🕌",
+"is_base": false,
+"rank": 777
 }
 ],
 "Muslim": [
 {
-"emoji": "🕌",
-"is_base": false,
-"rank": 777
-},
-{
 "emoji": "🕋",
 "is_base": false,
 "rank": 686
+},
+{
+"emoji": "🕌",
+"is_base": false,
+"rank": 777
 }
 ],
 "Hindu": [
@@ -19508,14 +12138,14 @@
 ],
 "Tempel": [
 {
-"emoji": "🛕",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🕍",
 "is_base": false,
 "rank": 1310
+},
+{
+"emoji": "🛕",
+"is_base": false,
+"rank": null
 }
 ],
 "Jude": [
@@ -19576,14 +12206,14 @@
 ],
 "Camping": [
 {
-"emoji": "⛺",
-"is_base": false,
-"rank": 907
-},
-{
 "emoji": "🥾",
 "is_base": false,
 "rank": 804
+},
+{
+"emoji": "⛺",
+"is_base": false,
+"rank": 907
 }
 ],
 "Campingurlaub": [
@@ -19595,14 +12225,14 @@
 ],
 "Zelt": [
 {
-"emoji": "⛺",
-"is_base": false,
-"rank": 907
-},
-{
 "emoji": "🎪",
 "is_base": false,
 "rank": 752
+},
+{
+"emoji": "⛺",
+"is_base": false,
+"rank": 907
 }
 ],
 "Zeltplatz": [
@@ -19640,14 +12270,14 @@
 ],
 "Sterne": [
 {
-"emoji": "🌃",
-"is_base": false,
-"rank": 298
-},
-{
 "emoji": "✨",
 "is_base": false,
 "rank": 36
+},
+{
+"emoji": "🌃",
+"is_base": false,
+"rank": 298
 }
 ],
 "Sternenhimmel": [
@@ -19678,6 +12308,11 @@
 ],
 "Meer": [
 {
+"emoji": "🌊",
+"is_base": false,
+"rank": 215
+},
+{
 "emoji": "🌅",
 "is_base": false,
 "rank": 305
@@ -19686,11 +12321,6 @@
 "emoji": "⚓",
 "is_base": false,
 "rank": 582
-},
-{
-"emoji": "🌊",
-"is_base": false,
-"rank": 215
 }
 ],
 "Hochhäuser": [
@@ -19794,14 +12424,14 @@
 ],
 "Rad": [
 {
-"emoji": "🎡",
-"is_base": false,
-"rank": 786
-},
-{
 "emoji": "🚲",
 "is_base": false,
 "rank": 596
+},
+{
+"emoji": "🎡",
+"is_base": false,
+"rank": 786
 },
 {
 "emoji": "🛞",
@@ -19893,29 +12523,14 @@
 ],
 "Fahrzeug": [
 {
-"emoji": "🚂",
-"is_base": false,
-"rank": 656
-},
-{
-"emoji": "🚃",
-"is_base": false,
-"rank": 792
-},
-{
-"emoji": "🚌",
-"is_base": false,
-"rank": 796
-},
-{
-"emoji": "🚕",
-"is_base": false,
-"rank": 944
-},
-{
 "emoji": "🚗",
 "is_base": false,
 "rank": 318
+},
+{
+"emoji": "🚂",
+"is_base": false,
+"rank": 656
 },
 {
 "emoji": "🚘",
@@ -19940,31 +12555,6 @@
 "emoji": "🚃",
 "is_base": false,
 "rank": 792
-},
-{
-"emoji": "🚄",
-"is_base": false,
-"rank": 1106
-},
-{
-"emoji": "🚅",
-"is_base": false,
-"rank": 1111
-},
-{
-"emoji": "🚆",
-"is_base": false,
-"rank": 1088
-},
-{
-"emoji": "🚈",
-"is_base": false,
-"rank": 1292
-},
-{
-"emoji": "🚉",
-"is_base": false,
-"rank": 1221
 },
 {
 "emoji": "💺",
@@ -20056,26 +12646,26 @@
 ],
 "Straßenbahn": [
 {
-"emoji": "🚊",
-"is_base": false,
-"rank": 1283
-},
-{
 "emoji": "🚋",
 "is_base": false,
 "rank": 1192
+},
+{
+"emoji": "🚊",
+"is_base": false,
+"rank": 1283
 }
 ],
 "Tram": [
 {
-"emoji": "🚊",
-"is_base": false,
-"rank": 1283
-},
-{
 "emoji": "🚋",
 "is_base": false,
 "rank": 1192
+},
+{
+"emoji": "🚊",
+"is_base": false,
+"rank": 1283
 }
 ],
 "Bahn": [
@@ -20132,19 +12722,14 @@
 "rank": 796
 },
 {
-"emoji": "🚍",
-"is_base": false,
-"rank": 1143
-},
-{
 "emoji": "🚐",
 "is_base": false,
 "rank": 915
 },
 {
-"emoji": "🚏",
+"emoji": "🚍",
 "is_base": false,
-"rank": 1209
+"rank": 1143
 }
 ],
 "Oberleitungsbus": [
@@ -20229,11 +12814,6 @@
 ],
 "Auto": [
 {
-"emoji": "🚕",
-"is_base": false,
-"rank": 944
-},
-{
 "emoji": "🚗",
 "is_base": false,
 "rank": 318
@@ -20242,6 +12822,11 @@
 "emoji": "🚘",
 "is_base": false,
 "rank": 679
+},
+{
+"emoji": "🚕",
+"is_base": false,
+"rank": 944
 }
 ],
 "Taxi": [
@@ -20286,14 +12871,14 @@
 ],
 "Lieferwagen": [
 {
-"emoji": "🛻",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🚚",
 "is_base": false,
 "rank": 630
+},
+{
+"emoji": "🛻",
+"is_base": false,
+"rank": null
 }
 ],
 "Pick-up": [
@@ -20427,24 +13012,14 @@
 ],
 "Schuh": [
 {
-"emoji": "🛼",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "👞",
-"is_base": false,
-"rank": 840
-},
-{
 "emoji": "👟",
 "is_base": false,
 "rank": 624
 },
 {
-"emoji": "👡",
+"emoji": "👞",
 "is_base": false,
-"rank": 1140
+"rank": 840
 },
 {
 "emoji": "👢",
@@ -20531,26 +13106,26 @@
 ],
 "Ampel": [
 {
-"emoji": "🚥",
-"is_base": false,
-"rank": 1148
-},
-{
 "emoji": "🚦",
 "is_base": false,
 "rank": 861
+},
+{
+"emoji": "🚥",
+"is_base": false,
+"rank": 1148
 }
 ],
 "Verkehrsampel": [
 {
-"emoji": "🚥",
-"is_base": false,
-"rank": 1148
-},
-{
 "emoji": "🚦",
 "is_base": false,
 "rank": 861
+},
+{
+"emoji": "🚥",
+"is_base": false,
+"rank": 1148
 }
 ],
 "vertikal": [
@@ -20581,19 +13156,14 @@
 "rank": 353
 },
 {
-"emoji": "🚧",
-"is_base": false,
-"rank": 853
-},
-{
-"emoji": "🪧",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "📛",
 "is_base": false,
 "rank": 774
+},
+{
+"emoji": "🚧",
+"is_base": false,
+"rank": 853
 }
 ],
 "Stopp": [
@@ -20666,29 +13236,19 @@
 ],
 "Sicherheit": [
 {
-"emoji": "🛟",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🦺",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🔒",
 "is_base": false,
 "rank": 614
 },
 {
-"emoji": "🔏",
-"is_base": false,
-"rank": 1212
-},
-{
 "emoji": "🔐",
 "is_base": false,
 "rank": 657
+},
+{
+"emoji": "🔏",
+"is_base": false,
+"rank": 1212
 }
 ],
 "Segelboot": [
@@ -20747,14 +13307,14 @@
 "rank": 820
 },
 {
-"emoji": "🛬",
-"is_base": false,
-"rank": 1069
-},
-{
 "emoji": "💺",
 "is_base": false,
 "rank": 1061
+},
+{
+"emoji": "🛬",
+"is_base": false,
+"rank": 1069
 }
 ],
 "Start": [
@@ -20836,14 +13396,14 @@
 ],
 "Schwebebahn": [
 {
-"emoji": "🚟",
-"is_base": false,
-"rank": 1313
-},
-{
 "emoji": "🚠",
 "is_base": false,
 "rank": 1274
+},
+{
+"emoji": "🚟",
+"is_base": false,
+"rank": 1313
 }
 ],
 "Bergschwebebahn": [
@@ -20921,26 +13481,26 @@
 ],
 "Prozess": [
 {
-"emoji": "⌛",
-"is_base": false,
-"rank": 701
-},
-{
 "emoji": "⏳",
 "is_base": false,
 "rank": 661
+},
+{
+"emoji": "⌛",
+"is_base": false,
+"rank": 701
 }
 ],
 "Sanduhr": [
 {
-"emoji": "⌛",
-"is_base": false,
-"rank": 701
-},
-{
 "emoji": "⏳",
 "is_base": false,
 "rank": 661
+},
+{
+"emoji": "⌛",
+"is_base": false,
+"rank": 701
 }
 ],
 "Armbanduhr": [
@@ -20952,134 +13512,19 @@
 ],
 "Uhr": [
 {
-"emoji": "⌚",
-"is_base": false,
-"rank": 512
-},
-{
 "emoji": "⏰",
 "is_base": false,
 "rank": 303
 },
 {
+"emoji": "⌚",
+"is_base": false,
+"rank": 512
+},
+{
 "emoji": "🕛",
 "is_base": false,
 "rank": 712
-},
-{
-"emoji": "🕧",
-"is_base": false,
-"rank": 1392
-},
-{
-"emoji": "🕐",
-"is_base": false,
-"rank": 732
-},
-{
-"emoji": "🕜",
-"is_base": false,
-"rank": 830
-},
-{
-"emoji": "🕑",
-"is_base": false,
-"rank": 1056
-},
-{
-"emoji": "🕝",
-"is_base": false,
-"rank": 1156
-},
-{
-"emoji": "🕒",
-"is_base": false,
-"rank": 930
-},
-{
-"emoji": "🕞",
-"is_base": false,
-"rank": 1269
-},
-{
-"emoji": "🕓",
-"is_base": false,
-"rank": 1120
-},
-{
-"emoji": "🕟",
-"is_base": false,
-"rank": 1408
-},
-{
-"emoji": "🕔",
-"is_base": false,
-"rank": 1226
-},
-{
-"emoji": "🕠",
-"is_base": false,
-"rank": 1402
-},
-{
-"emoji": "🕕",
-"is_base": false,
-"rank": 1173
-},
-{
-"emoji": "🕡",
-"is_base": false,
-"rank": 1363
-},
-{
-"emoji": "🕖",
-"is_base": false,
-"rank": 1188
-},
-{
-"emoji": "🕢",
-"is_base": false,
-"rank": 1401
-},
-{
-"emoji": "🕗",
-"is_base": false,
-"rank": 1197
-},
-{
-"emoji": "🕣",
-"is_base": false,
-"rank": 1372
-},
-{
-"emoji": "🕘",
-"is_base": false,
-"rank": 1137
-},
-{
-"emoji": "🕤",
-"is_base": false,
-"rank": 1388
-},
-{
-"emoji": "🕙",
-"is_base": false,
-"rank": 1125
-},
-{
-"emoji": "🕥",
-"is_base": false,
-"rank": 1257
-},
-{
-"emoji": "🕚",
-"is_base": false,
-"rank": 1208
-},
-{
-"emoji": "🕦",
-"is_base": false,
-"rank": 1370
 }
 ],
 "Uhrzeit": [
@@ -21266,19 +13711,9 @@
 ],
 "Mond": [
 {
-"emoji": "🌑",
+"emoji": "🌙",
 "is_base": false,
-"rank": 714
-},
-{
-"emoji": "🌒",
-"is_base": false,
-"rank": 928
-},
-{
-"emoji": "🌔",
-"is_base": false,
-"rank": 923
+"rank": 147
 },
 {
 "emoji": "🌕",
@@ -21286,39 +13721,29 @@
 "rank": 478
 },
 {
-"emoji": "🌖",
+"emoji": "🌑",
 "is_base": false,
-"rank": 1024
-},
-{
-"emoji": "🌘",
-"is_base": false,
-"rank": 959
-},
-{
-"emoji": "🌙",
-"is_base": false,
-"rank": 147
-},
-{
-"emoji": "🎑",
-"is_base": false,
-"rank": 1071
+"rank": 714
 }
 ],
 "Neumond": [
 {
-"emoji": "🌑",
-"is_base": false,
-"rank": 714
-},
-{
 "emoji": "🌚",
 "is_base": false,
 "rank": 189
+},
+{
+"emoji": "🌑",
+"is_base": false,
+"rank": 714
 }
 ],
 "zunehmend": [
+{
+"emoji": "🌔",
+"is_base": false,
+"rank": 923
+},
 {
 "emoji": "🌒",
 "is_base": false,
@@ -21328,11 +13753,6 @@
 "emoji": "🌓",
 "is_base": false,
 "rank": 989
-},
-{
-"emoji": "🌔",
-"is_base": false,
-"rank": 923
 }
 ],
 "Halbmond": [
@@ -21349,17 +13769,22 @@
 ],
 "Vollmond": [
 {
-"emoji": "🌕",
-"is_base": false,
-"rank": 478
-},
-{
 "emoji": "🌝",
 "is_base": false,
 "rank": 252
+},
+{
+"emoji": "🌕",
+"is_base": false,
+"rank": 478
 }
 ],
 "abnehmend": [
+{
+"emoji": "🌘",
+"is_base": false,
+"rank": 959
+},
 {
 "emoji": "🌖",
 "is_base": false,
@@ -21369,11 +13794,6 @@
 "emoji": "🌗",
 "is_base": false,
 "rank": 1025
-},
-{
-"emoji": "🌘",
-"is_base": false,
-"rank": 959
 }
 ],
 "Mondsichel": [
@@ -21479,26 +13899,26 @@
 ],
 "Regen": [
 {
-"emoji": "🌂",
-"is_base": false,
-"rank": 1027
-},
-{
 "emoji": "☔",
 "is_base": false,
 "rank": 384
+},
+{
+"emoji": "🌂",
+"is_base": false,
+"rank": 1027
 }
 ],
 "Regenschirm": [
 {
-"emoji": "🌂",
-"is_base": false,
-"rank": 1027
-},
-{
 "emoji": "☔",
 "is_base": false,
 "rank": 384
+},
+{
+"emoji": "🌂",
+"is_base": false,
+"rank": 1027
 }
 ],
 "Blitz": [
@@ -21708,29 +14128,9 @@
 "rank": 82
 },
 {
-"emoji": "🎏",
-"is_base": false,
-"rank": 1079
-},
-{
-"emoji": "🎐",
-"is_base": false,
-"rank": 921
-},
-{
-"emoji": "🎀",
-"is_base": false,
-"rank": 249
-},
-{
 "emoji": "🎁",
 "is_base": false,
 "rank": 91
-},
-{
-"emoji": "🪅",
-"is_base": false,
-"rank": null
 }
 ],
 "Konfetti": [
@@ -21817,14 +14217,14 @@
 ],
 "Glocke": [
 {
-"emoji": "🎐",
-"is_base": false,
-"rank": 921
-},
-{
 "emoji": "🔔",
 "is_base": false,
 "rank": 304
+},
+{
+"emoji": "🎐",
+"is_base": false,
+"rank": 921
 }
 ],
 "Mondfest": [
@@ -21836,14 +14236,14 @@
 ],
 "Geschenk": [
 {
-"emoji": "🧧",
-"is_base": false,
-"rank": 1043
-},
-{
 "emoji": "🎁",
 "is_base": false,
 "rank": 91
+},
+{
+"emoji": "🧧",
+"is_base": false,
+"rank": 1043
 }
 ],
 "Hongbao": [
@@ -21946,79 +14346,19 @@
 ],
 "Ball": [
 {
-"emoji": "⚽",
-"is_base": false,
-"rank": 235
-},
-{
-"emoji": "⚾",
-"is_base": false,
-"rank": 349
-},
-{
-"emoji": "🥎",
-"is_base": false,
-"rank": 613
-},
-{
-"emoji": "🏀",
-"is_base": false,
-"rank": 344
-},
-{
-"emoji": "🏐",
-"is_base": false,
-"rank": 724
-},
-{
-"emoji": "🏈",
-"is_base": false,
-"rank": 530
-},
-{
-"emoji": "🏉",
-"is_base": false,
-"rank": 873
-},
-{
-"emoji": "🎾",
-"is_base": false,
-"rank": 722
-},
-{
-"emoji": "🏏",
-"is_base": false,
-"rank": 919
-},
-{
-"emoji": "🥍",
-"is_base": false,
-"rank": 1151
-},
-{
-"emoji": "🏓",
-"is_base": false,
-"rank": 1011
-},
-{
 "emoji": "🔴",
 "is_base": false,
 "rank": 114
 },
 {
+"emoji": "⚽",
+"is_base": false,
+"rank": 235
+},
+{
 "emoji": "🔵",
 "is_base": false,
 "rank": 286
-},
-{
-"emoji": "⚫",
-"is_base": false,
-"rank": 338
-},
-{
-"emoji": "⚪",
-"is_base": false,
-"rank": 392
 }
 ],
 "Fußball": [
@@ -22037,14 +14377,14 @@
 ],
 "Handschuh": [
 {
-"emoji": "🥎",
-"is_base": false,
-"rank": 613
-},
-{
 "emoji": "🥊",
 "is_base": false,
 "rank": 453
+},
+{
+"emoji": "🥎",
+"is_base": false,
+"rank": 613
 }
 ],
 "Softball": [
@@ -22145,27 +14485,17 @@
 ],
 "Kugel": [
 {
-"emoji": "🎳",
-"is_base": false,
-"rank": 931
-},
-{
 "emoji": "🎱",
 "is_base": false,
 "rank": 616
-}
-],
-"Spiel": [
+},
 {
 "emoji": "🎳",
 "is_base": false,
 "rank": 931
-},
-{
-"emoji": "🥌",
-"is_base": false,
-"rank": 1200
-},
+}
+],
+"Spiel": [
 {
 "emoji": "🎯",
 "is_base": false,
@@ -22175,11 +14505,6 @@
 "emoji": "🎱",
 "is_base": false,
 "rank": 616
-},
-{
-"emoji": "🎰",
-"is_base": false,
-"rank": 809
 },
 {
 "emoji": "🎲",
@@ -22203,34 +14528,19 @@
 ],
 "Schläger": [
 {
-"emoji": "🏏",
-"is_base": false,
-"rank": 919
-},
-{
-"emoji": "🏑",
-"is_base": false,
-"rank": 1174
-},
-{
 "emoji": "🏒",
 "is_base": false,
 "rank": 730
 },
 {
-"emoji": "🥍",
+"emoji": "🏏",
 "is_base": false,
-"rank": 1151
+"rank": 919
 },
 {
 "emoji": "🏓",
 "is_base": false,
 "rank": 1011
-},
-{
-"emoji": "🏸",
-"is_base": false,
-"rank": 1098
 }
 ],
 "Feldhockey": [
@@ -22242,14 +14552,14 @@
 ],
 "Hockey": [
 {
-"emoji": "🏑",
-"is_base": false,
-"rank": 1174
-},
-{
 "emoji": "🏒",
 "is_base": false,
 "rank": 730
+},
+{
+"emoji": "🏑",
+"is_base": false,
+"rank": 1174
 }
 ],
 "Eishockey": [
@@ -22490,14 +14800,14 @@
 ],
 "Spielzeug": [
 {
-"emoji": "🪀",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🧸",
 "is_base": false,
 "rank": 327
+},
+{
+"emoji": "🪀",
+"is_base": false,
+"rank": null
 }
 ],
 "Drachen": [
@@ -22808,14 +15118,14 @@
 ],
 "Kunst": [
 {
-"emoji": "🎭",
-"is_base": false,
-"rank": 551
-},
-{
 "emoji": "🎨",
 "is_base": false,
 "rank": 405
+},
+{
+"emoji": "🎭",
+"is_base": false,
+"rank": 551
 }
 ],
 "Masken": [
@@ -22855,6 +15165,11 @@
 ],
 "Nadel": [
 {
+"emoji": "💉",
+"is_base": false,
+"rank": 193
+},
+{
 "emoji": "🧵",
 "is_base": false,
 "rank": 937
@@ -22863,11 +15178,6 @@
 "emoji": "🪡",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "💉",
-"is_base": false,
-"rank": 193
 }
 ],
 "Nähen": [
@@ -22997,11 +15307,6 @@
 "emoji": "👜",
 "is_base": false,
 "rank": 849
-},
-{
-"emoji": "👝",
-"is_base": false,
-"rank": 1277
 }
 ],
 "Brille": [
@@ -23041,14 +15346,14 @@
 ],
 "Experiment": [
 {
-"emoji": "🥼",
-"is_base": false,
-"rank": 1168
-},
-{
 "emoji": "🧪",
 "is_base": false,
 "rank": 943
+},
+{
+"emoji": "🥼",
+"is_base": false,
+"rank": 1168
 }
 ],
 "Laborkittel": [
@@ -23074,34 +15379,9 @@
 ],
 "Kleidung": [
 {
-"emoji": "👔",
-"is_base": false,
-"rank": 753
-},
-{
-"emoji": "👕",
-"is_base": false,
-"rank": 651
-},
-{
-"emoji": "👖",
-"is_base": false,
-"rank": 645
-},
-{
 "emoji": "👗",
 "is_base": false,
 "rank": 391
-},
-{
-"emoji": "👘",
-"is_base": false,
-"rank": 857
-},
-{
-"emoji": "🥻",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "👙",
@@ -23109,9 +15389,9 @@
 "rank": 462
 },
 {
-"emoji": "👚",
+"emoji": "👖",
 "is_base": false,
-"rank": 955
+"rank": 645
 }
 ],
 "Kragen": [
@@ -23238,6 +15518,11 @@
 ],
 "Badeanzug": [
 {
+"emoji": "👙",
+"is_base": false,
+"rank": 462
+},
+{
 "emoji": "🩱",
 "is_base": false,
 "rank": null
@@ -23246,11 +15531,6 @@
 "emoji": "🩲",
 "is_base": false,
 "rank": null
-},
-{
-"emoji": "👙",
-"is_base": false,
-"rank": 462
 }
 ],
 "Einteiler": [
@@ -23372,14 +15652,14 @@
 "rank": 849
 },
 {
-"emoji": "👝",
-"is_base": false,
-"rank": 1277
-},
-{
 "emoji": "💼",
 "is_base": false,
 "rank": 878
+},
+{
+"emoji": "👝",
+"is_base": false,
+"rank": 1277
 }
 ],
 "Clutch": [
@@ -23520,19 +15800,14 @@
 "rank": 450
 },
 {
-"emoji": "👡",
+"emoji": "🚺",
 "is_base": false,
-"rank": 1140
+"rank": 863
 },
 {
 "emoji": "👢",
 "is_base": false,
 "rank": 974
-},
-{
-"emoji": "🚺",
-"is_base": false,
-"rank": 863
 }
 ],
 "Highheels": [
@@ -23628,14 +15903,14 @@
 ],
 "Kopfbedeckung": [
 {
-"emoji": "👒",
-"is_base": false,
-"rank": 744
-},
-{
 "emoji": "🎩",
 "is_base": false,
 "rank": 567
+},
+{
+"emoji": "👒",
+"is_base": false,
+"rank": 744
 }
 ],
 "Zylinder": [
@@ -23766,14 +16041,14 @@
 ],
 "Edelstein": [
 {
-"emoji": "💍",
-"is_base": false,
-"rank": 261
-},
-{
 "emoji": "💎",
 "is_base": false,
 "rank": 182
+},
+{
+"emoji": "💍",
+"is_base": false,
+"rank": 261
 }
 ],
 "Ring": [
@@ -23839,14 +16114,14 @@
 ],
 "Lautsprecher": [
 {
-"emoji": "📢",
-"is_base": false,
-"rank": 183
-},
-{
 "emoji": "📣",
 "is_base": false,
 "rank": 177
+},
+{
+"emoji": "📢",
+"is_base": false,
+"rank": 183
 }
 ],
 "Jubel": [
@@ -23865,34 +16140,19 @@
 ],
 "E-Mail": [
 {
-"emoji": "📯",
-"is_base": false,
-"rank": 986
-},
-{
-"emoji": "📧",
-"is_base": false,
-"rank": 971
-},
-{
-"emoji": "📨",
-"is_base": false,
-"rank": 783
-},
-{
 "emoji": "📩",
 "is_base": false,
 "rank": 332
 },
 {
-"emoji": "📫",
-"is_base": false,
-"rank": 1187
-},
-{
 "emoji": "📬",
 "is_base": false,
 "rank": 769
+},
+{
+"emoji": "📨",
+"is_base": false,
+"rank": 783
 }
 ],
 "Posthorn": [
@@ -23904,9 +16164,9 @@
 ],
 "Musik": [
 {
-"emoji": "🎼",
+"emoji": "🎶",
 "is_base": false,
-"rank": 273
+"rank": 80
 },
 {
 "emoji": "🎵",
@@ -23914,61 +16174,21 @@
 "rank": 162
 },
 {
-"emoji": "🎶",
-"is_base": false,
-"rank": 80
-},
-{
 "emoji": "🎧",
 "is_base": false,
 "rank": 258
-},
-{
-"emoji": "📻",
-"is_base": false,
-"rank": 671
-},
-{
-"emoji": "🎷",
-"is_base": false,
-"rank": 788
-},
-{
-"emoji": "🎸",
-"is_base": false,
-"rank": 315
-},
-{
-"emoji": "🎹",
-"is_base": false,
-"rank": 485
-},
-{
-"emoji": "🎺",
-"is_base": false,
-"rank": 776
-},
-{
-"emoji": "🎻",
-"is_base": false,
-"rank": 499
-},
-{
-"emoji": "🪕",
-"is_base": false,
-"rank": null
 }
 ],
 "Noten": [
 {
-"emoji": "🎼",
-"is_base": false,
-"rank": 273
-},
-{
 "emoji": "🎶",
 "is_base": false,
 "rank": 80
+},
+{
+"emoji": "🎼",
+"is_base": false,
+"rank": 273
 }
 ],
 "Notenschlüssel": [
@@ -24050,11 +16270,6 @@
 ],
 "Instrument": [
 {
-"emoji": "🎷",
-"is_base": false,
-"rank": 788
-},
-{
 "emoji": "🎸",
 "is_base": false,
 "rank": 315
@@ -24063,11 +16278,6 @@
 "emoji": "🎹",
 "is_base": false,
 "rank": 485
-},
-{
-"emoji": "🎺",
-"is_base": false,
-"rank": 776
 },
 {
 "emoji": "🎻",
@@ -24077,11 +16287,6 @@
 ],
 "Musikinstrument": [
 {
-"emoji": "🎷",
-"is_base": false,
-"rank": 788
-},
-{
 "emoji": "🎸",
 "is_base": false,
 "rank": 315
@@ -24090,11 +16295,6 @@
 "emoji": "🎹",
 "is_base": false,
 "rank": 485
-},
-{
-"emoji": "🎺",
-"is_base": false,
-"rank": 776
 },
 {
 "emoji": "🎻",
@@ -24265,29 +16465,14 @@
 ],
 "Mobiltelefon": [
 {
-"emoji": "📱",
-"is_base": false,
-"rank": 294
-},
-{
 "emoji": "📲",
 "is_base": false,
 "rank": 275
 },
 {
-"emoji": "📵",
+"emoji": "📱",
 "is_base": false,
-"rank": 1177
-},
-{
-"emoji": "📶",
-"is_base": false,
-"rank": 1108
-},
-{
-"emoji": "📳",
-"is_base": false,
-"rank": 1183
+"rank": 294
 },
 {
 "emoji": "📴",
@@ -24525,6 +16710,11 @@
 ],
 "Film": [
 {
+"emoji": "📺",
+"is_base": false,
+"rank": 301
+},
+{
 "emoji": "🎥",
 "is_base": false,
 "rank": 308
@@ -24533,16 +16723,6 @@
 "emoji": "🎬",
 "is_base": false,
 "rank": 363
-},
-{
-"emoji": "📺",
-"is_base": false,
-"rank": 301
-},
-{
-"emoji": "🎦",
-"is_base": false,
-"rank": 1132
 }
 ],
 "Filmkamera": [
@@ -24757,64 +16937,34 @@
 ],
 "Notizbuch": [
 {
-"emoji": "📔",
-"is_base": false,
-"rank": 1104
-},
-{
 "emoji": "📓",
 "is_base": false,
 "rank": 1076
+},
+{
+"emoji": "📔",
+"is_base": false,
+"rank": 1104
 }
 ],
 "Buch": [
-{
-"emoji": "📕",
-"is_base": false,
-"rank": 739
-},
 {
 "emoji": "📖",
 "is_base": false,
 "rank": 415
 },
 {
-"emoji": "📗",
-"is_base": false,
-"rank": 1001
-},
-{
-"emoji": "📘",
-"is_base": false,
-"rank": 880
-},
-{
-"emoji": "📙",
-"is_base": false,
-"rank": 1008
-}
-],
-"geschlossen": [
-{
 "emoji": "📕",
 "is_base": false,
 "rank": 739
 },
 {
-"emoji": "📫",
+"emoji": "📘",
 "is_base": false,
-"rank": 1187
-},
-{
-"emoji": "📪",
-"is_base": false,
-"rank": 1329
-},
-{
-"emoji": "📁",
-"is_base": false,
-"rank": 1141
-},
+"rank": 880
+}
+],
+"geschlossen": [
 {
 "emoji": "🔒",
 "is_base": false,
@@ -24824,6 +16974,11 @@
 "emoji": "🚪",
 "is_base": false,
 "rank": 678
+},
+{
+"emoji": "📕",
+"is_base": false,
+"rank": 739
 }
 ],
 "geöffnet": [
@@ -24840,11 +16995,6 @@
 ],
 "orangefarben": [
 {
-"emoji": "📙",
-"is_base": false,
-"rank": 1008
-},
-{
 "emoji": "🔶",
 "is_base": false,
 "rank": 666
@@ -24853,6 +17003,11 @@
 "emoji": "🔸",
 "is_base": false,
 "rank": 667
+},
+{
+"emoji": "📙",
+"is_base": false,
+"rank": 1008
 }
 ],
 "Bücher": [
@@ -24897,58 +17052,48 @@
 ],
 "Dokument": [
 {
-"emoji": "📃",
-"is_base": false,
-"rank": 1019
-},
-{
 "emoji": "📄",
 "is_base": false,
 "rank": 612
+},
+{
+"emoji": "📃",
+"is_base": false,
+"rank": 1019
 },
 {
 "emoji": "📁",
 "is_base": false,
 "rank": 1141
-},
-{
-"emoji": "📂",
-"is_base": false,
-"rank": 1198
 }
 ],
 "Papier": [
 {
-"emoji": "📃",
+"emoji": "📝",
 "is_base": false,
-"rank": 1019
+"rank": 330
+},
+{
+"emoji": "📄",
+"is_base": false,
+"rank": 612
 },
 {
 "emoji": "📜",
 "is_base": false,
 "rank": 892
-},
-{
-"emoji": "📄",
-"is_base": false,
-"rank": 612
-},
-{
-"emoji": "📝",
-"is_base": false,
-"rank": 330
 }
 ],
 "Seite": [
 {
-"emoji": "📃",
-"is_base": false,
-"rank": 1019
-},
-{
 "emoji": "📄",
 "is_base": false,
 "rank": 612
+},
+{
+"emoji": "📃",
+"is_base": false,
+"rank": 1019
 }
 ],
 "Schriftrolle": [
@@ -25044,11 +17189,6 @@
 ],
 "Geldschein": [
 {
-"emoji": "💴",
-"is_base": false,
-"rank": 801
-},
-{
 "emoji": "💵",
 "is_base": false,
 "rank": 333
@@ -25059,9 +17199,9 @@
 "rank": 797
 },
 {
-"emoji": "💷",
+"emoji": "💴",
 "is_base": false,
-"rank": 1017
+"rank": 801
 }
 ],
 "Yen": [
@@ -25080,14 +17220,14 @@
 ],
 "Dollar": [
 {
-"emoji": "💵",
-"is_base": false,
-"rank": 333
-},
-{
 "emoji": "💲",
 "is_base": false,
 "rank": 312
+},
+{
+"emoji": "💵",
+"is_base": false,
+"rank": 333
 }
 ],
 "Dollar-Banknote": [
@@ -25183,24 +17323,19 @@
 ],
 "Diagramm": [
 {
-"emoji": "💹",
-"is_base": false,
-"rank": 1016
-},
-{
 "emoji": "📈",
 "is_base": false,
 "rank": 426
 },
 {
-"emoji": "📉",
-"is_base": false,
-"rank": 728
-},
-{
 "emoji": "📊",
 "is_base": false,
 "rank": 676
+},
+{
+"emoji": "📉",
+"is_base": false,
+"rank": 728
 }
 ],
 "Markt": [
@@ -25233,14 +17368,14 @@
 ],
 "Ablage": [
 {
-"emoji": "📤",
-"is_base": false,
-"rank": 1033
-},
-{
 "emoji": "📥",
 "is_base": false,
 "rank": 818
+},
+{
+"emoji": "📤",
+"is_base": false,
+"rank": 1033
 }
 ],
 "Postausgang": [
@@ -25273,14 +17408,9 @@
 ],
 "Briefkasten": [
 {
-"emoji": "📫",
+"emoji": "📮",
 "is_base": false,
-"rank": 1187
-},
-{
-"emoji": "📪",
-"is_base": false,
-"rank": 1329
+"rank": 540
 },
 {
 "emoji": "📬",
@@ -25288,14 +17418,9 @@
 "rank": 769
 },
 {
-"emoji": "📭",
+"emoji": "📫",
 "is_base": false,
-"rank": 1352
-},
-{
-"emoji": "📮",
-"is_base": false,
-"rank": 540
+"rank": 1187
 }
 ],
 "Bleistift": [
@@ -25340,14 +17465,14 @@
 ],
 "Kalender": [
 {
-"emoji": "📅",
-"is_base": false,
-"rank": 710
-},
-{
 "emoji": "📆",
 "is_base": false,
 "rank": 696
+},
+{
+"emoji": "📅",
+"is_base": false,
+"rank": 710
 }
 ],
 "Kalenderblatt": [
@@ -25524,26 +17649,26 @@
 "rank": 614
 },
 {
-"emoji": "🔏",
-"is_base": false,
-"rank": 1212
-},
-{
 "emoji": "🔐",
 "is_base": false,
 "rank": 657
+},
+{
+"emoji": "🔏",
+"is_base": false,
+"rank": 1212
 }
 ],
 "privat": [
 {
-"emoji": "🔏",
-"is_base": false,
-"rank": 1212
-},
-{
 "emoji": "🔐",
 "is_base": false,
 "rank": 657
+},
+{
+"emoji": "🔏",
+"is_base": false,
+"rank": 1212
 }
 ],
 "Passwort": [
@@ -25574,19 +17699,9 @@
 "rank": 608
 },
 {
-"emoji": "🪚",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🔧",
 "is_base": false,
 "rank": 1067
-},
-{
-"emoji": "🪛",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "🧰",
@@ -25680,14 +17795,14 @@
 ],
 "Schraube": [
 {
-"emoji": "🪛",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🔩",
 "is_base": false,
 "rank": 1195
+},
+{
+"emoji": "🪛",
+"is_base": false,
+"rank": null
 }
 ],
 "Schraubendreher": [
@@ -25844,14 +17959,14 @@
 ],
 "Biologie": [
 {
-"emoji": "🧫",
-"is_base": false,
-"rank": 1158
-},
-{
 "emoji": "🧬",
 "is_base": false,
 "rank": 531
+},
+{
+"emoji": "🧫",
+"is_base": false,
+"rank": 1158
 }
 ],
 "Petrischale": [
@@ -26146,11 +18261,6 @@
 "emoji": "🚽",
 "is_base": false,
 "rank": 652
-},
-{
-"emoji": "🪠",
-"is_base": false,
-"rank": null
 },
 {
 "emoji": "🚻",
@@ -26920,19 +19030,9 @@
 ],
 "Pfeile": [
 {
-"emoji": "🔃",
-"is_base": false,
-"rank": 1176
-},
-{
 "emoji": "🔄",
 "is_base": false,
 "rank": 817
-},
-{
-"emoji": "🔀",
-"is_base": false,
-"rank": 1293
 },
 {
 "emoji": "🔁",
@@ -26940,9 +19040,9 @@
 "rank": 992
 },
 {
-"emoji": "🔂",
+"emoji": "🔃",
 "is_base": false,
-"rank": 1272
+"rank": 1176
 }
 ],
 "BACK-Pfeil": [
@@ -27088,19 +19188,14 @@
 "rank": 610
 },
 {
-"emoji": "⏪",
-"is_base": false,
-"rank": 1082
-},
-{
-"emoji": "⏫",
-"is_base": false,
-"rank": 1262
-},
-{
 "emoji": "⏬",
 "is_base": false,
 "rank": 936
+},
+{
+"emoji": "⏪",
+"is_base": false,
+"rank": 1082
 }
 ],
 "überspringen": [
@@ -27126,9 +19221,9 @@
 ],
 "Dreieck": [
 {
-"emoji": "⏪",
+"emoji": "🔻",
 "is_base": false,
-"rank": 1082
+"rank": 521
 },
 {
 "emoji": "🔺",
@@ -27136,9 +19231,9 @@
 "rank": 640
 },
 {
-"emoji": "🔻",
+"emoji": "⏪",
 "is_base": false,
-"rank": 521
+"rank": 1082
 }
 ],
 "Zurückspulen": [
@@ -27157,11 +19252,6 @@
 ],
 "Schaltfläche": [
 {
-"emoji": "🔼",
-"is_base": false,
-"rank": 1136
-},
-{
 "emoji": "🔽",
 "is_base": false,
 "rank": 702
@@ -27170,11 +19260,6 @@
 "emoji": "🔘",
 "is_base": false,
 "rank": 816
-},
-{
-"emoji": "🔳",
-"is_base": false,
-"rank": 1268
 },
 {
 "emoji": "🔲",
@@ -27219,14 +19304,14 @@
 ],
 "Helligkeit": [
 {
-"emoji": "🔅",
-"is_base": false,
-"rank": 765
-},
-{
 "emoji": "🔆",
 "is_base": false,
 "rank": 514
+},
+{
+"emoji": "🔅",
+"is_base": false,
+"rank": 765
 }
 ],
 "Heller-Taste": [
@@ -27427,24 +19512,19 @@
 ],
 "Satzzeichen": [
 {
+"emoji": "❗",
+"is_base": false,
+"rank": 105
+},
+{
 "emoji": "❓",
 "is_base": false,
 "rank": 237
 },
 {
-"emoji": "❔",
-"is_base": false,
-"rank": 1005
-},
-{
 "emoji": "❕",
 "is_base": false,
 "rank": 743
-},
-{
-"emoji": "❗",
-"is_base": false,
-"rank": 105
 }
 ],
 "Ausrufezeichen": [
@@ -27463,14 +19543,14 @@
 ],
 "Währung": [
 {
-"emoji": "💱",
-"is_base": false,
-"rank": 1241
-},
-{
 "emoji": "💲",
 "is_base": false,
 "rank": 312
+},
+{
+"emoji": "💱",
+"is_base": false,
+"rank": 1241
 }
 ],
 "Wechsel": [
@@ -27573,51 +19653,6 @@
 ],
 "Quadrat": [
 {
-"emoji": "❎",
-"is_base": false,
-"rank": 781
-},
-{
-"emoji": "🆙",
-"is_base": false,
-"rank": 824
-},
-{
-"emoji": "🟥",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟧",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟨",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟩",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟦",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟪",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟫",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "⬛",
 "is_base": false,
 "rank": 565
@@ -27628,14 +19663,9 @@
 "rank": 695
 },
 {
-"emoji": "◾",
+"emoji": "❎",
 "is_base": false,
-"rank": 847
-},
-{
-"emoji": "◽",
-"is_base": false,
-"rank": 1018
+"rank": 781
 }
 ],
 "X": [
@@ -27890,51 +19920,21 @@
 "rank": 114
 },
 {
-"emoji": "🟠",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟡",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟢",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "🔵",
 "is_base": false,
 "rank": 286
 },
 {
-"emoji": "🟣",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🟤",
-"is_base": false,
-"rank": null
-},
-{
 "emoji": "⚫",
 "is_base": false,
 "rank": 338
-},
-{
-"emoji": "⚪",
-"is_base": false,
-"rank": 392
 }
 ],
 "Raute": [
 {
-"emoji": "🔶",
+"emoji": "🔹",
 "is_base": false,
-"rank": 666
+"rank": 417
 },
 {
 "emoji": "🔷",
@@ -27942,14 +19942,9 @@
 "rank": 644
 },
 {
-"emoji": "🔸",
+"emoji": "🔶",
 "is_base": false,
-"rank": 667
-},
-{
-"emoji": "🔹",
-"is_base": false,
-"rank": 417
+"rank": 666
 }
 ],
 "Rautenform": [
@@ -27968,14 +19963,14 @@
 ],
 "quadratisch": [
 {
-"emoji": "🔳",
-"is_base": false,
-"rank": 1268
-},
-{
 "emoji": "🔲",
 "is_base": false,
 "rank": 1055
+},
+{
+"emoji": "🔳",
+"is_base": false,
+"rank": 1268
 }
 ],
 "Zielflagge": [
@@ -27999,1309 +19994,14 @@
 "rank": 212
 },
 {
-"emoji": "🇦🇨",
-"is_base": false,
-"rank": 1368
-},
-{
-"emoji": "🇦🇩",
-"is_base": false,
-"rank": 1342
-},
-{
-"emoji": "🇦🇪",
-"is_base": false,
-"rank": 845
-},
-{
-"emoji": "🇦🇫",
-"is_base": false,
-"rank": 1271
-},
-{
-"emoji": "🇦🇬",
-"is_base": false,
-"rank": 1404
-},
-{
-"emoji": "🇦🇮",
-"is_base": false,
-"rank": 1397
-},
-{
-"emoji": "🇦🇱",
-"is_base": false,
-"rank": 1166
-},
-{
-"emoji": "🇦🇲",
-"is_base": false,
-"rank": 1138
-},
-{
-"emoji": "🇦🇴",
-"is_base": false,
-"rank": 1309
-},
-{
-"emoji": "🇦🇶",
-"is_base": false,
-"rank": 1383
-},
-{
-"emoji": "🇦🇷",
-"is_base": false,
-"rank": 672
-},
-{
-"emoji": "🇦🇸",
-"is_base": false,
-"rank": 1403
-},
-{
-"emoji": "🇦🇹",
-"is_base": false,
-"rank": 925
-},
-{
-"emoji": "🇦🇺",
-"is_base": false,
-"rank": 827
-},
-{
-"emoji": "🇦🇼",
-"is_base": false,
-"rank": 1410
-},
-{
-"emoji": "🇦🇽",
-"is_base": false,
-"rank": 1391
-},
-{
-"emoji": "🇦🇿",
-"is_base": false,
-"rank": 1182
-},
-{
-"emoji": "🇧🇦",
-"is_base": false,
-"rank": 1328
-},
-{
-"emoji": "🇧🇧",
-"is_base": false,
-"rank": 1349
-},
-{
-"emoji": "🇧🇩",
-"is_base": false,
-"rank": 1278
-},
-{
-"emoji": "🇧🇪",
-"is_base": false,
-"rank": 1077
-},
-{
-"emoji": "🇧🇫",
-"is_base": false,
-"rank": 1405
-},
-{
-"emoji": "🇧🇬",
-"is_base": false,
-"rank": 1171
-},
-{
-"emoji": "🇧🇭",
-"is_base": false,
-"rank": 1248
-},
-{
-"emoji": "🇧🇮",
-"is_base": false,
-"rank": 1414
-},
-{
-"emoji": "🇧🇯",
-"is_base": false,
-"rank": 1337
-},
-{
-"emoji": "🇧🇱",
-"is_base": false,
-"rank": 1479
-},
-{
-"emoji": "🇧🇲",
-"is_base": false,
-"rank": 1444
-},
-{
-"emoji": "🇧🇳",
-"is_base": false,
-"rank": 1351
-},
-{
-"emoji": "🇧🇴",
-"is_base": false,
-"rank": 1222
-},
-{
-"emoji": "🇧🇶",
-"is_base": false,
-"rank": 1489
-},
-{
-"emoji": "🇧🇷",
-"is_base": false,
-"rank": 406
-},
-{
-"emoji": "🇧🇸",
-"is_base": false,
-"rank": 1412
-},
-{
-"emoji": "🇧🇹",
-"is_base": false,
-"rank": 1443
-},
-{
-"emoji": "🇧🇻",
-"is_base": false,
-"rank": 1409
-},
-{
-"emoji": "🇧🇼",
-"is_base": false,
-"rank": 1355
-},
-{
-"emoji": "🇧🇾",
-"is_base": false,
-"rank": 1380
-},
-{
-"emoji": "🇧🇿",
-"is_base": false,
-"rank": 1492
-},
-{
-"emoji": "🇨🇦",
-"is_base": false,
-"rank": 442
-},
-{
-"emoji": "🇨🇨",
-"is_base": false,
-"rank": 1453
-},
-{
-"emoji": "🇨🇩",
-"is_base": false,
-"rank": 1253
-},
-{
-"emoji": "🇨🇫",
-"is_base": false,
-"rank": 1503
-},
-{
-"emoji": "🇨🇬",
-"is_base": false,
-"rank": 1434
-},
-{
-"emoji": "🇨🇭",
-"is_base": false,
-"rank": 1116
-},
-{
-"emoji": "🇨🇮",
-"is_base": false,
-"rank": 1162
-},
-{
-"emoji": "🇨🇰",
-"is_base": false,
-"rank": 1491
-},
-{
-"emoji": "🇨🇱",
-"is_base": false,
-"rank": 846
-},
-{
-"emoji": "🇨🇲",
-"is_base": false,
-"rank": 1251
-},
-{
-"emoji": "🇨🇳",
-"is_base": false,
-"rank": 754
-},
-{
-"emoji": "🇨🇴",
-"is_base": false,
-"rank": 750
-},
-{
-"emoji": "🇨🇵",
-"is_base": false,
-"rank": 1154
-},
-{
-"emoji": "🇨🇷",
-"is_base": false,
-"rank": 1261
-},
-{
-"emoji": "🇨🇺",
-"is_base": false,
-"rank": 1087
-},
-{
-"emoji": "🇨🇻",
-"is_base": false,
-"rank": 1467
-},
-{
-"emoji": "🇨🇼",
-"is_base": false,
-"rank": 1526
-},
-{
-"emoji": "🇨🇽",
-"is_base": false,
-"rank": 1534
-},
-{
-"emoji": "🇨🇾",
-"is_base": false,
-"rank": 1441
-},
-{
-"emoji": "🇨🇿",
-"is_base": false,
-"rank": 1296
-},
-{
-"emoji": "🇩🇪",
-"is_base": false,
-"rank": 689
-},
-{
-"emoji": "🇩🇬",
-"is_base": false,
-"rank": 1536
-},
-{
-"emoji": "🇩🇯",
-"is_base": false,
-"rank": 1496
-},
-{
-"emoji": "🇩🇰",
-"is_base": false,
-"rank": 1204
-},
-{
-"emoji": "🇩🇲",
-"is_base": false,
-"rank": 1499
-},
-{
-"emoji": "🇩🇴",
-"is_base": false,
-"rank": 1139
-},
-{
-"emoji": "🇩🇿",
-"is_base": false,
-"rank": 988
-},
-{
-"emoji": "🇪🇦",
-"is_base": false,
-"rank": 1150
-},
-{
-"emoji": "🇪🇨",
-"is_base": false,
-"rank": 1032
-},
-{
-"emoji": "🇪🇪",
-"is_base": false,
-"rank": 1327
-},
-{
-"emoji": "🇪🇬",
-"is_base": false,
-"rank": 828
-},
-{
-"emoji": "🇪🇭",
-"is_base": false,
-"rank": 1446
-},
-{
-"emoji": "🇪🇷",
-"is_base": false,
-"rank": 1417
-},
-{
-"emoji": "🇪🇸",
-"is_base": false,
-"rank": 766
-},
-{
-"emoji": "🇪🇹",
-"is_base": false,
-"rank": 1358
-},
-{
-"emoji": "🇪🇺",
-"is_base": false,
-"rank": 1062
-},
-{
-"emoji": "🇫🇮",
-"is_base": false,
-"rank": 1191
-},
-{
-"emoji": "🇫🇯",
-"is_base": false,
-"rank": 1505
-},
-{
-"emoji": "🇫🇰",
-"is_base": false,
-"rank": 1513
-},
-{
-"emoji": "🇫🇲",
-"is_base": false,
-"rank": 1502
-},
-{
-"emoji": "🇫🇴",
-"is_base": false,
-"rank": 1519
-},
-{
-"emoji": "🇫🇷",
-"is_base": false,
-"rank": 723
-},
-{
-"emoji": "🇬🇦",
-"is_base": false,
-"rank": 1435
-},
-{
-"emoji": "🇬🇧",
-"is_base": false,
-"rank": 584
-},
-{
-"emoji": "🇬🇩",
-"is_base": false,
-"rank": 1501
-},
-{
-"emoji": "🇬🇪",
-"is_base": false,
-"rank": 1243
-},
-{
-"emoji": "🇬🇫",
-"is_base": false,
-"rank": 1532
-},
-{
-"emoji": "🇬🇬",
-"is_base": false,
-"rank": 1507
-},
-{
-"emoji": "🇬🇭",
-"is_base": false,
-"rank": 1101
-},
-{
-"emoji": "🇬🇮",
-"is_base": false,
-"rank": 1523
-},
-{
-"emoji": "🇬🇱",
-"is_base": false,
-"rank": 1396
-},
-{
-"emoji": "🇬🇲",
-"is_base": false,
-"rank": 1487
-},
-{
-"emoji": "🇬🇳",
-"is_base": false,
-"rank": 1331
-},
-{
-"emoji": "🇬🇵",
-"is_base": false,
-"rank": 1547
-},
-{
-"emoji": "🇬🇶",
-"is_base": false,
-"rank": 1521
-},
-{
-"emoji": "🇬🇷",
-"is_base": false,
-"rank": 1054
-},
-{
-"emoji": "🇬🇸",
-"is_base": false,
-"rank": 1524
-},
-{
-"emoji": "🇬🇹",
-"is_base": false,
-"rank": 1238
-},
-{
-"emoji": "🇬🇺",
-"is_base": false,
-"rank": 1476
-},
-{
-"emoji": "🇬🇼",
-"is_base": false,
-"rank": 1473
-},
-{
-"emoji": "🇬🇾",
-"is_base": false,
-"rank": 1387
-},
-{
-"emoji": "🇭🇰",
-"is_base": false,
-"rank": 1288
-},
-{
-"emoji": "🇭🇲",
-"is_base": false,
-"rank": 1415
-},
-{
-"emoji": "🇭🇳",
-"is_base": false,
-"rank": 1256
-},
-{
-"emoji": "🇭🇷",
-"is_base": false,
-"rank": 1304
-},
-{
-"emoji": "🇭🇹",
-"is_base": false,
-"rank": 1254
-},
-{
-"emoji": "🇭🇺",
-"is_base": false,
-"rank": 1216
-},
-{
-"emoji": "🇮🇨",
-"is_base": false,
-"rank": 1429
-},
-{
-"emoji": "🇮🇩",
-"is_base": false,
-"rank": 916
-},
-{
-"emoji": "🇮🇪",
-"is_base": false,
-"rank": 991
-},
-{
-"emoji": "🇮🇱",
-"is_base": false,
-"rank": 822
-},
-{
-"emoji": "🇮🇲",
-"is_base": false,
-"rank": 1490
-},
-{
-"emoji": "🇮🇳",
-"is_base": false,
-"rank": 439
-},
-{
-"emoji": "🇮🇴",
-"is_base": false,
-"rank": 1470
-},
-{
-"emoji": "🇮🇶",
-"is_base": false,
-"rank": 1041
-},
-{
-"emoji": "🇮🇷",
-"is_base": false,
-"rank": 1291
-},
-{
-"emoji": "🇮🇸",
-"is_base": false,
-"rank": 1362
-},
-{
-"emoji": "🇮🇹",
-"is_base": false,
-"rank": 546
-},
-{
-"emoji": "🇯🇪",
-"is_base": false,
-"rank": 1522
-},
-{
-"emoji": "🇯🇲",
-"is_base": false,
-"rank": 1049
-},
-{
-"emoji": "🇯🇴",
-"is_base": false,
-"rank": 1265
-},
-{
-"emoji": "🇯🇵",
-"is_base": false,
-"rank": 579
-},
-{
-"emoji": "🇰🇪",
-"is_base": false,
-"rank": 1263
-},
-{
-"emoji": "🇰🇬",
-"is_base": false,
-"rank": 1433
-},
-{
-"emoji": "🇰🇭",
-"is_base": false,
-"rank": 1421
-},
-{
-"emoji": "🇰🇮",
-"is_base": false,
-"rank": 1515
-},
-{
-"emoji": "🇰🇲",
-"is_base": false,
-"rank": 1484
-},
-{
-"emoji": "🇰🇳",
-"is_base": false,
-"rank": 1508
-},
-{
-"emoji": "🇰🇵",
-"is_base": false,
-"rank": 1416
-},
-{
-"emoji": "🇰🇷",
-"is_base": false,
-"rank": 694
-},
-{
-"emoji": "🇰🇼",
-"is_base": false,
-"rank": 1230
-},
-{
-"emoji": "🇰🇾",
-"is_base": false,
-"rank": 1540
-},
-{
-"emoji": "🇰🇿",
-"is_base": false,
-"rank": 1375
-},
-{
-"emoji": "🇱🇦",
-"is_base": false,
-"rank": 1381
-},
-{
-"emoji": "🇱🇧",
-"is_base": false,
-"rank": 1134
-},
-{
-"emoji": "🇱🇨",
-"is_base": false,
-"rank": 1486
-},
-{
-"emoji": "🇱🇮",
-"is_base": false,
-"rank": 1530
-},
-{
-"emoji": "🇱🇰",
-"is_base": false,
-"rank": 1407
-},
-{
-"emoji": "🇱🇷",
-"is_base": false,
-"rank": 1021
-},
-{
-"emoji": "🇱🇸",
-"is_base": false,
-"rank": 1461
-},
-{
-"emoji": "🇱🇹",
-"is_base": false,
-"rank": 1413
-},
-{
-"emoji": "🇱🇺",
-"is_base": false,
-"rank": 1365
-},
-{
-"emoji": "🇱🇻",
-"is_base": false,
-"rank": 1360
-},
-{
-"emoji": "🇱🇾",
-"is_base": false,
-"rank": 1190
-},
-{
-"emoji": "🇲🇦",
-"is_base": false,
-"rank": 999
-},
-{
-"emoji": "🇲🇨",
-"is_base": false,
-"rank": 1223
-},
-{
-"emoji": "🇲🇩",
-"is_base": false,
-"rank": 1466
-},
-{
-"emoji": "🇲🇪",
-"is_base": false,
-"rank": 1448
-},
-{
-"emoji": "🇲🇫",
-"is_base": false,
-"rank": 1411
-},
-{
-"emoji": "🇲🇬",
-"is_base": false,
-"rank": 1459
-},
-{
-"emoji": "🇲🇭",
-"is_base": false,
-"rank": 1531
-},
-{
-"emoji": "🇲🇰",
-"is_base": false,
-"rank": 1373
-},
-{
-"emoji": "🇲🇱",
-"is_base": false,
-"rank": 1389
-},
-{
-"emoji": "🇲🇲",
-"is_base": false,
-"rank": 1440
-},
-{
-"emoji": "🇲🇳",
-"is_base": false,
-"rank": 1457
-},
-{
-"emoji": "🇲🇴",
-"is_base": false,
-"rank": 1436
-},
-{
-"emoji": "🇲🇵",
-"is_base": false,
-"rank": 1544
-},
-{
-"emoji": "🇲🇶",
-"is_base": false,
-"rank": 1546
-},
-{
-"emoji": "🇲🇷",
-"is_base": false,
-"rank": 1451
-},
-{
-"emoji": "🇲🇸",
-"is_base": false,
-"rank": 1529
-},
-{
-"emoji": "🇲🇹",
-"is_base": false,
-"rank": 1452
-},
-{
-"emoji": "🇲🇺",
-"is_base": false,
-"rank": 1437
-},
-{
-"emoji": "🇲🇻",
-"is_base": false,
-"rank": 1474
-},
-{
-"emoji": "🇲🇼",
-"is_base": false,
-"rank": 1527
-},
-{
-"emoji": "🇲🇽",
-"is_base": false,
-"rank": 487
-},
-{
-"emoji": "🇲🇾",
-"is_base": false,
-"rank": 1144
-},
-{
-"emoji": "🇲🇿",
-"is_base": false,
-"rank": 1468
-},
-{
-"emoji": "🇳🇦",
-"is_base": false,
-"rank": 1472
-},
-{
-"emoji": "🇳🇨",
-"is_base": false,
-"rank": 1538
-},
-{
-"emoji": "🇳🇪",
-"is_base": false,
-"rank": 1302
-},
-{
-"emoji": "🇳🇫",
-"is_base": false,
-"rank": 1480
-},
-{
-"emoji": "🇳🇬",
-"is_base": false,
-"rank": 983
-},
-{
-"emoji": "🇳🇮",
-"is_base": false,
-"rank": 1217
-},
-{
-"emoji": "🇳🇱",
-"is_base": false,
-"rank": 1051
-},
-{
-"emoji": "🇳🇴",
-"is_base": false,
-"rank": 1240
-},
-{
-"emoji": "🇳🇵",
-"is_base": false,
-"rank": 1285
-},
-{
-"emoji": "🇳🇷",
-"is_base": false,
-"rank": 1545
-},
-{
-"emoji": "🇳🇺",
-"is_base": false,
-"rank": 1537
-},
-{
-"emoji": "🇳🇿",
-"is_base": false,
-"rank": 1279
-},
-{
-"emoji": "🇴🇲",
-"is_base": false,
-"rank": 1382
-},
-{
-"emoji": "🇵🇦",
-"is_base": false,
-"rank": 1260
-},
-{
-"emoji": "🇵🇪",
-"is_base": false,
-"rank": 914
-},
-{
-"emoji": "🇵🇫",
-"is_base": false,
-"rank": 1539
-},
-{
-"emoji": "🇵🇬",
-"is_base": false,
-"rank": 1516
-},
-{
-"emoji": "🇵🇭",
-"is_base": false,
-"rank": 869
-},
-{
-"emoji": "🇵🇰",
-"is_base": false,
-"rank": 850
-},
-{
-"emoji": "🇵🇱",
-"is_base": false,
-"rank": 985
-},
-{
-"emoji": "🇵🇲",
-"is_base": false,
-"rank": 1543
-},
-{
-"emoji": "🇵🇳",
-"is_base": false,
-"rank": 1535
-},
-{
-"emoji": "🇵🇷",
-"is_base": false,
-"rank": 883
-},
-{
-"emoji": "🇵🇸",
-"is_base": false,
-"rank": 859
-},
-{
-"emoji": "🇵🇹",
-"is_base": false,
-"rank": 973
-},
-{
-"emoji": "🇵🇼",
-"is_base": false,
-"rank": 1528
-},
-{
-"emoji": "🇵🇾",
-"is_base": false,
-"rank": 1194
-},
-{
-"emoji": "🇶🇦",
-"is_base": false,
-"rank": 1232
-},
-{
-"emoji": "🇷🇪",
-"is_base": false,
-"rank": 1483
-},
-{
-"emoji": "🇷🇴",
-"is_base": false,
-"rank": 1343
-},
-{
-"emoji": "🇷🇸",
-"is_base": false,
-"rank": 1307
-},
-{
-"emoji": "🇷🇺",
-"is_base": false,
-"rank": 966
-},
-{
-"emoji": "🇷🇼",
-"is_base": false,
-"rank": 1450
-},
-{
-"emoji": "🇸🇦",
-"is_base": false,
-"rank": 894
-},
-{
-"emoji": "🇸🇧",
-"is_base": false,
-"rank": 1511
-},
-{
-"emoji": "🇸🇨",
-"is_base": false,
-"rank": 1509
-},
-{
-"emoji": "🇸🇩",
-"is_base": false,
-"rank": 1306
-},
-{
-"emoji": "🇸🇪",
-"is_base": false,
-"rank": 953
-},
-{
-"emoji": "🇸🇬",
-"is_base": false,
-"rank": 1258
-},
-{
-"emoji": "🇸🇭",
-"is_base": false,
-"rank": 1533
-},
-{
-"emoji": "🇸🇮",
-"is_base": false,
-"rank": 1439
-},
-{
-"emoji": "🇸🇯",
-"is_base": false,
-"rank": 1464
-},
-{
-"emoji": "🇸🇰",
-"is_base": false,
-"rank": 1419
-},
-{
-"emoji": "🇸🇱",
-"is_base": false,
-"rank": 1424
-},
-{
-"emoji": "🇸🇲",
-"is_base": false,
-"rank": 1504
-},
-{
-"emoji": "🇸🇳",
-"is_base": false,
-"rank": 1321
-},
-{
-"emoji": "🇸🇴",
-"is_base": false,
-"rank": 1354
-},
-{
-"emoji": "🇸🇷",
-"is_base": false,
-"rank": 1454
-},
-{
-"emoji": "🇸🇸",
-"is_base": false,
-"rank": 1449
-},
-{
-"emoji": "🇸🇹",
-"is_base": false,
-"rank": 1495
-},
-{
-"emoji": "🇸🇻",
-"is_base": false,
-"rank": 1189
-},
-{
-"emoji": "🇸🇽",
-"is_base": false,
-"rank": 1517
-},
-{
-"emoji": "🇸🇾",
-"is_base": false,
-"rank": 1298
-},
-{
-"emoji": "🇸🇿",
-"is_base": false,
-"rank": 1494
-},
-{
-"emoji": "🇹🇦",
-"is_base": false,
-"rank": 1477
-},
-{
-"emoji": "🇹🇨",
-"is_base": false,
-"rank": 1471
-},
-{
-"emoji": "🇹🇩",
-"is_base": false,
-"rank": 1425
-},
-{
-"emoji": "🇹🇫",
-"is_base": false,
-"rank": 1518
-},
-{
-"emoji": "🇹🇬",
-"is_base": false,
-"rank": 1386
-},
-{
-"emoji": "🇹🇭",
-"is_base": false,
-"rank": 946
-},
-{
-"emoji": "🇹🇯",
-"is_base": false,
-"rank": 1430
-},
-{
-"emoji": "🇹🇰",
-"is_base": false,
-"rank": 1506
-},
-{
-"emoji": "🇹🇱",
-"is_base": false,
-"rank": 1465
-},
-{
-"emoji": "🇹🇲",
-"is_base": false,
-"rank": 1422
-},
-{
-"emoji": "🇹🇳",
-"is_base": false,
-"rank": 1270
-},
-{
-"emoji": "🇹🇴",
-"is_base": false,
-"rank": 1418
-},
-{
-"emoji": "🇹🇷",
-"is_base": false,
-"rank": 454
-},
-{
-"emoji": "🇹🇹",
-"is_base": false,
-"rank": 1289
-},
-{
-"emoji": "🇹🇻",
-"is_base": false,
-"rank": 1428
-},
-{
-"emoji": "🇹🇼",
-"is_base": false,
-"rank": 1211
-},
-{
-"emoji": "🇹🇿",
-"is_base": false,
-"rank": 1359
-},
-{
-"emoji": "🇺🇦",
-"is_base": false,
-"rank": 1078
-},
-{
-"emoji": "🇺🇬",
-"is_base": false,
-"rank": 1305
-},
-{
-"emoji": "🇺🇲",
-"is_base": false,
-"rank": 413
-},
-{
-"emoji": "🇺🇳",
-"is_base": false,
-"rank": 1347
-},
-{
 "emoji": "🇺🇸",
 "is_base": false,
 "rank": 236
 },
 {
-"emoji": "🇺🇾",
+"emoji": "🇧🇷",
 "is_base": false,
-"rank": 1155
-},
-{
-"emoji": "🇺🇿",
-"is_base": false,
-"rank": 1393
-},
-{
-"emoji": "🇻🇦",
-"is_base": false,
-"rank": 1406
-},
-{
-"emoji": "🇻🇨",
-"is_base": false,
-"rank": 1390
-},
-{
-"emoji": "🇻🇪",
-"is_base": false,
-"rank": 851
-},
-{
-"emoji": "🇻🇬",
-"is_base": false,
-"rank": 1427
-},
-{
-"emoji": "🇻🇮",
-"is_base": false,
-"rank": 1338
-},
-{
-"emoji": "🇻🇳",
-"is_base": false,
-"rank": 1203
-},
-{
-"emoji": "🇻🇺",
-"is_base": false,
-"rank": 1420
-},
-{
-"emoji": "🇼🇫",
-"is_base": false,
-"rank": 1488
-},
-{
-"emoji": "🇼🇸",
-"is_base": false,
-"rank": 1369
-},
-{
-"emoji": "🇽🇰",
-"is_base": false,
-"rank": 1438
-},
-{
-"emoji": "🇾🇪",
-"is_base": false,
-"rank": 1057
-},
-{
-"emoji": "🇾🇹",
-"is_base": false,
-"rank": 1463
-},
-{
-"emoji": "🇿🇦",
-"is_base": false,
-"rank": 947
-},
-{
-"emoji": "🇿🇲",
-"is_base": false,
-"rank": 1336
-},
-{
-"emoji": "🇿🇼",
-"is_base": false,
-"rank": 1300
-},
-{
-"emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-"is_base": false,
-"rank": 1094
-},
-{
-"emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-"is_base": false,
-"rank": 1072
-},
-{
-"emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-"is_base": false,
-"rank": 1159
+"rank": 406
 }
 ],
 "Wimpel": [
@@ -29338,21 +20038,6 @@
 },
 {
 "emoji": "🧑🏼‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏽‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏾‍🦲",
-"is_base": false,
-"rank": null
-},
-{
-"emoji": "🧑🏿‍🦲",
 "is_base": false,
 "rank": null
 }
