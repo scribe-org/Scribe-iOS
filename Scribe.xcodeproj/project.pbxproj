@@ -2749,7 +2749,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/Norwegian/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Norsk (Scribe)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Norsk-Bokmål (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2774,7 +2774,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/Norwegian/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Norsk (Scribe)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Norsk-Bokmål (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
