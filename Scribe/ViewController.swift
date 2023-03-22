@@ -261,7 +261,9 @@ class ViewController: UIViewController {
 
     privacyScroll.isHidden = false
 
-    privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
+    privacyTextView.attributedText = setPrivacyPolicy(
+      fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+    )
     privacyTextView.textColor = .init(.keyChar).light
   }
 

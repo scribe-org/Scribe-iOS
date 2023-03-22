@@ -6,47 +6,12 @@
 //  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
 //
 
-import UIKit
-
-/// Formats and returns the text of the Scribe privacy policy.
-func setENPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
-  let privacyTextTitle = NSMutableAttributedString(string: """
-  Privacy Policy
-  """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-
-  let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
-  let wikipediaDataLicensing: String = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
-  let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
-  let scribeGitHub: String = "https://github.com/scribe-org"
-  let scribeEmail: String = "scribe.langauge@gmail.com"
-  let gitHubLogoLicensing: String = "https://github.com/logos"
-  let wikidataLogoLicensing: String = "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy"
-  let customKeyboardLicense: String = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
-
-  let privacyPolicyTextWithLinks = addHyperLinks(
-    originalText: privacyPolicyText,
-    links: [
-      wikidataDataLicensing: wikidataDataLicensing,
-      wikipediaDataLicensing: wikipediaDataLicensing,
-      huggingFaceLicensing: huggingFaceLicensing,
-      scribeGitHub: scribeGitHub,
-      scribeEmail: "mailto:" + scribeEmail,
-      gitHubLogoLicensing: gitHubLogoLicensing,
-      wikidataLogoLicensing: wikidataLogoLicensing,
-      customKeyboardLicense: customKeyboardLicense],
-    fontSize: fontSize
-  )
-
-  return concatAttributedStrings(
-    left: privacyTextTitle,
-    right: privacyPolicyTextWithLinks
-  )
-}
+let enPrivacyPolicyTitle: String = "Privacy Policy"
 
 // swiftlint:disable all
 
 // Includes a new line so that there is space between it and the page title.
-let privacyPolicyText = """
+let enPrivacyPolicyText: String = """
 \n
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.
 
