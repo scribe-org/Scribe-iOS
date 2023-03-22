@@ -8,6 +8,8 @@
 
 let enPrivacyPolicyTitle: String = "Privacy Policy"
 
+// swiftlint:disable all
+
 // Includes a new line so that there is space between it and the page title.
 let enPrivacyPolicyText = """
 \n
