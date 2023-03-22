@@ -37,6 +37,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var svSpace: UIView!
   @IBOutlet weak var bottomSpace: UIView!
 
+  let userSystemLanguage = String(Locale.preferredLanguages[0].prefix(2)).uppercased()
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -231,11 +232,32 @@ class ViewController: UIViewController {
     privacyScroll.isHidden = true
 
     // Set the texts for the fields.
-    appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    appTextView.textColor = .init(.keyChar).light
-
-    GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-    GHTextView.textColor = .init(.keyChar).light
+    switch userSystemLanguage{
+    case "EN":
+      appTextView.attributedText = setENInstallation(fontSize: fontSize)
+      appTextView.textColor = .init(.keyChar).light
+      
+      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
+      GHTextView.textColor = .init(.keyChar).light
+      
+      break
+      
+    case "DE":
+      appTextView.attributedText = setDEInstallation(fontSize: fontSize)
+      appTextView.textColor = .init(.keyChar).light
+      
+      GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
+      GHTextView.textColor = .init(.keyChar).light
+      
+      break
+      
+    default:
+      appTextView.attributedText = setENInstallation(fontSize: fontSize)
+      appTextView.textColor = .init(.keyChar).light
+      
+      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
+      GHTextView.textColor = .init(.keyChar).light
+    }
   }
 
   /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
@@ -243,26 +265,40 @@ class ViewController: UIViewController {
     let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize)
     topIconPhone.image = privacySymbol
     topIconPad.image = privacySymbol
-
+    
     // Disable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = false
     appTextView.text = ""
     appTextBackground.backgroundColor = .clear
-
+    
     GHBtn.isUserInteractionEnabled = false
     GHCorner.isHidden = true
     GHTextView.text = ""
     GHTextBackground.backgroundColor = .clear
-
+    
     // Enable the privacy policy elements.
     privacyTextView.isUserInteractionEnabled = true
     privacyTextBackground.backgroundColor = .white
     applyShadowEffects(elem: privacyTextBackground)
-
+    
     privacyScroll.isHidden = false
-
-    privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
-    privacyTextView.textColor = .init(.keyChar).light
+    
+    switch userSystemLanguage{
+      
+    case "EN":
+      privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
+      privacyTextView.textColor = .init(.keyChar).light
+      break
+      
+    case "DE":
+      privacyTextView.attributedText = setDEPrivacyPolicy(fontSize: fontSize)
+      privacyTextView.textColor = .init(.keyChar).light
+      break
+      
+    default:
+      privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
+      privacyTextView.textColor = .init(.keyChar).light
+    }
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
