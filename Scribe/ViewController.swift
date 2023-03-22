@@ -264,7 +264,7 @@ class ViewController: UIViewController {
     privacyTextView.attributedText = setPrivacyPolicy(
       fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
     )
-    privacyTextView.textColor = .init(.keyChar)
+    privacyTextView.textColor = .init(.keyChar).light
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
