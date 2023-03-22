@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     }
   }
 
-  let switchViewColor = UIColor(red: 253.0/255.0, green: 179.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+  let switchViewColor = UIColor(named: "scribeOrange")
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
       switchView.setTitle("View Installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    switchView.setTitleColor(.init(.keyChar).light, for: .normal)
+    switchView.setTitleColor(.init(.keyChar), for: .normal)
     switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5)
 
     switchView.clipsToBounds = true
@@ -214,12 +214,12 @@ class ViewController: UIViewController {
 
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
-    appTextBackground.backgroundColor = .white
+    appTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: appTextBackground)
 
     GHBtn.isUserInteractionEnabled = true
     GHCorner.isHidden = false
-    GHTextBackground.backgroundColor = .white
+    GHTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: GHTextBackground)
 
     // Disable the privacy policy elements.
@@ -232,10 +232,10 @@ class ViewController: UIViewController {
 
     // Set the texts for the fields.
     appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    appTextView.textColor = .init(.keyChar).light
+    appTextView.textColor = .init(.keyChar)
 
     GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-    GHTextView.textColor = .init(.keyChar).light
+    GHTextView.textColor = .init(.keyChar)
   }
 
   /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
@@ -256,13 +256,13 @@ class ViewController: UIViewController {
 
     // Enable the privacy policy elements.
     privacyTextView.isUserInteractionEnabled = true
-    privacyTextBackground.backgroundColor = .white
+    privacyTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: privacyTextBackground)
 
     privacyScroll.isHidden = false
 
     privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
-    privacyTextView.textColor = .init(.keyChar).light
+    privacyTextView.textColor = .init(.keyChar)
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
