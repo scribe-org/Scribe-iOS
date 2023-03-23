@@ -91,17 +91,17 @@ class ViewController: UIViewController {
     }
   }
 
-  let switchViewColor = UIColor(red: 253.0/255.0, green: 179.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+  let switchViewColor = UIColor(named: "scribeOrange")
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
-      switchView.setTitle("View Privacy Policy", for: .normal)
+      switchView.setTitle("View privacy policy", for: .normal)
     } else if displayPrivacyPolicy == true {
-      switchView.setTitle("View Installation", for: .normal)
+      switchView.setTitle("View installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    switchView.setTitleColor(.init(.keyChar).light, for: .normal)
-    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5)
+    switchView.setTitleColor(.init(.keyChar), for: .normal)
+    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .medium)
 
     switchView.clipsToBounds = true
     switchView.backgroundColor = switchViewColor
@@ -201,7 +201,7 @@ class ViewController: UIViewController {
     // Set link attributes for all textViews.
     for textView in allTextViews {
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor(.annotateBlue).light,
+        NSAttributedString.Key.foregroundColor: UIColor(named: "linkBlue")!,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     }
@@ -212,15 +212,17 @@ class ViewController: UIViewController {
     let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize)
     topIconPhone.image = settingsSymbol
     topIconPad.image = settingsSymbol
+    topIconPhone.tintColor = .init(.commandBar)
+    topIconPad.tintColor = .init(.commandBar)
 
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
-    appTextBackground.backgroundColor = .white
+    appTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: appTextBackground)
 
     GHBtn.isUserInteractionEnabled = true
     GHCorner.isHidden = false
-    GHTextBackground.backgroundColor = .white
+    GHTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: GHTextBackground)
 
     // Disable the privacy policy elements.
@@ -235,29 +237,23 @@ class ViewController: UIViewController {
     switch userSystemLanguage{
     case "EN":
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
-      appTextView.textColor = .init(.keyChar).light
-      
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-      GHTextView.textColor = .init(.keyChar).light
       
       break
       
     case "DE":
       appTextView.attributedText = setDEInstallation(fontSize: fontSize)
-      appTextView.textColor = .init(.keyChar).light
-      
       GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
-      GHTextView.textColor = .init(.keyChar).light
       
       break
       
     default:
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
-      appTextView.textColor = .init(.keyChar).light
-      
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-      GHTextView.textColor = .init(.keyChar).light
+
     }
+    appTextView.textColor = .init(.keyChar)
+    GHTextView.textColor = .init(.keyChar)
   }
 
   /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
@@ -265,7 +261,9 @@ class ViewController: UIViewController {
     let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize)
     topIconPhone.image = privacySymbol
     topIconPad.image = privacySymbol
-    
+    topIconPhone.tintColor = .init(.commandBar)
+    topIconPad.tintColor = .init(.commandBar)
+
     // Disable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = false
     appTextView.text = ""
@@ -278,7 +276,7 @@ class ViewController: UIViewController {
     
     // Enable the privacy policy elements.
     privacyTextView.isUserInteractionEnabled = true
-    privacyTextBackground.backgroundColor = .white
+    privacyTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: privacyTextBackground)
     
     privacyScroll.isHidden = false
@@ -286,19 +284,23 @@ class ViewController: UIViewController {
     switch userSystemLanguage{
       
     case "EN":
-      privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
-      privacyTextView.textColor = .init(.keyChar).light
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+      )
       break
       
     case "DE":
-      privacyTextView.attributedText = setDEPrivacyPolicy(fontSize: fontSize)
-      privacyTextView.textColor = .init(.keyChar).light
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: dePrivacyPolicyTitle, text: dePrivacyPolicyText
+      )
       break
       
     default:
-      privacyTextView.attributedText = setENPrivacyPolicy(fontSize: fontSize)
-      privacyTextView.textColor = .init(.keyChar).light
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+      )
     }
+    privacyTextView.textColor = .init(.keyChar)
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
