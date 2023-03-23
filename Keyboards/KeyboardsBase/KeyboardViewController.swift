@@ -1491,7 +1491,11 @@ class KeyboardViewController: UIInputViewController {
             if [.translate, .conjugate, .plural].contains(commandState) {
               styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
             } else {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+              if proxy.keyboardType == .webSearch{
+                styleIconBtn(btn: btn, color: keyCharColor, iconName: "search", btnTitle: "search")
+              }else{
+                styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+              }
             }
           }
 

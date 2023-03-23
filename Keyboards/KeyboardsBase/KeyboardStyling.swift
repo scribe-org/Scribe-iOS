@@ -115,15 +115,24 @@ func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 ///  - btn: the button to be styled.
 ///  - color: the tint color for the icon on the key.
 ///  - iconName: the name of the UIImage systemName icon to be used.
-func styleIconBtn(btn: UIButton, color: UIColor, iconName: String) {
-  btn.setTitle("", for: .normal)
-  var iconConfig = getPhoneIconConfig(iconName: iconName)
-  if DeviceType.isPad {
-    iconConfig = getPadIconConfig(iconName: iconName)
+func styleIconBtn(btn: UIButton, color: UIColor, iconName: String, btnTitle: String = "") {
+  
+  if(btnTitle == "search"){
+    btn.setTitle(btnTitle, for: .normal)
+    btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
+    btn.backgroundColor = keyboardBgColor
+    btn.tintColor = UIColor.white
   }
-
-  btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
-  btn.tintColor = color
+  else{
+    btn.setTitle("", for: .normal)
+    var iconConfig = getPhoneIconConfig(iconName: iconName)
+    if DeviceType.isPad {
+      iconConfig = getPadIconConfig(iconName: iconName)
+    }
+    
+    btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
+    btn.tintColor = color
+  }
 }
 
 /// Sets icon of delete button for pressed or non-pressed state.
