@@ -85,91 +85,91 @@ func returnDeclension(keyPressed: UIButton) {
         } else if keyName == "thirdPersonSingular" {
           deCaseVariantDeclensionState = .genitivePersonalTPS
         }
-      } else if deCaseDeclensionState == .accusativePossesive {
+      } else if deCaseDeclensionState == .accusativePossessive {
         if keyName == "firstPersonSingular" {
-          deCaseVariantDeclensionState = .accusativePossesiveFPS
+          deCaseVariantDeclensionState = .accusativePossessiveFPS
         } else if keyName == "secondPersonSingular" {
-          deCaseVariantDeclensionState = .accusativePossesiveSPS
+          deCaseVariantDeclensionState = .accusativePossessiveSPS
         } else if keyName == "thirdPersonSingular" {
-          deCaseVariantDeclensionState = .accusativePossesiveTPS
+          deCaseVariantDeclensionState = .accusativePossessiveTPS
         } else if keyName == "firstPersonPlural" {
-          deCaseVariantDeclensionState = .accusativePossesiveFPP
+          deCaseVariantDeclensionState = .accusativePossessiveFPP
         } else if keyName == "secondPersonPlural" {
-          deCaseVariantDeclensionState = .accusativePossesiveSPP
+          deCaseVariantDeclensionState = .accusativePossessiveSPP
         } else if keyName == "thirdPersonPlural" {
-          deCaseVariantDeclensionState = .accusativePossesiveTPP
+          deCaseVariantDeclensionState = .accusativePossessiveTPP
         }
-      } else if deCaseDeclensionState == .dativePossesive {
+      } else if deCaseDeclensionState == .dativePossessive {
         if keyName == "firstPersonSingular" {
-          deCaseVariantDeclensionState = .dativePossesiveFPS
+          deCaseVariantDeclensionState = .dativePossessiveFPS
         } else if keyName == "secondPersonSingular" {
-          deCaseVariantDeclensionState = .dativePossesiveSPS
+          deCaseVariantDeclensionState = .dativePossessiveSPS
         } else if keyName == "thirdPersonSingular" {
-          deCaseVariantDeclensionState = .dativePossesiveTPS
+          deCaseVariantDeclensionState = .dativePossessiveTPS
         } else if keyName == "firstPersonPlural" {
-          deCaseVariantDeclensionState = .dativePossesiveFPP
+          deCaseVariantDeclensionState = .dativePossessiveFPP
         } else if keyName == "secondPersonPlural" {
-          deCaseVariantDeclensionState = .dativePossesiveSPP
+          deCaseVariantDeclensionState = .dativePossessiveSPP
         } else if keyName == "thirdPersonPlural" {
-          deCaseVariantDeclensionState = .dativePossesiveTPP
+          deCaseVariantDeclensionState = .dativePossessiveTPP
         }
-      } else if deCaseDeclensionState == .genitivePossesive {
+      } else if deCaseDeclensionState == .genitivePossessive {
         if keyName == "firstPersonSingular" {
-          deCaseVariantDeclensionState = .genitivePossesiveFPS
+          deCaseVariantDeclensionState = .genitivePossessiveFPS
         } else if keyName == "secondPersonSingular" {
-          deCaseVariantDeclensionState = .genitivePossesiveSPS
+          deCaseVariantDeclensionState = .genitivePossessiveSPS
         } else if keyName == "thirdPersonSingular" {
-          deCaseVariantDeclensionState = .genitivePossesiveTPS
+          deCaseVariantDeclensionState = .genitivePossessiveTPS
         } else if keyName == "firstPersonPlural" {
-          deCaseVariantDeclensionState = .genitivePossesiveFPP
+          deCaseVariantDeclensionState = .genitivePossessiveFPP
         } else if keyName == "secondPersonPlural" {
-          deCaseVariantDeclensionState = .genitivePossesiveSPP
+          deCaseVariantDeclensionState = .genitivePossessiveSPP
         } else if keyName == "thirdPersonPlural" {
-          deCaseVariantDeclensionState = .genitivePossesiveTPP
+          deCaseVariantDeclensionState = .genitivePossessiveTPP
         }
       }
     } else {
-      if deCaseVariantDeclensionState == .accusativePossesiveSPS {
+      if deCaseVariantDeclensionState == .accusativePossessiveSPS {
         if keyName == "formLeft" {
-          deCaseVariantDeclensionState = .accusativePossesiveSPSInformal
+          deCaseVariantDeclensionState = .accusativePossessiveSPSInformal
         } else if keyName == "formRight" {
-          deCaseVariantDeclensionState = .accusativePossesiveSPSFormal
+          deCaseVariantDeclensionState = .accusativePossessiveSPSFormal
         }
-      } else if deCaseVariantDeclensionState == .accusativePossesiveTPS {
+      } else if deCaseVariantDeclensionState == .accusativePossessiveTPS {
         if keyName == "formTop" {
-          deCaseVariantDeclensionState = .accusativePossesiveTPSMasculine
+          deCaseVariantDeclensionState = .accusativePossessiveTPSMasculine
         } else if keyName == "formMiddle" {
-          deCaseVariantDeclensionState = .accusativePossesiveTPSFeminine
+          deCaseVariantDeclensionState = .accusativePossessiveTPSFeminine
         } else if keyName == "formBottom" {
-          deCaseVariantDeclensionState = .accusativePossesiveTPSNeutral
+          deCaseVariantDeclensionState = .accusativePossessiveTPSNeutral
         }
-      } else if deCaseVariantDeclensionState == .dativePossesiveSPS {
+      } else if deCaseVariantDeclensionState == .dativePossessiveSPS {
         if keyName == "formLeft" {
-          deCaseVariantDeclensionState = .dativePossesiveSPSInformal
+          deCaseVariantDeclensionState = .dativePossessiveSPSInformal
         } else if keyName == "formRight" {
-          deCaseVariantDeclensionState = .dativePossesiveSPSFormal
+          deCaseVariantDeclensionState = .dativePossessiveSPSFormal
         }
-      } else if deCaseVariantDeclensionState == .dativePossesiveTPS {
+      } else if deCaseVariantDeclensionState == .dativePossessiveTPS {
         if keyName == "formTop" {
-          deCaseVariantDeclensionState = .dativePossesiveTPSMasculine
+          deCaseVariantDeclensionState = .dativePossessiveTPSMasculine
         } else if keyName == "formMiddle" {
-          deCaseVariantDeclensionState = .dativePossesiveTPSFeminine
+          deCaseVariantDeclensionState = .dativePossessiveTPSFeminine
         } else if keyName == "formBottom" {
-          deCaseVariantDeclensionState = .dativePossesiveTPSNeutral
+          deCaseVariantDeclensionState = .dativePossessiveTPSNeutral
         }
-      } else if deCaseVariantDeclensionState == .genitivePossesiveSPS {
+      } else if deCaseVariantDeclensionState == .genitivePossessiveSPS {
         if keyName == "formLeft" {
-          deCaseVariantDeclensionState = .genitivePossesiveSPSInformal
+          deCaseVariantDeclensionState = .genitivePossessiveSPSInformal
         } else if keyName == "formRight" {
-          deCaseVariantDeclensionState = .genitivePossesiveSPSFormal
+          deCaseVariantDeclensionState = .genitivePossessiveSPSFormal
         }
-      } else if deCaseVariantDeclensionState == .genitivePossesiveTPS {
+      } else if deCaseVariantDeclensionState == .genitivePossessiveTPS {
         if keyName == "formTop" {
-          deCaseVariantDeclensionState = .genitivePossesiveTPSMasculine
+          deCaseVariantDeclensionState = .genitivePossessiveTPSMasculine
         } else if keyName == "formMiddle" {
-          deCaseVariantDeclensionState = .genitivePossesiveTPSFeminine
+          deCaseVariantDeclensionState = .genitivePossessiveTPSFeminine
         } else if keyName == "formBottom" {
-          deCaseVariantDeclensionState = .genitivePossesiveTPSNeutral
+          deCaseVariantDeclensionState = .genitivePossessiveTPSNeutral
         }
       }
     }

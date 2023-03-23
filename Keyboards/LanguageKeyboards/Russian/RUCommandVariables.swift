@@ -9,7 +9,7 @@ func ruSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   switch ruConjugationState {
   case .present:
     formLabelsDict["FPS"] = "я"
@@ -31,7 +31,7 @@ func ruSetCaseDeclensionLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   formLabelsDict["FPS"] = "я"
   formLabelsDict["SPS"] = "ты"
   formLabelsDict["TPS"] = "он/она/оно"

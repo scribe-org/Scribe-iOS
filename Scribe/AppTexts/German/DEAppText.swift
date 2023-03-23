@@ -1,20 +1,20 @@
 //
-//  ENAppText.swift
+//  DEAppText.swift
 //
-//  The English app text for the Scribe app.
+//  The German app text for the Scribe app.
 //
 
 import UIKit
 
 /// Formats and returns the title of the installation guidelines.
-func getENInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
+func getDEInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
   return NSMutableAttributedString(string: """
-  Keyboard Installation
+  Tastaturinstallation
   """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
 }
 
 /// Formats and returns the directions of the installation guidelines.
-func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
+func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
   let arrowString = getArrowIcon(fontSize: fontSize)
   let globeString = getGlobeIcon(fontSize: fontSize)
 
@@ -24,8 +24,8 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   let settingsLink = addHyperLinks(
-    originalText: "Open Settings",
-    links: ["Open Settings": "<makeTextLink>"], // placeholder as there's a button over it
+    originalText: "Einstellungen öffnen",
+    links: ["Einstellungen öffnen": "<makeTextLink>"], // placeholder as there's a button over it
     fontSize: fontSize
   )
 
@@ -33,9 +33,9 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   let installDirections = NSMutableAttributedString(string: """
   \n
-  2. In General do the following:
+  2. Gehen Sie im Allgemeinen wie folgt vor:
 
-        Keyboard
+        Tastatur
 
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
@@ -44,7 +44,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   installDirections.append(arrowString)
 
   installDirections.append(NSMutableAttributedString(string: """
-  \u{0020} Keyboards
+  \u{0020} Tastaturen
 
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
@@ -57,17 +57,17 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   installDirections.append(arrowString)
 
   installDirections.append(NSMutableAttributedString(string: """
-  \u{0020} Add New Keyboard
+  \u{0020} Neue Tastatur hinzufügen
 
-  3. Select Scribe and then activate keyboards
+  3. Wählen Sie Scribe und aktivieren Sie Tastaturen
 
-  4. When typing press\u{0020}
+  4. Drücken Sie \u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   installDirections.append(globeString)
 
   installDirections.append(NSMutableAttributedString(string: """
-  \u{0020}to select keyboards
+  , um Tastaturen auszuwählen
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   return concatAttributedStrings(left: installStart, right: installDirections)
@@ -77,9 +77,9 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
-func setENInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
-  let installTitle = getENInstallationTitle(fontSize: fontSize)
-  let installDirections = getENInstallationDirections(fontSize: fontSize)
+func setDEInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
+  let installTitle = getDEInstallationTitle(fontSize: fontSize)
+  let installDirections = getDEInstallationDirections(fontSize: fontSize)
 
   return concatAttributedStrings(
     left: installTitle,
@@ -91,9 +91,9 @@ func setENInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
-func getENGitHubTitle(fontSize: CGFloat) -> NSMutableAttributedString {
+func getDEGitHubTitle(fontSize: CGFloat) -> NSMutableAttributedString {
   return NSMutableAttributedString(string: """
-  Community
+  Gemeinschaft
   """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
 }
 
@@ -101,11 +101,11 @@ func getENGitHubTitle(fontSize: CGFloat) -> NSMutableAttributedString {
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
-func getENGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
+func getDEGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
   // Initialize the main body of the text.
   let ghInfoText = NSMutableAttributedString(string: """
   \n
-  Scribe is fully open-source software made by volunteers. To report issues or contribute please visit us at\u{0020}
+  Scribe ist vollständig open-source. Um Probleme zu melden oder eine Kontribution zu leisten, besuchen Sie uns unter\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   // A second NSAttributedString that includes a link to the GitHub.
@@ -122,9 +122,9 @@ func getENGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
 ///
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
-func setENGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
-  let ghTextTitle = getENGitHubTitle(fontSize: fontSize)
-  let ghInfoTextAndLink = getENGitHubText(fontSize: fontSize)
+func setDEGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
+  let ghTextTitle = getDEGitHubTitle(fontSize: fontSize)
+  let ghInfoTextAndLink = getDEGitHubText(fontSize: fontSize)
 
   return concatAttributedStrings(
     left: ghTextTitle,

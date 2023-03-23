@@ -9,7 +9,7 @@ func svSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   switch svConjugationState {
   case .active:
     formLabelsDict["TL"] = "imperativ"

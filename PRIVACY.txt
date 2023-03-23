@@ -1,5 +1,8 @@
 Privacy Policy
 
+Note that the English version of this policy takes precedence over
+all other verions.
+
 The Scribe developers (SCRIBE) built the iOS application "Scribe -
 Language Keyboards" (SERVICE) as an open-source application. This
 SERVICE is provided by SCRIBE at no cost and is intended for use

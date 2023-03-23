@@ -173,6 +173,20 @@
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
+		D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */; };
+		D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0A29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0B29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0C29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0D29CCDBF7007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0E29CCDBF7007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC0F29CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1029CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1129CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1229CCDBF9007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1329CCDBF9007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
+		D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D1608668270B6D3C00134D48 /* ESKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4928E9D89100301919 /* autosuggestions.json */; };
@@ -845,6 +859,8 @@
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
+		D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEPrivacyPolicy.swift; sourceTree = "<group>"; };
+		D156BC0729CCDBE8007E7362 /* DEAppText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEAppText.swift; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1220,6 +1236,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		D156BC0529CCDBE8007E7362 /* German */ = {
+			isa = PBXGroup;
+			children = (
+				D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */,
+				D156BC0729CCDBE8007E7362 /* DEAppText.swift */,
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
@@ -1349,6 +1374,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A2DCB227AD37D90057A10D /* English */,
+				D156BC0529CCDBE8007E7362 /* German */,
 				D17193BF27AEA33A0038660B /* AppTextStyling.swift */,
 			);
 			path = AppTexts;
@@ -2026,6 +2052,7 @@
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
 				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
+				D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */,
 				30453964293B9D18003AE55B /* InformationToolTipData.swift in Sources */,
 				30453969293B9DB4003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
@@ -2041,6 +2068,7 @@
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
+				D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */,
@@ -2066,6 +2094,7 @@
 				D1B071A227C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D180EC0628FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC0F29CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D171940227AECCD10038660B /* DECommandVariables.swift in Sources */,
 				3045397A293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945A27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2117,6 +2146,7 @@
 				D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0428FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC0C29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				30453978293B9E0A003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945927AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2168,6 +2198,7 @@
 				D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0828FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC1229CCDBF9007E7362 /* DEAppText.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397C293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945B27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2219,6 +2250,7 @@
 				D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0A28FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397D293B9E0D003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945D27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2270,6 +2302,7 @@
 				D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0928FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC1329CCDBF9007E7362 /* DEAppText.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397E293B9E0D003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945C27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2321,6 +2354,7 @@
 				D17693D728FC816200DF0FBB /* ESInterfaceVariables.swift in Sources */,
 				D17693B228FC7E1200DF0FBB /* KeyboardStyling.swift in Sources */,
 				D180EC0528FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC0D29CCDBF7007E7362 /* DEAppText.swift in Sources */,
 				D17693D028FC815900DF0FBB /* PTInterfaceVariables.swift in Sources */,
 				30453979293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D17693CE28FC815500DF0FBB /* ITInterfaceVariables.swift in Sources */,
@@ -2372,6 +2406,7 @@
 				D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0B28FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397F293B9E0E003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945E27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2423,6 +2458,7 @@
 				D1AB5B3129C757A100CCB0C1 /* KeyAltChars.swift in Sources */,
 				D1AB5B3229C757A100CCB0C1 /* RUCommandVariables.swift in Sources */,
 				D1AB5B3329C757A100CCB0C1 /* FRInterfaceVariables.swift in Sources */,
+				D156BC1129CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D1AB5B3429C757A100CCB0C1 /* KeyboardStyling.swift in Sources */,
 				D1AB5B3529C757A100CCB0C1 /* ToolTipViewDatasource.swift in Sources */,
 				D1AB5B3629C757A100CCB0C1 /* CommandBar.swift in Sources */,
@@ -2474,6 +2510,7 @@
 				D1AFDF0F29CA66D00033BF27 /* KeyAltChars.swift in Sources */,
 				D1AFDF1029CA66D00033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDF1129CA66D00033BF27 /* FRInterfaceVariables.swift in Sources */,
+				D156BC0B29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D1AFDF1229CA66D00033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDF1329CA66D00033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDF1429CA66D00033BF27 /* CommandBar.swift in Sources */,
@@ -2525,6 +2562,7 @@
 				D1AFDF8C29CA66F40033BF27 /* KeyAltChars.swift in Sources */,
 				D1AFDF8D29CA66F40033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDF8E29CA66F40033BF27 /* FRInterfaceVariables.swift in Sources */,
+				D156BC0A29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D1AFDF8F29CA66F40033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDF9029CA66F40033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDF9129CA66F40033BF27 /* CommandBar.swift in Sources */,
@@ -2576,6 +2614,7 @@
 				D1AFDFE229CA6E900033BF27 /* KeyAltChars.swift in Sources */,
 				D1AFDFE329CA6E900033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDFE429CA6E900033BF27 /* FRInterfaceVariables.swift in Sources */,
+				D156BC0E29CCDBF7007E7362 /* DEAppText.swift in Sources */,
 				D1AFDFE529CA6E900033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDFE629CA6E900033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDFE729CA6E900033BF27 /* CommandBar.swift in Sources */,
@@ -2627,6 +2666,7 @@
 				D1B071A327C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */,
 				D180EC0728FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
+				D156BC1029CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D1B81D3F27BBB7070085FE5E /* KeyboardStyling.swift in Sources */,
 				3045397B293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D1B81D4427BBB71C0085FE5E /* CommandBar.swift in Sources */,

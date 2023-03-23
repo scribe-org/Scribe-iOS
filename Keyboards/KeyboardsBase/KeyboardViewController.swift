@@ -217,22 +217,22 @@ class KeyboardViewController: UIInputViewController {
     leftAutoPartition.backgroundColor = .clear
     rightAutoPartition.backgroundColor = .clear
   }
-  
-  
+
+
   // Logic to create notification tooltip.
   func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
     let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
 
     return ToolTipViewDatasource(content: text, theme: theme)
   }
-  
+
   func setInformationState() {
     let contentData: [NSMutableAttributedString] = InformationToolTipData.getContent()
     let datasources = contentData.enumerated().compactMap({ index, text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
     })
     tipView = ToolTipView(datasources: datasources)
-    
+
     bindTooltipview()
 
     guard let tipView = tipView else { return }
@@ -248,13 +248,13 @@ class KeyboardViewController: UIInputViewController {
     tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
     styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
   }
-  
+
   private func bindTooltipview() {
     tipView?.didUpdatePage = { [weak self] currentState in
       conjViewShiftButtonsState = currentState
-      
+
       guard let weakSelf = self else { return }
-      
+
       switch currentState {
       case .rightInactive:
         weakSelf.shiftFormsDisplayRight.isUserInteractionEnabled = false
@@ -266,7 +266,7 @@ class KeyboardViewController: UIInputViewController {
       default:
         break
       }
-      
+
       weakSelf.styleShiftButtons()
     }
   }
@@ -274,13 +274,17 @@ class KeyboardViewController: UIInputViewController {
   /// Styles the shift buttons for the displayInformation states.
   private func styleShiftButtons() {
     styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-    styleIconBtn(btn: shiftFormsDisplayLeft,
-                 color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
-                 iconName: "chevron.left")
+    styleIconBtn(
+      btn: shiftFormsDisplayLeft,
+      color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+      iconName: "chevron.left"
+    )
     styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-    styleIconBtn(btn: shiftFormsDisplayRight,
-                 color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
-                 iconName: "chevron.right")
+    styleIconBtn(
+      btn: shiftFormsDisplayRight,
+      color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+      iconName: "chevron.right"
+    )
   }
 
   /// Generates an array of the three autocomplete words.
@@ -290,9 +294,9 @@ class KeyboardViewController: UIInputViewController {
       if let inString = proxy.documentContextBeforeInput {
         // To only focus on the current word as prefix in autocomplete.
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
-        
+
         if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
-           currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
+          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
           currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
         }
 
@@ -337,8 +341,8 @@ class KeyboardViewController: UIInputViewController {
       getDefaultAutosuggestions()
     }
   }
-  
-  /// Gets consistent autosguestions for all prnouns in the given language.
+
+  /// Gets consistent autosguestions for all pronouns in the given language.
   /// Note: currently only works for German, Spanish and French languages.
   func getPronounAutosuggestions() {
     let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
@@ -501,7 +505,7 @@ class KeyboardViewController: UIInputViewController {
     annotationBtns.removeAll()
     annotationSeparators.forEach { $0.removeFromSuperview() }
     annotationSeparators.removeAll()
-    
+
     // If user doesn't want the completion and wants what they typed back,
     // Completion is made the currentPrefix to be removed from the proxy.
     // Then autoActionButton title is inserted like normal.
@@ -842,20 +846,20 @@ class KeyboardViewController: UIInputViewController {
       case .disabled:
         break
       case .accusativePersonalSPS, .dativePersonalSPS, .genitivePersonalSPS,
-          .accusativePossesiveSPS, .dativePossesiveSPS, .genitivePossesiveSPS:
+          .accusativePossessiveSPS, .dativePossessiveSPS, .genitivePossessiveSPS:
         formsDisplayDimensions = .view1x2
       case .accusativePersonalTPS, .dativePersonalTPS, .genitivePersonalTPS,
-          .accusativePossesiveTPS, .dativePossesiveTPS, .genitivePossesiveTPS:
+          .accusativePossessiveTPS, .dativePossessiveTPS, .genitivePossessiveTPS:
         formsDisplayDimensions = .view3x1
-      case .accusativePossesiveFPS, .accusativePossesiveSPSInformal, .accusativePossesiveSPSFormal,
-          .accusativePossesiveTPSMasculine, .accusativePossesiveTPSFeminine, .accusativePossesiveTPSNeutral,
-          .accusativePossesiveFPP, .accusativePossesiveSPP, .accusativePossesiveTPP,
-          .dativePossesiveFPS, .dativePossesiveSPSInformal, .dativePossesiveSPSFormal,
-          .dativePossesiveTPSMasculine, .dativePossesiveTPSFeminine, .dativePossesiveTPSNeutral,
-          .dativePossesiveFPP, .dativePossesiveSPP, .dativePossesiveTPP,
-          .genitivePossesiveFPS, .genitivePossesiveSPSInformal, .genitivePossesiveSPSFormal,
-          .genitivePossesiveTPSMasculine, .genitivePossesiveTPSFeminine, .genitivePossesiveTPSNeutral,
-          .genitivePossesiveFPP, .genitivePossesiveSPP, .genitivePossesiveTPP:
+      case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
+          .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+          .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+          .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+          .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+          .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+          .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+          .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+          .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
         formsDisplayDimensions = .view2x2
       }
     } else if
@@ -1200,7 +1204,7 @@ class KeyboardViewController: UIInputViewController {
 
       linkShadowBlendElements()
       setAutoActionPartitions()
-      
+
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
 
@@ -1506,7 +1510,7 @@ class KeyboardViewController: UIInputViewController {
           )
           keyHoldPop.minimumPressDuration = 0.125
 
-         if allNonSpecialKeys.contains(key) {
+        if allNonSpecialKeys.contains(key) {
             btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
             btn.addGestureRecognizer(keyHoldPop)
           }
@@ -1774,7 +1778,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationStateRight()
         loadKeys()
       }
-      
+
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedForm: formFPS)
@@ -1855,7 +1859,7 @@ class KeyboardViewController: UIInputViewController {
       for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
-      
+
       if let wordSelected = proxy.selectedText {
         wordToCheck = wordSelected
       } else {
@@ -1966,7 +1970,7 @@ class KeyboardViewController: UIInputViewController {
         annotationSeparators.forEach { $0.removeFromSuperview() }
         annotationSeparators.removeAll()
       }
-      
+
       conditionallyDisplayAnnotation()
       doubleSpacePeriodPossible = true
 

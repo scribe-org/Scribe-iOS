@@ -13,6 +13,8 @@ let enPrivacyPolicyTitle: String = "Privacy Policy"
 // Includes a new line so that there is space between it and the page title.
 let enPrivacyPolicyText: String = """
 \n
+Note that the English version of this policy takes precedence over all other verions.
+
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.
 
 This privacy policy (POLICY) is used to inform the reader of the policies for the access, tracking, collection, retention, use, and disclosure of personal information (USER INFORMATION) and usage data (USER DATA) for all individuals who make use of this SERVICE (USERS).
