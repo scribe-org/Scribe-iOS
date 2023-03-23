@@ -37,6 +37,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var svSpace: UIView!
   @IBOutlet weak var bottomSpace: UIView!
 
+  let userSystemLanguage = String(Locale.preferredLanguages[0].prefix(2)).uppercased()
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -233,10 +234,25 @@ class ViewController: UIViewController {
     privacyScroll.isHidden = true
 
     // Set the texts for the fields.
-    appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    appTextView.textColor = .init(.keyChar)
+    switch userSystemLanguage{
+    case "EN":
+      appTextView.attributedText = setENInstallation(fontSize: fontSize)
+      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
+      
+      break
+      
+    case "DE":
+      appTextView.attributedText = setDEInstallation(fontSize: fontSize)
+      GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
+      
+      break
+      
+    default:
+      appTextView.attributedText = setENInstallation(fontSize: fontSize)
+      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
 
-    GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
+    }
+    appTextView.textColor = .init(.keyChar)
     GHTextView.textColor = .init(.keyChar)
   }
 
@@ -252,22 +268,38 @@ class ViewController: UIViewController {
     settingsBtn.isUserInteractionEnabled = false
     appTextView.text = ""
     appTextBackground.backgroundColor = .clear
-
+    
     GHBtn.isUserInteractionEnabled = false
     GHCorner.isHidden = true
     GHTextView.text = ""
     GHTextBackground.backgroundColor = .clear
-
+    
     // Enable the privacy policy elements.
     privacyTextView.isUserInteractionEnabled = true
     privacyTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: privacyTextBackground)
-
+    
     privacyScroll.isHidden = false
-
-    privacyTextView.attributedText = setPrivacyPolicy(
-      fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
-    )
+    
+    switch userSystemLanguage{
+      
+    case "EN":
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+      )
+      break
+      
+    case "DE":
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: dePrivacyPolicyTitle, text: dePrivacyPolicyText
+      )
+      break
+      
+    default:
+      privacyTextView.attributedText = setPrivacyPolicy(
+        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+      )
+    }
     privacyTextView.textColor = .init(.keyChar)
   }
 
