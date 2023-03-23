@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(.init(.keyChar), for: .normal)
-    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5)
+    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .medium)
 
     switchView.clipsToBounds = true
     switchView.backgroundColor = switchViewColor
@@ -200,7 +200,7 @@ class ViewController: UIViewController {
     // Set link attributes for all textViews.
     for textView in allTextViews {
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor(.annotateBlue).light,
+        NSAttributedString.Key.foregroundColor: UIColor(named: "linkBlue")!,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     }
