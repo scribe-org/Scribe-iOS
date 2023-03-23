@@ -30,6 +30,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
 - The app icon has been made more modern and glossy and the direct shadow has been removed.
 - The Scribe application also receives dark mode in this version.
+- Minor adjustments to the original app screen texts and colors have been made.
 
 # Scribe-iOS 2.1.0
 

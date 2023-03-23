@@ -94,9 +94,9 @@ class ViewController: UIViewController {
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
-      switchView.setTitle("View Privacy Policy", for: .normal)
+      switchView.setTitle("View privacy policy", for: .normal)
     } else if displayPrivacyPolicy == true {
-      switchView.setTitle("View Installation", for: .normal)
+      switchView.setTitle("View installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(.init(.keyChar), for: .normal)

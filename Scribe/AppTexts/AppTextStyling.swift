@@ -61,7 +61,7 @@ func getArrowIcon(fontSize: CGFloat) -> NSAttributedString {
   arrowAttachment.image = UIImage(
     systemName: "arrow.turn.down.right",
     withConfiguration: selectArrowIconConfig
-  )?.withTintColor(UIColor(named: "scribeGray")!)
+  )?.withTintColor(.init(.keyChar))
 
   return NSAttributedString(attachment: arrowAttachment)
 }
@@ -77,7 +77,7 @@ func getGlobeIcon(fontSize: CGFloat) -> NSAttributedString {
   globeAttachment.image = UIImage(
     systemName: "globe",
     withConfiguration: selectGlobeIconConfig
-  )?.withTintColor(UIColor(named: "scribeGray")!)
+  )?.withTintColor(.init(.keyChar))
 
   return NSAttributedString(attachment: globeAttachment)
 }
