@@ -9,7 +9,7 @@ func ptSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   formLabelsDict["FPS"] = "eu"
   formLabelsDict["SPS"] = "tu"
   formLabelsDict["TPS"] = "ele/ela/você"

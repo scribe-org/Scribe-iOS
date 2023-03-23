@@ -238,15 +238,15 @@ class ViewController: UIViewController {
     case "EN":
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-      
+
       break
-      
+
     case "DE":
       appTextView.attributedText = setDEInstallation(fontSize: fontSize)
       GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
-      
+
       break
-      
+
     default:
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
@@ -268,33 +268,33 @@ class ViewController: UIViewController {
     settingsBtn.isUserInteractionEnabled = false
     appTextView.text = ""
     appTextBackground.backgroundColor = .clear
-    
+
     GHBtn.isUserInteractionEnabled = false
     GHCorner.isHidden = true
     GHTextView.text = ""
     GHTextBackground.backgroundColor = .clear
-    
+
     // Enable the privacy policy elements.
     privacyTextView.isUserInteractionEnabled = true
     privacyTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: privacyTextBackground)
-    
+
     privacyScroll.isHidden = false
-    
+
     switch userSystemLanguage{
-      
+
     case "EN":
       privacyTextView.attributedText = setPrivacyPolicy(
         fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
       )
       break
-      
+
     case "DE":
       privacyTextView.attributedText = setPrivacyPolicy(
         fontSize: fontSize, title: dePrivacyPolicyTitle, text: dePrivacyPolicyText
       )
       break
-      
+
     default:
       privacyTextView.attributedText = setPrivacyPolicy(
         fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText

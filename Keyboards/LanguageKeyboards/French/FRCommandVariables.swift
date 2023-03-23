@@ -9,7 +9,7 @@ func frSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   formLabelsDict["FPS"] = "je"
   formLabelsDict["SPS"] = "tu"
   formLabelsDict["TPS"] = "il/elle"

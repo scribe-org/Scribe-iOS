@@ -9,7 +9,7 @@ func itSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   formLabelsDict["FPS"] = "io"
   formLabelsDict["SPS"] = "tu"
   formLabelsDict["TPS"] = "lei/lui"

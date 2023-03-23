@@ -9,7 +9,7 @@ func deSetConjugationLabels() {
   for k in formLabelsDict.keys {
     formLabelsDict[k] = ""
   }
-  
+
   formLabelsDict["FPS"] = "ich"
   formLabelsDict["SPS"] = "du"
   formLabelsDict["TPS"] = "er/sie/es"
@@ -41,26 +41,26 @@ func deSetCaseDeclensionLabels() {
     switch deCaseVariantDeclensionState {
     case .disabled:
       break // placeholder
-    case .accusativePersonalSPS, .accusativePossesiveSPS,
-        .dativePersonalSPS, .dativePossesiveSPS,
-        .genitivePersonalSPS, .genitivePossesiveSPS:
+    case .accusativePersonalSPS, .accusativePossessiveSPS,
+        .dativePersonalSPS, .dativePossessiveSPS,
+        .genitivePersonalSPS, .genitivePossessiveSPS:
       formLabelsDict["Left"] = "informell"
       formLabelsDict["Right"] = "formell"
-    case .accusativePersonalTPS, .accusativePossesiveTPS,
-        .dativePersonalTPS, .dativePossesiveTPS,
-        .genitivePersonalTPS, .genitivePossesiveTPS:
+    case .accusativePersonalTPS, .accusativePossessiveTPS,
+        .dativePersonalTPS, .dativePossessiveTPS,
+        .genitivePersonalTPS, .genitivePossessiveTPS:
       formLabelsDict["Top"] = "er"
       formLabelsDict["Middle"] = "sie"
       formLabelsDict["Bottom"] = "es"
-    case .accusativePossesiveFPS, .accusativePossesiveSPSInformal, .accusativePossesiveSPSFormal,
-        .accusativePossesiveTPSMasculine, .accusativePossesiveTPSFeminine, .accusativePossesiveTPSNeutral,
-        .accusativePossesiveFPP, .accusativePossesiveSPP, .accusativePossesiveTPP,
-        .dativePossesiveFPS, .dativePossesiveSPSInformal, .dativePossesiveSPSFormal,
-        .dativePossesiveTPSMasculine, .dativePossesiveTPSFeminine, .dativePossesiveTPSNeutral,
-        .dativePossesiveFPP, .dativePossesiveSPP, .dativePossesiveTPP,
-        .genitivePossesiveFPS, .genitivePossesiveSPSInformal, .genitivePossesiveSPSFormal,
-        .genitivePossesiveTPSMasculine, .genitivePossesiveTPSFeminine, .genitivePossesiveTPSNeutral,
-        .genitivePossesiveFPP, .genitivePossesiveSPP, .genitivePossesiveTPP:
+    case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
+        .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+        .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+        .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+        .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+        .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+        .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+        .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+        .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
       formLabelsDict["BL"] = "N"
@@ -80,13 +80,13 @@ enum DEConjugationState {
 enum DECaseDeclensionState {
   case accusative
   case accusativePersonal
-  case accusativePossesive
+  case accusativePossessive
   case dative
   case dativePersonal
-  case dativePossesive
+  case dativePossessive
   case genitive
   case genitivePersonal
-  case genitivePossesive
+  case genitivePossessive
 }
 
 /// Allows for switching the conjugation view to select from pronoun options based on noun genders.
@@ -94,43 +94,43 @@ enum DECaseVariantDeclensionState {
   case disabled
   case accusativePersonalSPS
   case accusativePersonalTPS
-  case accusativePossesiveFPS
-  case accusativePossesiveSPS
-  case accusativePossesiveSPSInformal
-  case accusativePossesiveSPSFormal
-  case accusativePossesiveTPS
-  case accusativePossesiveTPSMasculine
-  case accusativePossesiveTPSFeminine
-  case accusativePossesiveTPSNeutral
-  case accusativePossesiveFPP
-  case accusativePossesiveSPP
-  case accusativePossesiveTPP
+  case accusativePossessiveFPS
+  case accusativePossessiveSPS
+  case accusativePossessiveSPSInformal
+  case accusativePossessiveSPSFormal
+  case accusativePossessiveTPS
+  case accusativePossessiveTPSMasculine
+  case accusativePossessiveTPSFeminine
+  case accusativePossessiveTPSNeutral
+  case accusativePossessiveFPP
+  case accusativePossessiveSPP
+  case accusativePossessiveTPP
   case dativePersonalSPS
   case dativePersonalTPS
-  case dativePossesiveFPS
-  case dativePossesiveSPS
-  case dativePossesiveSPSInformal
-  case dativePossesiveSPSFormal
-  case dativePossesiveTPS
-  case dativePossesiveTPSMasculine
-  case dativePossesiveTPSFeminine
-  case dativePossesiveTPSNeutral
-  case dativePossesiveFPP
-  case dativePossesiveSPP
-  case dativePossesiveTPP
+  case dativePossessiveFPS
+  case dativePossessiveSPS
+  case dativePossessiveSPSInformal
+  case dativePossessiveSPSFormal
+  case dativePossessiveTPS
+  case dativePossessiveTPSMasculine
+  case dativePossessiveTPSFeminine
+  case dativePossessiveTPSNeutral
+  case dativePossessiveFPP
+  case dativePossessiveSPP
+  case dativePossessiveTPP
   case genitivePersonalSPS
   case genitivePersonalTPS
-  case genitivePossesiveFPS
-  case genitivePossesiveSPS
-  case genitivePossesiveSPSInformal
-  case genitivePossesiveSPSFormal
-  case genitivePossesiveTPS
-  case genitivePossesiveTPSMasculine
-  case genitivePossesiveTPSFeminine
-  case genitivePossesiveTPSNeutral
-  case genitivePossesiveFPP
-  case genitivePossesiveSPP
-  case genitivePossesiveTPP
+  case genitivePossessiveFPS
+  case genitivePossessiveSPS
+  case genitivePossessiveSPSInformal
+  case genitivePossessiveSPSFormal
+  case genitivePossessiveTPS
+  case genitivePossessiveTPSMasculine
+  case genitivePossessiveTPSFeminine
+  case genitivePossessiveTPSNeutral
+  case genitivePossessiveFPP
+  case genitivePossessiveSPP
+  case genitivePossessiveTPP
 }
 
 var deConjugationState: DEConjugationState = .indicativePresent
@@ -162,42 +162,42 @@ func deGetCaseDeclensionTitle() -> String {
       return commandPromptSpacing + "Akkusativ Pronomen"
     case .accusativePersonal:
       return commandPromptSpacing + "Akkusativ Personalpronomen"
-    case .accusativePossesive:
+    case .accusativePossessive:
       return commandPromptSpacing + "Akkusativ Possessivpronomen"
     case .dative:
       return commandPromptSpacing + "Dativ Pronomen"
     case .dativePersonal:
       return commandPromptSpacing + "Dativ Personalpronomen"
-    case .dativePossesive:
+    case .dativePossessive:
       return commandPromptSpacing + "Dativ Possessivpronomen"
     case .genitive:
       return commandPromptSpacing + "Genitiv Pronomen"
     case .genitivePersonal:
       return commandPromptSpacing + "Genitiv Personalpronomen"
-    case .genitivePossesive:
+    case .genitivePossessive:
       return commandPromptSpacing + "Genitiv Possessivpronomen"
     }
   } else {
     switch deCaseVariantDeclensionState {
     case .disabled:
       return "" // placeholder
-    case .accusativePersonalSPS, .accusativePossesiveSPS,
-        .dativePersonalSPS, .dativePossesiveSPS,
-        .genitivePersonalSPS, .genitivePossesiveSPS:
+    case .accusativePersonalSPS, .accusativePossessiveSPS,
+        .dativePersonalSPS, .dativePossessiveSPS,
+        .genitivePersonalSPS, .genitivePossessiveSPS:
       return commandPromptSpacing + "Formalität des Subjekts?"
-    case .accusativePersonalTPS, .accusativePossesiveTPS,
-        .dativePersonalTPS, .dativePossesiveTPS,
-        .genitivePersonalTPS, .genitivePossesiveTPS:
+    case .accusativePersonalTPS, .accusativePossessiveTPS,
+        .dativePersonalTPS, .dativePossessiveTPS,
+        .genitivePersonalTPS, .genitivePossessiveTPS:
       return commandPromptSpacing + "Geschlecht des Subjekts?"
-    case .accusativePossesiveFPS, .accusativePossesiveSPSInformal, .accusativePossesiveSPSFormal,
-        .accusativePossesiveTPSMasculine, .accusativePossesiveTPSFeminine, .accusativePossesiveTPSNeutral,
-        .accusativePossesiveFPP, .accusativePossesiveSPP, .accusativePossesiveTPP,
-        .dativePossesiveFPS, .dativePossesiveSPSInformal, .dativePossesiveSPSFormal,
-        .dativePossesiveTPSMasculine, .dativePossesiveTPSFeminine, .dativePossesiveTPSNeutral,
-        .dativePossesiveFPP, .dativePossesiveSPP, .dativePossesiveTPP,
-        .genitivePossesiveFPS, .genitivePossesiveSPSInformal, .genitivePossesiveSPSFormal,
-        .genitivePossesiveTPSMasculine, .genitivePossesiveTPSFeminine, .genitivePossesiveTPSNeutral,
-        .genitivePossesiveFPP, .genitivePossesiveSPP, .genitivePossesiveTPP:
+    case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
+        .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+        .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+        .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+        .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+        .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+        .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+        .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+        .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
       return commandPromptSpacing + "Geschlecht des Objekts?"
     }
   }
@@ -254,7 +254,7 @@ func deSetCaseDeclensions() {
     formFPP = "unser"
     formSPP = "euer"
     formTPP = "ihrer"
-  case .accusativePossesive, .dativePossesive, .genitivePossesive:
+  case .accusativePossessive, .dativePossessive, .genitivePossessive:
     formFPS = "mein∗"
     formSPS = "dein∗/Ihr∗"
     formTPS = "sein∗/ihr∗/sein∗"
@@ -290,144 +290,144 @@ func deSetCaseVariantDeclensions() {
     formTop = "seiner"
     formMiddle = "ihrer"
     formBottom = "seiner"
-  case .accusativePossesiveSPS, .dativePossesiveSPS, .genitivePossesiveSPS:
+  case .accusativePossessiveSPS, .dativePossessiveSPS, .genitivePossessiveSPS:
     formLeft = "dein∗"
     formRight = "Ihr∗"
-  case .accusativePossesiveTPS, .dativePossesiveTPS, .genitivePossesiveTPS:
+  case .accusativePossessiveTPS, .dativePossessiveTPS, .genitivePossessiveTPS:
     formTop = "sein∗"
     formMiddle = "ihr∗"
     formBottom = "sein∗"
-  case .accusativePossesiveFPS:
+  case .accusativePossessiveFPS:
     formTopLeft = "meinen"
     formTopRight = "meine"
     formBottomLeft = "mein"
     formBottomRight = "meine"
-  case .accusativePossesiveSPSInformal:
+  case .accusativePossessiveSPSInformal:
     formTopLeft = "deinen"
     formTopRight = "deine"
     formBottomLeft = "dein"
     formBottomRight = "deine"
-  case .accusativePossesiveSPSFormal:
+  case .accusativePossessiveSPSFormal:
     formTopLeft = "Ihren"
     formTopRight = "Ihre"
     formBottomLeft = "Ihr"
     formBottomRight = "Ihre"
-  case .accusativePossesiveTPSMasculine:
+  case .accusativePossessiveTPSMasculine:
     formTopLeft = "seinen"
     formTopRight = "seine"
     formBottomLeft = "sein"
     formBottomRight = "seine"
-  case .accusativePossesiveTPSFeminine:
+  case .accusativePossessiveTPSFeminine:
     formTopLeft = "ihren"
     formTopRight = "ihre"
     formBottomLeft = "ihr"
     formBottomRight = "ihre"
-  case .accusativePossesiveTPSNeutral:
+  case .accusativePossessiveTPSNeutral:
     formTopLeft = "seinen"
     formTopRight = "seine"
     formBottomLeft = "sein"
     formBottomRight = "seine"
-  case .accusativePossesiveFPP:
+  case .accusativePossessiveFPP:
     formTopLeft = "unsren"
     formTopRight = "unsre"
     formBottomLeft = "unser"
     formBottomRight = "unsre"
-  case .accusativePossesiveSPP:
+  case .accusativePossessiveSPP:
     formTopLeft = "euren"
     formTopRight = "eure"
     formBottomLeft = "euer"
     formBottomRight = "eure"
-  case .accusativePossesiveTPP:
+  case .accusativePossessiveTPP:
     formTopLeft = "ihren"
     formTopRight = "ihre"
     formBottomLeft = "ihr"
     formBottomRight = "ihre"
-  case .dativePossesiveFPS:
+  case .dativePossessiveFPS:
     formTopLeft = "meinem"
     formTopRight = "meiner"
     formBottomLeft = "meinem"
     formBottomRight = "meinen"
-  case .dativePossesiveSPSInformal:
+  case .dativePossessiveSPSInformal:
     formTopLeft = "deinem"
     formTopRight = "deiner"
     formBottomLeft = "deinem"
     formBottomRight = "deinen"
-  case .dativePossesiveSPSFormal:
+  case .dativePossessiveSPSFormal:
     formTopLeft = "Ihrem"
     formTopRight = "Ihrer"
     formBottomLeft = "Ihrem"
     formBottomRight = "Ihren"
-  case .dativePossesiveTPSMasculine:
+  case .dativePossessiveTPSMasculine:
     formTopLeft = "seinem"
     formTopRight = "seiner"
     formBottomLeft = "seinem"
     formBottomRight = "seinen"
-  case .dativePossesiveTPSFeminine:
+  case .dativePossessiveTPSFeminine:
     formTopLeft = "ihrem"
     formTopRight = "ihrer"
     formBottomLeft = "ihrem"
     formBottomRight = "ihren"
-  case .dativePossesiveTPSNeutral:
+  case .dativePossessiveTPSNeutral:
     formTopLeft = "seinem"
     formTopRight = "seiner"
     formBottomLeft = "seinem"
     formBottomRight = "seinen"
-  case .dativePossesiveFPP:
+  case .dativePossessiveFPP:
     formTopLeft = "unsrem"
     formTopRight = "unsrer"
     formBottomLeft = "unsrem"
     formBottomRight = "unsren"
-  case .dativePossesiveSPP:
+  case .dativePossessiveSPP:
     formTopLeft = "eurem"
     formTopRight = "eurer"
     formBottomLeft = "eurem"
     formBottomRight = "euren"
-  case .dativePossesiveTPP:
+  case .dativePossessiveTPP:
     formTopLeft = "ihrem"
     formTopRight = "ihrer"
     formBottomLeft = "ihrem"
     formBottomRight = "ihren"
-  case .genitivePossesiveFPS:
+  case .genitivePossessiveFPS:
     formTopLeft = "meines"
     formTopRight = "meiner"
     formBottomLeft = "meines"
     formBottomRight = "meiner"
-  case .genitivePossesiveSPSInformal:
+  case .genitivePossessiveSPSInformal:
     formTopLeft = "deines"
     formTopRight = "deiner"
     formBottomLeft = "deines"
     formBottomRight = "deiner"
-  case .genitivePossesiveSPSFormal:
+  case .genitivePossessiveSPSFormal:
     formTopLeft = "Ihres"
     formTopRight = "Ihrer"
     formBottomLeft = "Ihres"
     formBottomRight = "Ihrer"
-  case .genitivePossesiveTPSMasculine:
+  case .genitivePossessiveTPSMasculine:
     formTopLeft = "seines"
     formTopRight = "seiner"
     formBottomLeft = "seines"
     formBottomRight = "seiner"
-  case .genitivePossesiveTPSFeminine:
+  case .genitivePossessiveTPSFeminine:
     formTopLeft = "ihres"
     formTopRight = "ihr"
     formBottomLeft = "ihres"
     formBottomRight = "ihr"
-  case .genitivePossesiveTPSNeutral:
+  case .genitivePossessiveTPSNeutral:
     formTopLeft = "seines"
     formTopRight = "seiner"
     formBottomLeft = "seines"
     formBottomRight = "seiner"
-  case .genitivePossesiveFPP:
+  case .genitivePossessiveFPP:
     formTopLeft = "unsres"
     formTopRight = "unsrer"
     formBottomLeft = "unsres"
     formBottomRight = "unsrer"
-  case .genitivePossesiveSPP:
+  case .genitivePossessiveSPP:
     formTopLeft = "eures"
     formTopRight = "eurer"
     formBottomLeft = "eures"
     formBottomRight = "eurer"
-  case .genitivePossesiveTPP:
+  case .genitivePossessiveTPP:
     formTopLeft = "ihres"
     formTopRight = "ihrer"
     formBottomLeft = "ihres"
@@ -444,25 +444,25 @@ func deConjugationStateLeft() {
     case .accusativePersonal:
       conjViewShiftButtonsState = .leftInactive
       deCaseDeclensionState = .accusative
-    case .accusativePossesive:
+    case .accusativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePersonal
     case .dative:
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .accusativePossesive
+      deCaseDeclensionState = .accusativePossessive
     case .dativePersonal:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
-    case .dativePossesive:
+    case .dativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePersonal
     case .genitive:
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .dativePossesive
+      deCaseDeclensionState = .dativePossessive
     case .genitivePersonal:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
-    case .genitivePossesive:
+    case .genitivePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
     }
@@ -489,8 +489,8 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .accusativePersonal
     case .accusativePersonal:
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .accusativePossesive
-    case .accusativePossesive:
+      deCaseDeclensionState = .accusativePossessive
+    case .accusativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     case .dative:
@@ -498,8 +498,8 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .dativePersonal
     case .dativePersonal:
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .dativePossesive
-    case .dativePossesive:
+      deCaseDeclensionState = .dativePossessive
+    case .dativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitive:
@@ -507,8 +507,8 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .genitivePersonal
     case .genitivePersonal:
       conjViewShiftButtonsState = .rightInactive
-      deCaseDeclensionState = .genitivePossesive
-    case .genitivePossesive:
+      deCaseDeclensionState = .genitivePossessive
+    case .genitivePossessive:
       break
     }
   } else {
