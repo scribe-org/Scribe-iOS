@@ -105,7 +105,7 @@ func getENGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
   // Initialize the main body of the text.
   let ghInfoText = NSMutableAttributedString(string: """
   \n
-  Scribe is fully open-source. To report issues or contribute please visit us at\u{0020}
+  Scribe is fully open-source software made by volunteers. To report issues or contribute please visit us at\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   // A second NSAttributedString that includes a link to the GitHub.

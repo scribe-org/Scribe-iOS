@@ -57,17 +57,17 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   installDirections.append(arrowString)
 
   installDirections.append(NSMutableAttributedString(string: """
-  \u{0020} Eine neue Tastatur hinzufügen
+  \u{0020} Neue Tastatur hinzufügen
 
-  3. Wählen Sie Scribe und aktivieren Sie dann die Tastaturen
+  3. Wählen Sie Scribe und aktivieren Sie Tastaturen
 
-  4. Drücken Sie während der Eingabe\u{0020}
+  4. Drücken Sie \u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   installDirections.append(globeString)
 
   installDirections.append(NSMutableAttributedString(string: """
-  \u{0020}Tastaturen auszuwählen
+  , um Tastaturen auszuwählen
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   return concatAttributedStrings(left: installStart, right: installDirections)
@@ -105,7 +105,7 @@ func getDEGitHubText(fontSize: CGFloat) -> NSMutableAttributedString {
   // Initialize the main body of the text.
   let ghInfoText = NSMutableAttributedString(string: """
   \n
-  Scribe ist vollständig Open Source. Um Probleme zu melden oder einen Beitrag zu leisten, besuchen Sie uns bitte unter\u{0020}
+  Scribe ist vollständig open-source. Um Probleme zu melden oder eine Kontribution zu leisten, besuchen Sie uns unter\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   // A second NSAttributedString that includes a link to the GitHub.

@@ -6,49 +6,17 @@
 //  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
 //
 
-import UIKit
+let dePrivacyPolicyTitle: String = "Datenschutzrichtlinie"
 
-/// Formats and returns the text of the Scribe privacy policy.
-func setDEPrivacyPolicy(fontSize: CGFloat) -> NSMutableAttributedString {
-  let privacyTextTitle = NSMutableAttributedString(string: """
-  Datenschutz-Bestimmungen
-  """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-
-  let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
-  let wikipediaDataLicensing: String = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
-  let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
-  let scribeGitHub: String = "https://github.com/scribe-org"
-  let scribeEmail: String = "scribe.langauge@gmail.com"
-  let gitHubLogoLicensing: String = "https://github.com/logos"
-  let wikidataLogoLicensing: String = "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy"
-  let customKeyboardLicense: String = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
-
-  let privacyPolicyTextWithLinks = addHyperLinks(
-    originalText: DEprivacyPolicyText,
-    links: [
-      wikidataDataLicensing: wikidataDataLicensing,
-      wikipediaDataLicensing: wikipediaDataLicensing,
-      huggingFaceLicensing: huggingFaceLicensing,
-      scribeGitHub: scribeGitHub,
-      scribeEmail: "mailto:" + scribeEmail,
-      gitHubLogoLicensing: gitHubLogoLicensing,
-      wikidataLogoLicensing: wikidataLogoLicensing,
-      customKeyboardLicense: customKeyboardLicense],
-    fontSize: fontSize
-  )
-
-  return concatAttributedStrings(
-    left: privacyTextTitle,
-    right: privacyPolicyTextWithLinks
-  )
-}
 
 // swiftlint:disable all
 
 // Includes a new line so that there is space between it and the page title.
-let DEprivacyPolicyText = """
+let dePrivacyPolicyText = """
 \n
-Die Scribe-Entwickler (SCRIBE) haben die iOS-Anwendung „Scribe – Language Keyboards“ (SERVICE) als Open-Source-Anwendung entwickelt. Dieser SERVICE wird von SCRIBE kostenlos zur Verfügung gestellt und ist für die Nutzung ohne Mängelgewähr bestimmt.
+Beachten Sie, dass die englische Version dieser Richtlinie Vorrang vor allen anderen Versionen hat.
+
+Die Scribe-Entwickler (SCRIBE) haben die iOS-Applikation „Scribe – Language Keyboards“ (SERVICE) als Open-Source-Applikation entwickelt. Dieser SERVICE wird von SCRIBE kostenlos zur Verfügung gestellt und ist zur Verwendung so wie sie ist bestimmt.
 
 Diese Datenschutzrichtlinie (RICHTLINIE) wird verwendet, um den Leser über die Richtlinien für den Zugriff, die Verfolgung, die Erfassung, die Aufbewahrung, die Verwendung und die Offenlegung von persönlichen Informationen (BENUTZERINFORMATIONEN) und Nutzungsdaten (BENUTZERDATEN) für alle Personen zu informieren, die sie verwenden diesen SERVICE (BENUTZER).
 
@@ -74,7 +42,7 @@ Dieser SERVICE basierte auf Code von Drittanbietern. Der gesamte Quellcode, der 
 
 5. Dienste von Drittanbietern
 
-Dieser SERVICE nutzt Dienste von Drittanbietern, um einige der Daten von Drittanbietern zu manipulieren. Insbesondere wurden Daten unter Verwendung von Modellen von Hugging Face-Transformatoren übersetzt. Dieser Dienst ist durch eine Apache-Lizenz 2.0 abgedeckt, die besagt, dass er für die kommerzielle Nutzung, Änderung, Verteilung, Patentnutzung und private Nutzung verfügbar ist. Die Lizenz für den oben genannten Dienst finden Sie unter https://github.com/huggingface/transformers/blob/master/LICENSE.
+Dieser SERVICE nutzt Dienste von Drittanbietern, um einige der Daten von Drittanbietern zu manipulieren. Insbesondere wurden Daten unter Verwendung von Modellen von Hugging Face Transformers übersetzt. Dieser Dienst ist durch eine Apache-Lizenz 2.0 abgedeckt, die besagt, dass er für die kommerzielle Nutzung, Änderung, Verteilung, Patentnutzung und private Nutzung verfügbar ist. Die Lizenz für den oben genannten Dienst finden Sie unter https://github.com/huggingface/transformers/blob/master/LICENSE.
 
 6. Links zu Drittanbietern
 

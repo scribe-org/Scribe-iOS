@@ -64,24 +64,24 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afZ-cI-Uqj" userLabel="GHBkrd">
-                                <rect key="frame" x="18.666666666666657" y="517.33333333333337" width="337.66666666666674" height="103.66666666666663"/>
+                                <rect key="frame" x="18.666666666666657" y="509.33333333333331" width="337.66666666666674" height="111.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubCorner" translatesAutoresizingMaskIntoConstraints="NO" id="8Mn-6Y-5tR" userLabel="GHCorner">
-                                <rect key="frame" x="297" y="517.33333333333337" width="59.333333333333314" height="59.333333333333371"/>
+                                <rect key="frame" x="297" y="509.33333333333331" width="59.333333333333314" height="59.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8Mn-6Y-5tR" secondAttribute="height" multiplier="1:1" id="Ocs-kF-PRu"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-Un-zQg" userLabel="GHTextView">
-                                <rect key="frame" x="35.666666666666657" y="527.33333333333337" width="303.66666666666674" height="83.666666666666629"/>
+                                <rect key="frame" x="35.666666666666657" y="519.33333333333337" width="303.66666666666674" height="91.666666666666629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn2-6S-lTL" userLabel="GitHubBtn">
-                                <rect key="frame" x="18.666666666666657" y="517.33333333333337" width="337.66666666666674" height="103.66666666666663"/>
+                                <rect key="frame" x="18.666666666666657" y="509.33333333333331" width="337.66666666666674" height="111.66666666666669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6P-Fj-0z7" userLabel="AppTextBkrd">
@@ -161,7 +161,7 @@
                             <constraint firstItem="wNQ-WS-San" firstAttribute="centerX" secondItem="a6P-Fj-0z7" secondAttribute="centerX" id="Z4H-UC-bX1"/>
                             <constraint firstItem="kI5-w9-te5" firstAttribute="width" secondItem="2QI-f0-YLj" secondAttribute="width" id="a7Y-RS-PKv"/>
                             <constraint firstItem="Pec-99-6H5" firstAttribute="top" secondItem="h2H-6t-AEh" secondAttribute="top" constant="5" id="aD2-4x-ENf"/>
-                            <constraint firstItem="afZ-cI-Uqj" firstAttribute="height" secondItem="PZJ-cM-o4X" secondAttribute="height" multiplier="0.265" id="bsL-vg-R7A"/>
+                            <constraint firstItem="afZ-cI-Uqj" firstAttribute="height" secondItem="PZJ-cM-o4X" secondAttribute="height" multiplier="0.285" id="bsL-vg-R7A"/>
                             <constraint firstItem="uAP-y9-G5O" firstAttribute="centerY" secondItem="I5E-HP-H2z" secondAttribute="centerY" constant="5" id="ch1-7G-vTt"/>
                             <constraint firstItem="Cn2-6S-lTL" firstAttribute="height" secondItem="afZ-cI-Uqj" secondAttribute="height" id="cko-87-sP7"/>
                             <constraint firstItem="a6P-Fj-0z7" firstAttribute="centerX" secondItem="w88-X2-5bx" secondAttribute="centerX" id="cz1-Rl-god"/>
