@@ -1491,11 +1491,7 @@ class KeyboardViewController: UIInputViewController {
             if [.translate, .conjugate, .plural].contains(commandState) {
               styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
             } else {
-              if proxy.keyboardType == .webSearch{
-                styleIconBtn(btn: btn, color: keyCharColor, iconName: "search", btnTitle: "search")
-              }else{
-                styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
-              }
+              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
             }
           }
 
@@ -1535,6 +1531,11 @@ class KeyboardViewController: UIInputViewController {
 
           // Set the width of the key given device and the given key.
           btn.adjustKeyWidth()
+          if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
+            // Override background color from adjustKeyWidth for "search" blue for web searches.
+            styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
+            btn.backgroundColor = UIColor(red: 0.0/255.0, green: 121.0/255.0, blue: 251.0/255.0, alpha: 1.0)
+          }
 
           // Extend button touch areas.
           var widthOfSpacing = CGFloat(0)
