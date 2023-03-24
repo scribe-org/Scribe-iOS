@@ -305,8 +305,9 @@ class KeyboardViewController: UIInputViewController {
           currentPrefix = currentPrefix.components(separatedBy: " ").last ?? ""
         }
 
+        // Get options for completion that have start with the current prefix and are not just one letter.
         let stringOptions = autocompleteWords.filter { item in
-            return item.lowercased().hasPrefix(currentPrefix.lowercased())
+          return item.lowercased().hasPrefix(currentPrefix.lowercased()) && item.count > 1
         }
 
         var i = 0
@@ -457,7 +458,8 @@ class KeyboardViewController: UIInputViewController {
       if autoAction1Visible == true {
         allowUndo = false
         shouldHighlightFirstCompletion = false
-        if currentPrefix == completionWords[0] || completionWords[1] == " " {
+        // Highlight if the current prefix is the first autocompletion or there is only one available.
+        if currentPrefix == completionWords[0] || (completionWords[0] != " " && completionWords[1] == " ") {
           shouldHighlightFirstCompletion = true
         }
         setBtn(btn: translateKey, color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
@@ -1931,7 +1933,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case spaceBar, languageTextForSpaceBar:
-      if completionWords[1] == " " && previousWord != completionWords[0] {
+      if  previousWord != completionWords[0] && (completionWords[0] != " " && completionWords[1] == " ") {
         previousWord = currentPrefix
         clearPrefixFromTextFieldProxy()
         proxy.insertText(completionWords[0])
