@@ -302,7 +302,16 @@ class KeyboardViewController: UIInputViewController {
 
         // Post commands pastStringInTextProxy is "", so take last word.
         if currentPrefix.contains(" ") {
-          currentPrefix = currentPrefix.components(separatedBy: " ").last ?? ""
+          currentPrefix = currentPrefix.components(
+            separatedBy: " "
+          ).last ?? ""
+        }
+
+        // If there's a line break, take the word after it.
+        if currentPrefix.contains("\n") {
+          currentPrefix = currentPrefix.components(
+            separatedBy: "\n"
+          ).last ?? ""
         }
 
         // Get options for completion that have start with the current prefix and are not just one letter.
@@ -388,7 +397,16 @@ class KeyboardViewController: UIInputViewController {
 
   /// Generates an array of the three autosuggest words.
   func getAutosuggestions() {
-    let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
+    var prefix = proxy.documentContextBeforeInput?.components(
+      separatedBy: " "
+    ).secondToLast() ?? ""
+
+    // If there's a line break, take the word after it.
+    if prefix.contains("\n") {
+      prefix = prefix.components(
+        separatedBy: "\n"
+      ).last ?? ""
+    }
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
@@ -1702,6 +1720,13 @@ class KeyboardViewController: UIInputViewController {
     case "return":
       if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
         proxy.insertText("\n")
+        if shiftButtonState == .normal { // capitalize the proxy
+          shiftButtonState = .shift
+        }
+        commandState = .idle
+        autoActionState = .suggest
+        conditionallySetAutoActionBtns()
+        loadKeys()
       } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
