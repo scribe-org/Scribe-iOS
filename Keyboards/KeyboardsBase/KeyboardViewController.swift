@@ -1702,6 +1702,10 @@ class KeyboardViewController: UIInputViewController {
     case "return":
       if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
         proxy.insertText("\n")
+        commandState = .idle
+        autoActionState = .suggest
+        autoAction1Visible = false
+        conditionallySetAutoActionBtns()
       } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
