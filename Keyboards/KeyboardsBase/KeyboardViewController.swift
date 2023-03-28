@@ -893,7 +893,7 @@ class KeyboardViewController: UIInputViewController {
     } else if
       commandState == .selectCaseDeclension
       && controllerLanguage == "German"
-      && [.accusative, .dative, .genitive].contains(deCaseDeclensionState) {
+        && [.accusative, .dative, .genitive, .accusativeDemonstrative, .dativeDemonstrative, .genitiveDemostrative].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
     } else if
       commandState == .displayInformation {
