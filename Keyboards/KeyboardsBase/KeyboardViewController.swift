@@ -459,6 +459,11 @@ class KeyboardViewController: UIInputViewController {
         getDefaultAutosuggestions()
       }
     }
+
+    // Disable the third auto action button if we'll have emoji suggestions.
+    if emojiAutosuggestions[prefix].exists() {
+      // autoAction3Visible = false
+    }
   }
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
@@ -489,9 +494,11 @@ class KeyboardViewController: UIInputViewController {
       styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
-      setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-      styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
-      activateBtn(btn: pluralKey)
+      if autoAction3Visible == true {
+        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+        styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
+        activateBtn(btn: pluralKey)
+      }
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
       conjugateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -500,6 +507,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Reset autocorrect and autosuggest button visibility.
     autoAction1Visible = true
+    autoAction3Visible = true
   }
 
   /// Clears the text proxy when inserting using an auto action.
