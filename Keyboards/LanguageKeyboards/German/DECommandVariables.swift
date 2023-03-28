@@ -240,7 +240,7 @@ func deSetCaseDeclensions() {
     formSPP = "euch"
     formTPP = "sie"
   case .accusativeDemonstrative:
-    formTopLeft = "dieser"
+    formTopLeft = "diesen"
     formTopRight = "diese"
     formBottomLeft = "dieses"
     formBottomRight = "diese"
