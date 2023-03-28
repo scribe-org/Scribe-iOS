@@ -30,7 +30,7 @@ func queryPlural(commandBar: UILabel) {
   let nounInDirectory = nouns[noun].exists()
   if nounInDirectory {
     if nouns[noun]["plural"].string != "isPlural" {
-      guard let plural: String = nouns[noun]["plural"].string else { return }
+      guard let plural = nouns[noun]["plural"].string else { return }
       if inputWordIsCapitalized == false {
         proxy.insertText(plural + " ")
       } else {

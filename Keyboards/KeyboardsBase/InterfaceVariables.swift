@@ -12,12 +12,12 @@ var proxy: UITextDocumentProxy!
 // MARK: Display Variables
 
 // Variables for the keyboard and its appearance.
-var keyboard: [[String]] = [[String]]()
-var allKeys: [String] = [String]()
+var keyboard = [[String]]()
+var allKeys = [String]()
 let specialKeys = [
   "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
 ]
-var allNonSpecialKeys: [String] = [String]()
+var allNonSpecialKeys = [String]()
 var keyboardHeight: CGFloat!
 var keyCornerRadius: CGFloat!
 var commandKeyCornerRadius: CGFloat!
@@ -35,9 +35,9 @@ var languageTextForSpaceBar: String {
 var showKeyboardLanguage = false
 
 // Arrays for the possible keyboard views that are loaded with their characters.
-var letterKeys: [[String]] = [[String]]()
-var numberKeys: [[String]] = [[String]]()
-var symbolKeys: [[String]] = [[String]]()
+var letterKeys = [[String]]()
+var numberKeys = [[String]]()
+var symbolKeys = [[String]]()
 
 /// States of the keyboard corresponding to layouts found in KeyboardConstants.swift.
 enum KeyboardState {
@@ -97,7 +97,7 @@ struct DeviceType {
   static let isPad = UIDevice.current.userInterfaceIdiom == .pad
 }
 
-var isLandscapeView: Bool = false
+var isLandscapeView = false
 
 /// Checks if the device is in landscape mode.
 func checkLandscapeMode() {
@@ -113,7 +113,7 @@ var controllerLanguage = String()
 var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
-let languagesAbbrDict: [String: String] = [
+let languagesAbbrDict = [
   "French_AZERTY": "fr",
   "French_QWERTY": "fr",
   "German": "de",
@@ -169,9 +169,9 @@ func setKeyboardLayout() {
 
 // Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
 // The purpose of these is to define which key pop up functions should be ran.
-var centralKeyChars: [String] = [String]()
-var leftKeyChars: [String] = [String]()
-var rightKeyChars: [String] = [String]()
+var centralKeyChars = [String]()
+var leftKeyChars = [String]()
+var rightKeyChars = [String]()
 
 // Variables for call out positioning.
 var horizStart = CGFloat(0)

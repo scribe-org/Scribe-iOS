@@ -29,7 +29,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
 }
 
 // The names of symbols whose keys should be slightly larger than the default size.
-var keysThatAreSlightlyLarger: [String] = [
+var keysThatAreSlightlyLarger = [
   "delete.left",
   "chevron.left",
   "chevron.right",

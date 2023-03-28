@@ -7,7 +7,7 @@
 import UIKit
 
 // Dictionary for accessing keyboard conjugation state.
-var nounFormToColorDict: [String: UIColor] = [
+var nounFormToColorDict = [
   "F": annotateRed,
   "M": annotateBlue,
   "C": annotatePurple,
@@ -62,8 +62,8 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     )
     annotationBtn.styleSingleAnnotation()
 
-    let emojisToSelectFrom: String = "🥳🎉"
-    let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+    let emojisToSelectFrom = "🥳🎉"
+    let emojis = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
     annotationBtn.setTitle(emojis, for: .normal)
     KVC.view.addSubview(annotationBtn)
     annotationBtns.append(annotationBtn)
@@ -109,7 +109,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
       for i in 0..<numAnnotations {
         let annotationBtn = Annotation()
         var annotationSep = UIView()
-        var annotationToDisplay: String = annotationsToAssign[i]
+        var annotationToDisplay = annotationsToAssign[i]
 
         if nounFormToColorDict.keys.contains(annotationToDisplay) {
           if numAnnotations > 3 {
@@ -238,7 +238,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
     } else {
       if isNoun {
-        let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
+        let nounAnnotationForm = nouns[wordToCheck]["form"].string ?? ""
         if nounAnnotationForm != "" {
           if !nounAnnotationForm.contains("/") {
             annotationsToAssign.append(nounAnnotationForm)

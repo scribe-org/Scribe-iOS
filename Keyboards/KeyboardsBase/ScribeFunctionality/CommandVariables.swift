@@ -32,55 +32,55 @@ var numericAutosuggestions = [String]()
 var pronounAutosuggestionTenses: [String: String] = [:]
 var verbsAfterPronounsArray = [String]()
 
-var currentPrefix: String = ""
-var pastStringInTextProxy: String = ""
+var currentPrefix = ""
+var pastStringInTextProxy = ""
 var completionWords = [String]()
 
 // A larger vertical bar than the normal | key for the cursor.
-let commandCursor: String = "│"
-var commandPromptSpacing: String = ""
+let commandCursor = "│"
+var commandPromptSpacing = ""
 
 // Command input and output variables.
-var inputWordIsCapitalized: Bool = false
-var wordToReturn: String = ""
-var invalidCommandMsg: String = ""
+var inputWordIsCapitalized = false
+var wordToReturn = ""
+var invalidCommandMsg = ""
 
 // Annotation variables.
-var annotationState: Bool = false
-var activateAnnotationBtn: Bool = false
-var prepAnnotationForm: String = ""
-var annotationBtns: [UIButton] = [UIButton]()
-var annotationColors: [UIColor] = [UIColor]()
-var annotationSeparators: [UIView] = [UIView]()
-var annotationDisplayWord: String = ""
-var wordToCheck: String = ""
-var wordsTyped: [String] = [String]()
-var annotationsToAssign: [String] = [String]()
-var isNoun: Bool = false
-var isPrep: Bool = false
+var annotationState = false
+var activateAnnotationBtn = false
+var prepAnnotationForm = ""
+var annotationBtns = [UIButton]()
+var annotationColors = [UIColor]()
+var annotationSeparators = [UIView]()
+var annotationDisplayWord = ""
+var wordToCheck = ""
+var wordsTyped = [String]()
+var annotationsToAssign = [String]()
+var isNoun = false
+var isPrep = false
 
 // Prompts and saving groups of languages.
-var allPrompts: [String] = [""]
+var allPrompts = [""]
 var allColoredPrompts: [NSAttributedString] = []
 
 let languagesWithCapitalizedNouns = ["German"]
 let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
 
 // MARK: Translate Variables
-var translateKeyLbl: String = ""
-var translatePrompt: String = ""
-var translatePlaceholder: String = ""
-var translatePromptAndCursor: String = ""
-var translatePromptAndPlaceholder: String = ""
+var translateKeyLbl = ""
+var translatePrompt = ""
+var translatePlaceholder = ""
+var translatePromptAndCursor = ""
+var translatePromptAndPlaceholder = ""
 var translatePromptAndColorPlaceholder = NSMutableAttributedString()
-var wordToTranslate: String = ""
+var wordToTranslate = ""
 
 // MARK: Conjugate Variables
-var conjugateKeyLbl: String = ""
-var conjugatePrompt: String = ""
-var conjugatePlaceholder: String = ""
-var conjugatePromptAndCursor: String = ""
-var conjugatePromptAndPlaceholder: String = ""
+var conjugateKeyLbl = ""
+var conjugatePrompt = ""
+var conjugatePlaceholder = ""
+var conjugatePromptAndCursor = ""
+var conjugatePromptAndPlaceholder = ""
 var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
 
 /// What the view of the conjugation display to display to the user.
@@ -97,28 +97,28 @@ var formsDisplayDimensions: FormsDisplayDimensions = .view3x2
 var allConjugations = [String]()
 var allConjugationBtns = [UIButton]()
 
-var formFPS: String = ""
-var formSPS: String = ""
-var formTPS: String = ""
-var formFPP: String = ""
-var formSPP: String = ""
-var formTPP: String = ""
+var formFPS = ""
+var formSPS = ""
+var formTPS = ""
+var formFPP = ""
+var formSPP = ""
+var formTPP = ""
 
-var formTop: String = ""
-var formMiddle: String = ""
-var formBottom: String = ""
+var formTop = ""
+var formMiddle = ""
+var formBottom = ""
 
-var formTopLeft: String = ""
-var formTopRight: String = ""
-var formBottomLeft: String = ""
-var formBottomRight: String = ""
+var formTopLeft = ""
+var formTopRight = ""
+var formBottomLeft = ""
+var formBottomRight = ""
 
-var formLeft: String = ""
-var formRight: String = ""
+var formLeft = ""
+var formRight = ""
 
-var formSingle: String = ""
+var formSingle = ""
 
-var formLabelsDict: [String: String] = [
+var formLabelsDict = [
   "FPS": "",
   "SPS": "",
   "TPS": "",
@@ -137,17 +137,17 @@ var formLabelsDict: [String: String] = [
   "Single": ""
 ]
 
-var verbToConjugate: String = ""
-var verbToDisplay: String = ""
-var wordToDisplay: String = ""
-var conjugationToDisplay: String = ""
-var verbConjugated: String = ""
+var verbToConjugate = ""
+var verbToDisplay = ""
+var wordToDisplay = ""
+var conjugationToDisplay = ""
+var verbConjugated = ""
 
 // MARK: Plural Variables
-var pluralKeyLbl: String = ""
-var pluralPrompt: String = ""
-var pluralPlaceholder: String = ""
-var pluralPromptAndCursor: String = ""
-var pluralPromptAndPlaceholder: String = ""
+var pluralKeyLbl = ""
+var pluralPrompt = ""
+var pluralPlaceholder = ""
+var pluralPromptAndCursor = ""
+var pluralPromptAndPlaceholder = ""
 var pluralPromptAndColorPlaceholder = NSMutableAttributedString()
-var alreadyPluralMsg: String = ""
+var alreadyPluralMsg = ""

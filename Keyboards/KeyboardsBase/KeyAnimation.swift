@@ -257,7 +257,7 @@ func centerKeyPopPath(
 ///   - displayChar: the character to display on the pop up.
 func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
   // Get the frame in respect to the superview.
-  let frame: CGRect = (key.superview?.convert(key.frame, to: nil))!
+  let frame = (key.superview?.convert(key.frame, to: nil))!
   var labelVertPosition = frame.origin.y - key.frame.height / 1.75
   // non-capital characters should be higher for portrait phone views.
   if displayChar == char && DeviceType.isPhone && isLandscapeView == false
@@ -387,7 +387,7 @@ func setKeyPopCharSize(char: String) {
 func genKeyPop(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
   setKeyPopCharSize(char: char)
 
-  let popLbls: [UILabel] = [keyPopChar, keyHoldPopChar]
+  let popLbls = [keyPopChar, keyHoldPopChar]
   for lbl in popLbls {
     lbl.text = displayChar
     lbl.backgroundColor = .clear

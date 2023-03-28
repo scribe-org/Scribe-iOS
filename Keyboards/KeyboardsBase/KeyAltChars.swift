@@ -61,7 +61,7 @@ var alternatesBtnHeight = CGFloat(0)
 var alternatesCharHeight = CGFloat(0)
 
 // The main currency symbol that will receive the alternates view for iPhones.
-var currencySymbol: String = ""
+var currencySymbol = ""
 var currencySymbolAlternates = [String]()
 let dollarAlternateKeys = ["¢", "₽", "₩", "¥", "£", "€"]
 let euroAlternateKeys = ["¢", "₽", "₩", "¥", "£", "$"]
@@ -316,11 +316,11 @@ func alternateKeysPathRight(
 ///   - sender: the long press of the given key.
 func genAlternatesView(key: UIButton) {
   // Get the frame in respect to the superview.
-  let frame: CGRect = (key.superview?.convert(key.frame, to: nil))!
+  let frame = (key.superview?.convert(key.frame, to: nil))!
   let width = key.frame.width
 
   // Derive which button was pressed and get its alternates.
-  let char: String = key.layer.value(forKey: "original") as? String ?? ""
+  let char = key.layer.value(forKey: "original") as? String ?? ""
   alternateKeys = keyAlternatesDict[char ] ?? [""]
 
   // Add the original key given its location on the keyboard.
@@ -329,7 +329,7 @@ func genAlternatesView(key: UIButton) {
   } else if keysWithAlternatesRight.contains(char) {
     alternateKeys.append(char)
   }
-  let numAlternates: CGFloat = CGFloat(alternateKeys.count)
+  let numAlternates = CGFloat(alternateKeys.count)
 
   if keysWithAlternatesLeft.contains(char ) {
     alternatesViewX = frame.origin.x - 4.0
