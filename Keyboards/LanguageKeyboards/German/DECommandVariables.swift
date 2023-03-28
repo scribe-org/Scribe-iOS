@@ -24,7 +24,7 @@ func deSetCaseDeclensionLabels() {
     formLabelsDict[k] = ""
   }
   if deCaseVariantDeclensionState == .disabled {
-    if [.accusative, .dative, .genitive].contains(deCaseDeclensionState) {
+    if [.accusative, .dative, .genitive, .accusativeDemonstrative, .dativeDemonstrative, .genitiveDemostrative].contains(deCaseDeclensionState) {
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
       formLabelsDict["BL"] = "N"
@@ -81,12 +81,15 @@ enum DECaseDeclensionState {
   case accusative
   case accusativePersonal
   case accusativePossessive
+  case accusativeDemonstrative
   case dative
   case dativePersonal
   case dativePossessive
+  case dativeDemonstrative
   case genitive
   case genitivePersonal
   case genitivePossessive
+  case genitiveDemostrative
 }
 
 /// Allows for switching the conjugation view to select from pronoun options based on noun genders.
@@ -164,18 +167,24 @@ func deGetCaseDeclensionTitle() -> String {
       return commandPromptSpacing + "Akkusativ Personalpronomen"
     case .accusativePossessive:
       return commandPromptSpacing + "Akkusativ Possessivpronomen"
+    case .accusativeDemonstrative:
+      return commandPromptSpacing + "Akkusativ Demonstrativpronomen"
     case .dative:
       return commandPromptSpacing + "Dativ Pronomen"
     case .dativePersonal:
       return commandPromptSpacing + "Dativ Personalpronomen"
     case .dativePossessive:
       return commandPromptSpacing + "Dativ Possessivpronomen"
+    case .dativeDemonstrative:
+      return commandPromptSpacing + "Dativ Demonstrativpronomen"
     case .genitive:
       return commandPromptSpacing + "Genitiv Pronomen"
     case .genitivePersonal:
       return commandPromptSpacing + "Genitiv Personalpronomen"
     case .genitivePossessive:
       return commandPromptSpacing + "Genitiv Possessivpronomen"
+    case .genitiveDemostrative:
+      return commandPromptSpacing + "Genitiv Demonstrativpronomen"
     }
   } else {
     switch deCaseVariantDeclensionState {
@@ -230,6 +239,11 @@ func deSetCaseDeclensions() {
     formFPP = "uns"
     formSPP = "euch"
     formTPP = "sie"
+  case .accusativeDemonstrative:
+    formTopLeft = "diesen"
+    formTopRight = "diese"
+    formBottomLeft = "dieses"
+    formBottomRight = "diese"
   case .dative:
     formTopLeft = "dem"
     formTopRight = "der"
@@ -242,6 +256,11 @@ func deSetCaseDeclensions() {
     formFPP = "uns"
     formSPP = "euch"
     formTPP = "ihnen"
+  case .dativeDemonstrative:
+    formTopLeft = "diesem"
+    formTopRight = "dieser"
+    formBottomLeft = "diesem"
+    formBottomRight = "diesen"
   case .genitive:
     formTopLeft = "des"
     formTopRight = "der"
@@ -254,6 +273,11 @@ func deSetCaseDeclensions() {
     formFPP = "unser"
     formSPP = "euer"
     formTPP = "ihrer"
+  case .genitiveDemostrative:
+    formTopLeft = "dieses"
+    formTopRight = "dieser"
+    formBottomLeft = "dieses"
+    formBottomRight = "dieser"
   case .accusativePossessive, .dativePossessive, .genitivePossessive:
     formFPS = "mein∗"
     formSPS = "dein∗/Ihr∗"
@@ -447,24 +471,33 @@ func deConjugationStateLeft() {
     case .accusativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePersonal
-    case .dative:
+    case .accusativeDemonstrative:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .accusativePossessive
+    case .dative:
+      conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .accusativeDemonstrative
     case .dativePersonal:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     case .dativePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePersonal
-    case .genitive:
+    case .dativeDemonstrative:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dativePossessive
+    case .genitive:
+      conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .dativeDemonstrative
     case .genitivePersonal:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitivePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
+    case .genitiveDemostrative:
+      conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .genitivePossessive
     }
   } else {
     switch deConjugationState {
@@ -492,6 +525,9 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .accusativePossessive
     case .accusativePossessive:
       conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .accusativeDemonstrative
+    case .accusativeDemonstrative:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .dative
     case .dative:
       conjViewShiftButtonsState = .bothActive
@@ -501,14 +537,20 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .dativePossessive
     case .dativePossessive:
       conjViewShiftButtonsState = .bothActive
+      deCaseDeclensionState = .dativeDemonstrative
+    case .dativeDemonstrative:
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitive
     case .genitive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
     case .genitivePersonal:
-      conjViewShiftButtonsState = .rightInactive
+      conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePossessive
     case .genitivePossessive:
+      conjViewShiftButtonsState = .rightInactive
+      deCaseDeclensionState = .genitiveDemostrative
+    case .genitiveDemostrative:
       break
     }
   } else {
