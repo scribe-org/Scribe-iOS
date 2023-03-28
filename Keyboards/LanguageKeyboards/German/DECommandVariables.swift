@@ -24,7 +24,11 @@ func deSetCaseDeclensionLabels() {
     formLabelsDict[k] = ""
   }
   if deCaseVariantDeclensionState == .disabled {
-    if [.accusative, .dative, .genitive, .accusativeDemonstrative, .dativeDemonstrative, .genitiveDemostrative].contains(deCaseDeclensionState) {
+    if [
+      .accusative, .accusativeDemonstrative,
+      .dative, .dativeDemonstrative,
+      .genitive, .genitiveDemonstrative
+    ].contains(deCaseDeclensionState) {
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
       formLabelsDict["BL"] = "N"
@@ -89,7 +93,7 @@ enum DECaseDeclensionState {
   case genitive
   case genitivePersonal
   case genitivePossessive
-  case genitiveDemostrative
+  case genitiveDemonstrative
 }
 
 /// Allows for switching the conjugation view to select from pronoun options based on noun genders.
@@ -183,7 +187,7 @@ func deGetCaseDeclensionTitle() -> String {
       return commandPromptSpacing + "Genitiv Personalpronomen"
     case .genitivePossessive:
       return commandPromptSpacing + "Genitiv Possessivpronomen"
-    case .genitiveDemostrative:
+    case .genitiveDemonstrative:
       return commandPromptSpacing + "Genitiv Demonstrativpronomen"
     }
   } else {
@@ -273,7 +277,7 @@ func deSetCaseDeclensions() {
     formFPP = "unser"
     formSPP = "euer"
     formTPP = "ihrer"
-  case .genitiveDemostrative:
+  case .genitiveDemonstrative:
     formTopLeft = "dieses"
     formTopRight = "dieser"
     formBottomLeft = "dieses"
@@ -495,7 +499,7 @@ func deConjugationStateLeft() {
     case .genitivePossessive:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePersonal
-    case .genitiveDemostrative:
+    case .genitiveDemonstrative:
       conjViewShiftButtonsState = .bothActive
       deCaseDeclensionState = .genitivePossessive
     }
@@ -549,8 +553,8 @@ func deConjugationStateRight() {
       deCaseDeclensionState = .genitivePossessive
     case .genitivePossessive:
       conjViewShiftButtonsState = .rightInactive
-      deCaseDeclensionState = .genitiveDemostrative
-    case .genitiveDemostrative:
+      deCaseDeclensionState = .genitiveDemonstrative
+    case .genitiveDemonstrative:
       break
     }
   } else {
