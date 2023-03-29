@@ -48,7 +48,7 @@ let keyboardConjLabelDict: [String: Any] = [
 ///   - keyPressed: the button pressed as sender.
 ///   - requestedForm: the form that is triggered by the given key.
 func returnDeclension(keyPressed: UIButton) {
-  let wordPressed: String = keyPressed.titleLabel?.text ?? ""
+  let wordPressed = keyPressed.titleLabel?.text ?? ""
 
   let keyName = keyPressed.layer.value(
     forKey: "original"
@@ -207,7 +207,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     returnDeclension(keyPressed: keyPressed)
     return
   }
-  let wordPressed: String = keyPressed.titleLabel?.text ?? ""
+  let wordPressed = keyPressed.titleLabel?.text ?? ""
 
   // Don't change proxy if they select a conjugation that's missing.
   if wordPressed == invalidCommandMsg {

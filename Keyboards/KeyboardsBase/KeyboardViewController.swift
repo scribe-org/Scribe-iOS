@@ -227,7 +227,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   func setInformationState() {
-    let contentData: [NSMutableAttributedString] = InformationToolTipData.getContent()
+    let contentData = InformationToolTipData.getContent()
     let datasources = contentData.enumerated().compactMap({ index, text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
     })
@@ -416,7 +416,7 @@ class KeyboardViewController: UIInputViewController {
       /// We have to consider these different cases as the key always has to match.
       /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
       if autosuggestions[prefix.lowercased()].exists() {
-        let suggestions: [String] = autosuggestions[prefix.lowercased()].rawValue as! [String]
+        let suggestions = autosuggestions[prefix.lowercased()].rawValue as! [String]
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -438,7 +438,7 @@ class KeyboardViewController: UIInputViewController {
           i += 1
         }
       } else if autosuggestions[prefix.capitalize()].exists() {
-        let suggestions: [String] = autosuggestions[prefix.capitalize()].rawValue as! [String]
+        let suggestions = autosuggestions[prefix.capitalize()].rawValue as! [String]
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -1247,14 +1247,14 @@ class KeyboardViewController: UIInputViewController {
       ]
 
       // Access UILexicon words.
-      var lexiconWords: [String] = [String]()
+      var lexiconWords = [String]()
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
         for item in userLexicon.entries {
           lexiconWords.append(item.documentText)
         }
       }
 
-      var uniqueAutosuggestKeys: [String] = [String]()
+      var uniqueAutosuggestKeys = [String]()
       for elem in autosuggestions.dictionaryValue.keys {
         if elem.count > 2 && !nouns[elem].exists() {
           if autosuggestions[elem.lowercased()].exists()
@@ -1925,8 +1925,8 @@ class KeyboardViewController: UIInputViewController {
       for i in 0..<annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
-      let emojisToSelectFrom: String = "🥳🎉"
-      let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      let emojisToSelectFrom = "🥳🎉"
+      let emojis = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
       sender.setTitle(emojis, for: .normal)
       return
 
@@ -2254,8 +2254,8 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - key: the key pressed.
   @objc func genPopUpView(key: UIButton) {
-    let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
-    let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
+    let charPressed = key.layer.value(forKey: "original") as? String ?? ""
+    let displayChar = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
     genKeyPop(key: key, layer: keyPopLayer, char: charPressed, displayChar: displayChar)
 
     self.view.layer.addSublayer(keyPopLayer)
@@ -2273,8 +2273,8 @@ class KeyboardViewController: UIInputViewController {
   @objc func genHoldPopUpView(sender: UILongPressGestureRecognizer) {
     // Derive which button was pressed and get its alternates.
     guard let key: UIButton = sender.view as? UIButton else { return }
-    let charPressed: String = key.layer.value(forKey: "original") as? String ?? ""
-    let displayChar: String = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
+    let charPressed = key.layer.value(forKey: "original") as? String ?? ""
+    let displayChar = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
 
     // Timer is short as the alternates view gets canceled by sender.state.changed.
     _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { (_) in

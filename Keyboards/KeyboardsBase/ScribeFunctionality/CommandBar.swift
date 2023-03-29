@@ -16,7 +16,7 @@ class CommandBar: UILabel {
   /// The tap handler triggered when tapping `trailingButton`.
   var infoButtonTapHandler: (() -> Void)?
   /// Determines whether or not the trailing `infoButton` should be shown on the command bar.
-  var isShowingInfoButton: Bool = false {
+  var isShowingInfoButton = false {
     didSet {
       infoButton.isHidden = !isShowingInfoButton
       isUserInteractionEnabled = isShowingInfoButton
