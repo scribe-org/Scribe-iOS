@@ -1,4 +1,11 @@
-<!--- Thank you for your pull request! 🚀 -->
+<!---
+Thank you for your pull request! 🚀
+
+If you're not already a member of our public Matrix community, please consider joining via the following link:
+https://matrix.to/#/#scribe_community:matrix.org
+
+It'd be great to have you!
+-->
 
 ### Contributor checklist
 
