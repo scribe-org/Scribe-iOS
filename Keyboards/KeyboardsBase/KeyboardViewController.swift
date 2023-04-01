@@ -568,6 +568,7 @@ class KeyboardViewController: UIInputViewController {
     autoActionState = .suggest
     proxy.insertText(" ")
     currentPrefix = ""
+    emojisToSuggestArray = [String]()
     if shiftButtonState == .shift {
       shiftButtonState = .normal
       loadKeys()
@@ -1916,11 +1917,9 @@ class KeyboardViewController: UIInputViewController {
       
     case "EmojiSuggest1":
       executeAutoAction(keyPressed: emojiSuggest1)
-      emojisToSuggestArray = [String]()
     
     case "EmojiSuggest2":
       executeAutoAction(keyPressed: emojiSuggest2)
-      emojisToSuggestArray = [String]()
 
     case "GetAnnotationInfo":
       // Remove all prior annotations.
