@@ -469,6 +469,7 @@ class KeyboardViewController: UIInputViewController {
       }
       autoAction3Visible = false
       emojiSuggestVisible = true
+      emojiDivider.backgroundColor = .lightGray
     }
   }
 
@@ -506,6 +507,7 @@ class KeyboardViewController: UIInputViewController {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
+        emojiDivider.backgroundColor = .clear
       } else if emojiSuggestVisible == true {
         setBtn(btn: emojiSuggest1, color: keyboardBgColor, name: "EmojiSuggest1", canCap: false, isSpecial: false)
         styleBtn(btn: emojiSuggest1, title: emojisToSuggestArray[0], radius: commandKeyCornerRadius)
@@ -620,7 +622,8 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var pluralKey: UIButton!
   @IBOutlet var emojiSuggest1: UIButton!
   @IBOutlet var emojiSuggest2: UIButton!
-
+  @IBOutlet var emojiDivider: UILabel!
+  
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
     setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canCap: false, isSpecial: false)
