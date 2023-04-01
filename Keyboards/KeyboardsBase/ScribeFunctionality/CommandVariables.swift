@@ -11,6 +11,7 @@ var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible = true
 var autoAction3Visible = true
+var emojiSuggestVisible = false
 var shouldHighlightFirstCompletion = false
 var allowUndo = false
 var previousWord = ""
@@ -28,6 +29,7 @@ let emojiAutosuggestions = loadJSON(filename: "emoji_suggestions")
 // Words that should not be included in autocomplete should be added to the string below.
 var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
+var emojisToSuggestArray = [String]()
 var numericAutosuggestions = [String]()
 var pronounAutosuggestionTenses: [String: String] = [:]
 var verbsAfterPronounsArray = [String]()

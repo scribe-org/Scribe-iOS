@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="French" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Danish" customModuleProvider="target">
             <connections>
                 <outlet property="commandBackground" destination="RVF-jy-JTf" id="XVG-eG-Ni3"/>
                 <outlet property="commandBar" destination="IR7-Kd-kHd" id="wCv-IH-TWn"/>
                 <outlet property="commandBarBlend" destination="yqE-dJ-4q0" id="GU6-Ua-qVi"/>
                 <outlet property="commandBarShadow" destination="i3q-kx-6Dw" id="KBt-uH-7BZ"/>
                 <outlet property="conjugateKey" destination="rP7-7a-des" id="rpG-nR-hE3"/>
+                <outlet property="emojiSuggest1" destination="pTv-BK-rKh" id="Fhg-jH-CHl"/>
+                <outlet property="emojiSuggest2" destination="KVC-Ai-vdF" id="pAq-dz-yJs"/>
                 <outlet property="formKeyBL" destination="dOA-cy-aGo" id="0S9-XX-U3L"/>
                 <outlet property="formKeyBR" destination="myP-Mh-fDn" id="JDd-iO-3ro"/>
                 <outlet property="formKeyBottom" destination="wbb-ea-GPb" id="Oao-6R-Dhf"/>
@@ -297,7 +299,7 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-Kd-kHd" userLabel="CommandBar" customClass="CommandBar" customModule="French" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-Kd-kHd" userLabel="CommandBar" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
                     <rect key="frame" x="56.5" y="4.5" width="260.5" height="37.5"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -305,7 +307,7 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-B4-WMk" userLabel="AutoPartitionR" customClass="CommandBar" customModule="French" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-B4-WMk" userLabel="AutoPartitionR" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
                     <rect key="frame" x="233" y="8.5" width="1" height="30"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -316,7 +318,7 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-BE-21v" userLabel="AutoPartitionL" customClass="CommandBar" customModule="French" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-BE-21v" userLabel="AutoPartitionL" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
                     <rect key="frame" x="146.5" y="8.5" width="1" height="30"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -355,7 +357,7 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-7F-dNd" userLabel="ScribeKey" customClass="ScribeKey" customModule="French" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-7F-dNd" userLabel="ScribeKey" customClass="ScribeKey" customModule="Danish" customModuleProvider="target">
                     <rect key="frame" x="3" y="4.5" width="53.5" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -372,6 +374,16 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="Emoji1">
+                    <rect key="frame" x="237" y="4.5" width="40" height="37.5"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ai-vdF" userLabel="Emoji2">
+                    <rect key="frame" x="277" y="4.5" width="40" height="37.5"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -415,6 +427,8 @@
                 <constraint firstItem="RVF-jy-JTf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BeR-2b-bgJ"/>
                 <constraint firstItem="eBL-dH-9NG" firstAttribute="top" secondItem="kON-8k-vtV" secondAttribute="top" id="Bkv-kp-DM6"/>
                 <constraint firstItem="XHK-mv-i7e" firstAttribute="leading" secondItem="Yr3-T8-7HB" secondAttribute="trailing" constant="3" id="C7z-1q-caJ"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="leading" secondItem="hPX-B4-WMk" secondAttribute="trailing" constant="3" id="Cch-yO-9IP"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="height" secondItem="rP7-7a-des" secondAttribute="height" id="DAN-8W-0jD"/>
                 <constraint firstItem="92Z-QS-QCN" firstAttribute="top" secondItem="dOA-cy-aGo" secondAttribute="top" id="DEN-J7-G2A"/>
                 <constraint firstItem="jkU-RQ-53C" firstAttribute="leading" secondItem="gnL-wZ-ogY" secondAttribute="leading" id="DTe-Ym-JXE"/>
                 <constraint firstItem="Baw-fQ-6yb" firstAttribute="trailing" secondItem="XHK-mv-i7e" secondAttribute="trailing" id="DkO-9u-hA6"/>
@@ -463,6 +477,7 @@
                 <constraint firstItem="9b3-IF-jpf" firstAttribute="centerX" secondItem="L5x-e9-Ggg" secondAttribute="centerX" id="PQz-TQ-baF"/>
                 <constraint firstItem="KbB-Q5-JYD" firstAttribute="trailing" secondItem="dOA-cy-aGo" secondAttribute="trailing" id="Q3p-Rr-SKw"/>
                 <constraint firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" constant="2" id="QQB-oe-BPi"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="centerY" secondItem="rP7-7a-des" secondAttribute="centerY" id="R7I-xj-9pP"/>
                 <constraint firstItem="KbB-Q5-JYD" firstAttribute="leading" secondItem="dOA-cy-aGo" secondAttribute="leading" id="RNE-46-rYE"/>
                 <constraint firstItem="cgD-l0-Jm1" firstAttribute="height" secondItem="18n-dD-Eou" secondAttribute="height" multiplier="0.296296" id="RcC-aj-x4I"/>
                 <constraint firstItem="9b3-IF-jpf" firstAttribute="leading" secondItem="L5x-e9-Ggg" secondAttribute="leading" id="Rgm-wb-3Dn"/>
@@ -473,6 +488,7 @@
                 <constraint firstItem="9b3-IF-jpf" firstAttribute="trailing" secondItem="L5x-e9-Ggg" secondAttribute="trailing" id="StP-mL-hRl"/>
                 <constraint firstItem="rO5-ij-Hyw" firstAttribute="leading" secondItem="Yr3-T8-7HB" secondAttribute="trailing" constant="3" id="TYg-Oa-AXJ"/>
                 <constraint firstItem="ck0-jE-0Gh" firstAttribute="leading" secondItem="iWR-t5-AJH" secondAttribute="leading" id="TtM-eB-ofN"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="leading" secondItem="rP7-7a-des" secondAttribute="trailing" constant="7" id="UZc-gl-Fri"/>
                 <constraint firstItem="rP7-7a-des" firstAttribute="width" secondItem="FgS-T1-2rI" secondAttribute="width" id="VFB-kB-5N1"/>
                 <constraint firstItem="IR7-Kd-kHd" firstAttribute="leading" secondItem="MCB-7F-dNd" secondAttribute="trailing" id="Vim-AZ-YHe"/>
                 <constraint firstItem="JUl-T5-Lgg" firstAttribute="top" secondItem="KbB-Q5-JYD" secondAttribute="top" id="Vti-zy-gkE"/>
@@ -486,6 +502,7 @@
                 <constraint firstItem="Baw-fQ-6yb" firstAttribute="height" secondItem="XHK-mv-i7e" secondAttribute="height" multiplier="0.298507" id="Xrt-5H-V3Z"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="centerY" secondItem="9j4-80-zkW" secondAttribute="centerY" id="Xwz-Jb-9XZ"/>
                 <constraint firstItem="RQE-iH-Yas" firstAttribute="leading" secondItem="Yr3-T8-7HB" secondAttribute="trailing" constant="3" id="YMp-ou-Ij7"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="height" secondItem="rP7-7a-des" secondAttribute="height" id="YV3-ZA-YTj"/>
                 <constraint firstItem="kON-8k-vtV" firstAttribute="top" secondItem="rFZ-XE-qHq" secondAttribute="top" id="Yc4-kQ-wvn"/>
                 <constraint firstItem="kON-8k-vtV" firstAttribute="top" secondItem="18n-dD-Eou" secondAttribute="bottom" constant="2" id="YwR-oo-xqv"/>
                 <constraint firstItem="CTU-hK-obw" firstAttribute="leading" secondItem="wbb-ea-GPb" secondAttribute="leading" id="ZX4-lr-OWb"/>
@@ -495,12 +512,14 @@
                 <constraint firstItem="hPX-B4-WMk" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="ahW-F3-b11"/>
                 <constraint firstItem="gnL-wZ-ogY" firstAttribute="top" secondItem="18n-dD-Eou" secondAttribute="top" id="ara-UL-eBH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y6B-bi-XMS" secondAttribute="bottom" id="awn-yd-nvl"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="leading" secondItem="pTv-BK-rKh" secondAttribute="trailing" id="bK8-pj-Pls"/>
                 <constraint firstItem="92Z-QS-QCN" firstAttribute="height" secondItem="I6c-Dk-kl5" secondAttribute="height" id="c6J-fz-kW9"/>
                 <constraint firstItem="eBL-dH-9NG" firstAttribute="height" secondItem="kON-8k-vtV" secondAttribute="height" multiplier="0.298507" id="cWB-uY-rqf"/>
                 <constraint firstItem="wbb-ea-GPb" firstAttribute="height" secondItem="kON-8k-vtV" secondAttribute="height" id="cne-47-7Og"/>
                 <constraint firstItem="xYB-wV-ziM" firstAttribute="top" secondItem="IR7-Kd-kHd" secondAttribute="bottom" constant="4" id="cyv-uA-wmO"/>
                 <constraint firstItem="kON-8k-vtV" firstAttribute="leading" secondItem="Yr3-T8-7HB" secondAttribute="trailing" constant="3" id="d9t-KS-vZ9"/>
                 <constraint firstItem="ck0-jE-0Gh" firstAttribute="top" secondItem="iWR-t5-AJH" secondAttribute="top" id="dcR-cx-RPT"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="width" secondItem="pTv-BK-rKh" secondAttribute="width" id="dg7-jE-JBY"/>
                 <constraint firstItem="IR7-Kd-kHd" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="dgo-9u-kRB"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="height" secondItem="RVF-jy-JTf" secondAttribute="height" multiplier="0.8" id="dyp-Fx-xg3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgS-T1-2rI" secondAttribute="trailing" constant="3" id="egT-nn-Axv"/>
@@ -570,6 +589,7 @@
                 <constraint firstItem="92Z-QS-QCN" firstAttribute="leading" secondItem="dOA-cy-aGo" secondAttribute="leading" id="v6s-O1-2Hv"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="v8j-uv-siq"/>
                 <constraint firstItem="kON-8k-vtV" firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" id="vMW-zj-MNc"/>
+                <constraint firstAttribute="trailing" secondItem="KVC-Ai-vdF" secondAttribute="trailing" constant="3" id="vTG-PN-x7C"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="centerY" secondItem="RVF-jy-JTf" secondAttribute="centerY" id="vss-sR-d39"/>
                 <constraint firstItem="i3q-kx-6Dw" firstAttribute="trailing" secondItem="IR7-Kd-kHd" secondAttribute="trailing" id="wB9-7V-mOo"/>
                 <constraint firstItem="X7p-5k-iDr" firstAttribute="bottom" secondItem="MCB-7F-dNd" secondAttribute="bottom" id="wLH-hx-WGm"/>
@@ -579,6 +599,7 @@
                 <constraint firstItem="gnL-wZ-ogY" firstAttribute="top" secondItem="0Sz-72-xUw" secondAttribute="bottom" constant="2" id="wni-V8-ek7"/>
                 <constraint firstItem="9j4-80-zkW" firstAttribute="centerY" secondItem="FgS-T1-2rI" secondAttribute="centerY" id="wtv-yQ-JBt"/>
                 <constraint firstItem="X69-uD-USO" firstAttribute="leading" secondItem="myP-Mh-fDn" secondAttribute="leading" id="wvI-37-KuL"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="centerY" secondItem="rP7-7a-des" secondAttribute="centerY" id="x90-rB-nTZ"/>
                 <constraint firstItem="JUl-T5-Lgg" firstAttribute="leading" secondItem="KbB-Q5-JYD" secondAttribute="leading" id="xaj-lE-aBU"/>
                 <constraint firstItem="rO5-ij-Hyw" firstAttribute="height" secondItem="0Sz-72-xUw" secondAttribute="height" id="xaq-Is-r6o"/>
                 <constraint firstItem="OeW-Ji-4P7" firstAttribute="top" secondItem="xYB-wV-ziM" secondAttribute="bottom" constant="-2" id="xay-Mb-xwd"/>
@@ -606,6 +627,12 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
