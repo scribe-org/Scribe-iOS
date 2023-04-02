@@ -462,6 +462,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Disable the third auto action button if we'll have emoji suggestions.
     if emojiAutosuggestions[prefix].exists() {
+      emojisToSuggestArray = [String]()
       for i in 0..<2 {
         let emojiDesc = emojiAutosuggestions[prefix][i]
         let emoji = emojiDesc["emoji"].rawValue as! String
