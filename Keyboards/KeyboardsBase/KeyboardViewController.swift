@@ -463,14 +463,27 @@ class KeyboardViewController: UIInputViewController {
     // Disable the third auto action button if we'll have emoji suggestions.
     if emojiAutosuggestions[prefix].exists() {
       emojisToSuggestArray = [String]()
-      for i in 0..<2 {
-        let emojiDesc = emojiAutosuggestions[prefix][i]
+      if emojiAutosuggestions[prefix][1].exists() {
+        for i in 0..<2 {
+          let emojiDesc = emojiAutosuggestions[prefix][i]
+          let emoji = emojiDesc["emoji"].rawValue as! String
+          emojisToSuggestArray.append(emoji)
+        }
+        autoAction3Visible = false
+        emojiSuggestVisible = true
+
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          emojiDivider.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          emojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        }
+      } else {
+        let emojiDesc = emojiAutosuggestions[prefix][0]
         let emoji = emojiDesc["emoji"].rawValue as! String
         emojisToSuggestArray.append(emoji)
+
+        emojiSuggestVisible = true
       }
-      autoAction3Visible = false
-      emojiSuggestVisible = true
-      emojiDivider.backgroundColor = .lightGray
     }
   }
 
@@ -504,12 +517,12 @@ class KeyboardViewController: UIInputViewController {
       styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
-      if autoAction3Visible == true {
+      if autoAction3Visible == true && emojiSuggestVisible == false {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
         emojiDivider.backgroundColor = .clear
-      } else if emojiSuggestVisible == true {
+      } else if autoAction3Visible == false && emojiSuggestVisible == true {
         setBtn(btn: emojiSuggest1, color: keyboardBgColor, name: "EmojiSuggest1", canCap: false, isSpecial: false)
         styleBtn(btn: emojiSuggest1, title: emojisToSuggestArray[0], radius: commandKeyCornerRadius)
         activateBtn(btn: emojiSuggest1)
@@ -517,6 +530,13 @@ class KeyboardViewController: UIInputViewController {
         setBtn(btn: emojiSuggest2, color: keyboardBgColor, name: "EmojiSuggest2", canCap: false, isSpecial: false)
         styleBtn(btn: emojiSuggest2, title: emojisToSuggestArray[1], radius: commandKeyCornerRadius)
         activateBtn(btn: emojiSuggest2)
+        emojiSuggestVisible = false // reset
+      } else if autoAction3Visible == true && emojiSuggestVisible == true {
+        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+        styleBtn(btn: pluralKey, title: emojisToSuggestArray[0], radius: commandKeyCornerRadius)
+        activateBtn(btn: pluralKey)
+        emojiDivider.backgroundColor = .clear
+        emojiSuggestVisible = false // reset
       }
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor

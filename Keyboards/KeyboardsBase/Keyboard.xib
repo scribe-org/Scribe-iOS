@@ -375,26 +375,27 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="Emoji1">
-                    <rect key="frame" x="237" y="4.5" width="36.5" height="37.5"/>
-                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-gU-SO5" userLabel="EmojiDivider">
+                    <rect key="frame" x="276.5" y="8.5" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="zWH-sF-yfI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ai-vdF" userLabel="Emoji2">
                     <rect key="frame" x="280.5" y="4.5" width="36.5" height="37.5"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-gU-SO5" userLabel="EmojiDivider">
-                    <rect key="frame" x="276.5" y="4.5" width="1" height="37.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="1" id="zWH-sF-yfI"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="Emoji1">
+                    <rect key="frame" x="237" y="4.5" width="36.5" height="37.5"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -492,7 +493,7 @@
                 <constraint firstItem="KbB-Q5-JYD" firstAttribute="leading" secondItem="dOA-cy-aGo" secondAttribute="leading" id="RNE-46-rYE"/>
                 <constraint firstItem="cgD-l0-Jm1" firstAttribute="height" secondItem="18n-dD-Eou" secondAttribute="height" multiplier="0.296296" id="RcC-aj-x4I"/>
                 <constraint firstItem="9b3-IF-jpf" firstAttribute="leading" secondItem="L5x-e9-Ggg" secondAttribute="leading" id="Rgm-wb-3Dn"/>
-                <constraint firstItem="6DZ-gU-SO5" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="Rsf-tU-mXM"/>
+                <constraint firstItem="6DZ-gU-SO5" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="Rsf-tU-mXM"/>
                 <constraint firstItem="g0y-Ih-mX5" firstAttribute="height" secondItem="RQE-iH-Yas" secondAttribute="height" multiplier="0.097561" id="S4i-W4-QOy"/>
                 <constraint firstItem="L5x-e9-Ggg" firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" id="SB5-8l-sih"/>
                 <constraint firstItem="iWR-t5-AJH" firstAttribute="top" secondItem="epX-eh-uqd" secondAttribute="top" id="Scm-7q-S7D"/>
