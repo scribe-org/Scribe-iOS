@@ -26,6 +26,11 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
     btn.layer.shadowOpacity = 1.0
     btn.layer.shadowRadius = 0.0
   }
+  
+  // Needed, else buttons left an unnecessary shadow.
+  if emojiSuggestVisible == true {
+    btn.layer.shadowOpacity = 0
+  }
 }
 
 // The names of symbols whose keys should be slightly larger than the default size.
