@@ -559,7 +559,7 @@ class KeyboardViewController: UIInputViewController {
         setBtn(btn: emojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
         styleBtn(btn: emojiKey1, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         activateBtn(btn: emojiKey1)
-        
+
         setBtn(btn: emojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
         styleBtn(btn: emojiKey2, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
         activateBtn(btn: emojiKey2)
@@ -578,7 +578,6 @@ class KeyboardViewController: UIInputViewController {
     // Reset autocorrect and autosuggest button visibility.
     autoAction1Visible = true
     autoAction3Visible = true
-    emojiAutoActionVisible = false
   }
 
   /// Clears the text proxy when inserting using an auto action.
@@ -619,7 +618,10 @@ class KeyboardViewController: UIInputViewController {
     clearPrefixFromTextFieldProxy()
     emojisToDisplayArray = [String]()
     // Remove the space from the previous auto action or replace the current prefix.
-    if emojiAutoActionRepeatPossible == true && (keyPressed == emojiKey1 || keyPressed == emojiKey2) {
+    if emojiAutoActionRepeatPossible == true && (
+      (keyPressed == emojiKey1 || keyPressed == emojiKey2)
+      || (keyPressed == pluralKey && emojiAutoActionVisible == true)
+    ) {
       proxy.deleteBackward()
     } else {
       currentPrefix = ""
@@ -632,7 +634,8 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
     }
     conditionallyDisplayAnnotation()
-    if keyPressed == emojiKey1 || keyPressed == emojiKey2 {
+    if (keyPressed == emojiKey1 || keyPressed == emojiKey2)
+        || (keyPressed == pluralKey && emojiAutoActionVisible == true) {
       emojiAutoActionRepeatPossible = true
     }
   }
@@ -685,7 +688,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var emojiKey1: UIButton!
   @IBOutlet var emojiKey2: UIButton!
   @IBOutlet var emojiDivider: UILabel!
-  
+
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
     setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canCap: false, isSpecial: false)
@@ -1992,14 +1995,20 @@ class KeyboardViewController: UIInputViewController {
 
     case "AutoAction3":
       executeAutoAction(keyPressed: pluralKey)
-      
+      if emojiAutoActionVisible == true {
+        if shiftButtonState == .normal {
+          shiftButtonState = .shift
+        }
+        loadKeys()
+      }
+
     case "EmojiKey1":
       executeAutoAction(keyPressed: emojiKey1)
       if shiftButtonState == .normal {
         shiftButtonState = .shift
       }
       loadKeys()
-    
+
     case "EmojiKey2":
       executeAutoAction(keyPressed: emojiKey2)
       if shiftButtonState == .normal {
@@ -2194,9 +2203,12 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Reset emoji repeat functionality.
-    if !["EmojiKey1", "EmojiKey2"].contains(originalKey) {
+    if !(
+      ["EmojiKey1", "EmojiKey2"].contains(originalKey) || (originalKey == "AutoAction3" && emojiAutoActionVisible == true)
+    ) {
       emojiAutoActionRepeatPossible = false
     }
+    emojiAutoActionVisible = false
 
     // Add partitions and show auto actions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
