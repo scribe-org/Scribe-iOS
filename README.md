@@ -204,7 +204,8 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 - Dark mode compatibility
 - Autocompletion based on [Wikidata](https://www.wikidata.org/) sourced words
 - Autosuggestion based on [Wikipedia](https://www.wikipedia.org/) derived relationships
-- Autocorrection (WIP - see [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issue)
+- Emoji autocompletions and autosuggestions based on [Unicode CLDR](https://github.com/unicode-org/cldr) sourced emojis
+- Autocorrect (WIP - see [Autocorrect](https://github.com/scribe-org/Scribe-iOS/issues/2) issue)
 - Auto-capitalization following `.`, `?` and `!`
 - The double space period shortcut
 - Typing symbols and numbers followed by a space returns keyboard to letters
