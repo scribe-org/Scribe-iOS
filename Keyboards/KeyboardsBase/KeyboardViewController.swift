@@ -347,9 +347,10 @@ class KeyboardViewController: UIInputViewController {
         // Disable the third auto action button if we'll have emoji suggestions.
         if emojiKeywords[currentPrefix.lowercased()].exists() {
           emojisToDisplayArray = [String]()
+          currentEmojiTriggerWord = currentPrefix.lowercased()
           if emojiKeywords[currentPrefix.lowercased()][1].exists() {
             for i in 0..<2 {
-              let emojiDesc = emojiKeywords[currentPrefix.lowercased()][i]
+              let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
               let emoji = emojiDesc["emoji"].rawValue as! String
               emojisToDisplayArray.append(emoji)
             }
@@ -362,7 +363,7 @@ class KeyboardViewController: UIInputViewController {
               emojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
           } else {
-            let emojiDesc = emojiKeywords[currentPrefix.lowercased()][0]
+            let emojiDesc = emojiKeywords[currentEmojiTriggerWord][0]
             let emoji = emojiDesc["emoji"].rawValue as! String
             emojisToDisplayArray.append(emoji)
 
@@ -428,6 +429,10 @@ class KeyboardViewController: UIInputViewController {
       separatedBy: " "
     ).secondToLast() ?? ""
 
+    if emojiAutoActionRepeatPossible == true {
+      prefix = currentEmojiTriggerWord
+    }
+
     // If there's a line break, take the word after it.
     if prefix.contains("\n") {
       prefix = prefix.components(
@@ -490,9 +495,10 @@ class KeyboardViewController: UIInputViewController {
     // Disable the third auto action button if we'll have emoji suggestions.
     if emojiKeywords[prefix.lowercased()].exists() {
       emojisToDisplayArray = [String]()
+      currentEmojiTriggerWord = prefix.lowercased()
       if emojiKeywords[prefix.lowercased()][1].exists() {
         for i in 0..<2 {
-          let emojiDesc = emojiKeywords[prefix.lowercased()][i]
+          let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
           let emoji = emojiDesc["emoji"].rawValue as! String
           emojisToDisplayArray.append(emoji)
         }
@@ -505,7 +511,7 @@ class KeyboardViewController: UIInputViewController {
           emojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
       } else {
-        let emojiDesc = emojiKeywords[prefix.lowercased()][0]
+        let emojiDesc = emojiKeywords[currentEmojiTriggerWord][0]
         let emoji = emojiDesc["emoji"].rawValue as! String
         emojisToDisplayArray.append(emoji)
 
@@ -612,15 +618,23 @@ class KeyboardViewController: UIInputViewController {
 
     clearPrefixFromTextFieldProxy()
     emojisToDisplayArray = [String]()
+    // Remove the space from the previous auto action or replace the current prefix.
+    if emojiAutoActionRepeatPossible == true && (keyPressed == emojiKey1 || keyPressed == emojiKey2) {
+      proxy.deleteBackward()
+    } else {
+      currentPrefix = ""
+    }
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
-    autoActionState = .suggest
     proxy.insertText(" ")
-    currentPrefix = ""
+    autoActionState = .suggest
     if shiftButtonState == .shift {
       shiftButtonState = .normal
       loadKeys()
     }
     conditionallyDisplayAnnotation()
+    if keyPressed == emojiKey1 || keyPressed == emojiKey2 {
+      emojiAutoActionRepeatPossible = true
+    }
   }
 
   // The background for the Scribe command elements.
@@ -2177,6 +2191,11 @@ class KeyboardViewController: UIInputViewController {
     if [.alreadyPlural, .invalid].contains(commandState) {
       commandState = .idle
       loadKeys()
+    }
+
+    // Reset emoji repeat functionality.
+    if !["EmojiKey1", "EmojiKey2"].contains(originalKey) {
+      emojiAutoActionRepeatPossible = false
     }
 
     // Add partitions and show auto actions if the keyboard states dictate.

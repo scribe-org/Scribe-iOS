@@ -19,6 +19,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!-- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes. -->
 
 - Emoji autocompletions and autosuggestions are now available as the user types.
+- The user can also repeat amoji autocompletions and autosuggestions.
 - Added action to command bar information icon.
 - Added highlight for autocompletion if it is the word typed.
 - If a word is the only autosuggestion, hitting the space bar inserts the suggestion. Added undo functionality if the user does not want the completion.
