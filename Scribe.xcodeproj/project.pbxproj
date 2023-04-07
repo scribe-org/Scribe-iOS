@@ -172,6 +172,14 @@
 		D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
 		D11E3B6927299C6F00FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6827299C6F00FBE62C /* translations.json */; };
 		D11E3B6B27299C8000FBE62C /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D11E3B6A27299C8000FBE62C /* translations.json */; };
+		D12B8C2729E03148009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2629E03148009C0CFE /* emoji_keywords.json */; };
+		D12B8C2829E03148009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2629E03148009C0CFE /* emoji_keywords.json */; };
+		D12B8C2A29E03174009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2929E03174009C0CFE /* emoji_keywords.json */; };
+		D12B8C2C29E03183009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2B29E03183009C0CFE /* emoji_keywords.json */; };
+		D12B8C2E29E03192009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2D29E03192009C0CFE /* emoji_keywords.json */; };
+		D12B8C3029E031A2009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2F29E031A2009C0CFE /* emoji_keywords.json */; };
+		D12B8C3229E031B2009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C3129E031B2009C0CFE /* emoji_keywords.json */; };
+		D12B8C3429E031C0009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C3329E031C0009C0CFE /* emoji_keywords.json */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */; };
 		D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
@@ -187,14 +195,6 @@
 		D156BC1329CCDBF9007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D15B717129CDE0E4000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717029CDE0E4000F51F4 /* emoji_suggestions.json */; };
-		D15B717229CDE0E4000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717029CDE0E4000F51F4 /* emoji_suggestions.json */; };
-		D15B717429CDE120000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717329CDE120000F51F4 /* emoji_suggestions.json */; };
-		D15B717629CDE144000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717529CDE144000F51F4 /* emoji_suggestions.json */; };
-		D15B717829CDE156000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717729CDE156000F51F4 /* emoji_suggestions.json */; };
-		D15B717A29CDE16C000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717929CDE16B000F51F4 /* emoji_suggestions.json */; };
-		D15B717C29CDE17F000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717B29CDE17F000F51F4 /* emoji_suggestions.json */; };
-		D15B717E29CDE194000F51F4 /* emoji_suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D15B717D29CDE194000F51F4 /* emoji_suggestions.json */; };
 		D1608668270B6D3C00134D48 /* ESKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D163CA4A28E9D89100301919 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4928E9D89100301919 /* autosuggestions.json */; };
@@ -866,16 +866,16 @@
 		D111E9B927AFE7B200746F92 /* Annotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotate.swift; sourceTree = "<group>"; };
 		D11E3B6827299C6F00FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		D11E3B6A27299C8000FBE62C /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		D12B8C2629E03148009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C2929E03174009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C2B29E03183009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C2D29E03192009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C2F29E031A2009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C3129E031B2009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
+		D12B8C3329E031C0009C0CFE /* emoji_keywords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_keywords.json; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 		D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEPrivacyPolicy.swift; sourceTree = "<group>"; };
 		D156BC0729CCDBE8007E7362 /* DEAppText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEAppText.swift; sourceTree = "<group>"; };
-		D15B717029CDE0E4000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717329CDE120000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717529CDE144000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717729CDE156000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717929CDE16B000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717B29CDE17F000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
-		D15B717D29CDE194000F51F4 /* emoji_suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_suggestions.json; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1183,7 +1183,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA4B28E9D8A200301919 /* autosuggestions.json */,
-				D15B717529CDE144000F51F4 /* emoji_suggestions.json */,
+				D12B8C2B29E03183009C0CFE /* emoji_keywords.json */,
 				D107A4A927BE7C4500EB9D34 /* nouns.json */,
 				D1658E3D28F8FEDA00CB5ACD /* prepositions.json */,
 				D107A4A827BE7C4500EB9D34 /* translations.json */,
@@ -1220,7 +1220,7 @@
 			isa = PBXGroup;
 			children = (
 				D1658E3928F8FE2700CB5ACD /* autosuggestions.json */,
-				D15B717029CDE0E4000F51F4 /* emoji_suggestions.json */,
+				D12B8C2629E03148009C0CFE /* emoji_keywords.json */,
 				D1D880CB27860CFA00407050 /* nouns.json */,
 				D1658E3B28F8FEC600CB5ACD /* prepositions.json */,
 				D1D880C927860CFA00407050 /* translations.json */,
@@ -1233,7 +1233,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA4D28E9D8B400301919 /* autosuggestions.json */,
-				D15B717729CDE156000F51F4 /* emoji_suggestions.json */,
+				D12B8C2D29E03192009C0CFE /* emoji_keywords.json */,
 				D1D880D127860D4700407050 /* nouns.json */,
 				D1658E4028F8FEF900CB5ACD /* prepositions.json */,
 				D1D880D027860D4700407050 /* translations.json */,
@@ -1246,7 +1246,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA5228E9D8D700301919 /* autosuggestions.json */,
-				D15B717929CDE16B000F51F4 /* emoji_suggestions.json */,
+				D12B8C2F29E031A2009C0CFE /* emoji_keywords.json */,
 				D1D880D527860D6300407050 /* nouns.json */,
 				D1D880D727860D6300407050 /* prepositions.json */,
 				D1D880D827860D6300407050 /* translations.json */,
@@ -1338,7 +1338,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA5828E9D8F300301919 /* autosuggestions.json */,
-				D15B717D29CDE194000F51F4 /* emoji_suggestions.json */,
+				D12B8C3329E031C0009C0CFE /* emoji_keywords.json */,
 				D1D880DD27860D7B00407050 /* nouns.json */,
 				D1658E4428F8FF3100CB5ACD /* prepositions.json */,
 				D1D880DE27860D7B00407050 /* translations.json */,
@@ -1370,7 +1370,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA4928E9D89100301919 /* autosuggestions.json */,
-				D15B717329CDE120000F51F4 /* emoji_suggestions.json */,
+				D12B8C2929E03174009C0CFE /* emoji_keywords.json */,
 				D101821A2728291B0032A82D /* nouns.json */,
 				D19474C32740295300AF6EA5 /* prepositions.json */,
 				D11E3B6827299C6F00FBE62C /* translations.json */,
@@ -1383,7 +1383,7 @@
 			isa = PBXGroup;
 			children = (
 				D163CA5528E9D8E500301919 /* autosuggestions.json */,
-				D15B717B29CDE17F000F51F4 /* emoji_suggestions.json */,
+				D12B8C3129E031B2009C0CFE /* emoji_keywords.json */,
 				D101820F2728275B0032A82D /* nouns.json */,
 				D1658E4228F8FF1400CB5ACD /* prepositions.json */,
 				D10182102728275B0032A82D /* verbs.json */,
@@ -1862,9 +1862,9 @@
 				D101821D2728291B0032A82D /* nouns.json in Resources */,
 				D19474C42740295300AF6EA5 /* prepositions.json in Resources */,
 				D11E3B6927299C6F00FBE62C /* translations.json in Resources */,
-				D15B717429CDE120000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				D1018220272829E70032A82D /* verbs.json in Resources */,
+				D12B8C2A29E03174009C0CFE /* emoji_keywords.json in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1877,9 +1877,9 @@
 				D1658E3A28F8FE2700CB5ACD /* autosuggestions.json in Resources */,
 				D1D880CD27860CFA00407050 /* verbs.json in Resources */,
 				D1D880CC27860CFA00407050 /* translations.json in Resources */,
-				D15B717129CDE0E4000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880CE27860CFA00407050 /* nouns.json in Resources */,
+				D12B8C2729E03148009C0CFE /* emoji_keywords.json in Resources */,
 				D1658E3C28F8FEC600CB5ACD /* prepositions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1892,9 +1892,9 @@
 				D163CA5028E9D8BE00301919 /* autosuggestions.json in Resources */,
 				D1D880D327860D4700407050 /* translations.json in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
-				D15B717829CDE156000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D427860D4700407050 /* nouns.json in Resources */,
+				D12B8C2E29E03192009C0CFE /* emoji_keywords.json in Resources */,
 				D1658E4128F8FEF900CB5ACD /* prepositions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1907,9 +1907,9 @@
 				D163CA5728E9D8E800301919 /* autosuggestions.json in Resources */,
 				D11E3B6B27299C8000FBE62C /* translations.json in Resources */,
 				D10182132728275B0032A82D /* verbs.json in Resources */,
-				D15B717C29CDE17F000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
+				D12B8C3229E031B2009C0CFE /* emoji_keywords.json in Resources */,
 				D1658E4328F8FF1400CB5ACD /* prepositions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1922,9 +1922,9 @@
 				D1D880DB27860D6300407050 /* prepositions.json in Resources */,
 				D1D880DC27860D6300407050 /* translations.json in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
-				D15B717A29CDE16C000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880D927860D6300407050 /* nouns.json in Resources */,
+				D12B8C3029E031A2009C0CFE /* emoji_keywords.json in Resources */,
 				D1D880DA27860D6300407050 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1937,9 +1937,9 @@
 				D17693AC28FC7E0C00DF0FBB /* Keyboard.xib in Resources */,
 				D17693C328FC7ECB00DF0FBB /* autosuggestions.json in Resources */,
 				D17693C628FC7ECB00DF0FBB /* translations.json in Resources */,
-				D15B717229CDE0E4000F51F4 /* emoji_suggestions.json in Resources */,
 				D17693C928FC804900DF0FBB /* Assets.xcassets in Resources */,
 				D17693C528FC7ECB00DF0FBB /* verbs.json in Resources */,
+				D12B8C2829E03148009C0CFE /* emoji_keywords.json in Resources */,
 				D17693C228FC7ECB00DF0FBB /* nouns.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1952,9 +1952,9 @@
 				D163CA5A28E9D8F500301919 /* autosuggestions.json in Resources */,
 				D1D880E027860D7B00407050 /* nouns.json in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
-				D15B717E29CDE194000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D1D880E227860D7B00407050 /* verbs.json in Resources */,
+				D12B8C3429E031C0009C0CFE /* emoji_keywords.json in Resources */,
 				D1658E4528F8FF3100CB5ACD /* prepositions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2018,9 +2018,9 @@
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D107A4AB27BE7C4500EB9D34 /* translations.json in Resources */,
 				D107A4AD27BE7C4500EB9D34 /* verbs.json in Resources */,
-				D15B717629CDE144000F51F4 /* emoji_suggestions.json in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
 				D107A4AC27BE7C4500EB9D34 /* nouns.json in Resources */,
+				D12B8C2C29E03183009C0CFE /* emoji_keywords.json in Resources */,
 				D1658E3F28F8FEE100CB5ACD /* prepositions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

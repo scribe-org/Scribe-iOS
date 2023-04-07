@@ -461,11 +461,11 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Disable the third auto action button if we'll have emoji suggestions.
-    if emojiAutosuggestions[prefix].exists() {
+    if emojiKeywords[prefix.lowercased()].exists() {
       emojisToSuggestArray = [String]()
-      if emojiAutosuggestions[prefix][1].exists() {
+      if emojiKeywords[prefix.lowercased()][1].exists() {
         for i in 0..<2 {
-          let emojiDesc = emojiAutosuggestions[prefix][i]
+          let emojiDesc = emojiKeywords[prefix.lowercased()][i]
           let emoji = emojiDesc["emoji"].rawValue as! String
           emojisToSuggestArray.append(emoji)
         }
@@ -478,7 +478,7 @@ class KeyboardViewController: UIInputViewController {
           emojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
       } else {
-        let emojiDesc = emojiAutosuggestions[prefix][0]
+        let emojiDesc = emojiKeywords[prefix.lowercased()][0]
         let emoji = emojiDesc["emoji"].rawValue as! String
         emojisToSuggestArray.append(emoji)
 

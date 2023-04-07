@@ -24,7 +24,7 @@ let verbs = loadJSON(filename: "verbs")
 let translations = loadJSON(filename: "translations")
 let prepositions = loadJSON(filename: "prepositions")
 let autosuggestions = loadJSON(filename: "autosuggestions")
-let emojiAutosuggestions = loadJSON(filename: "emoji_suggestions")
+let emojiKeywords = loadJSON(filename: "emoji_keywords")
 
 // Words that should not be included in autocomplete should be added to the string below.
 var autocompleteWords = [String]()
