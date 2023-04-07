@@ -11,7 +11,7 @@ var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible = true
 var autoAction3Visible = true
-var emojiSuggestVisible = false
+var emojiAutoActionVisible = false
 var shouldHighlightFirstCompletion = false
 var allowUndo = false
 var previousWord = ""
@@ -22,14 +22,14 @@ var scribeKeyHeight = CGFloat(0)
 var nouns = loadJSON(filename: "nouns")
 let verbs = loadJSON(filename: "verbs")
 let translations = loadJSON(filename: "translations")
-let prepositions = loadJSON(filename: "prepositions")
+var prepositions = loadJSON(filename: "prepositions")
 let autosuggestions = loadJSON(filename: "autosuggestions")
 let emojiKeywords = loadJSON(filename: "emoji_keywords")
 
 // Words that should not be included in autocomplete should be added to the string below.
 var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
-var emojisToSuggestArray = [String]()
+var emojisToDisplayArray = [String]()
 var numericAutosuggestions = [String]()
 var pronounAutosuggestionTenses: [String: String] = [:]
 var verbsAfterPronounsArray = [String]()

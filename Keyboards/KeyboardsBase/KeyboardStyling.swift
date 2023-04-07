@@ -28,7 +28,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   }
   
   // Needed, else buttons left an unnecessary shadow.
-  if emojiSuggestVisible == true {
+  if emojiAutoActionVisible == true {
     btn.layer.shadowOpacity = 0
   }
 }

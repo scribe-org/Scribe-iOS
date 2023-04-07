@@ -54,7 +54,7 @@ class ScribeKey: UIButton {
   }
 
   /// Sets the corner radius for just the left side of the Scribe key.
-  func setLeftCornerRadius() {
+  func setPartialCornerRadius() {
     self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
 
@@ -69,7 +69,7 @@ class ScribeKey: UIButton {
   var shadow: UIButton!
 
   /// Sets the shadow of the Scribe key.
-  func setShadow() {
+  func setPartialShadow() {
     self.shadow.backgroundColor = specialKeyColor
     self.shadow.layer.cornerRadius = commandKeyCornerRadius
     self.shadow.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
@@ -82,7 +82,7 @@ class ScribeKey: UIButton {
   }
 
   /// Sets the shadow of the Scribe key when it's an escape key.
-  func setEscShadow() {
+  func setFullShadow() {
     self.shadow.backgroundColor = specialKeyColor
     self.shadow.layer.cornerRadius = commandKeyCornerRadius
     self.shadow.layer.maskedCorners = [

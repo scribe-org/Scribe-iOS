@@ -343,6 +343,33 @@ class KeyboardViewController: UIInputViewController {
             i += 1
           }
         }
+
+        // Disable the third auto action button if we'll have emoji suggestions.
+        if emojiKeywords[currentPrefix.lowercased()].exists() {
+          emojisToDisplayArray = [String]()
+          if emojiKeywords[currentPrefix.lowercased()][1].exists() {
+            for i in 0..<2 {
+              let emojiDesc = emojiKeywords[currentPrefix.lowercased()][i]
+              let emoji = emojiDesc["emoji"].rawValue as! String
+              emojisToDisplayArray.append(emoji)
+            }
+            autoAction3Visible = false
+            emojiAutoActionVisible = true
+
+            if UITraitCollection.current.userInterfaceStyle == .light {
+              emojiDivider.backgroundColor = specialKeyColor
+            } else if UITraitCollection.current.userInterfaceStyle == .dark {
+              emojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+            }
+          } else {
+            let emojiDesc = emojiKeywords[currentPrefix.lowercased()][0]
+            let emoji = emojiDesc["emoji"].rawValue as! String
+            emojisToDisplayArray.append(emoji)
+
+            emojiAutoActionVisible = true
+          }
+        }
+
       } else {
         getDefaultAutosuggestions()
       }
@@ -462,15 +489,15 @@ class KeyboardViewController: UIInputViewController {
 
     // Disable the third auto action button if we'll have emoji suggestions.
     if emojiKeywords[prefix.lowercased()].exists() {
-      emojisToSuggestArray = [String]()
+      emojisToDisplayArray = [String]()
       if emojiKeywords[prefix.lowercased()][1].exists() {
         for i in 0..<2 {
           let emojiDesc = emojiKeywords[prefix.lowercased()][i]
           let emoji = emojiDesc["emoji"].rawValue as! String
-          emojisToSuggestArray.append(emoji)
+          emojisToDisplayArray.append(emoji)
         }
         autoAction3Visible = false
-        emojiSuggestVisible = true
+        emojiAutoActionVisible = true
 
         if UITraitCollection.current.userInterfaceStyle == .light {
           emojiDivider.backgroundColor = specialKeyColor
@@ -480,9 +507,9 @@ class KeyboardViewController: UIInputViewController {
       } else {
         let emojiDesc = emojiKeywords[prefix.lowercased()][0]
         let emoji = emojiDesc["emoji"].rawValue as! String
-        emojisToSuggestArray.append(emoji)
+        emojisToDisplayArray.append(emoji)
 
-        emojiSuggestVisible = true
+        emojiAutoActionVisible = true
       }
     }
   }
@@ -498,8 +525,8 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: pluralKey)
-      deactivateBtn(btn: emojiSuggest1)
-      deactivateBtn(btn: emojiSuggest2)
+      deactivateBtn(btn: emojiKey1)
+      deactivateBtn(btn: emojiKey2)
 
       if autoAction1Visible == true {
         allowUndo = false
@@ -517,26 +544,24 @@ class KeyboardViewController: UIInputViewController {
       styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
-      if autoAction3Visible == true && emojiSuggestVisible == false {
+      if autoAction3Visible == true && emojiAutoActionVisible == false {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
         emojiDivider.backgroundColor = .clear
-      } else if autoAction3Visible == false && emojiSuggestVisible == true {
-        setBtn(btn: emojiSuggest1, color: keyboardBgColor, name: "EmojiSuggest1", canCap: false, isSpecial: false)
-        styleBtn(btn: emojiSuggest1, title: emojisToSuggestArray[0], radius: commandKeyCornerRadius)
-        activateBtn(btn: emojiSuggest1)
+      } else if autoAction3Visible == false && emojiAutoActionVisible == true {
+        setBtn(btn: emojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
+        styleBtn(btn: emojiKey1, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
+        activateBtn(btn: emojiKey1)
         
-        setBtn(btn: emojiSuggest2, color: keyboardBgColor, name: "EmojiSuggest2", canCap: false, isSpecial: false)
-        styleBtn(btn: emojiSuggest2, title: emojisToSuggestArray[1], radius: commandKeyCornerRadius)
-        activateBtn(btn: emojiSuggest2)
-        emojiSuggestVisible = false // reset
-      } else if autoAction3Visible == true && emojiSuggestVisible == true {
+        setBtn(btn: emojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
+        styleBtn(btn: emojiKey2, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
+        activateBtn(btn: emojiKey2)
+      } else if autoAction3Visible == true && emojiAutoActionVisible == true {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
-        styleBtn(btn: pluralKey, title: emojisToSuggestArray[0], radius: commandKeyCornerRadius)
+        styleBtn(btn: pluralKey, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
         emojiDivider.backgroundColor = .clear
-        emojiSuggestVisible = false // reset
       }
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -547,6 +572,7 @@ class KeyboardViewController: UIInputViewController {
     // Reset autocorrect and autosuggest button visibility.
     autoAction1Visible = true
     autoAction3Visible = true
+    emojiAutoActionVisible = false
   }
 
   /// Clears the text proxy when inserting using an auto action.
@@ -585,11 +611,11 @@ class KeyboardViewController: UIInputViewController {
     }
 
     clearPrefixFromTextFieldProxy()
+    emojisToDisplayArray = [String]()
     proxy.insertText(keyPressed.titleLabel?.text ?? "")
     autoActionState = .suggest
     proxy.insertText(" ")
     currentPrefix = ""
-    emojisToSuggestArray = [String]()
     if shiftButtonState == .shift {
       shiftButtonState = .normal
       loadKeys()
@@ -642,8 +668,8 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var translateKey: UIButton!
   @IBOutlet var conjugateKey: UIButton!
   @IBOutlet var pluralKey: UIButton!
-  @IBOutlet var emojiSuggest1: UIButton!
-  @IBOutlet var emojiSuggest2: UIButton!
+  @IBOutlet var emojiKey1: UIButton!
+  @IBOutlet var emojiKey2: UIButton!
   @IBOutlet var emojiDivider: UILabel!
   
   /// Sets up all buttons that are associated with Scribe commands.
@@ -1289,6 +1315,20 @@ class KeyboardViewController: UIInputViewController {
         "form": ""
       ]
 
+      // Make sure preposition annotations show for German compound prepositions.
+      let contractedGermanPrepositions = [
+        "am": "Acc/Dat", "ans": "Acc/Dat", "aufs": "Acc/Dat", "beim": "Dat",
+        "durchs": "Acc", "fürs": "Acc", "hinters": "Acc/Dat", "hinterm": "Acc/Dat",
+        "ins":"Acc/Dat", "im":"Acc/Dat",  "übers":"Acc/Dat",  "überm":"Acc/Dat",
+        "ums": "Acc", "unters": "Acc/Dat", "unterm": "Acc/Dat", "vom": "Dat",
+        "vors": "Acc/Dat", "vorm": "Acc/Dat", "zum": "Dat", "zur": "Dat"
+      ]
+      if controllerLanguage == "German" {
+        for (p, g) in contractedGermanPrepositions {
+          prepositions[p].stringValue = g
+        }
+      }
+
       // Access UILexicon words.
       var lexiconWords = [String]()
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
@@ -1314,6 +1354,9 @@ class KeyboardViewController: UIInputViewController {
       }
 
       autocompleteWords = Array(nouns.dictionaryValue.keys) + uniqueAutosuggestKeys + lexiconWords
+      if controllerLanguage == "German" {
+        autocompleteWords += contractedGermanPrepositions.keys
+      }
       autocompleteWords = autocompleteWords.filter(
         { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
       ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
@@ -1430,7 +1473,7 @@ class KeyboardViewController: UIInputViewController {
 
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()
-        scribeKey.setEscShadow()
+        scribeKey.setFullShadow()
 
         commandBar.hide()
         hideAutoActionPartitions()
@@ -1438,12 +1481,12 @@ class KeyboardViewController: UIInputViewController {
         deactivateBtn(btn: conjugateKey)
         deactivateBtn(btn: translateKey)
         deactivateBtn(btn: pluralKey)
-        deactivateBtn(btn: emojiSuggest1)
-        deactivateBtn(btn: emojiSuggest2)
+        deactivateBtn(btn: emojiKey1)
+        deactivateBtn(btn: emojiKey2)
 
         if [.translate, .conjugate, .plural].contains(commandState) {
-          scribeKey.setLeftCornerRadius()
-          scribeKey.setShadow()
+          scribeKey.setPartialCornerRadius()
+          scribeKey.setPartialShadow()
           scribeKey.toEscape()
 
           commandBar.set()
@@ -1451,15 +1494,15 @@ class KeyboardViewController: UIInputViewController {
           hideAutoActionPartitions()
         } else if [.alreadyPlural, .invalid].contains(commandState) {
           // Command bar as a view for invalid messages with a Scribe key to allow for new commands.
-          scribeKey.setLeftCornerRadius()
-          scribeKey.setShadow()
+          scribeKey.setPartialCornerRadius()
+          scribeKey.setPartialShadow()
 
           commandBar.set()
           commandBar.setCornerRadiusAndShadow()
           hideAutoActionPartitions()
         } else if commandState == .idle {
           scribeKey.setFullCornerRadius()
-          scribeKey.setEscShadow()
+          scribeKey.setFullShadow()
 
           commandBar.text = ""
           commandBar.hide()
@@ -1686,8 +1729,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
       scribeKey.toEscape()
-      scribeKey.setShadow()
-      scribeKey.setLeftCornerRadius()
+      scribeKey.setPartialShadow()
+      scribeKey.setPartialCornerRadius()
 
       commandBar.backgroundColor = commandBarColor
       commandBarBlend.backgroundColor = commandBarColor
@@ -1699,8 +1742,8 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: pluralKey)
-      deactivateBtn(btn: emojiSuggest1)
-      deactivateBtn(btn: emojiSuggest2)
+      deactivateBtn(btn: emojiKey1)
+      deactivateBtn(btn: emojiKey2)
 
       activateConjugationDisplay()
       styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
@@ -1936,11 +1979,19 @@ class KeyboardViewController: UIInputViewController {
     case "AutoAction3":
       executeAutoAction(keyPressed: pluralKey)
       
-    case "EmojiSuggest1":
-      executeAutoAction(keyPressed: emojiSuggest1)
+    case "EmojiKey1":
+      executeAutoAction(keyPressed: emojiKey1)
+      if shiftButtonState == .normal {
+        shiftButtonState = .shift
+      }
+      loadKeys()
     
-    case "EmojiSuggest2":
-      executeAutoAction(keyPressed: emojiSuggest2)
+    case "EmojiKey2":
+      executeAutoAction(keyPressed: emojiKey2)
+      if shiftButtonState == .normal {
+        shiftButtonState = .shift
+      }
+      loadKeys()
 
     case "GetAnnotationInfo":
       // Remove all prior annotations.
@@ -2023,7 +2074,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case spaceBar, languageTextForSpaceBar:
-      if  previousWord != completionWords[0] && (completionWords[0] != " " && completionWords[1] == " ") {
+      if currentPrefix != completionWords[0] && (completionWords[0] != " " && completionWords[1] == " ") {
         previousWord = currentPrefix
         clearPrefixFromTextFieldProxy()
         proxy.insertText(completionWords[0])
