@@ -11,9 +11,19 @@ var capsLockPossible = false
 var doubleSpacePeriodPossible = false
 var autoAction1Visible = true
 var autoAction3Visible = true
-var emojiAutoActionVisible = false
+
+/// States of the emoji display corresponding to the number to show.
+enum EmojisToShow {
+  case zero
+  case one
+  case two
+  case three
+}
+
+var emojisToShow: EmojisToShow = .zero
 var currentEmojiTriggerWord = ""
 var emojiAutoActionRepeatPossible = false
+
 var shouldHighlightFirstCompletion = false
 var allowUndo = false
 var previousWord = ""

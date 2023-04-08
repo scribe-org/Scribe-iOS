@@ -16,16 +16,18 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-<!-- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes. -->
-
+<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
 - Emoji autocompletions and autosuggestions are now available as the user types.
-- The user can also repeat amoji autocompletions and autosuggestions.
+  - There are a maximum of two emojis available to select on iPhones and three on iPads.
+  - The user can also repeat emoji autocompletions and autosuggestions.
+<!--- Emoji autocomplete and autosuggest keywords have also been added as possible autocompletion words.-->
 - Added action to command bar information icon.
 - Added highlight for autocompletion if it is the word typed.
 - If a word is the only autosuggestion, hitting the space bar inserts the suggestion. Added undo functionality if the user does not want the completion.
 - Added Demonstrative pronouns to German preposition declension tables.
 - Added contracted preposition annotation to the German keyboard.
-- Double dash inserts em dash in proxy
+- Double dash inserts an em dash in the text proxy.
+
 ### 🎨 Design Changes
 
 - The resolution of the Scribe key has been improved.
@@ -35,6 +37,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The return button for the keyboard has been changed to display "search" whenever a web browser is being used.
 - The Scribe application also receives dark mode in this version.
 - Minor adjustments to the original app screen texts and colors have been made.
+- The select keyboard button has been moved to the bottom left most position on iPads.
 
 # Scribe-iOS 2.1.0
 

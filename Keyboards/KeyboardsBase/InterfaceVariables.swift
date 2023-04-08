@@ -24,7 +24,7 @@ var commandKeyCornerRadius: CGFloat!
 var keyWidth = CGFloat(0)
 var letterKeyWidth = CGFloat(0)
 var numSymKeyWidth = CGFloat(0)
-var keyboardLoad = false
+var firstKeyboardLoad = false
 
 // Keyboard elements.
 var spaceBar = String()
