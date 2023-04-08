@@ -21,22 +21,23 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
   - There are a maximum of two emojis available to select on iPhones and three on iPads.
   - The user can also repeat emoji autocompletions and autosuggestions.
 - Emoji autocomplete and autosuggest keywords have also been added as possible autocompletion words.
-- Added action to command bar information icon.
+- Added an action to command bar information icon to explain Wikidata and Scribe's relation to it'.
 - Added highlight for autocompletion if it is the word typed.
-- If a word is the only autosuggestion, hitting the space bar inserts the suggestion. Added undo functionality if the user does not want the completion.
+- If a word is the only autosuggestion, hitting the space bar inserts the suggestion. 
+  - An undo option is included within autosuggestions if the user does not want the space completion.
 - Added Demonstrative pronouns to German preposition declension tables.
 - Added contracted preposition annotation to the German keyboard.
-- Double dash inserts an em dash in the text proxy.
+- Pressing dash twice now inserts an em dash in the text proxy.
 
 ### 🎨 Design Changes
 
+- The Scribe application receives dark mode in this version.
+- Minor adjustments to the original app screen texts and colors have been made.
 - The resolution of the Scribe key has been improved.
 - Scribe blue for dark mode has been made darker to fit the keyboard better.
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
 - The app icon has been made more modern and glossy and the direct shadow has been removed.
-- The return button for the keyboard has been changed to display "search" whenever a web browser is being used.
-- The Scribe application also receives dark mode in this version.
-- Minor adjustments to the original app screen texts and colors have been made.
+- The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
 
 ### 🐞 Bug Fixes
