@@ -79,9 +79,9 @@ Please also see the [contribution guidelines](https://github.com/scribe-org/Scri
 
 After your first few pull requests organization members would be happy to discuss granting you further rights as a contributor, with a maintainer role then being possible after continued interest in the project. Scribe seeks to be an inclusive and supportive organization. We'd love to have you on the team!
 
-### ⚠️ Note on Debugging ⚠️
-
-Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
+> **Warning**: Note on Debugging
+>
+> Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
 
 ### Ways to Help [`⇧`](#contents)
 
