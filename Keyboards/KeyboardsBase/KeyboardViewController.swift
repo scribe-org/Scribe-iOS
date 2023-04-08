@@ -2151,6 +2151,18 @@ class KeyboardViewController: UIInputViewController {
       }
       changeKeyboardToLetterKeys()
 
+    case "-":
+      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+        if proxy.documentContextBeforeInput?.last == "-" {
+          proxy.deleteBackward()
+          proxy.insertText("—")
+        } else {
+          proxy.insertText(keyToDisplay)
+        }
+      } else {
+        commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
+      }
+      
     case ",", ".", "!", "?":
       if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
         if proxy.documentContextBeforeInput?.last == " " {
