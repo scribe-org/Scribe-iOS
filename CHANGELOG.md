@@ -12,11 +12,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Unreleased] Scribe-iOS 2.2.0
 
-### 🗃️ Data Added
-
 ### ✨ New Features
 
-<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
 - Emoji autocompletions and autosuggestions are now available as the user types.
   - There are a maximum of two emojis available to select on iPhones and three on iPads.
   - The user can also repeat emoji autocompletions and autosuggestions.
@@ -28,6 +25,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Added Demonstrative pronouns to German preposition declension tables.
 - Added contracted preposition annotation to the German keyboard.
 - Pressing dash twice now inserts an em dash in the text proxy.
+
+### 🗃️ Data Added
+
+<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
 
 ### 🎨 Design Changes
 
