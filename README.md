@@ -225,7 +225,7 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 # Featured By [`⇧`](#contents)
 
-<details><summary><strong>Articles and Presentations on Scribe</strong></summary>
+<details open><summary><strong>Articles and Presentations on Scribe</strong></summary>
 <p>
 
 <strong>2023</strong>
