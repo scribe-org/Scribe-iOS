@@ -25,7 +25,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - If a word is the only autosuggestion, hitting the space bar inserts the suggestion. Added undo functionality if the user does not want the completion.
 - Added Demonstrative pronouns to German preposition declension tables.
 - Added contracted preposition annotation to the German keyboard.
-
+- Double dash inserts em dash in proxy
 ### 🎨 Design Changes
 
 - The resolution of the Scribe key has been improved.
