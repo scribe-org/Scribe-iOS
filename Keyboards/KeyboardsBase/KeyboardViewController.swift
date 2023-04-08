@@ -315,7 +315,7 @@ class KeyboardViewController: UIInputViewController {
         }
 
         // Get options for completion that have start with the current prefix and are not just one letter.
-        let stringOptions = autocompleteWords.filter { item in
+        let stringOptions = autocompleteLexicon.filter { item in
           return item.lowercased().hasPrefix(currentPrefix.lowercased()) && item.count > 1
         }
 
@@ -1410,67 +1410,16 @@ class KeyboardViewController: UIInputViewController {
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
 
-      // Make sure that Scribe shows up in auto actions.
-      nouns["Scribe"] = [
-        "plural": "Scribes",
-        "form": ""
-      ]
-
-      // Make sure preposition annotations show for German compound prepositions.
-      let contractedGermanPrepositions = [
-        "am": "Acc/Dat", "ans": "Acc/Dat", "aufs": "Acc/Dat", "beim": "Dat",
-        "durchs": "Acc", "fürs": "Acc", "hinters": "Acc/Dat", "hinterm": "Acc/Dat",
-        "ins":"Acc/Dat", "im":"Acc/Dat",  "übers":"Acc/Dat",  "überm":"Acc/Dat",
-        "ums": "Acc", "unters": "Acc/Dat", "unterm": "Acc/Dat", "vom": "Dat",
-        "vors": "Acc/Dat", "vorm": "Acc/Dat", "zum": "Dat", "zur": "Dat"
-      ]
-      if controllerLanguage == "German" {
-        for (p, g) in contractedGermanPrepositions {
-          prepositions[p].stringValue = g
-        }
-      }
-
-      // Access UILexicon words.
-      var lexiconWords = [String]()
+      // Access UILexicon words including unpaired first and last names from Contacts.
+      var uiLexiconWords = [String]()
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
         for item in userLexicon.entries {
-          lexiconWords.append(item.documentText)
+          uiLexiconWords.append(item.documentText)
         }
       }
 
-      var uniqueAutosuggestKeys = [String]()
-      for elem in autosuggestions.dictionaryValue.keys {
-        if elem.count > 2 && !nouns[elem].exists() {
-          if autosuggestions[elem.lowercased()].exists()
-              && !uniqueAutosuggestKeys.contains(elem.lowercased()) {
-            uniqueAutosuggestKeys.append(elem.lowercased())
-          } else if
-              elem.count > 2
-              && elem.isCapitalized
-              && !uniqueAutosuggestKeys.contains(elem)
-              && !uniqueAutosuggestKeys.contains(elem.lowercased()) {
-            uniqueAutosuggestKeys.append(elem)
-          }
-        }
-      }
-
-      autocompleteWords = Array(nouns.dictionaryValue.keys) + lexiconWords + uniqueAutosuggestKeys
-
-      if controllerLanguage == "German" {
-        autocompleteWords += contractedGermanPrepositions.keys
-      }
-
-//      // Add keys for emojis, checking first that they don't already exist in capital or upper case.
-//      let emojiKeywordsForAutocomplete = emojiKeywords.dictionaryValue.keys.filter {
-//        !autocompleteWords.contains($0.uppercased())
-//        && !autocompleteWords.contains($0.capitalized(with: NSLocale.current))
-//      }
-//      autocompleteWords += emojiKeywordsForAutocomplete
-
-      autocompleteWords = autocompleteWords.filter(
-        { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
-      ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
-      autocompleteWords = autocompleteWords.unique()
+      autocompleteLexicon += uiLexiconWords
+      autocompleteLexicon = autocompleteLexicon.unique()
     }
 
     setKeyboard()

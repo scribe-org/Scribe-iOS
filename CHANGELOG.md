@@ -20,7 +20,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Emoji autocompletions and autosuggestions are now available as the user types.
   - There are a maximum of two emojis available to select on iPhones and three on iPads.
   - The user can also repeat emoji autocompletions and autosuggestions.
-<!--- Emoji autocomplete and autosuggest keywords have also been added as possible autocompletion words.-->
+- Emoji autocomplete and autosuggest keywords have also been added as possible autocompletion words.
 - Added action to command bar information icon.
 - Added highlight for autocompletion if it is the word typed.
 - If a word is the only autosuggestion, hitting the space bar inserts the suggestion. Added undo functionality if the user does not want the completion.
@@ -38,6 +38,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The Scribe application also receives dark mode in this version.
 - Minor adjustments to the original app screen texts and colors have been made.
 - The select keyboard button has been moved to the bottom left most position on iPads.
+
+### 🐞 Bug Fixes
+
+- Fixed a bug where the keyboard's spacebar text would change size while it was showing the language of the keyboard.
 
 # Scribe-iOS 2.1.0
 
@@ -168,10 +172,6 @@ Thousands of new French verb conjugations have been added!
 - Spanish: 793 nouns, 174 verbs
 - Swedish: 8 nouns
 
-### 🐞 Bug Fixes
-
-- Verb conjugation tables now always return to their base conjugation each time the command is used.
-
 ### 🎨 Design Changes
 
 Scribe's second design sprint with Spencer Arney focussed on the App Store media:
@@ -179,6 +179,10 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 - The App Store images have been updated to be more professional and drive discovery.
 - Some App Store images have been replaced with ones that better show app features.
 - Section headers for App Store videos have been changed to match the new image style.
+
+### 🐞 Bug Fixes
+
+- Verb conjugation tables now always return to their base conjugation each time the command is used.
 
 # Scribe-iOS 1.3.7
 

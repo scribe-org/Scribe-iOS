@@ -114,7 +114,7 @@ class KeyboardKey: UIButton {
 
     if keyboardState == .letters
         && isSpecial == false
-        && !["123", "´", spaceBar].contains(self.key)
+        && !["123", "´", spaceBar, languageTextForSpaceBar].contains(self.key)
         && shiftButtonState == .normal {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
@@ -171,7 +171,7 @@ class KeyboardKey: UIButton {
 
     if keyboardState == .letters
         && isSpecial == false
-        && ![".?123", spaceBar, "ß", "´", ",", ".", "'", "-"].contains(self.key)
+        && ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(self.key)
         && shiftButtonState == .normal {
       self.titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 

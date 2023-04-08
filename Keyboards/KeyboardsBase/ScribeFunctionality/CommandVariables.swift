@@ -35,11 +35,65 @@ var nouns = loadJSON(filename: "nouns")
 let verbs = loadJSON(filename: "verbs")
 let translations = loadJSON(filename: "translations")
 var prepositions = loadJSON(filename: "prepositions")
-let autosuggestions = loadJSON(filename: "autosuggestions")
 let emojiKeywords = loadJSON(filename: "emoji_keywords")
+let autosuggestions = loadJSON(filename: "autosuggestions")
+
+/// Performs a few minor edits to language data to make sure that certain values are included.
+func expandLanguageDatasets() {
+  // Make sure that Scribe shows up in auto actions.
+  nouns["Scribe"] = [
+    "plural": "Scribes",
+    "form": ""
+  ]
+
+  // Make sure preposition annotations show for German compound prepositions.
+  if controllerLanguage == "German" {
+    for (p, g) in contractedGermanPrepositions {
+      prepositions[p].stringValue = g
+    }
+  }
+}
+
+/// Creates the word lexicon from with autocompletions will be referenced.
+/// Note: this function also calls expandLanguageDatasets prior to creating the lexicon.
+func createAutocompleteLexicon() -> [String] {
+  expandLanguageDatasets()
+
+  // Derive a list of unique keys from the autosuggest and emoji keys to serve as a basis for autocompletions.
+  let baseLexicon = Array(autosuggestions.dictionaryValue.keys) + Array(emojiKeywords.dictionaryValue.keys)
+
+  // Remove words that appear in nouns to make sure that capitalized versions are used for autocomplete.
+  // Note: this is especially important for German where all nouns are capitalized.
+  var uniqueBaseLexicon = [String]()
+  for elem in baseLexicon {
+    if elem.count > 2 && !(
+      nouns[elem].exists() || nouns[elem.capitalized].exists() || nouns[elem.uppercased()].exists()
+    ) {
+      if autosuggestions[elem.lowercased()].exists() || emojiKeywords[elem].exists()
+          && !uniqueBaseLexicon.contains(elem.lowercased()) {
+        uniqueBaseLexicon.append(elem.lowercased())
+      } else if
+          elem.isCapitalized
+          && !uniqueBaseLexicon.contains(elem)
+          && !uniqueBaseLexicon.contains(elem.lowercased()) {
+        uniqueBaseLexicon.append(elem)
+      }
+    }
+  }
+
+  var lexicon = Array(nouns.dictionaryValue.keys) + Array(prepositions.dictionaryValue.keys) + uniqueBaseLexicon
+
+  // Filter our numbers and hyphenated words.
+  lexicon = lexicon.filter(
+    { $0.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890-")) == nil }
+  ).sorted{$0.caseInsensitiveCompare($1) == .orderedAscending}
+
+  return lexicon
+}
+
+var autocompleteLexicon = createAutocompleteLexicon()
 
 // Words that should not be included in autocomplete should be added to the string below.
-var autocompleteWords = [String]()
 var baseAutosuggestions = [String]()
 var emojisToDisplayArray = [String]()
 var numericAutosuggestions = [String]()
