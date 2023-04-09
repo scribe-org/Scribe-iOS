@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(.init(.keyChar), for: .normal)
-    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .semibold)
+    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
     switchView.clipsToBounds = true
     switchView.backgroundColor = switchViewColor
