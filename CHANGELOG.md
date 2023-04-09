@@ -33,11 +33,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The Scribe application receives dark mode in this version.
+- The app icon has been made more modern and glossy and the direct shadow has been removed.
 - Minor adjustments to the original app screen texts and colors have been made.
 - The resolution of the Scribe key has been improved.
 - Scribe blue for dark mode has been made darker to fit the keyboard better.
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
-- The app icon has been made more modern and glossy and the direct shadow has been removed.
+<!--- The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.-->
+<!--- The descriptions in the App Store have been localized into Spanish.-->
 - The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
 
