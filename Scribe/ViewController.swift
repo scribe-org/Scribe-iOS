@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     }
   }
 
-  let switchViewColor = UIColor(named: "scribeOrange")
+  let switchViewColor = UIColor(named: "scribeCTA")
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(.init(.keyChar), for: .normal)
-    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .medium)
+    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .semibold)
 
     switchView.clipsToBounds = true
     switchView.backgroundColor = switchViewColor

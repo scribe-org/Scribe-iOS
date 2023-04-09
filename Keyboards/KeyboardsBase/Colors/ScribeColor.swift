@@ -24,8 +24,8 @@ enum ScribeColor: String {
   case keyboardBackground
   case linkBlue
   case scribeBlue
+  case scribeCTA
   case scribeGray
-  case scribeOrange
 
   /// `UIColor` object for the given
   var color: UIColor {
