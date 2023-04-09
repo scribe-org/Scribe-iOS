@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "linkCornerBackground.png",
+      "filename" : "CornerBackground.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "linkCornerBackgroundDarkMode.png",
+      "filename" : "CornerBackground-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
