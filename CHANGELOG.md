@@ -18,9 +18,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
   - There are a maximum of two emojis available to select on iPhones and three on iPads.
   - The user can also repeat emoji autocompletions and autosuggestions.
 - Emoji autocomplete and autosuggest keywords have also been added as possible autocompletion words.
-- Added an action to command bar information icon to explain Wikidata and Scribe's relation to it'.
+- Added an action to command bar information icon to explain Wikidata and Scribe's relation to it.
 - Added highlight for autocompletion if it is the word typed.
-- If a word is the only autosuggestion, hitting the space bar inserts the suggestion. 
+- If a word is the only autosuggestion, hitting the space bar inserts the suggestion.
   - An undo option is included within autosuggestions if the user does not want the space completion.
 - Added Demonstrative pronouns to German preposition declension tables.
 - Added contracted preposition annotation to the German keyboard.
