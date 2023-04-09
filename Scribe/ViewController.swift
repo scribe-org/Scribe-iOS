@@ -212,8 +212,8 @@ class ViewController: UIViewController {
     let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize)
     topIconPhone.image = settingsSymbol
     topIconPad.image = settingsSymbol
-    topIconPhone.tintColor = .init(.commandBar)
-    topIconPad.tintColor = .init(.commandBar)
+    topIconPhone.tintColor = .init(.keyChar)
+    topIconPad.tintColor = .init(.keyChar)
 
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
@@ -261,8 +261,8 @@ class ViewController: UIViewController {
     let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize)
     topIconPhone.image = privacySymbol
     topIconPad.image = privacySymbol
-    topIconPhone.tintColor = .init(.commandBar)
-    topIconPad.tintColor = .init(.commandBar)
+    topIconPhone.tintColor = .init(.keyChar)
+    topIconPad.tintColor = .init(.keyChar)
 
     // Disable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = false
