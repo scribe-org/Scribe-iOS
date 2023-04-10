@@ -28,9 +28,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
-<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
-<!--- All prior JSON data references have been replaced with database queries.-->
-
 ### 🎨 Design Changes
 
 - The Scribe application receives dark mode in this version.
@@ -48,6 +45,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - Fixed a bug where the keyboard's spacebar text would change size while it was showing the language of the keyboard.
+
+### ♻️ Code Refactoring
+
+<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
+<!--- All prior JSON data references have been replaced with database queries and JSON files have been removed.-->
 
 # Scribe-iOS 2.1.0
 
