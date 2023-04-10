@@ -29,6 +29,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🗃️ Data Added
 
 <!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
+<!--- All prior JSON data references have been replaced with database queries.-->
 
 ### 🎨 Design Changes
 
@@ -38,8 +39,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The resolution of the Scribe key has been improved.
 - Scribe blue for dark mode has been made darker to fit the keyboard better.
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
+<!--- A process has been made to localize the App Store images using image tamplates.-->
 <!--- The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.-->
-<!--- The descriptions in the App Store have been localized into Spanish.-->
+<!--- The texts and images for the App Store have been localized into Spanish.-->
 - The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
 
