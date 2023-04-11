@@ -41,6 +41,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- The texts and images for the App Store have been localized into Spanish.-->
 - The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
+- The gear icon in the top left of the keyboard installation steps is now a more simple version.
 
 ### 🐞 Bug Fixes
 

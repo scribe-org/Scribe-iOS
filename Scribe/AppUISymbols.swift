@@ -19,7 +19,7 @@ func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
       settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
     }
   }
-  let settingsSymbol: UIImage = UIImage(systemName: "gear", withConfiguration: settingsSymbolConfig)!
+  let settingsSymbol: UIImage = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig)!
 
   return settingsSymbol
 }
