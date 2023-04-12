@@ -53,7 +53,7 @@ Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP),
 
 The following are the preview videos for the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886):
 
-#### iPhone 6.5" version
+#### iPhone 6.7" version
 
 https://user-images.githubusercontent.com/24387426/194840842-f1668216-94a5-4f3d-8aac-a536db54b0d8.mp4
 

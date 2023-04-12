@@ -10,6 +10,13 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
+# [Unreleased] Scribe-iOS
+
+### 🎨 Design Changes
+
+<!--- A process has been made to localize the App Store images using image templates.-->
+<!--- The texts and images for the App Store have been localized into Spanish.-->
+
 # [Unreleased] Scribe-iOS 2.2.0
 
 ### ✨ New Features
@@ -36,9 +43,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The resolution of the Scribe key has been improved.
 - Scribe blue for dark mode has been made darker to fit the keyboard better.
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
-<!--- A process has been made to localize the App Store images using image templates.-->
-<!--- The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.-->
-<!--- The texts and images for the App Store have been localized into Spanish.-->
+- The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.
 - The menu options within the app installation steps have been bolded and underlined.
 - The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
@@ -56,7 +61,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 <!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
 <!--- All prior JSON data references have been replaced with database queries and JSON language data files have been removed.-->
-<!--- GRDB.swift was added to the dependencies.-->
+- GRDB.swift was added to the dependencies.
 
 # Scribe-iOS 2.1.0
 
