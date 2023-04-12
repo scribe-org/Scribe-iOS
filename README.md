@@ -126,17 +126,17 @@ For more information on features and use cases, see [Keyboard Features](#keyboar
 
 Scribe's goal is functional, feature-rich keyboards for all languages. Check [scribe_data/extract_transform](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/extract_transform) for queries for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
 
-The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/):
+The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/) and via [Unicode CLDR](https://github.com/unicode-org/cldr) for emojis:
 
-| Languages  |   Nouns | Verbs | Translations\* | Prepositions† |
-| :--------- | ------: | ----: | -------------: | ------------: |
-| French     |  16,815 | 5,450 |         67,652 |             - |
-| German     |  29,272 | 3,557 |         67,652 |           187 |
-| Italian    |   8,646 |    73 |         67,652 |             - |
-| Portuguese |   5,191 |   495 |         67,652 |             - |
-| Russian    | 194,419 |    11 |         67,652 |            13 |
-| Spanish    |  27,128 | 4,036 |         67,652 |             - |
-| Swedish    |  42,807 | 4,394 |         67,652 |             - |
+| Languages  |   Nouns | Verbs | Translations | Prepositions | Emoji Keywords |
+| :--------- | ------: | ----: | -----------: | -----------: | -------------: |
+| French     |  16,815 | 5,450 |       67,652 |            - |          2,493 |
+| German     |  29,272 | 3,557 |       67,652 |          187 |          2,901 |
+| Italian    |   8,646 |    73 |       67,652 |            - |          2,463 |
+| Portuguese |   5,191 |   495 |       67,652 |            - |          2,336 |
+| Russian    | 194,419 |    11 |       67,652 |           13 |          3,834 |
+| Spanish    |  27,128 | 4,036 |       67,652 |            - |          3,144 |
+| Swedish    |  42,807 | 4,394 |       67,652 |            - |          2,916 |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
