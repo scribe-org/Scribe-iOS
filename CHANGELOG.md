@@ -47,6 +47,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Fixed a bug where the keyboard's space bar text would change size while it was showing the language of the keyboard.
 
+### ⚖️ Legal
+
+- The text of the privacy policy was updated slightly for readability and also added information about data from Unicode CLDR for emoji suggestions and completions.
+
 ### ♻️ Code Refactoring
 
 <!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->

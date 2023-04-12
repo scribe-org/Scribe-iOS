@@ -227,8 +227,8 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       )
       annotationBtn.styleSingleAnnotation()
 
-      let emojisToSelectFrom: String = "🥳🎉"
-      let emojis: String = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      let emojisToSelectFrom = "🥳🎉"
+      let emojis = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
       annotationBtn.setTitle(emojis, for: .normal)
       KVC.view.addSubview(annotationBtn)
       annotationBtns.append(annotationBtn)

@@ -6,7 +6,7 @@
 //  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
 //
 
-let dePrivacyPolicyTitle: String = "Datenschutzrichtlinie"
+let dePrivacyPolicyTitle = "Datenschutzrichtlinie"
 
 
 // swiftlint:disable all
@@ -14,7 +14,7 @@ let dePrivacyPolicyTitle: String = "Datenschutzrichtlinie"
 // Includes a new line so that there is space between it and the page title.
 let dePrivacyPolicyText = """
 \n
-Beachten Sie, dass die englische Version dieser Richtlinie Vorrang vor allen anderen Versionen hat.
+Bitte beachten Sie, dass die englische Version dieser Richtlinie Vorrang vor allen anderen Versionen hat.
 
 Die Scribe-Entwickler (SCRIBE) haben die iOS-Applikation „Scribe – Language Keyboards“ (SERVICE) als Open-Source-Applikation entwickelt. Dieser SERVICE wird von SCRIBE kostenlos zur Verfügung gestellt und ist zur Verwendung so wie sie ist bestimmt.
 
@@ -34,7 +34,7 @@ BENUTZER, die SCRIBE kontaktieren, um zu verlangen, dass ihre BENUTZERINFORMATIO
 
 3. Daten von Drittanbietern
 
-Dieser SERVICE verwendet Daten von Drittanbietern. Alle Daten, die bei der Erstellung dieses SERVICE verwendet werden, stammen aus Quellen, die ihre vollständige Nutzung in der vom SERVICE durchgeführten Weise ermöglichen. Insbesondere stammen die Daten für diesen SERVICE von Wikidata und Wikipedia. Wikidata erklärt: „Alle strukturierten Daten in den Haupt-, Eigenschafts- und Lexem-Namespaces werden unter der Creative Commons CC0-Lizenz verfügbar gemacht; Text in anderen Namespaces wird unter der Creative Commons Attribution-Share Alike License verfügbar gemacht.“ Die Richtlinie zur detaillierten Verwendung von Wikidata-Daten finden Sie unter https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia gibt an, dass Textdaten, die Art von Daten, die vom SERVICE verwendet werden, "... unter den Bedingungen der Creative Commons Attribution Share-Alike-Lizenz verwendet werden können". Die Richtlinie zur Nutzung von Wikipedia-Daten finden Sie unter https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content.
+Dieser SERVICE verwendet Daten von Drittanbietern. Alle Daten, die bei der Erstellung dieses SERVICE verwendet werden, stammen aus Quellen, die ihre vollständige Nutzung in der vom SERVICE durchgeführten Weise ermöglichen. Insbesondere stammen die Daten für diesen SERVICE von Wikidata, Wikipedia und Unicode. Wikidata erklärt: „Alle strukturierten Daten in den Haupt-, Eigenschafts- und Lexem-Namespaces werden unter der Creative Commons CC0-Lizenz verfügbar gemacht; Text in anderen Namespaces wird unter der Creative Commons Attribution-Share Alike License verfügbar gemacht.“ Die Richtlinie zur detaillierten Verwendung von Wikidata-Daten finden Sie unter https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia gibt an, dass Textdaten, die Art von Daten, die vom SERVICE verwendet werden, "... unter den Bedingungen der Creative Commons Attribution Share-Alike-Lizenz verwendet werden können". Die Richtlinie zur Nutzung von Wikipedia-Daten finden Sie unter https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode gewährt jeder Person, „... kostenlos, die Erlaubnis, eine Kopie der Unicode-Datendateien und der zugehörigen Dokumentation (die „Datendateien“) oder der Unicode-Software und der zugehörigen Dokumentation (die „Software“) zu erwerben, um damit zu handeln die Datendateien oder Software ohne Einschränkung..." Die Richtlinie zur Nutzung von Unicode-Daten finden Sie unter https://www.unicode.org/license.txt.
 
 4. Quellcode von Drittanbietern
 
@@ -58,7 +58,7 @@ Dieser SERVICE ermöglicht NUTZERN den Zugriff auf sprachliche Inhalte (INHALTE)
 
 9. Änderungen
 
-Diese RICHTLINIE kann sich ändern. Aktualisierungen dieser RICHTLINIE ersetzen alle vorherigen Instanzen, und wenn sie als wesentlich erachtet werden, werden sie in der nächsten anwendbaren Aktualisierung des SERVICE weiter deutlich angegeben. SCRIBE ermutigt die BENUTZER, sich mit allen Änderungen dieser RICHTLINIE vertraut zu machen.
+Diese RICHTLINIE kann sich ändern. Aktualisierungen dieser RICHTLINIE ersetzen alle vorherigen Instanzen, und wenn sie als wesentlich erachtet werden, werden sie in der nächsten anwendbaren Aktualisierung des SERVICE weiter deutlich angegeben. SCRIBE ermutigt BENUTZER, diese RICHTLINIE regelmäßig auf die neuesten Informationen zu unseren Datenschutzpraktiken zu überprüfen und sich mit etwaigen Änderungen vertraut zu machen.
 
 10. Kontakt
 

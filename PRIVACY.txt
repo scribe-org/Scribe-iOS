@@ -1,6 +1,6 @@
 Privacy Policy
 
-Please note that the English version of this policy takes 
+Please note that the English version of this policy takes
 precedence over all other versions.
 
 The Scribe developers (SCRIBE) built the iOS application "Scribe -
@@ -36,8 +36,8 @@ tracked.
 This SERVICE makes use of third-party data. All data used in the
 creation of this SERVICE comes from sources that allow its full use
 in the manner done so by the SERVICE. Specifically, the data for this
-SERVICE comes from Wikidata and Wikipedia. Wikidata states that, "All
-structured data in the main, property and lexeme namespaces is made
+SERVICE comes from Wikidata, Wikipedia and Unicode. Wikidata states that,
+"All structured data in the main, property and lexeme namespaces is made
 available under the Creative Commons CC0 License; text in other
 namespaces is made available under the Creative Commons Attribution-
 Share Alike License." The policy detailing Wikidata data usage can
@@ -45,7 +45,13 @@ be found at https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia
 states that text data, the type of data used by the SERVICE, "... can be
 used under the terms of the Creative Commons Attribution Share-Alike
 license". The policy detailing Wikipedia data usage can be found at
-https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content.
+https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode
+provides permission, "... free of charge, to any person obtaining
+a copy of the Unicode data files and any associated documentation
+(the "Data Files") or Unicode software and any associated documentation
+(the "Software") to deal in the Data Files or Software
+without restriction..." The policy detailing Unicode data usage can be
+found at https://www.unicode.org/license.txt.
 
 4. Third-Party Source Code
 

@@ -6,14 +6,14 @@
 //  PRIVACY.txt is formatted for GitHub, and this is formatted for modular sizing.
 //
 
-let enPrivacyPolicyTitle: String = "Privacy Policy"
+let enPrivacyPolicyTitle = "Privacy Policy"
 
 // swiftlint:disable all
 
 // Includes a new line so that there is space between it and the page title.
-let enPrivacyPolicyText: String = """
+let enPrivacyPolicyText = """
 \n
-Note that the English version of this policy takes precedence over all other verions.
+Please note that the English version of this policy takes precedence over all other versions.
 
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.
 
@@ -33,15 +33,15 @@ USERS contacting SCRIBE to ask that their USER INFORMATION and USER DATA not be 
 
 3. Third-Party Data
 
-This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata and Wikipedia. Wikidata states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-Share Alike License." The policy detailing Wikidata data usage can be found at https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia states that text data, the type of data used by the SERVICE, "... can be used under the terms of the Creative Commons Attribution Share-Alike license". The policy detailing Wikipedia data usage can be found at https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content.
+This SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata, Wikipedia and Unicode. Wikidata states that, "All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-Share Alike License." The policy detailing Wikidata data usage can be found at https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia states that text data, the type of data used by the SERVICE, "... can be used under the terms of the Creative Commons Attribution Share-Alike license". The policy detailing Wikipedia data usage can be found at https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode provides permission, "... free of charge, to any person obtaining a copy of the Unicode data files and any associated documentation (the "Data Files") or Unicode software and any associated documentation (the "Software") to deal in the Data Files or Software without restriction..." The policy detailing Unicode data usage can be found at https://www.unicode.org/license.txt.
 
 4. Third-Party Source Code
 
-This SERVICE was based on third party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the basis of this project was the project CustomKeyboard by Ethan Sarif-Kattan. CustomKeyboard was released under an MIT license, with this license being available at https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.
+This SERVICE was based on third-party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the basis of this project was the project CustomKeyboard by Ethan Sarif-Kattan. CustomKeyboard was released under an MIT license, with this license being available at https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.
 
 5. Third-Party Services
 
-This SERVICE makes use of third-party services to manipulate some of the third-party data. Specifically, data has been translated using models from Hugging Face transformers. This service is covered by a Apache License 2.0, which states that it is available for commercial use, modification, distribution, patent use, and private use. The license for the aforementioned service can be found at https://github.com/huggingface/transformers/blob/master/LICENSE.
+This SERVICE makes use of third-party services to manipulate some of the third-party data. Specifically, data has been translated using models from Hugging Face transformers. This service is covered by an Apache License 2.0, which states that it is available for commercial use, modification, distribution, patent use, and private use. The license for the aforementioned service can be found at https://github.com/huggingface/transformers/blob/master/LICENSE.
 
 6. Third-Party Links
 
@@ -49,7 +49,7 @@ This SERVICE contains links to external websites. If USERS click on a third-part
 
 7. Third-Party Images
 
-This SERVICE contains images that are copyrighted by third-parties. Specifically this app includes a copy of the logos of GitHub, Inc and Wikidata, trademarked by Wikimedia Foundation, Inc. The terms by which the GitHub logo can be used are found on https://github.com/logos, and the terms for the Wikidata logo are found on the following Wikimedia page: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. This SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation of the GitHub logo that is common in the open-source community to indicate that there is a link to the GitHub website.
+This SERVICE contains images that are copyrighted by third-parties. Specifically, this app includes a copy of the logos of GitHub, Inc and Wikidata, trademarked by Wikimedia Foundation, Inc. The terms by which the GitHub logo can be used are found on https://github.com/logos, and the terms for the Wikidata logo are found on the following Wikimedia page: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. This SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation of the GitHub logo that is common in the open-source community to indicate that there is a link to the GitHub website.
 
 8. Content Notice
 
@@ -57,7 +57,7 @@ This SERVICE allows USERS to access linguistic content (CONTENT). Some of this C
 
 9. Changes
 
-This POLICY is subject to change. Updates to this POLICY will replace all prior instances, and if deemed material will further be clearly stated in the next applicable update to the SERVICE. SCRIBE encourages the USERS to familiarize themselves with any changes to this POLICY.
+This POLICY is subject to change. Updates to this POLICY will replace all prior instances, and if deemed material will further be clearly stated in the next applicable update to the SERVICE. SCRIBE encourages USERS to periodically review this POLICY for the latest information on our privacy practices and to familiarize themselves with any changes.
 
 10. Contact
 

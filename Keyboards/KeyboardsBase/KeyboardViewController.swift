@@ -578,7 +578,7 @@ class KeyboardViewController: UIInputViewController {
           shouldHighlightFirstCompletion = true
         }
         setBtn(btn: translateKey, color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
-        styleBtn(btn: translateKey, title: completionWords[0], radius: commandKeyCornerRadius)
+        styleBtn(btn: translateKey, title: completionWords[0], radius: shouldHighlightFirstCompletion ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
 

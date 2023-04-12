@@ -88,20 +88,22 @@ func setPrivacyPolicy(fontSize: CGFloat, title: String, text: String) -> NSMutab
     string: title, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)]
   )
 
-  let wikidataDataLicensing: String = "https://www.wikidata.org/wiki/Wikidata:Licensing"
-  let wikipediaDataLicensing: String = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
-  let huggingFaceLicensing: String = "https://github.com/huggingface/transformers/blob/master/LICENSE"
-  let scribeGitHub: String = "https://github.com/scribe-org"
-  let scribeEmail: String = "scribe.langauge@gmail.com"
-  let gitHubLogoLicensing: String = "https://github.com/logos"
-  let wikidataLogoLicensing: String = "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy"
-  let customKeyboardLicense: String = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+  let wikidataDataLicensing = "https://www.wikidata.org/wiki/Wikidata:Licensing"
+  let wikipediaDataLicensing = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
+  let unicodeDataLicense = "https://www.unicode.org/license.txt"
+  let huggingFaceLicensing = "https://github.com/huggingface/transformers/blob/master/LICENSE"
+  let scribeGitHub = "https://github.com/scribe-org"
+  let scribeEmail = "scribe.langauge@gmail.com"
+  let gitHubLogoLicensing = "https://github.com/logos"
+  let wikidataLogoLicensing = "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy"
+  let customKeyboardLicense = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
 
   let privacyPolicyTextWithLinks = addHyperLinks(
     originalText: text,
     links: [
       wikidataDataLicensing: wikidataDataLicensing,
       wikipediaDataLicensing: wikipediaDataLicensing,
+      unicodeDataLicense: unicodeDataLicense,
       huggingFaceLicensing: huggingFaceLicensing,
       scribeGitHub: scribeGitHub,
       scribeEmail: "mailto:" + scribeEmail,
