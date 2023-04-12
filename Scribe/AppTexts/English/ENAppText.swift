@@ -39,14 +39,42 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
+  installDirections.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 8, length: "General".count)
+  )
+  installDirections.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 8, length: "General".count)
+  )
+  installDirections.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 41, length: "Keyboard".count)
+  )
+  installDirections.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 41, length: "Keyboard".count)
+  )
+
   installDirections.append(NSAttributedString(string: "\n         "))
 
   installDirections.append(arrowString)
 
-  installDirections.append(NSMutableAttributedString(string: """
+  let keyboardsStep = NSMutableAttributedString(string: """
   \u{0020} Keyboards
 
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+  keyboardsStep.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 2, length: "Keyboards".count)
+  )
+  keyboardsStep.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 2, length: "Keyboards".count)
+  )
+
+  installDirections.append(keyboardsStep)
 
   installDirections.append(NSMutableAttributedString(
       string: "\n                    ",
@@ -56,13 +84,32 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   installDirections.append(arrowString)
 
-  installDirections.append(NSMutableAttributedString(string: """
+  let finalSteps = NSMutableAttributedString(string: """
   \u{0020} Add New Keyboard
 
   3. Select Scribe and then activate keyboards
 
   4. When typing press\u{0020}
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+  finalSteps.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 2, length: "Add New Keyboard".count)
+  )
+  finalSteps.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 2, length: "Add New Keyboard".count)
+  )
+  finalSteps.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 30, length: "Scribe".count)
+  )
+  finalSteps.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 30, length: "Scribe".count)
+  )
+
+  installDirections.append(finalSteps)
 
   installDirections.append(globeString)
 

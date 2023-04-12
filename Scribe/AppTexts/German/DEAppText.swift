@@ -33,20 +33,48 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   let installDirections = NSMutableAttributedString(string: """
   \n
-  2. Gehen Sie im Allgemeinen wie folgt vor:
+  2. Gehen Sie im Allgemein wie folgt vor:
 
         Tastatur
 
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
+  installDirections.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 18, length: "Allgemein".count)
+  )
+  installDirections.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 18, length: "Allgemein".count)
+  )
+  installDirections.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 50, length: "Tastatur".count)
+  )
+  installDirections.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 50, length: "Tastatur".count)
+  )
+
   installDirections.append(NSAttributedString(string: "\n         "))
 
   installDirections.append(arrowString)
 
-  installDirections.append(NSMutableAttributedString(string: """
+  let keyboardsStep = NSMutableAttributedString(string: """
   \u{0020} Tastaturen
 
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+  keyboardsStep.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 2, length: "Tastaturen".count)
+  )
+  keyboardsStep.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 2, length: "Tastaturen".count)
+  )
+
+  installDirections.append(keyboardsStep)
 
   installDirections.append(NSMutableAttributedString(
       string: "\n                    ",
@@ -56,13 +84,32 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   installDirections.append(arrowString)
 
-  installDirections.append(NSMutableAttributedString(string: """
+  let finalSteps = NSMutableAttributedString(string: """
   \u{0020} Neue Tastatur hinzufügen
 
   3. Wählen Sie Scribe und aktivieren Sie Tastaturen
 
   4. Drücken Sie \u{0020}
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+  finalSteps.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
+  )
+  finalSteps.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
+  )
+  finalSteps.addAttribute(
+    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+    range: NSRange(location: 42, length: "Scribe".count)
+  )
+  finalSteps.addAttributes(
+    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    range: NSRange(location: 42, length: "Scribe".count)
+  )
+
+  installDirections.append(finalSteps)
 
   installDirections.append(globeString)
 

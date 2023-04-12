@@ -39,6 +39,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- A process has been made to localize the App Store images using image templates.-->
 <!--- The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.-->
 <!--- The texts and images for the App Store have been localized into Spanish.-->
+- The menu options within the app installation steps have been bolded and underlined.
 - The return button for the keyboard changes color to blue whenever a web browser search is being used.
 - The select keyboard button has been moved to the bottom left most position on iPads.
 - The gear icon in the top left of the keyboard installation steps is now a more simple version.
