@@ -1,7 +1,7 @@
 Privacy Policy
 
-Note that the English version of this policy takes precedence over
-all other verions.
+Please note that the English version of this policy takes 
+precedence over all other versions.
 
 The Scribe developers (SCRIBE) built the iOS application "Scribe -
 Language Keyboards" (SERVICE) as an open-source application. This
@@ -49,7 +49,7 @@ https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content.
 
 4. Third-Party Source Code
 
-This SERVICE was based on third party code. All source code used in
+This SERVICE was based on third-party code. All source code used in
 the creation of this SERVICE comes from sources that allow its full
 use in the manner done so by the SERVICE. Specifically, the basis of
 this project was the project CustomKeyboard by Ethan Sarif-Kattan.
@@ -60,7 +60,7 @@ being available at https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
 
 This SERVICE makes use of third-party services to manipulate some of
 the third-party data. Specifically, data has been translated using
-models from Hugging Face transformers. This service is covered by a
+models from Hugging Face transformers. This service is covered by an
 Apache License 2.0, which states that it is available for commercial
 use, modification, distribution, patent use, and private use. The
 license for the aforementioned service can be found at
@@ -79,7 +79,7 @@ or services.
 7. Third-Party Images
 
 This SERVICE contains images that are copyrighted by third-parties.
-Specifically this app includes a copy of the logos of GitHub, Inc and
+Specifically, this app includes a copy of the logos of GitHub, Inc and
 Wikidata, trademarked by Wikimedia Foundation, Inc. The terms by which
 the GitHub logo can be used are found on https://github.com/logos, and
 the terms for the Wikidata logo are found on the following Wikimedia page:
@@ -108,7 +108,8 @@ responsibility for the access of such CONTENT.
 This POLICY is subject to change. Updates to this POLICY will replace
 all prior instances, and if deemed material will further be clearly
 stated in the next applicable update to the SERVICE. SCRIBE encourages
-the USERS to familiarize themselves with any changes to this POLICY.
+USERS to periodically review this POLICY for the latest information on
+our privacy practices and to familiarize themselves with any changes.
 
 10. Contact
 
