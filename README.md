@@ -128,15 +128,15 @@ Scribe's goal is functional, feature-rich keyboards for all languages. Check [sc
 
 The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/) and via [Unicode CLDR](https://github.com/unicode-org/cldr) for emojis:
 
-| Languages  |   Nouns | Verbs | Translations | Prepositions | Emoji Keywords |
-| :--------- | ------: | ----: | -----------: | -----------: | -------------: |
-| French     |  16,815 | 5,450 |       67,652 |            - |          2,493 |
-| German     |  29,272 | 3,557 |       67,652 |          187 |          2,901 |
-| Italian    |   8,646 |    73 |       67,652 |            - |          2,463 |
-| Portuguese |   5,191 |   495 |       67,652 |            - |          2,336 |
-| Russian    | 194,419 |    11 |       67,652 |           13 |          3,834 |
-| Spanish    |  27,128 | 4,036 |       67,652 |            - |          3,144 |
-| Swedish    |  42,807 | 4,394 |       67,652 |            - |          2,916 |
+| Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
+| :--------- | ------: | ----: | -------------: | ------------: | -------------: |
+| French     |  16,815 | 5,450 |         67,652 |             - |          2,493 |
+| German     |  29,272 | 3,557 |         67,652 |           187 |          2,901 |
+| Italian    |   8,646 |    73 |         67,652 |             - |          2,463 |
+| Portuguese |   5,191 |   495 |         67,652 |             - |          2,336 |
+| Russian    | 194,419 |    11 |         67,652 |            13 |          3,834 |
+| Spanish    |  27,128 | 4,036 |         67,652 |             - |          3,144 |
+| Swedish    |  42,807 | 4,394 |         67,652 |             - |          2,916 |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
