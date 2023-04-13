@@ -47,18 +47,20 @@ func openDBQueue() -> DatabaseQueue {
 /// - Parameters
 ///   - query: the query to run against the language database.
 ///   - args: arguments to pass to the query.
-///   - outputCol: the column from which the value should come.
-func queryDB(query: String, args: [String], outputCol: String) -> String {
-  var value = ""
+///   - outputCols: the columns from which the value should come.
+func queryDB(query: String, args: [String], outputCols: [String]) -> [String] {
+  var outputValues = [String]()
   do {
     try languageDB.read { db in
       if let row = try Row.fetchOne(db, sql: query, arguments: StatementArguments(args)) {
-        value = row[outputCol]
+        for col in outputCols {
+          outputValues.append(row[col])
+        }
       }
     }
   } catch {}
 
-  return value
+  return outputValues
 }
 
 var languageDB = try! DatabaseQueue()
