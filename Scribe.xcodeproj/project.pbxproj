@@ -180,7 +180,6 @@
 		D12B8C3029E031A2009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C2F29E031A2009C0CFE /* emoji_keywords.json */; };
 		D12B8C3229E031B2009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C3129E031B2009C0CFE /* emoji_keywords.json */; };
 		D12B8C3429E031C0009C0CFE /* emoji_keywords.json in Resources */ = {isa = PBXBuildFile; fileRef = D12B8C3329E031C0009C0CFE /* emoji_keywords.json */; };
-		D12B8C3729E20239009C0CFE /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D12B8C3629E20239009C0CFE /* GRDB */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */; };
 		D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
@@ -229,6 +228,45 @@
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D16D975429C75A4900E33F86 /* NBKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB5B1729C7554A00CCB0C1 /* NBKeyboardViewController.swift */; };
 		D16D975529C75E4C00E33F86 /* Norwegian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AB5B5F29C757A100CCB0C1 /* Norwegian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D16DD37029E7850600FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD36F29E7850600FB9022 /* SwiftyJSON */; };
+		D16DD37329E7853800FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37229E7853800FB9022 /* GRDB */; };
+		D16DD37529E7859C00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37429E7859C00FB9022 /* SwiftyJSON */; };
+		D16DD37729E785A100FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37629E785A100FB9022 /* SwiftyJSON */; };
+		D16DD37929E785A600FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37829E785A600FB9022 /* SwiftyJSON */; };
+		D16DD37B29E785AB00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37A29E785AB00FB9022 /* SwiftyJSON */; };
+		D16DD37D29E785B100FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37C29E785B100FB9022 /* SwiftyJSON */; };
+		D16DD37F29E785B500FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37E29E785B500FB9022 /* SwiftyJSON */; };
+		D16DD38129E785BA00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38029E785BA00FB9022 /* SwiftyJSON */; };
+		D16DD38329E785BE00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38229E785BE00FB9022 /* SwiftyJSON */; };
+		D16DD38529E785C300FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38429E785C300FB9022 /* SwiftyJSON */; };
+		D16DD38729E785C900FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38629E785C900FB9022 /* SwiftyJSON */; };
+		D16DD38929E785CE00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38829E785CE00FB9022 /* SwiftyJSON */; };
+		D16DD38B29E785D200FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38A29E785D200FB9022 /* SwiftyJSON */; };
+		D16DD38D29E7869300FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38C29E7869300FB9022 /* GRDB */; };
+		D16DD38F29E7869800FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38E29E7869800FB9022 /* GRDB */; };
+		D16DD39129E7869D00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39029E7869D00FB9022 /* GRDB */; };
+		D16DD39329E786A100FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39229E786A100FB9022 /* GRDB */; };
+		D16DD39529E786A500FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39429E786A500FB9022 /* GRDB */; };
+		D16DD39729E786AA00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39629E786AA00FB9022 /* GRDB */; };
+		D16DD39929E786AD00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39829E786AD00FB9022 /* GRDB */; };
+		D16DD39B29E786B200FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39A29E786B200FB9022 /* GRDB */; };
+		D16DD39D29E786B500FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39C29E786B500FB9022 /* GRDB */; };
+		D16DD39F29E786B900FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39E29E786B900FB9022 /* GRDB */; };
+		D16DD3A129E786BD00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD3A029E786BD00FB9022 /* GRDB */; };
+		D16DD3A329E786C100FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD3A229E786C100FB9022 /* GRDB */; };
+		D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3A629E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3A729E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3A829E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3A929E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AA29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AB29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AC29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AD29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AE29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3AF29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3B029E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
+		D16DD3B129E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C327AEAD7D0038660B /* AppStyling.swift */; };
 		D17193C727AEC8D80038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
@@ -374,7 +412,6 @@
 		D17693C428FC7ECB00DF0FBB /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3B28F8FEC600CB5ACD /* prepositions.json */; };
 		D17693C528FC7ECB00DF0FBB /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880CA27860CFA00407050 /* verbs.json */; };
 		D17693C628FC7ECB00DF0FBB /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D880C927860CFA00407050 /* translations.json */; };
-		D17693C828FC7F3200DF0FBB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D17693C728FC7F3200DF0FBB /* SwiftyJSON */; };
 		D17693C928FC804900DF0FBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D17693CA28FC815000DF0FBB /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
 		D17693CC28FC815000DF0FBB /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
@@ -431,14 +468,6 @@
 		D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */; };
 		D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */; };
-		D1A3EEF028F8D84A00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */; };
-		D1A3EEF228F8D85000896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF128F8D85000896C65 /* SwiftyJSON */; };
-		D1A3EEF428F8D85600896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF328F8D85600896C65 /* SwiftyJSON */; };
-		D1A3EEF628F8D85A00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF528F8D85A00896C65 /* SwiftyJSON */; };
-		D1A3EEF828F8D85F00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF728F8D85F00896C65 /* SwiftyJSON */; };
-		D1A3EEFA28F8D86400896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEF928F8D86400896C65 /* SwiftyJSON */; };
-		D1A3EEFC28F8D86900896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEFB28F8D86900896C65 /* SwiftyJSON */; };
-		D1A3EEFE28F8DF1B00896C65 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */; };
 		D1AB5B2629C757A100CCB0C1 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
 		D1AB5B2729C757A100CCB0C1 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		D1AB5B2829C757A100CCB0C1 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
@@ -482,7 +511,6 @@
 		D1AB5B4F29C757A100CCB0C1 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AB5B5029C757A100CCB0C1 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1AB5B5129C757A100CCB0C1 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D1AB5B5329C757A100CCB0C1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1AB5B2329C757A100CCB0C1 /* SwiftyJSON */; };
 		D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDF0429CA66D00033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
@@ -528,7 +556,6 @@
 		D1AFDF2D29CA66D00033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFDF2E29CA66D00033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1AFDF2F29CA66D00033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D1AFDF3129CA66D00033BF27 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1AFDF0129CA66D00033BF27 /* SwiftyJSON */; };
 		D1AFDF3329CA66D00033BF27 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
 		D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFDF3529CA66D00033BF27 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A827BE7C4500EB9D34 /* translations.json */; };
@@ -579,7 +606,6 @@
 		D1AFDFAA29CA66F40033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFDFAB29CA66F40033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1AFDFAC29CA66F40033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D1AFDFAE29CA66F40033BF27 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1AFDF7E29CA66F40033BF27 /* SwiftyJSON */; };
 		D1AFDFB029CA66F40033BF27 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
 		D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFDFB229CA66F40033BF27 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A827BE7C4500EB9D34 /* translations.json */; };
@@ -634,7 +660,6 @@
 		D1AFE00029CA6E900033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFE00129CA6E900033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1AFE00229CA6E900033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D1AFE00429CA6E900033BF27 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D1AFDFD429CA6E900033BF27 /* SwiftyJSON */; };
 		D1AFE00629CA6E900033BF27 /* autosuggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = D163CA4B28E9D8A200301919 /* autosuggestions.json */; };
 		D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFE00829CA6E900033BF27 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A827BE7C4500EB9D34 /* translations.json */; };
@@ -910,6 +935,7 @@
 		D166FCF1275A197B0047E62B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RUKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RUKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
+		D16DD3A429E78A1500FB9022 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D17193BF27AEA33A0038660B /* AppTextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyling.swift; sourceTree = "<group>"; };
 		D17193C327AEAD7D0038660B /* AppStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyling.swift; sourceTree = "<group>"; };
 		D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-AZERTYInterfaceVariables.swift"; sourceTree = "<group>"; };
@@ -988,8 +1014,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEFE28F8DF1B00896C65 /* SwiftyJSON in Frameworks */,
-				D12B8C3729E20239009C0CFE /* GRDB in Frameworks */,
+				D16DD37029E7850600FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD37329E7853800FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,7 +1023,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEF228F8D85000896C65 /* SwiftyJSON in Frameworks */,
+				D16DD37D29E785B100FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39529E786A500FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,7 +1032,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEF028F8D84A00896C65 /* SwiftyJSON in Frameworks */,
+				D16DD37929E785A600FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39129E7869D00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,7 +1041,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEF628F8D85A00896C65 /* SwiftyJSON in Frameworks */,
+				D16DD38529E785C300FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39D29E786B500FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,7 +1050,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEFA28F8D86400896C65 /* SwiftyJSON in Frameworks */,
+				D16DD38929E785CE00FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD3A129E786BD00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,7 +1059,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEF828F8D85F00896C65 /* SwiftyJSON in Frameworks */,
+				D16DD38729E785C900FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39F29E786B900FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,7 +1068,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17693C828FC7F3200DF0FBB /* SwiftyJSON in Frameworks */,
+				D16DD37B29E785AB00FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39329E786A100FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,7 +1077,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEFC28F8D86900896C65 /* SwiftyJSON in Frameworks */,
+				D16DD38B29E785D200FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD3A329E786C100FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,7 +1086,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1AB5B5329C757A100CCB0C1 /* SwiftyJSON in Frameworks */,
+				D16DD38329E785BE00FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39B29E786B200FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,7 +1095,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1AFDF3129CA66D00033BF27 /* SwiftyJSON in Frameworks */,
+				D16DD37729E785A100FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD38F29E7869800FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,7 +1104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1AFDFAE29CA66F40033BF27 /* SwiftyJSON in Frameworks */,
+				D16DD37529E7859C00FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD38D29E7869300FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,7 +1113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1AFE00429CA6E900033BF27 /* SwiftyJSON in Frameworks */,
+				D16DD37F29E785B500FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39729E786AA00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,7 +1122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A3EEF428F8D85600896C65 /* SwiftyJSON in Frameworks */,
+				D16DD38129E785BA00FB9022 /* SwiftyJSON in Frameworks */,
+				D16DD39929E786AD00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,6 +1422,7 @@
 				D171942E27AEDE110038660B /* KeyboardKeys.swift */,
 				D190B2592742565500705659 /* KeyboardViewController.swift */,
 				D190B24D2741B61000705659 /* LoadData.swift */,
+				D16DD3A429E78A1500FB9022 /* Utilities.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
 			);
 			path = KeyboardsBase;
@@ -1548,8 +1587,8 @@
 			);
 			name = Scribe;
 			packageProductDependencies = (
-				D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */,
-				D12B8C3629E20239009C0CFE /* GRDB */,
+				D16DD36F29E7850600FB9022 /* SwiftyJSON */,
+				D16DD37229E7853800FB9022 /* GRDB */,
 			);
 			productName = EmojiKeyboard;
 			productReference = 38BD213022D5907E00C6795D /* Scribe.app */;
@@ -1569,7 +1608,8 @@
 			);
 			name = German;
 			packageProductDependencies = (
-				D1A3EEF128F8D85000896C65 /* SwiftyJSON */,
+				D16DD37C29E785B100FB9022 /* SwiftyJSON */,
+				D16DD39429E786A500FB9022 /* GRDB */,
 			);
 			productName = typEmoji;
 			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
@@ -1589,7 +1629,8 @@
 			);
 			name = "French-AZERTY";
 			packageProductDependencies = (
-				D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */,
+				D16DD37829E785A600FB9022 /* SwiftyJSON */,
+				D16DD39029E7869D00FB9022 /* GRDB */,
 			);
 			productName = French;
 			productReference = D109A20B275B6888005E2271 /* French-AZERTY.appex */;
@@ -1609,7 +1650,8 @@
 			);
 			name = Portuguese;
 			packageProductDependencies = (
-				D1A3EEF528F8D85A00896C65 /* SwiftyJSON */,
+				D16DD38429E785C300FB9022 /* SwiftyJSON */,
+				D16DD39C29E786B500FB9022 /* GRDB */,
 			);
 			productName = Portuguese;
 			productReference = D109A21A275B68B3005E2271 /* Portuguese.appex */;
@@ -1629,7 +1671,8 @@
 			);
 			name = Spanish;
 			packageProductDependencies = (
-				D1A3EEF928F8D86400896C65 /* SwiftyJSON */,
+				D16DD38829E785CE00FB9022 /* SwiftyJSON */,
+				D16DD3A029E786BD00FB9022 /* GRDB */,
 			);
 			productName = CustomKeyboard2Extension;
 			productReference = D1608665270B6D3C00134D48 /* Spanish.appex */;
@@ -1649,7 +1692,8 @@
 			);
 			name = Russian;
 			packageProductDependencies = (
-				D1A3EEF728F8D85F00896C65 /* SwiftyJSON */,
+				D16DD38629E785C900FB9022 /* SwiftyJSON */,
+				D16DD39E29E786B900FB9022 /* GRDB */,
 			);
 			productName = Russian;
 			productReference = D1671A60275A1E8700A7C118 /* Russian.appex */;
@@ -1669,7 +1713,8 @@
 			);
 			name = "French-QWERTY";
 			packageProductDependencies = (
-				D17693C728FC7F3200DF0FBB /* SwiftyJSON */,
+				D16DD37A29E785AB00FB9022 /* SwiftyJSON */,
+				D16DD39229E786A100FB9022 /* GRDB */,
 			);
 			productName = "French (QWERTY)";
 			productReference = D176939D28FC7C4E00DF0FBB /* French-QWERTY.appex */;
@@ -1689,7 +1734,8 @@
 			);
 			name = Swedish;
 			packageProductDependencies = (
-				D1A3EEFB28F8D86900896C65 /* SwiftyJSON */,
+				D16DD38A29E785D200FB9022 /* SwiftyJSON */,
+				D16DD3A229E786C100FB9022 /* GRDB */,
 			);
 			productName = Swedish;
 			productReference = D18EA8992760D4A6001E1358 /* Swedish.appex */;
@@ -1709,7 +1755,8 @@
 			);
 			name = Norwegian;
 			packageProductDependencies = (
-				D1AB5B2329C757A100CCB0C1 /* SwiftyJSON */,
+				D16DD38229E785BE00FB9022 /* SwiftyJSON */,
+				D16DD39A29E786B200FB9022 /* GRDB */,
 			);
 			productName = Italian;
 			productReference = D1AB5B5F29C757A100CCB0C1 /* Norwegian.appex */;
@@ -1729,7 +1776,8 @@
 			);
 			name = English;
 			packageProductDependencies = (
-				D1AFDF0129CA66D00033BF27 /* SwiftyJSON */,
+				D16DD37629E785A100FB9022 /* SwiftyJSON */,
+				D16DD38E29E7869800FB9022 /* GRDB */,
 			);
 			productName = Italian;
 			productReference = D1AFDF3D29CA66D00033BF27 /* English.appex */;
@@ -1749,7 +1797,8 @@
 			);
 			name = Danish;
 			packageProductDependencies = (
-				D1AFDF7E29CA66F40033BF27 /* SwiftyJSON */,
+				D16DD37429E7859C00FB9022 /* SwiftyJSON */,
+				D16DD38C29E7869300FB9022 /* GRDB */,
 			);
 			productName = Italian;
 			productReference = D1AFDFBA29CA66F40033BF27 /* Danish.appex */;
@@ -1769,7 +1818,8 @@
 			);
 			name = Hebrew;
 			packageProductDependencies = (
-				D1AFDFD429CA6E900033BF27 /* SwiftyJSON */,
+				D16DD37E29E785B500FB9022 /* SwiftyJSON */,
+				D16DD39629E786AA00FB9022 /* GRDB */,
 			);
 			productName = Italian;
 			productReference = D1AFE01029CA6E900033BF27 /* Hebrew.appex */;
@@ -1789,7 +1839,8 @@
 			);
 			name = Italian;
 			packageProductDependencies = (
-				D1A3EEF328F8D85600896C65 /* SwiftyJSON */,
+				D16DD38029E785BA00FB9022 /* SwiftyJSON */,
+				D16DD39829E786AD00FB9022 /* GRDB */,
 			);
 			productName = Italian;
 			productReference = D1B81D1F27BBB5320085FE5E /* Italian.appex */;
@@ -1846,8 +1897,8 @@
 			);
 			mainGroup = 38BD212722D5907E00C6795D;
 			packageReferences = (
-				D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				D12B8C3529E20239009C0CFE /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
 			);
 			productRefGroup = 38BD213122D5907E00C6795D /* Products */;
 			projectDirPath = "";
@@ -2116,6 +2167,7 @@
 				30489C1E2936DAB700B59393 /* ToolTipView.swift in Sources */,
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
+				D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */,
 				30453964293B9D18003AE55B /* InformationToolTipData.swift in Sources */,
@@ -2174,6 +2226,7 @@
 				D111E9B427AFE79500746F92 /* Translate.swift in Sources */,
 				D17193E227AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D190B2472741B24F00705659 /* CommandVariables.swift in Sources */,
+				D16DD3AA29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D171941227AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D111E9BC27AFE7B200746F92 /* Annotate.swift in Sources */,
 				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
@@ -2226,6 +2279,7 @@
 				D111E9B327AFE79500746F92 /* Translate.swift in Sources */,
 				D171940127AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940927AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				D16DD3A829E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193D927AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9BB27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
@@ -2278,6 +2332,7 @@
 				D111E9B527AFE79500746F92 /* Translate.swift in Sources */,
 				D171940327AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940B27AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				D16DD3AE29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193DB27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9BD27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
@@ -2330,6 +2385,7 @@
 				D111E9B727AFE79500746F92 /* Translate.swift in Sources */,
 				D171940527AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940D27AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				D16DD3B029E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193DD27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9BF27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D190B2442740576600705659 /* Extensions.swift in Sources */,
@@ -2382,6 +2438,7 @@
 				D111E9B627AFE79500746F92 /* Translate.swift in Sources */,
 				D171940427AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940C27AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				D16DD3AF29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193DC27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9BE27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */,
@@ -2434,6 +2491,7 @@
 				D17693B128FC7E1200DF0FBB /* KeyAnimation.swift in Sources */,
 				D17693B728FC7E1600DF0FBB /* CommandVariables.swift in Sources */,
 				D17693AF28FC7E1200DF0FBB /* LoadData.swift in Sources */,
+				D16DD3A929E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17693D528FC815E00DF0FBB /* RUCommandVariables.swift in Sources */,
 				D17693B828FC7E1600DF0FBB /* Plural.swift in Sources */,
 				D17693BD28FC7E1900DF0FBB /* ScribeColor.swift in Sources */,
@@ -2486,6 +2544,7 @@
 				D111E9B827AFE79500746F92 /* Translate.swift in Sources */,
 				D171940627AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940E27AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				D16DD3B129E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193DE27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */,
 				D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */,
@@ -2538,6 +2597,7 @@
 				D16D975429C75A4900E33F86 /* NBKeyboardViewController.swift in Sources */,
 				D1AB5B3F29C757A100CCB0C1 /* LoadData.swift in Sources */,
 				D1AB5B4029C757A100CCB0C1 /* CommandVariables.swift in Sources */,
+				D16DD3AD29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D1AB5B4129C757A100CCB0C1 /* Translate.swift in Sources */,
 				D1AB5B4229C757A100CCB0C1 /* ColorVariables.swift in Sources */,
 				D1AB5B4329C757A100CCB0C1 /* Plural.swift in Sources */,
@@ -2590,6 +2650,7 @@
 				D1AFDF1C29CA66D00033BF27 /* InformationToolTipData.swift in Sources */,
 				D1AFDF1D29CA66D00033BF27 /* LoadData.swift in Sources */,
 				D1AFDF1E29CA66D00033BF27 /* CommandVariables.swift in Sources */,
+				D16DD3A729E78A1500FB9022 /* Utilities.swift in Sources */,
 				D1AFDF1F29CA66D00033BF27 /* Translate.swift in Sources */,
 				D1AFDF2029CA66D00033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDF2129CA66D00033BF27 /* Plural.swift in Sources */,
@@ -2642,6 +2703,7 @@
 				D1AFDFBC29CA67EE0033BF27 /* DAKeyboardViewController.swift in Sources */,
 				D1AFDF9A29CA66F40033BF27 /* LoadData.swift in Sources */,
 				D1AFDF9B29CA66F40033BF27 /* CommandVariables.swift in Sources */,
+				D16DD3A629E78A1500FB9022 /* Utilities.swift in Sources */,
 				D1AFDF9C29CA66F40033BF27 /* Translate.swift in Sources */,
 				D1AFDF9D29CA66F40033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDF9E29CA66F40033BF27 /* Plural.swift in Sources */,
@@ -2694,6 +2756,7 @@
 				D1AFDFF029CA6E900033BF27 /* LoadData.swift in Sources */,
 				D1AFDFF129CA6E900033BF27 /* CommandVariables.swift in Sources */,
 				D1AFE01229CA6F360033BF27 /* HEKeyboardViewController.swift in Sources */,
+				D16DD3AB29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D1AFDFF229CA6E900033BF27 /* Translate.swift in Sources */,
 				D1AFDFF329CA6E900033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDFF429CA6E900033BF27 /* Plural.swift in Sources */,
@@ -2746,6 +2809,7 @@
 				D1B81D4027BBB70C0085FE5E /* LoadData.swift in Sources */,
 				D1B81D4227BBB71C0085FE5E /* CommandVariables.swift in Sources */,
 				D1B81D4727BBB71C0085FE5E /* Translate.swift in Sources */,
+				D16DD3AC29E78A1500FB9022 /* Utilities.swift in Sources */,
 				D1B81D3A27BBB6F90085FE5E /* ColorVariables.swift in Sources */,
 				D1B81D4827BBB71C0085FE5E /* Plural.swift in Sources */,
 				D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */,
@@ -3753,49 +3817,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D12B8C3529E20239009C0CFE /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1AB5B2429C757A100CCB0C1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1AFDF0229CA66D00033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1AFDF7F29CA66F40033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1AFDFD529CA6E900033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -3804,75 +3836,135 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D12B8C3629E20239009C0CFE /* GRDB */ = {
+		D16DD36F29E7850600FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D12B8C3529E20239009C0CFE /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D16DD37229E7853800FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
 		};
-		D17693C728FC7F3200DF0FBB /* SwiftyJSON */ = {
+		D16DD37429E7859C00FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEEF28F8D84A00896C65 /* SwiftyJSON */ = {
+		D16DD37629E785A100FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEF128F8D85000896C65 /* SwiftyJSON */ = {
+		D16DD37829E785A600FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEF328F8D85600896C65 /* SwiftyJSON */ = {
+		D16DD37A29E785AB00FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEF528F8D85A00896C65 /* SwiftyJSON */ = {
+		D16DD37C29E785B100FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEF728F8D85F00896C65 /* SwiftyJSON */ = {
+		D16DD37E29E785B500FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEF928F8D86400896C65 /* SwiftyJSON */ = {
+		D16DD38029E785BA00FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEFB28F8D86900896C65 /* SwiftyJSON */ = {
+		D16DD38229E785BE00FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1A3EEFD28F8DF1B00896C65 /* SwiftyJSON */ = {
+		D16DD38429E785C300FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1542E8128F8D0A4006DA41F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1AB5B2329C757A100CCB0C1 /* SwiftyJSON */ = {
+		D16DD38629E785C900FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1AB5B2429C757A100CCB0C1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1AFDF0129CA66D00033BF27 /* SwiftyJSON */ = {
+		D16DD38829E785CE00FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1AFDF0229CA66D00033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1AFDF7E29CA66F40033BF27 /* SwiftyJSON */ = {
+		D16DD38A29E785D200FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1AFDF7F29CA66F40033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D1AFDFD429CA6E900033BF27 /* SwiftyJSON */ = {
+		D16DD38C29E7869300FB9022 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1AFDFD529CA6E900033BF27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD38E29E7869800FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39029E7869D00FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39229E786A100FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39429E786A500FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39629E786AA00FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39829E786AD00FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39A29E786B200FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39C29E786B500FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD39E29E786B900FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD3A029E786BD00FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		D16DD3A229E786C100FB9022 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

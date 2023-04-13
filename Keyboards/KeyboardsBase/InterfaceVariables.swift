@@ -30,7 +30,7 @@ var firstKeyboardLoad = false
 var spaceBar = String()
 var language = String()
 var languageTextForSpaceBar: String {
-    "\(language) (Scribe)"
+  "\(language) (Scribe)"
 }
 var showKeyboardLanguage = false
 

@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import GRDB
 
 // Basic keyboard functionality variables.
 var capsLockPossible = false
@@ -29,6 +30,38 @@ var allowUndo = false
 var previousWord = ""
 var backspaceTimer: Timer?
 var scribeKeyHeight = CGFloat(0)
+
+/// Makes a connection to the language database given the value for controllerLanguage.
+func openDBQueue() -> DatabaseQueue {
+  let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
+  let dbPath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
+  let db = try! DatabaseQueue(
+    path: dbPath
+  )
+
+  return db
+}
+
+/// Returns a value from the language database given a query and arguemtns.
+///
+/// - Parameters
+///   - query: the query to run against the language database.
+///   - args: arguments to pass to the query.
+///   - outputCol: the column from which the value should come.
+func queryDB(query: String, args: [String], outputCol: String) -> String {
+  var value = ""
+  do {
+    try languageDB.read { db in
+      if let row = try Row.fetchOne(db, sql: query, arguments: StatementArguments(args)) {
+        value = row[outputCol]
+      }
+    }
+  } catch {}
+
+  return value
+}
+
+var languageDB = try! DatabaseQueue()
 
 // All data needed for Scribe commands for the given language keyboard.
 var nouns = loadJSON(filename: "nouns")

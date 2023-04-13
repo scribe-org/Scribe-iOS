@@ -1,8 +1,34 @@
 //
-//  File.swift
-//  Scribe
+//  Utilities.swift
 //
-//  Created by Andrew Tavis on 13.04.23.
+//  Simple utility functions for data extractiona and language management.
 //
 
-import Foundation
+
+/// Returns the ISO code given a langauge.
+///
+/// - Parameters
+///   - language: the language an ISO code should be returned for.
+func get_iso_code(keyboardLanguage: String) -> String {
+  var iso = ""
+  switch keyboardLanguage {
+  case "French":
+    iso = "fr"
+  case "German":
+    iso = "de"
+  case "Italian":
+    iso = "it"
+  case "Portuguese":
+    iso = "pt"
+  case "Russian":
+    iso = "ru"
+  case "Spanish":
+    iso = "es"
+  case "Swedish":
+    iso = "sv"
+  default:
+    break
+  }
+
+  return iso
+}

@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import GRDB
 
 /// The parent KeyboardViewController class that is inherited by all Scribe keyboards.
 class KeyboardViewController: UIInputViewController {
@@ -1409,6 +1410,9 @@ class KeyboardViewController: UIInputViewController {
 
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
+
+      // Initialize the language database.
+      languageDB = openDBQueue()
 
       // Access UILexicon words including unpaired first and last names from Contacts.
       var uiLexiconWords = [String]()
