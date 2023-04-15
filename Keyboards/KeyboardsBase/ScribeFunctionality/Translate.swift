@@ -21,14 +21,15 @@ func queryTranslation(commandBar: UILabel) {
   wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
-  inputWordIsCapitalized = false
-  let firstLetter = wordToTranslate.substring(toIdx: 1)
-  inputWordIsCapitalized = firstLetter.isUppercase
+  inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase
   wordToTranslate = wordToTranslate.lowercased()
 
-  let wordInDirectory = translations[wordToTranslate].exists()
-  if wordInDirectory {
-    wordToReturn = translations[wordToTranslate].string ?? ""
+  let query = "SELECT * FROM translations WHERE word = ?"
+  let args = [wordToTranslate]
+  let outputCols = ["translation"]
+  wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
+  if wordToReturn != "" {
     if inputWordIsCapitalized {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {

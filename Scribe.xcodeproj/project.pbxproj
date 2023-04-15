@@ -227,7 +227,6 @@
 		D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		D1671A7A275A1FC900A7C118 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
 		D16D975429C75A4900E33F86 /* NBKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB5B1729C7554A00CCB0C1 /* NBKeyboardViewController.swift */; };
-		D16D975529C75E4C00E33F86 /* Norwegian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AB5B5F29C757A100CCB0C1 /* Norwegian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D16DD37029E7850600FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD36F29E7850600FB9022 /* SwiftyJSON */; };
 		D16DD37329E7853800FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37229E7853800FB9022 /* GRDB */; };
 		D16DD37529E7859C00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37429E7859C00FB9022 /* SwiftyJSON */; };
@@ -615,8 +614,6 @@
 		D1AFDFB629CA66F40033BF27 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3D28F8FEDA00CB5ACD /* prepositions.json */; };
 		D1AFDFBC29CA67EE0033BF27 /* DAKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDE7929CA658B0033BF27 /* DAKeyboardViewController.swift */; };
 		D1AFDFBD29CA67F10033BF27 /* ENKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDE6A29CA65740033BF27 /* ENKeyboardViewController.swift */; };
-		D1AFDFBE29CA68610033BF27 /* Danish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDFBA29CA66F40033BF27 /* Danish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D1AFDFC129CA68660033BF27 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1AFDFD729CA6E900033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
 		D1AFDFD829CA6E900033BF27 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		D1AFDFD929CA6E900033BF27 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
@@ -668,7 +665,6 @@
 		D1AFE00B29CA6E900033BF27 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = D107A4A927BE7C4500EB9D34 /* nouns.json */; };
 		D1AFE00C29CA6E900033BF27 /* prepositions.json in Resources */ = {isa = PBXBuildFile; fileRef = D1658E3D28F8FEDA00CB5ACD /* prepositions.json */; };
 		D1AFE01229CA6F360033BF27 /* HEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDFCA29CA6BF60033BF27 /* HEKeyboardViewController.swift */; };
-		D1AFE01329CA6F970033BF27 /* Hebrew.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFE01029CA6E900033BF27 /* Hebrew.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719827C63CE600FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
 		D1B0719927C63CE600FD7DBD /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
@@ -845,15 +841,11 @@
 				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */,
 				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
 				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
-				D1AFDFC129CA68660033BF27 /* English.appex in Embed Foundation Extensions */,
 				D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */,
-				D1AFE01329CA6F970033BF27 /* Hebrew.appex in Embed Foundation Extensions */,
 				D17693A428FC7C4E00DF0FBB /* French-QWERTY.appex in Embed Foundation Extensions */,
 				D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */,
 				D109A212275B6888005E2271 /* French-AZERTY.appex in Embed Foundation Extensions */,
-				D16D975529C75E4C00E33F86 /* Norwegian.appex in Embed Foundation Extensions */,
 				D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */,
-				D1AFDFBE29CA68610033BF27 /* Danish.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;

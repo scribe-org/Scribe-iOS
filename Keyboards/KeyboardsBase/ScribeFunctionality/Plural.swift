@@ -23,18 +23,21 @@ func queryPlural(commandBar: UILabel) {
   // Check to see if the input was uppercase to return an uppercase plural.
   inputWordIsCapitalized = false
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-    let firstLetter = noun.substring(toIdx: 1)
-    inputWordIsCapitalized = firstLetter.isUppercase
+    inputWordIsCapitalized = noun.substring(toIdx: 1).isUppercase
     noun = noun.lowercased()
   }
-  let nounInDirectory = nouns[noun].exists()
-  if nounInDirectory {
-    if nouns[noun]["plural"].string != "isPlural" {
-      guard let plural = nouns[noun]["plural"].string else { return }
-      if inputWordIsCapitalized == false {
-        proxy.insertText(plural + " ")
+
+  let query = "SELECT * FROM nouns WHERE noun = ?"
+  let args = [noun]
+  let outputCols = ["plural"]
+  wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
+  if wordToReturn != "" {
+    if wordToReturn != "isPlural" {
+      if inputWordIsCapitalized {
+        proxy.insertText(wordToReturn.capitalized + " ")
       } else {
-        proxy.insertText(plural.capitalized + " ")
+        proxy.insertText(wordToReturn + " ")
       }
     } else {
       proxy.insertText(noun + " ")

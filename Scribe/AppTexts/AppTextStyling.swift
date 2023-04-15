@@ -32,7 +32,7 @@ func concatAttributedStrings (left: NSAttributedString, right: NSAttributedStrin
 ///
 /// - Parameters
 ///  - originalText: the original text that hyperlinks will be added to.
-///  - hyperLinks: a dictionary of strings and the link to which they should link.
+///  - links: a dictionary of strings and the link to which they should link.
 func addHyperLinks(originalText: String, links: [String: String], fontSize: CGFloat) -> NSMutableAttributedString {
   let style = NSMutableParagraphStyle()
   style.alignment = .left

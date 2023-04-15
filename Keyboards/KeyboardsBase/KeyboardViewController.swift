@@ -52,10 +52,9 @@ class KeyboardViewController: UIInputViewController {
 
     loadKeys()
 
-    // Set tap handler for info button on CommandBar
+    // Set tap handler for info button on CommandBar.
     commandBar.infoButtonTapHandler = { [weak self] in
       commandState = .displayInformation
-      //resetCaseDeclensionState()
       conjViewShiftButtonsState = .leftInactive
       self?.loadKeys()
     }
@@ -239,6 +238,7 @@ class KeyboardViewController: UIInputViewController {
     guard let tipView = tipView else { return }
     tipView.translatesAutoresizingMaskIntoConstraints = false
     formKeySingle.addSubview(tipView)
+    formKeySingle.isUserInteractionEnabled = false
     tipView.leadingAnchor.constraint(
       equalTo: formKeySingle.leadingAnchor, constant: DeviceType.isPhone ? 15: 40
     ).isActive = true
@@ -315,45 +315,55 @@ class KeyboardViewController: UIInputViewController {
           ).last ?? ""
         }
 
-        // Get options for completion that have start with the current prefix and are not just one letter.
-        let stringOptions = autocompleteLexicon.filter { item in
-          return item.lowercased().hasPrefix(currentPrefix.lowercased()) && item.count > 1
-        }
+        // Get options for completion that start with the current prefix and are not just one letter.
+        let completionOptions = queryAutocompletions(word: currentPrefix)
 
-        var i = 0
-        if stringOptions.count <= 3 {
-          while i < stringOptions.count {
-            if shiftButtonState == .caps {
-              completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCapitalized {
-              completionWords[i] = stringOptions[i].capitalize()
-            } else {
-              completionWords[i] = stringOptions[i]
+        if completionOptions[0] != "" {
+          var i = 0
+          if completionOptions.count <= 3 {
+            while i < completionOptions.count {
+              if shiftButtonState == .caps {
+                completionWords[i] = completionOptions[i].uppercased()
+              } else if currentPrefix.isCapitalized {
+                if completionOptions[i].isUppercase {
+                  completionWords[i] = completionOptions[i]
+                } else {
+                  completionWords[i] = completionOptions[i].capitalize()
+                }
+              } else {
+                completionWords[i] = completionOptions[i]
+              }
+              i += 1
             }
-            i += 1
-          }
-        } else {
-          while i < 3 {
-            if shiftButtonState == .caps {
-              completionWords[i] = stringOptions[i].uppercased()
-            } else if currentPrefix.isCapitalized {
-              completionWords[i] = stringOptions[i].capitalize()
-            } else {
-              completionWords[i] = stringOptions[i]
+          } else {
+            while i < 3 {
+              if shiftButtonState == .caps {
+                completionWords[i] = completionOptions[i].uppercased()
+              } else if currentPrefix.isCapitalized {
+                if completionOptions[i].isUppercase {
+                  completionWords[i] = completionOptions[i]
+                } else {
+                  completionWords[i] = completionOptions[i].capitalize()
+                }
+              } else {
+                completionWords[i] = completionOptions[i]
+              }
+              i += 1
             }
-            i += 1
           }
         }
 
         // Disable the third auto action button if we'll have emoji suggestions.
-        if emojiKeywords[currentPrefix.lowercased()].exists() {
+        let query = "SELECT * FROM emoji_keywords WHERE word = ?"
+        let args = [currentPrefix.lowercased()]
+        let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
+        let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
+        if emojisToDisplay[0] != "" {
           emojisToDisplayArray = [String]()
           currentEmojiTriggerWord = currentPrefix.lowercased()
-          if emojiKeywords[currentEmojiTriggerWord][2].exists() && DeviceType.isPad {
+          if emojisToDisplay[2] != "" && DeviceType.isPad {
             for i in 0..<3 {
-              let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
-              let emoji = emojiDesc["emoji"].rawValue as! String
-              emojisToDisplayArray.append(emoji)
+              emojisToDisplayArray.append(emojisToDisplay[i])
             }
             autoAction3Visible = false
             emojisToShow = .three
@@ -365,11 +375,9 @@ class KeyboardViewController: UIInputViewController {
               padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
               padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
-          } else if emojiKeywords[currentPrefix.lowercased()][1].exists() {
+          } else if emojisToDisplay[1] != "" {
             for i in 0..<2 {
-              let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
-              let emoji = emojiDesc["emoji"].rawValue as! String
-              emojisToDisplayArray.append(emoji)
+              emojisToDisplayArray.append(emojisToDisplay[i])
             }
             autoAction3Visible = false
             emojisToShow = .two
@@ -380,9 +388,7 @@ class KeyboardViewController: UIInputViewController {
               phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
           } else {
-            let emojiDesc = emojiKeywords[currentEmojiTriggerWord][0]
-            let emoji = emojiDesc["emoji"].rawValue as! String
-            emojisToDisplayArray.append(emoji)
+            emojisToDisplayArray.append(emojisToDisplay[0])
 
             emojisToShow = .one
           }
@@ -404,8 +410,16 @@ class KeyboardViewController: UIInputViewController {
 
     completionWords = [String]()
     var i = 0
+    let query = "SELECT * FROM verbs WHERE verb = ?"
     while i < 3 {
-      var suggestion = verbs[verbsAfterPronounsArray[i]][pronounAutosuggestionTenses[prefix.lowercased()]!].string ?? verbsAfterPronounsArray[i]
+      // Get conjugations of the preselected verbs.
+      let args = [verbsAfterPronounsArray[i]]
+      let outputCols = [pronounAutosuggestionTenses[prefix.lowercased()]!]
+      var suggestion = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+      if suggestion == "" {
+        suggestion = verbsAfterPronounsArray[i]
+      }
+
       if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "Spanish" {
         suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
       }
@@ -462,10 +476,16 @@ class KeyboardViewController: UIInputViewController {
     } else if [ "French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
-      /// We have to consider these different cases as the key always has to match.
-      /// Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-      if autosuggestions[prefix.lowercased()].exists() {
-        let suggestions = autosuggestions[prefix.lowercased()].rawValue as! [String]
+      // We have to consider these different cases as the key always has to match.
+      // Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
+      let query = "SELECT * FROM autosuggestions WHERE word = ?"
+      let argsLower = [prefix.lowercased()]
+      let argsCapitalize = [prefix.lowercased()]
+      let outputCols = ["suggestion_1", "suggestion_2", "suggestion_3"]
+
+      let suggestionsLower = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
+      let suggestionsCapitalize = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
+      if suggestionsLower[0] != "" {
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -474,20 +494,25 @@ class KeyboardViewController: UIInputViewController {
         }
         while i < 3 {
           if shiftButtonState == .shift {
-            completionWords.append(suggestions[i].capitalize())
+            completionWords.append(suggestionsLower[i].capitalize())
           } else if shiftButtonState == .caps {
-            completionWords.append(suggestions[i].uppercased())
+            completionWords.append(suggestionsLower[i].uppercased())
           } else {
-            if !nouns[suggestions[i]].exists() {
-              completionWords.append(suggestions[i].lowercased())
+            let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+            let nounGenderArgs = [wordToCheck]
+            let outputCols = ["form"]
+
+            let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+            hasNounForm = nounForm != ""
+            if !hasNounForm {
+              completionWords.append(suggestionsLower[i].lowercased())
             } else {
-              completionWords.append(suggestions[i])
+              completionWords.append(suggestionsLower[i])
             }
           }
           i += 1
         }
-      } else if autosuggestions[prefix.capitalize()].exists() {
-        let suggestions = autosuggestions[prefix.capitalize()].rawValue as! [String]
+      } else if suggestionsCapitalize[0] != "" {
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -496,11 +521,11 @@ class KeyboardViewController: UIInputViewController {
         }
         while i < 3 {
           if shiftButtonState == .shift {
-            completionWords.append(suggestions[i].capitalize())
+            completionWords.append(suggestionsCapitalize[i].capitalize())
           } else if shiftButtonState == .caps {
-            completionWords.append(suggestions[i].uppercased())
+            completionWords.append(suggestionsCapitalize[i].uppercased())
           } else {
-            completionWords.append(suggestions[i])
+            completionWords.append(suggestionsCapitalize[i])
           }
           i += 1
         }
@@ -510,14 +535,16 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Disable the third auto action button if we'll have emoji suggestions.
-    if emojiKeywords[prefix.lowercased()].exists() {
+    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
+    let args = [prefix.lowercased()]
+    let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
+    let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
+    if emojisToDisplay[0] != "" {
       emojisToDisplayArray = [String]()
       currentEmojiTriggerWord = prefix.lowercased()
-      if emojiKeywords[currentEmojiTriggerWord][2].exists() && DeviceType.isPad {
+      if emojisToDisplay[2] != "" && DeviceType.isPad {
         for i in 0..<3 {
-          let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
-          let emoji = emojiDesc["emoji"].rawValue as! String
-          emojisToDisplayArray.append(emoji)
+          emojisToDisplayArray.append(emojisToDisplay[i])
         }
         autoAction3Visible = false
         emojisToShow = .three
@@ -529,11 +556,9 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
           padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
-      } else if emojiKeywords[prefix.lowercased()][1].exists() {
+      } else if emojisToDisplay[1] != "" {
         for i in 0..<2 {
-          let emojiDesc = emojiKeywords[currentEmojiTriggerWord][i]
-          let emoji = emojiDesc["emoji"].rawValue as! String
-          emojisToDisplayArray.append(emoji)
+          emojisToDisplayArray.append(emojisToDisplay[i])
         }
         autoAction3Visible = false
         emojisToShow = .two
@@ -544,9 +569,7 @@ class KeyboardViewController: UIInputViewController {
           phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
       } else {
-        let emojiDesc = emojiKeywords[currentEmojiTriggerWord][0]
-        let emoji = emojiDesc["emoji"].rawValue as! String
-        emojisToDisplayArray.append(emoji)
+        emojisToDisplayArray.append(emojisToDisplay[0])
 
         emojisToShow = .one
       }
@@ -1303,12 +1326,16 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Populate conjugation view buttons.
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
+    let outputCols = allConjugations
+    let conjugationsToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
     for index in 0..<allConjugations.count {
-      if verbs[verbToConjugate][allConjugations[index]].string == "" {
+      if conjugationsToDisplay[index] == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
-        conjugationToDisplay = verbs[verbToConjugate][allConjugations[index]].string!
+        conjugationToDisplay = conjugationsToDisplay[index]
         if inputWordIsCapitalized && deConjugationState != .indicativePerfect {
           conjugationToDisplay = conjugationToDisplay.capitalized
         }
@@ -1411,19 +1438,43 @@ class KeyboardViewController: UIInputViewController {
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
 
-      // Initialize the language database.
+      // Initialize the language database and create the autosuggestions lexicon.
       languageDB = openDBQueue()
+      createAutocompleteLexicon()
 
-      // Access UILexicon words including unpaired first and last names from Contacts.
-      var uiLexiconWords = [String]()
+      // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
+      let addUILexiconWordQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
         for item in userLexicon.entries {
-          uiLexiconWords.append(item.documentText)
+          writeDBRow(query: addUILexiconWordQuery, args: [item.documentText])
         }
       }
 
-      autocompleteLexicon += uiLexiconWords
-      autocompleteLexicon = autocompleteLexicon.unique()
+      // Drop non-unique values in case the lexicon has added words that were already present.
+      let dropNonUniqueAutosuggestionsQuery = """
+        DELETE FROM autocomplete_lexicon
+        WHERE rowid NOT IN (
+          SELECT
+            MIN(rowid)
+
+          FROM
+            autocomplete_lexicon
+
+          GROUP BY
+            word
+        )
+        """
+      do {
+        try languageDB.write { db in
+          try db.execute(sql: dropNonUniqueAutosuggestionsQuery)
+        }
+      } catch let error as DatabaseError {
+        let errorMessage = error.message
+        let errorSQL = error.sql
+        print(
+          "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+        )
+      } catch {}
     }
 
     setKeyboard()
@@ -2107,8 +2158,13 @@ class KeyboardViewController: UIInputViewController {
           wordToCheck = lastWordTyped!
         }
       }
-      isPrep = prepositions[wordToCheck.lowercased()].exists()
-      if isPrep {
+      let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
+      let prepCaseArgs = [wordToCheck.lowercased()]
+      let outputCols = ["form"]
+
+      let prepForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+      hasPrepForm = prepForm != ""
+      if hasPrepForm {
         resetCaseDeclensionState()
         commandState = .selectCaseDeclension
         loadKeys() // go to conjugation view
@@ -2405,6 +2461,7 @@ class KeyboardViewController: UIInputViewController {
       } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
         commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
         commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
+        emojisToShow = .zero // was showing empty emoji spots
         keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()

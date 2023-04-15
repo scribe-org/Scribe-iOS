@@ -6,11 +6,11 @@ import UIKit
 
 /// All the colors defined in `Assets.xcassets/Colors`
 enum ScribeColor: String {
+  case annotateRed
   case annotateBlue
+  case annotatePurple
   case annotateGreen
   case annotateOrange
-  case annotatePurple
-  case annotateRed
   case annotateTitle
   case commandBar
   case commandBarBorder

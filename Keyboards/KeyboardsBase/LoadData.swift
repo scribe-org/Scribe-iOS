@@ -6,6 +6,8 @@
 
 import Foundation
 import SwiftyJSON
+import GRDB
+
 
 /// Loads a JSON file that contains grammatical information into a dictionary.
 ///
@@ -16,4 +18,268 @@ func loadJSON(filename fileName: String) -> JSON {
   let data = NSData(contentsOf: url)
   let jsonData = try! JSON(data: data! as Data)
   return jsonData
+}
+
+
+/// Makes a connection to the language database given the value for controllerLanguage.
+func openDBQueue() -> DatabaseQueue {
+  let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
+  let dbPath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
+  let db = try! DatabaseQueue(
+    path: dbPath
+  )
+
+  return db
+}
+
+
+// Variable to be replaced with the result of openDBQueue.
+var languageDB = try! DatabaseQueue()
+
+
+/// Returns a row from the language database given a query and arguemtns.
+///
+/// - Parameters
+///   - query: the query to run against the language database.
+///   - outputCols: the columns from which the values should come.
+///   - args: arguments to pass to `query`.
+func queryDBRow(query: String, outputCols: [String], args: [String]) -> [String] {
+  var outputValues = [String]()
+  do {
+    try languageDB.read { db in
+      if let row = try Row.fetchOne(db, sql: query, arguments: StatementArguments(args)) {
+        for col in outputCols {
+          outputValues.append(row[col])
+        }
+      }
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    let errorArguments = error.arguments
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+    )
+  } catch {}
+
+  if outputValues == [String]() {
+    // Append an empty string so that we can check for it and trigger commandState = .invalid.
+    outputValues.append("")
+  }
+
+  return outputValues
+}
+
+
+/// Writes a row of a language database table given a query and arguemtns.
+///
+/// - Parameters
+///   - query: the query to run against the language database.
+///   - args: arguments to pass to `query`.
+func writeDBRow(query: String, args: StatementArguments) {
+  do {
+    try languageDB.write { db in
+      try db.execute(
+        sql: query,
+        arguments: args
+      )
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    let errorArguments = error.arguments
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+    )
+  } catch {}
+}
+
+
+/// Performs a few minor edits to language data to make sure that certain values are included.
+func expandLanguageDataset() {
+  // Make sure that Scribe shows up in auto actions.
+  let checkScribeQuery = "SELECT * FROM nouns WHERE noun = ?"
+  let args = ["Scribe"]
+  let outputCols = ["noun"]
+  let scribeOrEmptyString = queryDBRow(query: checkScribeQuery, outputCols: outputCols, args: args)[0]
+
+  if scribeOrEmptyString == "" {
+    let addScribeQuery = "INSERT INTO nouns (noun, plural, form) VALUES (?, ?, ?)"
+    writeDBRow(query: addScribeQuery, args: ["Scribe", "Scribes", ""])
+    writeDBRow(query: addScribeQuery, args: ["Scribes", "isPlural", "PL"])
+  }
+
+  // Add German compound prepositions to the prepositions table so they also receive annotations.
+  if controllerLanguage == "German" {
+    let query = "INSERT INTO prepositions (preposition, form) VALUES (?, ?)"
+    for (p, f) in contractedGermanPrepositions {
+      writeDBRow(query: query, args: [p, f])
+    }
+  }
+}
+
+
+/// Creates a table in the language database from which autocompletions will be drawn.
+/// Note: this function also calls expandLanguageDataset prior to creating the lexicon.
+///
+/// - Steps:
+///   - Create a base lexicon of noun, preposition, autosuggestion and emoji keys.
+///   - Remove words that have capitalized or upper case versions in the nouns table to make sure that just these versions are in autocomplete.
+///   - Filter out words that are less than three characters, numbers and hyphenated words.
+func createAutocompleteLexicon() {
+  expandLanguageDataset()
+
+  // Dropping the table before it's made to reset the values in case they change (potentially new data).
+  let dropLexiconTableQuery = "DROP TABLE IF EXISTS autocomplete_lexicon"
+  do {
+    try languageDB.write { db in
+      try db.execute(sql: dropLexiconTableQuery)
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+    )
+  } catch {}
+
+  let createLexiconTableQuery = "CREATE TABLE IF NOT EXISTS autocomplete_lexicon (word Text)"
+  do {
+    try languageDB.write { db in
+      try db.execute(sql: createLexiconTableQuery)
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+    )
+  } catch {}
+
+  let createLexiconQuery = """
+    INSERT INTO autocomplete_lexicon (word)
+
+    SELECT DISTINCT
+      -- Select an upper case or capitalized noun if it's available.
+      CASE
+        WHEN
+          UPPER(full_lexicon.word) = nouns.noun
+        THEN
+          nouns.noun
+
+        WHEN
+          UPPER(SUBSTR(full_lexicon.word, 1, 1)) || SUBSTR(full_lexicon.word, 2) = nouns.noun
+        THEN
+          nouns.noun
+
+        ELSE
+          full_lexicon.word
+      END
+
+    FROM (
+      SELECT
+        noun AS word
+      FROM
+        nouns
+
+      UNION
+
+      SELECT
+        preposition AS word
+      FROM
+        prepositions
+
+      UNION
+
+      SELECT
+        word AS word
+      FROM
+        autosuggestions
+
+      UNION
+
+      SELECT
+        word AS word
+      FROM
+        emoji_keywords
+    ) AS full_lexicon
+
+    LEFT JOIN
+      nouns
+
+    ON
+      full_lexicon.word = nouns.noun
+
+    WHERE
+      LENGTH(full_lexicon.word) > 2
+      AND full_lexicon.word NOT LIKE '%[0-9]%'
+      AND full_lexicon.word NOT LIKE '%-%'
+    """
+  do {
+    try languageDB.write { db in
+      try db.execute(sql: createLexiconQuery)
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+    )
+  } catch {}
+
+  // Note: the following lines are for checking the total of the autocomplete lexicon if needed.
+//  let checkLexiconTotal = "SELECT CAST(COUNT(?) AS Text) AS word_count FROM autocomplete_lexicon"
+//  let args = ["words"]
+//  let outputCols = ["word_count"]
+//  let lexicon_count = queryDBRow(query: checkLexiconTotal, outputCols: outputCols, args: args)[0]
+}
+
+
+/// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
+///
+/// - Parameters
+///   - word: the word that autosuggestions should be returned for.
+func queryAutocompletions(word: String) -> [String] {
+  var autocompletions = [String]()
+
+  let autocompletionsQuery = """
+    SELECT
+      word
+
+    FROM
+      autocomplete_lexicon
+
+    WHERE
+      LOWER(word) LIKE ?
+
+    ORDER BY
+      word COLLATE NOCASE ASC
+
+    LIMIT
+      3
+    """
+  let patterns = ["\(word.lowercased())%"]
+
+  do {
+    let rows = try languageDB.read { db in
+      try Row.fetchAll(db, sql: autocompletionsQuery, arguments: StatementArguments(patterns))
+    }
+    for r in rows {
+      autocompletions.append(r["word"])
+    }
+  } catch let error as DatabaseError {
+    let errorMessage = error.message
+    let errorSQL = error.sql
+    let errorArguments = error.arguments
+    print(
+      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+    )
+  } catch {}
+
+  if autocompletions == [String]() {
+    // Append an empty string so that we can check for it and trigger nothing being shown.
+    autocompletions.append("")
+  }
+
+  return autocompletions
 }

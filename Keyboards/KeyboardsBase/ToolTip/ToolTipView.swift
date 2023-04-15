@@ -121,7 +121,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
   private func animateDatasourceChange(newDatasource: ToolTipViewDatasourceable) {
     UIView.transition(with: contentLabel,
                       duration: 0.25,
-                      options: .transitionCrossDissolve,
+                      options: .showHideTransitionViews,
                       animations: { [weak self] in
       self?.contentLabel.attributedText = newDatasource.getCurrentText()
       self?.backgroundColor = newDatasource.theme.backgroundColor

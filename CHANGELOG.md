@@ -52,6 +52,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - Fixed a bug where the keyboard's space bar text would change size while it was showing the language of the keyboard.
+- Fixed a bug where the colors of Swedish and Russian nouns weren't being displayed because of checking original values rather than their localized equivalents.
+- Fixed a bug where autocomplete options that should have been upper case would only be capitalized in cases where the prefix was itself upper case.
 
 ### ⚖️ Legal
 
@@ -59,8 +61,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ♻️ Code Refactoring
 
-<!--- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.-->
-<!--- All prior JSON data references have been replaced with database queries and JSON language data files have been removed.-->
+- Scribe data is now loaded into SQLite database tables to make data reference less memory intensive and mitigate crashes.
+- All prior JSON data references have been replaced with database queries and JSON language data files have been removed.
 - GRDB.swift was added to the dependencies.
 
 # Scribe-iOS 2.1.0

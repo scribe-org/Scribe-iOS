@@ -194,7 +194,12 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   inputWordIsCapitalized = firstLetter.isUppercase
   verbToConjugate = verbToConjugate.lowercased()
 
-  return verbs[verbToConjugate].exists()
+  let query = "SELECT * FROM verbs WHERE verb = ?"
+  let args = [verbToConjugate]
+  let outputCols = ["verb"]
+  let verbInTable = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
+  return verbToConjugate == verbInTable
 }
 
 /// Returns a conjugation once a user presses a key in the conjugateView or triggers a declension.
@@ -214,17 +219,30 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
     if deConjugationState != .indicativePerfect {
-      wordToReturn = verbs[verbToConjugate][requestedForm].string ?? ""
+      let query = "SELECT * FROM verbs WHERE verb = ?"
+      let args = [verbToConjugate]
+      let outputCols = [requestedForm]
+      wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
       if inputWordIsCapitalized == true {
         proxy.insertText(wordToReturn.capitalized + " ")
       } else {
         proxy.insertText(wordToReturn + " ")
       }
     } else {
-      proxy.insertText(verbs[verbToConjugate]["pastParticiple"].string ?? "" + " ")
+      let query = "SELECT * FROM verbs WHERE verb = ?"
+      let args = [verbToConjugate]
+      let outputCols = ["pastParticiple"]
+      wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
+      proxy.insertText(wordToReturn + " ")
     }
   } else if formsDisplayDimensions == .view2x2 {
-    wordToReturn = verbs[verbToConjugate][requestedForm].string ?? ""
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
+    let outputCols = [requestedForm]
+    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+
     if inputWordIsCapitalized == true {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {

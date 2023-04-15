@@ -11,8 +11,13 @@ var nounFormToColorDict = [
   "F": annotateRed,
   "M": annotateBlue,
   "C": annotatePurple,
+  "U": annotatePurple,
   "N": annotateGreen,
-  "PL": annotateOrange
+  "PL": annotateOrange,
+  "Ж": annotateRed,
+  "М": annotateBlue,
+  "Н": annotateGreen,
+  "МН": annotateOrange
 ]
 
 // Dictionary to convert noun annotations into the keyboard language.
@@ -34,8 +39,17 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     wordToCheck = wordToCheck.lowercased()
   }
 
-  isNoun = nouns[wordToCheck].exists()
-  isPrep = prepositions[wordToCheck.lowercased()].exists()
+  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+  let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
+  let nounGenderArgs = [wordToCheck]
+  let prepCaseArgs = [wordToCheck.lowercased()]
+  let outputCols = ["form"]
+
+  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+  prepAnnotationForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+
+  hasNounForm = nounForm != ""
+  hasPrepForm = prepAnnotationForm != ""
 
   annotationsToAssign = [String]()
   annotationBtns = [UIButton]()
@@ -72,29 +86,23 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     KVC.activateBtn(btn: annotationBtn)
     setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
   } else {
-    if isNoun {
-      let nounAnnotationForm: String = nouns[wordToCheck]["form"].string ?? ""
-      if nounAnnotationForm != "" {
-        if !nounAnnotationForm.contains("/") {
-          annotationsToAssign.append(nounAnnotationForm)
-        } else {
-          for a in nounAnnotationForm.components(separatedBy: "/") {
-            annotationsToAssign.append(a)
-          }
+    if hasNounForm {
+      if !nounForm.contains("/") {
+        annotationsToAssign.append(nounForm)
+      } else {
+        for a in nounForm.components(separatedBy: "/") {
+          annotationsToAssign.append(a)
         }
       }
     }
 
-    if isPrep {
+    if hasPrepForm {
       activateAnnotationBtn = true
-      prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
-      if prepAnnotationForm != "" {
-        if !prepAnnotationForm.contains("/") {
-          annotationsToAssign.append(prepAnnotationForm)
-        } else {
-          for a in prepAnnotationForm.components(separatedBy: "/") {
-            annotationsToAssign.append(a)
-          }
+      if !prepAnnotationForm.contains("/") {
+        annotationsToAssign.append(prepAnnotationForm)
+      } else {
+        for a in prepAnnotationForm.components(separatedBy: "/") {
+          annotationsToAssign.append(a)
         }
       }
     }
@@ -199,8 +207,17 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       wordToCheck = lastWordTyped!
     }
 
-    isNoun = nouns[wordToCheck].exists()
-    isPrep = prepositions[wordToCheck.lowercased()].exists()
+    let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+    let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
+    let nounGenderArgs = [wordToCheck]
+    let prepCaseArgs = [wordToCheck.lowercased()]
+    let outputCols = ["form"]
+
+    let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+    prepAnnotationForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+
+    hasNounForm = nounForm != ""
+    hasPrepForm = prepAnnotationForm != ""
 
     annotationsToAssign = [String]()
     annotationBtns = [UIButton]()
@@ -237,29 +254,23 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
       KVC.activateBtn(btn: annotationBtn)
       setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canCap: false, isSpecial: false)
     } else {
-      if isNoun {
-        let nounAnnotationForm = nouns[wordToCheck]["form"].string ?? ""
-        if nounAnnotationForm != "" {
-          if !nounAnnotationForm.contains("/") {
-            annotationsToAssign.append(nounAnnotationForm)
-          } else {
-            for a in nounAnnotationForm.components(separatedBy: "/") {
-              annotationsToAssign.append(a)
-            }
+      if hasNounForm {
+        if !nounForm.contains("/") {
+          annotationsToAssign.append(nounForm)
+        } else {
+          for a in nounForm.components(separatedBy: "/") {
+            annotationsToAssign.append(a)
           }
         }
       }
 
-      if isPrep {
+      if hasPrepForm {
         activateAnnotationBtn = true
-        prepAnnotationForm = prepositions[wordToCheck.lowercased()].string ?? ""
-        if prepAnnotationForm != "" {
-          if !prepAnnotationForm.contains("/") {
-            annotationsToAssign.append(prepAnnotationForm)
-          } else {
-            for a in prepAnnotationForm.components(separatedBy: "/") {
-              annotationsToAssign.append(a)
-            }
+        if !prepAnnotationForm.contains("/") {
+          annotationsToAssign.append(prepAnnotationForm)
+        } else {
+          for a in prepAnnotationForm.components(separatedBy: "/") {
+            annotationsToAssign.append(a)
           }
         }
       }
