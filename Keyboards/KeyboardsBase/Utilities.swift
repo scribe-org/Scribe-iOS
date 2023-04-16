@@ -1,11 +1,11 @@
 //
 //  Utilities.swift
 //
-//  Simple utility functions for data extractiona and language management.
+//  Simple utility functions for data extraction and language management.
 //
 
 
-/// Returns the ISO code given a langauge.
+/// Returns the ISO code given a language.
 ///
 /// - Parameters
 ///   - language: the language an ISO code should be returned for.

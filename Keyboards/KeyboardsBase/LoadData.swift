@@ -37,7 +37,7 @@ func openDBQueue() -> DatabaseQueue {
 var languageDB = try! DatabaseQueue()
 
 
-/// Returns a row from the language database given a query and arguemtns.
+/// Returns a row from the language database given a query and arguments.
 ///
 /// - Parameters
 ///   - query: the query to run against the language database.
@@ -58,7 +58,7 @@ func queryDBRow(query: String, outputCols: [String], args: [String]) -> [String]
     let errorSQL = error.sql
     let errorArguments = error.arguments
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
     )
   } catch {}
 
@@ -71,7 +71,7 @@ func queryDBRow(query: String, outputCols: [String], args: [String]) -> [String]
 }
 
 
-/// Writes a row of a language database table given a query and arguemtns.
+/// Writes a row of a language database table given a query and arguments.
 ///
 /// - Parameters
 ///   - query: the query to run against the language database.
@@ -89,7 +89,7 @@ func writeDBRow(query: String, args: StatementArguments) {
     let errorSQL = error.sql
     let errorArguments = error.arguments
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
     )
   } catch {}
 }
@@ -139,7 +139,7 @@ func createAutocompleteLexicon() {
     let errorMessage = error.message
     let errorSQL = error.sql
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
     )
   } catch {}
 
@@ -152,7 +152,7 @@ func createAutocompleteLexicon() {
     let errorMessage = error.message
     let errorSQL = error.sql
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
     )
   } catch {}
 
@@ -223,7 +223,7 @@ func createAutocompleteLexicon() {
     let errorMessage = error.message
     let errorSQL = error.sql
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
     )
   } catch {}
 
@@ -272,7 +272,7 @@ func queryAutocompletions(word: String) -> [String] {
     let errorSQL = error.sql
     let errorArguments = error.arguments
     print(
-      "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
+      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL)) (\(String(describing: errorArguments)))"
     )
   } catch {}
 

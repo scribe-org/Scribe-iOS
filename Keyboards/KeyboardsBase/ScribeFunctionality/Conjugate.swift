@@ -59,7 +59,7 @@ func returnDeclension(keyPressed: UIButton) {
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
-  } else if controllerLanguage == "Russian" { // prounoun selection paths not implemented for Russian
+  } else if controllerLanguage == "Russian" { // pronoun selection paths not implemented for Russian
     proxy.insertText(wordPressed + " ")
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest

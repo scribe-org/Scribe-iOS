@@ -26,7 +26,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
     btn.layer.shadowOpacity = 1.0
     btn.layer.shadowRadius = 0.0
   }
-  
+
   // Needed to prevent an unnecessary shadow.
   if [.one, .two, .three].contains(emojisToShow) {
     btn.layer.shadowOpacity = 0

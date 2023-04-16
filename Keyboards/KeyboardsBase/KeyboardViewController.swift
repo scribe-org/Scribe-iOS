@@ -1472,7 +1472,7 @@ class KeyboardViewController: UIInputViewController {
         let errorMessage = error.message
         let errorSQL = error.sql
         print(
-          "An error '\(String(describing: errorMessage))' occured in the query: \(String(describing: errorSQL))"
+          "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
         )
       } catch {}
     }
