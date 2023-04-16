@@ -7,48 +7,47 @@
 import UIKit
 
 public enum SpanishKeyboardConstants {
-
   // Keyboard key layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "+", "return"],
     ["#+=", "%", "_", "-", "=", "/", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "^", "[", "]", "{", "}", "ᵒ", "ᵃ", "return"],
     ["123", "§", "|", "~", "¶", "\\", "<", ">", "¡", "¿", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -73,7 +72,7 @@ func getESKeys() {
     letterKeys = SpanishKeyboardConstants.letterKeysPhone
     numberKeys = SpanishKeyboardConstants.numberKeysPhone
     symbolKeys = SpanishKeyboardConstants.symbolKeysPhone
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
     rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
@@ -82,7 +81,7 @@ func getESKeys() {
     letterKeys = SpanishKeyboardConstants.letterKeysPad
     numberKeys = SpanishKeyboardConstants.numberKeysPad
     symbolKeys = SpanishKeyboardConstants.symbolKeysPad
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "@", "€"]
     rightKeyChars = []
@@ -126,7 +125,7 @@ func setESKeyboardLayout() {
     "vosotras": "presSPP",
     "ellos": "presTPP",
     "ellas": "presTPP",
-    "ustedes": "presTPP"
+    "ustedes": "presTPP",
   ]
 
   translateKeyLbl = "Traducir"

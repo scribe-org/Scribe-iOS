@@ -6,6 +6,7 @@
 
 import UIKit
 
+
 /// Inserts the translation of a valid word in the command bar into the proxy.
 ///
 /// - Parameters

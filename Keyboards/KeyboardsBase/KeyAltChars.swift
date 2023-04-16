@@ -42,7 +42,7 @@ func setKeyboardAlternateKeys() {
     "'": apostropheAlternateKeys,
     "\"": quotationAlternateKeys,
     "=": equalSignAlternateKeys,
-    currencySymbol: currencySymbolAlternates
+    currencySymbol: currencySymbolAlternates,
   ]
 }
 
@@ -108,7 +108,7 @@ var ьAlternateKeys = [String]()
 ///   - numAlternates: the number of alternate characters to display.
 ///   - side: the side of the keyboard that the key is found.
 func setAlternatesPathState(
-  startY: CGFloat,
+  startY _: CGFloat,
   keyWidth: CGFloat,
   keyHeight: CGFloat,
   numAlternates: CGFloat,
@@ -128,21 +128,21 @@ func setAlternatesPathState(
     }
   }
 
-  maxHeight = vertStart - ( keyHeight * maxHeightMultiplier )
-  maxHeightCurveControl = vertStart - ( keyHeight * ( maxHeightMultiplier - 0.125 ))
-  minHeightCurveControl = vertStart - ( keyHeight * 0.005 )
+  maxHeight = vertStart - (keyHeight * maxHeightMultiplier)
+  maxHeightCurveControl = vertStart - (keyHeight * (maxHeightMultiplier - 0.125))
+  minHeightCurveControl = vertStart - (keyHeight * 0.005)
 
   if DeviceType.isPhone {
-    heightBeforeTopCurves = vertStart - ( keyHeight * 1.8 )
-    maxWidthCurveControl =  keyWidth * 0.5
-  } else if DeviceType.isPad || ( DeviceType.isPhone && isLandscapeView == true ) {
-    heightBeforeTopCurves = vertStart - ( keyHeight * 1.6 )
-    maxWidthCurveControl =  keyWidth * 0.25
+    heightBeforeTopCurves = vertStart - (keyHeight * 1.8)
+    maxWidthCurveControl = keyWidth * 0.5
+  } else if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView == true) {
+    heightBeforeTopCurves = vertStart - (keyHeight * 1.6)
+    maxWidthCurveControl = keyWidth * 0.25
   }
   if side == "left" {
-    alternatesLongWidth =  horizStart + ( keyWidth * numAlternates + ( 3.0 * numAlternates ) + 8.0 )
+    alternatesLongWidth = horizStart + (keyWidth * numAlternates + (3.0 * numAlternates) + 8.0)
   } else if side == "right" {
-    alternatesLongWidth = horizStart + keyWidth - CGFloat(keyWidth * numAlternates + ( 3.0 * numAlternates ) + 8.0)
+    alternatesLongWidth = horizStart + keyWidth - CGFloat(keyWidth * numAlternates + (3.0 * numAlternates) + 8.0)
   }
 
   alternatesShapeLayer.strokeColor = keyShadowColor
@@ -173,57 +173,57 @@ func alternateKeysPathLeft(
   )
 
   // Path is clockwise from bottom left.
-  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
+  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + (keyWidth * 0.075), y: vertStart))
 
   // Curve up past bottom left, path up, and curve out to the left.
   path.addCurve(
-    to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
-    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
+    to: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.075)),
+    controlPoint1: CGPoint(x: horizStart + (keyWidth * 0.075), y: minHeightCurveControl),
     controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl)
   )
-  path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.85 )))
+  path.addLine(to: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.85)))
   path.addCurve(
-    to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.2 )),
-    controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.9 )),
-    controlPoint2: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: vertStart - ( keyHeight * 1.05 ))
+    to: CGPoint(x: horizStart - (keyWidth * widthMultiplier), y: vertStart - (keyHeight * 1.2)),
+    controlPoint1: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.9)),
+    controlPoint2: CGPoint(x: horizStart - (keyWidth * widthMultiplier), y: vertStart - (keyHeight * 1.05))
   )
 
   // Path up and curve right past the top left.
-  path.addLine(to: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: heightBeforeTopCurves))
+  path.addLine(to: CGPoint(x: horizStart - (keyWidth * widthMultiplier), y: heightBeforeTopCurves))
   path.addCurve(
-    to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: maxHeight),
-    controlPoint1: CGPoint(x: horizStart - ( keyWidth * widthMultiplier ), y: maxHeightCurveControl),
-    controlPoint2: CGPoint(x: horizStart - ( keyWidth * 0.25 ), y: maxHeight)
+    to: CGPoint(x: horizStart + (keyWidth * 0.075), y: maxHeight),
+    controlPoint1: CGPoint(x: horizStart - (keyWidth * widthMultiplier), y: maxHeightCurveControl),
+    controlPoint2: CGPoint(x: horizStart - (keyWidth * 0.25), y: maxHeight)
   )
 
   // Path right, curve down past the top right, and path down.
   path.addLine(to: CGPoint(x: alternatesLongWidth - maxWidthCurveControl, y: maxHeight))
   path.addCurve(
     to: CGPoint(x: alternatesLongWidth, y: heightBeforeTopCurves),
-    controlPoint1: CGPoint(x: alternatesLongWidth - ( keyWidth * 0.2 ), y: maxHeight),
+    controlPoint1: CGPoint(x: alternatesLongWidth - (keyWidth * 0.2), y: maxHeight),
     controlPoint2: CGPoint(x: alternatesLongWidth, y: maxHeightCurveControl)
   )
-  path.addLine(to: CGPoint(x: alternatesLongWidth, y: vertStart - ( keyHeight * 1.15 )))
+  path.addLine(to: CGPoint(x: alternatesLongWidth, y: vertStart - (keyHeight * 1.15)))
 
   // Curve down past the left and path left.
   path.addCurve(
-    to: CGPoint(x: alternatesLongWidth - maxWidthCurveControl, y: vertStart - ( keyHeight * 0.95 )),
-    controlPoint1: CGPoint(x: alternatesLongWidth, y: vertStart - ( keyHeight * 1.05 )),
-    controlPoint2: CGPoint(x: alternatesLongWidth - ( keyWidth * 0.2 ), y: vertStart - ( keyHeight * 0.95 ))
+    to: CGPoint(x: alternatesLongWidth - maxWidthCurveControl, y: vertStart - (keyHeight * 0.95)),
+    controlPoint1: CGPoint(x: alternatesLongWidth, y: vertStart - (keyHeight * 1.05)),
+    controlPoint2: CGPoint(x: alternatesLongWidth - (keyWidth * 0.2), y: vertStart - (keyHeight * 0.95))
   )
-  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 1.15 ), y: vertStart - ( keyHeight * 0.95 )))
+  path.addLine(to: CGPoint(x: horizStart + (keyWidth * 1.15), y: vertStart - (keyHeight * 0.95)))
 
   // Curve in to the left, go down, and curve down past bottom left.
   path.addCurve(
-    to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.85 )),
-    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 1.05 ), y: vertStart - ( keyHeight * 0.95 )),
-    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.875 ))
+    to: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.85)),
+    controlPoint1: CGPoint(x: horizStart + (keyWidth * 1.05), y: vertStart - (keyHeight * 0.95)),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.875))
   )
-  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
+  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.075)))
   path.addCurve(
-    to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
+    to: CGPoint(x: horizStart + (keyWidth * 0.925), y: vertStart),
     controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
-    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl)
+    controlPoint2: CGPoint(x: horizStart + (keyWidth * 0.925), y: minHeightCurveControl)
   )
 
   path.close()
@@ -253,27 +253,27 @@ func alternateKeysPathRight(
   )
 
   // Path is clockwise from bottom left.
-  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: vertStart))
+  let path = UIBezierPath(); path.move(to: CGPoint(x: horizStart + (keyWidth * 0.075), y: vertStart))
 
   // Curve up past bottom left, path up, and curve out to the left.
   path.addCurve(
-    to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.075 )),
-    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 0.075 ), y: minHeightCurveControl),
+    to: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.075)),
+    controlPoint1: CGPoint(x: horizStart + (keyWidth * 0.075), y: minHeightCurveControl),
     controlPoint2: CGPoint(x: horizStart, y: minHeightCurveControl)
   )
-  path.addLine(to: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.85 )))
+  path.addLine(to: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.85)))
   path.addCurve(
-    to: CGPoint(x: horizStart - ( keyWidth * 0.15 ), y: vertStart - ( keyHeight * 0.95 )),
-    controlPoint1: CGPoint(x: horizStart, y: vertStart - ( keyHeight * 0.875 )),
-    controlPoint2: CGPoint(x: horizStart - ( keyWidth * 0.05 ), y: vertStart - ( keyHeight * 0.95 ))
+    to: CGPoint(x: horizStart - (keyWidth * 0.15), y: vertStart - (keyHeight * 0.95)),
+    controlPoint1: CGPoint(x: horizStart, y: vertStart - (keyHeight * 0.875)),
+    controlPoint2: CGPoint(x: horizStart - (keyWidth * 0.05), y: vertStart - (keyHeight * 0.95))
   )
 
   // Path left and path up past the left.
-  path.addLine(to: CGPoint(x: alternatesLongWidth + maxWidthCurveControl, y: vertStart - ( keyHeight * 0.95 )))
+  path.addLine(to: CGPoint(x: alternatesLongWidth + maxWidthCurveControl, y: vertStart - (keyHeight * 0.95)))
   path.addCurve(
-    to: CGPoint(x: alternatesLongWidth, y: vertStart - ( keyHeight * 1.15 )),
-    controlPoint1: CGPoint(x: alternatesLongWidth + ( keyWidth * 0.2 ), y: vertStart - ( keyHeight * 0.95 )),
-    controlPoint2: CGPoint(x: alternatesLongWidth, y: vertStart - ( keyHeight * 1.05 ))
+    to: CGPoint(x: alternatesLongWidth, y: vertStart - (keyHeight * 1.15)),
+    controlPoint1: CGPoint(x: alternatesLongWidth + (keyWidth * 0.2), y: vertStart - (keyHeight * 0.95)),
+    controlPoint2: CGPoint(x: alternatesLongWidth, y: vertStart - (keyHeight * 1.05))
   )
 
   // Path up and curve up past the top left.
@@ -281,29 +281,29 @@ func alternateKeysPathRight(
   path.addCurve(
     to: CGPoint(x: alternatesLongWidth + maxWidthCurveControl, y: maxHeight),
     controlPoint1: CGPoint(x: alternatesLongWidth, y: maxHeightCurveControl),
-    controlPoint2: CGPoint(x: alternatesLongWidth + ( keyWidth * 0.2 ), y: maxHeight)
+    controlPoint2: CGPoint(x: alternatesLongWidth + (keyWidth * 0.2), y: maxHeight)
   )
 
   // Path right, curve down past the top right, and path down.
-  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: maxHeight))
+  path.addLine(to: CGPoint(x: horizStart + (keyWidth * 0.925), y: maxHeight))
   path.addCurve(
-    to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: heightBeforeTopCurves),
-    controlPoint1: CGPoint(x: horizStart + ( keyWidth * 1.25 ), y: maxHeight),
-    controlPoint2: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: maxHeightCurveControl)
+    to: CGPoint(x: horizStart + (keyWidth * (1 + widthMultiplier)), y: heightBeforeTopCurves),
+    controlPoint1: CGPoint(x: horizStart + (keyWidth * 1.25), y: maxHeight),
+    controlPoint2: CGPoint(x: horizStart + (keyWidth * (1 + widthMultiplier)), y: maxHeightCurveControl)
   )
-  path.addLine(to: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.2 )))
+  path.addLine(to: CGPoint(x: horizStart + (keyWidth * (1 + widthMultiplier)), y: vertStart - (keyHeight * 1.2)))
 
   // Curve in to the left, go down, and curve down past bottom left.
   path.addCurve(
-    to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.85 )),
-    controlPoint1: CGPoint(x: horizStart + ( keyWidth * ( 1 + widthMultiplier )), y: vertStart - ( keyHeight * 1.05 )),
-    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.9 ))
+    to: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.85)),
+    controlPoint1: CGPoint(x: horizStart + (keyWidth * (1 + widthMultiplier)), y: vertStart - (keyHeight * 1.05)),
+    controlPoint2: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.9))
   )
-  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - ( keyHeight * 0.075 )))
+  path.addLine(to: CGPoint(x: horizStart + keyWidth, y: vertStart - (keyHeight * 0.075)))
   path.addCurve(
-    to: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: vertStart),
+    to: CGPoint(x: horizStart + (keyWidth * 0.925), y: vertStart),
     controlPoint1: CGPoint(x: horizStart + keyWidth, y: minHeightCurveControl),
-    controlPoint2: CGPoint(x: horizStart + ( keyWidth * 0.925 ), y: minHeightCurveControl)
+    controlPoint2: CGPoint(x: horizStart + (keyWidth * 0.925), y: minHeightCurveControl)
   )
 
   path.close()
@@ -321,7 +321,7 @@ func genAlternatesView(key: UIButton) {
 
   // Derive which button was pressed and get its alternates.
   let char = key.layer.value(forKey: "original") as? String ?? ""
-  alternateKeys = keyAlternatesDict[char ] ?? [""]
+  alternateKeys = keyAlternatesDict[char] ?? [""]
 
   // Add the original key given its location on the keyboard.
   if keysWithAlternatesLeft.contains(char) {
@@ -331,14 +331,14 @@ func genAlternatesView(key: UIButton) {
   }
   let numAlternates = CGFloat(alternateKeys.count)
 
-  if keysWithAlternatesLeft.contains(char ) {
+  if keysWithAlternatesLeft.contains(char) {
     alternatesViewX = frame.origin.x - 4.0
     alternatesShapeLayer.path = alternateKeysPathLeft(
       startX: frame.origin.x, startY: frame.origin.y,
       keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
     ).cgPath
-  } else if keysWithAlternatesRight.contains(char ) {
-    alternatesViewX = frame.origin.x + width - CGFloat(width * numAlternates + ( 3.0 * numAlternates ) + 2.0)
+  } else if keysWithAlternatesRight.contains(char) {
+    alternatesViewX = frame.origin.x + width - CGFloat(width * numAlternates + (3.0 * numAlternates) + 2.0)
     alternatesShapeLayer.path = alternateKeysPathRight(
       startX: frame.origin.x, startY: frame.origin.y,
       keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
@@ -346,7 +346,7 @@ func genAlternatesView(key: UIButton) {
   }
 
   if numAlternates > 0 {
-    alternatesViewWidth = CGFloat(width * numAlternates + ( 3.0 * numAlternates ) + 8.0)
+    alternatesViewWidth = CGFloat(width * numAlternates + (3.0 * numAlternates) + 8.0)
   }
 
   alternatesViewY = frame.origin.y - key.frame.height * 1.135

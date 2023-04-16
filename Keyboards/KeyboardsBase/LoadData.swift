@@ -5,9 +5,8 @@
 //
 
 import Foundation
-import SwiftyJSON
 import GRDB
-
+import SwiftyJSON
 
 /// Loads a JSON file that contains grammatical information into a dictionary.
 ///
@@ -20,7 +19,6 @@ func loadJSON(filename fileName: String) -> JSON {
   return jsonData
 }
 
-
 /// Makes a connection to the language database given the value for controllerLanguage.
 func openDBQueue() -> DatabaseQueue {
   let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
@@ -30,10 +28,8 @@ func openDBQueue() -> DatabaseQueue {
   return dbQueue
 }
 
-
 // Variable to be replaced with the result of openDBQueue.
 var languageDB = try! DatabaseQueue()
-
 
 /// Returns a row from the language database given a query and arguments.
 ///
@@ -68,7 +64,6 @@ func queryDBRow(query: String, outputCols: [String], args: [String]) -> [String]
   return outputValues
 }
 
-
 /// Writes a row of a language database table given a query and arguments.
 ///
 /// - Parameters
@@ -92,7 +87,6 @@ func writeDBRow(query: String, args: StatementArguments) {
   } catch {}
 }
 
-
 /// Performs a few minor edits to language data to make sure that certain values are included.
 func expandLanguageDataset() {
   // Make sure that Scribe shows up in auto actions.
@@ -115,7 +109,6 @@ func expandLanguageDataset() {
     }
   }
 }
-
 
 /// Creates a table in the language database from which autocompletions will be drawn.
 /// Note: this function also calls expandLanguageDataset prior to creating the lexicon.
@@ -155,90 +148,90 @@ func createAutocompleteLexicon() {
   } catch {}
 
   let createLexiconQuery = """
-    INSERT INTO autocomplete_lexicon (word)
+  INSERT INTO autocomplete_lexicon (word)
 
-    WITH full_lexicon AS (
-      SELECT
-        noun AS word
-      FROM
-        nouns
-      WHERE
-        LENGTH(noun) > 2
+  WITH full_lexicon AS (
+    SELECT
+      noun AS word
+    FROM
+      nouns
+    WHERE
+      LENGTH(noun) > 2
 
-      UNION
+    UNION
 
-      SELECT
-        preposition AS word
-      FROM
-        prepositions
-      WHERE
-        LENGTH(preposition) > 2
+    SELECT
+      preposition AS word
+    FROM
+      prepositions
+    WHERE
+      LENGTH(preposition) > 2
 
-      UNION
+    UNION
 
-      SELECT
-        -- For short words we want lower case versions.
-        -- The SELECT DISTINCT cases later will make sure that nouns are appropriately selected.
-        CASE
-          WHEN
-            LENGTH(word) = 3
-          THEN
-            LOWER(word)
-          ELSE
-            word
-        END AS word
-      FROM
-        autosuggestions
-      WHERE
-        LENGTH(word) > 2
-
-      UNION
-
-      SELECT
-        word AS word
-      FROM
-        emoji_keywords
-    )
-
-    SELECT DISTINCT
-      -- Select an upper case or capitalized noun if it's available.
+    SELECT
+      -- For short words we want lower case versions.
+      -- The SELECT DISTINCT cases later will make sure that nouns are appropriately selected.
       CASE
         WHEN
-          UPPER(lex.word) = nouns_upper.noun
+          LENGTH(word) = 3
         THEN
-          nouns_upper.noun
-
-        WHEN
-          UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
-        THEN
-          nouns_cap.noun
-
+          LOWER(word)
         ELSE
-          lex.word
-      END
-
+          word
+      END AS word
     FROM
-      full_lexicon AS lex
-
-    LEFT JOIN
-      nouns AS nouns_upper
-
-    ON
-      UPPER(lex.word) = nouns_upper.noun
-
-    LEFT JOIN
-      nouns AS nouns_cap
-
-    ON
-      UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
-
+      autosuggestions
     WHERE
-      LENGTH(lex.word) > 1
-      AND lex.word NOT LIKE '%-%'
-      AND lex.word NOT LIKE '%/%'
-      AND lex.word NOT LIKE '%(%'
-      AND lex.word NOT LIKE '%)%'
-    """
+      LENGTH(word) > 2
+
+    UNION
+
+    SELECT
+      word AS word
+    FROM
+      emoji_keywords
+  )
+
+  SELECT DISTINCT
+    -- Select an upper case or capitalized noun if it's available.
+    CASE
+      WHEN
+        UPPER(lex.word) = nouns_upper.noun
+      THEN
+        nouns_upper.noun
+
+      WHEN
+        UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
+      THEN
+        nouns_cap.noun
+
+      ELSE
+        lex.word
+    END
+
+  FROM
+    full_lexicon AS lex
+
+  LEFT JOIN
+    nouns AS nouns_upper
+
+  ON
+    UPPER(lex.word) = nouns_upper.noun
+
+  LEFT JOIN
+    nouns AS nouns_cap
+
+  ON
+    UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
+
+  WHERE
+    LENGTH(lex.word) > 1
+    AND lex.word NOT LIKE '%-%'
+    AND lex.word NOT LIKE '%/%'
+    AND lex.word NOT LIKE '%(%'
+    AND lex.word NOT LIKE '%)%'
+  """
   do {
     try languageDB.write { db in
       try db.execute(sql: createLexiconQuery)
@@ -258,7 +251,6 @@ func createAutocompleteLexicon() {
 //  let lexicon_count = queryDBRow(query: checkLexiconTotal, outputCols: outputCols, args: args)[0]
 }
 
-
 /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
 ///
 /// - Parameters
@@ -267,21 +259,21 @@ func queryAutocompletions(word: String) -> [String] {
   var autocompletions = [String]()
 
   let autocompletionsQuery = """
-    SELECT
-      word
+  SELECT
+    word
 
-    FROM
-      autocomplete_lexicon
+  FROM
+    autocomplete_lexicon
 
-    WHERE
-      LOWER(word) LIKE ?
+  WHERE
+    LOWER(word) LIKE ?
 
-    ORDER BY
-      word COLLATE NOCASE ASC
+  ORDER BY
+    word COLLATE NOCASE ASC
 
-    LIMIT
-      3
-    """
+  LIMIT
+    3
+  """
   let patterns = ["\(word.lowercased())%"]
 
   do {

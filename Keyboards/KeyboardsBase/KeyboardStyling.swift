@@ -28,7 +28,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   }
 
   // Needed to prevent an unnecessary shadow.
-  if [.one, .two, .three].contains(emojisToShow) {
+  if commandState != .selectCommand, [.one, .two, .three].contains(emojisToShow) {
     btn.layer.shadowOpacity = 0
   }
 }
@@ -41,7 +41,7 @@ var keysThatAreSlightlyLarger = [
   "shift",
   "shift.fill",
   "capslock.fill",
-  "arrowtriangle.right.fill"
+  "arrowtriangle.right.fill",
 ]
 
 /// Get the icon configurations for keys if the device is an iPhone.
@@ -120,7 +120,7 @@ func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 ///  - btn: the button to be styled.
 ///  - color: the tint color for the icon on the key.
 ///  - iconName: the name of the UIImage systemName icon to be used.
-func styleIconBtn(btn: UIButton, color: UIColor, iconName: String, btnTitle: String = "") {
+func styleIconBtn(btn: UIButton, color: UIColor, iconName: String, btnTitle _: String = "") {
   btn.setTitle("", for: .normal)
   var iconConfig = getPhoneIconConfig(iconName: iconName)
   if DeviceType.isPad {
@@ -146,7 +146,7 @@ func styleDeleteButton(_ button: UIButton, isPressed: Bool) {
 ///  - to: the stackView in which the button is found.
 ///  - width: the width of the padding.
 ///  - key: the key associated with the button.
-func addPadding(to stackView: UIStackView, width: CGFloat, key: String) {
+func addPadding(to stackView: UIStackView, width: CGFloat, key _: String) {
   let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
   padding.setTitleColor(.clear, for: .normal)
   padding.alpha = 0.0

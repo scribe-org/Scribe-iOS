@@ -5,8 +5,7 @@
 import UIKit
 
 final class ToolTipView: UIView, ToolTipViewUpdatable {
-
-  var didUpdatePage: ( (ConjViewShiftButtonsState) -> Void)?
+  var didUpdatePage: ((ConjViewShiftButtonsState) -> Void)?
 
   // MARK: - Private propeties
 
@@ -21,6 +20,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
       }
     }
   }
+
   private var datasources: [ToolTipViewDatasourceable]
 
   // MARK: - Private UI
@@ -49,10 +49,9 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
 
   private(set) var pageControl = UIPageControl()
 
-
   // MARK: - Init
 
-  init(datasources: [ToolTipViewDatasourceable]){
+  init(datasources: [ToolTipViewDatasourceable]) {
     self.datasources = datasources
     pageControl.currentPage = 0
     pageControl.numberOfPages = datasources.count
@@ -66,7 +65,8 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     configureViews()
   }
 
-  required init?(coder: NSCoder) {
+  @available(*, unavailable)
+  required init?(coder _: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
@@ -79,8 +79,8 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
       layer.cornerRadius = cornerRadius
     }
 
-    if let maskedCorners  = datasource.theme.maskedCorners  {
-      layer.maskedCorners  = maskedCorners
+    if let maskedCorners = datasource.theme.maskedCorners {
+      layer.maskedCorners = maskedCorners
     }
 
     if let masksToBounds = datasource.theme.masksToBounds {
@@ -111,7 +111,6 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     animateDatasourceChange(newDatasource: newDatasource)
   }
 
-
   // MARK: - Private methods
 
   private func getCurrentDatasource() -> ToolTipViewDatasourceable {
@@ -123,14 +122,13 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
                       duration: 0.25,
                       options: .showHideTransitionViews,
                       animations: { [weak self] in
-      self?.contentLabel.attributedText = newDatasource.getCurrentText()
-      self?.backgroundColor = newDatasource.theme.backgroundColor
-    }, completion: nil)
+                        self?.contentLabel.attributedText = newDatasource.getCurrentText()
+                        self?.backgroundColor = newDatasource.theme.backgroundColor
+                      }, completion: nil)
   }
 }
 
 extension ToolTipView {
-
   func buildHierarchy() {
     addSubview(contentLabel)
     addSubview(pageControl)

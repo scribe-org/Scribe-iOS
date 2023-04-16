@@ -6,6 +6,7 @@
 
 import UIKit
 
+
 /// The main UI element that allows for accessing other commands and triggering annotation.
 class ScribeKey: UIButton {
   override init(frame: CGRect) {
@@ -16,10 +17,12 @@ class ScribeKey: UIButton {
     super.init(coder: coder)
   }
 
+
   /// Allows the class to be accessed from Keyboard.xib.
   class func instanceFromNib() -> UIView {
       return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
   }
+
 
   /// Converts the Scribe key to an escape key to return to the base keyboard view.
   func toEscape() {
@@ -42,6 +45,7 @@ class ScribeKey: UIButton {
     self.layer.masksToBounds = true
   }
 
+
   /// Assigns the icon and sets up the Scribe key.
   func set() {
     self.setImage(scribeKeyIcon, for: .normal)
@@ -53,10 +57,12 @@ class ScribeKey: UIButton {
     self.shadow.isUserInteractionEnabled = false
   }
 
+
   /// Sets the corner radius for just the left side of the Scribe key.
   func setPartialCornerRadius() {
     self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
+
 
   /// Sets the corner radius for all sides of the Scribe key.
   func setFullCornerRadius() {
@@ -66,7 +72,9 @@ class ScribeKey: UIButton {
     ]
   }
 
+
   var shadow: UIButton!
+
 
   /// Sets the shadow of the Scribe key.
   func setPartialShadow() {
@@ -80,6 +88,7 @@ class ScribeKey: UIButton {
     self.shadow.layer.shadowOffset = CGSize(width: 0, height: 1)
     self.shadow.layer.shadowColor = keyShadowColor
   }
+  
 
   /// Sets the shadow of the Scribe key when it's an escape key.
   func setFullShadow() {

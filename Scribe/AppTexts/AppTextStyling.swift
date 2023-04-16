@@ -7,6 +7,7 @@
 import UIKit
 
 var fontSize = CGFloat(0)
+
 /// Sets the font size for the text in the app screen and corresponding UIImage icons.
 func setFontSize() {
   if DeviceType.isPhone {
@@ -21,7 +22,7 @@ func setFontSize() {
 /// - Parameters
 ///  - left: the left attributed string to concatenate.
 ///  - right: the right attributed string to concatenate.
-func concatAttributedStrings (left: NSAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+func concatAttributedStrings(left: NSAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
   let result = NSMutableAttributedString()
   result.append(left)
   result.append(right)
@@ -109,7 +110,8 @@ func setPrivacyPolicy(fontSize: CGFloat, title: String, text: String) -> NSMutab
       scribeEmail: "mailto:" + scribeEmail,
       gitHubLogoLicensing: gitHubLogoLicensing,
       wikidataLogoLicensing: wikidataLogoLicensing,
-      customKeyboardLicense: customKeyboardLicense],
+      customKeyboardLicense: customKeyboardLicense,
+    ],
     fontSize: fontSize
   )
 

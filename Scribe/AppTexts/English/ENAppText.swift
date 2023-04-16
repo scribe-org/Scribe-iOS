@@ -44,7 +44,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 8, length: "General".count)
   )
   installDirections.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 8, length: "General".count)
   )
   installDirections.addAttribute(
@@ -52,7 +52,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 41, length: "Keyboard".count)
   )
   installDirections.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 41, length: "Keyboard".count)
   )
 
@@ -70,16 +70,16 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 2, length: "Keyboards".count)
   )
   keyboardsStep.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Keyboards".count)
   )
 
   installDirections.append(keyboardsStep)
 
   installDirections.append(NSMutableAttributedString(
-      string: "\n                    ",
-      attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
-    )
+    string: "\n                    ",
+    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+  )
   )
 
   installDirections.append(arrowString)
@@ -97,7 +97,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 2, length: "Add New Keyboard".count)
   )
   finalSteps.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Add New Keyboard".count)
   )
   finalSteps.addAttribute(
@@ -105,7 +105,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 30, length: "Scribe".count)
   )
   finalSteps.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 30, length: "Scribe".count)
   )
 

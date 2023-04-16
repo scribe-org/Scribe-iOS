@@ -4,7 +4,6 @@
 //  Simple utility functions for data extraction and language management.
 //
 
-
 /// Returns the ISO code given a language.
 ///
 /// - Parameters

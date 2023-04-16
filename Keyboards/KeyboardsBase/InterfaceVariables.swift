@@ -15,7 +15,7 @@ var proxy: UITextDocumentProxy!
 var keyboard = [[String]]()
 var allKeys = [String]()
 let specialKeys = [
-  "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
+  "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard",
 ]
 var allNonSpecialKeys = [String]()
 var keyboardHeight: CGFloat!
@@ -32,6 +32,7 @@ var language = String()
 var languageTextForSpaceBar: String {
   "\(language) (Scribe)"
 }
+
 var showKeyboardLanguage = false
 
 // Arrays for the possible keyboard views that are loaded with their characters.
@@ -92,7 +93,7 @@ var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
 
 // Variables and functions to determine display parameters.
-struct DeviceType {
+enum DeviceType {
   static let isPhone = UIDevice.current.userInterfaceIdiom == .phone
   static let isPad = UIDevice.current.userInterfaceIdiom == .pad
 }
@@ -121,7 +122,7 @@ let languagesAbbrDict = [
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",
-  "Swedish": "sv"
+  "Swedish": "sv",
 ]
 
 /// Returns the abbreviation of the language for use in commands.
@@ -142,7 +143,7 @@ let keyboardLayoutDict: [String: () -> Void] = [
   "Portuguese": setPTKeyboardLayout,
   "Russian": setRUKeyboardLayout,
   "Spanish": setESKeyboardLayout,
-  "Swedish": setSVKeyboardLayout
+  "Swedish": setSVKeyboardLayout,
 ]
 
 /// Sets the keyboard layout and its alternate keys.
@@ -190,6 +191,7 @@ var keyPopLayer = CAShapeLayer()
 var keyHoldPopLayer = CAShapeLayer()
 
 // MARK: English Interface Variables
+
 // Note: here only until there is an English keyboard.
 
 public enum EnglishKeyboardConstants {
@@ -198,42 +200,42 @@ public enum EnglishKeyboardConstants {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
-    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"] // "undoArrow"
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"], // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"],
     ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"],
     ["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"],
-    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -259,7 +261,7 @@ func getENKeys() {
     letterKeys = EnglishKeyboardConstants.letterKeysPhone
     numberKeys = EnglishKeyboardConstants.numberKeysPhone
     symbolKeys = EnglishKeyboardConstants.symbolKeysPhone
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
     rightKeyChars = ["p", "0", "\"", "=", "·"]
@@ -268,7 +270,7 @@ func getENKeys() {
     letterKeys = EnglishKeyboardConstants.letterKeysPad
     numberKeys = EnglishKeyboardConstants.numberKeysPad
     symbolKeys = EnglishKeyboardConstants.symbolKeysPad
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1"]
     rightKeyChars = []
@@ -308,7 +310,7 @@ func setENKeyboardLayout() {
     "she": "presTPS",
     "it": "presTPS",
     "we": "presFPP",
-    "they": "presTPP"
+    "they": "presTPP",
   ]
 
   translateKeyLbl = "Translate"

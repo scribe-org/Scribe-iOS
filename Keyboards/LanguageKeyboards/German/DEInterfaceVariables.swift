@@ -7,48 +7,47 @@
 import UIKit
 
 public enum GermanKeyboardConstants {
-
   // Keyboard key layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
     ["\"", "§", "€", "%", "&", "/", "(", ")", "=", "'", "#", "return"],
     ["#+=", "—", "`", "'", "...", "@", ";", ":", ",", ".", "-", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "return"],
     ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -75,7 +74,7 @@ func getDEKeys() {
     letterKeys = GermanKeyboardConstants.letterKeysPhone
     numberKeys = GermanKeyboardConstants.numberKeysPhone
     symbolKeys = GermanKeyboardConstants.symbolKeysPhone
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
     rightKeyChars = ["ü", "ä", "0", "\"", "=", "·"]
@@ -84,7 +83,7 @@ func getDEKeys() {
     letterKeys = GermanKeyboardConstants.letterKeysPad
     numberKeys = GermanKeyboardConstants.numberKeysPad
     symbolKeys = GermanKeyboardConstants.symbolKeysPad
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "\"", "$"]
     rightKeyChars = []
@@ -127,7 +126,7 @@ func setDEKeyboardLayout() {
     "es": "presTPS",
     "wir": "presFPP",
     "ihr": "presSPP",
-    "Sie": "presTPP"
+    "Sie": "presTPP",
   ]
 
   translateKeyLbl = "Übersetzen"

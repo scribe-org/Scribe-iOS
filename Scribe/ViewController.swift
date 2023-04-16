@@ -9,35 +9,36 @@ import UIKit
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class ViewController: UIViewController {
   // Variables linked to elements in AppScreen.storyboard.
-  @IBOutlet weak var appTextView: UITextView!
-  @IBOutlet weak var appTextBackground: UIView!
+  @IBOutlet var appTextView: UITextView!
+  @IBOutlet var appTextBackground: UIView!
 
-  @IBOutlet weak var settingsBtn: UIButton!
-  @IBOutlet weak var topIconPhone: UIImageView!
-  @IBOutlet weak var topIconPad: UIImageView!
-  @IBOutlet weak var settingsCorner: UIImageView!
+  @IBOutlet var settingsBtn: UIButton!
+  @IBOutlet var topIconPhone: UIImageView!
+  @IBOutlet var topIconPad: UIImageView!
+  @IBOutlet var settingsCorner: UIImageView!
 
-  @IBOutlet weak var GHTextView: UITextView!
-  @IBOutlet weak var GHTextBackground: UIView!
+  @IBOutlet var GHTextView: UITextView!
+  @IBOutlet var GHTextBackground: UIView!
 
-  @IBOutlet weak var GHBtn: UIButton!
-  @IBOutlet weak var GHCorner: UIImageView!
+  @IBOutlet var GHBtn: UIButton!
+  @IBOutlet var GHCorner: UIImageView!
 
-  @IBOutlet weak var privacyTextBackground: UIView!
-  @IBOutlet weak var privacyTextView: UITextView!
-  @IBOutlet weak var privacyScroll: UIImageView!
+  @IBOutlet var privacyTextBackground: UIView!
+  @IBOutlet var privacyTextView: UITextView!
+  @IBOutlet var privacyScroll: UIImageView!
 
-  @IBOutlet weak var switchView: UIButton!
-  @IBOutlet weak var switchViewBackground: UIView!
+  @IBOutlet var switchView: UIButton!
+  @IBOutlet var switchViewBackground: UIView!
   var displayPrivacyPolicy = false
 
   // Spacing views to size app screen proportionally.
-  @IBOutlet weak var topSpace: UIView!
-  @IBOutlet weak var logoSpace: UIView!
-  @IBOutlet weak var svSpace: UIView!
-  @IBOutlet weak var bottomSpace: UIView!
+  @IBOutlet var topSpace: UIView!
+  @IBOutlet var logoSpace: UIView!
+  @IBOutlet var svSpace: UIView!
+  @IBOutlet var bottomSpace: UIView!
 
   let userSystemLanguage = String(Locale.preferredLanguages[0].prefix(2)).uppercased()
+
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
 
   // Lock the device into portrait mode to avoid resizing issues.
   var orientations = UIInterfaceOrientationMask.portrait
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     get { return self.orientations }
     set { self.orientations = newValue }
   }
@@ -92,6 +93,7 @@ class ViewController: UIViewController {
   }
 
   let switchViewColor = UIColor(named: "scribeCTA")
+
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if displayPrivacyPolicy == false {
@@ -202,7 +204,7 @@ class ViewController: UIViewController {
     for textView in allTextViews {
       textView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: UIColor(named: "linkBlue")!,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
       ]
     }
   }
@@ -234,23 +236,18 @@ class ViewController: UIViewController {
     privacyScroll.isHidden = true
 
     // Set the texts for the fields.
-    switch userSystemLanguage{
+    switch userSystemLanguage {
     case "EN":
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-
-      break
 
     case "DE":
       appTextView.attributedText = setDEInstallation(fontSize: fontSize)
       GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
 
-      break
-
     default:
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
-
     }
     appTextView.textColor = .init(.keyChar)
     GHTextView.textColor = .init(.keyChar)
@@ -281,19 +278,16 @@ class ViewController: UIViewController {
 
     privacyScroll.isHidden = false
 
-    switch userSystemLanguage{
-
+    switch userSystemLanguage {
     case "EN":
       privacyTextView.attributedText = setPrivacyPolicy(
         fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
       )
-      break
 
     case "DE":
       privacyTextView.attributedText = setPrivacyPolicy(
         fontSize: fontSize, title: dePrivacyPolicyTitle, text: dePrivacyPolicyText
       )
-      break
 
     default:
       privacyTextView.attributedText = setPrivacyPolicy(

@@ -7,48 +7,47 @@
 import UIKit
 
 public enum SwedishKeyboardConstants {
-
   // Keyboard key layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "kr", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "$", "£", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
   static let letterKeysPad = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "delete"],
     ["@", "#", "kr", "&", "*", "(", ")", "'", "\"", "+", "·", "return"],
     ["#+=", "%", "≈", "±", "=", "/", ";", ":", ",", ".", "-", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["€", "$", "£", "^", "[", "]", "{", "}", "―", "ᵒ", "...", "return"],
     ["123", "§", "|", "~", "≠", "\\", "<", ">", "!", "?", "_", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
   // Alternate key vars.
@@ -74,7 +73,7 @@ func getSVKeys() {
     letterKeys = SwedishKeyboardConstants.letterKeysPhone
     numberKeys = SwedishKeyboardConstants.numberKeysPhone
     symbolKeys = SwedishKeyboardConstants.symbolKeysPhone
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
     rightKeyChars = ["å", "ä", "0", "\"", "=", "·"]
@@ -83,7 +82,7 @@ func getSVKeys() {
     letterKeys = SwedishKeyboardConstants.letterKeysPad
     numberKeys = SwedishKeyboardConstants.numberKeysPad
     symbolKeys = SwedishKeyboardConstants.symbolKeysPad
-    allKeys = Array(letterKeys.joined())  + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "@", "€"]
     rightKeyChars = []

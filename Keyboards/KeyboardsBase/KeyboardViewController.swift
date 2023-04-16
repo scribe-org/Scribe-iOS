@@ -4,18 +4,18 @@
 //  Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys.
 //
 
-import UIKit
 import GRDB
+import UIKit
 
 /// The parent KeyboardViewController class that is inherited by all Scribe keyboards.
 class KeyboardViewController: UIInputViewController {
   var keyboardView: UIView!
 
   // Stack views that are populated with they keyboard rows.
-  @IBOutlet weak var stackView0: UIStackView!
-  @IBOutlet weak var stackView1: UIStackView!
-  @IBOutlet weak var stackView2: UIStackView!
-  @IBOutlet weak var stackView3: UIStackView!
+  @IBOutlet var stackView0: UIStackView!
+  @IBOutlet var stackView1: UIStackView!
+  @IBOutlet var stackView2: UIStackView!
+  @IBOutlet var stackView3: UIStackView!
 
   private var tipView: ToolTipView?
 
@@ -130,8 +130,8 @@ class KeyboardViewController: UIInputViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // If alternateKeysView is already added than remove it so it's not colored wrong.
-    if self.view.viewWithTag(1001) != nil {
-      let viewWithTag = self.view.viewWithTag(1001)
+    if view.viewWithTag(1001) != nil {
+      let viewWithTag = view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
@@ -142,12 +142,12 @@ class KeyboardViewController: UIInputViewController {
     loadInterface()
     firstKeyboardLoad = false
 
-    self.selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+    selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
   }
 
   /// Includes hiding the keyboard selector button if it is not needed for the current device.
   override func viewWillLayoutSubviews() {
-    self.selectKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+    selectKeyboardButton.isHidden = !needsInputModeSwitchKey
     super.viewWillLayoutSubviews()
   }
 
@@ -175,8 +175,8 @@ class KeyboardViewController: UIInputViewController {
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
     // If alternateKeysView is already added than remove it so it's not colored wrong.
-    if self.view.viewWithTag(1001) != nil {
-      let viewWithTag = self.view.viewWithTag(1001)
+    if view.viewWithTag(1001) != nil {
+      let viewWithTag = view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
@@ -218,7 +218,6 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
 
-
   // Logic to create notification tooltip.
   func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
     let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
@@ -226,11 +225,12 @@ class KeyboardViewController: UIInputViewController {
     return ToolTipViewDatasource(content: text, theme: theme)
   }
 
+  /// Sets the tooltip to display information to the user.
   func setInformationState() {
     let contentData = InformationToolTipData.getContent()
-    let datasources = contentData.enumerated().compactMap({ index, text in
+    let datasources = contentData.enumerated().compactMap { _, text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
-    })
+    }
     tipView = ToolTipView(datasources: datasources)
 
     bindTooltipview()
@@ -240,16 +240,17 @@ class KeyboardViewController: UIInputViewController {
     formKeySingle.addSubview(tipView)
     formKeySingle.isUserInteractionEnabled = false
     tipView.leadingAnchor.constraint(
-      equalTo: formKeySingle.leadingAnchor, constant: DeviceType.isPhone ? 15: 40
+      equalTo: formKeySingle.leadingAnchor, constant: DeviceType.isPhone ? 15 : 40
     ).isActive = true
     tipView.trailingAnchor.constraint(
-      equalTo: formKeySingle.trailingAnchor, constant: DeviceType.isPhone ? -15: -40
+      equalTo: formKeySingle.trailingAnchor, constant: DeviceType.isPhone ? -15 : -40
     ).isActive = true
     tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 8).isActive = true
     tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
     styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
   }
 
+  // Shifts the view of the information tooltip view.
   private func bindTooltipview() {
     tipView?.didUpdatePage = { [weak self] currentState in
       conjViewShiftButtonsState = currentState
@@ -297,7 +298,8 @@ class KeyboardViewController: UIInputViewController {
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
 
         if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
-          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
+          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"")
+        {
           currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
         }
 
@@ -362,7 +364,7 @@ class KeyboardViewController: UIInputViewController {
           emojisToDisplayArray = [String]()
           currentEmojiTriggerWord = currentPrefix.lowercased()
           if emojisToDisplay[2] != "" && DeviceType.isPad {
-            for i in 0..<3 {
+            for i in 0 ..< 3 {
               emojisToDisplayArray.append(emojisToDisplay[i])
             }
             autoAction3Visible = false
@@ -376,7 +378,7 @@ class KeyboardViewController: UIInputViewController {
               padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
           } else if emojisToDisplay[1] != "" {
-            for i in 0..<2 {
+            for i in 0 ..< 2 {
               emojisToDisplayArray.append(emojisToDisplay[i])
             }
             autoAction3Visible = false
@@ -473,7 +475,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if [ "French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if ["French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       // We have to consider these different cases as the key always has to match.
@@ -543,7 +545,7 @@ class KeyboardViewController: UIInputViewController {
       emojisToDisplayArray = [String]()
       currentEmojiTriggerWord = prefix.lowercased()
       if emojisToDisplay[2] != "" && DeviceType.isPad {
-        for i in 0..<3 {
+        for i in 0 ..< 3 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
         autoAction3Visible = false
@@ -557,7 +559,7 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
       } else if emojisToDisplay[1] != "" {
-        for i in 0..<2 {
+        for i in 0 ..< 2 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
         autoAction3Visible = false
@@ -685,7 +687,7 @@ class KeyboardViewController: UIInputViewController {
     // Only delete characters for autocomplete, not autosuggest.
     if currentPrefix != "" && autoActionState != .suggest {
       if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0..<currentPrefix.count {
+        for _ in 0 ..< currentPrefix.count {
           proxy.deleteBackward()
         }
       }
@@ -719,8 +721,8 @@ class KeyboardViewController: UIInputViewController {
     // Remove the space from the previous auto action or replace the current prefix.
     if emojiAutoActionRepeatPossible == true && (
       (keyPressed == phoneEmojiKey1 || keyPressed == phoneEmojiKey2)
-      || (keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2 || keyPressed == padEmojiKey3)
-      || (keyPressed == pluralKey && emojisToShow == .one)
+        || (keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2 || keyPressed == padEmojiKey3)
+        || (keyPressed == pluralKey && emojisToShow == .one)
     ) {
       proxy.deleteBackward()
     } else {
@@ -735,14 +737,17 @@ class KeyboardViewController: UIInputViewController {
     }
     conditionallyDisplayAnnotation()
     if (keyPressed == phoneEmojiKey1 || keyPressed == phoneEmojiKey2)
-        || (keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2 || keyPressed == padEmojiKey3)
-        || (keyPressed == pluralKey && emojisToShow == .one) {
+      || (keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2 || keyPressed == padEmojiKey3)
+      || (keyPressed == pluralKey && emojisToShow == .one)
+    {
       emojiAutoActionRepeatPossible = true
     }
   }
 
   // The background for the Scribe command elements.
   @IBOutlet var commandBackground: UILabel!
+
+  /// Sets the background and user interactivity of the command bar.
   func setCommandBackground() {
     commandBackground.backgroundColor = keyboardBgColor
     commandBackground.isUserInteractionEnabled = false
@@ -809,6 +814,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   // MARK: Conjugation Variables and Functions
+
   // Note that we use "form" to describe both conjugations and declensions.
   @IBOutlet var shiftFormsDisplayLeft: UIButton!
   @IBOutlet var shiftFormsDisplayRight: UIButton!
@@ -823,7 +829,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 3x2 conjugation display.
   func get3x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyFPS, formKeySPS, formKeyTPS, formKeyFPP, formKeySPP, formKeyTPP
+      formKeyFPS, formKeySPS, formKeyTPS, formKeyFPP, formKeySPP, formKeyTPP,
     ]
 
     return conjugationButtons
@@ -841,7 +847,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 3x2 conjugation display.
   func get3x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblFPS, formLblSPS, formLblTPS, formLblFPP, formLblSPP, formLblTPP
+      formLblFPS, formLblSPS, formLblTPS, formLblFPP, formLblSPP, formLblTPP,
     ]
 
     return conjugationLabels
@@ -866,7 +872,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get3x2FormDisplayButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -878,7 +884,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 3x1 conjugation display
   func get3x1FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyTop, formKeyMiddle, formKeyBottom
+      formKeyTop, formKeyMiddle, formKeyBottom,
     ]
 
     return conjugationButtons
@@ -891,7 +897,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 3x1 conjugation display.
   func get3x1FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblTop, formLblMiddle, formLblBottom
+      formLblTop, formLblMiddle, formLblBottom,
     ]
 
     return conjugationLabels
@@ -913,7 +919,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get3x1FormDisplayButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -926,7 +932,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 2x2 conjugation display
   func get2x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyTL, formKeyTR, formKeyBL, formKeyBR
+      formKeyTL, formKeyTR, formKeyBL, formKeyBR,
     ]
 
     return conjugationButtons
@@ -940,7 +946,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 2x2 conjugation display.
   func get2x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblTL, formLblTR, formLblBL, formLblBR
+      formLblTL, formLblTR, formLblBL, formLblBR,
     ]
 
     return conjugationLabels
@@ -963,7 +969,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get2x2FormDisplayButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -974,7 +980,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 1x2 conjugation display
   func get1x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyLeft, formKeyRight
+      formKeyLeft, formKeyRight,
     ]
 
     return conjugationButtons
@@ -986,7 +992,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 1x2 conjugation display.
   func get1x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblLeft, formLblRight
+      formLblLeft, formLblRight,
     ]
 
     return conjugationLabels
@@ -1007,7 +1013,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get1x2FormDisplayButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -1017,7 +1023,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 1x1 conjugation display
   func get1x1FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeySingle
+      formKeySingle,
     ]
 
     return conjugationButtons
@@ -1028,7 +1034,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 1x1 conjugation display.
   func get1x1FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblSingle
+      formLblSingle,
     ]
 
     return conjugationLabels
@@ -1048,7 +1054,7 @@ class KeyboardViewController: UIInputViewController {
         conjugationFontDivisor = 4
       }
       for btn in get1x1FormDisplayButtons() {
-        btn.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
+        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
       }
     }
   }
@@ -1063,25 +1069,26 @@ class KeyboardViewController: UIInputViewController {
     } else if
       commandState == .selectCaseDeclension
       && controllerLanguage == "German"
-      && deCaseVariantDeclensionState != .disabled {
+      && deCaseVariantDeclensionState != .disabled
+    {
       switch deCaseVariantDeclensionState {
       case .disabled:
         break
       case .accusativePersonalSPS, .dativePersonalSPS, .genitivePersonalSPS,
-          .accusativePossessiveSPS, .dativePossessiveSPS, .genitivePossessiveSPS:
+           .accusativePossessiveSPS, .dativePossessiveSPS, .genitivePossessiveSPS:
         formsDisplayDimensions = .view1x2
       case .accusativePersonalTPS, .dativePersonalTPS, .genitivePersonalTPS,
-          .accusativePossessiveTPS, .dativePossessiveTPS, .genitivePossessiveTPS:
+           .accusativePossessiveTPS, .dativePossessiveTPS, .genitivePossessiveTPS:
         formsDisplayDimensions = .view3x1
       case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
-          .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
-          .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
-          .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
-          .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
-          .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
-          .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
-          .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
-          .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
+           .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+           .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+           .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+           .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+           .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+           .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+           .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+           .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
         formsDisplayDimensions = .view2x2
       }
     } else if
@@ -1090,11 +1097,13 @@ class KeyboardViewController: UIInputViewController {
       && [
         .accusative, .accusativeDemonstrative,
         .dative, .dativeDemonstrative,
-        .genitive, .genitiveDemonstrative
-      ].contains(deCaseDeclensionState) {
+        .genitive, .genitiveDemonstrative,
+      ].contains(deCaseDeclensionState)
+    {
       formsDisplayDimensions = .view2x2
     } else if
-      commandState == .displayInformation {
+      commandState == .displayInformation
+    {
       formsDisplayDimensions = .view1x1
     } else {
       formsDisplayDimensions = .view3x2
@@ -1144,16 +1153,16 @@ class KeyboardViewController: UIInputViewController {
     // Make all labels clear and set their font for if they will be used.
     let allFormDisplayLabels: [UIButton] =
       get3x2FormDisplayLabels()
-      + get3x1FormDisplayLabels()
-      + get2x2FormDisplayLabels()
-      + get1x2FormDisplayLabels()
-      + get1x1FormDisplayLabels()
+        + get3x1FormDisplayLabels()
+        + get2x2FormDisplayLabels()
+        + get1x2FormDisplayLabels()
+        + get1x1FormDisplayLabels()
     for lbl in allFormDisplayLabels {
       lbl.backgroundColor = UIColor.clear
       lbl.setTitleColor(UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : commandBarColor, for: .normal)
       lbl.isUserInteractionEnabled = false
       if DeviceType.isPad {
-        lbl.titleLabel?.font =  .systemFont(ofSize: letterKeyWidth / 4)
+        lbl.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
       }
     }
   }
@@ -1218,16 +1227,16 @@ class KeyboardViewController: UIInputViewController {
 
     let allFormDisplayButtons: [UIButton] =
       get3x2FormDisplayButtons()
-      + get3x1FormDisplayButtons()
-      + get2x2FormDisplayButtons()
-      + get1x2FormDisplayButtons()
-      + get1x1FormDisplayButtons()
+        + get3x1FormDisplayButtons()
+        + get2x2FormDisplayButtons()
+        + get1x2FormDisplayButtons()
+        + get1x1FormDisplayButtons()
     let allFormDisplayLabels: [UIButton] =
       get3x2FormDisplayLabels()
-      + get3x1FormDisplayLabels()
-      + get2x2FormDisplayLabels()
-      + get1x2FormDisplayLabels()
-      + get1x1FormDisplayLabels()
+        + get3x1FormDisplayLabels()
+        + get2x2FormDisplayLabels()
+        + get1x2FormDisplayLabels()
+        + get1x1FormDisplayLabels()
     let allConjElements: [UIButton] = allFormDisplayButtons + allFormDisplayLabels
 
     for elem in allConjElements {
@@ -1330,7 +1339,7 @@ class KeyboardViewController: UIInputViewController {
     let args = [verbToConjugate]
     let outputCols = allConjugations
     let conjugationsToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
-    for index in 0..<allConjugations.count {
+    for index in 0 ..< allConjugations.count {
       if conjugationsToDisplay[index] == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
@@ -1402,7 +1411,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Populate conjugation view buttons.
-    for index in 0..<allConjugations.count {
+    for index in 0 ..< allConjugations.count {
       styleBtn(btn: allConjugationBtns[index], title: allConjugations[index], radius: keyCornerRadius)
     }
   }
@@ -1444,7 +1453,7 @@ class KeyboardViewController: UIInputViewController {
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
       let addToAutocompleteLexiconQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
-      self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
+      requestSupplementaryLexicon { (userLexicon: UILexicon!) in
         for item in userLexicon.entries {
           if item.documentText.count > 1 {
             writeDBRow(query: addToAutocompleteLexiconQuery, args: [item.documentText])
@@ -1454,18 +1463,18 @@ class KeyboardViewController: UIInputViewController {
 
       // Drop non-unique values in case the lexicon has added words that were already present.
       let dropNonUniqueAutosuggestionsQuery = """
-        DELETE FROM autocomplete_lexicon
-        WHERE rowid NOT IN (
-          SELECT
-            MIN(rowid)
+      DELETE FROM autocomplete_lexicon
+      WHERE rowid NOT IN (
+        SELECT
+          MIN(rowid)
 
-          FROM
-            autocomplete_lexicon
+        FROM
+          autocomplete_lexicon
 
-          GROUP BY
-            word
-        )
-        """
+        GROUP BY
+          word
+      )
+      """
       do {
         try languageDB.write { db in
           try db.execute(sql: dropNonUniqueAutosuggestionsQuery)
@@ -1493,8 +1502,8 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Clear interface from the last state.
-    keyboardKeys.forEach {$0.removeFromSuperview()}
-    paddingViews.forEach {$0.removeFromSuperview()}
+    keyboardKeys.forEach { $0.removeFromSuperview() }
+    paddingViews.forEach { $0.removeFromSuperview() }
 
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView == true {
@@ -1634,8 +1643,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
       let numRows = keyboard.count
-      for row in 0..<numRows {
-        for idx in 0..<keyboard[row].count {
+      for row in 0 ..< numRows {
+        for idx in 0 ..< keyboard[row].count {
           // Set up button as a key with its values and properties.
           let btn = KeyboardKey(type: .custom)
           btn.row = row
@@ -1651,44 +1660,50 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone
             && key == "y"
             && ["German", "Swedish"].contains(controllerLanguage)
-            && commandState != .translate {
+            && commandState != .translate
+          {
             leftPadding = keyWidth / 3
             addPadding(to: stackView2, width: leftPadding, key: "y")
           }
           if DeviceType.isPhone
             && key == "a"
             && (controllerLanguage == "Portuguese"
-                || controllerLanguage == "Italian"
-                || commandState == .translate) {
+              || controllerLanguage == "Italian"
+              || commandState == .translate)
+          {
             leftPadding = keyWidth / 4
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "a"
             && (controllerLanguage == "Portuguese"
-                || controllerLanguage == "Italian"
-                || commandState == .translate) {
+              || controllerLanguage == "Italian"
+              || commandState == .translate)
+          {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
           }
           if DeviceType.isPad
             && key == "@"
             && (controllerLanguage == "Portuguese"
-                || controllerLanguage == "Italian"
-                || commandState == .translate) {
+              || controllerLanguage == "Italian"
+              || commandState == .translate)
+          {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "@")
           }
           if DeviceType.isPad
             && key == "$"
-            && controllerLanguage == "Italian" {
+            && controllerLanguage == "Italian"
+          {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "$")
           }
           if DeviceType.isPad
             && key == "€"
             && (controllerLanguage == "Portuguese"
-                || commandState == .translate) {
+              || commandState == .translate)
+          {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "€")
           }
@@ -1711,7 +1726,7 @@ class KeyboardViewController: UIInputViewController {
 
           if key == "selectKeyboard" {
             selectKeyboardButton = btn
-            self.selectKeyboardButton.addTarget(
+            selectKeyboardButton.addTarget(
               self,
               action: #selector(handleInputModeList(from:with:)),
               for: .allTouchEvents
@@ -1746,7 +1761,7 @@ class KeyboardViewController: UIInputViewController {
           )
           keyHoldPop.minimumPressDuration = 0.125
 
-        if allNonSpecialKeys.contains(key) {
+          if allNonSpecialKeys.contains(key) {
             btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
             btn.addGestureRecognizer(keyHoldPop)
           }
@@ -1756,15 +1771,17 @@ class KeyboardViewController: UIInputViewController {
           if DeviceType.isPhone
             && key == "m"
             && ["German", "Swedish"].contains(controllerLanguage)
-              && commandState != .translate {
+            && commandState != .translate
+          {
             rightPadding = keyWidth / 3
             addPadding(to: stackView2, width: rightPadding, key: "m")
           }
           if DeviceType.isPhone
             && key == "l"
             && (controllerLanguage == "Portuguese"
-                || controllerLanguage == "Italian"
-                || commandState == .translate) {
+              || controllerLanguage == "Italian"
+              || commandState == .translate)
+          {
             rightPadding = keyWidth / 4
             addPadding(to: stackView1, width: rightPadding, key: "l")
           }
@@ -1774,7 +1791,7 @@ class KeyboardViewController: UIInputViewController {
           if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
             // Override background color from adjustKeyWidth for "search" blue for web searches.
             styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
-            btn.backgroundColor = UIColor(red: 0.0/255.0, green: 121.0/255.0, blue: 251.0/255.0, alpha: 1.0)
+            btn.backgroundColor = UIColor(red: 0.0 / 255.0, green: 121.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
           }
 
           // Extend button touch areas.
@@ -1782,15 +1799,15 @@ class KeyboardViewController: UIInputViewController {
           if keyboardState == .letters {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(letterKeys[0].count) * keyWidth)
-              ) / (CGFloat(letterKeys[0].count)
+                - (CGFloat(letterKeys[0].count) * keyWidth)
+            ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
           } else {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(numberKeys[0].count) * numSymKeyWidth)
-              ) / (CGFloat(letterKeys[0].count)
+                - (CGFloat(numberKeys[0].count) * numSymKeyWidth)
+            ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
           }
@@ -1816,12 +1833,12 @@ class KeyboardViewController: UIInputViewController {
           if leftPadding == CGFloat(0) {
             btn.leftShift = -(widthOfSpacing / 2)
           } else {
-            btn.leftShift = -(leftPadding)
+            btn.leftShift = -leftPadding
           }
           if rightPadding == CGFloat(0) {
             btn.rightShift = -(widthOfSpacing / 2)
           } else {
-            btn.rightShift = -(rightPadding)
+            btn.rightShift = -rightPadding
           }
 
           // Activate keyboard interface buttons.
@@ -1899,9 +1916,10 @@ class KeyboardViewController: UIInputViewController {
     guard let originalKey = sender.layer.value(
       forKey: "original"
     ) as? String,
-      let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String else {
-        return
-      }
+      let keyToDisplay = sender.layer.value(forKey: "keyToDisplay") as? String
+    else {
+      return
+    }
 
     guard let isSpecial = sender.layer.value(forKey: "isSpecial") as? Bool else { return }
     sender.backgroundColor = isSpecial ? specialKeyColor : keyColor
@@ -1928,7 +1946,8 @@ class KeyboardViewController: UIInputViewController {
             .conjugate,
             .selectVerbConjugation,
             .selectCaseDeclension,
-            .plural].contains(commandState) { // escape
+            .plural].contains(commandState)
+        { // escape
           commandState = .idle
           deCaseVariantDeclensionState = .disabled
         } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
@@ -2032,7 +2051,6 @@ class KeyboardViewController: UIInputViewController {
         conjugationStateRight()
         loadKeys()
       }
-
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedForm: formFPS)
@@ -2145,7 +2163,7 @@ class KeyboardViewController: UIInputViewController {
       annotationSeparators.forEach { $0.removeFromSuperview() }
       annotationSeparators.removeAll()
 
-      for i in 0..<annotationBtns.count {
+      for i in 0 ..< annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
 
@@ -2176,11 +2194,11 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "ScribeAnnotation":
-      for i in 0..<annotationBtns.count {
+      for i in 0 ..< annotationBtns.count {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
       let emojisToSelectFrom = "🥳🎉"
-      let emojis = String((0..<3).map{ _ in emojisToSelectFrom.randomElement()! })
+      let emojis = String((0 ..< 3).map { _ in emojisToSelectFrom.randomElement()! })
       sender.setTitle(emojis, for: .normal)
       return
 
@@ -2248,7 +2266,7 @@ class KeyboardViewController: UIInputViewController {
         if [
           ". " + commandCursor,
           "? " + commandCursor,
-          "! " + commandCursor
+          "! " + commandCursor,
         ].contains(String(commandBar.text!.suffix(3))) {
           shiftButtonState = .shift
         }
@@ -2316,10 +2334,10 @@ class KeyboardViewController: UIInputViewController {
       autoCapAtStartOfProxy()
 
     case "selectKeyboard":
-      self.advanceToNextInputMode()
+      advanceToNextInputMode()
 
     case "hideKeyboard":
-      self.dismissKeyboard()
+      dismissKeyboard()
 
     default:
       autoActionState = .complete
@@ -2344,7 +2362,7 @@ class KeyboardViewController: UIInputViewController {
     // Reset emoji repeat functionality.
     if !(
       ["EmojiKey1", "EmojiKey2", "EmojiKey3"].contains(originalKey)
-      || (originalKey == "AutoAction3" && emojisToShow == .one)
+        || (originalKey == "AutoAction3" && emojisToShow == .one)
     ) {
       emojiAutoActionRepeatPossible = false
     }
@@ -2364,8 +2382,8 @@ class KeyboardViewController: UIInputViewController {
     activateAnnotationBtn = false
 
     // Remove alternates view if it's present.
-    if self.view.viewWithTag(1001) != nil {
-      let viewWithTag = self.view.viewWithTag(1001)
+    if view.viewWithTag(1001) != nil {
+      let viewWithTag = view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
@@ -2375,7 +2393,6 @@ class KeyboardViewController: UIInputViewController {
       tipView?.removeFromSuperview()
       tipView = nil
     }
-
   }
 
   // MARK: Key Press Functions
@@ -2451,7 +2468,8 @@ class KeyboardViewController: UIInputViewController {
     if touch.tapCount == 2
       && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
       && proxy.documentContextBeforeInput?.count != 1
-      && doubleSpacePeriodPossible == true {
+      && doubleSpacePeriodPossible == true
+    {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.deleteBackward()
@@ -2460,7 +2478,7 @@ class KeyboardViewController: UIInputViewController {
         keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
-      // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
+        // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
         commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
         commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
@@ -2487,19 +2505,19 @@ class KeyboardViewController: UIInputViewController {
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0
     if gesture.state == .began {
-      backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+      backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
         deleteCount += 1
         self.handleDeleteButtonPressed()
 
         if deleteCount == 20 {
           backspaceTimer?.invalidate()
-          backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.07, repeats: true) { (_) in
+          backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.07, repeats: true) { _ in
             deleteCount += 1
             self.handleDeleteButtonPressed()
 
             if deleteCount == 50 {
               backspaceTimer?.invalidate()
-              backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true) { (_) in
+              backspaceTimer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true) { _ in
                 self.handleDeleteButtonPressed()
               }
             }
@@ -2534,8 +2552,8 @@ class KeyboardViewController: UIInputViewController {
     let displayChar = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
     genKeyPop(key: key, layer: keyPopLayer, char: charPressed, displayChar: displayChar)
 
-    self.view.layer.addSublayer(keyPopLayer)
-    self.view.addSubview(keyPopChar)
+    view.layer.addSublayer(keyPopLayer)
+    view.addSubview(keyPopChar)
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) {
       keyPopLayer.removeFromSuperlayer()
       keyPopChar.removeFromSuperview()
@@ -2553,7 +2571,7 @@ class KeyboardViewController: UIInputViewController {
     let displayChar = key.layer.value(forKey: "keyToDisplay") as? String ?? ""
 
     // Timer is short as the alternates view gets canceled by sender.state.changed.
-    _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { (_) in
+    _ = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: false) { _ in
       if keysWithAlternates.contains(charPressed) {
         self.setAlternatesView(sender: sender)
         keyHoldPopLayer.removeFromSuperlayer()
@@ -2564,8 +2582,8 @@ class KeyboardViewController: UIInputViewController {
     switch sender.state {
     case .began:
       genKeyPop(key: key, layer: keyHoldPopLayer, char: charPressed, displayChar: displayChar)
-      self.view.layer.addSublayer(keyHoldPopLayer)
-      self.view.addSubview(keyHoldPopChar)
+      view.layer.addSublayer(keyHoldPopLayer)
+      view.addSubview(keyHoldPopChar)
 
     case .ended:
       // Remove the key hold pop up and execute key only if the alternates view isn't present.
@@ -2573,7 +2591,7 @@ class KeyboardViewController: UIInputViewController {
       keyHoldPopChar.removeFromSuperview()
       if !keysWithAlternates.contains(charPressed) {
         executeKeyActions(key)
-      } else if self.view.viewWithTag(1001) == nil {
+      } else if view.viewWithTag(1001) == nil {
         executeKeyActions(key)
       }
       keyUntouched(key)
@@ -2603,7 +2621,7 @@ class KeyboardViewController: UIInputViewController {
       alternatesBtnY = key.frame.height * 0.2
     }
     for char in alternateKeys {
-      let alternateKey: KeyboardKey = KeyboardKey(
+      let alternateKey = KeyboardKey(
         frame: CGRect(
           x: alternateBtnStartX,
           y: alternatesBtnY,
@@ -2634,13 +2652,13 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // If alternateKeysView is already added than remove and then add again.
-    if self.view.viewWithTag(1001) != nil {
-      let viewWithTag = self.view.viewWithTag(1001)
+    if view.viewWithTag(1001) != nil {
+      let viewWithTag = view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
     }
 
-    self.view.layer.addSublayer(alternatesShapeLayer)
-    self.view.addSubview(alternatesKeyView)
+    view.layer.addSublayer(alternatesShapeLayer)
+    view.addSubview(alternatesKeyView)
   }
 }

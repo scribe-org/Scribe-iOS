@@ -9,10 +9,10 @@ import UIKit
 /// Extension to access the second to last element of an array.
 extension Array {
   func secondToLast() -> Element? {
-    if self.count < 2 {
+    if count < 2 {
       return nil
     }
-    let index = self.count - 2
+    let index = count - 2
     return self[index]
   }
 }
@@ -20,14 +20,14 @@ extension Array {
 extension Sequence where Iterator.Element: Hashable {
   func unique() -> [Iterator.Element] {
     var seen: [Iterator.Element: Bool] = [:]
-    return self.filter { seen.updateValue(true, forKey: $0) == nil }
+    return filter { seen.updateValue(true, forKey: $0) == nil }
   }
 }
 
 /// Extensions to String to allow for easier indexing, substring extraction and checking for certain characteristics.
 extension String {
   func index(fromIdx: Int) -> Index {
-    return self.index(startIndex, offsetBy: fromIdx)
+    return index(startIndex, offsetBy: fromIdx)
   }
 
   func substring(fromIdx: Int) -> String {
@@ -43,27 +43,27 @@ extension String {
   func substring(with range: Range<Int>) -> String {
     let startIndex = index(fromIdx: range.lowerBound)
     let endIndex = index(fromIdx: range.upperBound)
-    return String(self[startIndex..<endIndex])
+    return String(self[startIndex ..< endIndex])
   }
 
   func insertPriorToCursor(char: String) -> String {
-    return substring(toIdx: self.count - 1) + char + commandCursor
+    return substring(toIdx: count - 1) + char + commandCursor
   }
 
   func deletePriorToCursor() -> String {
-    return substring(toIdx: self.count - 2) + commandCursor
+    return substring(toIdx: count - 2) + commandCursor
   }
 
   var isLowercase: Bool {
-    return self == self.lowercased()
+    return self == lowercased()
   }
 
   var isUppercase: Bool {
-    return self == self.uppercased()
+    return self == uppercased()
   }
 
   var isCapitalized: Bool {
-    return self == prefix(1).uppercased() + self.lowercased().dropFirst()
+    return self == prefix(1).uppercased() + lowercased().dropFirst()
   }
 
   func count(of char: Character) -> Int {
@@ -73,11 +73,11 @@ extension String {
   }
 
   func capitalize() -> String {
-    return prefix(1).uppercased() + self.lowercased().dropFirst()
+    return prefix(1).uppercased() + lowercased().dropFirst()
   }
 
-  var isNumeric : Bool {
-      return Double(self) != nil
+  var isNumeric: Bool {
+    return Double(self) != nil
   }
 }
 
@@ -95,8 +95,8 @@ extension StringProtocol {
 }
 
 extension NSMutableAttributedString {
-    func setColorForText(textForAttribute: String, withColor color: UIColor) {
-        let range = self.mutableString.range(of: textForAttribute, options: .caseInsensitive)
-        self.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
-    }
+  func setColorForText(textForAttribute: String, withColor color: UIColor) {
+    let range = mutableString.range(of: textForAttribute, options: .caseInsensitive)
+    addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+  }
 }

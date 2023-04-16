@@ -44,7 +44,7 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 18, length: "Allgemein".count)
   )
   installDirections.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 18, length: "Allgemein".count)
   )
   installDirections.addAttribute(
@@ -52,7 +52,7 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 50, length: "Tastatur".count)
   )
   installDirections.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 50, length: "Tastatur".count)
   )
 
@@ -70,16 +70,16 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 2, length: "Tastaturen".count)
   )
   keyboardsStep.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Tastaturen".count)
   )
 
   installDirections.append(keyboardsStep)
 
   installDirections.append(NSMutableAttributedString(
-      string: "\n                    ",
-      attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
-    )
+    string: "\n                    ",
+    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+  )
   )
 
   installDirections.append(arrowString)
@@ -97,7 +97,7 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
   )
   finalSteps.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
   )
   finalSteps.addAttribute(
@@ -105,7 +105,7 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     range: NSRange(location: 42, length: "Scribe".count)
   )
   finalSteps.addAttributes(
-    [.underlineStyle : NSUnderlineStyle.single.rawValue],
+    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 42, length: "Scribe".count)
   )
 

@@ -6,6 +6,7 @@
 
 import UIKit
 
+
 /// Inserts the plural of a valid noun in the command bar into the proxy.
 ///
 /// - Parameters

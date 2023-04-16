@@ -32,7 +32,7 @@ func setFRKeyboardLayout() {
     "nous": "presFPP",
     "vous": "presSPP",
     "ils": "presTPP",
-    "elles": "presTPP"
+    "elles": "presTPP",
   ]
 
   translateKeyLbl = "Traduire"

@@ -5,7 +5,6 @@
 import UIKit
 
 extension UIColor {
-
   // MARK: - Init from ScribeColor
 
   /// Creates `UIColor` from passed `ScribeColor`

@@ -6,14 +6,13 @@ import Foundation
 import UIKit
 
 enum InformationToolTipData {
-
   static let wikiDataExplanation = NSMutableAttributedString(
-      string: "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others.",
-      attributes: [
-        NSAttributedString.Key.font: UIFont.systemFont(
-          ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-        )
-      ]
+    string: "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others.",
+    attributes: [
+      NSAttributedString.Key.font: UIFont.systemFont(
+        ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
+      ),
+    ]
   )
 
   static let wikiDataContationOrigin = NSMutableAttributedString(
@@ -21,7 +20,7 @@ enum InformationToolTipData {
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-      )
+      ),
     ]
   )
 
@@ -30,7 +29,7 @@ enum InformationToolTipData {
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75
-      )
+      ),
     ]
   )
 
@@ -38,8 +37,7 @@ enum InformationToolTipData {
     [
       InformationToolTipData.wikiDataExplanation,
       InformationToolTipData.wikiDataContationOrigin,
-      InformationToolTipData.howToContribute
+      InformationToolTipData.howToContribute,
     ]
   }
-
 }

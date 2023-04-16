@@ -42,6 +42,7 @@ let keyboardConjLabelDict: [String: Any] = [
   "Swedish": svSetConjugationLabels
 ]
 
+
 /// Returns a declension once a user presses a key in the conjugateView.
 ///
 /// - Parameters
@@ -177,6 +178,7 @@ func returnDeclension(keyPressed: UIButton) {
   }
 }
 
+
 /// Triggers the display of the conjugation view for a valid verb in the command bar.
 ///
 /// - Parameters
@@ -201,6 +203,7 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
 
   return verbToConjugate == verbInTable
 }
+
 
 /// Returns a conjugation once a user presses a key in the conjugateView or triggers a declension.
 ///
@@ -254,6 +257,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   conjViewShiftButtonsState = .bothInactive
 }
 
+
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
   conjViewShiftButtonsState = .leftInactive
@@ -273,6 +277,7 @@ func resetVerbConjugationState() {
     svConjugationState = .active
   }
 }
+
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetCaseDeclensionState() {
@@ -308,6 +313,7 @@ func resetCaseDeclensionState() {
   }
 }
 
+
 /// Runs an action associated with the left view switch button of the conjugation state based on the keyboard language.
 func conjugationStateLeft() {
   if controllerLanguage.prefix("French".count) == "French" {
@@ -326,6 +332,7 @@ func conjugationStateLeft() {
     svConjugationStateLeft()
   }
 }
+
 
 /// Runs an action associated with the right view switch button of the conjugation state based on the keyboard language.
 func conjugationStateRight() {

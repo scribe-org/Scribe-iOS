@@ -27,44 +27,44 @@ func deSetCaseDeclensionLabels() {
     if [
       .accusative, .accusativeDemonstrative,
       .dative, .dativeDemonstrative,
-      .genitive, .genitiveDemonstrative
+      .genitive, .genitiveDemonstrative,
     ].contains(deCaseDeclensionState) {
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
       formLabelsDict["BL"] = "N"
       formLabelsDict["BR"] = "PL"
     } else {
-      formLabelsDict["FPS"]  = "ich"
-      formLabelsDict["SPS"]  = "du/Sie"
-      formLabelsDict["TPS"]  = "er/sie/es"
-      formLabelsDict["FPP"]  = "wir"
-      formLabelsDict["SPP"]  = "ihr"
-      formLabelsDict["TPP"]  = "sie"
+      formLabelsDict["FPS"] = "ich"
+      formLabelsDict["SPS"] = "du/Sie"
+      formLabelsDict["TPS"] = "er/sie/es"
+      formLabelsDict["FPP"] = "wir"
+      formLabelsDict["SPP"] = "ihr"
+      formLabelsDict["TPP"] = "sie"
     }
   } else {
     switch deCaseVariantDeclensionState {
     case .disabled:
       break // placeholder
     case .accusativePersonalSPS, .accusativePossessiveSPS,
-        .dativePersonalSPS, .dativePossessiveSPS,
-        .genitivePersonalSPS, .genitivePossessiveSPS:
+         .dativePersonalSPS, .dativePossessiveSPS,
+         .genitivePersonalSPS, .genitivePossessiveSPS:
       formLabelsDict["Left"] = "informell"
       formLabelsDict["Right"] = "formell"
     case .accusativePersonalTPS, .accusativePossessiveTPS,
-        .dativePersonalTPS, .dativePossessiveTPS,
-        .genitivePersonalTPS, .genitivePossessiveTPS:
+         .dativePersonalTPS, .dativePossessiveTPS,
+         .genitivePersonalTPS, .genitivePossessiveTPS:
       formLabelsDict["Top"] = "er"
       formLabelsDict["Middle"] = "sie"
       formLabelsDict["Bottom"] = "es"
     case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
-        .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
-        .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
-        .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
-        .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
-        .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
-        .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
-        .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
-        .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
+         .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+         .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+         .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+         .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+         .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+         .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+         .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+         .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
       formLabelsDict["BL"] = "N"
@@ -148,9 +148,9 @@ var deCaseVariantDeclensionState: DECaseVariantDeclensionState = .disabled
 let contractedGermanPrepositions = [
   "am": "Acc/Dat", "ans": "Acc/Dat", "aufs": "Acc/Dat", "beim": "Dat",
   "durchs": "Acc", "fürs": "Acc", "hinters": "Acc/Dat", "hinterm": "Acc/Dat",
-  "ins":"Acc/Dat", "im":"Acc/Dat",  "übers":"Acc/Dat",  "überm":"Acc/Dat",
+  "ins": "Acc/Dat", "im": "Acc/Dat", "übers": "Acc/Dat", "überm": "Acc/Dat",
   "ums": "Acc", "unters": "Acc/Dat", "unterm": "Acc/Dat", "vom": "Dat",
-  "vors": "Acc/Dat", "vorm": "Acc/Dat", "zum": "Dat", "zur": "Dat"
+  "vors": "Acc/Dat", "vorm": "Acc/Dat", "zum": "Dat", "zur": "Dat",
 ]
 
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
@@ -204,22 +204,22 @@ func deGetCaseDeclensionTitle() -> String {
     case .disabled:
       return "" // placeholder
     case .accusativePersonalSPS, .accusativePossessiveSPS,
-        .dativePersonalSPS, .dativePossessiveSPS,
-        .genitivePersonalSPS, .genitivePossessiveSPS:
+         .dativePersonalSPS, .dativePossessiveSPS,
+         .genitivePersonalSPS, .genitivePossessiveSPS:
       return commandPromptSpacing + "Formalität des Subjekts?"
     case .accusativePersonalTPS, .accusativePossessiveTPS,
-        .dativePersonalTPS, .dativePossessiveTPS,
-        .genitivePersonalTPS, .genitivePossessiveTPS:
+         .dativePersonalTPS, .dativePossessiveTPS,
+         .genitivePersonalTPS, .genitivePossessiveTPS:
       return commandPromptSpacing + "Geschlecht des Subjekts?"
     case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
-        .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
-        .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
-        .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
-        .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
-        .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
-        .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
-        .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
-        .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
+         .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+         .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+         .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+         .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+         .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+         .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+         .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+         .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
       return commandPromptSpacing + "Geschlecht des Objekts?"
     }
   }
@@ -474,7 +474,7 @@ func deSetCaseVariantDeclensions() {
 
 /// Action associated with the left view switch button of the conjugation state.
 func deConjugationStateLeft() {
-  if commandState == .selectCaseDeclension && deCaseVariantDeclensionState == .disabled {
+  if commandState == .selectCaseDeclension, deCaseVariantDeclensionState == .disabled {
     switch deCaseDeclensionState {
     case .accusative:
       break
@@ -528,7 +528,7 @@ func deConjugationStateLeft() {
 
 /// Action associated with the right view switch button of the conjugation state.
 func deConjugationStateRight() {
-  if commandState == .selectCaseDeclension && deCaseVariantDeclensionState == .disabled {
+  if commandState == .selectCaseDeclension, deCaseVariantDeclensionState == .disabled {
     switch deCaseDeclensionState {
     case .accusative:
       conjViewShiftButtonsState = .bothActive

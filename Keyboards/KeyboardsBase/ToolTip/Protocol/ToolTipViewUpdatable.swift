@@ -5,7 +5,7 @@
 import Foundation
 
 protocol ToolTipViewUpdatable {
-  var didUpdatePage: ( (ConjViewShiftButtonsState) -> Void)? { get set}
+  var didUpdatePage: ((ConjViewShiftButtonsState) -> Void)? { get set }
 
   func updateNext()
   func updatePrevious()

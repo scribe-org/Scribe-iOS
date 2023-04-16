@@ -5,7 +5,6 @@
 import Foundation
 
 struct ToolTipViewDatasource: ToolTipViewDatasourceable {
-
   var theme: ViewThemeable
   private var content: NSMutableAttributedString
 
@@ -19,5 +18,4 @@ struct ToolTipViewDatasource: ToolTipViewDatasourceable {
   func getCurrentText() -> NSMutableAttributedString {
     content
   }
-
 }

@@ -32,6 +32,7 @@ let prepAnnotationConversionDict = [
   "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
 
+
 /// Annotates a word after it's selected and the Scribe key is pressed.
 func selectedWordAnnotation(_ KVC: KeyboardViewController) {
   wordToCheck = proxy.selectedText ?? ""
@@ -195,6 +196,7 @@ func selectedWordAnnotation(_ KVC: KeyboardViewController) {
     }
   }
 }
+
 
 /// Annotates a typed word after a space or auto action.
 func typedWordAnnotation(_ KVC: KeyboardViewController) {
@@ -367,6 +369,7 @@ func typedWordAnnotation(_ KVC: KeyboardViewController) {
   }
 }
 
+
 class Annotation: UIButton {
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -375,6 +378,7 @@ class Annotation: UIButton {
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
+
 
   func style() {
     self.clipsToBounds = true
@@ -389,10 +393,12 @@ class Annotation: UIButton {
     }
   }
 
+
   func styleSingleAnnotation() {
     self.style()
     self.layer.cornerRadius = commandKeyCornerRadius / 2.5
   }
+
 
   func styleLeftAnnotation() {
     self.style()
@@ -400,22 +406,25 @@ class Annotation: UIButton {
     self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
 
+
   func styleRightAnnotation() {
     self.style()
     self.layer.cornerRadius = commandKeyCornerRadius / 2.5
     self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
   }
+
 
   func styleMiddleAnnotation() {
     self.style()
   }
+
 
   // First set the size, and then the location which is based on width for proper positioning.
   func setAnnotationSize(width: CGFloat, height: CGFloat, fontSize: CGFloat) {
     self.frame = CGRect(x: 0, y: 0, width: width, height: height)
     self.titleLabel?.font = .systemFont(ofSize: fontSize)
   }
+  
 
   func setAnnotationLoc(minX: CGFloat, maxY: CGFloat) {
     self.frame = CGRect(x: minX, y: maxY, width: self.frame.width, height: self.frame.height)

@@ -43,6 +43,7 @@ class CommandBar: UILabel {
 
   // MARK: - Internal methods
 
+
   /// Sets up the command bar's color and text alignment.
   func set() {
     addInfoButton()
@@ -65,6 +66,7 @@ class CommandBar: UILabel {
     }
   }
 
+
   /// Adds info button to Command Bar.
   private func addInfoButton() {
     infoButton.removeFromSuperview()
@@ -83,10 +85,12 @@ class CommandBar: UILabel {
     ])
   }
 
+
   /// Triggered when tapping on `trailingButton`.
   @objc func tappedButton() {
     infoButtonTapHandler?()
   }
+
 
   /// Sets up the command bar's radius and shadow.
   func setCornerRadiusAndShadow() {
@@ -106,6 +110,7 @@ class CommandBar: UILabel {
     self.shadow.layer.shadowColor = keyShadowColor
   }
 
+
   // Hides the command bar when command buttons will be showed.
   func hide() {
     self.backgroundColor = UIColor.clear
@@ -114,6 +119,7 @@ class CommandBar: UILabel {
     self.shadow.backgroundColor = UIColor.clear
     self.blend.backgroundColor = UIColor.clear
   }
+
 
   // Removes the placeholder text for a command and replaces it with just the prompt and cursor.
   func conditionallyRemovePlaceholder() {
@@ -125,6 +131,7 @@ class CommandBar: UILabel {
       self.text = pluralPromptAndCursor
     }
   }
+
 
   // Changes the command bar text to an attributed string with a placeholder if there is no entered characters.
   func conditionallyAddPlaceholder() {
@@ -139,6 +146,7 @@ class CommandBar: UILabel {
       }
     }
   }
+  
 
   // Changes the color of the placeholder text to indicate that it is temporary.
   func colorizePrompt(for prompt: String) -> NSMutableAttributedString {

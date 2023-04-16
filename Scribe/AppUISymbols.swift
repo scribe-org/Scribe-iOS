@@ -19,7 +19,7 @@ func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
       settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
     }
   }
-  let settingsSymbol: UIImage = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig)!
+  let settingsSymbol = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig)!
 
   return settingsSymbol
 }
@@ -37,7 +37,7 @@ func getPrivacySymbol(fontSize: CGFloat) -> UIImage {
       privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
     }
   }
-  let privacySymbol: UIImage = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)!
+  let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)!
 
   return privacySymbol
 }
