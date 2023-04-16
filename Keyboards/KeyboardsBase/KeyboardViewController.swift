@@ -1446,7 +1446,9 @@ class KeyboardViewController: UIInputViewController {
       let addUILexiconWordQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
         for item in userLexicon.entries {
-          writeDBRow(query: addUILexiconWordQuery, args: [item.documentText])
+          if item.documentText.count > 1 {
+            writeDBRow(query: addUILexiconWordQuery, args: [item.documentText])
+          }
         }
       }
 

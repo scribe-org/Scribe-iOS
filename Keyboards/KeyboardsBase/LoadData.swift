@@ -25,11 +25,9 @@ func loadJSON(filename fileName: String) -> JSON {
 func openDBQueue() -> DatabaseQueue {
   let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
   let dbPath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
-  let db = try! DatabaseQueue(
-    path: dbPath
-  )
+  let dbQueue = try! DatabaseQueue(path: dbPath)
 
-  return db
+  return dbQueue
 }
 
 
@@ -181,6 +179,8 @@ func createAutocompleteLexicon() {
         noun AS word
       FROM
         nouns
+      WHERE
+        LENGTH(noun) > 2
 
       UNION
 
@@ -188,6 +188,8 @@ func createAutocompleteLexicon() {
         preposition AS word
       FROM
         prepositions
+      WHERE
+        LENGTH(preposition) > 2
 
       UNION
 
@@ -195,6 +197,8 @@ func createAutocompleteLexicon() {
         word AS word
       FROM
         autosuggestions
+      WHERE
+        LENGTH(word) > 2
 
       UNION
 
@@ -211,8 +215,7 @@ func createAutocompleteLexicon() {
       full_lexicon.word = nouns.noun
 
     WHERE
-      LENGTH(full_lexicon.word) > 2
-      AND full_lexicon.word NOT LIKE '%[0-9]%'
+      LENGTH(full_lexicon.word) > 1
       AND full_lexicon.word NOT LIKE '%-%'
     """
   do {
