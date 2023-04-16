@@ -377,6 +377,7 @@ class KeyboardViewController: UIInputViewController {
               padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
               padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
+            conditionallyHideEmojiDividers()
           } else if emojisToDisplay[1] != "" {
             for i in 0 ..< 2 {
               emojisToDisplayArray.append(emojisToDisplay[i])
@@ -389,6 +390,7 @@ class KeyboardViewController: UIInputViewController {
             } else if UITraitCollection.current.userInterfaceStyle == .dark {
               phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
             }
+            conditionallyHideEmojiDividers()
           } else {
             emojisToDisplayArray.append(emojisToDisplay[0])
 
@@ -558,6 +560,7 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
           padEmojiDivider2.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
+        conditionallyHideEmojiDividers()
       } else if emojisToDisplay[1] != "" {
         for i in 0 ..< 2 {
           emojisToDisplayArray.append(emojisToDisplay[i])
@@ -570,6 +573,7 @@ class KeyboardViewController: UIInputViewController {
         } else if UITraitCollection.current.userInterfaceStyle == .dark {
           phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
+        conditionallyHideEmojiDividers()
       } else {
         emojisToDisplayArray.append(emojisToDisplay[0])
 
@@ -617,9 +621,7 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
 
-        phoneEmojiDivider.backgroundColor = .clear
-        padEmojiDivider1.backgroundColor = .clear
-        padEmojiDivider2.backgroundColor = .clear
+        conditionallyHideEmojiDividers()
       } else if autoAction3Visible == true && emojisToShow == .one {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
@@ -630,9 +632,7 @@ class KeyboardViewController: UIInputViewController {
         }
         activateBtn(btn: pluralKey)
 
-        phoneEmojiDivider.backgroundColor = .clear
-        padEmojiDivider1.backgroundColor = .clear
-        padEmojiDivider2.backgroundColor = .clear
+        conditionallyHideEmojiDividers()
       } else if autoAction3Visible == false && emojisToShow == .two {
         setBtn(btn: phoneEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
         setBtn(btn: phoneEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
@@ -650,8 +650,7 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: phoneEmojiKey1)
         activateBtn(btn: phoneEmojiKey2)
 
-        padEmojiDivider1.backgroundColor = .clear
-        padEmojiDivider2.backgroundColor = .clear
+        conditionallyHideEmojiDividers()
       } else if autoAction3Visible == false && emojisToShow == .three {
         setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
         setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
@@ -668,7 +667,7 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: padEmojiKey2)
         activateBtn(btn: padEmojiKey3)
 
-        phoneEmojiDivider.backgroundColor = .clear
+        conditionallyHideEmojiDividers()
       }
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -811,6 +810,23 @@ class KeyboardViewController: UIInputViewController {
     activateBtn(btn: translateKey)
     activateBtn(btn: conjugateKey)
     activateBtn(btn: pluralKey)
+  }
+
+  /// Hides all emoji dividers based on conditions determined by the keyboard state.
+  func conditionallyHideEmojiDividers() {
+    if commandState == .idle {
+      if [.zero, .one, .three].contains(emojisToShow) {
+        phoneEmojiDivider.backgroundColor = .clear
+      }
+      if [.zero, .one, .two].contains(emojisToShow) {
+        padEmojiDivider1.backgroundColor = .clear
+        padEmojiDivider2.backgroundColor = .clear
+      }
+    } else {
+      phoneEmojiDivider.backgroundColor = .clear
+      padEmojiDivider1.backgroundColor = .clear
+      padEmojiDivider2.backgroundColor = .clear
+    }
   }
 
   // MARK: Conjugation Variables and Functions
@@ -2015,12 +2031,14 @@ class KeyboardViewController: UIInputViewController {
       commandState = .translate
       // Always start in letters with a new keyboard.
       keyboardState = .letters
+      conditionallyHideEmojiDividers()
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = translatePromptAndColorPlaceholder
 
     case "Conjugate":
       commandState = .conjugate
+      conditionallyHideEmojiDividers()
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = conjugatePromptAndColorPlaceholder
@@ -2032,6 +2050,7 @@ class KeyboardViewController: UIInputViewController {
           shiftButtonState = .shift
         }
       }
+      conditionallyHideEmojiDividers()
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = pluralPromptAndColorPlaceholder

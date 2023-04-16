@@ -243,12 +243,6 @@ func createAutocompleteLexicon() {
       "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
     )
   } catch {}
-
-  // Note: the following lines are for checking the total of the autocomplete lexicon if needed.
-//  let checkLexiconTotal = "SELECT CAST(COUNT(?) AS Text) AS word_count FROM autocomplete_lexicon"
-//  let args = ["words"]
-//  let outputCols = ["word_count"]
-//  let lexicon_count = queryDBRow(query: checkLexiconTotal, outputCols: outputCols, args: args)[0]
 }
 
 /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
