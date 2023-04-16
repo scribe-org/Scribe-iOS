@@ -13,7 +13,7 @@ func setFontSize() {
   if DeviceType.isPhone {
     fontSize = UIScreen.main.bounds.height / 65
   } else if DeviceType.isPad {
-    fontSize = UIScreen.main.bounds.height / 60
+    fontSize = UIScreen.main.bounds.height / 58
   }
 }
 
