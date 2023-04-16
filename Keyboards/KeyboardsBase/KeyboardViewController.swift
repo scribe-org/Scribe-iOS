@@ -1443,11 +1443,11 @@ class KeyboardViewController: UIInputViewController {
       createAutocompleteLexicon()
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
-      let addUILexiconWordQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
+      let addToAutocompleteLexiconQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
       self.requestSupplementaryLexicon { (userLexicon: UILexicon!) -> Void in
         for item in userLexicon.entries {
           if item.documentText.count > 1 {
-            writeDBRow(query: addUILexiconWordQuery, args: [item.documentText])
+            writeDBRow(query: addToAutocompleteLexiconQuery, args: [item.documentText])
           }
         }
       }

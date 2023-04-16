@@ -195,34 +195,40 @@ func createAutocompleteLexicon() {
       -- Select an upper case or capitalized noun if it's available.
       CASE
         WHEN
-          UPPER(full_lexicon.word) = nouns.noun
+          UPPER(lex.word) = nouns_upper.noun
         THEN
-          nouns.noun
+          nouns_upper.noun
 
         WHEN
-          UPPER(SUBSTR(full_lexicon.word, 1, 1)) || SUBSTR(full_lexicon.word, 2) = nouns.noun
+          UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
         THEN
-          nouns.noun
+          nouns_cap.noun
 
         ELSE
-          full_lexicon.word
+          lex.word
       END
 
     FROM
-      full_lexicon
+      full_lexicon AS lex
 
-    JOIN
-      nouns
+    LEFT JOIN
+      nouns AS nouns_upper
 
     ON
-      full_lexicon.word = nouns.noun
+      UPPER(lex.word) = nouns_upper.noun
+
+    LEFT JOIN
+      nouns AS nouns_cap
+
+    ON
+      UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
 
     WHERE
-      LENGTH(full_lexicon.word) > 1
-      AND full_lexicon.word NOT LIKE '%-%'
-      AND full_lexicon.word NOT LIKE '%/%'
-      AND full_lexicon.word NOT LIKE '%(%'
-      AND full_lexicon.word NOT LIKE '%)%'
+      LENGTH(lex.word) > 1
+      AND lex.word NOT LIKE '%-%'
+      AND lex.word NOT LIKE '%/%'
+      AND lex.word NOT LIKE '%(%'
+      AND lex.word NOT LIKE '%)%'
     """
   do {
     try languageDB.write { db in
