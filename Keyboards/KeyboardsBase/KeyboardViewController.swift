@@ -2456,6 +2456,7 @@ class KeyboardViewController: UIInputViewController {
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.deleteBackward()
         proxy.insertText(". ")
+        emojisToShow = .zero // was showing empty emoji spots
         keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
@@ -2463,7 +2464,6 @@ class KeyboardViewController: UIInputViewController {
       } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
         commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
         commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
-        emojisToShow = .zero // was showing empty emoji spots
         keyboardState = .letters
         shiftButtonState = .shift
         loadKeys()
