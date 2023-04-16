@@ -157,24 +157,7 @@ func createAutocompleteLexicon() {
   let createLexiconQuery = """
     INSERT INTO autocomplete_lexicon (word)
 
-    SELECT DISTINCT
-      -- Select an upper case or capitalized noun if it's available.
-      CASE
-        WHEN
-          UPPER(full_lexicon.word) = nouns.noun
-        THEN
-          nouns.noun
-
-        WHEN
-          UPPER(SUBSTR(full_lexicon.word, 1, 1)) || SUBSTR(full_lexicon.word, 2) = nouns.noun
-        THEN
-          nouns.noun
-
-        ELSE
-          full_lexicon.word
-      END
-
-    FROM (
+    WITH full_lexicon AS (
       SELECT
         noun AS word
       FROM
@@ -206,9 +189,29 @@ func createAutocompleteLexicon() {
         word AS word
       FROM
         emoji_keywords
-    ) AS full_lexicon
+    )
 
-    LEFT JOIN
+    SELECT DISTINCT
+      -- Select an upper case or capitalized noun if it's available.
+      CASE
+        WHEN
+          UPPER(full_lexicon.word) = nouns.noun
+        THEN
+          nouns.noun
+
+        WHEN
+          UPPER(SUBSTR(full_lexicon.word, 1, 1)) || SUBSTR(full_lexicon.word, 2) = nouns.noun
+        THEN
+          nouns.noun
+
+        ELSE
+          full_lexicon.word
+      END
+
+    FROM
+      full_lexicon
+
+    JOIN
       nouns
 
     ON
@@ -217,6 +220,9 @@ func createAutocompleteLexicon() {
     WHERE
       LENGTH(full_lexicon.word) > 1
       AND full_lexicon.word NOT LIKE '%-%'
+      AND full_lexicon.word NOT LIKE '%/%'
+      AND full_lexicon.word NOT LIKE '%(%'
+      AND full_lexicon.word NOT LIKE '%)%'
     """
   do {
     try languageDB.write { db in
