@@ -177,7 +177,16 @@ func createAutocompleteLexicon() {
       UNION
 
       SELECT
-        word AS word
+        -- For short words we want lower case versions.
+        -- The SELECT DISTINCT cases later will make sure that nouns are appropriately selected.
+        CASE
+          WHEN
+            LENGTH(word) = 3
+          THEN
+            LOWER(word)
+          ELSE
+            word
+        END AS word
       FROM
         autosuggestions
       WHERE
