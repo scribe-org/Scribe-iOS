@@ -45,10 +45,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The app icon, app screen background, and other branding elements have been changed to reflect the change in the dark version of Scribe blue.
 - The App Store pictures have been updated with a new color scheme to reflect the new dark Scribe blue.
 - The menu options within the app installation steps have been bolded and underlined.
-- The return button for the keyboard changes color to blue whenever a web browser search is being used.
+- The return button for the keyboard changes color to blue whenever search is being used in a web browser.
 - The select keyboard button has been moved to the bottom left most position on iPads.
 - The gear icon in the top left of the keyboard installation steps is now a more simple version.
 - iPad application texts were made slightly larger.
+
+### 🌐 Localization
+
+- The Scribe app has been localized into German for users that have it as their system language.
 
 ### 🐞 Bug Fixes
 
@@ -58,7 +62,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ⚖️ Legal
 
-- The text of the privacy policy was updated slightly for readability and also added information about data from Unicode CLDR for emoji suggestions and completions.
+- A German version of the privacy policy was added.
+- All versions of the privacy policy now note that the English version takes precedence over all others.
+- The text of the privacy policy was updated slightly for readability.
+- Information about data from Unicode CLDR for emoji suggestions and completions was added to the privacy policy.
 
 ### ♻️ Code Refactoring
 
