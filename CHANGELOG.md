@@ -12,7 +12,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Unreleased] Scribe-iOS
 
-### 🎨 Design Changes
+### 🌐 Localization
 
 <!--- A process has been made to localize the App Store images using image templates.-->
 <!--- The texts and images for the App Store have been localized into Spanish.-->
@@ -35,6 +35,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🗃️ Data Added
 
+- French: 255 nouns, 1122 verbs
+- German: 73,517 nouns, 35 verbs, 3 prepositions
+- Italian: 23 nouns
+- Portuguese: 246 nouns, 41 verbs
+- Russian: 29 nouns, 1 verb, 2 prepositions
+- Spanish: 11,627 nouns, 792 verbs
+- Swedish: 1,817 nouns, 80 verbs
+
 ### 🎨 Design Changes
 
 - The Scribe application receives dark mode in this version.
@@ -49,6 +57,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The select keyboard button has been moved to the bottom left most position on iPads.
 - The gear icon in the top left of the keyboard installation steps is now a more simple version.
 - iPad application texts were made slightly larger.
+- Images and videos for 6.7 inch iPhones have been added to the App Store.
 
 ### 🌐 Localization
 

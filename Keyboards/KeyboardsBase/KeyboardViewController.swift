@@ -484,7 +484,7 @@ class KeyboardViewController: UIInputViewController {
       // Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
       let query = "SELECT * FROM autosuggestions WHERE word = ?"
       let argsLower = [prefix.lowercased()]
-      let argsCapitalize = [prefix.lowercased()]
+      let argsCapitalize = [prefix.capitalized]
       let outputCols = ["suggestion_1", "suggestion_2", "suggestion_3"]
 
       let suggestionsLower = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
@@ -1465,7 +1465,9 @@ class KeyboardViewController: UIInputViewController {
 
       // Initialize the language database and create the autosuggestions lexicon.
       languageDB = openDBQueue()
-      createAutocompleteLexicon()
+
+      // Expand the language database with some select words that are needed for Scribe.
+      expandLanguageDataset()
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
       let addToAutocompleteLexiconQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"

@@ -103,146 +103,16 @@ func expandLanguageDataset() {
 
   // Add German compound prepositions to the prepositions table so they also receive annotations.
   if controllerLanguage == "German" {
-    let query = "INSERT INTO prepositions (preposition, form) VALUES (?, ?)"
+    let prepositionsInsertQuery = "INSERT INTO prepositions (preposition, form) VALUES (?, ?)"
     for (p, f) in contractedGermanPrepositions {
-      writeDBRow(query: query, args: [p, f])
+      writeDBRow(query: prepositionsInsertQuery, args: [p, f])
+    }
+
+    let autocompletionsInsertQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
+    for (p, _) in contractedGermanPrepositions {
+      writeDBRow(query: autocompletionsInsertQuery, args: [p])
     }
   }
-}
-
-/// Creates a table in the language database from which autocompletions will be drawn.
-/// Note: this function also calls expandLanguageDataset prior to creating the lexicon.
-///
-/// - Steps:
-///   - Create a base lexicon of noun, preposition, autosuggestion and emoji keys.
-///   - Remove words that have capitalized or upper case versions in the nouns table to make sure that just these versions are in autocomplete.
-///   - Filter out words that are less than three characters, numbers and hyphenated words.
-func createAutocompleteLexicon() {
-  expandLanguageDataset()
-
-  // Dropping the table before it's made to reset the values in case they change (potentially new data).
-  let dropLexiconTableQuery = "DROP TABLE IF EXISTS autocomplete_lexicon"
-  do {
-    try languageDB.write { db in
-      try db.execute(sql: dropLexiconTableQuery)
-    }
-  } catch let error as DatabaseError {
-    let errorMessage = error.message
-    let errorSQL = error.sql
-    print(
-      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
-    )
-  } catch {}
-
-  let createLexiconTableQuery = "CREATE TABLE IF NOT EXISTS autocomplete_lexicon (word Text)"
-  do {
-    try languageDB.write { db in
-      try db.execute(sql: createLexiconTableQuery)
-    }
-  } catch let error as DatabaseError {
-    let errorMessage = error.message
-    let errorSQL = error.sql
-    print(
-      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
-    )
-  } catch {}
-
-  let createLexiconQuery = """
-  INSERT INTO autocomplete_lexicon (word)
-
-  WITH full_lexicon AS (
-    SELECT
-      noun AS word
-    FROM
-      nouns
-    WHERE
-      LENGTH(noun) > 2
-
-    UNION
-
-    SELECT
-      preposition AS word
-    FROM
-      prepositions
-    WHERE
-      LENGTH(preposition) > 2
-
-    UNION
-
-    SELECT
-      -- For short words we want lower case versions.
-      -- The SELECT DISTINCT cases later will make sure that nouns are appropriately selected.
-      CASE
-        WHEN
-          LENGTH(word) = 3
-        THEN
-          LOWER(word)
-        ELSE
-          word
-      END AS word
-    FROM
-      autosuggestions
-    WHERE
-      LENGTH(word) > 2
-
-    UNION
-
-    SELECT
-      word AS word
-    FROM
-      emoji_keywords
-  )
-
-  SELECT DISTINCT
-    -- Select an upper case or capitalized noun if it's available.
-    CASE
-      WHEN
-        UPPER(lex.word) = nouns_upper.noun
-      THEN
-        nouns_upper.noun
-
-      WHEN
-        UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
-      THEN
-        nouns_cap.noun
-
-      ELSE
-        lex.word
-    END
-
-  FROM
-    full_lexicon AS lex
-
-  LEFT JOIN
-    nouns AS nouns_upper
-
-  ON
-    UPPER(lex.word) = nouns_upper.noun
-
-  LEFT JOIN
-    nouns AS nouns_cap
-
-  ON
-    UPPER(SUBSTR(lex.word, 1, 1)) || SUBSTR(lex.word, 2) = nouns_cap.noun
-
-  WHERE
-    LENGTH(lex.word) > 1
-    AND lex.word NOT LIKE '%-%'
-    AND lex.word NOT LIKE '%/%'
-    AND lex.word NOT LIKE '%(%'
-    AND lex.word NOT LIKE '%)%'
-  """
-  do {
-    try languageDB.write { db in
-      try db.execute(sql: createLexiconQuery)
-    }
-  } catch let error as DatabaseError {
-    let errorMessage = error.message
-    let errorSQL = error.sql
-    print(
-      "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
-    )
-  } catch {}
 }
 
 /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
