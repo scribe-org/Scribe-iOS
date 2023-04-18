@@ -17,7 +17,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 <!--- A process has been made to localize the App Store images using image templates.-->
 <!--- The texts and images for the App Store have been localized into Spanish.-->
 
-# [Unreleased] Scribe-iOS 2.2.0
+# Scribe-iOS 2.2.0
 
 ### ✨ New Features
 
