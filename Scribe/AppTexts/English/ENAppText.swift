@@ -43,16 +43,8 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
     range: NSRange(location: 8, length: "General".count)
   )
-  installDirections.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
-    range: NSRange(location: 8, length: "General".count)
-  )
   installDirections.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 41, length: "Keyboard".count)
-  )
-  installDirections.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 41, length: "Keyboard".count)
   )
 
@@ -67,10 +59,6 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   keyboardsStep.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 2, length: "Keyboards".count)
-  )
-  keyboardsStep.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Keyboards".count)
   )
 
@@ -96,16 +84,8 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
     range: NSRange(location: 2, length: "Add New Keyboard".count)
   )
-  finalSteps.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
-    range: NSRange(location: 2, length: "Add New Keyboard".count)
-  )
   finalSteps.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 30, length: "Scribe".count)
-  )
-  finalSteps.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 30, length: "Scribe".count)
   )
 

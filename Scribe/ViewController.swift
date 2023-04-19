@@ -299,8 +299,16 @@ class ViewController: UIViewController {
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
   func setCurrentUI() {
-    // Set the font size and all button elements.
-    setFontSize()
+    // Sets the font size for the text in the app screen and corresponding UIImage icons.
+    if DeviceType.isPhone {
+      if userSystemLanguage == "DE" {
+        fontSize = UIScreen.main.bounds.height / 61
+      } else {
+        fontSize = UIScreen.main.bounds.height / 59
+      }
+    } else if DeviceType.isPad {
+      fontSize = UIScreen.main.bounds.height / 53
+    }
     setTopIcon()
     setSwitchViewBtn()
     setSettingsBtn()

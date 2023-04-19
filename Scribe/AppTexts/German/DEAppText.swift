@@ -43,16 +43,8 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
     range: NSRange(location: 18, length: "Allgemein".count)
   )
-  installDirections.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
-    range: NSRange(location: 18, length: "Allgemein".count)
-  )
   installDirections.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 50, length: "Tastatur".count)
-  )
-  installDirections.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 50, length: "Tastatur".count)
   )
 
@@ -67,10 +59,6 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 
   keyboardsStep.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 2, length: "Tastaturen".count)
-  )
-  keyboardsStep.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 2, length: "Tastaturen".count)
   )
 
@@ -96,16 +84,8 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
     range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
   )
-  finalSteps.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
-    range: NSRange(location: 2, length: "Neue Tastatur hinzufügen".count)
-  )
   finalSteps.addAttribute(
     NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 42, length: "Scribe".count)
-  )
-  finalSteps.addAttributes(
-    [.underlineStyle: NSUnderlineStyle.single.rawValue],
     range: NSRange(location: 42, length: "Scribe".count)
   )
 

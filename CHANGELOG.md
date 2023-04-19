@@ -10,12 +10,12 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Unreleased] Scribe-iOS
+# [Unreleased] Scribe-iOS 2.2.1
 
-### 🌐 Localization
+### 🎨 Design Changes
 
-<!--- A process has been made to localize the App Store images using image templates.-->
-<!--- The texts and images for the App Store have been localized into Spanish.-->
+- The app text area was made larger and the app text size was increased.
+- The steps to install the keyboard are no longer underlined to increase readability.
 
 # Scribe-iOS 2.2.0
 

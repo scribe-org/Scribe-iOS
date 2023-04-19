@@ -8,15 +8,6 @@ import UIKit
 
 var fontSize = CGFloat(0)
 
-/// Sets the font size for the text in the app screen and corresponding UIImage icons.
-func setFontSize() {
-  if DeviceType.isPhone {
-    fontSize = UIScreen.main.bounds.height / 65
-  } else if DeviceType.isPad {
-    fontSize = UIScreen.main.bounds.height / 58
-  }
-}
-
 /// Concatenates attributed strings.
 ///
 /// - Parameters
@@ -86,7 +77,7 @@ func getGlobeIcon(fontSize: CGFloat) -> NSAttributedString {
 /// Formats and returns the text of the Scribe privacy policy with links activated.
 func setPrivacyPolicy(fontSize: CGFloat, title: String, text: String) -> NSMutableAttributedString {
   let privacyTextTitle = NSMutableAttributedString(
-    string: title, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)]
+    string: title, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
   )
 
   let wikidataDataLicensing = "https://www.wikidata.org/wiki/Wikidata:Licensing"
