@@ -211,7 +211,7 @@ class ViewController: UIViewController {
 
   /// Sets the necessary properties for the installation UI including calling text generation functions.
   func setInstallationUI() {
-    let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize)
+    let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize * 0.9)
     topIconPhone.image = settingsSymbol
     topIconPad.image = settingsSymbol
     topIconPhone.tintColor = .init(.keyChar)
@@ -255,7 +255,7 @@ class ViewController: UIViewController {
 
   /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
   func setPrivacyUI() {
-    let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize)
+    let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize * 0.9)
     topIconPhone.image = privacySymbol
     topIconPad.image = privacySymbol
     topIconPhone.tintColor = .init(.keyChar)
