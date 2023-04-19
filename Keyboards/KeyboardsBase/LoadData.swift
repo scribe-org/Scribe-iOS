@@ -96,19 +96,19 @@ func expandLanguageDataset() {
   let scribeOrEmptyString = queryDBRow(query: checkScribeQuery, outputCols: outputCols, args: args)[0]
 
   if scribeOrEmptyString == "" {
-    let addScribeQuery = "INSERT INTO nouns (noun, plural, form) VALUES (?, ?, ?)"
+    let addScribeQuery = "INSERT OR IGNORE INTO nouns (noun, plural, form) VALUES (?, ?, ?)"
     writeDBRow(query: addScribeQuery, args: ["Scribe", "Scribes", ""])
     writeDBRow(query: addScribeQuery, args: ["Scribes", "isPlural", "PL"])
   }
 
   // Add German compound prepositions to the prepositions table so they also receive annotations.
   if controllerLanguage == "German" {
-    let prepositionsInsertQuery = "INSERT INTO prepositions (preposition, form) VALUES (?, ?)"
+    let prepositionsInsertQuery = "INSERT OR IGNORE INTO prepositions (preposition, form) VALUES (?, ?)"
     for (p, f) in contractedGermanPrepositions {
       writeDBRow(query: prepositionsInsertQuery, args: [p, f])
     }
 
-    let autocompletionsInsertQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
+    let autocompletionsInsertQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
     for (p, _) in contractedGermanPrepositions {
       writeDBRow(query: autocompletionsInsertQuery, args: [p])
     }

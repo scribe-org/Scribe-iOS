@@ -1470,7 +1470,7 @@ class KeyboardViewController: UIInputViewController {
       expandLanguageDataset()
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
-      let addToAutocompleteLexiconQuery = "INSERT INTO autocomplete_lexicon (word) VALUES (?)"
+      let addToAutocompleteLexiconQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
       requestSupplementaryLexicon { (userLexicon: UILexicon!) in
         for item in userLexicon.entries {
           if item.documentText.count > 1 {
