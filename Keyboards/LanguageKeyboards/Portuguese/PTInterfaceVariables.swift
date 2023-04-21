@@ -30,7 +30,8 @@ public enum PortugueseKeyboardConstants {
   ]
 
   static let letterKeysPad = [
-    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-", "=", "delete"],
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "!", "?", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
@@ -79,10 +80,16 @@ func getPTKeys() {
     letterKeys = PortugueseKeyboardConstants.letterKeysPad
     numberKeys = PortugueseKeyboardConstants.numberKeysPad
     symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+    
+    //if the ipad is too samll for numbers
+    letterKeys.removeFirst(1)
+    letterKeys[0].append("delete")
+    
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1"]
     rightKeyChars = []
+    // TODO: add "p" to rightKeyChar if has 4 rows
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
