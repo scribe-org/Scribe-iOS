@@ -61,7 +61,7 @@ func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
       scale: .medium
     )
   }
-  if isLandscapeView == true {
+  if isLandscapeView {
     iconConfig = UIImage.SymbolConfiguration(
       pointSize: letterKeyWidth / 3.5,
       weight: .light,
@@ -96,7 +96,7 @@ func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
       scale: .medium
     )
   }
-  if isLandscapeView == true {
+  if isLandscapeView {
     iconConfig = UIImage.SymbolConfiguration(
       pointSize: letterKeyWidth / 3.75,
       weight: .light,

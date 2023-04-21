@@ -227,7 +227,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
       let outputCols = [requestedForm]
       wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
 
-      if inputWordIsCapitalized == true {
+      if inputWordIsCapitalized {
         proxy.insertText(wordToReturn.capitalized + " ")
       } else {
         proxy.insertText(wordToReturn + " ")
@@ -246,7 +246,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     let outputCols = [requestedForm]
     wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
 
-    if inputWordIsCapitalized == true {
+    if inputWordIsCapitalized {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {
       proxy.insertText(wordToReturn + " ")

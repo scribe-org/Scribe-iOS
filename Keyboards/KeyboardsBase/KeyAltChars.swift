@@ -117,13 +117,13 @@ func setAlternatesPathState(
   if DeviceType.isPad {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.05
-    if isLandscapeView == true {
+    if isLandscapeView {
       maxHeightMultiplier = 1.95
     }
   } else if DeviceType.isPhone {
     widthMultiplier = 0.4
     maxHeightMultiplier = 2.125
-    if isLandscapeView == true {
+    if isLandscapeView {
       widthMultiplier = 0.2
     }
   }
@@ -135,7 +135,7 @@ func setAlternatesPathState(
   if DeviceType.isPhone {
     heightBeforeTopCurves = vertStart - (keyHeight * 1.8)
     maxWidthCurveControl = keyWidth * 0.5
-  } else if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView == true) {
+  } else if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
     heightBeforeTopCurves = vertStart - (keyHeight * 1.6)
     maxWidthCurveControl = keyWidth * 0.25
   }

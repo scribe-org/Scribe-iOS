@@ -26,10 +26,10 @@ func setPopPathState(
   if DeviceType.isPad {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.05
-    if isLandscapeView == true {
+    if isLandscapeView  {
       maxHeightMultiplier = 1.95
     }
-  } else if DeviceType.isPhone && isLandscapeView == true {
+  } else if DeviceType.isPhone && isLandscapeView {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.125
   } else if DeviceType.isPhone && [".", ",", "?", "!", "'"].contains(char) {
@@ -49,7 +49,7 @@ func setPopPathState(
 
   if DeviceType.isPhone {
     heightBeforeTopCurves = vertStart - (keyHeight * 1.8)
-  } else if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView == true) {
+  } else if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
     heightBeforeTopCurves = vertStart - (keyHeight * 1.6)
   }
 }
@@ -260,12 +260,12 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
   let frame = (key.superview?.convert(key.frame, to: nil))!
   var labelVertPosition = frame.origin.y - key.frame.height / 1.75
   // non-capital characters should be higher for portrait phone views.
-  if displayChar == char, DeviceType.isPhone, isLandscapeView == false,
+  if displayChar == char, DeviceType.isPhone, !isLandscapeView,
      !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char)
   {
     labelVertPosition = frame.origin.y - key.frame.height / 1.6
   } else if DeviceType.isPad,
-            isLandscapeView == true
+            isLandscapeView
   {
     labelVertPosition = frame.origin.y - key.frame.height / 2
   }
@@ -284,7 +284,7 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
     ).cgPath
     keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
     keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
-    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView == true) {
+    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
       keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
       keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
     }
@@ -295,7 +295,7 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
     ).cgPath
     keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
     keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
-    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView == true) {
+    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
       keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
       keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
     }
@@ -312,7 +312,7 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
 ///   - char: the character of the key.
 func setPhoneKeyPopCharSize(char: String) {
   if keyboardState != .letters && !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char) {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
     } else {
@@ -320,7 +320,7 @@ func setPhoneKeyPopCharSize(char: String) {
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 1.15)
     }
   } else if shiftButtonState == .shift || shiftButtonState == .caps {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.15)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.15)
     } else {
@@ -328,7 +328,7 @@ func setPhoneKeyPopCharSize(char: String) {
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 1)
     }
   } else {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2)
     } else {
@@ -344,7 +344,7 @@ func setPhoneKeyPopCharSize(char: String) {
 ///   - char: the character of the key.
 func setPadKeyPopCharSize(char: String) {
   if keyboardState != .letters, !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char) {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.75)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.75)
     } else {
@@ -352,7 +352,7 @@ func setPadKeyPopCharSize(char: String) {
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
     }
   } else if keyboardState == .letters, shiftButtonState == .shift || shiftButtonState == .caps {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
     } else {
@@ -360,7 +360,7 @@ func setPadKeyPopCharSize(char: String) {
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2)
     }
   } else {
-    if isLandscapeView == true {
+    if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.25)
     } else {
