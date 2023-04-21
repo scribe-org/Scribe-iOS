@@ -320,16 +320,16 @@ class KeyboardKey: UIButton {
 ///   - btn: the button to be set up.
 ///   - color: the color to assign to the background.
 ///   - name: the name of the value for the key.
-///   - canCap: whether the key receives a special character for the shift state.
+///   - canBeCapitalized: whether the key receives a capitalized character for the shift state.
 ///   - isSpecial: whether the btn should be marked as special to be colored accordingly.
-func setBtn(btn: UIButton, color: UIColor, name: String, canCap: Bool, isSpecial: Bool) {
+func setBtn(btn: UIButton, color: UIColor, name: String, canBeCapitalized: Bool, isSpecial: Bool) {
   btn.backgroundColor = color
   btn.layer.setValue(name, forKey: "original")
 
   let charsWithoutShiftState = ["ß"]
 
   var capsKey = ""
-  if canCap {
+  if canBeCapitalized {
     if !charsWithoutShiftState.contains(name) {
       capsKey = name.capitalized
     } else {

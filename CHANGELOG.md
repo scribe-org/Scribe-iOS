@@ -10,12 +10,16 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Unreleased] Scribe-iOS 2.2.1
+# [Unreleased] Scribe-iOS 2.3.0
 
 ### 🎨 Design Changes
 
 - The app text area was made larger and the app text size was increased.
 - The steps to install the keyboard are no longer underlined to increase readability.
+
+### ♻️ Code Refactoring
+
+- All unnecessary explicit boolean checks were removed from the codes in favor of implicit checks.
 
 # Scribe-iOS 2.2.0
 

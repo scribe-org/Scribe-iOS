@@ -138,9 +138,9 @@ class KeyboardViewController: UIInputViewController {
     proxy = textDocumentProxy as UITextDocumentProxy
     keyboardState = .letters
     annotationState = false
-    firstKeyboardLoad = true
+    isFirstKeyboardLoad = true
     loadInterface()
-    firstKeyboardLoad = false
+    isFirstKeyboardLoad = false
 
     selectKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
   }
@@ -155,9 +155,9 @@ class KeyboardViewController: UIInputViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateViewConstraints()
-    firstKeyboardLoad = true
+    isFirstKeyboardLoad = true
     loadKeys()
-    firstKeyboardLoad = false
+    isFirstKeyboardLoad = false
   }
 
   /// Includes:
@@ -166,9 +166,9 @@ class KeyboardViewController: UIInputViewController {
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
     updateViewConstraints()
-    firstKeyboardLoad = true
+    isFirstKeyboardLoad = true
     loadKeys()
-    firstKeyboardLoad = false
+    isFirstKeyboardLoad = false
   }
 
   /// Overrides the previous color variables if the user switches between light and dark mode.
@@ -181,9 +181,9 @@ class KeyboardViewController: UIInputViewController {
       alternatesShapeLayer.removeFromSuperlayer()
     }
     annotationState = false
-    firstKeyboardLoad = true
+    isFirstKeyboardLoad = true
     loadKeys()
-    firstKeyboardLoad = false
+    isFirstKeyboardLoad = false
   }
 
   // MARK: Scribe Command Elements
@@ -607,23 +607,23 @@ class KeyboardViewController: UIInputViewController {
         if currentPrefix == completionWords[0] || (completionWords[0] != " " && completionWords[1] == " ") {
           shouldHighlightFirstCompletion = true
         }
-        setBtn(btn: translateKey, color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canCap: false, isSpecial: false)
+        setBtn(btn: translateKey, color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor, name: "AutoAction1", canBeCapitalized: false, isSpecial: false)
         styleBtn(btn: translateKey, title: completionWords[0], radius: shouldHighlightFirstCompletion ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius)
         activateBtn(btn: translateKey)
       }
 
-      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canCap: false, isSpecial: false)
+      setBtn(btn: conjugateKey, color: keyboardBgColor, name: "AutoAction2", canBeCapitalized: false, isSpecial: false)
       styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
       if autoAction3Visible && emojisToShow == .zero {
-        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canBeCapitalized: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
 
         conditionallyHideEmojiDividers()
       } else if autoAction3Visible && emojisToShow == .one {
-        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
+        setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canBeCapitalized: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         if DeviceType.isPhone {
           pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKeyHeight * 0.435)
@@ -634,8 +634,8 @@ class KeyboardViewController: UIInputViewController {
 
         conditionallyHideEmojiDividers()
       } else if !autoAction3Visible && emojisToShow == .two {
-        setBtn(btn: phoneEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
-        setBtn(btn: phoneEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
+        setBtn(btn: phoneEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canBeCapitalized: false, isSpecial: false)
+        setBtn(btn: phoneEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canBeCapitalized: false, isSpecial: false)
         styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         styleBtn(btn: phoneEmojiKey2, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
 
@@ -652,9 +652,9 @@ class KeyboardViewController: UIInputViewController {
 
         conditionallyHideEmojiDividers()
       } else if !autoAction3Visible && emojisToShow == .three {
-        setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
-        setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
-        setBtn(btn: padEmojiKey3, color: keyboardBgColor, name: "EmojiKey3", canCap: false, isSpecial: false)
+        setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canBeCapitalized: false, isSpecial: false)
+        setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canBeCapitalized: false, isSpecial: false)
+        setBtn(btn: padEmojiKey3, color: keyboardBgColor, name: "EmojiKey3", canBeCapitalized: false, isSpecial: false)
         styleBtn(btn: padEmojiKey1, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         styleBtn(btn: padEmojiKey2, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
         styleBtn(btn: padEmojiKey3, title: emojisToDisplayArray[2], radius: commandKeyCornerRadius)
@@ -803,9 +803,9 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
-    setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canCap: false, isSpecial: false)
-    setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canCap: false, isSpecial: false)
-    setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canCap: false, isSpecial: false)
+    setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canBeCapitalized: false, isSpecial: false)
 
     activateBtn(btn: translateKey)
     activateBtn(btn: conjugateKey)
@@ -871,12 +871,12 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x2 conjugation display.
   func setFormDisplay3x2View() {
-    setBtn(btn: formKeyFPS, color: keyColor, name: "firstPersonSingular", canCap: false, isSpecial: false)
-    setBtn(btn: formKeySPS, color: keyColor, name: "secondPersonSingular", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyTPS, color: keyColor, name: "thirdPersonSingular", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyFPP, color: keyColor, name: "firstPersonPlural", canCap: false, isSpecial: false)
-    setBtn(btn: formKeySPP, color: keyColor, name: "secondPersonPlural", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyTPP, color: keyColor, name: "thirdPersonPlural", canCap: false, isSpecial: false)
+    setBtn(btn: formKeyFPS, color: keyColor, name: "firstPersonSingular", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeySPS, color: keyColor, name: "secondPersonSingular", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyTPS, color: keyColor, name: "thirdPersonSingular", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyFPP, color: keyColor, name: "firstPersonPlural", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeySPP, color: keyColor, name: "secondPersonPlural", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyTPP, color: keyColor, name: "thirdPersonPlural", canBeCapitalized: false, isSpecial: false)
 
     for btn in get3x2FormDisplayButtons() {
       activateBtn(btn: btn)
@@ -921,9 +921,9 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
   func setFormDisplay3x1View() {
-    setBtn(btn: formKeyTop, color: keyColor, name: "formTop", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyMiddle, color: keyColor, name: "formMiddle", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyBottom, color: keyColor, name: "formBottom", canCap: false, isSpecial: false)
+    setBtn(btn: formKeyTop, color: keyColor, name: "formTop", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyMiddle, color: keyColor, name: "formMiddle", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyBottom, color: keyColor, name: "formBottom", canBeCapitalized: false, isSpecial: false)
 
     for btn in get3x1FormDisplayButtons() {
       activateBtn(btn: btn)
@@ -970,10 +970,10 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
   func setFormDisplay2x2View() {
-    setBtn(btn: formKeyTL, color: keyColor, name: "formTopLeft", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyTR, color: keyColor, name: "formTopRight", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyBL, color: keyColor, name: "formBottomLeft", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyBR, color: keyColor, name: "formBottomRight", canCap: false, isSpecial: false)
+    setBtn(btn: formKeyTL, color: keyColor, name: "formTopLeft", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyTR, color: keyColor, name: "formTopRight", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyBL, color: keyColor, name: "formBottomLeft", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyBR, color: keyColor, name: "formBottomRight", canBeCapitalized: false, isSpecial: false)
 
     for btn in get2x2FormDisplayButtons() {
       activateBtn(btn: btn)
@@ -1016,8 +1016,8 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
   func setFormDisplay1x2View() {
-    setBtn(btn: formKeyLeft, color: keyColor, name: "formLeft", canCap: false, isSpecial: false)
-    setBtn(btn: formKeyRight, color: keyColor, name: "formRight", canCap: false, isSpecial: false)
+    setBtn(btn: formKeyLeft, color: keyColor, name: "formLeft", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: formKeyRight, color: keyColor, name: "formRight", canBeCapitalized: false, isSpecial: false)
 
     for btn in get1x2FormDisplayButtons() {
       activateBtn(btn: btn)
@@ -1058,7 +1058,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 1x1 conjugation display.
   func setFormDisplay1x1View() {
-    setBtn(btn: formKeySingle, color: keyColor, name: "formSingle", canCap: false, isSpecial: false)
+    setBtn(btn: formKeySingle, color: keyColor, name: "formSingle", canBeCapitalized: false, isSpecial: false)
 
     for btn in get1x1FormDisplayButtons() {
       activateBtn(btn: btn)
@@ -1144,14 +1144,14 @@ class KeyboardViewController: UIInputViewController {
       btn: shiftFormsDisplayLeft,
       color: keyColor,
       name: "shiftFormsDisplayLeft",
-      canCap: false,
+      canBeCapitalized: false,
       isSpecial: false
     )
     setBtn(
       btn: shiftFormsDisplayRight,
       color: keyColor,
       name: "shiftFormsDisplayRight",
-      canCap: false,
+      canBeCapitalized: false,
       isSpecial: false
     )
 
@@ -1447,7 +1447,7 @@ class KeyboardViewController: UIInputViewController {
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     // Actions to be done only on initial loads.
-    if firstKeyboardLoad {
+    if isFirstKeyboardLoad {
       shiftButtonState = .shift
       commandBar.textColor = keyCharColor
       commandBar.conditionallyAddPlaceholder() // in case of color mode change during commands
@@ -1654,7 +1654,7 @@ class KeyboardViewController: UIInputViewController {
           commandBar.text = ""
           commandBar.hide()
           // Set autosuggestions on keyboard's first load.
-          if firstKeyboardLoad {
+          if isFirstKeyboardLoad {
             conditionallySetAutoActionBtns()
           }
         }
@@ -1994,8 +1994,8 @@ class KeyboardViewController: UIInputViewController {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
         resetVerbConjugationState()
-        let triggerConjugationTbl = triggerVerbConjugation(commandBar: commandBar)
-        if triggerConjugationTbl {
+        let conjugationTblTriggered = triggerVerbConjugation(commandBar: commandBar)
+        if conjugationTblTriggered {
           commandState = .selectVerbConjugation
           loadKeys() // go to conjugation view
           return
@@ -2661,11 +2661,11 @@ class KeyboardViewController: UIInputViewController {
 
       alternatesKeyView.addSubview(alternateKey)
       if char == alternateKeys.first && keysWithAlternatesLeft.contains(char) {
-        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCap: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canBeCapitalized: true, isSpecial: false)
       } else if char == alternateKeys.last && keysWithAlternatesRight.contains(char) {
-        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canCap: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: commandKeyColor, name: char, canBeCapitalized: true, isSpecial: false)
       } else {
-        setBtn(btn: alternateKey, color: keyColor, name: char, canCap: true, isSpecial: false)
+        setBtn(btn: alternateKey, color: keyColor, name: char, canBeCapitalized: true, isSpecial: false)
       }
       activateBtn(btn: alternateKey)
 

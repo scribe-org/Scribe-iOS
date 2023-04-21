@@ -87,6 +87,7 @@ extension StringProtocol {
   var trailingSpacesTrimmed: Self.SubSequence {
     var view = self[...]
 
+    // Needs to be an explicit boolean comparison.
     while view.last?.isWhitespace == true {
       view = view.dropLast()
     }
