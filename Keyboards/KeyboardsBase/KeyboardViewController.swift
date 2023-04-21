@@ -92,13 +92,13 @@ class KeyboardViewController: UIInputViewController {
 
     checkLandscapeMode()
     if DeviceType.isPhone {
-      if isLandscapeView == true {
+      if isLandscapeView {
         keyboardHeight = 200
       } else {
         keyboardHeight = 270
       }
     } else if DeviceType.isPad {
-      if isLandscapeView == true {
+      if isLandscapeView {
         keyboardHeight = 420
       } else {
         keyboardHeight = 340
@@ -464,7 +464,7 @@ class KeyboardViewController: UIInputViewController {
       separatedBy: " "
     ).secondToLast() ?? ""
 
-    if emojiAutoActionRepeatPossible == true {
+    if emojiAutoActionRepeatPossible {
       prefix = currentEmojiTriggerWord
     }
 
@@ -600,7 +600,7 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: padEmojiKey2)
       deactivateBtn(btn: padEmojiKey3)
 
-      if autoAction1Visible == true {
+      if autoAction1Visible {
         allowUndo = false
         shouldHighlightFirstCompletion = false
         // Highlight if the current prefix is the first autocompletion or there is only one available.
@@ -616,13 +616,13 @@ class KeyboardViewController: UIInputViewController {
       styleBtn(btn: conjugateKey, title: !autoAction1Visible ? completionWords[0] : completionWords[1], radius: commandKeyCornerRadius)
       activateBtn(btn: conjugateKey)
 
-      if autoAction3Visible == true && emojisToShow == .zero {
+      if autoAction3Visible && emojisToShow == .zero {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: !autoAction1Visible ? completionWords[1] : completionWords[2], radius: commandKeyCornerRadius)
         activateBtn(btn: pluralKey)
 
         conditionallyHideEmojiDividers()
-      } else if autoAction3Visible == true && emojisToShow == .one {
+      } else if autoAction3Visible && emojisToShow == .one {
         setBtn(btn: pluralKey, color: keyboardBgColor, name: "AutoAction3", canCap: false, isSpecial: false)
         styleBtn(btn: pluralKey, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
         if DeviceType.isPhone {
@@ -633,7 +633,7 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: pluralKey)
 
         conditionallyHideEmojiDividers()
-      } else if autoAction3Visible == false && emojisToShow == .two {
+      } else if !autoAction3Visible && emojisToShow == .two {
         setBtn(btn: phoneEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
         setBtn(btn: phoneEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
         styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
@@ -651,7 +651,7 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: phoneEmojiKey2)
 
         conditionallyHideEmojiDividers()
-      } else if autoAction3Visible == false && emojisToShow == .three {
+      } else if !autoAction3Visible && emojisToShow == .three {
         setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canCap: false, isSpecial: false)
         setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canCap: false, isSpecial: false)
         setBtn(btn: padEmojiKey3, color: keyboardBgColor, name: "EmojiKey3", canCap: false, isSpecial: false)
@@ -718,7 +718,7 @@ class KeyboardViewController: UIInputViewController {
     clearPrefixFromTextFieldProxy()
     emojisToDisplayArray = [String]()
     // Remove the space from the previous auto action or replace the current prefix.
-    if emojiAutoActionRepeatPossible == true && (
+    if emojiAutoActionRepeatPossible && (
       (keyPressed == phoneEmojiKey1 || keyPressed == phoneEmojiKey2)
         || (keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2 || keyPressed == padEmojiKey3)
         || (keyPressed == pluralKey && emojisToShow == .one)
@@ -1447,7 +1447,7 @@ class KeyboardViewController: UIInputViewController {
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
 
     // Actions to be done only on initial loads.
-    if firstKeyboardLoad == true {
+    if firstKeyboardLoad {
       shiftButtonState = .shift
       commandBar.textColor = keyCharColor
       commandBar.conditionallyAddPlaceholder() // in case of color mode change during commands
@@ -1512,7 +1512,7 @@ class KeyboardViewController: UIInputViewController {
     setConjugationBtns()
 
     // Clear annotation state if a keyboard state change dictates it.
-    if annotationState == false {
+    if !annotationState {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
       annotationSeparators.forEach { $0.removeFromSuperview() }
@@ -1524,7 +1524,7 @@ class KeyboardViewController: UIInputViewController {
     paddingViews.forEach { $0.removeFromSuperview() }
 
     // keyWidth determined per keyboard by the top row.
-    if isLandscapeView == true {
+    if isLandscapeView {
       if DeviceType.isPhone {
         letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.5
         numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.5
@@ -1556,7 +1556,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Derive corner radii.
     if DeviceType.isPhone {
-      if isLandscapeView == true {
+      if isLandscapeView {
         keyCornerRadius = keyWidth / 9
         commandKeyCornerRadius = keyWidth / 5
       } else {
@@ -1564,7 +1564,7 @@ class KeyboardViewController: UIInputViewController {
         commandKeyCornerRadius = keyWidth / 3
       }
     } else if DeviceType.isPad {
-      if isLandscapeView == true {
+      if isLandscapeView {
         keyCornerRadius = keyWidth / 12
         commandKeyCornerRadius = keyWidth / 7.5
       } else {
@@ -1654,7 +1654,7 @@ class KeyboardViewController: UIInputViewController {
           commandBar.text = ""
           commandBar.hide()
           // Set autosuggestions on keyboard's first load.
-          if firstKeyboardLoad == true {
+          if firstKeyboardLoad {
             conditionallySetAutoActionBtns()
           }
         }
@@ -1995,7 +1995,7 @@ class KeyboardViewController: UIInputViewController {
       } else if commandState == .conjugate {
         resetVerbConjugationState()
         let triggerConjugationTbl = triggerVerbConjugation(commandBar: commandBar)
-        if triggerConjugationTbl == true {
+        if triggerConjugationTbl {
           commandState = .selectVerbConjugation
           loadKeys() // go to conjugation view
           return
@@ -2393,7 +2393,7 @@ class KeyboardViewController: UIInputViewController {
     conditionallyShowAutoActionPartitions()
     conditionallySetAutoActionBtns()
 
-    if annotationState == false {
+    if !annotationState {
       annotationBtns.forEach { $0.removeFromSuperview() }
       annotationBtns.removeAll()
       annotationSeparators.forEach { $0.removeFromSuperview() }
@@ -2466,7 +2466,7 @@ class KeyboardViewController: UIInputViewController {
     let touch: UITouch = event.allTouches!.first!
 
     // Caps lock given two taps of shift.
-    if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible == true {
+    if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible {
       shiftButtonState = .caps
       loadKeys()
       conditionallySetAutoActionBtns()
@@ -2489,7 +2489,7 @@ class KeyboardViewController: UIInputViewController {
     if touch.tapCount == 2
       && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
       && proxy.documentContextBeforeInput?.count != 1
-      && doubleSpacePeriodPossible == true
+      && doubleSpacePeriodPossible
     {
       // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
       if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {

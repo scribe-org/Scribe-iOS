@@ -85,7 +85,7 @@ class KeyboardKey: UIButton {
 
   /// Sets the character size of a capital key if the device is an iPhone given the orientation.
   func setPhoneCapCharSize() {
-    if isLandscapeView == true {
+    if isLandscapeView {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
@@ -117,13 +117,13 @@ class KeyboardKey: UIButton {
     guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
 
     if keyboardState == .letters
-      && isSpecial == false
+      && !isSpecial
       && !["123", "´", spaceBar, languageTextForSpaceBar].contains(key)
       && shiftButtonState == .normal
     {
       titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
-      if isLandscapeView == true {
+      if isLandscapeView {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.4)
       } else {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.35)
@@ -141,7 +141,7 @@ class KeyboardKey: UIButton {
 
   /// Sets the character size of a key if the device is an iPad given the orientation.
   func setPadCapCharSize() {
-    if isLandscapeView == true {
+    if isLandscapeView {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
@@ -177,13 +177,13 @@ class KeyboardKey: UIButton {
     guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
 
     if keyboardState == .letters
-      && isSpecial == false
+      && !isSpecial
       && ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(key)
       && shiftButtonState == .normal
     {
       titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
-      if isLandscapeView == true {
+      if isLandscapeView {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.35)
       } else {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.75)
@@ -308,7 +308,7 @@ class KeyboardKey: UIButton {
     } else if key == "return" && [.translate, .conjugate, .plural].contains(commandState) {
       // Color the return key depending on if it's being used as enter for commands.
       backgroundColor = commandKeyColor
-    } else if isSpecial == true {
+    } else if isSpecial {
       backgroundColor = specialKeyColor
     }
   }
@@ -329,7 +329,7 @@ func setBtn(btn: UIButton, color: UIColor, name: String, canCap: Bool, isSpecial
   let charsWithoutShiftState = ["ß"]
 
   var capsKey = ""
-  if canCap == true {
+  if canCap {
     if !charsWithoutShiftState.contains(name) {
       capsKey = name.capitalized
     } else {

@@ -30,7 +30,7 @@ var ptConjugationState: PTConjugationState = .indicativePresent
 
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
 func ptGetConjugationTitle() -> String {
-  if inputWordIsCapitalized == true {
+  if inputWordIsCapitalized {
     verbToDisplay = verbToConjugate.capitalized
   } else {
     verbToDisplay = verbToConjugate

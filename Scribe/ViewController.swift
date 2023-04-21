@@ -96,9 +96,9 @@ class ViewController: UIViewController {
 
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
-    if displayPrivacyPolicy == false {
+    if !displayPrivacyPolicy {
       switchView.setTitle(userSystemLanguage == "DE" ? "Datenschutzrichtlinie ansehen" : "View privacy policy", for: .normal)
-    } else if displayPrivacyPolicy == true {
+    } else if displayPrivacyPolicy {
       switchView.setTitle(userSystemLanguage == "DE" ? "Installation ansehen" : "View installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
@@ -316,7 +316,7 @@ class ViewController: UIViewController {
     setUIConstantProperties()
     setUIDeviceProperties()
 
-    if displayPrivacyPolicy == false {
+    if !displayPrivacyPolicy {
       setInstallationUI()
     } else {
       setPrivacyUI()
@@ -325,7 +325,7 @@ class ViewController: UIViewController {
 
   /// Switches the view of the app based on the current view.
   @objc func switchAppView() {
-    if displayPrivacyPolicy == false {
+    if !displayPrivacyPolicy {
       displayPrivacyPolicy = true
     } else {
       displayPrivacyPolicy = false

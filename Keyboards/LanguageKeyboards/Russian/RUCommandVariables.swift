@@ -60,7 +60,7 @@ var ruCaseDeclensionState: RUCaseDeclensionState = .accusative
 
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
 func ruGetConjugationTitle() -> String {
-  if inputWordIsCapitalized == true {
+  if inputWordIsCapitalized {
     verbToDisplay = verbToConjugate.capitalized
   } else {
     verbToDisplay = verbToConjugate
