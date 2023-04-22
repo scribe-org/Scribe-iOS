@@ -12,12 +12,32 @@ class KeyboardViewController: UIInputViewController {
   var keyboardView: UIView!
 
   // Stack views that are populated with they keyboard rows.
+  @IBOutlet var stackViewNum: UIStackView!
   @IBOutlet var stackView0: UIStackView!
   @IBOutlet var stackView1: UIStackView!
   @IBOutlet var stackView2: UIStackView!
   @IBOutlet var stackView3: UIStackView!
 
   private var tipView: ToolTipView?
+
+  /// Changes the height of `stackViewNum` depending on device type and size.
+  func conditionallyShowTopNumbersRow() {
+    if DeviceType.isPhone {
+      view.addConstraint(
+        NSLayoutConstraint(
+          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 0
+        )
+      )
+    } else if DeviceType.isPad {
+      // Update the size of the numbers row to add it to the view.
+      // let numbersRowHeight = scribeKeyHeight
+      view.addConstraint(
+        NSLayoutConstraint(
+          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 0
+        )
+      )
+    }
+  }
 
   /// Changes the keyboard state such that the letters view will be shown.
   func changeKeyboardToLetterKeys() {
@@ -1459,6 +1479,7 @@ class KeyboardViewController: UIInputViewController {
 
       linkShadowBlendElements()
       setAutoActionPartitions()
+      conditionallyShowTopNumbersRow()
 
       // Show the name of the keyboard to the user.
       showKeyboardLanguage = true
