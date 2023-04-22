@@ -80,7 +80,7 @@ func getFRQWERTYKeys() {
     numberKeys = FrenchQWERTYKeyboardConstants.numberKeysPad
     symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPad
     
-    //if the ipad is too samll for numbers
+    // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
     

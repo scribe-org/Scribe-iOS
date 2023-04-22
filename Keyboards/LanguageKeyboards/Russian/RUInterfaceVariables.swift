@@ -76,15 +76,15 @@ func getRUKeys() {
     numberKeys = RussianKeyboardConstants.numberKeysPad
     symbolKeys = RussianKeyboardConstants.symbolKeysPad
     
-    //if the ipad is too samll for numbers
+    // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
     
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]
+    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows
     rightKeyChars = []
-    // TODO: add "х" to rightKeyChar if has 4 rows
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 

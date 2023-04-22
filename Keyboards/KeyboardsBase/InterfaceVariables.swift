@@ -272,14 +272,14 @@ func getENKeys() {
     numberKeys = EnglishKeyboardConstants.numberKeysPad
     symbolKeys = EnglishKeyboardConstants.symbolKeysPad
     
-    //if the ipad is too samll for numbers
+    // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
     
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1"]
-    // TODO: add "p" to rightKeyChar if has 4 rows
+    // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
