@@ -16,6 +16,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The app text area was made larger and the app text size was increased.
 - The steps to install the keyboard are no longer underlined to increase readability.
+<!-- - The iPad keyboard layouts are more reflective of system keyboard designs in terms of key widths and key positioning. -->
 
 ### ♻️ Code Refactoring
 
