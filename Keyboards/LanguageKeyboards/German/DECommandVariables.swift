@@ -144,15 +144,6 @@ var deConjugationState: DEConjugationState = .indicativePresent
 var deCaseDeclensionState: DECaseDeclensionState = .accusative
 var deCaseVariantDeclensionState: DECaseVariantDeclensionState = .disabled
 
-// Contracted versions of German prepositions (ex: an + dem = am).
-let contractedGermanPrepositions = [
-  "am": "Acc/Dat", "ans": "Acc/Dat", "aufs": "Acc/Dat", "beim": "Dat",
-  "durchs": "Acc", "fürs": "Acc", "hinters": "Acc/Dat", "hinterm": "Acc/Dat",
-  "ins": "Acc/Dat", "im": "Acc/Dat", "übers": "Acc/Dat", "überm": "Acc/Dat",
-  "ums": "Acc", "unters": "Acc/Dat", "unterm": "Acc/Dat", "vom": "Dat",
-  "vors": "Acc/Dat", "vorm": "Acc/Dat", "zum": "Dat", "zur": "Dat",
-]
-
 /// Sets the title of the command bar when the keyboard is in conjugate mode.
 func deGetConjugationTitle() -> String {
   if inputWordIsCapitalized {

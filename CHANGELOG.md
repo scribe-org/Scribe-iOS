@@ -18,6 +18,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The steps to install the keyboard are no longer underlined to increase readability.
 <!-- - The iPad keyboard layouts are more reflective of system keyboard designs in terms of key widths and key positioning. -->
 
+### 🐞 Bug Fixes
+
+- Fixed a bug where the word "Scribe" was not being added into the nouns by shifting this to Scribe-Data.
+- Fixed a bug where German contracted prepositions were not being added by shifting this to Scribe-Data.
+
 ### ♻️ Code Refactoring
 
 - All unnecessary explicit boolean checks were removed from the codes in favor of implicit checks.

@@ -87,34 +87,6 @@ func writeDBRow(query: String, args: StatementArguments) {
   } catch {}
 }
 
-/// Performs a few minor edits to language data to make sure that certain values are included.
-func expandLanguageDataset() {
-  // Make sure that Scribe shows up in auto actions.
-  let checkScribeQuery = "SELECT * FROM nouns WHERE noun = ?"
-  let args = ["Scribe"]
-  let outputCols = ["noun"]
-  let scribeOrEmptyString = queryDBRow(query: checkScribeQuery, outputCols: outputCols, args: args)[0]
-
-  if scribeOrEmptyString == "" {
-    let addScribeQuery = "INSERT OR IGNORE INTO nouns (noun, plural, form) VALUES (?, ?, ?)"
-    writeDBRow(query: addScribeQuery, args: ["Scribe", "Scribes", ""])
-    writeDBRow(query: addScribeQuery, args: ["Scribes", "isPlural", "PL"])
-  }
-
-  // Add German compound prepositions to the prepositions table so they also receive annotations.
-  if controllerLanguage == "German" {
-    let prepositionsInsertQuery = "INSERT OR IGNORE INTO prepositions (preposition, form) VALUES (?, ?)"
-    for (p, f) in contractedGermanPrepositions {
-      writeDBRow(query: prepositionsInsertQuery, args: [p, f])
-    }
-
-    let autocompletionsInsertQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
-    for (p, _) in contractedGermanPrepositions {
-      writeDBRow(query: autocompletionsInsertQuery, args: [p])
-    }
-  }
-}
-
 /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
 ///
 /// - Parameters

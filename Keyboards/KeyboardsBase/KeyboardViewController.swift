@@ -1487,9 +1487,6 @@ class KeyboardViewController: UIInputViewController {
       // Initialize the language database and create the autosuggestions lexicon.
       languageDB = openDBQueue()
 
-      // Expand the language database with some select words that are needed for Scribe.
-      expandLanguageDataset()
-
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
       let addToAutocompleteLexiconQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
       requestSupplementaryLexicon { (userLexicon: UILexicon!) in
