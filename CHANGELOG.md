@@ -26,6 +26,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ♻️ Code Refactoring
 
 - All unnecessary explicit boolean checks were removed from the codes in favor of implicit checks.
+- The logic of `selectedWordAnnotation` and `typedWordAnnotation` is now shared in a single function.
 
 # Scribe-iOS 2.2.0
 

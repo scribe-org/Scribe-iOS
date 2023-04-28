@@ -1455,7 +1455,7 @@ class KeyboardViewController: UIInputViewController {
   /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
   func conditionallyDisplayAnnotation() {
     if [.idle, .alreadyPlural, .invalid].contains(commandState) {
-      typedWordAnnotation(self)
+      typedWordAnnotation(KVC: self)
     }
   }
 
@@ -1976,7 +1976,7 @@ class KeyboardViewController: UIInputViewController {
           commandState = .idle
         }
         loadKeys()
-        selectedWordAnnotation(self)
+        selectedWordAnnotation(KVC: self)
       } else {
         if [.translate,
             .conjugate,
