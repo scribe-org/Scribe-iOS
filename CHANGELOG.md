@@ -12,11 +12,15 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Unreleased] Scribe-iOS 2.3.0
 
+### ✨ New Features
+
+- Noun genders are now displayed to the user under autosuggestions and autocompletions.
+<!--- The word that the user is typing is available as an autosuggestion in cases where pressing space will insert an autocompletion.-->
+
 ### 🎨 Design Changes
 
 - The app text area was made larger and the app text size was increased.
 - The steps to install the keyboard are no longer underlined to increase readability.
-<!-- - The iPad keyboard layouts are more reflective of system keyboard designs in terms of key widths and key positioning. -->
 
 ### 🐞 Bug Fixes
 
@@ -27,6 +31,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - All unnecessary explicit boolean checks were removed from the codes in favor of implicit checks.
 - The logic of `selectedWordAnnotation` and `typedWordAnnotation` is now shared in a single function.
+- Many variable names have been changed to be zero indexed.
 
 # Scribe-iOS 2.2.0
 

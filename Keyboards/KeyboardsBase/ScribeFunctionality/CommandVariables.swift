@@ -10,8 +10,8 @@ import GRDB
 // Basic keyboard functionality variables.
 var capsLockPossible = false
 var doubleSpacePeriodPossible = false
-var autoAction1Visible = true
-var autoAction3Visible = true
+var autoAction0Visible = true
+var autoAction2Visible = true
 
 /// States of the emoji display corresponding to the number to show.
 enum EmojisToShow {
@@ -42,7 +42,6 @@ var verbsAfterPronounsArray = [String]()
 // Variables for basic keyboard appearance.
 let commandCursor = "│"
 var commandPromptSpacing = ""
-var scribeKeyHeight = CGFloat(0)
 
 // Command input and output variables.
 var inputWordIsCapitalized = false
@@ -55,13 +54,22 @@ var activateAnnotationBtn = false
 var hasNounForm = false
 var hasPrepForm = false
 var prepAnnotationForm = ""
-var annotationBtns = [UIButton]()
-var annotationColors = [UIColor]()
-var annotationSeparators = [UIView]()
 var annotationDisplayWord = ""
 var wordToCheck = ""
 var wordsTyped = [String]()
+
 var annotationsToAssign = [String]()
+var annotationBtns = [UIButton]()
+var annotationColors = [UIColor]()
+var annotationSeparators = [UIView]()
+
+var autoActionAnnotationBtns = [UIButton]()
+var autoActionAnnotationSeparators = [UIView]()
+
+var newAutoActionAnnotationsToAssign = [String]()
+var newAutoActionAnnotationBtns = [UIButton]()
+var newAutoActionAnnotationColors = [UIColor]()
+var newAutoActionAnnotationSeparators = [UIView]()
 
 // Prompts and saving groups of languages.
 var allPrompts = [""]

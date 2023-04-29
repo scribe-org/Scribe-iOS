@@ -35,6 +35,7 @@ let prepAnnotationConversionDict = [
 /// The base function for annotation that's accessed by `selectedWordAnnotation` and `typedWordAnnotation`.
 ///
 /// - Parameters
+///   - wordToAnnotate: the word that an annotation should be created for.
 ///   - KVC: the keyboard view controller.
 func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
   let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
@@ -55,24 +56,25 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
   annotationSeparators = [UIView]()
 
   let annotationFieldWidth = KVC.translateKey.frame.width * 0.85
-  var annotationHeight: CGFloat = 0.0
-  annotationHeight = scribeKeyHeight
+  let annotationHeight = KVC.scribeKey.frame.height
 
   if wordToAnnotate == "Scribe" || wordToAnnotate == "scribe" {
     // Thank the user :)
     annotationState = true
     activateAnnotationBtn = true
-    autoAction1Visible = false
+    autoAction0Visible = false
 
     let annotationBtn = Annotation()
-    annotationBtn.setAnnotationSize(width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55)
+    annotationBtn.setAnnotationSize(
+      width: annotationFieldWidth, height: annotationHeight, fontSize: annotationHeight * 0.55
+    )
     annotationBtn.setAnnotationLoc(
       minX: KVC.translateKey.frame.origin.x
         + (KVC.translateKey.frame.width / 2)
         - (annotationFieldWidth / 2),
       maxY: KVC.scribeKey.frame.origin.y
     )
-    annotationBtn.styleSingleAnnotation()
+    annotationBtn.styleSingleAnnotation(fullAnnotation: true)
 
     let emojisToSelectFrom = "🥳🎉"
     let emojis = String((0 ..< 3).map { _ in emojisToSelectFrom.randomElement()! })
@@ -82,7 +84,9 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     annotationColors.append(commandKeyColor)
 
     KVC.activateBtn(btn: annotationBtn)
-    setBtn(btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canBeCapitalized: false, isSpecial: false)
+    setBtn(
+      btn: annotationBtn, color: commandKeyColor, name: "ScribeAnnotation", canBeCapitalized: false, isSpecial: false
+    )
   } else {
     if hasNounForm {
       if !nounForm.contains("/") {
@@ -105,12 +109,12 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
       }
     }
 
-    if annotationsToAssign.count > 0 {
+    let numAnnotations = annotationsToAssign.count
+    if numAnnotations > 0 {
       annotationState = true
-      autoAction1Visible = false
+      autoAction0Visible = false
 
       let annotationWidth = annotationFieldWidth / CGFloat(annotationsToAssign.count)
-      let numAnnotations = annotationsToAssign.count
 
       for i in 0 ..< numAnnotations {
         let annotationBtn = Annotation()
@@ -143,11 +147,11 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
           maxY: KVC.scribeKey.frame.origin.y
         )
         if numAnnotations == 1 {
-          annotationBtn.styleSingleAnnotation()
+          annotationBtn.styleSingleAnnotation(fullAnnotation: true)
         } else if i == 0 {
-          annotationBtn.styleLeftAnnotation()
+          annotationBtn.styleLeftAnnotation(fullAnnotation: true)
         } else if i == numAnnotations - 1 {
-          annotationBtn.styleRightAnnotation()
+          annotationBtn.styleRightAnnotation(fullAnnotation: true)
         } else {
           annotationBtn.styleMiddleAnnotation()
         }
@@ -178,10 +182,20 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
         if activateAnnotationBtn {
           KVC.activateBtn(btn: annotationBtn)
         }
-        setBtn(btn: annotationBtn, color: annotationColors[i], name: "GetAnnotationInfo", canBeCapitalized: false, isSpecial: false)
+        setBtn(
+          btn: annotationBtn,
+          color: annotationColors[i],
+          name: "GetAnnotationInfo",
+          canBeCapitalized: false,
+          isSpecial: false
+        )
 
         if i != 0 {
-          annotationSep = UIView(frame: CGRect(x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height))
+          annotationSep = UIView(
+            frame: CGRect(
+              x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height
+            )
+          )
           annotationSep.isUserInteractionEnabled = false
           annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
           KVC.view.addSubview(annotationSep)
@@ -229,6 +243,130 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
   }
 }
 
+/// Annotates nouns during autocomplete and autosuggest.
+///
+/// - Parameters
+///   - autoActionWord: the word within an auto action that could be annotated.
+///   - index: the auto action key index that the annotation should be set for.
+///   - KVC: the keyboard view controller.
+func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewController) {
+  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+  let nounGenderArgs = [autoActionWord]
+  let outputCols = ["form"]
+
+  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+
+  hasNounForm = nounForm != ""
+
+  newAutoActionAnnotationsToAssign = [String]()
+  newAutoActionAnnotationBtns = [UIButton]()
+  newAutoActionAnnotationColors = [UIColor]()
+  newAutoActionAnnotationSeparators = [UIView]()
+
+  let annotationFieldWidth = KVC.translateKey.frame.width * 0.85
+  let annotationHeight = KVC.scribeKey.frame.height * 0.1
+
+  if hasNounForm {
+    if !nounForm.contains("/") {
+      newAutoActionAnnotationsToAssign.append(nounForm)
+    } else {
+      for a in nounForm.components(separatedBy: "/") {
+        newAutoActionAnnotationsToAssign.append(a)
+      }
+    }
+  }
+
+  let numAnnotations = newAutoActionAnnotationsToAssign.count
+  if numAnnotations > 0 {
+    let annotationWidth = annotationFieldWidth / CGFloat(newAutoActionAnnotationsToAssign.count)
+
+    for i in 0 ..< numAnnotations {
+      let annotationBtn = Annotation()
+      var annotationSep = UIView()
+
+      if numAnnotations > 3 {
+        annotationBtn.setAnnotationSize(
+          width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.4
+        )
+      } else if numAnnotations > 2 {
+        annotationBtn.setAnnotationSize(
+          width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.55
+        )
+      } else {
+        annotationBtn.setAnnotationSize(
+          width: annotationWidth, height: annotationHeight, fontSize: annotationHeight * 0.6
+        )
+      }
+
+      if index == 0 {
+        annotationBtn.setAnnotationLoc(
+          minX: KVC.translateKey.frame.origin.x
+            + (KVC.translateKey.frame.width / 2)
+            - (annotationFieldWidth / 2)
+            + (annotationWidth * CGFloat(i)),
+          maxY: KVC.translateKey.frame.origin.y + KVC.translateKey.frame.height - KVC.scribeKey.frame.height * 0.1
+        )
+      } else if index == 1 {
+        annotationBtn.setAnnotationLoc(
+          minX: KVC.conjugateKey.frame.origin.x
+            + (KVC.conjugateKey.frame.width / 2)
+            - (annotationFieldWidth / 2)
+            + (annotationWidth * CGFloat(i)),
+          maxY: KVC.conjugateKey.frame.origin.y + KVC.conjugateKey.frame.height - KVC.scribeKey.frame.height * 0.1
+        )
+      } else if index == 2 {
+        annotationBtn.setAnnotationLoc(
+          minX: KVC.pluralKey.frame.origin.x
+            + (KVC.pluralKey.frame.width / 2)
+            - (annotationFieldWidth / 2)
+            + (annotationWidth * CGFloat(i)),
+          maxY: KVC.pluralKey.frame.origin.y + KVC.pluralKey.frame.height - KVC.scribeKey.frame.height * 0.1
+        )
+      }
+
+      if numAnnotations == 1 {
+        annotationBtn.styleSingleAnnotation(fullAnnotation: false)
+      } else if i == 0 {
+        annotationBtn.styleLeftAnnotation(fullAnnotation: false)
+      } else if i == numAnnotations - 1 {
+        annotationBtn.styleRightAnnotation(fullAnnotation: false)
+      } else {
+        annotationBtn.styleMiddleAnnotation()
+      }
+
+      KVC.view.addSubview(annotationBtn)
+      autoActionAnnotationBtns.append(annotationBtn)
+      newAutoActionAnnotationColors.append(
+        nounFormToColorDict[newAutoActionAnnotationsToAssign[i]]!.withAlphaComponent(0.75)
+      )
+      setBtn(
+        btn: annotationBtn,
+        color: newAutoActionAnnotationColors[i],
+        name: "GetAnnotationInfo",
+        canBeCapitalized: false,
+        isSpecial: false
+      )
+      // Allow for interaction with the button beneath the annotation.
+      annotationBtn.isUserInteractionEnabled = false
+
+      if i != 0 {
+        annotationSep = UIView(
+          frame: CGRect(
+            x: annotationBtn.frame.minX, y: annotationBtn.frame.minY, width: 1, height: annotationBtn.frame.height
+          )
+        )
+        annotationSep.isUserInteractionEnabled = false
+        annotationSep.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ? keyColor : specialKeyColor
+        KVC.view.addSubview(annotationSep)
+        autoActionAnnotationSeparators.append(annotationSep)
+      }
+    }
+  } else {
+    return
+  }
+}
+
+/// UIButton class for annotation styling.
 class Annotation: UIButton {
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -251,20 +389,32 @@ class Annotation: UIButton {
     }
   }
 
-  func styleSingleAnnotation() {
+  func styleSingleAnnotation(fullAnnotation: Bool) {
     style()
-    layer.cornerRadius = commandKeyCornerRadius / 2.5
+    if fullAnnotation {
+      layer.cornerRadius = commandKeyCornerRadius / 2.5
+    } else {
+      layer.cornerRadius = commandKeyCornerRadius / 5
+    }
   }
 
-  func styleLeftAnnotation() {
+  func styleLeftAnnotation(fullAnnotation: Bool) {
     style()
-    layer.cornerRadius = commandKeyCornerRadius / 2.5
+    if fullAnnotation {
+      layer.cornerRadius = commandKeyCornerRadius / 2.5
+    } else {
+      layer.cornerRadius = commandKeyCornerRadius / 5
+    }
     layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
   }
 
-  func styleRightAnnotation() {
+  func styleRightAnnotation(fullAnnotation: Bool) {
     style()
-    layer.cornerRadius = commandKeyCornerRadius / 2.5
+    if fullAnnotation {
+      layer.cornerRadius = commandKeyCornerRadius / 2.5
+    } else {
+      layer.cornerRadius = commandKeyCornerRadius / 5
+    }
     layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
   }
 
