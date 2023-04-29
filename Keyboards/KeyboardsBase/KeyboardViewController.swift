@@ -2056,6 +2056,7 @@ class KeyboardViewController: UIInputViewController {
         if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
           commandState = .idle
         }
+        emojisToShow = .zero
         loadKeys()
         selectedWordAnnotation(KVC: self)
         print(proxy.selectedText!)
