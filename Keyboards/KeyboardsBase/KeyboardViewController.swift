@@ -628,14 +628,19 @@ class KeyboardViewController: UIInputViewController {
 
       if autoAction0Visible {
         allowUndo = false
-        shouldHighlightFirstCompletion = false
+        firstCompletionIsHighlighted = false
         // Highlight if the current prefix is the first autocompletion or there is only one available.
-        if currentPrefix == completionWords[0] || (completionWords[0] != " " && completionWords[1] == " ") {
-          shouldHighlightFirstCompletion = true
+        if (
+          currentPrefix == completionWords[0] && completionWords[1] != " "
+        ) || (
+          // Highlighting remaining autocomplete only if the user hasn't typed the autocompletion fully.
+          completionWords[0] != currentPrefix && completionWords[1] == " "
+        ) {
+          firstCompletionIsHighlighted = true
         }
         setBtn(
           btn: translateKey,
-          color: shouldHighlightFirstCompletion ? keyColor.withAlphaComponent(0.5) : keyboardBgColor,
+          color: firstCompletionIsHighlighted ? keyColor.withAlphaComponent(0.5) : keyboardBgColor,
           name: "AutoAction0",
           canBeCapitalized: false,
           isSpecial: false
@@ -643,10 +648,18 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(
           btn: translateKey,
           title: completionWords[0],
-          radius: shouldHighlightFirstCompletion ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius
+          radius: firstCompletionIsHighlighted ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius
         )
-        activateBtn(btn: translateKey)
+        if translateKey.titleLabel?.text != " " {
+          activateBtn(btn: translateKey)
+        }
         autoActionAnnotation(autoActionWord: completionWords[0], index: 0, KVC: self)
+      }
+
+      // Add the current word being typed to the completion words if there is only one option that's highlighted.
+      if firstCompletionIsHighlighted && completionWords[1] == " " {
+        spaceAutoInsertIsPossible = true
+        completionWords[1] = currentPrefix
       }
 
       setBtn(
@@ -660,7 +673,9 @@ class KeyboardViewController: UIInputViewController {
         title: !autoAction0Visible ? completionWords[0] : completionWords[1],
         radius: commandKeyCornerRadius
       )
-      activateBtn(btn: conjugateKey)
+      if conjugateKey.titleLabel?.text != " " {
+        activateBtn(btn: conjugateKey)
+      }
       autoActionAnnotation(
         autoActionWord: !autoAction0Visible ? completionWords[0] : completionWords[1], index: 1, KVC: self
       )
@@ -678,7 +693,9 @@ class KeyboardViewController: UIInputViewController {
           title: !autoAction0Visible ? completionWords[1] : completionWords[2],
           radius: commandKeyCornerRadius
         )
-        activateBtn(btn: pluralKey)
+        if pluralKey.titleLabel?.text != " " {
+          activateBtn(btn: pluralKey)
+        }
         autoActionAnnotation(
           autoActionWord: !autoAction0Visible ? completionWords[1] : completionWords[2], index: 2, KVC: self
         )
@@ -2342,13 +2359,14 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case spaceBar, languageTextForSpaceBar:
-      if currentPrefix != completionWords[0] && (completionWords[0] != " " && completionWords[1] == " ") {
+      if currentPrefix != completionWords[0] && (completionWords[0] != " " && spaceAutoInsertIsPossible) {
         previousWord = currentPrefix
         clearPrefixFromTextFieldProxy()
         proxy.insertText(completionWords[0])
         autoActionState = .suggest
         currentPrefix = ""
-        shouldHighlightFirstCompletion = false
+        firstCompletionIsHighlighted = false
+        spaceAutoInsertIsPossible = false
         allowUndo = true
       }
       autoActionState = .suggest

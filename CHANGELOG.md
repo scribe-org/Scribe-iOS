@@ -15,12 +15,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 - Noun genders are now displayed to the user under autosuggestions and autocompletions.
-<!--- The word that the user is typing is available as an autosuggestion in cases where pressing space will insert an autocompletion.-->
+- The word that the user is typing is available as an autocompletion in cases where pressing space will insert an autocompletion.
+- Auto completion and suggestion buttons are deactivated if there is no word being displayed.
 
 ### 🎨 Design Changes
 
 - The app text area was made larger and the app text size was increased.
 - The steps to install the keyboard are no longer underlined to increase readability.
+- Word highlighting for autocompletions is disabled when the user types the full word being highlighted.
 
 ### 🐞 Bug Fixes
 

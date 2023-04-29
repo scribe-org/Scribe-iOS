@@ -25,7 +25,8 @@ var emojisToShow: EmojisToShow = .zero
 var currentEmojiTriggerWord = ""
 var emojiAutoActionRepeatPossible = false
 
-var shouldHighlightFirstCompletion = false
+var firstCompletionIsHighlighted = false
+var spaceAutoInsertIsPossible = false
 var allowUndo = false
 var previousWord = ""
 var currentPrefix = ""
