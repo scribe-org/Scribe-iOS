@@ -417,7 +417,6 @@ class KeyboardViewController: UIInputViewController {
             emojisToShow = .one
           }
         }
-
       } else {
         getDefaultAutosuggestions()
       }
@@ -633,8 +632,8 @@ class KeyboardViewController: UIInputViewController {
         if (
           currentPrefix == completionWords[0] && completionWords[1] != " "
         ) || (
-          // Highlighting remaining autocomplete only if the user hasn't typed the autocompletion fully.
-          completionWords[0] != currentPrefix && completionWords[1] == " "
+          // Highlighting last remaining autocomplete.
+          completionWords[0] != " " && completionWords[1] == " "
         ) {
           firstCompletionIsHighlighted = true
         }
@@ -650,14 +649,14 @@ class KeyboardViewController: UIInputViewController {
           title: completionWords[0],
           radius: firstCompletionIsHighlighted ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius
         )
-        if translateKey.titleLabel?.text != " " {
+        if translateKey.currentTitle != " " {
           activateBtn(btn: translateKey)
         }
         autoActionAnnotation(autoActionWord: completionWords[0], index: 0, KVC: self)
       }
 
       // Add the current word being typed to the completion words if there is only one option that's highlighted.
-      if firstCompletionIsHighlighted && completionWords[1] == " " {
+      if firstCompletionIsHighlighted && completionWords[1] == " " && completionWords[0] != currentPrefix {
         spaceAutoInsertIsPossible = true
         completionWords[1] = currentPrefix
       }
@@ -673,7 +672,7 @@ class KeyboardViewController: UIInputViewController {
         title: !autoAction0Visible ? completionWords[0] : completionWords[1],
         radius: commandKeyCornerRadius
       )
-      if conjugateKey.titleLabel?.text != " " {
+      if conjugateKey.currentTitle != " " {
         activateBtn(btn: conjugateKey)
       }
       autoActionAnnotation(
@@ -693,7 +692,7 @@ class KeyboardViewController: UIInputViewController {
           title: !autoAction0Visible ? completionWords[1] : completionWords[2],
           radius: commandKeyCornerRadius
         )
-        if pluralKey.titleLabel?.text != " " {
+        if pluralKey.currentTitle != " " {
           activateBtn(btn: pluralKey)
         }
         autoActionAnnotation(
