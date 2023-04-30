@@ -131,13 +131,13 @@ The following table shows the supported languages and the amount of data availab
 
 | Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
 | :--------- | ------: | ----: | -------------: | ------------: | -------------: |
-| French     |  17,070 | 6,572 |         67,652 |             - |          2,488 |
-| German     | 102,789 | 3,592 |         67,652 |           190 |          2,898 |
-| Italian    |   8,669 |    73 |         67,652 |             - |          2,457 |
+| French     |  17,072 | 6,572 |         67,652 |             - |          2,488 |
+| German     | 102,833 | 3,593 |         67,652 |           210 |          2,898 |
+| Italian    |   8,671 |    73 |         67,652 |             - |          2,457 |
 | Portuguese |   5,437 |   536 |         67,652 |             - |          2,327 |
 | Russian    | 194,448 |    12 |         67,652 |            15 |          3,827 |
-| Spanish    |  38,755 | 4,828 |         67,652 |             - |          3,134 |
-| Swedish    |  44,624 | 4,474 |         67,652 |             - |          2,913 |
+| Spanish    |  39,105 | 4,930 |         67,652 |             - |          3,134 |
+| Swedish    |  45,259 | 4,501 |         67,652 |             - |          2,913 |
 
 `*` Given the current **`beta`** status where words are machine translated.
 

@@ -316,7 +316,7 @@ class KeyboardViewController: UIInputViewController {
   func getEmojiAutoSuggestions(for word: String) {
     let query = "SELECT * FROM emoji_keywords WHERE word = ?"
     let args = [word.lowercased()]
-    let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
+    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
     let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
 
     if emojisToDisplay[0] != "" {
@@ -523,7 +523,7 @@ class KeyboardViewController: UIInputViewController {
       let query = "SELECT * FROM autosuggestions WHERE word = ?"
       let argsLower = [prefix.lowercased()]
       let argsCapitalize = [prefix.capitalized]
-      let outputCols = ["suggestion_1", "suggestion_2", "suggestion_3"]
+      let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
 
       let suggestionsLower = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
       let suggestionsCapitalize = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
@@ -541,7 +541,7 @@ class KeyboardViewController: UIInputViewController {
             completionWords.append(suggestionsLower[i].uppercased())
           } else {
             let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
-            let nounGenderArgs = [wordToCheck]
+            let nounGenderArgs = [suggestionsLower[i]]
             let outputCols = ["form"]
 
             let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]

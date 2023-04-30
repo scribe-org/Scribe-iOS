@@ -10,23 +10,28 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Unreleased] Scribe-iOS 2.3.0
+# Scribe-iOS 2.3.0
 
 ### ✨ New Features
 
 - Noun genders are now displayed to the user under autosuggestions and autocompletions.
 - The word that the user is typing is available as an autocompletion in cases where pressing space will insert an autocompletion.
 - Auto completion and suggestion buttons are deactivated if there is no word being displayed.
-- Autosuggestions and emoji suggestions are now updated when a user checks the annotation of a word.
-<!--- Autosuggestions and emoji suggestions also update when the cursor is moved by the user.-->
+- Autosuggestions and emoji suggestions are now updated when a user checks the annotation of a word by pressing the Scribe key.
+- The capitalization of autosuggestions is maintained if the word is capitalized to assure that capitalized nouns are presented properly.
 
 ### 🗃️ Data Added
+
+- French: 2 nouns
+- German: 44 nouns, 1 verb, 20 prepositions
+- Italian: 2 nouns
+- Spanish: 350 nouns, 102 verbs
+- Swedish: 635 nouns, 27 verbs
 
 ### 🎨 Design Changes
 
 - The app text area was made larger and the app text size was increased.
 - The steps to install the keyboard are no longer underlined to increase readability.
-- Word highlighting for autocompletions is disabled when the user types the full word being highlighted.
 
 ### 🐞 Bug Fixes
 
