@@ -558,13 +558,17 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Disable the third auto action button if we'll have emoji suggestions.
+    getEmojiAutoSuggestions(for: prefix)
+  }
+  
+  func getEmojiAutoSuggestions(for word: String) {
     let query = "SELECT * FROM emoji_keywords WHERE word = ?"
-    let args = [prefix.lowercased()]
+    let args = [word.lowercased()]
     let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
     let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
     if emojisToDisplay[0] != "" {
       emojisToDisplayArray = [String]()
-      currentEmojiTriggerWord = prefix.lowercased()
+      currentEmojiTriggerWord = word.lowercased()
       if emojisToDisplay[2] != "" && DeviceType.isPad {
         for i in 0 ..< 3 {
           emojisToDisplayArray.append(emojisToDisplay[i])
@@ -2052,8 +2056,11 @@ class KeyboardViewController: UIInputViewController {
         if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
           commandState = .idle
         }
+        emojisToShow = .zero
         loadKeys()
         selectedWordAnnotation(KVC: self)
+        print(proxy.selectedText!)
+        getEmojiAutoSuggestions(for: proxy.selectedText!)
       } else {
         if [.translate,
             .conjugate,
@@ -2483,7 +2490,10 @@ class KeyboardViewController: UIInputViewController {
     ) {
       emojiAutoActionRepeatPossible = false
     }
-    emojisToShow = .zero
+    
+    if !["Scribe"].contains(originalKey) {
+      emojisToShow = .zero
+    }
 
     // Add partitions and show auto actions if the keyboard states dictate.
     conditionallyShowAutoActionPartitions()
