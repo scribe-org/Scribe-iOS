@@ -17,6 +17,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Noun genders are now displayed to the user under autosuggestions and autocompletions.
 - The word that the user is typing is available as an autocompletion in cases where pressing space will insert an autocompletion.
 - Auto completion and suggestion buttons are deactivated if there is no word being displayed.
+- Autosuggestions and emoji suggestions are now updated when a user checks the annotation of a word.
+<!--- Autosuggestions and emoji suggestions also update when the cursor is moved by the user.-->
+
+### 🗃️ Data Added
 
 ### 🎨 Design Changes
 
