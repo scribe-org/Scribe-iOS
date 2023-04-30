@@ -169,7 +169,7 @@ The `Plural` feature allows a user to enter a noun and then insert its plural in
 
 ### Word Annotation [`⇧`](#contents)
 
-Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, after commands or by pressing the `Scribe key` while it is selected. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
+Scribe further annotates words in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, after commands, by pressing the `Scribe key` while it is selected as well as under autocompletions and autosuggestions. The hope is that annotation will help a user remember grammar rules even when not using Scribe.
 
 #### Nouns
 

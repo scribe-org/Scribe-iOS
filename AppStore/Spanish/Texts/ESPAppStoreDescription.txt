@@ -10,7 +10,7 @@ Funciones actuales:
 
 - Función Plural: permite al usuario introducir un sustantivo e insertar su plural en el campo de texto.
 
-- Scribe muestra también género y preposiciones para los sustantivos en la barra de comandos, para ayudar a los usuarios entender el contexto de lo que estén escribiendo. Esto se muestran una vez que el usuario ha escrito una palabra y ha presionado la tecla de espacio o cuando selecciona la palabra y presiona la tecla 'Scribe'.
+- Scribe muestra también género y preposiciones para los sustantivos en la barra de comandos, para ayudar a los usuarios entender el contexto de lo que estén escribiendo. Esto se muestran una vez que el usuario ha escrito una palabra y ha presionado la tecla de espacio, cuando selecciona la palabra y presiona la tecla 'Scribe' así como debajo de los autocompletados y autosugerencias.
 
 - Para lenguajes que tienen declinación de pronombres, Scribe también permite seleccionar el caso y después el usuario puede seleccionar el pronombre que desea de acuerdo con el caso, predicado y objeto.
 

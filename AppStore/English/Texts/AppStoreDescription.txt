@@ -12,7 +12,7 @@ Current Features:
 
 - The Plural feature allows a user to enter a noun and then insert its plural into the text field.
 
-- Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space or by pressing the Scribe key while it is selected.
+- Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, by pressing the Scribe key while a word is selected as well as under autocompletions and autosuggestions.
 
 - For languages with pronoun declension, Scribe also allows for the case annotation to be clicked and then the user can select the pronoun they want based on case, subject and object.
 
