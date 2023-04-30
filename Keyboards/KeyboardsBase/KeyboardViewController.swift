@@ -525,9 +525,9 @@ class KeyboardViewController: UIInputViewController {
       let argsCapitalize = [prefix.capitalized]
       let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
 
-      let suggestionsLower = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
-      let suggestionsCapitalize = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
-      if suggestionsLower[0] != "" {
+      let suggestionsLowerCasePrefix = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
+      let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
+      if suggestionsLowerCasePrefix[0] != "" {
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -536,25 +536,25 @@ class KeyboardViewController: UIInputViewController {
         }
         while i < 3 {
           if shiftButtonState == .shift {
-            completionWords.append(suggestionsLower[i].capitalize())
+            completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
           } else if shiftButtonState == .caps {
-            completionWords.append(suggestionsLower[i].uppercased())
+            completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
             let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
-            let nounGenderArgs = [suggestionsLower[i]]
+            let nounGenderArgs = [suggestionsLowerCasePrefix[i]]
             let outputCols = ["form"]
 
             let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
             hasNounForm = nounForm != ""
             if !hasNounForm {
-              completionWords.append(suggestionsLower[i].lowercased())
+              completionWords.append(suggestionsLowerCasePrefix[i].lowercased())
             } else {
-              completionWords.append(suggestionsLower[i])
+              completionWords.append(suggestionsLowerCasePrefix[i])
             }
           }
           i += 1
         }
-      } else if suggestionsCapitalize[0] != "" {
+      } else if suggestionsCapitalizedPrefix[0] != "" {
         completionWords = [String]()
         var i = 0
         if allowUndo {
@@ -563,11 +563,11 @@ class KeyboardViewController: UIInputViewController {
         }
         while i < 3 {
           if shiftButtonState == .shift {
-            completionWords.append(suggestionsCapitalize[i].capitalize())
+            completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
           } else if shiftButtonState == .caps {
-            completionWords.append(suggestionsCapitalize[i].uppercased())
+            completionWords.append(suggestionsCapitalizedPrefix[i].uppercased())
           } else {
-            completionWords.append(suggestionsCapitalize[i])
+            completionWords.append(suggestionsCapitalizedPrefix[i])
           }
           i += 1
         }
