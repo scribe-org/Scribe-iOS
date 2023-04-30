@@ -309,6 +309,55 @@ class KeyboardViewController: UIInputViewController {
     )
   }
 
+  /// Generate emoji suggestions or completions for a given word.
+  ///
+  /// - Parameters
+  ///   - word: the word for which corresponding emojis should be shown for.
+  func getEmojiAutoSuggestions(for word: String) {
+    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
+    let args = [word.lowercased()]
+    let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
+    let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
+
+    if emojisToDisplay[0] != "" {
+      emojisToDisplayArray = [String]()
+      currentEmojiTriggerWord = word.lowercased()
+      if emojisToDisplay[2] != "" && DeviceType.isPad {
+        for i in 0 ..< 3 {
+          emojisToDisplayArray.append(emojisToDisplay[i])
+        }
+        autoAction2Visible = false
+        emojisToShow = .three
+
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          padEmojiDivider0.backgroundColor = specialKeyColor
+          padEmojiDivider1.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        }
+        conditionallyHideEmojiDividers()
+      } else if emojisToDisplay[1] != "" {
+        for i in 0 ..< 2 {
+          emojisToDisplayArray.append(emojisToDisplay[i])
+        }
+        autoAction2Visible = false
+        emojisToShow = .two
+
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          phoneEmojiDivider.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        }
+        conditionallyHideEmojiDividers()
+      } else {
+        emojisToDisplayArray.append(emojisToDisplay[0])
+
+        emojisToShow = .one
+      }
+    }
+  }
+
   /// Generates an array of the three autocomplete words.
   func getAutocompletions() {
     completionWords = [" ", " ", " "]
@@ -335,6 +384,11 @@ class KeyboardViewController: UIInputViewController {
           currentPrefix = currentPrefix.components(
             separatedBy: "\n"
           ).last ?? ""
+        }
+
+        // Trigger autocompletions for selected text instead.
+        if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+          currentPrefix = proxy.selectedText!
         }
 
         // Get options for completion that start with the current prefix and are not just one letter.
@@ -376,47 +430,7 @@ class KeyboardViewController: UIInputViewController {
         }
 
         // Disable the third auto action button if we'll have emoji suggestions.
-        let query = "SELECT * FROM emoji_keywords WHERE word = ?"
-        let args = [currentPrefix.lowercased()]
-        let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
-        let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
-        if emojisToDisplay[0] != "" {
-          emojisToDisplayArray = [String]()
-          currentEmojiTriggerWord = currentPrefix.lowercased()
-          if emojisToDisplay[2] != "" && DeviceType.isPad {
-            for i in 0 ..< 3 {
-              emojisToDisplayArray.append(emojisToDisplay[i])
-            }
-            autoAction2Visible = false
-            emojisToShow = .three
-
-            if UITraitCollection.current.userInterfaceStyle == .light {
-              padEmojiDivider0.backgroundColor = specialKeyColor
-              padEmojiDivider1.backgroundColor = specialKeyColor
-            } else if UITraitCollection.current.userInterfaceStyle == .dark {
-              padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-              padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-            }
-            conditionallyHideEmojiDividers()
-          } else if emojisToDisplay[1] != "" {
-            for i in 0 ..< 2 {
-              emojisToDisplayArray.append(emojisToDisplay[i])
-            }
-            autoAction2Visible = false
-            emojisToShow = .two
-
-            if UITraitCollection.current.userInterfaceStyle == .light {
-              phoneEmojiDivider.backgroundColor = specialKeyColor
-            } else if UITraitCollection.current.userInterfaceStyle == .dark {
-              phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-            }
-            conditionallyHideEmojiDividers()
-          } else {
-            emojisToDisplayArray.append(emojisToDisplay[0])
-
-            emojisToShow = .one
-          }
-        }
+        getEmojiAutoSuggestions(for: currentPrefix)
       } else {
         getDefaultAutosuggestions()
       }
@@ -494,6 +508,11 @@ class KeyboardViewController: UIInputViewController {
       ).last ?? ""
     }
 
+    // Trigger autocompletions for selected text instead.
+    if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+      prefix = proxy.selectedText!
+    }
+
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
     } else if ["French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
@@ -560,50 +579,6 @@ class KeyboardViewController: UIInputViewController {
     // Disable the third auto action button if we'll have emoji suggestions.
     getEmojiAutoSuggestions(for: prefix)
   }
-  
-  func getEmojiAutoSuggestions(for word: String) {
-    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
-    let args = [word.lowercased()]
-    let outputCols = ["emoji_1", "emoji_2", "emoji_3"]
-    let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
-    if emojisToDisplay[0] != "" {
-      emojisToDisplayArray = [String]()
-      currentEmojiTriggerWord = word.lowercased()
-      if emojisToDisplay[2] != "" && DeviceType.isPad {
-        for i in 0 ..< 3 {
-          emojisToDisplayArray.append(emojisToDisplay[i])
-        }
-        autoAction2Visible = false
-        emojisToShow = .three
-
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          padEmojiDivider0.backgroundColor = specialKeyColor
-          padEmojiDivider1.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        }
-        conditionallyHideEmojiDividers()
-      } else if emojisToDisplay[1] != "" {
-        for i in 0 ..< 2 {
-          emojisToDisplayArray.append(emojisToDisplay[i])
-        }
-        autoAction2Visible = false
-        emojisToShow = .two
-
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          phoneEmojiDivider.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        }
-        conditionallyHideEmojiDividers()
-      } else {
-        emojisToDisplayArray.append(emojisToDisplay[0])
-
-        emojisToShow = .one
-      }
-    }
-  }
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
   func conditionallySetAutoActionBtns() {
@@ -612,7 +587,7 @@ class KeyboardViewController: UIInputViewController {
     autoActionAnnotationBtns.removeAll()
     autoActionAnnotationSeparators.forEach { $0.removeFromSuperview() }
     autoActionAnnotationSeparators.removeAll()
-    
+
     if autoActionState == .suggest {
       getAutosuggestions()
     } else {
@@ -2059,8 +2034,6 @@ class KeyboardViewController: UIInputViewController {
         emojisToShow = .zero
         loadKeys()
         selectedWordAnnotation(KVC: self)
-        print(proxy.selectedText!)
-        getEmojiAutoSuggestions(for: proxy.selectedText!)
       } else {
         if [.translate,
             .conjugate,
@@ -2490,7 +2463,7 @@ class KeyboardViewController: UIInputViewController {
     ) {
       emojiAutoActionRepeatPossible = false
     }
-    
+
     if !["Scribe"].contains(originalKey) {
       emojisToShow = .zero
     }
