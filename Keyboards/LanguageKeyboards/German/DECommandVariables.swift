@@ -249,7 +249,7 @@ func deSetCaseDeclensions() {
     formTopLeft = "einen"
     formTopRight = "eine"
     formBottomLeft = "ein"
-    formBottomRight = "-"
+    formBottomRight = ""
   case .accusativePersonal:
     formFPS = "mich"
     formSPS = "dich/Sie"
@@ -271,7 +271,7 @@ func deSetCaseDeclensions() {
     formTopLeft = "einem"
     formTopRight = "einer"
     formBottomLeft = "einem"
-    formBottomRight = "-"
+    formBottomRight = ""
   case .dativePersonal:
     formFPS = "mir"
     formSPS = "dir/Ihnen"
@@ -293,7 +293,7 @@ func deSetCaseDeclensions() {
     formTopLeft = "eines"
     formTopRight = "einer"
     formBottomLeft = "eines"
-    formBottomRight = "-"
+    formBottomRight = ""
   case .genitivePersonal:
     formFPS = "meiner"
     formSPS = "deiner/Ihrer"
