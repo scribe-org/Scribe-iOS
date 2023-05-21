@@ -1190,9 +1190,9 @@ class KeyboardViewController: UIInputViewController {
       commandState == .selectCaseDeclension
       && controllerLanguage == "German"
       && [
-        .accusative, .accusativeDemonstrative,
-        .dative, .dativeDemonstrative,
-        .genitive, .genitiveDemonstrative,
+        .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
+        .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
+        .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative,
       ].contains(deCaseDeclensionState)
     {
       formsDisplayDimensions = .view2x2
