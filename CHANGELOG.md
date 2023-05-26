@@ -10,6 +10,12 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
+# [Upcoming] Scribe-iOS 2.4.0
+
+### ✨ New Features
+
+- German indefinite pronouns are now selectable from the case-declension display.
+
 # Scribe-iOS 2.3.0
 
 ### ✨ New Features
@@ -23,7 +29,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🗃️ Data Added
 
 - French: 2 nouns
-- German: 44 nouns, 1 verb, 20 prepositions, 9 pronouns
+- German: 44 nouns, 1 verb, 20 prepositions
 - Italian: 2 nouns
 - Spanish: 350 nouns, 102 verbs
 - Swedish: 635 nouns, 27 verbs

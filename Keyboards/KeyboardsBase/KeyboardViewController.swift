@@ -1058,12 +1058,6 @@ class KeyboardViewController: UIInputViewController {
       activateBtn(btn: btn)
       btn.isEnabled = true
     }
-    
-    if controllerLanguage == "German"
-        && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
-      deactivateBtn(btn: formKeyBR)
-      formKeyBR.isEnabled = false
-    }
 
     if DeviceType.isPad {
       var conjugationFontDivisor = 3.5
@@ -1302,6 +1296,11 @@ class KeyboardViewController: UIInputViewController {
     case .view2x2:
       for btn in get2x2FormDisplayButtons() {
         activateBtn(btn: btn)
+      }
+
+      if controllerLanguage == "German"
+          && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
+        formKeyBR.isUserInteractionEnabled = false
       }
 
       for btn in get3x2FormDisplayButtons() + get3x1FormDisplayButtons() + get1x2FormDisplayButtons() {
