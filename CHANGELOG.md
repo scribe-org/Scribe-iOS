@@ -23,7 +23,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🗃️ Data Added
 
 - French: 2 nouns
-- German: 44 nouns, 1 verb, 20 prepositions
+- German: 44 nouns, 1 verb, 20 prepositions, 9 pronouns
 - Italian: 2 nouns
 - Spanish: 350 nouns, 102 verbs
 - Swedish: 635 nouns, 27 verbs

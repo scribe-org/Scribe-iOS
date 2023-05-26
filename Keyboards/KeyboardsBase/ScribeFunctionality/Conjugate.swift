@@ -285,13 +285,13 @@ func resetCaseDeclensionState() {
   if controllerLanguage == "German" {
     if prepAnnotationForm.contains("Acc") {
       conjViewShiftButtonsState = .leftInactive
-      deCaseDeclensionState = .accusative
+      deCaseDeclensionState = .accusativeDefinite
     } else if prepAnnotationForm.contains("Dat") {
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .dative
+      deCaseDeclensionState = .dativeDefinite
     } else {
       conjViewShiftButtonsState = .bothActive
-      deCaseDeclensionState = .genitive
+      deCaseDeclensionState = .genitiveDefinite
     }
   } else if controllerLanguage == "Russian" {
     if prepAnnotationForm.contains("Acc") {
