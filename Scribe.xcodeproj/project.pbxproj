@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
+		14AC56862A24BCD8006B1DDF /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453952293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453953293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -792,6 +793,7 @@
 
 /* Begin PBXFileReference section */
 		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
 		30453966293B9D31003AE55B /* ViewThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThemeable.swift; sourceTree = "<group>"; };
 		30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipViewUpdatable.swift; sourceTree = "<group>"; };
@@ -1095,6 +1097,7 @@
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
 				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
+				14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */,
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
 				38BD214222D5908100C6795D /* Info.plist */,
@@ -1868,6 +1871,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AC56862A24BCD8006B1DDF /* InfoTableViewCell.swift in Sources */,
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171944A27AEFC620038660B /* LoadData.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
