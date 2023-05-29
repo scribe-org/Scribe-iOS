@@ -1,13 +1,13 @@
 //
 //  ViewController.swift
 //
-//  The ViewController for the Scribe app.
+//  The ViewController for the Installation screen of the Scribe app.
 //
 
 import UIKit
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
-class ViewController: UIViewController {
+class InstallationVC: UIViewController {
   // Variables linked to elements in AppScreen.storyboard.
   @IBOutlet var appTextView: UITextView!
   @IBOutlet var appTextBackground: UIView!
