@@ -41,7 +41,12 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     self.title = "About Scribe"
     communityTable.dataSource = self
+    FSTable.dataSource = self
+    legalTable.dataSource = self
     communityTable.delegate = self
+    
+    let nib = UINib(nibName: "InfoTableViewCellNIB", bundle: nil)
+    communityTable.register(nib, forCellReuseIdentifier: "InfoTableViewCellNIB")
     
     hideSeparators()
     styliseCommunityTableView()
@@ -55,23 +60,29 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return communityData.count
+    if tableView == communityTable {
+      return 4
+    } else if tableView == FSTable {
+      return 2
+    } else {
+      return 3
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let rowItem = communityData[indexPath.row]
-    let cell = communityTable.dequeueReusableCell(withIdentifier: "communityCell", for: indexPath) as! InfoTableViewCell
-    cell.iconImageView.image = UIImage(systemName: rowItem.imageName)
-    cell.label.text = rowItem.title
+//    let rowItem = communityData[indexPath.row]
+    let cell = communityTable.dequeueReusableCell(withIdentifier: "InfoTableViewCellNIB", for: indexPath) as! InfoTableViewCellNIB
+//    cell.iconImageView.image = UIImage(systemName: rowItem.imageName)
+//    cell.label.text = rowItem.title
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let selectedRow = communityData[indexPath.row]
+//    let selectedRow = communityData[indexPath.row]
     
     if let vc = storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
       vc.text = "Test description string"
-      vc.screenTitle = selectedRow.title
+//      vc.screenTitle = selectedRow.title
       navigationController?.pushViewController(vc, animated: true)
     }
   }
@@ -88,17 +99,12 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // Table View styling
     for i in 0...2 {
-      let tableDimensions = tables[i].contentSize
-      let height = tableDimensions.height
-      
       tableUIViews[i].layer.cornerRadius = 27
       applyShadowEffects(elem: tableUIViews[i])
       tables[i].clipsToBounds = true
       tables[i].isScrollEnabled = false
-  //    applyCornerRadius(elem: communityTable, radius: communityTable.frame.height * 0.4 / )
       tables[i].layer.cornerRadius = 27
     }
-//    communityTable.backgroundColor = .clear
     
   }
   

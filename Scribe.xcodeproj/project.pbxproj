@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1477979B2A287FF70044A53E /* InfoTableViewCellNIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797992A287FF70044A53E /* InfoTableViewCellNIB.swift */; };
+		1477979C2A287FF70044A53E /* InfoTableViewCellNIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1477979A2A287FF70044A53E /* InfoTableViewCellNIB.xib */; };
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
-		14AC56862A24BCD8006B1DDF /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */; };
 		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453952293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -793,8 +794,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		147797992A287FF70044A53E /* InfoTableViewCellNIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCellNIB.swift; sourceTree = "<group>"; };
+		1477979A2A287FF70044A53E /* InfoTableViewCellNIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCellNIB.xib; sourceTree = "<group>"; };
 		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		14AC56892A261663006B1DDF /* InformationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenVC.swift; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
 		30453966293B9D31003AE55B /* ViewThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThemeable.swift; sourceTree = "<group>"; };
@@ -1107,7 +1109,8 @@
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				D17193C327AEAD7D0038660B /* AppStyling.swift */,
 				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
-				14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */,
+				147797992A287FF70044A53E /* InfoTableViewCellNIB.swift */,
+				1477979A2A287FF70044A53E /* InfoTableViewCellNIB.xib */,
 				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
@@ -1732,6 +1735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1477979C2A287FF70044A53E /* InfoTableViewCellNIB.xib in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
@@ -1882,7 +1886,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14AC56862A24BCD8006B1DDF /* InfoTableViewCell.swift in Sources */,
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				D171944A27AEFC620038660B /* LoadData.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
@@ -1936,6 +1939,7 @@
 				D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */,
 				14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */,
 				D171945527AF05D40038660B /* Extensions.swift in Sources */,
+				1477979B2A287FF70044A53E /* InfoTableViewCellNIB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
