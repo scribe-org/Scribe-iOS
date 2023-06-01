@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
 		14AC56862A24BCD8006B1DDF /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */; };
+		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453952293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453953293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -794,6 +795,7 @@
 /* Begin PBXFileReference section */
 		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		14AC56892A261663006B1DDF /* InformationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenVC.swift; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
 		30453966293B9D31003AE55B /* ViewThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThemeable.swift; sourceTree = "<group>"; };
 		30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipViewUpdatable.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14AC568D2A262EE5006B1DDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38BD213522D5907F00C6795D /* InstallationVC.swift */,
+				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
+				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		30453961293B9D05003AE55B /* ToolTip */ = {
 			isa = PBXGroup;
 			children = (
@@ -1091,13 +1103,12 @@
 			isa = PBXGroup;
 			children = (
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
+				14AC568D2A262EE5006B1DDF /* ViewControllers */,
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				D17193C327AEAD7D0038660B /* AppStyling.swift */,
 				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
-				38BD213522D5907F00C6795D /* InstallationVC.swift */,
-				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
-				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
 				14AC56852A24BCD8006B1DDF /* InfoTableViewCell.swift */,
+				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
 				38BD214222D5908100C6795D /* Info.plist */,
@@ -1890,6 +1901,7 @@
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
+				14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
