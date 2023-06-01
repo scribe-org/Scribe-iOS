@@ -28,6 +28,7 @@
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAD-6b-gU6">
                         <rect key="frame" x="16" y="7" width="30" height="30"/>
+                        <color key="tintColor" name="keyChar"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="BGc-n3-bbH"/>
                             <constraint firstAttribute="height" constant="30" id="ee7-ct-PR9"/>

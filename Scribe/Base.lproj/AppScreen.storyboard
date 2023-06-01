@@ -56,10 +56,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfx-iS-ezC">
-                                <rect key="frame" x="24" y="438.33333333333331" width="327" height="87.999999999999943"/>
+                                <rect key="frame" x="24" y="438.33333333333326" width="327" height="176"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-Xf-oik">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="88"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="176"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -68,25 +68,25 @@
                                     <constraint firstItem="2Lh-Xf-oik" firstAttribute="leading" secondItem="Wfx-iS-ezC" secondAttribute="leading" id="3tY-Hr-7iq"/>
                                     <constraint firstItem="2Lh-Xf-oik" firstAttribute="top" secondItem="Wfx-iS-ezC" secondAttribute="top" id="6fi-vp-6ZX"/>
                                     <constraint firstAttribute="bottom" secondItem="2Lh-Xf-oik" secondAttribute="bottom" id="Npq-QR-Uei"/>
-                                    <constraint firstAttribute="height" constant="88" id="aVe-Ao-dU7"/>
+                                    <constraint firstAttribute="height" constant="176" id="aVe-Ao-dU7"/>
                                     <constraint firstAttribute="trailing" secondItem="2Lh-Xf-oik" secondAttribute="trailing" id="yER-4R-BuF"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UT-4z-Fr8" userLabel="ThirdSpacer">
-                                <rect key="frame" x="0.0" y="526.33333333333337" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="614.33333333333337" width="375" height="29"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-O6-hha" userLabel="LegalLabel">
-                                <rect key="frame" x="36" y="555.33333333333337" width="339" height="21"/>
+                                <rect key="frame" x="36" y="643.33333333333337" width="339" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wX-oo-YaO">
-                                <rect key="frame" x="24" y="584.33333333333337" width="327" height="132"/>
+                                <rect key="frame" x="24" y="672.33333333333337" width="327" height="88"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PjL-Q6-egP">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="132"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="88"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -95,7 +95,7 @@
                                     <constraint firstItem="PjL-Q6-egP" firstAttribute="leading" secondItem="3wX-oo-YaO" secondAttribute="leading" id="DE5-DS-WsZ"/>
                                     <constraint firstAttribute="trailing" secondItem="PjL-Q6-egP" secondAttribute="trailing" id="DcC-ts-AlK"/>
                                     <constraint firstItem="PjL-Q6-egP" firstAttribute="top" secondItem="3wX-oo-YaO" secondAttribute="top" id="My6-wW-DJh"/>
-                                    <constraint firstAttribute="height" constant="132" id="ZQG-sM-LIn"/>
+                                    <constraint firstAttribute="height" constant="88" id="ZQG-sM-LIn"/>
                                     <constraint firstAttribute="bottom" secondItem="PjL-Q6-egP" secondAttribute="bottom" id="m9z-ek-zsa"/>
                                 </constraints>
                             </view>

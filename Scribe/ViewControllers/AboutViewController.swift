@@ -26,16 +26,8 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
   @IBOutlet weak var FSLabel: UILabel!
   @IBOutlet weak var legalLabel: UILabel!
   
-  struct InfoCells {
-    let title: String
-    let imageName: String
-  }
-  
-  let communityData: [InfoCells] = [
-    InfoCells(title: "See the code on GitHub", imageName: "text.insert"),
-    InfoCells(title: "Share Scribe", imageName: "square.and.arrow.up")
-  ]
-  
+  let data = AboutSectionData()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -61,19 +53,31 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if tableView == communityTable {
-      return 4
+      return data.getCellTitleAndImage(forSection: .community).count
     } else if tableView == FSTable {
-      return 2
+      return data.getCellTitleAndImage(forSection: .feedbackAndSupport).count
     } else {
-      return 3
+      return data.getCellTitleAndImage(forSection: .legal).count
     }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let rowItem = communityData[indexPath.row]
+    
+    var rowItem: AboutSectionData.DataModel {
+      if tableView == communityTable {
+        return data.getCellTitleAndImage(forSection: .community)[indexPath.row]
+      } else if tableView == FSTable {
+        return data.getCellTitleAndImage(forSection: .feedbackAndSupport)[indexPath.row]
+      } else {
+        return data.getCellTitleAndImage(forSection: .legal)[indexPath.row]
+      }
+    }
+    
     let cell = communityTable.dequeueReusableCell(withIdentifier: "InfoTableViewCellNIB", for: indexPath) as! InfoTableViewCellNIB
-//    cell.iconImageView.image = UIImage(systemName: rowItem.imageName)
-//    cell.label.text = rowItem.title
+    
+    cell.infoLabel.text = rowItem.title
+    cell.infoImage.image = getRequiredIconForMenu(fontSize: fontSize * 0.9, imageName: rowItem.imageName)
+    
     return cell
   }
   

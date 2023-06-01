@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1477979B2A287FF70044A53E /* InfoTableViewCellNIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797992A287FF70044A53E /* InfoTableViewCellNIB.swift */; };
 		1477979C2A287FF70044A53E /* InfoTableViewCellNIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1477979A2A287FF70044A53E /* InfoTableViewCellNIB.xib */; };
+		1477979E2A2898600044A53E /* AboutSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1477979D2A2898600044A53E /* AboutSectionData.swift */; };
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
 		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -796,6 +797,7 @@
 /* Begin PBXFileReference section */
 		147797992A287FF70044A53E /* InfoTableViewCellNIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCellNIB.swift; sourceTree = "<group>"; };
 		1477979A2A287FF70044A53E /* InfoTableViewCellNIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCellNIB.xib; sourceTree = "<group>"; };
+		1477979D2A2898600044A53E /* AboutSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionData.swift; sourceTree = "<group>"; };
 		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		14AC56892A261663006B1DDF /* InformationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenVC.swift; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
@@ -1115,6 +1117,7 @@
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
 				38BD214222D5908100C6795D /* Info.plist */,
+				1477979D2A2898600044A53E /* AboutSectionData.swift */,
 			);
 			path = Scribe;
 			sourceTree = "<group>";
@@ -1912,6 +1915,7 @@
 				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
+				1477979E2A2898600044A53E /* AboutSectionData.swift in Sources */,
 				30489C1E2936DAB700B59393 /* ToolTipView.swift in Sources */,
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,

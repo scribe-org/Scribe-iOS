@@ -41,3 +41,23 @@ func getPrivacySymbol(fontSize: CGFloat) -> UIImage {
 
   return privacySymbol
 }
+
+func getRequiredIconForMenu(fontSize: CGFloat, imageName: String) -> UIImage {
+  if let image = UIImage(named: imageName) {
+    
+    return image
+  } else {
+    var iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
+    if DeviceType.isPad {
+      if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+        iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+      } else {
+        iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+      }
+    }
+    
+    guard let image = UIImage(systemName: imageName, withConfiguration: iconSymbolConfig) else { return UIImage() }
+    
+    return image
+  }
+}
