@@ -43,20 +43,31 @@
                         <color key="textColor" name="keyChar"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-yb-cab">
+                        <rect key="frame" x="255" y="7" width="51" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="TLe-pF-eis"/>
+                        </constraints>
+                    </switch>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="c3b-Ee-Sjz" secondAttribute="trailing" constant="16" id="1GZ-t8-7QH"/>
+                    <constraint firstItem="FbK-yb-cab" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="1rb-fC-ZZv"/>
                     <constraint firstItem="c3b-Ee-Sjz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="CnB-3r-wcQ"/>
+                    <constraint firstAttribute="bottom" secondItem="FbK-yb-cab" secondAttribute="bottom" constant="6" id="IXM-0p-b5C"/>
                     <constraint firstItem="JHo-c6-kU1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="LYw-PL-vG3"/>
                     <constraint firstItem="XI7-83-3eC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="WrK-Cz-jEI"/>
                     <constraint firstItem="XI7-83-3eC" firstAttribute="leading" secondItem="JHo-c6-kU1" secondAttribute="trailing" constant="8" symbolic="YES" id="hea-p2-0IU"/>
+                    <constraint firstAttribute="trailing" secondItem="FbK-yb-cab" secondAttribute="trailing" constant="16" id="kzi-n0-hcA"/>
                     <constraint firstItem="JHo-c6-kU1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="on6-i8-GTD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="chevronImgView" destination="c3b-Ee-Sjz" id="0NU-PH-88e"/>
                 <outlet property="iconImageView" destination="JHo-c6-kU1" id="iTB-MV-z6M"/>
                 <outlet property="titleLabel" destination="XI7-83-3eC" id="8Oo-On-CWs"/>
+                <outlet property="toggleSwitch" destination="FbK-yb-cab" id="CYZ-wz-okM"/>
             </connections>
             <point key="canvasLocation" x="25.954198473282442" y="-12.67605633802817"/>
         </tableViewCell>

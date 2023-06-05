@@ -12,13 +12,13 @@ struct SettingsTableData {
     ParentTableCellModel(
       headingTitle: "App language",
       section: [
-        Section(sectionTitle: "System language", imageString: "globe")
+        Section(sectionTitle: "System language", imageString: "globe", hasToggle: false)
       ]
     ),
     ParentTableCellModel(
       headingTitle: "Select installed keyboard",
       section: [
-        Section(sectionTitle: "All keyboards", imageString: "globe")
+        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false)
       ]
     )
   ]

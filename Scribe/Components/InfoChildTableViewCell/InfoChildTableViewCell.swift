@@ -12,6 +12,9 @@ class InfoChildTableViewCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var iconImageView: UIImageView!
   
+  @IBOutlet weak var chevronImgView: UIImageView!
+  @IBOutlet weak var toggleSwitch: UISwitch!
+  
   var section: Section?
   
   func configureCell(for section: Section) {
@@ -22,6 +25,12 @@ class InfoChildTableViewCell: UITableViewCell {
       self.iconImageView.image = image
     } else {
       self.iconImageView.image = UIImage(systemName: section.imageString)
+    }
+    
+    if !section.hasToggle {
+      toggleSwitch.isHidden = true
+    } else {
+      chevronImgView.isHidden = true
     }
   }
     
