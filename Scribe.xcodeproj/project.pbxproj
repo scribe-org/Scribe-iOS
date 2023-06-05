@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		147797AC2A2CD2F70044A53E /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */; };
 		147797AD2A2CD2F70044A53E /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
 		147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */; };
-		147797B32A2CD5AB0044A53E /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797B22A2CD5AB0044A53E /* AboutData.swift */; };
+		147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */; };
+		147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797B42A2CFB490044A53E /* SettingsViewController.swift */; };
+		147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */; };
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
 		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -797,11 +800,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
 		147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoChildTableViewCell.xib; sourceTree = "<group>"; };
-		147797B22A2CD5AB0044A53E /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
+		147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableCellModel.swift; sourceTree = "<group>"; };
+		147797B42A2CFB490044A53E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableData.swift; sourceTree = "<group>"; };
 		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		14AC56892A261663006B1DDF /* InformationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenVC.swift; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
@@ -1031,23 +1037,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		147797A92A2CD2B50044A53E /* About */ = {
+		1406B7832A2DFCA2001DF45B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				147797B22A2CD5AB0044A53E /* AboutData.swift */,
-				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
+				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
+				1406B7842A2DFCAB001DF45B /* ParentTableViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1406B7842A2DFCAB001DF45B /* ParentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */,
-				147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */,
 				147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */,
+			);
+			path = ParentTableViewCell;
+			sourceTree = "<group>";
+		};
+		1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */,
 				147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */,
 			);
-			path = About;
+			path = InfoChildTableViewCell;
+			sourceTree = "<group>";
+		};
+		1406B7882A2DFE4C001DF45B /* InstallationTab */ = {
+			isa = PBXGroup;
+			children = (
+				38BD213522D5907F00C6795D /* InstallationVC.swift */,
+			);
+			path = InstallationTab;
+			sourceTree = "<group>";
+		};
+		147797A92A2CD2B50044A53E /* AboutTab */ = {
+			isa = PBXGroup;
+			children = (
+				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
+				1406B7862A2DFCDD001DF45B /* AboutTableData.swift */,
+			);
+			path = AboutTab;
+			sourceTree = "<group>";
+		};
+		147797B62A2CFB560044A53E /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				147797B42A2CFB490044A53E /* SettingsViewController.swift */,
+				147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */,
+			);
+			path = SettingsTab;
 			sourceTree = "<group>";
 		};
 		14AC568D2A262EE5006B1DDF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
 			);
 			path = ViewControllers;
@@ -1122,9 +1167,13 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
-				147797A92A2CD2B50044A53E /* About */,
+				1406B7882A2DFE4C001DF45B /* InstallationTab */,
+				147797B62A2CFB560044A53E /* SettingsTab */,
+				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				14AC568D2A262EE5006B1DDF /* ViewControllers */,
+				1406B7832A2DFCA2001DF45B /* Components */,
+				147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */,
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				D17193C327AEAD7D0038660B /* AppStyling.swift */,
 				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
@@ -1909,6 +1958,8 @@
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
 				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
+				147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */,
+				1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
@@ -1922,6 +1973,7 @@
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
+				147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */,
 				14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */,
 				147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
@@ -1952,7 +2004,7 @@
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
-				147797B32A2CD5AB0044A53E /* AboutData.swift in Sources */,
+				147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,

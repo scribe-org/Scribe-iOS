@@ -10,6 +10,8 @@ import UIKit
 class AboutViewController: UIViewController {
   
   @IBOutlet weak var outerTable: UITableView!
+  
+  let tableData = AboutTableData.aboutTableData
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,16 +34,17 @@ class AboutViewController: UIViewController {
 /// Function implementation conforming to the UITableViewDataSource protocol.
 extension AboutViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return AboutData.data.count
+    return tableData.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
     
-    cell.configureCell(for: AboutData.data[indexPath.row])
+    cell.configureCell(for: tableData[indexPath.row])
     
     cell.backgroundColor = .clear
+    cell.selectionStyle = .none
     
     return cell
   }

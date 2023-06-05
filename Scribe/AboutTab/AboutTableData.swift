@@ -1,19 +1,15 @@
 //
-//  AboutData.swift
+//  AboutTableData.swift
 //  Scribe
 //
-//  Created by Saurabh Jamadagni on 04/06/23.
+//  Created by Saurabh Jamadagni on 05/06/23.
 //
 
 import Foundation
 
-/// Struct used for interpolating the parent and children table of the About section.
-struct AboutData {
-  let headingTitle: String
-  let section: [Section]
-  
-  static let data: [AboutData] = [
-    AboutData(
+struct AboutTableData {
+  static var aboutTableData = [
+    ParentTableCellModel(
       headingTitle: "Community",
       section: [
         Section(sectionTitle: "See the code on GitHub", imageString: "github"),
@@ -22,7 +18,7 @@ struct AboutData {
         Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up")
       ]
     ),
-    AboutData(
+    ParentTableCellModel(
       headingTitle: "Feedback and support",
       section: [
         Section(sectionTitle: "Rate Scribe", imageString: "star"),
@@ -31,7 +27,7 @@ struct AboutData {
         Section(sectionTitle: "Reset app hints", imageString: "lightbulb")
         ]
     ),
-    AboutData(
+    ParentTableCellModel(
       headingTitle: "Legal",
       section: [
         Section(sectionTitle: "Privacy policy", imageString: "lock.shield"),
@@ -39,9 +35,4 @@ struct AboutData {
       ]
     )
   ]
-}
-
-struct Section {
-  let sectionTitle: String
-  let imageString: String
 }

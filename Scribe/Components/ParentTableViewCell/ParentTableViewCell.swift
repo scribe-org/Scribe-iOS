@@ -13,7 +13,7 @@ class ParentTableViewCell: UITableViewCell {
   @IBOutlet weak var innerTable: UITableView!
   @IBOutlet weak var containerView: UIView!
 
-  var data: AboutData?
+  var data: ParentTableCellModel?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -26,19 +26,25 @@ class ParentTableViewCell: UITableViewCell {
     innerTable.rowHeight = UITableView.automaticDimension
     innerTable.reloadData()
     
-    applyShadowEffects(elem: containerView)
-    containerView.layer.cornerRadius = 27
-    innerTable.layer.cornerRadius = 27
-    innerTable.clipsToBounds = true
+    setContainerViewUI()
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
   }
   
-  func configureCell(for data: AboutData) {
+  func configureCell(for data: ParentTableCellModel) {
     self.data = data
     self.titleLabel.text = data.headingTitle
+  }
+  
+  func setContainerViewUI() {
+    let containerViewHeightWidthRatio = containerView.frame.height / containerView.frame.width
+    
+    containerView.layer.cornerRadius = 36 * containerViewHeightWidthRatio
+    innerTable.layer.cornerRadius = 36 * containerViewHeightWidthRatio
+    innerTable.clipsToBounds = true
+    applyShadowEffects(elem: containerView)
   }
     
 }
