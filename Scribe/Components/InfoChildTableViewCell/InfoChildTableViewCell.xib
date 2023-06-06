@@ -35,7 +35,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-83-3eC">
-                        <rect key="frame" x="50" y="12" width="42" height="21"/>
+                        <rect key="frame" x="58" y="12" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="trX-iS-h3L"/>
                         </constraints>
@@ -57,7 +57,7 @@
                     <constraint firstAttribute="bottom" secondItem="FbK-yb-cab" secondAttribute="bottom" constant="6" id="IXM-0p-b5C"/>
                     <constraint firstItem="JHo-c6-kU1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="LYw-PL-vG3"/>
                     <constraint firstItem="XI7-83-3eC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="WrK-Cz-jEI"/>
-                    <constraint firstItem="XI7-83-3eC" firstAttribute="leading" secondItem="JHo-c6-kU1" secondAttribute="trailing" constant="8" symbolic="YES" id="hea-p2-0IU"/>
+                    <constraint firstItem="XI7-83-3eC" firstAttribute="leading" secondItem="JHo-c6-kU1" secondAttribute="trailing" constant="16" id="hea-p2-0IU"/>
                     <constraint firstAttribute="trailing" secondItem="FbK-yb-cab" secondAttribute="trailing" constant="16" id="kzi-n0-hcA"/>
                     <constraint firstItem="JHo-c6-kU1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="on6-i8-GTD"/>
                 </constraints>
