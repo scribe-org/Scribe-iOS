@@ -28,10 +28,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azh-mR-LYl" userLabel="containerView">
-                        <rect key="frame" x="24" y="37" width="272" height="116"/>
+                        <rect key="frame" x="15" y="37" width="290" height="116"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ovr-Ss-rwu" userLabel="childTable" customClass="CustomChildTableView" customModule="Scribe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="116"/>
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="116"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -47,9 +47,9 @@
                 <constraints>
                     <constraint firstItem="Tcm-T8-ok8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6ha-Mt-8Nu"/>
                     <constraint firstItem="azh-mR-LYl" firstAttribute="top" secondItem="Tcm-T8-ok8" secondAttribute="bottom" constant="8" id="C9E-0J-yav"/>
-                    <constraint firstItem="azh-mR-LYl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="QKV-6t-ya9"/>
+                    <constraint firstItem="azh-mR-LYl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QKV-6t-ya9"/>
                     <constraint firstAttribute="bottom" secondItem="azh-mR-LYl" secondAttribute="bottom" constant="8" id="VbI-PH-vff"/>
-                    <constraint firstAttribute="trailing" secondItem="azh-mR-LYl" secondAttribute="trailing" constant="24" id="aQE-qk-18M"/>
+                    <constraint firstAttribute="trailing" secondItem="azh-mR-LYl" secondAttribute="trailing" constant="15" id="aQE-qk-18M"/>
                     <constraint firstItem="Tcm-T8-ok8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="36" id="zfg-rc-F7T"/>
                 </constraints>
             </tableViewCellContentView>
