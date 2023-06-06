@@ -24,6 +24,7 @@ class ParentTableViewCell: UITableViewCell {
     innerTable.dataSource = self
     innerTable.delegate = self
     innerTable.rowHeight = UITableView.automaticDimension
+    innerTable.isScrollEnabled = false
     innerTable.reloadData()
     
     setContainerViewUI()
