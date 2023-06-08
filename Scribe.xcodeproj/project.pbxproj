@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
+		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
 		147797AC2A2CD2F70044A53E /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */; };
 		147797AD2A2CD2F70044A53E /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
@@ -801,6 +802,7 @@
 
 /* Begin PBXFileReference section */
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
+		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
@@ -1177,6 +1179,7 @@
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				D17193C327AEAD7D0038660B /* AppStyling.swift */,
 				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
+				1406B78B2A3209CF001DF45B /* AppExtensions.swift */,
 				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				38BD213D22D5908100C6795D /* Assets.xcassets */,
@@ -1968,6 +1971,7 @@
 				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
 				D17193C927AEC8F90038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
+				1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
 				D180EC0328FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
