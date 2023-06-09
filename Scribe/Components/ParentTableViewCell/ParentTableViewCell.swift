@@ -125,7 +125,7 @@ extension ParentTableViewCell: UITableViewDelegate {
       guard let scene = UIApplication.shared.foregroundActiveScene else { return }
       SKStoreReviewController.requestReview(in: scene)
     } else {
-      let alert = UIAlertController(title: "Enjoying Scribe?", message: "Rate our app on the App Store.", preferredStyle: .alert)
+      let alert = UIAlertController(title: "Enjoying Scribe?", message: "Rate Scribe on the App Store.", preferredStyle: .alert)
       alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: openScribeAppStore(alert:)))
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       parentViewController?.present(alert, animated: true)
@@ -141,14 +141,12 @@ extension ParentTableViewCell: UITableViewDelegate {
     if MFMailComposeViewController.canSendMail() {
       let mailComposeViewController = MFMailComposeViewController()
       mailComposeViewController.mailComposeDelegate = self
-      mailComposeViewController.setToRecipients(["recipient@example.com"])
-      mailComposeViewController.setSubject("Hello")
-      mailComposeViewController.setMessageBody("Hello, how are you?", isHTML: false)
+      mailComposeViewController.setToRecipients(["scribe.language@gmail.com"])
       
       parentViewController?.present(mailComposeViewController, animated: true, completion: nil)
     } else {
       /// Show alert mentioning the email address
-      let alert = UIAlertController(title: "Send us an email?", message: "Reach out to us at ", preferredStyle: .alert)
+      let alert = UIAlertController(title: "Send us an email?", message: "Reach out to us at scribe.language@gmail.com", preferredStyle: .alert)
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       parentViewController?.present(alert, animated: true)
     }
