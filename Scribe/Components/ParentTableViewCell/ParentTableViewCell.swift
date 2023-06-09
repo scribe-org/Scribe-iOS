@@ -83,7 +83,8 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .wikimedia:
         // Push a new screen
         print("Details about Wikimedia and Scribe")
-      case .shareScribe: break
+      case .shareScribe:
+        showShareSheet()
       case .rateScribe:
         showRateScribeUI()
       case .bugReport:
@@ -133,8 +134,7 @@ extension ParentTableViewCell: UITableViewDelegate {
   }
   
   func openScribeAppStore(alert: UIAlertAction) {
-    guard let url = URL(string: "itms-apps: //itunes.apple.com/app/id1596613886") else { return }
-    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    openURLString(urlString: "itms-apps: //itunes.apple.com/app/id1596613886", withEncoding: true)
   }
   
   func showEmailUI() {
@@ -150,6 +150,16 @@ extension ParentTableViewCell: UITableViewDelegate {
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       parentViewController?.present(alert, animated: true)
     }
+  }
+  
+  func showShareSheet() {
+    let urlString = "itms-apps: //itunes.apple.com/app/id1596613886"
+    let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    guard let encodedURLString = encodedString, let url = URL(string: encodedURLString) else { return }
+    
+    let shareSheetVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+    
+    parentViewController?.present(shareSheetVC, animated: true, completion: nil)
   }
 }
 
