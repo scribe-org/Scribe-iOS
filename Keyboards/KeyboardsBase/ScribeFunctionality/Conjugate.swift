@@ -221,7 +221,6 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   if wordPressed == invalidCommandMsg {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
-    if deConjugationState != .indicativePerfect {
       let query = "SELECT * FROM verbs WHERE verb = ?"
       let args = [verbToConjugate]
       let outputCols = [requestedForm]
@@ -232,14 +231,6 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
       } else {
         proxy.insertText(wordToReturn + " ")
       }
-    } else {
-      let query = "SELECT * FROM verbs WHERE verb = ?"
-      let args = [verbToConjugate]
-      let outputCols = ["pastParticiple"]
-      wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
-
-      proxy.insertText(wordToReturn + " ")
-    }
   } else if formsDisplayDimensions == .view2x2 {
     let query = "SELECT * FROM verbs WHERE verb = ?"
     let args = [verbToConjugate]
@@ -250,6 +241,12 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
       proxy.insertText(wordToReturn.capitalized + " ")
     } else {
       proxy.insertText(wordToReturn + " ")
+    }
+  }
+  if controllerLanguage == "German" {
+    let components = wordToReturn.components(separatedBy: " ")
+    if components.count == 2 {
+      proxy.adjustTextPosition(byCharacterOffset: (components[1].count + 1) * -1)
     }
   }
   autoActionState = .suggest
