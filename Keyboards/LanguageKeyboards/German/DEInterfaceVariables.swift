@@ -30,7 +30,7 @@ public enum GermanKeyboardConstants {
   ]
 
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-", "=", "delete"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
@@ -84,11 +84,11 @@ func getDEKeys() {
     letterKeys = GermanKeyboardConstants.letterKeysPad
     numberKeys = GermanKeyboardConstants.numberKeysPad
     symbolKeys = GermanKeyboardConstants.symbolKeysPad
-    
+
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
-    
+
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "\"", "$"]

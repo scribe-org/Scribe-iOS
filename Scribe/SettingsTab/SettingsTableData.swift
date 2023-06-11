@@ -1,8 +1,5 @@
 //
 //  SettingsTableData.swift
-//  Scribe
-//
-//  Created by Saurabh Jamadagni on 04/06/23.
 //
 
 import Foundation
@@ -12,14 +9,14 @@ struct SettingsTableData {
     ParentTableCellModel(
       headingTitle: "App language",
       section: [
-        Section(sectionTitle: "System language", imageString: "globe", hasToggle: false)
+        Section(sectionTitle: "System language", imageString: "globe", hasToggle: false),
       ]
     ),
     ParentTableCellModel(
       headingTitle: "Select installed keyboard",
       section: [
-        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false)
+        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false),
       ]
-    )
+    ),
   ]
 }

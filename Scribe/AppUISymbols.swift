@@ -44,7 +44,6 @@ func getPrivacySymbol(fontSize: CGFloat) -> UIImage {
 
 func getRequiredIconForMenu(fontSize: CGFloat, imageName: String) -> UIImage {
   if let image = UIImage(named: imageName) {
-    
     return image
   } else {
     var iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
@@ -55,9 +54,9 @@ func getRequiredIconForMenu(fontSize: CGFloat, imageName: String) -> UIImage {
         iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
       }
     }
-    
+
     guard let image = UIImage(systemName: imageName, withConfiguration: iconSymbolConfig) else { return UIImage() }
-    
+
     return image
   }
 }

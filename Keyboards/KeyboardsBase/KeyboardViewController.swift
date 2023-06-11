@@ -1299,7 +1299,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
       if controllerLanguage == "German"
-          && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
+        && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState)
+      {
         formKeyBR.isUserInteractionEnabled = false
       }
 

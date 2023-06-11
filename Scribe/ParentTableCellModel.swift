@@ -1,8 +1,5 @@
 //
 //  AboutData.swift
-//  Scribe
-//
-//  Created by Saurabh Jamadagni on 04/06/23.
 //
 
 import Foundation

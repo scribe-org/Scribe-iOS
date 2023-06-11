@@ -6,7 +6,6 @@
 
 import UIKit
 
-
 /// Inserts the translation of a valid word in the command bar into the proxy.
 ///
 /// - Parameters
@@ -17,7 +16,7 @@ func queryTranslation(commandBar: UILabel) {
     return
   }
   wordToTranslate = (commandBar.text!.substring(
-    with: translatePrompt.count..<((commandBar.text!.count) - 1))
+    with: translatePrompt.count ..< ((commandBar.text!.count) - 1))
   )
   wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
 

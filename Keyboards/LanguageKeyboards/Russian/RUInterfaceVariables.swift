@@ -30,7 +30,7 @@ public enum RussianKeyboardConstants {
   ]
 
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-", "=", "delete"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"],
     ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "return"],
     ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", ".", "shift"],
@@ -75,11 +75,11 @@ func getRUKeys() {
     letterKeys = RussianKeyboardConstants.letterKeysPad
     numberKeys = RussianKeyboardConstants.numberKeysPad
     symbolKeys = RussianKeyboardConstants.symbolKeysPad
-    
+
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
-    
+
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]

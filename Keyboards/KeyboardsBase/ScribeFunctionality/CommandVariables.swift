@@ -4,8 +4,8 @@
 //  Variables associated with Scribe commands.
 //
 
-import UIKit
 import GRDB
+import UIKit
 
 // Basic keyboard functionality variables.
 var capsLockPossible = false
@@ -47,6 +47,7 @@ var commandPromptSpacing = ""
 // Command input and output variables.
 var inputWordIsCapitalized = false
 var wordToReturn = ""
+var potentialWordsToReturn = [String]()
 var invalidCommandMsg = ""
 
 // Annotation variables.
@@ -80,6 +81,7 @@ let languagesWithCapitalizedNouns = ["German"]
 let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
 
 // MARK: Translate Variables
+
 var translateKeyLbl = ""
 var translatePrompt = ""
 var translatePlaceholder = ""
@@ -89,6 +91,7 @@ var translatePromptAndColorPlaceholder = NSMutableAttributedString()
 var wordToTranslate = ""
 
 // MARK: Conjugate Variables
+
 var conjugateKeyLbl = ""
 var conjugatePrompt = ""
 var conjugatePlaceholder = ""
@@ -147,7 +150,7 @@ var formLabelsDict = [
   "BR": "",
   "Left": "",
   "Right": "",
-  "Single": ""
+  "Single": "",
 ]
 
 var verbToConjugate = ""
@@ -157,6 +160,7 @@ var conjugationToDisplay = ""
 var verbConjugated = ""
 
 // MARK: Plural Variables
+
 var pluralKeyLbl = ""
 var pluralPrompt = ""
 var pluralPlaceholder = ""

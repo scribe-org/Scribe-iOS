@@ -26,7 +26,7 @@ func setPopPathState(
   if DeviceType.isPad {
     widthMultiplier = 0.2
     maxHeightMultiplier = 2.05
-    if isLandscapeView  {
+    if isLandscapeView {
       maxHeightMultiplier = 1.95
     }
   } else if DeviceType.isPhone && isLandscapeView {

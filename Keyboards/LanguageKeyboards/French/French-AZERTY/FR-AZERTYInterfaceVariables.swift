@@ -28,7 +28,7 @@ public enum FrenchAZERTYKeyboardConstants {
   ]
 
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-", "=", "delete"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"],
@@ -79,11 +79,11 @@ func getFRAZERTYKeys() {
     letterKeys = FrenchAZERTYKeyboardConstants.letterKeysPad
     numberKeys = FrenchAZERTYKeyboardConstants.numberKeysPad
     symbolKeys = FrenchAZERTYKeyboardConstants.symbolKeysPad
-    
+
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")
-    
+
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "@", "~"]

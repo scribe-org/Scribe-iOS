@@ -15,7 +15,7 @@ let keyboardConjTitleDict: [String: Any] = [
   "Portuguese": ptGetConjugationTitle,
   "Russian": ruGetConjugationTitle,
   "Spanish": esGetConjugationTitle,
-  "Swedish": svGetConjugationTitle
+  "Swedish": svGetConjugationTitle,
 ]
 
 // Dictionary for accessing keyboard conjugation state.
@@ -27,7 +27,7 @@ let keyboardConjStateDict: [String: Any] = [
   "Portuguese": ptGetConjugationState,
   "Russian": ruGetConjugationState,
   "Spanish": esGetConjugationState,
-  "Swedish": svGetConjugationState
+  "Swedish": svGetConjugationState,
 ]
 
 // Dictionary for accessing keyboard conjugation state.
@@ -39,9 +39,8 @@ let keyboardConjLabelDict: [String: Any] = [
   "Portuguese": ptSetConjugationLabels,
   "Russian": ruSetConjugationLabels,
   "Spanish": esSetConjugationLabels,
-  "Swedish": svSetConjugationLabels
+  "Swedish": svSetConjugationLabels,
 ]
-
 
 /// Returns a declension once a user presses a key in the conjugateView.
 ///
@@ -178,7 +177,6 @@ func returnDeclension(keyPressed: UIButton) {
   }
 }
 
-
 /// Triggers the display of the conjugation view for a valid verb in the command bar.
 ///
 /// - Parameters
@@ -188,7 +186,7 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   if commandBar.text! == conjugatePromptAndCursor || commandBar.text! == conjugatePromptAndPlaceholder {
     return false
   }
-  verbToConjugate = (commandBar.text!.substring(with: conjugatePrompt.count..<(commandBar.text!.count) - 1))
+  verbToConjugate = (commandBar.text!.substring(with: conjugatePrompt.count ..< (commandBar.text!.count) - 1))
   verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
@@ -203,7 +201,6 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
 
   return verbToConjugate == verbInTable
 }
-
 
 /// Returns a conjugation once a user presses a key in the conjugateView or triggers a declension.
 ///
@@ -221,21 +218,28 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   if wordPressed == invalidCommandMsg {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
-      let query = "SELECT * FROM verbs WHERE verb = ?"
-      let args = [verbToConjugate]
-      let outputCols = [requestedForm]
-      wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
+    let outputCols = [requestedForm]
+    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
-      if inputWordIsCapitalized {
-        proxy.insertText(wordToReturn.capitalized + " ")
+    if inputWordIsCapitalized {
+      if controllerLanguage == "German" && potentialWordsToReturn.count == 2 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
       } else {
-        proxy.insertText(wordToReturn + " ")
+        proxy.insertText(wordToReturn.capitalized + " ")
       }
+    } else {
+      proxy.insertText(wordToReturn + " ")
+    }
   } else if formsDisplayDimensions == .view2x2 {
     let query = "SELECT * FROM verbs WHERE verb = ?"
     let args = [verbToConjugate]
     let outputCols = [requestedForm]
     wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
       proxy.insertText(wordToReturn.capitalized + " ")
@@ -244,16 +248,14 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     }
   }
   if controllerLanguage == "German" {
-    let components = wordToReturn.components(separatedBy: " ")
-    if components.count == 2 {
-      proxy.adjustTextPosition(byCharacterOffset: (components[1].count + 1) * -1)
+    if potentialWordsToReturn.count == 2 {
+      proxy.adjustTextPosition(byCharacterOffset: (potentialWordsToReturn[1].count) * -1)
     }
   }
   autoActionState = .suggest
   commandState = .idle
   conjViewShiftButtonsState = .bothInactive
 }
-
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
@@ -274,7 +276,6 @@ func resetVerbConjugationState() {
     svConjugationState = .active
   }
 }
-
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetCaseDeclensionState() {
@@ -310,7 +311,6 @@ func resetCaseDeclensionState() {
   }
 }
 
-
 /// Runs an action associated with the left view switch button of the conjugation state based on the keyboard language.
 func conjugationStateLeft() {
   if controllerLanguage.prefix("French".count) == "French" {
@@ -329,7 +329,6 @@ func conjugationStateLeft() {
     svConjugationStateLeft()
   }
 }
-
 
 /// Runs an action associated with the right view switch button of the conjugation state based on the keyboard language.
 func conjugationStateRight() {

@@ -6,7 +6,6 @@
 
 import UIKit
 
-
 /// Inserts the plural of a valid noun in the command bar into the proxy.
 ///
 /// - Parameters
@@ -17,7 +16,7 @@ func queryPlural(commandBar: UILabel) {
     return
   }
   var noun: String = (commandBar.text!.substring(
-    with: pluralPrompt.count..<((commandBar.text!.count) - 1))
+    with: pluralPrompt.count ..< ((commandBar.text!.count) - 1))
   )
   noun = String(noun.trailingSpacesTrimmed)
 
