@@ -15,6 +15,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 - German indefinite pronouns are now selectable from the case-declension display.
+- German imperfect verb conjugations now insert both the auxiliary verb and the past participle with the cursor between them.
 - Adds a new menu to the Scribe app allowing users to set their preferences for their respective language keyboards!
 
 # Scribe-iOS 2.3.0
