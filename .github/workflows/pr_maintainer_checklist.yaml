@@ -1,6 +1,6 @@
 name: pr_maintainer_checklist
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
     types:
@@ -27,3 +27,5 @@ jobs:
             ### Maintainer Checklist
 
             - [ ] The commit messages for the remote branch should be checked to make sure the contributor's email is set up correctly so that they receive credit for their contribution (name and icon should be the same in remote commits)
+
+            - [ ] The [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) has been updated with a description of the changes for the upcoming release (if necessary)
