@@ -97,6 +97,9 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .privacyPolicy:
         // Push a new screen
         print("Scribe privacy policy page")
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
       case .licenses:
         // Push a new screen
         print("Licenses page")
