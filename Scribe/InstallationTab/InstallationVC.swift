@@ -37,8 +37,6 @@ class InstallationVC: UIViewController {
   @IBOutlet var svSpace: UIView!
   @IBOutlet var bottomSpace: UIView!
 
-  let userSystemLanguage = String(Locale.preferredLanguages[0].prefix(2)).uppercased()
-
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -97,9 +95,9 @@ class InstallationVC: UIViewController {
   /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
   func setSwitchViewBtn() {
     if !displayPrivacyPolicy {
-      switchView.setTitle(userSystemLanguage == "DE" ? "Datenschutzrichtlinie ansehen" : "View privacy policy", for: .normal)
+      switchView.setTitle(Locale.userSystemLanguage == "DE" ? "Datenschutzrichtlinie ansehen" : "View privacy policy", for: .normal)
     } else if displayPrivacyPolicy {
-      switchView.setTitle(userSystemLanguage == "DE" ? "Installation ansehen" : "View installation", for: .normal)
+      switchView.setTitle(Locale.userSystemLanguage == "DE" ? "Installation ansehen" : "View installation", for: .normal)
     }
     switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
     switchView.setTitleColor(.init(.keyChar), for: .normal)
@@ -236,7 +234,7 @@ class InstallationVC: UIViewController {
     privacyScroll.isHidden = true
 
     // Set the texts for the fields.
-    switch userSystemLanguage {
+    switch Locale.userSystemLanguage {
     case "EN":
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
       GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
@@ -278,20 +276,20 @@ class InstallationVC: UIViewController {
 
     privacyScroll.isHidden = false
 
-    switch userSystemLanguage {
+    switch Locale.userSystemLanguage {
     case "EN":
       privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+        fontSize: fontSize, text: enPrivacyPolicyText
       )
 
     case "DE":
       privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, title: dePrivacyPolicyTitle, text: dePrivacyPolicyText
+        fontSize: fontSize, text: dePrivacyPolicyText
       )
 
     default:
       privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, title: enPrivacyPolicyTitle, text: enPrivacyPolicyText
+        fontSize: fontSize, text: enPrivacyPolicyText
       )
     }
     privacyTextView.textColor = .init(.keyChar)
@@ -301,7 +299,7 @@ class InstallationVC: UIViewController {
   func setCurrentUI() {
     // Sets the font size for the text in the app screen and corresponding UIImage icons.
     if DeviceType.isPhone {
-      if userSystemLanguage == "DE" {
+      if Locale.userSystemLanguage == "DE" {
         fontSize = UIScreen.main.bounds.height / 61
       } else {
         fontSize = UIScreen.main.bounds.height / 59

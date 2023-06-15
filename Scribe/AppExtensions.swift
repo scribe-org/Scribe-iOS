@@ -26,3 +26,9 @@ extension UIView {
     return nil
   }
 }
+
+extension Locale {
+  static var userSystemLanguage: String {
+    return String(Locale.preferredLanguages[0].prefix(2)).uppercased()
+  }
+}

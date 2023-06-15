@@ -95,10 +95,9 @@ extension ParentTableViewCell: UITableViewDelegate {
 //        // reset functionality
 //        print("Resets app hints")
       case .privacyPolicy:
-        // Push a new screen
-        print("Scribe privacy policy page")
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.section = .privacyPolicy
         }
       case .licenses:
         // Push a new screen

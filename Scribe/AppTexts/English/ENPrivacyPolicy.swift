@@ -7,12 +7,12 @@
 //
 
 let enPrivacyPolicyTitle = "Privacy Policy"
+let enPrivacyPolicyPageCaption = "Keeping you safe"
 
 // swiftlint:disable all
 
 // Includes a new line so that there is space between it and the page title.
 let enPrivacyPolicyText = """
-\n
 Please note that the English version of this policy takes precedence over all other versions.
 
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.
