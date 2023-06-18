@@ -73,7 +73,7 @@ extension ParentTableViewCell: UITableViewDataSource {
 extension ParentTableViewCell: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print(data?.section[indexPath.row].sectionTitle ?? "")
-    
+
     if let section = data?.section[indexPath.row] {
       switch section.sectionState {
       case .github:
@@ -104,12 +104,12 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .specificLang: break
       }
     }
-    
+
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedIndexPath, animated: false)
     }
   }
-  
+
   func openURLString(urlString: String, withEncoding: Bool) {
     if withEncoding {
       let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -120,7 +120,7 @@ extension ParentTableViewCell: UITableViewDelegate {
       UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
   }
-  
+
   func showRateScribeUI() {
     if #available(iOS 14.0, *) {
       guard let scene = UIApplication.shared.foregroundActiveScene else { return }
@@ -132,17 +132,17 @@ extension ParentTableViewCell: UITableViewDelegate {
       parentViewController?.present(alert, animated: true)
     }
   }
-  
-  func openScribeAppStore(alert: UIAlertAction) {
+
+  func openScribeAppStore(alert _: UIAlertAction) {
     openURLString(urlString: "itms-apps: //itunes.apple.com/app/id1596613886", withEncoding: true)
   }
-  
+
   func showEmailUI() {
     if MFMailComposeViewController.canSendMail() {
       let mailComposeViewController = MFMailComposeViewController()
       mailComposeViewController.mailComposeDelegate = self
       mailComposeViewController.setToRecipients(["scribe.language@gmail.com"])
-      
+
       parentViewController?.present(mailComposeViewController, animated: true, completion: nil)
     } else {
       /// Show alert mentioning the email address
@@ -151,22 +151,23 @@ extension ParentTableViewCell: UITableViewDelegate {
       parentViewController?.present(alert, animated: true)
     }
   }
-  
+
   func showShareSheet() {
     let urlString = "itms-apps: //itunes.apple.com/app/id1596613886"
     let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     guard let encodedURLString = encodedString, let url = URL(string: encodedURLString) else { return }
-    
+
     let shareSheetVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-    
+
     parentViewController?.present(shareSheetVC, animated: true, completion: nil)
   }
 }
 
 // MARK: MFMailComposeViewControllerDelegate
+
 /// Function implementation conforming to the MFMailComposeViewControllerDelegate protocol.
 extension ParentTableViewCell: MFMailComposeViewControllerDelegate {
-  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
     controller.dismiss(animated: true, completion: nil)
   }
 }

@@ -25,7 +25,7 @@ struct Section {
     case appLang
     case specificLang
   }
-  
+
   let sectionTitle: String
   let imageString: String
   let hasToggle: Bool
