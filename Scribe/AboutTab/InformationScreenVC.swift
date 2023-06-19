@@ -32,7 +32,7 @@ class InformationScreenVC: UIViewController {
    
     textView.backgroundColor = UIColor(named: "commandBar")
     contentContainerView.backgroundColor = UIColor(named: "commandBar")
-    applyCornerRadius(elem: contentContainerView, radius: 16)
+    applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
     applyShadowEffects(elem: contentContainerView)
     
     cornerImageView.clipsToBounds = true

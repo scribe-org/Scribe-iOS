@@ -40,8 +40,8 @@ class SettingsViewController: UIViewController {
     footerButton.setTitle("Install keyboard", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
-    footerFrame.layer.cornerRadius = footerFrame.frame.height * 0.3
-    footerButton.layer.cornerRadius = footerFrame.frame.height * 0.3
+    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.05
+    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.05
     footerButton.clipsToBounds = true
   }
 }

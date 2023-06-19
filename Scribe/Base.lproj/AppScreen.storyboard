@@ -166,10 +166,10 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-l8-ZuO">
-                                            <rect key="frame" x="24" y="24" width="327" height="70"/>
+                                            <rect key="frame" x="15" y="24" width="345" height="70"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-ix-8Gq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="tintColor" name="keyChar"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -188,9 +188,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="IUx-l8-ZuO" secondAttribute="trailing" constant="24" id="1f9-Bu-bhz"/>
+                                        <constraint firstAttribute="trailing" secondItem="IUx-l8-ZuO" secondAttribute="trailing" constant="15" id="1f9-Bu-bhz"/>
                                         <constraint firstItem="IUx-l8-ZuO" firstAttribute="top" secondItem="2AI-Eq-Aoc" secondAttribute="top" constant="24" id="2eq-kX-aJZ"/>
-                                        <constraint firstItem="IUx-l8-ZuO" firstAttribute="leading" secondItem="2AI-Eq-Aoc" secondAttribute="leading" constant="24" id="G55-3z-qUg"/>
+                                        <constraint firstItem="IUx-l8-ZuO" firstAttribute="leading" secondItem="2AI-Eq-Aoc" secondAttribute="leading" constant="15" id="G55-3z-qUg"/>
                                     </constraints>
                                 </view>
                                 <prototypes>

@@ -11,7 +11,6 @@ struct ParentTableCellModel {
 }
 
 struct Section {
-  
   let sectionTitle: String
   let imageString: String
   let hasToggle: Bool

@@ -38,10 +38,8 @@ class ParentTableViewCell: UITableViewCell {
   }
 
   func setContainerViewUI() {
-    let containerViewHeightWidthRatio = containerView.frame.height / containerView.frame.width
-
-    containerView.layer.cornerRadius = 36 * containerViewHeightWidthRatio
-    innerTable.layer.cornerRadius = 36 * containerViewHeightWidthRatio
+    containerView.layer.cornerRadius = containerView.frame.width * 0.05
+    innerTable.layer.cornerRadius = innerTable.frame.width * 0.05
     innerTable.clipsToBounds = true
     applyShadowEffects(elem: containerView)
   }
