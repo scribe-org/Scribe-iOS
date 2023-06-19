@@ -142,6 +142,7 @@ extension ParentTableViewCell: UITableViewDelegate {
       let mailComposeViewController = MFMailComposeViewController()
       mailComposeViewController.mailComposeDelegate = self
       mailComposeViewController.setToRecipients(["scribe.language@gmail.com"])
+      mailComposeViewController.setSubject("Hey Scribe!")
       
       parentViewController?.present(mailComposeViewController, animated: true, completion: nil)
     } else {
