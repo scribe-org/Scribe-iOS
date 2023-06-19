@@ -23,19 +23,9 @@ class InstallationVC: UIViewController {
   @IBOutlet var GHBtn: UIButton!
   @IBOutlet var GHCorner: UIImageView!
 
-  @IBOutlet var privacyTextBackground: UIView!
-  @IBOutlet var privacyTextView: UITextView!
-  @IBOutlet var privacyScroll: UIImageView!
-
-  @IBOutlet var switchView: UIButton!
-  @IBOutlet var switchViewBackground: UIView!
-  var displayPrivacyPolicy = false
-
   // Spacing views to size app screen proportionally.
   @IBOutlet var topSpace: UIView!
   @IBOutlet var logoSpace: UIView!
-  @IBOutlet var svSpace: UIView!
-  @IBOutlet var bottomSpace: UIView!
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
@@ -90,33 +80,6 @@ class InstallationVC: UIViewController {
     }
   }
 
-  let switchViewColor = UIColor(named: "scribeCTA")
-
-  /// Sets the functionality of the button that switches between installation instructions and the privacy policy.
-  func setSwitchViewBtn() {
-    if !displayPrivacyPolicy {
-      switchView.setTitle(Locale.userSystemLanguage == "DE" ? "Datenschutzrichtlinie ansehen" : "View privacy policy", for: .normal)
-    } else if displayPrivacyPolicy {
-      switchView.setTitle(Locale.userSystemLanguage == "DE" ? "Installation ansehen" : "View installation", for: .normal)
-    }
-    switchView.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-    switchView.setTitleColor(.init(.keyChar), for: .normal)
-    switchView.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .semibold)
-
-    switchView.clipsToBounds = true
-    switchView.backgroundColor = switchViewColor
-    applyCornerRadius(elem: switchView, radius: switchView.frame.height * 0.35)
-    applyShadowEffects(elem: switchView)
-
-    switchView.addTarget(self, action: #selector(switchAppView), for: .touchUpInside)
-    switchView.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-
-    // Add a white background so that the key press doesn't show the blue app screen background.
-    switchViewBackground.backgroundColor = .white
-    switchViewBackground.clipsToBounds = true
-    applyCornerRadius(elem: switchViewBackground, radius: switchView.frame.height * 0.35)
-  }
-
   /// Sets the functionality of the button over the keyboard installation guide that opens Settings.
   func setSettingsBtn() {
     settingsBtn.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
@@ -134,10 +97,9 @@ class InstallationVC: UIViewController {
     // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
     let scrollbarAppearance = UINavigationBarAppearance()
     scrollbarAppearance.configureWithOpaqueBackground()
-    privacyScroll.isUserInteractionEnabled = false
 
     // Disable spacing views.
-    let allSpacingViews: [UIView] = [topSpace, logoSpace, svSpace, bottomSpace]
+    let allSpacingViews: [UIView] = [topSpace, logoSpace]
     for view in allSpacingViews {
       view.isUserInteractionEnabled = false
       view.backgroundColor = .clear
@@ -149,26 +111,21 @@ class InstallationVC: UIViewController {
 
   /// Sets properties for the app screen given the current device.
   func setUIDeviceProperties() {
-    // Height ratios to set corner radii exactly.
-    let installTextToSwitchBtnHeightRatio = appTextBackground.frame.height / switchViewBackground.frame.height
-    let GHTextToSwitchBtnHeightRatio = GHTextBackground.frame.height / switchViewBackground.frame.height
-    let privacyTextToSwitchBtnHeightRatio = privacyTextBackground.frame.height / switchViewBackground.frame.height
-
     settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    settingsCorner.layer.cornerRadius = appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
+    settingsCorner.layer.cornerRadius = appTextBackground.frame.width * 0.05
     settingsCorner.alpha = 0.9
     GHCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    GHCorner.layer.cornerRadius = GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
+    GHCorner.layer.cornerRadius = GHTextBackground.frame.width * 0.05
     GHCorner.alpha = 0.9
 
     settingsBtn.clipsToBounds = true
     settingsBtn.layer.masksToBounds = false
-    settingsBtn.layer.cornerRadius = appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
+    settingsBtn.layer.cornerRadius = appTextBackground.frame.width * 0.05
     GHBtn.clipsToBounds = true
     GHBtn.layer.masksToBounds = false
-    GHBtn.layer.cornerRadius = GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
+    GHBtn.layer.cornerRadius = GHTextBackground.frame.width * 0.05
 
-    let allTextViews: [UITextView] = [appTextView, GHTextView, privacyTextView]
+    let allTextViews: [UITextView] = [appTextView, GHTextView]
 
     // Disable text views.
     for textView in allTextViews {
@@ -182,20 +139,14 @@ class InstallationVC: UIViewController {
     appTextBackground.clipsToBounds = true
     applyCornerRadius(
       elem: appTextBackground,
-      radius: appTextBackground.frame.height * 0.4 / installTextToSwitchBtnHeightRatio
+      radius: appTextBackground.frame.width * 0.05
     )
 
     GHTextBackground.isUserInteractionEnabled = false
     GHTextBackground.clipsToBounds = true
     applyCornerRadius(
       elem: GHTextBackground,
-      radius: GHTextBackground.frame.height * 0.4 / GHTextToSwitchBtnHeightRatio
-    )
-
-    privacyTextView.backgroundColor = .clear
-    applyCornerRadius(
-      elem: privacyTextBackground,
-      radius: privacyTextBackground.frame.height * 0.4 / privacyTextToSwitchBtnHeightRatio
+      radius: GHTextBackground.frame.width * 0.05
     )
 
     // Set link attributes for all textViews.
@@ -225,14 +176,6 @@ class InstallationVC: UIViewController {
     GHTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: GHTextBackground)
 
-    // Disable the privacy policy elements.
-    privacyTextView.isUserInteractionEnabled = false
-    privacyTextView.backgroundColor = .clear
-    privacyTextView.text = ""
-    privacyTextBackground.backgroundColor = .clear
-
-    privacyScroll.isHidden = true
-
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {
     case "EN":
@@ -251,50 +194,6 @@ class InstallationVC: UIViewController {
     GHTextView.textColor = .init(.keyChar)
   }
 
-  /// Sets the necessary properties for the privacy policy UI including calling the text generation function.
-  func setPrivacyUI() {
-    let privacySymbol: UIImage = getPrivacySymbol(fontSize: fontSize * 0.9)
-    topIconPhone.image = privacySymbol
-    topIconPad.image = privacySymbol
-    topIconPhone.tintColor = .init(.keyChar)
-    topIconPad.tintColor = .init(.keyChar)
-
-    // Disable installation directions and GitHub notice elements.
-    settingsBtn.isUserInteractionEnabled = false
-    appTextView.text = ""
-    appTextBackground.backgroundColor = .clear
-
-    GHBtn.isUserInteractionEnabled = false
-    GHCorner.isHidden = true
-    GHTextView.text = ""
-    GHTextBackground.backgroundColor = .clear
-
-    // Enable the privacy policy elements.
-    privacyTextView.isUserInteractionEnabled = true
-    privacyTextBackground.backgroundColor = UIColor(named: "commandBar")
-    applyShadowEffects(elem: privacyTextBackground)
-
-    privacyScroll.isHidden = false
-
-    switch Locale.userSystemLanguage {
-    case "EN":
-      privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, text: enPrivacyPolicyText
-      )
-
-    case "DE":
-      privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, text: dePrivacyPolicyText
-      )
-
-    default:
-      privacyTextView.attributedText = setPrivacyPolicy(
-        fontSize: fontSize, text: enPrivacyPolicyText
-      )
-    }
-    privacyTextView.textColor = .init(.keyChar)
-  }
-
   /// Creates the current app UI by applying constraints and calling child UI functions.
   func setCurrentUI() {
     // Sets the font size for the text in the app screen and corresponding UIImage icons.
@@ -308,27 +207,11 @@ class InstallationVC: UIViewController {
       fontSize = UIScreen.main.bounds.height / 53
     }
     setTopIcon()
-    setSwitchViewBtn()
     setSettingsBtn()
     setGHBtn()
     setUIConstantProperties()
     setUIDeviceProperties()
-
-    if !displayPrivacyPolicy {
-      setInstallationUI()
-    } else {
-      setPrivacyUI()
-    }
-  }
-
-  /// Switches the view of the app based on the current view.
-  @objc func switchAppView() {
-    if !displayPrivacyPolicy {
-      displayPrivacyPolicy = true
-    } else {
-      displayPrivacyPolicy = false
-    }
-    setCurrentUI()
+    setInstallationUI()
   }
 
   /// Function to open the settings app that is targeted by settingsBtn.
@@ -350,24 +233,13 @@ class InstallationVC: UIViewController {
   /// - Parameters
   ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    if sender == switchView {
+    sender.backgroundColor = .black
+    sender.alpha = 0.2
+
+    // Bring sender's opacity back up to fully opaque and replace the background color.
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
       sender.backgroundColor = .clear
-      sender.setTitleColor(switchViewColor, for: .normal)
-
-      // Bring sender's background and text colors back to their original values.
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [self] in
-        sender.backgroundColor = switchViewColor
-        sender.setTitleColor(.init(.keyChar).light, for: .normal)
-      }
-    } else {
-      sender.backgroundColor = .black
-      sender.alpha = 0.2
-
-      // Bring sender's opacity back up to fully opaque and replace the background color.
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-        sender.backgroundColor = .clear
-        sender.alpha = 1.0
-      }
+      sender.alpha = 1.0
     }
   }
 }

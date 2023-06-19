@@ -70,8 +70,6 @@ extension ParentTableViewCell: UITableViewDataSource {
 /// Function implementation conforming to the UITableViewDelegate protocol.
 extension ParentTableViewCell: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(data?.section[indexPath.row].sectionTitle ?? "")
-    
     if let section = data?.section[indexPath.row] {
       switch section.sectionState {
       case .github:
