@@ -17,12 +17,6 @@ class InstallationVC: UIViewController {
   @IBOutlet var topIconPad: UIImageView!
   @IBOutlet var settingsCorner: UIImageView!
 
-  @IBOutlet var GHTextView: UITextView!
-  @IBOutlet var GHTextBackground: UIView!
-
-  @IBOutlet var GHBtn: UIButton!
-  @IBOutlet var GHCorner: UIImageView!
-
   // Spacing views to size app screen proportionally.
   @IBOutlet var topSpace: UIView!
   @IBOutlet var logoSpace: UIView!
@@ -86,12 +80,6 @@ class InstallationVC: UIViewController {
     settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 
-  /// Sets the functionality of the button over the keyboard installation guide that links to Scribe's GitHub.
-  func setGHBtn() {
-    GHBtn.addTarget(self, action: #selector(openScribeGH), for: .touchUpInside)
-    GHBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-  }
-
   /// Sets constant properties for the app screen.
   func setUIConstantProperties() {
     // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
@@ -114,18 +102,13 @@ class InstallationVC: UIViewController {
     settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
     settingsCorner.layer.cornerRadius = appTextBackground.frame.width * 0.05
     settingsCorner.alpha = 0.9
-    GHCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    GHCorner.layer.cornerRadius = GHTextBackground.frame.width * 0.05
-    GHCorner.alpha = 0.9
 
+    settingsBtn.titleLabel?.text = ""
     settingsBtn.clipsToBounds = true
     settingsBtn.layer.masksToBounds = false
     settingsBtn.layer.cornerRadius = appTextBackground.frame.width * 0.05
-    GHBtn.clipsToBounds = true
-    GHBtn.layer.masksToBounds = false
-    GHBtn.layer.cornerRadius = GHTextBackground.frame.width * 0.05
 
-    let allTextViews: [UITextView] = [appTextView, GHTextView]
+    let allTextViews: [UITextView] = [appTextView]
 
     // Disable text views.
     for textView in allTextViews {
@@ -135,18 +118,11 @@ class InstallationVC: UIViewController {
     }
 
     // Set backgrounds and corner radii.
-    appTextBackground.isUserInteractionEnabled = false
+    appTextBackground.isUserInteractionEnabled = true
     appTextBackground.clipsToBounds = true
     applyCornerRadius(
       elem: appTextBackground,
       radius: appTextBackground.frame.width * 0.05
-    )
-
-    GHTextBackground.isUserInteractionEnabled = false
-    GHTextBackground.clipsToBounds = true
-    applyCornerRadius(
-      elem: GHTextBackground,
-      radius: GHTextBackground.frame.width * 0.05
     )
 
     // Set link attributes for all textViews.
@@ -171,27 +147,18 @@ class InstallationVC: UIViewController {
     appTextBackground.backgroundColor = UIColor(named: "commandBar")
     applyShadowEffects(elem: appTextBackground)
 
-    GHBtn.isUserInteractionEnabled = true
-    GHCorner.isHidden = false
-    GHTextBackground.backgroundColor = UIColor(named: "commandBar")
-    applyShadowEffects(elem: GHTextBackground)
-
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {
     case "EN":
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
-      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
 
     case "DE":
       appTextView.attributedText = setDEInstallation(fontSize: fontSize)
-      GHTextView.attributedText = setDEGitHubText(fontSize: fontSize)
 
     default:
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
-      GHTextView.attributedText = setENGitHubText(fontSize: fontSize)
     }
     appTextView.textColor = .init(.keyChar)
-    GHTextView.textColor = .init(.keyChar)
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
@@ -208,7 +175,6 @@ class InstallationVC: UIViewController {
     }
     setTopIcon()
     setSettingsBtn()
-    setGHBtn()
     setUIConstantProperties()
     setUIDeviceProperties()
     setInstallationUI()
@@ -217,15 +183,6 @@ class InstallationVC: UIViewController {
   /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-  }
-
-  /// Function to open Scribe's GitHub page that is targeted by GHBtn.
-  @objc func openScribeGH() {
-    guard let url = URL(string: "https://github.com/scribe-org/Scribe-iOS") else {
-      return
-    }
-
-    UIApplication.shared.open(url, options: [:], completionHandler: nil)
   }
 
   /// Function to change the key coloration given a touch down.
