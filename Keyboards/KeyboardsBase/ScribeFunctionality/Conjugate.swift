@@ -8,8 +8,7 @@ import UIKit
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjTitleDict: [String: Any] = [
-  "French_AZERTY": frGetConjugationTitle,
-  "French_QWERTY": frGetConjugationTitle,
+  "French": frGetConjugationTitle,
   "German": deGetConjugationTitle,
   "Italian": itGetConjugationTitle,
   "Portuguese": ptGetConjugationTitle,
@@ -20,8 +19,7 @@ let keyboardConjTitleDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjStateDict: [String: Any] = [
-  "French_AZERTY": frGetConjugationState,
-  "French_QWERTY": frGetConjugationState,
+  "French": frGetConjugationState,
   "German": deGetConjugationState,
   "Italian": itGetConjugationState,
   "Portuguese": ptGetConjugationState,
@@ -32,8 +30,7 @@ let keyboardConjStateDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjLabelDict: [String: Any] = [
-  "French_AZERTY": frSetConjugationLabels,
-  "French_QWERTY": frSetConjugationLabels,
+  "French": frSetConjugationLabels,
   "German": deSetConjugationLabels,
   "Italian": itSetConjugationLabels,
   "Portuguese": ptSetConjugationLabels,

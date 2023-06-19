@@ -515,7 +515,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if ["French_AZERTY", "French_QWERTY", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if ["French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       // We have to consider these different cases as the key always has to match.

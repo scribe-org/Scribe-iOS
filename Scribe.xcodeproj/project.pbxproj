@@ -19,7 +19,6 @@
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
 		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453952293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453953293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453954293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453955293B9108003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
@@ -27,7 +26,6 @@
 		30453957293B9109003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453958293B9109003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
 		30453959293B911B003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
-		3045395A293B911C003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		3045395B293B911C003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		3045395C293B911D003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		3045395D293B911D003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
@@ -41,7 +39,6 @@
 		3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
 		3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453970293B9DFF003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
-		30453971293B9E00003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453972293B9E04003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453973293B9E05003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453974293B9E05003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
@@ -49,7 +46,6 @@
 		30453976293B9E06003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453977293B9E06003AE55B /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		30453978293B9E0A003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
-		30453979293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
 		3045397A293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
 		3045397B293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
 		3045397C293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396C293B9DDC003AE55B /* ToolTipViewDatasource.swift */; };
@@ -59,13 +55,11 @@
 		30453980293B9E10003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453981293B9E11003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453982293B9E11003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
-		30453983293B9E12003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453984293B9E12003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453985293B9E12003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453986293B9E13003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453987293B9E13003AE55B /* InformationToolTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453963293B9D18003AE55B /* InformationToolTipData.swift */; };
 		30453988293B9E17003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
-		30453989293B9E17003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		3045398A293B9E18003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		3045398B293B9E18003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		3045398C293B9E18003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
@@ -73,7 +67,6 @@
 		3045398E293B9E19003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		3045398F293B9E1A003AE55B /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		30453990293B9E1C003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
-		30453991293B9E1C003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
 		30453992293B9E1C003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
 		30453993293B9E1D003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
 		30453994293B9E1D003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
@@ -81,7 +74,6 @@
 		30453996293B9E1E003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
 		30453997293B9E1E003AE55B /* ToolTipViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */; };
 		30453998293B9E20003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
-		30453999293B9E21003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
 		3045399A293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
 		3045399B293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
 		3045399C293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
@@ -90,7 +82,6 @@
 		3045399F293B9E24003AE55B /* ToolTipViewDatasourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396A293B9DC9003AE55B /* ToolTipViewDatasourceable.swift */; };
 		30489C1E2936DAB700B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		30489C1F2936DAFE00B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
-		30489C202936DAFF00B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		30489C212936DAFF00B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		30489C222936DB0000B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		30489C232936DB0100B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
@@ -128,8 +119,8 @@
 		CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		D109A20E275B6888005E2271 /* FR-AZERTYKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A20D275B6888005E2271 /* FR-AZERTYKeyboardViewController.swift */; };
-		D109A212275B6888005E2271 /* French-AZERTY.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French-AZERTY.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D109A20E275B6888005E2271 /* FRKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A20D275B6888005E2271 /* FRKeyboardViewController.swift */; };
+		D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A20B275B6888005E2271 /* French.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A21D275B68B3005E2271 /* PTKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109A21C275B68B3005E2271 /* PTKeyboardViewController.swift */; };
 		D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D109A21A275B68B3005E2271 /* Portuguese.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
@@ -180,7 +171,6 @@
 		D156BC0A29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC0B29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC0C29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0D29CCDBF7007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC0E29CCDBF7007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC0F29CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC1029CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
@@ -190,7 +180,6 @@
 		D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		D15E298029E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
 		D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
 		D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
 		D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
@@ -214,7 +203,6 @@
 		D16DD37529E7859C00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37429E7859C00FB9022 /* SwiftyJSON */; };
 		D16DD37729E785A100FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37629E785A100FB9022 /* SwiftyJSON */; };
 		D16DD37929E785A600FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37829E785A600FB9022 /* SwiftyJSON */; };
-		D16DD37B29E785AB00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37A29E785AB00FB9022 /* SwiftyJSON */; };
 		D16DD37D29E785B100FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37C29E785B100FB9022 /* SwiftyJSON */; };
 		D16DD37F29E785B500FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD37E29E785B500FB9022 /* SwiftyJSON */; };
 		D16DD38129E785BA00FB9022 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38029E785BA00FB9022 /* SwiftyJSON */; };
@@ -226,7 +214,6 @@
 		D16DD38D29E7869300FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38C29E7869300FB9022 /* GRDB */; };
 		D16DD38F29E7869800FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD38E29E7869800FB9022 /* GRDB */; };
 		D16DD39129E7869D00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39029E7869D00FB9022 /* GRDB */; };
-		D16DD39329E786A100FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39229E786A100FB9022 /* GRDB */; };
 		D16DD39529E786A500FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39429E786A500FB9022 /* GRDB */; };
 		D16DD39729E786AA00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39629E786AA00FB9022 /* GRDB */; };
 		D16DD39929E786AD00FB9022 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D16DD39829E786AD00FB9022 /* GRDB */; };
@@ -239,7 +226,6 @@
 		D16DD3A629E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D16DD3A729E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D16DD3A829E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
-		D16DD3A929E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D16DD3AA29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D16DD3AB29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D16DD3AC29E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
@@ -250,13 +236,6 @@
 		D16DD3B129E78A1500FB9022 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD3A429E78A1500FB9022 /* Utilities.swift */; };
 		D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C327AEAD7D0038660B /* AppStyling.swift */; };
-		D17193C727AEC8D80038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193C927AEC8F90038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193CA27AEC9760038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193CB27AEC9770038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193CC27AEC9770038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193CD27AEC9780038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17193CE27AEC9780038660B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
 		D17193D927AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
 		D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
@@ -365,43 +344,6 @@
 		D171946927AF31770038660B /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
 		D171946A27AF31770038660B /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
 		D171946B27AF31770038660B /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
-		D17693A028FC7C4E00DF0FBB /* FR-QWERTYKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176939F28FC7C4E00DF0FBB /* FR-QWERTYKeyboardViewController.swift */; };
-		D17693A428FC7C4E00DF0FBB /* French-QWERTY.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D176939D28FC7C4E00DF0FBB /* French-QWERTY.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D17693AC28FC7E0C00DF0FBB /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
-		D17693AD28FC7E1200DF0FBB /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
-		D17693AE28FC7E1200DF0FBB /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171942E27AEDE110038660B /* KeyboardKeys.swift */; };
-		D17693AF28FC7E1200DF0FBB /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LoadData.swift */; };
-		D17693B028FC7E1200DF0FBB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
-		D17693B128FC7E1200DF0FBB /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
-		D17693B228FC7E1200DF0FBB /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
-		D17693B328FC7E1200DF0FBB /* KeyAltChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719F27C6A1AA00FD7DBD /* KeyAltChars.swift */; };
-		D17693B428FC7E1200DF0FBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		D17693B528FC7E1600DF0FBB /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
-		D17693B628FC7E1600DF0FBB /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
-		D17693B728FC7E1600DF0FBB /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
-		D17693B828FC7E1600DF0FBB /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9A927AFE78600746F92 /* Plural.swift */; };
-		D17693B928FC7E1600DF0FBB /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
-		D17693BA28FC7E1600DF0FBB /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B127AFE79500746F92 /* Translate.swift */; };
-		D17693BB28FC7E1600DF0FBB /* CommandBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9A127AFE4F300746F92 /* CommandBar.swift */; };
-		D17693BC28FC7E1900DF0FBB /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
-		D17693BD28FC7E1900DF0FBB /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
-		D17693BE28FC7E1900DF0FBB /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
-		D17693BF28FC7EB200DF0FBB /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
-		D17693C128FC7EB200DF0FBB /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
-		D17693C928FC804900DF0FBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		D17693CA28FC815000DF0FBB /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
-		D17693CC28FC815000DF0FBB /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
-		D17693CE28FC815500DF0FBB /* ITInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */; };
-		D17693CF28FC815500DF0FBB /* ITCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B81D4927BBBA200085FE5E /* ITCommandVariables.swift */; };
-		D17693D028FC815900DF0FBB /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
-		D17693D128FC815900DF0FBB /* PTCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940727AECCE50038660B /* PTCommandVariables.swift */; };
-		D17693D328FC815E00DF0FBB /* RUInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */; };
-		D17693D528FC815E00DF0FBB /* RUCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940F27AECCF50038660B /* RUCommandVariables.swift */; };
-		D17693D628FC816200DF0FBB /* ESCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941727AECD070038660B /* ESCommandVariables.swift */; };
-		D17693D728FC816200DF0FBB /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
-		D17693D928FC816700DF0FBB /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
-		D17693DB28FC816700DF0FBB /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
-		D17693DD28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */; };
 		D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */; };
 		D17693DF28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */; };
 		D17693E028FC8D6C00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */; };
@@ -412,7 +354,6 @@
 		D17693E528FC8D6E00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */; };
 		D180EC0328FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
 		D180EC0428FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
-		D180EC0528FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
 		D180EC0628FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
 		D180EC0728FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
 		D180EC0828FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */; };
@@ -485,7 +426,6 @@
 		D1AB5B4E29C757A100CCB0C1 /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		D1AB5B4F29C757A100CCB0C1 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AB5B5029C757A100CCB0C1 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
-		D1AB5B5129C757A100CCB0C1 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDF0429CA66D00033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
@@ -530,7 +470,6 @@
 		D1AFDF2C29CA66D00033BF27 /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		D1AFDF2D29CA66D00033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFDF2E29CA66D00033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
-		D1AFDF2F29CA66D00033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDF8129CA66F40033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
@@ -575,7 +514,6 @@
 		D1AFDFA929CA66F40033BF27 /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		D1AFDFAA29CA66F40033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFDFAB29CA66F40033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
-		D1AFDFAC29CA66F40033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDFBC29CA67EE0033BF27 /* DAKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDE7929CA658B0033BF27 /* DAKeyboardViewController.swift */; };
@@ -622,7 +560,6 @@
 		D1AFDFFF29CA6E900033BF27 /* ViewThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30453966293B9D31003AE55B /* ViewThemeable.swift */; };
 		D1AFE00029CA6E900033BF27 /* ScribeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171945727AF237C0038660B /* ScribeKey.swift */; };
 		D1AFE00129CA6E900033BF27 /* KeyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */; };
-		D1AFE00229CA6E900033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFE01229CA6F360033BF27 /* HEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDFCA29CA6BF60033BF27 /* HEKeyboardViewController.swift */; };
@@ -646,7 +583,6 @@
 		D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1B81D1F27BBB5320085FE5E /* Italian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193FF27AECCD10038660B /* DECommandVariables.swift */; };
 		D1B81D2B27BBB6830085FE5E /* DEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */; };
-		D1B81D2C27BBB6880085FE5E /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */; };
 		D1B81D2D27BBB68B0085FE5E /* FRCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193F727AECC930038660B /* FRCommandVariables.swift */; };
 		D1B81D2E27BBB69B0085FE5E /* PTCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940727AECCE50038660B /* PTCommandVariables.swift */; };
 		D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193D727AECA450038660B /* PTInterfaceVariables.swift */; };
@@ -735,13 +671,6 @@
 			remoteGlobalIDString = D1AB5B2229C757A100CCB0C1;
 			remoteInfo = Norwegian;
 		};
-		D17693A228FC7C4E00DF0FBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D176939C28FC7C4E00DF0FBB;
-			remoteInfo = "French (QWERTY)";
-		};
 		D18EA89E2760D4A6001E1358 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
@@ -790,9 +719,8 @@
 				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
 				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
 				D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */,
-				D17693A428FC7C4E00DF0FBB /* French-QWERTY.appex in Embed Foundation Extensions */,
 				D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */,
-				D109A212275B6888005E2271 /* French-AZERTY.appex in Embed Foundation Extensions */,
+				D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */,
 				D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -832,8 +760,8 @@
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
 		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
-		D109A20B275B6888005E2271 /* French-AZERTY.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "French-AZERTY.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D109A20D275B6888005E2271 /* FR-AZERTYKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-AZERTYKeyboardViewController.swift"; sourceTree = "<group>"; };
+		D109A20B275B6888005E2271 /* French.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = French.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D109A20D275B6888005E2271 /* FRKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRKeyboardViewController.swift; sourceTree = "<group>"; };
 		D109A20F275B6888005E2271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D109A21A275B68B3005E2271 /* Portuguese.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Portuguese.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D109A21C275B68B3005E2271 /* PTKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -861,7 +789,6 @@
 		D16DD3A429E78A1500FB9022 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D17193BF27AEA33A0038660B /* AppTextStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyling.swift; sourceTree = "<group>"; };
 		D17193C327AEAD7D0038660B /* AppStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyling.swift; sourceTree = "<group>"; };
-		D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-AZERTYInterfaceVariables.swift"; sourceTree = "<group>"; };
 		D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193D727AECA450038660B /* PTInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTInterfaceVariables.swift; sourceTree = "<group>"; };
 		D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUInterfaceVariables.swift; sourceTree = "<group>"; };
@@ -878,9 +805,7 @@
 		D171945727AF237C0038660B /* ScribeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribeKey.swift; sourceTree = "<group>"; };
 		D171946427AF31770038660B /* Conjugate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conjugate.swift; sourceTree = "<group>"; };
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		D176939D28FC7C4E00DF0FBB /* French-QWERTY.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "French-QWERTY.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D176939F28FC7C4E00DF0FBB /* FR-QWERTYKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-QWERTYKeyboardViewController.swift"; sourceTree = "<group>"; };
-		D17693A128FC7C4E00DF0FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-QWERTYInterfaceVariables.swift"; sourceTree = "<group>"; };
 		D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRInterfaceVariables.swift; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -970,15 +895,6 @@
 			files = (
 				D16DD38729E785C900FB9022 /* SwiftyJSON in Frameworks */,
 				D16DD39F29E786B900FB9022 /* GRDB in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D176939A28FC7C4E00DF0FBB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D16DD37B29E785AB00FB9022 /* SwiftyJSON in Frameworks */,
-				D16DD39329E786A100FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1153,11 +1069,10 @@
 				38BD214C22D592CA00C6795D /* German.appex */,
 				D1608665270B6D3C00134D48 /* Spanish.appex */,
 				D1671A60275A1E8700A7C118 /* Russian.appex */,
-				D109A20B275B6888005E2271 /* French-AZERTY.appex */,
+				D109A20B275B6888005E2271 /* French.appex */,
 				D109A21A275B68B3005E2271 /* Portuguese.appex */,
 				D18EA8992760D4A6001E1358 /* Swedish.appex */,
 				D1B81D1F27BBB5320085FE5E /* Italian.appex */,
-				D176939D28FC7C4E00DF0FBB /* French-QWERTY.appex */,
 				D1AB5B5F29C757A100CCB0C1 /* Norwegian.appex */,
 				D1AFDF3D29CA66D00033BF27 /* English.appex */,
 				D1AFDFBA29CA66F40033BF27 /* Danish.appex */,
@@ -1213,11 +1128,12 @@
 		D109A20C275B6888005E2271 /* French */ = {
 			isa = PBXGroup;
 			children = (
-				D180EC0128FDF7310018E29B /* French-AZERTY */,
 				D176939E28FC7C4E00DF0FBB /* French-QWERTY */,
 				D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */,
+				D109A20D275B6888005E2271 /* FRKeyboardViewController.swift */,
 				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D180EC0228FDFABF0018E29B /* FRInterfaceVariables.swift */,
+				D109A20F275B6888005E2271 /* Info.plist */,
 			);
 			path = French;
 			sourceTree = "<group>";
@@ -1286,19 +1202,8 @@
 			children = (
 				D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */,
 				D176939F28FC7C4E00DF0FBB /* FR-QWERTYKeyboardViewController.swift */,
-				D17693A128FC7C4E00DF0FBB /* Info.plist */,
 			);
 			path = "French-QWERTY";
-			sourceTree = "<group>";
-		};
-		D180EC0128FDF7310018E29B /* French-AZERTY */ = {
-			isa = PBXGroup;
-			children = (
-				D17193C527AEC8D20038660B /* FR-AZERTYInterfaceVariables.swift */,
-				D109A20D275B6888005E2271 /* FR-AZERTYKeyboardViewController.swift */,
-				D109A20F275B6888005E2271 /* Info.plist */,
-			);
-			path = "French-AZERTY";
 			sourceTree = "<group>";
 		};
 		D18EA89A2760D4A6001E1358 /* Swedish */ = {
@@ -1457,7 +1362,6 @@
 				D109A220275B68B3005E2271 /* PBXTargetDependency */,
 				D18EA89F2760D4A6001E1358 /* PBXTargetDependency */,
 				D1B81D2527BBB5320085FE5E /* PBXTargetDependency */,
-				D17693A328FC7C4E00DF0FBB /* PBXTargetDependency */,
 				D16D975729C75E4C00E33F86 /* PBXTargetDependency */,
 				D1AFDFC029CA68610033BF27 /* PBXTargetDependency */,
 				D1AFDFC329CA68660033BF27 /* PBXTargetDependency */,
@@ -1493,9 +1397,9 @@
 			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		D109A20A275B6888005E2271 /* French-AZERTY */ = {
+		D109A20A275B6888005E2271 /* French */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French-AZERTY" */;
+			buildConfigurationList = D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French" */;
 			buildPhases = (
 				D109A207275B6888005E2271 /* Sources */,
 				D109A208275B6888005E2271 /* Frameworks */,
@@ -1505,13 +1409,13 @@
 			);
 			dependencies = (
 			);
-			name = "French-AZERTY";
+			name = French;
 			packageProductDependencies = (
 				D16DD37829E785A600FB9022 /* SwiftyJSON */,
 				D16DD39029E7869D00FB9022 /* GRDB */,
 			);
 			productName = French;
-			productReference = D109A20B275B6888005E2271 /* French-AZERTY.appex */;
+			productReference = D109A20B275B6888005E2271 /* French.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		D109A219275B68B3005E2271 /* Portuguese */ = {
@@ -1575,27 +1479,6 @@
 			);
 			productName = Russian;
 			productReference = D1671A60275A1E8700A7C118 /* Russian.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		D176939C28FC7C4E00DF0FBB /* French-QWERTY */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D17693A728FC7C4F00DF0FBB /* Build configuration list for PBXNativeTarget "French-QWERTY" */;
-			buildPhases = (
-				D176939928FC7C4E00DF0FBB /* Sources */,
-				D176939A28FC7C4E00DF0FBB /* Frameworks */,
-				D176939B28FC7C4E00DF0FBB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "French-QWERTY";
-			packageProductDependencies = (
-				D16DD37A29E785AB00FB9022 /* SwiftyJSON */,
-				D16DD39229E786A100FB9022 /* GRDB */,
-			);
-			productName = "French (QWERTY)";
-			productReference = D176939D28FC7C4E00DF0FBB /* French-QWERTY.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		D18EA8982760D4A6001E1358 /* Swedish */ = {
@@ -1754,9 +1637,6 @@
 						CreatedOnToolsVersion = 13.1;
 						LastSwiftMigration = 1310;
 					};
-					D176939C28FC7C4E00DF0FBB = {
-						CreatedOnToolsVersion = 14.0.1;
-					};
 					D18EA8982760D4A6001E1358 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -1785,8 +1665,7 @@
 				38BD212F22D5907E00C6795D /* Scribe */,
 				D1AFDF7D29CA66F40033BF27 /* Danish */,
 				D1AFDF0029CA66D00033BF27 /* English */,
-				D109A20A275B6888005E2271 /* French-AZERTY */,
-				D176939C28FC7C4E00DF0FBB /* French-QWERTY */,
+				D109A20A275B6888005E2271 /* French */,
 				38BD214B22D592CA00C6795D /* German */,
 				D1AFDFD329CA6E900033BF27 /* Hebrew */,
 				D1B81D1E27BBB5320085FE5E /* Italian */,
@@ -1859,16 +1738,6 @@
 				D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D176939B28FC7C4E00DF0FBB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D17693AC28FC7E0C00DF0FBB /* Keyboard.xib in Resources */,
-				D17693C928FC804900DF0FBB /* Assets.xcassets in Resources */,
-				D15E298029E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1970,7 +1839,6 @@
 				D171940027AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
-				D17193C927AEC8F90038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
 				D180EC0328FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
@@ -2061,7 +1929,6 @@
 				D190B24A2741B31F00705659 /* InterfaceVariables.swift in Sources */,
 				D190B24E2741B61000705659 /* LoadData.swift in Sources */,
 				CE1378CE28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
-				D17193CA27AEC9760038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D111E9A427AFE4F300746F92 /* CommandBar.swift in Sources */,
 				D17693E028FC8D6C00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D17193DA27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
@@ -2094,9 +1961,8 @@
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				30453978293B9E0A003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945927AF237C0038660B /* ScribeKey.swift in Sources */,
-				D109A20E275B6888005E2271 /* FR-AZERTYKeyboardViewController.swift in Sources */,
+				D109A20E275B6888005E2271 /* FRKeyboardViewController.swift in Sources */,
 				D1B81D4B27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
-				D17193C727AEC8D80038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D171946627AF31770038660B /* Conjugate.swift in Sources */,
 				D111E9AB27AFE78600746F92 /* Plural.swift in Sources */,
 				D109A237275B6A99005E2271 /* LoadData.swift in Sources */,
@@ -2172,7 +2038,6 @@
 				D17693E228FC8D6D00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D109A22F275B6A8C005E2271 /* ColorVariables.swift in Sources */,
 				3045398C293B9E18003AE55B /* ViewThemeable.swift in Sources */,
-				D17193CB27AEC9770038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1B0719C27C63CE800FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941B27AECD070038660B /* ESCommandVariables.swift in Sources */,
 			);
@@ -2225,7 +2090,6 @@
 				D17693E428FC8D6E00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D190B24F2741B61000705659 /* LoadData.swift in Sources */,
 				3045398E293B9E19003AE55B /* ViewThemeable.swift in Sources */,
-				D17193CE27AEC9780038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1B0719D27C63CE800FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941D27AECD070038660B /* ESCommandVariables.swift in Sources */,
 			);
@@ -2278,62 +2142,8 @@
 				D17693E328FC8D6D00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D1671A76275A1FC000A7C118 /* ColorVariables.swift in Sources */,
 				3045398D293B9E19003AE55B /* ViewThemeable.swift in Sources */,
-				D17193CC27AEC9770038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1B0719B27C63CE700FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941C27AECD070038660B /* ESCommandVariables.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D176939928FC7C4E00DF0FBB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D17693CF28FC815500DF0FBB /* ITCommandVariables.swift in Sources */,
-				30453952293B9106003AE55B /* ENAppText.swift in Sources */,
-				D17693B528FC7E1600DF0FBB /* Conjugate.swift in Sources */,
-				D17693A028FC7C4E00DF0FBB /* FR-QWERTYKeyboardViewController.swift in Sources */,
-				D17693B428FC7E1200DF0FBB /* Extensions.swift in Sources */,
-				30453971293B9E00003AE55B /* ToolTipViewTheme.swift in Sources */,
-				3045395A293B911C003AE55B /* AppTextStyling.swift in Sources */,
-				D17693D328FC815E00DF0FBB /* RUInterfaceVariables.swift in Sources */,
-				D17693C128FC7EB200DF0FBB /* FRCommandVariables.swift in Sources */,
-				30489C202936DAFF00B59393 /* ToolTipView.swift in Sources */,
-				D17693B028FC7E1200DF0FBB /* KeyboardViewController.swift in Sources */,
-				D17693D728FC816200DF0FBB /* ESInterfaceVariables.swift in Sources */,
-				D17693B228FC7E1200DF0FBB /* KeyboardStyling.swift in Sources */,
-				D180EC0528FDFABF0018E29B /* FRInterfaceVariables.swift in Sources */,
-				D156BC0D29CCDBF7007E7362 /* DEAppText.swift in Sources */,
-				D17693D028FC815900DF0FBB /* PTInterfaceVariables.swift in Sources */,
-				30453979293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */,
-				D17693CE28FC815500DF0FBB /* ITInterfaceVariables.swift in Sources */,
-				D17693DD28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
-				D17693B928FC7E1600DF0FBB /* Annotate.swift in Sources */,
-				D17693AD28FC7E1200DF0FBB /* InterfaceVariables.swift in Sources */,
-				D17693D928FC816700DF0FBB /* SVInterfaceVariables.swift in Sources */,
-				D17693CA28FC815000DF0FBB /* DEInterfaceVariables.swift in Sources */,
-				D17693AE28FC7E1200DF0FBB /* KeyboardKeys.swift in Sources */,
-				D17693B628FC7E1600DF0FBB /* ScribeKey.swift in Sources */,
-				30453983293B9E12003AE55B /* InformationToolTipData.swift in Sources */,
-				D17693B128FC7E1200DF0FBB /* KeyAnimation.swift in Sources */,
-				D17693B728FC7E1600DF0FBB /* CommandVariables.swift in Sources */,
-				D17693AF28FC7E1200DF0FBB /* LoadData.swift in Sources */,
-				D16DD3A929E78A1500FB9022 /* Utilities.swift in Sources */,
-				D17693D528FC815E00DF0FBB /* RUCommandVariables.swift in Sources */,
-				D17693B828FC7E1600DF0FBB /* Plural.swift in Sources */,
-				D17693BD28FC7E1900DF0FBB /* ScribeColor.swift in Sources */,
-				30453999293B9E21003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
-				30453991293B9E1C003AE55B /* ToolTipViewUpdatable.swift in Sources */,
-				D17693BC28FC7E1900DF0FBB /* ColorVariables.swift in Sources */,
-				D17693BE28FC7E1900DF0FBB /* UIColor+ScribeColors.swift in Sources */,
-				D17693B328FC7E1200DF0FBB /* KeyAltChars.swift in Sources */,
-				D17693CC28FC815000DF0FBB /* DECommandVariables.swift in Sources */,
-				D17693D128FC815900DF0FBB /* PTCommandVariables.swift in Sources */,
-				D17693BA28FC7E1600DF0FBB /* Translate.swift in Sources */,
-				D17693BB28FC7E1600DF0FBB /* CommandBar.swift in Sources */,
-				30453989293B9E17003AE55B /* ViewThemeable.swift in Sources */,
-				D17693DB28FC816700DF0FBB /* SVCommandVariables.swift in Sources */,
-				D17693BF28FC7EB200DF0FBB /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D17693D628FC816200DF0FBB /* ESCommandVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2384,7 +2194,6 @@
 				D17693E528FC8D6E00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D18EA8A72760D6F5001E1358 /* KeyboardViewController.swift in Sources */,
 				3045398F293B9E1A003AE55B /* ViewThemeable.swift in Sources */,
-				D17193CD27AEC9780038660B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1B0719E27C63CE900FD7DBD /* KeyAnimation.swift in Sources */,
 				D171941E27AECD070038660B /* ESCommandVariables.swift in Sources */,
 			);
@@ -2439,7 +2248,6 @@
 				D1AB5B4E29C757A100CCB0C1 /* ViewThemeable.swift in Sources */,
 				D1AB5B4F29C757A100CCB0C1 /* ScribeKey.swift in Sources */,
 				D1AB5B5029C757A100CCB0C1 /* KeyAnimation.swift in Sources */,
-				D1AB5B5129C757A100CCB0C1 /* FR-AZERTYInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2492,7 +2300,6 @@
 				D1AFDF2C29CA66D00033BF27 /* ViewThemeable.swift in Sources */,
 				D1AFDF2D29CA66D00033BF27 /* ScribeKey.swift in Sources */,
 				D1AFDF2E29CA66D00033BF27 /* KeyAnimation.swift in Sources */,
-				D1AFDF2F29CA66D00033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2545,7 +2352,6 @@
 				D1AFDFA929CA66F40033BF27 /* ViewThemeable.swift in Sources */,
 				D1AFDFAA29CA66F40033BF27 /* ScribeKey.swift in Sources */,
 				D1AFDFAB29CA66F40033BF27 /* KeyAnimation.swift in Sources */,
-				D1AFDFAC29CA66F40033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2598,7 +2404,6 @@
 				D1AFDFFF29CA6E900033BF27 /* ViewThemeable.swift in Sources */,
 				D1AFE00029CA6E900033BF27 /* ScribeKey.swift in Sources */,
 				D1AFE00129CA6E900033BF27 /* KeyAnimation.swift in Sources */,
-				D1AFE00229CA6E900033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2651,7 +2456,6 @@
 				3045398B293B9E18003AE55B /* ViewThemeable.swift in Sources */,
 				D1B81D4627BBB71C0085FE5E /* ScribeKey.swift in Sources */,
 				D1B0719A27C63CE600FD7DBD /* KeyAnimation.swift in Sources */,
-				D1B81D2C27BBB6880085FE5E /* FR-AZERTYInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2665,7 +2469,7 @@
 		};
 		D109A211275B6888005E2271 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D109A20A275B6888005E2271 /* French-AZERTY */;
+			target = D109A20A275B6888005E2271 /* French */;
 			targetProxy = D109A210275B6888005E2271 /* PBXContainerItemProxy */;
 		};
 		D109A220275B68B3005E2271 /* PBXTargetDependency */ = {
@@ -2687,11 +2491,6 @@
 			isa = PBXTargetDependency;
 			target = D1AB5B2229C757A100CCB0C1 /* Norwegian */;
 			targetProxy = D16D975629C75E4C00E33F86 /* PBXContainerItemProxy */;
-		};
-		D17693A328FC7C4E00DF0FBB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D176939C28FC7C4E00DF0FBB /* French-QWERTY */;
-			targetProxy = D17693A228FC7C4E00DF0FBB /* PBXContainerItemProxy */;
 		};
 		D18EA89F2760D4A6001E1358 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2969,8 +2768,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
-				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/French-AZERTY/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Français-AZERTY (Scribe)";
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Français (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2978,7 +2777,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.scribe.french-AZERTY";
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2994,8 +2793,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
-				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/French-AZERTY/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Français-AZERTY (Scribe)";
+				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Français (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3003,7 +2802,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.scribe.french-AZERTY";
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -3153,56 +2952,6 @@
 				);
 				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.russian;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D17693A528FC7C4F00DF0FBB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ATJ9U3WZ27;
-				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/French-QWERTY/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Français-QWERTY (Scribe)";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.scribe.french-QWERTY";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D17693A628FC7C4F00DF0FBB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ATJ9U3WZ27;
-				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/French/French-QWERTY/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Français-QWERTY (Scribe)";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.scribe.french-QWERTY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3541,7 +3290,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French-AZERTY" */ = {
+		D109A215275B6888005E2271 /* Build configuration list for PBXNativeTarget "French" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D109A213275B6888005E2271 /* Debug */,
@@ -3573,15 +3322,6 @@
 			buildConfigurations = (
 				D1671A69275A1E8700A7C118 /* Debug */,
 				D1671A6A275A1E8700A7C118 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D17693A728FC7C4F00DF0FBB /* Build configuration list for PBXNativeTarget "French-QWERTY" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D17693A528FC7C4F00DF0FBB /* Debug */,
-				D17693A628FC7C4F00DF0FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3687,11 +3427,6 @@
 			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		D16DD37A29E785AB00FB9022 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
 		D16DD37C29E785B100FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
@@ -3743,11 +3478,6 @@
 			productName = GRDB;
 		};
 		D16DD39029E7869D00FB9022 /* GRDB */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
-			productName = GRDB;
-		};
-		D16DD39229E786A100FB9022 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
