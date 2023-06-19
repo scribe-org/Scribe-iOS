@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D109A20A275B6888005E2271"
-               BuildableName = "French-AZERTY.appex"
-               BlueprintName = "French-AZERTY"
+               BuildableName = "French.appex"
+               BlueprintName = "French"
                ReferencedContainer = "container:Scribe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

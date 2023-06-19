@@ -1,8 +1,5 @@
 //
 //  AppExtensions.swift
-//  Scribe
-//
-//  Created by Saurabh Jamadagni on 08/06/23.
 //
 
 import UIKit

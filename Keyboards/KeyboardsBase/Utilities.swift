@@ -11,9 +11,7 @@
 func get_iso_code(keyboardLanguage: String) -> String {
   var iso = ""
   switch keyboardLanguage {
-  case "French_AZERTY":
-    iso = "fr"
-  case "French_QWERTY":
+  case "French":
     iso = "fr"
   case "German":
     iso = "de"
