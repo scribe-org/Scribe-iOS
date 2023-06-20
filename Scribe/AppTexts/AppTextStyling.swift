@@ -75,11 +75,7 @@ func getGlobeIcon(fontSize: CGFloat) -> NSAttributedString {
 }
 
 /// Formats and returns the text of the Scribe privacy policy with links activated.
-func setPrivacyPolicy(fontSize: CGFloat, title: String, text: String) -> NSMutableAttributedString {
-  let privacyTextTitle = NSMutableAttributedString(
-    string: title, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
-  )
-
+func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedString {
   let wikidataDataLicensing = "https://www.wikidata.org/wiki/Wikidata:Licensing"
   let wikipediaDataLicensing = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
   let unicodeDataLicense = "https://www.unicode.org/license.txt"
@@ -106,8 +102,5 @@ func setPrivacyPolicy(fontSize: CGFloat, title: String, text: String) -> NSMutab
     fontSize: fontSize
   )
 
-  return concatAttributedStrings(
-    left: privacyTextTitle,
-    right: privacyPolicyTextWithLinks
-  )
+  return privacyPolicyTextWithLinks
 }

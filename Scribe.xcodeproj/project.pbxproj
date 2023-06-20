@@ -995,6 +995,7 @@
 			children = (
 				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
 				1406B7862A2DFCDD001DF45B /* AboutTableData.swift */,
+				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
 			);
 			path = AboutTab;
 			sourceTree = "<group>";
@@ -1006,14 +1007,6 @@
 				147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */,
 			);
 			path = SettingsTab;
-			sourceTree = "<group>";
-		};
-		14AC568D2A262EE5006B1DDF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		30453961293B9D05003AE55B /* ToolTip */ = {
@@ -1088,7 +1081,6 @@
 				147797B62A2CFB560044A53E /* SettingsTab */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
-				14AC568D2A262EE5006B1DDF /* ViewControllers */,
 				1406B7832A2DFCA2001DF45B /* Components */,
 				147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */,
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,

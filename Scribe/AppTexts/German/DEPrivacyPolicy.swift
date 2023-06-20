@@ -7,6 +7,7 @@
 //
 
 let dePrivacyPolicyTitle = "Datenschutzrichtlinie"
+let dePrivacyPolicyPageCaption = "Wir sorgen für Ihre Sicherheit"
 
 
 // swiftlint:disable all

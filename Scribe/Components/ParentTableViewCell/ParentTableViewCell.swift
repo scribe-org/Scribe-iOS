@@ -38,10 +38,8 @@ class ParentTableViewCell: UITableViewCell {
   }
 
   func setContainerViewUI() {
-    let containerViewHeightWidthRatio = containerView.frame.height / containerView.frame.width
-
-    containerView.layer.cornerRadius = 36 * containerViewHeightWidthRatio
-    innerTable.layer.cornerRadius = 36 * containerViewHeightWidthRatio
+    containerView.layer.cornerRadius = containerView.frame.width * 0.05
+    innerTable.layer.cornerRadius = innerTable.frame.width * 0.05
     innerTable.clipsToBounds = true
     applyShadowEffects(elem: containerView)
   }
@@ -72,8 +70,6 @@ extension ParentTableViewCell: UITableViewDataSource {
 /// Function implementation conforming to the UITableViewDelegate protocol.
 extension ParentTableViewCell: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(data?.section[indexPath.row].sectionTitle ?? "")
-
     if let section = data?.section[indexPath.row] {
       switch section.sectionState {
       case .github:
@@ -95,8 +91,10 @@ extension ParentTableViewCell: UITableViewDelegate {
 //        // reset functionality
 //        print("Resets app hints")
       case .privacyPolicy:
-        // Push a new screen
-        print("Scribe privacy policy page")
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.section = .privacyPolicy
+        }
       case .licenses:
         // Push a new screen
         print("Licenses page")
@@ -142,6 +140,7 @@ extension ParentTableViewCell: UITableViewDelegate {
       let mailComposeViewController = MFMailComposeViewController()
       mailComposeViewController.mailComposeDelegate = self
       mailComposeViewController.setToRecipients(["scribe.language@gmail.com"])
+      mailComposeViewController.setSubject("Hey Scribe!")
 
       parentViewController?.present(mailComposeViewController, animated: true, completion: nil)
     } else {
