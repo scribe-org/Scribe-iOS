@@ -9,6 +9,7 @@ class InformationScreenVC: UIViewController {
   @IBOutlet var textView: UITextView!
   @IBOutlet var scrollContainerView: UIView!
   @IBOutlet var contentContainerView: UIView!
+  @IBOutlet var viewForApplyingShadow: UIView!
 
   @IBOutlet var cornerImageView: UIImageView!
   @IBOutlet var iconImageView: UIImageView!
@@ -24,16 +25,19 @@ class InformationScreenVC: UIViewController {
 
     if section == .privacyPolicy {
       setupPrivacyPolicyPage()
+    } else if section == .licenses {
+      setupLicensesPage()
     }
   }
 
   func setupInformationPageUI() {
     scrollContainerView.backgroundColor = .clear
+    viewForApplyingShadow.backgroundColor = .clear
 
     textView.backgroundColor = UIColor(named: "commandBar")
     contentContainerView.backgroundColor = UIColor(named: "commandBar")
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
-    applyShadowEffects(elem: contentContainerView)
+    applyShadowEffects(elem: viewForApplyingShadow)
 
     cornerImageView.clipsToBounds = true
     contentContainerView.clipsToBounds = true
@@ -67,7 +71,37 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage(systemName: "lock.shield")
+    iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
+    iconImageView.tintColor = keyCharColor
+  }
+  
+  func setupLicensesPage() {
+    switch Locale.userSystemLanguage {
+    case "EN":
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+    case "DE":
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+
+    default:
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+    }
+    textView.textColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
     iconImageView.tintColor = keyCharColor
   }
 }

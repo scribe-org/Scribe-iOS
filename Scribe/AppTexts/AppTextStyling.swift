@@ -104,3 +104,30 @@ func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedStr
 
   return privacyPolicyTextWithLinks
 }
+
+func setThirdPartyLicenses(fontSize: CGFloat, text: String) -> NSMutableAttributedString {
+//  let attributedOriginalText = NSMutableAttributedString(
+//    string: text,
+//    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+//  )
+//
+//  let listParagraphyStyle = NSMutableParagraphStyle()
+//  listParagraphyStyle.headIndent = 24
+//  listParagraphyStyle.firstLineHeadIndent = 24
+//
+//  let attributes = [NSAttributedString.Key.paragraphStyle: listParagraphyStyle]
+//
+//  let listItem = NSAttributedString(string: "• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE", attributes: attributes)
+//
+//  attributedOriginalText.append(listItem)
+  
+  let licensesLink = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+  let thirdPartyLicensesWithLinks = addHyperLinks(
+    originalText: text,
+    links: [licensesLink : licensesLink],
+    fontSize: fontSize
+  )
+  
+  return thirdPartyLicensesWithLinks
+}
+

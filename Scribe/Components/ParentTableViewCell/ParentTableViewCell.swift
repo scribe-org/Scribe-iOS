@@ -98,6 +98,10 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .licenses:
         // Push a new screen
         print("Licenses page")
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.section = .licenses
+        }
       case .appLang: break
       case .specificLang: break
       }

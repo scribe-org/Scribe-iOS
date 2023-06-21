@@ -16,12 +16,7 @@ class InfoChildTableViewCell: UITableViewCell {
   func configureCell(for section: Section) {
     self.section = section
     titleLabel.text = section.sectionTitle
-
-    if let image = UIImage(named: section.imageString) {
-      iconImageView.image = image
-    } else {
-      iconImageView.image = UIImage(systemName: section.imageString)
-    }
+    iconImageView.image = UIImage.availableIconImage(with: section.imageString)
 
     if !section.hasToggle {
       toggleSwitch.isHidden = true

@@ -11,6 +11,16 @@ extension UIApplication {
   }
 }
 
+extension UIImage {
+  static func availableIconImage(with imageString: String) -> UIImage {
+    if let image = UIImage(named: imageString) {
+      return image
+    } else {
+      return UIImage(systemName: imageString) ?? UIImage(systemName: "info.circle")!
+    }
+  }
+}
+
 extension UIView {
   var parentViewController: UIViewController? {
     var parentResponder: UIResponder? = self
