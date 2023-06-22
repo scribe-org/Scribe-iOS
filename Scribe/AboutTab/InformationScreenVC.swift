@@ -83,14 +83,14 @@ class InformationScreenVC: UIViewController {
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
     case "DE":
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
 
     default:
       navigationItem.title = enThirdPartyLicensesTitle
@@ -98,7 +98,7 @@ class InformationScreenVC: UIViewController {
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText)
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
     }
     textView.textColor = keyCharColor
     iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")

@@ -14,8 +14,14 @@ the iOS application "Scribe - Language Keyboards" (SERVICE) using third party co
 
 The following is a list of all used source code, the main author or authors of the code, the license under which it was released at time of usage, and a link to the license.
 
-1. CustomKeyboard\n
-\t • Author: EthanSK
-\t • License: MIT
-\t • Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
+1. CustomKeyboard
+• Author: EthanSK
+• License: MIT
+• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
 """
+
+let enThirdPartyLicensesListItems = [
+  "• Author: EthanSK",
+  "• License: MIT",
+  "• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+]

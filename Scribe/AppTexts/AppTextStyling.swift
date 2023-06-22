@@ -20,7 +20,7 @@ func concatAttributedStrings(left: NSAttributedString, right: NSAttributedString
   return result
 }
 
-/// Returns an attributed text that hyperlinked.
+/// Returns an attributed text that is hyperlinked.
 ///
 /// - Parameters
 ///  - originalText: the original text that hyperlinks will be added to.
@@ -40,6 +40,27 @@ func addHyperLinks(originalText: String, links: [String: String], fontSize: CGFl
   }
 
   return attributedOriginalText
+}
+
+/// Returns an attributed text that has indentation for list items.
+///
+/// - Parameters
+///  - attributedOriginalText: the original text that hyperlinks will be added to passed as a NSMutableAttributedString.
+///  - links: a array of strings with the list items text.
+func addTabStops(attributedOriginalText: NSMutableAttributedString, links: [String]) -> NSMutableAttributedString {
+  let textToAddIndentation = attributedOriginalText
+  
+  let listParagraphStyle = NSMutableParagraphStyle()
+  listParagraphStyle.headIndent = 46
+  listParagraphStyle.firstLineHeadIndent = 36
+  listParagraphStyle.lineBreakMode = .byCharWrapping
+  
+  for element in links {
+    let linkRange = textToAddIndentation.mutableString.range(of: element)
+    textToAddIndentation.addAttribute(NSAttributedString.Key.paragraphStyle, value: listParagraphStyle, range: linkRange)
+  }
+  
+  return textToAddIndentation
 }
 
 /// Formats and returns an arrow icon for the app texts.
@@ -105,29 +126,18 @@ func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedStr
   return privacyPolicyTextWithLinks
 }
 
-func setThirdPartyLicenses(fontSize: CGFloat, text: String) -> NSMutableAttributedString {
-//  let attributedOriginalText = NSMutableAttributedString(
-//    string: text,
-//    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
-//  )
-//
-//  let listParagraphyStyle = NSMutableParagraphStyle()
-//  listParagraphyStyle.headIndent = 24
-//  listParagraphyStyle.firstLineHeadIndent = 24
-//
-//  let attributes = [NSAttributedString.Key.paragraphStyle: listParagraphyStyle]
-//
-//  let listItem = NSAttributedString(string: "• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE", attributes: attributes)
-//
-//  attributedOriginalText.append(listItem)
-  
+func setThirdPartyLicenses(fontSize: CGFloat, text: String, listElements: [String]) -> NSMutableAttributedString {
   let licensesLink = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
-  let thirdPartyLicensesWithLinks = addHyperLinks(
+  let thirdPartyLicensesTextWithLink = addHyperLinks(
     originalText: text,
-    links: [licensesLink : licensesLink],
+    links: [
+      licensesLink : licensesLink
+    ],
     fontSize: fontSize
   )
   
-  return thirdPartyLicensesWithLinks
+  let thirdPartyLicensesTextWithLinkAndIndents = addTabStops(attributedOriginalText: thirdPartyLicensesTextWithLink, links: listElements)
+  
+  return thirdPartyLicensesTextWithLinkAndIndents
 }
 
