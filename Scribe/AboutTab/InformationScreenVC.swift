@@ -27,6 +27,21 @@ class InformationScreenVC: UIViewController {
       setupPrivacyPolicyPage()
     } else if section == .licenses {
       setupLicensesPage()
+    } else {
+      setupWikimediaAndScribePage()
+    }
+  }
+  
+  /// Needed since Wikimedia and Scribe have an image as an attachment in the text.
+  /// Thus, it doesn't dynamically switch on theme change like a UIImage would.
+  /// Therefore, monitor for theme change and manually re-render textView.
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+
+    if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+      if section == .wikimedia {
+        textView.attributedText = switchAttachmentOnThemeChange(for: textView.attributedText)
+      }
     }
   }
 
@@ -61,7 +76,6 @@ class InformationScreenVC: UIViewController {
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: dePrivacyPolicyText)
-
     default:
       navigationItem.title = enPrivacyPolicyTitle
       headingLabel.attributedText = NSMutableAttributedString(
@@ -91,7 +105,6 @@ class InformationScreenVC: UIViewController {
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
       textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
-
     default:
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
@@ -102,6 +115,35 @@ class InformationScreenVC: UIViewController {
     }
     textView.textColor = keyCharColor
     iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
+    iconImageView.tintColor = keyCharColor
+  }
+  
+  func setupWikimediaAndScribePage() {
+    switch Locale.userSystemLanguage {
+    case "EN":
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    case "DE":
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    default:
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    }
+    textView.textColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "wikimedia")
     iconImageView.tintColor = keyCharColor
   }
 }

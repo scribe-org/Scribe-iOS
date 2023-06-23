@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		140158992A430DD000D14E52 /* ENThirdPartyLicenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */; };
+		1401589B2A45A07200D14E52 /* ENWikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
 		147797AC2A2CD2F70044A53E /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */; };
@@ -731,6 +732,7 @@
 
 /* Begin PBXFileReference section */
 		140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENThirdPartyLicenses.swift; sourceTree = "<group>"; };
+		1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENWikimediaAndScribe.swift; sourceTree = "<group>"; };
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
@@ -1248,6 +1250,7 @@
 				D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */,
 				D1A2DCB027AD37BD0057A10D /* ENAppText.swift */,
 				140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */,
+				1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */,
 			);
 			path = English;
 			sourceTree = "<group>";
@@ -1873,6 +1876,7 @@
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */,
+				1401589B2A45A07200D14E52 /* ENWikimediaAndScribe.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
