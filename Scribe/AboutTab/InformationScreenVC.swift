@@ -46,10 +46,10 @@ class InformationScreenVC: UIViewController {
   }
 
   func setupInformationPageUI() {
+    textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
     viewForApplyingShadow.backgroundColor = .clear
 
-    textView.backgroundColor = UIColor(named: "commandBar")
     contentContainerView.backgroundColor = UIColor(named: "commandBar")
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
     applyShadowEffects(elem: viewForApplyingShadow)
