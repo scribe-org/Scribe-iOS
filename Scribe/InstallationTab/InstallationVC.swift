@@ -16,6 +16,7 @@ class InstallationVC: UIViewController {
   @IBOutlet var topIconPhone: UIImageView!
   @IBOutlet var topIconPad: UIImageView!
   @IBOutlet var settingsCorner: UIImageView!
+  @IBOutlet var settingCornerWidthConstraint: NSLayoutConstraint!
 
   // Spacing views to size app screen proportionally.
   @IBOutlet var topSpace: UIView!
@@ -68,9 +69,19 @@ class InstallationVC: UIViewController {
     if DeviceType.isPhone {
       topIconPhone.isHidden = false
       topIconPad.isHidden = true
+      for constraint in settingsCorner.constraints {
+        if constraint.identifier == "settingsCorner" {
+          constraint.constant = 70
+        }
+      }
     } else if DeviceType.isPad {
       topIconPhone.isHidden = true
       topIconPad.isHidden = false
+      for constraint in settingsCorner.constraints {
+        if constraint.identifier == "settingsCorner" {
+          constraint.constant = 125
+        }
+      }
     }
   }
 

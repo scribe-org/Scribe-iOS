@@ -75,14 +75,13 @@
                                                                 <rect key="frame" x="280" y="0.0" width="65" height="65"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="AKE-81-A9j" secondAttribute="height" multiplier="1:1" id="Baf-Al-Ew6"/>
-                                                                    <constraint firstAttribute="width" constant="65" id="HLa-o6-ouX"/>
+                                                                    <constraint firstAttribute="width" constant="65" identifier="cornerImageView" id="HLa-o6-ouX"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIq-U8-VFG">
-                                                                <rect key="frame" x="310" y="5" width="30" height="30"/>
+                                                                <rect key="frame" x="310.66666666666669" y="4.9999999999999982" width="29.333333333333314" height="29.333333333333329"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="qIq-U8-VFG" secondAttribute="height" multiplier="1:1" id="ChV-Sw-cLG"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="KjY-Lj-AQn"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-Gg-Baj" userLabel="InforTextView">
@@ -104,6 +103,7 @@
                                                             <constraint firstItem="Q8I-Gg-Baj" firstAttribute="top" secondItem="8hd-gU-IBe" secondAttribute="top" constant="15" id="KQY-Ue-2eN"/>
                                                             <constraint firstItem="Q8I-Gg-Baj" firstAttribute="leading" secondItem="8hd-gU-IBe" secondAttribute="leading" constant="15" id="Uyk-tr-8qg"/>
                                                             <constraint firstAttribute="trailing" secondItem="qIq-U8-VFG" secondAttribute="trailing" constant="5" id="suT-8H-dSj"/>
+                                                            <constraint firstItem="qIq-U8-VFG" firstAttribute="width" secondItem="AKE-81-A9j" secondAttribute="width" multiplier="0.45" id="zNr-QH-hmE"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -297,21 +297,21 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-2Z-4lJ" userLabel="SettingsCorner">
-                                        <rect key="frame" x="276" y="0.0" width="69" height="69"/>
+                                        <rect key="frame" x="280" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="height" multiplier="1:1" id="AXv-zc-hvL"/>
+                                            <constraint firstAttribute="width" constant="65" identifier="settingsCorner" id="Ldt-RH-Dz8"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="21V-cO-tk0" userLabel="TopIconPad">
-                                        <rect key="frame" x="305.66666666666669" y="11.999999999999998" width="27.333333333333314" height="27.333333333333329"/>
+                                        <rect key="frame" x="307.33333333333331" y="12.000000000000002" width="25.666666666666686" height="25.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="21V-cO-tk0" secondAttribute="height" multiplier="1:1" id="XOP-yt-npT"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnq-D3-6Lg" userLabel="TopIconPhone">
-                                        <rect key="frame" x="307" y="8" width="30" height="30"/>
+                                        <rect key="frame" x="313" y="6" width="26" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="HRF-2a-S2T"/>
                                             <constraint firstAttribute="width" secondItem="xnq-D3-6Lg" secondAttribute="height" multiplier="1:1" id="zJ7-nh-scL"/>
                                         </constraints>
                                     </imageView>
@@ -322,16 +322,16 @@
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="15" id="FgU-If-l8m"/>
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="leading" secondItem="Z6Q-k0-ggs" secondAttribute="leading" constant="15" id="IiP-bb-4Da"/>
                                     <constraint firstAttribute="trailing" secondItem="21V-cO-tk0" secondAttribute="trailing" constant="12" id="MU2-Ac-SDm"/>
+                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.4" id="MW7-uD-c1g"/>
                                     <constraint firstAttribute="trailing" secondItem="7N0-2Z-4lJ" secondAttribute="trailing" id="TJE-HA-Nu5"/>
-                                    <constraint firstItem="7N0-2Z-4lJ" firstAttribute="width" secondItem="Z6Q-k0-ggs" secondAttribute="width" multiplier="0.2" id="UCK-HO-qOB"/>
                                     <constraint firstAttribute="bottom" secondItem="ZcW-Aa-aDz" secondAttribute="bottom" constant="15" id="V1w-2s-uX7"/>
                                     <constraint firstItem="21V-cO-tk0" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="12" id="eMh-2F-hF1"/>
                                     <constraint firstItem="cWe-iO-9F6" firstAttribute="leading" secondItem="Z6Q-k0-ggs" secondAttribute="leading" id="eus-3V-Lqj"/>
-                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="8" id="gGh-q1-eMZ"/>
+                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="6" id="gGh-q1-eMZ"/>
                                     <constraint firstItem="7N0-2Z-4lJ" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" id="iGn-IR-SHG"/>
                                     <constraint firstAttribute="trailing" secondItem="cWe-iO-9F6" secondAttribute="trailing" id="rbW-8t-g4d"/>
                                     <constraint firstAttribute="trailing" secondItem="ZcW-Aa-aDz" secondAttribute="trailing" constant="15" id="uQh-vj-ZZ3"/>
-                                    <constraint firstAttribute="trailing" secondItem="xnq-D3-6Lg" secondAttribute="trailing" constant="8" id="w2l-S8-ssC"/>
+                                    <constraint firstAttribute="trailing" secondItem="xnq-D3-6Lg" secondAttribute="trailing" constant="6" id="w2l-S8-ssC"/>
                                     <constraint firstItem="21V-cO-tk0" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.394737" id="xOh-T6-f0D"/>
                                     <constraint firstItem="cWe-iO-9F6" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" id="ygR-ZR-coW"/>
                                 </constraints>
@@ -361,6 +361,7 @@
                         <outlet property="appTextBackground" destination="Z6Q-k0-ggs" id="jA7-Mx-8RA"/>
                         <outlet property="appTextView" destination="ZcW-Aa-aDz" id="JWT-TA-s9A"/>
                         <outlet property="logoSpace" destination="xOG-9z-mVQ" id="dmA-CN-T1P"/>
+                        <outlet property="settingCornerWidthConstraint" destination="7N0-2Z-4lJ" id="lgA-xw-4mX"/>
                         <outlet property="settingsBtn" destination="cWe-iO-9F6" id="TR7-qB-ZDN"/>
                         <outlet property="settingsCorner" destination="7N0-2Z-4lJ" id="C3e-Tn-B6p"/>
                         <outlet property="topIconPad" destination="21V-cO-tk0" id="mlN-Za-vGo"/>

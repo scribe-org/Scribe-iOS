@@ -46,6 +46,8 @@ class InformationScreenVC: UIViewController {
   }
 
   func setupInformationPageUI() {
+    setCornerImageView()
+    
     textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
     viewForApplyingShadow.backgroundColor = .clear
@@ -58,6 +60,22 @@ class InformationScreenVC: UIViewController {
     contentContainerView.clipsToBounds = true
 
     textView.isEditable = false
+  }
+  
+  func setCornerImageView() {
+    if DeviceType.isPhone {
+      for constraint in cornerImageView.constraints {
+        if constraint.identifier == "cornerImageView" {
+          constraint.constant = 70
+        }
+      }
+    } else if DeviceType.isPad {
+      for constraint in cornerImageView.constraints {
+        if constraint.identifier == "cornerImageView" {
+          constraint.constant = 125
+        }
+      }
+    }
   }
 
   func setupPrivacyPolicyPage() {
