@@ -77,8 +77,10 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .matrix:
         openURLString(urlString: "https://matrix.to/#/#scribe_community:matrix.org", withEncoding: true)
       case .wikimedia:
-        // Push a new screen
-        print("Details about Wikimedia and Scribe")
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.section = .wikimedia
+        }
       case .shareScribe:
         showShareSheet()
       case .rateScribe:
@@ -96,8 +98,10 @@ extension ParentTableViewCell: UITableViewDelegate {
           viewController.section = .privacyPolicy
         }
       case .licenses:
-        // Push a new screen
-        print("Licenses page")
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.section = .licenses
+        }
       case .appLang: break
       case .specificLang: break
       }

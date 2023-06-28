@@ -9,6 +9,7 @@ class InformationScreenVC: UIViewController {
   @IBOutlet var textView: UITextView!
   @IBOutlet var scrollContainerView: UIView!
   @IBOutlet var contentContainerView: UIView!
+  @IBOutlet var viewForApplyingShadow: UIView!
 
   @IBOutlet var cornerImageView: UIImageView!
   @IBOutlet var iconImageView: UIImageView!
@@ -24,21 +25,57 @@ class InformationScreenVC: UIViewController {
 
     if section == .privacyPolicy {
       setupPrivacyPolicyPage()
+    } else if section == .licenses {
+      setupLicensesPage()
+    } else {
+      setupWikimediaAndScribePage()
+    }
+  }
+  
+  /// Needed since Wikimedia and Scribe have an image as an attachment in the text.
+  /// Thus, it doesn't dynamically switch on theme change like a UIImage would.
+  /// Therefore, monitor for theme change and manually re-render textView.
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+
+    if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+      if section == .wikimedia {
+        textView.attributedText = switchAttachmentOnThemeChange(for: textView.attributedText)
+      }
     }
   }
 
   func setupInformationPageUI() {
+    setCornerImageView()
+    
+    textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
+    viewForApplyingShadow.backgroundColor = .clear
 
-    textView.backgroundColor = UIColor(named: "commandBar")
     contentContainerView.backgroundColor = UIColor(named: "commandBar")
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
-    applyShadowEffects(elem: contentContainerView)
+    applyShadowEffects(elem: viewForApplyingShadow)
 
     cornerImageView.clipsToBounds = true
     contentContainerView.clipsToBounds = true
 
     textView.isEditable = false
+  }
+  
+  func setCornerImageView() {
+    if DeviceType.isPhone {
+      for constraint in cornerImageView.constraints {
+        if constraint.identifier == "cornerImageView" {
+          constraint.constant = 70
+        }
+      }
+    } else if DeviceType.isPad {
+      for constraint in cornerImageView.constraints {
+        if constraint.identifier == "cornerImageView" {
+          constraint.constant = 125
+        }
+      }
+    }
   }
 
   func setupPrivacyPolicyPage() {
@@ -57,7 +94,6 @@ class InformationScreenVC: UIViewController {
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: dePrivacyPolicyText)
-
     default:
       navigationItem.title = enPrivacyPolicyTitle
       headingLabel.attributedText = NSMutableAttributedString(
@@ -67,7 +103,65 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage(systemName: "lock.shield")
+    iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
+    iconImageView.tintColor = keyCharColor
+  }
+  
+  func setupLicensesPage() {
+    switch Locale.userSystemLanguage {
+    case "EN":
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+    case "DE":
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+    default:
+      navigationItem.title = enThirdPartyLicensesTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enThirdPartyLicensesCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+    }
+    textView.textColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
+    iconImageView.tintColor = keyCharColor
+  }
+  
+  func setupWikimediaAndScribePage() {
+    switch Locale.userSystemLanguage {
+    case "EN":
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    case "DE":
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    default:
+      navigationItem.title = enWikimediaAndScribeTitle
+      headingLabel.attributedText = NSMutableAttributedString(
+        string: enWikimediaAndScribeCaption,
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+      )
+      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+    }
+    textView.textColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "wikimedia")
     iconImageView.tintColor = keyCharColor
   }
 }
