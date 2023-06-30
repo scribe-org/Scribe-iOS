@@ -12,6 +12,21 @@ class InfoChildTableViewCell: UITableViewCell {
   @IBOutlet var toggleSwitch: UISwitch!
 
   var section: Section?
+  var parentSection: Section?
+  
+  var languageCode: String {
+    guard let parentSection = parentSection,
+          case .specificLang(let lang) = parentSection.sectionState else { return "all"}
+    
+    return lang
+  }
+  
+  var togglePurpose: UserInteractiveState {
+    guard let section = section,
+          case .none(let action) = section.sectionState else { return .none}
+    
+    return action
+  }
 
   func configureCell(for section: Section) {
     self.section = section
@@ -23,26 +38,23 @@ class InfoChildTableViewCell: UITableViewCell {
     } else {
       chevronImgView.isHidden = true
     }
+    
+    toggleSwitch.onTintColor = .init(.commandKey).withAlphaComponent(0.4)
+    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
   }
-}
-
-/// Need this class so that rows of the child table resize the parent table cell.
-/// Works similar to extending the UITableView class.
-/// Without this, the child table views will not be visible until we manually specify a height for parent table cell.
-class CustomChildTableView: UITableView {
-  override var intrinsicContentSize: CGSize {
-    self.layoutIfNeeded()
-    return self.contentSize
-  }
-
-  override var contentSize: CGSize {
-    didSet {
-      self.invalidateIntrinsicContentSize()
+  
+  @IBAction func switchDidChange(_ sender: UISwitch) {
+    switch togglePurpose {
+    case .toggleCommaAndPeriod:
+      let dictionaryKey = languageCode + "CommaAndPeriod"
+      
+    case .none: break
     }
+    
+    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
   }
-
-  override func reloadData() {
-    super.reloadData()
-    invalidateIntrinsicContentSize()
+  
+  func fetchSwitchStateForCell() {
+    
   }
 }

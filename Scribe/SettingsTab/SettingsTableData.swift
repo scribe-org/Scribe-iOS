@@ -15,8 +15,17 @@ struct SettingsTableData {
     ParentTableCellModel(
       headingTitle: "Select installed keyboard",
       section: [
-        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false, sectionState: .specificLang),
+        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false, sectionState: .specificLang("all")),
       ]
     ),
+  ]
+  
+  static var languageSettingsData: [ParentTableCellModel] = [
+    ParentTableCellModel(
+      headingTitle: "Layout",
+      section: [
+        Section(sectionTitle: "Period and comma on ABC", imageString: "info.circle", hasToggle: true, sectionState: .none(.toggleCommaAndPeriod))
+      ]
+    )
   ]
 }

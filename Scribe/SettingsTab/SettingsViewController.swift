@@ -15,7 +15,8 @@ class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = "Settings"
+    title = "Scribe Settings"
+    navigationItem.backButtonTitle = "Settings"
 
     let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
     parentTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")

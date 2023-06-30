@@ -17,7 +17,7 @@ struct Section {
   let sectionState: SectionState
 }
 
-enum SectionState {
+enum SectionState: Equatable {
   case github
   case matrix
   case wikimedia
@@ -29,5 +29,11 @@ enum SectionState {
   case privacyPolicy
   case licenses
   case appLang
-  case specificLang
+  case specificLang(String)
+  case none(UserInteractiveState)
+}
+
+enum UserInteractiveState {
+  case toggleCommaAndPeriod
+  case none
 }

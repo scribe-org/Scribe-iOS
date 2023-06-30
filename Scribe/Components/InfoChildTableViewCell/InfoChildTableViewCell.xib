@@ -48,6 +48,9 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="49" id="TLe-pF-eis"/>
                         </constraints>
+                        <connections>
+                            <action selector="switchDidChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9ge-t9-By6"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>

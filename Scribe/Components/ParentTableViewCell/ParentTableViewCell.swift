@@ -12,6 +12,7 @@ class ParentTableViewCell: UITableViewCell {
   @IBOutlet var containerView: UIView!
 
   var data: ParentTableCellModel?
+  var parentSection: Section?
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -60,6 +61,10 @@ extension ParentTableViewCell: UITableViewDataSource {
     if let data = data {
       cell.configureCell(for: data.section[indexPath.row])
     }
+    
+    if let parentSection = parentSection {
+      cell.parentSection = parentSection
+    }
 
     return cell
   }
@@ -103,7 +108,14 @@ extension ParentTableViewCell: UITableViewDelegate {
           viewController.section = .licenses
         }
       case .appLang: break
-      case .specificLang: break
+      case .specificLang:
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+          viewController.screenTitle = "Large Title"
+          viewController.tableData = SettingsTableData.languageSettingsData
+          viewController.parentSection = section
+        }
+      case .none: break
       }
     }
 
