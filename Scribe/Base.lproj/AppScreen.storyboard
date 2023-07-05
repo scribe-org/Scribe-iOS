@@ -310,7 +310,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnq-D3-6Lg" userLabel="TopIconPhone">
-                                        <rect key="frame" x="313" y="6" width="26" height="26"/>
+                                        <rect key="frame" x="309" y="6" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xnq-D3-6Lg" secondAttribute="height" multiplier="1:1" id="zJ7-nh-scL"/>
                                         </constraints>
@@ -322,7 +322,7 @@
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="15" id="FgU-If-l8m"/>
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="leading" secondItem="Z6Q-k0-ggs" secondAttribute="leading" constant="15" id="IiP-bb-4Da"/>
                                     <constraint firstAttribute="trailing" secondItem="21V-cO-tk0" secondAttribute="trailing" constant="12" id="MU2-Ac-SDm"/>
-                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.4" id="MW7-uD-c1g"/>
+                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.46" id="MW7-uD-c1g"/>
                                     <constraint firstAttribute="trailing" secondItem="7N0-2Z-4lJ" secondAttribute="trailing" id="TJE-HA-Nu5"/>
                                     <constraint firstAttribute="bottom" secondItem="ZcW-Aa-aDz" secondAttribute="bottom" constant="15" id="V1w-2s-uX7"/>
                                     <constraint firstItem="21V-cO-tk0" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="12" id="eMh-2F-hF1"/>
