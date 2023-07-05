@@ -246,6 +246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="commandBar"/>
+                        <color key="selectedImageTintColor" name="linkBlue"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YCU-Xu-zWn"/>
@@ -428,6 +429,9 @@
         </namedColor>
         <namedColor name="keyChar">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="linkBlue">
+            <color red="0.2196078431372549" green="0.49411764705882355" blue="0.6705882352941176" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scribeAppBackground">
             <color red="0.36862745098039218" green="0.70980392156862748" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
