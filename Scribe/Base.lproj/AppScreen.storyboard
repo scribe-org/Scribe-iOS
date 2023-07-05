@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1zu-X4-Qkc">
-                                <rect key="frame" x="0.0" y="146" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <constraints>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="bottom" secondItem="jmm-1G-rGX" secondAttribute="bottom" id="CPq-V8-hSe"/>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="top" secondItem="jmm-1G-rGX" secondAttribute="top" id="P2k-i0-6Ek"/>
+                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="top" secondItem="jmm-1G-rGX" secondAttribute="top" constant="8" id="P2k-i0-6Ek"/>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="trailing" secondItem="jmm-1G-rGX" secondAttribute="trailing" id="iAb-5d-74H"/>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="leading" secondItem="jmm-1G-rGX" secondAttribute="leading" id="poY-yf-vBp"/>
                         </constraints>
@@ -172,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
-                                <rect key="frame" x="0.0" y="94" width="375" height="635"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="2AI-Eq-Aoc" userLabel="footerContainer">
                                     <rect key="frame" x="0.0" y="121.66666793823242" width="375" height="130"/>
@@ -221,7 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="I0X-V8-Xfd"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <constraints>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="top" secondItem="I0X-V8-Xfd" secondAttribute="top" id="OWc-aW-GCS"/>
+                            <constraint firstItem="R98-aa-uZS" firstAttribute="top" secondItem="I0X-V8-Xfd" secondAttribute="top" constant="8" id="OWc-aW-GCS"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="trailing" secondItem="I0X-V8-Xfd" secondAttribute="trailing" id="bpS-fM-PPM"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="leading" secondItem="I0X-V8-Xfd" secondAttribute="leading" id="kfz-Wb-hJ6"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="bottom" secondItem="I0X-V8-Xfd" secondAttribute="bottom" id="rIQ-1I-NCm"/>
