@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1zu-X4-Qkc">
-                                <rect key="frame" x="0.0" y="146" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <constraints>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="bottom" secondItem="jmm-1G-rGX" secondAttribute="bottom" id="CPq-V8-hSe"/>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="top" secondItem="jmm-1G-rGX" secondAttribute="top" id="P2k-i0-6Ek"/>
+                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="top" secondItem="jmm-1G-rGX" secondAttribute="top" constant="8" id="P2k-i0-6Ek"/>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="trailing" secondItem="jmm-1G-rGX" secondAttribute="trailing" id="iAb-5d-74H"/>
                             <constraint firstItem="1zu-X4-Qkc" firstAttribute="leading" secondItem="jmm-1G-rGX" secondAttribute="leading" id="poY-yf-vBp"/>
                         </constraints>
@@ -172,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
-                                <rect key="frame" x="0.0" y="94" width="375" height="635"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="2AI-Eq-Aoc" userLabel="footerContainer">
                                     <rect key="frame" x="0.0" y="121.66666793823242" width="375" height="130"/>
@@ -221,7 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="I0X-V8-Xfd"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <constraints>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="top" secondItem="I0X-V8-Xfd" secondAttribute="top" id="OWc-aW-GCS"/>
+                            <constraint firstItem="R98-aa-uZS" firstAttribute="top" secondItem="I0X-V8-Xfd" secondAttribute="top" constant="8" id="OWc-aW-GCS"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="trailing" secondItem="I0X-V8-Xfd" secondAttribute="trailing" id="bpS-fM-PPM"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="leading" secondItem="I0X-V8-Xfd" secondAttribute="leading" id="kfz-Wb-hJ6"/>
                             <constraint firstItem="R98-aa-uZS" firstAttribute="bottom" secondItem="I0X-V8-Xfd" secondAttribute="bottom" id="rIQ-1I-NCm"/>
@@ -246,6 +246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="commandBar"/>
+                        <color key="selectedImageTintColor" name="linkBlue"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YCU-Xu-zWn"/>
@@ -310,7 +311,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnq-D3-6Lg" userLabel="TopIconPhone">
-                                        <rect key="frame" x="313" y="6" width="26" height="26"/>
+                                        <rect key="frame" x="309" y="6" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xnq-D3-6Lg" secondAttribute="height" multiplier="1:1" id="zJ7-nh-scL"/>
                                         </constraints>
@@ -322,7 +323,7 @@
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="15" id="FgU-If-l8m"/>
                                     <constraint firstItem="ZcW-Aa-aDz" firstAttribute="leading" secondItem="Z6Q-k0-ggs" secondAttribute="leading" constant="15" id="IiP-bb-4Da"/>
                                     <constraint firstAttribute="trailing" secondItem="21V-cO-tk0" secondAttribute="trailing" constant="12" id="MU2-Ac-SDm"/>
-                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.4" id="MW7-uD-c1g"/>
+                                    <constraint firstItem="xnq-D3-6Lg" firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="width" multiplier="0.46" id="MW7-uD-c1g"/>
                                     <constraint firstAttribute="trailing" secondItem="7N0-2Z-4lJ" secondAttribute="trailing" id="TJE-HA-Nu5"/>
                                     <constraint firstAttribute="bottom" secondItem="ZcW-Aa-aDz" secondAttribute="bottom" constant="15" id="V1w-2s-uX7"/>
                                     <constraint firstItem="21V-cO-tk0" firstAttribute="top" secondItem="Z6Q-k0-ggs" secondAttribute="top" constant="12" id="eMh-2F-hF1"/>
@@ -428,6 +429,9 @@
         </namedColor>
         <namedColor name="keyChar">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="linkBlue">
+            <color red="0.2196078431372549" green="0.49411764705882355" blue="0.6705882352941176" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scribeAppBackground">
             <color red="0.36862745098039218" green="0.70980392156862748" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
