@@ -28,6 +28,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Auto completion and suggestion buttons are deactivated if there is no word being displayed.
 - Autosuggestions and emoji suggestions are now updated when a user checks the annotation of a word by pressing the Scribe key.
 - The capitalization of autosuggestions is maintained if the word is capitalized to assure that capitalized nouns are presented properly.
+- The app screen now includes information about Scribe's relation to Wikimedia as well as license information for code used in development.
 
 ### 🗃️ Data Added
 
