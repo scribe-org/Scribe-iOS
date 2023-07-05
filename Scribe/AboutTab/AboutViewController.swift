@@ -12,7 +12,7 @@ class AboutViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = "About Scribe"
+    title = "About"
 
     let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
     outerTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")

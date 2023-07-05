@@ -31,7 +31,7 @@ class InformationScreenVC: UIViewController {
       setupWikimediaAndScribePage()
     }
   }
-  
+
   /// Needed since Wikimedia and Scribe have an image as an attachment in the text.
   /// Thus, it doesn't dynamically switch on theme change like a UIImage would.
   /// Therefore, monitor for theme change and manually re-render textView.
@@ -47,7 +47,7 @@ class InformationScreenVC: UIViewController {
 
   func setupInformationPageUI() {
     setCornerImageView()
-    
+
     textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
     viewForApplyingShadow.backgroundColor = .clear
@@ -61,7 +61,7 @@ class InformationScreenVC: UIViewController {
 
     textView.isEditable = false
   }
-  
+
   func setCornerImageView() {
     if DeviceType.isPhone {
       for constraint in cornerImageView.constraints {
@@ -106,7 +106,7 @@ class InformationScreenVC: UIViewController {
     iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
     iconImageView.tintColor = keyCharColor
   }
-  
+
   func setupLicensesPage() {
     switch Locale.userSystemLanguage {
     case "EN":
@@ -135,7 +135,7 @@ class InformationScreenVC: UIViewController {
     iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
     iconImageView.tintColor = keyCharColor
   }
-  
+
   func setupWikimediaAndScribePage() {
     switch Locale.userSystemLanguage {
     case "EN":

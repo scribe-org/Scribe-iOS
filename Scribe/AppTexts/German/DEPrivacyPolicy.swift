@@ -9,7 +9,6 @@
 let dePrivacyPolicyTitle = "Datenschutzrichtlinie"
 let dePrivacyPolicyPageCaption = "Wir sorgen für Ihre Sicherheit"
 
-
 // swiftlint:disable all
 
 // Includes a new line so that there is space between it and the page title.

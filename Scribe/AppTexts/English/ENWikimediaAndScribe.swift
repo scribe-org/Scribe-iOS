@@ -1,13 +1,9 @@
 //
 //  ENWikimediaAndScribe.swift
-//  Scribe
-//
-//  Created by Saurabh Jamadagni on 23/06/23.
 //
 
 let enWikimediaAndScribeTitle = "Wikimedia and Scribe"
 let enWikimediaAndScribeCaption = "How we work together"
-
 
 let enWikiMediaAndScribeText = [
   """
@@ -18,5 +14,5 @@ let enWikiMediaAndScribeText = [
   """,
   """
   \n\nWikipedia is a multilingual free online encyclopedia written and maintained by a community of volunteers through open collaboration and a wiki-based editing system. Scribe uses data from Wikipedia to produce autosuggestions by deriving the most common words in a language as well as the most common words that follow them.\n
-  """
+  """,
 ]
