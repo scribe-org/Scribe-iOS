@@ -30,9 +30,9 @@ public enum GermanKeyboardConstants {
   ]
 
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
-    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
-    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
+    ["snake", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
+    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
+    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
   ]
@@ -91,9 +91,11 @@ func getDEKeys() {
 
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-    leftKeyChars = ["q", "a", "1", "\"", "$"]
+    leftKeyChars = ["snake", "indent", "uppercase", "shift", "selectKeyboard"]
+    rightKeyChar = ["delete", "\"", "enter", "shift", "hideKeyboard"]
+    //leftKeyChars = ["q", "a", "1", "\"", "$"]
     // TODO: add "ü" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
+    //rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
