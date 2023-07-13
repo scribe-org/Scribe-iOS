@@ -65,7 +65,7 @@ public enum GermanKeyboardConstants {
     ["'", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
     ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], 
-    ["redo", " ", "...", ".", ",", "?", "!", "'", "'"'", "_", "€"], //not entirely sure how to do " key, maybe escape char? 
+    ["redo", " ", "...", ".", ",", "?", "!", "'", '"', "_", "€"], 
     ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"],
   ]
 
