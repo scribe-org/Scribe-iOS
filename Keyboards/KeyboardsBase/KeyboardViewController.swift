@@ -1588,6 +1588,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     setKeyboard()
+    setCommaAndPeriodKeysConditionally()
     setCommandBackground()
     setCommandBtns()
     setConjugationBtns()
@@ -2002,6 +2003,22 @@ class KeyboardViewController: UIInputViewController {
       } else {
         setCaseDeclensionState()
       }
+    }
+  }
+  
+  func setCommaAndPeriodKeysConditionally() {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    
+    let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+    
+    let dictionaryKey = langCode + "CommaAndPeriod"
+    
+    let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
+    
+    if letterKeysHaveCommaPeriod {
+      letterKeys[3] = ["123", "selectKeyboard", ",", "space", ".", "return"]
+    } else {
+      letterKeys[3] = ["123", "selectKeyboard", "space", "return"]
     }
   }
 

@@ -10,24 +10,31 @@ import UIKit
 class TableViewTemplateViewController: UIViewController {
   @IBOutlet var mainTable: UITableView!
   
-  var screenTitle = ""
+  var screenTitle: String = ""
   var tableData: [ParentTableCellModel] = []
   var parentSection: Section?
   
   var langCode: String {
     if let section = parentSection {
-      guard case .specificLang(let lang) = section.sectionState else { return "all"}
+      guard case .specificLang(let lang) = section.sectionState else { return "de"}
       
-      print(lang)
+      return lang
     }
     
     return ""
   }
   
+  func configureTable(for tableData: [ParentTableCellModel], parentSection: Section) {
+    self.tableData = tableData
+    self.parentSection = parentSection
+    
+    print("break")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = screenTitle
+    title = parentSection?.sectionTitle ?? "Unknown"
     
     let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
     mainTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")
@@ -48,15 +55,15 @@ extension TableViewTemplateViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
 
+    if let parentSection = parentSection {
+      cell.parentSection = parentSection
+    }
+    
     cell.configureCell(for: tableData[indexPath.row])
 
     cell.backgroundColor = .clear
     cell.selectionStyle = .none
     
-    if let parentSection = parentSection {
-      cell.parentSection = parentSection
-    }
-
     return cell
   }
 }

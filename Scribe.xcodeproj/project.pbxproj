@@ -739,6 +739,14 @@
 		140158A32A4F06CA00D14E52 /* CustomChildTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChildTableView.swift; sourceTree = "<group>"; };
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
+		146B70962A64122D00710BD4 /* German.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = German.entitlements; path = ../../../.Trash/German.entitlements; sourceTree = "<group>"; };
+		146B70972A64123700710BD4 /* French.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = French.entitlements; path = ../../../.Trash/French.entitlements; sourceTree = "<group>"; };
+		146B70982A6412F700710BD4 /* Italian.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Italian.entitlements; path = ../../../.Trash/Italian.entitlements; sourceTree = "<group>"; };
+		146B70992A64130300710BD4 /* Portuguese.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Portuguese.entitlements; path = ../../../.Trash/Portuguese.entitlements; sourceTree = "<group>"; };
+		146B709A2A64130E00710BD4 /* Russian.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Russian.entitlements; path = ../../../.Trash/Russian.entitlements; sourceTree = "<group>"; };
+		146B709B2A64131D00710BD4 /* Spanish.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Spanish.entitlements; path = ../../../.Trash/Spanish.entitlements; sourceTree = "<group>"; };
+		146B709C2A64132600710BD4 /* Swedish.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Swedish.entitlements; path = ../../../.Trash/Swedish.entitlements; sourceTree = "<group>"; };
 		147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
@@ -1052,6 +1060,13 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
+				146B70962A64122D00710BD4 /* German.entitlements */,
+				146B70972A64123700710BD4 /* French.entitlements */,
+				146B70982A6412F700710BD4 /* Italian.entitlements */,
+				146B70992A64130300710BD4 /* Portuguese.entitlements */,
+				146B709A2A64130E00710BD4 /* Russian.entitlements */,
+				146B709B2A64131D00710BD4 /* Spanish.entitlements */,
+				146B709C2A64132600710BD4 /* Swedish.entitlements */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
@@ -1087,6 +1102,7 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				144B56F22A568AC200C2F447 /* Scribe.entitlements */,
 				1406B7882A2DFE4C001DF45B /* InstallationTab */,
 				147797B62A2CFB560044A53E /* SettingsTab */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
@@ -2670,6 +2686,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
@@ -2697,6 +2714,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
@@ -2722,10 +2740,11 @@
 		38BD215522D592CA00C6795D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = German.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				DEVELOPMENT_TEAM = CJJ59NJ7J8;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/German/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2747,10 +2766,11 @@
 		38BD215622D592CA00C6795D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = German.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				DEVELOPMENT_TEAM = CJJ59NJ7J8;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/German/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2772,6 +2792,7 @@
 		D109A213275B6888005E2271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = French.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2797,6 +2818,7 @@
 		D109A214275B6888005E2271 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = French.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2821,6 +2843,7 @@
 		D109A223275B68B3005E2271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Portuguese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2846,6 +2869,7 @@
 		D109A224275B68B3005E2271 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Portuguese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2871,6 +2895,7 @@
 		D160866E270B6D3C00134D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Spanish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2896,6 +2921,7 @@
 		D160866F270B6D3C00134D48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Spanish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2921,6 +2947,7 @@
 		D1671A69275A1E8700A7C118 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Russian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2946,6 +2973,7 @@
 		D1671A6A275A1E8700A7C118 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Russian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2971,6 +2999,7 @@
 		D18EA8A12760D4A6001E1358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Swedish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2996,6 +3025,7 @@
 		D18EA8A22760D4A6001E1358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Swedish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3221,6 +3251,7 @@
 		D1B81D2727BBB5320085FE5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Italian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3246,6 +3277,7 @@
 		D1B81D2827BBB5320085FE5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Italian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -14,6 +14,8 @@ class InfoChildTableViewCell: UITableViewCell {
   var section: Section?
   var parentSection: Section?
   
+  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  
   var languageCode: String {
     guard let parentSection = parentSection,
           case .specificLang(let lang) = parentSection.sectionState else { return "all"}
@@ -39,6 +41,8 @@ class InfoChildTableViewCell: UITableViewCell {
       chevronImgView.isHidden = true
     }
     
+    fetchSwitchStateForCell()
+    
     toggleSwitch.onTintColor = .init(.commandKey).withAlphaComponent(0.4)
     toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
   }
@@ -47,7 +51,7 @@ class InfoChildTableViewCell: UITableViewCell {
     switch togglePurpose {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
-      
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
     case .none: break
     }
     
@@ -55,6 +59,11 @@ class InfoChildTableViewCell: UITableViewCell {
   }
   
   func fetchSwitchStateForCell() {
-    
+    switch togglePurpose {
+    case .toggleCommaAndPeriod:
+      let dictionaryKey = languageCode + "CommaAndPeriod"
+      toggleSwitch.isOn = userDefaults.bool(forKey: dictionaryKey)
+    case .none: break
+    }
   }
 }
