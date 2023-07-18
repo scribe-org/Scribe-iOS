@@ -12,6 +12,7 @@ class ParentTableViewCell: UITableViewCell {
   @IBOutlet var containerView: UIView!
 
   var data: ParentTableCellModel?
+  var parentSection: Section?
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -35,6 +36,12 @@ class ParentTableViewCell: UITableViewCell {
   func configureCell(for data: ParentTableCellModel) {
     self.data = data
     titleLabel.text = data.headingTitle
+
+    if let safeData = self.data {
+      if let _ = safeData.hasDynamicData {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadChildTable), name: .keyboardsUpdatedNotification, object: nil)
+      }
+    }
   }
 
   func setContainerViewUI() {
@@ -42,6 +49,24 @@ class ParentTableViewCell: UITableViewCell {
     innerTable.layer.cornerRadius = innerTable.frame.width * 0.05
     innerTable.clipsToBounds = true
     applyShadowEffects(elem: containerView)
+  }
+  
+  @objc func reloadChildTable() {
+    guard let data = data,
+          let dynamicDataState = data.hasDynamicData else { return }
+    
+    switch dynamicDataState {
+    case .installedKeyboards:
+      self.data?.section = SettingsTableData.getInstalledKeyboardsSections()
+    }
+    
+    DispatchQueue.main.async {
+      self.innerTable.reloadData()
+    }
+  }
+  
+  deinit {
+      NotificationCenter.default.removeObserver(self)
   }
 }
 
@@ -56,11 +81,14 @@ extension ParentTableViewCell: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "InfoChildTableViewCell", for: indexPath) as! InfoChildTableViewCell
 
-    // Configure the child cell
+    if let parentSection = parentSection {
+      cell.parentSection = parentSection
+    }
+
     if let data = data {
       cell.configureCell(for: data.section[indexPath.row])
     }
-
+    
     return cell
   }
 }
@@ -103,7 +131,14 @@ extension ParentTableViewCell: UITableViewDelegate {
           viewController.section = .licenses
         }
       case .appLang: break
-      case .specificLang: break
+      case .specificLang:
+        if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
+          
+          viewController.configureTable(for: SettingsTableData.languageSettingsData, parentSection: section)
+          
+          parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
+      case .none: break
       }
     }
 

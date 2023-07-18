@@ -9,13 +9,14 @@ class SettingsViewController: UIViewController {
   @IBOutlet var footerButton: UIButton!
 
   @IBOutlet var parentTable: UITableView!
-
-  let tableData = SettingsTableData.settingsTableData
+  
+  var tableData = SettingsTableData.settingsTableData
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     title = "Settings"
+    navigationItem.backButtonTitle = "Settings"
 
     let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
     parentTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")
@@ -25,12 +26,35 @@ class SettingsViewController: UIViewController {
 
     parentTable.separatorStyle = .none
     parentTable.backgroundColor = .clear
-
+    
     setFooterButtonView()
+    
+    DispatchQueue.main.async {
+      self.parentTable.reloadData()
+
+      self.commonMethodToRefresh()
+    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    commonMethodToRefresh()
+  }
+  
+  func commonMethodToRefresh() {
+    DispatchQueue.main.async {
+      self.tableData[1].section = SettingsTableData.getInstalledKeyboardsSections()
+      self.parentTable.reloadData()
+      self.setFooterButtonView()
+    }
+
+    let notification = Notification(name: .keyboardsUpdatedNotification, object: nil, userInfo: nil)
+    NotificationCenter.default.post(notification)
   }
 
   func setFooterButtonView() {
-    if tableData[1].section.count > 1 {
+    if tableData.count > 1 && tableData[1].section.count != 0 {
       parentTable.tableFooterView?.isHidden = true
     } else {
       parentTable.tableFooterView?.isHidden = false
@@ -53,7 +77,7 @@ extension SettingsViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
-
+      
     cell.configureCell(for: tableData[indexPath.row])
 
     cell.backgroundColor = .clear

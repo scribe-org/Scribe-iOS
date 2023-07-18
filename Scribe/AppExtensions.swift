@@ -39,3 +39,7 @@ extension Locale {
     return String(Locale.preferredLanguages[0].prefix(2)).uppercased()
   }
 }
+
+extension Notification.Name {
+  static let keyboardsUpdatedNotification = Notification.Name("keyboardsHaveUpdated")
+}

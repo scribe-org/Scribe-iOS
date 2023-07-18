@@ -7,7 +7,8 @@ import Foundation
 /// Struct used for interpolating the parent and children table of the About section.
 struct ParentTableCellModel {
   let headingTitle: String
-  let section: [Section]
+  var section: [Section]
+  let hasDynamicData: DynamicDataTableInstance?
 }
 
 struct Section {
@@ -17,7 +18,7 @@ struct Section {
   let sectionState: SectionState
 }
 
-enum SectionState {
+enum SectionState: Equatable {
   case github
   case matrix
   case wikimedia
@@ -29,5 +30,15 @@ enum SectionState {
   case privacyPolicy
   case licenses
   case appLang
-  case specificLang
+  case specificLang(String)
+  case none(UserInteractiveState)
+}
+
+enum UserInteractiveState {
+  case toggleCommaAndPeriod
+  case none
+}
+
+enum DynamicDataTableInstance {
+  case installedKeyboards
 }
