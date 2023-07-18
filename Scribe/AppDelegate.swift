@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       If your application supports background execution:
         - This method is called instead of applicationWillTerminate: when the user quits
      */
-    
+
     /// Hacky fix to update installed keyboard list.
     /// This is needed because list will only update on viewWillAppear.
     /// Thus, if we redirect the user to the first screen when leaving the app then viewWillAppear is always be called when going back to the Settings screen.

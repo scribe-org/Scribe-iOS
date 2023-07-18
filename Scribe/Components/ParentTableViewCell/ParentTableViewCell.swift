@@ -50,23 +50,23 @@ class ParentTableViewCell: UITableViewCell {
     innerTable.clipsToBounds = true
     applyShadowEffects(elem: containerView)
   }
-  
+
   @objc func reloadChildTable() {
     guard let data = data,
           let dynamicDataState = data.hasDynamicData else { return }
-    
+
     switch dynamicDataState {
     case .installedKeyboards:
       self.data?.section = SettingsTableData.getInstalledKeyboardsSections()
     }
-    
+
     DispatchQueue.main.async {
       self.innerTable.reloadData()
     }
   }
-  
+
   deinit {
-      NotificationCenter.default.removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
   }
 }
 
@@ -88,7 +88,7 @@ extension ParentTableViewCell: UITableViewDataSource {
     if let data = data {
       cell.configureCell(for: data.section[indexPath.row])
     }
-    
+
     return cell
   }
 }
@@ -133,9 +133,8 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .appLang: break
       case .specificLang:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
-          
           viewController.configureTable(for: SettingsTableData.languageSettingsData, parentSection: section)
-          
+
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
         }
       case .none: break

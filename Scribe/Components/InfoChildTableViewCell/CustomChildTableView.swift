@@ -1,8 +1,5 @@
 //
 //  CustomChildTableView.swift
-//  Scribe
-//
-//  Created by Saurabh Jamadagni on 30/06/23.
 //
 
 import UIKit

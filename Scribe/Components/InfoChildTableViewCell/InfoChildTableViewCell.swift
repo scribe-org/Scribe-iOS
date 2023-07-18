@@ -13,20 +13,20 @@ class InfoChildTableViewCell: UITableViewCell {
 
   var section: Section?
   var parentSection: Section?
-  
+
   let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-  
+
   var languageCode: String {
     guard let parentSection = parentSection,
-          case .specificLang(let lang) = parentSection.sectionState else { return "all"}
-    
+          case let .specificLang(lang) = parentSection.sectionState else { return "all" }
+
     return lang
   }
-  
+
   var togglePurpose: UserInteractiveState {
     guard let section = section,
-          case .none(let action) = section.sectionState else { return .none}
-    
+          case let .none(action) = section.sectionState else { return .none }
+
     return action
   }
 
@@ -40,24 +40,24 @@ class InfoChildTableViewCell: UITableViewCell {
     } else {
       chevronImgView.isHidden = true
     }
-    
+
     fetchSwitchStateForCell()
-    
+
     toggleSwitch.onTintColor = .init(.commandKey).withAlphaComponent(0.4)
     toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
   }
-  
-  @IBAction func switchDidChange(_ sender: UISwitch) {
+
+  @IBAction func switchDidChange(_: UISwitch) {
     switch togglePurpose {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
     case .none: break
     }
-    
+
     toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
   }
-  
+
   func fetchSwitchStateForCell() {
     switch togglePurpose {
     case .toggleCommaAndPeriod:

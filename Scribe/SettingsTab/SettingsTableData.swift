@@ -5,7 +5,6 @@
 import Foundation
 
 struct SettingsTableData {
-  
   static var settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
       headingTitle: "App language",
@@ -22,24 +21,24 @@ struct SettingsTableData {
       hasDynamicData: .installedKeyboards
     ),
   ]
-  
+
   static var languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
       headingTitle: "Layout",
       section: [
-        Section(sectionTitle: "Period and comma on ABC", imageString: "info.circle", hasToggle: true, sectionState: .none(.toggleCommaAndPeriod))
+        Section(sectionTitle: "Period and comma on ABC", imageString: "info.circle", hasToggle: true, sectionState: .none(.toggleCommaAndPeriod)),
       ],
       hasDynamicData: nil
-    )
+    ),
   ]
-  
-  static func getInstalledKeyboardsSections() -> [Section ] {
+
+  static func getInstalledKeyboardsSections() -> [Section] {
     var installedKeyboards = [String]()
-    
+
     guard let appBundleIdentifier = Bundle.main.bundleIdentifier else { return [] }
-    
+
     guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else { return [] }
-    
+
     let customKeyboardExtension = appBundleIdentifier + "."
     for keyboard in keyboards {
       if keyboard.hasPrefix(customKeyboardExtension) {
@@ -47,9 +46,9 @@ struct SettingsTableData {
         installedKeyboards.append(lang.capitalize())
       }
     }
-    
+
     var sections = [Section]()
-    
+
     for language in installedKeyboards {
       let newSection = Section(
         sectionTitle: language,
@@ -57,10 +56,10 @@ struct SettingsTableData {
         hasToggle: false,
         sectionState: .specificLang(languagesAbbrDict[language]!)
       )
-      
+
       sections.append(newSection)
     }
-    
+
     return sections
   }
 }

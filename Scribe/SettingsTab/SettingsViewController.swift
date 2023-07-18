@@ -9,7 +9,7 @@ class SettingsViewController: UIViewController {
   @IBOutlet var footerButton: UIButton!
 
   @IBOutlet var parentTable: UITableView!
-  
+
   var tableData = SettingsTableData.settingsTableData
 
   override func viewDidLoad() {
@@ -26,22 +26,22 @@ class SettingsViewController: UIViewController {
 
     parentTable.separatorStyle = .none
     parentTable.backgroundColor = .clear
-    
+
     setFooterButtonView()
-    
+
     DispatchQueue.main.async {
       self.parentTable.reloadData()
 
       self.commonMethodToRefresh()
     }
   }
-  
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
     commonMethodToRefresh()
   }
-  
+
   func commonMethodToRefresh() {
     DispatchQueue.main.async {
       self.tableData[1].section = SettingsTableData.getInstalledKeyboardsSections()
@@ -77,7 +77,7 @@ extension SettingsViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
-      
+
     cell.configureCell(for: tableData[indexPath.row])
 
     cell.backgroundColor = .clear
