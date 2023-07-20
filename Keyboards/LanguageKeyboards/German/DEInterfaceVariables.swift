@@ -51,6 +51,24 @@ public enum GermanKeyboardConstants {
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
+  //added for expanded keyboard
+  static let letterKeysPadExpanded = [
+    ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "'", "delete"],
+    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "return"],
+    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
+    ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"], // "undoArrow"
+  ]
+
+  //added for symbolKeysPadExpanded 
+  static let symbolKeysPadExpanded = [ 
+    ["'", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
+    ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], 
+    ["redo", " ", "...", ".", ",", "?", "!", "'", '"', "_", "€"], 
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"],
+  ]
+
   // Alternate key vars.
   static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "l", "z", "c", "n"]
   static let keysWithAlternatesLeft = ["a", "e", "y", "s", "z", "c"]
@@ -160,4 +178,4 @@ func setDEKeyboardLayout() {
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   alreadyPluralMsg = "Schon Plural"
-}
+} 
