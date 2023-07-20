@@ -51,22 +51,22 @@ public enum GermanKeyboardConstants {
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
-  //added for expanded keyboard
+  // Expanded pad layouts for wider devices.
   static let letterKeysPadExpanded = [
-    ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "'", "delete"],
+    ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
     ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "return"],
     ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
     ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
-    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   //added for symbolKeysPadExpanded 
   static let symbolKeysPadExpanded = [ 
-    ["'", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
     ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], 
-    ["redo", " ", "...", ".", ",", "?", "!", "'", '"', "_", "€"], 
-    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"],
+    ["redo", " ", "...", ".", ",", "?", "!", "'", "\"", "_", "€"],
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   // Alternate key vars.
