@@ -7,7 +7,7 @@
 import UIKit
 
 public enum GermanKeyboardConstants {
-  // Keyboard key layouts.
+  // iPhone keyboard layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
@@ -29,6 +29,7 @@ public enum GermanKeyboardConstants {
     ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
   ]
 
+  // iPad keyboard layouts.
   static let letterKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
@@ -51,7 +52,7 @@ public enum GermanKeyboardConstants {
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
-  // Expanded pad layouts for wider devices.
+  // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
     ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "return"],
@@ -60,8 +61,7 @@ public enum GermanKeyboardConstants {
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
-  //added for symbolKeysPadExpanded 
-  static let symbolKeysPadExpanded = [ 
+  static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
     ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], 
