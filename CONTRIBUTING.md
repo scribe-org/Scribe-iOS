@@ -39,7 +39,7 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
    - In the top bar select Scribe as the scheme
      - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
    - Select a device to run the app on
-   - Press the run button marked "Start the active scheme"
+   - Press the run button marked `Start the active scheme`
 
 From there code edits that are made will be reflected in the app each time the active scheme is restarted.
 

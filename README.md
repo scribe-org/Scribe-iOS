@@ -84,6 +84,23 @@ Those interested can further check the [`-next release-`](https://github.com/scr
 
 After your first few pull requests organization members would be happy to discuss granting you further rights as a contributor, with a maintainer role then being possible after continued interest in the project. Scribe seeks to be an inclusive and supportive organization. We'd love to have you on the team!
 
+### Development environment [`⇧`](#contents)
+
+Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) coding language. Those new to Swift or wanting to develop their skills are more than welcome to contribute! The first step on your Swift journey would be to read through the [Swift documentation](https://docs.swift.org/swift-book/index.html). The general steps to setting up a development environment are:
+
+1. Download [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+2. [Fork](http://help.github.com/fork-a-repo/) a copy of the [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS) repository
+   - Alternatively you can [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository
+3. Open the Scribe-iOS directory in Xcode
+4. In order to run Scribe on an emulator:
+
+   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
+   - In the top bar select Scribe as the scheme
+   - Select a device to run the app on
+   - Press the run button marked `Start the active scheme`
+
+From there code edits that are made will be reflected in the app each time the active scheme is restarted.
+
 > **Warning**: Note on Debugging
 >
 > Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
