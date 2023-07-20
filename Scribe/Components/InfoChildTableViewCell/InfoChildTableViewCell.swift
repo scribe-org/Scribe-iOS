@@ -43,8 +43,8 @@ class InfoChildTableViewCell: UITableViewCell {
 
     fetchSwitchStateForCell()
 
-    toggleSwitch.onTintColor = .init(.commandKey).withAlphaComponent(0.4)
-    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
+    toggleSwitch.onTintColor = .init(.scribeCTA).withAlphaComponent(0.4)
+    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
   }
 
   @IBAction func switchDidChange(_: UISwitch) {
@@ -52,10 +52,11 @@ class InfoChildTableViewCell: UITableViewCell {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+    case .autosuggestEmojis: break
     case .none: break
     }
 
-    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.commandKey) : .lightGray
+    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
   }
 
   func fetchSwitchStateForCell() {
@@ -63,6 +64,7 @@ class InfoChildTableViewCell: UITableViewCell {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
       toggleSwitch.isOn = userDefaults.bool(forKey: dictionaryKey)
+    case .autosuggestEmojis: break
     case .none: break
     }
   }

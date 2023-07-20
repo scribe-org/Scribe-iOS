@@ -26,10 +26,27 @@ struct SettingsTableData {
     ParentTableCellModel(
       headingTitle: "Layout",
       section: [
-        Section(sectionTitle: "Period and comma on ABC", imageString: "info.circle", hasToggle: true, sectionState: .none(.toggleCommaAndPeriod)),
+        Section(
+          sectionTitle: "Period and comma on ABC",
+          imageString: "info.circle",
+          hasToggle: true,
+          sectionState: .none(.toggleCommaAndPeriod)
+        ),
       ],
       hasDynamicData: nil
     ),
+    ParentTableCellModel(
+      headingTitle: "Functionality",
+      section: [
+        Section(
+          sectionTitle: "Autosuggest emojis",
+          imageString: "info.circle",
+          hasToggle: true,
+          sectionState: .none(.autosuggestEmojis)
+        )
+      ],
+      hasDynamicData: nil
+    )
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {
