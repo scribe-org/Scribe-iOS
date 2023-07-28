@@ -51,6 +51,25 @@ public enum PortugueseKeyboardConstants {
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
   ]
 
+  //added for expanded keyboard
+  static let letterKeysPadExpanded = [
+    ["~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "–", "+", "delete"],
+    ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "{", "}", "|"],
+    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", '"', "return"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", "<", ">", "?", "shift"],
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"], // "undoArrow"
+  ]
+
+  //added for symbolKeysPadExpanded 
+  static let symbolKeysPadExpanded = [ 
+    ["'", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "~"], 
+    ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "return"], 
+    ["redo", " ", "...", ".", ",", "?", "!", "'", '"', "_", "€"], 
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"],
+  ]
+
+
   // Alternate key vars.
   static let keysWithAlternates = ["a", "e", "i", "o", "u", "c", "n"]
   static let keysWithAlternatesLeft = ["a", "e", "c"]

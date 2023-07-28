@@ -51,6 +51,25 @@ public enum RussianKeyboardConstants {
     ["selectKeyboard", "АБВ", "space", "АБВ", "hideKeyboard"], // "undoArrow"
   ]
 
+  //added for expanded keyboard
+  static let letterKeysPadExpanded = [
+    ["<", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "–", "+", "delete"],
+    ["indent", "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ", "return"],
+    ["uppercase", "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "Ё" "return"],
+    ["shift", "[", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "?", "shift"],
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"], // "undoArrow"
+  ]
+
+  //added for symbolKeysPadExpanded 
+  static let symbolKeysPadExpanded = [ 
+    ["'", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
+    ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "return"], 
+    ["redo", " ", "...", ".", ",", "?", "!", "'", '"', "_", "€"], 
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "scribble", "hideKeyboard"],
+  ]
+
+
   // Alternate key vars.
   static let keysWithAlternates = ["е", "ь"]
   static let keysWithAlternatesLeft = ["е"]
