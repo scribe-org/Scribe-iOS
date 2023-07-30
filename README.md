@@ -104,7 +104,7 @@ From there code edits that are made will be reflected in the app each time the a
 
 > [!WARNING]\
 > **Note on Debugging**
-> Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](./CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get it working properly.
+> Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) to learn how to get it working properly.
 
 ### Ways to Help [`⇧`](#contents)
 
