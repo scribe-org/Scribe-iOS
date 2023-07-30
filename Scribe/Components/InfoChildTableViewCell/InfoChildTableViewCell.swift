@@ -52,7 +52,9 @@ class InfoChildTableViewCell: UITableViewCell {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
-    case .autosuggestEmojis: break
+    case .autosuggestEmojis:
+      let dictionaryKey = languageCode + "EmojiAutosuggest"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
     case .none: break
     }
 
@@ -63,8 +65,20 @@ class InfoChildTableViewCell: UITableViewCell {
     switch togglePurpose {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
-      toggleSwitch.isOn = userDefaults.bool(forKey: dictionaryKey)
-    case .autosuggestEmojis: break
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        /// Default value
+        toggleSwitch.isOn = false
+      }
+    case .autosuggestEmojis:
+      let dictionaryKey = languageCode + "EmojiAutosuggest"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        /// Default value
+        toggleSwitch.isOn = true
+      }
     case .none: break
     }
   }

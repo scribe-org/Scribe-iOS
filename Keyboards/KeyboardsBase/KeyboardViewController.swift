@@ -430,7 +430,9 @@ class KeyboardViewController: UIInputViewController {
         }
 
         // Disable the third auto action button if we'll have emoji suggestions.
-        getEmojiAutoSuggestions(for: currentPrefix)
+        if emojiAutosuggestIsEnabled() {
+          getEmojiAutoSuggestions(for: currentPrefix)
+        }
       } else {
         getDefaultAutosuggestions()
       }
@@ -577,7 +579,9 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Disable the third auto action button if we'll have emoji suggestions.
-    getEmojiAutoSuggestions(for: prefix)
+    if emojiAutosuggestIsEnabled() {
+      getEmojiAutoSuggestions(for: prefix)
+    }
   }
 
   /// Sets up command buttons to execute autocomplete and autosuggest.
@@ -2008,11 +2012,8 @@ class KeyboardViewController: UIInputViewController {
   
   func setCommaAndPeriodKeysConditionally() {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    
     let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-    
     let dictionaryKey = langCode + "CommaAndPeriod"
-    
     let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
     
     if letterKeysHaveCommaPeriod {
@@ -2020,6 +2021,14 @@ class KeyboardViewController: UIInputViewController {
     } else {
       letterKeys[3] = ["123", "selectKeyboard", "space", "return"]
     }
+  }
+  
+  func emojiAutosuggestIsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+    let dictionaryKey = langCode + "EmojiAutosuggest"
+    
+    return userDefaults.bool(forKey: dictionaryKey)
   }
 
   // MARK: Button Actions
