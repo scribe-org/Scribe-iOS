@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="25" y="-100"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Swipeable Tab Bar Controller-->
         <scene sceneID="sLs-HO-3by">
             <objects>
-                <tabBarController id="z4h-ME-igh" sceneMemberID="viewController">
+                <tabBarController id="z4h-ME-igh" customClass="SwipeableTabBarController" customModule="SwipeableTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="pcg-48-jfk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

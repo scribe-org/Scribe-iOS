@@ -13,6 +13,7 @@
 		140158A42A4F06CA00D14E52 /* CustomChildTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A32A4F06CA00D14E52 /* CustomChildTableView.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
+		146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 146B70BC2A853A3800710BD4 /* SwipeableTabBarController */; };
 		147797AC2A2CD2F70044A53E /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */; };
 		147797AD2A2CD2F70044A53E /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
@@ -968,6 +969,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37029E7850600FB9022 /* SwiftyJSON in Frameworks */,
+				146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */,
 				D16DD37329E7853800FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1493,6 +1495,7 @@
 			packageProductDependencies = (
 				D16DD36F29E7850600FB9022 /* SwiftyJSON */,
 				D16DD37229E7853800FB9022 /* GRDB */,
+				146B70BC2A853A3800710BD4 /* SwipeableTabBarController */,
 			);
 			productName = EmojiKeyboard;
 			productReference = 38BD213022D5907E00C6795D /* Scribe.app */;
@@ -1779,6 +1782,7 @@
 			packageReferences = (
 				D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				146B70BB2A853A3800710BD4 /* XCRemoteSwiftPackageReference "SwipeableTabBarController" */,
 			);
 			productRefGroup = 38BD213122D5907E00C6795D /* Products */;
 			projectDirPath = "";
@@ -3621,6 +3625,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		146B70BB2A853A3800710BD4 /* XCRemoteSwiftPackageReference "SwipeableTabBarController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/SwipeableTabBarController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -3640,6 +3652,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		146B70BC2A853A3800710BD4 /* SwipeableTabBarController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 146B70BB2A853A3800710BD4 /* XCRemoteSwiftPackageReference "SwipeableTabBarController" */;
+			productName = SwipeableTabBarController;
+		};
 		D16DD36F29E7850600FB9022 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
