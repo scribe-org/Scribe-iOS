@@ -1,7 +1,7 @@
 //
 //  ESCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the Spanish keyboard.
+//  Variables associated with commands for the Spanish Scribe keyboard.
 //
 
 func esSetConjugationLabels() {

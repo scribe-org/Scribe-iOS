@@ -1,7 +1,7 @@
 //
 //  ITCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the Italian keyboard.
+//  Variables associated with commands for the Italian Scribe keyboard.
 //
 
 func itSetConjugationLabels() {

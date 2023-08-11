@@ -1,3 +1,5 @@
 //
-//  KeyboardViewController.swift
+//  DAKeyboardViewController.swift
 //
+
+class DAKeyboardViewController: KeyboardViewController {}

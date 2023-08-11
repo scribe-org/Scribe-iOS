@@ -1,7 +1,7 @@
 //
 //  FRCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the French keyboard.
+//  Variables associated with commands for the French Scribe keyboard.
 //
 
 func frSetConjugationLabels() {

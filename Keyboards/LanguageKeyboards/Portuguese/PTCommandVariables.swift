@@ -1,7 +1,7 @@
 //
 //  PTCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the Portuguese keyboard.
+//  Variables associated with commands for the Portuguese Scribe keyboard.
 //
 
 func ptSetConjugationLabels() {

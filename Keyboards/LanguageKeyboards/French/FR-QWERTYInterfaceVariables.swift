@@ -5,48 +5,66 @@
 //
 
 public enum FrenchQWERTYKeyboardConstants {
-  // Keyboard key layouts.
+  // iPhone keyboard layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "´"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
 
+  // iPad keyboard layouts.
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
-    ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
+    ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"],
     ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"],
     ["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+  ]
+
+  // Expanded iPad keyboard layouts for wider devices.
+  static let letterKeysPadExpanded = [
+    ["/", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
+    ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "ç", ":"],
+    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "è", "à", "return"],
+    ["shift", "ù", "z", "x", "c", "v", "b", "n", "m", ",", ".", "é", "shift"],
+    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+  ]
+
+  static let symbolKeysPadExpanded = [
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "~"],
+    ["uppercase", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
+    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
+    ["selectKeyboard", "ABC", "microphone", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   // Alternate key vars.

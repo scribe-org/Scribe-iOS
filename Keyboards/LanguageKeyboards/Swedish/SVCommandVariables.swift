@@ -1,7 +1,7 @@
 //
 //  SVCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the Swedish keyboard.
+//  Variables associated with commands for the Swedish Scribe keyboard.
 //
 
 func svSetConjugationLabels() {

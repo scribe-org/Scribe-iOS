@@ -12,50 +12,50 @@ public enum GermanKeyboardConstants {
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undoArrow"
+    ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   // iPad keyboard layouts.
   static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
-    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
+    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
     ["\"", "§", "€", "%", "&", "/", "(", ")", "=", "'", "#", "return"],
     ["#+=", "—", "`", "'", "...", "@", ";", ":", ",", ".", "-", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "return"],
     ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undoArrow"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
-    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "return"],
+    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "*"],
     ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
     ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
@@ -63,15 +63,15 @@ public enum GermanKeyboardConstants {
 
   static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "return"], 
-    ["undo", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], 
-    ["redo", " ", "...", ".", ",", "?", "!", "'", "\"", "_", "€"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "§"],
+    ["uppercase", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
+    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "s", "l", "z", "c", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "y", "s", "z", "c"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "c", "l", "n", "s", "z"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "c", "s", "z"]
   static let keysWithAlternatesRight = ["i", "o", "u", "l", "n"]
 
   static let aAlternateKeys = ["à", "á", "â", "æ", "ã", "å", "ā", "ą"]
@@ -80,11 +80,11 @@ public enum GermanKeyboardConstants {
   static let oAlternateKeys = ["ō", "ø", "œ", "õ", "ó", "ò", "ô"]
   static let uAlternateKeys = ["ū", "ú", "ù", "û"]
   static let yAlternateKeys = ["ÿ"]
-  static let sAlternateKeys = ["ß", "ś", "š"]
-  static let lAlternateKeys = ["ł"]
-  static let zAlternateKeys = ["ź", "ż"]
   static let cAlternateKeys = ["ç", "ć", "č"]
+  static let lAlternateKeys = ["ł"]
   static let nAlternateKeys = ["ń", "ñ"]
+  static let sAlternateKeys = ["ß", "ś", "š"]
+  static let zAlternateKeys = ["ź", "ż"]
 }
 
 /// Gets the keys for the German keyboard.
@@ -131,7 +131,7 @@ func getDEKeys() {
   nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
 }
 
-/// Provides a German keyboard layout.
+/// Provides the German keyboard layout.
 func setDEKeyboardLayout() {
   getDEKeys()
 
@@ -178,4 +178,4 @@ func setDEKeyboardLayout() {
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
   alreadyPluralMsg = "Schon Plural"
-} 
+}

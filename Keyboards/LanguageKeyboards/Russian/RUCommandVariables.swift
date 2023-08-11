@@ -1,7 +1,7 @@
 //
 //  RUCommandVariables.swift
 //
-//  Variables associated with Scribe commands for the Russian keyboard.
+//  Variables associated with commands for the Russian Scribe keyboard.
 //
 
 func ruSetConjugationLabels() {

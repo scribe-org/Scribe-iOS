@@ -1,7 +1,7 @@
 //
 //  DECommandVariables.swift
 //
-//  Variables associated with Scribe commands for the German keyboard.
+//  Variables associated with commands for the German Scribe keyboard.
 //
 
 func deSetConjugationLabels() {

@@ -1,12 +1,12 @@
 //
-//  PTInterfaceVariables.swift
+//  ENInterfaceVariables.swift.swift
 //
-//  Constants and functions to load the Portuguese Scribe keyboard.
+//  Constants and functions to load the English Scribe keyboard.
 //
 
 import UIKit
 
-public enum PortugueseKeyboardConstants {
+public enum EnglishKeyboardConstants {
   // iPhone keyboard layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
@@ -17,14 +17,14 @@ public enum PortugueseKeyboardConstants {
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
+    ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
+    ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
     ["ABC", "selectKeyboard", "space", "return"], // "undo"
   ]
@@ -34,22 +34,22 @@ public enum PortugueseKeyboardConstants {
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
-    ["shift", "z", "x", "c", "v", "b", "n", "m", "!", "?", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
+    ["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
+    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"], // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"],
-    ["#+=", "%", "-", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"],
     ["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
@@ -57,47 +57,50 @@ public enum PortugueseKeyboardConstants {
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"],
     ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "return"],
-    ["shift", "z", "x", "c", "v", "b", "n", "m", "<", ">", "/", "shift"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
-    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "~"],
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "~"],
     ["uppercase", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "return"], // "undo"
     ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "i", "o", "u", "c", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "c"]
-  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
+  static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "c", "l", "n", "s", "z"]
+  static let keysWithAlternatesLeft = ["a", "e", "y", "c", "s", "z"]
+  static let keysWithAlternatesRight = ["i", "o", "u", "l", "n"]
 
-  static let aAlternateKeys = ["á", "ã", "à", "â", "ä", "å", "æ", "ᵃ"]
-  static let eAlternateKeys = ["é", "ê", "è", "ę", "ė", "ē", "ë"]
-  static let iAlternateKeys = ["ī", "į", "ï", "ì", "î", "í"]
-  static let oAlternateKeys = ["ᵒ", "ō", "ø", "œ", "ö", "ò", "ô", "õ", "ó"]
-  static let uAlternateKeys = ["ū", "û", "ù", "ü", "ú"]
-  static let cAlternateKeys = ["ç"]
-  static let nAlternateKeys = ["ñ"]
+  static let aAlternateKeys = ["à", "á", "â", "ä", "æ", "ã", "å", "ā"]
+  static let eAlternateKeys = ["è", "é", "ê", "ë", "ē", "ė", "ę"]
+  static let iAlternateKeys = ["ì", "į", "ī", "í", "ï", "î"]
+  static let oAlternateKeys = ["õ", "ō", "ø", "œ", "ó", "ò", "ö", "ô"]
+  static let uAlternateKeys = ["ū", "ú", "ù", "ü", "û"]
+  static let cAlternateKeys = ["ç", "ć", "č"]
+  static let lAlternateKeys = ["ł"]
+  static let nAlternateKeys = ["ń", "ñ"]
+  static let sAlternateKeys = ["ś", "š"]
+  static let zAlternateKeys = ["ž", "ź", "ż"]
 }
 
-/// Gets the keys for the Portuguese keyboard.
-func getPTKeys() {
+/// Gets the keys for the English keyboard.
+func getENKeys() {
   if DeviceType.isPhone {
-    letterKeys = PortugueseKeyboardConstants.letterKeysPhone
-    numberKeys = PortugueseKeyboardConstants.numberKeysPhone
-    symbolKeys = PortugueseKeyboardConstants.symbolKeysPhone
+    letterKeys = EnglishKeyboardConstants.letterKeysPhone
+    numberKeys = EnglishKeyboardConstants.numberKeysPhone
+    symbolKeys = EnglishKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = PortugueseKeyboardConstants.letterKeysPad
-    numberKeys = PortugueseKeyboardConstants.numberKeysPad
-    symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+    letterKeys = EnglishKeyboardConstants.letterKeysPad
+    numberKeys = EnglishKeyboardConstants.numberKeysPad
+    symbolKeys = EnglishKeyboardConstants.symbolKeysPad
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
@@ -111,52 +114,61 @@ func getPTKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
-  eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
-  iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
-  oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
-  uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
-  cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
-  nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+  keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = EnglishKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = EnglishKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = EnglishKeyboardConstants.aAlternateKeys
+  eAlternateKeys = EnglishKeyboardConstants.eAlternateKeys
+  iAlternateKeys = EnglishKeyboardConstants.iAlternateKeys
+  oAlternateKeys = EnglishKeyboardConstants.oAlternateKeys
+  uAlternateKeys = EnglishKeyboardConstants.uAlternateKeys
+  sAlternateKeys = EnglishKeyboardConstants.sAlternateKeys
+  lAlternateKeys = EnglishKeyboardConstants.lAlternateKeys
+  zAlternateKeys = EnglishKeyboardConstants.zAlternateKeys
+  cAlternateKeys = EnglishKeyboardConstants.cAlternateKeys
+  nAlternateKeys = EnglishKeyboardConstants.nAlternateKeys
 }
 
-/// Provides the Portuguese keyboard layout.
-func setPTKeyboardLayout() {
-  getPTKeys()
+/// Provides the English keyboard layout.
+func setENKeyboardLayout() {
+  getENKeys()
 
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
-  spaceBar = "espaço"
-  language = "Português"
-  invalidCommandMsg = "Não está no Wikidata"
-  baseAutosuggestions = ["o", "a", "eu"]
-  numericAutosuggestions = ["de", "que", "a"]
+  spaceBar = "space"
+  invalidCommandMsg = "Not in Wikidata"
+  baseAutosuggestions = ["I", "I'm", "we"]
+  numericAutosuggestions = ["is", "to", "and"]
+  verbsAfterPronounsArray = ["have", "be", "can"]
+  pronounAutosuggestionTenses = [
+    "I": "presFPS",
+    "you": "presSPS",
+    "he": "presTPS",
+    "she": "presTPS",
+    "it": "presTPS",
+    "we": "presFPP",
+    "they": "presTPP",
+  ]
 
-  translateKeyLbl = "Traduzir"
-  translatePlaceholder = "Digite uma palavra"
-  translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
+  translateKeyLbl = "Translate"
+  translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
-  conjugateKeyLbl = "Conjugar"
-  conjugatePlaceholder = "Digite um verbo"
-  conjugatePrompt = commandPromptSpacing + "Conjugar: "
+  conjugateKeyLbl = "Conjugate"
+  conjugatePrompt = commandPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
 
   pluralKeyLbl = "Plural"
-  pluralPlaceholder = "Digite um substantivo"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
-  alreadyPluralMsg = "Já plural"
+  alreadyPluralMsg = "Already plural"
 }
