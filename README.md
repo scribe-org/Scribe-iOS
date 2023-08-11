@@ -294,15 +294,14 @@ Many thanks to all the [Scribe-iOS contributors](https://github.com/scribe-org/S
   <img src="https://contrib.rocks/image?repo=scribe-org/Scribe-iOS" />
 </a>
 
-### Code
+### Code and Dependencies
 
-<details><summary><strong>List of referenced code</strong></summary>
-<p>
+The Scribe team would like to thank all the great software that made Scribe-iOS' development possible 💙
 
+- [GRDB](https://github.com/groue/GRDB.swift) by [groue](https://github.com/groue) ([License](https://github.com/groue/GRDB.swift/blob/master/LICENSE))
+- [SwipeableTabBarController](https://github.com/marcosgriselli/SwipeableTabBarController) by [marcosgriselli](https://github.com/marcosgriselli) ([License](https://github.com/marcosgriselli/SwipeableTabBarController/blob/master/LICENSE))
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) by [SwiftyJSON](https://github.com/SwiftyJSON) ([License](https://github.com/SwiftyJSON/SwiftyJSON/blob/master/LICENSE))
 - [CustomKeyboard](https://github.com/EthanSK/CustomKeyboard) by [EthanSK](https://github.com/EthanSK) ([License](https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE))
-
-</p>
-</details>
 
 ### Wikimedia Communities
 

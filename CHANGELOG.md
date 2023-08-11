@@ -20,6 +20,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
   - Users now have easy access to the Scribe GitHub, the Matrix community, rating the app, sending bug reports and emailing the team.
   - A menu option has been added that allows the user to add a command and period to the baseline letter keys.
   - A menu option has been added that allows the user to disable emoji autosuggestions and autocompletions.
+  - Mneu screens can be swiped between via an implementation using SwipeableTabBarController.
 
 <!-- ### 🎨 Design Changes
 
