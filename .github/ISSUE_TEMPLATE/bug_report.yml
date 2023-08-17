@@ -1,6 +1,7 @@
 name: 🐞 Bug report
 description: Report a bug to help us improve Scribe-iOS.
 labels: ["bug"]
+projects: ["projects/1"]
 body:
   - type: checkboxes
     id: new-bug
