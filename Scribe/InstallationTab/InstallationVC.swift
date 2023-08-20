@@ -59,11 +59,6 @@ class InstallationVC: UIViewController {
     set { self.orientations = newValue }
   }
 
-  // The app screen is white content on blue, so match the status bar.
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
-
   /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
   func setTopIcon() {
     if DeviceType.isPhone {
