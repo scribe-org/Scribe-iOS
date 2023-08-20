@@ -1,6 +1,7 @@
 name: 🌐 Localization
 description: Report issues or offer help for Scribe localizations.
 labels: ["localization"]
+projects: ["scribe-org/1"]
 body:
   - type: checkboxes
     id: terms
