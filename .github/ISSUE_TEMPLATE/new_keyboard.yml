@@ -1,6 +1,7 @@
 name: ⌨️ New keyboard
 description: Suggest a new language keyboard for Scribe!
 labels: ["new keyboard"]
+projects: ["scribe-org/1"]
 title: Add <language> keyboard
 body:
   - type: checkboxes
