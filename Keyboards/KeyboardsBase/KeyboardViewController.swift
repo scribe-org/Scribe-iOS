@@ -1591,6 +1591,23 @@ class KeyboardViewController: UIInputViewController {
       } catch {}
     }
 
+    //Check if ipad device meets the criteria for expanded keyboard
+          if DeviceType.isPad {
+        //Check if device has home button, this will be used later to determine if we should use expanded keypad or not.
+          if #available(iOS 13.0, *), keyboardView.safeAreaInsets.bottom > 0 {
+            hasHomeButton = true;
+          }
+        else
+        {
+          hasHomeButton =  false;
+        } //If the width is below 768 px we should not use the expanded keys
+        if #available(iOS 13.0, *), UIScreen.main.bounds.width > 768 {
+            isWideEnough = true;
+          }
+        else {
+          isWideEnough = false;
+        }
+
     setKeyboard()
     setCommaAndPeriodKeysConditionally()
     setCommandBackground()

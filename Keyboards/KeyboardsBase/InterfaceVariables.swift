@@ -10,7 +10,8 @@ import UIKit
 var proxy: UITextDocumentProxy!
 
 // MARK: Display Variables
-
+public var hasHomeButton = false;
+public var isWideEnough = false;
 // Variables for the keyboard and its appearance.
 var keyboard = [[String]]()
 var allKeys = [String]()
