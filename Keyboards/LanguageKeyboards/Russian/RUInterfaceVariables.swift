@@ -90,9 +90,17 @@ func getRUKeys() {
     rightKeyChars = ["х", "э", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = RussianKeyboardConstants.letterKeysPad
-    numberKeys = RussianKeyboardConstants.numberKeysPad
-    symbolKeys = RussianKeyboardConstants.symbolKeysPad
+    if(usingExpandedKeyboard)
+    {
+      letterKeys = RussianKeyboardConstants.letterKeysPadExpanded;
+      letterKeys = RussianKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = RussianKeyboardConstants.letterKeysPad
+      numberKeys = RussianKeyboardConstants.numberKeysPad
+      symbolKeys = RussianKeyboardConstants.symbolKeysPad
+    }
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)

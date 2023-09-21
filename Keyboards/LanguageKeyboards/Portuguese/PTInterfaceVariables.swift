@@ -95,9 +95,17 @@ func getPTKeys() {
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = PortugueseKeyboardConstants.letterKeysPad
-    numberKeys = PortugueseKeyboardConstants.numberKeysPad
-    symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+    if (usingExpandedKeyboard)
+    {
+      letterKeys = PortugueseKeyboardConstants.letterKeysPadExpanded;
+      symbolKeys = PortugueseKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = PortugueseKeyboardConstants.letterKeysPad
+      numberKeys = PortugueseKeyboardConstants.numberKeysPad
+      symbolKeys = PortugueseKeyboardConstants.symbolKeysPad
+    }
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)

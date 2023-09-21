@@ -17,6 +17,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var stackView1: UIStackView!
   @IBOutlet var stackView2: UIStackView!
   @IBOutlet var stackView3: UIStackView!
+  @IBOutlet var stackView4: UIStackView! //Used for expanded keyboard
 
   private var tipView: ToolTipView?
 
@@ -1592,21 +1593,16 @@ class KeyboardViewController: UIInputViewController {
     }
 
     //Check if ipad device meets the criteria for expanded keyboard
-          if DeviceType.isPad {
-        //Check if device has home button, this will be used later to determine if we should use expanded keypad or not.
-          if #available(iOS 13.0, *), keyboardView.safeAreaInsets.bottom > 0 {
-            hasHomeButton = true;
-          }
-        else
-        {
-          hasHomeButton =  false;
-        } //If the width is below 768 px we should not use the expanded keys
-        if #available(iOS 13.0, *), UIScreen.main.bounds.width > 768 {
-            isWideEnough = true;
-          }
-        else {
-          isWideEnough = false;
-        }
+    if DeviceType.isPad {
+      //Check if device has home button, this will be used later to determine if we should use expanded keypad or not.
+      if #available(iOS 13.0, *), (keyboardView.safeAreaInsets.bottom <= 0 && UIScreen.main.bounds.width > 768)  {
+        usingExpandedKeyboard = true;
+      }
+      else
+      {
+        usingExpandedKeyboard = false;
+      }
+    }
 
     setKeyboard()
     setCommaAndPeriodKeysConditionally()
@@ -1637,7 +1633,8 @@ class KeyboardViewController: UIInputViewController {
       }
     } else {
       letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
-      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(numberKeys[0].count) * 0.9
+      //If we are using expanded keys the numberKeys array is empty, we use symbolKeys
+      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(      (usingExpandedKeyboard) == true ? symbolKeys[0].count: numberKeys[0].count) * 0.9
     }
 
     // Derive keyboard given current states and set widths.
@@ -1927,7 +1924,7 @@ class KeyboardViewController: UIInputViewController {
           } else {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-                - (CGFloat(numberKeys[0].count) * numSymKeyWidth)
+              - (CGFloat((usingExpandedKeyboard) == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
             ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
@@ -2471,7 +2468,8 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     case "123", ".?123":
-      changeKeyboardToNumberKeys()
+      (usingExpandedKeyboard) == true ? changeKeyboardToSymbolKeys() : changeKeyboardToNumberKeys()
+        
 
     case "#+=":
       changeKeyboardToSymbolKeys()

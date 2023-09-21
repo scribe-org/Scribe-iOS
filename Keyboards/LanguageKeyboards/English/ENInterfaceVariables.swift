@@ -98,10 +98,17 @@ func getENKeys() {
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = EnglishKeyboardConstants.letterKeysPad
-    numberKeys = EnglishKeyboardConstants.numberKeysPad
-    symbolKeys = EnglishKeyboardConstants.symbolKeysPad
-
+    if (usingExpandedKeyboard)
+    {
+      letterKeys = EnglishKeyboardConstants.letterKeysPadExpanded;
+      symbolKeys = EnglishKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = EnglishKeyboardConstants.letterKeysPad
+      numberKeys = EnglishKeyboardConstants.numberKeysPad
+      symbolKeys = EnglishKeyboardConstants.symbolKeysPad
+    }
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
     letterKeys[0].append("delete")

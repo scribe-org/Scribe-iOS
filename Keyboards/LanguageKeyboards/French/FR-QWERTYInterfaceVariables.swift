@@ -94,9 +94,17 @@ func getFRQWERTYKeys() {
     rightKeyChars = ["p", "m", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPad
-    numberKeys = FrenchQWERTYKeyboardConstants.numberKeysPad
-    symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPad
+    if (usingExpandedKeyboard)
+    {
+      letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPadExpanded;
+      symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPad
+      numberKeys = FrenchQWERTYKeyboardConstants.numberKeysPad
+      symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPad
+    }
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
