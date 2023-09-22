@@ -17,7 +17,7 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var stackView1: UIStackView!
   @IBOutlet var stackView2: UIStackView!
   @IBOutlet var stackView3: UIStackView!
-  @IBOutlet var stackView4: UIStackView! //Used for expanded keyboard
+
 
   private var tipView: ToolTipView?
 
