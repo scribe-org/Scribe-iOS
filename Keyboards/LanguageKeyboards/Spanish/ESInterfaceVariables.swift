@@ -32,9 +32,9 @@ public enum SpanishKeyboardConstants {
   // iPad keyboard layouts.
   static let letterKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
-    ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ", "return"],
-    ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
 
