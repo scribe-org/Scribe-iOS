@@ -55,6 +55,9 @@ class InfoChildTableViewCell: UITableViewCell {
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+    case .toggleAccentCharacters:
+      let dictionaryKey = languageCode + "AccentCharacters"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
     case .none: break
     }
 
@@ -78,6 +81,14 @@ class InfoChildTableViewCell: UITableViewCell {
       } else {
         /// Default value
         toggleSwitch.isOn = true
+      }
+    case .toggleAccentCharacters:
+      let dictionaryKey = languageCode + "AccentCharacters"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        /// Default value
+        toggleSwitch.isOn = false
       }
     case .none: break
     }
