@@ -32,6 +32,12 @@ struct SettingsTableData {
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod)
         ),
+        Section(
+          sectionTitle: "Disable accent characters",
+          imageString: "info.circle",
+          hasToggle: true,
+          sectionState: .none(.toggleAccentCharacters)
+        ),
       ],
       hasDynamicData: nil
     ),
