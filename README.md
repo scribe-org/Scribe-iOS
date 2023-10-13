@@ -103,7 +103,7 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 From there code edits that are made will be reflected in the app each time the active scheme is restarted.
 
 > [!WARNING]\
-> **Note on Debugging**
+> **Note on Debugging:**
 > Because Scribe is a keyboard extension, the Xcode debugger doesn't work as expected when debugging a regular app. Please see the [note on debugging](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md#note-on-debugging) in [CONTRIBUTING.md](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) to learn how to get it working properly.
 
 ### Ways to Help [`⇧`](#contents)
