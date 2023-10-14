@@ -118,7 +118,7 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    # Navigate to the newly cloned directory
    cd Scribe-iOS
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
+   git remote add upstream https://github.com/scribe-org/Scribe-iOS
    ```
    Now, if you run `git remote -v` you should see two remote repositories named:
 
