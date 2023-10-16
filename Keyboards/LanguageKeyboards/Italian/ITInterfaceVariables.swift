@@ -96,9 +96,17 @@ func getITKeys() {
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = ItalianKeyboardConstants.letterKeysPad
-    numberKeys = ItalianKeyboardConstants.numberKeysPad
-    symbolKeys = ItalianKeyboardConstants.symbolKeysPad
+    if (usingExpandedKeyboard)
+    {
+      letterKeys = ItalianKeyboardConstants.letterKeysPadExpanded;
+      symbolKeys = ItalianKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = ItalianKeyboardConstants.letterKeysPad
+      numberKeys = ItalianKeyboardConstants.numberKeysPad
+      symbolKeys = ItalianKeyboardConstants.symbolKeysPad
+    }
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)

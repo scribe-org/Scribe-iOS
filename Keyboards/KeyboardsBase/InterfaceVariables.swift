@@ -12,6 +12,7 @@ var proxy: UITextDocumentProxy!
 // MARK: Display Variables
 
 // Variables for the keyboard and its appearance.
+public var usingExpandedKeyboard = false;
 var keyboard = [[String]]()
 var allKeys = [String]()
 let specialKeys = [

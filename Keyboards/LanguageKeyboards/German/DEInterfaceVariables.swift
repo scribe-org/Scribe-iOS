@@ -99,9 +99,17 @@ func getDEKeys() {
     rightKeyChars = ["ü", "ä", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = GermanKeyboardConstants.letterKeysPad
-    numberKeys = GermanKeyboardConstants.numberKeysPad
-    symbolKeys = GermanKeyboardConstants.symbolKeysPad
+    if (usingExpandedKeyboard)
+    {
+      letterKeys = GermanKeyboardConstants.letterKeysPadExpanded;
+      symbolKeys = GermanKeyboardConstants.symbolKeysPadExpanded;
+    }
+    else
+    {
+      letterKeys = GermanKeyboardConstants.letterKeysPad
+      numberKeys = GermanKeyboardConstants.numberKeysPad
+      symbolKeys = GermanKeyboardConstants.symbolKeysPad
+    }
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
