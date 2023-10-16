@@ -135,20 +135,30 @@ func getSVKeys() {
     }
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
       if userDefaults.bool(forKey: "svAccentCharacters") {
-      letterKeys = SwedishKeyboardConstants.letterKeysPadDisableAccents
+        letterKeys = SwedishKeyboardConstants.letterKeysPadExpandedDisableAccents
+      } else {
+        letterKeys = SwedishKeyboardConstants.letterKeysPadExpanded
+      }
+      symbolKeys = SwedishKeyboardConstants.symbolKeysPadExpanded
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = SwedishKeyboardConstants.letterKeysPad
+      if userDefaults.bool(forKey: "svAccentCharacters") {
+        letterKeys = SwedishKeyboardConstants.letterKeysPadDisableAccents
+      } else {
+        letterKeys = SwedishKeyboardConstants.letterKeysPad
+      }
+      numberKeys = SwedishKeyboardConstants.numberKeysPad
+      symbolKeys = SwedishKeyboardConstants.symbolKeysPad
+
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
-    numberKeys = SwedishKeyboardConstants.numberKeysPad
-    symbolKeys = SwedishKeyboardConstants.symbolKeysPad
-
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
-    letterKeys[0].append("delete")
-
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
+    
     leftKeyChars = ["q", "a", "1", "@", "€"]
     // TODO: add "å" to rightKeyChar if the keyboard has 4 rows.
     rightKeyChars = []

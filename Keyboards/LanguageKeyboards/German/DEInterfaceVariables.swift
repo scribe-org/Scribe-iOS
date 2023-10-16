@@ -135,19 +135,29 @@ func getDEKeys() {
     }
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    if userDefaults.bool(forKey: "deAccentCharacters") {
-    letterKeys = GermanKeyboardConstants.letterKeysPadDisableAccents
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      if userDefaults.bool(forKey: "deAccentCharacters") {
+        letterKeys = GermanKeyboardConstants.letterKeysPadExpandedDisableAccents
+      } else {
+        letterKeys = GermanKeyboardConstants.letterKeysPadExpanded
+      }
+      symbolKeys = GermanKeyboardConstants.symbolKeysPadExpanded
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = GermanKeyboardConstants.letterKeysPad
+      if userDefaults.bool(forKey: "deAccentCharacters") {
+        letterKeys = GermanKeyboardConstants.letterKeysPadDisableAccents
+      } else {
+        letterKeys = GermanKeyboardConstants.letterKeysPad
+      }
+      numberKeys = GermanKeyboardConstants.numberKeysPad
+      symbolKeys = GermanKeyboardConstants.symbolKeysPad
+
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
-    numberKeys = GermanKeyboardConstants.numberKeysPad
-    symbolKeys = GermanKeyboardConstants.symbolKeysPad
-
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
-    letterKeys[0].append("delete")
-
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "\"", "$"]
     // TODO: add "ü" to rightKeyChar if the keyboard has 4 rows.
