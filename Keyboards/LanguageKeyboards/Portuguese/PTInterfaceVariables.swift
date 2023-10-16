@@ -109,7 +109,6 @@ func getPTKeys() {
 
     // If the iPad is too small to have a numbers row.
     letterKeys.removeFirst(1)
-    letterKeys[0].append("delete")
 
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
