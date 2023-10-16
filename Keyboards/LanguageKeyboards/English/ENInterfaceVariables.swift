@@ -35,21 +35,21 @@ public enum EnglishKeyboardConstants {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
-    [".?123", "selectKeyboard", "space", ".?123", "hideKeyboard"], // "undo"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"],
     ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"],
     ["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"],
-    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
@@ -98,21 +98,21 @@ func getENKeys() {
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    if (usingExpandedKeyboard)
-    {
-      letterKeys = EnglishKeyboardConstants.letterKeysPadExpanded;
-      symbolKeys = EnglishKeyboardConstants.symbolKeysPadExpanded;
-    }
-    else
-    {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = EnglishKeyboardConstants.letterKeysPadExpanded
+      symbolKeys = EnglishKeyboardConstants.symbolKeysPadExpanded
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
       letterKeys = EnglishKeyboardConstants.letterKeysPad
       numberKeys = EnglishKeyboardConstants.numberKeysPad
       symbolKeys = EnglishKeyboardConstants.symbolKeysPad
-    }
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
 
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    }
 
     leftKeyChars = ["q", "1"]
     // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.

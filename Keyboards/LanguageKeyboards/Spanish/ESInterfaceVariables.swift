@@ -97,23 +97,21 @@ func getESKeys() {
     rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    //if the iPad is wide enough, and has no home button, use the expanded keys
-    if(usingExpandedKeyboard)
-    {
-      letterKeys = SpanishKeyboardConstants.letterKeysPadExpanded;
-      symbolKeys = SpanishKeyboardConstants.symbolKeysPadExpanded;
-    }
-    else
-    {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = SpanishKeyboardConstants.letterKeysPadExpanded
+      symbolKeys = SpanishKeyboardConstants.symbolKeysPadExpanded
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
       letterKeys = SpanishKeyboardConstants.letterKeysPad
       numberKeys = SpanishKeyboardConstants.numberKeysPad
       symbolKeys = SpanishKeyboardConstants.symbolKeysPad
+
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
-
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
-
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "@", "€"]
     // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.

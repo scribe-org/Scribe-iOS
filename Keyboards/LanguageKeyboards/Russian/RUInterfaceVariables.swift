@@ -90,22 +90,21 @@ func getRUKeys() {
     rightKeyChars = ["х", "э", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    if(usingExpandedKeyboard)
-    {
-      letterKeys = RussianKeyboardConstants.letterKeysPadExpanded;
-      letterKeys = RussianKeyboardConstants.symbolKeysPadExpanded;
-    }
-    else
-    {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = RussianKeyboardConstants.letterKeysPadExpanded
+      letterKeys = RussianKeyboardConstants.symbolKeysPadExpanded
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
       letterKeys = RussianKeyboardConstants.letterKeysPad
       numberKeys = RussianKeyboardConstants.numberKeysPad
       symbolKeys = RussianKeyboardConstants.symbolKeysPad
+
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
-
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
-
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]
     // TODO: add "х" to rightKeyChar if the keyboard has 4 rows
