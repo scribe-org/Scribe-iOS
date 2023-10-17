@@ -14,6 +14,13 @@ public enum SpanishKeyboardConstants {
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
     ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
+  
+  static let letterKeysPhoneDisableAccents = [
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
+    ["123", "selectKeyboard", "space", "return"], // "undo"
+  ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
@@ -34,6 +41,14 @@ public enum SpanishKeyboardConstants {
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ", "return"],
+    ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
+  ]
+  
+  static let letterKeysPadDisableAccents = [
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
+    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
+    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
@@ -60,6 +75,14 @@ public enum SpanishKeyboardConstants {
     ["shift", "|", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
+  
+  static let letterKeysPadExpandedDisableAccents = [
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "'", "¿", "delete"],
+    ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "'", "+", "*"],
+    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "{", "}", "return"],
+    ["shift", "|", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+  ]
 
   static let symbolKeysPadExpanded = [
     ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
@@ -82,29 +105,48 @@ public enum SpanishKeyboardConstants {
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let dAlternateKeys = ["đ"]
   static let nAlternateKeys = ["ń"]
+  static let nAlternateKeysDisableAccents = ["ń","ñ"]
   static let sAlternateKeys = ["š"]
 }
 
 /// Gets the keys for the Spanish keyboard.
 func getESKeys() {
+  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  
   if DeviceType.isPhone {
-    letterKeys = SpanishKeyboardConstants.letterKeysPhone
+    if userDefaults.bool(forKey: "esAccentCharacters") {
+      letterKeys = SpanishKeyboardConstants.letterKeysPhoneDisableAccents
+    } else {
+      letterKeys = SpanishKeyboardConstants.letterKeysPhone
+    }
     numberKeys = SpanishKeyboardConstants.numberKeysPhone
     symbolKeys = SpanishKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
-    rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
+    if userDefaults.bool(forKey: "esAccentCharacters") {
+      rightKeyChars = ["p", "l", "0", "\"", "=", "·"]
+    } else {
+      rightKeyChars = ["p", "ñ", "0", "\"", "=", "·"]
+    }
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = SpanishKeyboardConstants.letterKeysPadExpanded
+      if userDefaults.bool(forKey: "esAccentCharacters") {
+        letterKeys = SpanishKeyboardConstants.letterKeysPadExpandedDisableAccents
+      } else {
+        letterKeys = SpanishKeyboardConstants.letterKeysPadExpanded
+      }
       symbolKeys = SpanishKeyboardConstants.symbolKeysPadExpanded
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = SpanishKeyboardConstants.letterKeysPad
+      if userDefaults.bool(forKey: "esAccentCharacters") {
+        letterKeys = SpanishKeyboardConstants.letterKeysPadDisableAccents
+      } else {
+        letterKeys = SpanishKeyboardConstants.letterKeysPad
+      }
       numberKeys = SpanishKeyboardConstants.numberKeysPad
       symbolKeys = SpanishKeyboardConstants.symbolKeysPad
 
@@ -130,7 +172,11 @@ func getESKeys() {
   sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
   dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
   cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
-  nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+  if userDefaults.bool(forKey: "esAccentCharacters") {
+    nAlternateKeys = SpanishKeyboardConstants.nAlternateKeysDisableAccents
+  } else {
+    nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+  }
 }
 
 /// Provides the Spanish keyboard layout.
