@@ -14,7 +14,7 @@ public enum GermanKeyboardConstants {
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
     ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
-  
+
   static let letterKeysPhoneDisableAccents = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -44,7 +44,7 @@ public enum GermanKeyboardConstants {
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
-  
+
   static let letterKeysPadDisableAccents = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
@@ -75,7 +75,7 @@ public enum GermanKeyboardConstants {
     ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
-  
+
   static let letterKeysPadExpandedDisableAccents = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
     ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "+", "*"],
@@ -116,7 +116,7 @@ public enum GermanKeyboardConstants {
 /// Gets the keys for the German keyboard.
 func getDEKeys() {
   let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-  
+
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "deAccentCharacters") {
       letterKeys = GermanKeyboardConstants.letterKeysPhoneDisableAccents
@@ -176,6 +176,7 @@ func getDEKeys() {
   zAlternateKeys = GermanKeyboardConstants.zAlternateKeys
   cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
   nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+
   if userDefaults.bool(forKey: "deAccentCharacters") {
     aAlternateKeys = GermanKeyboardConstants.aAlternateKeysDisableAccents
     oAlternateKeys = GermanKeyboardConstants.oAlternateKeysDisableAccents

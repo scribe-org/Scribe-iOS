@@ -14,7 +14,7 @@ public enum SwedishKeyboardConstants {
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
     ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
-  
+
   static let letterKeysPhoneDisableAccents = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -44,7 +44,7 @@ public enum SwedishKeyboardConstants {
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "?", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
-  
+
   static let letterKeysPadDisableAccents = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
@@ -75,7 +75,7 @@ public enum SwedishKeyboardConstants {
     ["shift", "<", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
-  
+
   static let letterKeysPadExpandedDisableAccents = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "'", "delete"],
     ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "*"],
@@ -104,7 +104,7 @@ public enum SwedishKeyboardConstants {
   static let eAlternateKeys = ["é", "ë", "è", "ê", "ẽ", "ē", "ę"]
   static let iAlternateKeys = ["ī", "î", "í", "ï", "ì", "ĩ"]
   static let oAlternateKeys = ["ō", "õ", "ô", "ò", "ó", "œ"]
-  static let oAlternateKeysDisableAccents = ["ō", "õ", "ô", "ò", "ó", "œ","ö","ø"]
+  static let oAlternateKeysDisableAccents = ["ō", "õ", "ô", "ò", "ó", "œ", "ö", "ø"]
   static let uAlternateKeys = ["û", "ú", "ü", "ù", "ũ", "ū"]
   static let äAlternateKeys = ["æ"]
   static let öAlternateKeys = ["ø"]
@@ -116,7 +116,7 @@ public enum SwedishKeyboardConstants {
 /// Gets the keys for the Swedish keyboard.
 func getSVKeys() {
   let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-  
+
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "svAccentCharacters") {
       letterKeys = SwedishKeyboardConstants.letterKeysPhoneDisableAccents
@@ -158,12 +158,20 @@ func getSVKeys() {
 
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
-    
+
     leftKeyChars = ["q", "a", "1", "@", "€"]
     // TODO: add "å" to rightKeyChar if the keyboard has 4 rows.
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
+
+  keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
+  eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
+  iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
+  uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
+  sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
+  cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
+  nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
 
   if userDefaults.bool(forKey: "svAccentCharacters") {
     keysWithAlternates = SwedishKeyboardConstants.keysWithAlernatesDisableAccents
@@ -178,13 +186,6 @@ func getSVKeys() {
     äAlternateKeys = SwedishKeyboardConstants.äAlternateKeys
     öAlternateKeys = SwedishKeyboardConstants.öAlternateKeys
   }
-  keysWithAlternatesLeft = SwedishKeyboardConstants.keysWithAlternatesLeft
-  eAlternateKeys = SwedishKeyboardConstants.eAlternateKeys
-  iAlternateKeys = SwedishKeyboardConstants.iAlternateKeys
-  uAlternateKeys = SwedishKeyboardConstants.uAlternateKeys
-  sAlternateKeys = SwedishKeyboardConstants.sAlternateKeys
-  cAlternateKeys = SwedishKeyboardConstants.cAlternateKeys
-  nAlternateKeys = SwedishKeyboardConstants.nAlternateKeys
 }
 
 /// Provides the Swedish keyboard layout.

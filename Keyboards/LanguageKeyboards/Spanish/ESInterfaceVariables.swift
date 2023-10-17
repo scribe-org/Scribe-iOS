@@ -14,7 +14,7 @@ public enum SpanishKeyboardConstants {
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
     ["123", "selectKeyboard", "space", "return"], // "undo"
   ]
-  
+
   static let letterKeysPhoneDisableAccents = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -44,7 +44,7 @@ public enum SpanishKeyboardConstants {
     ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
   ]
-  
+
   static let letterKeysPadDisableAccents = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
@@ -75,7 +75,7 @@ public enum SpanishKeyboardConstants {
     ["shift", "|", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
-  
+
   static let letterKeysPadExpandedDisableAccents = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "'", "¿", "delete"],
     ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "'", "+", "*"],
@@ -105,14 +105,14 @@ public enum SpanishKeyboardConstants {
   static let cAlternateKeys = ["ç", "ć", "č"]
   static let dAlternateKeys = ["đ"]
   static let nAlternateKeys = ["ń"]
-  static let nAlternateKeysDisableAccents = ["ń","ñ"]
+  static let nAlternateKeysDisableAccents = ["ń", "ñ"]
   static let sAlternateKeys = ["š"]
 }
 
 /// Gets the keys for the Spanish keyboard.
 func getESKeys() {
   let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-  
+
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "esAccentCharacters") {
       letterKeys = SpanishKeyboardConstants.letterKeysPhoneDisableAccents
@@ -172,6 +172,7 @@ func getESKeys() {
   sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
   dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
   cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
+
   if userDefaults.bool(forKey: "esAccentCharacters") {
     nAlternateKeys = SpanishKeyboardConstants.nAlternateKeysDisableAccents
   } else {
