@@ -16,7 +16,7 @@ var keyboard = [[String]]()
 var usingExpandedKeyboard = false
 var allKeys = [String]()
 let specialKeys = [
-  "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard",
+  SpecialKeys.indent, SpecialKeys.capsLock, "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard",
 ]
 var allNonSpecialKeys = [String]()
 var keyboardHeight: CGFloat!
@@ -51,11 +51,17 @@ enum KeyboardState {
 /// What the keyboard state is in regards to the shift key.
 /// - normal: not capitalized
 /// - shift: capitalized
-/// - caps: caps-lock
 enum ShiftButtonState {
   case normal
   case shift
-  case caps
+}
+
+/// What the keyboard state is in regards to the all caps key.
+/// - normal: not capitalized
+/// - locked: caps-lock
+enum CapsLockButtonState {
+  case normal
+  case locked
 }
 
 /// States of the keyboard corresponding to which commands the user is executing.
@@ -89,6 +95,7 @@ enum ConjViewShiftButtonsState {
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
+var capsLockButtonState: CapsLockButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive

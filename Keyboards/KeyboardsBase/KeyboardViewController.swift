@@ -406,7 +406,9 @@ class KeyboardViewController: UIInputViewController {
           var i = 0
           if completionOptions.count <= 3 {
             while i < completionOptions.count {
-              if shiftButtonState == .caps {
+              if shiftButtonState == .shift {
+                completionWords[i] = completionOptions[i].capitalize()
+              } else if capsLockButtonState == .locked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -421,7 +423,9 @@ class KeyboardViewController: UIInputViewController {
             }
           } else {
             while i < 3 {
-              if shiftButtonState == .caps {
+              if shiftButtonState == .shift {
+                completionWords[i] = completionOptions[i].capitalize()
+              } else if capsLockButtonState == .locked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -472,7 +476,7 @@ class KeyboardViewController: UIInputViewController {
       }
       if shiftButtonState == .shift {
         completionWords.append(suggestion.capitalize())
-      } else if shiftButtonState == .caps {
+      } else if capsLockButtonState == .locked {
         completionWords.append(suggestion.uppercased())
       } else {
         completionWords.append(suggestion)
@@ -492,7 +496,7 @@ class KeyboardViewController: UIInputViewController {
     while i < 3 {
       if shiftButtonState == .shift {
         completionWords.append(baseAutosuggestions[i].capitalize())
-      } else if shiftButtonState == .caps {
+      } else if capsLockButtonState == .locked {
         completionWords.append(baseAutosuggestions[i].uppercased())
       } else {
         completionWords.append(baseAutosuggestions[i])
@@ -547,7 +551,7 @@ class KeyboardViewController: UIInputViewController {
         while i < 3 {
           if shiftButtonState == .shift {
             completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
-          } else if shiftButtonState == .caps {
+          } else if capsLockButtonState == .locked {
             completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
             let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
@@ -574,7 +578,7 @@ class KeyboardViewController: UIInputViewController {
         while i < 3 {
           if shiftButtonState == .shift {
             completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
-          } else if shiftButtonState == .caps {
+          } else if capsLockButtonState == .locked {
             completionWords.append(suggestionsCapitalizedPrefix[i].uppercased())
           } else {
             completionWords.append(suggestionsCapitalizedPrefix[i])
@@ -1875,6 +1879,14 @@ class KeyboardViewController: UIInputViewController {
             styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
           }
 
+          if key == SpecialKeys.indent {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.forward.to.line")
+          }
+
+          if key == SpecialKeys.capsLock {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "capslock")
+          }
+
           if key == "shift" {
             styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
           }
@@ -1925,6 +1937,10 @@ class KeyboardViewController: UIInputViewController {
 
           // Set the width of the key given device and the given key.
           btn.adjustKeyWidth()
+
+          // Update the button style
+          btn.adjustButtonStyle()
+
           if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
             // Override background color from adjustKeyWidth for "search" blue for web searches.
             styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
@@ -2482,7 +2498,14 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "shift":
-      shiftButtonState = shiftButtonState == .normal ? .shift : .normal
+      if capsLockButtonState == .locked {
+        // Return capitalization to default
+        capsLockButtonState = .normal
+        shiftButtonState = .normal
+      } else {
+        shiftButtonState = shiftButtonState == .normal ? .shift : .normal
+      }
+
       loadKeys()
       capsLockPossible = true
 
@@ -2495,6 +2518,12 @@ class KeyboardViewController: UIInputViewController {
     case "ABC", "АБВ":
       changeKeyboardToLetterKeys()
       autoCapAtStartOfProxy()
+
+    case SpecialKeys.capsLock:
+      switchToFullCaps()
+
+    case SpecialKeys.indent:
+      proxy.insertText("\t")
 
     case "selectKeyboard":
       advanceToNextInputMode()
@@ -2612,9 +2641,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Caps lock given two taps of shift.
     if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible {
-      shiftButtonState = .caps
-      loadKeys()
-      conditionallySetAutoActionBtns()
+      switchToFullCaps()
     }
 
     // To make sure that the user can still use the double space period shortcut after numbers and symbols.
@@ -2655,6 +2682,15 @@ class KeyboardViewController: UIInputViewController {
       // Show auto actions if the keyboard states dictate.
       conditionallySetAutoActionBtns()
     }
+  }
+
+  private func switchToFullCaps() {
+    // Return SHIFT button to normal state as the ALLCAPS button will be enabled
+    shiftButtonState = .normal
+    capsLockButtonState = capsLockButtonState == .normal ? .locked : .normal
+
+    loadKeys()
+    conditionallySetAutoActionBtns()
   }
 
   /// Defines the criteria under which delete is long pressed.
