@@ -55,8 +55,8 @@ class InstallationVC: UIViewController {
   // Lock the device into portrait mode to avoid resizing issues.
   var orientations = UIInterfaceOrientationMask.portrait
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    get { return self.orientations }
-    set { self.orientations = newValue }
+    get { return orientations }
+    set { orientations = newValue }
   }
 
   /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.

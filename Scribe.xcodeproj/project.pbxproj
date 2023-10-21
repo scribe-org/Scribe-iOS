@@ -837,13 +837,6 @@
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
-		146B70962A64122D00710BD4 /* German.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = German.entitlements; path = ../../../.Trash/German.entitlements; sourceTree = "<group>"; };
-		146B70972A64123700710BD4 /* French.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = French.entitlements; path = ../../../.Trash/French.entitlements; sourceTree = "<group>"; };
-		146B70982A6412F700710BD4 /* Italian.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Italian.entitlements; path = ../../../.Trash/Italian.entitlements; sourceTree = "<group>"; };
-		146B70992A64130300710BD4 /* Portuguese.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Portuguese.entitlements; path = ../../../.Trash/Portuguese.entitlements; sourceTree = "<group>"; };
-		146B709A2A64130E00710BD4 /* Russian.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Russian.entitlements; path = ../../../.Trash/Russian.entitlements; sourceTree = "<group>"; };
-		146B709B2A64131D00710BD4 /* Spanish.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Spanish.entitlements; path = ../../../.Trash/Spanish.entitlements; sourceTree = "<group>"; };
-		146B709C2A64132600710BD4 /* Swedish.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Swedish.entitlements; path = ../../../.Trash/Swedish.entitlements; sourceTree = "<group>"; };
 		147797AA2A2CD2F70044A53E /* ParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		147797AB2A2CD2F70044A53E /* ParentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
@@ -961,6 +954,13 @@
 		D1CDED7E2A85A05C00098546 /* HECommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HECommandVariables.swift; sourceTree = "<group>"; };
 		D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInterfaceVariables.swift; sourceTree = "<group>"; };
 		D1CDED822A85A12C00098546 /* NBCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBCommandVariables.swift; sourceTree = "<group>"; };
+		D1D8B2372AE4084D0070B817 /* Swedish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swedish.entitlements; sourceTree = "<group>"; };
+		D1D8B2382AE408620070B817 /* Spanish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spanish.entitlements; sourceTree = "<group>"; };
+		D1D8B2392AE408720070B817 /* Russian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Russian.entitlements; sourceTree = "<group>"; };
+		D1D8B23A2AE408850070B817 /* Portuguese.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Portuguese.entitlements; sourceTree = "<group>"; };
+		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
+		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
+		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1165,13 +1165,6 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
-				146B70962A64122D00710BD4 /* German.entitlements */,
-				146B70972A64123700710BD4 /* French.entitlements */,
-				146B70982A6412F700710BD4 /* Italian.entitlements */,
-				146B70992A64130300710BD4 /* Portuguese.entitlements */,
-				146B709A2A64130E00710BD4 /* Russian.entitlements */,
-				146B709B2A64131D00710BD4 /* Spanish.entitlements */,
-				146B709C2A64132600710BD4 /* Swedish.entitlements */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
@@ -1229,6 +1222,7 @@
 		38BD214D22D592CA00C6795D /* German */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B23C2AE408AC0070B817 /* German.entitlements */,
 				D17193FF27AECCD10038660B /* DECommandVariables.swift */,
 				D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */,
 				38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */,
@@ -1251,6 +1245,7 @@
 		D109A20C275B6888005E2271 /* French */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B23D2AE408C50070B817 /* French.entitlements */,
 				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */,
 				D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */,
@@ -1264,6 +1259,7 @@
 		D109A21B275B68B3005E2271 /* Portuguese */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B23A2AE408850070B817 /* Portuguese.entitlements */,
 				D171940727AECCE50038660B /* PTCommandVariables.swift */,
 				D17193D727AECA450038660B /* PTInterfaceVariables.swift */,
 				D109A21C275B68B3005E2271 /* PTKeyboardViewController.swift */,
@@ -1285,6 +1281,7 @@
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B2382AE408620070B817 /* Spanish.entitlements */,
 				D171941727AECD070038660B /* ESCommandVariables.swift */,
 				D17193E727AECAE60038660B /* ESInterfaceVariables.swift */,
 				D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */,
@@ -1297,6 +1294,7 @@
 		D1671A61275A1E8700A7C118 /* Russian */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B2392AE408720070B817 /* Russian.entitlements */,
 				D171940F27AECCF50038660B /* RUCommandVariables.swift */,
 				D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */,
 				D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */,
@@ -1323,6 +1321,7 @@
 		D18EA89A2760D4A6001E1358 /* Swedish */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B2372AE4084D0070B817 /* Swedish.entitlements */,
 				D171941F27AECD170038660B /* SVCommandVariables.swift */,
 				D17193EF27AECB350038660B /* SVInterfaceVariables.swift */,
 				D18EA89B2760D4A6001E1358 /* SVKeyboardViewController.swift */,
@@ -1427,6 +1426,7 @@
 		D1B81D2027BBB5320085FE5E /* Italian */ = {
 			isa = PBXGroup;
 			children = (
+				D1D8B23B2AE4089C0070B817 /* Italian.entitlements */,
 				D1B81D4927BBBA200085FE5E /* ITCommandVariables.swift */,
 				D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */,
 				D1B81D2127BBB5320085FE5E /* ITKeyboardViewController.swift */,
@@ -2942,7 +2942,7 @@
 		38BD215522D592CA00C6795D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = German.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/German/German.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2968,7 +2968,7 @@
 		38BD215622D592CA00C6795D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = German.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/German/German.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2994,7 +2994,7 @@
 		D109A213275B6888005E2271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = French.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/French/French.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3020,7 +3020,7 @@
 		D109A214275B6888005E2271 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = French.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/French/French.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3045,7 +3045,7 @@
 		D109A223275B68B3005E2271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Portuguese.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Portuguese/Portuguese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3071,7 +3071,7 @@
 		D109A224275B68B3005E2271 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Portuguese.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Portuguese/Portuguese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3097,7 +3097,7 @@
 		D160866E270B6D3C00134D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Spanish.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Spanish/Spanish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3123,7 +3123,7 @@
 		D160866F270B6D3C00134D48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Spanish.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Spanish/Spanish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3149,7 +3149,7 @@
 		D1671A69275A1E8700A7C118 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Russian.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Russian/Russian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3175,7 +3175,7 @@
 		D1671A6A275A1E8700A7C118 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Russian.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Russian/Russian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3201,7 +3201,7 @@
 		D18EA8A12760D4A6001E1358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Swedish.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Swedish/Swedish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3227,7 +3227,7 @@
 		D18EA8A22760D4A6001E1358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Swedish.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Swedish/Swedish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3453,7 +3453,7 @@
 		D1B81D2727BBB5320085FE5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Italian.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Italian/Italian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3479,7 +3479,7 @@
 		D1B81D2827BBB5320085FE5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Italian.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Italian/Italian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

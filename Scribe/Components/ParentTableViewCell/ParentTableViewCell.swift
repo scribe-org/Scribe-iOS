@@ -102,41 +102,53 @@ extension ParentTableViewCell: UITableViewDelegate {
       switch section.sectionState {
       case .github:
         openURLString(urlString: "https://github.com/scribe-org/Scribe-iOS", withEncoding: false)
+
       case .matrix:
         openURLString(urlString: "https://matrix.to/#/#scribe_community:matrix.org", withEncoding: true)
+
       case .wikimedia:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
           viewController.section = .wikimedia
         }
+
       case .shareScribe:
         showShareSheet()
+
       case .rateScribe:
         showRateScribeUI()
+
       case .bugReport:
         openURLString(urlString: "https://github.com/scribe-org/Scribe-iOS/issues", withEncoding: false)
+
       case .email:
         showEmailUI()
+
 //      case .appHints:
 //        // reset functionality
 //        print("Resets app hints")
+
       case .privacyPolicy:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
           viewController.section = .privacyPolicy
         }
+
       case .licenses:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
           viewController.section = .licenses
         }
+
       case .appLang: break
+
       case .specificLang:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
           viewController.configureTable(for: SettingsTableData.languageSettingsData, parentSection: section)
 
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
         }
+
       case .none: break
       }
     }
@@ -177,13 +189,13 @@ extension ParentTableViewCell: UITableViewDelegate {
     if MFMailComposeViewController.canSendMail() {
       let mailComposeViewController = MFMailComposeViewController()
       mailComposeViewController.mailComposeDelegate = self
-      mailComposeViewController.setToRecipients(["scribe.language@gmail.com"])
+      mailComposeViewController.setToRecipients(["team@scri.be"])
       mailComposeViewController.setSubject("Hey Scribe!")
 
       parentViewController?.present(mailComposeViewController, animated: true, completion: nil)
     } else {
       /// Show alert mentioning the email address
-      let alert = UIAlertController(title: "Send us an email?", message: "Reach out to us at scribe.language@gmail.com", preferredStyle: .alert)
+      let alert = UIAlertController(title: "Send us an email?", message: "Reach out to us at team@scri.be", preferredStyle: .alert)
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       parentViewController?.present(alert, animated: true)
     }
