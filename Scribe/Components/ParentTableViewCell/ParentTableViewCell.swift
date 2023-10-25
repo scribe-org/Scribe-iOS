@@ -133,6 +133,11 @@ extension ParentTableViewCell: UITableViewDelegate {
       case .appLang: break
       case .specificLang:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
+          let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]; //Languages where we can disable accent keys
+          if (accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil)
+          {
+            SettingsTableData.languageSettingsData[0].section.remove(at: 1) //If there are no accent keys we remove the option.
+          }
           viewController.configureTable(for: SettingsTableData.languageSettingsData, parentSection: section)
 
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
