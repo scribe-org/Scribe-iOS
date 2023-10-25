@@ -7,7 +7,7 @@ import UIKit
 class TableViewTemplateViewController: UIViewController {
   @IBOutlet var mainTable: UITableView!
 
-  var screenTitle: String = ""
+  var screenTitle: String = "" 
   var tableData: [ParentTableCellModel] = []
   var parentSection: Section?
 
