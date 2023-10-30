@@ -32,4 +32,4 @@ jobs:
               - The contributor's name and icon in remote commits should be the same as what appears in the PR
               - If there's a mismatch, the contributor needs to make sure that the [email they use for GitHub](https://github.com/settings/emails) matches what they have for `git config user.email` in their local Scribe-iOS repo
 
-            - [ ] The [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) has been updated with a description of the changes for the upcoming release (if necessary)
+            - [ ] The [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) has been updated with a description of the changes for the upcoming release and the corresponding issue (if necessary)
