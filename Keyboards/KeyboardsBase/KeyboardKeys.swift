@@ -285,7 +285,7 @@ class KeyboardKey: UIButton {
     }
   }
 
-  /// Adjusts the style of the button based on different states
+  /// Adjusts the style of the button based on different states.
   func adjustButtonStyle() {
     guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
 
@@ -308,7 +308,13 @@ class KeyboardKey: UIButton {
     case "shift":
       if shiftButtonState == .shift {
         backgroundColor = keyPressedColor
+
         styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
+      } else if DeviceType.isPhone && capsLockButtonState == .locked {
+        // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller
+        backgroundColor = keyPressedColor
+
+        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
       } else {
         backgroundColor = specialKeyColor
       }
@@ -317,6 +323,8 @@ class KeyboardKey: UIButton {
       if [.translate, .conjugate, .plural].contains(commandState) {
         // Color the return key depending on if it's being used as enter for commands.
         backgroundColor = commandKeyColor
+      } else {
+        backgroundColor = specialKeyColor
       }
 
     default:
