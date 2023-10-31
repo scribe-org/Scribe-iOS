@@ -261,9 +261,9 @@ class KeyboardKey: UIButton {
       widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
     } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
       if key == "return"
-          && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
-          && row == 1
-          && DeviceType.isPad
+        && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
+        && row == 1
+        && DeviceType.isPad
       {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
@@ -295,7 +295,6 @@ class KeyboardKey: UIButton {
 
     case SpecialKeys.capsLock:
       switch capsLockButtonState {
-
       case .normal:
         backgroundColor = specialKeyColor
         styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
@@ -311,7 +310,7 @@ class KeyboardKey: UIButton {
 
         styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
       } else if DeviceType.isPhone && capsLockButtonState == .locked {
-        // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller
+        // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller.
         backgroundColor = keyPressedColor
 
         styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")

@@ -1,9 +1,10 @@
 //
 //  Scribe
 //
+//  Constants for Scribe keyboard interfaces.
+//
 
-struct SpecialKeys {
-
+enum SpecialKeys {
   static let indent = "indent"
   static let capsLock = "capslock"
 }

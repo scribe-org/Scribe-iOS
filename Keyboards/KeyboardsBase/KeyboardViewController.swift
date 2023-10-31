@@ -1938,7 +1938,7 @@ class KeyboardViewController: UIInputViewController {
           // Set the width of the key given device and the given key.
           btn.adjustKeyWidth()
 
-          // Update the button style
+          // Update the button style.
           btn.adjustButtonStyle()
 
           if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
@@ -2066,7 +2066,7 @@ class KeyboardViewController: UIInputViewController {
     let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
 
     if letterKeysHaveCommaPeriod {
-      let spaceIndex = letterKeys[3].firstIndex(where: {$0 == "space"})
+      let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
       letterKeys[3].insert(",", at: spaceIndex!)
       letterKeys[3].insert(".", at: spaceIndex! + 2)
     }
@@ -2499,7 +2499,7 @@ class KeyboardViewController: UIInputViewController {
 
     case "shift":
       if capsLockButtonState == .locked {
-        // Return capitalization to default
+        // Return capitalization to default.
         capsLockButtonState = .normal
         shiftButtonState = .normal
       } else {
@@ -2685,7 +2685,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   private func switchToFullCaps() {
-    // Return SHIFT button to normal state as the ALLCAPS button will be enabled
+    // Return SHIFT button to normal state as the CAPSLOCK button will be enabled.
     shiftButtonState = .normal
     capsLockButtonState = capsLockButtonState == .normal ? .locked : .normal
 

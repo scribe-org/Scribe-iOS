@@ -238,7 +238,7 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
   guard let lastWordTyped = wordsTyped.secondToLast() else {
     return
   }
-  
+
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
     wordToCheck = lastWordTyped.lowercased()
   } else {
