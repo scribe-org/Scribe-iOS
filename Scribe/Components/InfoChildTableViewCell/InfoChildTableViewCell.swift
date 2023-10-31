@@ -52,9 +52,15 @@ class InfoChildTableViewCell: UITableViewCell {
     case .toggleCommaAndPeriod:
       let dictionaryKey = languageCode + "CommaAndPeriod"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
+    case .toggleAccentCharacters:
+      let dictionaryKey = languageCode + "AccentCharacters"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .none: break
     }
 
@@ -71,6 +77,16 @@ class InfoChildTableViewCell: UITableViewCell {
         /// Default value
         toggleSwitch.isOn = false
       }
+
+    case .toggleAccentCharacters:
+      let dictionaryKey = languageCode + "AccentCharacters"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        /// Default value
+        toggleSwitch.isOn = false
+      }
+
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
@@ -79,6 +95,7 @@ class InfoChildTableViewCell: UITableViewCell {
         /// Default value
         toggleSwitch.isOn = true
       }
+
     case .none: break
     }
   }

@@ -47,7 +47,7 @@ public enum FrenchQWERTYKeyboardConstants {
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"],
     ["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"], // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
@@ -56,7 +56,7 @@ public enum FrenchQWERTYKeyboardConstants {
     ["indent", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "ç", ":"],
     ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "è", "à", "return"],
     ["shift", "ù", "z", "x", "c", "v", "b", "n", "m", ",", ".", "é", "shift"],
-    ["selectKeyboard", ".?123", "microphone", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
@@ -64,7 +64,7 @@ public enum FrenchQWERTYKeyboardConstants {
     ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "~"],
     ["uppercase", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
     ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
-    ["selectKeyboard", "ABC", "microphone", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   // Alternate key vars.
@@ -94,15 +94,21 @@ func getFRQWERTYKeys() {
     rightKeyChars = ["p", "m", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
-    letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPad
-    numberKeys = FrenchQWERTYKeyboardConstants.numberKeysPad
-    symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPad
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPadExpanded
+      symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPadExpanded
 
-    // If the iPad is too small to have a numbers row.
-    letterKeys.removeFirst(1)
-    letterKeys[0].append("delete")
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
+      letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPad
+      numberKeys = FrenchQWERTYKeyboardConstants.numberKeysPad
+      symbolKeys = FrenchQWERTYKeyboardConstants.symbolKeysPad
 
-    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    }
 
     leftKeyChars = ["q", "a", "1", "@", "~"]
     rightKeyChars = []

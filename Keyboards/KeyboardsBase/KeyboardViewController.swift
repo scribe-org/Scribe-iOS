@@ -25,17 +25,25 @@ class KeyboardViewController: UIInputViewController {
     if DeviceType.isPhone {
       view.addConstraint(
         NSLayoutConstraint(
-          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 0
+          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
         )
       )
     } else if DeviceType.isPad {
       // Update the size of the numbers row to add it to the view.
-      // let numbersRowHeight = self.scribeKey.frame.height
-      view.addConstraint(
-        NSLayoutConstraint(
-          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: 0
+      if usingExpandedKeyboard {
+        let numbersRowHeight = scribeKey.frame.height
+        view.addConstraint(
+          NSLayoutConstraint(
+            item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: numbersRowHeight
+          )
         )
-      )
+      } else {
+        view.addConstraint(
+          NSLayoutConstraint(
+            item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
+          )
+        )
+      }
     }
   }
 
@@ -1544,6 +1552,15 @@ class KeyboardViewController: UIInputViewController {
       keyboardView.backgroundColor? = keyboardBgColor
       allNonSpecialKeys = allKeys.filter { !specialKeys.contains($0) }
 
+      // Check if the device has a home button and is large enough so we should use an expanded keyboard.
+      if DeviceType.isPad {
+        if UIScreen.main.bounds.width > 768 {
+          usingExpandedKeyboard = true
+        } else {
+          usingExpandedKeyboard = false
+        }
+      }
+
       linkShadowBlendElements()
       setAutoActionPartitions()
       conditionallyShowTopNumbersRow()
@@ -1620,7 +1637,7 @@ class KeyboardViewController: UIInputViewController {
       }
     } else {
       letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
-      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(numberKeys[0].count) * 0.9
+      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * 0.9
     }
 
     // Derive keyboard given current states and set widths.
@@ -1659,13 +1676,17 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if ![.selectVerbConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) { // normal keyboard view
-      for view in [stackView0, stackView1, stackView2, stackView3] {
+    if ![
+      .selectVerbConjugation, .selectCaseDeclension, .displayInformation
+    ].contains(commandState) { // normal keyboard view
+      for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
 
         // Set edge insets for stack views to provide vertical key spacing.
-        if view == stackView0 {
+        if view == stackViewNum {
+          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+        } else if view == stackView0 {
           view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
         } else if view == stackView1 {
           view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
@@ -1813,13 +1834,25 @@ class KeyboardViewController: UIInputViewController {
           }
 
           keyboardKeys.append(btn)
-          switch row {
-          case 0: stackView0.addArrangedSubview(btn)
-          case 1: stackView1.addArrangedSubview(btn)
-          case 2: stackView2.addArrangedSubview(btn)
-          case 3: stackView3.addArrangedSubview(btn)
-          default:
-            break
+          if !usingExpandedKeyboard {
+            switch row {
+            case 0: stackView0.addArrangedSubview(btn)
+            case 1: stackView1.addArrangedSubview(btn)
+            case 2: stackView2.addArrangedSubview(btn)
+            case 3: stackView3.addArrangedSubview(btn)
+            default:
+              break
+            }
+          } else {
+            switch row {
+            case 0: stackViewNum.addArrangedSubview(btn)
+            case 1: stackView0.addArrangedSubview(btn)
+            case 2: stackView1.addArrangedSubview(btn)
+            case 3: stackView2.addArrangedSubview(btn)
+            case 4: stackView3.addArrangedSubview(btn)
+            default:
+              break
+            }
           }
 
           // Special key styling.
@@ -1910,7 +1943,7 @@ class KeyboardViewController: UIInputViewController {
           } else {
             widthOfSpacing = (
               (UIScreen.main.bounds.width - 6.0)
-                - (CGFloat(numberKeys[0].count) * numSymKeyWidth)
+                - (CGFloat(usingExpandedKeyboard == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
             ) / (CGFloat(letterKeys[0].count)
               - 1.0
             )
@@ -1965,7 +1998,7 @@ class KeyboardViewController: UIInputViewController {
 
     } else {
       // Load conjugation view.
-      for view in [stackView0, stackView1, stackView2, stackView3] {
+      for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = false
       }
 
@@ -2017,9 +2050,9 @@ class KeyboardViewController: UIInputViewController {
     let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
 
     if letterKeysHaveCommaPeriod {
-      letterKeys[3] = ["123", "selectKeyboard", ",", "space", ".", "return"]
-    } else {
-      letterKeys[3] = ["123", "selectKeyboard", "space", "return"]
+      let spaceIndex = letterKeys[3].firstIndex(where: {$0 == "space"})
+      letterKeys[3].insert(",", at: spaceIndex!)
+      letterKeys[3].insert(".", at: spaceIndex! + 2)
     }
   }
 
@@ -2454,7 +2487,7 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     case "123", ".?123":
-      changeKeyboardToNumberKeys()
+      usingExpandedKeyboard == true ? changeKeyboardToSymbolKeys() : changeKeyboardToNumberKeys()
 
     case "#+=":
       changeKeyboardToSymbolKeys()

@@ -12,6 +12,7 @@ If you have questions or would like to communicate with the team, please [join u
 
 # **Contents**
 
+- [First steps as a contributor](#first-steps)
 - [Development environment](#dev-env)
   - [Note on debugging](#note-on-debugging)
 - [Issues and projects](#issues-projects)
@@ -24,6 +25,20 @@ If you have questions or would like to communicate with the team, please [join u
 - [Design](#design)
 
 <a id="dev-env"></a>
+
+## First steps as a contributor [`⇧`](#contents)
+
+Thank you for your interest in contributing to activist.org! We look forward to welcoming you to the community and working with you to build a global platform for political action :) The following are some suggested steps for people interested in joining our community:
+
+- Please join the [public Matrix chat](https://matrix.to/#/#activist_community:matrix.org) to connect with the community
+  - [Matrix](https://matrix.org/) is a network for secure, decentralized communication
+  - activist would suggest that you use the [Element](https://element.io/) client
+  - The [General](https://matrix.to/#/!uIGQUxlCnEzrPiRsRw:matrix.org?via=matrix.org&via=effektio.org&via=acter.global) and [Development](https://matrix.to/#/!CRgLpGeOBNwxYCtqmK:matrix.org?via=matrix.org&via=acter.global&via=chat.0x7cd.xyz) channels would be great places to start!
+  - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
+- Read through this contributing guide and the [style guide](https://github.com/activist-org/activist/blob/main/STYLEGUIDE.md) for all the information you need to contribute
+- Look into issues marked [`good first issue`](https://github.com/activist-org/activist/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and the [Projects board](https://github.com/orgs/activist-org/projects/1) to get a better understanding of what you can work on
+- Check out our [public designs on Figma](https://www.figma.com/file/I9McFfaLu1RiiWp5IP3YjE/activist_public_designs?type=design&node-id=10%3A18&mode=design&t=tdQyOtl5lU1n7oLN-1) to understand activist's goals and direction
+- Consider joining our [bi-weekly developers sync](https://etherpad.wikimedia.org/p/activist-dev-sync)!
 
 # Development environment [`⇧`](#contents)
 
@@ -139,7 +154,13 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    git checkout -b <topic-branch-name>
    ```
 
-4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Use Git's [interactive rebase](https://docs.github.com/en/github/getting-started-with-github/about-git-rebase) feature to tidy up your commits before making them public.
+4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+   
+   > [!NOTE]\
+   > The following are tools and methods to help you write good commit messages ✨
+   >
+   > - [commitlint](https://commitlint.io/) helps write [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+   > - Git's [interactive rebase](https://docs.github.com/en/github/getting-started-with-github/about-git-rebase) cleans up commits
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
@@ -153,7 +174,7 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    git push origin <topic-branch-name>
    ```
 
-7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
+7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description outlined in the pull request. A useful tool during this step is the [Commitlint](https://commitlint.io/) tool!
 
 Thank you in advance for your contributions!
 

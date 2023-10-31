@@ -13,6 +13,7 @@ var proxy: UITextDocumentProxy!
 
 // Variables for the keyboard and its appearance.
 var keyboard = [[String]]()
+var usingExpandedKeyboard = false
 var allKeys = [String]()
 let specialKeys = [
   "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard",
