@@ -65,7 +65,7 @@ class KeyboardKey: UIButton {
     } else {
       capsKey = key
     }
-    let keyToDisplay = shiftButtonState == .normal ? key : capsKey
+    let keyToDisplay = shiftButtonState == .shift || capsLockButtonState == .locked ? capsKey : key
     setTitleColor(keyCharColor, for: .normal)
     layer.setValue(key, forKey: "original")
     layer.setValue(keyToDisplay, forKey: "keyToDisplay")
@@ -256,18 +256,10 @@ class KeyboardKey: UIButton {
     if key == "ABC" || key == "АБВ" {
       layer.setValue(true, forKey: "isSpecial")
       widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-    } else if key == "delete"
-      || key == "#+="
-      || key == "shift"
-      || key == "selectKeyboard"
-    {
+    } else if ["delete", "#+=", "shift", "selectKeyboard", SpecialKeys.indent, SpecialKeys.capsLock].contains(key) {
       layer.setValue(true, forKey: "isSpecial")
       widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-    } else if key == "123"
-      || key == ".?123"
-      || key == "return"
-      || key == "hideKeyboard"
-    {
+    } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
       if key == "return"
         && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
         && row == 1
@@ -291,25 +283,53 @@ class KeyboardKey: UIButton {
     } else if DeviceType.isPad {
       adjustPadKeyWidth()
     }
+  }
 
+  /// Adjusts the style of the button based on different states.
+  func adjustButtonStyle() {
     guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
 
-    if key == "shift" {
-      // Switch the shift key icon given its state.
+    switch key {
+    case SpecialKeys.indent:
+      backgroundColor = specialKeyColor
+
+    case SpecialKeys.capsLock:
+      switch capsLockButtonState {
+      case .normal:
+        backgroundColor = specialKeyColor
+        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
+
+      case .locked:
+        backgroundColor = keyPressedColor
+        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
+      }
+
+    case "shift":
       if shiftButtonState == .shift {
         backgroundColor = keyPressedColor
+
         styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
-      } else if shiftButtonState == .caps {
+      } else if DeviceType.isPhone && capsLockButtonState == .locked {
+        // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller.
         backgroundColor = keyPressedColor
+
         styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
       } else {
         backgroundColor = specialKeyColor
       }
-    } else if key == "return" && [.translate, .conjugate, .plural].contains(commandState) {
-      // Color the return key depending on if it's being used as enter for commands.
-      backgroundColor = commandKeyColor
-    } else if isSpecial {
-      backgroundColor = specialKeyColor
+
+    case "return":
+      if [.translate, .conjugate, .plural].contains(commandState) {
+        // Color the return key depending on if it's being used as enter for commands.
+        backgroundColor = commandKeyColor
+      } else {
+        backgroundColor = specialKeyColor
+      }
+
+    default:
+      if isSpecial {
+        backgroundColor = specialKeyColor
+      }
     }
   }
 }

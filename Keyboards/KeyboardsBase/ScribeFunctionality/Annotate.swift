@@ -229,18 +229,23 @@ func selectedWordAnnotation(KVC: KeyboardViewController) {
 /// - Parameters
 ///   - KVC: the keyboard view controller.
 func typedWordAnnotation(KVC: KeyboardViewController) {
-  if proxy.documentContextBeforeInput?.count != 0 {
-    wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-    let lastWordTyped = wordsTyped.secondToLast()
-    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      wordToCheck = lastWordTyped!.lowercased()
-    } else {
-      wordToCheck = lastWordTyped!
-    }
-    wordAnnotation(wordToAnnotate: wordToCheck, KVC: KVC)
-  } else {
+  guard let documentContextBeforeInput = proxy.documentContextBeforeInput, !documentContextBeforeInput.isEmpty else {
     return
   }
+
+  wordsTyped = documentContextBeforeInput.components(separatedBy: " ")
+
+  guard let lastWordTyped = wordsTyped.secondToLast() else {
+    return
+  }
+
+  if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+    wordToCheck = lastWordTyped.lowercased()
+  } else {
+    wordToCheck = lastWordTyped
+  }
+
+  wordAnnotation(wordToAnnotate: wordToCheck, KVC: KVC)
 }
 
 /// Annotates nouns during autocomplete and autosuggest.
