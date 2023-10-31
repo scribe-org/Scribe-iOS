@@ -319,7 +319,7 @@ func setPhoneKeyPopCharSize(char: String) {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 1.15)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 1.15)
     }
-  } else if shiftButtonState == .shift || shiftButtonState == .caps {
+  } else if shiftButtonState == .shift || capsLockButtonState == .locked {
     if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.15)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.15)
@@ -351,7 +351,7 @@ func setPadKeyPopCharSize(char: String) {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
     }
-  } else if keyboardState == .letters, shiftButtonState == .shift || shiftButtonState == .caps {
+  } else if keyboardState == .letters, shiftButtonState == .shift || capsLockButtonState == .locked {
     if isLandscapeView {
       keyPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)
       keyHoldPopChar.font = .systemFont(ofSize: letterKeyWidth / 2.5)

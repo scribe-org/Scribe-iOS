@@ -40,7 +40,9 @@ var keysThatAreSlightlyLarger = [
   "chevron.right",
   "shift",
   "shift.fill",
+  "capslock",
   "capslock.fill",
+  "arrow.forward.to.line",
   "arrowtriangle.right.fill",
 ]
 

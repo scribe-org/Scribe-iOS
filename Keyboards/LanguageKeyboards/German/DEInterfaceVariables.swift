@@ -70,24 +70,24 @@ public enum GermanKeyboardConstants {
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
-    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "*"],
-    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
+    [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "*"],
+    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
     ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let letterKeysPadExpandedDisableAccents = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
-    ["indent", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "+", "*"],
-    ["uppercase", "a", "s", "d", "f", "g", "h", "j", "k", "l", "#", "return"],
+    [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "+", "*"],
+    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "#", "return"],
     ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    ["indent", "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "§"],
-    ["uppercase", "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
+    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "§"],
+    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
     ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
