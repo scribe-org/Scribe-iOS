@@ -21,7 +21,7 @@ struct SettingsTableData {
       hasDynamicData: .installedKeyboards
     ),
   ]
-  
+
   static var languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
       headingTitle: "Layout",
@@ -32,12 +32,12 @@ struct SettingsTableData {
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod)
         ),
-       Section(
+        Section(
           sectionTitle: "Disable accent characters",
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.toggleAccentCharacters)
-        )
+        ),
       ],
       hasDynamicData: nil
     ),
@@ -49,12 +49,12 @@ struct SettingsTableData {
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis)
-        )
+        ),
       ],
       hasDynamicData: nil
-    )
+    ),
   ]
-  
+
   static func getInstalledKeyboardsSections() -> [Section] {
     var installedKeyboards = [String]()
 
@@ -86,5 +86,3 @@ struct SettingsTableData {
     return sections
   }
 }
-
-

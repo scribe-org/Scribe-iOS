@@ -132,7 +132,6 @@ let languagesAbbrDict = [
   "Swedish": "sv",
 ]
 
-
 /// Returns the abbreviation of the language for use in commands.
 func getControllerLanguageAbbr() -> String {
   guard let abbreviation = languagesAbbrDict[controllerLanguage] else {
