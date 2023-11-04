@@ -322,11 +322,7 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - word: the word for which corresponding emojis should be shown for.
   func getEmojiAutoSuggestions(for word: String) {
-    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
-    let args = [word.lowercased()]
-    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
-    let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
-
+    let emojisToDisplay = LanguageDBManager.shared.queryEmojis(of: word)
     if emojisToDisplay[0] != "" {
       emojisToDisplayArray = [String]()
       currentEmojiTriggerWord = word.lowercased()
@@ -400,7 +396,7 @@ class KeyboardViewController: UIInputViewController {
         }
 
         // Get options for completion that start with the current prefix and are not just one letter.
-        let completionOptions = queryAutocompletions(word: currentPrefix)
+        let completionOptions = LanguageDBManager.shared.queryAutocompletions(word: currentPrefix)
 
         if completionOptions[0] != "" {
           var i = 0
@@ -461,12 +457,10 @@ class KeyboardViewController: UIInputViewController {
 
     completionWords = [String]()
     var i = 0
-    let query = "SELECT * FROM verbs WHERE verb = ?"
     while i < 3 {
       // Get conjugations of the preselected verbs.
-      let args = [verbsAfterPronounsArray[i]]
       let outputCols = [pronounAutosuggestionTenses[prefix.lowercased()]!]
-      var suggestion = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+      var suggestion = LanguageDBManager.shared.queryVerb(of: verbsAfterPronounsArray[i], with: outputCols)[0]
       if suggestion == "" {
         suggestion = verbsAfterPronounsArray[i]
       }
@@ -534,13 +528,9 @@ class KeyboardViewController: UIInputViewController {
     } else {
       // We have to consider these different cases as the key always has to match.
       // Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-      let query = "SELECT * FROM autosuggestions WHERE word = ?"
-      let argsLower = [prefix.lowercased()]
-      let argsCapitalize = [prefix.capitalized]
-      let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
-
-      let suggestionsLowerCasePrefix = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
-      let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
+    
+      let suggestionsLowerCasePrefix = LanguageDBManager.shared.queryAutosuggestions(of: prefix)
+      let suggestionsCapitalizedPrefix = LanguageDBManager.shared.queryAutosuggestions(of: prefix)
       if suggestionsLowerCasePrefix[0] != "" {
         completionWords = [String]()
         var i = 0
@@ -554,11 +544,7 @@ class KeyboardViewController: UIInputViewController {
           } else if capsLockButtonState == .locked {
             completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
-            let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
-            let nounGenderArgs = [suggestionsLowerCasePrefix[i]]
-            let outputCols = ["form"]
-
-            let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+            let nounForm = LanguageDBManager.shared.queryNounForm(of: suggestionsLowerCasePrefix[i])[0]
             hasNounForm = nounForm != ""
             if !hasNounForm {
               completionWords.append(suggestionsLowerCasePrefix[i].lowercased())
@@ -1453,10 +1439,8 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Populate conjugation view buttons.
-    let query = "SELECT * FROM verbs WHERE verb = ?"
-    let args = [verbToConjugate]
     let outputCols = allConjugations
-    let conjugationsToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
+    let conjugationsToDisplay = LanguageDBManager.shared.queryVerb(of: verbConjugated, with: outputCols)
     for index in 0 ..< allConjugations.count {
       if conjugationsToDisplay[index] == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
@@ -1573,43 +1557,19 @@ class KeyboardViewController: UIInputViewController {
       showKeyboardLanguage = true
 
       // Initialize the language database and create the autosuggestions lexicon.
-      languageDB = openDBQueue()
+      //languageDB = openDBQueue()
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
-      let addToAutocompleteLexiconQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
       requestSupplementaryLexicon { (userLexicon: UILexicon!) in
         for item in userLexicon.entries {
           if item.documentText.count > 1 {
-            writeDBRow(query: addToAutocompleteLexiconQuery, args: [item.documentText])
+            LanguageDBManager.shared.insertAutocompleteLexion(of: item.documentText)
           }
         }
       }
 
       // Drop non-unique values in case the lexicon has added words that were already present.
-      let dropNonUniqueAutosuggestionsQuery = """
-      DELETE FROM autocomplete_lexicon
-      WHERE rowid NOT IN (
-        SELECT
-          MIN(rowid)
-
-        FROM
-          autocomplete_lexicon
-
-        GROUP BY
-          word
-      )
-      """
-      do {
-        try languageDB.write { db in
-          try db.execute(sql: dropNonUniqueAutosuggestionsQuery)
-        }
-      } catch let error as DatabaseError {
-        let errorMessage = error.message
-        let errorSQL = error.sql
-        print(
-          "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
-        )
-      } catch {}
+      LanguageDBManager.shared.deleteNonUniqueAutosuggestions()
     }
 
     setKeyboard()
@@ -2356,11 +2316,7 @@ class KeyboardViewController: UIInputViewController {
           wordToCheck = lastWordTyped!
         }
       }
-      let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
-      let prepCaseArgs = [wordToCheck.lowercased()]
-      let outputCols = ["form"]
-
-      let prepForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+      let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck)[0]
       hasPrepForm = prepForm != ""
       if hasPrepForm {
         resetCaseDeclensionState()

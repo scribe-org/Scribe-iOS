@@ -189,12 +189,8 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   // Check to see if the input was uppercase to return an uppercase conjugation.
   let firstLetter = verbToConjugate.substring(toIdx: 1)
   inputWordIsCapitalized = firstLetter.isUppercase
-  verbToConjugate = verbToConjugate.lowercased()
 
-  let query = "SELECT * FROM verbs WHERE verb = ?"
-  let args = [verbToConjugate]
-  let outputCols = ["verb"]
-  let verbInTable = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+  let verbInTable = LanguageDBManager.shared.queryVerb(of: verbConjugated)[0]
 
   return verbToConjugate == verbInTable
 }
@@ -205,6 +201,7 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
 ///   - keyPressed: the button pressed as sender.
 ///   - requestedForm: the form that is triggered by the given key.
 func returnConjugation(keyPressed: UIButton, requestedForm: String) {
+  let outputCols = [requestedForm]
   if commandState == .selectCaseDeclension {
     returnDeclension(keyPressed: keyPressed)
     return
@@ -215,10 +212,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   if wordPressed == invalidCommandMsg {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
-    let query = "SELECT * FROM verbs WHERE verb = ?"
-    let args = [verbToConjugate]
-    let outputCols = [requestedForm]
-    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
@@ -232,10 +226,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
       proxy.insertText(wordToReturn + " ")
     }
   } else if formsDisplayDimensions == .view2x2 {
-    let query = "SELECT * FROM verbs WHERE verb = ?"
-    let args = [verbToConjugate]
-    let outputCols = [requestedForm]
-    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {

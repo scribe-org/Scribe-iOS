@@ -22,12 +22,8 @@ func queryTranslation(commandBar: UILabel) {
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase
-  wordToTranslate = wordToTranslate.lowercased()
 
-  let query = "SELECT * FROM translations WHERE word = ?"
-  let args = [wordToTranslate]
-  let outputCols = ["translation"]
-  wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+  wordToReturn = LanguageDBManager.shared.queryTranslation(of: wordToTranslate)[0]
 
   if wordToReturn != "" {
     if inputWordIsCapitalized {

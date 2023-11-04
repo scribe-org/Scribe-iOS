@@ -24,13 +24,9 @@ func queryPlural(commandBar: UILabel) {
   inputWordIsCapitalized = false
   if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
     inputWordIsCapitalized = noun.substring(toIdx: 1).isUppercase
-    noun = noun.lowercased()
   }
 
-  let query = "SELECT * FROM nouns WHERE noun = ?"
-  let args = [noun]
-  let outputCols = ["plural"]
-  wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+  wordToReturn = LanguageDBManager.shared.queryNounPlural(of: noun)[0]
 
   if wordToReturn != "" {
     if wordToReturn != "isPlural" {
