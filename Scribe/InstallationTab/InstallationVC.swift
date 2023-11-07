@@ -245,25 +245,3 @@ class InstallationVC: UIViewController {
     }
   }
 }
-
-extension InstallationVC: UITableViewDataSource {
-  func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    return tableData.count
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
-
-    cell.configureCell(for: tableData[indexPath.row])
-
-    cell.backgroundColor = .clear
-    cell.selectionStyle = .none
-
-    return cell
-  }
-}
-
-// MARK: UITableViewDelegate
-
-/// Function implementation conforming to the UITableViewDelegate protocol.
-extension InstallationVC: UITableViewDelegate {}
