@@ -144,26 +144,29 @@ extension ParentTableViewCell: UITableViewDelegate {
 
       case .specificLang:
         if let viewController = parentViewController?.storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
+          // Copy base settings
+          var data = SettingsTableData.languageSettingsData
+
           // Languages where we can disable accent keys.
           let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
           let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
             s in s.sectionTitle.elementsEqual("Disable accent characters")
           }) ?? -1
-          if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1
-          {
+
+          if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
             // As there are no accent keys we can remove the `Disable accent characters` option.
-            let accentKeySettings = SettingsTableData.languageSettingsData[0].section.remove(at: accentKeyOptionIndex)
+            let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
             print(accentKeySettings)
-          } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1
-          {
-            SettingsTableData.languageSettingsData[0].section.insert(Section(
+          } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
+            data[0].section.insert(Section(
               sectionTitle: "Disable accent characters",
               imageString: "info.circle",
               hasToggle: true,
               sectionState: .none(.toggleAccentCharacters)
             ), at: 1)
           }
-          viewController.configureTable(for: SettingsTableData.languageSettingsData, parentSection: section)
+
+          viewController.configureTable(for: data, parentSection: section)
 
           parentViewController?.navigationController?.pushViewController(viewController, animated: true)
         }
