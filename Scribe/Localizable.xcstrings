@@ -1,0 +1,124 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "settings.appLanguage" : {
+      "comment" : "The title of the app language section",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App language"
+          }
+        }
+      }
+    },
+    "settings.appLanguage.system" : {
+      "comment" : "Use the system language",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System language"
+          }
+        }
+      }
+    },
+    "settings.functionality" : {
+      "comment" : "The title of the functionality section",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Functionality"
+          }
+        }
+      }
+    },
+    "settings.functionality.autoSuggestEmoji" : {
+      "comment" : "Toggles the suggestion of Emoji",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autosuggest emojis"
+          }
+        }
+      }
+    },
+    "settings.installedKeyboards" : {
+      "comment" : "The title of the installed keyboards section",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select installed keyboard"
+          }
+        }
+      }
+    },
+    "settings.layout" : {
+      "comment" : "The title of the layout section",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout"
+          }
+        }
+      }
+    },
+    "settings.layout.autoSuggestEmoji.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on emoji suggestions and completions for more expressive typing."
+          }
+        }
+      }
+    },
+    "settings.layout.disableAccentCharacters" : {
+      "comment" : "Toggles accented characters for the selected keyboard",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disable accent characters"
+          }
+        }
+      }
+    },
+    "settings.layout.disableAccentCharacters.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Include accented letter keys on the primary keyboard layout."
+          }
+        }
+      }
+    },
+    "settings.layout.periodAndComma" : {
+      "comment" : "Toggles period and commas for the selected keyboard",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Period and comma on ABC"
+          }
+        }
+      }
+    },
+    "settings.layout.periodAndComma.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Include comma and period keys on the main keyboard for convenient typing."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

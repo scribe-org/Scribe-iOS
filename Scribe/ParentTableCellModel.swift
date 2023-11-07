@@ -12,10 +12,20 @@ struct ParentTableCellModel {
 }
 
 struct Section {
+
   let sectionTitle: String
   let imageString: String
   let hasToggle: Bool
   let sectionState: SectionState
+  let shortDescription: String?
+
+  init(sectionTitle: String, imageString: String, hasToggle: Bool, sectionState: SectionState, shortDescription: String? = nil) {
+    self.sectionTitle = sectionTitle
+    self.imageString = imageString
+    self.hasToggle = hasToggle
+    self.sectionState = sectionState
+    self.shortDescription = shortDescription
+  }
 }
 
 enum SectionState: Equatable {
@@ -26,8 +36,8 @@ enum SectionState: Equatable {
   case rateScribe
   case bugReport
   case email
-  case downloadData
-  case checkData
+  // case downloadData
+  // case checkData
 //    case appHints
   case privacyPolicy
   case licenses
