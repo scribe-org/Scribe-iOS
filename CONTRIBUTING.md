@@ -28,17 +28,17 @@ If you have questions or would like to communicate with the team, please [join u
 
 ## First steps as a contributor [`⇧`](#contents)
 
-Thank you for your interest in contributing to activist.org! We look forward to welcoming you to the community and working with you to build a global platform for political action :) The following are some suggested steps for people interested in joining our community:
+Thank you for your interest in contributing to Scribe IOS! We look forward to welcoming you to the community and working with you to build an evolving keyboard for helping with translation and intuitive typeing :) The following are some suggested steps for people interested in joining our community:
 
-- Please join the [public Matrix chat](https://matrix.to/#/#activist_community:matrix.org) to connect with the community
+- Please join the [public Matrix chat](https://matrix.to/#/#scribe_community:matrix.org) to connect with the community
   - [Matrix](https://matrix.org/) is a network for secure, decentralized communication
-  - activist would suggest that you use the [Element](https://element.io/) client
-  - The [General](https://matrix.to/#/!uIGQUxlCnEzrPiRsRw:matrix.org?via=matrix.org&via=effektio.org&via=acter.global) and [Development](https://matrix.to/#/!CRgLpGeOBNwxYCtqmK:matrix.org?via=matrix.org&via=acter.global&via=chat.0x7cd.xyz) channels would be great places to start!
+  - Scribe would suggest that you use the [Element](https://element.io/) client
+  - The [General](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) and [IOS](https://matrix.to/#/#ScribeiOS:matrix.org) channels would be great places to start!
   - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
-- Read through this contributing guide and the [style guide](https://github.com/activist-org/activist/blob/main/STYLEGUIDE.md) for all the information you need to contribute
-- Look into issues marked [`good first issue`](https://github.com/activist-org/activist/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and the [Projects board](https://github.com/orgs/activist-org/projects/1) to get a better understanding of what you can work on
-- Check out our [public designs on Figma](https://www.figma.com/file/I9McFfaLu1RiiWp5IP3YjE/activist_public_designs?type=design&node-id=10%3A18&mode=design&t=tdQyOtl5lU1n7oLN-1) to understand activist's goals and direction
-- Consider joining our [bi-weekly developers sync](https://etherpad.wikimedia.org/p/activist-dev-sync)!
+- Read through this contributing guide and the [style guide] (WORK IN PROGRESS) for all the information you need to contribute
+- Look into issues marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and the [Projects board](https://github.com/orgs/scribe-org/projects/1) to get a better understanding of what you can work on
+- Check out our [public designs on Figma](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?type=design&node-id=405-464&mode=design&t=E3ccS9Z8MDVSizQ4-0) to understand Scribes's goals and direction
+- Consider joining our [deveoper meetings on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org)!
 
 # Development environment [`⇧`](#contents)
 
@@ -155,7 +155,7 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    ```
 
 4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
-   
+
    > [!NOTE]\
    > The following are tools and methods to help you write good commit messages ✨
    >
