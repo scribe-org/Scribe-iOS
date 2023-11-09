@@ -49,10 +49,10 @@ struct SettingsTableData {
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis)
-        )
+        ),
       ],
       hasDynamicData: nil
-    )
+    ),
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {
