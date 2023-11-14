@@ -118,6 +118,28 @@
           }
         }
       }
+    },
+    "settings.title" : {
+      "comment" : "The title for the settings screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "settings.title.backButton" : {
+      "comment" : "The back button's title for the settings screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
