@@ -29,7 +29,6 @@ struct SettingsTableData {
       section: [
         Section(
           sectionTitle: NSLocalizedString("settings.layout.periodAndComma", comment: "Toggles period and commas for the selected keyboard"),
-          imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod),
           shortDescription: NSLocalizedString("settings.layout.periodAndComma.description", comment: "")
@@ -49,14 +48,13 @@ struct SettingsTableData {
       section: [
         Section(
           sectionTitle: NSLocalizedString("settings.functionality.autoSuggestEmoji", comment: "Toggles the suggestion of Emoji"),
-          imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
           shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", comment: "")
         ),
       ],
       hasDynamicData: nil
-    ),
+    )
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {

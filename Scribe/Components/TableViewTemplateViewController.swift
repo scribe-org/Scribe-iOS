@@ -4,7 +4,7 @@
 
 import UIKit
 
-class TableViewTemplateViewController: UIViewController {
+final class TableViewTemplateViewController: UIViewController {
   @IBOutlet var mainTable: UITableView!
 
   var screenTitle: String = ""
@@ -24,8 +24,6 @@ class TableViewTemplateViewController: UIViewController {
   func configureTable(for tableData: [ParentTableCellModel], parentSection: Section) {
     self.tableData = tableData
     self.parentSection = parentSection
-
-    print("break")
   }
 
   override func viewDidLoad() {
@@ -33,36 +31,61 @@ class TableViewTemplateViewController: UIViewController {
 
     title = parentSection?.sectionTitle ?? "Unknown"
 
-    let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
-    mainTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")
-
+    mainTable.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoChildTableViewCell")
     mainTable.dataSource = self
     mainTable.delegate = self
-
+    mainTable.rowHeight = UITableView.automaticDimension
+    mainTable.sectionHeaderHeight = 32
+    mainTable.estimatedRowHeight = 250
     mainTable.separatorStyle = .none
     mainTable.backgroundColor = .clear
   }
 }
 
+// MARK: - UITableViewDataSource
+
 extension TableViewTemplateViewController: UITableViewDataSource {
-  func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    return tableData.count
+
+  func numberOfSections(in tableView: UITableView) -> Int {
+    tableData.count
+  }
+
+  func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+    tableData[section].section.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "InfoChildTableViewCell", for: indexPath) as! InfoChildTableViewCell
 
     if let parentSection = parentSection {
       cell.parentSection = parentSection
     }
 
-    cell.configureCell(for: tableData[indexPath.row])
-
-    cell.backgroundColor = .clear
-    cell.selectionStyle = .none
+    cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
 
     return cell
   }
 }
 
-extension TableViewTemplateViewController: UITableViewDelegate {}
+// MARK: - UITableViewDelegate
+
+extension TableViewTemplateViewController: UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let headerView: UIView
+
+    if let reusableHeaderView = tableView.headerView(forSection: section) {
+      headerView = reusableHeaderView
+    } else {
+      headerView = UIView(frame: CGRect(x: 0, y: 0, width: mainTable.bounds.width, height: 32))
+    }
+
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: 32))
+    label.text = tableData[section].headingTitle
+    label.font = UIFont.preferredFont(forTextStyle: .headline)
+    label.textColor = .black
+    headerView.addSubview(label)
+
+    return headerView
+  }
+}

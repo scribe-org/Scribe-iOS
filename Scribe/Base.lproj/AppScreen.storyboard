@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,36 +11,24 @@
     </dependencies>
     <scenes>
         <!--About View Controller-->
-        <scene sceneID="uP7-m3-hJz">
+        <scene sceneID="wu0-fh-eQH">
             <objects>
-                <viewController storyboardIdentifier="AboutScreen" id="zit-w5-BnV" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bI1-au-Dfh">
+                <tableViewController id="4qA-Bq-SU4" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="6fu-7Z-I4m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1zu-X4-Qkc">
-                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jmm-1G-rGX"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
-                        <constraints>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="bottom" secondItem="jmm-1G-rGX" secondAttribute="bottom" id="CPq-V8-hSe"/>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="top" secondItem="jmm-1G-rGX" secondAttribute="top" constant="8" id="P2k-i0-6Ek"/>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="trailing" secondItem="jmm-1G-rGX" secondAttribute="trailing" id="iAb-5d-74H"/>
-                            <constraint firstItem="1zu-X4-Qkc" firstAttribute="leading" secondItem="jmm-1G-rGX" secondAttribute="leading" id="poY-yf-vBp"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="OC5-M8-saf"/>
-                    <connections>
-                        <outlet property="outerTable" destination="1zu-X4-Qkc" id="HDp-2I-gO5"/>
-                        <segue destination="Ous-Ne-edI" kind="show" identifier="infoScreenSegue" id="Dpt-qo-oVP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lyp-Wj-LTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="4qA-Bq-SU4" id="kbz-xC-5xC"/>
+                            <outlet property="delegate" destination="4qA-Bq-SU4" id="cG0-24-ISc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="S38-5i-wqH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZB-x0-ZvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-888.79999999999995" y="640.64039408866995"/>
+            <point key="canvasLocation" x="-889" y="641"/>
         </scene>
         <!--Information ScreenVC-->
         <scene sceneID="ByU-In-aKw">
@@ -51,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKP-ZG-fIn">
-                                <rect key="frame" x="0.0" y="146" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-tJ-4qs">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="320.33333333333331"/>
@@ -171,11 +159,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
                                 <rect key="frame" x="0.0" y="102" width="375" height="627"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="2AI-Eq-Aoc" userLabel="footerContainer">
-                                    <rect key="frame" x="0.0" y="121.66666793823242" width="375" height="130"/>
+                                    <rect key="frame" x="0.0" y="99.666667938232422" width="375" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-l8-ZuO">
@@ -208,10 +195,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dummyCell" id="O9h-lq-niX">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="20" y="38" width="335" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9h-lq-niX" id="78r-CS-l4A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -247,9 +234,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="obq-rY-JVB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="obq-rY-JVB">
                                 <rect key="frame" x="0.0" y="154" width="375" height="575"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SyY-44-GGu"/>
@@ -420,7 +406,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zit-w5-BnV" kind="relationship" relationship="rootViewController" id="uQQ-5Y-Kpt"/>
+                        <segue destination="4qA-Bq-SU4" kind="relationship" relationship="rootViewController" id="btg-Dr-Cul"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7S-YE-Xji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,13 +458,13 @@
             <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

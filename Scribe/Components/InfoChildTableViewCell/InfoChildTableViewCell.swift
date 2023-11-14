@@ -4,10 +4,18 @@
 
 import UIKit
 
-class InfoChildTableViewCell: UITableViewCell {
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
+final class InfoChildTableViewCell: UITableViewCell {
 
+  // MARK: - Constants
+
+  static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
+
+  // MARK: - Properties
+
+  @IBOutlet var containerView: UIView!
+  @IBOutlet var titleLabel: UILabel!
+  @IBOutlet var descriptionLabel: UILabel!
+  @IBOutlet var iconImageView: UIImageView!
   @IBOutlet var chevronImgView: UIImageView!
   @IBOutlet var toggleSwitch: UISwitch!
 
@@ -29,16 +37,42 @@ class InfoChildTableViewCell: UITableViewCell {
 
     return action
   }
+  
+  // MARK: - Functions
 
   func configureCell(for section: Section) {
     self.section = section
+
+    selectionStyle = .none
+
     titleLabel.text = section.sectionTitle
-    iconImageView.image = UIImage.availableIconImage(with: section.imageString)
+
+    if let icon = section.imageString {
+      iconImageView.image = UIImage.availableIconImage(with: icon)
+
+      containerView.addSubview(iconImageView)
+
+    } else {
+      iconImageView.image = nil
+
+      iconImageView.removeFromSuperview()
+    }
+
+    if let shortDescription = section.shortDescription {
+      descriptionLabel.text = shortDescription
+
+      containerView.addSubview(descriptionLabel)
+    } else {
+      descriptionLabel.text = nil
+      descriptionLabel.removeFromSuperview()
+    }
 
     if !section.hasToggle {
+      accessoryType = .disclosureIndicator
       toggleSwitch.isHidden = true
     } else {
-      chevronImgView.isHidden = true
+      accessoryType = .none
+//      chevronImgView.isHidden = true
     }
 
     fetchSwitchStateForCell()
