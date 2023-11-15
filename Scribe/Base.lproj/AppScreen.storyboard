@@ -219,7 +219,7 @@
                         <outlet property="footerButton" destination="3gB-ix-8Gq" id="sQ7-oh-pis"/>
                         <outlet property="footerFrame" destination="IUx-l8-ZuO" id="zei-iv-IbX"/>
                         <outlet property="parentTable" destination="R98-aa-uZS" id="5wJ-1H-Zp2"/>
-                        <segue destination="4YA-bx-fdf" kind="show" id="ZXJ-g2-Dsn"/>
+                        <segue destination="ZA3-mW-CXa" kind="show" id="WZJ-vL-yPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-Lq-Rf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,72 +447,24 @@
             </objects>
             <point key="canvasLocation" x="-1831.2" y="-100.49261083743843"/>
         </scene>
-        <!--Installation-->
-        <scene sceneID="v8R-xu-urf">
+        <!--Table View Template View Controller-->
+        <scene sceneID="okZ-mS-Z02">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BdJ-Tg-oUo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Installation" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aNa-eJ-xMK">
-                        <rect key="frame" x="0.0" y="50" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KN6-ge-0Mj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aMw-QO-ebb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1772" y="-808.37438423645324"/>
-        </scene>
-        <!--Download DataVC-->
-        <scene sceneID="JwU-9R-yYW">
-            <objects>
-                <viewController storyboardIdentifier="DownloadDataVC" id="JEg-VP-tCs" customClass="DownloadDataVC" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cjj-dK-pU9">
+                <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vRa-Ve-ZCX">
-                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="nMh-mo-try"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
-                        <constraints>
-                            <constraint firstItem="nMh-mo-try" firstAttribute="trailing" secondItem="vRa-Ve-ZCX" secondAttribute="trailing" id="SyC-zV-MFz"/>
-                            <constraint firstItem="vRa-Ve-ZCX" firstAttribute="top" secondItem="nMh-mo-try" secondAttribute="top" constant="8" id="TpB-3J-2OZ"/>
-                            <constraint firstItem="vRa-Ve-ZCX" firstAttribute="leading" secondItem="nMh-mo-try" secondAttribute="leading" id="dxG-6o-cw8"/>
-                            <constraint firstItem="nMh-mo-try" firstAttribute="bottom" secondItem="vRa-Ve-ZCX" secondAttribute="bottom" id="jMm-7R-fTq"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="2VQ-6k-UTl"/>
-                    <connections>
-                        <outlet property="outerTable" destination="vRa-Ve-ZCX" id="Xfh-Tv-7Yw"/>
-                        <segue destination="RGh-BY-pAH" kind="show" id="oKV-Z8-MUl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dgV-Sf-L41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZA3-mW-CXa" id="LpK-sh-yHG"/>
+                            <outlet property="delegate" destination="ZA3-mW-CXa" id="6TP-eq-rrB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vhy-kK-VNo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-28" y="-808"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9Jx-mh-9Ym">
-            <objects>
-                <viewController storyboardIdentifier="CheckdDataVC" id="RGh-BY-pAH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GFv-7B-5Wd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="lPM-uo-2kG"/>
-                        <color key="backgroundColor" name="scribeAppBackground"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gny-sO-uVQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ddf-fT-QOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="732" y="-808"/>
+            <point key="canvasLocation" x="25" y="-100"/>
         </scene>
     </scenes>
     <color key="tintColor" name="scribeAppBackground"/>

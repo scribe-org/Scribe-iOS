@@ -29,16 +29,6 @@ class BaseTableViewController: UITableViewController {
     []
   }
 
-  // MARK: - Initialisation
-
-  override init(style: UITableView.Style) {
-    super.init(style: .insetGrouped)
-  }
-  
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
-  }
-
   // MARK: - Functions
 
   override func viewDidLoad() {
