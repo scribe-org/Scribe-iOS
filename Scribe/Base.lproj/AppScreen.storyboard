@@ -219,42 +219,12 @@
                         <outlet property="footerButton" destination="3gB-ix-8Gq" id="sQ7-oh-pis"/>
                         <outlet property="footerFrame" destination="IUx-l8-ZuO" id="zei-iv-IbX"/>
                         <outlet property="parentTable" destination="R98-aa-uZS" id="5wJ-1H-Zp2"/>
-                        <segue destination="4YA-bx-fdf" kind="show" id="ZXJ-g2-Dsn"/>
+                        <segue destination="ZA3-mW-CXa" kind="show" id="WZJ-vL-yPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-Lq-Rf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-888.79999999999995" y="-100.49261083743843"/>
-        </scene>
-        <!--Table View Template View Controller-->
-        <scene sceneID="sI7-t7-s2m">
-            <objects>
-                <viewController storyboardIdentifier="TableViewTemplateViewController" id="4YA-bx-fdf" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PBQ-hz-8QI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="obq-rY-JVB">
-                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SyY-44-GGu"/>
-                        <color key="backgroundColor" name="scribeAppBackground"/>
-                        <constraints>
-                            <constraint firstItem="obq-rY-JVB" firstAttribute="top" secondItem="SyY-44-GGu" secondAttribute="top" constant="8" id="SV4-gG-JiQ"/>
-                            <constraint firstItem="SyY-44-GGu" firstAttribute="bottom" secondItem="obq-rY-JVB" secondAttribute="bottom" id="dlD-Aa-HJd"/>
-                            <constraint firstItem="SyY-44-GGu" firstAttribute="trailing" secondItem="obq-rY-JVB" secondAttribute="trailing" id="hNo-Oc-OMY"/>
-                            <constraint firstItem="obq-rY-JVB" firstAttribute="leading" secondItem="SyY-44-GGu" secondAttribute="leading" id="nvD-tt-zHX"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="YW1-CT-vgn"/>
-                    <connections>
-                        <outlet property="mainTable" destination="obq-rY-JVB" id="Qbh-ZZ-2ho"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RRR-Nu-rPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="25" y="-100"/>
         </scene>
         <!--Swipeable Tab Bar Controller-->
         <scene sceneID="sLs-HO-3by">
@@ -433,6 +403,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okr-LC-69u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1831.2" y="-100.49261083743843"/>
+        </scene>
+        <!--Table View Template View Controller-->
+        <scene sceneID="okZ-mS-Z02">
+            <objects>
+                <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="scribeAppBackground"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZA3-mW-CXa" id="LpK-sh-yHG"/>
+                            <outlet property="delegate" destination="ZA3-mW-CXa" id="6TP-eq-rrB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vhy-kK-VNo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="-100"/>
         </scene>
     </scenes>
     <color key="tintColor" name="scribeAppBackground"/>

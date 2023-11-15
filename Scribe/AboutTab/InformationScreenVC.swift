@@ -15,7 +15,6 @@ class InformationScreenVC: UIViewController {
   @IBOutlet var iconImageView: UIImageView!
 
   var text: String = ""
-  var screenTitle: String = ""
   var section: SectionState = .privacyPolicy
 
   override func viewDidLoad() {
