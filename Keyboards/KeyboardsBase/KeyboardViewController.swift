@@ -538,7 +538,7 @@ class KeyboardViewController: UIInputViewController {
 
       let suggestionsLowerCasePrefix = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
       let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
-      if suggestionsLowerCasePrefix[0] != "" {
+      if !suggestionsLowerCasePrefix[0].isEmpty {
         completionWords = [String]()
         var i = 0
         if allowUndo {
