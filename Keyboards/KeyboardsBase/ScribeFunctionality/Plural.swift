@@ -32,18 +32,18 @@ func queryPlural(commandBar: UILabel) {
   let outputCols = ["plural"]
   wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
 
-  if wordToReturn != "" {
-    if wordToReturn != "isPlural" {
-      if inputWordIsCapitalized {
-        proxy.insertText(wordToReturn.capitalized + " ")
-      } else {
-        proxy.insertText(wordToReturn + " ")
-      }
+  guard !wordToReturn.isEmpty else {
+    commandState = .invalid
+    return
+  }
+  if wordToReturn != "isPlural" {
+    if inputWordIsCapitalized {
+      proxy.insertText(wordToReturn.capitalized + " ")
     } else {
-      proxy.insertText(noun + " ")
-      commandState = .alreadyPlural
+      proxy.insertText(wordToReturn + " ")
     }
   } else {
-    commandState = .invalid
+    proxy.insertText(noun + " ")
+    commandState = .alreadyPlural
   }
 }
