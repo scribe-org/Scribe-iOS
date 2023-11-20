@@ -406,7 +406,7 @@ class KeyboardViewController: UIInputViewController {
     // Get options for completion that start with the current prefix and are not just one letter.
     let completionOptions = queryAutocompletions(word: currentPrefix)
 
-    if completionOptions[0] != "" {
+    if !completionOptions[0].isEmpty {
       var i = 0
       if completionOptions.count <= 3 {
         while i < completionOptions.count {
