@@ -12,11 +12,8 @@ final class InfoChildTableViewCell: UITableViewCell {
 
   // MARK: - Properties
 
-  @IBOutlet var containerView: UIView!
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var descriptionLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
-  @IBOutlet var chevronImgView: UIImageView!
   @IBOutlet var toggleSwitch: UISwitch!
 
   var section: Section?
@@ -47,21 +44,10 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     titleLabel.text = section.sectionTitle
 
-    if let icon = section.imageString {
-      iconImageView.image = UIImage.availableIconImage(with: icon)
-
-      containerView.addSubview(iconImageView)
-
-    } else {
-      iconImageView.image = nil
-
-      iconImageView.removeFromSuperview()
-    }
-
     if let shortDescription = section.shortDescription {
       descriptionLabel.text = shortDescription
 
-      containerView.addSubview(descriptionLabel)
+      contentView.addSubview(descriptionLabel)
     } else {
       descriptionLabel.text = nil
       descriptionLabel.removeFromSuperview()
@@ -72,7 +58,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       toggleSwitch.isHidden = true
     } else {
       accessoryType = .none
-//      chevronImgView.isHidden = true
+      toggleSwitch.isHidden = false
     }
 
     fetchSwitchStateForCell()

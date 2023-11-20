@@ -28,7 +28,9 @@ final class AboutViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = "About"
+    title = NSLocalizedString("about.title", comment: "The title of the about tab")
+
+    tableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier)
   }
 }
 
@@ -37,7 +39,7 @@ final class AboutViewController: BaseTableViewController {
 extension AboutViewController {
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as! InfoChildTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: AboutTableViewCell.reuseIdentifier, for: indexPath) as! AboutTableViewCell
 
     cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
 
