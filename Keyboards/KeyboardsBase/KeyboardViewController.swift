@@ -369,88 +369,85 @@ class KeyboardViewController: UIInputViewController {
   /// Generates an array of the three autocomplete words.
   func getAutocompletions() {
     completionWords = [" ", " ", " "]
-    if proxy.documentContextBeforeInput?.count != 0 {
-      if let inString = proxy.documentContextBeforeInput {
-        // To only focus on the current word as prefix in autocomplete.
-        currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
 
-        if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
-          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"")
-        {
-          currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
-        }
-
-        // Post commands pastStringInTextProxy is "", so take last word.
-        if currentPrefix.contains(" ") {
-          currentPrefix = currentPrefix.components(
-            separatedBy: " "
-          ).last ?? ""
-        }
-
-        // If there's a line break, take the word after it.
-        if currentPrefix.contains("\n") {
-          currentPrefix = currentPrefix.components(
-            separatedBy: "\n"
-          ).last ?? ""
-        }
-
-        // Trigger autocompletions for selected text instead.
-        if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-          currentPrefix = proxy.selectedText!
-        }
-
-        // Get options for completion that start with the current prefix and are not just one letter.
-        let completionOptions = queryAutocompletions(word: currentPrefix)
-
-        if completionOptions[0] != "" {
-          var i = 0
-          if completionOptions.count <= 3 {
-            while i < completionOptions.count {
-              if shiftButtonState == .shift {
-                completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
-                completionWords[i] = completionOptions[i].uppercased()
-              } else if currentPrefix.isCapitalized {
-                if completionOptions[i].isUppercase {
-                  completionWords[i] = completionOptions[i]
-                } else {
-                  completionWords[i] = completionOptions[i].capitalize()
-                }
-              } else {
-                completionWords[i] = completionOptions[i]
-              }
-              i += 1
-            }
-          } else {
-            while i < 3 {
-              if shiftButtonState == .shift {
-                completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
-                completionWords[i] = completionOptions[i].uppercased()
-              } else if currentPrefix.isCapitalized {
-                if completionOptions[i].isUppercase {
-                  completionWords[i] = completionOptions[i]
-                } else {
-                  completionWords[i] = completionOptions[i].capitalize()
-                }
-              } else {
-                completionWords[i] = completionOptions[i]
-              }
-              i += 1
-            }
-          }
-        }
-
-        // Disable the third auto action button if we'll have emoji suggestions.
-        if emojiAutosuggestIsEnabled() {
-          getEmojiAutoSuggestions(for: currentPrefix)
-        }
-      } else {
-        getDefaultAutosuggestions()
-      }
-    } else {
+    guard let inString = proxy.documentContextBeforeInput, !inString.isEmpty else {
       // For getting words on launch when the user hasn't typed anything in the proxy.
       getDefaultAutosuggestions()
+      return
+    }
+    // To only focus on the current word as prefix in autocomplete.
+    currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
+
+    if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
+        currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"")
+    {
+      currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
+    }
+
+    // Post commands pastStringInTextProxy is "", so take last word.
+    if currentPrefix.contains(" ") {
+      currentPrefix = currentPrefix.components(
+        separatedBy: " "
+      ).last ?? ""
+    }
+
+    // If there's a line break, take the word after it.
+    if currentPrefix.contains("\n") {
+      currentPrefix = currentPrefix.components(
+        separatedBy: "\n"
+      ).last ?? ""
+    }
+
+    // Trigger autocompletions for selected text instead.
+    if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+      currentPrefix = proxy.selectedText!
+    }
+
+    // Get options for completion that start with the current prefix and are not just one letter.
+    let completionOptions = queryAutocompletions(word: currentPrefix)
+
+    if completionOptions[0] != "" {
+      var i = 0
+      if completionOptions.count <= 3 {
+        while i < completionOptions.count {
+          if shiftButtonState == .shift {
+            completionWords[i] = completionOptions[i].capitalize()
+          } else if capsLockButtonState == .locked {
+            completionWords[i] = completionOptions[i].uppercased()
+          } else if currentPrefix.isCapitalized {
+            if completionOptions[i].isUppercase {
+              completionWords[i] = completionOptions[i]
+            } else {
+              completionWords[i] = completionOptions[i].capitalize()
+            }
+          } else {
+            completionWords[i] = completionOptions[i]
+          }
+          i += 1
+        }
+      } else {
+        while i < 3 {
+          if shiftButtonState == .shift {
+            completionWords[i] = completionOptions[i].capitalize()
+          } else if capsLockButtonState == .locked {
+            completionWords[i] = completionOptions[i].uppercased()
+          } else if currentPrefix.isCapitalized {
+            if completionOptions[i].isUppercase {
+              completionWords[i] = completionOptions[i]
+            } else {
+              completionWords[i] = completionOptions[i].capitalize()
+            }
+          } else {
+            completionWords[i] = completionOptions[i]
+          }
+          i += 1
+        }
+      }
+    }
+
+    // Disable the third auto action button if we'll have emoji suggestions.
+    if emojiAutosuggestIsEnabled() {
+      getEmojiAutoSuggestions(for: currentPrefix)
     }
   }
 
@@ -779,12 +776,17 @@ class KeyboardViewController: UIInputViewController {
   /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
     // Only delete characters for autocomplete, not autosuggest.
-    if currentPrefix != "" && autoActionState != .suggest {
-      if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0 ..< currentPrefix.count {
-          proxy.deleteBackward()
-        }
-      }
+    guard !currentPrefix.isEmpty, autoActionState != .suggest else {
+      return
+    }
+
+    guard let documentContext = proxy.documentContextBeforeInput, !documentContext.isEmpty else {
+      return
+    }
+
+    // Delete characters in text proxy
+    for _ in 0 ..< currentPrefix.count {
+      proxy.deleteBackward()
     }
   }
 
@@ -1650,9 +1652,10 @@ class KeyboardViewController: UIInputViewController {
       keyboard = letterKeys
       keyWidth = letterKeyWidth
       // Auto-capitalization if the cursor is at the start of the proxy.
-      if proxy.documentContextBeforeInput?.count == 0 {
-        shiftButtonState = .shift
+      guard let documentContext = proxy.documentContextBeforeInput, documentContext.isEmpty else {
+        return
       }
+      shiftButtonState = .shift
     case .numbers:
       keyboard = numberKeys
       keyWidth = numSymKeyWidth
