@@ -77,7 +77,6 @@ struct SettingsTableData {
     for language in installedKeyboards {
       let newSection = Section(
         sectionTitle: language,
-        imageString: "globe",
         hasToggle: false,
         sectionState: .specificLang(languagesAbbrDict[language]!)
       )

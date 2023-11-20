@@ -724,6 +724,8 @@
 		D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
+		ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
 		EDB4601B2AF9FD8200BEA967 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */; };
 		EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */; };
 		EDC364692AE408F20001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
@@ -969,6 +971,8 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
+		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
+		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EDB4601C2AF9FDD600BEA967 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/AppScreen.strings; sourceTree = "<group>"; };
 		EDB4601D2AF9FDD600BEA967 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -1092,6 +1096,7 @@
 		1406B7832A2DFCA2001DF45B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
 				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
 				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
 			);
@@ -1468,6 +1473,15 @@
 			path = Keyboards;
 			sourceTree = "<group>";
 		};
+		ED2486F02B0B4E610038AE6A /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */,
+				ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
 		EDB4601F2B03B3B400BEA967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1834,6 +1848,7 @@
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				EDB4601B2AF9FD8200BEA967 /* Localizable.xcstrings in Resources */,
+				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
 			);
@@ -2030,6 +2045,7 @@
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
 				30453967293B9D31003AE55B /* ViewThemeable.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
+				ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,

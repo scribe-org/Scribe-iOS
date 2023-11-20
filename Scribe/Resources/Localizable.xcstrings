@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "about.title" : {
+      "comment" : "The title of the about tab",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
     "settings.appLanguage" : {
       "comment" : "The title of the app language section",
       "localizations" : {
