@@ -565,7 +565,7 @@ class KeyboardViewController: UIInputViewController {
           }
           i += 1
         }
-      } else if suggestionsCapitalizedPrefix[0] != "" {
+      } else if !suggestionsCapitalizedPrefix[0].isEmpty {
         completionWords = [String]()
         var i = 0
         if allowUndo {
