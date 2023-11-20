@@ -327,42 +327,42 @@ class KeyboardViewController: UIInputViewController {
     let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
     let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
 
-    if emojisToDisplay[0] != "" {
-      emojisToDisplayArray = [String]()
-      currentEmojiTriggerWord = word.lowercased()
-      if emojisToDisplay[2] != "" && DeviceType.isPad {
-        for i in 0 ..< 3 {
-          emojisToDisplayArray.append(emojisToDisplay[i])
-        }
-        autoAction2Visible = false
-        emojisToShow = .three
+    guard !emojisToDisplay[0].isEmpty else {
+      emojisToDisplayArray.append(emojisToDisplay[0])
 
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          padEmojiDivider0.backgroundColor = specialKeyColor
-          padEmojiDivider1.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        }
-        conditionallyHideEmojiDividers()
-      } else if emojisToDisplay[1] != "" {
-        for i in 0 ..< 2 {
-          emojisToDisplayArray.append(emojisToDisplay[i])
-        }
-        autoAction2Visible = false
-        emojisToShow = .two
-
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          phoneEmojiDivider.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        }
-        conditionallyHideEmojiDividers()
-      } else {
-        emojisToDisplayArray.append(emojisToDisplay[0])
-
-        emojisToShow = .one
+      emojisToShow = .one
+      return
+    }
+    emojisToDisplayArray = [String]()
+    currentEmojiTriggerWord = word.lowercased()
+    if !emojisToDisplay[2].isEmpty && DeviceType.isPad {
+      for i in 0 ..< 3 {
+        emojisToDisplayArray.append(emojisToDisplay[i])
       }
+      autoAction2Visible = false
+      emojisToShow = .three
+
+      if UITraitCollection.current.userInterfaceStyle == .light {
+        padEmojiDivider0.backgroundColor = specialKeyColor
+        padEmojiDivider1.backgroundColor = specialKeyColor
+      } else if UITraitCollection.current.userInterfaceStyle == .dark {
+        padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+      }
+      conditionallyHideEmojiDividers()
+    } else if !emojisToDisplay[1].isEmpty {
+      for i in 0 ..< 2 {
+        emojisToDisplayArray.append(emojisToDisplay[i])
+      }
+      autoAction2Visible = false
+      emojisToShow = .two
+
+      if UITraitCollection.current.userInterfaceStyle == .light {
+        phoneEmojiDivider.backgroundColor = specialKeyColor
+      } else if UITraitCollection.current.userInterfaceStyle == .dark {
+        phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+      }
+      conditionallyHideEmojiDividers()
     }
   }
 
