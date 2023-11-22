@@ -1961,6 +1961,8 @@ class KeyboardViewController: UIInputViewController {
       keyWidth = numSymKeyWidth
     }
 
+
+    
     // Derive corner radii.
     if DeviceType.isPhone {
       if isLandscapeView {

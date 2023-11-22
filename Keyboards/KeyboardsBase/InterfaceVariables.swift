@@ -27,6 +27,26 @@ var letterKeyWidth = CGFloat(0)
 var numSymKeyWidth = CGFloat(0)
 var isFirstKeyboardLoad = false
 
+//Constants for scaling key widths and heights
+let keyCornerRadiusScalarLandscapeViewPhone = 9.0
+let comamndKeyCornerRadiusScalarLandscapeViewPhone = 5.0
+let keyCornerRadiusScalarPhone = 6.0
+let commandKeyCornerRadiusScalarPhone = 3.0
+let keyCornerRadiusScalarLandscapeViewPad = 12.0
+let commandKeyCornerRadiusScalarLandscapeViewPad = 7.5
+let keyCornerRadiusScalarPad = 9.0
+let commandKeyCornerRadiusScalarPad = 5.0
+let fontScalarPhone = 0.435
+let fontScalarPad = 0.475
+let emojiKeyFontScalar = 0.475
+let letterNumSymKeyWidthScalar = 0.9
+let letterNumSymKeyWidthScalarLandscapeViewPhone = 1.5
+let letterNumSymKeyWidthScalarLandscapeViewPad = 1.2
+let alternatesBtnYScalarPhone = 0.15
+let alternatesBtnYScalarPad = 0.2
+let commandKeyHeightScalarPhone = 0.435
+let commandKeyHeightScalarPad = 0.475
+
 // Keyboard elements.
 var spaceBar = String()
 var language = String()
@@ -195,3 +215,4 @@ var keyPopChar = UILabel()
 var keyHoldPopChar = UILabel()
 var keyPopLayer = CAShapeLayer()
 var keyHoldPopLayer = CAShapeLayer()
+
