@@ -12,6 +12,7 @@ If you have questions or would like to communicate with the team, please [join u
 
 # **Contents**
 
+- [First steps as a contributor](#first-steps)
 - [Development environment](#dev-env)
   - [Note on debugging](#note-on-debugging)
 - [Issues and projects](#issues-projects)
@@ -24,6 +25,20 @@ If you have questions or would like to communicate with the team, please [join u
 - [Design](#design)
 
 <a id="dev-env"></a>
+
+## First steps as a contributor [`⇧`](#contents)
+
+Thank you for your interest in contributing to Scribe IOS! We look forward to welcoming you to the community and working with you to build an evolving keyboard for helping with translation and intuitive typeing :) The following are some suggested steps for people interested in joining our community:
+
+- Please join the [public Matrix chat](https://matrix.to/#/#scribe_community:matrix.org) to connect with the community
+  - [Matrix](https://matrix.org/) is a network for secure, decentralized communication
+  - Scribe would suggest that you use the [Element](https://element.io/) client
+  - The [General](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) and [IOS](https://matrix.to/#/#ScribeiOS:matrix.org) channels would be great places to start!
+  - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
+- Read through this contributing guide and the [style guide] (WORK IN PROGRESS) for all the information you need to contribute
+- Look into issues marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and the [Projects board](https://github.com/orgs/scribe-org/projects/1) to get a better understanding of what you can work on
+- Check out our [public designs on Figma](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?type=design&node-id=405-464&mode=design&t=E3ccS9Z8MDVSizQ4-0) to understand Scribes's goals and direction
+- Consider joining our [deveoper meetings on Matrix](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org)!
 
 # Development environment [`⇧`](#contents)
 
@@ -114,12 +129,17 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/<repo-name>
+   git clone https://github.com/<your-username>/Scribe-iOS
    # Navigate to the newly cloned directory
-   cd <repo-name>
+   cd Scribe-iOS
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/<upsteam-owner>/<repo-name>
+   git remote add upstream https://github.com/scribe-org/Scribe-iOS
    ```
+   Now, if you run `git remote -v` you should see two remote repositories named:
+
+   - `origin` (forked repository)
+   - `upstream` (Scribe-iOS repository)
+
 
 2. If you cloned a while ago, get the latest changes from upstream:
 
@@ -134,7 +154,13 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    git checkout -b <topic-branch-name>
    ```
 
-4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Use Git's [interactive rebase](https://docs.github.com/en/github/getting-started-with-github/about-git-rebase) feature to tidy up your commits before making them public.
+4. Commit your changes in logical chunks, and please try to adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+   > [!NOTE]\
+   > The following are tools and methods to help you write good commit messages ✨
+   >
+   > - [commitlint](https://commitlint.io/) helps write [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+   > - Git's [interactive rebase](https://docs.github.com/en/github/getting-started-with-github/about-git-rebase) cleans up commits
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
@@ -148,7 +174,7 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
    git push origin <topic-branch-name>
    ```
 
-7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
+7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description outlined in the pull request. A useful tool during this step is the [Commitlint](https://commitlint.io/) tool!
 
 Thank you in advance for your contributions!
 
