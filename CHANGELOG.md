@@ -33,6 +33,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Bugs were fixed that were causing the autocompletions to trigger to regularly. -->
 
+### ♻️ Code Refactoring
+
+- Magic numbers for interface radii and other sizing dimensions have been converted to defined variables ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
+
 # Scribe-iOS 2.3.0
 
 ### ✨ New Features
