@@ -709,9 +709,9 @@ class KeyboardViewController: UIInputViewController {
           radius: commandKeyCornerRadius
         )
         if DeviceType.isPhone {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPhone)
         } else if DeviceType.isPad {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPad)
         }
         activateBtn(btn: pluralKey)
 
@@ -735,11 +735,11 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
 
         if DeviceType.isPhone {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPhone)
+          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPhone)
         } else if DeviceType.isPad {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPad)
+          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * fontScalarPad)
         }
 
         activateBtn(btn: phoneEmojiKey0)
@@ -754,9 +754,9 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: padEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
         styleBtn(btn: padEmojiKey2, title: emojisToDisplayArray[2], radius: commandKeyCornerRadius)
 
-        padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+        padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * emojiKeyFontScalar)
+        padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * emojiKeyFontScalar)
+        padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * emojiKeyFontScalar)
 
         activateBtn(btn: padEmojiKey0)
         activateBtn(btn: padEmojiKey1)
@@ -1633,15 +1633,15 @@ class KeyboardViewController: UIInputViewController {
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView {
       if DeviceType.isPhone {
-        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.5
-        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.5
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * letterNumSymKeyWidthScalarLandscapeViewPhone
+        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * letterNumSymKeyWidthScalarLandscapeViewPhone
       } else if DeviceType.isPad {
-        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.2
-        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.2
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * letterNumSymKeyWidthScalarLandscapeViewPad
+        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * letterNumSymKeyWidthScalarLandscapeViewPad
       }
     } else {
-      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
-      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * 0.9
+      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * letterNumSymKeyWidthScalar
+      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * letterNumSymKeyWidthScalar
     }
 
     // Derive keyboard given current states and set widths.
@@ -1661,22 +1661,24 @@ class KeyboardViewController: UIInputViewController {
       keyWidth = numSymKeyWidth
     }
 
+
+    
     // Derive corner radii.
     if DeviceType.isPhone {
       if isLandscapeView {
-        keyCornerRadius = keyWidth / 9
-        commandKeyCornerRadius = keyWidth / 5
+        keyCornerRadius = keyWidth / keyCornerRadiusScalarLandscapeViewPhone
+        commandKeyCornerRadius = keyWidth / comamndKeyCornerRadiusScalarLandscapeViewPhone
       } else {
-        keyCornerRadius = keyWidth / 6
-        commandKeyCornerRadius = keyWidth / 3
+        keyCornerRadius = keyWidth / keyCornerRadiusScalarPhone
+        commandKeyCornerRadius = keyWidth / commandKeyCornerRadiusScalarPhone
       }
     } else if DeviceType.isPad {
       if isLandscapeView {
-        keyCornerRadius = keyWidth / 12
-        commandKeyCornerRadius = keyWidth / 7.5
+        keyCornerRadius = keyWidth / keyCornerRadiusScalarLandscapeViewPad
+        commandKeyCornerRadius = keyWidth / commandKeyCornerRadiusScalarLandscapeViewPad
       } else {
-        keyCornerRadius = keyWidth / 9
-        commandKeyCornerRadius = keyWidth / 5
+        keyCornerRadius = keyWidth / keyCornerRadiusScalarPad
+        commandKeyCornerRadius = keyWidth / commandKeyCornerRadiusScalarPad
       }
     }
 
@@ -1711,13 +1713,13 @@ class KeyboardViewController: UIInputViewController {
       deactivateConjugationDisplay()
 
       if DeviceType.isPhone {
-        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPhone)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPhone)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPhone)
       } else if DeviceType.isPad {
-        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPad)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPad)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * commandKeyHeightScalarPad)
       }
 
       if commandState == .selectCommand {
@@ -2818,9 +2820,9 @@ class KeyboardViewController: UIInputViewController {
     genAlternatesView(key: key)
 
     alternateBtnStartX = 5.0
-    var alternatesBtnY = key.frame.height * 0.15
+    var alternatesBtnY = key.frame.height * alternatesBtnYScalarPhone
     if DeviceType.isPad {
-      alternatesBtnY = key.frame.height * 0.2
+      alternatesBtnY = key.frame.height * alternatesBtnYScalarPad
     }
     for char in alternateKeys {
       let alternateKey = KeyboardKey(
