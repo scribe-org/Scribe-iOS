@@ -106,22 +106,20 @@ cd Scribe-iOS
 git remote add upstream https://github.com/scribe-org/Scibe-iOS.git
 ```
 
-Now, if you run `git remote -v` you should see two remote repositories named:
-
-- `origin` (forked repository)
-- `upstream` (Scribe-iOS repository)
+- Now, if you run `git remote -v` you should see two remote repositories named:
+  - `origin` (forked repository)
+  - `upstream` (Scribe-iOS repository)
 
 3. Open the Scribe-iOS directory in Xcode
 
 4. In order to run Scribe on an emulator:
 
-- Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
-- In the top bar select Scribe as the scheme
-  - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
-- Select a device to run the app on
-- Press the run button marked `Start the active scheme`
-
-From there code edits that are made will be reflected in the app each time the active scheme is restarted.
+   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
+   - In the top bar select Scribe as the scheme
+   - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
+   - Select a device to run the app on
+   - Press the run button marked `Start the active scheme`
+   - From here code edits that are made will be reflected in the app each time the active scheme is restarted
 
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
