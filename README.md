@@ -134,7 +134,7 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 >
 > - e.g. Cloning now becomes `git clone git@github.com:<your-username>/Scribe-iOS.git`
 >
-> GitHub also has their documentation on how to [Generate new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). 🔑
+> GitHub also has their documentation on how to [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 🔑
 >
 > </p>
 > </details>
@@ -157,10 +157,11 @@ Now, if you run `git remote -v` you should see two remote repositories named:
 
 4. In order to run Scribe on an emulator:
 
-   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
-   - In the top bar select Scribe as the scheme
-   - Select a device to run the app on
-   - Press the run button marked `Start the active scheme`
+- Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
+- In the top bar select Scribe as the scheme
+  - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
+- Select a device to run the app on
+- Press the run button marked `Start the active scheme`
 
 From there code edits that are made will be reflected in the app each time the active scheme is restarted.
 
