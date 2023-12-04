@@ -169,6 +169,22 @@ extension ParentTableViewCell: UITableViewDelegate {
         }
 
       case .none: break
+      case .downloadData:
+        if let newViewController = parentViewController?.storyboard?.instantiateViewController(withIdentifier: "DownloadDataVC") {
+          if parentViewController?.navigationController != nil {
+            parentViewController?.navigationController?.pushViewController(newViewController, animated: true)
+          } else {
+            parentViewController?.present(newViewController, animated: true, completion: nil)
+          }
+        }
+      case .checkData:
+        if let newViewController = parentViewController?.storyboard?.instantiateViewController(withIdentifier: "CheckdDataVC") {
+          if parentViewController?.navigationController != nil {
+            parentViewController?.navigationController?.pushViewController(newViewController, animated: true)
+          } else {
+            parentViewController?.present(newViewController, animated: true, completion: nil)
+          }
+        }
       }
     }
 
