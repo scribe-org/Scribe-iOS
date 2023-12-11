@@ -193,10 +193,14 @@ class KeyboardViewController: UIInputViewController {
   /// - A call to loadKeys to reload the display after an orientation change
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
-    updateViewConstraints()
-    isFirstKeyboardLoad = true
-    loadKeys()
-    isFirstKeyboardLoad = false
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+      self.updateViewConstraints()
+    }
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+      isFirstKeyboardLoad = true
+      self.loadKeys()
+      isFirstKeyboardLoad = false
+    }
   }
 
   /// Overrides the previous color variables if the user switches between light and dark mode.
@@ -1629,7 +1633,6 @@ class KeyboardViewController: UIInputViewController {
     // Clear interface from the last state.
     keyboardKeys.forEach { $0.removeFromSuperview() }
     paddingViews.forEach { $0.removeFromSuperview() }
-
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView {
       if DeviceType.isPhone {
@@ -1637,11 +1640,13 @@ class KeyboardViewController: UIInputViewController {
         numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPhone
       } else if DeviceType.isPad {
         letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
-        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
+        if (!usingExpandedKeyboard) {
+          numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
+        }
       }
     } else {
-      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidth
-      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * scalarLetterNumSymKeyWidth
+     letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidth
+    numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * scalarLetterNumSymKeyWidth
     }
 
     // Derive keyboard given current states and set widths.
