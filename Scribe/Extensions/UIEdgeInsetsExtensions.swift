@@ -17,33 +17,11 @@
 
 import UIKit
 
-final class AboutTableViewCell: UITableViewCell {
+extension UIEdgeInsets {
 
-  // MARK: - Constants
+  // MARK: - Initialisation
 
-  static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
-
-  // MARK: - Properties
-
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
-
-  private var section: Section?
-  private var parentSection: Section?
-
-  // MARK: - Functions
-
-  func configureCell(for section: Section) {
-    selectionStyle = .none
-
-    titleLabel.text = section.sectionTitle
-
-    if let icon = section.imageString {
-      iconImageView.image = UIImage.availableIconImage(with: icon)
-    } else {
-      iconImageView.image = nil
-    }
-
-    accessoryType = section.hasNestedNavigation ? .disclosureIndicator : .none
+  init(vertical: CGFloat, horizontal: CGFloat) {
+    self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
   }
 }

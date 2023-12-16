@@ -754,6 +754,7 @@
 		EDC364722AE408FF0001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
 		EDC364732AE409000001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
 		EDC364742AE409000001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
+		EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -995,6 +996,7 @@
 		EDB4601D2AF9FDD600BEA967 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
+		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1226,6 +1228,7 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				EDEE62232B2DE64A00A0B9C1 /* Extensions */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				1406B78B2A3209CF001DF45B /* AppExtensions.swift */,
@@ -1516,6 +1519,14 @@
 				EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDEE62232B2DE64A00A0B9C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2038,6 +2049,7 @@
 				147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
+				EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */,
 				D1CDED772A859E4800098546 /* DACommandVariables.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,

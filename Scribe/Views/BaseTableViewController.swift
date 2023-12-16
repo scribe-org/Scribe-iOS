@@ -22,6 +22,7 @@ class BaseTableViewController: UITableViewController {
   // MARK: - Constants
 
   private let sectionHeaderHeight: CGFloat = 32
+  private let separatorInset = UIEdgeInsets(vertical: 16, horizontal: 16)
 
   // MARK: - Properties
 
@@ -36,6 +37,7 @@ class BaseTableViewController: UITableViewController {
 
     tableView.sectionHeaderHeight = sectionHeaderHeight
     tableView.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoChildTableViewCell")
+    tableView.separatorInset = separatorInset
   }
 }
 

@@ -12,24 +12,24 @@
         }
       }
     },
-    "settings.appLanguage" : {
-      "comment" : "The title of the app language section",
+    "settings.appSettings" : {
+      "comment" : "The title of the app settings section",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App settings"
+          }
+        }
+      }
+    },
+    "settings.appSettings.appLanguage" : {
+      "comment" : "Change the language of the Scribe App",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App language"
-          }
-        }
-      }
-    },
-    "settings.appLanguage.system" : {
-      "comment" : "Use the system language",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "System language"
           }
         }
       }
@@ -136,7 +136,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Settings"
+            "value" : "Scribe Settings"
           }
         }
       }

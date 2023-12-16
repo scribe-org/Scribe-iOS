@@ -18,12 +18,21 @@
 import UIKit
 
 final class SettingsViewController: UIViewController {
+
+  // MARK: - Constants
+  
+  private let sectionHeaderHeight: CGFloat = 32
+  private let separatorInset = UIEdgeInsets(vertical: 16, horizontal: 16)
+
+  // MARK: - Properties
+
   @IBOutlet var footerFrame: UIView!
   @IBOutlet var footerButton: UIButton!
-
   @IBOutlet var parentTable: UITableView!
 
   var tableData = SettingsTableData.settingsTableData
+
+  // MARK: - Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,11 +41,11 @@ final class SettingsViewController: UIViewController {
     navigationItem.backButtonTitle = NSLocalizedString("settings.title.backButton", comment: "The back button's title for the settings screen")
 
     parentTable.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier)
-
     parentTable.dataSource = self
     parentTable.delegate = self
     parentTable.backgroundColor = .clear
-    parentTable.sectionHeaderHeight = 32
+    parentTable.sectionHeaderHeight = sectionHeaderHeight
+    parentTable.separatorInset = separatorInset
 
     setFooterButtonView()
 
@@ -81,6 +90,8 @@ final class SettingsViewController: UIViewController {
   }
 }
 
+// MARK: - UITableViewDataSource
+
 extension SettingsViewController: UITableViewDataSource {
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,6 +113,8 @@ extension SettingsViewController: UITableViewDataSource {
     return cell
   }
 }
+
+// MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
 

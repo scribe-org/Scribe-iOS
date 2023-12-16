@@ -43,9 +43,6 @@ extension AboutViewController {
 
     cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
 
-    cell.backgroundColor = .clear
-    cell.selectionStyle = .none
-
     return cell
   }
 }
