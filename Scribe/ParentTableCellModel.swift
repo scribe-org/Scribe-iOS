@@ -16,13 +16,15 @@ struct Section {
   let sectionTitle: String
   let imageString: String?
   let hasToggle: Bool
+  let hasNestedNavigation: Bool
   let sectionState: SectionState
   let shortDescription: String?
 
-  init(sectionTitle: String, imageString: String? = nil, hasToggle: Bool, sectionState: SectionState, shortDescription: String? = nil) {
+  init(sectionTitle: String, imageString: String? = nil, hasToggle: Bool = false, hasNestedNavigation: Bool = false, sectionState: SectionState, shortDescription: String? = nil) {
     self.sectionTitle = sectionTitle
     self.imageString = imageString
     self.hasToggle = hasToggle
+    self.hasNestedNavigation = hasNestedNavigation
     self.sectionState = sectionState
     self.shortDescription = shortDescription
   }

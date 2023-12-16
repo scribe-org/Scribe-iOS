@@ -8,16 +8,16 @@ struct SettingsTableData {
 
   static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("settings.appLanguage", comment: "The title of the app language section"),
+      headingTitle: NSLocalizedString("settings.appSettings", comment: "The title of the app settings section"),
       section: [
-        Section(sectionTitle: NSLocalizedString("settings.appLanguage.system", comment: "Use the system language"), imageString: "globe", hasToggle: false, sectionState: .appLang),
+        Section(sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"), imageString: "globe", hasToggle: false, sectionState: .appLang),
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
       headingTitle: NSLocalizedString("settings.installedKeyboards", comment: "The title of the installed keyboards section"),
       section: [
-        //        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false, sectionState: .specificLang("all")),
+        //        Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
       ],
       hasDynamicData: .installedKeyboards
     ),
@@ -77,7 +77,6 @@ struct SettingsTableData {
     for language in installedKeyboards {
       let newSection = Section(
         sectionTitle: language,
-        hasToggle: false,
         sectionState: .specificLang(languagesAbbrDict[language]!)
       )
 
