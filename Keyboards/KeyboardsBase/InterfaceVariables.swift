@@ -26,7 +26,7 @@ var keyWidth = CGFloat(0)
 var letterKeyWidth = CGFloat(0)
 var numSymKeyWidth = CGFloat(0)
 var isFirstKeyboardLoad = false
-var disableAccentCharacters = false;
+var disableAccentCharacters = false
 // Constants for scaling key widths and heights.
 let scalarAlternatesBtnYPad = 0.2
 let scalarAlternatesBtnYPhone = 0.15
