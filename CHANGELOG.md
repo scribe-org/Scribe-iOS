@@ -50,6 +50,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ♻️ Code Refactoring
 
 - Magic numbers for interface radii and other sizing dimensions have been converted to defined variables ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
+- The code for settings keyboard key dimensions and padding was extracted into functions for maintainability ([#383](https://github.com/scribe-org/Scribe-iOS/issues/383)).
 
 # Scribe-iOS 2.3.0
 
