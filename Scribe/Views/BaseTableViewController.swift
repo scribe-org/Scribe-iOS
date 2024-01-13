@@ -18,11 +18,10 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-
   // MARK: - Constants
 
   private let sectionHeaderHeight: CGFloat = 32
-  private let separatorInset = UIEdgeInsets(vertical: 16, horizontal: 16)
+  private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
 
   // MARK: - Properties
 
@@ -44,12 +43,11 @@ class BaseTableViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 
 extension BaseTableViewController {
-
-  override func numberOfSections(in tableView: UITableView) -> Int {
+  override func numberOfSections(in _: UITableView) -> Int {
     dataSet.count
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
     dataSet[section].section.count
   }
 }
@@ -57,8 +55,7 @@ extension BaseTableViewController {
 // MARK: - UITableViewDelegate
 
 extension BaseTableViewController {
-
-  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+  override func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     headerView(for: section)
   }
 
