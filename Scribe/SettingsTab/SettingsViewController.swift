@@ -18,11 +18,10 @@
 import UIKit
 
 final class SettingsViewController: UIViewController {
-
   // MARK: - Constants
-  
+
   private let sectionHeaderHeight: CGFloat = 32
-  private let separatorInset = UIEdgeInsets(vertical: 16, horizontal: 16)
+  private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
 
   // MARK: - Properties
 
@@ -93,8 +92,7 @@ final class SettingsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource {
-
-  func numberOfSections(in tableView: UITableView) -> Int {
+  func numberOfSections(in _: UITableView) -> Int {
     tableData.count
   }
 
@@ -117,48 +115,47 @@ extension SettingsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let tableSection = tableData[indexPath.section]
+    let section = tableSection.section[indexPath.row]
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let tableSection = tableData[indexPath.section]
-      let section = tableSection.section[indexPath.row]
+    switch section.sectionState {
+    case .specificLang:
+      if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
+        // Copy base settings
+        var data = SettingsTableData.languageSettingsData
 
-        switch section.sectionState {
-        case .specificLang:
-          if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
-            // Copy base settings
-            var data = SettingsTableData.languageSettingsData
+        // Languages where we can disable accent keys.
+        let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
+        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
+          s in s.sectionTitle.elementsEqual("Disable accent characters")
+        }) ?? -1
 
-            // Languages where we can disable accent keys.
-            let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-            let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
-              s in s.sectionTitle.elementsEqual("Disable accent characters")
-            }) ?? -1
-
-            if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
-              // As there are no accent keys we can remove the `Disable accent characters` option.
-              let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
-              print(accentKeySettings)
-            } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-              data[0].section.insert(Section(
-                sectionTitle: "Disable accent characters",
-                imageString: "info.circle",
-                hasToggle: true,
-                sectionState: .none(.toggleAccentCharacters)
-              ), at: 1)
-            }
-
-            viewController.configureTable(for: data, parentSection: section)
-
-            navigationController?.pushViewController(viewController, animated: true)
-          }
-
-        default: break
+        if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
+          // As there are no accent keys we can remove the `Disable accent characters` option.
+          let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
+          print(accentKeySettings)
+        } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
+          data[0].section.insert(Section(
+            sectionTitle: "Disable accent characters",
+            imageString: "info.circle",
+            hasToggle: true,
+            sectionState: .none(.toggleAccentCharacters)
+          ), at: 1)
         }
 
-      if let selectedIndexPath = tableView.indexPathForSelectedRow {
-        tableView.deselectRow(at: selectedIndexPath, animated: false)
+        viewController.configureTable(for: data, parentSection: section)
+
+        navigationController?.pushViewController(viewController, animated: true)
       }
+
+    default: break
     }
+
+    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedIndexPath, animated: false)
+    }
+  }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let headerView: UIView
