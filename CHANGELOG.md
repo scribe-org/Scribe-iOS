@@ -21,6 +21,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
     - Allowing the user to disable emoji autosuggestions and autocompletions ([#310](https://github.com/scribe-org/Scribe-iOS/issues/196), [#311](https://github.com/scribe-org/Scribe-iOS/issues/308)).
     - Allowing the user to disable accented characters on the letter keys ([#339](https://github.com/scribe-org/Scribe-iOS/issues/339), [#372](https://github.com/scribe-org/Scribe-iOS/issues/372)).
   - Menu screens can be swiped between via an implementation using [SwipeableTabBarController](https://github.com/marcosgriselli/SwipeableTabBarController).
+  - Menu options have descriptions of their functionality listed beneath them ([#330](https://github.com/scribe-org/Scribe-iOS/issues/339), [#372](https://github.com/scribe-org/Scribe-iOS/issues/330)).
 - German indefinite pronouns are now selectable from the case-declension display ([#303](https://github.com/scribe-org/Scribe-iOS/issues/303)).
 - German imperfect verb conjugations now insert both the auxiliary verb and the past participle with the cursor between them.
 - Tab and caps lock keys and their functionalities have been added to expanded iPad layouts ([#371](https://github.com/scribe-org/Scribe-iOS/issues/371)).
