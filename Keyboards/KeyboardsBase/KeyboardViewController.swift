@@ -1541,7 +1541,6 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  
   func setKeywidth() {
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView {
@@ -1550,7 +1549,7 @@ class KeyboardViewController: UIInputViewController {
         numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPhone
       } else if DeviceType.isPad {
         letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
-        if (!usingExpandedKeyboard) {
+        if !usingExpandedKeyboard {
           numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
         }
       }
@@ -1559,7 +1558,7 @@ class KeyboardViewController: UIInputViewController {
       numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * scalarLetterNumSymKeyWidth
     }
   }
-  
+
   func setKeyPadding() {
     let numRows = keyboard.count
     for row in 0 ..< numRows {
@@ -1571,240 +1570,239 @@ class KeyboardViewController: UIInputViewController {
         btn.style()
         btn.setChar()
         btn.setCharSize()
-        
+
         let key: String = btn.key
-        
+
         // Pad before key is added.
         var leftPadding = CGFloat(0)
         if DeviceType.isPhone
-              && key == "y"
-              && ["German", "Swedish"].contains(controllerLanguage)
-              && commandState != .translate
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView2, width: leftPadding, key: "y")
-          }
-          if DeviceType.isPhone
-              && key == "a"
-              && (controllerLanguage == "Portuguese"
-                  || controllerLanguage == "Italian"
-                  || commandState == .translate)
-          {
-            leftPadding = keyWidth / 4
-            addPadding(to: stackView1, width: leftPadding, key: "a")
-          }
-          if DeviceType.isPad
-              && key == "a"
-              && (controllerLanguage == "Portuguese"
-                  || controllerLanguage == "Italian"
-                  || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "a")
-          }
-          if DeviceType.isPad
-              && key == "@"
-              && (controllerLanguage == "Portuguese"
-                  || controllerLanguage == "Italian"
-                  || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "@")
-          }
-          if DeviceType.isPad
-              && key == "$"
-              && controllerLanguage == "Italian"
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "$")
-          }
-          if DeviceType.isPad
-              && key == "€"
-              && (controllerLanguage == "Portuguese"
-                  || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "€")
-          }
-        //}
-          
-          keyboardKeys.append(btn)
-          if !usingExpandedKeyboard {
-            switch row {
-            case 0: stackView0.addArrangedSubview(btn)
-            case 1: stackView1.addArrangedSubview(btn)
-            case 2: stackView2.addArrangedSubview(btn)
-            case 3: stackView3.addArrangedSubview(btn)
-            default:
-              break
-            }
-          } else {
-            switch row {
-            case 0: stackViewNum.addArrangedSubview(btn)
-            case 1: stackView0.addArrangedSubview(btn)
-            case 2: stackView1.addArrangedSubview(btn)
-            case 3: stackView2.addArrangedSubview(btn)
-            case 4: stackView3.addArrangedSubview(btn)
-            default:
-              break
-            }
-          }
-          
-          // Special key styling.
-          if key == "delete" {
-            let deleteLongPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(deleteLongPressed(_:)))
-            btn.addGestureRecognizer(deleteLongPressRecognizer)
-          }
-          
-          if key == "selectKeyboard" {
-            selectKeyboardButton = btn
-            selectKeyboardButton.addTarget(
-              self,
-              action: #selector(handleInputModeList(from:with:)),
-              for: .allTouchEvents
-            )
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "globe")
-          }
-          
-          if key == "hideKeyboard" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
-          }
-          
-          if key == SpecialKeys.indent {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.forward.to.line")
-          }
-          
-          if key == SpecialKeys.capsLock {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "capslock")
-          }
-          
-          if key == "shift" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
-          }
-          
-          if key == "return" {
-            if [.translate, .conjugate, .plural].contains(commandState) {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
-            } else {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
-            }
-          }
-          
-          if key == "delete" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
-          }
-          
-          // Setting key pop functionality.
-          let keyHoldPop = UILongPressGestureRecognizer(
-            target: self,
-            action: #selector(genHoldPopUpView(sender:))
-          )
-          keyHoldPop.minimumPressDuration = 0.125
-          
-          if allNonSpecialKeys.contains(key) {
-            btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
-            btn.addGestureRecognizer(keyHoldPop)
-          }
-          
-          // Pad after key is added.
-          var rightPadding = CGFloat(0)
-          if DeviceType.isPhone
-              && key == "m"
-              && ["German", "Swedish"].contains(controllerLanguage)
-              && commandState != .translate
-          {
-            rightPadding = keyWidth / 3
-            addPadding(to: stackView2, width: rightPadding, key: "m")
-          }
-          if DeviceType.isPhone
-              && key == "l"
-              && (controllerLanguage == "Portuguese"
-                  || controllerLanguage == "Italian"
-                  || commandState == .translate)
-          {
-            rightPadding = keyWidth / 4
-            addPadding(to: stackView1, width: rightPadding, key: "l")
-          }
-          
-          // Set the width of the key given device and the given key.
-          btn.adjustKeyWidth()
-          
-          // Update the button style.
-          btn.adjustButtonStyle()
-          
-          if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
-            // Override background color from adjustKeyWidth for "search" blue for web searches.
-            styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
-            btn.backgroundColor = UIColor(red: 0.0 / 255.0, green: 121.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
-          }
-          
-          // Extend button touch areas.
-          var widthOfSpacing = CGFloat(0)
-          if keyboardState == .letters {
-            widthOfSpacing = (
-              (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(letterKeys[0].count) * keyWidth)
-            ) / (CGFloat(letterKeys[0].count)
-                 - 1.0
-            )
-          } else {
-            widthOfSpacing = (
-              (UIScreen.main.bounds.width - 6.0)
-              - (CGFloat(usingExpandedKeyboard == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
-            ) / (CGFloat(letterKeys[0].count)
-                 - 1.0
-            )
-          }
-          
+          && key == "y"
+          && ["German", "Swedish"].contains(controllerLanguage)
+          && commandState != .translate
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView2, width: leftPadding, key: "y")
+        }
+        if DeviceType.isPhone
+          && key == "a"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 4
+          addPadding(to: stackView1, width: leftPadding, key: "a")
+        }
+        if DeviceType.isPad
+          && key == "a"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "a")
+        }
+        if DeviceType.isPad
+          && key == "@"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "@")
+        }
+        if DeviceType.isPad
+          && key == "$"
+          && controllerLanguage == "Italian"
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "$")
+        }
+        if DeviceType.isPad
+          && key == "€"
+          && (controllerLanguage == "Portuguese"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "€")
+        }
+        // }
+
+        keyboardKeys.append(btn)
+        if !usingExpandedKeyboard {
           switch row {
-          case 0:
-            btn.topShift = -5
-            btn.bottomShift = -6
-          case 1:
-            btn.topShift = -6
-            btn.bottomShift = -6
-          case 2:
-            btn.topShift = -6
-            btn.bottomShift = -6
-          case 3:
-            btn.topShift = -6
-            btn.bottomShift = -5
+          case 0: stackView0.addArrangedSubview(btn)
+          case 1: stackView1.addArrangedSubview(btn)
+          case 2: stackView2.addArrangedSubview(btn)
+          case 3: stackView3.addArrangedSubview(btn)
           default:
             break
           }
-          
-          // Pad left and right based on if the button has been shifted.
-          if leftPadding == CGFloat(0) {
-            btn.leftShift = -(widthOfSpacing / 2)
-          } else {
-            btn.leftShift = -leftPadding
-          }
-          if rightPadding == CGFloat(0) {
-            btn.rightShift = -(widthOfSpacing / 2)
-          } else {
-            btn.rightShift = -rightPadding
-          }
-          
-          // Activate keyboard interface buttons.
-          activateBtn(btn: btn)
-          if key == "shift" || key == spaceBar || key == languageTextForSpaceBar {
-            btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+        } else {
+          switch row {
+          case 0: stackViewNum.addArrangedSubview(btn)
+          case 1: stackView0.addArrangedSubview(btn)
+          case 2: stackView1.addArrangedSubview(btn)
+          case 3: stackView2.addArrangedSubview(btn)
+          case 4: stackView3.addArrangedSubview(btn)
+          default:
+            break
           }
         }
+
+        // Special key styling.
+        if key == "delete" {
+          let deleteLongPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(deleteLongPressed(_:)))
+          btn.addGestureRecognizer(deleteLongPressRecognizer)
+        }
+
+        if key == "selectKeyboard" {
+          selectKeyboardButton = btn
+          selectKeyboardButton.addTarget(
+            self,
+            action: #selector(handleInputModeList(from:with:)),
+            for: .allTouchEvents
+          )
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "globe")
+        }
+
+        if key == "hideKeyboard" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
+        }
+
+        if key == SpecialKeys.indent {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.forward.to.line")
+        }
+
+        if key == SpecialKeys.capsLock {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "capslock")
+        }
+
+        if key == "shift" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
+        }
+
+        if key == "return" {
+          if [.translate, .conjugate, .plural].contains(commandState) {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
+          } else {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+          }
+        }
+
+        if key == "delete" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
+        }
+
+        // Setting key pop functionality.
+        let keyHoldPop = UILongPressGestureRecognizer(
+          target: self,
+          action: #selector(genHoldPopUpView(sender:))
+        )
+        keyHoldPop.minimumPressDuration = 0.125
+
+        if allNonSpecialKeys.contains(key) {
+          btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
+          btn.addGestureRecognizer(keyHoldPop)
+        }
+
+        // Pad after key is added.
+        var rightPadding = CGFloat(0)
+        if DeviceType.isPhone
+          && key == "m"
+          && ["German", "Swedish"].contains(controllerLanguage)
+          && commandState != .translate
+        {
+          rightPadding = keyWidth / 3
+          addPadding(to: stackView2, width: rightPadding, key: "m")
+        }
+        if DeviceType.isPhone
+          && key == "l"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          rightPadding = keyWidth / 4
+          addPadding(to: stackView1, width: rightPadding, key: "l")
+        }
+
+        // Set the width of the key given device and the given key.
+        btn.adjustKeyWidth()
+
+        // Update the button style.
+        btn.adjustButtonStyle()
+
+        if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
+          // Override background color from adjustKeyWidth for "search" blue for web searches.
+          styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
+          btn.backgroundColor = UIColor(red: 0.0 / 255.0, green: 121.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
+        }
+
+        // Extend button touch areas.
+        var widthOfSpacing = CGFloat(0)
+        if keyboardState == .letters {
+          widthOfSpacing = (
+            (UIScreen.main.bounds.width - 6.0)
+              - (CGFloat(letterKeys[0].count) * keyWidth)
+          ) / (CGFloat(letterKeys[0].count)
+            - 1.0
+          )
+        } else {
+          widthOfSpacing = (
+            (UIScreen.main.bounds.width - 6.0)
+              - (CGFloat(usingExpandedKeyboard == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
+          ) / (CGFloat(letterKeys[0].count)
+            - 1.0
+          )
+        }
+
+        switch row {
+        case 0:
+          btn.topShift = -5
+          btn.bottomShift = -6
+        case 1:
+          btn.topShift = -6
+          btn.bottomShift = -6
+        case 2:
+          btn.topShift = -6
+          btn.bottomShift = -6
+        case 3:
+          btn.topShift = -6
+          btn.bottomShift = -5
+        default:
+          break
+        }
+
+        // Pad left and right based on if the button has been shifted.
+        if leftPadding == CGFloat(0) {
+          btn.leftShift = -(widthOfSpacing / 2)
+        } else {
+          btn.leftShift = -leftPadding
+        }
+        if rightPadding == CGFloat(0) {
+          btn.rightShift = -(widthOfSpacing / 2)
+        } else {
+          btn.rightShift = -rightPadding
+        }
+
+        // Activate keyboard interface buttons.
+        activateBtn(btn: btn)
+        if key == "shift" || key == spaceBar || key == languageTextForSpaceBar {
+          btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+        }
       }
-      
-      // End padding.
-      switch keyboardState {
-      case .letters:
-        break
-      case .numbers:
-        break
-      case .symbols:
-        break
-      }
-    
+    }
+
+    // End padding.
+    switch keyboardState {
+    case .letters:
+      break
+    case .numbers:
+      break
+    case .symbols:
+      break
+    }
   }
-  
+
   // MARK: Load Keys
 
   /// Loads the keys given the current constraints.
@@ -1815,11 +1813,10 @@ class KeyboardViewController: UIInputViewController {
 
     if userDefaults.bool(forKey: "svAccentCharacters") {
       disableAccentCharacters = true
-    }
-    else {
+    } else {
       disableAccentCharacters = false
     }
-        
+
     // Actions to be done only on initial loads.
     if isFirstKeyboardLoad {
       shiftButtonState = .shift
@@ -1890,7 +1887,6 @@ class KeyboardViewController: UIInputViewController {
     setCommandBtns()
     setConjugationBtns()
 
-
     // Clear annotation state if a keyboard state change dictates it.
     if !annotationState {
       annotationBtns.forEach { $0.removeFromSuperview() }
@@ -1904,7 +1900,6 @@ class KeyboardViewController: UIInputViewController {
     paddingViews.forEach { $0.removeFromSuperview() }
 
     setKeywidth()
-    
 
     // Derive keyboard given current states and set widths.
     switch keyboardState {
@@ -2032,7 +2027,7 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       }
-      
+
       setKeyPadding()
 
     } else {
