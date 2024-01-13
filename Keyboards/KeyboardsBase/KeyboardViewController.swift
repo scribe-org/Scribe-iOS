@@ -403,9 +403,8 @@ class KeyboardViewController: UIInputViewController {
         let completionOptions = queryAutocompletions(word: currentPrefix)
 
         if completionOptions[0] != "" {
-          var i = 0
           if completionOptions.count <= 3 {
-            while i < completionOptions.count {
+            for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
               } else if capsLockButtonState == .locked {
@@ -419,10 +418,9 @@ class KeyboardViewController: UIInputViewController {
               } else {
                 completionWords[i] = completionOptions[i]
               }
-              i += 1
             }
           } else {
-            while i < 3 {
+            for i in 0 ..< 3 {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
               } else if capsLockButtonState == .locked {
@@ -436,7 +434,6 @@ class KeyboardViewController: UIInputViewController {
               } else {
                 completionWords[i] = completionOptions[i]
               }
-              i += 1
             }
           }
         }
@@ -460,9 +457,8 @@ class KeyboardViewController: UIInputViewController {
     let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
 
     completionWords = [String]()
-    var i = 0
     let query = "SELECT * FROM verbs WHERE verb = ?"
-    while i < 3 {
+    for i in 0 ..< 3 {
       // Get conjugations of the preselected verbs.
       let args = [verbsAfterPronounsArray[i]]
       let outputCols = [pronounAutosuggestionTenses[prefix.lowercased()]!]
@@ -481,19 +477,17 @@ class KeyboardViewController: UIInputViewController {
       } else {
         completionWords.append(suggestion)
       }
-      i += 1
     }
   }
 
   /// Generates an array of three words that serve as baseline autosuggestions.
   func getDefaultAutosuggestions() {
-    var i = 0
     completionWords = [String]()
-    if allowUndo {
-      completionWords.append(previousWord)
-      i += 1
-    }
-    while i < 3 {
+    for i in 0 ..< 3 {
+      if (allowUndo) {
+        completionWords.append(previousWord)
+        continue
+      }
       if shiftButtonState == .shift {
         completionWords.append(baseAutosuggestions[i].capitalize())
       } else if capsLockButtonState == .locked {
@@ -501,7 +495,6 @@ class KeyboardViewController: UIInputViewController {
       } else {
         completionWords.append(baseAutosuggestions[i])
       }
-      i += 1
     }
   }
 
@@ -543,12 +536,11 @@ class KeyboardViewController: UIInputViewController {
       let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
       if suggestionsLowerCasePrefix[0] != "" {
         completionWords = [String]()
-        var i = 0
-        if allowUndo {
-          completionWords.append(previousWord)
-          i += 1
-        }
-        while i < 3 {
+        for i in 0 ..< 3 {
+          if (allowUndo) {
+            completionWords.append(previousWord)
+            continue
+          }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
           } else if capsLockButtonState == .locked {
@@ -566,16 +558,14 @@ class KeyboardViewController: UIInputViewController {
               completionWords.append(suggestionsLowerCasePrefix[i])
             }
           }
-          i += 1
         }
       } else if suggestionsCapitalizedPrefix[0] != "" {
         completionWords = [String]()
-        var i = 0
-        if allowUndo {
-          completionWords.append(previousWord)
-          i += 1
-        }
-        while i < 3 {
+        for i in 0 ..< 3 {
+          if (allowUndo) {
+            completionWords.append(previousWord)
+            continue
+          }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
           } else if capsLockButtonState == .locked {
@@ -583,7 +573,6 @@ class KeyboardViewController: UIInputViewController {
           } else {
             completionWords.append(suggestionsCapitalizedPrefix[i])
           }
-          i += 1
         }
       } else {
         getDefaultAutosuggestions()
