@@ -26,7 +26,7 @@ var keyWidth = CGFloat(0)
 var letterKeyWidth = CGFloat(0)
 var numSymKeyWidth = CGFloat(0)
 var isFirstKeyboardLoad = false
-
+var disableAccentCharacters = false
 // Constants for scaling key widths and heights.
 let scalarAlternatesBtnYPad = 0.2
 let scalarAlternatesBtnYPhone = 0.15
@@ -46,6 +46,10 @@ let scalarFontPhone = 0.435
 let scalarLetterNumSymKeyWidth = 0.9
 let scalarLetterNumSymKeyWidthLandscapeViewPad = 1.2
 let scalarLetterNumSymKeyWidthLandscapeViewPhone = 1.5
+var scalarSpecialKeysWidth = disableAccentCharacters ? 2.2 : 1.0
+let scalarIndentKeyWidth = 1.7
+let scalarShiftKeyWidth = 1.4
+var scalarReturnKeyWidth = disableAccentCharacters ? 2.2 : 1.0
 
 // Keyboard elements.
 var spaceBar = String()
