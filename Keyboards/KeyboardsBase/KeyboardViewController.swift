@@ -1601,7 +1601,7 @@ class KeyboardViewController: UIInputViewController {
       numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * scalarLetterNumSymKeyWidth
     }
   }
-  
+
   func setKeyPadding() {
     let numRows = keyboard.count
     for row in 0 ..< numRows {
@@ -1857,11 +1857,10 @@ class KeyboardViewController: UIInputViewController {
 
     if userDefaults.bool(forKey: "svAccentCharacters") {
       disableAccentCharacters = true
-    }
-    else {
+    } else {
       disableAccentCharacters = false
     }
-        
+
     // Actions to be done only on initial loads.
     if isFirstKeyboardLoad {
       shiftButtonState = .shift
@@ -1933,7 +1932,6 @@ class KeyboardViewController: UIInputViewController {
     setCommandBackground()
     setCommandBtns()
     setConjugationBtns()
-
 
     // Clear annotation state if a keyboard state change dictates it.
     if !annotationState {
@@ -2092,7 +2090,7 @@ class KeyboardViewController: UIInputViewController {
           }
         }
       }
-      
+
       setKeyPadding()
 
     } else {
