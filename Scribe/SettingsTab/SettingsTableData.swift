@@ -5,54 +5,56 @@
 import Foundation
 
 struct SettingsTableData {
-  static var settingsTableData: [ParentTableCellModel] = [
+
+  static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: "App language",
+      headingTitle: NSLocalizedString("settings.appSettings", comment: "The title of the app settings section"),
       section: [
-        Section(sectionTitle: "System language", imageString: "globe", hasToggle: false, sectionState: .appLang),
+        Section(sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"), imageString: "globe", hasToggle: false, sectionState: .appLang),
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: "Select installed keyboard",
+      headingTitle: NSLocalizedString("settings.installedKeyboards", comment: "The title of the installed keyboards section"),
       section: [
-        //        Section(sectionTitle: "All keyboards", imageString: "globe", hasToggle: false, sectionState: .specificLang("all")),
+        //        Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
       ],
       hasDynamicData: .installedKeyboards
     ),
   ]
 
-  static var languageSettingsData: [ParentTableCellModel] = [
+  static let languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: "Layout",
+      headingTitle: NSLocalizedString("settings.layout", comment: "The title of the layout section"),
       section: [
         Section(
-          sectionTitle: "Period and comma on ABC",
-          imageString: "info.circle",
+          sectionTitle: NSLocalizedString("settings.layout.periodAndComma", comment: "Toggles period and commas for the selected keyboard"),
           hasToggle: true,
-          sectionState: .none(.toggleCommaAndPeriod)
+          sectionState: .none(.toggleCommaAndPeriod),
+          shortDescription: NSLocalizedString("settings.layout.periodAndComma.description", comment: "")
         ),
         Section(
-          sectionTitle: "Disable accent characters",
+          sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", comment: "Toggles accented characters for the selected keyboard"),
           imageString: "info.circle",
           hasToggle: true,
-          sectionState: .none(.toggleAccentCharacters)
+          sectionState: .none(.toggleAccentCharacters),
+          shortDescription: NSLocalizedString("settings.layout.disableAccentCharacters.description", comment: "")
         ),
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: "Functionality",
+      headingTitle: NSLocalizedString("settings.functionality", comment: "The title of the functionality section"),
       section: [
         Section(
-          sectionTitle: "Autosuggest emojis",
-          imageString: "info.circle",
+          sectionTitle: NSLocalizedString("settings.functionality.autoSuggestEmoji", comment: "Toggles the suggestion of Emoji"),
           hasToggle: true,
-          sectionState: .none(.autosuggestEmojis)
+          sectionState: .none(.autosuggestEmojis),
+          shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", comment: "")
         ),
       ],
       hasDynamicData: nil
-    ),
+    )
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {
@@ -75,8 +77,6 @@ struct SettingsTableData {
     for language in installedKeyboards {
       let newSection = Section(
         sectionTitle: language,
-        imageString: "globe",
-        hasToggle: false,
         sectionState: .specificLang(languagesAbbrDict[language]!)
       )
 

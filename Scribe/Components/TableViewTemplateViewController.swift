@@ -4,65 +4,57 @@
 
 import UIKit
 
-class TableViewTemplateViewController: UIViewController {
-  @IBOutlet var mainTable: UITableView!
+final class TableViewTemplateViewController: BaseTableViewController {
 
-  var screenTitle: String = ""
-  var tableData: [ParentTableCellModel] = []
-  var parentSection: Section?
+  // MARK: - Properties
 
-  var langCode: String {
-    if let section = parentSection {
-      guard case let .specificLang(lang) = section.sectionState else { return "de" }
+  override var dataSet: [ParentTableCellModel] {
+    tableData
+  }
 
-      return lang
+  private var tableData: [ParentTableCellModel] = []
+  private var parentSection: Section?
+
+  private var langCode: String {
+    guard let parentSection else {
+      return ""
     }
 
-    return ""
+    guard case let .specificLang(lang) = parentSection.sectionState else {
+      return "de"
+    }
+
+    return lang
+  }
+
+  // MARK: - Functions
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    tableView.rowHeight = UITableView.automaticDimension
+    tableView.estimatedRowHeight = 250
+    tableView.separatorStyle = .none
   }
 
   func configureTable(for tableData: [ParentTableCellModel], parentSection: Section) {
     self.tableData = tableData
     self.parentSection = parentSection
 
-    print("break")
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    title = parentSection?.sectionTitle ?? "Unknown"
-
-    let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
-    mainTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")
-
-    mainTable.dataSource = self
-    mainTable.delegate = self
-
-    mainTable.separatorStyle = .none
-    mainTable.backgroundColor = .clear
+    title = parentSection.sectionTitle
   }
 }
 
-extension TableViewTemplateViewController: UITableViewDataSource {
-  func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    return tableData.count
-  }
+// MARK: - UITableViewDataSource
 
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ParentTableViewCell", for: indexPath) as! ParentTableViewCell
+extension TableViewTemplateViewController {
 
-    if let parentSection = parentSection {
-      cell.parentSection = parentSection
-    }
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as! InfoChildTableViewCell
 
-    cell.configureCell(for: tableData[indexPath.row])
-
-    cell.backgroundColor = .clear
-    cell.selectionStyle = .none
+    cell.parentSection = parentSection
+    cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
 
     return cell
   }
 }
-
-extension TableViewTemplateViewController: UITableViewDelegate {}

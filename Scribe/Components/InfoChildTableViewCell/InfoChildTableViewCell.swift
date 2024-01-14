@@ -4,11 +4,16 @@
 
 import UIKit
 
-class InfoChildTableViewCell: UITableViewCell {
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
+final class InfoChildTableViewCell: UITableViewCell {
 
-  @IBOutlet var chevronImgView: UIImageView!
+  // MARK: - Constants
+
+  static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
+
+  // MARK: - Properties
+
+  @IBOutlet var titleLabel: UILabel!
+  @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var toggleSwitch: UISwitch!
 
   var section: Section?
@@ -29,16 +34,31 @@ class InfoChildTableViewCell: UITableViewCell {
 
     return action
   }
+  
+  // MARK: - Functions
 
   func configureCell(for section: Section) {
     self.section = section
+
+    selectionStyle = .none
+
     titleLabel.text = section.sectionTitle
-    iconImageView.image = UIImage.availableIconImage(with: section.imageString)
+
+    if let shortDescription = section.shortDescription {
+      descriptionLabel.text = shortDescription
+
+      contentView.addSubview(descriptionLabel)
+    } else {
+      descriptionLabel.text = nil
+      descriptionLabel.removeFromSuperview()
+    }
 
     if !section.hasToggle {
+      accessoryType = .disclosureIndicator
       toggleSwitch.isHidden = true
     } else {
-      chevronImgView.isHidden = true
+      accessoryType = .none
+      toggleSwitch.isHidden = false
     }
 
     fetchSwitchStateForCell()
