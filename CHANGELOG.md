@@ -47,11 +47,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) directory has been added for future localization work.
 - SQLite queries were refactored to extract the DB access logic into a common file ([#378](https://github.com/scribe-org/Scribe-iOS/issues/378)).
 
-### ♻️ Code Refactoring
-
-- Magic numbers for interface radii and other sizing dimensions have been converted to defined variables ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
-- The code for settings keyboard key dimensions and padding was extracted into functions for maintainability ([#383](https://github.com/scribe-org/Scribe-iOS/issues/383)).
-
 # Scribe-iOS 2.3.0
 
 ### ✨ New Features
