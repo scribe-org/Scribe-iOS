@@ -193,10 +193,14 @@ class KeyboardViewController: UIInputViewController {
   /// - A call to loadKeys to reload the display after an orientation change
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
-    updateViewConstraints()
-    isFirstKeyboardLoad = true
-    loadKeys()
-    isFirstKeyboardLoad = false
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+      self.updateViewConstraints()
+    }
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+      isFirstKeyboardLoad = true
+      self.loadKeys()
+      isFirstKeyboardLoad = false
+    }
   }
 
   /// Overrides the previous color variables if the user switches between light and dark mode.
