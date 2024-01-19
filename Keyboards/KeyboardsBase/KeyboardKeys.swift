@@ -259,18 +259,21 @@ class KeyboardKey: UIButton {
       if key == "ABC" || key == "АБВ" {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["delete", "#+=", "selectKeyboard", SpecialKeys.capsLock].contains(key) {
+      } else if ["delete", "#+=", "selectKeyboard"].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true // *2 scalarSpecialKeysWidth = 1
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
+      } else if [SpecialKeys.capsLock].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
       } else if [SpecialKeys.indent].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true // scalarIndentKeyWidth
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
       } else if ["shift"].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true // scalarShiftKeyWidth
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
       } else if ["return"].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true // scalarReturnKeyWidth
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
       } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
         if key == "return"
           && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
