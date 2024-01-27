@@ -254,8 +254,34 @@ class KeyboardKey: UIButton {
   /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
   func adjustPadKeyWidth() {
     if usingExpandedKeyboard {
-      scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-      scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+      // Switch case for controller language
+      switch (controllerLanguage){
+      case "Spanish":
+        scalarCapsLockKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.0 : 1.2
+        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.7 : 1.3
+        //scalarReturnKeyWidth = 1.3
+        scalarShiftKeyWidth = 1.8
+      case "German", "Swedish":
+        scalarCapsLockKeyWidth = 1.8
+        scalarReturnKeyWidth = 1.3
+        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+      case "French":
+        scalarCapsLockKeyWidth = 1.2
+        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.4 : 1.0
+        scalarShiftKeyWidth = 1.8
+      case "Italian":
+        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.5 : 1.0
+        scalarCapsLockKeyWidth = 1.3
+        scalarShiftKeyWidth = 1.8
+      default:
+        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+      }
+      //scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+      //scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
       if key == "ABC" || key == "АБВ" {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
@@ -281,7 +307,7 @@ class KeyboardKey: UIButton {
           && DeviceType.isPad
         {
           layer.setValue(true, forKey: "isSpecial")
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
         } else {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true

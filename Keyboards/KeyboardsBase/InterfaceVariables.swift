@@ -48,9 +48,10 @@ let scalarLetterNumSymKeyWidth = 0.9
 let scalarLetterNumSymKeyWidthLandscapeViewPad = 1.2
 let scalarLetterNumSymKeyWidthLandscapeViewPhone = 1.5
 var scalarReturnKeyWidth = disableAccentCharacters ? 2.2 : 1.0
-let scalarShiftKeyWidth = 1.4
+var scalarShiftKeyWidth = 1.4
 var scalarSpecialKeysWidth = disableAccentCharacters ? 2.2 : 1.0
-let scalarCapsLockKeyWidth = 1.8
+var scalarCapsLockKeyWidth = 1.8
+
 
 // Keyboard elements.
 var spaceBar = String()

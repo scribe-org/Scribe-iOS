@@ -1585,10 +1585,9 @@ class KeyboardViewController: UIInputViewController {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
         }
-        if DeviceType.isPad
+       if DeviceType.isPad
           && key == "a"
           && (controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
             || commandState == .translate)
         {
           leftPadding = keyWidth / 3
@@ -1597,19 +1596,18 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "@"
           && (controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
             || commandState == .translate)
         {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "@")
         }
-        if DeviceType.isPad
+       /* if DeviceType.isPad
           && key == "$"
           && controllerLanguage == "Italian"
         {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "$")
-        }
+        }*/
         if DeviceType.isPad
           && key == "€"
           && (controllerLanguage == "Portuguese"
