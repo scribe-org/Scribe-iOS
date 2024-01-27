@@ -1587,7 +1587,9 @@ class KeyboardViewController: UIInputViewController {
         }
        if DeviceType.isPad
           && key == "a"
+          && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
             || commandState == .translate)
         {
           leftPadding = keyWidth / 3
@@ -1595,7 +1597,9 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPad
           && key == "@"
+          && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
             || commandState == .translate)
         {
           leftPadding = keyWidth / 3
