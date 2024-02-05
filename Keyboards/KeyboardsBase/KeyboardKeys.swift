@@ -254,38 +254,36 @@ class KeyboardKey: UIButton {
   /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
   func adjustPadKeyWidth() {
     if usingExpandedKeyboard {
+      accentCharactersDisabledandKeyboardStateNotSymbols = (disableAccentCharacters && keyboardState != .symbols)
       // Switch case for controller language
       switch (controllerLanguage){
       case "Spanish":
-        scalarCapsLockKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.0 : 1.2
-        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.7 : 1.3
-        //scalarReturnKeyWidth = 1.3
+        scalarCapsLockKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.0 : 1.2
+        scalarSpecialKeysWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
+        scalarReturnKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 1.7 : 1.3
         scalarShiftKeyWidth = 1.8
       case "German", "Swedish":
         scalarCapsLockKeyWidth = 1.8
         scalarReturnKeyWidth = 1.3
-        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarSpecialKeysWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
+        scalarReturnKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
       case "French":
         scalarCapsLockKeyWidth = 1.2
-        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.4 : 1.0
+        scalarReturnKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 1.4 : 1.0
         scalarShiftKeyWidth = 1.8
       case "Italian":
-        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 1.5 : 1.0
+        scalarSpecialKeysWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
+        scalarReturnKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 1.5 : 1.0
         scalarCapsLockKeyWidth = 1.3
         scalarShiftKeyWidth = 1.8
       default:
-        scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-        scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+        scalarSpecialKeysWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
+        scalarReturnKeyWidth = accentCharactersDisabledandKeyboardStateNotSymbols  ? 2.2 : 1.0
       }
-      //scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-      //scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
       if key == "ABC" || key == "АБВ" {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["delete", "#+=", "selectKeyboard"].contains(key) {
+      } else if ["delete", "#+=", "selectKeyboard"].contains(key) { 
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
       } else if [SpecialKeys.capsLock].contains(key) {
