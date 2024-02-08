@@ -27,6 +27,7 @@ final class AboutTableViewCell: UITableViewCell {
 
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var iconImageView: UIImageView!
+  @IBOutlet var linkImageView: UIImageView!
 
   private var section: Section?
   private var parentSection: Section?
@@ -42,6 +43,15 @@ final class AboutTableViewCell: UITableViewCell {
       iconImageView.image = UIImage.availableIconImage(with: icon)
     } else {
       iconImageView.image = nil
+    }
+    if let link = section.externalLink {
+      if link {
+        linkImageView.image = UIImage.availableIconImage(with: "externalLink")
+      } else {
+        linkImageView.image = nil
+      }
+    } else {
+      linkImageView.image = nil
     }
 
     accessoryType = section.hasNestedNavigation ? .disclosureIndicator : .none

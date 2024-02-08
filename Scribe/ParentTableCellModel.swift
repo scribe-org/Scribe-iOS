@@ -19,14 +19,16 @@ struct Section {
   let hasNestedNavigation: Bool
   let sectionState: SectionState
   let shortDescription: String?
+  let externalLink: Bool?
 
-  init(sectionTitle: String, imageString: String? = nil, hasToggle: Bool = false, hasNestedNavigation: Bool = false, sectionState: SectionState, shortDescription: String? = nil) {
+  init(sectionTitle: String, imageString: String? = nil, hasToggle: Bool = false, hasNestedNavigation: Bool = false, sectionState: SectionState, shortDescription: String? = nil, externalLink: Bool? = false) {
     self.sectionTitle = sectionTitle
     self.imageString = imageString
     self.hasToggle = hasToggle
     self.hasNestedNavigation = hasNestedNavigation
     self.sectionState = sectionState
     self.shortDescription = shortDescription
+    self.externalLink = externalLink
   }
 }
 
@@ -46,6 +48,7 @@ enum SectionState: Equatable {
   case appLang
   case specificLang(String)
   case none(UserInteractiveState)
+  case externalLink
 }
 
 enum UserInteractiveState {

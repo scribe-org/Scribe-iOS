@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,11 +36,22 @@
                             <constraint firstAttribute="height" constant="26" id="Vwp-c3-IiP"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Av5-Tu-z7q" userLabel="Link Image View">
+                        <rect key="frame" x="450" y="56" width="20" height="20"/>
+                        <color key="tintColor" name="keyChar"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="2Nf-N8-aed"/>
+                            <constraint firstAttribute="height" constant="20" id="7Tb-NH-OcY"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="MSu-WY-MCY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Yr-Bm-4Cx"/>
+                    <constraint firstItem="Av5-Tu-z7q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nx3-Wr-JYN"/>
+                    <constraint firstAttribute="trailing" secondItem="Av5-Tu-z7q" secondAttribute="trailing" constant="16" id="awi-VI-67k"/>
                     <constraint firstItem="MSu-WY-MCY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="k6M-7f-ePY"/>
+                    <constraint firstItem="Av5-Tu-z7q" firstAttribute="centerY" secondItem="AJP-R8-VkX" secondAttribute="centerY" id="qSS-hY-B7w"/>
                     <constraint firstItem="AJP-R8-VkX" firstAttribute="centerY" secondItem="MSu-WY-MCY" secondAttribute="centerY" id="twY-UQ-o7I"/>
                     <constraint firstItem="AJP-R8-VkX" firstAttribute="leading" secondItem="MSu-WY-MCY" secondAttribute="trailing" constant="8" id="udY-dz-eEL"/>
                     <constraint firstAttribute="trailing" secondItem="AJP-R8-VkX" secondAttribute="trailing" constant="8" id="wI4-UY-kS6"/>
@@ -49,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="iconImageView" destination="MSu-WY-MCY" id="EMy-K1-jZa"/>
+                <outlet property="linkImageView" destination="Av5-Tu-z7q" id="Dq0-4R-6NK"/>
                 <outlet property="titleLabel" destination="AJP-R8-VkX" id="urL-z2-Msc"/>
             </connections>
             <point key="canvasLocation" x="265.64885496183206" y="50.70422535211268"/>
