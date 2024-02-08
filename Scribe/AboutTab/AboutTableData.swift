@@ -9,8 +9,8 @@ struct AboutTableData {
     ParentTableCellModel(
       headingTitle: "Community",
       section: [
-        Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github),
-        Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix),
+        Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github, externalLink: true),
+        Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix, externalLink: true),
         Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", sectionState: .wikimedia),
         Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe),
       ],
@@ -19,9 +19,9 @@ struct AboutTableData {
     ParentTableCellModel(
       headingTitle: "Feedback and support",
       section: [
-        Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe),
-        Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport),
-        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email),
+        Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe, externalLink: true),
+        Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport, externalLink: true),
+        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email, externalLink: true),
 //        Section(sectionTitle: "Reset app hints", imageString: "lightbulb", sectionState: .appHints)
       ],
       hasDynamicData: nil

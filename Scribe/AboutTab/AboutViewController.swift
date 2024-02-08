@@ -99,6 +99,7 @@ extension AboutViewController {
     case .appLang: break
     case .none: break
     case .specificLang(_): break
+    case .externalLink: break
     }
 
 
