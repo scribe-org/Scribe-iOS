@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "External_link_font_awesome.png",
+      "filename" : "external-link.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "External_link_font_awesome_dark_mode.png",
+      "filename" : "external-link-dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
