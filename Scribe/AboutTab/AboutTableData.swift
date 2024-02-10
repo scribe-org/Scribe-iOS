@@ -24,8 +24,9 @@ struct AboutTableData {
       section: [
         Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github, externalLink: true),
         Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix, externalLink: true),
-        Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", sectionState: .wikimedia),
-        Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe),
+        Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe, externalLink: true),
+//        Section(sectionTitle: "View all Scribe apps", imageString: "scribeIcon", sectionState: .scribeApps, externalLink: true)
+        Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", hasNestedNavigation: true, sectionState: .wikimedia),
       ],
       hasDynamicData: nil
     ),

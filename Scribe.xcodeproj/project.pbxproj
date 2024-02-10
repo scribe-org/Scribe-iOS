@@ -1098,8 +1098,8 @@
 		1406B7832A2DFCA2001DF45B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
 				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
+				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
 				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
 			);
 			path = Components;
@@ -1125,8 +1125,8 @@
 		147797A92A2CD2B50044A53E /* AboutTab */ = {
 			isa = PBXGroup;
 			children = (
-				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
 				1406B7862A2DFCDD001DF45B /* AboutTableData.swift */,
+				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
 				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
 			);
 			path = AboutTab;
@@ -1135,8 +1135,8 @@
 		147797B62A2CFB560044A53E /* SettingsTab */ = {
 			isa = PBXGroup;
 			children = (
-				147797B42A2CFB490044A53E /* SettingsViewController.swift */,
 				147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */,
+				147797B42A2CFB490044A53E /* SettingsViewController.swift */,
 			);
 			path = SettingsTab;
 			sourceTree = "<group>";
@@ -1209,24 +1209,24 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
-				EDEE62232B2DE64A00A0B9C1 /* Extensions */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
-				38BD213322D5907F00C6795D /* AppDelegate.swift */,
-				1406B78B2A3209CF001DF45B /* AppExtensions.swift */,
-				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
-				D17193C327AEAD7D0038660B /* AppStyling.swift */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
-				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
-				38BD213D22D5908100C6795D /* Assets.xcassets */,
 				1406B7832A2DFCA2001DF45B /* Components */,
-				38BD214222D5908100C6795D /* Info.plist */,
+				EDEE62232B2DE64A00A0B9C1 /* Extensions */,
 				1406B7882A2DFE4C001DF45B /* InstallationTab */,
-				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
-				147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */,
 				EDB460222B03BF7000BEA967 /* Resources */,
-				144B56F22A568AC200C2F447 /* Scribe.entitlements */,
 				147797B62A2CFB560044A53E /* SettingsTab */,
 				EDB4601F2B03B3B400BEA967 /* Views */,
+				38BD213322D5907F00C6795D /* AppDelegate.swift */,
+				1406B78B2A3209CF001DF45B /* AppExtensions.swift */,
+				D17193C327AEAD7D0038660B /* AppStyling.swift */,
+				D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */,
+				147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */,
+				38BD213D22D5908100C6795D /* Assets.xcassets */,
+				38BD213722D5907F00C6795D /* AppScreen.storyboard */,
+				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
+				144B56F22A568AC200C2F447 /* Scribe.entitlements */,
+				38BD214222D5908100C6795D /* Info.plist */,
 			);
 			path = Scribe;
 			sourceTree = "<group>";
