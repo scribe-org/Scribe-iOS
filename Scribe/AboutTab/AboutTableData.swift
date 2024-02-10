@@ -1,5 +1,18 @@
 //
-//  AboutTableData.swift
+//  Copyright (C) 2023 Scribe
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
 import Foundation
@@ -9,8 +22,8 @@ struct AboutTableData {
     ParentTableCellModel(
       headingTitle: "Community",
       section: [
-        Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github),
-        Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix),
+        Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github, externalLink: true),
+        Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix, externalLink: true),
         Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", sectionState: .wikimedia),
         Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe),
       ],
@@ -19,9 +32,9 @@ struct AboutTableData {
     ParentTableCellModel(
       headingTitle: "Feedback and support",
       section: [
-        Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe),
-        Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport),
-        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email),
+        Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe, externalLink: true),
+        Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport, externalLink: true),
+        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email, externalLink: true),
 //        Section(sectionTitle: "Reset app hints", imageString: "lightbulb", sectionState: .appHints)
       ],
       hasDynamicData: nil
