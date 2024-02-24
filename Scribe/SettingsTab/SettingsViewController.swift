@@ -45,6 +45,7 @@ final class SettingsViewController: UIViewController {
     parentTable.backgroundColor = .clear
     parentTable.sectionHeaderHeight = sectionHeaderHeight
     parentTable.separatorInset = separatorInset
+    applyShadowEffects(elem: parentTable)
 
     setFooterButtonView()
 
