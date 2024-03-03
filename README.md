@@ -36,6 +36,8 @@ Scribe is fully open-source and does not collect usage data or ask for system ac
 
 Also available on [Android](https://github.com/scribe-org/Scribe-Android) (WIP), [Desktop](https://github.com/scribe-org/Scribe-Desktop) (planned) and for the data processes see [Scribe-Data](https://github.com/scribe-org/Scribe-Data).
 
+Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organization/blob/main/ARCHITECTURE.md) for an overview of the organization including our applications, services and processes. It depicts the projects that [Scribe](https://github.com/scribe-org) is developing as well as the relationships between them and the external systems with which they interact.
+
 <a id="contents"></a>
 
 # **Contents**
@@ -145,7 +147,7 @@ git clone https://github.com/<your-username>/Scribe-iOS.git
 # Navigate to the newly cloned directory.
 cd Scribe-iOS
 # Assign the original repo to a remote called "upstream".
-git remote add upstream https://github.com/scribe-org/Scibe-iOS.git
+git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
 ```
 
 - Now, if you run `git remote -v` you should see two remote repositories named:

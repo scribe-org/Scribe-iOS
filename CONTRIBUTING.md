@@ -103,7 +103,7 @@ git clone https://github.com/<your-username>/Scribe-iOS.git
 # Navigate to the newly cloned directory.
 cd Scribe-iOS
 # Assign the original repo to a remote called "upstream".
-git remote add upstream https://github.com/scribe-org/Scibe-iOS.git
+git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
 ```
 
 - Now, if you run `git remote -v` you should see two remote repositories named:
