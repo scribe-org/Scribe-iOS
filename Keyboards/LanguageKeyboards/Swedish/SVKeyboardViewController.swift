@@ -1,6 +1,5 @@
 /**
- * Class for the Swedish Scribe keyboard
- *
+ * Class for the Swedish Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the QWERTY French Scribe keyboard
- *
+ * Constants and functions to load the QWERTY French Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

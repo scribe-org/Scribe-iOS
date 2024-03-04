@@ -1,7 +1,6 @@
 /**
- * Controls the ToolTipViewDatasourceable protocol
+ * Controls the ToolTipViewDatasourceable protocol.
  * 
- *
  * Copyright (C) 2023 Scribe
  *
  * This program is free software: you can redistribute it and/or modify

@@ -1,6 +1,5 @@
 /**
- * Classes and variables that define keys for Scribe keyboards
- *
+ * Classes and variables that define keys for Scribe keyboards.
  *
  * Copyright (C) 2023 Scribe
  *

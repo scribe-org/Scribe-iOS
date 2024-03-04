@@ -1,6 +1,5 @@
 /**
- * Class for the English Scribe keyboard
- *
+ * Class for the English Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

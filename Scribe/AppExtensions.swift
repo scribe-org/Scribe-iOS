@@ -1,6 +1,5 @@
 /**
- * Extensions for the Scribe app
- *
+ * Extensions for the Scribe app.
  *
  * Copyright (C) 2023 Scribe
  *

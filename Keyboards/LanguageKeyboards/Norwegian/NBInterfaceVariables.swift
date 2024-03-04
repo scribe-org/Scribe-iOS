@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the Norwegian Bokmål Scribe keyboard
- *
+ * Constants and functions to load the Norwegian Bokmål Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

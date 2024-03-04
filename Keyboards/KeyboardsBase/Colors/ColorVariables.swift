@@ -1,6 +1,5 @@
 /**
- * Variables associated with coloration for scribe
- *
+ * Variables associated with coloration for scribe.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * Variables associated with commands for the Hebrew Scribe keyboard
- *
+ * Variables associated with commands for the Hebrew Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

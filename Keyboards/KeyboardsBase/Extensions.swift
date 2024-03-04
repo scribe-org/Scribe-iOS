@@ -1,6 +1,5 @@
 /**
- * Extensions for Scribe keyboards
- *
+ * Extensions for Scribe keyboards.
  *
  * Copyright (C) 2023 Scribe
  *

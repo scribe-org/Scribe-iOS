@@ -1,6 +1,5 @@
 /**
- * Attributes for tooltips
- *
+ * Attributes for tooltips.
  *
  * Copyright (C) 2023 Scribe
  *

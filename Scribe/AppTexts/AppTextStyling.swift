@@ -1,6 +1,5 @@
 /**
- * Functions returning styled text elements for the app screen
- *
+ * Functions returning styled text elements for the app screen.
  *
  * Copyright (C) 2023 Scribe
  *

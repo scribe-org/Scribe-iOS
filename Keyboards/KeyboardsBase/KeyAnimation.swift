@@ -1,6 +1,5 @@
 /**
- * Functions to animate key pressed with pop up characters
- *
+ * Functions to animate key pressed with pop up characters.
  *
  * Copyright (C) 2023 Scribe
  *

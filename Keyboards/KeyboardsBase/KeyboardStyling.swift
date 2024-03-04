@@ -1,6 +1,5 @@
 /**
- * Functions to style keyboard elements
- *
+ * Functions to style keyboard elements.
  *
  * Copyright (C) 2023 Scribe
  *

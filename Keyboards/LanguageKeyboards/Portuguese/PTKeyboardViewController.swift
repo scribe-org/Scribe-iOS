@@ -1,6 +1,5 @@
 /**
- * Class for the Portuguese Scribe keyboard
- *
+ * Class for the Portuguese Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,8 +1,7 @@
 /**
- * The English privacy policy for the Scribe app
+ * The English privacy policy for the Scribe app.
  *
- * `PRIVACY.txt` is formatted for GitHub, this is formatted for modular sizing
- *
+ *`PRIVACY.txt` is formatted for GitHub, this is formatted for modular sizing.
  *
  * Copyright (C) 2023 Scribe
  *

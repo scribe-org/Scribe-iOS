@@ -1,6 +1,5 @@
 /**
- * Converts strings for colors into the corresponding color
- *
+ * Converts strings for colors into the corresponding color.
  *
  * Copyright (C) 2023 Scribe
  *

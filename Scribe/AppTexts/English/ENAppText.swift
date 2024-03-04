@@ -1,6 +1,5 @@
 /**
- * The English app text for the Scribe app
- *
+ * The English app text for the Scribe app.
  *
  * Copyright (C) 2023 Scribe
  *

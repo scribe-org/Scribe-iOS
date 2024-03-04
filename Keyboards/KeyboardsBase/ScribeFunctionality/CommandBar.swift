@@ -1,6 +1,5 @@
 /**
- * Class defining the bar into which commands are typed
- *
+ * Class defining the bar into which commands are typed.
  *
  * Copyright (C) 2023 Scribe
  *

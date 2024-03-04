@@ -1,6 +1,5 @@
 /**
- * Functions for the About tab
- *
+ * Functions for the About tab.
  *
  * Copyright (C) 2023 Scribe
  *

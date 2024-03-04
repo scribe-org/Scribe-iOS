@@ -1,6 +1,5 @@
 /**
- * Class of methods to manage Scribe's behaviors
- *
+ * Class of methods to manage Scribe's behaviors.
  *
  * Copyright (C) 2023 Scribe
  *

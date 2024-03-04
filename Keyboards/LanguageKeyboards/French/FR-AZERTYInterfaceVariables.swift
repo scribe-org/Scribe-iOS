@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the AZERTY French Scribe keyboard
- *
+ * Constants and functions to load the AZERTY French Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

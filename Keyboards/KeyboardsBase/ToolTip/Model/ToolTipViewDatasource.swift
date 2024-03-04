@@ -1,6 +1,5 @@
 /**
- * Creates tooltips to be used in the ToolTipView
- *
+ * Creates tooltips to be used in the ToolTipView.
  *
  * Copyright (C) 2023 Scribe
  *

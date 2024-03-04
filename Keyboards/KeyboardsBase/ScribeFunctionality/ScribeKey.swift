@@ -1,6 +1,5 @@
 /**
- * Class defining the Scribe key that is used to access keyboard commands
- *
+ * Class defining the Scribe key that is used to access keyboard commands.
  *
  * Copyright (C) 2023 Scribe
  *

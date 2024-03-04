@@ -1,6 +1,5 @@
 /**
- * Sets up information views in the About tab
- *
+ * Sets up information views in the About tab.
  *
  * Copyright (C) 2023 Scribe
  *

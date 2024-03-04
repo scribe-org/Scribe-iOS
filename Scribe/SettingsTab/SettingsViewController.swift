@@ -1,6 +1,5 @@
 /**
- * Functions for the Settings tab
- *
+ * Functions for the Settings tab.
  *
  * Copyright (C) 2023 Scribe
  *

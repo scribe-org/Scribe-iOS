@@ -1,6 +1,5 @@
 /**
- * Contains structs that control how buttons in the About tab are built
- *
+ * Contains structs that control how buttons in the About tab are built.
  *
  * Copyright (C) 2023 Scribe
  *

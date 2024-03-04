@@ -1,6 +1,5 @@
 /**
- * Constants for the Scribe keyboard interfaces
- *
+ * Constants for the Scribe keyboard interfaces.
  *
  * Copyright (C) 2023 Scribe
  *

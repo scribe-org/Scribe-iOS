@@ -1,6 +1,5 @@
 /**
- * Commands and functions to load the Russian Scribe keyboard
- *
+ * Commands and functions to load the Russian Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * Variables associated with commands for the Spanish Scribe keyboard
- *
+ * Variables associated with commands for the Spanish Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

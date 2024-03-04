@@ -1,6 +1,5 @@
 /**
- * Adds Scribe colors to the UIColor pool
- *
+ * Adds Scribe colors to the UIColor pool.
  *
  * Copyright (C) 2023 Scribe
  *

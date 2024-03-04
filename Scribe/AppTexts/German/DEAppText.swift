@@ -1,6 +1,5 @@
 /**
- * The German app text for the Scribe app
- *
+ * The German app text for the Scribe app.
  *
  * Copyright (C) 2023 Scribe
  *

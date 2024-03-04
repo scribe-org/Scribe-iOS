@@ -1,6 +1,5 @@
 /**
- * Base for table view in the Scribe app
- *
+ * Base for table view in the Scribe app.
  *
  * Copyright (C) 2023 Scribe
  *

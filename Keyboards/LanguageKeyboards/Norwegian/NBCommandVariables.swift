@@ -1,6 +1,5 @@
 /**
- * Variables associated with commands for the Norwegian Bokmål Scribe keyboard
- *
+ * Variables associated with commands for the Norwegian Bokmål Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

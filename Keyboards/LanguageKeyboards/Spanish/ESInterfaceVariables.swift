@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the Spanish Scribe keyboard
- *
+ * Constants and functions to load the Spanish Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

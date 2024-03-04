@@ -1,6 +1,5 @@
 /**
- * The ViewController for the Installation screen of the Scribe app
- *
+ * The ViewController for the Installation screen of the Scribe app.
  *
  * Copyright (C) 2023 Scribe
  *

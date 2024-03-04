@@ -1,6 +1,5 @@
 /**
- * Functions to style app elements
- *
+ * Functions to style app elements.
  *
  * Copyright (C) 2023 Scribe
  *

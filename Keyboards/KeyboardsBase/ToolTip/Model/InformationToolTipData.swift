@@ -1,6 +1,5 @@
 /**
- * Data used for tooltips
- *
+ * Data used for tooltips.
  *
  * Copyright (C) 2023 Scribe
  *
