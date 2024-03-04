@@ -1,6 +1,5 @@
 /**
- * Class for the Spanish Scribe keyboard
- *
+ * Class for the Spanish Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

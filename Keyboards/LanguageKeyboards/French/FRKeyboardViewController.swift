@@ -1,6 +1,5 @@
 /**
- * Class for the French Scribe keyboard
- *
+ * Class for the French Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * Functions and variables to create alternate key views
- *
+ * Functions and variables to create alternate key views.
  *
  * Copyright (C) 2023 Scribe
  *

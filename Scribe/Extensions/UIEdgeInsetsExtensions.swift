@@ -1,6 +1,5 @@
 /**
- * Extensions for UIEdgeInsets
- *
+ * Extensions for UIEdgeInsets.
  *
  * Copyright (C) 2023 Scribe
  *

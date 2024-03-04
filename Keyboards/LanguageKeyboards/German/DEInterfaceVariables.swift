@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the German Scribe keyboard
- *
+ * Constants and functions to load the German Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

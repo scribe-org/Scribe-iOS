@@ -1,6 +1,5 @@
 /**
- * Simple utility functions for data extraction and language management
- *
+ * Simple utility functions for data extraction and language management.
  *
  * Copyright (C) 2023 Scribe
  *

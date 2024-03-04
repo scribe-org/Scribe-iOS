@@ -1,6 +1,5 @@
 /**
- * Class for the Russian Scribe keyboard
- *
+ * Class for the Russian Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

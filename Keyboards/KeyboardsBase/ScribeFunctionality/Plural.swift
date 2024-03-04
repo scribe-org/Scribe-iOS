@@ -1,6 +1,5 @@
 /**
- * Functions that control the plural command
- *
+ * Functions that control the plural command.
  *
  * Copyright (C) 2023 Scribe
  *

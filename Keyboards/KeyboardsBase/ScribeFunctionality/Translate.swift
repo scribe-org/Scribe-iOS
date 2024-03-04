@@ -1,6 +1,5 @@
 /**
- * Functions that control the translate command
- *
+ * Functions that control the translate command.
  *
  * Copyright (C) 2023 Scribe
  *

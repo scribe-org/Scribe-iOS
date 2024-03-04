@@ -1,6 +1,5 @@
 /**
- * Controls data displayed in the Settings tab
- *
+ * Controls data displayed in the Settings tab.
  *
  * Copyright (C) 2023 Scribe
  *

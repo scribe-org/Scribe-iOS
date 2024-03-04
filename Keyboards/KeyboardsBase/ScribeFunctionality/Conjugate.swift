@@ -1,6 +1,5 @@
 /**
- * Functions and elements that control the conjugation command
- *
+ * Functions and elements that control the conjugation command.
  *
  * Copyright (C) 2023 Scribe
  *

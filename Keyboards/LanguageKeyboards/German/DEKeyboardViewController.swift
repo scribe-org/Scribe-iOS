@@ -1,6 +1,5 @@
 /**
- * Class for the German Scribe keyboard
- *
+ * Class for the German Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

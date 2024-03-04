@@ -1,6 +1,5 @@
 /**
- * Functions returning symbols for the app UI
- *
+ * Functions returning symbols for the app UI.
  *
  * Copyright (C) 2023 Scribe
  *

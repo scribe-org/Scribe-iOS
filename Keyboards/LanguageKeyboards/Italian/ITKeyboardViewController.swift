@@ -1,6 +1,5 @@
 /**
- * Class for the Italian Scribe keyboard
- *
+ * Class for the Italian Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * The main file used to control tooltips
- *
+ * The main file used to control tooltips.
  *
  * Copyright (C) 2023 Scribe
  *

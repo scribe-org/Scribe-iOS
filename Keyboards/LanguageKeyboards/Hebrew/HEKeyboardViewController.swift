@@ -1,6 +1,5 @@
 /**
- * Class for the Hebrew Scribe keyboard
- *
+ * Class for the Hebrew Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

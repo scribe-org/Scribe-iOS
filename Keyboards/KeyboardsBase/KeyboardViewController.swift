@@ -1,6 +1,5 @@
 /**
- * Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys.
- *
+ * Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys..
  *
  * Copyright (C) 2023 Scribe
  *

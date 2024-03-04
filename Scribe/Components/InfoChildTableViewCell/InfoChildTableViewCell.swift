@@ -1,6 +1,5 @@
 /**
- * Class for a setting component with a heading, description and switch
- *
+ * Class for a setting component with a heading, description and switch.
  *
  * Copyright (C) 2023 Scribe
  *

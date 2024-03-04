@@ -1,6 +1,5 @@
 /**
- * Constants and functions to load the English Scribe keyboard
- *
+ * Constants and functions to load the English Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

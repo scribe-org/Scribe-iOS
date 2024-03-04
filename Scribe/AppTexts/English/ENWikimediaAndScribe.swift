@@ -1,6 +1,5 @@
 /**
- * Text displayed on the English Wikimedia and Scribe view
- *
+ * Text displayed on the English Wikimedia and Scribe view.
  *
  * Copyright (C) 2023 Scribe
  *

@@ -1,6 +1,5 @@
 /**
- * Text displayed on the English Third Party Licenses view
- *
+ * Text displayed on the English Third Party Licenses view.
  *
  * Copyright (C) 2023 Scribe
  *

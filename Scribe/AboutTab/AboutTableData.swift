@@ -1,6 +1,5 @@
 /**
- * Controls data displayed in the About tab
- *
+ * Controls data displayed in the About tab.
  *
  * Copyright (C) 2023 Scribe
  *

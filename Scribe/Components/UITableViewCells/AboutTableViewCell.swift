@@ -1,6 +1,5 @@
 /**
- * Class for a button component with a label, icon and link icon
- *
+ * Class for a button component with a label, icon and link icon.
  *
  * Copyright (C) 2023 Scribe
  *

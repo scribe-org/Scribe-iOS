@@ -1,6 +1,5 @@
 /**
- * Variables associated with Scribe commands
- *
+ * Variables associated with Scribe commands.
  *
  * Copyright (C) 2023 Scribe
  *

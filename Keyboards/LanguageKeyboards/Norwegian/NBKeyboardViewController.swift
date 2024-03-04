@@ -1,6 +1,5 @@
 /**
- * Class for the Norwegian Bokmål Scribe keyboard
- *
+ * Class for the Norwegian Bokmål Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *

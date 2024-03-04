@@ -1,6 +1,5 @@
 /**
- * Function for loading in data to the keyboards
- *
+ * Function for loading in data to the keyboards.
  *
  * Copyright (C) 2023 Scribe
  *

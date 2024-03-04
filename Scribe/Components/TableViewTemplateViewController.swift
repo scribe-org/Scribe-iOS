@@ -1,6 +1,5 @@
 /**
- * Controls the table views within the app
- *
+ * Controls the table views within the app.
  *
  * Copyright (C) 2023 Scribe
  *

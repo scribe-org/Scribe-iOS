@@ -1,6 +1,5 @@
 /**
- * Variables associated with the base keyboard interface
- *
+ * Variables associated with the base keyboard interface.
  *
  * Copyright (C) 2023 Scribe
  *
