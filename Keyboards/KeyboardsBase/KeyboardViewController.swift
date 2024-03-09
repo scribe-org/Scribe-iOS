@@ -1,5 +1,5 @@
 /**
- * Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys..
+ * Classes for the parent keyboard view controller that language keyboards.
  *
  * Copyright (C) 2023 Scribe
  *
@@ -17,7 +17,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-              
 import GRDB
 import UIKit
 
@@ -207,10 +206,10 @@ class KeyboardViewController: UIInputViewController {
   /// - A call to loadKeys to reload the display after an orientation change
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
-    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
       self.updateViewConstraints()
     }
-    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (nil) in
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
       isFirstKeyboardLoad = true
       self.loadKeys()
       isFirstKeyboardLoad = false
@@ -502,7 +501,7 @@ class KeyboardViewController: UIInputViewController {
   func getDefaultAutosuggestions() {
     completionWords = [String]()
     for i in 0 ..< 3 {
-      if (allowUndo) {
+      if allowUndo {
         completionWords.append(previousWord)
         continue
       }
@@ -555,7 +554,7 @@ class KeyboardViewController: UIInputViewController {
       if suggestionsLowerCasePrefix[0] != "" {
         completionWords = [String]()
         for i in 0 ..< 3 {
-          if (allowUndo) {
+          if allowUndo {
             completionWords.append(previousWord)
             continue
           }
@@ -580,7 +579,7 @@ class KeyboardViewController: UIInputViewController {
       } else if suggestionsCapitalizedPrefix[0] != "" {
         completionWords = [String]()
         for i in 0 ..< 3 {
-          if (allowUndo) {
+          if allowUndo {
             completionWords.append(previousWord)
             continue
           }

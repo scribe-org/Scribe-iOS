@@ -1,5 +1,5 @@
 /**
- * Class for the Danish Scribe keybaord.
+ * Class for the Danish Scribe keyboard.
  *
  * Copyright (C) 2023 Scribe
  *
