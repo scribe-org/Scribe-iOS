@@ -206,9 +206,10 @@ class KeyboardViewController: UIInputViewController {
   /// - A call to loadKeys to reload the display after an orientation change
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
-    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+    coordinator.animate(alongsideTransition: { (context) in
       self.updateViewConstraints()
-    }
+      self.loadKeys()
+    })
     Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
       isFirstKeyboardLoad = true
       self.loadKeys()
@@ -226,9 +227,11 @@ class KeyboardViewController: UIInputViewController {
       alternatesShapeLayer.removeFromSuperlayer()
     }
     annotationState = false
-    isFirstKeyboardLoad = true
-    loadKeys()
-    isFirstKeyboardLoad = false
+    Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+      isFirstKeyboardLoad = true
+      self.loadKeys()
+      isFirstKeyboardLoad = false
+    }
   }
 
   // MARK: Scribe Command Elements
