@@ -47,7 +47,7 @@ final class SettingsViewController: UIViewController {
     parentTable.backgroundColor = .clear
     parentTable.sectionHeaderHeight = sectionHeaderHeight
     parentTable.separatorInset = separatorInset
-    applyShadowEffects(elem: parentTable)
+  
 
     setFooterButtonView()
 
@@ -82,7 +82,7 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    applyShadowEffects(elem: footerFrame)
+    
     footerButton.setTitle("Install keyboard", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 

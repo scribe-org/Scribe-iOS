@@ -164,7 +164,7 @@ class InstallationVC: UIViewController {
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
     appTextBackground.backgroundColor = UIColor(named: "commandBar")
-    applyShadowEffects(elem: appTextBackground)
+    
 
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {
