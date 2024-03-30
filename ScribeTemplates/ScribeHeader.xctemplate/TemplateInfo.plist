@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Identifier</key>
+        <string>com.example.templates.mytemplate</string>
+        <key>Kind</key>
+        <string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+        <key>Ancestors</key>
+        <array>
+            <string>com.apple.dt.unit-test-class</string>
+        </array>
+    </dict>
+</plist>

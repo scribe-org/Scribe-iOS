@@ -103,7 +103,7 @@ git clone https://github.com/<your-username>/Scribe-iOS.git
 # Navigate to the newly cloned directory.
 cd Scribe-iOS
 # Assign the original repo to a remote called "upstream".
-git remote add upstream https://github.com/scribe-org/Scibe-iOS.git
+git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
 ```
 
 - Now, if you run `git remote -v` you should see two remote repositories named:
@@ -135,6 +135,15 @@ The Xcode debugger often doesn't work as expected for Scribe as the keyboards th
 - Hit the run button (or ⌘-R) to start the active scheme
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
 - Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for keyboard testing
+
+### Adding the file header template to Xcode
+
+As [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) licensed technology, Scribe is expected to include a license header in all files within the codebase. A template for this has been provided in the `ScribeTemplates` directory. You can have this header automatically added to the top of files by executing the following commands to add it to your Xcode templates:
+
+```bash
+mkdir ~/Library/Developer/Xcode/Templates
+ln -s PATH_TO_LOCAL_SCRIBE_DIRECTORY/Scribe-iOS/ScribeTemplates ~/Library/Developer/Xcode/Templates/
+```
 
 <a id="issues-projects"></a>
 

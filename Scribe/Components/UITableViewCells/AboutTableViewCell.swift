@@ -1,19 +1,21 @@
-//
-//  Copyright (C) 2023 Scribe
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-//
+/**
+ * Class for a button component with a label, icon and link icon.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -27,6 +29,7 @@ final class AboutTableViewCell: UITableViewCell {
 
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var iconImageView: UIImageView!
+  @IBOutlet var linkImageView: UIImageView!
 
   private var section: Section?
   private var parentSection: Section?
@@ -42,6 +45,15 @@ final class AboutTableViewCell: UITableViewCell {
       iconImageView.image = UIImage.availableIconImage(with: icon)
     } else {
       iconImageView.image = nil
+    }
+    if let link = section.externalLink {
+      if link {
+        linkImageView.image = UIImage.availableIconImage(with: "externalLink")
+      } else {
+        linkImageView.image = nil
+      }
+    } else {
+      linkImageView.image = nil
     }
 
     accessoryType = section.hasNestedNavigation ? .disclosureIndicator : .none

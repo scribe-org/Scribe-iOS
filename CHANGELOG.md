@@ -30,14 +30,18 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - iPad keyboards are now more reflective of their system keyboard counterparts for devices above a certain width ([#33](https://github.com/scribe-org/Scribe-iOS/issues/33), [#352](https://github.com/scribe-org/Scribe-iOS/issues/352)).
 
-<!-- ### 🐞 Bug Fixes
+### 🐞 Bug Fixes
 
-- Bugs were fixed that were causing the autocompletions to trigger to regularly. -->
+- The transition from between portrait and landscape mode was dramatically improved ([#25](https://github.com/scribe-org/Scribe-iOS/issues/33)).
+- Annotations under autosuggestions and autocompletions are no longer distorted during an orientation transition ([#396](https://github.com/scribe-org/Scribe-iOS/issues/396)).
+<!-- - Bugs were fixed that were causing the autocompletions to trigger too regularly. -->
 
 ### ♻️ Code Refactoring
 
 - Magic numbers for interface radii and other sizing dimensions have been converted to defined variables ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
 - The code for settings keyboard key dimensions and padding was extracted into functions for maintainability ([#383](https://github.com/scribe-org/Scribe-iOS/issues/383)).
+- While loops were replaced by for loops in places where they were being used inappropriately ([#380](https://github.com/scribe-org/Scribe-iOS/issues/380)).
+- The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) directory has been added for future localization work.
 
 # Scribe-iOS 2.3.0
 
