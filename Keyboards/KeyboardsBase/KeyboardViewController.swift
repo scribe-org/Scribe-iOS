@@ -139,10 +139,19 @@ class KeyboardViewController: UIInputViewController {
         keyboardHeight = 270
       }
     } else if DeviceType.isPad {
-      if isLandscapeView {
-        keyboardHeight = 420
+      // Expanded keyboard on larger iPads can be higher.
+      if UIScreen.main.bounds.width > 768 {
+        if isLandscapeView {
+          keyboardHeight = 430
+        } else {
+          keyboardHeight = 360
+        }
       } else {
-        keyboardHeight = 340
+        if isLandscapeView {
+          keyboardHeight = 420
+        } else {
+          keyboardHeight = 340
+        }
       }
     }
 
@@ -1623,13 +1632,13 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPad
           && key == "€"
+          && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
             || commandState == .translate)
         {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "€")
         }
-        // }
 
         keyboardKeys.append(btn)
         if !usingExpandedKeyboard {
@@ -1949,16 +1958,30 @@ class KeyboardViewController: UIInputViewController {
         view?.isLayoutMarginsRelativeArrangement = true
 
         // Set edge insets for stack views to provide vertical key spacing.
-        if view == stackViewNum {
-          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
-        } else if view == stackView0 {
-          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
-        } else if view == stackView1 {
-          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
-        } else if view == stackView2 {
-          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
-        } else if view == stackView3 {
-          view?.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 5, right: 0)
+        if DeviceType.isPad {
+          if view == stackViewNum {
+            view?.layoutMargins = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0)
+          } else if view == stackView0 {
+            view?.layoutMargins = UIEdgeInsets(top: 2, left: 0, bottom: 6, right: 0)
+          } else if view == stackView1 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView2 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView3 {
+            view?.layoutMargins = UIEdgeInsets(top: 4, left: 0, bottom: 3, right: 0)
+          }
+        } else {
+          if view == stackViewNum {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView0 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
+          } else if view == stackView1 {
+            view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+          } else if view == stackView2 {
+            view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+          } else if view == stackView3 {
+            view?.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 5, right: 0)
+          }
         }
       }
 
