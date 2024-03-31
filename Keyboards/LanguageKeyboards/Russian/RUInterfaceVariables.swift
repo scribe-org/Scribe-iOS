@@ -67,18 +67,18 @@ public enum RussianKeyboardConstants {
 
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
+    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     [SpecialKeys.indent, "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ", "+"],
     [SpecialKeys.capsLock, "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "ё", "return"],
-    ["shift", "[", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"],
+    ["shift", "'", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
-    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\\", "|", "₽"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
+    [SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"], // "undo"
+    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", "-", ",", ".", "shift"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
@@ -106,7 +106,7 @@ func getRUKeys() {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       letterKeys = RussianKeyboardConstants.letterKeysPadExpanded
-      letterKeys = RussianKeyboardConstants.symbolKeysPadExpanded
+      symbolKeys = RussianKeyboardConstants.symbolKeysPadExpanded
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
@@ -120,7 +120,7 @@ func getRUKeys() {
     }
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]
-    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows
+    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows.
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }

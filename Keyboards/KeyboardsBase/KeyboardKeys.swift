@@ -267,23 +267,36 @@ class KeyboardKey: UIButton {
   /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
   func adjustPadKeyWidth() {
     if usingExpandedKeyboard {
-      scalarSpecialKeysWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
-      scalarReturnKeyWidth = (disableAccentCharacters && keyboardState != .symbols) ? 2.2 : 1.0
+      scalarCapsLockKeyWidth = 1.3
+      scalarDeleteKeyWidth = 1.65
+      scalarReturnKeyWidth = 1.3
+      scalarShiftKeyWidth = 1.5
+      scalarSpecialKeysWidth = 1.0
+
       if key == "ABC" || key == "АБВ" {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["delete", "#+=", "selectKeyboard", SpecialKeys.capsLock].contains(key) {
+      } else if ["#+=", "selectKeyboard"].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true // *2 scalarSpecialKeysWidth = 1
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
+      } else if ["delete"].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth).isActive = true
+      } else if [SpecialKeys.capsLock].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
       } else if [SpecialKeys.indent].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true // scalarIndentKeyWidth
-      } else if ["shift"].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
+      } else if ["shift"].contains(key) && idx == 0 {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true // scalarShiftKeyWidth
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
+      } else if ["shift"].contains(key) && (idx > 0) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
       } else if ["return"].contains(key) {
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true // scalarReturnKeyWidth
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
       } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
         if key == "return"
           && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
@@ -291,7 +304,7 @@ class KeyboardKey: UIButton {
           && DeviceType.isPad
         {
           layer.setValue(true, forKey: "isSpecial")
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
         } else {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
