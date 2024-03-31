@@ -127,6 +127,16 @@ extension SettingsViewController: UITableViewDelegate {
       if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
         // Copy base settings
         var data = SettingsTableData.languageSettingsData
+        
+        // Check if the device is an iPad, and if so don't show the option to put a period and comma on the ABC characters.
+        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
+          s in s.sectionTitle.elementsEqual("Period and comma on ABC")
+        }) ?? -1
+
+        if DeviceType.isPad {
+          let periodCommaSettings = data[0].section.remove(at: periodCommaOptionIndex)
+          print(periodCommaSettings)
+        }
 
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]

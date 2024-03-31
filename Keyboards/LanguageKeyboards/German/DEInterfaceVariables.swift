@@ -85,23 +85,23 @@ public enum GermanKeyboardConstants {
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "*"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
-    ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    ["shift", "'", "y", "x", "c", "v", "b", "n", "m", "-", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let letterKeysPadExpandedDisableAccents = [
     ["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"],
-    [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "+", "*"],
-    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "#", "return"],
-    ["shift", "<", "y", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "=", "+", "*"],
+    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "/", "@", "#", "return"],
+    ["shift", "'", "y", "x", "c", "v", "b", "n", "m", "-", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "§"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€", "shift"], // "redo"
+    [SpecialKeys.indent, "\"", "|", "§", "[", "]", "{", "}", "—", "%", "^", "=", "+", "*"],
+    [SpecialKeys.capsLock, ":", ";", "(", ")", "&", "$", "£", "¥", "€", "/", "@", "#", "return"], // "undo"
+    ["shift", "'", "?", "!", "~", "≠", "°", "…", "_", "-", ",", ".", "shift"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 

@@ -67,18 +67,18 @@ public enum ItalianKeyboardConstants {
 
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
-    ["\\", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "'", "ì", "delete"],
+    ["\\", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "‘", "ì", "delete"],
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "è", "+", "*"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ò", "à", "ù", "return"],
-    ["shift", "<", "z", "x", "c", "v", "b", "n", "m", ",", ".", ">", "shift"],
+    ["shift", "'", "z", "x", "c", "v", "b", "n", "m", "-", ",", ".", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "§"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€", "shift"], // "shift"
+    [SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"], // "undo"
+    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", "-", ",", ".", "shift"], // "shift"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
