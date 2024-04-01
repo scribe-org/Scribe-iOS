@@ -47,7 +47,6 @@ final class SettingsViewController: UIViewController {
     parentTable.backgroundColor = .clear
     parentTable.sectionHeaderHeight = sectionHeaderHeight
     parentTable.separatorInset = separatorInset
-  
 
     setFooterButtonView()
 
@@ -82,7 +81,6 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    
     footerButton.setTitle("Install keyboard", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
@@ -104,7 +102,9 @@ extension SettingsViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as! InfoChildTableViewCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as? InfoChildTableViewCell else {
+      fatalError("Failed to dequeue InfoChildTableViewCell")
+    }
 
     let section = tableData[indexPath.section]
     let setting = section.section[indexPath.row]
@@ -127,7 +127,7 @@ extension SettingsViewController: UITableViewDelegate {
       if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
         // Copy base settings
         var data = SettingsTableData.languageSettingsData
-        
+
         // Check if the device is an iPad, and if so don't show the option to put a period and comma on the ABC characters.
         let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
           s in s.sectionTitle.elementsEqual("Period and comma on ABC")

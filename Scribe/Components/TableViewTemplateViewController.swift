@@ -20,7 +20,6 @@
 import UIKit
 
 final class TableViewTemplateViewController: BaseTableViewController {
-
   // MARK: - Properties
 
   override var dataSet: [ParentTableCellModel] {
@@ -63,10 +62,10 @@ final class TableViewTemplateViewController: BaseTableViewController {
 // MARK: - UITableViewDataSource
 
 extension TableViewTemplateViewController {
-
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as! InfoChildTableViewCell
-
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as? InfoChildTableViewCell else {
+      fatalError("Failed to dequeue InfoChildTableViewCell.")
+    }
     cell.parentSection = parentSection
     cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
 

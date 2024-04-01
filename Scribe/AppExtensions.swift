@@ -31,20 +31,29 @@ extension UIImage {
     if let image = UIImage(named: imageString) {
       return image
     } else {
-      return UIImage(systemName: imageString) ?? UIImage(systemName: "info.circle")!
+      if let image = UIImage(systemName: imageString) {
+        return image
+      } else {
+        guard let infoCircleSymbol = UIImage(systemName: "info.circle") else {
+          fatalError("Failed to create info circle symbol image.")
+        }
+        return infoCircleSymbol
+      }
     }
   }
 }
 
 extension UIView {
   var parentViewController: UIViewController? {
-    var parentResponder: UIResponder? = self
-    while parentResponder != nil {
-      parentResponder = parentResponder!.next
-      if parentResponder is UIViewController {
-        return parentResponder as? UIViewController
+    var currentResponder: UIResponder? = self
+
+    while let responder = currentResponder {
+      if let viewController = responder as? UIViewController {
+        return viewController
       }
+      currentResponder = responder.next
     }
+
     return nil
   }
 }

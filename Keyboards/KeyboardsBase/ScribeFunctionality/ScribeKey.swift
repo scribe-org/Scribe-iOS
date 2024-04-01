@@ -31,7 +31,10 @@ class ScribeKey: UIButton {
 
   /// Allows the class to be accessed from Keyboard.xib.
   class func instanceFromNib() -> UIView {
-    return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    guard let nibContents = UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView else {
+      fatalError("Failed to instantiate view from nib.")
+    }
+    return nibContents
   }
 
   /// Converts the Scribe key to an escape key to return to the base keyboard view.

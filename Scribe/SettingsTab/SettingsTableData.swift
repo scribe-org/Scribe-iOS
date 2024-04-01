@@ -19,8 +19,7 @@
 
 import Foundation
 
-struct SettingsTableData {
-
+enum SettingsTableData {
   static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
       headingTitle: NSLocalizedString("settings.appSettings", comment: "The title of the app settings section"),
@@ -69,7 +68,7 @@ struct SettingsTableData {
         ),
       ],
       hasDynamicData: nil
-    )
+    ),
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {
@@ -90,9 +89,12 @@ struct SettingsTableData {
     var sections = [Section]()
 
     for language in installedKeyboards {
+      guard let abbreviation = languagesAbbrDict[language] else {
+        fatalError("Abbreviation not found for language: \(language)")
+      }
       let newSection = Section(
         sectionTitle: language,
-        sectionState: .specificLang(languagesAbbrDict[language]!)
+        sectionState: .specificLang(abbreviation)
       )
 
       sections.append(newSection)

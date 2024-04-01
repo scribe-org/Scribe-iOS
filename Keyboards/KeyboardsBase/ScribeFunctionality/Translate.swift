@@ -25,12 +25,17 @@ import UIKit
 ///   - commandBar: the command bar into which an input was entered.
 func queryTranslation(commandBar: UILabel) {
   // Cancel via a return press.
-  if commandBar.text! == translatePromptAndCursor || commandBar.text! == translatePromptAndPlaceholder {
+  if let commandBarText = commandBar.text,
+     commandBarText == translatePromptAndCursor || commandBarText == translatePromptAndPlaceholder
+  {
     return
   }
-  wordToTranslate = (commandBar.text!.substring(
-    with: translatePrompt.count ..< ((commandBar.text!.count) - 1))
-  )
+
+  if let commandBarText = commandBar.text {
+    let startIndex = commandBarText.index(commandBarText.startIndex, offsetBy: translatePrompt.count)
+    let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
+    wordToTranslate = String(commandBarText[startIndex ..< endIndex])
+  }
   wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
@@ -46,7 +51,7 @@ func queryTranslation(commandBar: UILabel) {
     commandState = .invalid
     return
   }
-  
+
   if inputWordIsCapitalized {
     proxy.insertText(wordToReturn.capitalized + " ")
   } else {

@@ -25,20 +25,28 @@ import SwiftyJSON
 ///
 /// - Parameters
 ///  - filename: the name of the JSON file to be loaded.
-func loadJSON(filename fileName: String) -> JSON {
-  let url = Bundle.main.url(forResource: fileName, withExtension: "json")!
-  let data = NSData(contentsOf: url)
-  let jsonData = try! JSON(data: data! as Data)
+func loadJSON(filename fileName: String) -> JSON? {
+  guard let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
+        let data = try? Data(contentsOf: url),
+        let jsonData = try? JSON(data: data)
+  else {
+    return nil
+  }
   return jsonData
 }
 
 /// Makes a connection to the language database given the value for controllerLanguage.
 func openDBQueue() -> DatabaseQueue {
   let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
-  let dbPath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
-  let dbQueue = try! DatabaseQueue(path: dbPath)
-
-  return dbQueue
+  guard let dbPath = Bundle.main.path(forResource: dbName, ofType: "sqlite") else {
+    fatalError("Failed to locate database file.")
+  }
+  do {
+    let dbQueue = try DatabaseQueue(path: dbPath)
+    return dbQueue
+  } catch {
+    fatalError("Failed to initialize DatabaseQueue: \(error)")
+  }
 }
 
 // Variable to be replaced with the result of openDBQueue.

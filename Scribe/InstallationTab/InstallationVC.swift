@@ -146,8 +146,12 @@ class InstallationVC: UIViewController {
 
     // Set link attributes for all textViews.
     for textView in allTextViews {
+      guard let linkBlueColor = UIColor(named: "linkBlue") else {
+        fatalError("Failed to load linkBlue color.")
+      }
+
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor(named: "linkBlue")!,
+        NSAttributedString.Key.foregroundColor: linkBlueColor,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
       ]
     }
@@ -164,7 +168,6 @@ class InstallationVC: UIViewController {
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
     appTextBackground.backgroundColor = UIColor(named: "commandBar")
-    
 
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {
@@ -201,7 +204,10 @@ class InstallationVC: UIViewController {
 
   /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
-    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      fatalError("Failed to create settings URL.")
+    }
+    UIApplication.shared.open(settingsURL)
   }
 
   /// Function to change the key coloration given a touch down.

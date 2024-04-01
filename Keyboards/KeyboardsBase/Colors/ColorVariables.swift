@@ -30,10 +30,10 @@ var keyPressedColor = UIColor(.keyPressed)
 
 var commandKeyColor = UIColor(.commandKey)
 var commandBarColor = UIColor(.commandBar)
-var commandBarBorderColor = UIColor(.commandBarBorder).cgColor
+var commandBarBorderColor = UIColor(resource: .commandBarBorder).cgColor
 
 var keyboardBgColor = UIColor(.keyboardBackground)
-var keyShadowColor = UIColor(.keyShadow).cgColor
+var keyShadowColor = UIColor(resource: .keyShadow).cgColor
 
 // annotate colors.
 var annotateRed = UIColor(.annotateRed)

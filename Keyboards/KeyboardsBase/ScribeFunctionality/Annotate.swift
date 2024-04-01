@@ -90,7 +90,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     annotationBtn.styleSingleAnnotation(fullAnnotation: true)
 
     let emojisToSelectFrom = "🥳🎉"
-    let emojis = String((0 ..< 3).map { _ in emojisToSelectFrom.randomElement()! })
+    let emojis = String((0 ..< 3).compactMap { _ in emojisToSelectFrom.randomElement() })
     annotationBtn.setTitle(emojis, for: .normal)
     KVC.view.addSubview(annotationBtn)
     annotationBtns.append(annotationBtn)
@@ -188,7 +188,9 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
         KVC.view.addSubview(annotationBtn)
         annotationBtns.append(annotationBtn)
         if nounFormToColorDict.keys.contains(annotationToDisplay) {
-          annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+          if let annotationColor = nounFormToColorDict[annotationsToAssign[i]] {
+            annotationColors.append(annotationColor)
+          }
         } else {
           annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
         }
@@ -227,7 +229,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
 ///   - KVC: the keyboard view controller.
 func selectedWordAnnotation(KVC: KeyboardViewController) {
   wordToCheck = proxy.selectedText ?? ""
-  if wordToCheck.count > 0 {
+  if !wordToCheck.isEmpty {
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       wordToCheck = wordToCheck.lowercased()
     }
@@ -354,9 +356,11 @@ func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewC
 
       KVC.view.addSubview(annotationBtn)
       autoActionAnnotationBtns.append(annotationBtn)
-      newAutoActionAnnotationColors.append(
-        nounFormToColorDict[newAutoActionAnnotationsToAssign[i]]!.withAlphaComponent(0.75)
-      )
+      if let annotationColor = nounFormToColorDict[newAutoActionAnnotationsToAssign[i]] {
+        let colorWithAlpha = annotationColor.withAlphaComponent(0.75)
+        newAutoActionAnnotationColors.append(colorWithAlpha)
+      }
+
       setBtn(
         btn: annotationBtn,
         color: newAutoActionAnnotationColors[i],

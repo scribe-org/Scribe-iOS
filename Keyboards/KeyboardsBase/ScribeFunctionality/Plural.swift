@@ -25,12 +25,18 @@ import UIKit
 ///   - commandBar: the command bar into which an input was entered.
 func queryPlural(commandBar: UILabel) {
   // Cancel via a return press.
-  if commandBar.text! == pluralPromptAndCursor || commandBar.text! == pluralPromptAndPlaceholder {
+  if let commandBarText = commandBar.text,
+     commandBarText == pluralPromptAndCursor || commandBarText == pluralPromptAndCursor
+  {
     return
   }
-  var noun: String = (commandBar.text!.substring(
-    with: pluralPrompt.count ..< ((commandBar.text!.count) - 1))
-  )
+
+  var noun = ""
+  if let commandBarText = commandBar.text {
+    let startIndex = commandBarText.index(commandBarText.startIndex, offsetBy: pluralPrompt.count)
+    let endIndex = commandBarText.index(before: commandBarText.endIndex)
+    noun = String(commandBarText[startIndex ..< endIndex])
+  }
   noun = String(noun.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase plural.
@@ -44,7 +50,7 @@ func queryPlural(commandBar: UILabel) {
   let args = [noun]
   let outputCols = ["plural"]
   wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
-  
+
   guard !wordToReturn.isEmpty else {
     commandState = .invalid
     return

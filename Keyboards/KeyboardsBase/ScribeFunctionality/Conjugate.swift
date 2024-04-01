@@ -60,9 +60,10 @@ let keyboardConjLabelDict: [String: Any] = [
 func returnDeclension(keyPressed: UIButton) {
   let wordPressed = keyPressed.titleLabel?.text ?? ""
 
-  let keyName = keyPressed.layer.value(
-    forKey: "original"
-  ) as! String
+  var keyName = ""
+  if let originalKeyValue = keyPressed.layer.value(forKey: "original") as? String {
+    keyName = originalKeyValue
+  }
 
   if !(wordPressed.contains("/") || wordPressed.contains("∗")) {
     proxy.insertText(wordPressed + " ")
@@ -193,10 +194,17 @@ func returnDeclension(keyPressed: UIButton) {
 ///   - commandBar: the command bar into which an input was entered.
 func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
-  if commandBar.text! == conjugatePromptAndCursor || commandBar.text! == conjugatePromptAndPlaceholder {
+  if let commandBarText = commandBar.text,
+     commandBarText == conjugatePromptAndCursor || commandBarText == conjugatePromptAndCursor
+  {
     return false
   }
-  verbToConjugate = (commandBar.text!.substring(with: conjugatePrompt.count ..< (commandBar.text!.count) - 1))
+
+  if let commandBarText = commandBar.text {
+    let startIndex = commandBarText.index(commandBarText.startIndex, offsetBy: conjugatePrompt.count)
+    let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
+    verbToConjugate = String(commandBarText[startIndex ..< endIndex])
+  }
   verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
@@ -235,7 +243,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      if controllerLanguage == "German" && potentialWordsToReturn.count == 2 {
+      if controllerLanguage == "German", potentialWordsToReturn.count == 2 {
         // Don't return a space as well as we have a perfect verb and the cursor will be between.
         proxy.insertText(wordToReturn.capitalize())
       } else {
