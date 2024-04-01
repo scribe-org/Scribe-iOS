@@ -355,11 +355,12 @@ class KeyboardViewController: UIInputViewController {
     let args = [word.lowercased()]
     let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
     let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
-
-    if emojisToDisplay[0] != "" {
+    
+    if !emojisToDisplay[0].isEmpty {
       emojisToDisplayArray = [String]()
       currentEmojiTriggerWord = word.lowercased()
-      if emojisToDisplay[2] != "" && DeviceType.isPad {
+
+      if !emojisToDisplay[2].isEmpty && DeviceType.isPad {
         for i in 0 ..< 3 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
@@ -374,7 +375,7 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
         conditionallyHideEmojiDividers()
-      } else if emojisToDisplay[1] != "" {
+      } else if !emojisToDisplay[1].isEmpty {
         for i in 0 ..< 2 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
@@ -431,7 +432,7 @@ class KeyboardViewController: UIInputViewController {
         // Get options for completion that start with the current prefix and are not just one letter.
         let completionOptions = queryAutocompletions(word: currentPrefix)
 
-        if completionOptions[0] != "" {
+        if !completionOptions[0].isEmpty {
           if completionOptions.count <= 3 {
             for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {
@@ -563,7 +564,7 @@ class KeyboardViewController: UIInputViewController {
 
       let suggestionsLowerCasePrefix = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
       let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
-      if suggestionsLowerCasePrefix[0] != "" {
+      if !suggestionsLowerCasePrefix[0].isEmpty {
         completionWords = [String]()
         for i in 0 ..< 3 {
           if allowUndo {
@@ -580,7 +581,7 @@ class KeyboardViewController: UIInputViewController {
             let outputCols = ["form"]
 
             let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
-            hasNounForm = nounForm != ""
+            hasNounForm = !nounForm.isEmpty
             if !hasNounForm {
               completionWords.append(suggestionsLowerCasePrefix[i].lowercased())
             } else {
@@ -588,7 +589,7 @@ class KeyboardViewController: UIInputViewController {
             }
           }
         }
-      } else if suggestionsCapitalizedPrefix[0] != "" {
+      } else if !suggestionsCapitalizedPrefix[0].isEmpty {
         completionWords = [String]()
         for i in 0 ..< 3 {
           if allowUndo {
@@ -797,12 +798,17 @@ class KeyboardViewController: UIInputViewController {
   /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
     // Only delete characters for autocomplete, not autosuggest.
-    if currentPrefix != "" && autoActionState != .suggest {
-      if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0 ..< currentPrefix.count {
-          proxy.deleteBackward()
-        }
-      }
+    guard !currentPrefix.isEmpty, autoActionState != .suggest else {
+      return
+    }
+
+    guard let documentContext = proxy.documentContextBeforeInput, !documentContext.isEmpty else {
+      return
+    }
+
+    // Delete characters in text proxy.
+    for _ in 0 ..< currentPrefix.count {
+      proxy.deleteBackward()
     }
   }
 
@@ -1919,13 +1925,16 @@ class KeyboardViewController: UIInputViewController {
     case .letters:
       keyboard = letterKeys
       keyWidth = letterKeyWidth
+
       // Auto-capitalization if the cursor is at the start of the proxy.
       if proxy.documentContextBeforeInput?.count == 0 {
         shiftButtonState = .shift
       }
+
     case .numbers:
       keyboard = numberKeys
       keyWidth = numSymKeyWidth
+
     case .symbols:
       keyboard = symbolKeys
       keyWidth = numSymKeyWidth
@@ -2406,7 +2415,7 @@ class KeyboardViewController: UIInputViewController {
       let outputCols = ["form"]
 
       let prepForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
-      hasPrepForm = prepForm != ""
+      hasPrepForm = !prepForm.isEmpty
       if hasPrepForm {
         resetCaseDeclensionState()
         commandState = .selectCaseDeclension

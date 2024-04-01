@@ -44,19 +44,20 @@ func queryPlural(commandBar: UILabel) {
   let args = [noun]
   let outputCols = ["plural"]
   wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+  
+  guard !wordToReturn.isEmpty else {
+    commandState = .invalid
+    return
+  }
 
-  if wordToReturn != "" {
-    if wordToReturn != "isPlural" {
-      if inputWordIsCapitalized {
-        proxy.insertText(wordToReturn.capitalized + " ")
-      } else {
-        proxy.insertText(wordToReturn + " ")
-      }
+  if wordToReturn != "isPlural" {
+    if inputWordIsCapitalized {
+      proxy.insertText(wordToReturn.capitalized + " ")
     } else {
-      proxy.insertText(noun + " ")
-      commandState = .alreadyPlural
+      proxy.insertText(wordToReturn + " ")
     }
   } else {
-    commandState = .invalid
+    proxy.insertText(noun + " ")
+    commandState = .alreadyPlural
   }
 }

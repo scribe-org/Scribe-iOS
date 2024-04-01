@@ -42,13 +42,14 @@ func queryTranslation(commandBar: UILabel) {
   let outputCols = ["translation"]
   wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
 
-  if wordToReturn != "" {
-    if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
-    } else {
-      proxy.insertText(wordToReturn + " ")
-    }
-  } else {
+  guard !wordToReturn.isEmpty else {
     commandState = .invalid
+    return
+  }
+  
+  if inputWordIsCapitalized {
+    proxy.insertText(wordToReturn.capitalized + " ")
+  } else {
+    proxy.insertText(wordToReturn + " ")
   }
 }

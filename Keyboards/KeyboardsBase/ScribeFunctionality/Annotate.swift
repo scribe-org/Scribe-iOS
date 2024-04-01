@@ -60,8 +60,8 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
   let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
   prepAnnotationForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
 
-  hasNounForm = nounForm != ""
-  hasPrepForm = prepAnnotationForm != ""
+  hasNounForm = !nounForm.isEmpty
+  hasPrepForm = !prepAnnotationForm.isEmpty
 
   annotationsToAssign = [String]()
   annotationBtns = [UIButton]()
@@ -274,7 +274,7 @@ func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewC
 
   let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
 
-  hasNounForm = nounForm != ""
+  hasNounForm = !nounForm.isEmpty
 
   newAutoActionAnnotationsToAssign = [String]()
   newAutoActionAnnotationBtns = [UIButton]()
