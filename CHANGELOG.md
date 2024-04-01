@@ -40,6 +40,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ♻️ Code Refactoring
 
 - Magic numbers for interface radii and other sizing dimensions have been converted to defined variables ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
+- Usage of force-unwraps was dramatically reduced in the codebase ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
+- Usage of `guard let` and `if let` increased throughout the codebase to assure that early and safe nil-unwrapping ([#379](https://github.com/scribe-org/Scribe-iOS/issues/379)).
 - The code for settings keyboard key dimensions and padding was extracted into functions for maintainability ([#383](https://github.com/scribe-org/Scribe-iOS/issues/383)).
 - While loops were replaced by for loops in places where they were being used inappropriately ([#380](https://github.com/scribe-org/Scribe-iOS/issues/380)).
 - The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) directory has been added for future localization work.
