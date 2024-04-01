@@ -109,8 +109,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = false
+        toggleSwitch.isOn = false  // Default value
       }
 
     case .toggleAccentCharacters:
@@ -118,8 +117,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = false
+        toggleSwitch.isOn = false  // Default value
       }
 
     case .autosuggestEmojis:
@@ -127,8 +125,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = true
+        toggleSwitch.isOn = true  // Default value
       }
 
     case .none: break
