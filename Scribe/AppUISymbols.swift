@@ -32,7 +32,9 @@ func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
       settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
     }
   }
-  let settingsSymbol = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig)!
+  guard let settingsSymbol = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig) else {
+    fatalError("Failed to create settings symbol image.")
+  }
 
   return settingsSymbol
 }
@@ -50,7 +52,9 @@ func getPrivacySymbol(fontSize: CGFloat) -> UIImage {
       privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
     }
   }
-  let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig)!
+  guard let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig) else {
+    fatalError("Failed to create privacy symbol image.")
+  }
 
   return privacySymbol
 }

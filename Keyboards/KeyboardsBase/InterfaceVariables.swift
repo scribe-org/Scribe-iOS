@@ -202,8 +202,7 @@ func setKeyboard() {
 func setKeyboardLayout() {
   if commandState == .translate {
     setENKeyboardLayout()
-  } else {
-    let setLayoutFxn: () -> Void = keyboardLayoutDict[controllerLanguage]!
+  } else if let setLayoutFxn = keyboardLayoutDict[controllerLanguage] {
     setLayoutFxn()
   }
 

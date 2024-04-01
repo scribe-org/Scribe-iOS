@@ -50,7 +50,7 @@ func queryPlural(commandBar: UILabel) {
   let args = [noun]
   let outputCols = ["plural"]
   wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
-  
+
   guard !wordToReturn.isEmpty else {
     commandState = .invalid
     return

@@ -1855,12 +1855,6 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if userDefaults.bool(forKey: "svAccentCharacters") {
-      disableAccentCharacters = true
-    } else {
-      disableAccentCharacters = false
-    }
-
     // Actions to be done only on initial loads.
     if isFirstKeyboardLoad {
       shiftButtonState = .shift

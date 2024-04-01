@@ -17,12 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import UIKit
 import MessageUI
 import StoreKit
+import UIKit
 
 final class AboutViewController: BaseTableViewController {
-
   override var dataSet: [ParentTableCellModel] {
     AboutTableData.aboutTableData
   }
@@ -39,10 +38,10 @@ final class AboutViewController: BaseTableViewController {
 // MARK: UITableViewDataSource
 
 extension AboutViewController {
-
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: AboutTableViewCell.reuseIdentifier, for: indexPath) as! AboutTableViewCell
-
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: AboutTableViewCell.reuseIdentifier, for: indexPath) as? AboutTableViewCell else {
+      fatalError("Failed to dequeue AboutTableViewCell.")
+    }
     cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
 
     return cell
@@ -52,7 +51,6 @@ extension AboutViewController {
 // MARK: UITableViewDelegate
 
 extension AboutViewController {
-
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let tableSection = dataSet[indexPath.section]
     let section = tableSection.section[indexPath.row]
@@ -100,10 +98,9 @@ extension AboutViewController {
 
     case .appLang: break
     case .none: break
-    case .specificLang(_): break
+    case .specificLang: break
     case .externalLink: break
     }
-
 
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedIndexPath, animated: false)
@@ -159,7 +156,7 @@ extension AboutViewController {
     guard let encodedURLString = encodedString, let url = URL(string: encodedURLString) else { return }
 
     let shareSheetVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-    
+
     present(shareSheetVC, animated: true, completion: nil)
   }
 }
@@ -167,7 +164,6 @@ extension AboutViewController {
 // MARK: - MFMailComposeViewControllerDelegate
 
 extension AboutViewController: MFMailComposeViewControllerDelegate {
-
   func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
     controller.dismiss(animated: true, completion: nil)
   }
