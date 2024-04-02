@@ -1,8 +1,21 @@
-//
-//  KeyboardViewController.swift
-//
-//  Classes for the parent keyboard view controller that language keyboards inherit and keyboard keys.
-//
+/**
+ * Classes for the parent keyboard view controller that language keyboards.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import GRDB
 import UIKit
@@ -23,26 +36,38 @@ class KeyboardViewController: UIInputViewController {
   /// Changes the height of `stackViewNum` depending on device type and size.
   func conditionallyShowTopNumbersRow() {
     if DeviceType.isPhone {
-      view.addConstraint(
-        NSLayoutConstraint(
-          item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
+      if let stackViewNum = stackViewNum {
+        view.addConstraint(
+          NSLayoutConstraint(
+            item: stackViewNum, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
+          )
         )
-      )
+      }
     } else if DeviceType.isPad {
       // Update the size of the numbers row to add it to the view.
       if usingExpandedKeyboard {
-        let numbersRowHeight = scribeKey.frame.height
-        view.addConstraint(
-          NSLayoutConstraint(
-            item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: numbersRowHeight
+        let numbersRowHeight = scribeKey.frame.height * 1.8
+        if let stackViewNum = stackViewNum {
+          view.addConstraint(
+            NSLayoutConstraint(
+              item: stackViewNum,
+              attribute: .height,
+              relatedBy: .equal,
+              toItem: nil,
+              attribute: .height,
+              multiplier: 1,
+              constant: numbersRowHeight
+            )
           )
-        )
+        }
       } else {
-        view.addConstraint(
-          NSLayoutConstraint(
-            item: stackViewNum!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
+        if let stackViewNum = stackViewNum {
+          view.addConstraint(
+            NSLayoutConstraint(
+              item: stackViewNum, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0
+            )
           )
-        )
+        }
       }
     }
   }
@@ -126,15 +151,28 @@ class KeyboardViewController: UIInputViewController {
         keyboardHeight = 270
       }
     } else if DeviceType.isPad {
-      if isLandscapeView {
-        keyboardHeight = 420
+      // Expanded keyboard on larger iPads can be higher.
+      if UIScreen.main.bounds.width > 768 {
+        if isLandscapeView {
+          keyboardHeight = 430
+        } else {
+          keyboardHeight = 360
+        }
       } else {
-        keyboardHeight = 340
+        if isLandscapeView {
+          keyboardHeight = 420
+        } else {
+          keyboardHeight = 340
+        }
       }
     }
 
+    guard let view = view else {
+      fatalError("The view is nil.")
+    }
+
     let heightConstraint = NSLayoutConstraint(
-      item: view!,
+      item: view,
       attribute: NSLayoutConstraint.Attribute.height,
       relatedBy: NSLayoutConstraint.Relation.equal,
       toItem: nil,
@@ -193,10 +231,15 @@ class KeyboardViewController: UIInputViewController {
   /// - A call to loadKeys to reload the display after an orientation change
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
-    updateViewConstraints()
-    isFirstKeyboardLoad = true
-    loadKeys()
-    isFirstKeyboardLoad = false
+    coordinator.animate(alongsideTransition: { _ in
+      self.updateViewConstraints()
+      self.loadKeys()
+    })
+    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+      isFirstKeyboardLoad = true
+      self.loadKeys()
+      isFirstKeyboardLoad = false
+    }
   }
 
   /// Overrides the previous color variables if the user switches between light and dark mode.
@@ -209,9 +252,11 @@ class KeyboardViewController: UIInputViewController {
       alternatesShapeLayer.removeFromSuperlayer()
     }
     annotationState = false
-    isFirstKeyboardLoad = true
-    loadKeys()
-    isFirstKeyboardLoad = false
+    Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+      isFirstKeyboardLoad = true
+      self.loadKeys()
+      isFirstKeyboardLoad = false
+    }
   }
 
   // MARK: Scribe Command Elements
@@ -322,11 +367,16 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - word: the word for which corresponding emojis should be shown for.
   func getEmojiAutoSuggestions(for word: String) {
-    let emojisToDisplay = LanguageDBManager.shared.queryEmojis(of: word)
-    if emojisToDisplay[0] != "" {
+    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
+    let args = [word.lowercased()]
+    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
+    let emojisToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
+
+    if !emojisToDisplay[0].isEmpty {
       emojisToDisplayArray = [String]()
       currentEmojiTriggerWord = word.lowercased()
-      if emojisToDisplay[2] != "" && DeviceType.isPad {
+
+      if !emojisToDisplay[2].isEmpty && DeviceType.isPad {
         for i in 0 ..< 3 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
@@ -341,7 +391,7 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
         }
         conditionallyHideEmojiDividers()
-      } else if emojisToDisplay[1] != "" {
+      } else if !emojisToDisplay[1].isEmpty {
         for i in 0 ..< 2 {
           emojisToDisplayArray.append(emojisToDisplay[i])
         }
@@ -365,7 +415,7 @@ class KeyboardViewController: UIInputViewController {
   /// Generates an array of the three autocomplete words.
   func getAutocompletions() {
     completionWords = [" ", " ", " "]
-    if proxy.documentContextBeforeInput?.count != 0 {
+    if let documentContext = proxy.documentContextBeforeInput, !documentContext.isEmpty {
       if let inString = proxy.documentContextBeforeInput {
         // To only focus on the current word as prefix in autocomplete.
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
@@ -392,16 +442,17 @@ class KeyboardViewController: UIInputViewController {
 
         // Trigger autocompletions for selected text instead.
         if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-          currentPrefix = proxy.selectedText!
+          if let selectedText = proxy.selectedText {
+            currentPrefix = selectedText
+          }
         }
 
         // Get options for completion that start with the current prefix and are not just one letter.
-        let completionOptions = LanguageDBManager.shared.queryAutocompletions(word: currentPrefix)
+        let completionOptions = queryAutocompletions(word: currentPrefix)
 
-        if completionOptions[0] != "" {
-          var i = 0
+        if !completionOptions[0].isEmpty {
           if completionOptions.count <= 3 {
-            while i < completionOptions.count {
+            for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
               } else if capsLockButtonState == .locked {
@@ -415,10 +466,9 @@ class KeyboardViewController: UIInputViewController {
               } else {
                 completionWords[i] = completionOptions[i]
               }
-              i += 1
             }
           } else {
-            while i < 3 {
+            for i in 0 ..< 3 {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
               } else if capsLockButtonState == .locked {
@@ -432,7 +482,6 @@ class KeyboardViewController: UIInputViewController {
               } else {
                 completionWords[i] = completionOptions[i]
               }
-              i += 1
             }
           }
         }
@@ -456,38 +505,39 @@ class KeyboardViewController: UIInputViewController {
     let prefix = proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? ""
 
     completionWords = [String]()
-    var i = 0
-    while i < 3 {
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    for i in 0 ..< 3 {
       // Get conjugations of the preselected verbs.
-      let outputCols = [pronounAutosuggestionTenses[prefix.lowercased()]!]
-      var suggestion = LanguageDBManager.shared.queryVerb(of: verbsAfterPronounsArray[i], with: outputCols)[0]
-      if suggestion == "" {
-        suggestion = verbsAfterPronounsArray[i]
-      }
+      let args = [verbsAfterPronounsArray[i]]
+      if let tense = pronounAutosuggestionTenses[prefix.lowercased()] {
+        let outputCols = [tense]
+        var suggestion = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+        if suggestion == "" {
+          suggestion = verbsAfterPronounsArray[i]
+        }
 
-      if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "Spanish" {
-        suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
+        if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "Spanish" {
+          suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
+        }
+        if shiftButtonState == .shift {
+          completionWords.append(suggestion.capitalize())
+        } else if capsLockButtonState == .locked {
+          completionWords.append(suggestion.uppercased())
+        } else {
+          completionWords.append(suggestion)
+        }
       }
-      if shiftButtonState == .shift {
-        completionWords.append(suggestion.capitalize())
-      } else if capsLockButtonState == .locked {
-        completionWords.append(suggestion.uppercased())
-      } else {
-        completionWords.append(suggestion)
-      }
-      i += 1
     }
   }
 
   /// Generates an array of three words that serve as baseline autosuggestions.
   func getDefaultAutosuggestions() {
-    var i = 0
     completionWords = [String]()
-    if allowUndo {
-      completionWords.append(previousWord)
-      i += 1
-    }
-    while i < 3 {
+    for i in 0 ..< 3 {
+      if allowUndo {
+        completionWords.append(previousWord)
+        continue
+      }
       if shiftButtonState == .shift {
         completionWords.append(baseAutosuggestions[i].capitalize())
       } else if capsLockButtonState == .locked {
@@ -495,7 +545,6 @@ class KeyboardViewController: UIInputViewController {
       } else {
         completionWords.append(baseAutosuggestions[i])
       }
-      i += 1
     }
   }
 
@@ -518,7 +567,9 @@ class KeyboardViewController: UIInputViewController {
 
     // Trigger autocompletions for selected text instead.
     if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-      prefix = proxy.selectedText!
+      if let selectedText = proxy.selectedText {
+        prefix = selectedText
+      }
     }
 
     if prefix.isNumeric {
@@ -528,40 +579,45 @@ class KeyboardViewController: UIInputViewController {
     } else {
       // We have to consider these different cases as the key always has to match.
       // Else, even if the lowercased prefix is present in the dictionary, if the actual prefix isn't present we won't get an output.
-    
-      let suggestionsLowerCasePrefix = LanguageDBManager.shared.queryAutosuggestions(of: prefix)
-      let suggestionsCapitalizedPrefix = LanguageDBManager.shared.queryAutosuggestions(of: prefix)
-      if suggestionsLowerCasePrefix[0] != "" {
+      let query = "SELECT * FROM autosuggestions WHERE word = ?"
+      let argsLower = [prefix.lowercased()]
+      let argsCapitalize = [prefix.capitalized]
+      let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
+
+      let suggestionsLowerCasePrefix = queryDBRow(query: query, outputCols: outputCols, args: argsLower)
+      let suggestionsCapitalizedPrefix = queryDBRow(query: query, outputCols: outputCols, args: argsCapitalize)
+      if !suggestionsLowerCasePrefix[0].isEmpty {
         completionWords = [String]()
-        var i = 0
-        if allowUndo {
-          completionWords.append(previousWord)
-          i += 1
-        }
-        while i < 3 {
+        for i in 0 ..< 3 {
+          if allowUndo {
+            completionWords.append(previousWord)
+            continue
+          }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
           } else if capsLockButtonState == .locked {
             completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
-            let nounForm = LanguageDBManager.shared.queryNounForm(of: suggestionsLowerCasePrefix[i])[0]
-            hasNounForm = nounForm != ""
+            let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+            let nounGenderArgs = [suggestionsLowerCasePrefix[i]]
+            let outputCols = ["form"]
+
+            let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+            hasNounForm = !nounForm.isEmpty
             if !hasNounForm {
               completionWords.append(suggestionsLowerCasePrefix[i].lowercased())
             } else {
               completionWords.append(suggestionsLowerCasePrefix[i])
             }
           }
-          i += 1
         }
-      } else if suggestionsCapitalizedPrefix[0] != "" {
+      } else if !suggestionsCapitalizedPrefix[0].isEmpty {
         completionWords = [String]()
-        var i = 0
-        if allowUndo {
-          completionWords.append(previousWord)
-          i += 1
-        }
-        while i < 3 {
+        for i in 0 ..< 3 {
+          if allowUndo {
+            completionWords.append(previousWord)
+            continue
+          }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
           } else if capsLockButtonState == .locked {
@@ -569,7 +625,6 @@ class KeyboardViewController: UIInputViewController {
           } else {
             completionWords.append(suggestionsCapitalizedPrefix[i])
           }
-          i += 1
         }
       } else {
         getDefaultAutosuggestions()
@@ -695,9 +750,9 @@ class KeyboardViewController: UIInputViewController {
           radius: commandKeyCornerRadius
         )
         if DeviceType.isPhone {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
         } else if DeviceType.isPad {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
         }
         activateBtn(btn: pluralKey)
 
@@ -721,11 +776,11 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
 
         if DeviceType.isPhone {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
         } else if DeviceType.isPad {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
         }
 
         activateBtn(btn: phoneEmojiKey0)
@@ -740,9 +795,9 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: padEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
         styleBtn(btn: padEmojiKey2, title: emojisToDisplayArray[2], radius: commandKeyCornerRadius)
 
-        padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+        padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
+        padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
+        padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
 
         activateBtn(btn: padEmojiKey0)
         activateBtn(btn: padEmojiKey1)
@@ -765,12 +820,17 @@ class KeyboardViewController: UIInputViewController {
   /// Note: the completion is appended after the typed text if this is not ran.
   func clearPrefixFromTextFieldProxy() {
     // Only delete characters for autocomplete, not autosuggest.
-    if currentPrefix != "" && autoActionState != .suggest {
-      if proxy.documentContextBeforeInput?.count != 0 {
-        for _ in 0 ..< currentPrefix.count {
-          proxy.deleteBackward()
-        }
-      }
+    guard !currentPrefix.isEmpty, autoActionState != .suggest else {
+      return
+    }
+
+    guard let documentContext = proxy.documentContextBeforeInput, !documentContext.isEmpty else {
+      return
+    }
+
+    // Delete characters in text proxy.
+    for _ in 0 ..< currentPrefix.count {
+      proxy.deleteBackward()
     }
   }
 
@@ -842,14 +902,11 @@ class KeyboardViewController: UIInputViewController {
   func handleDeleteButtonPressed() {
     if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
       proxy.deleteBackward()
-    } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text!) || allColoredPrompts.contains(commandBar.attributedText!)) {
-      guard
-        let inputText = commandBar.text,
-        !inputText.isEmpty
-      else {
+    } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text ?? "") || allColoredPrompts.contains(commandBar.attributedText ?? NSAttributedString())) {
+      guard let inputText = commandBar.text, !inputText.isEmpty else {
         return
       }
-      commandBar.text = commandBar.text!.deletePriorToCursor()
+      commandBar.text = inputText.deletePriorToCursor()
     } else {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
@@ -1355,8 +1412,8 @@ class KeyboardViewController: UIInputViewController {
   /// Assign the verb conjugations that will be selectable in the conjugation display.
   func assignVerbConjStates() {
     var conjugationStateFxn: () -> String = deGetConjugationState
-    if controllerLanguage != "Swedish" {
-      conjugationStateFxn = keyboardConjStateDict[controllerLanguage] as! () -> String
+    if let conjugationFxn = keyboardConjStateDict[controllerLanguage] as? () -> String {
+      conjugationStateFxn = conjugationFxn
     }
 
     if !["Russian", "Swedish"].contains(controllerLanguage) {
@@ -1366,7 +1423,6 @@ class KeyboardViewController: UIInputViewController {
       formFPP = conjugationStateFxn() + "FPP"
       formSPP = conjugationStateFxn() + "SPP"
       formTPP = conjugationStateFxn() + "TPP"
-
     } else if controllerLanguage == "Russian" {
       if formsDisplayDimensions == .view3x2 {
         formFPS = ruGetConjugationState() + "FPS"
@@ -1381,7 +1437,6 @@ class KeyboardViewController: UIInputViewController {
         formBottomLeft = "pastNeutral"
         formBottomRight = "pastPlural"
       }
-
     } else if controllerLanguage == "Swedish" {
       let swedishTenses = svGetConjugationState()
 
@@ -1400,9 +1455,11 @@ class KeyboardViewController: UIInputViewController {
     // Set the view title and its labels.
     var conjugationTitleFxn: () -> String = deGetConjugationTitle
     var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
-    if controllerLanguage != "Swedish" {
-      conjugationTitleFxn = keyboardConjTitleDict[controllerLanguage] as! () -> String
-      conjugationLabelsFxn = keyboardConjLabelDict[controllerLanguage] as! () -> Void
+    if let titleFxn = keyboardConjTitleDict[controllerLanguage] as? () -> String {
+      conjugationTitleFxn = titleFxn
+    }
+    if let labelsFxn = keyboardConjLabelDict[controllerLanguage] as? () -> Void {
+      conjugationLabelsFxn = labelsFxn
     }
 
     if !["Russian", "Swedish"].contains(controllerLanguage) {
@@ -1439,8 +1496,10 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Populate conjugation view buttons.
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
     let outputCols = allConjugations
-    let conjugationsToDisplay = LanguageDBManager.shared.queryVerb(of: verbConjugated, with: outputCols)
+    let conjugationsToDisplay = queryDBRow(query: query, outputCols: outputCols, args: args)
     for index in 0 ..< allConjugations.count {
       if conjugationsToDisplay[index] == "" {
         // Assign the invalid message if the conjugation isn't present in the directory.
@@ -1525,12 +1584,276 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  func setKeywidth() {
+    // keyWidth determined per keyboard by the top row.
+    if isLandscapeView {
+      if DeviceType.isPhone {
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPhone
+        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPhone
+      } else if DeviceType.isPad {
+        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
+        if !usingExpandedKeyboard {
+          numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * scalarLetterNumSymKeyWidthLandscapeViewPad
+        }
+      }
+    } else {
+      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * scalarLetterNumSymKeyWidth
+      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * scalarLetterNumSymKeyWidth
+    }
+  }
+
+  func setKeyPadding() {
+    let numRows = keyboard.count
+    for row in 0 ..< numRows {
+      for idx in 0 ..< keyboard[row].count {
+        // Set up button as a key with its values and properties.
+        let btn = KeyboardKey(type: .custom)
+        btn.row = row
+        btn.idx = idx
+        btn.style()
+        btn.setChar()
+        btn.setCharSize()
+
+        let key: String = btn.key
+
+        // Pad before key is added.
+        var leftPadding = CGFloat(0)
+        if DeviceType.isPhone
+          && key == "y"
+          && ["German", "Swedish"].contains(controllerLanguage)
+          && commandState != .translate
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView2, width: leftPadding, key: "y")
+        }
+        if DeviceType.isPhone
+          && key == "a"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 4
+          addPadding(to: stackView1, width: leftPadding, key: "a")
+        }
+        if DeviceType.isPad
+          && key == "a"
+          && !usingExpandedKeyboard
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "a")
+        }
+        if DeviceType.isPad
+          && key == "@"
+          && !usingExpandedKeyboard
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "@")
+        }
+        if DeviceType.isPad
+          && key == "€"
+          && !usingExpandedKeyboard
+          && (controllerLanguage == "Portuguese"
+            || commandState == .translate)
+        {
+          leftPadding = keyWidth / 3
+          addPadding(to: stackView1, width: leftPadding, key: "€")
+        }
+
+        keyboardKeys.append(btn)
+        if !usingExpandedKeyboard {
+          switch row {
+          case 0: stackView0.addArrangedSubview(btn)
+          case 1: stackView1.addArrangedSubview(btn)
+          case 2: stackView2.addArrangedSubview(btn)
+          case 3: stackView3.addArrangedSubview(btn)
+          default:
+            break
+          }
+        } else {
+          switch row {
+          case 0: stackViewNum.addArrangedSubview(btn)
+          case 1: stackView0.addArrangedSubview(btn)
+          case 2: stackView1.addArrangedSubview(btn)
+          case 3: stackView2.addArrangedSubview(btn)
+          case 4: stackView3.addArrangedSubview(btn)
+          default:
+            break
+          }
+        }
+
+        // Special key styling.
+        if key == "delete" {
+          let deleteLongPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(deleteLongPressed(_:)))
+          btn.addGestureRecognizer(deleteLongPressRecognizer)
+        }
+
+        if key == "selectKeyboard" {
+          selectKeyboardButton = btn
+          selectKeyboardButton.addTarget(
+            self,
+            action: #selector(handleInputModeList(from:with:)),
+            for: .allTouchEvents
+          )
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "globe")
+        }
+
+        if key == "hideKeyboard" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
+        }
+
+        if key == SpecialKeys.indent {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.forward.to.line")
+        }
+
+        if key == SpecialKeys.capsLock {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "capslock")
+        }
+
+        if key == "shift" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
+        }
+
+        if key == "return" {
+          if [.translate, .conjugate, .plural].contains(commandState) {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
+          } else {
+            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
+          }
+        }
+
+        if key == "delete" {
+          styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
+        }
+
+        // Setting key pop functionality.
+        let keyHoldPop = UILongPressGestureRecognizer(
+          target: self,
+          action: #selector(genHoldPopUpView(sender:))
+        )
+        keyHoldPop.minimumPressDuration = 0.125
+
+        if allNonSpecialKeys.contains(key) {
+          btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
+          btn.addGestureRecognizer(keyHoldPop)
+        }
+
+        // Pad after key is added.
+        var rightPadding = CGFloat(0)
+        if DeviceType.isPhone
+          && key == "m"
+          && ["German", "Swedish"].contains(controllerLanguage)
+          && commandState != .translate
+        {
+          rightPadding = keyWidth / 3
+          addPadding(to: stackView2, width: rightPadding, key: "m")
+        }
+        if DeviceType.isPhone
+          && key == "l"
+          && (controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate)
+        {
+          rightPadding = keyWidth / 4
+          addPadding(to: stackView1, width: rightPadding, key: "l")
+        }
+
+        // Set the width of the key given device and the given key.
+        btn.adjustKeyWidth()
+
+        // Update the button style.
+        btn.adjustButtonStyle()
+
+        if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
+          // Override background color from adjustKeyWidth for "search" blue for web searches.
+          styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
+          btn.backgroundColor = UIColor(red: 0.0 / 255.0, green: 121.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
+        }
+
+        // Extend button touch areas.
+        var widthOfSpacing = CGFloat(0)
+        if keyboardState == .letters {
+          widthOfSpacing = (
+            (UIScreen.main.bounds.width - 6.0)
+              - (CGFloat(letterKeys[0].count) * keyWidth)
+          ) / (CGFloat(letterKeys[0].count)
+            - 1.0
+          )
+        } else {
+          widthOfSpacing = (
+            (UIScreen.main.bounds.width - 6.0)
+              - (CGFloat(usingExpandedKeyboard == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
+          ) / (CGFloat(letterKeys[0].count)
+            - 1.0
+          )
+        }
+
+        switch row {
+        case 0:
+          btn.topShift = -5
+          btn.bottomShift = -6
+        case 1:
+          btn.topShift = -6
+          btn.bottomShift = -6
+        case 2:
+          btn.topShift = -6
+          btn.bottomShift = -6
+        case 3:
+          btn.topShift = -6
+          btn.bottomShift = -5
+        default:
+          break
+        }
+
+        // Pad left and right based on if the button has been shifted.
+        if leftPadding == CGFloat(0) {
+          btn.leftShift = -(widthOfSpacing / 2)
+        } else {
+          btn.leftShift = -leftPadding
+        }
+        if rightPadding == CGFloat(0) {
+          btn.rightShift = -(widthOfSpacing / 2)
+        } else {
+          btn.rightShift = -rightPadding
+        }
+
+        // Activate keyboard interface buttons.
+        activateBtn(btn: btn)
+        if key == "shift" || key == spaceBar || key == languageTextForSpaceBar {
+          btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
+        }
+      }
+    }
+
+    // End padding.
+    switch keyboardState {
+    case .letters:
+      break
+    case .numbers:
+      break
+    case .symbols:
+      break
+    }
+  }
+
   // MARK: Load Keys
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
+    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+      if userDefaults.bool(forKey: "svAccentCharacters") {
+        disableAccentCharacters = true
+      } else {
+        disableAccentCharacters = false
+      }
+    }
 
     // Actions to be done only on initial loads.
     if isFirstKeyboardLoad {
@@ -1557,19 +1880,45 @@ class KeyboardViewController: UIInputViewController {
       showKeyboardLanguage = true
 
       // Initialize the language database and create the autosuggestions lexicon.
-      //languageDB = openDBQueue()
+      languageDB = openDBQueue()
 
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
-      requestSupplementaryLexicon { (userLexicon: UILexicon!) in
-        for item in userLexicon.entries {
-          if item.documentText.count > 1 {
-            LanguageDBManager.shared.insertAutocompleteLexion(of: item.documentText)
+      let addToAutocompleteLexiconQuery = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
+      requestSupplementaryLexicon { (userLexicon: UILexicon?) in
+        if let lexicon = userLexicon {
+          for item in lexicon.entries {
+            if item.documentText.count > 1 {
+              writeDBRow(query: addToAutocompleteLexiconQuery, args: [item.documentText])
+            }
           }
         }
       }
 
       // Drop non-unique values in case the lexicon has added words that were already present.
-      LanguageDBManager.shared.deleteNonUniqueAutosuggestions()
+      let dropNonUniqueAutosuggestionsQuery = """
+      DELETE FROM autocomplete_lexicon
+      WHERE rowid NOT IN (
+        SELECT
+          MIN(rowid)
+
+        FROM
+          autocomplete_lexicon
+
+        GROUP BY
+          word
+      )
+      """
+      do {
+        try languageDB.write { db in
+          try db.execute(sql: dropNonUniqueAutosuggestionsQuery)
+        }
+      } catch let error as DatabaseError {
+        let errorMessage = error.message
+        let errorSQL = error.sql
+        print(
+          "An error '\(String(describing: errorMessage))' occurred in the query: \(String(describing: errorSQL))"
+        )
+      } catch {}
     }
 
     setKeyboard()
@@ -1590,32 +1939,23 @@ class KeyboardViewController: UIInputViewController {
     keyboardKeys.forEach { $0.removeFromSuperview() }
     paddingViews.forEach { $0.removeFromSuperview() }
 
-    // keyWidth determined per keyboard by the top row.
-    if isLandscapeView {
-      if DeviceType.isPhone {
-        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.5
-        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.5
-      } else if DeviceType.isPad {
-        letterKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(letterKeys[0].count) * 1.2
-        numSymKeyWidth = (UIScreen.main.bounds.height - 5) / CGFloat(numberKeys[0].count) * 1.2
-      }
-    } else {
-      letterKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(letterKeys[0].count) * 0.9
-      numSymKeyWidth = (UIScreen.main.bounds.width - 6) / CGFloat(symbolKeys[0].count) * 0.9
-    }
+    setKeywidth()
 
     // Derive keyboard given current states and set widths.
     switch keyboardState {
     case .letters:
       keyboard = letterKeys
       keyWidth = letterKeyWidth
+
       // Auto-capitalization if the cursor is at the start of the proxy.
-      if proxy.documentContextBeforeInput?.count == 0 {
+      if let documentContext = proxy.documentContextBeforeInput, documentContext.isEmpty {
         shiftButtonState = .shift
       }
+
     case .numbers:
       keyboard = numberKeys
       keyWidth = numSymKeyWidth
+
     case .symbols:
       keyboard = symbolKeys
       keyWidth = numSymKeyWidth
@@ -1624,19 +1964,19 @@ class KeyboardViewController: UIInputViewController {
     // Derive corner radii.
     if DeviceType.isPhone {
       if isLandscapeView {
-        keyCornerRadius = keyWidth / 9
-        commandKeyCornerRadius = keyWidth / 5
+        keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPhone
+        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPhone
       } else {
-        keyCornerRadius = keyWidth / 6
-        commandKeyCornerRadius = keyWidth / 3
+        keyCornerRadius = keyWidth / scalarKeyCornerRadiusPhone
+        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPhone
       }
     } else if DeviceType.isPad {
       if isLandscapeView {
-        keyCornerRadius = keyWidth / 12
-        commandKeyCornerRadius = keyWidth / 7.5
+        keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPad
+        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPad
       } else {
-        keyCornerRadius = keyWidth / 9
-        commandKeyCornerRadius = keyWidth / 5
+        keyCornerRadius = keyWidth / scalarKeyCornerRadiusPad
+        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPad
       }
     }
 
@@ -1648,16 +1988,30 @@ class KeyboardViewController: UIInputViewController {
         view?.isLayoutMarginsRelativeArrangement = true
 
         // Set edge insets for stack views to provide vertical key spacing.
-        if view == stackViewNum {
-          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
-        } else if view == stackView0 {
-          view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
-        } else if view == stackView1 {
-          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
-        } else if view == stackView2 {
-          view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
-        } else if view == stackView3 {
-          view?.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 5, right: 0)
+        if DeviceType.isPad {
+          if view == stackViewNum {
+            view?.layoutMargins = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0)
+          } else if view == stackView0 {
+            view?.layoutMargins = UIEdgeInsets(top: 2, left: 0, bottom: 6, right: 0)
+          } else if view == stackView1 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView2 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView3 {
+            view?.layoutMargins = UIEdgeInsets(top: 4, left: 0, bottom: 3, right: 0)
+          }
+        } else {
+          if view == stackViewNum {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 4, right: 0)
+          } else if view == stackView0 {
+            view?.layoutMargins = UIEdgeInsets(top: 3, left: 0, bottom: 8, right: 0)
+          } else if view == stackView1 {
+            view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+          } else if view == stackView2 {
+            view?.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 6, right: 0)
+          } else if view == stackView3 {
+            view?.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 5, right: 0)
+          }
         }
       }
 
@@ -1671,13 +2025,13 @@ class KeyboardViewController: UIInputViewController {
       deactivateConjugationDisplay()
 
       if DeviceType.isPhone {
-        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.435)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
       } else if DeviceType.isPad {
-        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
-        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * 0.475)
+        translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPad)
+        conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPad)
+        pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPad)
       }
 
       if commandState == .selectCommand {
@@ -1731,246 +2085,7 @@ class KeyboardViewController: UIInputViewController {
         }
       }
 
-      let numRows = keyboard.count
-      for row in 0 ..< numRows {
-        for idx in 0 ..< keyboard[row].count {
-          // Set up button as a key with its values and properties.
-          let btn = KeyboardKey(type: .custom)
-          btn.row = row
-          btn.idx = idx
-          btn.style()
-          btn.setChar()
-          btn.setCharSize()
-
-          let key: String = btn.key
-
-          // Pad before key is added.
-          var leftPadding = CGFloat(0)
-          if DeviceType.isPhone
-            && key == "y"
-            && ["German", "Swedish"].contains(controllerLanguage)
-            && commandState != .translate
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView2, width: leftPadding, key: "y")
-          }
-          if DeviceType.isPhone
-            && key == "a"
-            && (controllerLanguage == "Portuguese"
-              || controllerLanguage == "Italian"
-              || commandState == .translate)
-          {
-            leftPadding = keyWidth / 4
-            addPadding(to: stackView1, width: leftPadding, key: "a")
-          }
-          if DeviceType.isPad
-            && key == "a"
-            && (controllerLanguage == "Portuguese"
-              || controllerLanguage == "Italian"
-              || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "a")
-          }
-          if DeviceType.isPad
-            && key == "@"
-            && (controllerLanguage == "Portuguese"
-              || controllerLanguage == "Italian"
-              || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "@")
-          }
-          if DeviceType.isPad
-            && key == "$"
-            && controllerLanguage == "Italian"
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "$")
-          }
-          if DeviceType.isPad
-            && key == "€"
-            && (controllerLanguage == "Portuguese"
-              || commandState == .translate)
-          {
-            leftPadding = keyWidth / 3
-            addPadding(to: stackView1, width: leftPadding, key: "€")
-          }
-
-          keyboardKeys.append(btn)
-          if !usingExpandedKeyboard {
-            switch row {
-            case 0: stackView0.addArrangedSubview(btn)
-            case 1: stackView1.addArrangedSubview(btn)
-            case 2: stackView2.addArrangedSubview(btn)
-            case 3: stackView3.addArrangedSubview(btn)
-            default:
-              break
-            }
-          } else {
-            switch row {
-            case 0: stackViewNum.addArrangedSubview(btn)
-            case 1: stackView0.addArrangedSubview(btn)
-            case 2: stackView1.addArrangedSubview(btn)
-            case 3: stackView2.addArrangedSubview(btn)
-            case 4: stackView3.addArrangedSubview(btn)
-            default:
-              break
-            }
-          }
-
-          // Special key styling.
-          if key == "delete" {
-            let deleteLongPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(deleteLongPressed(_:)))
-            btn.addGestureRecognizer(deleteLongPressRecognizer)
-          }
-
-          if key == "selectKeyboard" {
-            selectKeyboardButton = btn
-            selectKeyboardButton.addTarget(
-              self,
-              action: #selector(handleInputModeList(from:with:)),
-              for: .allTouchEvents
-            )
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "globe")
-          }
-
-          if key == "hideKeyboard" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "keyboard.chevron.compact.down")
-          }
-
-          if key == SpecialKeys.indent {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.forward.to.line")
-          }
-
-          if key == SpecialKeys.capsLock {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "capslock")
-          }
-
-          if key == "shift" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "shift")
-          }
-
-          if key == "return" {
-            if [.translate, .conjugate, .plural].contains(commandState) {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrowtriangle.right.fill")
-            } else {
-              styleIconBtn(btn: btn, color: keyCharColor, iconName: "arrow.turn.down.left")
-            }
-          }
-
-          if key == "delete" {
-            styleIconBtn(btn: btn, color: keyCharColor, iconName: "delete.left")
-          }
-
-          // Setting key pop functionality.
-          let keyHoldPop = UILongPressGestureRecognizer(
-            target: self,
-            action: #selector(genHoldPopUpView(sender:))
-          )
-          keyHoldPop.minimumPressDuration = 0.125
-
-          if allNonSpecialKeys.contains(key) {
-            btn.addTarget(self, action: #selector(genPopUpView), for: .touchDown)
-            btn.addGestureRecognizer(keyHoldPop)
-          }
-
-          // Pad after key is added.
-          var rightPadding = CGFloat(0)
-          if DeviceType.isPhone
-            && key == "m"
-            && ["German", "Swedish"].contains(controllerLanguage)
-            && commandState != .translate
-          {
-            rightPadding = keyWidth / 3
-            addPadding(to: stackView2, width: rightPadding, key: "m")
-          }
-          if DeviceType.isPhone
-            && key == "l"
-            && (controllerLanguage == "Portuguese"
-              || controllerLanguage == "Italian"
-              || commandState == .translate)
-          {
-            rightPadding = keyWidth / 4
-            addPadding(to: stackView1, width: rightPadding, key: "l")
-          }
-
-          // Set the width of the key given device and the given key.
-          btn.adjustKeyWidth()
-
-          // Update the button style.
-          btn.adjustButtonStyle()
-
-          if key == "return" && proxy.keyboardType == .webSearch && ![.translate, .conjugate, .plural].contains(commandState) {
-            // Override background color from adjustKeyWidth for "search" blue for web searches.
-            styleIconBtn(btn: btn, color: .white.withAlphaComponent(0.9), iconName: "arrow.turn.down.left")
-            btn.backgroundColor = UIColor(red: 0.0 / 255.0, green: 121.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
-          }
-
-          // Extend button touch areas.
-          var widthOfSpacing = CGFloat(0)
-          if keyboardState == .letters {
-            widthOfSpacing = (
-              (UIScreen.main.bounds.width - 6.0)
-                - (CGFloat(letterKeys[0].count) * keyWidth)
-            ) / (CGFloat(letterKeys[0].count)
-              - 1.0
-            )
-          } else {
-            widthOfSpacing = (
-              (UIScreen.main.bounds.width - 6.0)
-                - (CGFloat(usingExpandedKeyboard == true ? symbolKeys[0].count : numberKeys[0].count) * numSymKeyWidth)
-            ) / (CGFloat(letterKeys[0].count)
-              - 1.0
-            )
-          }
-
-          switch row {
-          case 0:
-            btn.topShift = -5
-            btn.bottomShift = -6
-          case 1:
-            btn.topShift = -6
-            btn.bottomShift = -6
-          case 2:
-            btn.topShift = -6
-            btn.bottomShift = -6
-          case 3:
-            btn.topShift = -6
-            btn.bottomShift = -5
-          default:
-            break
-          }
-
-          // Pad left and right based on if the button has been shifted.
-          if leftPadding == CGFloat(0) {
-            btn.leftShift = -(widthOfSpacing / 2)
-          } else {
-            btn.leftShift = -leftPadding
-          }
-          if rightPadding == CGFloat(0) {
-            btn.rightShift = -(widthOfSpacing / 2)
-          } else {
-            btn.rightShift = -rightPadding
-          }
-
-          // Activate keyboard interface buttons.
-          activateBtn(btn: btn)
-          if key == "shift" || key == spaceBar || key == languageTextForSpaceBar {
-            btn.addTarget(self, action: #selector(keyMultiPress(_:event:)), for: .touchDownRepeat)
-          }
-        }
-      }
-
-      // End padding.
-      switch keyboardState {
-      case .letters:
-        break
-      case .numbers:
-        break
-      case .symbols:
-        break
-      }
+      setKeyPadding()
 
     } else {
       // Load conjugation view.
@@ -2021,23 +2136,27 @@ class KeyboardViewController: UIInputViewController {
 
   func setCommaAndPeriodKeysConditionally() {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-    let dictionaryKey = langCode + "CommaAndPeriod"
-    let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
+    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+      let dictionaryKey = langCode + "CommaAndPeriod"
+      let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
 
-    if letterKeysHaveCommaPeriod {
-      let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
-      letterKeys[3].insert(",", at: spaceIndex!)
-      letterKeys[3].insert(".", at: spaceIndex! + 2)
+      if letterKeysHaveCommaPeriod {
+        let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
+        letterKeys[3].insert(",", at: spaceIndex!)
+        letterKeys[3].insert(".", at: spaceIndex! + 2)
+      }
     }
   }
 
   func emojiAutosuggestIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
-    let dictionaryKey = langCode + "EmojiAutosuggest"
+    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+      let dictionaryKey = langCode + "EmojiAutosuggest"
 
-    return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.bool(forKey: dictionaryKey)
+    } else {
+      return true // return the default value
+    }
   }
 
   // MARK: Button Actions
@@ -2308,16 +2427,22 @@ class KeyboardViewController: UIInputViewController {
       if let wordSelected = proxy.selectedText {
         wordToCheck = wordSelected
       } else {
-        wordsTyped = proxy.documentContextBeforeInput!.components(separatedBy: " ")
-        let lastWordTyped = wordsTyped.secondToLast()
-        if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-          wordToCheck = lastWordTyped!.lowercased()
-        } else {
-          wordToCheck = lastWordTyped!
+        if let contextBeforeInput = proxy.documentContextBeforeInput {
+          wordsTyped = contextBeforeInput.components(separatedBy: " ")
+          let lastWordTyped = wordsTyped.secondToLast()
+          if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+            wordToCheck = lastWordTyped!.lowercased()
+          } else {
+            wordToCheck = lastWordTyped!
+          }
         }
       }
-      let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck)[0]
-      hasPrepForm = prepForm != ""
+      let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
+      let prepCaseArgs = [wordToCheck.lowercased()]
+      let outputCols = ["form"]
+
+      let prepForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+      hasPrepForm = !prepForm.isEmpty
       if hasPrepForm {
         resetCaseDeclensionState()
         commandState = .selectCaseDeclension
@@ -2332,7 +2457,7 @@ class KeyboardViewController: UIInputViewController {
         annotationBtns[i].backgroundColor = annotationColors[i]
       }
       let emojisToSelectFrom = "🥳🎉"
-      let emojis = String((0 ..< 3).map { _ in emojisToSelectFrom.randomElement()! })
+      let emojis = String((0 ..< 3).compactMap { _ in emojisToSelectFrom.randomElement() })
       sender.setTitle(emojis, for: .normal)
       return
 
@@ -2360,13 +2485,15 @@ class KeyboardViewController: UIInputViewController {
         conditionallySetAutoActionBtns()
       } else {
         // Shift state if the user presses delete when the prompt is present.
-        if allPrompts.contains((commandBar?.text!)!) || allColoredPrompts.contains(commandBar.attributedText!) {
-          shiftButtonState = .shift // Auto-capitalization
-          loadKeys()
-          // Function call required due to return.
-          // Not including means placeholder is never added on last delete action.
-          commandBar.conditionallyAddPlaceholder()
-          return
+        if let commandBarText = commandBar?.text, let commandBarAttributedText = commandBar?.attributedText {
+          if allPrompts.contains(commandBarText) || allColoredPrompts.contains(commandBarAttributedText) {
+            shiftButtonState = .shift // Auto-capitalization
+            loadKeys()
+            // Function call required due to return.
+            // Not including means placeholder is never added on last delete action.
+            commandBar.conditionallyAddPlaceholder()
+            return
+          }
         }
 
         handleDeleteButtonPressed()
@@ -2397,16 +2524,14 @@ class KeyboardViewController: UIInputViewController {
           changeKeyboardToLetterKeys()
         }
       } else {
-        commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: " "))!
-        if [
-          ". " + commandCursor,
-          "? " + commandCursor,
-          "! " + commandCursor,
-        ].contains(String(commandBar.text!.suffix(3))) {
-          shiftButtonState = .shift
-        }
-        if keyboardState != .letters {
-          changeKeyboardToLetterKeys()
+        if let commandBarText = commandBar?.text {
+          commandBar?.text = commandBarText.insertPriorToCursor(char: " ")
+          if [". " + commandCursor, "? " + commandCursor, "! " + commandCursor].contains(String(commandBarText.suffix(3))) {
+            shiftButtonState = .shift
+          }
+          if keyboardState != .letters {
+            changeKeyboardToLetterKeys()
+          }
         }
       }
 
@@ -2427,7 +2552,9 @@ class KeyboardViewController: UIInputViewController {
       if ![.translate, .conjugate, .plural].contains(commandState) {
         proxy.insertText("'")
       } else {
-        commandBar.text! = (commandBar.text!.insertPriorToCursor(char: "'"))
+        if let commandBarText = commandBar.text {
+          commandBar.text = commandBarText.insertPriorToCursor(char: "'")
+        }
       }
       changeKeyboardToLetterKeys()
 
@@ -2440,7 +2567,9 @@ class KeyboardViewController: UIInputViewController {
           proxy.insertText(keyToDisplay)
         }
       } else {
-        commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
+        if let commandBarText = commandBar.text {
+          commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
+        }
       }
 
     case ",", ".", "!", "?":
@@ -2450,7 +2579,9 @@ class KeyboardViewController: UIInputViewController {
         }
         proxy.insertText(keyToDisplay)
       } else {
-        commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
+        if let commandBarText = commandBar.text {
+          commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
+        }
       }
 
     case "shift":
@@ -2497,7 +2628,9 @@ class KeyboardViewController: UIInputViewController {
       if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
         proxy.insertText(keyToDisplay)
       } else {
-        commandBar.text = commandBar.text!.insertPriorToCursor(char: keyToDisplay)
+        if let currentText = commandBar.text {
+          commandBar.text = currentText.insertPriorToCursor(char: keyToDisplay)
+        }
       }
     }
 
@@ -2593,50 +2726,50 @@ class KeyboardViewController: UIInputViewController {
   @objc func keyMultiPress(_ sender: UIButton, event: UIEvent) {
     guard var originalKey = sender.layer.value(forKey: "original") as? String else { return }
 
-    let touch: UITouch = event.allTouches!.first!
-
-    // Caps lock given two taps of shift.
-    if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible {
-      switchToFullCaps()
-    }
-
-    // To make sure that the user can still use the double space period shortcut after numbers and symbols.
-    let punctuationThatCancelsShortcut = ["?", "!", ",", ".", ":", ";", "-"]
-    if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && ![.translate, .conjugate, .plural].contains(commandState) {
-      let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
-      if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
-        originalKey = "Cancel shortcut"
+    if let touches = event.allTouches, let touch = touches.first {
+      // Caps lock given two taps of shift.
+      if touch.tapCount == 2 && originalKey == "shift" && capsLockPossible {
+        switchToFullCaps()
       }
-    } else if [.translate, .conjugate, .plural].contains(commandState) {
-      let charBeforeSpace = String(Array((commandBar?.text!)!).secondToLast()!)
-      if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
-        originalKey = "Cancel shortcut"
+
+      // To make sure that the user can still use the double space period shortcut after numbers and symbols.
+      let punctuationThatCancelsShortcut = ["?", "!", ",", ".", ":", ";", "-"]
+      if originalKey != "shift" && proxy.documentContextBeforeInput?.count != 1 && ![.translate, .conjugate, .plural].contains(commandState) {
+        let charBeforeSpace = String(Array(proxy.documentContextBeforeInput!).secondToLast()!)
+        if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
+          originalKey = "Cancel shortcut"
+        }
+      } else if [.translate, .conjugate, .plural].contains(commandState) {
+        let charBeforeSpace = String(Array((commandBar?.text!)!).secondToLast()!)
+        if punctuationThatCancelsShortcut.contains(charBeforeSpace) {
+          originalKey = "Cancel shortcut"
+        }
       }
-    }
-    // Double space period shortcut.
-    if touch.tapCount == 2
-      && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
-      && proxy.documentContextBeforeInput?.count != 1
-      && doubleSpacePeriodPossible
-    {
-      // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
-      if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
-        proxy.deleteBackward()
-        proxy.insertText(". ")
-        emojisToShow = .zero // was showing empty emoji spots
-        keyboardState = .letters
-        shiftButtonState = .shift
-        loadKeys()
+      // Double space period shortcut.
+      if touch.tapCount == 2
+        && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
+        && proxy.documentContextBeforeInput?.count != 1
+        && doubleSpacePeriodPossible
+      {
         // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
-      } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
-        commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
-        commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
-        keyboardState = .letters
-        shiftButtonState = .shift
-        loadKeys()
+        if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
+          proxy.deleteBackward()
+          proxy.insertText(". ")
+          emojisToShow = .zero // was showing empty emoji spots
+          keyboardState = .letters
+          shiftButtonState = .shift
+          loadKeys()
+          // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
+        } else if commandBar.text!.suffix(2) != "  " && [.translate, .conjugate, .plural].contains(commandState) {
+          commandBar.text! = (commandBar?.text!.deletePriorToCursor())!
+          commandBar.text! = (commandBar?.text!.insertPriorToCursor(char: ". "))!
+          keyboardState = .letters
+          shiftButtonState = .shift
+          loadKeys()
+        }
+        // Show auto actions if the keyboard states dictate.
+        conditionallySetAutoActionBtns()
       }
-      // Show auto actions if the keyboard states dictate.
-      conditionallySetAutoActionBtns()
     }
   }
 
@@ -2655,7 +2788,7 @@ class KeyboardViewController: UIInputViewController {
   ///   - gesture: the gesture that was received.
   @objc func deleteLongPressed(_ gesture: UIGestureRecognizer) {
     // Prevent the command state prompt from being deleted.
-    if [.translate, .conjugate, .plural].contains(commandState) && allPrompts.contains((commandBar?.text!)!) {
+    if let commandBarText = commandBar?.text, [.translate, .conjugate, .plural].contains(commandState), allPrompts.contains(commandBarText) {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
@@ -2774,9 +2907,9 @@ class KeyboardViewController: UIInputViewController {
     genAlternatesView(key: key)
 
     alternateBtnStartX = 5.0
-    var alternatesBtnY = key.frame.height * 0.15
+    var alternatesBtnY = key.frame.height * scalarAlternatesBtnYPhone
     if DeviceType.isPad {
-      alternatesBtnY = key.frame.height * 0.2
+      alternatesBtnY = key.frame.height * scalarAlternatesBtnYPad
     }
     for char in alternateKeys {
       let alternateKey = KeyboardKey(

@@ -1,8 +1,21 @@
-//
-//  Annotate.swift
-//
-//  Functions and elements that control word annotations.
-//
+/**
+ * Functions and elements that control word annotations.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -38,11 +51,17 @@ let prepAnnotationConversionDict = [
 ///   - wordToAnnotate: the word that an annotation should be created for.
 ///   - KVC: the keyboard view controller.
 func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
-  let nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
-  prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate)[0]
+  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+  let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
+  let nounGenderArgs = [wordToAnnotate]
+  let prepCaseArgs = [wordToAnnotate.lowercased()]
+  let outputCols = ["form"]
 
-  hasNounForm = nounForm != ""
-  hasPrepForm = prepAnnotationForm != ""
+  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+  prepAnnotationForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+
+  hasNounForm = !nounForm.isEmpty
+  hasPrepForm = !prepAnnotationForm.isEmpty
 
   annotationsToAssign = [String]()
   annotationBtns = [UIButton]()
@@ -71,7 +90,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     annotationBtn.styleSingleAnnotation(fullAnnotation: true)
 
     let emojisToSelectFrom = "🥳🎉"
-    let emojis = String((0 ..< 3).map { _ in emojisToSelectFrom.randomElement()! })
+    let emojis = String((0 ..< 3).compactMap { _ in emojisToSelectFrom.randomElement() })
     annotationBtn.setTitle(emojis, for: .normal)
     KVC.view.addSubview(annotationBtn)
     annotationBtns.append(annotationBtn)
@@ -169,7 +188,9 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
         KVC.view.addSubview(annotationBtn)
         annotationBtns.append(annotationBtn)
         if nounFormToColorDict.keys.contains(annotationToDisplay) {
-          annotationColors.append(nounFormToColorDict[annotationsToAssign[i]]!)
+          if let annotationColor = nounFormToColorDict[annotationsToAssign[i]] {
+            annotationColors.append(annotationColor)
+          }
         } else {
           annotationColors.append(UITraitCollection.current.userInterfaceStyle == .light ? .black : .white)
         }
@@ -208,7 +229,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
 ///   - KVC: the keyboard view controller.
 func selectedWordAnnotation(KVC: KeyboardViewController) {
   wordToCheck = proxy.selectedText ?? ""
-  if wordToCheck.count > 0 {
+  if !wordToCheck.isEmpty {
     if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
       wordToCheck = wordToCheck.lowercased()
     }
@@ -249,9 +270,13 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
 ///   - index: the auto action key index that the annotation should be set for.
 ///   - KVC: the keyboard view controller.
 func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewController) {
-  let nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
+  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
+  let nounGenderArgs = [autoActionWord]
+  let outputCols = ["form"]
 
-  hasNounForm = nounForm != ""
+  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+
+  hasNounForm = !nounForm.isEmpty
 
   newAutoActionAnnotationsToAssign = [String]()
   newAutoActionAnnotationBtns = [UIButton]()
@@ -331,9 +356,11 @@ func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewC
 
       KVC.view.addSubview(annotationBtn)
       autoActionAnnotationBtns.append(annotationBtn)
-      newAutoActionAnnotationColors.append(
-        nounFormToColorDict[newAutoActionAnnotationsToAssign[i]]!.withAlphaComponent(0.75)
-      )
+      if let annotationColor = nounFormToColorDict[newAutoActionAnnotationsToAssign[i]] {
+        let colorWithAlpha = annotationColor.withAlphaComponent(0.75)
+        newAutoActionAnnotationColors.append(colorWithAlpha)
+      }
+
       setBtn(
         btn: annotationBtn,
         color: newAutoActionAnnotationColors[i],
