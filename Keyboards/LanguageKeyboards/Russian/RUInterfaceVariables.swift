@@ -1,8 +1,21 @@
-//
-//  RUInterfaceVariables.swift
-//
-//  Constants and functions to load the Russian Scribe keyboard.
-//
+/**
+ * Commands and functions to load the Russian Scribe keyboard.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -54,18 +67,18 @@ public enum RussianKeyboardConstants {
 
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
+    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     [SpecialKeys.indent, "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ", "+"],
     [SpecialKeys.capsLock, "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "ё", "return"],
-    ["shift", "[", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"],
+    ["shift", "'", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
-    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\\", "|", "₽"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
+    [SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"], // "undo"
+    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", "-", ",", ".", "shift"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 
@@ -93,7 +106,7 @@ func getRUKeys() {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       letterKeys = RussianKeyboardConstants.letterKeysPadExpanded
-      letterKeys = RussianKeyboardConstants.symbolKeysPadExpanded
+      symbolKeys = RussianKeyboardConstants.symbolKeysPadExpanded
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
@@ -107,7 +120,7 @@ func getRUKeys() {
     }
 
     leftKeyChars = ["й", "ф", "1", "@", "$"]
-    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows
+    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows.
     rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }

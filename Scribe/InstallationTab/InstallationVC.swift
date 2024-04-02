@@ -1,8 +1,21 @@
-//
-//  ViewController.swift
-//
-//  The ViewController for the Installation screen of the Scribe app.
-//
+/**
+ * The ViewController for the Installation screen of the Scribe app.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -133,8 +146,12 @@ class InstallationVC: UIViewController {
 
     // Set link attributes for all textViews.
     for textView in allTextViews {
+      guard let linkBlueColor = UIColor(named: "linkBlue") else {
+        fatalError("Failed to load linkBlue color.")
+      }
+
       textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: UIColor(named: "linkBlue")!,
+        NSAttributedString.Key.foregroundColor: linkBlueColor,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
       ]
     }
@@ -151,7 +168,6 @@ class InstallationVC: UIViewController {
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
     appTextBackground.backgroundColor = UIColor(named: "commandBar")
-    applyShadowEffects(elem: appTextBackground)
 
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {
@@ -188,7 +204,10 @@ class InstallationVC: UIViewController {
 
   /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
-    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      fatalError("Failed to create settings URL.")
+    }
+    UIApplication.shared.open(settingsURL)
   }
 
   /// Function to change the key coloration given a touch down.

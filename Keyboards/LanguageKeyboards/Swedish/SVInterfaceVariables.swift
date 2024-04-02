@@ -1,6 +1,21 @@
-//
-//  SVInterfaceVariables.swift
-//
+/**
+ * Constants and functions to load the Swedish Scribe keyboard.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 //  Constants and functions to load the Swedish Scribe keyboard.
 //
 
@@ -69,26 +84,26 @@ public enum SwedishKeyboardConstants {
 
   // Expanded iPad keyboard layouts for wider devices.
   static let letterKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "'", "delete"],
+    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"],
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å", "^", "*"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "'", "return"],
-    ["shift", "<", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    ["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let letterKeysPadExpandedDisableAccents = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "'", "delete"],
-    [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "*"],
-    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "'", "return"],
-    ["shift", "<", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
+    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"],
+    [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "\"", "^", "*"],
+    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "(", ")", "'", "return"],
+    ["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
-    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "...", ".", ",", "?", "!", "'", "\"", "_", "€"], // "redo"
+    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
+    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "°", "|", "§"],
+    [SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"], // "undo"
+    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", ",", ".", "-", "shift"], // "redo"
     ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
   ]
 

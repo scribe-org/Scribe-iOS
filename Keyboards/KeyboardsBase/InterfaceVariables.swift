@@ -1,8 +1,21 @@
-//
-//  InterfaceVariables.swift
-//
-//  Variables associated with the base keyboard interface.
-//
+/**
+ * Variables associated with the base keyboard interface.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -26,6 +39,33 @@ var keyWidth = CGFloat(0)
 var letterKeyWidth = CGFloat(0)
 var numSymKeyWidth = CGFloat(0)
 var isFirstKeyboardLoad = false
+var disableAccentCharacters = false
+// Constants and variables for scaling key widths and heights.
+let scalarAlternatesBtnYPad = 0.2
+let scalarAlternatesBtnYPhone = 0.15
+let scalarCommandKeyCornerRadiusLandscapeViewPad = 7.5
+let scalarCommandKeyCornerRadiusLandscapeViewPhone = 5.0
+let scalarCommandKeyCornerRadiusPad = 5.0
+let scalarCommandKeyCornerRadiusPhone = 3.0
+let scalarCommandKeyHeightPad = 0.475
+let scalarCommandKeyHeightPhone = 0.435
+let scalarEmojiKeyFont = 0.475
+let scalarKeyCornerRadiusLandscapeViewPad = 12.0
+let scalarKeyCornerRadiusLandscapeViewPhone = 9.0
+let scalarKeyCornerRadiusPad = 9.0
+let scalarKeyCornerRadiusPhone = 6.0
+let scalarFontPad = 0.475
+let scalarFontPhone = 0.435
+let scalarIndentKeyWidth = 1.65
+let scalarLetterNumSymKeyWidth = 0.9
+let scalarLetterNumSymKeyWidthLandscapeViewPad = 1.2
+let scalarLetterNumSymKeyWidthLandscapeViewPhone = 1.5
+var scalarReturnKeyWidth = disableAccentCharacters ? 2.2 : 1.0
+var scalarShiftKeyWidth = 1.4
+var scalarRightShiftKeyWidth = 2.2
+var scalarSpecialKeysWidth = disableAccentCharacters ? 2.2 : 1.0
+var scalarDeleteKeyWidth = disableAccentCharacters ? 2.2 : 1.0
+var scalarCapsLockKeyWidth = 1.8
 
 // Keyboard elements.
 var spaceBar = String()
@@ -162,8 +202,7 @@ func setKeyboard() {
 func setKeyboardLayout() {
   if commandState == .translate {
     setENKeyboardLayout()
-  } else {
-    let setLayoutFxn: () -> Void = keyboardLayoutDict[controllerLanguage]!
+  } else if let setLayoutFxn = keyboardLayoutDict[controllerLanguage] {
     setLayoutFxn()
   }
 

@@ -1,8 +1,21 @@
-//
-//  KeyAnimation.swift
-//
-//  Functions to animate key pressed with pop up characters.
-//
+/**
+ * Functions to animate key presses with pop up characters.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -257,53 +270,54 @@ func centerKeyPopPath(
 ///   - displayChar: the character to display on the pop up.
 func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
   // Get the frame in respect to the superview.
-  let frame = (key.superview?.convert(key.frame, to: nil))!
-  var labelVertPosition = frame.origin.y - key.frame.height / 1.75
-  // non-capital characters should be higher for portrait phone views.
-  if displayChar == char, DeviceType.isPhone, !isLandscapeView,
-     !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char)
-  {
-    labelVertPosition = frame.origin.y - key.frame.height / 1.6
-  } else if DeviceType.isPad,
-            isLandscapeView
-  {
-    labelVertPosition = frame.origin.y - key.frame.height / 2
-  }
-
-  if centralKeyChars.contains(char) {
-    layer.path = centerKeyPopPath(
-      startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-    ).cgPath
-    keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition)
-    keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition)
-  } else if leftKeyChars.contains(char) {
-    layer.path = leftKeyPopPath(
-      startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-    ).cgPath
-    keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
-    keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
-    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
-      keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
-      keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
+  if let frame = key.superview?.convert(key.frame, to: nil) {
+    var labelVertPosition = frame.origin.y - key.frame.height / 1.75
+    // non-capital characters should be higher for portrait phone views.
+    if displayChar == char, DeviceType.isPhone, !isLandscapeView,
+       !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char)
+    {
+      labelVertPosition = frame.origin.y - key.frame.height / 1.6
+    } else if DeviceType.isPad,
+              isLandscapeView
+    {
+      labelVertPosition = frame.origin.y - key.frame.height / 2
     }
-  } else if rightKeyChars.contains(char) {
-    layer.path = rightKeyPopPath(
-      startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-    ).cgPath
-    keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
-    keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
-    if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
-      keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
-      keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
-    }
-  }
 
-  layer.strokeColor = keyShadowColor
-  layer.fillColor = keyColor.cgColor
-  layer.lineWidth = 1.0
+    if centralKeyChars.contains(char) {
+      layer.path = centerKeyPopPath(
+        startX: frame.origin.x, startY: frame.origin.y,
+        keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+      ).cgPath
+      keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition)
+      keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition)
+    } else if leftKeyChars.contains(char) {
+      layer.path = leftKeyPopPath(
+        startX: frame.origin.x, startY: frame.origin.y,
+        keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+      ).cgPath
+      keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
+      keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition)
+      if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
+        keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
+        keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition)
+      }
+    } else if rightKeyChars.contains(char) {
+      layer.path = rightKeyPopPath(
+        startX: frame.origin.x, startY: frame.origin.y,
+        keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+      ).cgPath
+      keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
+      keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition)
+      if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
+        keyPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
+        keyHoldPopChar.center = CGPoint(x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition)
+      }
+    }
+
+    layer.strokeColor = keyShadowColor
+    layer.fillColor = keyColor.cgColor
+    layer.lineWidth = 1.0
+  }
 }
 
 /// Sizes the character displayed on a key pop for iPhones.

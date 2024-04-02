@@ -1,14 +1,34 @@
-//
-//  InfoChildTableViewCell.swift
-//
+/**
+ * Class for a setting component with a heading, description and switch.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
-class InfoChildTableViewCell: UITableViewCell {
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
+final class InfoChildTableViewCell: UITableViewCell {
 
-  @IBOutlet var chevronImgView: UIImageView!
+  // MARK: - Constants
+
+  static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
+
+  // MARK: - Properties
+
+  @IBOutlet var titleLabel: UILabel!
+  @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var toggleSwitch: UISwitch!
 
   var section: Section?
@@ -29,16 +49,31 @@ class InfoChildTableViewCell: UITableViewCell {
 
     return action
   }
+  
+  // MARK: - Functions
 
   func configureCell(for section: Section) {
     self.section = section
+
+    selectionStyle = .none
+
     titleLabel.text = section.sectionTitle
-    iconImageView.image = UIImage.availableIconImage(with: section.imageString)
+
+    if let shortDescription = section.shortDescription {
+      descriptionLabel.text = shortDescription
+
+      contentView.addSubview(descriptionLabel)
+    } else {
+      descriptionLabel.text = nil
+      descriptionLabel.removeFromSuperview()
+    }
 
     if !section.hasToggle {
+      accessoryType = .disclosureIndicator
       toggleSwitch.isHidden = true
     } else {
-      chevronImgView.isHidden = true
+      accessoryType = .none
+      toggleSwitch.isHidden = false
     }
 
     fetchSwitchStateForCell()
@@ -74,8 +109,7 @@ class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = false
+        toggleSwitch.isOn = false  // Default value
       }
 
     case .toggleAccentCharacters:
@@ -83,8 +117,7 @@ class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = false
+        toggleSwitch.isOn = false  // Default value
       }
 
     case .autosuggestEmojis:
@@ -92,8 +125,7 @@ class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        /// Default value
-        toggleSwitch.isOn = true
+        toggleSwitch.isOn = true  // Default value
       }
 
     case .none: break

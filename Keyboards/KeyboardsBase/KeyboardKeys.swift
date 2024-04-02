@@ -1,8 +1,21 @@
-//
-//  KeyboardKey.swift
-//
-//  Classes and variables that define keys for Scribe keyboards.
-//
+/**
+ * Classes and variables that define keys for Scribe keyboards.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -253,26 +266,74 @@ class KeyboardKey: UIButton {
 
   /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
   func adjustPadKeyWidth() {
-    if key == "ABC" || key == "АБВ" {
-      layer.setValue(true, forKey: "isSpecial")
-      widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-    } else if ["delete", "#+=", "shift", "selectKeyboard", SpecialKeys.indent, SpecialKeys.capsLock].contains(key) {
-      layer.setValue(true, forKey: "isSpecial")
-      widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-    } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
-      if key == "return"
-        && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
-        && row == 1
-        && DeviceType.isPad
-      {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
-      } else {
+    if usingExpandedKeyboard {
+      scalarCapsLockKeyWidth = 1.3
+      scalarDeleteKeyWidth = 1.65
+      scalarReturnKeyWidth = 1.3
+      scalarShiftKeyWidth = 1.5
+      scalarSpecialKeysWidth = 1.0
+
+      if key == "ABC" || key == "АБВ" {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+      } else if ["#+=", "selectKeyboard"].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
+      } else if ["delete"].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth).isActive = true
+      } else if [SpecialKeys.capsLock].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
+      } else if [SpecialKeys.indent].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
+      } else if ["shift"].contains(key) && idx == 0 {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
+      } else if ["shift"].contains(key) && (idx > 0) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
+      } else if ["return"].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
+      } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
+        if key == "return"
+          && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
+          && row == 1
+          && DeviceType.isPad
+        {
+          layer.setValue(true, forKey: "isSpecial")
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
+        } else {
+          layer.setValue(true, forKey: "isSpecial")
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+        }
+      } else if key != spaceBar && key != languageTextForSpaceBar {
+        widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
       }
-    } else if key != spaceBar && key != languageTextForSpaceBar {
-      widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+    } else {
+      if key == "ABC" || key == "АБВ" {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+      } else if ["delete", "#+=", "shift", "selectKeyboard", SpecialKeys.indent, SpecialKeys.capsLock].contains(key) {
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+      } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
+        if key == "return"
+          && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
+          && row == 1
+          && DeviceType.isPad
+        {
+          layer.setValue(true, forKey: "isSpecial")
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+        } else {
+          layer.setValue(true, forKey: "isSpecial")
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+        }
+      } else if key != spaceBar && key != languageTextForSpaceBar {
+        widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+      }
     }
   }
 

@@ -1,8 +1,21 @@
-//
-//  KeyAltChars.swift
-//
-//  Functions and variables to create alternate key views.
-//
+/**
+ * Functions and variables to create alternate key views.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -316,50 +329,51 @@ func alternateKeysPathRight(
 ///   - sender: the long press of the given key.
 func genAlternatesView(key: UIButton) {
   // Get the frame in respect to the superview.
-  let frame = (key.superview?.convert(key.frame, to: nil))!
-  let width = key.frame.width
+  if let frame = key.superview?.convert(key.frame, to: nil) {
+    let width = key.frame.width
 
-  // Derive which button was pressed and get its alternates.
-  let char = key.layer.value(forKey: "original") as? String ?? ""
-  alternateKeys = keyAlternatesDict[char] ?? [""]
+    // Derive which button was pressed and get its alternates.
+    let char = key.layer.value(forKey: "original") as? String ?? ""
+    alternateKeys = keyAlternatesDict[char] ?? [""]
 
-  // Add the original key given its location on the keyboard.
-  if keysWithAlternatesLeft.contains(char) {
-    alternateKeys.insert(char, at: 0)
-  } else if keysWithAlternatesRight.contains(char) {
-    alternateKeys.append(char)
-  }
-  let numAlternates = CGFloat(alternateKeys.count)
+    // Add the original key given its location on the keyboard.
+    if keysWithAlternatesLeft.contains(char) {
+      alternateKeys.insert(char, at: 0)
+    } else if keysWithAlternatesRight.contains(char) {
+      alternateKeys.append(char)
+    }
+    let numAlternates = CGFloat(alternateKeys.count)
 
-  if keysWithAlternatesLeft.contains(char) {
-    alternatesViewX = frame.origin.x - 4.0
-    alternatesShapeLayer.path = alternateKeysPathLeft(
-      startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
-    ).cgPath
-  } else if keysWithAlternatesRight.contains(char) {
-    alternatesViewX = frame.origin.x + width - CGFloat(width * numAlternates + (3.0 * numAlternates) + 2.0)
-    alternatesShapeLayer.path = alternateKeysPathRight(
-      startX: frame.origin.x, startY: frame.origin.y,
-      keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
-    ).cgPath
-  }
+    if keysWithAlternatesLeft.contains(char) {
+      alternatesViewX = frame.origin.x - 4.0
+      alternatesShapeLayer.path = alternateKeysPathLeft(
+        startX: frame.origin.x, startY: frame.origin.y,
+        keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
+      ).cgPath
+    } else if keysWithAlternatesRight.contains(char) {
+      alternatesViewX = frame.origin.x + width - CGFloat(width * numAlternates + (3.0 * numAlternates) + 2.0)
+      alternatesShapeLayer.path = alternateKeysPathRight(
+        startX: frame.origin.x, startY: frame.origin.y,
+        keyWidth: width, keyHeight: key.frame.height, numAlternates: numAlternates
+      ).cgPath
+    }
 
-  if numAlternates > 0 {
-    alternatesViewWidth = CGFloat(width * numAlternates + (3.0 * numAlternates) + 8.0)
-  }
+    if numAlternates > 0 {
+      alternatesViewWidth = CGFloat(width * numAlternates + (3.0 * numAlternates) + 8.0)
+    }
 
-  alternatesViewY = frame.origin.y - key.frame.height * 1.135
-  alternatesBtnHeight = key.frame.height * 0.9
-  alternatesKeyView = UIView(
-    frame: CGRect(
-      x: alternatesViewX,
-      y: alternatesViewY,
-      width: alternatesViewWidth,
-      height: key.frame.height * 1.2
+    alternatesViewY = frame.origin.y - key.frame.height * 1.135
+    alternatesBtnHeight = key.frame.height * 0.9
+    alternatesKeyView = UIView(
+      frame: CGRect(
+        x: alternatesViewX,
+        y: alternatesViewY,
+        width: alternatesViewWidth,
+        height: key.frame.height * 1.2
+      )
     )
-  )
 
-  alternatesKeyView.tag = 1001
-  key.backgroundColor = keyColor
+    alternatesKeyView.tag = 1001
+    key.backgroundColor = keyColor
+  }
 }

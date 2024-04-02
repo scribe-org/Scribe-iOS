@@ -1,8 +1,21 @@
-//
-//  CommandBar.swift
-//
-//  Class defining the bar into which commands are typed.
-//
+/**
+ * Class defining the bar into which commands are typed.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -34,7 +47,12 @@ class CommandBar: UILabel {
 
   /// Allows the class to be accessed from Keyboard.xib.
   class func instanceFromNib() -> UIView {
-    return UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    let nibContents = UINib(nibName: "Keyboard", bundle: nil).instantiate(withOwner: nil, options: nil)
+    if let view = nibContents.first as? UIView {
+      return view
+    } else {
+      fatalError("Failed to instantiate view from nib.")
+    }
   }
 
   var shadow: UIButton!
