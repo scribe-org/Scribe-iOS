@@ -1,8 +1,21 @@
-//
-//  Conjugation.swift
-//
-//  Functions and elements that control the conjugation command.
-//
+/**
+ * Functions and elements that control the conjugation command.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import UIKit
 
@@ -47,9 +60,10 @@ let keyboardConjLabelDict: [String: Any] = [
 func returnDeclension(keyPressed: UIButton) {
   let wordPressed = keyPressed.titleLabel?.text ?? ""
 
-  let keyName = keyPressed.layer.value(
-    forKey: "original"
-  ) as! String
+  var keyName = ""
+  if let originalKeyValue = keyPressed.layer.value(forKey: "original") as? String {
+    keyName = originalKeyValue
+  }
 
   if !(wordPressed.contains("/") || wordPressed.contains("∗")) {
     proxy.insertText(wordPressed + " ")
@@ -180,17 +194,28 @@ func returnDeclension(keyPressed: UIButton) {
 ///   - commandBar: the command bar into which an input was entered.
 func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
-  if commandBar.text! == conjugatePromptAndCursor || commandBar.text! == conjugatePromptAndPlaceholder {
+  if let commandBarText = commandBar.text,
+     commandBarText == conjugatePromptAndCursor || commandBarText == conjugatePromptAndCursor
+  {
     return false
   }
-  verbToConjugate = (commandBar.text!.substring(with: conjugatePrompt.count ..< (commandBar.text!.count) - 1))
+
+  if let commandBarText = commandBar.text {
+    let startIndex = commandBarText.index(commandBarText.startIndex, offsetBy: conjugatePrompt.count)
+    let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
+    verbToConjugate = String(commandBarText[startIndex ..< endIndex])
+  }
   verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   let firstLetter = verbToConjugate.substring(toIdx: 1)
   inputWordIsCapitalized = firstLetter.isUppercase
+  verbToConjugate = verbToConjugate.lowercased()
 
-  let verbInTable = LanguageDBManager.shared.queryVerb(of: verbConjugated)[0]
+  let query = "SELECT * FROM verbs WHERE verb = ?"
+  let args = [verbToConjugate]
+  let outputCols = ["verb"]
+  let verbInTable = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
 
   return verbToConjugate == verbInTable
 }
@@ -201,7 +226,6 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
 ///   - keyPressed: the button pressed as sender.
 ///   - requestedForm: the form that is triggered by the given key.
 func returnConjugation(keyPressed: UIButton, requestedForm: String) {
-  let outputCols = [requestedForm]
   if commandState == .selectCaseDeclension {
     returnDeclension(keyPressed: keyPressed)
     return
@@ -212,11 +236,14 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   if wordPressed == invalidCommandMsg {
     proxy.insertText("")
   } else if formsDisplayDimensions == .view3x2 {
-    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
+    let outputCols = [requestedForm]
+    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      if controllerLanguage == "German" && potentialWordsToReturn.count == 2 {
+      if controllerLanguage == "German", potentialWordsToReturn.count == 2 {
         // Don't return a space as well as we have a perfect verb and the cursor will be between.
         proxy.insertText(wordToReturn.capitalize())
       } else {
@@ -226,7 +253,10 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
       proxy.insertText(wordToReturn + " ")
     }
   } else if formsDisplayDimensions == .view2x2 {
-    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let args = [verbToConjugate]
+    let outputCols = [requestedForm]
+    wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
