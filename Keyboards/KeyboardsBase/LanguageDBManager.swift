@@ -1,20 +1,32 @@
-//
-//  LoadData.swift
-//
-//  Function for loading in data to the keyboards.
-//
+/**
+ * Functions for loading in data to the keyboards.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import Foundation
 import GRDB
 import SwiftyJSON
 
-
 class LanguageDBManager {
   static let shared = LanguageDBManager()
   private lazy var languageDB = openDBQueue()
-  
+
   private init() {}
-  
+
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue() -> DatabaseQueue {
     let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
@@ -23,7 +35,7 @@ class LanguageDBManager {
 
     return dbQueue
   }
-  
+
   /// Loads a JSON file that contains grammatical information into a dictionary.
   ///
   /// - Parameters
@@ -34,7 +46,7 @@ class LanguageDBManager {
     let jsonData = try! JSON(data: data! as Data)
     return jsonData
   }
-  
+
   /// Returns a row from the language database given a query and arguments.
   ///
   /// - Parameters
@@ -67,14 +79,14 @@ class LanguageDBManager {
 
     return outputValues
   }
-  
+
   /// Returns rows from the language database given a query and arguments
   ///
   /// - Parameters:
   ///   - query: the query to run against the language database.
   ///   - outputCols: the columns from which the values should come.
   ///   - args: arguments to pass to `query`.
-  private func queryDBRows(query: String, outputCols: [String], args: StatementArguments) -> [String] {
+  private func queryDBRows(query: String, outputCols _: [String], args: StatementArguments) -> [String] {
     var outputValues = [String]()
     do {
       let rows = try languageDB.read { db in
@@ -99,7 +111,7 @@ class LanguageDBManager {
 
     return outputValues
   }
-  
+
   /// Writes a row of a language database table given a query and arguments.
   ///
   /// - Parameters
@@ -119,7 +131,7 @@ class LanguageDBManager {
       )
     } catch {}
   }
-  
+
   /// Deletes rows from the language database given a query and arguments
   ///
   /// - Parameters:
@@ -127,7 +139,7 @@ class LanguageDBManager {
   ///   - args: arguments to pass to `query`.
   private func deleteDBRow(query: String, args: StatementArguments? = nil) {
     do {
-      try languageDB.write{ db in
+      try languageDB.write { db in
         guard let args = args else {
           try db.execute(sql: query)
           return
@@ -145,25 +157,26 @@ class LanguageDBManager {
 }
 
 // MARK: - Database operations
+
 extension LanguageDBManager {
   /// Query the translation of word in `translations`
   func queryTranslation(of word: String) -> [String] {
     let query = "SELECT * FROM translations WHERE word = ?"
     let outputCols = ["translation"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query the suggestion of word in `autosuggestions`
   func queryAutosuggestions(of word: String) -> [String] {
     let query = "SELECT * FROM autosuggestions WHERE word = ?"
     let args = [word.lowercased()]
     let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
   ///
   /// - Parameters
@@ -190,34 +203,34 @@ extension LanguageDBManager {
 
     return queryDBRows(query: autocompletionsQuery, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query the plural form of word in `nouns`
   func queryNounPlural(of word: String) -> [String] {
     let query = "SELECT * FROM nouns WHERE noun = ?"
     let outputCols = ["plural"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query the noun form of word in `nonuns`
   func queryNounForm(of word: String) -> [String] {
     let query = "SELECT * FROM nouns WHERE noun = ?"
     let outputCols = ["form"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query the verb form of word in `verbs`
   func queryVerb(of word: String) -> [String] {
     let query = "SELECT * FROM verbs WHERE verb = ?"
     let outputCols = ["verb"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query specific form of word in `verbs`
   ///
   /// - Parameters:
@@ -225,52 +238,52 @@ extension LanguageDBManager {
   func queryVerb(of word: String, with outputCols: [String]) -> [String] {
     let query = "SELECT * FROM verbs WHERE verb = ?"
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query preposition form of word in `prepositions`
   func queryPrepForm(of word: String) -> [String] {
     let query = "SELECT * FROM prepositions WHERE preposition = ?"
     let outputCols = ["form"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Query emojis of word in `emoji_keywords`
   func queryEmojis(of word: String) -> [String] {
     let query = "SELECT * FROM emoji_keywords WHERE word = ?"
     let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
     let args = [word.lowercased()]
-    
+
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
-  
+
   /// Add words  to autocompletions.
   func insertAutocompleteLexion(of word: String) {
     let query = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
     let args = [word]
-    
+
     writeDBRow(query: query, args: StatementArguments(args))
   }
-  
+
   /// Delete non-unique values in case the lexicon has added words that were already present.
   func deleteNonUniqueAutosuggestions() {
     let query = """
-      DELETE FROM autocomplete_lexicon
-      WHERE rowid NOT IN (
-        SELECT
-          MIN(rowid)
+    DELETE FROM autocomplete_lexicon
+    WHERE rowid NOT IN (
+      SELECT
+        MIN(rowid)
 
-        FROM
-          autocomplete_lexicon
+      FROM
+        autocomplete_lexicon
 
-        GROUP BY
-          word
-      )
-      """
-    
+      GROUP BY
+        word
+    )
+    """
+
     deleteDBRow(query: query)
   }
 }
