@@ -170,7 +170,6 @@ var verbToConjugate = ""
 var verbToDisplay = ""
 var wordToDisplay = ""
 var conjugationToDisplay = ""
-var verbConjugated = ""
 
 // MARK: Plural Variables
 
