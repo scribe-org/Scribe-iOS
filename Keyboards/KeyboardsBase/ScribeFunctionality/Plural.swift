@@ -46,10 +46,7 @@ func queryPlural(commandBar: UILabel) {
     noun = noun.lowercased()
   }
 
-  let query = "SELECT * FROM nouns WHERE noun = ?"
-  let args = [noun]
-  let outputCols = ["plural"]
-  wordToReturn = queryDBRow(query: query, outputCols: outputCols, args: args)[0]
+  wordToReturn = LanguageDBManager.shared.queryNounPlural(of: noun)[0]
 
   guard !wordToReturn.isEmpty else {
     commandState = .invalid

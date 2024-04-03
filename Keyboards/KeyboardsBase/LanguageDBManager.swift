@@ -80,7 +80,7 @@ class LanguageDBManager {
     return outputValues
   }
 
-  /// Returns rows from the language database given a query and arguments
+  /// Returns rows from the language database given a query and arguments.
   ///
   /// - Parameters:
   ///   - query: the query to run against the language database.
@@ -132,7 +132,7 @@ class LanguageDBManager {
     } catch {}
   }
 
-  /// Deletes rows from the language database given a query and arguments
+  /// Deletes rows from the language database given a query and arguments.
   ///
   /// - Parameters:
   ///   - query: the query to run against the language database.
@@ -159,22 +159,38 @@ class LanguageDBManager {
 // MARK: - Database operations
 
 extension LanguageDBManager {
-  /// Query the translation of word in `translations`
-  func queryTranslation(of word: String) -> [String] {
-    let query = "SELECT * FROM translations WHERE word = ?"
-    let outputCols = ["translation"]
-    let args = [word.lowercased()]
+  /// Delete non-unique values in case the lexicon has added words that were already present.
+  func deleteNonUniqueAutosuggestions() {
+    let query = """
+    DELETE FROM
+      autocomplete_lexicon
 
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+    WHERE rowid NOT IN (
+      SELECT
+        MIN(rowid)
+
+      FROM
+        autocomplete_lexicon
+
+      GROUP BY
+        word
+    )
+    """
+
+    deleteDBRow(query: query)
   }
 
-  /// Query the suggestion of word in `autosuggestions`
-  func queryAutosuggestions(of word: String) -> [String] {
-    let query = "SELECT * FROM autosuggestions WHERE word = ?"
-    let args = [word.lowercased()]
-    let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
+  /// Add words  to autocompletions.
+  func insertAutocompleteLexion(of word: String) {
+    let query = """
+    INSERT OR IGNORE INTO
+      autocomplete_lexicon (word)
 
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+    VALUES (?)
+    """
+    let args = [word]
+
+    writeDBRow(query: query, args: StatementArguments(args))
   }
 
   /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
@@ -204,86 +220,149 @@ extension LanguageDBManager {
     return queryDBRows(query: autocompletionsQuery, outputCols: outputCols, args: StatementArguments(args))
   }
 
-  /// Query the plural form of word in `nouns`
-  func queryNounPlural(of word: String) -> [String] {
-    let query = "SELECT * FROM nouns WHERE noun = ?"
-    let outputCols = ["plural"]
-    let args = [word.lowercased()]
+  /// Query the suggestion of word in `autosuggestions`.
+  func queryAutosuggestions(of word: String) -> [String] {
+    let query = """
+    SELECT
+      *
+
+    FROM
+      autosuggestions
+
+    WHERE
+      word = ?
+    """
+    let args = [word]
+    let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 
-  /// Query the noun form of word in `nonuns`
+  /// Query emojis of word in `emoji_keywords`.
+  func queryEmojis(of word: String) -> [String] {
+    let query = """
+    SELECT
+      *
+
+    FROM
+      emoji_keywords
+
+    WHERE
+      word = ?
+    """
+    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
+    let args = [word]
+
+    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Query the noun form of word in `nonuns`.
   func queryNounForm(of word: String) -> [String] {
-    let query = "SELECT * FROM nouns WHERE noun = ?"
+    let query = """
+    SELECT
+      *
+
+    FROM
+      nouns
+
+    WHERE
+      noun = ?
+    """
     let outputCols = ["form"]
-    let args = [word.lowercased()]
+    let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 
-  /// Query the verb form of word in `verbs`
+  /// Query the plural form of word in `nouns`.
+  func queryNounPlural(of word: String) -> [String] {
+    let query = """
+    SELECT
+      *
+
+    FROM
+      nouns
+
+    WHERE
+      noun = ?
+    """
+    let outputCols = ["plural"]
+    let args = [word]
+
+    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Query preposition form of word in `prepositions`.
+  func queryPrepForm(of word: String) -> [String] {
+    let query = """
+    SELECT
+      *
+
+    FROM
+      prepositions
+
+    WHERE
+      preposition = ?
+    """
+    let outputCols = ["form"]
+    let args = [word]
+
+    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Query the translation of word in `translations`.
+  func queryTranslation(of word: String) -> [String] {
+    let query = """
+    SELECT
+      *
+
+    FROM
+      translations
+
+    WHERE
+      word = ?
+    """
+    let outputCols = ["translation"]
+    let args = [word]
+
+    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Query the verb form of word in `verbs`.
   func queryVerb(of word: String) -> [String] {
-    let query = "SELECT * FROM verbs WHERE verb = ?"
+    let query = """
+    SELECT
+      *
+
+    FROM
+      verbs
+
+    WHERE
+      verb = ?
+    """
     let outputCols = ["verb"]
-    let args = [word.lowercased()]
+    let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 
-  /// Query specific form of word in `verbs`
+  /// Query specific form of word in `verbs`.
   ///
   /// - Parameters:
   ///   - outputCols: Specific form want to output
   func queryVerb(of word: String, with outputCols: [String]) -> [String] {
-    let query = "SELECT * FROM verbs WHERE verb = ?"
-    let args = [word.lowercased()]
+    let query = """
+    SELECT
+      *
 
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
-  }
+    FROM
+      verbs
 
-  /// Query preposition form of word in `prepositions`
-  func queryPrepForm(of word: String) -> [String] {
-    let query = "SELECT * FROM prepositions WHERE preposition = ?"
-    let outputCols = ["form"]
-    let args = [word.lowercased()]
-
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
-  }
-
-  /// Query emojis of word in `emoji_keywords`
-  func queryEmojis(of word: String) -> [String] {
-    let query = "SELECT * FROM emoji_keywords WHERE word = ?"
-    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
-    let args = [word.lowercased()]
-
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
-  }
-
-  /// Add words  to autocompletions.
-  func insertAutocompleteLexion(of word: String) {
-    let query = "INSERT OR IGNORE INTO autocomplete_lexicon (word) VALUES (?)"
+    WHERE
+      verb = ?
+    """
     let args = [word]
 
-    writeDBRow(query: query, args: StatementArguments(args))
-  }
-
-  /// Delete non-unique values in case the lexicon has added words that were already present.
-  func deleteNonUniqueAutosuggestions() {
-    let query = """
-    DELETE FROM autocomplete_lexicon
-    WHERE rowid NOT IN (
-      SELECT
-        MIN(rowid)
-
-      FROM
-        autocomplete_lexicon
-
-      GROUP BY
-        word
-    )
-    """
-
-    deleteDBRow(query: query)
+    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 }
