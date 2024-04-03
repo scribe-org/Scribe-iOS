@@ -51,14 +51,8 @@ let prepAnnotationConversionDict = [
 ///   - wordToAnnotate: the word that an annotation should be created for.
 ///   - KVC: the keyboard view controller.
 func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
-  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
-  let prepCaseQuery = "SELECT * FROM prepositions WHERE preposition = ?"
-  let nounGenderArgs = [wordToAnnotate]
-  let prepCaseArgs = [wordToAnnotate.lowercased()]
-  let outputCols = ["form"]
-
-  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
-  prepAnnotationForm = queryDBRow(query: prepCaseQuery, outputCols: outputCols, args: prepCaseArgs)[0]
+  let nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
+  prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate.lowercased())[0]
 
   hasNounForm = !nounForm.isEmpty
   hasPrepForm = !prepAnnotationForm.isEmpty
@@ -270,11 +264,7 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
 ///   - index: the auto action key index that the annotation should be set for.
 ///   - KVC: the keyboard view controller.
 func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewController) {
-  let nounGenderQuery = "SELECT * FROM nouns WHERE noun = ?"
-  let nounGenderArgs = [autoActionWord]
-  let outputCols = ["form"]
-
-  let nounForm = queryDBRow(query: nounGenderQuery, outputCols: outputCols, args: nounGenderArgs)[0]
+  let nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
 
   hasNounForm = !nounForm.isEmpty
 
