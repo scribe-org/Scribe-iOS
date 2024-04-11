@@ -1207,6 +1207,13 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels for the conjugation view given constraints to determine the dimensions.
   func setConjugationBtns() {
+    // add swipe functionality to the conjugation and declension views
+    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(shiftLeft))
+    keyboardView.addGestureRecognizer(swipeRight)
+    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(shiftRight))
+    swipeLeft.direction = .left
+    keyboardView.addGestureRecognizer(swipeLeft)
+    
     // Set the conjugation view to 2x2 for Swedish and Russian past tense.
     if controllerLanguage == "Swedish" {
       formsDisplayDimensions = .view2x2
@@ -1570,6 +1577,24 @@ class KeyboardViewController: UIInputViewController {
   func conditionallyDisplayAnnotation() {
     if [.idle, .alreadyPlural, .invalid].contains(commandState) {
       typedWordAnnotation(KVC: self)
+    }
+  }
+  
+  @objc func shiftLeft() {
+    if commandState == .displayInformation {
+      tipView?.updatePrevious()
+    } else {
+      conjugationStateLeft()
+      loadKeys()
+    }
+  }
+ 
+  @objc func shiftRight() {
+    if commandState == .displayInformation {
+      tipView?.updateNext()
+    } else {
+      conjugationStateRight()
+      loadKeys()
     }
   }
 
@@ -2256,20 +2281,10 @@ class KeyboardViewController: UIInputViewController {
       commandBar.attributedText = pluralPromptAndColorPlaceholder
 
     case "shiftFormsDisplayLeft":
-      if commandState == .displayInformation {
-        tipView?.updatePrevious()
-      } else {
-        conjugationStateLeft()
-        loadKeys()
-      }
+      shiftLeft()
 
     case "shiftFormsDisplayRight":
-      if commandState == .displayInformation {
-        tipView?.updateNext()
-      } else {
-        conjugationStateRight()
-        loadKeys()
-      }
+      shiftRight()
 
     case "firstPersonSingular":
       returnConjugation(keyPressed: sender, requestedForm: formFPS)
