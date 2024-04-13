@@ -56,12 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         - This method is called instead of applicationWillTerminate: when the user quits
      */
 
-    /// Hacky fix to update installed keyboard list.
-    /// This is needed because list will only update on viewWillAppear.
-    /// Thus, if we redirect the user to the first screen when leaving the app then viewWillAppear is always be called when going back to the Settings screen.
-    /// Needs a better implementation.
+    /// Hacky fix to update the installed keyboard list that needs viewWillAppear to update.
+    /// If we redirect the user to the first screen when leaving the app.
+    /// viewWillAppear will always be called when going back to the Settings screen.
+    /// Also set for the About screen for consistency.
     if let tabBarController = window?.rootViewController as? UITabBarController {
-      if tabBarController.selectedIndex == 1 {
+      if tabBarController.selectedIndex != 0 {
         tabBarController.selectedIndex = 0
       }
     }
