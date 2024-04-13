@@ -1,0 +1,41 @@
+name: pr_swift_lint
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches:
+      - main
+    types: [opened, reopened, synchronize]
+
+jobs:
+  swift_format_check:
+    runs-on: macos-latest
+
+    name: Run Swift Lint and Format Check
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Homebrew (if macOS does not have it)
+        run: |
+          if ! command -v brew &>/dev/null
+          then
+              /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          fi
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Install SwiftFormat
+        run: brew install swiftformat
+
+      - name: Run SwiftLint
+        run: swiftlint
+
+      - name: Run SwiftFormat (check only)
+        run: swiftformat --lint .
+
+      - name: Run SwiftFormat
+        if: always()
+        run: swiftformat .
