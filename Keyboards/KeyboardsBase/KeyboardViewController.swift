@@ -655,13 +655,16 @@ class KeyboardViewController: UIInputViewController {
       if autoAction0Visible {
         allowUndo = false
         firstCompletionIsHighlighted = false
-        // Highlight if the current prefix is the first autocompletion or there is only one available.
+        // Highlight if the current prefix is the first autocompletion.
         if (
           currentPrefix == completionWords[0] && completionWords[1] != " "
-        ) || (
-          // Highlighting last remaining autocomplete.
-          completionWords[0] != " " && completionWords[1] == " "
-        ) {
+        ) 
+        // Note: Code for highlighting the word if it's the only option available - add when libraries are expanded.
+//        || (
+//          // Highlighting last remaining autocomplete.
+//          completionWords[0] != " " && completionWords[1] == " "
+//        ) 
+        {
           firstCompletionIsHighlighted = true
         }
         setBtn(
@@ -684,7 +687,7 @@ class KeyboardViewController: UIInputViewController {
 
       // Add the current word being typed to the completion words if there is only one option that's highlighted.
       if firstCompletionIsHighlighted && completionWords[1] == " " && completionWords[0] != currentPrefix {
-        spaceAutoInsertIsPossible = true
+//        spaceAutoInsertIsPossible = true
         completionWords[1] = currentPrefix
       }
 
