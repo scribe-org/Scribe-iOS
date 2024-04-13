@@ -122,7 +122,7 @@ class InstallationVC: UIViewController {
     settingsCorner.layer.cornerRadius = appTextBackground.frame.width * 0.05
     settingsCorner.alpha = 0.9
 
-    settingsBtn.titleLabel?.text = ""
+    settingsBtn.setTitle("", for: .normal)
     settingsBtn.clipsToBounds = true
     settingsBtn.layer.masksToBounds = false
     settingsBtn.layer.cornerRadius = appTextBackground.frame.width * 0.05
