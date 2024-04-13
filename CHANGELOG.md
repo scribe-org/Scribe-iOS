@@ -26,6 +26,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - German imperfect verb conjugations now insert both the auxiliary verb and the past participle with the cursor between them.
 - Tab and caps lock keys and their functionalities have been added to expanded iPad layouts ([#371](https://github.com/scribe-org/Scribe-iOS/issues/371)).
 - Users can now swipe between the conjugation and declension views ([#361](https://github.com/scribe-org/Scribe-iOS/issues/361)).
+- Autocomplete on space when the word is the last one available in the autocompletion lexicon has been disabled ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305), reverts [#256](https://github.com/scribe-org/Scribe-iOS/issues/256)).
 
 ### 🎨 Design Changes
 
@@ -36,7 +37,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The transition from between portrait and landscape mode was dramatically improved ([#25](https://github.com/scribe-org/Scribe-iOS/issues/33)).
 - Annotations under autosuggestions and autocompletions are no longer distorted during an orientation transition ([#396](https://github.com/scribe-org/Scribe-iOS/issues/396)).
-<!-- - Bugs were fixed that were causing the autocompletions to trigger too regularly. -->
+- Bugs were fixed that were causing autocompletions to trigger too regularly ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305)).
 
 ### ♻️ Code Refactoring
 
