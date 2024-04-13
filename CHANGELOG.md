@@ -25,6 +25,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - German indefinite pronouns are now selectable from the case-declension display ([#303](https://github.com/scribe-org/Scribe-iOS/issues/303)).
 - German imperfect verb conjugations now insert both the auxiliary verb and the past participle with the cursor between them.
 - Tab and caps lock keys and their functionalities have been added to expanded iPad layouts ([#371](https://github.com/scribe-org/Scribe-iOS/issues/371)).
+- Users can now swipe between the conjugation and declension views ([#361](https://github.com/scribe-org/Scribe-iOS/issues/361)).
 
 ### 🎨 Design Changes
 

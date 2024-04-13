@@ -1207,13 +1207,13 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels for the conjugation view given constraints to determine the dimensions.
   func setConjugationBtns() {
-    // add swipe functionality to the conjugation and declension views
+    // Add swipe functionality to the conjugation and declension views.
     let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(shiftLeft))
     keyboardView.addGestureRecognizer(swipeRight)
     let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(shiftRight))
     swipeLeft.direction = .left
     keyboardView.addGestureRecognizer(swipeLeft)
-    
+
     // Set the conjugation view to 2x2 for Swedish and Russian past tense.
     if controllerLanguage == "Swedish" {
       formsDisplayDimensions = .view2x2
@@ -1579,7 +1579,7 @@ class KeyboardViewController: UIInputViewController {
       typedWordAnnotation(KVC: self)
     }
   }
-  
+
   @objc func shiftLeft() {
     if commandState == .displayInformation {
       tipView?.updatePrevious()
@@ -1588,7 +1588,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
     }
   }
- 
+
   @objc func shiftRight() {
     if commandState == .displayInformation {
       tipView?.updateNext()
