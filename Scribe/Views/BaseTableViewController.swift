@@ -17,6 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import SwipeableTabBarController
 import UIKit
 
 class BaseTableViewController: UITableViewController {
@@ -39,6 +40,9 @@ class BaseTableViewController: UITableViewController {
     tableView.sectionHeaderHeight = sectionHeaderHeight
     tableView.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoChildTableViewCell")
     tableView.separatorInset = separatorInset
+    if let tabBarController = tabBarController as? SwipeableTabBarController {
+      tabBarController.isCyclingEnabled = true
+    }
   }
 }
 
