@@ -267,7 +267,7 @@ extension LanguageDBManager {
 
     WHERE
       noun = ?
-    OR noun = ?
+      OR noun = ?
     """
     let outputCols = ["form"]
     let args = [word, word.lowercased()]
