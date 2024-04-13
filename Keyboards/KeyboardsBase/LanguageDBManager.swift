@@ -267,9 +267,10 @@ extension LanguageDBManager {
 
     WHERE
       noun = ?
+      OR noun = ?
     """
     let outputCols = ["form"]
-    let args = [word]
+    let args = [word, word.lowercased()]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
