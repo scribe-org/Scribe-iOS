@@ -1,5 +1,5 @@
 /**
- * Functions and elements that control word annotations
+ * Functions and elements that control word annotations.
  *
  * Copyright (C) 2023 Scribe
  *
