@@ -34,15 +34,11 @@ class InstallationVC: UIViewController {
   // Spacing views to size app screen proportionally.
   @IBOutlet var topSpace: UIView!
   @IBOutlet var logoSpace: UIView!
-  @IBOutlet var outerTable: UITableView!
-  let tableData = InstallationDataTable.installationDataTable
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
     setCurrentUI()
-    setTable()
-    setToolbar()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
@@ -54,7 +50,6 @@ class InstallationVC: UIViewController {
   /// Includes a call to set the UI for the app screen.
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.navigationController?.setNavigationBarHidden(true, animated: animated)
     setCurrentUI()
   }
 
@@ -73,23 +68,8 @@ class InstallationVC: UIViewController {
   // Lock the device into portrait mode to avoid resizing issues.
   var orientations = UIInterfaceOrientationMask.portrait
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    get { return self.orientations }
-    set { self.orientations = newValue }
-  }
-
-  private func setTable() {
-    let nib = UINib(nibName: "ParentTableViewCell", bundle: nil)
-    outerTable.register(nib, forCellReuseIdentifier: "ParentTableViewCell")
-    outerTable.dataSource = self
-    outerTable.delegate = self
-    outerTable.separatorStyle = .none
-    outerTable.backgroundColor = .clear
-  }
-
-  private func setToolbar() {
-    let backItem = UIBarButtonItem()
-    backItem.title = "Installation"
-    navigationItem.backBarButtonItem = backItem
+    get { return orientations }
+    set { orientations = newValue }
   }
 
   /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
