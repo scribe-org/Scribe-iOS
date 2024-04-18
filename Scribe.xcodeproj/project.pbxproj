@@ -968,6 +968,7 @@
 		D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInterfaceVariables.swift; sourceTree = "<group>"; };
 		D1CDED822A85A12C00098546 /* NBCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBCommandVariables.swift; sourceTree = "<group>"; };
 		D1D8B2372AE4084D0070B817 /* Swedish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swedish.entitlements; sourceTree = "<group>"; };
+		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
 		D1D8B2382AE408620070B817 /* Spanish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spanish.entitlements; sourceTree = "<group>"; };
 		D1D8B2392AE408720070B817 /* Russian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Russian.entitlements; sourceTree = "<group>"; };
 		D1D8B23A2AE408850070B817 /* Portuguese.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Portuguese.entitlements; sourceTree = "<group>"; };
@@ -1121,8 +1122,6 @@
 		1406B7882A2DFE4C001DF45B /* InstallationTab */ = {
 			isa = PBXGroup;
 			children = (
-				EA536F162AF9B4CB00795DA3 /* DownloadDataTable.swift */,
-				EA536F172AF9B4CB00795DA3 /* DownloadDataVC.swift */,
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 			);
 			path = InstallationTab;
@@ -2017,7 +2016,6 @@
 				3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
 				D171941827AECD070038660B /* ESCommandVariables.swift in Sources */,
-				EA536F192AF9B4CB00795DA3 /* DownloadDataVC.swift in Sources */,
 				D171940027AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2028,7 +2026,6 @@
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
-				EA536F182AF9B4CB00795DA3 /* DownloadDataTable.swift in Sources */,
 				147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */,
 				14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */,
 				147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */,
