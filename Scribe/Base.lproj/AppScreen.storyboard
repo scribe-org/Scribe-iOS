@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -226,36 +226,6 @@
             </objects>
             <point key="canvasLocation" x="-888.79999999999995" y="-100.49261083743843"/>
         </scene>
-        <!--Table View Template View Controller-->
-        <scene sceneID="sI7-t7-s2m">
-            <objects>
-                <viewController storyboardIdentifier="TableViewTemplateViewController" id="4YA-bx-fdf" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PBQ-hz-8QI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="obq-rY-JVB">
-                                <rect key="frame" x="0.0" y="154" width="375" height="575"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SyY-44-GGu"/>
-                        <color key="backgroundColor" name="scribeAppBackground"/>
-                        <constraints>
-                            <constraint firstItem="obq-rY-JVB" firstAttribute="top" secondItem="SyY-44-GGu" secondAttribute="top" constant="8" id="SV4-gG-JiQ"/>
-                            <constraint firstItem="SyY-44-GGu" firstAttribute="bottom" secondItem="obq-rY-JVB" secondAttribute="bottom" id="dlD-Aa-HJd"/>
-                            <constraint firstItem="SyY-44-GGu" firstAttribute="trailing" secondItem="obq-rY-JVB" secondAttribute="trailing" id="hNo-Oc-OMY"/>
-                            <constraint firstItem="obq-rY-JVB" firstAttribute="leading" secondItem="SyY-44-GGu" secondAttribute="leading" id="nvD-tt-zHX"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="YW1-CT-vgn"/>
-                    <connections>
-                        <outlet property="mainTable" destination="obq-rY-JVB" id="Qbh-ZZ-2ho"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RRR-Nu-rPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-28" y="-100"/>
-        </scene>
         <!--Swipeable Tab Bar Controller-->
         <scene sceneID="sLs-HO-3by">
             <objects>
@@ -437,6 +407,7 @@
         <!--Table View Template View Controller-->
         <scene sceneID="okZ-mS-Z02">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -449,9 +420,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="vhy-kK-VNo"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="-100"/>
+            <point key="canvasLocation" x="79" y="-100"/>
         </scene>
     </scenes>
     <color key="tintColor" name="scribeAppBackground"/>
@@ -477,7 +447,7 @@
             <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
