@@ -58,25 +58,18 @@ representative at an online or offline event.
 
 ## Enforcement
 
-# <<<<<<< HEAD
-
-> > > > > > > 3871fc2 (Squashed 'Scribe/i18n/' content from commit 8dd22be)
-
 <!---
 Edits made to the enforcement section to avoid explicitly putting contact
 information, as it seems that people are copying and pasting the code of conduct
 without reading it fully and realizing that there are contacts for other projects.
 --->
 
-# <<<<<<< HEAD
-
-> > > > > > > 3871fc2 (Squashed 'Scribe/i18n/' content from commit 8dd22be)
-> > > > > > > Instances of abusive, harassing, or otherwise unacceptable behavior may be
-> > > > > > > reported to the community leaders responsible for enforcement - these being the
-> > > > > > > main project stakeholders or individuals specifically tasked with overseeing the
-> > > > > > > values described within this code. Contact details must be readily provided for
-> > > > > > > the latter party, and for the former if no community leader has been given the
-> > > > > > > specific responsibility to oversee community conduct.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported to the community leaders responsible for enforcement - these being the
+main project stakeholders or individuals specifically tasked with overseeing the
+values described within this code. Contact details must be readily provided for
+the latter party, and for the former if no community leader has been given the
+specific responsibility to oversee community conduct.
 
 Within source code, the contact for those responsible for community conduct can
 be found in a corresponding COC_CONTACT file. All complaints will be reviewed and
