@@ -12,6 +12,8 @@
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
+		1455C87C2BD0EE4200F12BD4 /* DownloadDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */; };
+		1455C87D2BD0EE4200F12BD4 /* DownloadDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */; };
 		146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 146B70BC2A853A3800710BD4 /* SwipeableTabBarController */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
 		147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */; };
@@ -724,6 +726,8 @@
 		D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		EA536F182AF9B4CB00795DA3 /* DownloadDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA536F162AF9B4CB00795DA3 /* DownloadDataTable.swift */; };
+		EA536F192AF9B4CB00795DA3 /* DownloadDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA536F172AF9B4CB00795DA3 /* DownloadDataVC.swift */; };
 		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
 		ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
 		EDB4601B2AF9FD8200BEA967 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */; };
@@ -850,6 +854,8 @@
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
+		1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataTable.swift; sourceTree = "<group>"; };
+		1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataVC.swift; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
 		147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoChildTableViewCell.xib; sourceTree = "<group>"; };
 		147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableCellModel.swift; sourceTree = "<group>"; };
@@ -972,6 +978,8 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
+		EA536F162AF9B4CB00795DA3 /* DownloadDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataTable.swift; sourceTree = "<group>"; };
+		EA536F172AF9B4CB00795DA3 /* DownloadDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataVC.swift; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -1117,6 +1125,8 @@
 		1406B7882A2DFE4C001DF45B /* InstallationTab */ = {
 			isa = PBXGroup;
 			children = (
+				1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */,
+				1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */,
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 			);
 			path = InstallationTab;
@@ -2015,6 +2025,7 @@
 				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
 				1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */,
+				1455C87D2BD0EE4200F12BD4 /* DownloadDataVC.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
 				D180EC0328FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */,
@@ -2029,6 +2040,7 @@
 				EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */,
 				D1CDED772A859E4800098546 /* DACommandVariables.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
+				1455C87C2BD0EE4200F12BD4 /* DownloadDataTable.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
 				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
