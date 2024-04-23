@@ -27,24 +27,23 @@ jobs:
         run: brew install swiftlint
 
       - name: Run SwiftLint
-        id: lint
         run: |
           swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 
-          echo "exit_code=$?"  # Print it for debugging
-          echo "::set-output name=exit_code::$?"  # Set the exit code as an output
-        continue-on-error: true
-
-      - name: Handle Based on Exit Code
-        run: |
-          if [ "${{ steps.lint.outputs.exit_code }}" == "0" ]; then
+          exit_code=$?
+          echo "SwiftLint Exit Code: $exit_code"
+          if [ "$exit_code" -eq 0 ]; then
             echo "SwiftLint found no issues."
-          elif [ "${{ steps.lint.outputs.exit_code }}" == "1" ]; then
+          elif [ "$exit_code" -eq 1 ]; then
             echo "SwiftLint found warnings."
-            # Handle warnings here, e.g., set job status or perform other actions
-          elif [ "${{ steps.lint.outputs.exit_code }}" == "2" ]; then
+            # Optionally handle warnings, e.g., do not fail the job
+            echo "::set-output name=status::warning"
+          elif [ "$exit_code" -eq 2 ]; then
             echo "SwiftLint found errors."
-            exit 1  # Fail the job if errors were found
+            echo "::set-output name=status::error"
+            exit $exit_code  # Use the actual exit code from SwiftLint to fail the job
           else
-            echo "Unexpected exit code: ${{ steps.lint.outputs.exit_code }}"
-            exit 1  # Fail the job if the exit code is unexpected
+            echo "Unexpected exit code: $exit_code"
+            exit $exit_code  # Propagate unexpected exit code
           fi
+        shell: bash
+        id: swiftlint
