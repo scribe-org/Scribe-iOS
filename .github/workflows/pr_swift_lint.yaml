@@ -35,8 +35,9 @@ jobs:
         continue-on-error: true 
 
       - name: Learning outcome and conclusion results
-          run: echo steps.lint.outcome
-          run: echo steps.lint.conclusion
+          run: |
+            echo steps.lint.outcome
+            echo steps.lint.conclusion
       
       - name: Check for warnings
         if: ${{ steps.lint.outcome == 'failure' && steps.lint.conclusion != 'failure' }}
