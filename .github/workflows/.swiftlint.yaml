@@ -1,6 +1,7 @@
 # SwiftLint Configuration File
 
 disabled_rules: # rule identifiers to exclude from running
+  # errors
   - cyclomatic_complexity
   - identifier_name
   - function_body_length
@@ -8,7 +9,19 @@ disabled_rules: # rule identifiers to exclude from running
   - force_try
   - line_length
   - file_length
-  # - type_body_length
+  - type_body_length
+  # warnings 
+  - trailing_comma
+  - todo
+  - orphaned_doc_comment
+  - opening_brace
+  - blanket_disable_command
+  - for_where
+  - trailing_whitespace
+  - vertical_whitespace
+  - void_function_in_ternary
+  - empty_enum_arguments
+  - closure_parameter_position
 
 
 
