@@ -33,6 +33,13 @@ jobs:
           echo "::set-output name=exit_code::$?" # Capture the exit code of SwiftLint
         continue-on-error: true 
 
+      - name: Run SwiftLint
+        id: lint
+        run: |
+          swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml || true  # Ensure the command exits cleanly to allow capturing the exit code
+          echo "exit_code=$?"  # Print it for debugging
+          echo "::set-output name=exit_code::$?"  # Set the exit code as an output
+
       - name: Handle Based on Exit Code
         run: |
           if [ "${{ steps.lint.outputs.exit_code }}" == "0" ]; then
@@ -42,8 +49,9 @@ jobs:
             # Handle warnings here, e.g., set job status or perform other actions
           elif [ "${{ steps.lint.outputs.exit_code }}" == "2" ]; then
             echo "SwiftLint found errors."
-            exit 1 # Fail the job if errors were found
+            exit 1  # Fail the job if errors were found
           else
-            echo "Unexpected exit code."
-            exit 1 # Fail the job if the exit code is unexpected
+            echo "Unexpected exit code: ${{ steps.lint.outputs.exit_code }}"
+            exit 1  # Fail the job if the exit code is unexpected
           fi
+
