@@ -28,19 +28,22 @@ jobs:
 
       - name: Run SwiftLint
         id: lint
-        run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
+        run: |
+          swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
+          echo "::set-output name=exit_code::$?" # Capture the exit code of SwiftLint
         continue-on-error: true 
 
-      - name: Handle warnings
-        if: ${{ steps.check_exit.outputs.status == 'warning' }}
-        run: echo "Handling SwiftLint warnings."
-
-      - name: Handle errors
-        if: ${{ steps.check_exit.outputs.status == 'error' }}
+      - name: Handle Based on Exit Code
         run: |
-          echo "Errors detected by SwiftLint."
-          exit 1
-
-      - name: Success message
-        if: ${{ steps.check_exit.outputs.status == 'success' }}
-        run: echo "SwiftLint completed successfully without any issues."
+          if [ "${{ steps.lint.outputs.exit_code }}" == "0" ]; then
+            echo "SwiftLint found no issues."
+          elif [ "${{ steps.lint.outputs.exit_code }}" == "1" ]; then
+            echo "SwiftLint found warnings."
+            # Handle warnings here, e.g., set job status or perform other actions
+          elif [ "${{ steps.lint.outputs.exit_code }}" == "2" ]; then
+            echo "SwiftLint found errors."
+            exit 1 # Fail the job if errors were found
+          else
+            echo "Unexpected exit code."
+            exit 1 # Fail the job if the exit code is unexpected
+          fi
