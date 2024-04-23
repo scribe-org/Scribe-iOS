@@ -28,7 +28,10 @@ jobs:
 
       - name: Run SwiftLint
         run: |
-          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 2>&1 | tee swiftlint-results.json
+          swiftlint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
+          echo "Analysing results" 
+          swiftlint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
+
           warnings_count=$(jq '. | map(select(.severity == "Warning")) | length' swiftlint-results.json)
           errors_count=$(jq '. | map(select(.severity == "Error")) | length' swiftlint-results.json)
           
