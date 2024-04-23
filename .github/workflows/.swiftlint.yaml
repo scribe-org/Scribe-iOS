@@ -1,0 +1,25 @@
+# SwiftLint Configuration File
+
+disabled_rules: # rule identifiers to exclude from running
+  - cyclomatic_complexity
+  - identifier_name
+  - function_body_length
+  - force_cast
+  - force_try
+  - line_length
+  - file_length
+
+
+
+#identifier_name:
+#  min_length: 
+#    warning: 1
+#    error: 0  
+#  max_length: 
+#    warning: 40
+#    error: 41  
+#
+#line_length:
+#  warning:
+
+
