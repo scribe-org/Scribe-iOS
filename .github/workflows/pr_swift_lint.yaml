@@ -48,6 +48,10 @@ jobs:
           warnings_count=$(jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
           jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json
 
+          if [ "$warnings_count" = 0 ]; then
+            echo "No Warnings"
+          fi
+          
           echo " "
           echo " "
           
@@ -55,6 +59,10 @@ jobs:
           echo "ERRORS:"
           errors_count=$(jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
           jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json
+
+          if [ "$errors_count" = 0 ]; then
+            echo "No Errors"
+          fi
           
           # Printing summary of counts
           echo " "
