@@ -3,7 +3,7 @@
 
 # To be tailored to reflect projects ideal linting configuration
 
-disabled_rules:
+#disabled_rules:
 #   ERRORS IN PROJECT CURRENTLY
 #   - cyclomatic_complexity
 #   - identifier_name
