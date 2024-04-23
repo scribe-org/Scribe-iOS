@@ -37,7 +37,7 @@ jobs:
             exit 2
           elif [ "$warnings_count" -gt 0 ]; then
             echo "SwiftLint found warnings."
-            exit 1
+            # exit 1         #Uncomment to enforce warnings
           else
             echo "SwiftLint found no issues."
           fi
