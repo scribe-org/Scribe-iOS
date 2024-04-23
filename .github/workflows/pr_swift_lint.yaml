@@ -40,18 +40,3 @@ jobs:
           echo "exit_code=$?"  # Print it for debugging
           echo "::set-output name=exit_code::$?"  # Set the exit code as an output
 
-      - name: Handle Based on Exit Code
-        run: |
-          if [ "${{ steps.lint.outputs.exit_code }}" == "0" ]; then
-            echo "SwiftLint found no issues."
-          elif [ "${{ steps.lint.outputs.exit_code }}" == "1" ]; then
-            echo "SwiftLint found warnings."
-            # Handle warnings here, e.g., set job status or perform other actions
-          elif [ "${{ steps.lint.outputs.exit_code }}" == "2" ]; then
-            echo "SwiftLint found errors."
-            exit 1  # Fail the job if errors were found
-          else
-            echo "Unexpected exit code: ${{ steps.lint.outputs.exit_code }}"
-            exit 1  # Fail the job if the exit code is unexpected
-          fi
-
