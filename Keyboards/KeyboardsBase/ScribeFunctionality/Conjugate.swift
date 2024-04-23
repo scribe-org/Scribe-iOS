@@ -231,10 +231,11 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
   }
 
   let wordPressed = keyPressed.titleLabel?.text ?? ""
-
-  // Don't change proxy if they select a conjugation that's missing.
+  var displayInfo = false
+  
+  // Select to change into a ToolTipView if the user selects a conjugation that is unavailable
   if wordPressed == invalidCommandMsg {
-    proxy.insertText("")
+    displayInfo = true
   } else if formsDisplayDimensions == .view3x2 {
     wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
@@ -266,9 +267,13 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     }
   }
 
-  autoActionState = .suggest
-  commandState = .idle
-  conjViewShiftButtonsState = .bothInactive
+  if displayInfo {
+    commandState = .displayInformation
+  } else {
+    autoActionState = .suggest
+    commandState = .idle
+    conjViewShiftButtonsState = .bothInactive
+  }
 }
 
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
