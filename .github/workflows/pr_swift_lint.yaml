@@ -36,7 +36,7 @@ jobs:
       - name: Run SwiftLint
         id: lint
         run: |
-          swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml || true  # Ensure the command exits cleanly to allow capturing the exit code
+          swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 
           echo "exit_code=$?"  # Print it for debugging
           echo "::set-output name=exit_code::$?"  # Set the exit code as an output
 
