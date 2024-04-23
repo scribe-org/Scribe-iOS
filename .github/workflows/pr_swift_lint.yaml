@@ -30,11 +30,5 @@ jobs:
         run: brew install swiftformat
 
       - name: Run SwiftLint
-        run: swiftlint
-
-#      - name: Run SwiftFormat (check only)
-#        run: swiftformat --lint .
-#
-#      - name: Run SwiftFormat
-#        if: always()
-#        run: swiftformat .
+        run: |
+          swiftlint lint --config /Scribe-iOS/.github/workflows/.swiftlint.yaml
