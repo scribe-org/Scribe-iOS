@@ -1,15 +1,18 @@
-
 # Lints the project using SwiftLint
 
-name: SwiftLint
+name: pr_swift_lint
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches:
-      - main
-    types: [opened, reopened, synchronize]
+      - master
+      - develop
+  pull_request:
+    types: [synchronize, opened, reopened, ready_for_review]
+    branches:
+      - master
+      - develop
+
 
 
 jobs:
