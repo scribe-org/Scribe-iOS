@@ -5,14 +5,11 @@ name: SwiftLint
 
 on:
   push:
-    branches:
-      - master
-      - develop
+    branches: [main]
   pull_request:
-    types: [synchronize, opened, reopened, ready_for_review]
     branches:
-      - master
-      - develop
+      - main
+    types: [opened, reopened, synchronize]
 
 
 jobs:
