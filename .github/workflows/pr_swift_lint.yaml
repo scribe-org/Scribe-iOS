@@ -31,7 +31,7 @@ jobs:
         run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
         continue-on-error: true 
 
-       - name: Handle warnings
+      - name: Handle warnings
         if: ${{ steps.check_exit.outputs.status == 'warning' }}
         run: echo "Handling SwiftLint warnings."
 
