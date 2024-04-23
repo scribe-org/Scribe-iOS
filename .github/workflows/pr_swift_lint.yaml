@@ -28,22 +28,17 @@ jobs:
 
       - name: Run SwiftLint
         run: |
-          swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 
-          exit_code=$?
-          echo "SwiftLint Exit Code: $exit_code"
-          if [ "$exit_code" -eq 0 ]; then
-            echo "SwiftLint found no issues."
-          elif [ "$exit_code" -eq 1 ]; then
-            echo "SwiftLint found warnings."
-            # Optionally handle warnings, e.g., do not fail the job
-            echo "::set-output name=status::warning"
-          elif [ "$exit_code" -eq 2 ]; then
+          swiftlint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
+          warnings_count=$(jq '. | map(select(.severity == "Warning")) | length' swiftlint-results.json)
+          errors_count=$(jq '. | map(select(.severity == "Error")) | length' swiftlint-results.json)
+          
+          if [ "$errors_count" -gt 0 ]; then
             echo "SwiftLint found errors."
-            echo "::set-output name=status::error"
-            exit $exit_code  # Use the actual exit code from SwiftLint to fail the job
+            exit 2
+          elif [ "$warnings_count" -gt 0 ]; then
+            echo "SwiftLint found warnings."
+            exit 1
           else
-            echo "Unexpected exit code: $exit_code"
-            exit $exit_code  # Propagate unexpected exit code
+            echo "SwiftLint found no issues."
           fi
         shell: bash
-        id: swiftlint
