@@ -31,11 +31,8 @@ jobs:
 
       - name: Run SwiftLint
         id: lint
-        run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
+        run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml; echo steps.lint.outcome; echo steps.lint.conclusion
         continue-on-error: true 
-
-      - name: Learning outcome and conclusion results
-          run: echo steps.lint.outcome; echo steps.lint.conclusion
       
       - name: Check for warnings
         if: ${{ steps.lint.outcome == 'failure' && steps.lint.conclusion != 'failure' }}
