@@ -28,10 +28,8 @@ jobs:
 
       - name: Run SwiftLint
         run: |
-          swiftlint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
-          echo "Analysing results" 
-          swiftlint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
-
+          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 2>&1 | tee swiftlint-results.json
+          
           warnings_count=$(jq '. | map(select(.severity == "Warning")) | length' swiftlint-results.json)
           errors_count=$(jq '. | map(select(.severity == "Error")) | length' swiftlint-results.json)
           
@@ -45,5 +43,3 @@ jobs:
             echo "SwiftLint found no issues." # Can change message to be more reflective of what needs to be conveyed
           fi
         shell: bash
-        continue-on-error: true 
-
