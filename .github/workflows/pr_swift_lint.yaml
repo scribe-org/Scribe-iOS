@@ -22,17 +22,28 @@ jobs:
           then
               /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           fi
+          
+      - name: Install jq
+        run: brew install jq
 
       - name: Install SwiftLint
         run: brew install swiftlint
 
       - name: Run SwiftLint
         run: |
-          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 2>&1 | tee swiftlint-results.json
+          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
           
-          warnings_count=$(jq '. | map(select(.severity == "Warning")) | length' swiftlint-results.json)
-          errors_count=$(jq '. | map(select(.severity == "Error")) | length' swiftlint-results.json)
+          echo "WARNINGS:"
+          warnings_count=$(jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json | tee /dev/tty | wc -l)
           
+          echo "ERRORS:"
+          errors_count=$(jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json | tee /dev/tty | wc -l)
+          
+          echo "Summary:"
+          echo "Total Warnings: $warnings_count"
+          echo "Total Errors: $errors_count"
+
+    
           if [ "$errors_count" -gt 0 ]; then
             echo "SwiftLint found errors." # Won't show message because exits immediatly
             exit 2
