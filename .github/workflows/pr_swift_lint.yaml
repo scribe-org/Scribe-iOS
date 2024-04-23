@@ -33,12 +33,12 @@ jobs:
           errors_count=$(jq '. | map(select(.severity == "Error")) | length' swiftlint-results.json)
           
           if [ "$errors_count" -gt 0 ]; then
-            echo "SwiftLint found errors."
+            echo "SwiftLint found errors." # Won't show message because exits immediatly
             exit 2
-          elif [ "$warnings_count" -gt 0 ]; then
-            echo "SwiftLint found warnings."
+          elif [ "$warnings_count" -gt 0 ];
+            echo "SwiftLint found warnings." # Can change message to be more reflective of what needs to be conveyed
             # exit 1         #Uncomment to enforce warnings
           else
-            echo "SwiftLint found no issues."
+            echo "SwiftLint found no issues." # Can change message to be more reflective of what needs to be conveyed
           fi
         shell: bash
