@@ -32,6 +32,7 @@ jobs:
           swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 
           echo "exit_code=$?"  # Print it for debugging
           echo "::set-output name=exit_code::$?"  # Set the exit code as an output
+        continue-on-error: true
 
       - name: Handle Based on Exit Code
         run: |
