@@ -31,5 +31,4 @@ jobs:
 
       - name: Run SwiftLint
         run: |
-          
           swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
