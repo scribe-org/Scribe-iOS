@@ -31,7 +31,16 @@ jobs:
         run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
         continue-on-error: true 
 
-      - name: Fail on SwiftLint errors
-        if: ${{ steps.lint.conclusion == 'failure' }}
-        run: echo "SwiftLint errors detected"
-        # run: exit 1 # Explicitly fail the workflow if there are SwiftLint errors
+       - name: Handle warnings
+        if: ${{ steps.check_exit.outputs.status == 'warning' }}
+        run: echo "Handling SwiftLint warnings."
+
+      - name: Handle errors
+        if: ${{ steps.check_exit.outputs.status == 'error' }}
+        run: |
+          echo "Errors detected by SwiftLint."
+          exit 1
+
+      - name: Success message
+        if: ${{ steps.check_exit.outputs.status == 'success' }}
+        run: echo "SwiftLint completed successfully without any issues."
