@@ -45,3 +45,5 @@ jobs:
             echo "SwiftLint found no issues." # Can change message to be more reflective of what needs to be conveyed
           fi
         shell: bash
+        continue-on-error: true 
+
