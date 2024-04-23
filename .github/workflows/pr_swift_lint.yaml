@@ -1,19 +1,11 @@
-# Lints the project using SwiftLint
-
 name: pr_swift_lint
-
 on:
   push:
-    branches:
-      - master
-      - develop
+    branches: [main]
   pull_request:
-    types: [synchronize, opened, reopened, ready_for_review]
     branches:
-      - master
-      - develop
-
-
+      - main
+    types: [opened, reopened, synchronize]
 
 jobs:
   swift_format_check:
@@ -39,11 +31,11 @@ jobs:
         run: brew install swiftformat
 
       - name: Run SwiftLint
-        run: |
-          swiftlint lint --config /Scribe-iOS/.github/workflows.swiftlint.yaml
-          if [ $result -eq 0 ] || [ $result -eq 1 ]; then
-              echo "SwiftLint passed with no errors."
-          else
-              echo "SwiftLint failed with errors."
-              exit 1
-          fi
+        run: swiftlint
+
+#      - name: Run SwiftFormat (check only)
+#        run: swiftformat --lint .
+#
+#      - name: Run SwiftFormat
+#        if: always()
+#        run: swiftformat .
