@@ -26,23 +26,10 @@ jobs:
       - name: Install SwiftLint
         run: brew install swiftlint
 
-      - name: Install SwiftFormat
-        run: brew install swiftformat
-
       - name: Run SwiftLint
         id: lint
         run: swiftlint lint --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml
         continue-on-error: true 
-
-      - name: Print lint outcomes and conclusions
-        run: |
-          echo "Outcome: ${{ steps.lint.outcome }}"
-          echo "Conclusion: ${{ steps.lint.conclusion }}"
-      
-      - name: Check for warnings
-        if: ${{ steps.lint.outcome == 'failure' && steps.lint.conclusion != 'failure' }}
-        run: echo "SwiftLint warnings detected"
-        # Add additional steps here to handle the warnings case
 
       - name: Fail on SwiftLint errors
         if: ${{ steps.lint.conclusion == 'failure' }}
