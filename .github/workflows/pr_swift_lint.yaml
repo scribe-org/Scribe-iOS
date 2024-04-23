@@ -31,7 +31,9 @@ jobs:
 
       - name: Run SwiftLint
         run: |
+          set +e
           swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
+          set -e
           
           echo "WARNINGS:"
           warnings_count=$(jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json | tee /dev/tty | wc -l)
