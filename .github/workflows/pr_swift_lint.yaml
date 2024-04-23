@@ -10,7 +10,7 @@ jobs:
   swift_format_check:
     runs-on: macos-latest
 
-    name: Run Swift Lint and Format Check
+    name: Run Swift Lint
 
     steps:
       - name: Checkout
