@@ -28,10 +28,10 @@
 
 
 # change individual rule configurations
-# identifier_name:
-#  min_length: 1
-#  max_length: 
-#    warning: 40
-#   error: 41  
+identifier_name:
+  min_length: 1
+  max_length: 
+    warning: 40
+    error: 41  
 
 
