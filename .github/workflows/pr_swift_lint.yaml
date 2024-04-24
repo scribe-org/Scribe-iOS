@@ -33,8 +33,8 @@ jobs:
         run: |
           echo " "
           set +e
-          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml 2>&1 | tee swiftlint-results.json
-
+          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
+          
           # Verify the JSON output exists and is not empty
           if [ ! -f swiftlint-results.json ] || [ ! -s swiftlint-results.json ]; then
             echo "SwiftLint did not produce output or the output is empty."
@@ -46,7 +46,7 @@ jobs:
           # Formatting and printing warnings
           echo "WARNINGS:"
           warnings_count=$(jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
-          #jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json
+          jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json
 
           if [ "$warnings_count" -eq 0 ]; then
             echo "No Warnings"
@@ -57,7 +57,7 @@ jobs:
           # Formatting and printing errors
           echo "ERRORS:"
           errors_count=$(jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
-          #jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json
+          jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json
 
           if [ "$errors_count" -eq 0 ]; then
             echo "No Errors"
