@@ -5,26 +5,26 @@
 
 disabled_rules:
 #   ERRORS IN PROJECT CURRENTLY
-#   - cyclomatic_complexity
-#   - identifier_name
-#   - function_body_length
-#   - force_cast
-#   - force_try
-#   - line_length
-#   - file_length
-#   - type_body_length 
+   - cyclomatic_complexity
+   - identifier_name
+   - function_body_length
+   - force_cast
+   - force_try
+   - line_length
+   - file_length
+   - type_body_length 
 #   WARNINGS IN PROJECT CURRENTLY (excluding those already listed as errors)
-   - trailing_comma
-   - todo
-   - orphaned_doc_comment
-   - opening_brace
-   - blanket_disable_command
-   - for_where
-   - trailing_whitespace
-   - vertical_whitespace
-   - void_function_in_ternary
-   - empty_enum_arguments
-   - closure_parameter_position
+#   - trailing_comma
+#   - todo
+#   - orphaned_doc_comment
+#   - opening_brace
+#   - blanket_disable_command
+#   - for_where
+#   - trailing_whitespace
+#   - vertical_whitespace
+#   - void_function_in_ternary
+#   - empty_enum_arguments
+#   - closure_parameter_position
 
 
 # change individual rule configurations
