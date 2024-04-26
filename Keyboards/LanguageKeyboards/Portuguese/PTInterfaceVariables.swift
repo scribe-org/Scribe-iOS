@@ -69,7 +69,7 @@ public enum PortugueseKeyboardConstants {
   static let letterKeysPadExpanded = [
     ["~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"],
-    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":",  ";", "ç", "return"],
+    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "ç", "return"],
     ["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"],
     ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
   ]

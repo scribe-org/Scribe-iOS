@@ -38,7 +38,10 @@ class BaseTableViewController: UITableViewController {
     super.viewDidLoad()
 
     tableView.sectionHeaderHeight = sectionHeaderHeight
-    tableView.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoChildTableViewCell")
+    tableView.register(
+      UINib(nibName: "InfoChildTableViewCell", bundle: nil),
+      forCellReuseIdentifier: "InfoChildTableViewCell"
+    )
     tableView.separatorInset = separatorInset
     if let tabBarController = tabBarController as? SwipeableTabBarController {
       tabBarController.isCyclingEnabled = true

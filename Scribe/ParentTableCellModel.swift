@@ -27,7 +27,6 @@ struct ParentTableCellModel {
 }
 
 struct Section {
-
   let sectionTitle: String
   let imageString: String?
   let hasToggle: Bool
@@ -36,11 +35,19 @@ struct Section {
   let shortDescription: String?
   let externalLink: Bool?
 
-  init(sectionTitle: String, imageString: String? = nil, hasToggle: Bool = false, hasNestedNavigation: Bool = false, sectionState: SectionState, shortDescription: String? = nil, externalLink: Bool? = false) {
+  init(
+    sectionTitle: String,
+    imageString: String? = nil,
+    hasToggle: Bool = false, h _: Bool = false,
+
+    sectionState: SectionState,
+    shortDescription: String? = nil,
+    externalLink: Bool? = false
+  ) {
     self.sectionTitle = sectionTitle
     self.imageString = imageString
     self.hasToggle = hasToggle
-    self.hasNestedNavigation = hasNestedNavigation
+    hasNestedNavigation = hasNestedNavigation
     self.sectionState = sectionState
     self.shortDescription = shortDescription
     self.externalLink = externalLink

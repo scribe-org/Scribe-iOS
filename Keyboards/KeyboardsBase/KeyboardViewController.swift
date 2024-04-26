@@ -656,14 +656,14 @@ class KeyboardViewController: UIInputViewController {
         allowUndo = false
         firstCompletionIsHighlighted = false
         // Highlight if the current prefix is the first autocompletion.
-        if (
+        if
           currentPrefix == completionWords[0] && completionWords[1] != " "
-        ) 
+
         // Note: Code for highlighting the word if it's the only option available - add when libraries are expanded.
 //        || (
 //          // Highlighting last remaining autocomplete.
 //          completionWords[0] != " " && completionWords[1] == " "
-//        ) 
+//        )
         {
           firstCompletionIsHighlighted = true
         }
