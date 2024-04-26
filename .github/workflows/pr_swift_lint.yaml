@@ -3,82 +3,16 @@ on:
   pull_request_target:
     branches:
       - main
-    types:
-      - opened
+    types: [opened, reopened, synchronize]
 
 jobs:
-  swift_format_check:
-    runs-on: macos-latest
+  swiftlint:
+    runs-on: ubuntu-latest
 
-    name: Run Swift Lint
+    name: Run SwiftLint
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Install Homebrew (if macOS does not have it)
-        run: |
-          if ! command -v brew &>/dev/null
-          then
-              /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          fi
-          
-      - name: Install jq
-        run: brew install jq
-
-      - name: Install SwiftLint
-        run: brew install swiftlint
-
-      - name: Run SwiftLint
-        run: |
-          echo " "
-          set +e
-          swiftlint lint --reporter json --config /Users/runner/work/Scribe-iOS/Scribe-iOS/.github/workflows/.swiftlint.yaml > swiftlint-results.json
-          
-          # Verify the JSON output exists and is not empty
-          if [ ! -f swiftlint-results.json ] || [ ! -s swiftlint-results.json ]; then
-            echo "SwiftLint did not produce output or the output is empty."
-            exit 1
-          fi
-
-          echo " "
-        
-          # Formatting and printing warnings
-          echo "WARNINGS:"
-          warnings_count=$(jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
-          jq -r '.[] | select(.severity == "Warning") | "\(.file):\(.line): warning: (\(.rule_id)) \(.reason)"' swiftlint-results.json
-
-          if [ "$warnings_count" -eq 0 ]; then
-            echo "No Warnings"
-          fi
-        
-          echo " "
-          
-          # Formatting and printing errors
-          echo "ERRORS:"
-          errors_count=$(jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json | wc -l)
-          jq -r '.[] | select(.severity == "Error") | "\(.file):\(.line): error: (\(.rule_id)) \(.reason)"' swiftlint-results.json
-
-          if [ "$errors_count" -eq 0 ]; then
-            echo "No Errors"
-          fi
-          
-          # Printing summary of counts
-          echo " "
-          
-          echo "-------- Summary --------"
-          echo "Total Warnings: $warnings_count"
-          echo "Total Errors:  $errors_count"
-
-          echo " "
-          
-          if [ "$errors_count" -gt 0 ]; then
-            echo "SwiftLint found errors." # Can change message to be more reflective of what needs to be conveyed
-            exit 2
-          elif [ "$warnings_count" -gt 0 ]; then
-            echo "SwiftLint found warnings." # Can change message to be more reflective of what needs to be conveyed
-            # exit 1         #Uncomment to enforce warnings
-          else
-            echo "SwiftLint found no issues." # Can change message to be more reflective of what needs to be conveyed
-          fi
-        shell: bash
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1

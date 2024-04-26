@@ -1,8 +1,5 @@
 # SwiftLint Configuration File
 
-
-# To be tailored to reflect projects ideal linting configuration
-
 #disabled_rules:
 #   ERRORS IN PROJECT CURRENTLY
 #   - cyclomatic_complexity
@@ -12,7 +9,7 @@
 #   - force_try
 #   - line_length
 #   - file_length
-#   - type_body_length 
+#   - type_body_length
 #   WARNINGS IN PROJECT CURRENTLY (excluding those already listed as errors)
 #   - trailing_comma
 #   - todo
@@ -26,12 +23,8 @@
 #   - empty_enum_arguments
 #   - closure_parameter_position
 
-
-# change individual rule configurations
 identifier_name:
   min_length: 1
-  max_length: 
+  max_length:
     warning: 40
-    error: 41  
-
-
+    error: 41
