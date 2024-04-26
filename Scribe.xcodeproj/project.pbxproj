@@ -892,7 +892,7 @@
 		D111E9B127AFE79500746F92 /* Translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
 		D111E9B927AFE7B200746F92 /* Annotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotate.swift; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
-		D155AD272BDC69260075B18C /* .swiftlint.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yaml; sourceTree = "<group>"; };
+		D155AD282BDC6CC20075B18C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEPrivacyPolicy.swift; sourceTree = "<group>"; };
 		D156BC0729CCDBE8007E7362 /* DEAppText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEAppText.swift; sourceTree = "<group>"; };
 		D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FRLanguageData.sqlite; path = Keyboards/LanguageKeyboards/French/FRLanguageData.sqlite; sourceTree = SOURCE_ROOT; };
@@ -1187,7 +1187,7 @@
 				D190B28F27426F4900705659 /* LICENSE.txt */,
 				D1362A37274C040F00C00E48 /* PRIVACY.txt */,
 				D190B29027426F4900705659 /* README.md */,
-				D155AD272BDC69260075B18C /* .swiftlint.yaml */,
+				D155AD282BDC6CC20075B18C /* .swiftlint.yml */,
 				38BD213122D5907E00C6795D /* Products */,
 				D1A3EEED28F8D3EA00896C65 /* Frameworks */,
 			);
