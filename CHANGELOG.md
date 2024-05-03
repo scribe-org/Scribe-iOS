@@ -38,6 +38,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The transition from between portrait and landscape mode was dramatically improved ([#25](https://github.com/scribe-org/Scribe-iOS/issues/33)).
 - Annotations under autosuggestions and autocompletions are no longer distorted during an orientation transition ([#396](https://github.com/scribe-org/Scribe-iOS/issues/396)).
 - Bugs were fixed that were causing autocompletions to trigger too regularly ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305)).
+- Fixes a bug where the names from the UI lexicon were not being loaded into the keyboards ([#292](https://github.com/scribe-org/Scribe-iOS/issues/292), fixes [#201](https://github.com/scribe-org/Scribe-iOS/issues/201)).
 
 ### ♻️ Code Refactoring
 
