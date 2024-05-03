@@ -38,8 +38,8 @@ struct Section {
   init(
     sectionTitle: String,
     imageString: String? = nil,
-    hasToggle: Bool = false, h _: Bool = false,
-
+    hasToggle: Bool = false, 
+    hasNestedNavigation: Bool = false,
     sectionState: SectionState,
     shortDescription: String? = nil,
     externalLink: Bool? = false
@@ -47,7 +47,7 @@ struct Section {
     self.sectionTitle = sectionTitle
     self.imageString = imageString
     self.hasToggle = hasToggle
-    hasNestedNavigation = hasNestedNavigation
+    self.hasNestedNavigation = hasNestedNavigation
     self.sectionState = sectionState
     self.shortDescription = shortDescription
     self.externalLink = externalLink
