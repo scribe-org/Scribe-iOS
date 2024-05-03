@@ -193,7 +193,7 @@ class InstallationVC: UIViewController {
         fontSize = UIScreen.main.bounds.height / 59
       }
     } else if DeviceType.isPad {
-      fontSize = UIScreen.main.bounds.height / 53
+      fontSize = UIScreen.main.bounds.height / 38
     }
     setTopIcon()
     setSettingsBtn()
