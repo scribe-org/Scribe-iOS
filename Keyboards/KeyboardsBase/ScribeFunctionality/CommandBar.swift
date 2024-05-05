@@ -96,7 +96,7 @@ class CommandBar: UILabel {
       infoButton.heightAnchor.constraint(equalTo: heightAnchor),
       infoButton.widthAnchor.constraint(equalTo: heightAnchor),
       infoButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-      infoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+      infoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
     ])
   }
 

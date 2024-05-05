@@ -29,7 +29,7 @@ var keyboard = [[String]]()
 var usingExpandedKeyboard = false
 var allKeys = [String]()
 let specialKeys = [
-  SpecialKeys.indent, SpecialKeys.capsLock, "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard",
+  SpecialKeys.indent, SpecialKeys.capsLock, "shift", "delete", "ABC", "АБВ", "123", "#+=", "selectKeyboard", "space", "return", ".?123", "hideKeyboard"
 ]
 var allNonSpecialKeys = [String]()
 var keyboardHeight: CGFloat!
@@ -169,7 +169,7 @@ let languagesAbbrDict = [
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",
-  "Swedish": "sv",
+  "Swedish": "sv"
 ]
 
 /// Returns the abbreviation of the language for use in commands.
@@ -189,7 +189,7 @@ let keyboardLayoutDict: [String: () -> Void] = [
   "Portuguese": setPTKeyboardLayout,
   "Russian": setRUKeyboardLayout,
   "Spanish": setESKeyboardLayout,
-  "Swedish": setSVKeyboardLayout,
+  "Swedish": setSVKeyboardLayout
 ]
 
 /// Sets the keyboard layout and its alternate keys.

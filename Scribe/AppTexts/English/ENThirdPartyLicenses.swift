@@ -35,5 +35,5 @@ The following is a list of all used source code, the main author or authors of t
 let enThirdPartyLicensesListItems = [
   "• Author: EthanSK",
   "• License: MIT",
-  "• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE",
+  "• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
 ]

@@ -26,7 +26,7 @@ enum InformationToolTipData {
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-      ),
+      )
     ]
   )
 
@@ -35,7 +35,7 @@ enum InformationToolTipData {
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-      ),
+      )
     ]
   )
 
@@ -44,7 +44,7 @@ enum InformationToolTipData {
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75
-      ),
+      )
     ]
   )
 
@@ -52,7 +52,7 @@ enum InformationToolTipData {
     [
       InformationToolTipData.wikiDataExplanation,
       InformationToolTipData.wikiDataContationOrigin,
-      InformationToolTipData.howToContribute,
+      InformationToolTipData.howToContribute
     ]
   }
 }

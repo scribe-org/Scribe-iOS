@@ -152,7 +152,7 @@ class InstallationVC: UIViewController {
 
       textView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: linkBlueColor,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
       ]
     }
   }

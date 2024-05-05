@@ -55,7 +55,7 @@ func setKeyboardAlternateKeys() {
     "'": apostropheAlternateKeys,
     "\"": quotationAlternateKeys,
     "=": equalSignAlternateKeys,
-    currencySymbol: currencySymbolAlternates,
+    currencySymbol: currencySymbolAlternates
   ]
 }
 

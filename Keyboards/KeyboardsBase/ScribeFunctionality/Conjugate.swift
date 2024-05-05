@@ -27,7 +27,7 @@ let keyboardConjTitleDict: [String: Any] = [
   "Portuguese": ptGetConjugationTitle,
   "Russian": ruGetConjugationTitle,
   "Spanish": esGetConjugationTitle,
-  "Swedish": svGetConjugationTitle,
+  "Swedish": svGetConjugationTitle
 ]
 
 // Dictionary for accessing keyboard conjugation state.
@@ -38,7 +38,7 @@ let keyboardConjStateDict: [String: Any] = [
   "Portuguese": ptGetConjugationState,
   "Russian": ruGetConjugationState,
   "Spanish": esGetConjugationState,
-  "Swedish": svGetConjugationState,
+  "Swedish": svGetConjugationState
 ]
 
 // Dictionary for accessing keyboard conjugation state.
@@ -49,7 +49,7 @@ let keyboardConjLabelDict: [String: Any] = [
   "Portuguese": ptSetConjugationLabels,
   "Russian": ruSetConjugationLabels,
   "Spanish": esSetConjugationLabels,
-  "Swedish": svSetConjugationLabels,
+  "Swedish": svSetConjugationLabels
 ]
 
 /// Returns a declension once a user presses a key in the conjugateView.
