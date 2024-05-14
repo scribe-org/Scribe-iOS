@@ -22,7 +22,7 @@ import UIKit
 // A proxy into which text is typed.
 var proxy: UITextDocumentProxy!
 
-// MARK: Display Variables
+// MARK: - Display Variables
 
 // Variables for the keyboard and its appearance.
 var keyboard = [[String]]()

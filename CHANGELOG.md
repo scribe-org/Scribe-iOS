@@ -49,6 +49,9 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - While loops were replaced by for loops in places where they were being used inappropriately ([#380](https://github.com/scribe-org/Scribe-iOS/issues/380)).
 - The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) directory has been added for future localization work.
 - SQLite queries were refactored to extract the DB access logic into a common file ([#378](https://github.com/scribe-org/Scribe-iOS/issues/378)).
+- A SwiftLint pull request workflow was added to the codebase to check style and other coding conventions ([#390](https://github.com/scribe-org/Scribe-iOS/issues/390)).
+- Trailing commas were removed from the codebase ([#421](https://github.com/scribe-org/Scribe-iOS/issues/421)).
+- SwiftFormat was configured to allow for the removal of trailing commas ([#421](https://github.com/scribe-org/Scribe-iOS/issues/421)).
 
 # Scribe-iOS 2.3.0
 

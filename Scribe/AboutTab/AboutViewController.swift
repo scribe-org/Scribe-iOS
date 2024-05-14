@@ -35,7 +35,7 @@ final class AboutViewController: BaseTableViewController {
   }
 }
 
-// MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +48,7 @@ extension AboutViewController {
   }
 }
 
-// MARK: UITableViewDelegate
+// MARK: - UITableViewDelegate
 
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
