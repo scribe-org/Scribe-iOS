@@ -163,7 +163,7 @@ var formLabelsDict = [
   "BR": "",
   "Left": "",
   "Right": "",
-  "Single": "",
+  "Single": ""
 ]
 
 var verbToConjugate = ""

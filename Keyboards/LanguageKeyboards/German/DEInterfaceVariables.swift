@@ -25,28 +25,28 @@ public enum GermanKeyboardConstants {
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"], // "undo"
+    ["123", "selectKeyboard", "space", "return"] // "undo"
   ]
 
   static let letterKeysPhoneDisableAccents = [
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"], // "undo"
+    ["123", "selectKeyboard", "space", "return"] // "undo"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undo"
+    ["ABC", "selectKeyboard", "space", "return"] // "undo"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undo"
+    ["ABC", "selectKeyboard", "space", "return"] // "undo"
   ]
 
   // iPad keyboard layouts.
@@ -55,7 +55,7 @@ public enum GermanKeyboardConstants {
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
   ]
 
   static let letterKeysPadDisableAccents = [
@@ -63,21 +63,21 @@ public enum GermanKeyboardConstants {
     ["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"],
     ["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "ß", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "delete"],
     ["\"", "§", "€", "%", "&", "/", "(", ")", "=", "'", "#", "return"],
     ["#+=", "—", "`", "'", "...", "@", ";", ":", ",", ".", "-", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["$", "£", "¥", "¿", "―", "\\", "[", "]", "{", "}", "|", "return"],
     ["123", "¡", "<", ">", "≠", "·", "^", "~", "!", "?", "_", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
@@ -86,7 +86,7 @@ public enum GermanKeyboardConstants {
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü", "+", "*"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "#", "return"],
     ["shift", "'", "y", "x", "c", "v", "b", "n", "m", "-", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
   ]
 
   static let letterKeysPadExpandedDisableAccents = [
@@ -94,7 +94,7 @@ public enum GermanKeyboardConstants {
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "=", "+", "*"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "/", "@", "#", "return"],
     ["shift", "'", "y", "x", "c", "v", "b", "n", "m", "-", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
@@ -102,7 +102,7 @@ public enum GermanKeyboardConstants {
     [SpecialKeys.indent, "\"", "|", "§", "[", "]", "{", "}", "—", "%", "^", "=", "+", "*"],
     [SpecialKeys.capsLock, ":", ";", "(", ")", "&", "$", "£", "¥", "€", "/", "@", "#", "return"], // "undo"
     ["shift", "'", "?", "!", "~", "≠", "°", "…", "_", "-", ",", ".", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
   ]
 
   // Alternate key vars.
@@ -221,7 +221,7 @@ func setDEKeyboardLayout() {
     "es": "presTPS",
     "wir": "presFPP",
     "ihr": "presSPP",
-    "Sie": "presTPP",
+    "Sie": "presTPP"
   ]
 
   translateKeyLbl = "Übersetzen"

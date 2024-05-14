@@ -181,7 +181,7 @@ func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedStr
       scribeEmail: "mailto:" + scribeEmail,
       gitHubLogoLicensing: gitHubLogoLicensing,
       wikidataLogoLicensing: wikidataLogoLicensing,
-      customKeyboardLicense: customKeyboardLicense,
+      customKeyboardLicense: customKeyboardLicense
     ],
     fontSize: fontSize
   )
@@ -195,7 +195,7 @@ func setThirdPartyLicenses(fontSize: CGFloat, text: String, listElements: [Strin
   let thirdPartyLicensesTextWithLink = addHyperLinks(
     originalText: text,
     links: [
-      licensesLink: licensesLink,
+      licensesLink: licensesLink
     ],
     fontSize: fontSize
   )

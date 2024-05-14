@@ -78,7 +78,7 @@ class ScribeKey: UIButton {
   func setFullCornerRadius() {
     layer.borderColor = UIColor.clear.cgColor // border is set by the shadow
     layer.maskedCorners = [
-      .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner,
+      .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner
     ]
   }
 
@@ -102,7 +102,7 @@ class ScribeKey: UIButton {
     shadow.backgroundColor = specialKeyColor
     shadow.layer.cornerRadius = commandKeyCornerRadius
     shadow.layer.maskedCorners = [
-      .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner,
+      .layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner
     ]
     shadow.clipsToBounds = true
     shadow.layer.masksToBounds = false

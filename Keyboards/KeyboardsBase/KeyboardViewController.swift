@@ -977,7 +977,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 3x2 conjugation display.
   func get3x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyFPS, formKeySPS, formKeyTPS, formKeyFPP, formKeySPP, formKeyTPP,
+      formKeyFPS, formKeySPS, formKeyTPS, formKeyFPP, formKeySPP, formKeyTPP
     ]
 
     return conjugationButtons
@@ -995,7 +995,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 3x2 conjugation display.
   func get3x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblFPS, formLblSPS, formLblTPS, formLblFPP, formLblSPP, formLblTPP,
+      formLblFPS, formLblSPS, formLblTPS, formLblFPP, formLblSPP, formLblTPP
     ]
 
     return conjugationLabels
@@ -1032,7 +1032,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 3x1 conjugation display
   func get3x1FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyTop, formKeyMiddle, formKeyBottom,
+      formKeyTop, formKeyMiddle, formKeyBottom
     ]
 
     return conjugationButtons
@@ -1045,7 +1045,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 3x1 conjugation display.
   func get3x1FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblTop, formLblMiddle, formLblBottom,
+      formLblTop, formLblMiddle, formLblBottom
     ]
 
     return conjugationLabels
@@ -1080,7 +1080,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 2x2 conjugation display
   func get2x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyTL, formKeyTR, formKeyBL, formKeyBR,
+      formKeyTL, formKeyTR, formKeyBL, formKeyBR
     ]
 
     return conjugationButtons
@@ -1094,7 +1094,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 2x2 conjugation display.
   func get2x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblTL, formLblTR, formLblBL, formLblBR,
+      formLblTL, formLblTR, formLblBL, formLblBR
     ]
 
     return conjugationLabels
@@ -1129,7 +1129,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 1x2 conjugation display
   func get1x2FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeyLeft, formKeyRight,
+      formKeyLeft, formKeyRight
     ]
 
     return conjugationButtons
@@ -1141,7 +1141,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 1x2 conjugation display.
   func get1x2FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblLeft, formLblRight,
+      formLblLeft, formLblRight
     ]
 
     return conjugationLabels
@@ -1172,7 +1172,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all buttons for the 1x1 conjugation display
   func get1x1FormDisplayButtons() -> [UIButton] {
     let conjugationButtons: [UIButton] = [
-      formKeySingle,
+      formKeySingle
     ]
 
     return conjugationButtons
@@ -1183,7 +1183,7 @@ class KeyboardViewController: UIInputViewController {
   /// Returns all labels for the 1x1 conjugation display.
   func get1x1FormDisplayLabels() -> [UIButton] {
     let conjugationLabels: [UIButton] = [
-      formLblSingle,
+      formLblSingle
     ]
 
     return conjugationLabels
@@ -1253,7 +1253,7 @@ class KeyboardViewController: UIInputViewController {
       && [
         .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
         .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
-        .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative,
+        .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
       ].contains(deCaseDeclensionState)
     {
       formsDisplayDimensions = .view2x2

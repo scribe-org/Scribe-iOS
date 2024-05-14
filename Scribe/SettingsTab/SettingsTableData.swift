@@ -24,7 +24,7 @@ enum SettingsTableData {
     ParentTableCellModel(
       headingTitle: NSLocalizedString("settings.appSettings", comment: "The title of the app settings section"),
       section: [
-        Section(sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"), imageString: "globe", hasToggle: false, sectionState: .appLang),
+        Section(sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"), imageString: "globe", hasToggle: false, sectionState: .appLang)
       ],
       hasDynamicData: nil
     ),
@@ -34,7 +34,7 @@ enum SettingsTableData {
         //        Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
       ],
       hasDynamicData: .installedKeyboards
-    ),
+    )
   ]
 
   static let languageSettingsData: [ParentTableCellModel] = [
@@ -53,7 +53,7 @@ enum SettingsTableData {
           hasToggle: true,
           sectionState: .none(.toggleAccentCharacters),
           shortDescription: NSLocalizedString("settings.layout.disableAccentCharacters.description", comment: "")
-        ),
+        )
       ],
       hasDynamicData: nil
     ),
@@ -65,10 +65,10 @@ enum SettingsTableData {
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
           shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", comment: "")
-        ),
+        )
       ],
       hasDynamicData: nil
-    ),
+    )
   ]
 
   static func getInstalledKeyboardsSections() -> [Section] {

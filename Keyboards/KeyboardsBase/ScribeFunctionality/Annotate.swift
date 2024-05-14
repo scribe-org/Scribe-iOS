@@ -30,19 +30,19 @@ var nounFormToColorDict = [
   "Ж": annotateRed,
   "М": annotateBlue,
   "Н": annotateGreen,
-  "МН": annotateOrange,
+  "МН": annotateOrange
 ]
 
 // Dictionary to convert noun annotations into the keyboard language.
 let nounAnnotationConversionDict = [
   "Swedish": ["C": "U"],
-  "Russian": ["F": "Ж", "M": "М", "N": "Н", "PL": "МН"],
+  "Russian": ["F": "Ж", "M": "М", "N": "Н", "PL": "МН"]
 ]
 
 // Dictionary to convert case annotations into the keyboard language.
 let prepAnnotationConversionDict = [
   "German": ["Acc": "Akk"],
-  "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"],
+  "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
 
 /// The base function for annotation that's accessed by `selectedWordAnnotation` and `typedWordAnnotation`.

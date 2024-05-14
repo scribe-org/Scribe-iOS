@@ -28,7 +28,7 @@ struct AboutTableData {
         Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix, externalLink: true),
         Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe, externalLink: true),
 //        Section(sectionTitle: "View all Scribe apps", imageString: "scribeIcon", sectionState: .scribeApps, externalLink: true)
-        Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", hasNestedNavigation: true, sectionState: .wikimedia),
+        Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", hasNestedNavigation: true, sectionState: .wikimedia)
       ],
       hasDynamicData: nil
     ),
@@ -37,7 +37,7 @@ struct AboutTableData {
       section: [
         Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe, externalLink: true),
         Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport, externalLink: true),
-        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email, externalLink: true),
+        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email, externalLink: true)
 //        Section(sectionTitle: "Reset app hints", imageString: "lightbulb", sectionState: .appHints)
       ],
       hasDynamicData: nil
@@ -46,9 +46,9 @@ struct AboutTableData {
       headingTitle: "Legal",
       section: [
         Section(sectionTitle: "Privacy policy", imageString: "lock.shield", hasNestedNavigation: true, sectionState: .privacyPolicy),
-        Section(sectionTitle: "Third-party licenses", imageString: "thirdPartyLicenses", hasNestedNavigation: true, sectionState: .licenses),
+        Section(sectionTitle: "Third-party licenses", imageString: "thirdPartyLicenses", hasNestedNavigation: true, sectionState: .licenses)
       ],
       hasDynamicData: nil
-    ),
+    )
   ]
 }

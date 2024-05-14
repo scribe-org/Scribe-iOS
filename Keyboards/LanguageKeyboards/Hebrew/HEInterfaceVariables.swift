@@ -25,21 +25,21 @@ public enum HebrewKeyboardConstants {
     ["פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"],
     ["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"],
     ["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז"],
-    ["123", "selectKeyboard", "space", "return"], // "undo", "accent"
+    ["123", "selectKeyboard", "space", "return"] // "undo", "accent"
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undo", "accent"
+    ["ABC", "selectKeyboard", "space", "return"] // "undo", "accent"
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"], // "undo", "accent"
+    ["ABC", "selectKeyboard", "space", "return"] // "undo", "accent"
   ]
 
   // iPad keyboard layouts.
@@ -48,21 +48,21 @@ public enum HebrewKeyboardConstants {
     [",", ".", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"],
     ["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"],
     ["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", "return"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "undo"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["!", "@", "#", "&", "_", "-", "'", "\"", "(", ")", "return"],
     ["#+=", "%", "...", "&", ";", ":", "=", "+", "/", "?", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"],
     ["^", "€", "$", "£", "[", "]", "'", "\"", "<", ">", "return"],
     ["123", "§", "|", "~", "*", "·", "{", "}", "\\", "~", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
   ]
 
   // Expanded iPad keyboard layouts for wider devices.
@@ -71,7 +71,7 @@ public enum HebrewKeyboardConstants {
     [SpecialKeys.indent, "/", "'", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "[", "]", "+"],
     [SpecialKeys.capsLock, "ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש", ",", "\"", "return"], // "accent"
     ["shift", ";", "ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
   ]
 
   static let symbolKeysPadExpanded = [
@@ -79,7 +79,7 @@ public enum HebrewKeyboardConstants {
     [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "—"],
     [SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "€", "return"], // "undo"
     ["shift", "…", "?", "!", "~", "≠", "'", "\"", "_", ",", ".", "-", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"], // "microphone", "scribble"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
   ]
 
   // Alternate key vars.

@@ -40,7 +40,7 @@ func deSetCaseDeclensionLabels() {
     if [
       .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
       .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
-      .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative,
+      .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
     ].contains(deCaseDeclensionState) {
       formLabelsDict["TL"] = "M"
       formLabelsDict["TR"] = "F"
