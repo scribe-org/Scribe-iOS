@@ -16,7 +16,6 @@ disabled_rules:
   - opening_brace
   - blanket_disable_command
   - for_where
-  - trailing_whitespace
   - vertical_whitespace
   - void_function_in_ternary
   - empty_enum_arguments

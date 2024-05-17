@@ -49,7 +49,7 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     return action
   }
-  
+
   // MARK: - Functions
 
   func configureCell(for section: Section) {

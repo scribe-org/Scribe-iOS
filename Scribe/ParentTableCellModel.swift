@@ -38,7 +38,7 @@ struct Section {
   init(
     sectionTitle: String,
     imageString: String? = nil,
-    hasToggle: Bool = false, 
+    hasToggle: Bool = false,
     hasNestedNavigation: Bool = false,
     sectionState: SectionState,
     shortDescription: String? = nil,
