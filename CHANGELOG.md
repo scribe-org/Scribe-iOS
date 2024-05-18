@@ -32,6 +32,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - iPad keyboards are now more reflective of their system keyboard counterparts for devices above a certain width ([#33](https://github.com/scribe-org/Scribe-iOS/issues/33), [#352](https://github.com/scribe-org/Scribe-iOS/issues/352)).
 - Vertical spacing between keys on iPads has been decreased so that keys are more square and thus more in line with system keyboards.
+- The border was removed from the Scribe key and command bar so that now only the shadow delineates them ([#423](https://github.com/scribe-org/Scribe-iOS/issues/423)).
 
 ### 🐞 Bug Fixes
 
