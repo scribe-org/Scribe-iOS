@@ -19,7 +19,6 @@ disabled_rules:
   - vertical_whitespace
   - void_function_in_ternary
   - empty_enum_arguments
-  - closure_parameter_position
 
 identifier_name:
   min_length: 1
