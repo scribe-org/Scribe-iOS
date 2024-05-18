@@ -2571,7 +2571,11 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     case "123", ".?123":
-      usingExpandedKeyboard == true ? changeKeyboardToSymbolKeys() : changeKeyboardToNumberKeys()
+    if usingExpandedKeyboard {
+        changeKeyboardToSymbolKeys()
+    } else {
+        changeKeyboardToNumberKeys()
+    }
 
     case "#+=":
       changeKeyboardToSymbolKeys()
