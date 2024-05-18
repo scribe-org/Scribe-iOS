@@ -140,7 +140,7 @@ extension SettingsViewController: UITableViewDelegate {
 
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in 
+        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
           s.sectionTitle.elementsEqual("Disable accent characters")
         }) ?? -1
 
