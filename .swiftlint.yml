@@ -18,7 +18,6 @@ disabled_rules:
   - for_where
   - vertical_whitespace
   - void_function_in_ternary
-  - empty_enum_arguments
   - closure_parameter_position
 
 identifier_name:
