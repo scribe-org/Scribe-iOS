@@ -56,7 +56,6 @@ class CommandBar: UILabel {
   }
 
   var shadow: UIButton!
-  var blend: UILabel!
 
   // MARK: - Internal methods
 
@@ -64,7 +63,6 @@ class CommandBar: UILabel {
   func set() {
     addInfoButton()
     backgroundColor = commandBarColor
-    blend.backgroundColor = commandBarColor
     textAlignment = NSTextAlignment.left
     if DeviceType.isPhone {
       font = .systemFont(ofSize: frame.height * 0.4725)
@@ -127,7 +125,6 @@ class CommandBar: UILabel {
     layer.borderColor = UIColor.clear.cgColor
     text = ""
     shadow.backgroundColor = UIColor.clear
-    blend.backgroundColor = UIColor.clear
   }
 
   // Removes the placeholder text for a command and replaces it with just the prompt and cursor.

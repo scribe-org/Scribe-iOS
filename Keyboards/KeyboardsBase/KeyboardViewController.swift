@@ -890,7 +890,6 @@ class KeyboardViewController: UIInputViewController {
   // The bar that displays language logic or is typed into for Scribe commands.
   @IBOutlet var commandBar: CommandBar!
   @IBOutlet var commandBarShadow: UIButton!
-  @IBOutlet var commandBarBlend: UILabel!
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
@@ -915,7 +914,6 @@ class KeyboardViewController: UIInputViewController {
   func linkShadowBlendElements() {
     scribeKey.shadow = scribeKeyShadow
     commandBar.shadow = commandBarShadow
-    commandBar.blend = commandBarBlend
   }
 
   // Buttons used to trigger Scribe command functionality.
@@ -2088,7 +2086,6 @@ class KeyboardViewController: UIInputViewController {
       scribeKey.setPartialCornerRadius()
 
       commandBar.backgroundColor = commandBarColor
-      commandBarBlend.backgroundColor = commandBarColor
       commandBar.textColor = keyCharColor
       commandBar.set()
       commandBar.setCornerRadiusAndShadow()
