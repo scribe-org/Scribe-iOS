@@ -418,8 +418,7 @@ class KeyboardViewController: UIInputViewController {
         currentPrefix = inString.replacingOccurrences(of: pastStringInTextProxy, with: "")
 
         if currentPrefix.hasPrefix("(") || currentPrefix.hasPrefix("#") ||
-          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"")
-        {
+          currentPrefix.hasPrefix("/") || currentPrefix.hasPrefix("\"") {
           currentPrefix = currentPrefix.replacingOccurrences(of: #"[\"(#\/]"#, with: "", options: .regularExpression)
         }
 
@@ -872,8 +871,7 @@ class KeyboardViewController: UIInputViewController {
     conditionallyDisplayAnnotation()
     if (keyPressed == phoneEmojiKey0 || keyPressed == phoneEmojiKey1)
       || (keyPressed == padEmojiKey0 || keyPressed == padEmojiKey1 || keyPressed == padEmojiKey2)
-      || (keyPressed == pluralKey && emojisToShow == .one)
-    {
+      || (keyPressed == pluralKey && emojisToShow == .one) {
       emojiAutoActionRepeatPossible = true
     }
   }
@@ -890,7 +888,6 @@ class KeyboardViewController: UIInputViewController {
   // The bar that displays language logic or is typed into for Scribe commands.
   @IBOutlet var commandBar: CommandBar!
   @IBOutlet var commandBarShadow: UIButton!
-  @IBOutlet var commandBarBlend: UILabel!
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
@@ -915,7 +912,6 @@ class KeyboardViewController: UIInputViewController {
   func linkShadowBlendElements() {
     scribeKey.shadow = scribeKeyShadow
     commandBar.shadow = commandBarShadow
-    commandBar.blend = commandBarBlend
   }
 
   // Buttons used to trigger Scribe command functionality.
@@ -1359,8 +1355,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
       if controllerLanguage == "German"
-        && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState)
-      {
+        && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
         formKeyBR.isUserInteractionEnabled = false
       }
 
@@ -1638,8 +1633,7 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPhone
           && key == "y"
           && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate
-        {
+          && commandState != .translate {
           leftPadding = keyWidth / 3
           addPadding(to: stackView2, width: leftPadding, key: "y")
         }
@@ -1647,8 +1641,7 @@ class KeyboardViewController: UIInputViewController {
           && key == "a"
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate)
-        {
+            || commandState == .translate) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
         }
@@ -1657,8 +1650,7 @@ class KeyboardViewController: UIInputViewController {
           && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate)
-        {
+            || commandState == .translate) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "a")
         }
@@ -1667,8 +1659,7 @@ class KeyboardViewController: UIInputViewController {
           && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate)
-        {
+            || commandState == .translate) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "@")
         }
@@ -1676,8 +1667,7 @@ class KeyboardViewController: UIInputViewController {
           && key == "€"
           && !usingExpandedKeyboard
           && (controllerLanguage == "Portuguese"
-            || commandState == .translate)
-        {
+            || commandState == .translate) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "€")
         }
@@ -1765,8 +1755,7 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPhone
           && key == "m"
           && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate
-        {
+          && commandState != .translate {
           rightPadding = keyWidth / 3
           addPadding(to: stackView2, width: rightPadding, key: "m")
         }
@@ -1774,8 +1763,7 @@ class KeyboardViewController: UIInputViewController {
           && key == "l"
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate)
-        {
+            || commandState == .translate) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
         }
@@ -2088,7 +2076,6 @@ class KeyboardViewController: UIInputViewController {
       scribeKey.setPartialCornerRadius()
 
       commandBar.backgroundColor = commandBarColor
-      commandBarBlend.backgroundColor = commandBarColor
       commandBar.textColor = keyCharColor
       commandBar.set()
       commandBar.setCornerRadiusAndShadow()
@@ -2190,8 +2177,7 @@ class KeyboardViewController: UIInputViewController {
             .conjugate,
             .selectVerbConjugation,
             .selectCaseDeclension,
-            .plural].contains(commandState)
-        { // escape
+            .plural].contains(commandState) { // escape
           commandState = .idle
           deCaseVariantDeclensionState = .disabled
         } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
@@ -2574,7 +2560,11 @@ class KeyboardViewController: UIInputViewController {
       capsLockPossible = true
 
     case "123", ".?123":
-      usingExpandedKeyboard == true ? changeKeyboardToSymbolKeys() : changeKeyboardToNumberKeys()
+    if usingExpandedKeyboard {
+        changeKeyboardToSymbolKeys()
+    } else {
+        changeKeyboardToNumberKeys()
+    }
 
     case "#+=":
       changeKeyboardToSymbolKeys()
@@ -2726,8 +2716,7 @@ class KeyboardViewController: UIInputViewController {
       if touch.tapCount == 2
         && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
         && proxy.documentContextBeforeInput?.count != 1
-        && doubleSpacePeriodPossible
-      {
+        && doubleSpacePeriodPossible {
         // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
         if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
           proxy.deleteBackward()
