@@ -65,8 +65,6 @@ class CommandBar: UILabel {
     addInfoButton()
     backgroundColor = commandBarColor
     blend.backgroundColor = commandBarColor
-    layer.borderColor = commandBarBorderColor
-    layer.borderWidth = 1.0
     textAlignment = NSTextAlignment.left
     if DeviceType.isPhone {
       font = .systemFont(ofSize: frame.height * 0.4725)
