@@ -15,7 +15,6 @@ disabled_rules:
   - orphaned_doc_comment
   - blanket_disable_command
   - for_where
-  - empty_enum_arguments
 
 identifier_name:
   min_length: 1
