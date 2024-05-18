@@ -195,8 +195,7 @@ func returnDeclension(keyPressed: UIButton) {
 func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   // Cancel via a return press.
   if let commandBarText = commandBar.text,
-     commandBarText == conjugatePromptAndCursor || commandBarText == conjugatePromptAndCursor
-  {
+     commandBarText == conjugatePromptAndCursor || commandBarText == conjugatePromptAndCursor {
     return false
   }
 

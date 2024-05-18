@@ -26,8 +26,7 @@ import UIKit
 func queryPlural(commandBar: UILabel) {
   // Cancel via a return press.
   if let commandBarText = commandBar.text,
-     commandBarText == pluralPromptAndCursor || commandBarText == pluralPromptAndCursor
-  {
+     commandBarText == pluralPromptAndCursor || commandBarText == pluralPromptAndCursor {
     return
   }
 
