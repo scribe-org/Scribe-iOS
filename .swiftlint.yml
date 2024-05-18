@@ -13,7 +13,6 @@ disabled_rules:
   # WARNINGS IN PROJECT CURRENTLY
   - todo
   - orphaned_doc_comment
-  - opening_brace
   - blanket_disable_command
   - for_where
   - vertical_whitespace

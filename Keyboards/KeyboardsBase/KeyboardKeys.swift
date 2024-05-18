@@ -72,8 +72,7 @@ class KeyboardKey: UIButton {
       && key != spaceBar
       && key != languageTextForSpaceBar
       && key != "ABC"
-      && key != "АБВ"
-    {
+      && key != "АБВ" {
       capsKey = keyboard[row][idx].capitalized
     } else {
       capsKey = key
@@ -102,8 +101,7 @@ class KeyboardKey: UIButton {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
-        || key == "123"
-      {
+        || key == "123" {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
       } else if key == spaceBar || key == languageTextForSpaceBar {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
@@ -114,8 +112,7 @@ class KeyboardKey: UIButton {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
-        || key == "123"
-      {
+        || key == "123" {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
       } else if key == spaceBar || key == languageTextForSpaceBar {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2)
@@ -132,8 +129,7 @@ class KeyboardKey: UIButton {
     if keyboardState == .letters
       && !isSpecial
       && !["123", "´", spaceBar, languageTextForSpaceBar].contains(key)
-      && shiftButtonState == .normal
-    {
+      && shiftButtonState == .normal {
       titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView {
@@ -158,8 +154,7 @@ class KeyboardKey: UIButton {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
-        || key == "hideKeyboard"
-      {
+        || key == "hideKeyboard" {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
       } else if key == spaceBar || key == languageTextForSpaceBar {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.25)
@@ -172,8 +167,7 @@ class KeyboardKey: UIButton {
       if key == "#+="
         || key == "ABC"
         || key == "АБВ"
-        || key == "hideKeyboard"
-      {
+        || key == "hideKeyboard" {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.25)
       } else if key == spaceBar || key == languageTextForSpaceBar {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
@@ -192,8 +186,7 @@ class KeyboardKey: UIButton {
     if keyboardState == .letters
       && !isSpecial
       && ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(key)
-      && shiftButtonState == .normal
-    {
+      && shiftButtonState == .normal {
       titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView {
@@ -229,13 +222,11 @@ class KeyboardKey: UIButton {
     } else if key == "delete"
       || key == "#+="
       || key == "shift"
-      || key == "selectKeyboard"
-    {
+      || key == "selectKeyboard" {
       // Cancel Russian keyboard key resizing if translating as the keyboard is English.
       if controllerLanguage == "Russian"
         && keyboardState == .letters
-        && commandState != .translate
-      {
+        && commandState != .translate {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       } else {
@@ -245,8 +236,7 @@ class KeyboardKey: UIButton {
     } else if key == "123"
       || key == ".?123"
       || key == "return"
-      || key == "hideKeyboard"
-    {
+      || key == "hideKeyboard" {
       if row == 2 {
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
@@ -255,8 +245,7 @@ class KeyboardKey: UIButton {
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
       }
     } else if (keyboardState == .numbers || keyboardState == .symbols)
-      && row == 2
-    {
+      && row == 2 {
       // Make second row number and symbol keys wider for iPhones.
       widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.4).isActive = true
     } else if key != spaceBar && key != languageTextForSpaceBar {
@@ -301,8 +290,7 @@ class KeyboardKey: UIButton {
         if key == "return"
           && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
           && row == 1
-          && DeviceType.isPad
-        {
+          && DeviceType.isPad {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
         } else {
@@ -323,8 +311,7 @@ class KeyboardKey: UIButton {
         if key == "return"
           && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
           && row == 1
-          && DeviceType.isPad
-        {
+          && DeviceType.isPad {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
         } else {

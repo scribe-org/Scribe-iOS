@@ -274,12 +274,10 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
     var labelVertPosition = frame.origin.y - key.frame.height / 1.75
     // non-capital characters should be higher for portrait phone views.
     if displayChar == char, DeviceType.isPhone, !isLandscapeView,
-       !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char)
-    {
+       !["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(char) {
       labelVertPosition = frame.origin.y - key.frame.height / 1.6
     } else if DeviceType.isPad,
-              isLandscapeView
-    {
+              isLandscapeView {
       labelVertPosition = frame.origin.y - key.frame.height / 2
     }
 
