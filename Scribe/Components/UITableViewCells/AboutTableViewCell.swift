@@ -59,7 +59,9 @@ final class AboutTableViewCell: UITableViewCell {
     if section.hasNestedNavigation {
       let disclosureIcon = UIImage(systemName: "chevron.right")
       let accessory  = UIImageView(
-        frame:CGRect(x:0, y:0, width:(disclosureIcon?.size.width)!, height:(disclosureIcon?.size.height)!)
+        frame: CGRect(
+          x: 0, y: 0, width: (disclosureIcon?.size.width)!, height: (disclosureIcon?.size.height)!
+        )
       )
       accessory.image = disclosureIcon
       accessory.tintColor = menuOptionColor
