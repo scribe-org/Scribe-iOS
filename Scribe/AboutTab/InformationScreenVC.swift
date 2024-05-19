@@ -116,6 +116,9 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     }
     textView.textColor = keyCharColor
+    textView.linkTextAttributes = [
+      NSAttributedString.Key.foregroundColor: linkBlueColor
+    ]
     iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
     iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }

@@ -143,10 +143,6 @@ class InstallationVC: UIViewController {
 
     // Set link attributes for all textViews.
     for textView in allTextViews {
-      guard let linkBlueColor = UIColor(named: "linkBlue") else {
-        fatalError("Failed to load linkBlue color.")
-      }
-
       textView.linkTextAttributes = [
         NSAttributedString.Key.foregroundColor: linkBlueColor,
         NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue

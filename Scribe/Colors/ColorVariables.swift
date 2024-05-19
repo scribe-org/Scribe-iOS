@@ -38,6 +38,7 @@ var keyShadowColor = UIColor(.keyShadow).cgColor
 
 var menuOptionColor = UIColor(.menuOption)
 var lightWhiteDarkBlackColor = UIColor(.lightWhiteDarkBlack)
+var linkBlueColor = UIColor(.linkBlue)
 var scribeCTAColor = UIColor(.scribeCTA)
 var scribeAppBackgroundColor = UIColor(.scribeAppBackground)
 
