@@ -128,21 +128,27 @@ class InformationScreenVC: UIViewController {
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     case "DE":
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     default:
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     }
     textView.textColor = keyCharColor
     iconImageView.image = UIImage.availableIconImage(with: "doc.text")
@@ -157,21 +163,27 @@ class InformationScreenVC: UIViewController {
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     case "DE":
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     default:
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     }
     textView.textColor = keyCharColor
     iconImageView.image = UIImage.availableIconImage(with: "wikimediaInfoPage")

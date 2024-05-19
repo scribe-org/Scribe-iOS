@@ -26,7 +26,9 @@ var fontSize = CGFloat(0)
 /// - Parameters
 ///  - left: the left attributed string to concatenate.
 ///  - right: the right attributed string to concatenate.
-func concatAttributedStrings(left: NSAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+func concatAttributedStrings(
+  left: NSAttributedString, right: NSAttributedString
+) -> NSMutableAttributedString {
   let result = NSMutableAttributedString()
   result.append(left)
   result.append(right)
@@ -70,7 +72,9 @@ func addTabStops(attributedOriginalText: NSMutableAttributedString, links: [Stri
 
   for element in links {
     let linkRange = textToAddIndentation.mutableString.range(of: element)
-    textToAddIndentation.addAttribute(NSAttributedString.Key.paragraphStyle, value: listParagraphStyle, range: linkRange)
+    textToAddIndentation.addAttribute(
+      NSAttributedString.Key.paragraphStyle, value: listParagraphStyle, range: linkRange
+    )
   }
 
   return textToAddIndentation
@@ -125,7 +129,11 @@ func getCenteredImagesForWikimediaAndScribe(imageString: String, imageWidth: CGF
     imageAttachment.bounds = CGRect(origin: .zero, size: CGSize(width: imageWidth, height: imageHeight))
 
     let imageAttributedString = NSMutableAttributedString(attachment: imageAttachment)
-    imageAttributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: imageParagraphStyle, range: imageAttributedString.mutableString.range(of: imageAttributedString.string))
+    imageAttributedString.addAttribute(
+      NSAttributedString.Key.paragraphStyle,
+      value: imageParagraphStyle,
+      range: imageAttributedString.mutableString.range(of: imageAttributedString.string)
+    )
 
     return imageAttributedString
   }
@@ -150,7 +158,11 @@ func switchAttachmentOnThemeChange(for attributedString: NSAttributedString) -> 
     let imageParagraphStyle = NSMutableParagraphStyle()
     imageParagraphStyle.alignment = .center
     let imageAttributedString = NSMutableAttributedString(attachment: attachment)
-    imageAttributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: imageParagraphStyle, range: imageAttributedString.mutableString.range(of: imageAttributedString.string))
+    imageAttributedString.addAttribute(
+      NSAttributedString.Key.paragraphStyle,
+      value: imageParagraphStyle,
+      range: imageAttributedString.mutableString.range(of: imageAttributedString.string)
+    )
 
     mutableString.replaceCharacters(in: range, with: imageAttributedString)
   }
@@ -210,13 +222,19 @@ func setWikimediaAndScribe(text: [String], fontSize: CGFloat, imageWidth: CGFloa
   var attributedTextBySections = [NSMutableAttributedString]()
 
   for section in text {
-    let attributedSection = NSMutableAttributedString(string: section, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+    let attributedSection = NSMutableAttributedString(
+      string: section, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+    )
     attributedTextBySections.append(attributedSection)
   }
 
-  let wikidataLogoString = getCenteredImagesForWikimediaAndScribe(imageString: "wikidata.logo", imageWidth: imageWidth)
+  let wikidataLogoString = getCenteredImagesForWikimediaAndScribe(
+    imageString: "wikidata.logo", imageWidth: imageWidth
+  )
 
-  let wikipediaLogoString = getCenteredImagesForWikimediaAndScribe(imageString: "wikipedia.logo", imageWidth: imageWidth)
+  let wikipediaLogoString = getCenteredImagesForWikimediaAndScribe(
+    imageString: "wikipedia.logo", imageWidth: imageWidth
+  )
 
   let wikimediaAndScribeTextWithImages = attributedTextBySections[0]
   wikimediaAndScribeTextWithImages.append(wikidataLogoString)

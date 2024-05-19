@@ -24,12 +24,18 @@ import UIKit
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
 func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
-  var settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+  var settingsSymbolConfig = UIImage.SymbolConfiguration(
+    pointSize: fontSize * 0.2, weight: .medium, scale: .medium
+  )
   if DeviceType.isPad {
     if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-      settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.05, weight: .medium, scale: .medium)
+      settingsSymbolConfig = UIImage.SymbolConfiguration(
+        pointSize: fontSize * 0.05, weight: .medium, scale: .medium
+      )
     } else {
-      settingsSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+      settingsSymbolConfig = UIImage.SymbolConfiguration(
+        pointSize: fontSize * 0.15, weight: .medium, scale: .medium
+      )
     }
   }
   guard let settingsSymbol = UIImage(systemName: "gearshape", withConfiguration: settingsSymbolConfig) else {
@@ -44,15 +50,23 @@ func getSettingsSymbol(fontSize: CGFloat) -> UIImage {
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
 func getPrivacySymbol(fontSize: CGFloat) -> UIImage {
-  var privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
+  var privacySymbolConfig = UIImage.SymbolConfiguration(
+    pointSize: fontSize * 0.25, weight: .medium, scale: .medium
+  )
   if DeviceType.isPad {
     if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-      privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+      privacySymbolConfig = UIImage.SymbolConfiguration(
+        pointSize: fontSize * 0.15, weight: .medium, scale: .medium
+      )
     } else {
-      privacySymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+      privacySymbolConfig = UIImage.SymbolConfiguration(
+        pointSize: fontSize * 0.2, weight: .medium, scale: .medium
+      )
     }
   }
-  guard let privacySymbol = UIImage(systemName: "lock.shield", withConfiguration: privacySymbolConfig) else {
+  guard let privacySymbol = UIImage(
+    systemName: "lock.shield", withConfiguration: privacySymbolConfig
+  ) else {
     fatalError("Failed to create privacy symbol image.")
   }
 
@@ -63,12 +77,18 @@ func getRequiredIconForMenu(fontSize: CGFloat, imageName: String) -> UIImage {
   if let image = UIImage(named: imageName) {
     return image
   } else {
-    var iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.25, weight: .medium, scale: .medium)
+    var iconSymbolConfig = UIImage.SymbolConfiguration(
+      pointSize: fontSize * 0.25, weight: .medium, scale: .medium
+    )
     if DeviceType.isPad {
       if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-        iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.15, weight: .medium, scale: .medium)
+        iconSymbolConfig = UIImage.SymbolConfiguration(
+          pointSize: fontSize * 0.15, weight: .medium, scale: .medium
+        )
       } else {
-        iconSymbolConfig = UIImage.SymbolConfiguration(pointSize: fontSize * 0.2, weight: .medium, scale: .medium)
+        iconSymbolConfig = UIImage.SymbolConfiguration(
+          pointSize: fontSize * 0.2, weight: .medium, scale: .medium
+        )
       }
     }
 
