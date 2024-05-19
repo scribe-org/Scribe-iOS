@@ -36,7 +36,9 @@ var commandBarPlaceholderColorCG = UIColor(.commandBarPlaceholder).cgColor
 var keyboardBgColor = UIColor(.keyboardBackground)
 var keyShadowColor = UIColor(.keyShadow).cgColor
 
+var appBtnColor = UIColor(.appBtn)
 var menuOptionColor = UIColor(.menuOption)
+var lightTextDarkCTA = UIColor(.lightTextDarkCTA)
 var lightWhiteDarkBlackColor = UIColor(.lightWhiteDarkBlack)
 var linkBlueColor = UIColor(.linkBlue)
 var scribeCTAColor = UIColor(.scribeCTA)

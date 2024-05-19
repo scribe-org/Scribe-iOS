@@ -176,7 +176,7 @@
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" name="scribeCTA"/>
+                                            <color key="backgroundColor" name="appBtn"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="3gB-ix-8Gq" secondAttribute="bottom" id="3zh-t3-d71"/>
                                                 <constraint firstItem="3gB-ix-8Gq" firstAttribute="top" secondItem="IUx-l8-ZuO" secondAttribute="top" id="3zq-SH-hyN"/>
@@ -219,7 +219,7 @@
                         <outlet property="footerButton" destination="3gB-ix-8Gq" id="sQ7-oh-pis"/>
                         <outlet property="footerFrame" destination="IUx-l8-ZuO" id="zei-iv-IbX"/>
                         <outlet property="parentTable" destination="R98-aa-uZS" id="5wJ-1H-Zp2"/>
-                        <segue destination="ZA3-mW-CXa" kind="show" id="WZJ-vL-yPU"/>
+                        <segue destination="ZA3-mW-CXa" kind="show" identifier="View keyboard settings" id="WZJ-vL-yPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-Lq-Rf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,6 +431,9 @@
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="keyboard" catalog="system" width="128" height="78"/>
         <image name="linkCornerBackground" width="1024" height="1024"/>
+        <namedColor name="appBtn">
+            <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="keyChar">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -438,13 +441,10 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="linkBlue">
-            <color red="0.2196078431372549" green="0.49411764705882355" blue="0.6705882352941176" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16470588235294117" green="0.49411764705882355" blue="0.66666666666666663" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scribeAppBackground">
             <color red="0.36862745098039218" green="0.70980392156862748" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="scribeCTA">
-            <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

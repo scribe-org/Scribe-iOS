@@ -89,9 +89,21 @@ final class SettingsViewController: UIViewController {
     footerButton.setTitle("Install keyboard", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
-    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.05
-    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.05
-    footerButton.clipsToBounds = true
+    footerButton.backgroundColor = appBtnColor
+    if UITraitCollection.current.userInterfaceStyle == .dark {
+      footerButton.layer.borderWidth = 1
+      footerButton.layer.borderColor = scribeCTAColor.cgColor
+    }
+    footerButton.setTitleColor(lightTextDarkCTA, for: .normal)
+    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.025
+    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.025
+    footerButton.layer.shadowColor = UIColor(red: 0.247, green: 0.247, blue: 0.275, alpha: 0.25).cgColor
+    footerButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+    footerButton.layer.shadowOpacity = 1.0
+    footerButton.layer.masksToBounds = false
+
+    footerButton.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
+    footerButton.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 }
 
@@ -199,5 +211,28 @@ extension SettingsViewController: UITableViewDelegate {
     headerView.addSubview(label)
 
     return headerView
+  }
+
+  /// Function to open the settings app that is targeted by settingsBtn.
+  @objc func openSettingsApp() {
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      fatalError("Failed to create settings URL.")
+    }
+    UIApplication.shared.open(settingsURL)
+  }
+
+  /// Function to change the key coloration given a touch down.
+  ///
+  /// - Parameters
+  ///  - sender: the button that has been pressed.
+  @objc func keyTouchDown(_ sender: UIButton) {
+    sender.backgroundColor = .black
+    sender.alpha = 0.2
+
+    // Bring sender's opacity back up to fully opaque and replace the background color.
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+      sender.backgroundColor = .clear
+      sender.alpha = 1.0
+    }
   }
 }

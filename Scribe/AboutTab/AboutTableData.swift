@@ -62,13 +62,13 @@ struct AboutTableData {
       section: [
         Section(
           sectionTitle: "Rate Scribe",
-          imageString: "star",
+          imageString: "star.fill",
           sectionState: .rateScribe,
           externalLink: true
         ),
         Section(
           sectionTitle: "Report a bug",
-          imageString: "ant",
+          imageString: "ladybug",
           sectionState: .bugReport,
           externalLink: true
         ),

@@ -27,6 +27,7 @@ enum ScribeColor: String {
   case annotateGreen
   case annotateOrange
   case annotateTitle
+  case appBtn
   case commandBar
   case commandBarPlaceholder
   case commandKey
@@ -36,6 +37,7 @@ enum ScribeColor: String {
   case keyPressed
   case keyShadow
   case keySpecial
+  case lightTextDarkCTA
   case lightWhiteDarkBlack
   case linkBlue
   case menuOption
