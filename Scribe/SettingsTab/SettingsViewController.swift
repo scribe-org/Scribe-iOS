@@ -39,9 +39,14 @@ final class SettingsViewController: UIViewController {
     super.viewDidLoad()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
-    navigationItem.backButtonTitle = NSLocalizedString("settings.title.backButton", comment: "The back button's title for the settings screen")
+    navigationItem.backButtonTitle = NSLocalizedString(
+      "settings.title.backButton", comment: "The back button's title for the settings screen"
+    )
 
-    parentTable.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier)
+    parentTable.register(
+      UINib(nibName: "InfoChildTableViewCell", bundle: nil),
+      forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier
+    )
     parentTable.dataSource = self
     parentTable.delegate = self
     parentTable.backgroundColor = .clear
@@ -102,7 +107,10 @@ extension SettingsViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as? InfoChildTableViewCell else {
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      for: indexPath
+    ) as? InfoChildTableViewCell else {
       fatalError("Failed to dequeue InfoChildTableViewCell")
     }
 
@@ -110,6 +118,7 @@ extension SettingsViewController: UITableViewDataSource {
     let setting = section.section[indexPath.row]
 
     cell.configureCell(for: setting)
+    cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
   }
@@ -124,11 +133,13 @@ extension SettingsViewController: UITableViewDelegate {
 
     switch section.sectionState {
     case .specificLang:
-      if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
-        // Copy base settings
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "TableViewTemplateViewController"
+      ) as? TableViewTemplateViewController {
+        // Copy base settings.
         var data = SettingsTableData.languageSettingsData
 
-        // Check if the device is an iPad, and if so don't show the option to put a period and comma on the ABC characters.
+        // Check if the device is an iPad to determine period and comma on the ABC characters option.
         let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
             s.sectionTitle.elementsEqual("Period and comma on ABC")
         }) ?? -1
@@ -149,12 +160,14 @@ extension SettingsViewController: UITableViewDelegate {
           let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
           print(accentKeySettings)
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-          data[0].section.insert(Section(
-            sectionTitle: "Disable accent characters",
-            imageString: "info.circle",
-            hasToggle: true,
-            sectionState: .none(.toggleAccentCharacters)
-          ), at: 1)
+          data[0].section.insert(
+            Section(
+              sectionTitle: "Disable accent characters",
+              imageString: "info.circle",
+              hasToggle: true,
+              sectionState: .none(.toggleAccentCharacters)
+            ), at: 1
+          )
         }
 
         viewController.configureTable(for: data, parentSection: section)

@@ -69,7 +69,15 @@ final class InfoChildTableViewCell: UITableViewCell {
     }
 
     if !section.hasToggle {
-      accessoryType = .disclosureIndicator
+      let disclosureIcon = UIImage(systemName: "chevron.right")
+      let accessory  = UIImageView(
+        frame: CGRect(
+          x: 0, y: 0, width: (disclosureIcon?.size.width)!, height: (disclosureIcon?.size.height)!
+        )
+      )
+      accessory.image = disclosureIcon
+      accessory.tintColor = menuOptionColor
+      accessoryView = accessory
       toggleSwitch.isHidden = true
     } else {
       accessoryType = .none

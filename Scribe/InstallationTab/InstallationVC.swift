@@ -111,9 +111,6 @@ class InstallationVC: UIViewController {
       view.isUserInteractionEnabled = false
       view.backgroundColor = .clear
     }
-
-    topIconPhone.tintColor = .white
-    topIconPad.tintColor = .white
   }
 
   /// Sets properties for the app screen given the current device.
