@@ -182,7 +182,7 @@ extension SettingsViewController: UITableViewDelegate {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: 32))
     label.text = tableData[section].headingTitle
     label.font = UIFont.preferredFont(forTextStyle: .headline)
-    label.textColor = .black
+    label.textColor = keyCharColor
     headerView.addSubview(label)
 
     return headerView

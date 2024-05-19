@@ -1217,6 +1217,7 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				1406B7832A2DFCA2001DF45B /* Components */,
@@ -1355,7 +1356,6 @@
 			isa = PBXGroup;
 			children = (
 				30453961293B9D05003AE55B /* ToolTip */,
-				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				D171945627AF23680038660B /* ScribeFunctionality */,
 				38DD94F022D6A40000FF8845 /* Extensions.swift */,
 				D190B2492741B31F00705659 /* InterfaceVariables.swift */,

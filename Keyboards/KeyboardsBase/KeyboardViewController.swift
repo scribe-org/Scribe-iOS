@@ -278,8 +278,8 @@ class KeyboardViewController: UIInputViewController {
         leftAutoPartition.backgroundColor = specialKeyColor
         rightAutoPartition.backgroundColor = specialKeyColor
       } else if UITraitCollection.current.userInterfaceStyle == .dark {
-        leftAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-        rightAutoPartition.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+        leftAutoPartition.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        rightAutoPartition.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
       }
     }
   }
@@ -351,13 +351,13 @@ class KeyboardViewController: UIInputViewController {
     styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
     styleIconBtn(
       btn: shiftFormsDisplayLeft,
-      color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+      color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
       iconName: "chevron.left"
     )
     styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
     styleIconBtn(
       btn: shiftFormsDisplayRight,
-      color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+      color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
       iconName: "chevron.right"
     )
   }
@@ -384,8 +384,8 @@ class KeyboardViewController: UIInputViewController {
           padEmojiDivider0.backgroundColor = specialKeyColor
           padEmojiDivider1.backgroundColor = specialKeyColor
         } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarBorderColor)
-          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
         }
         conditionallyHideEmojiDividers()
       } else if !emojisToDisplay[1].isEmpty {
@@ -398,7 +398,7 @@ class KeyboardViewController: UIInputViewController {
         if UITraitCollection.current.userInterfaceStyle == .light {
           phoneEmojiDivider.backgroundColor = specialKeyColor
         } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarBorderColor)
+          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
         }
         conditionallyHideEmojiDividers()
       } else {
@@ -999,14 +999,19 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x2 conjugation display.
   func setFormDisplay3x2View() {
-    setBtn(btn: formKeyFPS, color: keyColor, name: "firstPersonSingular", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeySPS, color: keyColor, name: "secondPersonSingular", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyTPS, color: keyColor, name: "thirdPersonSingular", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyFPP, color: keyColor, name: "firstPersonPlural", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeySPP, color: keyColor, name: "secondPersonPlural", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyTPP, color: keyColor, name: "thirdPersonPlural", canBeCapitalized: false, isSpecial: false)
+    let conjugationNames: [String] = [
+      "firstPersonSingular",
+      "secondPersonSingular",
+      "thirdPersonSingular",
+      "firstPersonPlural",
+      "secondPersonPlural",
+      "thirdPersonPlural"
+    ]
 
-    for btn in get3x2FormDisplayButtons() {
+    let displayBtns = get3x2FormDisplayButtons()
+
+    for (idx, btn) in displayBtns.enumerated() {
+      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
       activateBtn(btn: btn)
     }
 
@@ -1049,11 +1054,14 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
   func setFormDisplay3x1View() {
-    setBtn(btn: formKeyTop, color: keyColor, name: "formTop", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyMiddle, color: keyColor, name: "formMiddle", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyBottom, color: keyColor, name: "formBottom", canBeCapitalized: false, isSpecial: false)
+    let conjugationNames: [String] = [
+      "formTop", "formMiddle", "formBottom"
+    ]
 
-    for btn in get3x1FormDisplayButtons() {
+    let displayBtns = get3x1FormDisplayButtons()
+
+    for (idx, btn) in displayBtns.enumerated() {
+      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
       activateBtn(btn: btn)
     }
 
@@ -1098,12 +1106,14 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
   func setFormDisplay2x2View() {
-    setBtn(btn: formKeyTL, color: keyColor, name: "formTopLeft", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyTR, color: keyColor, name: "formTopRight", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyBL, color: keyColor, name: "formBottomLeft", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyBR, color: keyColor, name: "formBottomRight", canBeCapitalized: false, isSpecial: false)
+    let conjugationNames: [String] = [
+      "formTopLeft", "formTopRight", "formBottomLeft", "formBottomRight"
+    ]
 
-    for btn in get2x2FormDisplayButtons() {
+    let displayBtns = get2x2FormDisplayButtons()
+
+    for (idx, btn) in displayBtns.enumerated() {
+      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
       activateBtn(btn: btn)
       btn.isEnabled = true
     }
@@ -1145,10 +1155,14 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
   func setFormDisplay1x2View() {
-    setBtn(btn: formKeyLeft, color: keyColor, name: "formLeft", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: formKeyRight, color: keyColor, name: "formRight", canBeCapitalized: false, isSpecial: false)
+    let conjugationNames: [String] = [
+      "formLeft", "formRight"
+    ]
 
-    for btn in get1x2FormDisplayButtons() {
+    let displayBtns = get1x2FormDisplayButtons()
+
+    for (idx, btn) in displayBtns.enumerated() {
+      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
       activateBtn(btn: btn)
     }
 
@@ -1187,9 +1201,14 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets up all buttons and labels that are associated with the 1x1 conjugation display.
   func setFormDisplay1x1View() {
-    setBtn(btn: formKeySingle, color: keyColor, name: "formSingle", canBeCapitalized: false, isSpecial: false)
+    let conjugationNames: [String] = [
+      "formSingle"
+    ]
 
-    for btn in get1x1FormDisplayButtons() {
+    let displayBtns = get1x1FormDisplayButtons()
+
+    for (idx, btn) in displayBtns.enumerated() {
+      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
       activateBtn(btn: btn)
     }
 
@@ -1311,7 +1330,7 @@ class KeyboardViewController: UIInputViewController {
         + get1x1FormDisplayLabels()
     for lbl in allFormDisplayLabels {
       lbl.backgroundColor = UIColor.clear
-      lbl.setTitleColor(UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : commandBarColor, for: .normal)
+      lbl.setTitleColor(commandBarPlaceholderColor, for: .normal)
       lbl.isUserInteractionEnabled = false
       if DeviceType.isPad {
         lbl.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
@@ -2094,11 +2113,11 @@ class KeyboardViewController: UIInputViewController {
       activateConjugationDisplay()
       styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: shiftFormsDisplayLeft,
-                   color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                   color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
                    iconName: "chevron.left")
       styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
       styleIconBtn(btn: shiftFormsDisplayRight,
-                   color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : specialKeyColor,
+                   color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
                    iconName: "chevron.right")
 
       if commandState == .selectVerbConjugation {

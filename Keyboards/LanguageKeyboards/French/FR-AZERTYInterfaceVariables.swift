@@ -174,7 +174,7 @@ func setFRKeyboardLayout() {
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
-  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   conjugateKeyLbl = "Conjuguer"
   conjugatePlaceholder = "Entrez un verbe"
@@ -182,7 +182,7 @@ func setFRKeyboardLayout() {
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
-  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   pluralKeyLbl = "Pluriel"
   pluralPlaceholder = "Entrez un nom"
@@ -190,6 +190,6 @@ func setFRKeyboardLayout() {
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
-  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
   alreadyPluralMsg = "Déjà pluriel"
 }

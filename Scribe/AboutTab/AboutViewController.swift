@@ -43,6 +43,7 @@ extension AboutViewController {
       fatalError("Failed to dequeue AboutTableViewCell.")
     }
     cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
+    cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
   }

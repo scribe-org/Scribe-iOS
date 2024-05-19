@@ -162,12 +162,12 @@ class InstallationVC: UIViewController {
     let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize * 0.9)
     topIconPhone.image = settingsSymbol
     topIconPad.image = settingsSymbol
-    topIconPhone.tintColor = .init(.keyChar)
-    topIconPad.tintColor = .init(.keyChar)
+    topIconPhone.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
+    topIconPad.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
 
     // Enable installation directions and GitHub notice elements.
     settingsBtn.isUserInteractionEnabled = true
-    appTextBackground.backgroundColor = UIColor(named: "commandBar")
+    appTextBackground.backgroundColor = lightWhiteDarkBlackColor
 
     // Set the texts for the fields.
     switch Locale.userSystemLanguage {

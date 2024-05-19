@@ -80,7 +80,7 @@ extension BaseTableViewController {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: sectionHeaderHeight))
     label.text = dataSet[section].headingTitle
     label.font = UIFont.preferredFont(forTextStyle: .headline)
-    label.textColor = .black
+    label.textColor = keyCharColor
     headerView.addSubview(label)
 
     return headerView

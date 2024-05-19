@@ -66,7 +66,7 @@ class InformationScreenVC: UIViewController {
     scrollContainerView.backgroundColor = .clear
     viewForApplyingShadow.backgroundColor = .clear
 
-    contentContainerView.backgroundColor = UIColor(named: "commandBar")
+    contentContainerView.backgroundColor = lightWhiteDarkBlackColor
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
 
     cornerImageView.clipsToBounds = true
@@ -117,7 +117,7 @@ class InformationScreenVC: UIViewController {
     }
     textView.textColor = keyCharColor
     iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupLicensesPage() {
@@ -145,8 +145,8 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "doc.text")
+    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupWikimediaAndScribePage() {
@@ -174,7 +174,6 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage.availableIconImage(with: "wikimedia")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "wikimediaInfoPage")
   }
 }
