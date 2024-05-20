@@ -16,8 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-//  The English app text for the Scribe app.
-//
 
 import UIKit
 
@@ -37,82 +35,120 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   \n
   1.\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  
+  var settingsLink = NSMutableAttributedString()
+  if #available(iOS 17.2.0, *) {
+    settingsLink = addHyperLinks(
+      originalText: "Open Scribe settings",
+      links: ["Open Scribe settings": "MakeTextLink"], // placeholder as there's a button over it
+      fontSize: fontSize
+    )
 
-  let settingsLink = addHyperLinks(
-    originalText: "Open Settings",
-    links: ["Open Settings": "<makeTextLink>"], // placeholder as there's a button over it
-    fontSize: fontSize
-  )
+    let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
-  let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
+    let installDirections = NSMutableAttributedString(string: """
+    \n
+    2. Select Keyboards
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  let installDirections = NSMutableAttributedString(string: """
-  \n
-  2. In General do the following:
+    installDirections.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 12, length: "Keyboards".count)
+    )
 
-        Keyboard
+    let finalSteps = NSMutableAttributedString(string: """
+    \n
+    3. Activate keyboards that you want to use
+    
+    4. When typing press\u{0020}
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+    installDirections.append(finalSteps)
 
-  installDirections.addAttribute(
-    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 8, length: "General".count)
-  )
-  installDirections.addAttribute(
-    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 41, length: "Keyboard".count)
-  )
+    installDirections.append(globeString)
 
-  installDirections.append(NSAttributedString(string: "\n         "))
+    installDirections.append(NSMutableAttributedString(string: """
+    \u{0020}to select keyboards
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
-  installDirections.append(arrowString)
+    return concatAttributedStrings(left: installStart, right: installDirections)
+  } else {
+    settingsLink = addHyperLinks(
+      originalText: "Open Settings",
+      links: ["Open Settings": "MakeTextLink"], // placeholder as there's a button over it
+      fontSize: fontSize
+    )
 
-  let keyboardsStep = NSMutableAttributedString(string: """
-  \u{0020} Keyboards
+    let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+    let installDirections = NSMutableAttributedString(string: """
+    \n
+    2. In General do the following:
 
-  keyboardsStep.addAttribute(
-    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 2, length: "Keyboards".count)
-  )
+          Keyboard
 
-  installDirections.append(keyboardsStep)
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  installDirections.append(NSMutableAttributedString(
-    string: "\n                    ",
-    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
-  )
-  )
+    installDirections.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 8, length: "General".count)
+    )
+    installDirections.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 41, length: "Keyboard".count)
+    )
 
-  installDirections.append(arrowString)
+    installDirections.append(NSAttributedString(string: "\n         "))
 
-  let finalSteps = NSMutableAttributedString(string: """
-  \u{0020} Add New Keyboard
+    installDirections.append(arrowString)
 
-  3. Select Scribe and then activate keyboards
+    let keyboardsStep = NSMutableAttributedString(string: """
+    \u{0020} Keyboards
 
-  4. When typing press\u{0020}
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  finalSteps.addAttribute(
-    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 2, length: "Add New Keyboard".count)
-  )
-  finalSteps.addAttribute(
-    NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
-    range: NSRange(location: 30, length: "Scribe".count)
-  )
+    keyboardsStep.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 2, length: "Keyboards".count)
+    )
 
-  installDirections.append(finalSteps)
+    installDirections.append(keyboardsStep)
 
-  installDirections.append(globeString)
+    installDirections.append(NSMutableAttributedString(
+      string: "\n                    ",
+      attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]
+    )
+    )
 
-  installDirections.append(NSMutableAttributedString(string: """
-  \u{0020}to select keyboards
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+    installDirections.append(arrowString)
 
-  return concatAttributedStrings(left: installStart, right: installDirections)
+    let finalSteps = NSMutableAttributedString(string: """
+    \u{0020} Add New Keyboard
+
+    3. Select Scribe and then activate keyboards
+
+    4. When typing press\u{0020}
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+
+    finalSteps.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 2, length: "Add New Keyboard".count)
+    )
+    finalSteps.addAttribute(
+      NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize),
+      range: NSRange(location: 30, length: "Scribe".count)
+    )
+
+    installDirections.append(finalSteps)
+
+    installDirections.append(globeString)
+
+    installDirections.append(NSMutableAttributedString(string: """
+    \u{0020}to select keyboards
+    """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+
+    return concatAttributedStrings(left: installStart, right: installDirections)
+  }
 }
 
 /// Formats and returns the full text for the installation guidelines.
