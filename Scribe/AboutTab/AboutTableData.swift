@@ -24,29 +24,82 @@ struct AboutTableData {
     ParentTableCellModel(
       headingTitle: "Community",
       section: [
-        Section(sectionTitle: "See the code on GitHub", imageString: "github", sectionState: .github, externalLink: true),
-        Section(sectionTitle: "Chat with the team on Matrix", imageString: "matrix", sectionState: .matrix, externalLink: true),
-        Section(sectionTitle: "Share Scribe", imageString: "square.and.arrow.up", sectionState: .shareScribe, externalLink: true),
-//        Section(sectionTitle: "View all Scribe apps", imageString: "scribeIcon", sectionState: .scribeApps, externalLink: true)
-        Section(sectionTitle: "Wikimedia and Scribe", imageString: "wikimedia", hasNestedNavigation: true, sectionState: .wikimedia)
+        Section(
+          sectionTitle: "See the code on GitHub",
+          imageString: "github",
+          sectionState: .github,
+          externalLink: true
+        ),
+        Section(
+          sectionTitle: "Chat with the team on Matrix",
+          imageString: "matrix",
+          sectionState: .matrix,
+          externalLink: true
+        ),
+        Section(
+          sectionTitle: "Share Scribe",
+          imageString: "square.and.arrow.up",
+          sectionState: .shareScribe,
+          externalLink: true
+        ),
+//        Section(
+//          sectionTitle: "View all Scribe apps",
+//          imageString: "scribeIcon",
+//          sectionState: .scribeApps,
+//          externalLink: true
+//        ),
+        Section(
+          sectionTitle: "Wikimedia and Scribe",
+          imageString: "wikimedia",
+          hasNestedNavigation: true,
+          sectionState: .wikimedia
+        )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
       headingTitle: "Feedback and support",
       section: [
-        Section(sectionTitle: "Rate Scribe", imageString: "star", sectionState: .rateScribe, externalLink: true),
-        Section(sectionTitle: "Report a bug", imageString: "ant", sectionState: .bugReport, externalLink: true),
-        Section(sectionTitle: "Send us an email", imageString: "envelope", sectionState: .email, externalLink: true)
-//        Section(sectionTitle: "Reset app hints", imageString: "lightbulb", sectionState: .appHints)
+        Section(
+          sectionTitle: "Rate Scribe",
+          imageString: "star.fill",
+          sectionState: .rateScribe,
+          externalLink: true
+        ),
+        Section(
+          sectionTitle: "Report a bug",
+          imageString: "ladybug",
+          sectionState: .bugReport,
+          externalLink: true
+        ),
+        Section(
+          sectionTitle: "Send us an email",
+          imageString: "envelope",
+          sectionState: .email,
+          externalLink: true
+        )
+//        Section(
+//          sectionTitle: "Reset app hints",
+//          imageString: "lightbulb",sectionState: .appHints
+//        )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
       headingTitle: "Legal",
       section: [
-        Section(sectionTitle: "Privacy policy", imageString: "lock.shield", hasNestedNavigation: true, sectionState: .privacyPolicy),
-        Section(sectionTitle: "Third-party licenses", imageString: "thirdPartyLicenses", hasNestedNavigation: true, sectionState: .licenses)
+        Section(
+          sectionTitle: "Privacy policy",
+          imageString: "lock.shield",
+          hasNestedNavigation: true,
+          sectionState: .privacyPolicy
+        ),
+        Section(
+          sectionTitle: "Third-party licenses",
+          imageString: "doc.text",
+          hasNestedNavigation: true,
+          sectionState: .licenses
+        )
       ],
       hasDynamicData: nil
     )

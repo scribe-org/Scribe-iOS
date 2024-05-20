@@ -22,16 +22,27 @@ import Foundation
 enum SettingsTableData {
   static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("settings.appSettings", comment: "The title of the app settings section"),
+      headingTitle: NSLocalizedString(
+        "settings.appSettings", comment: "The title of the app settings section"
+      ),
       section: [
-        Section(sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"), imageString: "globe", hasToggle: false, sectionState: .appLang)
+        Section(
+          sectionTitle: NSLocalizedString(
+            "settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"
+          ),
+          imageString: "globe",
+          hasToggle: false,
+          sectionState: .appLang
+        )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("settings.installedKeyboards", comment: "The title of the installed keyboards section"),
+      headingTitle: NSLocalizedString(
+        "settings.installedKeyboards", comment: "The title of the installed keyboards section"
+      ),
       section: [
-        //        Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
+        // Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
       ],
       hasDynamicData: .installedKeyboards
     )
@@ -39,29 +50,45 @@ enum SettingsTableData {
 
   static let languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("settings.layout", comment: "The title of the layout section"),
+      headingTitle: NSLocalizedString(
+        "settings.layout", comment: "The title of the layout section"
+      ),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("settings.layout.periodAndComma", comment: "Toggles period and commas for the selected keyboard"),
+          sectionTitle: NSLocalizedString(
+            "settings.layout.periodAndComma",
+            comment: "Toggles period and commas for the selected keyboard"
+          ),
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod),
-          shortDescription: NSLocalizedString("settings.layout.periodAndComma.description", comment: "")
+          shortDescription: NSLocalizedString(
+            "settings.layout.periodAndComma.description", comment: ""
+          )
         ),
         Section(
-          sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", comment: "Toggles accented characters for the selected keyboard"),
+          sectionTitle: NSLocalizedString(
+            "settings.layout.disableAccentCharacters",
+            comment: "Toggles accented characters for the selected keyboard"
+          ),
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.toggleAccentCharacters),
-          shortDescription: NSLocalizedString("settings.layout.disableAccentCharacters.description", comment: "")
+          shortDescription: NSLocalizedString(
+            "settings.layout.disableAccentCharacters.description", comment: ""
+          )
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("settings.functionality", comment: "The title of the functionality section"),
+      headingTitle: NSLocalizedString(
+        "settings.functionality", comment: "The title of the functionality section"
+      ),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("settings.functionality.autoSuggestEmoji", comment: "Toggles the suggestion of Emoji"),
+          sectionTitle: NSLocalizedString(
+            "settings.functionality.autoSuggestEmoji", comment: "Toggles the suggestion of Emoji"
+          ),
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
           shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", comment: "")

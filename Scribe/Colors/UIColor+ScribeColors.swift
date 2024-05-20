@@ -30,7 +30,7 @@ extension UIColor {
     if UIColor(named: color.rawValue) != nil {
       self.init(named: color.rawValue)!
     } else {
-      print("unable to find color named: \(color.rawValue)")
+      print("Unable to find color named: \(color.rawValue)")
       self.init(red: 1, green: 0, blue: 0, alpha: 1)
     }
   }

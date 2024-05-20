@@ -66,9 +66,8 @@ class InformationScreenVC: UIViewController {
     scrollContainerView.backgroundColor = .clear
     viewForApplyingShadow.backgroundColor = .clear
 
-    contentContainerView.backgroundColor = UIColor(named: "commandBar")
+    contentContainerView.backgroundColor = lightWhiteDarkBlackColor
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
-
 
     cornerImageView.clipsToBounds = true
     contentContainerView.clipsToBounds = true
@@ -117,8 +116,11 @@ class InformationScreenVC: UIViewController {
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     }
     textView.textColor = keyCharColor
+    textView.linkTextAttributes = [
+      NSAttributedString.Key.foregroundColor: linkBlueColor
+    ]
     iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupLicensesPage() {
@@ -129,25 +131,31 @@ class InformationScreenVC: UIViewController {
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     case "DE":
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     default:
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setThirdPartyLicenses(fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems)
+      textView.attributedText = setThirdPartyLicenses(
+        fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
+      )
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage.availableIconImage(with: "thirdPartyLicenses")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "doc.text")
+    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupWikimediaAndScribePage() {
@@ -158,24 +166,29 @@ class InformationScreenVC: UIViewController {
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     case "DE":
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     default:
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
         attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
       )
-      textView.attributedText = setWikimediaAndScribe(text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6)
+      textView.attributedText = setWikimediaAndScribe(
+        text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
+      )
     }
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage.availableIconImage(with: "wikimedia")
-    iconImageView.tintColor = keyCharColor
+    iconImageView.image = UIImage.availableIconImage(with: "wikimediaInfoPage")
   }
 }

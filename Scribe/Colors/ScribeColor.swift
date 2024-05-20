@@ -19,7 +19,7 @@
 
 import UIKit
 
-/// All the colors defined in `Assets.xcassets/Colors`
+/// All the colors defined in `Assets.xcassets/Colors`.
 enum ScribeColor: String {
   case annotateRed
   case annotateBlue
@@ -27,20 +27,23 @@ enum ScribeColor: String {
   case annotateGreen
   case annotateOrange
   case annotateTitle
+  case appBtn
   case commandBar
-  case commandBarBorder
-  case commandBarInfoButton
+  case commandBarPlaceholder
   case commandKey
   case key
+  case keyboardBackground
   case keyChar
   case keyPressed
   case keyShadow
   case keySpecial
-  case keyboardBackground
+  case lightTextDarkCTA
+  case lightWhiteDarkBlack
   case linkBlue
+  case menuOption
+  case scribeAppBackground
   case scribeBlue
   case scribeCTA
-  case scribeGray
 
   /// `UIColor` object for the given
   var color: UIColor {

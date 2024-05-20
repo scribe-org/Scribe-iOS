@@ -39,9 +39,14 @@ final class SettingsViewController: UIViewController {
     super.viewDidLoad()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
-    navigationItem.backButtonTitle = NSLocalizedString("settings.title.backButton", comment: "The back button's title for the settings screen")
+    navigationItem.backButtonTitle = NSLocalizedString(
+      "settings.title.backButton", comment: "The back button's title for the settings screen"
+    )
 
-    parentTable.register(UINib(nibName: "InfoChildTableViewCell", bundle: nil), forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier)
+    parentTable.register(
+      UINib(nibName: "InfoChildTableViewCell", bundle: nil),
+      forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier
+    )
     parentTable.dataSource = self
     parentTable.delegate = self
     parentTable.backgroundColor = .clear
@@ -81,12 +86,24 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    footerButton.setTitle("Install keyboard", for: .normal)
+    footerButton.setTitle("Install keyboards", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
-    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.05
-    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.05
-    footerButton.clipsToBounds = true
+    footerButton.backgroundColor = appBtnColor
+    if UITraitCollection.current.userInterfaceStyle == .dark {
+      footerButton.layer.borderWidth = 1
+      footerButton.layer.borderColor = scribeCTAColor.cgColor
+    }
+    footerButton.setTitleColor(lightTextDarkCTA, for: .normal)
+    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.025
+    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.025
+    footerButton.layer.shadowColor = UIColor(red: 0.247, green: 0.247, blue: 0.275, alpha: 0.25).cgColor
+    footerButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+    footerButton.layer.shadowOpacity = 1.0
+    footerButton.layer.masksToBounds = false
+
+    footerButton.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
+    footerButton.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
   }
 }
 
@@ -102,7 +119,10 @@ extension SettingsViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as? InfoChildTableViewCell else {
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      for: indexPath
+    ) as? InfoChildTableViewCell else {
       fatalError("Failed to dequeue InfoChildTableViewCell")
     }
 
@@ -110,6 +130,7 @@ extension SettingsViewController: UITableViewDataSource {
     let setting = section.section[indexPath.row]
 
     cell.configureCell(for: setting)
+    cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
   }
@@ -124,13 +145,15 @@ extension SettingsViewController: UITableViewDelegate {
 
     switch section.sectionState {
     case .specificLang:
-      if let viewController = storyboard?.instantiateViewController(identifier: "TableViewTemplateViewController") as? TableViewTemplateViewController {
-        // Copy base settings
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "TableViewTemplateViewController"
+      ) as? TableViewTemplateViewController {
+        // Copy base settings.
         var data = SettingsTableData.languageSettingsData
 
-        // Check if the device is an iPad, and if so don't show the option to put a period and comma on the ABC characters.
-        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
-          s in s.sectionTitle.elementsEqual("Period and comma on ABC")
+        // Check if the device is an iPad to determine period and comma on the ABC characters option.
+        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+            s.sectionTitle.elementsEqual("Period and comma on ABC")
         }) ?? -1
 
         if DeviceType.isPad {
@@ -140,8 +163,8 @@ extension SettingsViewController: UITableViewDelegate {
 
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: {
-          s in s.sectionTitle.elementsEqual("Disable accent characters")
+        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+          s.sectionTitle.elementsEqual("Disable accent characters")
         }) ?? -1
 
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
@@ -149,12 +172,14 @@ extension SettingsViewController: UITableViewDelegate {
           let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
           print(accentKeySettings)
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-          data[0].section.insert(Section(
-            sectionTitle: "Disable accent characters",
-            imageString: "info.circle",
-            hasToggle: true,
-            sectionState: .none(.toggleAccentCharacters)
-          ), at: 1)
+          data[0].section.insert(
+            Section(
+              sectionTitle: "Disable accent characters",
+              imageString: "info.circle",
+              hasToggle: true,
+              sectionState: .none(.toggleAccentCharacters)
+            ), at: 1
+          )
         }
 
         viewController.configureTable(for: data, parentSection: section)
@@ -182,9 +207,32 @@ extension SettingsViewController: UITableViewDelegate {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: 32))
     label.text = tableData[section].headingTitle
     label.font = UIFont.preferredFont(forTextStyle: .headline)
-    label.textColor = .black
+    label.textColor = keyCharColor
     headerView.addSubview(label)
 
     return headerView
+  }
+
+  /// Function to open the settings app that is targeted by settingsBtn.
+  @objc func openSettingsApp() {
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      fatalError("Failed to create settings URL.")
+    }
+    UIApplication.shared.open(settingsURL)
+  }
+
+  /// Function to change the key coloration given a touch down.
+  ///
+  /// - Parameters
+  ///  - sender: the button that has been pressed.
+  @objc func keyTouchDown(_ sender: UIButton) {
+    sender.backgroundColor = .black
+    sender.alpha = 0.2
+
+    // Bring sender's opacity back up to fully opaque and replace the background color.
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+      sender.backgroundColor = .clear
+      sender.alpha = 1.0
+    }
   }
 }

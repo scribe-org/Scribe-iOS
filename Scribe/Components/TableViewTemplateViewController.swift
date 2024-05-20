@@ -63,11 +63,15 @@ final class TableViewTemplateViewController: BaseTableViewController {
 
 extension TableViewTemplateViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoChildTableViewCell.reuseIdentifier, for: indexPath) as? InfoChildTableViewCell else {
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      for: indexPath
+    ) as? InfoChildTableViewCell else {
       fatalError("Failed to dequeue InfoChildTableViewCell.")
     }
     cell.parentSection = parentSection
     cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
+    cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
   }

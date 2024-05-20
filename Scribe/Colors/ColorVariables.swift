@@ -30,12 +30,21 @@ var keyPressedColor = UIColor(.keyPressed)
 
 var commandKeyColor = UIColor(.commandKey)
 var commandBarColor = UIColor(.commandBar)
-var commandBarBorderColor = UIColor(resource: .commandBarBorder).cgColor
+var commandBarPlaceholderColor = UIColor(.commandBarPlaceholder)
+var commandBarPlaceholderColorCG = UIColor(.commandBarPlaceholder).cgColor
 
 var keyboardBgColor = UIColor(.keyboardBackground)
-var keyShadowColor = UIColor(resource: .keyShadow).cgColor
+var keyShadowColor = UIColor(.keyShadow).cgColor
 
-// annotate colors.
+var appBtnColor = UIColor(.appBtn)
+var menuOptionColor = UIColor(.menuOption)
+var lightTextDarkCTA = UIColor(.lightTextDarkCTA)
+var lightWhiteDarkBlackColor = UIColor(.lightWhiteDarkBlack)
+var linkBlueColor = UIColor(.linkBlue)
+var scribeCTAColor = UIColor(.scribeCTA)
+var scribeAppBackgroundColor = UIColor(.scribeAppBackground)
+
+// Annotation colors.
 var annotateRed = UIColor(.annotateRed)
 var annotateBlue = UIColor(.annotateBlue)
 var annotatePurple = UIColor(.annotatePurple)

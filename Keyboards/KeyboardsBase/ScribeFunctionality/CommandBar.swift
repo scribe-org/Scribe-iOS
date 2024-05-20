@@ -83,7 +83,7 @@ class CommandBar: UILabel {
     infoButton.removeFromSuperview()
     infoButton.isHidden = true
     infoButton.setImage(UIImage(systemName: "info.circle.fill"), for: .normal)
-    infoButton.tintColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
+    infoButton.tintColor = commandBarPlaceholderColor
     infoButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     infoButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -156,11 +156,11 @@ class CommandBar: UILabel {
   func colorizePrompt(for prompt: String) -> NSMutableAttributedString {
     let colorPrompt = NSMutableAttributedString(string: prompt)
     if commandState == .translate {
-      colorPrompt.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+      colorPrompt.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
     } else if commandState == .conjugate {
-      colorPrompt.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+      colorPrompt.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
     } else if commandState == .plural {
-      colorPrompt.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+      colorPrompt.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
     }
 
     return colorPrompt

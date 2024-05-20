@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "GitHubCornerLight.png",
+      "filename" : "wikimedia.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "GitHubCornerDark.png",
+      "filename" : "wikimedia-dark-cta.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

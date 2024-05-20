@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController id="4qA-Bq-SU4" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="6fu-7Z-I4m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <sections/>
@@ -156,7 +156,7 @@
             <objects>
                 <viewController id="cQF-42-ekB" userLabel="Settings" customClass="SettingsViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rjV-Tb-pQl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
@@ -176,7 +176,7 @@
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" name="scribeCTA"/>
+                                            <color key="backgroundColor" name="appBtn"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="3gB-ix-8Gq" secondAttribute="bottom" id="3zh-t3-d71"/>
                                                 <constraint firstItem="3gB-ix-8Gq" firstAttribute="top" secondItem="IUx-l8-ZuO" secondAttribute="top" id="3zq-SH-hyN"/>
@@ -195,10 +195,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dummyCell" id="O9h-lq-niX">
-                                        <rect key="frame" x="20" y="38" width="335" height="43.666667938232422"/>
+                                        <rect key="frame" x="16" y="38" width="343" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9h-lq-niX" id="78r-CS-l4A">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -219,7 +219,7 @@
                         <outlet property="footerButton" destination="3gB-ix-8Gq" id="sQ7-oh-pis"/>
                         <outlet property="footerFrame" destination="IUx-l8-ZuO" id="zei-iv-IbX"/>
                         <outlet property="parentTable" destination="R98-aa-uZS" id="5wJ-1H-Zp2"/>
-                        <segue destination="ZA3-mW-CXa" kind="show" id="WZJ-vL-yPU"/>
+                        <segue destination="ZA3-mW-CXa" kind="show" identifier="View keyboard settings" id="WZJ-vL-yPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-Lq-Rf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,10 +230,10 @@
         <scene sceneID="sLs-HO-3by">
             <objects>
                 <tabBarController id="z4h-ME-igh" customClass="SwipeableTabBarController" customModule="SwipeableTabBarController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="pcg-48-jfk">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="pcg-48-jfk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="commandBar"/>
+                        <color key="backgroundColor" name="lightWhiteDarkBlack"/>
                         <color key="selectedImageTintColor" name="linkBlue"/>
                     </tabBar>
                     <connections>
@@ -251,7 +251,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InstallationVC" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyk-EK-raM" userLabel="TopSpace">
@@ -409,7 +409,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <connections>
@@ -431,20 +431,20 @@
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="keyboard" catalog="system" width="128" height="78"/>
         <image name="linkCornerBackground" width="1024" height="1024"/>
-        <namedColor name="commandBar">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="appBtn">
+            <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="keyChar">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="lightWhiteDarkBlack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="linkBlue">
-            <color red="0.2196078431372549" green="0.49411764705882355" blue="0.6705882352941176" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16470588235294117" green="0.49411764705882355" blue="0.66666666666666663" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scribeAppBackground">
             <color red="0.36862745098039218" green="0.70980392156862748" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="scribeCTA">
-            <color red="0.99215686274509807" green="0.67843137254901964" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -453,7 +453,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

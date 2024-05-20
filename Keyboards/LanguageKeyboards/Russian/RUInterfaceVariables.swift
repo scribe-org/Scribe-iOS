@@ -150,7 +150,7 @@ func setRUKeyboardLayout() {
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
-  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   conjugateKeyLbl = "Спрягать"
   conjugatePlaceholder = "Введите глагол"
@@ -158,7 +158,7 @@ func setRUKeyboardLayout() {
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
-  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   pluralKeyLbl = "Множ-ое"
   pluralPlaceholder = "Введите существительное"
@@ -166,6 +166,6 @@ func setRUKeyboardLayout() {
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
-  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarBorderColor))
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
   alreadyPluralMsg = "Уже во множ-ом"
 }

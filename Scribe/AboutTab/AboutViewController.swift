@@ -39,10 +39,14 @@ final class AboutViewController: BaseTableViewController {
 
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: AboutTableViewCell.reuseIdentifier, for: indexPath) as? AboutTableViewCell else {
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: AboutTableViewCell.reuseIdentifier,
+      for: indexPath
+    ) as? AboutTableViewCell else {
       fatalError("Failed to dequeue AboutTableViewCell.")
     }
     cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
+    cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
   }
@@ -63,7 +67,9 @@ extension AboutViewController {
       openURLString(urlString: "https://matrix.to/#/#scribe_community:matrix.org", withEncoding: true)
 
     case .wikimedia:
-      if let viewController = storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "InformationScreenVC"
+      ) as? InformationScreenVC {
         navigationController?.pushViewController(viewController, animated: true)
         viewController.section = .wikimedia
       }
@@ -75,7 +81,9 @@ extension AboutViewController {
       showRateScribeUI()
 
     case .bugReport:
-      openURLString(urlString: "https://github.com/scribe-org/Scribe-iOS/issues", withEncoding: false)
+      openURLString(
+        urlString: "https://github.com/scribe-org/Scribe-iOS/issues", withEncoding: false
+      )
 
     case .email:
       showEmailUI()
@@ -85,13 +93,17 @@ extension AboutViewController {
       //        print("Resets app hints")
 
     case .privacyPolicy:
-      if let viewController = storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "InformationScreenVC"
+      ) as? InformationScreenVC {
         navigationController?.pushViewController(viewController, animated: true)
         viewController.section = .privacyPolicy
       }
 
     case .licenses:
-      if let viewController = storyboard?.instantiateViewController(identifier: "InformationScreenVC") as? InformationScreenVC {
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "InformationScreenVC"
+      ) as? InformationScreenVC {
         navigationController?.pushViewController(viewController, animated: true)
         viewController.section = .licenses
       }
@@ -123,7 +135,9 @@ extension AboutViewController {
       guard let scene = UIApplication.shared.foregroundActiveScene else { return }
       SKStoreReviewController.requestReview(in: scene)
     } else {
-      let alert = UIAlertController(title: "Enjoying Scribe?", message: "Rate Scribe on the App Store.", preferredStyle: .alert)
+      let alert = UIAlertController(
+        title: "Enjoying Scribe?", message: "Rate Scribe on the App Store.", preferredStyle: .alert
+      )
       alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: openScribeAppStore(alert:)))
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       present(alert, animated: true)
@@ -144,7 +158,9 @@ extension AboutViewController {
       present(mailComposeViewController, animated: true, completion: nil)
     } else {
       /// Show alert mentioning the email address
-      let alert = UIAlertController(title: "Send us an email?", message: "Reach out to us at team@scri.be", preferredStyle: .alert)
+      let alert = UIAlertController(
+        title: "Send us an email?", message: "Reach out to us at team@scri.be", preferredStyle: .alert
+      )
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       present(alert, animated: true)
     }
