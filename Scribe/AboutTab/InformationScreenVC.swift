@@ -20,17 +20,78 @@
 import UIKit
 
 class InformationScreenVC: UIViewController {
-  @IBOutlet var headingLabel: UILabel!
-  @IBOutlet var textView: UITextView!
-  @IBOutlet var scrollContainerView: UIView!
-  @IBOutlet var contentContainerView: UIView!
-  @IBOutlet var viewForApplyingShadow: UIView!
+  @IBOutlet var scrollViewPhone: UIScrollView!
+  @IBOutlet var scrollViewPad: UIScrollView!
 
-  @IBOutlet var cornerImageView: UIImageView!
-  @IBOutlet var iconImageView: UIImageView!
+  @IBOutlet var scrollContainerViewPhone: UIView!
+  @IBOutlet var scrollContainerViewPad: UIView!
+  var scrollContainerView: UIView!
+
+  @IBOutlet var relativeViewPhone: UIView!
+  @IBOutlet var relativeViewPad: UIView!
+  var relativeView: UIView!
+
+  @IBOutlet var contentContainerViewPhone: UIView!
+  @IBOutlet var contentContainerViewPad: UIView!
+  var contentContainerView: UIView!
+
+  @IBOutlet var headingLabelPhone: UILabel!
+  @IBOutlet var headingLabelPad: UILabel!
+  var headingLabel: UILabel!
+
+  @IBOutlet var textViewPhone: UITextView!
+  @IBOutlet var textViewPad: UITextView!
+  var textView: UITextView!
+
+  @IBOutlet var cornerImageViewPhone: UIImageView!
+  @IBOutlet var cornerImageViewPad: UIImageView!
+  var cornerImageView: UIImageView!
+
+  @IBOutlet var iconImageViewPhone: UIImageView!
+  @IBOutlet var iconImageViewPad: UIImageView!
+  var iconImageView: UIImageView!
 
   var text: String = ""
   var section: SectionState = .privacyPolicy
+
+  func setAppTextView() {
+    if DeviceType.isPad {
+      scrollContainerView = scrollContainerViewPad
+      relativeView = relativeViewPad
+      contentContainerView = contentContainerViewPad
+      headingLabel = headingLabelPad
+      textView = textViewPad
+      cornerImageView = cornerImageViewPad
+      iconImageView = iconImageViewPad
+
+      scrollViewPhone.removeFromSuperview()
+      scrollContainerViewPhone.removeFromSuperview()
+      relativeViewPhone.removeFromSuperview()
+      contentContainerViewPhone.removeFromSuperview()
+      headingLabelPhone.removeFromSuperview()
+      textViewPhone.removeFromSuperview()
+      cornerImageViewPhone.removeFromSuperview()
+      iconImageViewPhone.removeFromSuperview()
+
+    } else {
+      scrollContainerView = scrollContainerViewPhone
+      relativeView = relativeViewPhone
+      contentContainerView = contentContainerViewPhone
+      headingLabel = headingLabelPhone
+      textView = textViewPhone
+      cornerImageView = cornerImageViewPhone
+      iconImageView = iconImageViewPhone
+
+      scrollViewPad.removeFromSuperview()
+      scrollContainerViewPad.removeFromSuperview()
+      relativeViewPad.removeFromSuperview()
+      contentContainerViewPad.removeFromSuperview()
+      headingLabelPad.removeFromSuperview()
+      textViewPad.removeFromSuperview()
+      cornerImageViewPad.removeFromSuperview()
+      iconImageViewPad.removeFromSuperview()
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -60,11 +121,12 @@ class InformationScreenVC: UIViewController {
   }
 
   func setupInformationPageUI() {
+    setAppTextView()
     setCornerImageView()
 
     textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
-    viewForApplyingShadow.backgroundColor = .clear
+    relativeView.backgroundColor = .clear
 
     contentContainerView.backgroundColor = lightWhiteDarkBlackColor
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
@@ -97,21 +159,21 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enPrivacyPolicyTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enPrivacyPolicyPageCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     case "DE":
       navigationItem.title = dePrivacyPolicyTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: dePrivacyPolicyPageCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: dePrivacyPolicyText)
     default:
       navigationItem.title = enPrivacyPolicyTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enPrivacyPolicyPageCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: enPrivacyPolicyText)
     }
@@ -119,6 +181,7 @@ class InformationScreenVC: UIViewController {
     textView.linkTextAttributes = [
       NSAttributedString.Key.foregroundColor: linkBlueColor
     ]
+
     iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
     iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
@@ -129,7 +192,7 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setThirdPartyLicenses(
         fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
@@ -138,7 +201,7 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setThirdPartyLicenses(
         fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
@@ -147,13 +210,17 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enThirdPartyLicensesTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enThirdPartyLicensesCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setThirdPartyLicenses(
         fontSize: fontSize, text: enThirdPartyLicensesText, listElements: enThirdPartyLicensesListItems
       )
     }
     textView.textColor = keyCharColor
+    textView.linkTextAttributes = [
+      NSAttributedString.Key.foregroundColor: linkBlueColor
+    ]
+
     iconImageView.image = UIImage.availableIconImage(with: "doc.text")
     iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
@@ -164,7 +231,7 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setWikimediaAndScribe(
         text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
@@ -173,7 +240,7 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setWikimediaAndScribe(
         text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
@@ -182,7 +249,7 @@ class InformationScreenVC: UIViewController {
       navigationItem.title = enWikimediaAndScribeTitle
       headingLabel.attributedText = NSMutableAttributedString(
         string: enWikimediaAndScribeCaption,
-        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.2)]
+        attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
       )
       textView.attributedText = setWikimediaAndScribe(
         text: enWikiMediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6

@@ -35,7 +35,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   \n
   1.\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-  
+
   var settingsLink = NSMutableAttributedString()
   if #available(iOS 17.2.0, *) {
     settingsLink = addHyperLinks(
@@ -59,7 +59,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
     let finalSteps = NSMutableAttributedString(string: """
     \n
     3. Activate keyboards that you want to use
-    
+
     4. When typing press\u{0020}
     """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 

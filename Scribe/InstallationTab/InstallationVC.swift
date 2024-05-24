@@ -22,18 +22,63 @@ import UIKit
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class InstallationVC: UIViewController {
   // Variables linked to elements in AppScreen.storyboard.
-  @IBOutlet var appTextView: UITextView!
-  @IBOutlet var appTextBackground: UIView!
+  @IBOutlet var appTextViewPhone: UITextView!
+  @IBOutlet var appTextViewPad: UITextView!
+  var appTextView: UITextView!
 
-  @IBOutlet var settingsBtn: UIButton!
+  @IBOutlet var appTextBackgroundPhone: UIView!
+  @IBOutlet var appTextBackgroundPad: UIView!
+  var appTextBackground: UIView!
+
   @IBOutlet var topIconPhone: UIImageView!
   @IBOutlet var topIconPad: UIImageView!
-  @IBOutlet var settingsCorner: UIImageView!
-  @IBOutlet var settingCornerWidthConstraint: NSLayoutConstraint!
+  var topIcon: UIImageView!
+
+  @IBOutlet var settingsBtnPhone: UIButton!
+  @IBOutlet var settingsBtnPad: UIButton!
+  var settingsBtn: UIButton!
+
+  @IBOutlet var settingsCornerPhone: UIImageView!
+  @IBOutlet var settingsCornerPad: UIImageView!
+  var settingsCorner: UIImageView!
+
+  @IBOutlet var settingCornerWidthConstraintPhone: NSLayoutConstraint!
+  @IBOutlet var settingCornerWidthConstraintPad: NSLayoutConstraint!
+  var settingCornerWidthConstraint: NSLayoutConstraint!
 
   // Spacing views to size app screen proportionally.
   @IBOutlet var topSpace: UIView!
   @IBOutlet var logoSpace: UIView!
+
+  func setAppTextView() {
+    if DeviceType.isPad {
+      appTextView = appTextViewPad
+      appTextBackground = appTextBackgroundPad
+      topIcon = topIconPad
+      settingsBtn = settingsBtnPad
+      settingsCorner = settingsCornerPad
+      settingCornerWidthConstraint = settingCornerWidthConstraintPad
+
+      appTextViewPhone.removeFromSuperview()
+      appTextBackgroundPhone.removeFromSuperview()
+      topIconPhone.removeFromSuperview()
+      settingsBtnPhone.removeFromSuperview()
+      settingsCornerPhone.removeFromSuperview()
+    } else {
+      appTextView = appTextViewPhone
+      appTextBackground = appTextBackgroundPhone
+      topIcon = topIconPhone
+      settingsBtn = settingsBtnPhone
+      settingsCorner = settingsCornerPhone
+      settingCornerWidthConstraint = settingCornerWidthConstraintPhone
+
+      appTextViewPad.removeFromSuperview()
+      appTextBackgroundPad.removeFromSuperview()
+      topIconPad.removeFromSuperview()
+      settingsBtnPad.removeFromSuperview()
+      settingsCornerPad.removeFromSuperview()
+    }
+  }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
@@ -74,20 +119,20 @@ class InstallationVC: UIViewController {
 
   /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
   func setTopIcon() {
-    if DeviceType.isPhone {
-      topIconPhone.isHidden = false
-      topIconPad.isHidden = true
-      for constraint in settingsCorner.constraints {
-        if constraint.identifier == "settingsCorner" {
-          constraint.constant = 70
-        }
-      }
-    } else if DeviceType.isPad {
+    if DeviceType.isPad {
       topIconPhone.isHidden = true
       topIconPad.isHidden = false
       for constraint in settingsCorner.constraints {
         if constraint.identifier == "settingsCorner" {
           constraint.constant = 125
+        }
+      }
+    } else {
+      topIconPhone.isHidden = false
+      topIconPad.isHidden = true
+      for constraint in settingsCorner.constraints {
+        if constraint.identifier == "settingsCorner" {
+          constraint.constant = 70
         }
       }
     }
@@ -116,13 +161,12 @@ class InstallationVC: UIViewController {
   /// Sets properties for the app screen given the current device.
   func setUIDeviceProperties() {
     settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
-    settingsCorner.layer.cornerRadius = appTextBackground.frame.width * 0.05
-    settingsCorner.alpha = 0.9
+    settingsCorner.layer.cornerRadius = DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
 
     settingsBtn.setTitle("", for: .normal)
     settingsBtn.clipsToBounds = true
     settingsBtn.layer.masksToBounds = false
-    settingsBtn.layer.cornerRadius = appTextBackground.frame.width * 0.05
+    settingsBtn.layer.cornerRadius = DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
 
     let allTextViews: [UITextView] = [appTextView]
 
@@ -138,7 +182,7 @@ class InstallationVC: UIViewController {
     appTextBackground.clipsToBounds = true
     applyCornerRadius(
       elem: appTextBackground,
-      radius: appTextBackground.frame.width * 0.05
+      radius: DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
     )
 
     // Set link attributes for all textViews.
@@ -173,7 +217,7 @@ class InstallationVC: UIViewController {
     default:
       appTextView.attributedText = setENInstallation(fontSize: fontSize)
     }
-    appTextView.textColor = .init(.keyChar)
+    appTextView.textColor = keyCharColor
   }
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
@@ -186,8 +230,9 @@ class InstallationVC: UIViewController {
         fontSize = UIScreen.main.bounds.height / 59
       }
     } else if DeviceType.isPad {
-      fontSize = UIScreen.main.bounds.height / 38
+      fontSize = UIScreen.main.bounds.height / 50
     }
+    setAppTextView()
     setTopIcon()
     setSettingsBtn()
     setUIConstantProperties()

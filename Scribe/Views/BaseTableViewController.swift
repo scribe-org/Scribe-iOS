@@ -23,8 +23,16 @@ import UIKit
 class BaseTableViewController: UITableViewController {
   // MARK: - Constants
 
-  private let sectionHeaderHeight: CGFloat = 32
+  private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+
+  func setHeaderHeight() {
+    if DeviceType.isPad {
+      sectionHeaderHeight = 48
+    } else {
+      sectionHeaderHeight = 32
+    }
+  }
 
   // MARK: - Properties
 
@@ -36,6 +44,7 @@ class BaseTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setHeaderHeight()
 
     tableView.sectionHeaderHeight = sectionHeaderHeight
     tableView.register(
@@ -83,7 +92,7 @@ extension BaseTableViewController {
       frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: sectionHeaderHeight)
     )
     label.text = dataSet[section].headingTitle
-    label.font = UIFont.preferredFont(forTextStyle: .headline)
+    label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
     label.textColor = keyCharColor
     headerView.addSubview(label)
 
