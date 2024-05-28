@@ -1388,7 +1388,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deactivates all buttons that are associated with the conjugation display.
   func deactivateConjugationDisplay(deactivateShiftForms: Bool) {
-    if (deactivateShiftForms) {
+    if deactivateShiftForms {
       deactivateBtn(btn: shiftFormsDisplayLeft)
       shiftFormsDisplayLeft.tintColor = UIColor.clear
       deactivateBtn(btn: shiftFormsDisplayRight)

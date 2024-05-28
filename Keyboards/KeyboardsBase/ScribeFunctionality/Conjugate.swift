@@ -232,7 +232,7 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
 
   let wordPressed = keyPressed.titleLabel?.text ?? ""
   var displayInfo = false
-  
+
   // Select to change into a ToolTipView if the user selects a conjugation that is unavailable
   if wordPressed == invalidCommandMsg {
     displayInfo = true
