@@ -22,8 +22,8 @@ import SwiftUI
 let wikimediaAndScribeTitle = NSLocalizedString("about.wikimedia", comment: "Title for the Wikimedia explanation")
 let wikimediaAndScribeCaption = NSLocalizedString("about.wikimedia.caption", comment: "Caption for the Wikimedia explanation")
 
-let wikimediaAndScribeText1 = NSLocalizedString("about.wikimedia.text1", comment: "First paragraph of the Wikimedia explanation")
-let wikimediaAndScribeText2 = NSLocalizedString("about.wikimedia.text2", comment: "Second paragraph of the Wikimedia explanation")
-let wikimediaAndScribeText3 = NSLocalizedString("about.wikimedia.text3", comment: "Third paragraph of the Wikimedia explanation")
+let wikimediaAndScribeText1 = "\n" + NSLocalizedString("about.wikimedia.text1", comment: "First paragraph of the Wikimedia explanation") + "\n\n"
+let wikimediaAndScribeText2 = "\n\n" + NSLocalizedString("about.wikimedia.text2", comment: "Second paragraph of the Wikimedia explanation") + "\n\n"
+let wikimediaAndScribeText3 = "\n\n" + NSLocalizedString("about.wikimedia.text3", comment: "Third paragraph of the Wikimedia explanation") + "\n"
 
 let wikimediaAndScribeText = [wikimediaAndScribeText1, wikimediaAndScribeText2, wikimediaAndScribeText3]

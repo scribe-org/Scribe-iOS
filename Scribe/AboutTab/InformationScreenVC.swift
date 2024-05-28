@@ -159,7 +159,7 @@ class InformationScreenVC: UIViewController {
       string: NSLocalizedString("about.privacyPolicy.caption", comment: "Caption for the privacy policy"),
       attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
     )
-    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: NSLocalizedString("about.privacyPolicy.body", comment: "Main text body for the privacy policy"))
+    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: "\n" + NSLocalizedString("about.privacyPolicy.body", comment: "Main text body for the privacy policy"))
     textView.textColor = keyCharColor
     textView.linkTextAttributes = [
       NSAttributedString.Key.foregroundColor: linkBlueColor
