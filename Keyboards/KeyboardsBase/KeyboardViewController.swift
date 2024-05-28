@@ -305,6 +305,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
+    setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
     let datasources = contentData.enumerated().compactMap { _, text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
