@@ -22,7 +22,7 @@ import UIKit
 
 enum InformationToolTipData {
   static let wikiDataExplanation = NSMutableAttributedString(
-    string: "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others.",
+    string: NSLocalizedString("wikidataExplanation1", comment: "First page of the wikidata explanation for missing words/conjugations"),
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
@@ -31,7 +31,7 @@ enum InformationToolTipData {
   )
 
   static let wikiDataContationOrigin = NSMutableAttributedString(
-    string: "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!",
+    string: NSLocalizedString("wikidataExplanation2", comment: "Second page of the wikidata explanation for missing words/conjugations"),
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
@@ -40,7 +40,7 @@ enum InformationToolTipData {
   )
 
   static let howToContribute = NSMutableAttributedString(
-    string: "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!",
+    string: NSLocalizedString("wikidataExplanation3", comment: "Last page of the wikidata explanation for missing words/conjugations"),
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75

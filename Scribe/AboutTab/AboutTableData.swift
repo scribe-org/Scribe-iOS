@@ -22,34 +22,34 @@ import Foundation
 struct AboutTableData {
   static var aboutTableData = [
     ParentTableCellModel(
-      headingTitle: "Community",
+      headingTitle: NSLocalizedString("about.community", comment: "Heading for the community category"),
       section: [
         Section(
-          sectionTitle: "See the code on GitHub",
+          sectionTitle: NSLocalizedString("about.github", comment: "Title for the GitHub button"),
           imageString: "github",
           sectionState: .github,
           externalLink: true
         ),
         Section(
-          sectionTitle: "Chat with the team on Matrix",
+          sectionTitle: NSLocalizedString("about.matrix", comment: "Title for the Matrix button"),
           imageString: "matrix",
           sectionState: .matrix,
           externalLink: true
         ),
         Section(
-          sectionTitle: "Share Scribe",
+          sectionTitle: NSLocalizedString("about.share", comment: "Title for the share button"),
           imageString: "square.and.arrow.up",
           sectionState: .shareScribe,
           externalLink: true
         ),
 //        Section(
-//          sectionTitle: "View all Scribe apps",
+//          sectionTitle: NSLocalizedString("about.scribe", comment: "Title for the Scribe Apps section"),
 //          imageString: "scribeIcon",
 //          sectionState: .scribeApps,
 //          externalLink: true
 //        ),
         Section(
-          sectionTitle: "Wikimedia and Scribe",
+          sectionTitle: NSLocalizedString("about.wikimedia", comment: "Title for the Wikimedia explanation"),
           imageString: "wikimedia",
           hasNestedNavigation: true,
           sectionState: .wikimedia
@@ -58,44 +58,44 @@ struct AboutTableData {
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: "Feedback and support",
+      headingTitle: NSLocalizedString("about.feedback", comment: "Heading for the feedback category"),
       section: [
         Section(
-          sectionTitle: "Rate Scribe",
+          sectionTitle: NSLocalizedString("about.rate", comment: "Title for the rate button"),
           imageString: "star.fill",
           sectionState: .rateScribe,
           externalLink: true
         ),
         Section(
-          sectionTitle: "Report a bug",
+          sectionTitle: NSLocalizedString("about.bugReport", comment: "Title for the bug report button"),
           imageString: "ladybug",
           sectionState: .bugReport,
           externalLink: true
         ),
         Section(
-          sectionTitle: "Send us an email",
+          sectionTitle: NSLocalizedString("about.email", comment: "Title for the email button"),
           imageString: "envelope",
           sectionState: .email,
           externalLink: true
         )
 //        Section(
-//          sectionTitle: "Reset app hints",
+//          sectionTitle: NSLocalizedString("about.appHints", comment: "Title for the button to reset hints"),
 //          imageString: "lightbulb",sectionState: .appHints
 //        )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: "Legal",
+      headingTitle: NSLocalizedString("about.legal", comment: "Title for the legal category"),
       section: [
         Section(
-          sectionTitle: "Privacy policy",
+          sectionTitle: NSLocalizedString("about.privacyPolicy", comment: "Title for the privacy policy"),
           imageString: "lock.shield",
           hasNestedNavigation: true,
           sectionState: .privacyPolicy
         ),
         Section(
-          sectionTitle: "Third-party licenses",
+          sectionTitle: NSLocalizedString("about.thirdParty", comment: "Title for the third party licenses"),
           imageString: "doc.text",
           hasNestedNavigation: true,
           sectionState: .licenses

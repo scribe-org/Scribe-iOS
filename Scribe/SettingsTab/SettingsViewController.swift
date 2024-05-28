@@ -48,9 +48,7 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
-    navigationItem.backButtonTitle = NSLocalizedString(
-      "settings.title.backButton", comment: "The back button's title for the settings screen"
-    )
+    navigationItem.backButtonTitle = title
 
     parentTable.register(
       UINib(nibName: "InfoChildTableViewCell", bundle: nil),

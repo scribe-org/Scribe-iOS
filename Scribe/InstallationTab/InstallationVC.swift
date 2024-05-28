@@ -207,16 +207,7 @@ class InstallationVC: UIViewController {
     appTextBackground.backgroundColor = lightWhiteDarkBlackColor
 
     // Set the texts for the fields.
-    switch Locale.userSystemLanguage {
-    case "EN":
-      appTextView.attributedText = setENInstallation(fontSize: fontSize)
-
-    case "DE":
-      appTextView.attributedText = setDEInstallation(fontSize: fontSize)
-
-    default:
-      appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    }
+    appTextView.attributedText = setInstallation(fontSize: fontSize)
     appTextView.textColor = keyCharColor
   }
 
