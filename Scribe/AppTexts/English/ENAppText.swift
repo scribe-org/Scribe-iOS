@@ -37,7 +37,7 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   var settingsLink = NSMutableAttributedString()
-  if #available(iOS 17.2.0, *) {
+  if #available(iOS 15.0, *) {
     settingsLink = addHyperLinks(
       originalText: "Open Scribe settings",
       links: ["Open Scribe settings": "MakeTextLink"], // placeholder as there's a button over it
