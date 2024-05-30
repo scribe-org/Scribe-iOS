@@ -39,7 +39,7 @@ enum SettingsTableData {
     ),
     ParentTableCellModel(
       headingTitle: NSLocalizedString(
-        "settings.installedKeyboards", comment: "Scribe keyboard installation header"
+        "settings.installedKeyboards", comment: "The title of the installed keyboards section"
       ),
       section: [
         // Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),

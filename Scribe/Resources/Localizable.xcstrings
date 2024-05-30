@@ -69,7 +69,7 @@
       }
     },
     "settings.installedKeyboards" : {
-      "comment" : "Scribe keyboard installation header",
+      "comment" : "The title of the installed keyboards section",
       "localizations" : {
         "en" : {
           "stringUnit" : {
