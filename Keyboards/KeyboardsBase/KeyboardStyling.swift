@@ -30,6 +30,27 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   btn.layer.masksToBounds = false
   btn.layer.cornerRadius = radius
   btn.setTitle(title, for: .normal)
+  if #available(iOS 15.0, *) {
+    // Displays info button for missing data
+    if title == invalidCommandMsg {
+      btn.configuration = UIButton.Configuration.plain()
+      btn.configuration?.baseForegroundColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
+      btn.configuration?.image = UIImage(systemName: "info.circle.fill")
+      btn.configuration?.imagePlacement = .trailing
+      btn.configuration?.imagePadding = 3
+    } else {
+      btn.configuration = nil
+    }
+  } else {
+    if title == invalidCommandMsg {
+      btn.semanticContentAttribute = .forceLeftToRight // Has to be changed once support for RTL languages is implemented
+      btn.setImage(UIImage(systemName: "info.circle.fill"), for: .normal)
+      btn.tintColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
+    } else {
+      btn.semanticContentAttribute = .unspecified
+      btn.setImage(nil, for: .normal)
+    }
+  }
   btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
   btn.setTitleColor(keyCharColor, for: .normal)
 

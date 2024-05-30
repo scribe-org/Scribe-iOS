@@ -130,6 +130,11 @@ class KeyboardViewController: UIInputViewController {
   ///   - btn: the button to be deactivated.
   func deactivateBtn(btn: UIButton) {
     btn.setTitle("", for: .normal)
+    if #available(iOS 15.0, *) {
+      btn.configuration?.image = nil
+    } else {
+      btn.setImage(nil, for: .normal)
+    }
     btn.backgroundColor = UIColor.clear
     btn.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
     btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
@@ -300,6 +305,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
+    setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
     let datasources = contentData.enumerated().compactMap { _, text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
@@ -313,13 +319,13 @@ class KeyboardViewController: UIInputViewController {
     formKeySingle.addSubview(tipView)
     formKeySingle.isUserInteractionEnabled = false
     tipView.leadingAnchor.constraint(
-      equalTo: formKeySingle.leadingAnchor, constant: DeviceType.isPhone ? 15 : 40
+      equalTo: formKeySingle.leadingAnchor
     ).isActive = true
     tipView.trailingAnchor.constraint(
-      equalTo: formKeySingle.trailingAnchor, constant: DeviceType.isPhone ? -15 : -40
+      equalTo: formKeySingle.trailingAnchor
     ).isActive = true
-    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor, constant: 8).isActive = true
-    tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor, constant: -5).isActive = true
+    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor).isActive = true
+    tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor).isActive = true
     styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
   }
 
@@ -1395,11 +1401,13 @@ class KeyboardViewController: UIInputViewController {
   }
 
   /// Deactivates all buttons that are associated with the conjugation display.
-  func deactivateConjugationDisplay() {
-    deactivateBtn(btn: shiftFormsDisplayLeft)
-    shiftFormsDisplayLeft.tintColor = UIColor.clear
-    deactivateBtn(btn: shiftFormsDisplayRight)
-    shiftFormsDisplayRight.tintColor = UIColor.clear
+  func deactivateConjugationDisplay(deactivateShiftForms: Bool) {
+    if deactivateShiftForms {
+      deactivateBtn(btn: shiftFormsDisplayLeft)
+      shiftFormsDisplayLeft.tintColor = UIColor.clear
+      deactivateBtn(btn: shiftFormsDisplayRight)
+      shiftFormsDisplayRight.tintColor = UIColor.clear
+    }
 
     let allFormDisplayButtons: [UIButton] =
       get3x2FormDisplayButtons()
@@ -2019,7 +2027,7 @@ class KeyboardViewController: UIInputViewController {
       scribeKey.setTitle("", for: .normal)
       commandBar.set() // set here so text spacing is appropriate
       conditionallyShowAutoActionPartitions()
-      deactivateConjugationDisplay()
+      deactivateConjugationDisplay(deactivateShiftForms: true)
 
       if DeviceType.isPhone {
         translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
@@ -2123,6 +2131,7 @@ class KeyboardViewController: UIInputViewController {
       if commandState == .selectVerbConjugation {
         setVerbConjugationState()
       } else if commandState == .displayInformation {
+        deactivateConjugationDisplay(deactivateShiftForms: false) // Ensures that previously displayed buttons disappear before showing the info view
         setInformationState()
       } else {
         setCaseDeclensionState()
