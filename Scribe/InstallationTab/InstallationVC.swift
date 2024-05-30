@@ -50,6 +50,8 @@ class InstallationVC: UIViewController {
   @IBOutlet var topSpace: UIView!
   @IBOutlet var logoSpace: UIView!
 
+  @IBOutlet var installationHeaderLabel: UILabel!
+
   func setAppTextView() {
     if DeviceType.isPad {
       appTextView = appTextViewPad
@@ -232,6 +234,12 @@ class InstallationVC: UIViewController {
     } else if DeviceType.isPad {
       fontSize = UIScreen.main.bounds.height / 50
     }
+
+    installationHeaderLabel.text = NSLocalizedString(
+      "settings.installation.header", comment: "The title of the installed keyboards section"
+    )
+    installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
+
     setAppTextView()
     setTopIcon()
     setSettingsBtn()
