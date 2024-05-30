@@ -56,8 +56,20 @@
         }
       }
     },
+    "settings.installation.header" : {
+      "comment" : "Scribe keyboard installation header",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard installation"
+          }
+        }
+      }
+    },
     "settings.installedKeyboards" : {
-      "comment" : "The title of the installed keyboards section",
+      "comment" : "Scribe keyboard installation header",
       "localizations" : {
         "en" : {
           "stringUnit" : {

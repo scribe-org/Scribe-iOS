@@ -19,20 +19,12 @@
 
 import UIKit
 
-/// Formats and returns the title of the installation guidelines.
-func getDEInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
-  return NSMutableAttributedString(string: """
-  Tastaturinstallation
-  """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-}
-
 /// Formats and returns the directions of the installation guidelines.
 func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
   let arrowString = getArrowIcon(fontSize: fontSize)
   let globeString = getGlobeIcon(fontSize: fontSize)
 
   let startOfBody = NSMutableAttributedString(string: """
-  \n
   1.\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
@@ -118,11 +110,6 @@ func getDEInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
 func setDEInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
-  let installTitle = getDEInstallationTitle(fontSize: fontSize)
   let installDirections = getDEInstallationDirections(fontSize: fontSize)
-
-  return concatAttributedStrings(
-    left: installTitle,
-    right: installDirections
-  )
+  return installDirections
 }
