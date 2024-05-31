@@ -131,17 +131,8 @@ extension AboutViewController {
   }
 
   private func showRateScribeUI() {
-    if #available(iOS 14.0, *) {
-      guard let scene = UIApplication.shared.foregroundActiveScene else { return }
-      SKStoreReviewController.requestReview(in: scene)
-    } else {
-      let alert = UIAlertController(
-        title: "Enjoying Scribe?", message: "Rate Scribe on the App Store.", preferredStyle: .alert
-      )
-      alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: openScribeAppStore(alert:)))
-      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-      present(alert, animated: true)
-    }
+    guard let scene = UIApplication.shared.foregroundActiveScene else { return }
+    SKStoreReviewController.requestReview(in: scene)
   }
 
   private func openScribeAppStore(alert _: UIAlertAction) {
