@@ -3,7 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -359,21 +359,27 @@
                                 <rect key="frame" x="0.0" y="50" width="375" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOG-9z-mVQ" userLabel="LogoSpace">
-                                <rect key="frame" x="0.0" y="185.66666666666666" width="375" height="34"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScribeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Oxz-Zq-2g7">
                                 <rect key="frame" x="81.333333333333329" y="84" width="212.33333333333337" height="101.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Oxz-Zq-2g7" secondAttribute="height" multiplier="981:471" id="fLZ-Jn-Qjj"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOG-9z-mVQ" userLabel="LogoSpace">
+                                <rect key="frame" x="0.0" y="185.66666666666666" width="375" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-BQ-4ti" userLabel="InstallationLabel">
+                                <rect key="frame" x="15.000000000000004" y="219.66666666666666" width="44.333333333333343" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-k0-ggs" userLabel="AppTextBkrdPad">
-                                <rect key="frame" x="15" y="219.66666666666663" width="345" height="310"/>
+                                <rect key="frame" x="15" y="244" width="345" height="304"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWe-iO-9F6" userLabel="SettingsBtnPad">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="310"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="304"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -386,7 +392,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-2Z-4lJ" userLabel="SettingsCorner">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-2Z-4lJ" userLabel="SettingsCornerPad">
                                         <rect key="frame" x="280" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7N0-2Z-4lJ" secondAttribute="height" multiplier="1:1" id="AXv-zc-hvL"/>
@@ -404,7 +410,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="cWe-iO-9F6" secondAttribute="bottom" id="5u3-Kk-cd4"/>
                                     <constraint firstAttribute="trailing" secondItem="CCX-IO-PsS" secondAttribute="trailing" constant="36" id="EWs-b1-4WY"/>
-                                    <constraint firstAttribute="bottom" secondItem="CCX-IO-PsS" secondAttribute="bottom" constant="36" id="LPh-Al-jcl"/>
+                                    <constraint firstAttribute="bottom" secondItem="CCX-IO-PsS" secondAttribute="bottom" constant="30" id="LPh-Al-jcl"/>
                                     <constraint firstAttribute="trailing" secondItem="21V-cO-tk0" secondAttribute="trailing" constant="12" id="MU2-Ac-SDm"/>
                                     <constraint firstAttribute="trailing" secondItem="7N0-2Z-4lJ" secondAttribute="trailing" id="TJE-HA-Nu5"/>
                                     <constraint firstItem="CCX-IO-PsS" firstAttribute="leading" secondItem="Z6Q-k0-ggs" secondAttribute="leading" constant="36" id="VIa-vN-jBK"/>
@@ -418,23 +424,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV9-hG-bLi" userLabel="AppTextBkrdPhone">
-                                <rect key="frame" x="15" y="219.66666666666666" width="345" height="263.33333333333337"/>
+                                <rect key="frame" x="15" y="244" width="345" height="255.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpZ-Pp-c4F" userLabel="SettingsBtnPhone">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="263.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="255.33333333333334"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VS8-mK-hEN" userLabel="AppTextViewPhone">
-                                        <rect key="frame" x="15" y="15.000000000000014" width="315" height="233.33333333333337"/>
+                                        <rect key="frame" x="15" y="10" width="315" height="233.33333333333334"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-ou-iS6" userLabel="SettingsCorner">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-ou-iS6" userLabel="SettingsCornerPhone">
                                         <rect key="frame" x="280" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VWk-ou-iS6" secondAttribute="height" multiplier="1:1" id="93R-3J-JqB"/>
@@ -451,14 +457,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="UpZ-Pp-c4F" secondAttribute="bottom" id="72x-qF-Qdq"/>
-                                    <constraint firstItem="VS8-mK-hEN" firstAttribute="top" secondItem="uV9-hG-bLi" secondAttribute="top" constant="15" id="Et9-hZ-gCu"/>
+                                    <constraint firstItem="VS8-mK-hEN" firstAttribute="top" secondItem="uV9-hG-bLi" secondAttribute="top" constant="10" id="Et9-hZ-gCu"/>
                                     <constraint firstAttribute="trailing" secondItem="UpZ-Pp-c4F" secondAttribute="trailing" id="GWX-Po-Byy"/>
                                     <constraint firstItem="VS8-mK-hEN" firstAttribute="leading" secondItem="uV9-hG-bLi" secondAttribute="leading" constant="15" id="Jvm-03-Axt"/>
                                     <constraint firstAttribute="trailing" secondItem="VWk-ou-iS6" secondAttribute="trailing" id="N83-cv-Mow"/>
                                     <constraint firstItem="UpZ-Pp-c4F" firstAttribute="top" secondItem="uV9-hG-bLi" secondAttribute="top" id="Vrf-1P-wmQ"/>
                                     <constraint firstAttribute="trailing" secondItem="l1f-Me-0zA" secondAttribute="trailing" constant="6" id="XFu-ty-2uf"/>
                                     <constraint firstItem="l1f-Me-0zA" firstAttribute="top" secondItem="uV9-hG-bLi" secondAttribute="top" constant="6" id="anC-t9-iMC"/>
-                                    <constraint firstAttribute="bottom" secondItem="VS8-mK-hEN" secondAttribute="bottom" constant="15" id="auT-1r-owk"/>
+                                    <constraint firstAttribute="bottom" secondItem="VS8-mK-hEN" secondAttribute="bottom" constant="12" id="auT-1r-owk"/>
                                     <constraint firstItem="UpZ-Pp-c4F" firstAttribute="leading" secondItem="uV9-hG-bLi" secondAttribute="leading" id="lPf-cW-QTl"/>
                                     <constraint firstItem="VWk-ou-iS6" firstAttribute="top" secondItem="uV9-hG-bLi" secondAttribute="top" id="nAh-lc-Mfk"/>
                                     <constraint firstItem="l1f-Me-0zA" firstAttribute="width" secondItem="VWk-ou-iS6" secondAttribute="width" multiplier="0.46" id="r3A-fp-cy1"/>
@@ -471,21 +477,24 @@
                         <constraints>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Ph-fn-dx0"/>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="8SI-nP-cSR"/>
+                            <constraint firstItem="jrH-BQ-4ti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AaE-7i-Edv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uV9-hG-bLi" secondAttribute="trailing" constant="15" id="LKo-Yu-ymz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="uV9-hG-bLi" secondAttribute="leading" constant="-15" id="Y55-OG-IwF"/>
+                            <constraint firstItem="jrH-BQ-4ti" firstAttribute="top" secondItem="xOG-9z-mVQ" secondAttribute="bottom" id="clE-7m-6vf"/>
                             <constraint firstItem="xOG-9z-mVQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fhd-JE-4TH"/>
-                            <constraint firstItem="Z6Q-k0-ggs" firstAttribute="top" secondItem="xOG-9z-mVQ" secondAttribute="bottom" id="fme-On-ZPU"/>
                             <constraint firstItem="Oxz-Zq-2g7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hCU-MF-j2K"/>
                             <constraint firstItem="xOG-9z-mVQ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="iW6-ER-Dkj"/>
-                            <constraint firstItem="uV9-hG-bLi" firstAttribute="top" secondItem="xOG-9z-mVQ" secondAttribute="bottom" id="isf-4O-rwx"/>
                             <constraint firstItem="xOG-9z-mVQ" firstAttribute="top" secondItem="Oxz-Zq-2g7" secondAttribute="bottom" id="iyg-X4-Ffs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6Q-k0-ggs" secondAttribute="trailing" constant="15" id="l2i-W0-zLN"/>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="mHz-xI-0TG"/>
                             <constraint firstItem="Z6Q-k0-ggs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="p8Q-Ru-mRC"/>
+                            <constraint firstItem="Z6Q-k0-ggs" firstAttribute="top" secondItem="jrH-BQ-4ti" secondAttribute="bottom" constant="4" id="qvd-hW-WWB"/>
                             <constraint firstItem="eyk-EK-raM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uVZ-du-Fub"/>
+                            <constraint firstItem="uV9-hG-bLi" firstAttribute="top" secondItem="jrH-BQ-4ti" secondAttribute="bottom" constant="4" id="ukz-Qc-T7Z"/>
                             <constraint firstItem="Oxz-Zq-2g7" firstAttribute="top" secondItem="eyk-EK-raM" secondAttribute="bottom" id="vNz-Be-acs"/>
                             <constraint firstItem="xOG-9z-mVQ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="xhQ-Iw-ZFa"/>
                             <constraint firstItem="Oxz-Zq-2g7" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="yJI-k4-sar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jrH-BQ-4ti" secondAttribute="trailing" symbolic="YES" id="zOe-dD-pB6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Installation" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
@@ -494,6 +503,7 @@
                         <outlet property="appTextBackgroundPhone" destination="uV9-hG-bLi" id="s6y-0B-0qh"/>
                         <outlet property="appTextViewPad" destination="CCX-IO-PsS" id="uq8-u0-CoC"/>
                         <outlet property="appTextViewPhone" destination="VS8-mK-hEN" id="d9C-Cn-Ua0"/>
+                        <outlet property="installationHeaderLabel" destination="jrH-BQ-4ti" id="sa6-Ir-dxR"/>
                         <outlet property="logoSpace" destination="xOG-9z-mVQ" id="dmA-CN-T1P"/>
                         <outlet property="settingCornerWidthConstraintPad" destination="7N0-2Z-4lJ" id="rhO-NN-wS1"/>
                         <outlet property="settingCornerWidthConstraintPhone" destination="VWk-ou-iS6" id="4oT-Wy-i9C"/>

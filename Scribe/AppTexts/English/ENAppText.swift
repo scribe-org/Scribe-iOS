@@ -19,20 +19,12 @@
 
 import UIKit
 
-/// Formats and returns the title of the installation guidelines.
-func getENInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
-  return NSMutableAttributedString(string: """
-  Keyboard Installation
-  """, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)])
-}
-
 /// Formats and returns the directions of the installation guidelines.
 func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
   let arrowString = getArrowIcon(fontSize: fontSize)
   let globeString = getGlobeIcon(fontSize: fontSize)
 
   let startOfBody = NSMutableAttributedString(string: """
-  \n
   1.\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
@@ -156,11 +148,6 @@ func getENInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
 func setENInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
-  let installTitle = getENInstallationTitle(fontSize: fontSize)
   let installDirections = getENInstallationDirections(fontSize: fontSize)
-
-  return concatAttributedStrings(
-    left: installTitle,
-    right: installDirections
-  )
+  return installDirections
 }
