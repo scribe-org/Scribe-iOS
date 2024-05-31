@@ -114,7 +114,7 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     fetchSwitchStateForCell()
 
-    toggleSwitch.onTintColor = .init(.scribeCTA).withAlphaComponent(0.4)
+    toggleSwitch.onTintColor = .init(ScribeColor.scribeCTA).withAlphaComponent(0.4)
     toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
   }
 
