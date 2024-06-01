@@ -371,7 +371,7 @@
       }
     },
     "about.privacyPolicy.body" : {
-      "comment" : "Main text body of the privacy policy",
+      "comment" : "Main text body for the privacy policy",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1108,47 +1108,6 @@
         }
       }
     },
-    "install.settingsLinkOld" : {
-      "comment" : "Text for the link to the scribe section in the settings on older iOS versions",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen öffnen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open Settings"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
     "install.text" : {
       "comment" : "Main text for the installation screen",
       "localizations" : {
@@ -1202,7 +1161,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Activate keyboards that you want to use\n\n4. When typing press "
+            "value" : "Activate keyboards that you want to use\n\n4. When typing press"
           }
         },
         "es" : {
@@ -1243,211 +1202,6 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " to select keyboards"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "install.textOld" : {
-      "comment" : "Main text for the installation screen on older iOS versions",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "install.textOld2" : {
-      "comment" : "Main text for the installation screen on older iOS versions 2",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "do the following"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "install.textOld3" : {
-      "comment" : "Main text for the installation screen on older iOS versions 3",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add New Keyboard\n\n3. Select"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "install.textOld4" : {
-      "comment" : "Main text for the installation screen on older iOS versions 4",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "and then activate keyboards\n\n4. When typing, press "
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "install.textOld5" : {
-      "comment" : "Main text for the installation screen on older iOS versions 5",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
             "value" : "to select keyboards"
           }
         },
@@ -1478,7 +1232,7 @@
       }
     },
     "install.title" : {
-      "comment" : "Title of the keyboard installation screen",
+      "comment" : "Scribe keyboard installation header",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1490,47 +1244,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keyboard installation"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "keyboard" : {
-      "comment" : "Keyboard button in the settings",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keyboard"
           }
         },
         "es" : {
@@ -1760,59 +1473,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : ""
-          }
-        }
-      }
-    },
-    "settings.general" : {
-      "comment" : "General section of system settings",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "settings.installation.header" : {
-      "comment" : "Scribe keyboard installation header",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keyboard installation"
           }
         }
       }
