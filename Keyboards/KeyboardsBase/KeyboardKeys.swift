@@ -130,15 +130,12 @@ class KeyboardKey: UIButton {
       && !isSpecial
       && !["123", "´", spaceBar, languageTextForSpaceBar].contains(key)
       && shiftButtonState == .normal {
-      titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.4)
       } else {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.35)
       }
-    } else {
-      titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
   }
 
@@ -187,15 +184,12 @@ class KeyboardKey: UIButton {
       && !isSpecial
       && ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(key)
       && shiftButtonState == .normal {
-      titleEdgeInsets = UIEdgeInsets(top: -4.0, left: 0.0, bottom: 0.0, right: 0.0)
 
       if isLandscapeView {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.35)
       } else {
         titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.75)
       }
-    } else {
-      titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
   }
 

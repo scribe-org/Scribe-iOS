@@ -24,7 +24,7 @@ import UIKit
 /// - Parameters
 ///  - elem: the element to have shadows added to.
 func applyShadowEffects(elem: AnyObject) {
-  elem.layer.shadowColor = UIColor(.keyShadow).light.cgColor
+  elem.layer.shadowColor = UIColor(ScribeColor.keyShadow).light.cgColor
   elem.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
   elem.layer.shadowOpacity = 1.0
   elem.layer.shadowRadius = 3.0

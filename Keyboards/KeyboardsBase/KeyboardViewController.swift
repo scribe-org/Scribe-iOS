@@ -130,11 +130,7 @@ class KeyboardViewController: UIInputViewController {
   ///   - btn: the button to be deactivated.
   func deactivateBtn(btn: UIButton) {
     btn.setTitle("", for: .normal)
-    if #available(iOS 15.0, *) {
-      btn.configuration?.image = nil
-    } else {
-      btn.setImage(nil, for: .normal)
-    }
+    btn.configuration?.image = nil
     btn.backgroundColor = UIColor.clear
     btn.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
     btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
