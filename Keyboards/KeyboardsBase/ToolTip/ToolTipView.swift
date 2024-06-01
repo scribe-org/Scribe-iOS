@@ -1,5 +1,5 @@
 /**
- * The main file used to control tooltips.
+ * Shows the user an information view.
  *
  * Copyright (C) 2023 Scribe
  *

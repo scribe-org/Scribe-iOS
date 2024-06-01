@@ -27,6 +27,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Tab and caps lock keys and their functionalities have been added to expanded iPad layouts ([#371](https://github.com/scribe-org/Scribe-iOS/issues/371)).
 - Users can now swipe between the conjugation and declension views ([#361](https://github.com/scribe-org/Scribe-iOS/issues/361)).
 - Autocomplete on space when the word is the last one available in the autocompletion lexicon has been disabled ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305), reverts [#256](https://github.com/scribe-org/Scribe-iOS/issues/256)).
+- Missing verb conjugations can be clicked to show information about Wikidata and its relationship to Scribe ([#400](https://github.com/scribe-org/Scribe-iOS/issues/400)).
 
 ### 🎨 Design Changes
 
