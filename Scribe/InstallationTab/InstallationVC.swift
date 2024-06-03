@@ -227,7 +227,7 @@ class InstallationVC: UIViewController {
     }
 
     installationHeaderLabel.text = NSLocalizedString(
-      "settings.installation.header", comment: "The title of the installed keyboards section"
+      "install.title", comment: "The title of the installed keyboards section"
     )
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 

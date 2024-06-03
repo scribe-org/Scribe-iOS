@@ -19,21 +19,11 @@
 
 import UIKit
 
-/// Formats and returns the title of the installation guidelines.
-func getInstallationTitle(fontSize: CGFloat) -> NSMutableAttributedString {
-  return NSMutableAttributedString(
-    string: NSLocalizedString("install.title", comment: "Title of the keyboard installation screen"),
-    attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.5)]
-  )
-}
-
 /// Formats and returns the directions of the installation guidelines.
 func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
-  let arrowString = getArrowIcon(fontSize: fontSize)
   let globeString = getGlobeIcon(fontSize: fontSize)
 
   let startOfBody = NSMutableAttributedString(string: """
-  \n
   1.\u{0020}
   """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
@@ -49,7 +39,7 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
 
   let installDirections = NSMutableAttributedString(string: "\n\n2. " + NSLocalizedString("install.text", comment: "Main text for the installation screen"), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  var toAppend = NSMutableAttributedString(string: " " + NSLocalizedString("keyboards", comment: "Keyboards button in the settings"), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  let toAppend = NSMutableAttributedString(string: " " + NSLocalizedString("keyboards", comment: "Keyboards button in the settings"), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
   toAppend.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize), range: NSRange(location: 0, length: toAppend.length))
   installDirections.append(toAppend)
 
@@ -67,11 +57,5 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
 /// - Parameters
 ///  - fontSize: the size of the font derived for the app text given screen dimensions.
 func setInstallation(fontSize: CGFloat) -> NSMutableAttributedString {
-  let installTitle = getInstallationTitle(fontSize: fontSize)
-  let installDirections = getInstallationDirections(fontSize: fontSize)
-
-  return concatAttributedStrings(
-    left: installTitle,
-    right: installDirections
-  )
+  return getInstallationDirections(fontSize: fontSize)
 }
