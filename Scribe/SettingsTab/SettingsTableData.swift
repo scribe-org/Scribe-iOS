@@ -30,7 +30,6 @@ enum SettingsTableData {
           sectionTitle: NSLocalizedString(
             "settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"
           ),
-          imageString: "globe",
           hasToggle: false,
           sectionState: .appLang
         )

@@ -93,7 +93,7 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    footerButton.setTitle("Install keyboards", for: .normal)
+    footerButton.setTitle("Install keyboards", for: .normal) // is this ever used?
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
     footerButton.backgroundColor = appBtnColor
@@ -151,6 +151,9 @@ extension SettingsViewController: UITableViewDelegate {
     let section = tableSection.section[indexPath.row]
 
     switch section.sectionState {
+    case .appLang:
+      openSettingsApp()
+
     case .specificLang:
       if let viewController = storyboard?.instantiateViewController(
         identifier: "TableViewTemplateViewController"

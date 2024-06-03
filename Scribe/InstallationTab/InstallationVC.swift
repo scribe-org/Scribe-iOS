@@ -239,7 +239,7 @@ class InstallationVC: UIViewController {
     setInstallationUI()
   }
 
-  /// Function to open the settings app that is targeted by settingsBtn.
+  /// Function to open the settings app that is targeted by settingsBtn. <- could this be moved to a more generic file?
   @objc func openSettingsApp() {
     guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
       fatalError("Failed to create settings URL.")
