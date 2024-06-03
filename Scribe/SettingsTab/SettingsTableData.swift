@@ -109,14 +109,14 @@ enum SettingsTableData {
     for keyboard in keyboards {
       if keyboard.hasPrefix(customKeyboardExtension) {
         let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
-        installedKeyboards.append(lang.capitalize())
+        installedKeyboards.append(NSLocalizedString(lang, comment: ""))
       }
     }
 
     var sections = [Section]()
 
     for language in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[language] else {
+      guard let abbreviation = localizedLanguagesAbbrDict[language] else {
         fatalError("Abbreviation not found for language: \(language)")
       }
       let newSection = Section(

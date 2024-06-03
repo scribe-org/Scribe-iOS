@@ -1,332 +1,109 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "about.appHints" : {
-      "comment" : "Title for the button to reset hints",
+    "about" : {
+      "comment" : "Title for the about tab",
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Info"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+      }
+    },
+    "about.appHints" : {
+      "comment" : "Title for the button to reset hints",
+      "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reset app hints"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.bugReport" : {
       "comment" : "Title for the bug report button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Report a bug"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.community" : {
       "comment" : "Heading for the community category",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Community"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.email" : {
       "comment" : "Title for the email button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Send us an email"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.feedback" : {
       "comment" : "Heading for the feedback category",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Feedback and support"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.github" : {
       "comment" : "Title for the GitHub button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "See the code on GitHub"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.legal" : {
       "comment" : "Title for the legal category",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legal"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.matrix" : {
       "comment" : "Title for the Matrix button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chat with the team on Matrix"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.privacyPolicy" : {
@@ -344,30 +121,6 @@
             "value" : "Privacy policy"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.privacyPolicy.body" : {
@@ -385,30 +138,6 @@
             "value" : "Please note that the English version of this policy takes precedence over all other versions.\n\nThe Scribe developers (SCRIBE) built the iOS application \"Scribe - Language Keyboards\" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.\n\nThis privacy policy (POLICY) is used to inform the reader of the policies for the access, tracking, collection, retention, use, and disclosure of personal information (USER INFORMATION) and usage data (USER DATA) for all individuals who make use of this SERVICE (USERS).\n\nUSER INFORMATION is specifically defined as any information related to the USERS themselves or the devices they use to access the SERVICE.\n\nUSER DATA is specifically defined as any text that is typed or actions that are done by the USERS while using the SERVICE.\n\n1. Policy Statement\n\nThis SERVICE does not access, track, collect, retain, use, or disclose any USER INFORMATION or USER DATA.\n\n2. Do Not Track\n\nUSERS contacting SCRIBE to ask that their USER INFORMATION and USER DATA not be tracked will be provided with a copy of this POLICY as well as a link to all source codes as proof that they are not being tracked.\n\n3. Third-Party Data\n\nThis SERVICE makes use of third-party data. All data used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the data for this SERVICE comes from Wikidata, Wikipedia and Unicode. Wikidata states that, \"All structured data in the main, property and lexeme namespaces is made available under the Creative Commons CC0 License; text in other namespaces is made available under the Creative Commons Attribution-Share Alike License.\" The policy detailing Wikidata data usage can be found at https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia states that text data, the type of data used by the SERVICE, \"... can be used under the terms of the Creative Commons Attribution Share-Alike license\". The policy detailing Wikipedia data usage can be found at https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode provides permission, \"... free of charge, to any person obtaining a copy of the Unicode data files and any associated documentation (the \"Data Files\") or Unicode software and any associated documentation (the \"Software\") to deal in the Data Files or Software without restriction...\" The policy detailing Unicode data usage can be found at https://www.unicode.org/license.txt.\n\n4. Third-Party Source Code\n\nThis SERVICE was based on third-party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. Specifically, the basis of this project was the project CustomKeyboard by Ethan Sarif-Kattan. CustomKeyboard was released under an MIT license, with this license being available at https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Third-Party Services\n\nThis SERVICE makes use of third-party services to manipulate some of the third-party data. Specifically, data has been translated using models from Hugging Face transformers. This service is covered by an Apache License 2.0, which states that it is available for commercial use, modification, distribution, patent use, and private use. The license for the aforementioned service can be found at https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Third-Party Links\n\nThis SERVICE contains links to external websites. If USERS click on a third-party link, they will be directed to a website. Note that these external websites are not operated by this SERVICE. Therefore, USERS are strongly advised to review the privacy policy of these websites. This SERVICE has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party sites or services.\n\n7. Third-Party Images\n\nThis SERVICE contains images that are copyrighted by third-parties. Specifically, this app includes a copy of the logos of GitHub, Inc and Wikidata, trademarked by Wikimedia Foundation, Inc. The terms by which the GitHub logo can be used are found on https://github.com/logos, and the terms for the Wikidata logo are found on the following Wikimedia page: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. This SERVICE uses the copyrighted images in a way that matches these criteria, with the only deviation being a rotation of the GitHub logo that is common in the open-source community to indicate that there is a link to the GitHub website.\n\n8. Content Notice\n\nThis SERVICE allows USERS to access linguistic content (CONTENT). Some of this CONTENT could be deemed inappropriate for children and legal minors. Accessing CONTENT using the SERVICE is done in a way that the information is unavailable unless explicitly known. Specifically, USERS \"can\" translate words, conjugate verbs, and access other grammatical features of CONTENT that may be sexual, violent, or otherwise inappropriate in nature. USERS \"cannot\" translate words, conjugate verbs, and access other grammatical features of CONTENT that may be sexual, violent, or otherwise inappropriate in nature if they do not already know about the nature of this CONTENT. SCRIBE takes no responsibility for the access of such CONTENT.\n\n9. Changes\n\nThis POLICY is subject to change. Updates to this POLICY will replace all prior instances, and if deemed material will further be clearly stated in the next applicable update to the SERVICE. SCRIBE encourages USERS to periodically review this POLICY for the latest information on our privacy practices and to familiarize themselves with any changes.\n\n10. Contact\n\nIf you have any questions, concerns, or suggestions about this POLICY, do not hesitate to visit https://github.com/scribe-org or contact SCRIBE at scribe.langauge@gmail.com. The person responsible for such inquiries is Andrew Tavis McAllister.\n\n11. Effective Date\n\nThis POLICY is effective as of the 24th of May, 2022."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.privacyPolicy.caption" : {
@@ -426,1342 +155,436 @@
             "value" : "Keeping you safe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.rate" : {
       "comment" : "Title for the rate button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate Scribe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.scribe" : {
       "comment" : "Title for the Scribe Apps section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View all Scribe apps"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.share" : {
       "comment" : "Title for the share button",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share Scribe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty" : {
       "comment" : "Title for the third party licenses",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Third-party licenses"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty.author" : {
       "comment" : "Author of third party code",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Author"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty.body" : {
       "comment" : "Main text body for the third party license",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The Scribe developers (SCRIBE) built\nthe iOS application \"Scribe - Language Keyboards\" (SERVICE) using third party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. This section lists the source code on which the SERVICE was based as well as the coinciding licenses of each.\n\nThe following is a list of all used source code, the main author or authors of the code, the license under which it was released at time of usage, and a link to the license.\n\n1. Custom Keyboard\n• Author: EthanSK\n• License: MIT\n• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty.caption" : {
       "comment" : "Caption for the third party license",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Whose code we used"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty.license" : {
       "comment" : "License of third party code",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "License"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.thirdParty.link" : {
       "comment" : "Link to license of third party code",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Link"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.title" : {
       "comment" : "The title of the about tab",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "About"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.wikimedia" : {
       "comment" : "Title for the Wikimedia explanation",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wikimedia and Scribe"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.wikimedia.caption" : {
       "comment" : "Caption for the Wikimedia explanation",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "How we work together"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.wikimedia.text1" : {
       "comment" : "First paragraph of the Wikimedia explanation",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Specifically Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.wikimedia.text2" : {
       "comment" : "Second paragraph of the Wikimedia explanation",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation. It provides freely available data that anyone can use under a Creative Commons Public Domain license (CC0).  Scribe uses language data from Wikidata to provide users with verb conjugations, noun-form annotations, noun plurals, and many other features."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "about.wikimedia.text3" : {
       "comment" : "Third paragraph of the Wikimedia explanation",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wikipedia is a multilingual free online encyclopedia written and maintained by a community of volunteers through open collaboration and a wiki-based editing system. Scribe uses data from Wikipedia to produce autosuggestions by deriving the most common words in a language as well as the most common words that follow them."
           }
         },
-        "es" : {
+      }
+    },
+    "french" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "French"
           }
         },
-        "fr" : {
+      }
+    },
+    "german" : {
+      "comment" : "German (language)",
+      "localizations" : {
+        "de" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Deutsch"
           }
         },
-        "it" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "German"
           }
         },
-        "pt" : {
+      }
+    },
+    "install" : {
+      "comment" : "Title for the installation tab",
+      "localizations" : {
+        "de" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Installation"
           }
-        }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation"
+          }
+        },
       }
     },
     "install.settingsLink" : {
       "comment" : "Text for the link to the scribe section in the settings",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Scribe settings"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "install.text" : {
       "comment" : "Main text for the installation screen",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "install.text2" : {
       "comment" : "Main text for the installation screen 2",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activate keyboards that you want to use\n\n4. When typing press"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "install.text3" : {
       "comment" : "Main text for the installation screen 3",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "to select keyboards"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "install.title" : {
       "comment" : "The title of the installed keyboards section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keyboard installation"
           }
         },
-        "es" : {
+      }
+    },
+    "italian" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Italian"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "keyboards" : {
       "comment" : "Keyboards button in the settings",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keyboards"
           }
         },
-        "es" : {
+      }
+    },
+    "portuguese" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Portuguese"
           }
         },
-        "fr" : {
+      }
+    },
+    "russian" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Russian"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.appSettings" : {
       "comment" : "The title of the app settings section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App settings"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.appSettings.appLanguage" : {
       "comment" : "Change the language of the Scribe App",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App language"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.functionality" : {
       "comment" : "The title of the functionality section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Functionality"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.functionality.autoSuggestEmoji" : {
       "comment" : "Toggles the suggestion of Emoji",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autosuggest emojis"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.installedKeyboards" : {
       "comment" : "The title of the installed keyboards section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select installed keyboard"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout" : {
       "comment" : "The title of the layout section",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Layout"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout.autoSuggestEmoji.description" : {
       "comment" : "",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turn on emoji suggestions and completions for more expressive typing."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout.disableAccentCharacters" : {
       "comment" : "Toggles accented characters for the selected keyboard",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disable accent characters"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout.disableAccentCharacters.description" : {
       "comment" : "",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Include accented letter keys on the primary keyboard layout."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout.periodAndComma" : {
       "comment" : "Toggles period and commas for the selected keyboard",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Period and comma on ABC"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.layout.periodAndComma.description" : {
       "comment" : "",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Include comma and period keys on the main keyboard for convenient typing."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "settings.title" : {
@@ -1769,8 +592,8 @@
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Einstellungen"
           }
         },
         "en" : {
@@ -1779,153 +602,61 @@
             "value" : "Settings"
           }
         },
-        "es" : {
+      }
+    },
+    "spanish" : {
+      "comment" : "Spanish (language)",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Spanish"
           }
         },
-        "fr" : {
+      }
+    },
+    "swedish" : {
+      "comment" : "Swedish (language)",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Swedish"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "wikidataExplanation1" : {
       "comment" : "First page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "wikidataExplanation2" : {
       "comment" : "Second page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     },
     "wikidataExplanation3" : {
       "comment" : "Last page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : ""
-          }
-        }
       }
     }
   },

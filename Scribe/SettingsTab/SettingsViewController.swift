@@ -160,7 +160,7 @@ extension SettingsViewController: UITableViewDelegate {
 
         // Check if the device is an iPad to determine period and comma on the ABC characters option.
         let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual("Period and comma on ABC")
+            s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.periodAndComma", comment: "Toggles period and commas for the selected keyboard"))
         }) ?? -1
 
         if DeviceType.isPad {
@@ -171,7 +171,7 @@ extension SettingsViewController: UITableViewDelegate {
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
         let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual("Disable accent characters")
+          s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.disableAccentCharacters", comment: "Toggles accented characters for the selected keyboard"))
         }) ?? -1
 
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
@@ -181,7 +181,7 @@ extension SettingsViewController: UITableViewDelegate {
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
           data[0].section.insert(
             Section(
-              sectionTitle: "Disable accent characters",
+              sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", comment: "Toggles accented characters for the selected keyboard"),
               imageString: "info.circle",
               hasToggle: true,
               sectionState: .none(.toggleAccentCharacters)
