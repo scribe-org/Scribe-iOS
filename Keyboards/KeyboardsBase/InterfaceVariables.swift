@@ -172,13 +172,13 @@ let languagesAbbrDict = [
   "Swedish": "sv"
 ]
 let localizedLanguagesAbbrDict = [
-  NSLocalizedString("french", comment: ""): "fr",
-  NSLocalizedString("german", comment: ""): "de",
-  NSLocalizedString("italian", comment: ""): "it",
-  NSLocalizedString("portuguese", comment: ""): "pt",
-  NSLocalizedString("russian", comment: ""): "ru",
-  NSLocalizedString("spanish", comment: ""): "es",
-  NSLocalizedString("swedish", comment: ""): "sv"
+  NSLocalizedString("french", comment: "French (language)"): "fr",
+  NSLocalizedString("german", comment: "German (language)"): "de",
+  NSLocalizedString("italian", comment: "Italian (language)"): "it",
+  NSLocalizedString("portuguese", comment: "Portuguese (language)"): "pt",
+  NSLocalizedString("russian", comment: "Russian (language)"): "ru",
+  NSLocalizedString("spanish", comment: "Spanish (language)"): "es",
+  NSLocalizedString("swedish", comment: "Swedish (language)"): "sv"
 ]
 
 /// Returns the abbreviation of the language for use in commands.

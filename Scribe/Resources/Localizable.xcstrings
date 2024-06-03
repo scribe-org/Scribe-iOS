@@ -21,6 +21,12 @@
     "about.appHints" : {
       "comment" : "Title for the button to reset hints",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.appHints"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32,6 +38,12 @@
     "about.bugReport" : {
       "comment" : "Title for the bug report button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.bugReport"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,6 +55,12 @@
     "about.community" : {
       "comment" : "Heading for the community category",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.community"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -54,6 +72,12 @@
     "about.email" : {
       "comment" : "Title for the email button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.email"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -65,6 +89,12 @@
     "about.feedback" : {
       "comment" : "Heading for the feedback category",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.feedback"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -76,6 +106,12 @@
     "about.github" : {
       "comment" : "Title for the GitHub button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.github"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -87,6 +123,12 @@
     "about.legal" : {
       "comment" : "Title for the legal category",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.legal"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -98,6 +140,12 @@
     "about.matrix" : {
       "comment" : "Title for the Matrix button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.matrix"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -160,6 +208,12 @@
     "about.rate" : {
       "comment" : "Title for the rate button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.rate"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -171,6 +225,12 @@
     "about.scribe" : {
       "comment" : "Title for the Scribe Apps section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.scribe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -182,6 +242,12 @@
     "about.share" : {
       "comment" : "Title for the share button",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.share"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -193,6 +259,12 @@
     "about.thirdParty" : {
       "comment" : "Title for the third party licenses",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -204,6 +276,12 @@
     "about.thirdParty.author" : {
       "comment" : "Author of third party code",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty.author"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -215,6 +293,12 @@
     "about.thirdParty.body" : {
       "comment" : "Main text body for the third party license",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty.body"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -226,6 +310,12 @@
     "about.thirdParty.caption" : {
       "comment" : "Caption for the third party license",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty.caption"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -237,6 +327,12 @@
     "about.thirdParty.license" : {
       "comment" : "License of third party code",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty.license"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -248,6 +344,12 @@
     "about.thirdParty.link" : {
       "comment" : "Link to license of third party code",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.thirdParty.link"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +361,12 @@
     "about.title" : {
       "comment" : "The title of the about tab",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.title"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -270,6 +378,12 @@
     "about.wikimedia" : {
       "comment" : "Title for the Wikimedia explanation",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.wikimedia"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -281,6 +395,12 @@
     "about.wikimedia.caption" : {
       "comment" : "Caption for the Wikimedia explanation",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.wikimedia.caption"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -292,6 +412,12 @@
     "about.wikimedia.text1" : {
       "comment" : "First paragraph of the Wikimedia explanation",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.wikimedia.text1"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +429,12 @@
     "about.wikimedia.text2" : {
       "comment" : "Second paragraph of the Wikimedia explanation",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.wikimedia.text2"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -314,6 +446,12 @@
     "about.wikimedia.text3" : {
       "comment" : "Third paragraph of the Wikimedia explanation",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "about.wikimedia.text3"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -323,8 +461,14 @@
       }
     },
     "french" : {
-      "comment" : "",
+      "comment" : "French (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "french"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -370,6 +514,12 @@
     "install.settingsLink" : {
       "comment" : "Text for the link to the scribe section in the settings",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "install.settingsLink"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -381,6 +531,12 @@
     "install.text" : {
       "comment" : "Main text for the installation screen",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "install.text"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -392,6 +548,12 @@
     "install.text2" : {
       "comment" : "Main text for the installation screen 2",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "install.text2"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -403,6 +565,12 @@
     "install.text3" : {
       "comment" : "Main text for the installation screen 3",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "install.text3"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -414,6 +582,12 @@
     "install.title" : {
       "comment" : "The title of the installed keyboards section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "install.title"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -423,8 +597,14 @@
       }
     },
     "italian" : {
-      "comment" : "",
+      "comment" : "Italian (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "italian"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -436,6 +616,12 @@
     "keyboards" : {
       "comment" : "Keyboards button in the settings",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "keyboards"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -445,8 +631,14 @@
       }
     },
     "portuguese" : {
-      "comment" : "",
+      "comment" : "Portuguese (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "portuguese"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -456,8 +648,14 @@
       }
     },
     "russian" : {
-      "comment" : "",
+      "comment" : "Russian (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "russian"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -469,6 +667,12 @@
     "settings.appSettings" : {
       "comment" : "The title of the app settings section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.appSettings"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -480,6 +684,12 @@
     "settings.appSettings.appLanguage" : {
       "comment" : "Change the language of the Scribe App",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.appSettings.appLanguage"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -491,6 +701,12 @@
     "settings.functionality" : {
       "comment" : "The title of the functionality section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.functionality"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -502,6 +718,12 @@
     "settings.functionality.autoSuggestEmoji" : {
       "comment" : "Toggles the suggestion of Emoji",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.functionality.autoSuggestEmoji"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -513,6 +735,12 @@
     "settings.installedKeyboards" : {
       "comment" : "The title of the installed keyboards section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.installedKeyboards"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -524,6 +752,12 @@
     "settings.layout" : {
       "comment" : "The title of the layout section",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -535,6 +769,12 @@
     "settings.layout.autoSuggestEmoji.description" : {
       "comment" : "",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout.autoSuggestEmoji.description"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -546,6 +786,12 @@
     "settings.layout.disableAccentCharacters" : {
       "comment" : "Toggles accented characters for the selected keyboard",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout.disableAccentCharacters"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -557,6 +803,12 @@
     "settings.layout.disableAccentCharacters.description" : {
       "comment" : "",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout.disableAccentCharacters.description"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -568,6 +820,12 @@
     "settings.layout.periodAndComma" : {
       "comment" : "Toggles period and commas for the selected keyboard",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout.periodAndComma"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -579,6 +837,12 @@
     "settings.layout.periodAndComma.description" : {
       "comment" : "",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "settings.layout.periodAndComma.description"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -607,6 +871,12 @@
     "spanish" : {
       "comment" : "Spanish (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "spanish"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -618,6 +888,12 @@
     "swedish" : {
       "comment" : "Swedish (language)",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "swedish"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -629,6 +905,12 @@
     "wikidataExplanation1" : {
       "comment" : "First page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "wikidataExplanation1"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -640,6 +922,12 @@
     "wikidataExplanation2" : {
       "comment" : "Second page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "wikidataExplanation2"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -651,6 +939,12 @@
     "wikidataExplanation3" : {
       "comment" : "Last page of the wikidata explanation for missing words/conjugations",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "wikidataExplanation3"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
