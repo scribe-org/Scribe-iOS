@@ -332,7 +332,7 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
   <br>
 </div>
 
-# Powered By
+# Powered By [`⇧`](#contents)
 
 ### Contributors
 
