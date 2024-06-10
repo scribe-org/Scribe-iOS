@@ -303,7 +303,7 @@ class KeyboardViewController: UIInputViewController {
   func setInformationState() {
     setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
-    let datasources = contentData.enumerated().compactMap { _, text in
+    let datasources = contentData.compactMap { text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
     }
     tipView = ToolTipView(datasources: datasources)
@@ -658,14 +658,13 @@ class KeyboardViewController: UIInputViewController {
         firstCompletionIsHighlighted = false
         // Highlight if the current prefix is the first autocompletion.
         if
-          currentPrefix == completionWords[0] && completionWords[1] != " "
+          currentPrefix == completionWords[0] && completionWords[1] != " " {
 
         // Note: Code for highlighting the word if it's the only option available - add when libraries are expanded.
 //        || (
 //          // Highlighting last remaining autocomplete.
 //          completionWords[0] != " " && completionWords[1] == " "
 //        )
-        {
           firstCompletionIsHighlighted = true
         }
         setBtn(
@@ -1242,8 +1241,7 @@ class KeyboardViewController: UIInputViewController {
     } else if
       commandState == .selectCaseDeclension
       && controllerLanguage == "German"
-      && deCaseVariantDeclensionState != .disabled
-    {
+      && deCaseVariantDeclensionState != .disabled {
       switch deCaseVariantDeclensionState {
       case .disabled:
         break
@@ -1271,12 +1269,10 @@ class KeyboardViewController: UIInputViewController {
         .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
         .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
         .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
-      ].contains(deCaseDeclensionState)
-    {
+      ].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
     } else if
-      commandState == .displayInformation
-    {
+      commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
     } else {
       formsDisplayDimensions = .view3x2
