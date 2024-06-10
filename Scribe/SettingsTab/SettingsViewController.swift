@@ -22,8 +22,16 @@ import UIKit
 final class SettingsViewController: UIViewController {
   // MARK: - Constants
 
-  private let sectionHeaderHeight: CGFloat = 32
+  private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+
+  func setHeaderHeight() {
+    if DeviceType.isPad {
+      sectionHeaderHeight = 42
+    } else {
+      sectionHeaderHeight = 32
+    }
+  }
 
   // MARK: - Properties
 
@@ -37,6 +45,7 @@ final class SettingsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setHeaderHeight()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
     navigationItem.backButtonTitle = NSLocalizedString(
@@ -205,8 +214,9 @@ extension SettingsViewController: UITableViewDelegate {
     }
 
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: 32))
+
     label.text = tableData[section].headingTitle
-    label.font = UIFont.preferredFont(forTextStyle: .headline)
+    label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
     label.textColor = keyCharColor
     headerView.addSubview(label)
 

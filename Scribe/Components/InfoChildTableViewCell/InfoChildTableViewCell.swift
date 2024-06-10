@@ -27,12 +27,40 @@ final class InfoChildTableViewCell: UITableViewCell {
 
   // MARK: - Properties
 
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var descriptionLabel: UILabel!
-  @IBOutlet var toggleSwitch: UISwitch!
+  @IBOutlet var titleLabelPhone: UILabel!
+  @IBOutlet var titleLabelPad: UILabel!
+  var titleLabel: UILabel!
+
+  @IBOutlet var toggleSwitchPhone: UISwitch!
+  @IBOutlet var toggleSwitchPad: UISwitch!
+  var toggleSwitch: UISwitch!
+
+  @IBOutlet var descriptionLabelPhone: UILabel!
+  @IBOutlet var descriptionLabelPad: UILabel!
+  var descriptionLabel: UILabel!
 
   var section: Section?
   var parentSection: Section?
+
+  func setTableView() {
+    if DeviceType.isPad {
+      titleLabel = titleLabelPad
+      toggleSwitch = toggleSwitchPad
+      descriptionLabel = descriptionLabelPad
+
+      titleLabelPhone.removeFromSuperview()
+      toggleSwitchPhone.removeFromSuperview()
+      descriptionLabelPhone.removeFromSuperview()
+    } else {
+      titleLabel = titleLabelPhone
+      toggleSwitch = toggleSwitchPhone
+      descriptionLabel = descriptionLabelPhone
+
+      titleLabelPad.removeFromSuperview()
+      toggleSwitchPad.removeFromSuperview()
+      descriptionLabelPad.removeFromSuperview()
+    }
+  }
 
   let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
 
@@ -54,9 +82,9 @@ final class InfoChildTableViewCell: UITableViewCell {
 
   func configureCell(for section: Section) {
     self.section = section
-
     selectionStyle = .none
 
+    setTableView()
     titleLabel.text = section.sectionTitle
 
     if let shortDescription = section.shortDescription {
@@ -86,7 +114,7 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     fetchSwitchStateForCell()
 
-    toggleSwitch.onTintColor = .init(.scribeCTA).withAlphaComponent(0.4)
+    toggleSwitch.onTintColor = .init(ScribeColor.scribeCTA).withAlphaComponent(0.4)
     toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
   }
 

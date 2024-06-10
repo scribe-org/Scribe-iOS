@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,15 +12,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoChildTableViewCell" rowHeight="128" id="KGk-i7-Jjw" customClass="InfoChildTableViewCell" customModule="Scribe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="424" height="128"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoChildTableViewCell" rowHeight="148" id="KGk-i7-Jjw" customClass="InfoChildTableViewCell" customModule="Scribe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="424" height="128"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" userLabel="ContentView">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-yb-cab">
-                        <rect key="frame" x="359" y="13.666666666666664" width="51" height="31"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-83-3eC" userLabel="TitleLabelPad">
+                        <rect key="frame" x="24.000000000000004" y="12" width="58.333333333333343" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="trX-iS-h3L"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                        <color key="textColor" name="keyChar"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-yb-cab" userLabel="ToggleSwitchPad">
+                        <rect key="frame" x="351" y="20.666666666666671" width="51" height="31"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="49" id="TLe-pF-eis"/>
                         </constraints>
@@ -28,44 +37,73 @@
                             <action selector="switchDidChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9ge-t9-By6"/>
                         </connections>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-In-Sru">
-                        <rect key="frame" x="16" y="46" width="392" height="66"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-In-Sru" userLabel="DescriptionLabelPad">
+                        <rect key="frame" x="24" y="68" width="376" height="64"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="h5P-Y8-JKH"/>
                         </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-83-3eC">
-                        <rect key="frame" x="15.999999999999996" y="16" width="40.666666666666657" height="26"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-w6-QQi" userLabel="TitleLabelPhone">
+                        <rect key="frame" x="15.999999999999996" y="8" width="40.666666666666657" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="26" id="trX-iS-h3L"/>
+                            <constraint firstAttribute="height" constant="32" id="FRe-ww-FJ2"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <color key="textColor" name="keyChar"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEK-aH-VJH" userLabel="ToggleSwitchPhone">
+                        <rect key="frame" x="359" y="8.6666666666666643" width="51" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="Khi-vw-oTT"/>
+                        </constraints>
+                        <connections>
+                            <action selector="switchDidChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2aX-9q-Xm3"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-gs-N4L" userLabel="DescriptionLabelPhone">
+                        <rect key="frame" x="16" y="48" width="392" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ynu-Q0-G95"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="LZg-In-Sru" secondAttribute="trailing" constant="16" id="2Qt-oK-abA"/>
-                    <constraint firstAttribute="bottom" secondItem="LZg-In-Sru" secondAttribute="bottom" constant="16" id="3UC-Es-LgJ"/>
-                    <constraint firstItem="LZg-In-Sru" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5iP-HO-wDD"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XI7-83-3eC" secondAttribute="bottom" constant="16" id="7Sd-0h-s3R"/>
-                    <constraint firstItem="XI7-83-3eC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="AFt-39-OV3"/>
+                    <constraint firstAttribute="trailing" secondItem="LZg-In-Sru" secondAttribute="trailing" constant="24" id="2Qt-oK-abA"/>
+                    <constraint firstAttribute="bottom" secondItem="LZg-In-Sru" secondAttribute="bottom" constant="16" id="3Bx-Zf-41Z"/>
+                    <constraint firstItem="LZg-In-Sru" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="5iP-HO-wDD"/>
+                    <constraint firstItem="XI7-83-3eC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="AFt-39-OV3"/>
                     <constraint firstItem="FbK-yb-cab" firstAttribute="centerY" secondItem="XI7-83-3eC" secondAttribute="centerY" id="IRH-3q-9RQ"/>
-                    <constraint firstAttribute="trailing" secondItem="FbK-yb-cab" secondAttribute="trailing" constant="16" id="NSu-Bi-Rs7"/>
-                    <constraint firstItem="LZg-In-Sru" firstAttribute="top" secondItem="XI7-83-3eC" secondAttribute="bottom" constant="4" id="YPZ-4h-YkG"/>
-                    <constraint firstItem="XI7-83-3eC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="da5-Mw-d8e"/>
+                    <constraint firstAttribute="trailing" secondItem="FbK-yb-cab" secondAttribute="trailing" constant="24" id="NSu-Bi-Rs7"/>
+                    <constraint firstItem="Z37-gs-N4L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NUc-eT-51z"/>
+                    <constraint firstAttribute="bottom" secondItem="Z37-gs-N4L" secondAttribute="bottom" constant="16" id="NVO-sx-oET"/>
+                    <constraint firstItem="LZg-In-Sru" firstAttribute="top" secondItem="XI7-83-3eC" secondAttribute="bottom" constant="8" id="YPZ-4h-YkG"/>
+                    <constraint firstItem="Z37-gs-N4L" firstAttribute="top" secondItem="Y7l-w6-QQi" secondAttribute="bottom" constant="8" id="cYT-7r-iva"/>
+                    <constraint firstItem="XI7-83-3eC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="da5-Mw-d8e"/>
+                    <constraint firstItem="Y7l-w6-QQi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j7R-Wb-Bf1"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XI7-83-3eC" secondAttribute="bottom" constant="12" id="lu1-D7-DGx"/>
+                    <constraint firstAttribute="trailing" secondItem="iEK-aH-VJH" secondAttribute="trailing" constant="16" id="n4G-Lb-Cpd"/>
+                    <constraint firstItem="Y7l-w6-QQi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pKu-Re-d4D"/>
+                    <constraint firstItem="iEK-aH-VJH" firstAttribute="centerY" secondItem="Y7l-w6-QQi" secondAttribute="centerY" id="pgQ-hV-7VG"/>
+                    <constraint firstAttribute="trailing" secondItem="Z37-gs-N4L" secondAttribute="trailing" constant="16" id="v6o-1J-9JP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="descriptionLabel" destination="LZg-In-Sru" id="M4c-Fh-6s1"/>
-                <outlet property="titleLabel" destination="XI7-83-3eC" id="8Oo-On-CWs"/>
-                <outlet property="toggleSwitch" destination="FbK-yb-cab" id="CYZ-wz-okM"/>
+                <outlet property="descriptionLabelPad" destination="LZg-In-Sru" id="pqa-F0-8gX"/>
+                <outlet property="descriptionLabelPhone" destination="Z37-gs-N4L" id="QWf-la-nC2"/>
+                <outlet property="titleLabelPad" destination="XI7-83-3eC" id="Ux1-cE-hdw"/>
+                <outlet property="titleLabelPhone" destination="Y7l-w6-QQi" id="Azb-9B-TQa"/>
+                <outlet property="toggleSwitchPad" destination="FbK-yb-cab" id="jdx-46-rpt"/>
+                <outlet property="toggleSwitchPhone" destination="iEK-aH-VJH" id="1Rh-a4-Luk"/>
             </connections>
-            <point key="canvasLocation" x="105.34351145038167" y="16.901408450704228"/>
+            <point key="canvasLocation" x="105.34351145038167" y="23.943661971830988"/>
         </tableViewCell>
     </objects>
     <resources>

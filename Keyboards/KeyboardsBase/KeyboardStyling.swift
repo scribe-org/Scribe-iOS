@@ -30,6 +30,15 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   btn.layer.masksToBounds = false
   btn.layer.cornerRadius = radius
   btn.setTitle(title, for: .normal)
+  if title == invalidCommandMsg {
+    btn.configuration = UIButton.Configuration.plain()
+    btn.configuration?.baseForegroundColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
+    btn.configuration?.image = UIImage(systemName: "info.circle.fill")
+    btn.configuration?.imagePlacement = .trailing
+    btn.configuration?.imagePadding = 3
+  } else {
+    btn.configuration = nil
+  }
   btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
   btn.setTitleColor(keyCharColor, for: .normal)
 

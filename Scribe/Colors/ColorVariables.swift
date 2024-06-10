@@ -23,30 +23,30 @@ import UIKit
 var scribeKeyIcon = UIImage(named: "scribeKeyIcon")
 
 // Initialize all colors.
-var keyColor = UIColor(.key)
-var keyCharColor = UIColor(.keyChar)
-var specialKeyColor = UIColor(.keySpecial)
-var keyPressedColor = UIColor(.keyPressed)
+var keyColor = UIColor(ScribeColor.key)
+var keyCharColor = UIColor(ScribeColor.keyChar)
+var specialKeyColor = UIColor(ScribeColor.keySpecial)
+var keyPressedColor = UIColor(ScribeColor.keyPressed)
 
-var commandKeyColor = UIColor(.commandKey)
-var commandBarColor = UIColor(.commandBar)
-var commandBarPlaceholderColor = UIColor(.commandBarPlaceholder)
-var commandBarPlaceholderColorCG = UIColor(.commandBarPlaceholder).cgColor
+var commandKeyColor = UIColor(ScribeColor.commandKey)
+var commandBarColor = UIColor(ScribeColor.commandBar)
+var commandBarPlaceholderColor = UIColor(ScribeColor.commandBarPlaceholder)
+var commandBarPlaceholderColorCG = UIColor(ScribeColor.commandBarPlaceholder).cgColor
 
-var keyboardBgColor = UIColor(.keyboardBackground)
-var keyShadowColor = UIColor(.keyShadow).cgColor
+var keyboardBgColor = UIColor(ScribeColor.keyboardBackground)
+var keyShadowColor = UIColor(ScribeColor.keyShadow).cgColor
 
-var appBtnColor = UIColor(.appBtn)
-var menuOptionColor = UIColor(.menuOption)
-var lightTextDarkCTA = UIColor(.lightTextDarkCTA)
-var lightWhiteDarkBlackColor = UIColor(.lightWhiteDarkBlack)
-var linkBlueColor = UIColor(.linkBlue)
-var scribeCTAColor = UIColor(.scribeCTA)
-var scribeAppBackgroundColor = UIColor(.scribeAppBackground)
+var appBtnColor = UIColor(ScribeColor.appBtn)
+var menuOptionColor = UIColor(ScribeColor.menuOption)
+var lightTextDarkCTA = UIColor(ScribeColor.lightTextDarkCTA)
+var lightWhiteDarkBlackColor = UIColor(ScribeColor.lightWhiteDarkBlack)
+var linkBlueColor = UIColor(ScribeColor.linkBlue)
+var scribeCTAColor = UIColor(ScribeColor.scribeCTA)
+var scribeAppBackgroundColor = UIColor(ScribeColor.scribeAppBackground)
 
 // Annotation colors.
-var annotateRed = UIColor(.annotateRed)
-var annotateBlue = UIColor(.annotateBlue)
-var annotatePurple = UIColor(.annotatePurple)
-var annotateGreen = UIColor(.annotateGreen)
-var annotateOrange = UIColor(.annotateOrange)
+var annotateRed = UIColor(ScribeColor.annotateRed)
+var annotateBlue = UIColor(ScribeColor.annotateBlue)
+var annotatePurple = UIColor(ScribeColor.annotatePurple)
+var annotateGreen = UIColor(ScribeColor.annotateGreen)
+var annotateOrange = UIColor(ScribeColor.annotateOrange)

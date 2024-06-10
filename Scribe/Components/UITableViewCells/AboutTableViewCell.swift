@@ -27,18 +27,47 @@ final class AboutTableViewCell: UITableViewCell {
 
   // MARK: - Properties
 
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var iconImageView: UIImageView!
-  @IBOutlet var linkImageView: UIImageView!
+  @IBOutlet var titleLabelPhone: UILabel!
+  @IBOutlet var titleLabelPad: UILabel!
+  var titleLabel: UILabel!
+
+  @IBOutlet var iconImageViewPhone: UIImageView!
+  @IBOutlet var iconImageViewPad: UIImageView!
+  var iconImageView: UIImageView!
+
+  @IBOutlet var linkImageViewPhone: UIImageView!
+  @IBOutlet var linkImageViewPad: UIImageView!
+  var linkImageView: UIImageView!
 
   private var section: Section?
   private var parentSection: Section?
+
+  func setTableView() {
+    if DeviceType.isPad {
+      titleLabel = titleLabelPad
+      iconImageView = iconImageViewPad
+      linkImageView = linkImageViewPad
+
+      titleLabelPhone.removeFromSuperview()
+      iconImageViewPhone.removeFromSuperview()
+      linkImageViewPhone.removeFromSuperview()
+    } else {
+      titleLabel = titleLabelPhone
+      iconImageView = iconImageViewPhone
+      linkImageView = linkImageViewPhone
+
+      titleLabelPad.removeFromSuperview()
+      iconImageViewPad.removeFromSuperview()
+      linkImageViewPad.removeFromSuperview()
+    }
+  }
 
   // MARK: - Functions
 
   func configureCell(for section: Section) {
     selectionStyle = .none
 
+    setTableView()
     titleLabel.text = section.sectionTitle
 
     if let icon = section.imageString {

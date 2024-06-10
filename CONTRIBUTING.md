@@ -248,7 +248,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 # Localization [`⇧`](#contents)
 
-Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested in contributing to localization for the app are welcome to check related issues using the [`localization`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Alocalization) label, and are further welcome to open their own issues using the [localization](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=localization.yml) template!
+Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications via [Weblate](https://weblate.org/).
 
 <a id="documentation"></a>
 
