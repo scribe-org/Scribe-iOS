@@ -27,15 +27,11 @@ final class AboutViewController: BaseTableViewController {
     AboutTableData.aboutTableData
   }
 
-  var isOverlayVisible = true {
-    didSet {
-      if isOverlayVisible {
-        showOverlay()
-      } else {
-        removeOverlay()
-      }
-    }
-  }
+  private let tipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    return state
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,7 +43,12 @@ final class AboutViewController: BaseTableViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    isOverlayVisible = true
+    showTipCardView()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    removeTipCardView()
   }
 }
 
@@ -104,9 +105,9 @@ extension AboutViewController {
     case .email:
       showEmailUI()
 
-      //      case .appHints:
-      //        // reset functionality
-      //        print("Resets app hints")
+    case .appHints:
+      let userDefaults = UserDefaults.standard
+      userDefaults.set(true, forKey: "tipCardState")
 
     case .privacyPolicy:
       if let viewController = storyboard?.instantiateViewController(
@@ -194,21 +195,19 @@ extension AboutViewController: MFMailComposeViewControllerDelegate {
 
 // MARK: - TipCardView
 extension AboutViewController {
-  private func showOverlay() {
-    let overlayView = TipCardView(isVisible: Binding(
-      get: { self.isOverlayVisible },
-      set: { self.isOverlayVisible = $0 }
-    ), infoText: "This is About view, where you can learn more about Scribe.")
+  private func showTipCardView() {
+    let overlayView = TipCardView(infoText: "This is About view, where you can learn more about Scribe.",
+                                  tipCardState: tipCardState)
 
     let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 120)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150)
     hostingController.view.backgroundColor = .clear
     addChild(hostingController)
     view.addSubview(hostingController.view)
     hostingController.didMove(toParent: self)
   }
 
-  private func removeOverlay() {
+  private func removeTipCardView() {
     if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
       hostingController.willMove(toParent: nil)
       hostingController.view.removeFromSuperview()

@@ -64,7 +64,7 @@ enum SectionState: Equatable {
   case email
   // case downloadData
   // case checkData
-  // case appHints
+  case appHints
   case privacyPolicy
   case licenses
   case appLang

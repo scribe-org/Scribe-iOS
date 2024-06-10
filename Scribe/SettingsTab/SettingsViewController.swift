@@ -18,12 +18,19 @@
  */
 
 import UIKit
+import SwiftUI
 
 final class SettingsViewController: UIViewController {
   // MARK: - Constants
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+
+  private let tipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    return state
+  }()
 
   func setHeaderHeight() {
     if DeviceType.isPad {
@@ -75,6 +82,12 @@ final class SettingsViewController: UIViewController {
     super.viewWillAppear(animated)
 
     commonMethodToRefresh()
+    showTipCardView()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    removeTipCardView()
   }
 
   func commonMethodToRefresh() {
@@ -243,6 +256,31 @@ extension SettingsViewController: UITableViewDelegate {
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
       sender.backgroundColor = .clear
       sender.alpha = 1.0
+    }
+  }
+}
+
+// MARK: - TipCardView
+extension SettingsViewController {
+  private func showTipCardView() {
+    let overlayView = TipCardView(infoText: "This is Settings View, where you can set languages setting for Scribe.",
+                                  tipCardState: tipCardState)
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0,
+                                          width: self.view.bounds.width,
+                                          height: self.view.bounds.height - 500)
+    hostingController.view.backgroundColor = .clear
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+    hostingController.didMove(toParent: self)
+  }
+
+  private func removeTipCardView() {
+    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+      hostingController.willMove(toParent: nil)
+      hostingController.view.removeFromSuperview()
+      hostingController.removeFromParent()
     }
   }
 }

@@ -77,11 +77,12 @@ struct AboutTableData {
           imageString: "envelope",
           sectionState: .email,
           externalLink: true
+        ),
+        Section(
+          sectionTitle: "Reset app hints",
+          imageString: "lightbulb",
+          sectionState: .appHints
         )
-//        Section(
-//          sectionTitle: "Reset app hints",
-//          imageString: "lightbulb",sectionState: .appHints
-//        )
       ],
       hasDynamicData: nil
     ),

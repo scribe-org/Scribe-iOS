@@ -1,9 +1,21 @@
-//
-//  TipCardView.swift
-//  Scribe
-//
-//  Created by Kailash Bora on 20/05/24.
-//
+/**
+ * App hints View.
+ *
+ * Copyright (C) 2023 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 import SwiftUI
 
@@ -12,8 +24,8 @@ struct TipCardView: View {
   private let multiplicityPadding = 0.5
   private let leadingPadding = 40.0
   private let cardCornerRadius: CGFloat = 10
-  @Binding var isVisible: Bool
-  @State var infoText: String
+  var infoText: String
+  @AppStorage("tipCardState", store: .standard) var tipCardState: Bool = true
 
     var body: some View {
       ZStack {
@@ -29,7 +41,7 @@ struct TipCardView: View {
             .font(Font.system(size: 0, weight: .medium))
           Spacer()
           Button {
-            isVisible = false
+            tipCardState = false
           } label: {
             Text("OK")
               .foregroundColor(.white)
@@ -42,8 +54,8 @@ struct TipCardView: View {
       }
       .frame(width: UIScreen.main.bounds.size.width - leadingPadding * multiplicityPadding,
              height: buttonHeight)
-      .shadow(radius: cardCornerRadius)
-      .opacity(isVisible ? 1.0 : 0)
+      .shadow(color: Color.keyShadow, radius: cardCornerRadius)
+      .opacity(tipCardState ? 1.0 : 0)
       .edgesIgnoringSafeArea(.all)
     }
 }

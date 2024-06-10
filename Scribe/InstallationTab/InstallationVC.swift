@@ -18,6 +18,7 @@
  */
 
 import UIKit
+import SwiftUI
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class InstallationVC: UIViewController {
@@ -51,6 +52,12 @@ class InstallationVC: UIViewController {
   @IBOutlet var logoSpace: UIView!
 
   @IBOutlet var installationHeaderLabel: UILabel!
+
+  private let tipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    return state
+  }()
 
   func setAppTextView() {
     if DeviceType.isPad {
@@ -98,6 +105,12 @@ class InstallationVC: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     setCurrentUI()
+    showTipCardView()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    removeTipCardView()
   }
 
   /// Includes a call to set the UI for the app screen.
@@ -268,6 +281,31 @@ class InstallationVC: UIViewController {
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
       sender.backgroundColor = .clear
       sender.alpha = 1.0
+    }
+  }
+}
+
+// MARK: - TipCardView
+extension InstallationVC {
+  private func showTipCardView() {
+    let overlayView = TipCardView(infoText: "This is Installation view, where you will learn how to install Scribe in your device.",
+                                  tipCardState: tipCardState)
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0,
+                                          width: self.view.bounds.width,
+                                          height: self.view.bounds.height - 250)
+    hostingController.view.backgroundColor = .clear
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+    hostingController.didMove(toParent: self)
+  }
+
+  private func removeTipCardView() {
+    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+      hostingController.willMove(toParent: nil)
+      hostingController.view.removeFromSuperview()
+      hostingController.removeFromParent()
     }
   }
 }
