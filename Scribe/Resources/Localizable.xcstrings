@@ -12,6 +12,16 @@
         }
       }
     },
+    "OK" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
     "settings.appSettings" : {
       "comment" : "The title of the app settings section",
       "localizations" : {

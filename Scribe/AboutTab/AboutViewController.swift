@@ -20,10 +20,21 @@
 import MessageUI
 import StoreKit
 import UIKit
+import SwiftUI
 
 final class AboutViewController: BaseTableViewController {
   override var dataSet: [ParentTableCellModel] {
     AboutTableData.aboutTableData
+  }
+
+  var isOverlayVisible = true {
+    didSet {
+      if isOverlayVisible {
+        showOverlay()
+      } else {
+        removeOverlay()
+      }
+    }
   }
 
   override func viewDidLoad() {
@@ -32,6 +43,11 @@ final class AboutViewController: BaseTableViewController {
     title = NSLocalizedString("about.title", comment: "The title of the about tab")
 
     tableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier)
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    isOverlayVisible = true
   }
 }
 
@@ -182,5 +198,30 @@ extension AboutViewController {
 extension AboutViewController: MFMailComposeViewControllerDelegate {
   func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
     controller.dismiss(animated: true, completion: nil)
+  }
+}
+
+// MARK: - TipCardView
+extension AboutViewController {
+  private func showOverlay() {
+    let overlayView = TipCardView(isVisible: Binding(
+      get: { self.isOverlayVisible },
+      set: { self.isOverlayVisible = $0 }
+    ), infoText: "This is About view, where you can learn more about Scribe.")
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 120)
+    hostingController.view.backgroundColor = .clear
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+    hostingController.didMove(toParent: self)
+  }
+
+  private func removeOverlay() {
+    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+      hostingController.willMove(toParent: nil)
+      hostingController.view.removeFromSuperview()
+      hostingController.removeFromParent()
+    }
   }
 }
