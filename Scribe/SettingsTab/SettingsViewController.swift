@@ -1,7 +1,7 @@
 /**
  * Functions for the Settings tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,9 +26,9 @@ final class SettingsViewController: UIViewController {
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
 
-  private let tipCardState: Bool = {
+  private let settingsTipCardState: Bool = {
     let userDefault = UserDefaults.standard
-    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    let state = userDefault.object(forKey: "settingsTipCardState") as? Bool ?? true
     return state
   }()
 
@@ -53,6 +53,7 @@ final class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setHeaderHeight()
+    showTipCardView()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
     navigationItem.backButtonTitle = NSLocalizedString(
@@ -80,14 +81,7 @@ final class SettingsViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
     commonMethodToRefresh()
-    showTipCardView()
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    removeTipCardView()
   }
 
   func commonMethodToRefresh() {
@@ -263,13 +257,12 @@ extension SettingsViewController: UITableViewDelegate {
 // MARK: - TipCardView
 extension SettingsViewController {
   private func showTipCardView() {
-    let overlayView = TipCardView(infoText: "This is Settings View, where you can set languages setting for Scribe.",
-                                  tipCardState: tipCardState)
+    let overlayView = SettingsTipCardView(
+      settingsTipCardState: settingsTipCardState
+    )
 
     let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0,
-                                          width: self.view.bounds.width,
-                                          height: self.view.bounds.height - 500)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
     hostingController.view.backgroundColor = .clear
     addChild(hostingController)
     view.addSubview(hostingController.view)
@@ -277,7 +270,7 @@ extension SettingsViewController {
   }
 
   private func removeTipCardView() {
-    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+    if let hostingController = children.first(where: { $0 is UIHostingController<SettingsTipCardView> }) {
       hostingController.willMove(toParent: nil)
       hostingController.view.removeFromSuperview()
       hostingController.removeFromParent()

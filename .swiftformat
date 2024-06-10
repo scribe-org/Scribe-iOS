@@ -1,3 +1,2 @@
 disable_formatting_rules:
-
-- trailingCommas
+  - trailingCommas
