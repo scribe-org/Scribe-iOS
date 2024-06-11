@@ -1,7 +1,7 @@
 /**
- * App hints View.
+ * The app tip views for the application tabs.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,37 +25,72 @@ struct TipCardView: View {
   private let leadingPadding = 40.0
   private let cardCornerRadius: CGFloat = 10
   var infoText: String
-  @AppStorage("tipCardState", store: .standard) var tipCardState: Bool = true
+  @Binding var tipCardState: Bool
 
-    var body: some View {
-      ZStack {
-        RoundedRectangle(cornerRadius: cardCornerRadius)
-          .fill(Color.commandBar)
-        HStack {
-          Image(systemName: "lightbulb.max")
-            .resizable()
-            .frame(width: leadingPadding, height: leadingPadding)
-            .foregroundColor(Color.scribeCTA)
-            .padding(.horizontal)
-          Text(infoText)
-            .font(Font.system(size: 0, weight: .medium))
-          Spacer()
-          Button {
-            tipCardState = false
-          } label: {
-            Text("OK")
-              .foregroundColor(.white)
-          }
+  var body: some View {
+    ZStack {
+      RoundedRectangle(cornerRadius: cardCornerRadius)
+        .fill(Color.lightWhiteDarkBlack)
+      HStack {
+        Image(systemName: "lightbulb.max")
+          .resizable()
           .frame(width: leadingPadding, height: leadingPadding)
-          .background(Color.scribeBlue)
-          .cornerRadius(cardCornerRadius)
+          .foregroundColor(Color.scribeCTA)
           .padding(.horizontal)
+        Text(infoText)
+          .font(Font.system(size: 0, weight: .medium))
+        Spacer()
+        Button {
+          tipCardState = false
+        } label: {
+          Text("OK")
+            .foregroundColor(.white)
         }
+        .frame(width: leadingPadding, height: leadingPadding)
+        .background(Color.scribeBlue)
+        .cornerRadius(cardCornerRadius)
+        .padding(.horizontal)
       }
-      .frame(width: UIScreen.main.bounds.size.width - leadingPadding * multiplicityPadding,
-             height: buttonHeight)
-      .shadow(color: Color.keyShadow, radius: cardCornerRadius)
-      .opacity(tipCardState ? 1.0 : 0)
-      .edgesIgnoringSafeArea(.all)
     }
+    .frame(
+      width: UIScreen.main.bounds.size.width - leadingPadding * multiplicityPadding,
+      height: buttonHeight
+    )
+    .shadow(color: Color.keyShadow, radius: cardCornerRadius / 2)
+    .opacity(tipCardState ? 1.0 : 0)
+    .edgesIgnoringSafeArea(.all)
+  }
+}
+
+struct InstallationTipCardView: View {
+  @AppStorage("installationTipCardState", store: .standard) var installationTipCardState: Bool = true
+
+  var body: some View {
+    TipCardView(
+      infoText: "Follow the directions below to install Scribe keyboards on your device.",
+      tipCardState: $installationTipCardState
+    )
+  }
+}
+
+struct SettingsTipCardView: View {
+  @AppStorage("settingsTipCardState", store: .standard) var settingsTipCardState: Bool = true
+
+  var body: some View {
+    TipCardView(
+      infoText: "Settings for the app and installed language keyboards are found here.",
+      tipCardState: $settingsTipCardState
+    )
+  }
+}
+
+struct AboutTipCardView: View {
+  @AppStorage("aboutTipCardState", store: .standard) var aboutTipCardState: Bool = true
+
+  var body: some View {
+    TipCardView(
+      infoText: "Here's where you can learn more about Scribe and its community.",
+      tipCardState: $aboutTipCardState
+    )
+  }
 }

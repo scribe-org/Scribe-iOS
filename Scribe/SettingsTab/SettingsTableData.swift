@@ -1,7 +1,7 @@
 /**
  * Controls data displayed in the Settings tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

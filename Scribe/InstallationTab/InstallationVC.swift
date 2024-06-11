@@ -1,7 +1,7 @@
 /**
  * The ViewController for the Installation screen of the Scribe app.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ class InstallationVC: UIViewController {
 
   @IBOutlet var installationHeaderLabel: UILabel!
 
-  private let tipCardState: Bool = {
+  private let installationTipCardState: Bool = {
     let userDefault = UserDefaults.standard
-    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    let state = userDefault.object(forKey: "installationTipCardState") as? Bool ?? true
     return state
   }()
 
@@ -93,6 +93,7 @@ class InstallationVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setCurrentUI()
+    showTipCardView()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
@@ -105,12 +106,6 @@ class InstallationVC: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     setCurrentUI()
-    showTipCardView()
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    removeTipCardView()
   }
 
   /// Includes a call to set the UI for the app screen.
@@ -285,16 +280,15 @@ class InstallationVC: UIViewController {
   }
 }
 
-// MARK: - TipCardView
+// MARK: - TipHintView
 extension InstallationVC {
   private func showTipCardView() {
-    let overlayView = TipCardView(infoText: "This is Installation view, where you will learn how to install Scribe in your device.",
-                                  tipCardState: tipCardState)
+    let overlayView = InstallationTipCardView(
+      installationTipCardState: installationTipCardState
+    )
 
     let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0,
-                                          width: self.view.bounds.width,
-                                          height: self.view.bounds.height - 250)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200)
     hostingController.view.backgroundColor = .clear
     addChild(hostingController)
     view.addSubview(hostingController.view)
@@ -302,7 +296,7 @@ extension InstallationVC {
   }
 
   private func removeTipCardView() {
-    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+    if let hostingController = children.first(where: { $0 is UIHostingController<InstallationTipCardView> }) {
       hostingController.willMove(toParent: nil)
       hostingController.view.removeFromSuperview()
       hostingController.removeFromParent()

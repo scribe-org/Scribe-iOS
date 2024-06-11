@@ -1,7 +1,7 @@
 /**
  * Functions for the About tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,28 +27,22 @@ final class AboutViewController: BaseTableViewController {
     AboutTableData.aboutTableData
   }
 
-  private let tipCardState: Bool = {
+  private let aboutTipCardState: Bool = {
     let userDefault = UserDefaults.standard
-    let state = userDefault.object(forKey: "tipCardState") as? Bool ?? true
+    let state = userDefault.object(forKey: "aboutTipCardState") as? Bool ?? true
     return state
   }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    showTipCardView()
     title = NSLocalizedString("about.title", comment: "The title of the about tab")
 
-    tableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier)
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    showTipCardView()
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    removeTipCardView()
+    tableView.register(
+      UINib(nibName: "AboutTableViewCell", bundle: nil),
+      forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier
+    )
   }
 }
 
@@ -107,7 +101,9 @@ extension AboutViewController {
 
     case .appHints:
       let userDefaults = UserDefaults.standard
-      userDefaults.set(true, forKey: "tipCardState")
+      userDefaults.set(true, forKey: "installationTipCardState")
+      userDefaults.set(true, forKey: "settingsTipCardState")
+      userDefaults.set(true, forKey: "aboutTipCardState")
 
     case .privacyPolicy:
       if let viewController = storyboard?.instantiateViewController(
@@ -196,11 +192,12 @@ extension AboutViewController: MFMailComposeViewControllerDelegate {
 // MARK: - TipCardView
 extension AboutViewController {
   private func showTipCardView() {
-    let overlayView = TipCardView(infoText: "This is About view, where you can learn more about Scribe.",
-                                  tipCardState: tipCardState)
+    let overlayView = AboutTipCardView(
+      aboutTipCardState: aboutTipCardState
+    )
 
     let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 150)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -40)
     hostingController.view.backgroundColor = .clear
     addChild(hostingController)
     view.addSubview(hostingController.view)
@@ -208,7 +205,7 @@ extension AboutViewController {
   }
 
   private func removeTipCardView() {
-    if let hostingController = children.first(where: { $0 is UIHostingController<TipCardView> }) {
+    if let hostingController = children.first(where: { $0 is UIHostingController<AboutTipCardView> }) {
       hostingController.willMove(toParent: nil)
       hostingController.view.removeFromSuperview()
       hostingController.removeFromParent()
