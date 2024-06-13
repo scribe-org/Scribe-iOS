@@ -28,6 +28,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Users can now swipe between the conjugation and declension views ([#361](https://github.com/scribe-org/Scribe-iOS/issues/361)).
 - Autocomplete on space when the word is the last one available in the autocompletion lexicon has been disabled ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305), reverts [#256](https://github.com/scribe-org/Scribe-iOS/issues/256)).
 - Missing verb conjugations can be clicked to show information about Wikidata and its relationship to Scribe ([#400](https://github.com/scribe-org/Scribe-iOS/issues/400)).
+- The user is receives hints about the installation, settings and about tabs when visiting them for the first time ([#329](https://github.com/scribe-org/Scribe-iOS/issues/329)).
 
 ### 🎨 Design Changes
 
