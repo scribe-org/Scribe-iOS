@@ -657,14 +657,7 @@ class KeyboardViewController: UIInputViewController {
         allowUndo = false
         firstCompletionIsHighlighted = false
         // Highlight if the current prefix is the first autocompletion.
-        if
-          currentPrefix == completionWords[0] && completionWords[1] != " " {
-
-        // Note: Code for highlighting the word if it's the only option available - add when libraries are expanded.
-//        || (
-//          // Highlighting last remaining autocomplete.
-//          completionWords[0] != " " && completionWords[1] == " "
-//        )
+        if currentPrefix == completionWords[0] && completionWords[1] != " " {
           firstCompletionIsHighlighted = true
         }
         setBtn(
@@ -1271,8 +1264,7 @@ class KeyboardViewController: UIInputViewController {
         .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
       ].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
-    } else if
-      commandState == .displayInformation {
+    } else if commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
     } else {
       formsDisplayDimensions = .view3x2
@@ -1667,11 +1659,13 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "a"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate) {
-          leftPadding = keyWidth / 3
-          addPadding(to: stackView1, width: leftPadding, key: "a")
+            || commandState == .translate
+          ) {
+            leftPadding = keyWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "a")
         }
         if DeviceType.isPad
           && key == "@"

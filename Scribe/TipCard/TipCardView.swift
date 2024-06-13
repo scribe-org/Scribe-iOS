@@ -26,6 +26,7 @@ struct TipCardView: View {
   private let cardCornerRadius: CGFloat = 10
   var infoText: String
   @Binding var tipCardState: Bool
+  var onDismiss: (() -> Void)?
 
   var body: some View {
     ZStack {
@@ -42,6 +43,7 @@ struct TipCardView: View {
         Spacer()
         Button {
           tipCardState = false
+          self.onDismiss?()
         } label: {
           Text("OK")
             .foregroundColor(.white)
@@ -75,11 +77,13 @@ struct InstallationTipCardView: View {
 
 struct SettingsTipCardView: View {
   @AppStorage("settingsTipCardState", store: .standard) var settingsTipCardState: Bool = true
+  var onDismiss: (() -> Void)?
 
   var body: some View {
     TipCardView(
       infoText: "Settings for the app and installed language keyboards are found here.",
-      tipCardState: $settingsTipCardState
+      tipCardState: $settingsTipCardState,
+      onDismiss: onDismiss
     )
   }
 }

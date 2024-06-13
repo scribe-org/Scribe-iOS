@@ -57,6 +57,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - SwiftFormat was configured to allow for the removal of trailing commas ([#421](https://github.com/scribe-org/Scribe-iOS/issues/421)).
 - Trailing commas were removed from the codebase ([#421](https://github.com/scribe-org/Scribe-iOS/issues/421)).
 - Extra whitespace was removed from the codebase ([#429](https://github.com/scribe-org/Scribe-iOS/issues/429)).
+- pre-commit hooks were added to the codebase to fix common errors on commit ([#450](https://github.com/scribe-org/Scribe-iOS/issues/450)).
 
 # Scribe-iOS 2.3.0
 

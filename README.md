@@ -157,9 +157,17 @@ git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
   - `origin` (forked repository)
   - `upstream` (Scribe-iOS repository)
 
-3. Open the Scribe-iOS directory in Xcode
+3. (Optional) Install [pre-commit](https://pre-commit.com/) and its hooks to check for and correct common errors in commits:
 
-4. In order to run Scribe on an emulator:
+```bash
+pip install pre-commit
+pre-commit install
+# pre-commit run --all-files
+```
+
+4. Open the Scribe-iOS directory in Xcode
+
+5. In order to run Scribe on an emulator:
 
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
