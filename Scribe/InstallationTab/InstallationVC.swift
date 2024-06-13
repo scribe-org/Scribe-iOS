@@ -288,7 +288,7 @@ extension InstallationVC {
     )
 
     let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
     hostingController.view.backgroundColor = .clear
     addChild(hostingController)
     view.addSubview(hostingController.view)
