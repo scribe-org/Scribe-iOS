@@ -277,7 +277,7 @@ extension SettingsViewController {
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
     navigationView.bringSubviewToFront(hostingController.view)
-    
+
     NSLayoutConstraint.activate([
       hostingController.view.topAnchor.constraint(equalTo: navigationView.topAnchor, constant: 30),
       hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
