@@ -100,7 +100,6 @@
 		38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		6962ECA82C1824A700C5E309 /* TransparentOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6962ECA72C1824A700C5E309 /* TransparentOverlayViewController.swift */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -893,7 +892,6 @@
 		38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		6962ECA72C1824A700C5E309 /* TransparentOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentOverlayViewController.swift; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
 		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
@@ -1287,7 +1285,6 @@
 			isa = PBXGroup;
 			children = (
 				69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */,
-				6962ECA72C1824A700C5E309 /* TransparentOverlayViewController.swift */,
 			);
 			path = TipCard;
 			sourceTree = "<group>";
@@ -2162,7 +2159,6 @@
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
 				30453967293B9D31003AE55B /* ViewThemeable.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
-				6962ECA82C1824A700C5E309 /* TransparentOverlayViewController.swift in Sources */,
 				ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
 				D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */,

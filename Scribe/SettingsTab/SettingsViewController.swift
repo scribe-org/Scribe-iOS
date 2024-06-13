@@ -53,7 +53,7 @@ final class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setHeaderHeight()
-//    showTipCardView()
+    showTipCardView()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
     navigationItem.backButtonTitle = NSLocalizedString(
@@ -82,14 +82,6 @@ final class SettingsViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     commonMethodToRefresh()
-
-    let transparentViewController = TransparentOverlayViewController()
-    view.parentViewController?.modalPresentationStyle = .fullScreen
-    view.parentViewController?.modalTransitionStyle = .coverVertical
-    present(transparentViewController, animated: false)
-    transparentViewController.rootView.onDismiss = { [weak self] in
-      self?.view.parentViewController?.dismiss(animated: false)
-    }
   }
 
   func commonMethodToRefresh() {
