@@ -294,12 +294,4 @@ extension InstallationVC {
     view.addSubview(hostingController.view)
     hostingController.didMove(toParent: self)
   }
-
-  private func removeTipCardView() {
-    if let hostingController = children.first(where: { $0 is UIHostingController<InstallationTipCardView> }) {
-      hostingController.willMove(toParent: nil)
-      hostingController.view.removeFromSuperview()
-      hostingController.removeFromParent()
-    }
-  }
 }

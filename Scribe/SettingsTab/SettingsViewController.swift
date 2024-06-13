@@ -264,16 +264,17 @@ extension SettingsViewController {
     let hostingController = UIHostingController(rootView: overlayView)
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
     hostingController.view.backgroundColor = .clear
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
+    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+    let navigationView = navigationController?.navigationBar
+    guard let navigationView else { return }
+    navigationView.addSubview(hostingController.view)
+    navigationView.bringSubviewToFront(hostingController.view)
+    
+    NSLayoutConstraint.activate([
+      hostingController.view.topAnchor.constraint(equalTo: navigationView.topAnchor, constant: 30),
+      hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
+      hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
+    ])
     hostingController.didMove(toParent: self)
-  }
-
-  private func removeTipCardView() {
-    if let hostingController = children.first(where: { $0 is UIHostingController<SettingsTipCardView> }) {
-      hostingController.willMove(toParent: nil)
-      hostingController.view.removeFromSuperview()
-      hostingController.removeFromParent()
-    }
   }
 }
