@@ -1006,8 +1006,6 @@
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		EDB4601C2AF9FDD600BEA967 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/AppScreen.strings; sourceTree = "<group>"; };
-		EDB4601D2AF9FDD600BEA967 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
@@ -1603,7 +1601,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38BD214522D5908100C6795D /* Build configuration list for PBXNativeTarget "Scribe" */;
 			buildPhases = (
-				D103B184273C356E00B97121 /* ShellScript */,
+				D103B184273C356E00B97121 /* Run Script */,
 				38BD212C22D5907E00C6795D /* Sources */,
 				38BD212D22D5907E00C6795D /* Frameworks */,
 				38BD212E22D5907E00C6795D /* Resources */,
@@ -1910,7 +1908,6 @@
 			knownRegions = (
 				en,
 				Base,
-				fr,
 			);
 			mainGroup = 38BD212722D5907E00C6795D;
 			packageReferences = (
@@ -2073,7 +2070,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D103B184273C356E00B97121 /* ShellScript */ = {
+		D103B184273C356E00B97121 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -2083,6 +2080,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -2913,7 +2911,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				38BD213822D5907F00C6795D /* Base */,
-				EDB4601C2AF9FDD600BEA967 /* fr */,
 			);
 			name = AppScreen.storyboard;
 			sourceTree = "<group>";
@@ -2922,7 +2919,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				38BD214022D5908100C6795D /* Base */,
-				EDB4601D2AF9FDD600BEA967 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
