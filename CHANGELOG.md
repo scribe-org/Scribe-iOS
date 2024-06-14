@@ -32,6 +32,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Missing verb conjugations can be clicked to show information about Wikidata and its relationship to Scribe ([#400](https://github.com/scribe-org/Scribe-iOS/issues/400)).
 - The user is receives hints about the installation, settings and about tabs when visiting them for the first time ([#329](https://github.com/scribe-org/Scribe-iOS/issues/329)).
 
+### 🗃️ Data Added
+
+- French: 972 nouns, 2 verbs
+- German: 91,854 nouns, 41 verbs, 5 prepositions
+- Italian: 50,520 nouns, 7,576 verbs
+- Portuguese: 2 verbs
+- Russian: 119 nouns, 3 verbs
+- Spanish: 22,545 nouns, 2,982 verbs
+- Swedish: 1,748 nouns, 177 verbs
+
 ### 🎨 Design Changes
 
 - iPad keyboards are now more reflective of their system keyboard counterparts for devices above a certain width ([#33](https://github.com/scribe-org/Scribe-iOS/issues/33), [#352](https://github.com/scribe-org/Scribe-iOS/issues/352)).
