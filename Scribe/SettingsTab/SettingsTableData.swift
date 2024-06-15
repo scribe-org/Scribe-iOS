@@ -21,22 +21,22 @@ import Foundation
 
 enum SettingsTableData {
   static let settingsTableData: [ParentTableCellModel] = [
-    ParentTableCellModel(
-      headingTitle: NSLocalizedString(
-        "settings.appSettings", comment: "The title of the app settings section"
-      ),
-      section: [
-        Section(
-          sectionTitle: NSLocalizedString(
-            "settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"
-          ),
-          imageString: "globe",
-          hasToggle: false,
-          sectionState: .appLang
-        )
-      ],
-      hasDynamicData: nil
-    ),
+//    ParentTableCellModel(
+//      headingTitle: NSLocalizedString(
+//        "settings.appSettings", comment: "The title of the app settings section"
+//      ),
+//      section: [
+//        Section(
+//          sectionTitle: NSLocalizedString(
+//            "settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"
+//          ),
+//          imageString: "globe",
+//          hasToggle: false,
+//          sectionState: .appLang
+//        )
+//      ],
+//      hasDynamicData: nil
+//    ),
     ParentTableCellModel(
       headingTitle: NSLocalizedString(
         "settings.installedKeyboards", comment: "The title of the installed keyboards section"

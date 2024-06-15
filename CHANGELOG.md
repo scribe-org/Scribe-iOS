@@ -10,7 +10,9 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Upcoming] Scribe-iOS 3.0.0
+# [Upcoming] Scribe-iOS 3.1.0
+
+# Scribe-iOS 3.0.0
 
 ### ✨ New Features
 
@@ -18,10 +20,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
   - Users now have easy access to the Scribe GitHub, the Matrix community, rating the app, sending bug reports and emailing the team.
   - Settings options include:
     - Allowing the user to add a comma and period to the letter keys ([#196](https://github.com/scribe-org/Scribe-iOS/issues/196), [#308](https://github.com/scribe-org/Scribe-iOS/issues/308)).
-    - Allowing the user to disable emoji autosuggestions and autocompletions ([#310](https://github.com/scribe-org/Scribe-iOS/issues/196), [#311](https://github.com/scribe-org/Scribe-iOS/issues/308)).
+    - Allowing the user to disable emoji autosuggestions and autocompletions ([#310](https://github.com/scribe-org/Scribe-iOS/issues/310), [#311](https://github.com/scribe-org/Scribe-iOS/issues/308)).
     - Allowing the user to disable accented characters on the letter keys ([#339](https://github.com/scribe-org/Scribe-iOS/issues/339), [#372](https://github.com/scribe-org/Scribe-iOS/issues/372)).
   - Menu screens can be swiped between via an implementation using [SwipeableTabBarController](https://github.com/marcosgriselli/SwipeableTabBarController).
-  - Menu options have descriptions of their functionality listed beneath them ([#330](https://github.com/scribe-org/Scribe-iOS/issues/339), [#372](https://github.com/scribe-org/Scribe-iOS/issues/330)).
+  - Menu options have descriptions of their functionality listed beneath them ([#330](https://github.com/scribe-org/Scribe-iOS/issues/330), [#372](https://github.com/scribe-org/Scribe-iOS/issues/372)).
 - German indefinite pronouns are now selectable from the case-declension display ([#303](https://github.com/scribe-org/Scribe-iOS/issues/303)).
 - German imperfect verb conjugations now insert both the auxiliary verb and the past participle with the cursor between them.
 - Tab and caps lock keys and their functionalities have been added to expanded iPad layouts ([#371](https://github.com/scribe-org/Scribe-iOS/issues/371)).
@@ -29,6 +31,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Autocomplete on space when the word is the last one available in the autocompletion lexicon has been disabled ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305), reverts [#256](https://github.com/scribe-org/Scribe-iOS/issues/256)).
 - Missing verb conjugations can be clicked to show information about Wikidata and its relationship to Scribe ([#400](https://github.com/scribe-org/Scribe-iOS/issues/400)).
 - The user is receives hints about the installation, settings and about tabs when visiting them for the first time ([#329](https://github.com/scribe-org/Scribe-iOS/issues/329)).
+
+### 🗃️ Data Added
+
+- French: 972 nouns, 2 verbs
+- German: 91,854 nouns, 41 verbs, 5 prepositions
+- Italian: 50,520 nouns, 7,576 verbs
+- Portuguese: 2 verbs
+- Russian: 119 nouns, 3 verbs
+- Spanish: 22,545 nouns, 2,982 verbs
+- Swedish: 1,748 nouns, 177 verbs
 
 ### 🎨 Design Changes
 
@@ -40,7 +52,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐞 Bug Fixes
 
-- The transition from between portrait and landscape mode was dramatically improved ([#25](https://github.com/scribe-org/Scribe-iOS/issues/33)).
+- The transition from between portrait and landscape mode was dramatically improved ([#25](https://github.com/scribe-org/Scribe-iOS/issues/25)).
 - Annotations under autosuggestions and autocompletions are no longer distorted during an orientation transition ([#396](https://github.com/scribe-org/Scribe-iOS/issues/396)).
 - Bugs were fixed that were causing autocompletions to trigger too regularly ([#305](https://github.com/scribe-org/Scribe-iOS/issues/305)).
 - Fixes a bug where the names from the UI lexicon were not being loaded into the keyboards ([#292](https://github.com/scribe-org/Scribe-iOS/issues/292), fixes [#201](https://github.com/scribe-org/Scribe-iOS/issues/201)).

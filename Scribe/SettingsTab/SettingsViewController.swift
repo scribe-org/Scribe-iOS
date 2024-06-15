@@ -86,7 +86,7 @@ final class SettingsViewController: UIViewController {
 
   func commonMethodToRefresh() {
     DispatchQueue.main.async {
-      self.tableData[1].section = SettingsTableData.getInstalledKeyboardsSections()
+      self.tableData[0].section = SettingsTableData.getInstalledKeyboardsSections()
       self.parentTable.reloadData()
       self.setFooterButtonView()
     }
@@ -96,7 +96,7 @@ final class SettingsViewController: UIViewController {
   }
 
   func setFooterButtonView() {
-    if tableData.count > 1 && tableData[1].section.count != 0 {
+    if tableData.count > 0 && tableData[0].section.count != 0 {
       parentTable.tableFooterView?.isHidden = true
     } else {
       parentTable.tableFooterView?.isHidden = false

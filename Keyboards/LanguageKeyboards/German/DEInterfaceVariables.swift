@@ -128,7 +128,7 @@ public enum GermanKeyboardConstants {
 
 /// Gets the keys for the German keyboard.
 func getDEKeys() {
-  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "deAccentCharacters") {
