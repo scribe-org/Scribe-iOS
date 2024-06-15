@@ -365,6 +365,18 @@
 		D180EC0928FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */; };
 		D180EC0A28FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */; };
 		D180EC0B28FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */; };
+		D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
+		D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
 		D18EA89C2760D4A6001E1358 /* SVKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EA89B2760D4A6001E1358 /* SVKeyboardViewController.swift */; };
 		D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D18EA8992760D4A6001E1358 /* Swedish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
@@ -943,6 +955,7 @@
 		D174F8A22756893200DCE106 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-QWERTYInterfaceVariables.swift"; sourceTree = "<group>"; };
 		D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FR-AZERTYInterfaceVariables.swift"; sourceTree = "<group>"; };
+		D1895BD12C1D816F009FBEB0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D18EA8992760D4A6001E1358 /* Swedish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Swedish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18EA89B2760D4A6001E1358 /* SVKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVKeyboardViewController.swift; sourceTree = "<group>"; };
 		D18EA89D2760D4A6001E1358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1582,6 +1595,7 @@
 			isa = PBXGroup;
 			children = (
 				EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */,
+				D1895BD12C1D816F009FBEB0 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1941,6 +1955,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D198B5D82BFA954100E1BF4F /* LICENSE.txt in Resources */,
+				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D198B5D72BFA954100E1BF4F /* .gitignore in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				D198B5D22BFA954100E1BF4F /* en-US.json in Resources */,
@@ -1965,6 +1980,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
@@ -1975,6 +1991,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */,
@@ -1985,6 +2002,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
@@ -1995,6 +2013,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				D15E298A29E41BAD006B2C81 /* ESLanguageData.sqlite in Resources */,
@@ -2005,6 +2024,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
@@ -2015,6 +2035,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
@@ -2026,6 +2047,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */,
+				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2035,6 +2057,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
+				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2044,6 +2067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */,
+				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2053,6 +2077,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */,
+				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2061,6 +2086,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
@@ -3115,7 +3141,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJJ59NJ7J8;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Keyboards/LanguageKeyboards/German/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Deutsch (Scribe)";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -3217,6 +3243,7 @@
 				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.french;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

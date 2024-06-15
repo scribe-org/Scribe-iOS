@@ -62,7 +62,7 @@ final class InfoChildTableViewCell: UITableViewCell {
     }
   }
 
-  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   var languageCode: String {
     guard let parentSection = parentSection,

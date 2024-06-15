@@ -124,7 +124,7 @@ public enum SpanishKeyboardConstants {
 
 /// Gets the keys for the Spanish keyboard.
 func getESKeys() {
-  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "esAccentCharacters") {
