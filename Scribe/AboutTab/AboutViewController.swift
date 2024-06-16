@@ -200,6 +200,7 @@ extension AboutViewController {
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -40)
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+    hostingController.view.isUserInteractionEnabled = true
     let navigationView = navigationController?.navigationBar
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
