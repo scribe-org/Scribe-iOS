@@ -271,11 +271,13 @@ class InstallationVC: UIViewController {
   @objc func keyTouchDown(_ sender: UIButton) {
     sender.backgroundColor = .black
     sender.alpha = 0.2
+    topIcon.alpha = 0.2
 
     // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in
       sender.backgroundColor = .clear
       sender.alpha = 1.0
+      self?.topIcon.alpha = 1.0
     }
   }
 }
