@@ -269,13 +269,15 @@ class InstallationVC: UIViewController {
   /// - Parameters
   ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = .black
+    sender.backgroundColor = UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
     sender.alpha = 0.2
+    topIcon.alpha = 0.2
 
     // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in
       sender.backgroundColor = .clear
       sender.alpha = 1.0
+      self?.topIcon.alpha = 1.0
     }
   }
 }
