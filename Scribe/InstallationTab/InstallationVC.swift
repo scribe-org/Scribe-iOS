@@ -269,7 +269,7 @@ class InstallationVC: UIViewController {
   /// - Parameters
   ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = .black
+    sender.backgroundColor = UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
     sender.alpha = 0.2
     topIcon.alpha = 0.2
 
