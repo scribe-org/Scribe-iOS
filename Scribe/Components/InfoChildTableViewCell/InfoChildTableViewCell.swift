@@ -1,7 +1,7 @@
 /**
  * Class for a setting component with a heading, description and switch.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -62,7 +62,7 @@ final class InfoChildTableViewCell: UITableViewCell {
     }
   }
 
-  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   var languageCode: String {
     guard let parentSection = parentSection,

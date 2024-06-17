@@ -1,7 +1,7 @@
 /**
  * The ViewController for the Installation screen of the Scribe app.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
  */
 
 import UIKit
+import SwiftUI
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class InstallationVC: UIViewController {
@@ -51,6 +52,12 @@ class InstallationVC: UIViewController {
   @IBOutlet var logoSpace: UIView!
 
   @IBOutlet var installationHeaderLabel: UILabel!
+
+  private let installationTipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "installationTipCardState") as? Bool ?? true
+    return state
+  }()
 
   func setAppTextView() {
     if DeviceType.isPad {
@@ -86,6 +93,7 @@ class InstallationVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setCurrentUI()
+    showTipCardView()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
@@ -252,13 +260,31 @@ class InstallationVC: UIViewController {
   /// - Parameters
   ///  - sender: the button that has been pressed.
   @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = .black
+    sender.backgroundColor = UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
     sender.alpha = 0.2
+    topIcon.alpha = 0.2
 
     // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in
       sender.backgroundColor = .clear
       sender.alpha = 1.0
+      self?.topIcon.alpha = 1.0
     }
+  }
+}
+
+// MARK: - TipHintView
+extension InstallationVC {
+  private func showTipCardView() {
+    let overlayView = InstallationTipCardView(
+      installationTipCardState: installationTipCardState
+    )
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
+    hostingController.view.backgroundColor = .clear
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+    hostingController.didMove(toParent: self)
   }
 }

@@ -1,7 +1,7 @@
 /**
  * Classes for the parent keyboard view controller that language keyboards.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1865,7 +1865,7 @@ class KeyboardViewController: UIInputViewController {
   func loadKeys() {
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       if userDefaults.bool(forKey: "svAccentCharacters") {
         disableAccentCharacters = true
       } else {
@@ -2127,7 +2127,7 @@ class KeyboardViewController: UIInputViewController {
 
   func setCommaAndPeriodKeysConditionally() {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "CommaAndPeriod"
       let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
 
@@ -2141,7 +2141,7 @@ class KeyboardViewController: UIInputViewController {
 
   func emojiAutosuggestIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "EmojiAutosuggest"
 
       return userDefaults.bool(forKey: dictionaryKey)

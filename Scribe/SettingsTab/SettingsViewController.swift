@@ -1,7 +1,7 @@
 /**
  * Functions for the Settings tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,12 +18,19 @@
  */
 
 import UIKit
+import SwiftUI
 
 final class SettingsViewController: UIViewController {
   // MARK: - Constants
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+
+  private let settingsTipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "settingsTipCardState") as? Bool ?? true
+    return state
+  }()
 
   func setHeaderHeight() {
     if DeviceType.isPad {
@@ -46,6 +53,7 @@ final class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setHeaderHeight()
+    showTipCardView()
 
     title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
     navigationItem.backButtonTitle = title
@@ -71,7 +79,6 @@ final class SettingsViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
     commonMethodToRefresh()
   }
 
@@ -245,5 +252,30 @@ extension SettingsViewController: UITableViewDelegate {
       sender.backgroundColor = .clear
       sender.alpha = 1.0
     }
+  }
+}
+
+// MARK: - TipCardView
+extension SettingsViewController {
+  private func showTipCardView() {
+    let overlayView = SettingsTipCardView(
+      settingsTipCardState: settingsTipCardState
+    )
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
+    hostingController.view.backgroundColor = .clear
+    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+    let navigationView = navigationController?.navigationBar
+    guard let navigationView else { return }
+    navigationView.addSubview(hostingController.view)
+    navigationView.bringSubviewToFront(hostingController.view)
+
+    NSLayoutConstraint.activate([
+      hostingController.view.topAnchor.constraint(equalTo: navigationView.topAnchor, constant: 30),
+      hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
+      hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
+    ])
+    hostingController.didMove(toParent: self)
   }
 }
