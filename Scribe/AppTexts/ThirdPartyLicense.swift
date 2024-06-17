@@ -19,14 +19,23 @@
 
 import SwiftUI
 
-let thirdPartyLicensesTitle = NSLocalizedString("about.thirdParty", comment: "Title for the third party licenses")
-let thirdPartyLicensesCaption = NSLocalizedString("about.thirdParty.caption", comment: "Caption for the third party license")
+let thirdPartyLicensesTitle = NSLocalizedString("about.thirdParty", value: "Third-party licenses", comment: "")
+let thirdPartyLicensesCaption = NSLocalizedString("about.thirdParty.caption", value: "Whose code we used", comment: "")
 
-let thirdPartyLicensesText = NSLocalizedString("about.thirdParty.body", comment: "Main text body for the third party license")
+let thirdPartyLicensesText = NSLocalizedString("about.thirdParty.body", value: """
+The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) using third party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. This section lists the source code on which the SERVICE was based as well as the coinciding licenses of each.
 
-let localizedAuthor = NSLocalizedString("about.thirdParty.author", comment: "Author of third party code")
-let localizedLicense = NSLocalizedString("about.thirdParty.license", comment: "License of third party code")
-let localizedLink = NSLocalizedString("about.thirdParty.link", comment: "Link to license of third party code")
+The following is a list of all used source code, the main author or authors of the code, the license under which it was released at time of usage, and a link to the license.
+
+1. Custom Keyboard
+• Author: EthanSK
+• License: MIT
+• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
+""", comment: "")
+
+let localizedAuthor = NSLocalizedString("about.thirdParty.author", value: "Author", comment: "")
+let localizedLicense = NSLocalizedString("about.thirdParty.license", value: "License", comment: "")
+let localizedLink = NSLocalizedString("about.thirdParty.link", value: "Link", comment: "")
 
 let thirdPartyLicensesListItems = [
   "• \(localizedAuthor): EthanSK",

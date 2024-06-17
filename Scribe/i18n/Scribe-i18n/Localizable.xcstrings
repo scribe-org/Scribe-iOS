@@ -335,6 +335,7 @@
     },
     "install" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -426,6 +427,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "portuguese" : {
       "comment" : "",
@@ -527,7 +531,7 @@
       }
     },
     "settings.layout.disableAccentCharacters" : {
-      "comment" : "",
+      "comment" : "Toggles accented characters for the selected keyboard",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -22,34 +22,34 @@ import Foundation
 struct AboutTableData {
   static var aboutTableData = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("about.community", comment: "Heading for the community category"),
+      headingTitle: NSLocalizedString("about.community", value: "Community", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("about.github", comment: "Title for the GitHub button"),
+          sectionTitle: NSLocalizedString("about.github", value: "See the code on GitHub", comment: ""),
           imageString: "github",
           sectionState: .github,
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.matrix", comment: "Title for the Matrix button"),
+          sectionTitle: NSLocalizedString("about.matrix", value: "Chat with the team on Matrix", comment: ""),
           imageString: "matrix",
           sectionState: .matrix,
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.share", comment: "Title for the share button"),
+          sectionTitle: NSLocalizedString("about.share", value: "Share Scribe", comment: ""),
           imageString: "square.and.arrow.up",
           sectionState: .shareScribe,
           externalLink: true
         ),
 //        Section(
-//          sectionTitle: NSLocalizedString("about.scribe", comment: "Title for the Scribe Apps section"),
+//          sectionTitle: NSLocalizedString("about.scribe", value: "View all Scribe apps", comment: ""),
 //          imageString: "scribeIcon",
 //          sectionState: .scribeApps,
 //          externalLink: true
 //        ),
         Section(
-          sectionTitle: NSLocalizedString("about.wikimedia", comment: "Title for the Wikimedia explanation"),
+          sectionTitle: NSLocalizedString("about.wikimedia", value: "Wikimedia and Scribe", comment: ""),
           imageString: "wikimedia",
           hasNestedNavigation: true,
           sectionState: .wikimedia
@@ -58,44 +58,44 @@ struct AboutTableData {
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("about.feedback", comment: "Heading for the feedback category"),
+      headingTitle: NSLocalizedString("about.feedback", value: "Feedback and support", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("about.rate", comment: "Title for the rate button"),
+          sectionTitle: NSLocalizedString("about.rate", value: "Rate Scribe", comment: ""),
           imageString: "star.fill",
           sectionState: .rateScribe,
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.bugReport", comment: "Title for the bug report button"),
+          sectionTitle: NSLocalizedString("about.bugReport", value: "Report a bug", comment: ""),
           imageString: "ladybug",
           sectionState: .bugReport,
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.email", comment: "Title for the email button"),
+          sectionTitle: NSLocalizedString("about.email", value: "Send us an email", comment: ""),
           imageString: "envelope",
           sectionState: .email,
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.appHints", comment: "Title for the button to reset hints"),
+          sectionTitle: NSLocalizedString("about.appHints", value: "Reset app hints", comment: ""),
           imageString: "lightbulb",sectionState: .appHints
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("about.legal", comment: "Title for the legal category"),
+      headingTitle: NSLocalizedString("about.legal", value: "Legal", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("about.privacyPolicy", comment: "Title for the privacy policy"),
+          sectionTitle: NSLocalizedString("about.privacyPolicy", value: "Privacy policy", comment: ""),
           imageString: "lock.shield",
           hasNestedNavigation: true,
           sectionState: .privacyPolicy
         ),
         Section(
-          sectionTitle: NSLocalizedString("about.thirdParty", comment: "Title for the third party licenses"),
+          sectionTitle: NSLocalizedString("about.thirdParty", value: "Third-party licenses", comment: ""),
           imageString: "doc.text",
           hasNestedNavigation: true,
           sectionState: .licenses

@@ -154,12 +154,12 @@ class InformationScreenVC: UIViewController {
   }
 
   func setupPrivacyPolicyPage() {
-    navigationItem.title = NSLocalizedString("about.privacyPolicy", comment: "Title for the privacy policy")
+    navigationItem.title = NSLocalizedString("about.privacyPolicy", value: "Privacy policy", comment: "")
     headingLabel.attributedText = NSMutableAttributedString(
-      string: NSLocalizedString("about.privacyPolicy.caption", comment: "Caption for the privacy policy"),
+      string: NSLocalizedString("about.privacyPolicy.caption", value: "Keeping you safe", comment: ""),
       attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
     )
-    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: "\n" + NSLocalizedString("about.privacyPolicy.body", comment: "Main text body for the privacy policy"))
+    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: "\n" + NSLocalizedString("about.privacyPolicy.body", value: "Please set the app language to English and return to this view", comment: ""))
     textView.textColor = keyCharColor
     textView.linkTextAttributes = [
       NSAttributedString.Key.foregroundColor: linkBlueColor
