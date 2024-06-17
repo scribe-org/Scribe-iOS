@@ -258,6 +258,12 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications via [Weblate](https://weblate.org/).
 
+### Progress
+
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+    <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+</a>
+
 <a id="documentation"></a>
 
 # Documentation [`⇧`](#contents)

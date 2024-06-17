@@ -335,6 +335,7 @@
     },
     "install" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -426,6 +427,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "portuguese" : {
       "comment" : "",

@@ -33,7 +33,7 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 # Localization Coverage [`⇧`](#contents)
 
 <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
-<img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+    <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
 </a>
 
 <a id="contributing"></a>

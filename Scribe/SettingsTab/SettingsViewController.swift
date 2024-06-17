@@ -100,7 +100,7 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    footerButton.setTitle("Install keyboards", for: .normal) // is this ever used?
+    footerButton.setTitle("Install keyboards", for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
     footerButton.backgroundColor = appBtnColor
