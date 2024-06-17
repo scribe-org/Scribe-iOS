@@ -1,7 +1,7 @@
 /**
  * Controls data displayed in the About tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -77,11 +77,12 @@ struct AboutTableData {
           imageString: "envelope",
           sectionState: .email,
           externalLink: true
+        ),
+        Section(
+          sectionTitle: "Reset app tips",
+          imageString: "lightbulb.max",
+          sectionState: .appHints
         )
-//        Section(
-//          sectionTitle: "Reset app hints",
-//          imageString: "lightbulb",sectionState: .appHints
-//        )
       ],
       hasDynamicData: nil
     ),

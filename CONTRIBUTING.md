@@ -110,9 +110,17 @@ git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
   - `origin` (forked repository)
   - `upstream` (Scribe-iOS repository)
 
-3. Open the Scribe-iOS directory in Xcode
+3. (Optional) Install [pre-commit](https://pre-commit.com/) and its hooks to check for and correct common errors in commits:
 
-4. In order to run Scribe on an emulator:
+```bash
+pip install pre-commit
+pre-commit install
+# pre-commit run --all-files
+```
+
+4. Open the Scribe-iOS directory in Xcode
+
+5. In order to run Scribe on an emulator:
 
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
@@ -248,7 +256,7 @@ Scribe does not accept direct edits to the grammar JSON files as they are source
 
 # Localization [`⇧`](#contents)
 
-Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested in contributing to localization for the app are welcome to check related issues using the [`localization`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Alocalization) label, and are further welcome to open their own issues using the [localization](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=localization.yml) template!
+Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications via [Weblate](https://weblate.org/).
 
 <a id="documentation"></a>
 

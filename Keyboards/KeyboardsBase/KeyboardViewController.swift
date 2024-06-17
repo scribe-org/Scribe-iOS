@@ -1,7 +1,7 @@
 /**
  * Classes for the parent keyboard view controller that language keyboards.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -303,7 +303,7 @@ class KeyboardViewController: UIInputViewController {
   func setInformationState() {
     setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
-    let datasources = contentData.enumerated().compactMap { _, text in
+    let datasources = contentData.compactMap { text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
     }
     tipView = ToolTipView(datasources: datasources)
@@ -657,15 +657,7 @@ class KeyboardViewController: UIInputViewController {
         allowUndo = false
         firstCompletionIsHighlighted = false
         // Highlight if the current prefix is the first autocompletion.
-        if
-          currentPrefix == completionWords[0] && completionWords[1] != " "
-
-        // Note: Code for highlighting the word if it's the only option available - add when libraries are expanded.
-//        || (
-//          // Highlighting last remaining autocomplete.
-//          completionWords[0] != " " && completionWords[1] == " "
-//        )
-        {
+        if currentPrefix == completionWords[0] && completionWords[1] != " " {
           firstCompletionIsHighlighted = true
         }
         setBtn(
@@ -1242,8 +1234,7 @@ class KeyboardViewController: UIInputViewController {
     } else if
       commandState == .selectCaseDeclension
       && controllerLanguage == "German"
-      && deCaseVariantDeclensionState != .disabled
-    {
+      && deCaseVariantDeclensionState != .disabled {
       switch deCaseVariantDeclensionState {
       case .disabled:
         break
@@ -1271,12 +1262,9 @@ class KeyboardViewController: UIInputViewController {
         .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
         .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
         .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
-      ].contains(deCaseDeclensionState)
-    {
+      ].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
-    } else if
-      commandState == .displayInformation
-    {
+    } else if commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
     } else {
       formsDisplayDimensions = .view3x2
@@ -1671,11 +1659,13 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "a"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate) {
-          leftPadding = keyWidth / 3
-          addPadding(to: stackView1, width: leftPadding, key: "a")
+            || commandState == .translate
+          ) {
+            leftPadding = keyWidth / 3
+            addPadding(to: stackView1, width: leftPadding, key: "a")
         }
         if DeviceType.isPad
           && key == "@"
@@ -1875,7 +1865,7 @@ class KeyboardViewController: UIInputViewController {
   func loadKeys() {
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       if userDefaults.bool(forKey: "svAccentCharacters") {
         disableAccentCharacters = true
       } else {
@@ -2137,7 +2127,7 @@ class KeyboardViewController: UIInputViewController {
 
   func setCommaAndPeriodKeysConditionally() {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "CommaAndPeriod"
       let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
 
@@ -2151,7 +2141,7 @@ class KeyboardViewController: UIInputViewController {
 
   func emojiAutosuggestIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
-    if let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer") {
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "EmojiAutosuggest"
 
       return userDefaults.bool(forKey: dictionaryKey)

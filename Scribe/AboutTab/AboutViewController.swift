@@ -1,7 +1,7 @@
 /**
  * Functions for the About tab.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,18 +20,29 @@
 import MessageUI
 import StoreKit
 import UIKit
+import SwiftUI
 
 final class AboutViewController: BaseTableViewController {
   override var dataSet: [ParentTableCellModel] {
     AboutTableData.aboutTableData
   }
 
+  private let aboutTipCardState: Bool = {
+    let userDefault = UserDefaults.standard
+    let state = userDefault.object(forKey: "aboutTipCardState") as? Bool ?? true
+    return state
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    showTipCardView()
     title = NSLocalizedString("about.title", comment: "The title of the about tab")
 
-    tableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier)
+    tableView.register(
+      UINib(nibName: "AboutTableViewCell", bundle: nil),
+      forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier
+    )
   }
 }
 
@@ -88,9 +99,11 @@ extension AboutViewController {
     case .email:
       showEmailUI()
 
-      //      case .appHints:
-      //        // reset functionality
-      //        print("Resets app hints")
+    case .appHints:
+      let userDefaults = UserDefaults.standard
+      userDefaults.set(true, forKey: "installationTipCardState")
+      userDefaults.set(true, forKey: "settingsTipCardState")
+      userDefaults.set(true, forKey: "aboutTipCardState")
 
     case .privacyPolicy:
       if let viewController = storyboard?.instantiateViewController(
@@ -170,5 +183,30 @@ extension AboutViewController {
 extension AboutViewController: MFMailComposeViewControllerDelegate {
   func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
     controller.dismiss(animated: true, completion: nil)
+  }
+}
+
+// MARK: - TipCardView
+extension AboutViewController {
+  private func showTipCardView() {
+    let overlayView = AboutTipCardView(
+      aboutTipCardState: aboutTipCardState
+    )
+
+    let hostingController = UIHostingController(rootView: overlayView)
+    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -40)
+    hostingController.view.backgroundColor = .clear
+    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+    let navigationView = navigationController?.navigationBar
+    guard let navigationView else { return }
+    navigationView.addSubview(hostingController.view)
+    navigationView.bringSubviewToFront(hostingController.view)
+
+    NSLayoutConstraint.activate([
+      hostingController.view.topAnchor.constraint(equalTo: navigationView.topAnchor, constant: 30),
+      hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
+      hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
+    ])
+    hostingController.didMove(toParent: self)
   }
 }

@@ -92,7 +92,7 @@ After your first few pull requests organization members would be happy to discus
 
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
-- [Localization](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Alocalization) for the app and App Store 🌐
+- [Localization](https://github.com/scribe-org/Scribe-i18n) for the app and App Store 🌐
 - [Documentation](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
@@ -100,6 +100,9 @@ After your first few pull requests organization members would be happy to discus
 ### Road Map [`⇧`](#contents)
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
+
+> [!NOTE]\
+> Consider joining our [bi-weekly developer syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
 
 ### Designs [`⇧`](#contents)
 
@@ -154,9 +157,17 @@ git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
   - `origin` (forked repository)
   - `upstream` (Scribe-iOS repository)
 
-3. Open the Scribe-iOS directory in Xcode
+3. (Optional) Install [pre-commit](https://pre-commit.com/) and its hooks to check for and correct common errors in commits:
 
-4. In order to run Scribe on an emulator:
+```bash
+pip install pre-commit
+pre-commit install
+# pre-commit run --all-files
+```
+
+4. Open the Scribe-iOS directory in Xcode
+
+5. In order to run Scribe on an emulator:
 
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
@@ -196,13 +207,13 @@ The following table shows the supported languages and the amount of data availab
 
 | Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
 | :--------- | ------: | ----: | -------------: | ------------: | -------------: |
-| French     |  17,072 | 6,572 |         67,652 |             - |          2,488 |
-| German     | 102,833 | 3,593 |         67,652 |           210 |          2,898 |
-| Italian    |   8,671 |    73 |         67,652 |             - |          2,457 |
-| Portuguese |   5,437 |   536 |         67,652 |             - |          2,327 |
-| Russian    | 194,448 |    12 |         67,652 |            15 |          3,827 |
-| Spanish    |  39,105 | 4,930 |         67,652 |             - |          3,134 |
-| Swedish    |  45,259 | 4,501 |         67,652 |             - |          2,913 |
+| French     |  18,044 | 6,574 |         67,652 |             - |          2,488 |
+| German     | 194,687 | 3,634 |         67,652 |           215 |          2,898 |
+| Italian    |  59,191 | 7,649 |         67,652 |             - |          2,457 |
+| Portuguese |   5,268 |   538 |         67,652 |             - |          2,327 |
+| Russian    | 194,567 |    15 |         67,652 |            15 |          3,827 |
+| Spanish    |  61,650 | 7,912 |         67,652 |             - |          3,134 |
+| Swedish    |  47,007 | 4,678 |         67,652 |             - |          2,913 |
 
 `*` Given the current **`beta`** status where words are machine translated.
 
@@ -296,13 +307,14 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 <strong>2024</strong>
 
+- April: [Blog post on Medium](https://medium.com/@mhmohona/scribe-data-a-guide-to-open-source-language-data-a801c59db4c9) about [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and its functionalities
 - February: [Presentation slides](https://docs.google.com/presentation/d/1lMhYiQx1R99SVGhbikUGjOVaFgPPASvbzM2Bsu3NXSg/edit?usp=sharing) for Scribe's participation at the [Wikimedia Tech Safari Program](https://www.mediawiki.org/wiki/Wikimedia_Tech_Safari_Program)
 
 <strong>2023</strong>
 
 - August: [Scribe-iOS final submission report for Google Summer of Code 2023](https://saurabhjamadagni.hashnode.dev/gsoc-23-final-work-submission)
 - June: [Scribe-iOS development blog post on Nested UITableViews & Apple's built-in ViewControllers in app menu](https://saurabhjamadagni.hashnode.dev/nested-uitableviews-apples-built-in-viewcontrollers) for [GSoC '23](https://www.mediawiki.org/wiki/Google_Summer_of_Code/2023#Accepted_projects:~:text=links%3A%20Phabricator%20issue-,3.%20Adding%20a%20Menu%20and%20Keyboards%20to%20Scribe%2DiOS,-%5Bedit%5D)
-- March: [Presentation slides](https://docs.google.com/presentation/d/1W4ZkGi9UDDiTxM_silEij0gTE8YEubluHxe78xoqEP0/edit?usp=sharing) for a talk at [Berlin Hack and Tell](https://berlinhackandtell.rocks/) ([Hack of the month winner 🏆](https://berlinhackandtell.rocks/2023-03-28-no87-moore-hacks))
+- March: [Presentation slides](https://docs.google.com/presentation/d/1W4ZkGi9UDDiTxM_silEij0gTE8YEubluHxe78xoqEP0/edit?usp=sharing) for a talk at [Berlin Hack and Tell](https://bhnt.c-base.org/) ([Hack of the month winner 🏆](https://bhnt.c-base.org/2023-03-28-no87-moore-hacks))
 
 <strong>2022</strong>
 
@@ -329,7 +341,7 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
   <br>
 </div>
 
-# Powered By
+# Powered By [`⇧`](#contents)
 
 ### Contributors
 

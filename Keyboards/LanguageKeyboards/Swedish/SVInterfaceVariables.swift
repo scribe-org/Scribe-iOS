@@ -1,7 +1,7 @@
 /**
  * Constants and functions to load the Swedish Scribe keyboard.
  *
- * Copyright (C) 2023 Scribe
+ * Copyright (C) 2024 Scribe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -130,7 +130,7 @@ public enum SwedishKeyboardConstants {
 
 /// Gets the keys for the Swedish keyboard.
 func getSVKeys() {
-  let userDefaults = UserDefaults(suiteName: "group.scribe.userDefaultsContainer")!
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "svAccentCharacters") {

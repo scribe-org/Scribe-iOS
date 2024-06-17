@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 🌐 Localization
+    url: https://github.com/scribe-org/Scribe-i18n
+    about: Head over to Scribe-i18n to help us with localization!
+  - name: 👋 Community discussion channels
+    url: https://matrix.to/#/#scribe_community:matrix.org
+    about: Join us in our public Matrix chat rooms!
