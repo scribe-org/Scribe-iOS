@@ -45,7 +45,7 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
 
   installDirections.append(NSMutableAttributedString(string: "\n\n3. " + NSLocalizedString("install.text2", value: """
   Activate keyboards that you want to use
-                                                                                           
+
   4. When typing press
   """, comment: "") + " ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 

@@ -80,7 +80,8 @@ struct AboutTableData {
         ),
         Section(
           sectionTitle: NSLocalizedString("about.appHints", value: "Reset app hints", comment: ""),
-          imageString: "lightbulb",sectionState: .appHints
+          imageString: "lightbulb",
+          sectionState: .appHints
         )
       ],
       hasDynamicData: nil
