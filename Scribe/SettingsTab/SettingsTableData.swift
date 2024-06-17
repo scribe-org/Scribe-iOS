@@ -22,15 +22,10 @@ import Foundation
 enum SettingsTableData {
   static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString(
-        "settings.appSettings", comment: "The title of the app settings section"
-      ),
+      headingTitle: NSLocalizedString("settings.appSettings", value: "App settings", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString(
-            "settings.appSettings.appLanguage", comment: "Change the language of the Scribe App"
-          ),
-          imageString: "globe",
+          sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", value: "App language", comment: ""),
           hasToggle: false,
           sectionState: .appLang
         )
@@ -38,9 +33,7 @@ enum SettingsTableData {
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString(
-        "settings.installedKeyboards", comment: "The title of the installed keyboards section"
-      ),
+      headingTitle: NSLocalizedString("settings.installedKeyboards", value: "Select installed keyboard", comment: ""),
       section: [
         // Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
       ],
@@ -50,48 +43,32 @@ enum SettingsTableData {
 
   static let languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString(
-        "settings.layout", comment: "The title of the layout section"
-      ),
+      headingTitle: NSLocalizedString("settings.layout", value: "Layout", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString(
-            "settings.layout.periodAndComma",
-            comment: "Toggles period and commas for the selected keyboard"
-          ),
+          sectionTitle: NSLocalizedString("settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""),
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod),
-          shortDescription: NSLocalizedString(
-            "settings.layout.periodAndComma.description", comment: ""
-          )
+          shortDescription: NSLocalizedString("settings.layout.periodAndComma.description", value: "Include comma and period keys on the main keyboard for convenient typing.", comment: "")
         ),
         Section(
-          sectionTitle: NSLocalizedString(
-            "settings.layout.disableAccentCharacters",
-            comment: "Toggles accented characters for the selected keyboard"
-          ),
+          sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.toggleAccentCharacters),
-          shortDescription: NSLocalizedString(
-            "settings.layout.disableAccentCharacters.description", comment: ""
-          )
+          shortDescription: NSLocalizedString("settings.layout.disableAccentCharacters.description", value: "Include accented letter keys on the primary keyboard layout.", comment: "")
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString(
-        "settings.functionality", comment: "The title of the functionality section"
-      ),
+      headingTitle: NSLocalizedString("settings.functionality", value: "Functionality", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString(
-            "settings.functionality.autoSuggestEmoji", comment: "Toggles the suggestion of Emoji"
-          ),
+          sectionTitle: NSLocalizedString("settings.functionality.autoSuggestEmoji", value: "Autosuggest emojis", comment: ""),
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
-          shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", comment: "")
+          shortDescription: NSLocalizedString("settings.layout.autoSuggestEmoji.description", value: "Turn on emoji suggestions and completions for more expressive typing.", comment: "")
         )
       ],
       hasDynamicData: nil
@@ -109,14 +86,14 @@ enum SettingsTableData {
     for keyboard in keyboards {
       if keyboard.hasPrefix(customKeyboardExtension) {
         let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
-        installedKeyboards.append(lang.capitalize())
+        installedKeyboards.append(NSLocalizedString(lang, value: lang.capitalized, comment: ""))
       }
     }
 
     var sections = [Section]()
 
     for language in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[language] else {
+      guard let abbreviation = localizedLanguagesAbbrDict[language] else {
         fatalError("Abbreviation not found for language: \(language)")
       }
       let newSection = Section(

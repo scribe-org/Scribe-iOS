@@ -1,0 +1,51 @@
+"""
+Converts from JSON files to an xcstrings file.
+"""
+
+import json
+import os
+
+directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+files = os.listdir(directory)
+languages = sorted(
+    [file.replace(".json", "") for file in files if file.endswith(".json")]
+)
+path = os.path.join(directory, "en-US.json")
+file = open(path, "r").read()
+file = json.loads(file)
+
+data = "{\n" '  "sourceLanguage" : "en",\n' '  "strings" : {\n'
+for pos, key in enumerate(file, start=1):
+    data += (
+        f'    "{key}" : {{\n' f'      "comment" : "",\n' f'      "localizations" : {{\n'
+    )
+    for lang in languages:
+        if lang != "en-US":
+            lang_json = json.loads(
+                open(os.path.join(directory, f"{lang}.json"), "r").read()
+            )
+            translation = lang_json[key].replace('"', '\\"').replace("\n", "\\n")
+            if translation != "":
+                data += (
+                    f'        "{lang}" : {{\n'
+                    f'          "stringUnit" : {{\n'
+                    f'            "state" : "",\n'
+                    f'            "value" : "{translation}"\n'
+                    f"          }}\n"
+                    f"        }},\n"
+                )
+
+    lang_json = json.loads(open(os.path.join(directory, "en-US.json"), "r").read())
+    translation = lang_json[key].replace('"', '\\"').replace("\n", "\\n")
+    data += (
+        f'        "en" : {{\n'
+        f'          "stringUnit" : {{\n'
+        f'            "state" : "",\n'
+        f'            "value" : "{translation}"\n'
+        f"          }}\n"
+        f"        }}\n"
+    )
+
+    data += "      }\n" "    },\n" if pos < len(file) else "      }\n" "    }\n"
+data += "  }},\n" '  "version" : "1.0"\n' "}}"
+open(os.path.join(directory, "Localizable.xcstrings"), "w").write(data)
