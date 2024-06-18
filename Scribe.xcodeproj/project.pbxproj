@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		140158992A430DD000D14E52 /* ENThirdPartyLicenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */; };
-		1401589B2A45A07200D14E52 /* ENWikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */; };
+		140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
+		1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */; };
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
@@ -22,13 +22,13 @@
 		147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */; };
 		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
 		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
-		30453951293B9106003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453953293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453954293B9107003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453955293B9108003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453956293B9108003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453957293B9109003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
-		30453958293B9109003AE55B /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		30453951293B9106003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453953293B9107003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453954293B9107003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453955293B9108003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453956293B9108003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453957293B9109003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
+		30453958293B9109003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		30453959293B911B003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		3045395B293B911C003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		3045395C293B911D003AE55B /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
@@ -100,6 +100,7 @@
 		38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -171,19 +172,6 @@
 		D111E9BF27AFE7B200746F92 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
 		D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
-		D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */; };
-		D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0A29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0B29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0C29CCDBF6007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0E29CCDBF7007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC0F29CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1029CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1129CCDBF8007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1229CCDBF9007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1329CCDBF9007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
-		D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BC0729CCDBE8007E7362 /* DEAppText.swift */; };
 		D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
 		D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
 		D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
@@ -386,23 +374,10 @@
 		D190B2582742525C00705659 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		D190B26927426ACD00705659 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
-		D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */; };
-		D198B5CE2BFA954100E1BF4F /* pr_maintainer_checklist.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D198B5BE2BFA954100E1BF4F /* pr_maintainer_checklist.yaml */; };
-		D198B5CF2BFA954100E1BF4F /* COC_CONTACT.md in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C02BFA954100E1BF4F /* COC_CONTACT.md */; };
-		D198B5D02BFA954100E1BF4F /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C12BFA954100E1BF4F /* CODE_OF_CONDUCT.md */; };
-		D198B5D12BFA954100E1BF4F /* de.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C32BFA954100E1BF4F /* de.json */; };
-		D198B5D22BFA954100E1BF4F /* en-US.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C42BFA954100E1BF4F /* en-US.json */; };
-		D198B5D32BFA954100E1BF4F /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C52BFA954100E1BF4F /* es.json */; };
-		D198B5D42BFA954100E1BF4F /* fr.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C62BFA954100E1BF4F /* fr.json */; };
-		D198B5D52BFA954100E1BF4F /* it.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C72BFA954100E1BF4F /* it.json */; };
-		D198B5D62BFA954100E1BF4F /* pt.json in Resources */ = {isa = PBXBuildFile; fileRef = D198B5C82BFA954100E1BF4F /* pt.json */; };
-		D198B5D72BFA954100E1BF4F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D198B5CA2BFA954100E1BF4F /* .gitignore */; };
-		D198B5D82BFA954100E1BF4F /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D198B5CB2BFA954100E1BF4F /* LICENSE.txt */; };
-		D198B5D92BFA954100E1BF4F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D198B5CC2BFA954100E1BF4F /* README.md */; };
-		D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		D1A2DCB127AD37BD0057A10D /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */; };
 		D1AB5B2629C757A100CCB0C1 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
-		D1AB5B2729C757A100CCB0C1 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		D1AB5B2729C757A100CCB0C1 /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		D1AB5B2829C757A100CCB0C1 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1AB5B2929C757A100CCB0C1 /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D1AB5B2A29C757A100CCB0C1 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -446,7 +421,7 @@
 		D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDF0429CA66D00033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
-		D1AFDF0529CA66D00033BF27 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		D1AFDF0529CA66D00033BF27 /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		D1AFDF0629CA66D00033BF27 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1AFDF0729CA66D00033BF27 /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D1AFDF0829CA66D00033BF27 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -490,7 +465,7 @@
 		D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		D1AFDF8129CA66F40033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
-		D1AFDF8229CA66F40033BF27 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		D1AFDF8229CA66F40033BF27 /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		D1AFDF8329CA66F40033BF27 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1AFDF8429CA66F40033BF27 /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D1AFDF8529CA66F40033BF27 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -536,7 +511,7 @@
 		D1AFDFBC29CA67EE0033BF27 /* DAKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDE7929CA658B0033BF27 /* DAKeyboardViewController.swift */; };
 		D1AFDFBD29CA67F10033BF27 /* ENKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFDE6A29CA65740033BF27 /* ENKeyboardViewController.swift */; };
 		D1AFDFD729CA6E900033BF27 /* SVCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171941F27AECD170038660B /* SVCommandVariables.swift */; };
-		D1AFDFD829CA6E900033BF27 /* ENAppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* ENAppText.swift */; };
+		D1AFDFD829CA6E900033BF27 /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		D1AFDFD929CA6E900033BF27 /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193E727AECAE60038660B /* ESInterfaceVariables.swift */; };
 		D1AFDFDA29CA6E900033BF27 /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		D1AFDFDB29CA6E900033BF27 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -741,7 +716,6 @@
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
 		ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
-		EDB4601B2AF9FD8200BEA967 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */; };
 		EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */; };
 		EDC364692AE408F20001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
 		EDC3646A2AE408FA0001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
@@ -859,8 +833,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENThirdPartyLicenses.swift; sourceTree = "<group>"; };
-		1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENWikimediaAndScribe.swift; sourceTree = "<group>"; };
+		140158982A430DD000D14E52 /* ThirdPartyLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicense.swift; sourceTree = "<group>"; };
+		1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaAndScribe.swift; sourceTree = "<group>"; };
 		140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTemplateViewController.swift; sourceTree = "<group>"; };
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
@@ -892,6 +866,7 @@
 		38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
 		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
@@ -907,8 +882,6 @@
 		D111E9B927AFE7B200746F92 /* Annotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotate.swift; sourceTree = "<group>"; };
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 		D155AD282BDC6CC20075B18C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEPrivacyPolicy.swift; sourceTree = "<group>"; };
-		D156BC0729CCDBE8007E7362 /* DEAppText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEAppText.swift; sourceTree = "<group>"; };
 		D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FRLanguageData.sqlite; path = Keyboards/LanguageKeyboards/French/FRLanguageData.sqlite; sourceTree = SOURCE_ROOT; };
 		D15E298129E41B56006B2C81 /* DELanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DELanguageData.sqlite; sourceTree = "<group>"; };
 		D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ITLanguageData.sqlite; sourceTree = "<group>"; };
@@ -953,20 +926,7 @@
 		D190B2592742565500705659 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D190B28F27426F4900705659 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		D190B29027426F4900705659 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENPrivacyPolicy.swift; sourceTree = "<group>"; };
-		D198B5BE2BFA954100E1BF4F /* pr_maintainer_checklist.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = pr_maintainer_checklist.yaml; sourceTree = "<group>"; };
-		D198B5C02BFA954100E1BF4F /* COC_CONTACT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = COC_CONTACT.md; sourceTree = "<group>"; };
-		D198B5C12BFA954100E1BF4F /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
-		D198B5C32BFA954100E1BF4F /* de.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = de.json; sourceTree = "<group>"; };
-		D198B5C42BFA954100E1BF4F /* en-US.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "en-US.json"; sourceTree = "<group>"; };
-		D198B5C52BFA954100E1BF4F /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
-		D198B5C62BFA954100E1BF4F /* fr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fr.json; sourceTree = "<group>"; };
-		D198B5C72BFA954100E1BF4F /* it.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = it.json; sourceTree = "<group>"; };
-		D198B5C82BFA954100E1BF4F /* pt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pt.json; sourceTree = "<group>"; };
-		D198B5CA2BFA954100E1BF4F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		D198B5CB2BFA954100E1BF4F /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		D198B5CC2BFA954100E1BF4F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D1A2DCB027AD37BD0057A10D /* ENAppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAppText.swift; sourceTree = "<group>"; };
+		D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallScreen.swift; sourceTree = "<group>"; };
 		D1A2DCB327AD3EB50057A10D /* AppUISymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUISymbols.swift; sourceTree = "<group>"; };
 		D1AB5B1729C7554A00CCB0C1 /* NBKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1AB5B1929C7554A00CCB0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1005,7 +965,6 @@
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
-		EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
@@ -1324,15 +1283,6 @@
 			path = Portuguese;
 			sourceTree = "<group>";
 		};
-		D156BC0529CCDBE8007E7362 /* German */ = {
-			isa = PBXGroup;
-			children = (
-				D156BC0629CCDBE8007E7362 /* DEPrivacyPolicy.swift */,
-				D156BC0729CCDBE8007E7362 /* DEAppText.swift */,
-			);
-			path = German;
-			sourceTree = "<group>";
-		};
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
@@ -1404,33 +1354,10 @@
 			path = KeyboardsBase;
 			sourceTree = "<group>";
 		};
-		D198B5BF2BFA954100E1BF4F /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				D198B5BE2BFA954100E1BF4F /* pr_maintainer_checklist.yaml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
-		D198B5C22BFA954100E1BF4F /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				D198B5BF2BFA954100E1BF4F /* workflows */,
-				D198B5C02BFA954100E1BF4F /* COC_CONTACT.md */,
-				D198B5C12BFA954100E1BF4F /* CODE_OF_CONDUCT.md */,
-			);
-			path = .github;
-			sourceTree = "<group>";
-		};
 		D198B5C92BFA954100E1BF4F /* Scribe-i18n */ = {
 			isa = PBXGroup;
 			children = (
-				D198B5C32BFA954100E1BF4F /* de.json */,
-				D198B5C42BFA954100E1BF4F /* en-US.json */,
-				D198B5C52BFA954100E1BF4F /* es.json */,
-				D198B5C62BFA954100E1BF4F /* fr.json */,
-				D198B5C72BFA954100E1BF4F /* it.json */,
-				D198B5C82BFA954100E1BF4F /* pt.json */,
+				5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */,
 			);
 			path = "Scribe-i18n";
 			sourceTree = "<group>";
@@ -1438,11 +1365,7 @@
 		D198B5CD2BFA954100E1BF4F /* i18n */ = {
 			isa = PBXGroup;
 			children = (
-				D198B5C22BFA954100E1BF4F /* .github */,
 				D198B5C92BFA954100E1BF4F /* Scribe-i18n */,
-				D198B5CA2BFA954100E1BF4F /* .gitignore */,
-				D198B5CB2BFA954100E1BF4F /* LICENSE.txt */,
-				D198B5CC2BFA954100E1BF4F /* README.md */,
 			);
 			path = i18n;
 			sourceTree = "<group>";
@@ -1450,22 +1373,12 @@
 		D1A2DCAF27AD378F0057A10D /* AppTexts */ = {
 			isa = PBXGroup;
 			children = (
-				D1A2DCB227AD37D90057A10D /* English */,
-				D156BC0529CCDBE8007E7362 /* German */,
+				D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */,
+				140158982A430DD000D14E52 /* ThirdPartyLicense.swift */,
+				1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */,
 				D17193BF27AEA33A0038660B /* AppTextStyling.swift */,
 			);
 			path = AppTexts;
-			sourceTree = "<group>";
-		};
-		D1A2DCB227AD37D90057A10D /* English */ = {
-			isa = PBXGroup;
-			children = (
-				D196B35F279A051000228F3F /* ENPrivacyPolicy.swift */,
-				D1A2DCB027AD37BD0057A10D /* ENAppText.swift */,
-				140158982A430DD000D14E52 /* ENThirdPartyLicenses.swift */,
-				1401589A2A45A07200D14E52 /* ENWikimediaAndScribe.swift */,
-			);
-			path = English;
 			sourceTree = "<group>";
 		};
 		D1A3EEED28F8D3EA00896C65 /* Frameworks */ = {
@@ -1580,7 +1493,6 @@
 		EDB460222B03BF7000BEA967 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EDB4601A2AF9FD8200BEA967 /* Localizable.xcstrings */,
 				D1895BD12C1D816F009FBEB0 /* Settings.bundle */,
 			);
 			path = Resources;
@@ -1908,6 +1820,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				de,
 			);
 			mainGroup = 38BD212722D5907E00C6795D;
 			packageReferences = (
@@ -1940,25 +1854,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D198B5D82BFA954100E1BF4F /* LICENSE.txt in Resources */,
 				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				D198B5D72BFA954100E1BF4F /* .gitignore in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
-				D198B5D22BFA954100E1BF4F /* en-US.json in Resources */,
-				D198B5D52BFA954100E1BF4F /* it.json in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
-				D198B5D92BFA954100E1BF4F /* README.md in Resources */,
-				D198B5D32BFA954100E1BF4F /* es.json in Resources */,
-				D198B5D12BFA954100E1BF4F /* de.json in Resources */,
-				D198B5D02BFA954100E1BF4F /* CODE_OF_CONDUCT.md in Resources */,
-				EDB4601B2AF9FD8200BEA967 /* Localizable.xcstrings in Resources */,
+				5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
-				D198B5D62BFA954100E1BF4F /* pt.json in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
-				D198B5CF2BFA954100E1BF4F /* COC_CONTACT.md in Resources */,
-				D198B5CE2BFA954100E1BF4F /* pr_maintainer_checklist.yaml in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
-				D198B5D42BFA954100E1BF4F /* fr.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2109,7 +2011,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171941027AECCF50038660B /* RUCommandVariables.swift in Sources */,
-				140158992A430DD000D14E52 /* ENThirdPartyLicenses.swift in Sources */,
+				140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */,
 				D171944A27AEFC620038660B /* LanguageDBManager.swift in Sources */,
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
 				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
@@ -2130,7 +2032,6 @@
 				D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */,
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
-				D196B360279A051000228F3F /* ENPrivacyPolicy.swift in Sources */,
 				147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */,
 				14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */,
 				147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */,
@@ -2154,7 +2055,6 @@
 				D1CDED752A859DDD00098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */,
-				D156BC0929CCDBE8007E7362 /* DEAppText.swift in Sources */,
 				30453964293B9D18003AE55B /* InformationToolTipData.swift in Sources */,
 				30453969293B9DB4003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D1CDED7D2A85A05100098546 /* HEInterfaceVariables.swift in Sources */,
@@ -2169,13 +2069,12 @@
 				30453967293B9D31003AE55B /* ViewThemeable.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */,
-				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
+				D1A2DCB127AD37BD0057A10D /* InstallScreen.swift in Sources */,
 				D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */,
-				1401589B2A45A07200D14E52 /* ENWikimediaAndScribe.swift in Sources */,
+				1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
-				D156BC0829CCDBE8007E7362 /* DEPrivacyPolicy.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D1CDED812A85A12400098546 /* NBInterfaceVariables.swift in Sources */,
 				D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
@@ -2191,7 +2090,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942927AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
-				30453953293B9107003AE55B /* ENAppText.swift in Sources */,
+				30453953293B9107003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDD62A85AE9A00098546 /* NBInterfaceVariables.swift in Sources */,
 				38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */,
 				D171943A27AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2209,7 +2108,6 @@
 				D1CDED9C2A85AE6B00098546 /* ENCommandVariables.swift in Sources */,
 				D190B26827426ACD00705659 /* KeyboardViewController.swift in Sources */,
 				D180EC0628FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC0F29CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D171940227AECCD10038660B /* DECommandVariables.swift in Sources */,
 				3045397A293B9E0B003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945A27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2251,7 +2149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942727AECEA60038660B /* DEInterfaceVariables.swift in Sources */,
-				30453951293B9106003AE55B /* ENAppText.swift in Sources */,
+				30453951293B9106003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDD42A85AE9800098546 /* NBInterfaceVariables.swift in Sources */,
 				D171942127AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943927AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2269,7 +2167,6 @@
 				D1CDED9D2A85AE6C00098546 /* ENCommandVariables.swift in Sources */,
 				D17193E927AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0428FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC0C29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D171941127AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				30453978293B9E0A003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945927AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2311,7 +2208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942827AECEA70038660B /* DEInterfaceVariables.swift in Sources */,
-				30453956293B9108003AE55B /* ENAppText.swift in Sources */,
+				30453956293B9108003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDD92A85AE9B00098546 /* NBInterfaceVariables.swift in Sources */,
 				D171942327AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943B27AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2329,7 +2226,6 @@
 				D1CDEDA22A85AE6F00098546 /* ENCommandVariables.swift in Sources */,
 				D17193EB27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0828FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1229CCDBF9007E7362 /* DEAppText.swift in Sources */,
 				D171941327AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397C293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945B27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2371,7 +2267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942B27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
-				30453957293B9109003AE55B /* ENAppText.swift in Sources */,
+				30453957293B9109003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDDB2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */,
 				D171942527AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943D27AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2389,7 +2285,6 @@
 				D1CDEDA42A85AE7000098546 /* ENCommandVariables.swift in Sources */,
 				D17193ED27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0A28FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1429CCDBFA007E7362 /* DEAppText.swift in Sources */,
 				D171941527AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397D293B9E0D003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945D27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2431,7 +2326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942A27AECEA80038660B /* DEInterfaceVariables.swift in Sources */,
-				30453955293B9108003AE55B /* ENAppText.swift in Sources */,
+				30453955293B9108003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDDA2A85AE9C00098546 /* NBInterfaceVariables.swift in Sources */,
 				D171942427AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943C27AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2449,7 +2344,6 @@
 				D1CDEDA32A85AE7000098546 /* ENCommandVariables.swift in Sources */,
 				D17193EC27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0928FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1329CCDBF9007E7362 /* DEAppText.swift in Sources */,
 				D171941427AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397E293B9E0D003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945C27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2491,7 +2385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D171942C27AECEA90038660B /* DEInterfaceVariables.swift in Sources */,
-				30453958293B9109003AE55B /* ENAppText.swift in Sources */,
+				30453958293B9109003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */,
 				D171942627AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D171943E27AEF0560038660B /* KeyboardStyling.swift in Sources */,
@@ -2509,7 +2403,6 @@
 				D1CDEDA52A85AE7000098546 /* ENCommandVariables.swift in Sources */,
 				D17193EE27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
 				D180EC0B28FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1529CCDBFA007E7362 /* DEAppText.swift in Sources */,
 				D171941627AECCF50038660B /* RUCommandVariables.swift in Sources */,
 				3045397F293B9E0E003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D171945E27AF237C0038660B /* ScribeKey.swift in Sources */,
@@ -2551,7 +2444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AB5B2629C757A100CCB0C1 /* SVCommandVariables.swift in Sources */,
-				D1AB5B2729C757A100CCB0C1 /* ENAppText.swift in Sources */,
+				D1AB5B2729C757A100CCB0C1 /* InstallScreen.swift in Sources */,
 				D1CDEDD82A85AE9A00098546 /* NBInterfaceVariables.swift in Sources */,
 				D1AB5B2829C757A100CCB0C1 /* ESInterfaceVariables.swift in Sources */,
 				D1AB5B2929C757A100CCB0C1 /* SVInterfaceVariables.swift in Sources */,
@@ -2569,7 +2462,6 @@
 				D1CDEDA02A85AE6D00098546 /* ENCommandVariables.swift in Sources */,
 				D1AB5B3229C757A100CCB0C1 /* RUCommandVariables.swift in Sources */,
 				D1AB5B3329C757A100CCB0C1 /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1129CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D1AB5B3429C757A100CCB0C1 /* KeyboardStyling.swift in Sources */,
 				D1AB5B3529C757A100CCB0C1 /* ToolTipViewDatasource.swift in Sources */,
 				D1AB5B3629C757A100CCB0C1 /* CommandBar.swift in Sources */,
@@ -2611,7 +2503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFDF0429CA66D00033BF27 /* SVCommandVariables.swift in Sources */,
-				D1AFDF0529CA66D00033BF27 /* ENAppText.swift in Sources */,
+				D1AFDF0529CA66D00033BF27 /* InstallScreen.swift in Sources */,
 				D1CDEDD32A85AE9800098546 /* NBInterfaceVariables.swift in Sources */,
 				D1AFDF0629CA66D00033BF27 /* ESInterfaceVariables.swift in Sources */,
 				D1AFDF0729CA66D00033BF27 /* SVInterfaceVariables.swift in Sources */,
@@ -2629,7 +2521,6 @@
 				D1CDED9B2A85AE6A00098546 /* ENCommandVariables.swift in Sources */,
 				D1AFDF1029CA66D00033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDF1129CA66D00033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC0B29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D1AFDF1229CA66D00033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDF1329CA66D00033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDF1429CA66D00033BF27 /* CommandBar.swift in Sources */,
@@ -2671,7 +2562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFDF8129CA66F40033BF27 /* SVCommandVariables.swift in Sources */,
-				D1AFDF8229CA66F40033BF27 /* ENAppText.swift in Sources */,
+				D1AFDF8229CA66F40033BF27 /* InstallScreen.swift in Sources */,
 				D1CDEDD22A85AE9800098546 /* NBInterfaceVariables.swift in Sources */,
 				D1AFDF8329CA66F40033BF27 /* ESInterfaceVariables.swift in Sources */,
 				D1AFDF8429CA66F40033BF27 /* SVInterfaceVariables.swift in Sources */,
@@ -2689,7 +2580,6 @@
 				D1CDED9A2A85AE6A00098546 /* ENCommandVariables.swift in Sources */,
 				D1AFDF8D29CA66F40033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDF8E29CA66F40033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC0A29CCDBF6007E7362 /* DEAppText.swift in Sources */,
 				D1AFDF8F29CA66F40033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDF9029CA66F40033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDF9129CA66F40033BF27 /* CommandBar.swift in Sources */,
@@ -2731,7 +2621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AFDFD729CA6E900033BF27 /* SVCommandVariables.swift in Sources */,
-				D1AFDFD829CA6E900033BF27 /* ENAppText.swift in Sources */,
+				D1AFDFD829CA6E900033BF27 /* InstallScreen.swift in Sources */,
 				D1CDEDD52A85AE9900098546 /* NBInterfaceVariables.swift in Sources */,
 				D1AFDFD929CA6E900033BF27 /* ESInterfaceVariables.swift in Sources */,
 				D1AFDFDA29CA6E900033BF27 /* SVInterfaceVariables.swift in Sources */,
@@ -2749,7 +2639,6 @@
 				D1CDED9E2A85AE6C00098546 /* ENCommandVariables.swift in Sources */,
 				D1AFDFE329CA6E900033BF27 /* RUCommandVariables.swift in Sources */,
 				D1AFDFE429CA6E900033BF27 /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC0E29CCDBF7007E7362 /* DEAppText.swift in Sources */,
 				D1AFDFE529CA6E900033BF27 /* KeyboardStyling.swift in Sources */,
 				D1AFDFE629CA6E900033BF27 /* ToolTipViewDatasource.swift in Sources */,
 				D1AFDFE729CA6E900033BF27 /* CommandBar.swift in Sources */,
@@ -2791,7 +2680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B81D3427BBB6B30085FE5E /* SVCommandVariables.swift in Sources */,
-				30453954293B9107003AE55B /* ENAppText.swift in Sources */,
+				30453954293B9107003AE55B /* InstallScreen.swift in Sources */,
 				D1CDEDD72A85AE9A00098546 /* NBInterfaceVariables.swift in Sources */,
 				D1B81D3327BBB6AD0085FE5E /* ESInterfaceVariables.swift in Sources */,
 				D1B81D3527BBB6B50085FE5E /* SVInterfaceVariables.swift in Sources */,
@@ -2809,7 +2698,6 @@
 				D1CDED9F2A85AE6D00098546 /* ENCommandVariables.swift in Sources */,
 				D1B81D3027BBB6A30085FE5E /* RUCommandVariables.swift in Sources */,
 				D180EC0728FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
-				D156BC1029CCDBF8007E7362 /* DEAppText.swift in Sources */,
 				D1B81D3F27BBB7070085FE5E /* KeyboardStyling.swift in Sources */,
 				3045397B293B9E0C003AE55B /* ToolTipViewDatasource.swift in Sources */,
 				D1B81D4427BBB71C0085FE5E /* CommandBar.swift in Sources */,

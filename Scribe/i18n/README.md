@@ -2,6 +2,7 @@
   <a href="https://github.com/scribe-org/Scribe-i18n"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeGitHubOrgBanner.png" width=1024 alt="Scribe Logo"></a>
 </div>
 
+[![weblate](https://img.shields.io/badge/Weblate-144D3F.svg?logo=weblate&logoColor=ffffff)](https://hosted.weblate.org/projects/scribe/scribe-i18n)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-i18n?label=%20&logo=github)](https://github.com/scribe-org/Scribe-i18n/issues)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-i18n.svg?label=%20)](https://github.com/scribe-org/Scribe-i18n/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-i18n/blob/main/.github/CODE_OF_CONDUCT.md)
@@ -10,7 +11,7 @@
 
 ## Application text localization files for Scribe apps
 
-**Scribe-i18n** is the home of the localization files that are included in each Scribe application.
+**Scribe-i18n** is the home of the localization files that are included in each Scribe application. Scribe uses [Weblate](https://weblate.org/en/) for localization! Head over to [weblate.org/projects/scribe/scribe-i18n](https://hosted.weblate.org/projects/scribe/scribe-i18n) to localize the applications. Changes in this directory will be merged into other Scribe applications via this repo being a [Git subtree](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges).
 
 > [!NOTE]\
 > The [contributing](#contributing) section has information for those interested.
@@ -23,16 +24,63 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 
 # **Contents**
 
-- [Setup](#setup)
-- [Contributing](#contributing)
-- [Localizing Scribe](#localizing-scribe)
 - [Localization Coverage](#localization-coverage)
+- [Contributing](#contributing)
+- [Community](#community)
 
-<a id="setup"></a>
+<a id="localization-coverage"></a>
 
-# Setup [`⇧`](#contents)
+# Localization Coverage [`⇧`](#contents)
 
-[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repo, clone your fork, and configure the remotes:
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+    <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+</a>
+
+<a id="contributing"></a>
+
+# Contributing [`⇧`](#contents)
+
+Thank you for your interest in contributing to Scribe-i18n! We look forward to welcoming you to the community and working with you to build an tools for language learners to communicate effectively :) The following are some suggested steps for people interested in joining our community.
+
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, and in accordance with this project's [code of conduct](https://github.com/scribe-org/Scribe-i18n/blob/main/.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing changes and features.
+
+<a href="https://matrix.to/#/#scribe_community:matrix.org"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/MatrixLogoGrey.png" height="50" alt="Public Matrix Chat" align="right"></a>
+
+If you have questions or would like to communicate with the team, please [join us in our public Matrix chat rooms](https://matrix.to/#/#scribe_community:matrix.org). Scribe would suggest that you use the [Element](https://element.io/) client. We'd be happy to hear from you!
+
+### Issues [`⇧`](#contents)
+
+The [issue tracker for Scribe-i18n](https://github.com/scribe-org/Scribe-i18n/issues) is the preferred channel to let the team know if there are problems with localizations or to ask to work on new ones. Those interested in helping can check the [`-next release-`](https://github.com/scribe-org/Scribe-i18n/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-i18n/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-i18n/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-i18n/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors. Generally issues in this repository will be marked with the [`localization`](https://github.com/scribe-org/Scribe-i18n/issues?q=is%3Aopen+is%3Aissue+label%3Alocalization) label.
+
+### Localizing via Weblate [`⇧`](#contents)
+
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" height="100" alt="Visit Weblate project" align="right"></a>
+
+[Weblate](https://weblate.org/en/) localization is as easy as making an account and jumping into the Scribe-i18n project!
+
+1. First [register at Weblate](https://hosted.weblate.org/accounts/register/) (you can also authenticate with GitHub or other accounts)
+
+   - We suggest that you do link your GitHub account so you get credit for the localization commits!
+
+2. Navigate to the Scribe-i18n project at [weblate.org/projects/scribe/scribe-i18n](https://hosted.weblate.org/projects/scribe/scribe-i18n)
+
+3. Click on a language you want to start translating
+
+4. You can browse the available strings or start translating directly
+
+   - When translating a word, be sure to check the glossary context if you're not sure what the string's use is
+
+   - You can also make use of Automatic suggestions to see machine translations if you need help
+
+5. Hit `Save and continue` when you're ready to move to the next string
+
+6. Maintainers will open up pull requests from [Weblate](https://weblate.org/en/) to this repo
+
+7. Scribe-i18n directories that are [Git subtrees](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges) in other Scribe application repos are then synched
+
+### Adding source strings [`⇧`](#contents)
+
+The base language for all Scribe applications is US English. If you'd like to edit the [en-US.json](https://github.com/scribe-org/Scribe-i18n/blob/main/Scribe-i18n/en-US.json) file, please [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repo, clone your fork, and configure the remotes:
 
 > [!NOTE]
 >
@@ -64,30 +112,11 @@ git remote add upstream https://github.com/scribe-org/Scribe-i18n.git
   - `origin` (forked repository)
   - `upstream` (Scribe-i18n repository)
 
-If all looks good, then you're ready to start localizing!
-
-<a id="contributing"></a>
-
-# Contributing [`⇧`](#contents)
-
-<a href="https://matrix.to/#/#scribe_community:matrix.org"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/MatrixLogoGrey.png" height="50" alt="Public Matrix Chat" align="right"></a>
-
-Thank you for your interest in contributing to Scribe-i18n! We look forward to welcoming you to the community and working with you to build an tools for language learners to communicate effectively :) The following are some suggested steps for people interested in joining our community.
-
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, and in accordance with this project's [code of conduct](https://github.com/scribe-org/Scribe-i18n/blob/main/.github/CODE_OF_CONDUCT.md), other contributors will reciprocate that respect in addressing your issue or assessing changes and features.
-
-If you have questions or would like to communicate with the team, please [join us in our public Matrix chat rooms](https://matrix.to/#/#scribe_community:matrix.org). Scribe would suggest that you use the [Element](https://element.io/) client. We'd be happy to hear from you!
-
-### Issues [`⇧`](#contents)
-
-The [issue tracker for Scribe-i18n](https://github.com/scribe-org/Scribe-i18n/issues) is the preferred channel to let the team know if there are problems with localizations or to ask to work on new ones. Those interested in helping can check the [`-next release-`](https://github.com/scribe-org/Scribe-i18n/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-i18n/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-i18n/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-i18n/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors. Generally issues in this repository will be marked with the [`localization`](https://github.com/scribe-org/Scribe-i18n/issues?q=is%3Aopen+is%3Aissue+label%3Alocalization) label.
+If all looks good, then you're ready to start adding localizable key-string pairs via pull requests!
 
 ### Pull Requests [`⇧`](#contents)
 
-> [!NOTE]\
-> Please [open an issue](https://github.com/scribe-org/Scribe-i18n/issues/new) before setting out on a major localization so that the team is aware of what you're working on! If you don't let us know, you risk spending a lot of time working on something that the developers might not want to merge into the project. With that being said, major additions are very appreciated!
-
-Good pull requests are the foundation of our community making Scribe-i18n. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](https://github.com/scribe-org/Scribe-i18n/blob/main/LICENSE.txt) and should follow the code style standards ([contact us](https://matrix.to/#/#scribe_community:matrix.org) if unsure).
+Good pull requests are the foundation of our community making Scribe-i18n. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](https://github.com/scribe-org/Scribe-i18n/blob/main/LICENSE.txt).
 
 When making a contribution, adhering to the [GitHub flow](https://guides.github.com/introduction/flow/index.html) process is the best way to get your work merged:
 
@@ -128,30 +157,22 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
 
 Thank you in advance for your contributions!
 
+<a id="community"></a>
+
+# Community [`⇧`](#contents)
+
+### Joining in [`⇧`](#contents)
+
+After your first few pull requests organization members would be happy to discuss granting you further rights as a contributor, with a maintainer role then being possible after continued interest in the project. Scribe seeks to be an inclusive and supportive organization. We'd love to have you on the team!
+
 ### Road Map [`⇧`](#contents)
 
 The Scribe road map can be followed in the organization's [project board](https://github.com/orgs/scribe-org/projects/1) where we list the most important issues along with their priority, status and an indication of which sub projects they're included in (if applicable).
 
-### Joining the Community [`⇧`](#contents)
-
-After your first few pull requests organization members would be happy to discuss granting you further rights as a contributor, with a maintainer role then being possible after continued interest in the project. Scribe seeks to be an inclusive and supportive organization. We'd love to have you on the team!
-
 > [!NOTE]\
-> Consider joining our [bi-weekly developer sync](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
+> Consider joining our [bi-weekly developer syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync)!
 
-<a id="localizing-scribe"></a>
-
-# Localizing Scribe [`⇧`](#contents)
-
-Specific directions on how Scribe applications should be localized will be included here.
-
-<a id="localization-coverage"></a>
-
-# Localization Coverage [`⇧`](#contents)
-
-A diagram showing localization coverage across languages will be added here eventually.
-
-# Powered By
+# Powered By [`⇧`](#contents)
 
 ### Contributors
 

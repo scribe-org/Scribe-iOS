@@ -217,16 +217,7 @@ class InstallationVC: UIViewController {
     appTextBackground.backgroundColor = lightWhiteDarkBlackColor
 
     // Set the texts for the fields.
-    switch Locale.userSystemLanguage {
-    case "EN":
-      appTextView.attributedText = setENInstallation(fontSize: fontSize)
-
-    case "DE":
-      appTextView.attributedText = setDEInstallation(fontSize: fontSize)
-
-    default:
-      appTextView.attributedText = setENInstallation(fontSize: fontSize)
-    }
+    appTextView.attributedText = setInstallation(fontSize: fontSize)
     appTextView.textColor = keyCharColor
   }
 
@@ -243,9 +234,7 @@ class InstallationVC: UIViewController {
       fontSize = UIScreen.main.bounds.height / 50
     }
 
-    installationHeaderLabel.text = NSLocalizedString(
-      "settings.installation.header", comment: "The title of the installed keyboards section"
-    )
+    installationHeaderLabel.text = NSLocalizedString("install.title", value: "Keyboard installation", comment: "")
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 
     setAppTextView()
@@ -256,7 +245,7 @@ class InstallationVC: UIViewController {
     setInstallationUI()
   }
 
-  /// Function to open the settings app that is targeted by settingsBtn.
+  /// Function to open the settings app that is targeted by settingsBtn. <- could this be moved to a more generic file?
   @objc func openSettingsApp() {
     guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
       fatalError("Failed to create settings URL.")

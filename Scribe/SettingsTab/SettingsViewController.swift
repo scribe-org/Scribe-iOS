@@ -55,10 +55,8 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
     showTipCardView()
 
-    title = NSLocalizedString("settings.title", comment: "The title for the settings screen")
-    navigationItem.backButtonTitle = NSLocalizedString(
-      "settings.title.backButton", comment: "The back button's title for the settings screen"
-    )
+    title = NSLocalizedString("settings.title", value: "Settings", comment: "")
+    navigationItem.backButtonTitle = title
 
     parentTable.register(
       UINib(nibName: "InfoChildTableViewCell", bundle: nil),
@@ -160,6 +158,9 @@ extension SettingsViewController: UITableViewDelegate {
     let section = tableSection.section[indexPath.row]
 
     switch section.sectionState {
+    case .appLang:
+      openSettingsApp()
+
     case .specificLang:
       if let viewController = storyboard?.instantiateViewController(
         identifier: "TableViewTemplateViewController"
@@ -169,7 +170,7 @@ extension SettingsViewController: UITableViewDelegate {
 
         // Check if the device is an iPad to determine period and comma on the ABC characters option.
         let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual("Period and comma on ABC")
+          s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
         }) ?? -1
 
         if DeviceType.isPad {
@@ -180,7 +181,7 @@ extension SettingsViewController: UITableViewDelegate {
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
         let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual("Disable accent characters")
+          s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
         }) ?? -1
 
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
@@ -190,7 +191,7 @@ extension SettingsViewController: UITableViewDelegate {
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
           data[0].section.insert(
             Section(
-              sectionTitle: "Disable accent characters",
+              sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",
               hasToggle: true,
               sectionState: .none(.toggleAccentCharacters)

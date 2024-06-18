@@ -221,6 +221,14 @@ The following table shows the supported languages and the amount of data availab
 
 Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
 
+<details><summary><strong>View Scribe-i18n localization progress</strong></summary>
+    <p>
+        <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+            <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+        </a>
+    </p>
+</details>
+
 <a id="keyboard-features"></a>
 
 # Keyboard Features [`⇧`](#contents)
