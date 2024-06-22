@@ -1,5 +1,8 @@
 """
-Converts from an xcstrings file to JSON files.
+Converts from the Scribe-i18n Localizable.xcstrings file to localization JSON files.
+
+Usage:
+    python3 Scribe-i18n/Scripts/convert_xcstrings_to_jsons.py
 """
 
 import json
@@ -34,9 +37,14 @@ for lang in languages:
                 .replace('"', '\\"')
                 .replace("\n", "\\n")
             )
+
         data += f'  "{key}" : "{translation}"'
         data += ",\n" if pos < len(json_file["strings"]) else "\n"
 
     data += "}\n"
 
     dest.write(data)
+
+print(
+    "Scribe-i18n Localizable.xcstrings file successfully converted to the localization JSON files."
+)
