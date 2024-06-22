@@ -37,7 +37,7 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
 
   let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
-  let installDirections = NSMutableAttributedString(string: "\n\n2. " + NSLocalizedString("app.installation.text", value: "Select", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  let installDirections = NSMutableAttributedString(string: "\n\n2. " + NSLocalizedString("app.installation.text1", value: "Select", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   let toAppend = NSMutableAttributedString(string: " " + NSLocalizedString("app.keyboards", value: "Keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
   toAppend.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize), range: NSRange(location: 0, length: toAppend.length))
