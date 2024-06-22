@@ -37,7 +37,7 @@ final class AboutViewController: BaseTableViewController {
     super.viewDidLoad()
 
     showTipCardView()
-    title = NSLocalizedString("about.title", value: "About", comment: "")
+    title = NSLocalizedString("app.about.title", value: "About", comment: "")
 
     tableView.register(
       UINib(nibName: "AboutTableViewCell", bundle: nil),

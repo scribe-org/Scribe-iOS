@@ -234,7 +234,7 @@ class InstallationVC: UIViewController {
       fontSize = UIScreen.main.bounds.height / 50
     }
 
-    installationHeaderLabel.text = NSLocalizedString("install.title", value: "Keyboard installation", comment: "")
+    installationHeaderLabel.text = NSLocalizedString("app.installation.title", value: "Keyboard installation", comment: "")
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 
     setAppTextView()
@@ -245,7 +245,7 @@ class InstallationVC: UIViewController {
     setInstallationUI()
   }
 
-  /// Function to open the settings app that is targeted by settingsBtn. <- could this be moved to a more generic file?
+  /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
     guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
       fatalError("Failed to create settings URL.")
