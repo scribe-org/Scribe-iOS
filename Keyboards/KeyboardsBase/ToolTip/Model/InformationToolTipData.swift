@@ -22,7 +22,7 @@ import UIKit
 
 enum InformationToolTipData {
   static let wikiDataExplanation = NSMutableAttributedString(
-    string: NSLocalizedString("wikidataExplanation1",
+    string: NSLocalizedString("app.wikidataExplanation1",
                               value: "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others.",
                               comment: ""),
     attributes: [
@@ -33,7 +33,7 @@ enum InformationToolTipData {
   )
 
   static let wikiDataContationOrigin = NSMutableAttributedString(
-    string: NSLocalizedString("wikidataExplanation2",
+    string: NSLocalizedString("app.wikidataExplanation2",
                               value: "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!",
                               comment: ""),
     attributes: [
@@ -44,7 +44,7 @@ enum InformationToolTipData {
   )
 
   static let howToContribute = NSMutableAttributedString(
-    string: NSLocalizedString("wikidataExplanation3",
+    string: NSLocalizedString("app.wikidataExplanation3",
                               value: "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!",
                               comment: ""),
     attributes: [
