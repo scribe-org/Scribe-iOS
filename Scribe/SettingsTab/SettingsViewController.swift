@@ -169,27 +169,27 @@ extension SettingsViewController: UITableViewDelegate {
         var data = SettingsTableData.languageSettingsData
 
         // Check if the device is an iPad to determine period and comma on the ABC characters option.
-        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+        let periodCommaOptionIndex = data[1].section.firstIndex(where: { s in
           s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
         }) ?? -1
 
         if DeviceType.isPad {
-          let periodCommaSettings = data[0].section.remove(at: periodCommaOptionIndex)
+          let periodCommaSettings = data[1].section.remove(at: periodCommaOptionIndex)
           print(periodCommaSettings)
         }
 
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+        let accentKeyOptionIndex = data[1].section.firstIndex(where: { s in
           s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
         }) ?? -1
 
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
           // As there are no accent keys we can remove the `Disable accent characters` option.
-          let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
+          let accentKeySettings = data[1].section.remove(at: accentKeyOptionIndex)
           print(accentKeySettings)
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-          data[0].section.insert(
+          data[1].section.insert(
             Section(
               sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",

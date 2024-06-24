@@ -26,7 +26,6 @@ enum SettingsTableData {
       section: [
         Section(
           sectionTitle: NSLocalizedString("settings.appSettings.appLanguage", value: "App language", comment: ""),
-          hasToggle: false,
           sectionState: .appLang
         )
       ],
@@ -42,6 +41,16 @@ enum SettingsTableData {
   ]
 
   static let languageSettingsData: [ParentTableCellModel] = [
+    ParentTableCellModel(
+      headingTitle: NSLocalizedString("app.settings.translateLang", value: "Translation language", comment: ""),
+      section: [
+        Section(
+          sectionTitle: NSLocalizedString("app.settings.translateLang", value: "Translation language", comment: ""),
+          sectionState: .translateLang
+        )
+      ],
+      hasDynamicData: nil
+    ),
     ParentTableCellModel(
       headingTitle: NSLocalizedString("settings.layout", value: "Layout", comment: ""),
       section: [

@@ -69,8 +69,9 @@ enum SectionState: Equatable {
   case licenses
   case appLang
   case specificLang(String)
-  case none(UserInteractiveState)
+  case translateLang
   case externalLink
+  case none(UserInteractiveState)
 }
 
 enum UserInteractiveState {

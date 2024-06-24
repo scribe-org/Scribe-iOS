@@ -132,6 +132,17 @@ enum ConjViewShiftButtonsState {
   case rightInactive
 }
 
+enum TranslateLanguage: String {
+  case english
+  case french
+  case german
+  case italian
+  case portuguese
+  case russian
+  case spanish
+  case swedish
+}
+
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
@@ -139,6 +150,7 @@ var capsLockButtonState: CapsLockButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
+var translateLanguage: TranslateLanguage = .english
 
 // Variables and functions to determine display parameters.
 enum DeviceType {
