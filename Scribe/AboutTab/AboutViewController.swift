@@ -33,6 +33,9 @@ final class AboutViewController: BaseTableViewController {
     return state
   }()
 
+  private var tipHostingController: UIHostingController<AboutTipCardView>!
+  private var lastContentOffset: CGFloat = 0.5
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -197,6 +200,7 @@ extension AboutViewController {
     )
 
     let hostingController = UIHostingController(rootView: overlayView)
+    tipHostingController = hostingController
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -40)
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -212,5 +216,25 @@ extension AboutViewController {
       hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
     ])
     hostingController.didMove(toParent: self)
+  }
+
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    guard let hostingController = tipHostingController else { return }
+
+    let currentOffset = scrollView.contentOffset.y
+
+    if currentOffset > lastContentOffset {
+      // Scrolling up
+      UIView.animate(withDuration: 0.2) {
+        hostingController.view.alpha = 1
+      }
+    } else if currentOffset < lastContentOffset {
+      // Scrolling down
+      UIView.animate(withDuration: 0.2) {
+        hostingController.view.alpha = 0
+      }
+    }
+    
+    lastContentOffset = currentOffset
   }
 }
