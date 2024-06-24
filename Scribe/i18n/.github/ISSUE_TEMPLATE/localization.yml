@@ -1,0 +1,26 @@
+name: 🌐 Localization
+description: Report issues or offer help for Scribe localizations.
+labels: ["localization"]
+projects: ["scribe-org/1"]
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I have searched [open localization issues](https://github.com/scribe-org/Scribe-i18n/issues?q=is%3Aissue+is%3Aopen+label%3Alocalization)
+          required: true
+        - label: I agree to follow Scribe-i18n's [Code of Conduct](https://github.com/scribe-org/Scribe-i18n/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+  - type: textarea
+    id: support
+    attributes:
+      label: Description
+      placeholder: |
+        Tell us where Scribe needs localization support, and let us know if you're able to help!
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your efforts to bring Scribe to other languages!

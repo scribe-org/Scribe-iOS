@@ -16,6 +16,13 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The top right corner of the keyboard installation directions now blinks when the view is clicked on ([#461](https://github.com/scribe-org/Scribe-iOS/issues/461)).
 
+### 🌐 Localization
+
+- The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) localization process has been fully integrated into the Scribe-iOS workflow.
+  - All strings for the application have been converted over to localizable strings.
+  - Localization is version controlled via [Weblate](https://weblate.org/en/) and new texts are added to Scribe-iOS via Git subtrees.
+  - The new menu of the Scribe application has been localized into German ([Scribe-i18n#13](https://github.com/scribe-org/Scribe-i18n/issues/13)).
+
 ### 🐞 Bug Fixes
 
 <!-- - Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)). -->
