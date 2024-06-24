@@ -234,7 +234,7 @@ extension AboutViewController {
         hostingController.view.alpha = 0
       }
     }
-    
+
     lastContentOffset = currentOffset
   }
 }
