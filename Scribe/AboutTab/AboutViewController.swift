@@ -34,7 +34,7 @@ final class AboutViewController: BaseTableViewController {
   }()
 
   private var tipHostingController: UIHostingController<AboutTipCardView>!
-  private var lastContentOffset: CGFloat = 0.0
+  private var topContentOffset: CGFloat = 116
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -226,19 +226,17 @@ extension AboutViewController {
 
     let currentOffset = scrollView.contentOffset.y
 
-    if currentOffset > lastContentOffset {
+    if currentOffset > -topContentOffset {
       // Scrolling up
-      UIView.animate(withDuration: 0.1) {
-        hostingController.view.alpha = 1
-      }
-    } else if currentOffset < lastContentOffset {
-      // Scrolling down
-      UIView.animate(withDuration: 0.1) {
+      UIView.animate(withDuration: 0.2) {
         hostingController.view.alpha = 0
       }
+    } else if currentOffset == -topContentOffset {
+      // Show the view only when scrolled to the top
+      UIView.animate(withDuration: 0.2) {
+        hostingController.view.alpha = 1
+      }
     }
-
-    lastContentOffset = currentOffset
   }
 
   func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
