@@ -34,7 +34,7 @@ final class AboutViewController: BaseTableViewController {
   }()
 
   private var tipHostingController: UIHostingController<AboutTipCardView>!
-  private var lastContentOffset: CGFloat = 0.5
+  private var lastContentOffset: CGFloat = 0.0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -107,6 +107,8 @@ extension AboutViewController {
       userDefaults.set(true, forKey: "installationTipCardState")
       userDefaults.set(true, forKey: "settingsTipCardState")
       userDefaults.set(true, forKey: "aboutTipCardState")
+
+      startGlowingEffect(on: tipHostingController.view)
 
     case .privacyPolicy:
       if let viewController = storyboard?.instantiateViewController(
@@ -216,6 +218,7 @@ extension AboutViewController {
       hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
     ])
     hostingController.didMove(toParent: self)
+    startGlowingEffect(on: hostingController.view)
   }
 
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -225,16 +228,30 @@ extension AboutViewController {
 
     if currentOffset > lastContentOffset {
       // Scrolling up
-      UIView.animate(withDuration: 0.2) {
+      UIView.animate(withDuration: 0.1) {
         hostingController.view.alpha = 1
       }
     } else if currentOffset < lastContentOffset {
       // Scrolling down
-      UIView.animate(withDuration: 0.2) {
+      UIView.animate(withDuration: 0.1) {
         hostingController.view.alpha = 0
       }
     }
 
     lastContentOffset = currentOffset
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(withDuration: duration,
+                   delay: 0,
+                   options: [.curveEaseOut, .autoreverse],
+                   animations: {
+      view.layer.shadowOpacity = 0.6
+    }, completion: nil)
   }
 }
