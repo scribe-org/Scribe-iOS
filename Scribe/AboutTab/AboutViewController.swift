@@ -34,7 +34,7 @@ final class AboutViewController: BaseTableViewController {
   }()
 
   private var tipHostingController: UIHostingController<AboutTipCardView>!
-  private var topContentOffset: CGFloat = 116
+  private var tableViewOffset: CGFloat?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,6 +46,14 @@ final class AboutViewController: BaseTableViewController {
       UINib(nibName: "AboutTableViewCell", bundle: nil),
       forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier
     )
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    if tableViewOffset == nil && UIDevice.current.userInterfaceIdiom != .pad {
+      tableViewOffset = tableView.contentOffset.y
+    }
   }
 }
 
@@ -222,16 +230,17 @@ extension AboutViewController {
   }
 
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    guard let hostingController = tipHostingController else { return }
+    guard let hostingController = tipHostingController,
+          let tableViewOffset else { return }
 
     let currentOffset = scrollView.contentOffset.y
 
-    if currentOffset > -topContentOffset {
+    if currentOffset > tableViewOffset{
       // Scrolling up
       UIView.animate(withDuration: 0.2) {
         hostingController.view.alpha = 0
       }
-    } else if currentOffset == -topContentOffset {
+    } else if currentOffset == tableViewOffset {
       // Show the view only when scrolled to the top
       UIView.animate(withDuration: 0.2) {
         hostingController.view.alpha = 1
