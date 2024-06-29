@@ -15,6 +15,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The top right corner of the keyboard installation directions now blinks when the view is clicked on ([#461](https://github.com/scribe-org/Scribe-iOS/issues/461)).
+- The app hints now appear and disappear with a transition ([#462](https://github.com/scribe-org/Scribe-iOS/issues/462)).
 
 ### 🌐 Localization
 
@@ -25,6 +26,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### 🐞 Bug Fixes
 
+- The user will no longer click a menu option beneath an app hint as the hints will disappear on scroll ([#465](https://github.com/scribe-org/Scribe-iOS/issues/465)).
 <!-- - Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)). -->
 
 # Scribe-iOS 3.0.0
