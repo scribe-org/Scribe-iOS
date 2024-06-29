@@ -281,8 +281,23 @@ extension InstallationVC {
     let hostingController = UIHostingController(rootView: overlayView)
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
     hostingController.view.backgroundColor = .clear
+    startGlowingEffect(on: hostingController.view)
     addChild(hostingController)
     view.addSubview(hostingController.view)
     hostingController.didMove(toParent: self)
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(withDuration: duration,
+                   delay: 0,
+                   options: [.curveEaseOut, .autoreverse],
+                   animations: {
+      view.layer.shadowOpacity = 0.6
+    }, completion: nil)
   }
 }

@@ -266,6 +266,7 @@ extension SettingsViewController {
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
     let navigationView = navigationController?.navigationBar
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
@@ -277,5 +278,20 @@ extension SettingsViewController {
       hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
     ])
     hostingController.didMove(toParent: self)
+    startGlowingEffect(on: hostingController.view)
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(withDuration: duration,
+                   delay: 0,
+                   options: [.curveEaseOut, .autoreverse],
+                   animations: {
+      view.layer.shadowOpacity = 0.6
+    }, completion: nil)
   }
 }
