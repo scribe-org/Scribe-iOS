@@ -215,6 +215,7 @@ extension AboutViewController {
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
     hostingController.view.isUserInteractionEnabled = true
+
     let navigationView = navigationController?.navigationBar
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
@@ -235,14 +236,14 @@ extension AboutViewController {
 
     let currentOffset = scrollView.contentOffset.y
 
-    if currentOffset > tableViewOffset{
+    if currentOffset > tableViewOffset {
       // Scrolling up
       UIView.animate(withDuration: 0.2) {
         hostingController.view.alpha = 0
       }
     } else if currentOffset == tableViewOffset {
       // Show the view only when scrolled to the top
-      UIView.animate(withDuration: 0.2) {
+      UIView.animate(withDuration: 0.1) {
         hostingController.view.alpha = 1
       }
     }
