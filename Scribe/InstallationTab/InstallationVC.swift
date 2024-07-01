@@ -228,8 +228,15 @@ class InstallationVC: UIViewController {
       if Locale.userSystemLanguage == "DE" {
         fontSize = UIScreen.main.bounds.height / 61
       } else {
-        fontSize = UIScreen.main.bounds.height / 59
+        if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
+          print(UIScreen.main.bounds.width)
+          fontSize = UIScreen.main.bounds.height / 59
+        } else if UIScreen.main.bounds.width <= 413 && UIScreen.main.bounds.width > 375 {
+          print(UIScreen.main.bounds.width)
+          fontSize = UIScreen.main.bounds.height / 50
+        }
       }
+
     } else if DeviceType.isPad {
       fontSize = UIScreen.main.bounds.height / 50
     }
