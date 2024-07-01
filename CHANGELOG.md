@@ -16,6 +16,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The top right corner of the keyboard installation directions now blinks when the view is clicked on ([#461](https://github.com/scribe-org/Scribe-iOS/issues/461)).
 - The app hints now appear and disappear with a transition ([#462](https://github.com/scribe-org/Scribe-iOS/issues/462)).
+- The installation page texts were made larger on certain devices to improve readability ([#466](https://github.com/scribe-org/Scribe-iOS/issues/466)).
 
 ### 🌐 Localization
 
