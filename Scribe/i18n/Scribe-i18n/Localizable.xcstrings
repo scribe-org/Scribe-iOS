@@ -1,8 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "_global.(language.lowercased())" : {
+
+    },
     "_global.french" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -20,6 +24,7 @@
     },
     "_global.german" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -37,6 +42,7 @@
     },
     "_global.italian" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -54,6 +60,7 @@
     },
     "_global.portuguese" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -71,6 +78,7 @@
     },
     "_global.russian" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -88,6 +96,7 @@
     },
     "_global.spanish" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -105,6 +114,7 @@
     },
     "_global.swedish" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -597,6 +607,23 @@
         }
       }
     },
+    "app.installation.appHint" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Folge den Anweisungen unten, um Scribe-Tastaturen auf deinem Gerät zu installieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Follow the directions below to install Scribe keyboards on your device."
+          }
+        }
+      }
+    },
     "app.installation.settingsLink" : {
       "comment" : "",
       "localizations" : {
@@ -678,23 +705,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Keyboard installation"
-          }
-        }
-      }
-    },
-    "app.installation.appHint" : {
-      "comment" : "",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Folge den Anweisungen unten, um Scribe-Tastaturen auf deinem Gerät zu installieren."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Follow the directions below to install Scribe keyboards on your device."
           }
         }
       }
@@ -987,6 +997,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     }
   },
   "version" : "1.0"
