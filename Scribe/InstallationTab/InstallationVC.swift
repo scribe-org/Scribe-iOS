@@ -279,6 +279,7 @@ class InstallationVC: UIViewController {
 }
 
 // MARK: - TipHintView
+
 extension InstallationVC {
   private func showTipCardView() {
     let overlayView = InstallationTipCardView(
@@ -288,9 +289,25 @@ extension InstallationVC {
     let hostingController = UIHostingController(rootView: overlayView)
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
     hostingController.view.backgroundColor = .clear
-    startGlowingEffect(on: hostingController.view)
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
+
+    if !UIDevice.hasNotch {
+      startGlowingEffect(on: hostingController.view)
+      addChild(hostingController)
+      view.addSubview(hostingController.view)
+      hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+      NSLayoutConstraint.activate([
+        hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+        hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+      ])
+
+    } else {
+      startGlowingEffect(on: hostingController.view)
+      addChild(hostingController)
+      view.addSubview(hostingController.view)
+
+    }
     hostingController.didMove(toParent: self)
   }
 
@@ -300,11 +317,13 @@ extension InstallationVC {
     view.layer.shadowOpacity = 0.0
     view.layer.shadowOffset = CGSize(width: 0, height: 0)
 
-    UIView.animate(withDuration: duration,
-                   delay: 0,
-                   options: [.curveEaseOut, .autoreverse],
-                   animations: {
-      view.layer.shadowOpacity = 0.6
-    }, completion: nil)
+    UIView.animate(
+      withDuration: duration,
+      delay: 0,
+      options: [.curveEaseOut, .autoreverse],
+      animations: {
+        view.layer.shadowOpacity = 0.6
+      }, completion: nil
+    )
   }
 }
