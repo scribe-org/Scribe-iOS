@@ -55,7 +55,7 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
     showTipCardView()
 
-    title = NSLocalizedString("settings.title", value: "Settings", comment: "")
+    title = NSLocalizedString("app.settings.title", value: "Settings", comment: "")
     navigationItem.backButtonTitle = title
 
     parentTable.register(
@@ -169,8 +169,8 @@ extension SettingsViewController: UITableViewDelegate {
         var data = SettingsTableData.languageSettingsData
 
         // Check if the device is an iPad to determine period and comma on the ABC characters option.
-        let periodCommaOptionIndex = data[1].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
+        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+          s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
         }) ?? -1
 
         if DeviceType.isPad {
@@ -180,8 +180,8 @@ extension SettingsViewController: UITableViewDelegate {
 
         // Languages where we can disable accent keys.
         let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-        let accentKeyOptionIndex = data[1].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual(NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
+        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
+          s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
         }) ?? -1
 
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
@@ -191,7 +191,7 @@ extension SettingsViewController: UITableViewDelegate {
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
           data[1].section.insert(
             Section(
-              sectionTitle: NSLocalizedString("settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
+              sectionTitle: NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",
               hasToggle: true,
               sectionState: .none(.toggleAccentCharacters)
@@ -266,6 +266,7 @@ extension SettingsViewController {
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
     let navigationView = navigationController?.navigationBar
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
@@ -277,5 +278,20 @@ extension SettingsViewController {
       hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
     ])
     hostingController.didMove(toParent: self)
+    startGlowingEffect(on: hostingController.view)
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(withDuration: duration,
+                   delay: 0,
+                   options: [.curveEaseOut, .autoreverse],
+                   animations: {
+      view.layer.shadowOpacity = 0.6
+    }, completion: nil)
   }
 }

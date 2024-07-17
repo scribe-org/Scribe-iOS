@@ -228,13 +228,20 @@ class InstallationVC: UIViewController {
       if Locale.userSystemLanguage == "DE" {
         fontSize = UIScreen.main.bounds.height / 61
       } else {
-        fontSize = UIScreen.main.bounds.height / 59
+        if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
+          print(UIScreen.main.bounds.width)
+          fontSize = UIScreen.main.bounds.height / 59
+        } else if UIScreen.main.bounds.width <= 413 && UIScreen.main.bounds.width > 375 {
+          print(UIScreen.main.bounds.width)
+          fontSize = UIScreen.main.bounds.height / 50
+        }
       }
+
     } else if DeviceType.isPad {
       fontSize = UIScreen.main.bounds.height / 50
     }
 
-    installationHeaderLabel.text = NSLocalizedString("install.title", value: "Keyboard installation", comment: "")
+    installationHeaderLabel.text = NSLocalizedString("app.installation.title", value: "Keyboard installation", comment: "")
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 
     setAppTextView()
@@ -245,7 +252,7 @@ class InstallationVC: UIViewController {
     setInstallationUI()
   }
 
-  /// Function to open the settings app that is targeted by settingsBtn. <- could this be moved to a more generic file?
+  /// Function to open the settings app that is targeted by settingsBtn.
   @objc func openSettingsApp() {
     guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
       fatalError("Failed to create settings URL.")
@@ -272,6 +279,7 @@ class InstallationVC: UIViewController {
 }
 
 // MARK: - TipHintView
+
 extension InstallationVC {
   private func showTipCardView() {
     let overlayView = InstallationTipCardView(
@@ -281,8 +289,41 @@ extension InstallationVC {
     let hostingController = UIHostingController(rootView: overlayView)
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
     hostingController.view.backgroundColor = .clear
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
+
+    if !UIDevice.hasNotch {
+      startGlowingEffect(on: hostingController.view)
+      addChild(hostingController)
+      view.addSubview(hostingController.view)
+      hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+      NSLayoutConstraint.activate([
+        hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+        hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+      ])
+
+    } else {
+      startGlowingEffect(on: hostingController.view)
+      addChild(hostingController)
+      view.addSubview(hostingController.view)
+
+    }
     hostingController.didMove(toParent: self)
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(
+      withDuration: duration,
+      delay: 0,
+      options: [.curveEaseOut, .autoreverse],
+      animations: {
+        view.layer.shadowOpacity = 0.6
+      }, completion: nil
+    )
   }
 }

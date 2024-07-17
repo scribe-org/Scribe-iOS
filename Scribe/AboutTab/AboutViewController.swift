@@ -33,16 +33,27 @@ final class AboutViewController: BaseTableViewController {
     return state
   }()
 
+  private var tipHostingController: UIHostingController<AboutTipCardView>!
+  private var tableViewOffset: CGFloat?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     showTipCardView()
-    title = NSLocalizedString("about.title", value: "About", comment: "")
+    title = NSLocalizedString("app.about.title", value: "About", comment: "")
 
     tableView.register(
       UINib(nibName: "AboutTableViewCell", bundle: nil),
       forCellReuseIdentifier: AboutTableViewCell.reuseIdentifier
     )
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    if tableViewOffset == nil && UIDevice.current.userInterfaceIdiom != .pad {
+      tableViewOffset = tableView.contentOffset.y
+    }
   }
 }
 
@@ -104,6 +115,8 @@ extension AboutViewController {
       userDefaults.set(true, forKey: "installationTipCardState")
       userDefaults.set(true, forKey: "settingsTipCardState")
       userDefaults.set(true, forKey: "aboutTipCardState")
+
+      startGlowingEffect(on: tipHostingController.view)
 
     case .privacyPolicy:
       if let viewController = storyboard?.instantiateViewController(
@@ -194,9 +207,12 @@ extension AboutViewController {
     )
 
     let hostingController = UIHostingController(rootView: overlayView)
+    tipHostingController = hostingController
     hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -40)
     hostingController.view.backgroundColor = .clear
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+    hostingController.view.isUserInteractionEnabled = true
+
     let navigationView = navigationController?.navigationBar
     guard let navigationView else { return }
     navigationView.addSubview(hostingController.view)
@@ -208,5 +224,39 @@ extension AboutViewController {
       hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
     ])
     hostingController.didMove(toParent: self)
+    startGlowingEffect(on: hostingController.view)
+  }
+
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    guard let hostingController = tipHostingController,
+          let tableViewOffset else { return }
+
+    let currentOffset = scrollView.contentOffset.y
+
+    if currentOffset > tableViewOffset {
+      // Scrolling up
+      UIView.animate(withDuration: 0.2) {
+        hostingController.view.alpha = 0
+      }
+    } else if currentOffset == tableViewOffset {
+      // Show the view only when scrolled to the top
+      UIView.animate(withDuration: 0.1) {
+        hostingController.view.alpha = 1
+      }
+    }
+  }
+
+  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+    view.layer.shadowColor = UIColor.scribeCTA.cgColor
+    view.layer.shadowRadius = 8
+    view.layer.shadowOpacity = 0.0
+    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+
+    UIView.animate(withDuration: duration,
+                   delay: 0,
+                   options: [.curveEaseOut, .autoreverse],
+                   animations: {
+      view.layer.shadowOpacity = 0.6
+    }, completion: nil)
   }
 }
