@@ -27,6 +27,7 @@ struct TipCardView: View {
   var infoText: String
   @Binding var tipCardState: Bool
   var onDismiss: (() -> Void)?
+  let ok = "OK"
 
   var body: some View {
     ZStack {
@@ -45,7 +46,7 @@ struct TipCardView: View {
           tipCardState = false
           self.onDismiss?()
         } label: {
-          Text("OK")
+          Text(ok)
             .foregroundColor(.white)
         }
         .frame(width: leadingPadding, height: leadingPadding)
