@@ -132,7 +132,7 @@ enum ConjViewShiftButtonsState {
   case rightInactive
 }
 
-enum TranslateLanguage: String {
+enum TranslateLanguage: String, CaseIterable {
   case english
   case french
   case german
@@ -175,6 +175,7 @@ var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [
+  "English": "en",
   "French": "fr",
   "German": "de",
   "Italian": "it",

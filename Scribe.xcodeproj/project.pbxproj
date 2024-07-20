@@ -101,6 +101,9 @@
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		5A0A4C352C2AF52D003ADE27 /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C342C2AF52D003ADE27 /* RadioTableViewCell.xib */; };
+		5A0A4C372C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4C362C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift */; };
+		5A0A4C392C2C6AC0003ADE27 /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4C382C2C6AC0003ADE27 /* RadioTableViewCell.swift */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -868,6 +871,9 @@
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5A0A4C342C2AF52D003ADE27 /* RadioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioTableViewCell.xib; sourceTree = "<group>"; };
+		5A0A4C362C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewTemplateViewController.swift; sourceTree = "<group>"; };
+		5A0A4C382C2C6AC0003ADE27 /* RadioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTableViewCell.swift; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
@@ -1088,6 +1094,7 @@
 		1406B7832A2DFCA2001DF45B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5A0A4C312C2AF4A7003ADE27 /* SelectionView */,
 				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
 				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
 				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
@@ -1238,6 +1245,16 @@
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		5A0A4C312C2AF4A7003ADE27 /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5A0A4C362C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift */,
+				5A0A4C382C2C6AC0003ADE27 /* RadioTableViewCell.swift */,
+				5A0A4C342C2AF52D003ADE27 /* RadioTableViewCell.xib */,
+			);
+			path = SelectionView;
 			sourceTree = "<group>";
 		};
 		69B81EBA2BFB8C60008CAB85 /* TipCard */ = {
@@ -1858,6 +1875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				5A0A4C352C2AF52D003ADE27 /* RadioTableViewCell.xib in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */,
@@ -2065,6 +2083,7 @@
 				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D1B81D5327BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */,
+				5A0A4C392C2C6AC0003ADE27 /* RadioTableViewCell.swift in Sources */,
 				D17193C427AEAD7D0038660B /* AppStyling.swift in Sources */,
 				D111E9AA27AFE78600746F92 /* Plural.swift in Sources */,
 				D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */,
@@ -2078,6 +2097,7 @@
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */,
 				1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */,
+				5A0A4C372C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D1CDED812A85A12400098546 /* NBInterfaceVariables.swift in Sources */,
