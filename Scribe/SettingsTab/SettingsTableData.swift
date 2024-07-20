@@ -84,6 +84,14 @@ enum SettingsTableData {
       hasDynamicData: nil
     )
   ]
+  
+  static let translateLangSettingsData: [ParentTableCellModel] = [
+    ParentTableCellModel(
+      headingTitle: NSLocalizedString("app.settings.translateLang", value: "Translation language", comment: ""),
+      section: getTranslateLanguages(),
+      hasDynamicData: nil
+    )
+  ]
 
   static func getInstalledKeyboardsSections() -> [Section] {
     var installedKeyboards = [String]()
@@ -108,6 +116,25 @@ enum SettingsTableData {
       }
       let newSection = Section(
         sectionTitle: NSLocalizedString("_global.\(language.lowercased())", value: language, comment: ""),
+        sectionState: .specificLang(abbreviation)
+      )
+
+      sections.append(newSection)
+    }
+
+    return sections
+  }
+
+  static func getTranslateLanguages() -> [Section] {
+    var sections = [Section]()
+
+    for language in TranslateLanguage.allCases {
+      let value = language.rawValue.capitalize()
+      guard let abbreviation = languagesAbbrDict[value] else {
+        fatalError("Abbreviation not found for language: \(value)")
+      }
+      let newSection = Section(
+        sectionTitle: NSLocalizedString("_global.\(language.rawValue)", value: value, comment: ""),
         sectionState: .specificLang(abbreviation)
       )
 

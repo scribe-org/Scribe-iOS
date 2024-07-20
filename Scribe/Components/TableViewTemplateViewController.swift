@@ -75,4 +75,21 @@ extension TableViewTemplateViewController {
 
     return cell
   }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let tableSection = tableData[indexPath.section]
+    let section = tableSection.section[indexPath.row]
+
+    if section.sectionState == .translateLang {
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "SelectionViewTemplateViewController"
+      ) as? SelectionViewTemplateViewController {
+        let data = SettingsTableData.translateLangSettingsData
+
+        viewController.configureTable(for: data, parentSection: section)
+
+        navigationController?.pushViewController(viewController, animated: true)
+      }
+    }
+  }
 }

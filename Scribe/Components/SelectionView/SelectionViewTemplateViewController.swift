@@ -37,6 +37,11 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 250
     tableView.separatorStyle = .none
+
+    tableView.register(
+      UINib(nibName: "RadioTableViewCell", bundle: nil),
+      forCellReuseIdentifier: RadioTableViewCell.reuseIdentifier
+    )
   }
 
   func configureTable(for tableData: [ParentTableCellModel], parentSection: Section) {
@@ -52,10 +57,10 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
 extension SelectionViewTemplateViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      withIdentifier: RadioTableViewCell.reuseIdentifier,
       for: indexPath
-    ) as? InfoChildTableViewCell else {
-      fatalError("Failed to dequeue InfoChildTableViewCell.")
+    ) as? RadioTableViewCell else {
+      fatalError("Failed to dequeue RadioTableViewCell.")
     }
     cell.parentSection = parentSection
     cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
