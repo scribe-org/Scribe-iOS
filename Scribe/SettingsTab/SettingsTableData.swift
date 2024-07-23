@@ -110,12 +110,13 @@ enum SettingsTableData {
 
     var sections = [Section]()
 
-    for language in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[language] else {
-        fatalError("Abbreviation not found for language: \(language)")
+    for lang in installedKeyboards {
+      guard let abbreviation = languagesAbbrDict[lang] else {
+        fatalError("Abbreviation not found for language: \(lang)")
       }
+      let key = "_global.\(lang.lowercased())"
       let newSection = Section(
-        sectionTitle: NSLocalizedString("_global.\(language.lowercased())", value: language, comment: ""),
+        sectionTitle: NSLocalizedString(key, value: lang, comment: ""),
         sectionState: .specificLang(abbreviation)
       )
 
@@ -128,13 +129,14 @@ enum SettingsTableData {
   static func getTranslateLanguages() -> [Section] {
     var sections = [Section]()
 
-    for language in TranslateLanguage.allCases {
-      let value = language.rawValue.capitalize()
+    for lang in TranslateLanguage.allCases {
+      let value = lang.rawValue.capitalize()
       guard let abbreviation = languagesAbbrDict[value] else {
         fatalError("Abbreviation not found for language: \(value)")
       }
+      let key = "_global.\(lang.rawValue)"
       let newSection = Section(
-        sectionTitle: NSLocalizedString("_global.\(language.rawValue)", value: value, comment: ""),
+        sectionTitle: NSLocalizedString(key, value: value, comment: ""),
         sectionState: .specificLang(abbreviation)
       )
 

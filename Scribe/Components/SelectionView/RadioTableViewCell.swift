@@ -57,6 +57,13 @@ final class RadioTableViewCell: UITableViewCell {
 
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
+  var specificLang: String {
+    guard let section = section,
+          case let .specificLang(lang) = section.sectionState else { return "all" }
+
+    return lang
+  }
+
   var togglePurpose: UserInteractiveState {
     guard let section = section,
           case let .none(action) = section.sectionState else { return .none }
@@ -72,11 +79,6 @@ final class RadioTableViewCell: UITableViewCell {
 
     setTableView()
     titleLabel.text = section.sectionTitle
-
-    if section.sectionState == .specificLang(languagesAbbrDict[translateLanguage.rawValue] ?? "") {
-      iconImageView.image = UIImage(named: "radioButtonColored")
-    } else {
-      iconImageView.image = UIImage(named: "radioButton")
-    }
+    iconImageView.image = UIImage(named: "radioButton")
   }
 }

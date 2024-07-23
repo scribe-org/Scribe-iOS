@@ -185,6 +185,15 @@ let languagesAbbrDict = [
   "Swedish": "sv"
 ]
 
+func getKeyInDict(givenValue: String, dict: [String:String]) -> String {
+  for (key, value) in dict {
+    if value == givenValue {
+      return key
+    }
+  }
+  return ""
+}
+
 /// Returns the abbreviation of the language for use in commands.
 func getControllerLanguageAbbr() -> String {
   guard let abbreviation = languagesAbbrDict[controllerLanguage] else {

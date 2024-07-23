@@ -28,16 +28,12 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
 
   private var tableData: [ParentTableCellModel] = []
   private var parentSection: Section?
+  private var selectedPath: IndexPath?
 
   // MARK: - Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 250
-    tableView.separatorStyle = .none
-
     tableView.register(
       UINib(nibName: "RadioTableViewCell", bundle: nil),
       forCellReuseIdentifier: RadioTableViewCell.reuseIdentifier
@@ -65,7 +61,41 @@ extension SelectionViewTemplateViewController {
     cell.parentSection = parentSection
     cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
     cell.backgroundColor = lightWhiteDarkBlackColor
+    if getKeyInDict(givenValue: cell.specificLang, dict: languagesAbbrDict) == translateLanguage.rawValue.capitalize() {
+      selectedPath = indexPath
+      cell.iconImageView.image = UIImage(named: "radioButtonSelected")
+    }
 
     return cell
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let tableSection = tableData[indexPath.section]
+    let section = tableSection.section[indexPath.row]
+
+    if !(section.sectionState == .specificLang(languagesAbbrDict[translateLanguage.rawValue] ?? "")) {
+      if let selectedIndexPath = tableView.indexPathForSelectedRow {
+        let cell = tableView.cellForRow(at: selectedIndexPath) as! RadioTableViewCell
+
+        let newSelection = getKeyInDict(givenValue: cell.specificLang, dict: languagesAbbrDict)
+        for lang in TranslateLanguage.allCases {
+          if lang.rawValue.capitalize() == newSelection {
+            translateLanguage = lang
+
+            if selectedPath != nil {
+              let previousCell = tableView.cellForRow(at: selectedPath!) as! RadioTableViewCell
+              previousCell.iconImageView.image = UIImage(named: "radioButton")
+            }
+
+            cell.iconImageView.image = UIImage(named: "radioButtonSelected")
+            selectedPath = indexPath
+          }
+        }
+      }
+    }
+
+    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedIndexPath, animated: true)
+    }
   }
 }
