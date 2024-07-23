@@ -74,8 +74,7 @@ extension SelectionViewTemplateViewController {
     let section = tableSection.section[indexPath.row]
 
     if !(section.sectionState == .specificLang(languagesAbbrDict[translateLanguage.rawValue] ?? "")) {
-      if let selectedIndexPath = tableView.indexPathForSelectedRow {
-        let cell = tableView.cellForRow(at: selectedIndexPath) as! RadioTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
 
         let newSelection = getKeyInDict(givenValue: cell.specificLang, dict: languagesAbbrDict)
         for lang in TranslateLanguage.allCases {
@@ -90,12 +89,12 @@ extension SelectionViewTemplateViewController {
             cell.iconImageView.image = UIImage(named: "radioButtonSelected")
             selectedPath = indexPath
           }
-        }
       }
     }
 
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedIndexPath, animated: true)
     }
+    navigationController?.popViewController(animated: true)
   }
 }

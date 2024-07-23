@@ -59,7 +59,7 @@ final class RadioTableViewCell: UITableViewCell {
 
   var specificLang: String {
     guard let section = section,
-          case let .specificLang(lang) = section.sectionState else { return "all" }
+          case let .specificLang(lang) = section.sectionState else { return "n/a" }
 
     return lang
   }

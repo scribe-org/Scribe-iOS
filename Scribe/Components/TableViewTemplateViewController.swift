@@ -57,6 +57,15 @@ final class TableViewTemplateViewController: BaseTableViewController {
 
     title = parentSection.sectionTitle
   }
+
+  override func viewWillAppear(_ animated: Bool) {
+    for cell in tableView.visibleCells as! [InfoChildTableViewCell] {
+      if cell.section?.sectionState == .translateLang {
+        let currentLang = "_global.\(translateLanguage.rawValue)"
+        cell.subLabel.text = NSLocalizedString(currentLang, value: translateLanguage.rawValue.capitalized, comment: "")
+      }
+    }
+  }
 }
 
 // MARK: - UITableViewDataSource
