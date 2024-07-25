@@ -30,6 +30,10 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
   private var parentSection: Section?
   private var selectedPath: IndexPath?
 
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
+
+  private var langCode: String = "de"
+
   // MARK: - Functions
 
   override func viewDidLoad() {
@@ -40,9 +44,10 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
     )
   }
 
-  func configureTable(for tableData: [ParentTableCellModel], parentSection: Section) {
+  func configureTable(for tableData: [ParentTableCellModel], parentSection: Section, langCode: String) {
     self.tableData = tableData
     self.parentSection = parentSection
+    self.langCode = langCode
 
     title = parentSection.sectionTitle
   }
@@ -61,7 +66,7 @@ extension SelectionViewTemplateViewController {
     cell.parentSection = parentSection
     cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
     cell.backgroundColor = lightWhiteDarkBlackColor
-    if getKeyInDict(givenValue: cell.specificLang, dict: languagesAbbrDict) == translateLanguage.rawValue.capitalize() {
+    if cell.selectedLang == userDefaults.string(forKey: langCode + "TranslateLanguage") {
       selectedPath = indexPath
       cell.iconImageView.image = UIImage(named: "radioButtonSelected")
     }
@@ -70,27 +75,17 @@ extension SelectionViewTemplateViewController {
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let tableSection = tableData[indexPath.section]
-    let section = tableSection.section[indexPath.row]
-
-    if !(section.sectionState == .specificLang(languagesAbbrDict[translateLanguage.rawValue] ?? "")) {
-        let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
-
-        let newSelection = getKeyInDict(givenValue: cell.specificLang, dict: languagesAbbrDict)
-        for lang in TranslateLanguage.allCases {
-          if lang.rawValue.capitalize() == newSelection {
-            translateLanguage = lang
-
-            if selectedPath != nil {
-              let previousCell = tableView.cellForRow(at: selectedPath!) as! RadioTableViewCell
-              previousCell.iconImageView.image = UIImage(named: "radioButton")
-            }
-
-            cell.iconImageView.image = UIImage(named: "radioButtonSelected")
-            selectedPath = indexPath
-          }
-      }
+    if selectedPath != nil {
+      let previousCell = tableView.cellForRow(at: selectedPath!) as! RadioTableViewCell
+      previousCell.iconImageView.image = UIImage(named: "radioButton")
     }
+
+    let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
+    cell.iconImageView.image = UIImage(named: "radioButtonSelected")
+    selectedPath = indexPath
+
+    let dictionaryKey = langCode + "TranslateLanguage"
+    userDefaults.setValue(cell.selectedLang, forKey: dictionaryKey)
 
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedIndexPath, animated: true)

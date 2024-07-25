@@ -127,8 +127,14 @@ final class InfoChildTableViewCell: UITableViewCell {
     }
 
     if section.sectionState == .translateLang {
-      let currentLang = "_global.\(translateLanguage.rawValue)"
-      subLabel.text = NSLocalizedString(currentLang, value: translateLanguage.rawValue.capitalized, comment: "")
+      var langTranslateLanguage = "English"
+      if let selectedLang = userDefaults.string(forKey: languageCode + "TranslateLanguage") {
+        langTranslateLanguage = getKeyInDict(givenValue: selectedLang, dict: languagesAbbrDict)
+      } else {
+        userDefaults.set("en", forKey: languageCode + "TranslateLanguage")
+      }
+      let currentLang = "_global." + langTranslateLanguage.lowercased()
+      subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
       subLabel.textColor = menuOptionColor
     } else {
       subLabel.removeFromSuperview()

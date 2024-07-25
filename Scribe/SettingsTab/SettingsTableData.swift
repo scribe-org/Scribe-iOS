@@ -129,14 +129,13 @@ enum SettingsTableData {
   static func getTranslateLanguages() -> [Section] {
     var sections = [Section]()
 
-    for lang in TranslateLanguage.allCases {
-      let value = lang.rawValue.capitalize()
-      guard let abbreviation = languagesAbbrDict[value] else {
-        fatalError("Abbreviation not found for language: \(value)")
+    for lang in languagesAbbrDict.keys.sorted() {
+      guard let abbreviation = languagesAbbrDict[lang] else {
+        fatalError("Abbreviation not found for language: \(lang)")
       }
-      let key = "_global.\(lang.rawValue)"
+      let key = "_global.\(lang.lowercased())"
       let newSection = Section(
-        sectionTitle: NSLocalizedString(key, value: value, comment: ""),
+        sectionTitle: NSLocalizedString(key, value: lang, comment: ""),
         sectionState: .specificLang(abbreviation)
       )
 
