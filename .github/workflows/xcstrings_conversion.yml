@@ -24,7 +24,7 @@ jobs:
           $SourceDiff = $diff | Where-Object { $_ -match '^Scribe-i18n/' -and $_ -match '.json$' }
           $HasDiff = $SourceDiff.Length -gt 0
 
-          Write-Host "json_changed=$HasDiff >> $GITHUB_OUTPUT"
+          Write-Host "json_changed=$HasDiff" >> "$GITHUB_OUTPUT"
 
   # Run xcstrings conversion script if needed.
   conditional_job:
