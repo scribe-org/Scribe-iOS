@@ -58,7 +58,7 @@ for pos, key in enumerate(file, start=1):
 
     data += "      }\n" "    },\n" if pos < len(file) else "      }\n" "    }\n"
 
-data += "  }},\n" '  "version" : "1.0"\n' "}}"
+data += "  },\n" '  "version" : "1.0"\n' "}"
 open(os.path.join(directory, "Localizable.xcstrings"), "w").write(data)
 
 print(
