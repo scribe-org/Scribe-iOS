@@ -55,8 +55,6 @@ final class RadioTableViewCell: UITableViewCell {
     }
   }
 
-  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
-
   var selectedLang: String {
     guard let section = section,
           case let .specificLang(lang) = section.sectionState else { return "n/a" }

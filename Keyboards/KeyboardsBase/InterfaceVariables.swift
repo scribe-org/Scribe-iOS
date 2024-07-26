@@ -159,7 +159,6 @@ func checkLandscapeMode() {
 
 // Keyboard language variables.
 var controllerLanguage = String()
-var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [

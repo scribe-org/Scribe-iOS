@@ -329,13 +329,13 @@ extension LanguageDBManager {
   }
 
   /// Query the translation of word in `translations`.
-  func queryTranslation(of word: String) -> [String] {
+  func queryTranslation(of word: String, langCode: String) -> [String] {
     let query = """
     SELECT
       *
 
     FROM
-      translations
+      \(langCode)_translations
 
     WHERE
       word = ?
