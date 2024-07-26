@@ -29,7 +29,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The user will no longer click a menu option beneath an app hint as the hints will disappear on scroll ([#465](https://github.com/scribe-org/Scribe-iOS/issues/465)).
 - The installation app hints tooltip's vertical location is programmatically determined based on if the device has a home button or not ([#467](https://github.com/scribe-org/Scribe-iOS/issues/467)).
-<!-- - Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)). -->
+- Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)).
+<!-- - The disable accent characters option has been removed on iPads and will no longer crashes the app settings ([#477](https://github.com/scribe-org/Scribe-iOS/issues/477)). -->
 
 # Scribe-iOS 3.0.0
 
