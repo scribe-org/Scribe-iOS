@@ -172,7 +172,7 @@ let languagesAbbrDict = [
   "Swedish": "sv"
 ]
 
-func getKeyInDict(givenValue: String, dict: [String:String]) -> String {
+func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
   for (key, value) in dict {
     if value == givenValue {
       return key

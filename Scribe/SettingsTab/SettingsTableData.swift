@@ -84,7 +84,7 @@ enum SettingsTableData {
       hasDynamicData: nil
     )
   ]
-  
+
   static let translateLangSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
       headingTitle: NSLocalizedString("app.settings.translation.translationLang.caption", value: "Choose a language to translate from", comment: ""),
