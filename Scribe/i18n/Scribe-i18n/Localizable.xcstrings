@@ -1,6 +1,35 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "_global.english" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Englisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inglés"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Engelska"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "English"
+          }
+        }
+      }
+    },
     "_global.french" : {
       "comment" : "",
       "localizations" : {
@@ -8,6 +37,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Französisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Francés"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Franska"
           }
         },
         "en" : {
@@ -27,6 +68,18 @@
             "value" : "Deutsch"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alemán"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tyska"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -42,6 +95,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Italienisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Italiano"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Italienska"
           }
         },
         "en" : {
@@ -61,6 +126,18 @@
             "value" : "Portugiesisch"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Portugués"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Portugisiska"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -76,6 +153,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Russisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ruso"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ryska"
           }
         },
         "en" : {
@@ -95,6 +184,18 @@
             "value" : "Spanisch"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Español"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Spanska"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -110,6 +211,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Schwedisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sueco"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Svenska"
           }
         },
         "en" : {
@@ -129,6 +242,18 @@
             "value" : "Hier kannst du mehr über Scribe und seine Community erfahren."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aquí puedes obtener más información sobre Scribe y su comunidad."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Här kan du lära dig mer om Scribe och dess community."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -144,6 +269,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "App-Hinweise zurücksetzen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Restablecer notificaciones de aplicaciones"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Återställ app-tips"
           }
         },
         "en" : {
@@ -163,6 +300,18 @@
             "value" : "Bug melden"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Reportar un error"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Rapportera ett fel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -175,6 +324,18 @@
       "comment" : "",
       "localizations" : {
         "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Community"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Comunidad"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Community"
@@ -197,6 +358,18 @@
             "value" : "Schicke uns eine E-Mail"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Envianos un correo electrónico"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Skicka ett e-mail till oss"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -212,6 +385,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Feedback und Support"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Comentarios y soporte"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Feedback och support"
           }
         },
         "en" : {
@@ -231,6 +416,18 @@
             "value" : "Den Code auf GitHub ansehen"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ver el código en GitHub"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "See koden på GitHub"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -246,6 +443,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Rechtliches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Legal"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Legalitet"
           }
         },
         "en" : {
@@ -265,6 +474,18 @@
             "value" : "Chatte mit dem Team auf Matrix"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Chatea con el equipo en Matrix"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Chatta med teamet på Matrix"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -280,6 +501,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Datenschutzrichtlinie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Política de privacidad"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Integritetspolicy"
           }
         },
         "en" : {
@@ -299,6 +532,18 @@
             "value" : "Bitte beachten Sie, dass die englische Version dieser Richtlinie Vorrang vor allen anderen Versionen hat.\n\nDie Scribe-Entwickler (SCRIBE) haben die iOS-App „Scribe – Language Keyboards“ (SERVICE) als Open-Source-App entwickelt. Dieser DIENST wird von SCRIBE kostenlos zur Verfügung gestellt und ist zur Verwendung so wie er ist bestimmt.\n\nDiese Datenschutzrichtlinie (RICHTLINIE) dient dazu, den Leser über die Bedingungen für den Zugriff auf, sowie die Verfolgung, Erfassung, Aufbewahrung, Verwendung und Offenlegung von persönlichen Informationen (NUTZERINFORMATIONEN) und Nutzungsdaten (NUTZERDATEN) aller Benutzer (NUTZER) dieses DIENSTES aufzuklären.\n\nNUTZERINFORMATIONEN sind insbesondere alle Informationen, die sich auf die NUTZER selbst oder die Geräte beziehen, die sie für den Zugriff auf den DIENST verwenden.\n\nNUTZERDATEN sind definiert als eingegebener Text oder Aktionen, die von den NUTZERN während der Nutzung des DIENSTES ausgeführt werden.\n\n1. Grundsatzerklärung\n\nDieser DIENST greift nicht auf NUTZERINFORMATIONEN oder NUTZERDATEN zu und verfolgt, sammelt, speichert, verwendet und gibt keine NUTZERDATEN weiter.\n\n2. Do Not Track\n\nNUTZER, die SCRIBE kontaktieren, um zu verlangen, dass ihre NUTZERINFORMATIONEN und NUTZERDATEN nicht verfolgt werden, erhalten eine Kopie dieser RICHTLINIE sowie einen Link zu allen Quellcodes als Nachweis, dass sie nicht verfolgt werden.\n\n3. Daten von Drittanbietern\n\nDieser DIENST verwendet Daten von Drittanbietern. Alle Daten, die bei der Erstellung dieses DIENSTES verwendet werden, stammen aus Quellen, die ihre vollständige Nutzung in der vom DIENST durchgeführten Weise ermöglichen. Primär stammen die Daten für diesen DIENST von Wikidata, Wikipedia und Unicode. Wikidata erklärt: „Alle strukturierten Daten in den Haupt-, Eigenschafts- und Lexem-Namespaces werden unter der Creative Commons CC0-Lizenz verfügbar gemacht; Text in anderen Namespaces wird unter der Creative Commons Attribution Share-Alike Lizenz verfügbar gemacht.“ Die Wikidata-Richtlinie zur Verwendung von Daten ist unter https://www.wikidata.org/wiki/Wikidata:Licensing zu finden. Wikipedia gibt an, dass Texte, also die Daten, die vom DIENST verwendet werden, „… unter den Bedingungen der Creative Commons Attribution Share-Alike Lizenz verwendet werden können“. Die Wikipedia-Richtlinie zur Verwendung von Daten ist unter https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content zu finden. Unicode gewährt die Erlaubnis, „… kostenlos, für alle Inhaber einer Kopie der Unicode-Daten und der zugehörigen Dokumentation (der „Data Files“) oder der Unicode-Software und der zugehörigen Dokumentation (der „Software“), die Data Files oder Software ohne Einschränkung zu verwenden …“ Die Unicode-Richtlinie zur Verwendung von Daten ist unter https://www.unicode.org/license.txt zu finden.\n\n4. Quellcode von Drittanbietern\n\nDieser DIENST basiert auf Code von Dritten. Der gesamte bei der Erstellung dieses DIENSTES verwendete Quellcode stammt von Quellen, die ihre Nutzung in der vom DIENST durchgeführten Weise gestatten. Grundlage dieses Projekts war im Besonderen das Projekt CustomKeyboard von Ethan Sarif-Kattan. CustomKeyboard wurde unter der MIT-Lizenz veröffentlicht, welche unter https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE abrufbar ist.\n\n5. Dienste von Drittanbietern\n\nDieser DIENST nutzt Drittanbieterdienste, um einige der Daten von Drittanbietern zu modifizieren. Namentlich wurden Daten unter Verwendung von Modellen von Hugging Face’ Transformers übersetzt. Dieser Dienst ist durch eine Apache 2.0 Lizenz abgedeckt, die besagt, dass er für die kommerzielle Nutzung, Änderung, Verteilung, Patent- und private Nutzung verfügbar ist. Die Lizenz für den oben genannten Dienst finden Sie unter https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Links zu Drittanbietern\n\nDieser DIENST enthält Links zu externen Webseiten. Wenn NUTZER auf einen Link eines Drittanbieters klicken, werden sie auf eine Webseite weitergeleitet. Beachten Sie, dass diese externen Websites nicht von diesem DIENST betrieben werden. Daher wird NUTZERN dringend empfohlen, die Datenschutzrichtlinie dieser Webseiten zu lesen. Dieser DIENST hat keine Kontrolle über und übernimmt keine Haftung für Inhalte, Datenschutzrichtlinien oder Praktiken von Webseiten oder Diensten Dritter.\n\n7. Bilder von Drittanbietern\n\nDieser SERVICE enthält Bilder, die von Dritten urheberrechtlich geschützt sind. Insbesondere enthält diese App eine Kopie der Logos von GitHub, Inc. und Wikidata, Warenzeichen von Wikimedia Foundation, Inc. Die Bedingungen, unter denen das GitHub-Logo verwendet werden kann, ist unter https://github.com/logo abrufbar. Die Bedingungen für das Wikidata-Logo ist zu finden auf der folgenden Wikimedia-Seite: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. Dieser DIENST verwendet die urheberrechtlich geschützten Bilder in einer Weise, die diesen Kriterien entspricht, wobei die einzige Abweichung eine rotierte Version des GitHub-Logos ist, was in der Open-Source-Community üblich ist, um einen Link zur GitHub-Website darzustellen.\n\n8. Inhaltshinweis\n\nDieser DIENST ermöglicht NUTZERN den Zugriff auf sprachliche Inhalte (INHALTE). Einige dieser INHALTE könnten für Kinder und Minderjährige als ungeeignet eingestuft werden. Der Zugriff auf INHALTE über den DIENST erfolgt auf eine Weise, in der die Informationen nur bekannt sind, wenn diese ausdrücklich angefragt werden. Speziell können NUTZER Wörter übersetzen, Verben konjugieren und auf andere grammatikalische Merkmale von INHALTEN zugreifen, die sexueller, gewalttätiger oder anderweitig nicht altersgerechter Natur sein können. NUTZER können keine Wörter übersetzen, Verben konjugieren und auf andere grammatikalische Merkmale von INHALTEN zugreifen, die sexueller, gewalttätiger oder anderweitig nicht altersgerechter Natur sein können, wenn sie nicht bereits über diese Art INHALTE Bescheid wissen. SCRIBE übernimmt keine Haftung für den Zugriff auf solche INHALTE.\n\n9. Änderungen\n\nDer DIENST behält sich Änderungen dieser RICHTLINIE vor. Aktualisierungen dieser RICHTLINIE ersetzen alle vorherigen Versionen, und werden, wenn sie als wesentlich erachtet werden, in der nächsten anwendbaren Aktualisierung des DIENSTES deutlich aufgeführt. SCRIBE animiert NUTZER dazu, diese RICHTLINIE regelmäßig auf die neuesten Informationen zu unseren Datenschutzpraktiken zu prüfen und sich mit etwaigen Änderungen vertraut zu machen.\n\n10. Kontakt\n\nWenn Sie Fragen, Bedenken oder Vorschläge zu dieser RICHTLINIE haben, zögern Sie nicht, https://github.com/scribe-org zu besuchen oder SCRIBE unter scribe.langauge@gmail.com zu kontaktieren. Verantwortlich für solche Anfragen ist Andrew Tavis McAllister.\n\n11. Datum des Inkrafttretens\n\nDiese RICHTLINIE tritt am 24. Mai 2022 in Kraft."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tenga en cuenta que la versión en inglés de esta política tiene prioridad sobre todas las demás versiones.\n\nLos desarrolladores de Scribe (SCRIBE) crearon la aplicación para iOS \"Scribe - Language Keyboards\" (SERVICIO) como una aplicación de código abierto. SCRIBE proporciona este SERVICIO sin coste y está destinado a usarse tal como está.\n\nEsta política de privacidad (POLÍTICA) se utiliza para informar al lector sobre las políticas de acceso, seguimiento, recopilación, retención, uso y divulgación de información personal (INFORMACIÓN DEL USUARIO) y datos de uso (DATOS DEL USUARIO) para todas las personas que hacen uso de este SERVICIO (USUARIOS).\n\nLA INFORMACIÓN DEL USUARIO se define específicamente como cualquier información relacionada con los propios USUARIOS o los dispositivos que utilizan para acceder al SERVICIO.\n\nLOS DATOS DEL USUARIO se definen específicamente como cualquier texto escrito o acción realizada por los USUARIOS mientras utilizan el SERVICIO.\n\n1. Declaración de política\n\nEste SERVICIO no accede, rastrea, recopila, retiene, utiliza ni divulga ninguna INFORMACIÓN DEL USUARIO ni DATOS DEL USUARIO.\n\n2. No rastrear\n\nA los USUARIOS que se comuniquen con SCRIBE para solicitar que su INFORMACIÓN DE USUARIO y sus DATOS DE USUARIO no sean rastreados se les proporcionará una copia de esta POLÍTICA así como un enlace a todos los códigos fuente como prueba de que no están siendo rastreados.\n\n3. Datos de terceros\n\nEste SERVICIO hace uso de datos de terceros. Todos los datos utilizados en la creación de este SERVICIO provienen de fuentes que permiten su uso completo en la forma en que lo hace el SERVICIO. En concreto, los datos de este SERVICIO provienen de Wikidata, Wikipedia y Unicode. Wikidata afirma que \"Todos los datos estructurados en los espacios de nombres principal, de propiedad y de lexema están disponibles bajo la Licencia Creative Commons CC0; el texto en otros espacios de nombres está disponible bajo la Licencia Creative Commons Attribution-Share Alike\". La política que detalla el uso de los datos de Wikidata se puede encontrar en https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia afirma que los datos de texto, el tipo de datos utilizados por el SERVICIO, \"... pueden usarse bajo los términos de la licencia Creative Commons Attribution Share-Alike\". La política que detalla el uso de los datos de Wikipedia se puede encontrar en https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode otorga permiso, \"... sin cargo, a cualquier persona que obtenga una copia de los archivos de datos Unicode y cualquier documentación asociada (los \"Archivos de Datos\") o el software Unicode y cualquier documentación asociada (el \"Software\") para tratar los Archivos de Datos o el Software sin restricción...\" La política que detalla el uso de datos Unicode se puede encontrar en https://www.unicode.org/license.txt.\n\n4. Código fuente de terceros\n\nEste SERVICIO se basó en código de terceros. Todo el código fuente utilizado en la creación de este SERVICIO proviene de fuentes que permiten su uso completo en la forma en que lo hace el SERVICIO. En concreto, la base de este proyecto fue el proyecto CustomKeyboard de Ethan Sarif-Kattan. CustomKeyboard se publicó bajo una licencia MIT, que está disponible en https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Servicios de terceros\n\nEste SERVICIO hace uso de servicios de terceros para manipular algunos de los datos de terceros. En concreto, los datos se han traducido utilizando modelos de los transformadores de Hugging Face. Este servicio está cubierto por una Licencia Apache 2.0, que establece que está disponible para uso comercial, modificación, distribución, uso de patentes y uso privado. La licencia para el servicio mencionado anteriormente se puede encontrar en https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Enlaces de terceros\n\nEste SERVICIO contiene enlaces a páginas web externas. Si los USUARIOS hacen clic en un enlace de un tercero, serán dirigidos a un sitio web. Tenga en cuenta que estos sitios web externos no son operados por este SERVICIO. Por lo tanto, se recomienda encarecidamente a los USUARIOS que revisen la política de privacidad de estos sitios web. Este SERVICIO no tiene control ni asume ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de los sitios o servicios de terceros.\n\n7. Imágenes de terceros\n\nEste SERVICIO contiene imágenes con derechos de autor de terceros. En concreto, esta aplicación incluye una copia de los logotipos de GitHub, Inc. y Wikidata, marcas registradas de Wikimedia Foundation, Inc. Los términos por los que se puede utilizar el logotipo de GitHub se encuentran en https://github.com/logos, y los términos para el logotipo de Wikidata se encuentran en la siguiente página de Wikimedia: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. Este SERVICIO utiliza las imágenes con derechos de autor de una manera que cumple con estos criterios, con la única desviación de una rotación del logotipo de GitHub que es común en la comunidad de código abierto para indicar que hay un enlace al sitio web de GitHub.\n\n8. Aviso de contenido\n\nEste SERVICIO permite a los USUARIOS acceder a contenido lingüístico (CONTENIDO). Parte de este CONTENIDO podría considerarse inapropiado para niños y menores de edad. El acceso al CONTENIDO mediante el SERVICIO se realiza de forma que la información no esté disponible a menos que se conozca explícitamente. En concreto, los USUARIOS \"pueden\" traducir palabras, conjugar verbos y acceder a otras características gramaticales del CONTENIDO que puedan ser de naturaleza sexual, violenta o inapropiada de otro modo. Los USUARIOS \"no pueden\" traducir palabras, conjugar verbos y acceder a otras características gramaticales del CONTENIDO que puedan ser de naturaleza sexual, violenta o inapropiada de otro modo si no conocen ya la naturaleza de este CONTENIDO. SCRIBE no asume ninguna responsabilidad por el acceso a dicho CONTENIDO.\n\n9. Cambios\n\nEsta POLÍTICA está sujeta a cambios. Las actualizaciones de esta POLÍTICA reemplazarán todas las anteriores y, si se consideran importantes, se indicarán claramente en la próxima actualización correspondiente del SERVICIO. SCRIBE alienta a los USUARIOS a revisar periódicamente esta POLÍTICA para obtener la información más reciente sobre nuestras prácticas de privacidad y familiarizarse con los cambios.\n\n10. Contacto\n\nSi tiene alguna pregunta, inquietud o sugerencia sobre esta POLÍTICA, no dude en visitar https://github.com/scribe-org o comunicarse con SCRIBE a través de scribe.langauge@gmail.com. La persona responsable de dichas consultas es Andrew Tavis McAllister.\n\n11. Fecha de entrada en vigor\n\nEsta POLÍTICA entra en vigencia a partir del 24 de mayo de 2022."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Observera att den engelska versionen av denna policy har företräde framför alla andra versioner.\n\nScribe-utvecklarna (SCRIBE) byggde iOS-applikationen \"Scribe - Language Keyboards\" (SERVICE) som en applikation med öppen källkod.\nDenna TJÄNST tillhandahålls av SCRIBE utan kostnad och är avsedd att användas i befintligt skick.\n\nDenna sekretesspolicy (POLICY) används för att informera läsaren om policyerna för åtkomst, spårning, insamling, lagring, användning och utlämnande av personlig information (ANVÄNDARINFORMATION) och användningsdata (ANVÄNDARDATA) för alla individer som använder denna TJÄNST (ANVÄNDARE).\n\nANVÄNDARINFORMATION definieras specifikt som all information som är relaterad till användarna själva eller de enheter de använder för att få tillgång till tjänsten.\n\nANVÄNDARDATA definieras specifikt som all text som skrivs eller åtgärder som utförs av ANVÄNDARNA när de använder TJÄNSTEN.\n\n1. Uttalande om policy\n\nDenna TJÄNST får inte tillgång till, spårar, samlar in, behåller, använder eller avslöjar någon ANVÄNDARINFORMATION eller ANVÄNDARDATA.\n\n2. Spårar inte\n\nANVÄNDARE som kontaktar SCRIBE för att be om att deras ANVÄNDARINFORMATION och ANVÄNDARDATA inte spåras kommer att förses med en kopia av denna POLICY samt en länk till alla källkoder som bevis på att de inte spåras.\n\n3. Uppgifter från tredje part\n\nDenna TJÄNST använder sig av data från tredje part. All data som används vid skapandet av denna TJÄNST kommer från källor som tillåter dess fulla användning på det sätt som görs av TJÄNSTEN. Specifikt kommer data för denna TJÄNST från Wikidata, Wikipedia och Unicode. Wikidata säger att \"All strukturerad data i namnrymderna main, property och lexeme görs tillgänglig under Creative Commons CC0-licensen; text i andra namnrymder görs tillgänglig under Creative Commons Attribution-Share Alike-Licens.\" Policyn som beskriver Wikidatas dataanvändning finns på https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia anger att textdata, den typ av data som används av TJÄNSTEN, \"... kan användas enligt villkoren i Creative Commons Attribution-Share Alike-licensen\". Policyn som beskriver Wikipedias dataanvändning kan hittas på https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode ger tillstånd, \"... kostnadsfritt, till alla personer som erhåller en kopia av Unicode-datafilerna och all tillhörande dokumentation (\"datafilerna\") eller Unicode-programvaran och all tillhörande dokumentation (\"programvaran\") för att hantera datafilerna eller programvaran utan begränsning...\" Policyn för användning av Unicode-data finns på https://www.unicode.org/license.txt.\n\n4. Källkod från tredje part\n\nDenna TJÄNST baserades på kod från tredje part. All källkod som används vid skapandet av denna TJÄNST kommer från källor som tillåter dess fulla användning på det sätt som görs av TJÄNSTEN. Grunden för detta projekt var projektet CustomKeyboard av Ethan Sarif-Kattan. CustomKeyboard släpptes under en MIT-licens, och denna licens är tillgänglig på https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Tjänster från tredje part\n\nDenna TJÄNST använder sig av tjänster från tredje part för att manipulera en del av data från tredje part. Specifikt har data översatts med hjälp av modeller från Hugging Face-transformatorer. Denna tjänst omfattas av en Apache License 2.0, som anger att den är tillgänglig för kommersiellt bruk, modifiering, distribution, patentanvändning och privat bruk. Licensen för ovannämnda tjänst finns på https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Länkar till tredje part\n\nDenna TJÄNST innehåller länkar till externa webbplatser. Om ANVÄNDARE klickar på en länk från tredje part kommer de att dirigeras till en webbplats. Observera att dessa externa webbplatser inte drivs av denna TJÄNST. Därför rekommenderas ANVÄNDARE starkt att granska sekretesspolicyn för dessa webbplatser. Denna TJÄNST har ingen kontroll över och tar inget ansvar för innehållet, sekretesspolicyn eller praxis på tredje parts webbplatser eller tjänster.\n\n7. Bilder från tredje part\n\nDenna TJÄNST innehåller bilder som är upphovsrättsskyddade av tredje part. Specifikt innehåller den här appen en kopia av logotyperna för GitHub, Inc och Wikidata, varumärkesskyddade av Wikimedia Foundation, Inc. Villkoren för hur GitHub-logotypen kan användas finns på https://github.com/logos, och villkoren för Wikidata-logotypen finns på följande Wikimedia-sida: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. Den här tjänsten använder de upphovsrättsskyddade bilderna på ett sätt som matchar dessa kriterier, med den enda avvikelsen är en rotation av GitHub-logotypen som är vanlig i öppen källkodsgemenskapen för att indikera att det finns en länk till GitHub-webbplatsen.\n\n8. Meddelande om innehåll\n\nDenna TJÄNST gör det möjligt för ANVÄNDARE att få tillgång till språkligt innehåll (INNEHÅLL). En del av detta INNEHÅLL kan anses vara olämpligt för barn och minderåriga som har rätt att göra det. Åtkomst till INNEHÅLL med hjälp av TJÄNSTEN görs på ett sätt så att informationen inte är tillgänglig om den inte uttryckligen är känd. Specifikt \"kan\" ANVÄNDARE översätta ord, böja verb och få tillgång till andra grammatiska egenskaper i INNEHÅLL som kan vara sexuella, våldsamma eller på annat sätt olämpliga till sin natur. ANVÄNDARE \"kan\" översätta ord, böja verb och få tillgång till andra grammatiska egenskaper i INNEHÅLL som kan vara sexuella, våldsamma eller på annat sätt olämpliga till sin natur om de inte redan känner till detta INNEHÅLLS natur. SCRIBE tar inget ansvar för åtkomsten till sådant INNEHÅLL.\n\n9. Ändringar\n\nDenna POLICY kan komma att ändras. Uppdateringar av denna POLICY kommer att ersätta alla tidigare instanser, och om de anses vara väsentliga kommer de att anges tydligt i nästa tillämpliga uppdatering av TJÄNSTEN. SCRIBE uppmuntrar ANVÄNDARE att regelbundet granska denna POLICY för den senaste informationen om vår integritetspraxis och att bekanta sig med eventuella ändringar.\n\n10. Kontakt\n\nOm du har några frågor, funderingar eller förslag om denna POLICY, tveka inte att besöka https://github.com/scribe-org eller kontakta SCRIBE på scribe.langauge@gmail.com. Ansvarig för sådana förfrågningar är Andrew Tavis McAllister.\n\n11. Ikraftträdande\n\nDenna POLICY gäller från och med den 24 maj 2022."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -314,6 +559,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Wir sorgen für Ihre Sicherheit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Velamos por tu seguridad"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Håller dig säker"
           }
         },
         "en" : {
@@ -333,6 +590,18 @@
             "value" : "Scribe bewerten"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Puntúa a Scribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Betygsätt Scribe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -348,6 +617,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Alle Scribe Apps anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ver todas las aplicaciones de Scribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Visa all Scribe-applikationer"
           }
         },
         "en" : {
@@ -367,6 +648,18 @@
             "value" : "Scribe teilen"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Compartir Scribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dela Scribe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -382,6 +675,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Lizenzen von Drittanbietern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Licencias de terceros"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Licenser från tredje part"
           }
         },
         "en" : {
@@ -401,6 +706,18 @@
             "value" : "Autor"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Autor"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Författare"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -416,6 +733,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Die iOS-App „Scribe - Language Keyboards“ (DIENST) wurde von den Scribe-Entwicklern (SCRIBE) unter Verwendung von Code von Dritten erstellt. Der gesamte bei der Erstellung dieses DIENSTES verwendete Quellcode stammt von Quellen, die ihre Nutzung in der vom DIENST durchgeführten Weise gestatten. Dieser Abschnitt enthält den Quellcode, auf dem der DIENST basiert, sowie die zugehörigen Lizenzen.\n\nIm Folgenden ist eine Liste des benutzten Quellcodes, des oder der jeweiligen Autor:innen und der Lizenz zur Zeit der Verwendung durch SCRIBE mit einem Link zu dieser zu finden.\n\n1. Custom Keyboard\n• Autor: EthanSK\n• Lizenz: MIT\n• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Los desarrolladores de Scribe (SCRIBE) han creado la aplicación iOS \"Scribe - Language Keyboards\" (SERVICIO) utilizando código de terceros. Todo el código fuente utilizado en la creación de este SERVICIO proviene de fuentes que permiten su uso completo en la forma en que lo hace el SERVICIO. En esta sección se enumera el código fuente en el que se basó el SERVICIO, así como las licencias coincidentes de cada uno.\n\nA continuación se muestra una lista de todo el código fuente utilizado, el autor o autores principales del código, la licencia bajo la cual fue publicado en el momento de su uso y un enlace a la licencia.\n\n1. Teclado personalizado\n• Autor: EthanSK\n• Licencia: MIT\n• Enlace: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Utvecklarna på Scribe (SCRIBE) har utvecklat iOS-applikationen \"Scribe - Language Keyboards\" (TJÄNST) med hjälp av kod från tredje part. All källkod använd i skapelsen av denna TJÄNST kommer ifrån källor som ger oss full tillåtelse att använda koden på det sätt som görs av TJÄNSTEN. Nedan listas källkoden som TJÄNSTEN är baserad på och licenserna som sammanfaller. \n\nFöljande lista listar all källkod, upphovsmän, licensen som gällde vid tillfället av användandet och en länk till licensen.\n\n1. Custom Keyboard\n• Upphovsman: EthanSK\n• Licens: MIT\n• Länk: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         },
         "en" : {
@@ -435,6 +764,18 @@
             "value" : "Der von uns verwendete Code"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "¿De quién es el código que utilizamos?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vems kod vi använde"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -450,6 +791,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Lizenz"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Licencia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Licens"
           }
         },
         "en" : {
@@ -469,6 +822,18 @@
             "value" : "Link"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Enlace"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Länk"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -484,6 +849,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Über uns"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Acerca de"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Om"
           }
         },
         "en" : {
@@ -503,6 +880,18 @@
             "value" : "Wikimedia und Scribe"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia y Scribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia och Scribe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -518,6 +907,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Wie wir zusammenarbeiten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "¿Cómo funcionan juntos?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Om vårt samarbete"
           }
         },
         "en" : {
@@ -537,6 +938,18 @@
             "value" : "Scribe wäre ohne die etlichen Mitwirkungen von Wikimedia Mitwirkenden, den Projekten, die sie unterstützen, gegenüber, nicht möglich. Genauer benutzt Scribe Daten der Lexikografischen Datencommunity in Wikidata, sowie solche von Wikipedia für jede von Scribe unterstützte Sprache."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe no sería posible sin las innumerables contribuciones de los colaboradores de Wikimedia a los numerosos proyectos que apoya. En concreto, Scribe utiliza datos de la comunidad de datos lexicográficos de Wikidata, así como datos de Wikipedia para cada idioma que Scribe admite."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe skulle inte vara möjligt utan de otaliga bidrag som görs till de olika Wikimedia-projekten. Scribe använder sig specifikt av data från Wikidata Lexicographical data community, och data från Wikipedia för de olika språk som Scribe stöder."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -554,6 +967,18 @@
             "value" : "Wikidata ist ein kollaborativ gestalteter, mehrsprachiger Wissensgraf, der von der Wikimedia Foundation gehostet wird. Sie stellt frei verfügbare Daten, die unter einer Creative Commons Public Domain Lizenz (CC0) stehen, zur Verfügung. Scribe benutzt Sprachdaten von Wikidata, um Nutzern Verbkonjugationen, Kasusannotationen, Plurale und viele andere Funktionen zu bieten."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata es un gráfico de conocimiento colaborativo y multilingüe alojado por la Fundación Wikimedia. Proporciona datos disponibles gratuitamente bajo una licencia de dominio público Creative Commons (CC0). Scribe utiliza datos de idioma de Wikidata para proporcionar a los usuarios conjugaciones verbales, anotaciones de casos, plurales y muchas otras características."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata är en flerspråkig kunskapsgraf som underhålls kollektivt. Den hostas av Wikimedia Foundation. Den tillhandahåller data som kan användas under Creative Commons Public Domain-licensen (CC0). Scribe använder sig av språk-relaterad data från Wikidata för att ge användare tillgång till diverse grammatiska funktioner."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -569,6 +994,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Wikipedia ist eine mehrsprachige, freie, Online-Enzyklopädie, die von einer Community an Freiwilligen durch offene Kollaboration und einem Wiki-basierten Bearbeitungssystem geschrieben und aufrechterhalten wird. Scribe nutzt Wikipedia-Daten, um automatische Empfehlungen zu erstellen, indem die häufigsten Wörter und Folgewörter einer Sprache erlangt werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "La Wikipedia es una enciclopedia libre multilingüe escrita y mantenida por una comunidad de voluntarios mediante una colaboración abierta y un sistema de edición basado en wiki. Scribe utiliza datos de la Wikipedia para generar autosugestiones derivando las palabras más comunes de un idioma, así como las palabras más comunes que las siguen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikipedia är en flerspråkig gratis online-encyklopedi skriven och underhållen av en gemenskap av volontärer genom öppet samarbete och ett wiki-baserat redigeringssystem. Scribe använder data från Wikipedia för att producera autoförslag genom att härleda de vanligaste orden i ett språk samt de vanligaste orden som följer dem."
           }
         },
         "en" : {
@@ -589,10 +1026,51 @@
             "value" : "Installation"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Instalación"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Installation"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Installation"
+          }
+        }
+      }
+    },
+    "app.installation.appHint" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Folge den Anweisungen unten, um Scribe-Tastaturen auf deinem Gerät zu installieren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sigue las instrucciones para instalar los teclados Scribe en tu dispositivo."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Följ instruktionerna nedan för att installera Scribe-tangentbord på din enhet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Follow the directions below to install Scribe keyboards on your device."
           }
         }
       }
@@ -604,6 +1082,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Scribe-Einstellungen öffnen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Abrir la configuración de Scribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Öppna Scribe-inställningar"
           }
         },
         "en" : {
@@ -623,6 +1113,18 @@
             "value" : "Drücke auf"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seleccionar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -638,6 +1140,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Wähle die Tastaturen aus, die du benutzen möchtest\n\n4. Drücke beim Tippen auf"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Activa los teclados que quieras utilizar\n\n4. Al escribir, presiona"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aktivera tangenbort som du vill använda\n\n4. Medans du skriver, tryck"
           }
         },
         "en" : {
@@ -657,6 +1171,18 @@
             "value" : "um Tastaturen auszuwählen"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "para seleccionar teclados"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "För att välja tangentbord"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -674,27 +1200,22 @@
             "value" : "Tastaturinstallation"
           }
         },
-        "en" : {
+        "es" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Keyboard installation"
+            "value" : "Instalación del teclado"
           }
-        }
-      }
-    },
-    "app.installation.appHint" : {
-      "comment" : "",
-      "localizations" : {
-        "de" : {
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Folge den Anweisungen unten, um Scribe-Tastaturen auf deinem Gerät zu installieren."
+            "value" : "Tangentbords-installation"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Follow the directions below to install Scribe keyboards on your device."
+            "value" : "Keyboard installation"
           }
         }
       }
@@ -706,6 +1227,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Tastaturen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Teclados"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tangentbord"
           }
         },
         "en" : {
@@ -725,6 +1258,18 @@
             "value" : "Hier sind die Einstellungen der App und installierte Tastaturen zu finden."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "La configuración de la aplicación y los teclados de idiomas instalados se encuentran aquí."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inställningar för appen och installerade tangentbord finns här."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -740,6 +1285,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "App-Einstellungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ajustes de la aplicación"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "App-inställningar"
           }
         },
         "en" : {
@@ -759,6 +1316,18 @@
             "value" : "App-Sprache"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Idioma de la aplicación"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "App-språk"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -774,6 +1343,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Funktionalität"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Funcionalidad"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Funktionalitet"
           }
         },
         "en" : {
@@ -793,6 +1374,18 @@
             "value" : "Schlage Emojis vor"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Autosugerir emojis"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Föreslå automatiskt emojis"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -810,6 +1403,18 @@
             "value" : "Wähle installierte Tastatur aus"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seleccionar el teclado instalado"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj installerade tangentbord"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -822,6 +1427,18 @@
       "comment" : "",
       "localizations" : {
         "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Layout"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Disposición"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Layout"
@@ -844,6 +1461,18 @@
             "value" : "Schlage für ausdrucksvolleres Schreiben Emojis vor."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Active las sugerencias y el autocompletado de los emojis para una escritura más expresiva."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aktivera emojiförslag och kompletteringar för mer uttrycksfullt skrivande."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -859,6 +1488,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Buchstaben mit Akzent deaktivieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Deshabilitar caracteres acentuados"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inaktivera accenter"
           }
         },
         "en" : {
@@ -878,6 +1519,18 @@
             "value" : "Entscheide, ob Buchstaben mit Akzenten wie Umlaute auf der Haupttastatur angezeigt werden."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Elimine las teclas de los letras acentuadas en la distribución del teclado principal."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ta bort tangenter med accenter på den primära tangentbordslayouten."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -893,6 +1546,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Punkt und Komma auf ABC"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Punto y coma en ABC"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Punk och komma på ABC"
           }
         },
         "en" : {
@@ -912,6 +1577,18 @@
             "value" : "Füge der Haupttastatur Punkt- und Komma-Tasten für bequemeres Schreiben hinzu."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Agrega teclas de punto y coma al teclado principal para escribir más cómodamente."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inkludera komma- och punkttangenter på huvudtangentbordet för att underlätta skrivandet."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -929,10 +1606,109 @@
             "value" : "Einstellungen"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ajustes"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inställningar"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Settings"
+          }
+        }
+      }
+    },
+    "app.settings.translation" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Übersetzung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Traducción"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Översättning"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Translation"
+          }
+        }
+      }
+    },
+    "app.settings.translation.translateLang" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Übersetzungssprache"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Idioma de la traducción"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Språk för översättning"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Translation language"
+          }
+        }
+      }
+    },
+    "app.settings.translation.translateLang.caption" : {
+      "comment" : "",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wähle die Sprache, von der übersetzt wird"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Elige un idioma para traducir"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj ett språk att översätta ifrån"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Choose a language to translate from"
           }
         }
       }
@@ -944,6 +1720,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Wikidata ist ein kollaborativ gestalteter, mehrsprachiger Wissensgraf, der von der Wikimedia Foundation gehostet wird. Sie dient als Quelle für offene Daten für unzählige Projekte, beispielsweise Wikipedia."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata es un gráfico de conocimiento editado de forma colaborativa y mantenido por la Fundación Wikimedia. Sirve como fuente de datos abiertos para proyectos como Wikipedia y muchos otros."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata är en gemensamt redigerad kunskapsgraf som underhålls av Wikimedia Foundation. Det fungerar som en källa till öppen data för projekt som Wikipedia och flera andra."
           }
         },
         "en" : {
@@ -963,6 +1751,18 @@
             "value" : "Scribe nutzt Sprachdaten von Wikidata für viele Kernfunktionen. Von dort erhalten wir Informationen wie Genera, Verbkonjugationen und viele mehr!"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe utiliza los datos lingüísticos de Wikidata para muchas de sus funciones principales. ¡Obtenemos información como géneros de sustantivos, conjugaciones de verbos y mucho más!"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe använder Wikidatas språkdata för många av sina kärnfunktioner. Vi får information som substantiv, genus, verbböjningar och mycket mer!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -978,6 +1778,18 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Du kannst auf wikidata.org einen Account erstellen, um der Community, die Scribe und viele andere Projekte unterstützt, beizutreten. Hilf uns dabei, der Welt freie Informationen zu geben!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Puedes crear una cuenta en wikidata.org para unirte a la comunidad que apoya a Scribe y a muchos otros proyectos. ¡Ayúdanos a llevar información gratuita al mundo!"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Du kan skapa ett konto på wikidata.org för att gå med i communityn som stöder Scribe och så många andra projekt. Hjälp oss att ge gratis information till världen!"
           }
         },
         "en" : {
