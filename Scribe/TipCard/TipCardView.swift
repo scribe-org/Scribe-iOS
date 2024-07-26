@@ -39,7 +39,7 @@ struct TipCardView: View {
           .foregroundColor(Color.scribeCTA)
           .padding(.horizontal)
         Text(infoText)
-          .font(Font.system(size: 0, weight: .medium))
+          .font(Font.system(size: DeviceType.isPad ? 22 : 0, weight: .medium))
         Spacer()
         Button {
           tipCardState = false

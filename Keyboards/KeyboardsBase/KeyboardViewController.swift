@@ -1607,6 +1607,8 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  // MARK: Key Sizing
+
   func setKeywidth() {
     // keyWidth determined per keyboard by the top row.
     if isLandscapeView {
@@ -1644,7 +1646,8 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPhone
           && key == "y"
           && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate {
+          && commandState != .translate
+          && disableAccentCharacters != true {
           leftPadding = keyWidth / 3
           addPadding(to: stackView2, width: leftPadding, key: "y")
         }
@@ -1652,7 +1655,15 @@ class KeyboardViewController: UIInputViewController {
           && key == "a"
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate) {
+            || commandState == .translate
+            || (
+              (
+                controllerLanguage == "German"
+                || controllerLanguage == "Spanish"
+                || controllerLanguage == "Swedish"
+              )
+              && disableAccentCharacters == true
+            )) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
         }
@@ -1768,7 +1779,8 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPhone
           && key == "m"
           && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate {
+          && commandState != .translate
+          && disableAccentCharacters != true {
           rightPadding = keyWidth / 3
           addPadding(to: stackView2, width: rightPadding, key: "m")
         }
@@ -1776,7 +1788,15 @@ class KeyboardViewController: UIInputViewController {
           && key == "l"
           && (controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
-            || commandState == .translate) {
+            || commandState == .translate
+            || (
+              (
+                controllerLanguage == "German"
+                || controllerLanguage == "Spanish"
+                || controllerLanguage == "Swedish"
+              )
+              && disableAccentCharacters == true
+            )) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
         }
@@ -1859,14 +1879,14 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: - Load Keys
+  // MARK: Load Keys
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
-      if userDefaults.bool(forKey: "svAccentCharacters") {
+      if userDefaults.bool(forKey: "deAccentCharacters") || userDefaults.bool(forKey: "esAccentCharacters") || userDefaults.bool(forKey: "svAccentCharacters") {
         disableAccentCharacters = true
       } else {
         disableAccentCharacters = false

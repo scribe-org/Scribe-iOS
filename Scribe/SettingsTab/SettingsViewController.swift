@@ -184,13 +184,12 @@ extension SettingsViewController: UITableViewDelegate {
           s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
         }) ?? -1
 
+        // If there are no accent keys we can remove the `Disable accent characters` option.
         if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
-          // As there are no accent keys we can remove the `Disable accent characters` option.
           let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
           print(accentKeySettings)
         } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-          data[0].section.insert(
-            Section(
+          data[0].section.insert(Section(
               sectionTitle: NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",
               hasToggle: true,
