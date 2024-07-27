@@ -87,7 +87,7 @@ struct AboutTableData {
         Section(
           sectionTitle: NSLocalizedString("app.about.appHints", value: "Reset app hints", comment: ""),
           imageString: "lightbulb.max",
-          hasNestedNavigation: true, 
+          hasNestedNavigation: true,
           sectionState: .appHints
         )
       ],
