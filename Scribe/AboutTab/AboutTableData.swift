@@ -37,6 +37,12 @@ struct AboutTableData {
           externalLink: true
         ),
         Section(
+          sectionTitle: NSLocalizedString("app.about.mastodon", value: "Follow us on Mastodon", comment: ""),
+          imageString: "mastodon",
+          sectionState: .mastodon,
+          externalLink: true
+        ),
+        Section(
           sectionTitle: NSLocalizedString("app.about.share", value: "Share Scribe", comment: ""),
           imageString: "square.and.arrow.up",
           sectionState: .shareScribe,
@@ -80,7 +86,8 @@ struct AboutTableData {
         ),
         Section(
           sectionTitle: NSLocalizedString("app.about.appHints", value: "Reset app hints", comment: ""),
-          imageString: "lightbulb",
+          imageString: "lightbulb.max",
+          hasNestedNavigation: true, 
           sectionState: .appHints
         )
       ],
