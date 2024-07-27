@@ -71,6 +71,7 @@ enum SectionState: Equatable {
   case specificLang(String)
   case none(UserInteractiveState)
   case externalLink
+  case mastodon
 }
 
 enum UserInteractiveState {

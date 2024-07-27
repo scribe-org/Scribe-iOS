@@ -88,6 +88,9 @@ extension AboutViewController {
     case .matrix:
       openURLString(urlString: "https://matrix.to/#/#scribe_community:matrix.org", withEncoding: true)
 
+    case .mastodon:
+      openURLString(urlString: "https://wikis.world/@scribe", withEncoding: false)
+
     case .wikimedia:
       if let viewController = storyboard?.instantiateViewController(
         identifier: "InformationScreenVC"

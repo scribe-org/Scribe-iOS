@@ -86,13 +86,15 @@ final class AboutTableViewCell: UITableViewCell {
     }
 
     if section.hasNestedNavigation {
+      let resetIcon = UIImage(systemName: "arrow.circlepath")
       let disclosureIcon = UIImage(systemName: "chevron.right")
+      let rightIcon = section.sectionState == .appHints ? resetIcon : disclosureIcon
       let accessory  = UIImageView(
         frame: CGRect(
-          x: 0, y: 0, width: (disclosureIcon?.size.width)!, height: (disclosureIcon?.size.height)!
+          x: 0, y: 0, width: (rightIcon?.size.width)!, height: (rightIcon?.size.height)!
         )
       )
-      accessory.image = disclosureIcon
+      accessory.image = rightIcon
       accessory.tintColor = menuOptionColor
       accessoryView = accessory
     }
