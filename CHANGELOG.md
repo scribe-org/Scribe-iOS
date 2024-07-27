@@ -12,11 +12,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Upcoming] Scribe-iOS 3.1.0
 
+### ✨ New Features
+
+- The About tab now includes a link to Scribe's Mastodon account ([#474](https://github.com/scribe-org/Scribe-iOS/issues/474)).
+
 ### 🎨 Design Changes
 
 - The top right corner of the keyboard installation directions now blinks when the view is clicked on ([#461](https://github.com/scribe-org/Scribe-iOS/issues/461)).
 - The app hints now appear and disappear with a transition ([#462](https://github.com/scribe-org/Scribe-iOS/issues/462)).
-- The installation page texts were made larger on certain devices to improve readability ([#466](https://github.com/scribe-org/Scribe-iOS/issues/466)).
+- The Installation tab texts were made larger on certain devices to improve readability ([#466](https://github.com/scribe-org/Scribe-iOS/issues/466)).
+- The reset app hints option in the About tab has an icon so that all menu options now have one ([#475](https://github.com/scribe-org/Scribe-iOS/issues/475)).
 
 ### 🌐 Localization
 
