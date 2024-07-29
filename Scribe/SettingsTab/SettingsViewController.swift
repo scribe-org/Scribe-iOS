@@ -169,7 +169,15 @@ extension SettingsViewController: UITableViewDelegate {
         var data = SettingsTableData.languageSettingsData
         // Check if the device is an iPad to remove the Layout Section.
         if DeviceType.isPad {
-          data.remove(at: 0)
+          for menuOption in data[0].section {
+            if menuOption.sectionState == .none(.toggleAccentCharacters) ||
+                menuOption.sectionState == .none(.toggleCommaAndPeriod) {
+              data[0].section.remove(at: 0)
+            }
+          }
+          if data[0].section.isEmpty {
+            data.remove(at: 0)
+          }
         } else {
           let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
             s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
