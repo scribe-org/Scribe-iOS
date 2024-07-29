@@ -167,10 +167,10 @@ extension SettingsViewController: UITableViewDelegate {
       ) as? TableViewTemplateViewController {
         // Copy base settings.
         var data = SettingsTableData.languageSettingsData
+        // Check if the device is an iPad to remove the Layout Section.
         if DeviceType.isPad {
           data.remove(at: 0)
         } else {
-          // Check if the device is an iPad to determine period and comma on the ABC characters option.
           let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
             s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
           }) ?? -1
