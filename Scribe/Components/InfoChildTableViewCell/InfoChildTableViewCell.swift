@@ -21,11 +21,11 @@ import UIKit
 
 final class InfoChildTableViewCell: UITableViewCell {
 
-  // MARK: - Constants
+  // MARK: Constants
 
   static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var titleLabelPhone: UILabel!
   @IBOutlet var titleLabelPad: UILabel!
@@ -78,7 +78,7 @@ final class InfoChildTableViewCell: UITableViewCell {
     return action
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   func configureCell(for section: Section) {
     self.section = section

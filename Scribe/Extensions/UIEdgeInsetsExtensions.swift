@@ -21,7 +21,7 @@ import UIKit
 
 extension UIEdgeInsets {
 
-  // MARK: - Initialisation
+  // MARK: Initialisation
 
   init(vertical: CGFloat, horizontal: CGFloat) {
     self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)

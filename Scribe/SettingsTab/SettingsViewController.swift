@@ -21,7 +21,7 @@ import UIKit
 import SwiftUI
 
 final class SettingsViewController: UIViewController {
-  // MARK: - Constants
+  // MARK: Constants
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
@@ -40,7 +40,7 @@ final class SettingsViewController: UIViewController {
     }
   }
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var footerFrame: UIView!
   @IBOutlet var footerButton: UIButton!
@@ -48,7 +48,7 @@ final class SettingsViewController: UIViewController {
 
   var tableData = SettingsTableData.settingsTableData
 
-  // MARK: - Functions
+  // MARK: Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -121,7 +121,7 @@ final class SettingsViewController: UIViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource {
   func numberOfSections(in _: UITableView) -> Int {
@@ -150,7 +150,7 @@ extension SettingsViewController: UITableViewDataSource {
   }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -260,7 +260,7 @@ extension SettingsViewController: UITableViewDelegate {
   }
 }
 
-// MARK: - TipCardView
+// MARK: TipCardView
 extension SettingsViewController {
   private func showTipCardView() {
     let overlayView = SettingsTipCardView(
@@ -292,11 +292,12 @@ extension SettingsViewController {
     view.layer.shadowOpacity = 0.0
     view.layer.shadowOffset = CGSize(width: 0, height: 0)
 
-    UIView.animate(withDuration: duration,
-                   delay: 0,
-                   options: [.curveEaseOut, .autoreverse],
-                   animations: {
-      view.layer.shadowOpacity = 0.6
-    }, completion: nil)
+    UIView.animate(
+      withDuration: duration,
+      delay: 0,
+      options: [.curveEaseOut, .autoreverse],
+      animations: {
+        view.layer.shadowOpacity = 0.6
+      }, completion: nil)
   }
 }

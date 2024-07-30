@@ -21,7 +21,7 @@ import UIKit
 
 /// A custom UILabel used to house all the functionality of the command bar.
 class CommandBar: UILabel {
-  // MARK: - Internal Properties
+  // MARK: Internal Properties
 
   /// Button that is shown on the trailing edge of the command bar.
   let infoButton = UIButton(type: .system)
@@ -35,7 +35,7 @@ class CommandBar: UILabel {
     }
   }
 
-  // MARK: - Initializer
+  // MARK: Initializer
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -57,7 +57,7 @@ class CommandBar: UILabel {
 
   var shadow: UIButton!
 
-  // MARK: - Internal methods
+  // MARK: Internal methods
 
   /// Sets up the command bar's color and text alignment.
   func set() {
