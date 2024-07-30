@@ -10,13 +10,22 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Upcoming] Scribe-iOS 3.1.0
+# [Upcoming] Scribe-iOS 3.2.0
+
+# Scribe-iOS 3.1.0
 
 ### ✨ New Features
 
 - The About tab now includes a link to Scribe's Mastodon account ([#474](https://github.com/scribe-org/Scribe-iOS/issues/474)).
 
 ### 🗃️ Data Added
+
+- French: 38 nouns, 1 verb
+- German: 75 nouns, 3 verbs
+- Italian: 719 nouns, 5 verbs
+- Portuguese: 13 nouns, 1 verb
+- Spanish: 1,299 nouns, 26 verbs
+- Swedish: 32 nouns, 4 verbs
 
 ### 🎨 Design Changes
 
