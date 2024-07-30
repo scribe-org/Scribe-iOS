@@ -1,36 +1,36 @@
 {
-  "images" : [
+  "images": [
     {
-      "filename" : "ScribeKeyPhoneBlack.png",
-      "idiom" : "iphone"
+      "filename": "ScribeKeyPhoneBlack.png",
+      "idiom": "iphone"
     },
     {
-      "appearances" : [
+      "appearances": [
         {
-          "appearance" : "luminosity",
-          "value" : "dark"
+          "appearance": "luminosity",
+          "value": "dark"
         }
       ],
-      "filename" : "ScribeKeyPhoneWhite.png",
-      "idiom" : "iphone"
+      "filename": "ScribeKeyPhoneWhite.png",
+      "idiom": "iphone"
     },
     {
-      "filename" : "ScribeKeyPadBlack.png",
-      "idiom" : "ipad"
+      "filename": "ScribeKeyPadBlack.png",
+      "idiom": "ipad"
     },
     {
-      "appearances" : [
+      "appearances": [
         {
-          "appearance" : "luminosity",
-          "value" : "dark"
+          "appearance": "luminosity",
+          "value": "dark"
         }
       ],
-      "filename" : "ScribeKeyPadWhite.png",
-      "idiom" : "ipad"
+      "filename": "ScribeKeyPadWhite.png",
+      "idiom": "ipad"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "xcode",
+    "version": 1
   }
 }

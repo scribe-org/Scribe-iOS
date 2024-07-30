@@ -57,6 +57,7 @@ struct Section {
 enum SectionState: Equatable {
   case github
   case matrix
+  case mastodon
   case wikimedia
   case shareScribe
   case rateScribe
