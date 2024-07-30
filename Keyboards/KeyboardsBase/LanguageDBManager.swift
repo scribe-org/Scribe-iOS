@@ -173,7 +173,7 @@ class LanguageDBManager {
   }
 }
 
-// MARK: - Database operations
+// MARK: Database operations
 
 extension LanguageDBManager {
   /// Delete non-unique values in case the lexicon has added words that were already present.

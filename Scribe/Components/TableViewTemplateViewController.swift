@@ -20,7 +20,7 @@
 import UIKit
 
 final class TableViewTemplateViewController: BaseTableViewController {
-  // MARK: - Properties
+  // MARK: Properties
 
   override var dataSet: [ParentTableCellModel] {
     tableData
@@ -41,7 +41,7 @@ final class TableViewTemplateViewController: BaseTableViewController {
     return lang
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -59,7 +59,7 @@ final class TableViewTemplateViewController: BaseTableViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension TableViewTemplateViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

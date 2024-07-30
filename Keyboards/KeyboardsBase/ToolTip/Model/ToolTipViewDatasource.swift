@@ -23,7 +23,7 @@ struct ToolTipViewDatasource: ToolTipViewDatasourceable {
   var theme: ViewThemeable
   private var content: NSMutableAttributedString
 
-  // MARK: - Init
+  // MARK: Init
 
   init(content: NSMutableAttributedString, theme: ViewThemeable) {
     self.content = content

@@ -278,7 +278,7 @@ class InstallationVC: UIViewController {
   }
 }
 
-// MARK: - TipHintView
+// MARK: TipHintView
 
 extension InstallationVC {
   private func showTipCardView() {

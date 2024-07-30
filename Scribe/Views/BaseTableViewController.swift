@@ -21,7 +21,7 @@ import SwipeableTabBarController
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-  // MARK: - Constants
+  // MARK: Constants
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
@@ -34,13 +34,13 @@ class BaseTableViewController: UITableViewController {
     }
   }
 
-  // MARK: - Properties
+  // MARK: Properties
 
   var dataSet: [ParentTableCellModel] {
     []
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,7 +58,7 @@ class BaseTableViewController: UITableViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension BaseTableViewController {
   override func numberOfSections(in _: UITableView) -> Int {
@@ -70,7 +70,7 @@ extension BaseTableViewController {
   }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: UITableViewDelegate
 
 extension BaseTableViewController {
   override func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {

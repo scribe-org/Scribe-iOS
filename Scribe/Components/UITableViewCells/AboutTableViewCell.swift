@@ -21,11 +21,11 @@ import UIKit
 
 final class AboutTableViewCell: UITableViewCell {
 
-  // MARK: - Constants
+  // MARK: Constants
 
   static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var titleLabelPhone: UILabel!
   @IBOutlet var titleLabelPad: UILabel!
@@ -62,7 +62,7 @@ final class AboutTableViewCell: UITableViewCell {
     }
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   func configureCell(for section: Section) {
     selectionStyle = .none

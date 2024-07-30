@@ -91,7 +91,7 @@ class KeyboardViewController: UIInputViewController {
     loadKeys()
   }
 
-  // MARK: - Display Activation Functions
+  // MARK: Display Activation Functions
 
   /// Function to load the keyboard interface into which keyboardView is instantiated.
   func loadInterface() {
@@ -138,7 +138,7 @@ class KeyboardViewController: UIInputViewController {
     btn.isUserInteractionEnabled = false
   }
 
-  // MARK: - Override UIInputViewController Functions
+  // MARK: Override UIInputViewController Functions
 
   /// Includes adding custom view sizing constraints.
   override func updateViewConstraints() {
@@ -260,7 +260,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: - Scribe Command Elements
+  // MARK: Scribe Command Elements
 
   // Partitions for autocomplete and autosuggest
   @IBOutlet var leftAutoPartition: UILabel!
@@ -951,7 +951,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: - Conjugation Variables and Functions
+  // MARK: Conjugation Variables and Functions
 
   // Note that we use "form" to describe both conjugations and declensions.
   @IBOutlet var shiftFormsDisplayLeft: UIButton!
@@ -2170,7 +2170,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: - Button Actions
+  // MARK: Button Actions
 
   /// Triggers actions based on the press of a key.
   ///
@@ -2680,7 +2680,7 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: - Key Press Functions
+  // MARK: Key Press Functions
 
   /// Auto-capitalization if the cursor is at the start of the proxy.
   func autoCapAtStartOfProxy() {
