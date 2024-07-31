@@ -179,26 +179,27 @@ extension SettingsViewController: UITableViewDelegate {
             data.remove(at: 0)
           }
         } else {
-          let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
-          }) ?? -1
-
           // Languages where we can disable accent keys.
-          let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
+          let accentKeyLanguages: [String] = [
+            NSLocalizedString("_global.german", comment: ""),
+            NSLocalizedString("_global.spanish", comment: ""),
+            NSLocalizedString("_global.swedish", comment: "")
+          ]
+
           let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
             s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
           }) ?? -1
 
           // If there are no accent keys we can remove the `Disable accent characters` option.
           if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
-            let accentKeySettings = data[0].section.remove(at: accentKeyOptionIndex)
-            print(accentKeySettings)
+            data[0].section.remove(at: accentKeyOptionIndex)
           } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
             data[0].section.insert(Section(
               sectionTitle: NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",
               hasToggle: true,
-              sectionState: .none(.toggleAccentCharacters)
+              sectionState: .none(.toggleAccentCharacters),
+              shortDescription: NSLocalizedString("app.settings.layout.disableAccentCharacters.description", value: "Include accented letter keys on the primary keyboard layout.", comment: "")
             ), at: 1
             )
           }
