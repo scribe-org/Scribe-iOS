@@ -12,6 +12,16 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Upcoming] Scribe-iOS 3.2.0
 
+# Scribe-iOS 3.1.1
+
+### ✨ New Features
+
+- A warning is added to trying to change the app localization if the user only has one language installed on their device ([#481](https://github.com/scribe-org/Scribe-iOS/issues/481)).
+
+### 🌐 Localization
+
+- Localization strings for English, German, Swedish and Spanish have been added for all remaining app texts ([Scribe-i18n#28](https://github.com/scribe-org/Scribe-i18n/issues/28)).
+
 # Scribe-iOS 3.1.0
 
 ### ✨ New Features

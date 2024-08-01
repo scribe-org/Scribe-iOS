@@ -56,7 +56,7 @@
   "app.settings.layout.periodAndComma": "Punto y coma en ABC",
   "app.settings.layout.periodAndComma.description": "Agrega teclas de punto y coma al teclado principal para escribir más cómodamente.",
   "app.settings.oneDeviceLanguage.message": "Solo tienes un idioma instalado en tu dispositivo. Instala más idiomas en Configuración y luego podrás seleccionar diferentes localizaciones de Scribe.",
-  "app.settings.oneDeviceLanguage.title": "Solo un idioma del dispositivo",
+  "app.settings.oneDeviceLanguage.title": "Solo un idioma para el dispositivo",
   "app.settings.title": "Ajustes",
   "app.settings.translation": "Traducción",
   "app.settings.translation.translateLang": "Idioma de la traducción",
