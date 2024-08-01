@@ -92,12 +92,13 @@ enum SettingsTableData {
 
     var sections = [Section]()
 
-    for language in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[language] else {
-        fatalError("Abbreviation not found for language: \(language)")
+    for lang in installedKeyboards {
+      guard let abbreviation = languagesAbbrDict[lang] else {
+        fatalError("Abbreviation not found for language: \(lang)")
       }
+      let key = "_global.\(lang.lowercased())"
       let newSection = Section(
-        sectionTitle: NSLocalizedString("_global.\(language.lowercased())", value: language, comment: ""),
+        sectionTitle: NSLocalizedString(key, value: language, comment: ""),
         sectionState: .specificLang(abbreviation)
       )
 
