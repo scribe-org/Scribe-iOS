@@ -55,7 +55,7 @@
   "app.settings.layout.disableAccentCharacters.description": "Ta bort tangenter med accenter på den primära tangentbordslayouten.",
   "app.settings.layout.periodAndComma": "Punk och komma på ABC",
   "app.settings.layout.periodAndComma.description": "Inkludera komma- och punkttangenter på huvudtangentbordet för att underlätta skrivandet.",
-  "app.settings.oneDeviceLanguage.message": "Du har bara ett språk installerat på din enhet. Installera fler språk i Inställningar och sedan kan du välja olika lokaliseringar av Scribe.",
+  "app.settings.oneDeviceLanguage.message": "Du har bara ett språk installerat på din enhet. Installera fler språk i Inställningar och efter det kan du välja olika lokaliseringar av Scribe.",
   "app.settings.oneDeviceLanguage.title": "Endast ett enhetsspråk",
   "app.settings.title": "Inställningar",
   "app.settings.translation": "Översättning",

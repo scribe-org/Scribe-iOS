@@ -25,38 +25,29 @@ for pos, key in enumerate(file, start=1):
     )
 
     for lang in languages:
-        if lang != "en-US":
-            lang_json = json.loads(
-                open(os.path.join(directory, f"{lang}.json"), "r").read()
+        lang_json = json.loads(
+            open(os.path.join(directory, f"{lang}.json"), "r").read()
+        )
+
+        if key in lang_json:
+            translation = lang_json[key].replace('"', '\\"').replace("\n", "\\n")
+        else:
+            translation = ""
+
+        if lang == "en-US":
+            lang = "en"
+        if translation != "":
+            data += (
+                f'        "{lang}" : {{\n'
+                f'          "stringUnit" : {{\n'
+                f'            "state" : "",\n'
+                f'            "value" : "{translation}"\n'
+                f"          }}\n"
+                f"        }},\n"
             )
 
-            if key in lang_json:
-                translation = lang_json[key].replace('"', '\\"').replace("\n", "\\n")
-            else:
-                translation = ""
-
-            if translation != "":
-                data += (
-                    f'        "{lang}" : {{\n'
-                    f'          "stringUnit" : {{\n'
-                    f'            "state" : "",\n'
-                    f'            "value" : "{translation}"\n'
-                    f"          }}\n"
-                    f"        }},\n"
-                )
-
-    lang_json = json.loads(open(os.path.join(directory, "en-US.json"), "r").read())
-    translation = lang_json[key].replace('"', '\\"').replace("\n", "\\n")
-    data += (
-        f'        "en" : {{\n'
-        f'          "stringUnit" : {{\n'
-        f'            "state" : "",\n'
-        f'            "value" : "{translation}"\n'
-        f"          }}\n"
-        f"        }}\n"
-    )
-
-    data += "      }\n" "    },\n" if pos < len(file) else "      }\n" "    }\n"
+    data = data[:-2]
+    data += "\n      }\n" "    },\n" if pos < len(file) else "      }\n" "    }\n"
 
 data += "  },\n" '  "version" : "1.0"\n' "}"
 open(os.path.join(directory, "Localizable.xcstrings"), "w").write(data)
