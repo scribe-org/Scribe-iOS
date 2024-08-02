@@ -21,6 +21,7 @@ import UIKit
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjTitleDict: [String: Any] = [
+  "English": enGetConjugationTitle,
   "French": frGetConjugationTitle,
   "German": deGetConjugationTitle,
   "Italian": itGetConjugationTitle,
@@ -32,6 +33,7 @@ let keyboardConjTitleDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjStateDict: [String: Any] = [
+  "English": enGetConjugationState,
   "French": frGetConjugationState,
   "German": deGetConjugationState,
   "Italian": itGetConjugationState,
@@ -43,6 +45,7 @@ let keyboardConjStateDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjLabelDict: [String: Any] = [
+  "English": enSetConjugationLabels,
   "French": frSetConjugationLabels,
   "German": deSetConjugationLabels,
   "Italian": itSetConjugationLabels,
@@ -278,7 +281,9 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
   conjViewShiftButtonsState = .leftInactive
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationState = .present
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationState = .indicativePresent
   } else if controllerLanguage == "German" {
     deConjugationState = .indicativePresent
@@ -331,7 +336,9 @@ func resetCaseDeclensionState() {
 
 /// Runs an action associated with the left view switch button of the conjugation state based on the keyboard language.
 func conjugationStateLeft() {
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationStateLeft()
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationStateLeft()
   } else if controllerLanguage == "German" {
     deConjugationStateLeft()
@@ -350,7 +357,9 @@ func conjugationStateLeft() {
 
 /// Runs an action associated with the right view switch button of the conjugation state based on the keyboard language.
 func conjugationStateRight() {
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationStateRight()
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationStateRight()
   } else if controllerLanguage == "German" {
     deConjugationStateRight()

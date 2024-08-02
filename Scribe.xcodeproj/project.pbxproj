@@ -101,6 +101,10 @@
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		5A0A4C352C2AF52D003ADE27 /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C342C2AF52D003ADE27 /* RadioTableViewCell.xib */; };
+		5A0A4C372C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4C362C2B0B28003ADE27 /* SelectionViewTemplateViewController.swift */; };
+		5A0A4C392C2C6AC0003ADE27 /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4C382C2C6AC0003ADE27 /* RadioTableViewCell.swift */; };
+		5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -753,6 +757,13 @@
 			remoteGlobalIDString = 38BD214B22D592CA00C6795D;
 			remoteInfo = typEmoji;
 		};
+		5A8FFB6C2C5A9D9C00F4B571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1AFDF0029CA66D00033BF27;
+			remoteInfo = English;
+		};
 		D109A210275B6888005E2271 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
@@ -835,6 +846,7 @@
 				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */,
 				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
 				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
+				5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */,
 				D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */,
 				D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */,
 				D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */,
@@ -1550,6 +1562,7 @@
 				D1AFDFC029CA68610033BF27 /* PBXTargetDependency */,
 				D1AFDFC329CA68660033BF27 /* PBXTargetDependency */,
 				D1AFE01529CA6F980033BF27 /* PBXTargetDependency */,
+				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
 			);
 			name = Scribe;
 			packageProductDependencies = (
@@ -2771,6 +2784,11 @@
 			isa = PBXTargetDependency;
 			target = 38BD214B22D592CA00C6795D /* German */;
 			targetProxy = 38BD215122D592CA00C6795D /* PBXContainerItemProxy */;
+		};
+		5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1AFDF0029CA66D00033BF27 /* English */;
+			targetProxy = 5A8FFB6C2C5A9D9C00F4B571 /* PBXContainerItemProxy */;
 		};
 		D109A211275B6888005E2271 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
