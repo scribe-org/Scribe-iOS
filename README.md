@@ -24,13 +24,13 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 
 # **Contents**
 
-- [Localization Coverage](#localization-coverage)
+- [Localization coverage](#localization-coverage)
 - [Contributing](#contributing)
 - [Community](#community)
 
 <a id="localization-coverage"></a>
 
-# Localization Coverage [`⇧`](#contents)
+# Localization coverage [`⇧`](#contents)
 
 <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
     <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
@@ -74,9 +74,13 @@ The [issue tracker for Scribe-i18n](https://github.com/scribe-org/Scribe-i18n/is
 
 5. Hit `Save and continue` when you're ready to move to the next string
 
-6. Maintainers will open up pull requests from [Weblate](https://weblate.org/en/) to this repo
+6. Maintainers will open up pull requests from [Weblate](https://weblate.org/en/) to the Scribe-i18n repo to bring in the new strings
+
+   - Changes are also automatically sent every 24 hours
 
 7. Scribe-i18n directories that are [Git subtrees](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges) in other Scribe application repos are then synched
+
+Thanks so much for your interest in supporting Scribe's localization!
 
 ### Adding source strings [`⇧`](#contents)
 
