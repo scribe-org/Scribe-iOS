@@ -159,7 +159,16 @@ extension SettingsViewController: UITableViewDelegate {
 
     switch section.sectionState {
     case .appLang:
-      openSettingsApp()
+      let preferredLanguages = NSLocale.preferredLanguages
+      if preferredLanguages.count == 1 {
+        let alert = UIAlertController(
+          title: "No languages installed", message: "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.", preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true)
+      } else {
+        openSettingsApp()
+      }
 
     case .specificLang:
       if let viewController = storyboard?.instantiateViewController(
