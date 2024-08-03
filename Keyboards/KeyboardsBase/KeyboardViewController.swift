@@ -2199,32 +2199,23 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) { // annotate word
-        if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-          commandState = .idle
-        }
-        emojisToShow = .zero
-        loadKeys()
-        selectedWordAnnotation(KVC: self)
-      } else {
-        if [.translate,
-            .conjugate,
-            .selectVerbConjugation,
-            .selectCaseDeclension,
-            .plural].contains(commandState) { // escape
-          commandState = .idle
-          deCaseVariantDeclensionState = .disabled
-        } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
-          commandState = .selectCommand
-          activateBtn(btn: translateKey)
-          activateBtn(btn: conjugateKey)
-          activateBtn(btn: pluralKey)
-        } else { // escape
-          commandState = .idle
-          deCaseVariantDeclensionState = .disabled
-        }
-        loadKeys()
+      if [.translate,
+          .conjugate,
+          .selectVerbConjugation,
+          .selectCaseDeclension,
+          .plural].contains(commandState) { // escape
+        commandState = .idle
+        deCaseVariantDeclensionState = .disabled
+      } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
+        commandState = .selectCommand
+        activateBtn(btn: translateKey)
+        activateBtn(btn: conjugateKey)
+        activateBtn(btn: pluralKey)
+      } else { // escape
+        commandState = .idle
+        deCaseVariantDeclensionState = .disabled
       }
+      loadKeys()
 
     case "return":
       if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
@@ -2283,6 +2274,9 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = translatePromptAndColorPlaceholder
+      if let selectedText = proxy.selectedText {
+        commandBar.text = translatePrompt + selectedText + commandCursor
+      }
 
     case "Conjugate":
       commandState = .conjugate
@@ -2290,6 +2284,9 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = conjugatePromptAndColorPlaceholder
+      if let selectedText = proxy.selectedText {
+        commandBar.text = conjugatePrompt + selectedText + commandCursor
+      }
 
     case "Plural":
       commandState = .plural
@@ -2302,6 +2299,9 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
       commandBar.textColor = keyCharColor
       commandBar.attributedText = pluralPromptAndColorPlaceholder
+      if let selectedText = proxy.selectedText {
+        commandBar.text = pluralPrompt + selectedText + commandCursor
+      }
 
     case "shiftFormsDisplayLeft":
       shiftLeft()
