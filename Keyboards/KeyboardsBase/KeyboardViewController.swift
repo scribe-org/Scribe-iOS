@@ -2751,7 +2751,7 @@ class KeyboardViewController: UIInputViewController {
         && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
         && proxy.documentContextBeforeInput?.count != 1
         && doubleSpacePeriodPossible {
-        // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
+        // The first condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
         if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
           proxy.deleteBackward()
           proxy.insertText(". ")
