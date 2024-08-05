@@ -45,7 +45,7 @@ let prepAnnotationConversionDict = [
   "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
 
-/// The base function for annotation that's accessed by `selectedWordAnnotation` and `typedWordAnnotation`.
+/// The base function for annotation that's accessed by `typedWordAnnotation`.
 ///
 /// - Parameters
 ///   - wordToAnnotate: the word that an annotation should be created for.
@@ -214,22 +214,6 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     } else {
       return
     }
-  }
-}
-
-/// Annotates a word after it's selected and the Scribe key is pressed.
-///
-/// - Parameters
-///   - KVC: the keyboard view controller.
-func selectedWordAnnotation(KVC: KeyboardViewController) {
-  wordToCheck = proxy.selectedText ?? ""
-  if !wordToCheck.isEmpty {
-    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-      wordToCheck = wordToCheck.lowercased()
-    }
-    wordAnnotation(wordToAnnotate: wordToCheck, KVC: KVC)
-  } else {
-    return
   }
 }
 
