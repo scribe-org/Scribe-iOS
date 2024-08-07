@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - conditional_job_check_files
-    if: needs.conditional_job_check_files.outputs.json_changed == 'True'
+    if: needs.conditional_job_check_files.outputs.json_changed == True
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5
