@@ -172,6 +172,17 @@ let languagesAbbrDict = [
   "Swedish": "sv"
 ]
 
+let languagesStringDict = [
+  "English": NSLocalizedString("_global.english", value: "English", comment: ""),
+  "French": NSLocalizedString("_global.french", value: "French", comment: ""),
+  "German": NSLocalizedString("_global.german", value: "German", comment: ""),
+  "Italian": NSLocalizedString("_global.italian", value: "Italian", comment: ""),
+  "Portuguese": NSLocalizedString("_global.portuguese", value: "Portuguese", comment: ""),
+  "Russian": NSLocalizedString("_global.russian", value: "Russian", comment: ""),
+  "Spanish": NSLocalizedString("_global.spanish", value: "Spanish", comment: ""),
+  "Swedish": NSLocalizedString("_global.swedish", value: "Swedish", comment: "")
+]
+
 /// Returns the abbreviation of the language for use in commands.
 func getControllerLanguageAbbr() -> String {
   guard let abbreviation = languagesAbbrDict[controllerLanguage] else {
