@@ -54,12 +54,12 @@ func queryPlural(commandBar: UILabel) {
 
   if wordToReturn != "isPlural" {
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
+      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else {
-    proxy.insertText(noun + " ")
+    proxy.insertText(noun + getOptionalSpace())
     commandState = .alreadyPlural
   }
 }

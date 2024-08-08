@@ -66,12 +66,12 @@ func returnDeclension(keyPressed: UIButton) {
   }
 
   if !(wordPressed.contains("/") || wordPressed.contains("∗")) {
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
   } else if controllerLanguage == "Russian" { // pronoun selection paths not implemented for Russian
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
@@ -244,19 +244,19 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
         // Don't return a space as well as we have a perfect verb and the cursor will be between.
         proxy.insertText(wordToReturn.capitalize())
       } else {
-        proxy.insertText(wordToReturn.capitalized + " ")
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
       }
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else if formsDisplayDimensions == .view2x2 {
     wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
+      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   }
 

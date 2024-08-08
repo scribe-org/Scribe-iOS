@@ -48,8 +48,8 @@ func queryTranslation(commandBar: UILabel) {
   }
 
   if inputWordIsCapitalized {
-    proxy.insertText(wordToReturn.capitalized + " ")
+    proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
   } else {
-    proxy.insertText(wordToReturn + " ")
+    proxy.insertText(wordToReturn + getOptionalSpace())
   }
 }
