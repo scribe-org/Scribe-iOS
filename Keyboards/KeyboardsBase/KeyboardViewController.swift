@@ -572,7 +572,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if ["French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if ["English", "French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       // We have to consider these different cases as the key always has to match.
@@ -1653,7 +1653,9 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPhone
           && key == "a"
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
             || (
@@ -1671,7 +1673,8 @@ class KeyboardViewController: UIInputViewController {
           && key == "a"
           && !usingExpandedKeyboard
           && (
-            controllerLanguage == "Portuguese"
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
           ) {
@@ -1681,7 +1684,9 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "@"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate) {
           leftPadding = keyWidth / 3
@@ -1690,7 +1695,9 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "€"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || commandState == .translate) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "€")
@@ -1786,7 +1793,9 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPhone
           && key == "l"
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
             || (
