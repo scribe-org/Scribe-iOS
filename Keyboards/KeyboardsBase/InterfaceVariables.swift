@@ -189,6 +189,17 @@ func getControllerLanguageAbbr() -> String {
   return abbreviation
 }
 
+func getControllerTranslateLang() -> String {
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
+  let key = getControllerLanguageAbbr() + "TranslateLanguage"
+  if let translateLang = userDefaults.string(forKey: key) {
+    return translateLang
+  } else {
+    userDefaults.set("en", forKey: key)
+    return "en"
+  }
+}
+
 // Dictionary for accessing keyboard abbreviations and layouts.
 let keyboardLayoutDict: [String: () -> Void] = [
   // Layouts for French checked within setFRKeyboardLayout.
@@ -210,7 +221,12 @@ func setKeyboard() {
 /// Sets the keyboard layouts given the chosen keyboard and device type.
 func setKeyboardLayout() {
   if commandState == .translate {
-    setENKeyboardLayout()
+    let translateLanguage = getKeyInDict(givenValue: getControllerTranslateLang(), dict: languagesAbbrDict)
+    if let setLayoutFxn = keyboardLayoutDict[translateLanguage] {
+      setLayoutFxn()
+    } else {
+      setENKeyboardLayout()
+    }
   } else if let setLayoutFxn = keyboardLayoutDict[controllerLanguage] {
     setLayoutFxn()
   }
