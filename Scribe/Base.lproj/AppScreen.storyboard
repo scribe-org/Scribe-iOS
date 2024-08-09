@@ -576,10 +576,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vhy-kK-VNo"/>
+                    <connections>
+                        <segue destination="oOM-lN-cEA" kind="show" identifier="Select option within keyboard settings" id="5Pu-48-MeW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="25" y="-100"/>
+        </scene>
+        <!--Selection View Template View Controller-->
+        <scene sceneID="Y04-va-yC3">
+            <objects>
+                <tableViewController storyboardIdentifier="SelectionViewTemplateViewController" id="oOM-lN-cEA" userLabel="Selection View Template View Controller" customClass="SelectionViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="SS2-uh-4eH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="scribeAppBackground"/>
+                        <connections>
+                            <outlet property="dataSource" destination="oOM-lN-cEA" id="o1H-zm-BFJ"/>
+                            <outlet property="delegate" destination="oOM-lN-cEA" id="IoE-QL-Kun"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ApL-7K-SMa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2o-Rh-3Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="-100"/>
         </scene>
     </scenes>
     <color key="tintColor" name="scribeAppBackground"/>

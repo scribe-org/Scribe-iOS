@@ -40,7 +40,15 @@ func queryTranslation(commandBar: UILabel) {
   // Check to see if the input was uppercase to return an uppercase conjugation.
   inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase
 
-  wordToReturn = LanguageDBManager.shared.queryTranslation(of: wordToTranslate.lowercased())[0]
+  var langCode = "en"
+  if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+    if let selectedLang = userDefaults.string(forKey: getControllerLanguageAbbr() + "TranslateLanguage") {
+      langCode = selectedLang
+    } else {
+      userDefaults.set("en", forKey: getControllerLanguageAbbr() + "TranslateLanguage")
+    }
+  }
+  wordToReturn = LanguageDBManager.shared.queryTranslation(of: wordToTranslate.lowercased(), langCode: langCode)[0]
 
   guard !wordToReturn.isEmpty else {
     commandState = .invalid

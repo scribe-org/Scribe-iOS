@@ -31,7 +31,7 @@ class LanguageDBManager {
 
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue() -> DatabaseQueue {
-    let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
+    let dbName = "\(String(describing: getControllerLanguageAbbr().uppercased()))LanguageData"
     let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
     let fileManager = FileManager.default
     do {
@@ -329,13 +329,13 @@ extension LanguageDBManager {
   }
 
   /// Query the translation of word in `translations`.
-  func queryTranslation(of word: String) -> [String] {
+  func queryTranslation(of word: String, langCode: String) -> [String] {
     let query = """
     SELECT
       *
 
     FROM
-      translations
+      \(langCode)_translations
 
     WHERE
       word = ?

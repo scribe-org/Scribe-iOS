@@ -29,6 +29,8 @@ final class TableViewTemplateViewController: BaseTableViewController {
   private var tableData: [ParentTableCellModel] = []
   private var parentSection: Section?
 
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
+
   private var langCode: String {
     guard let parentSection else {
       return ""
@@ -57,6 +59,17 @@ final class TableViewTemplateViewController: BaseTableViewController {
 
     title = parentSection.sectionTitle
   }
+
+  // Refreshes to check for changes when a translation language is selected
+  override func viewWillAppear(_ animated: Bool) {
+    for cell in tableView.visibleCells as! [InfoChildTableViewCell] {
+      if cell.section?.sectionState == .translateLang {
+        let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
+        let currentLang = "_global." + langTranslateLanguage.lowercased()
+        cell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
+      }
+    }
+  }
 }
 
 // MARK: UITableViewDataSource
@@ -74,5 +87,28 @@ extension TableViewTemplateViewController {
     cell.backgroundColor = lightWhiteDarkBlackColor
 
     return cell
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let tableSection = tableData[indexPath.section]
+    let section = tableSection.section[indexPath.row]
+
+    if section.sectionState == .translateLang {
+      if let viewController = storyboard?.instantiateViewController(
+        identifier: "SelectionViewTemplateViewController"
+      ) as? SelectionViewTemplateViewController {
+        var data = SettingsTableData.translateLangSettingsData
+
+        // Removes keyboard language from possible translation languages
+        let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
+          s.sectionState == .specificLang(langCode)
+        }) ?? -1
+        data[0].section.remove(at: langCodeIndex)
+
+        viewController.configureTable(for: data, parentSection: section, langCode: langCode)
+
+        navigationController?.pushViewController(viewController, animated: true)
+      }
+    }
   }
 }

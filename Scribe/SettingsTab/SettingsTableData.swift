@@ -43,6 +43,16 @@ enum SettingsTableData {
 
   static let languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
+      headingTitle: NSLocalizedString("app.settings.translation", value: "Translation", comment: ""),
+      section: [
+        Section(
+          sectionTitle: NSLocalizedString("app.settings.translation.translationLang", value: "Translation language", comment: ""),
+          sectionState: .translateLang
+        )
+      ],
+      hasDynamicData: nil
+    ),
+    ParentTableCellModel(
       headingTitle: NSLocalizedString("app.settings.layout", value: "Layout", comment: ""),
       section: [
         Section(
@@ -75,6 +85,14 @@ enum SettingsTableData {
     )
   ]
 
+  static let translateLangSettingsData: [ParentTableCellModel] = [
+    ParentTableCellModel(
+      headingTitle: NSLocalizedString("app.settings.translation.translationLang.caption", value: "Choose a language to translate from", comment: ""),
+      section: getTranslateLanguages(),
+      hasDynamicData: nil
+    )
+  ]
+
   static func getInstalledKeyboardsSections() -> [Section] {
     var installedKeyboards = [String]()
 
@@ -93,6 +111,24 @@ enum SettingsTableData {
     var sections = [Section]()
 
     for lang in installedKeyboards {
+      guard let abbreviation = languagesAbbrDict[lang] else {
+        fatalError("Abbreviation not found for language: \(lang)")
+      }
+      let newSection = Section(
+        sectionTitle: languagesStringDict[lang]!,
+        sectionState: .specificLang(abbreviation)
+      )
+
+      sections.append(newSection)
+    }
+
+    return sections
+  }
+
+  static func getTranslateLanguages() -> [Section] {
+    var sections = [Section]()
+
+    for lang in languagesAbbrDict.keys.sorted() {
       guard let abbreviation = languagesAbbrDict[lang] else {
         fatalError("Abbreviation not found for language: \(lang)")
       }
