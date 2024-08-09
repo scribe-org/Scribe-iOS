@@ -114,9 +114,8 @@ enum SettingsTableData {
       guard let abbreviation = languagesAbbrDict[lang] else {
         fatalError("Abbreviation not found for language: \(lang)")
       }
-      let key = "_global.\(lang.lowercased())"
       let newSection = Section(
-        sectionTitle: NSLocalizedString(key, value: lang, comment: ""),
+        sectionTitle: languagesStringDict[lang]!,
         sectionState: .specificLang(abbreviation)
       )
 
@@ -133,9 +132,8 @@ enum SettingsTableData {
       guard let abbreviation = languagesAbbrDict[lang] else {
         fatalError("Abbreviation not found for language: \(lang)")
       }
-      let key = "_global.\(lang.lowercased())"
       let newSection = Section(
-        sectionTitle: NSLocalizedString(key, value: lang, comment: ""),
+        sectionTitle: languagesStringDict[lang]!,
         sectionState: .specificLang(abbreviation)
       )
 

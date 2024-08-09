@@ -20,7 +20,7 @@
 import UIKit
 
 extension UIColor {
-  // MARK: - Init from ScribeColor
+  // MARK: Init from ScribeColor
 
   /// Creates `UIColor` from passed `ScribeColor`
   /// - Parameter color: The `UIColor`.

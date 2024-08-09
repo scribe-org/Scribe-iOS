@@ -21,7 +21,7 @@ import UIKit
 import SwiftUI
 
 final class SettingsViewController: UIViewController {
-  // MARK: - Constants
+  // MARK: Constants
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
@@ -40,7 +40,7 @@ final class SettingsViewController: UIViewController {
     }
   }
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var footerFrame: UIView!
   @IBOutlet var footerButton: UIButton!
@@ -48,7 +48,7 @@ final class SettingsViewController: UIViewController {
 
   var tableData = SettingsTableData.settingsTableData
 
-  // MARK: - Functions
+  // MARK: Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -121,7 +121,7 @@ final class SettingsViewController: UIViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource {
   func numberOfSections(in _: UITableView) -> Int {
@@ -150,7 +150,7 @@ extension SettingsViewController: UITableViewDataSource {
   }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -159,7 +159,16 @@ extension SettingsViewController: UITableViewDelegate {
 
     switch section.sectionState {
     case .appLang:
-      openSettingsApp()
+      let preferredLanguages = NSLocale.preferredLanguages
+      if preferredLanguages.count == 1 {
+        let alert = UIAlertController(
+          title: "No languages installed", message: "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.", preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true)
+      } else {
+        openSettingsApp()
+      }
 
     case .specificLang:
       if let viewController = storyboard?.instantiateViewController(
@@ -167,37 +176,42 @@ extension SettingsViewController: UITableViewDelegate {
       ) as? TableViewTemplateViewController {
         // Copy base settings.
         var data = SettingsTableData.languageSettingsData
-
-        // Check if the device is an iPad to determine period and comma on the ABC characters option.
-        let periodCommaOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.periodAndComma", value: "Period and comma on ABC", comment: ""))
-        }) ?? -1
-
+        // Check if the device is an iPad to remove the Layout Section.
         if DeviceType.isPad {
-          let periodCommaSettings = data[1].section.remove(at: periodCommaOptionIndex)
-          print(periodCommaSettings)
-        }
+          for menuOption in data[1].section {
+            if menuOption.sectionState == .none(.toggleAccentCharacters) ||
+                menuOption.sectionState == .none(.toggleCommaAndPeriod) {
+              data[1].section.remove(at: 1)
+            }
+          }
+          if data[1].section.isEmpty {
+            data.remove(at: 1)
+          }
+        } else {
+          // Languages where we can disable accent keys.
+          let accentKeyLanguages: [String] = [
+            languagesStringDict["German"]!,
+            languagesStringDict["Spanish"]!,
+            languagesStringDict["Swedish"]!
+          ]
 
-        // Languages where we can disable accent keys.
-        let accentKeyLanguages: [String] = ["Swedish", "German", "Spanish"]
-        let accentKeyOptionIndex = SettingsTableData.languageSettingsData[0].section.firstIndex(where: { s in
-          s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
-        }) ?? -1
+          let accentKeyOptionIndex = SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
+            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
+          }) ?? -1
 
-        // If there are no accent keys we can remove the `Disable accent characters` option.
-        if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
-          // As there are no accent keys we can remove the `Disable accent characters` option.
-          let accentKeySettings = data[1].section.remove(at: accentKeyOptionIndex)
-          print(accentKeySettings)
-        } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-          data[1].section.insert(
-            Section(
+          // If there are no accent keys we can remove the `Disable accent characters` option.
+          if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
+            data[1].section.remove(at: accentKeyOptionIndex)
+          } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
+            data[1].section.insert(Section(
               sectionTitle: NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
               imageString: "info.circle",
               hasToggle: true,
-              sectionState: .none(.toggleAccentCharacters)
+              sectionState: .none(.toggleAccentCharacters),
+              shortDescription: NSLocalizedString("app.settings.layout.disableAccentCharacters.description", value: "Include accented letter keys on the primary keyboard layout.", comment: "")
             ), at: 1
-          )
+            )
+          }
         }
 
         viewController.configureTable(for: data, parentSection: section)
@@ -256,7 +270,7 @@ extension SettingsViewController: UITableViewDelegate {
   }
 }
 
-// MARK: - TipCardView
+// MARK: TipCardView
 extension SettingsViewController {
   private func showTipCardView() {
     let overlayView = SettingsTipCardView(
@@ -288,11 +302,12 @@ extension SettingsViewController {
     view.layer.shadowOpacity = 0.0
     view.layer.shadowOffset = CGSize(width: 0, height: 0)
 
-    UIView.animate(withDuration: duration,
-                   delay: 0,
-                   options: [.curveEaseOut, .autoreverse],
-                   animations: {
-      view.layer.shadowOpacity = 0.6
-    }, completion: nil)
+    UIView.animate(
+      withDuration: duration,
+      delay: 0,
+      options: [.curveEaseOut, .autoreverse],
+      animations: {
+        view.layer.shadowOpacity = 0.6
+      }, completion: nil)
   }
 }

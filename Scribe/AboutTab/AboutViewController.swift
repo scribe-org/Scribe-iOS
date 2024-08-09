@@ -57,7 +57,7 @@ final class AboutViewController: BaseTableViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,7 +74,7 @@ extension AboutViewController {
   }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: UITableViewDelegate
 
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -194,7 +194,7 @@ extension AboutViewController {
   }
 }
 
-// MARK: - MFMailComposeViewControllerDelegate
+// MARK: MFMailComposeViewControllerDelegate
 
 extension AboutViewController: MFMailComposeViewControllerDelegate {
   func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
@@ -202,7 +202,7 @@ extension AboutViewController: MFMailComposeViewControllerDelegate {
   }
 }
 
-// MARK: - TipCardView
+// MARK: TipCardView
 extension AboutViewController {
   private func showTipCardView() {
     let overlayView = AboutTipCardView(

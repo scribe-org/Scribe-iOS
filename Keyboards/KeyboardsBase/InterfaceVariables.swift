@@ -22,7 +22,7 @@ import UIKit
 // A proxy into which text is typed.
 var proxy: UITextDocumentProxy!
 
-// MARK: - Display Variables
+// MARK: Display Variables
 
 // Variables for the keyboard and its appearance.
 var keyboard = [[String]]()
@@ -170,6 +170,17 @@ let languagesAbbrDict = [
   "Russian": "ru",
   "Spanish": "es",
   "Swedish": "sv"
+]
+
+let languagesStringDict = [
+  "English": NSLocalizedString("_global.english", value: "English", comment: ""),
+  "French": NSLocalizedString("_global.french", value: "French", comment: ""),
+  "German": NSLocalizedString("_global.german", value: "German", comment: ""),
+  "Italian": NSLocalizedString("_global.italian", value: "Italian", comment: ""),
+  "Portuguese": NSLocalizedString("_global.portuguese", value: "Portuguese", comment: ""),
+  "Russian": NSLocalizedString("_global.russian", value: "Russian", comment: ""),
+  "Spanish": NSLocalizedString("_global.spanish", value: "Spanish", comment: ""),
+  "Swedish": NSLocalizedString("_global.swedish", value: "Swedish", comment: "")
 ]
 
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {

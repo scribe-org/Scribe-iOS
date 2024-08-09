@@ -24,13 +24,13 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 
 # **Contents**
 
-- [Localization Coverage](#localization-coverage)
+- [Localization coverage](#localization-coverage)
 - [Contributing](#contributing)
 - [Community](#community)
 
 <a id="localization-coverage"></a>
 
-# Localization Coverage [`⇧`](#contents)
+# Localization coverage [`⇧`](#contents)
 
 <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
     <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
@@ -74,9 +74,22 @@ The [issue tracker for Scribe-i18n](https://github.com/scribe-org/Scribe-i18n/is
 
 5. Hit `Save and continue` when you're ready to move to the next string
 
-6. Maintainers will open up pull requests from [Weblate](https://weblate.org/en/) to this repo
+6. Maintainers will open up pull requests from [Weblate](https://weblate.org/en/) to the Scribe-i18n repo to bring in the new strings
 
-7. Scribe-i18n directories that are [Git subtrees](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges) in other Scribe application repos are then synched
+   - Changes are also automatically sent every 24 hours
+
+7. Scribe-i18n directories that are [Git subtrees](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges) in other Scribe application repos are then synched. For each project using Scribe-i18n:
+
+   - Navigate to the root of the Scribe project's repo
+   - To load into the project the latest Scribe-i18n updates, run the following - where `subtree-directory` is the directory within the repo structure with the Scribe-i18n subtree (refer to the `Localization` section of the project's `CONTRIBUTING.md`):
+
+      ```bash
+      git subtree pull --prefix <subtree-directory> git@github.com:scribe-org/Scribe-i18n.git main --squash
+      ```
+
+   - From the above command, two commits are then auto-generated. Finally, create the PR to the given project to bring in the Scribe-i18n updates.
+
+Thanks so much for your interest in supporting Scribe's localization!
 
 ### Adding source strings [`⇧`](#contents)
 
@@ -113,6 +126,16 @@ git remote add upstream https://github.com/scribe-org/Scribe-i18n.git
   - `upstream` (Scribe-i18n repository)
 
 If all looks good, then you're ready to start adding localizable key-string pairs via pull requests!
+
+### Adding Scribe-i18n to projects [`⇧`](#contents)
+
+To use Scribe-i18n within another repository, run the following command from the root directory of the project to add Scribe-i18n as a subtree:
+
+```bash
+git subtree add --prefix <subtree-directory> git@github.com:scribe-org/Scribe-i18n.git main --squash
+```
+
+In the command, the value for `subtree-directory` is a directory within the repo structure of the project. Which directory to use will be dependent on the stack of the project and how i18n files will be consumed. Typically, this is simply a directory named `i18n` somewhere in the repo structure. Refer to documentation of the tool that will consume the i18n files to determine what it should be.
 
 ### Pull Requests [`⇧`](#contents)
 
