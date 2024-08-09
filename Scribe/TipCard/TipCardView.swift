@@ -28,8 +28,6 @@ struct TipCardView: View {
   @Binding var tipCardState: Bool
   var onDismiss: (() -> Void)?
   let ok = "OK"
-
-  let ok = "OK"
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: cardCornerRadius)
