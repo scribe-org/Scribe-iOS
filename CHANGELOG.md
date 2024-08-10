@@ -12,6 +12,11 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Upcoming] Scribe-iOS 3.2.0
 
+### ♻️ Code Refactoring
+
+- All orphaned documentation comments have been removed from the codebase ([#425](https://github.com/scribe-org/Scribe-iOS/issues/425)).
+- All if clauses within for loops have been removed from the codebase ([#428](https://github.com/scribe-org/Scribe-iOS/issues/428)).
+
 # Scribe-iOS 3.1.1
 
 ### ✨ New Features
