@@ -494,35 +494,6 @@
         }
       }
     },
-    "app.about.mastodon" : {
-      "comment" : "",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Folge uns auf Mastodon"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Siguenos en Mastodon"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Följ oss på Mastodon"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Follow us on Mastodon"
-          }
-        }
-      }
-    },
     "app.about.matrix" : {
       "comment" : "",
       "localizations" : {
@@ -657,7 +628,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Puntúa a Scribe"
+            "value" : "Rate Scribe"
           }
         },
         "sv" : {
@@ -1076,6 +1047,7 @@
     },
     "app.install" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1656,6 +1628,7 @@
     },
     "app.settings.oneDeviceLanguage.message" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1685,6 +1658,7 @@
     },
     "app.settings.oneDeviceLanguage.title" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1708,64 +1682,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Endast ett enhetsspråk"
-          }
-        }
-      }
-    },
-    "app.settings.oneDeviceLanguage.message" : {
-      "comment" : "",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Auf Ihrem Gerät ist nur eine Sprache installiert. Bitte installieren Sie weitere Sprachen in den Einstellungen. Anschließend können Sie verschiedene Lokalisierungen von Scribe auswählen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Solo tienes un idioma instalado en tu dispositivo. Instala más idiomas en Configuración y luego podrás seleccionar diferentes localizaciones de Scribe."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Du har bara ett språk installerat på din enhet. Installera fler språk i Inställningar och sedan kan du välja olika lokaliseringar av Scribe."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe."
-          }
-        }
-      }
-    },
-    "app.settings.oneDeviceLanguage.title" : {
-      "comment" : "",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Nur eine Gerätesprache"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Solo un idioma del dispositivo"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Endast ett enhetsspråk"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Only one device language"
           }
         }
       }
@@ -1801,6 +1717,7 @@
     },
     "app.settings.translation" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1830,6 +1747,7 @@
     },
     "app.settings.translation.translateLang" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1859,6 +1777,7 @@
     },
     "app.settings.translation.translateLang.caption" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1970,7 +1889,8 @@
             "state" : "",
             "value" : "Du kan skapa ett konto på wikidata.org för att gå med i communityn som stöder Scribe och så många andra projekt. Hjälp oss att ge gratis information till världen!"
           }
-        }      }
+        }
+      }
     }
   },
   "version" : "1.0"
