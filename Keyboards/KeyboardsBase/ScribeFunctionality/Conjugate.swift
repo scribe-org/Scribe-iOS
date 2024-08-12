@@ -66,12 +66,12 @@ func returnDeclension(keyPressed: UIButton) {
   }
 
   if !(wordPressed.contains("/") || wordPressed.contains("∗")) {
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
   } else if controllerLanguage == "Russian" { // pronoun selection paths not implemented for Russian
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
@@ -204,7 +204,12 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
     let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
     verbToConjugate = String(commandBarText[startIndex ..< endIndex])
   }
-  verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
+
+  return isVerbInConjugationTable(queriedVerbToConjugate: verbToConjugate)
+}
+
+func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
+  verbToConjugate = String(queriedVerbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   let firstLetter = verbToConjugate.substring(toIdx: 1)
@@ -244,19 +249,19 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
         // Don't return a space as well as we have a perfect verb and the cursor will be between.
         proxy.insertText(wordToReturn.capitalize())
       } else {
-        proxy.insertText(wordToReturn.capitalized + " ")
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
       }
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else if formsDisplayDimensions == .view2x2 {
     wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
+      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   }
 
