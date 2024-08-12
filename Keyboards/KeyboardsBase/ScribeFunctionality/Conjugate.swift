@@ -204,7 +204,12 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
     let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
     verbToConjugate = String(commandBarText[startIndex ..< endIndex])
   }
-  verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
+
+  return isVerbInConjugationTable(queriedVerbToConjugate: verbToConjugate)
+}
+
+func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
+  verbToConjugate = String(queriedVerbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   let firstLetter = verbToConjugate.substring(toIdx: 1)

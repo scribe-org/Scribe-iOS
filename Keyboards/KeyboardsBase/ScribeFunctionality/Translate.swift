@@ -35,7 +35,12 @@ func queryTranslation(commandBar: UILabel) {
     let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
     wordToTranslate = String(commandBarText[startIndex ..< endIndex])
   }
-  wordToTranslate = String(wordToTranslate.trailingSpacesTrimmed)
+
+  queryWordToTranslate(queriedWordToTranslate: wordToTranslate)
+}
+
+func queryWordToTranslate(queriedWordToTranslate: String) {
+  wordToTranslate = String(queriedWordToTranslate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase

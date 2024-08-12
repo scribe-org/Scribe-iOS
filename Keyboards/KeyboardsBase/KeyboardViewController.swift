@@ -2267,40 +2267,65 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "Translate":
-      commandState = .translate
-      // Always start in letters with a new keyboard.
-      keyboardState = .letters
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = translatePromptAndColorPlaceholder
       if let selectedText = proxy.selectedText {
-        commandBar.text = translatePrompt + selectedText + commandCursor
+        queryWordToTranslate(queriedWordToTranslate: selectedText)
+        autoActionState = .suggest
+        commandState = .idle
+        autoCapAtStartOfProxy()
+        loadKeys()
+        conditionallyDisplayAnnotation()
+      } else {
+        commandState = .translate
+        // Always start in letters with a new keyboard.
+        keyboardState = .letters
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = translatePromptAndColorPlaceholder
       }
 
     case "Conjugate":
-      commandState = .conjugate
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = conjugatePromptAndColorPlaceholder
       if let selectedText = proxy.selectedText {
-        commandBar.text = conjugatePrompt + selectedText + commandCursor
+        resetVerbConjugationState()
+        let conjugationTblTriggered = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
+        if conjugationTblTriggered {
+          commandState = .selectVerbConjugation
+          loadKeys() // go to conjugation view
+        } else {
+          commandState = .invalid
+          loadKeys()
+          autoCapAtStartOfProxy()
+          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.isShowingInfoButton = true
+          commandBar.textColor = keyCharColor
+        }
+      } else {
+        commandState = .conjugate
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = conjugatePromptAndColorPlaceholder
       }
 
     case "Plural":
-      commandState = .plural
-      if controllerLanguage == "German" { // capitalize for nouns
-        if shiftButtonState == .normal {
-          shiftButtonState = .shift
-        }
-      }
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = pluralPromptAndColorPlaceholder
       if let selectedText = proxy.selectedText {
-        commandBar.text = pluralPrompt + selectedText + commandCursor
+        queryPluralNoun(queriedNoun: selectedText)
+        autoActionState = .suggest
+        commandState = .idle
+        autoCapAtStartOfProxy()
+        loadKeys()
+        conditionallyDisplayAnnotation()
+      } else {
+        commandState = .plural
+        if controllerLanguage == "German" { // capitalize for nouns
+          if shiftButtonState == .normal {
+            shiftButtonState = .shift
+          }
+        }
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = pluralPromptAndColorPlaceholder
       }
 
     case "shiftFormsDisplayLeft":
