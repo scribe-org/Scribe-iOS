@@ -2269,11 +2269,22 @@ class KeyboardViewController: UIInputViewController {
     case "Translate":
       if let selectedText = proxy.selectedText {
         queryWordToTranslate(queriedWordToTranslate: selectedText)
-        autoActionState = .suggest
-        commandState = .idle
-        autoCapAtStartOfProxy()
-        loadKeys()
-        conditionallyDisplayAnnotation()
+
+        if commandState == .invalid { // invalid state
+          loadKeys()
+          proxy.insertText(selectedText)
+          autoCapAtStartOfProxy()
+          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.isShowingInfoButton = true
+          commandBar.textColor = keyCharColor
+          return
+        } else { // functional commands above
+          autoActionState = .suggest
+          commandState = .idle
+          autoCapAtStartOfProxy()
+          loadKeys()
+          conditionallyDisplayAnnotation()
+        }
       } else {
         commandState = .translate
         // Always start in letters with a new keyboard.
@@ -2287,17 +2298,20 @@ class KeyboardViewController: UIInputViewController {
     case "Conjugate":
       if let selectedText = proxy.selectedText {
         resetVerbConjugationState()
-        let conjugationTblTriggered = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
-        if conjugationTblTriggered {
+        let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
+        if verbInTable {
           commandState = .selectVerbConjugation
           loadKeys() // go to conjugation view
+          return
         } else {
           commandState = .invalid
           loadKeys()
+          proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
           commandBar.text = commandPromptSpacing + invalidCommandMsg
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
+          return
         }
       } else {
         commandState = .conjugate
@@ -2310,11 +2324,30 @@ class KeyboardViewController: UIInputViewController {
     case "Plural":
       if let selectedText = proxy.selectedText {
         queryPluralNoun(queriedNoun: selectedText)
-        autoActionState = .suggest
-        commandState = .idle
-        autoCapAtStartOfProxy()
-        loadKeys()
-        conditionallyDisplayAnnotation()
+
+        if [.invalid, .alreadyPlural].contains(commandState) {
+          loadKeys()
+
+          if commandState == .invalid {
+            proxy.insertText(selectedText)
+            commandBar.text = commandPromptSpacing + invalidCommandMsg
+            commandBar.isShowingInfoButton = true
+          } else {
+            commandBar.isShowingInfoButton = false
+            if commandState == .alreadyPlural {
+              commandBar.text = commandPromptSpacing + alreadyPluralMsg
+            }
+          }
+          autoCapAtStartOfProxy()
+          commandBar.textColor = keyCharColor
+          return
+        } else { // functional commands above
+          autoActionState = .suggest
+          commandState = .idle
+          autoCapAtStartOfProxy()
+          loadKeys()
+          conditionallyDisplayAnnotation()
+        }
       } else {
         commandState = .plural
         if controllerLanguage == "German" { // capitalize for nouns
