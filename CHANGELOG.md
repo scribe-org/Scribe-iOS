@@ -12,6 +12,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Upcoming] Scribe-iOS 3.2.0
 
+### ✨ New Features
+
+- Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
+
 ### ♻️ Code Refactoring
 
 - All orphaned documentation comments have been removed from the codebase ([#425](https://github.com/scribe-org/Scribe-iOS/issues/425)).
