@@ -13,7 +13,6 @@ disabled_rules:
   # WARNINGS IN PROJECT CURRENTLY
   - todo
   - blanket_disable_command
-  - for_where
 
 identifier_name:
   min_length: 1

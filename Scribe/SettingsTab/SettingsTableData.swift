@@ -83,11 +83,9 @@ enum SettingsTableData {
     guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else { return [] }
 
     let customKeyboardExtension = appBundleIdentifier + "."
-    for keyboard in keyboards {
-      if keyboard.hasPrefix(customKeyboardExtension) {
+    for keyboard in keyboards where keyboard.hasPrefix(customKeyboardExtension) {
         let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
         installedKeyboards.append(lang.capitalized)
-      }
     }
 
     var sections = [Section]()
