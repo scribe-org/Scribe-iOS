@@ -1929,10 +1929,8 @@ class KeyboardViewController: UIInputViewController {
       // Add UILexicon words including unpaired first and last names from Contacts to autocompletions.
       requestSupplementaryLexicon { (userLexicon: UILexicon?) in
         if let lexicon = userLexicon {
-          for item in lexicon.entries {
-            if item.documentText.count > 1 {
+          for item in lexicon.entries where item.documentText.count > 1 {
               LanguageDBManager.shared.insertAutocompleteLexion(of: item.documentText)
-            }
           }
         }
       }
@@ -2208,32 +2206,23 @@ class KeyboardViewController: UIInputViewController {
 
     switch originalKey {
     case "Scribe":
-      if proxy.selectedText != nil && [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) { // annotate word
-        if [.selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-          commandState = .idle
-        }
-        emojisToShow = .zero
-        loadKeys()
-        selectedWordAnnotation(KVC: self)
-      } else {
-        if [.translate,
-            .conjugate,
-            .selectVerbConjugation,
-            .selectCaseDeclension,
-            .plural].contains(commandState) { // escape
-          commandState = .idle
-          deCaseVariantDeclensionState = .disabled
-        } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
-          commandState = .selectCommand
-          activateBtn(btn: translateKey)
-          activateBtn(btn: conjugateKey)
-          activateBtn(btn: pluralKey)
-        } else { // escape
-          commandState = .idle
-          deCaseVariantDeclensionState = .disabled
-        }
-        loadKeys()
+      if [.translate,
+          .conjugate,
+          .selectVerbConjugation,
+          .selectCaseDeclension,
+          .plural].contains(commandState) { // escape
+        commandState = .idle
+        deCaseVariantDeclensionState = .disabled
+      } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
+        commandState = .selectCommand
+        activateBtn(btn: translateKey)
+        activateBtn(btn: conjugateKey)
+        activateBtn(btn: pluralKey)
+      } else { // escape
+        commandState = .idle
+        deCaseVariantDeclensionState = .disabled
       }
+      loadKeys()
 
     case "return":
       if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
@@ -2285,32 +2274,99 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "Translate":
-      commandState = .translate
-      // Always start in letters with a new keyboard.
-      keyboardState = .letters
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = translatePromptAndColorPlaceholder
+      if let selectedText = proxy.selectedText {
+        queryWordToTranslate(queriedWordToTranslate: selectedText)
+
+        if commandState == .invalid { // invalid state
+          loadKeys()
+          proxy.insertText(selectedText)
+          autoCapAtStartOfProxy()
+          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.isShowingInfoButton = true
+          commandBar.textColor = keyCharColor
+          return
+        } else { // functional commands above
+          autoActionState = .suggest
+          commandState = .idle
+          autoCapAtStartOfProxy()
+          loadKeys()
+          conditionallyDisplayAnnotation()
+        }
+      } else {
+        commandState = .translate
+        // Always start in letters with a new keyboard.
+        keyboardState = .letters
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = translatePromptAndColorPlaceholder
+      }
 
     case "Conjugate":
-      commandState = .conjugate
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = conjugatePromptAndColorPlaceholder
+      if let selectedText = proxy.selectedText {
+        resetVerbConjugationState()
+        let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
+        if verbInTable {
+          commandState = .selectVerbConjugation
+          loadKeys() // go to conjugation view
+          return
+        } else {
+          commandState = .invalid
+          loadKeys()
+          proxy.insertText(selectedText)
+          autoCapAtStartOfProxy()
+          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.isShowingInfoButton = true
+          commandBar.textColor = keyCharColor
+          return
+        }
+      } else {
+        commandState = .conjugate
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = conjugatePromptAndColorPlaceholder
+      }
 
     case "Plural":
-      commandState = .plural
-      if controllerLanguage == "German" { // capitalize for nouns
-        if shiftButtonState == .normal {
-          shiftButtonState = .shift
+      if let selectedText = proxy.selectedText {
+        queryPluralNoun(queriedNoun: selectedText)
+
+        if [.invalid, .alreadyPlural].contains(commandState) {
+          loadKeys()
+
+          if commandState == .invalid {
+            proxy.insertText(selectedText)
+            commandBar.text = commandPromptSpacing + invalidCommandMsg
+            commandBar.isShowingInfoButton = true
+          } else {
+            commandBar.isShowingInfoButton = false
+            if commandState == .alreadyPlural {
+              commandBar.text = commandPromptSpacing + alreadyPluralMsg
+            }
+          }
+          autoCapAtStartOfProxy()
+          commandBar.textColor = keyCharColor
+          return
+        } else { // functional commands above
+          autoActionState = .suggest
+          commandState = .idle
+          autoCapAtStartOfProxy()
+          loadKeys()
+          conditionallyDisplayAnnotation()
         }
+      } else {
+        commandState = .plural
+        if controllerLanguage == "German" { // capitalize for nouns
+          if shiftButtonState == .normal {
+            shiftButtonState = .shift
+          }
+        }
+        conditionallyHideEmojiDividers()
+        loadKeys()
+        commandBar.textColor = keyCharColor
+        commandBar.attributedText = pluralPromptAndColorPlaceholder
       }
-      conditionallyHideEmojiDividers()
-      loadKeys()
-      commandBar.textColor = keyCharColor
-      commandBar.attributedText = pluralPromptAndColorPlaceholder
 
     case "shiftFormsDisplayLeft":
       shiftLeft()
@@ -2760,7 +2816,7 @@ class KeyboardViewController: UIInputViewController {
         && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
         && proxy.documentContextBeforeInput?.count != 1
         && doubleSpacePeriodPossible {
-        // The fist condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
+        // The first condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
         if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
           proxy.deleteBackward()
           proxy.insertText(". ")

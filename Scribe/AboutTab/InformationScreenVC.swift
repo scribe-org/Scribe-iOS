@@ -139,16 +139,12 @@ class InformationScreenVC: UIViewController {
 
   func setCornerImageView() {
     if DeviceType.isPhone {
-      for constraint in cornerImageView.constraints {
-        if constraint.identifier == "cornerImageView" {
+      for constraint in cornerImageView.constraints where constraint.identifier == "cornerImageView" {
           constraint.constant = 70
-        }
       }
     } else if DeviceType.isPad {
-      for constraint in cornerImageView.constraints {
-        if constraint.identifier == "cornerImageView" {
+      for constraint in cornerImageView.constraints where constraint.identifier == "cornerImageView" {
           constraint.constant = 125
-        }
       }
     }
   }
