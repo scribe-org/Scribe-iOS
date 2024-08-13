@@ -257,12 +257,45 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
     } else {
       proxy.insertText(wordToReturn + getOptionalSpace())
     }
+  } else if formsDisplayDimensions == .view3x1 {
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: getOptionalSpace())
+
+    if inputWordIsCapitalized {
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
+    } else {
+      proxy.insertText(wordToReturn + getOptionalSpace())
+    }
   } else if formsDisplayDimensions == .view2x2 {
     wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
+    } else {
+      proxy.insertText(wordToReturn + getOptionalSpace())
+    }
+  } else if formsDisplayDimensions == .view1x2 {
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
+
+    if inputWordIsCapitalized {
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
     } else {
       proxy.insertText(wordToReturn + getOptionalSpace())
     }
