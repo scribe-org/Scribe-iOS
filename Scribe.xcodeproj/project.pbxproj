@@ -891,7 +891,6 @@
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ENLanguageData.sqlite; sourceTree = "<group>"; };
-		5A8FFB6F2C5E59A800F4B571 /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
@@ -1192,7 +1191,6 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
-				D1FF8ED12C6C282500EF50AC /* English.entitlements */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
@@ -1432,7 +1430,7 @@
 		D1AFDE6929CA65740033BF27 /* English */ = {
 			isa = PBXGroup;
 			children = (
-				5A8FFB6F2C5E59A800F4B571 /* English.entitlements */,
+				D1FF8ED12C6C282500EF50AC /* English.entitlements */,
 				D1CDED782A859FB600098546 /* ENCommandVariables.swift */,
 				D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */,
 				D1AFDE6A29CA65740033BF27 /* ENKeyboardViewController.swift */,
@@ -3470,7 +3468,7 @@
 		D1AFDF3B29CA66D00033BF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = English.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/English/English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3496,7 +3494,7 @@
 		D1AFDF3C29CA66D00033BF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = English.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/English/English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

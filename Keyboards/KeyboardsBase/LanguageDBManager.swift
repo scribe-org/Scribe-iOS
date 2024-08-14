@@ -267,7 +267,7 @@ extension LanguageDBManager {
     WHERE
       word = ?
     """
-    let outputCols = ["emoji_0", "emoji_1", "emoji_2"]
+    let outputCols = ["emoji_keyword_0", "emoji_keyword_1", "emoji_keyword_2"]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
