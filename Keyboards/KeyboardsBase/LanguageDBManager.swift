@@ -250,7 +250,7 @@ extension LanguageDBManager {
       word = ?
     """
     let args = [word]
-    let outputCols = ["suggestion_0", "suggestion_1", "suggestion_2"]
+    let outputCols = ["autosuggestion_0", "autosuggestion_1", "autosuggestion_2"]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
