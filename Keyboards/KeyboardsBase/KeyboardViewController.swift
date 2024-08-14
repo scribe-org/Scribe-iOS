@@ -1553,6 +1553,22 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
         conjugationToDisplay = conjugationsToDisplay[index]
+        if controllerLanguage == "English" {
+          if index == 0 && allConjugations[index] == "presTPS" {
+            let simple = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: ["presSimp"])
+            conjugationToDisplay = simple[0] + "/" + conjugationToDisplay
+          } else if index == 1 && allConjugations[index] == "presPart" {
+            if enConjugationState == .present {
+              conjugationToDisplay = "am/are/is/" + conjugationToDisplay
+            } else {
+              conjugationToDisplay = "was/were/" + conjugationToDisplay
+            }
+          } else if index == 3 && allConjugations[index] == "presPerfTPS" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          } else if index == 3 && allConjugations[index] == "presPerfTPSCont" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          }
+        }
         if inputWordIsCapitalized {
           if controllerLanguage == "English", conjugationToDisplay.count(of: " ") > 0 {
             conjugationToDisplay = conjugationToDisplay.capitalize()

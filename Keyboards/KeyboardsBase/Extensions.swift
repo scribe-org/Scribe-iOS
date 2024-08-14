@@ -1,5 +1,5 @@
 /**
- * Extensions for Scribe keyboards.
+ * Extensions with helper functions for Scribe keyboards.
  *
  * Copyright (C) 2024 Scribe
  *

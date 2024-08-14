@@ -92,7 +92,7 @@ func enGetConjugationTitle() -> String {
 func enGetConjugationState() -> [String] {
   switch enConjugationState {
   case .present:
-    return ["presSimp", "presFPSCont", "presPerfSimp", "presPerfSimpCont"]
+    return ["presTPS", "presPart", "presPerfTPS", "presPerfTPSCont"]
   case .presSimp:
     return ["presSimp", "presTPS"]
   case .presCont:
@@ -102,7 +102,7 @@ func enGetConjugationState() -> [String] {
   case .presPerfCont:
     return ["presPerfSimpCont", "presPerfTPSCont"]
   case .past:
-    return ["pastSimp", "pastSimpCont", "pastPerf", "pastPerfCont"]
+    return ["pastSimp", "presPart", "pastPerf", "pastPerfCont"]
   case .pastCont:
     return ["presPart", "pastSimpCont", "pastSimpPluralCont"]
   case .future:
