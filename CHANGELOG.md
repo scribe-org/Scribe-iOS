@@ -12,6 +12,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 # [Upcoming] Scribe-iOS 3.2.0
 
+### ⌨️ New Keyboards
+
+- Adds an English keyboard ([#7](https://github.com/scribe-org/Scribe-iOS/issues/7)).
+
 ### ✨ New Features
 
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
@@ -30,6 +34,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🌐 Localization
 
 - Localization strings for English, German, Swedish and Spanish have been added for all remaining app texts ([Scribe-i18n#28](https://github.com/scribe-org/Scribe-i18n/issues/28)).
+
+### 🐞 Bug Fixes
+
+- The plural command now reacts to the capitalization of the input word when a word that's already plural is entered.
 
 # Scribe-iOS 3.1.0
 

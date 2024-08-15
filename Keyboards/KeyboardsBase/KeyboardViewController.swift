@@ -1559,9 +1559,9 @@ class KeyboardViewController: UIInputViewController {
             conjugationToDisplay = simple[0] + "/" + conjugationToDisplay
           } else if index == 1 && allConjugations[index] == "presPart" {
             if enConjugationState == .present {
-              conjugationToDisplay = "am/are/is/" + conjugationToDisplay
+              conjugationToDisplay = "am/are/is " + conjugationToDisplay
             } else {
-              conjugationToDisplay = "was/were/" + conjugationToDisplay
+              conjugationToDisplay = "was/were " + conjugationToDisplay
             }
           } else if index == 3 && allConjugations[index] == "presPerfTPS" {
             conjugationToDisplay = "have/" + conjugationToDisplay

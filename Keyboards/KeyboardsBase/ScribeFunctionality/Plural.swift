@@ -64,7 +64,11 @@ func queryPluralNoun(queriedNoun: String) {
       proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else {
-    proxy.insertText(noun + getOptionalSpace())
+    if inputWordIsCapitalized {
+      proxy.insertText(noun.capitalized + getOptionalSpace())
+    } else {
+      proxy.insertText(noun + getOptionalSpace())
+    }
     commandState = .alreadyPlural
   }
 }
