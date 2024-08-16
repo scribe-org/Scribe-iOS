@@ -282,7 +282,12 @@ class KeyboardKey: UIButton {
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
       } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
         if key == "return"
-          && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate
+          )
           && row == 1
           && DeviceType.isPad {
           layer.setValue(true, forKey: "isSpecial")
@@ -303,7 +308,12 @@ class KeyboardKey: UIButton {
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
         if key == "return"
-          && (controllerLanguage == "Portuguese" || controllerLanguage == "Italian" || commandState == .translate)
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
+            || controllerLanguage == "Italian"
+            || commandState == .translate
+          )
           && row == 1
           && DeviceType.isPad {
           layer.setValue(true, forKey: "isSpecial")

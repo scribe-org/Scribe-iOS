@@ -101,6 +101,8 @@
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
 		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -753,6 +755,13 @@
 			remoteGlobalIDString = 38BD214B22D592CA00C6795D;
 			remoteInfo = typEmoji;
 		};
+		5A8FFB6C2C5A9D9C00F4B571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1AFDF0029CA66D00033BF27;
+			remoteInfo = English;
+		};
 		D109A210275B6888005E2271 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
@@ -835,6 +844,7 @@
 				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */,
 				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
 				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
+				5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */,
 				D109A221275B68B3005E2271 /* Portuguese.appex in Embed Foundation Extensions */,
 				D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */,
 				D109A212275B6888005E2271 /* French.appex in Embed Foundation Extensions */,
@@ -880,6 +890,7 @@
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ENLanguageData.sqlite; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
@@ -978,6 +989,7 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
+		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -1418,9 +1430,11 @@
 		D1AFDE6929CA65740033BF27 /* English */ = {
 			isa = PBXGroup;
 			children = (
+				D1FF8ED12C6C282500EF50AC /* English.entitlements */,
 				D1CDED782A859FB600098546 /* ENCommandVariables.swift */,
 				D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */,
 				D1AFDE6A29CA65740033BF27 /* ENKeyboardViewController.swift */,
+				5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */,
 				D1AFDE6C29CA65740033BF27 /* Info.plist */,
 			);
 			path = English;
@@ -1550,6 +1564,7 @@
 				D1AFDFC029CA68610033BF27 /* PBXTargetDependency */,
 				D1AFDFC329CA68660033BF27 /* PBXTargetDependency */,
 				D1AFE01529CA6F980033BF27 /* PBXTargetDependency */,
+				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
 			);
 			name = Scribe;
 			packageProductDependencies = (
@@ -1963,6 +1978,7 @@
 			files = (
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
 				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2772,6 +2788,11 @@
 			target = 38BD214B22D592CA00C6795D /* German */;
 			targetProxy = 38BD215122D592CA00C6795D /* PBXContainerItemProxy */;
 		};
+		5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1AFDF0029CA66D00033BF27 /* English */;
+			targetProxy = 5A8FFB6C2C5A9D9C00F4B571 /* PBXContainerItemProxy */;
+		};
 		D109A211275B6888005E2271 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D109A20A275B6888005E2271 /* French */;
@@ -3447,6 +3468,7 @@
 		D1AFDF3B29CA66D00033BF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/English/English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3472,6 +3494,7 @@
 		D1AFDF3C29CA66D00033BF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/English/English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

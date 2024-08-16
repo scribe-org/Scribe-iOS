@@ -572,7 +572,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if ["French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if ["English", "French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       // We have to consider these different cases as the key always has to match.
@@ -1264,6 +1264,15 @@ class KeyboardViewController: UIInputViewController {
         .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
       ].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
+    } else if controllerLanguage == "English" {
+      switch enConjugationState {
+      case .present, .presCont, .past, .future, .conditional:
+        formsDisplayDimensions = .view2x2
+      case .presSimp, .presPerf, .presPerfCont:
+        formsDisplayDimensions = .view1x2
+      case .pastCont:
+        formsDisplayDimensions = .view3x1
+      }
     } else if commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
     } else {
@@ -1423,7 +1432,7 @@ class KeyboardViewController: UIInputViewController {
       conjugationStateFxn = conjugationFxn
     }
 
-    if !["Russian", "Swedish"].contains(controllerLanguage) {
+    if !["English", "Russian", "Swedish"].contains(controllerLanguage) {
       formFPS = conjugationStateFxn() + "FPS"
       formSPS = conjugationStateFxn() + "SPS"
       formTPS = conjugationStateFxn() + "TPS"
@@ -1451,6 +1460,24 @@ class KeyboardViewController: UIInputViewController {
       formTopRight = swedishTenses[1]
       formBottomLeft = swedishTenses[2]
       formBottomRight = swedishTenses[3]
+    } else if controllerLanguage == "English" {
+      if formsDisplayDimensions == .view2x2 {
+        let englishTenses = enGetConjugationState()
+
+        formTopLeft = englishTenses[0]
+        formTopRight = englishTenses[1]
+        formBottomLeft = englishTenses[2]
+        formBottomRight = englishTenses[3]
+      } else if formsDisplayDimensions == .view1x2 {
+        let englishTenses = enGetConjugationState()
+
+        formLeft = englishTenses[0]
+        formRight = englishTenses[1]
+      } else if formsDisplayDimensions == .view3x1 {
+        formTop = "presPart"
+        formMiddle = "pastSimpCont"
+        formBottom = "pastSimpPluralCont"
+      }
     }
   }
 
@@ -1481,7 +1508,6 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Assign labels that have been set by SetConjugationLabels function.
-    // Other labels not assigned as they're not used in conjugation at this time.
     formLblFPS.setTitle("  " + (formLabelsDict["FPS"] ?? ""), for: .normal)
     formLblSPS.setTitle("  " + (formLabelsDict["SPS"] ?? ""), for: .normal)
     formLblTPS.setTitle("  " + (formLabelsDict["TPS"] ?? ""), for: .normal)
@@ -1489,17 +1515,33 @@ class KeyboardViewController: UIInputViewController {
     formLblSPP.setTitle("  " + (formLabelsDict["SPP"] ?? ""), for: .normal)
     formLblTPP.setTitle("  " + (formLabelsDict["TPP"] ?? ""), for: .normal)
 
+    formLblTop.setTitle("  " + (formLabelsDict["Top"] ?? ""), for: .normal)
+    formLblMiddle.setTitle("  " + (formLabelsDict["Middle"] ?? ""), for: .normal)
+    formLblBottom.setTitle("  " + (formLabelsDict["Bottom"] ?? ""), for: .normal)
+
     formLblTL.setTitle("  " + (formLabelsDict["TL"] ?? ""), for: .normal)
     formLblTR.setTitle("  " + (formLabelsDict["TR"] ?? ""), for: .normal)
     formLblBL.setTitle("  " + (formLabelsDict["BL"] ?? ""), for: .normal)
     formLblBR.setTitle("  " + (formLabelsDict["BR"] ?? ""), for: .normal)
 
-    if formsDisplayDimensions == .view3x2 {
+    formLblLeft.setTitle("  " + (formLabelsDict["Left"] ?? ""), for: .normal)
+    formLblRight.setTitle("  " + (formLabelsDict["Right"] ?? ""), for: .normal)
+
+    switch formsDisplayDimensions {
+    case .view3x2:
       allConjugations = [formFPS, formSPS, formTPS, formFPP, formSPP, formTPP]
       allConjugationBtns = get3x2FormDisplayButtons()
-    } else {
+    case .view3x1:
+      allConjugations = [formTop, formMiddle, formBottom]
+      allConjugationBtns = get3x1FormDisplayButtons()
+    case .view2x2:
       allConjugations = [formTopLeft, formTopRight, formBottomLeft, formBottomRight]
       allConjugationBtns = get2x2FormDisplayButtons()
+    case .view1x2:
+      allConjugations = [formLeft, formRight]
+      allConjugationBtns = get1x2FormDisplayButtons()
+    case .view1x1:
+      break
     }
 
     // Populate conjugation view buttons.
@@ -1511,8 +1553,28 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
         conjugationToDisplay = conjugationsToDisplay[index]
-        if inputWordIsCapitalized && deConjugationState != .indicativePerfect {
-          conjugationToDisplay = conjugationToDisplay.capitalized
+        if controllerLanguage == "English" {
+          if index == 0 && allConjugations[index] == "presTPS" {
+            let simple = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: ["presSimp"])
+            conjugationToDisplay = simple[0] + "/" + conjugationToDisplay
+          } else if index == 1 && allConjugations[index] == "presPart" {
+            if enConjugationState == .present {
+              conjugationToDisplay = "am/are/is " + conjugationToDisplay
+            } else {
+              conjugationToDisplay = "was/were " + conjugationToDisplay
+            }
+          } else if index == 3 && allConjugations[index] == "presPerfTPS" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          } else if index == 3 && allConjugations[index] == "presPerfTPSCont" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          }
+        }
+        if inputWordIsCapitalized {
+          if controllerLanguage == "English", conjugationToDisplay.count(of: " ") > 0 {
+            conjugationToDisplay = conjugationToDisplay.capitalize()
+          } else if deConjugationState != .indicativePerfect {
+            conjugationToDisplay = conjugationToDisplay.capitalized
+          }
         }
         styleBtn(btn: allConjugationBtns[index], title: conjugationToDisplay, radius: keyCornerRadius)
       }
@@ -1653,7 +1715,9 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPhone
           && key == "a"
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
             || (
@@ -1671,7 +1735,8 @@ class KeyboardViewController: UIInputViewController {
           && key == "a"
           && !usingExpandedKeyboard
           && (
-            controllerLanguage == "Portuguese"
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
           ) {
@@ -1681,7 +1746,9 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "@"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate) {
           leftPadding = keyWidth / 3
@@ -1690,7 +1757,9 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad
           && key == "€"
           && !usingExpandedKeyboard
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || commandState == .translate) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "€")
@@ -1786,7 +1855,9 @@ class KeyboardViewController: UIInputViewController {
         }
         if DeviceType.isPhone
           && key == "l"
-          && (controllerLanguage == "Portuguese"
+          && (
+            controllerLanguage == "English"
+            || controllerLanguage == "Portuguese"
             || controllerLanguage == "Italian"
             || commandState == .translate
             || (
@@ -2402,19 +2473,46 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "formTopLeft":
-      returnConjugation(keyPressed: sender, requestedForm: formTopLeft)
+      if controllerLanguage == "English" && enConjugationState == .present {
+        enConjugationState = .presSimp
+        conjViewShiftButtonsState = .bothInactive
+      } else {
+        returnConjugation(keyPressed: sender, requestedForm: formTopLeft)
+      }
       loadKeys()
 
     case "formTopRight":
-      returnConjugation(keyPressed: sender, requestedForm: formTopRight)
+      if controllerLanguage == "English" {
+        if enConjugationState == .present {
+          enConjugationState = .presCont
+          conjViewShiftButtonsState = .bothInactive
+        } else if enConjugationState == .past {
+          enConjugationState = .pastCont
+          conjViewShiftButtonsState = .bothInactive
+        } else {
+          returnConjugation(keyPressed: sender, requestedForm: formTopRight)
+        }
+      } else {
+        returnConjugation(keyPressed: sender, requestedForm: formTopRight)
+      }
       loadKeys()
 
     case "formBottomLeft":
-      returnConjugation(keyPressed: sender, requestedForm: formBottomLeft)
+      if controllerLanguage == "English" && enConjugationState == .present {
+        enConjugationState = .presPerf
+        conjViewShiftButtonsState = .bothInactive
+      } else {
+        returnConjugation(keyPressed: sender, requestedForm: formBottomLeft)
+      }
       loadKeys()
 
     case "formBottomRight":
-      returnConjugation(keyPressed: sender, requestedForm: formBottomRight)
+      if controllerLanguage == "English" && enConjugationState == .present {
+        enConjugationState = .presPerfCont
+        conjViewShiftButtonsState = .bothInactive
+      } else {
+        returnConjugation(keyPressed: sender, requestedForm: formBottomRight)
+      }
       loadKeys()
 
     case "formLeft":
