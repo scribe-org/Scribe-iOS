@@ -129,6 +129,8 @@ pre-commit install
    - Press the run button marked `Start the active scheme`
    - From here code edits that are made will be reflected in the app each time the active scheme is restarted
 
+6. Build the developer documentation by selecting `Product` > `Build Documentation` (^⇧⌘D)
+
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
 
