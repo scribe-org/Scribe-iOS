@@ -964,6 +964,7 @@
 		D1CDED7E2A85A05C00098546 /* HECommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HECommandVariables.swift; sourceTree = "<group>"; };
 		D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInterfaceVariables.swift; sourceTree = "<group>"; };
 		D1CDED822A85A12C00098546 /* NBCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBCommandVariables.swift; sourceTree = "<group>"; };
+		D1D0BA402C72344800334F27 /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		D1D8B2372AE4084D0070B817 /* Swedish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swedish.entitlements; sourceTree = "<group>"; };
 		D1D8B2382AE408620070B817 /* Spanish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spanish.entitlements; sourceTree = "<group>"; };
 		D1D8B2392AE408720070B817 /* Russian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Russian.entitlements; sourceTree = "<group>"; };
@@ -1173,6 +1174,7 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
+				D1D0BA402C72344800334F27 /* English.entitlements */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
@@ -3441,6 +3443,7 @@
 		D1AFDF3B29CA66D00033BF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3466,6 +3469,7 @@
 		D1AFDF3C29CA66D00033BF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = English.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
