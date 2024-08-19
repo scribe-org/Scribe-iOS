@@ -31,7 +31,7 @@ class LanguageDBManager {
 
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue() -> DatabaseQueue {
-    let dbName = "\(String(describing: getControllerLanguageAbbr().uppercased()))LanguageData"
+    let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
     let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
     let fileManager = FileManager.default
     do {

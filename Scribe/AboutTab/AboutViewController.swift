@@ -137,7 +137,10 @@ extension AboutViewController {
         viewController.section = .licenses
       }
 
-    default: break
+    case .appLang: break
+    case .none: break
+    case .specificLang: break
+    case .externalLink: break
     }
 
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
