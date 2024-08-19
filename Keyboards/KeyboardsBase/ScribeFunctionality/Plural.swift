@@ -36,7 +36,12 @@ func queryPlural(commandBar: UILabel) {
     let endIndex = commandBarText.index(before: commandBarText.endIndex)
     noun = String(commandBarText[startIndex ..< endIndex])
   }
-  noun = String(noun.trailingSpacesTrimmed)
+
+  queryPluralNoun(queriedNoun: noun)
+}
+
+func queryPluralNoun(queriedNoun: String) {
+  var noun = String(queriedNoun.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase plural.
   inputWordIsCapitalized = false
@@ -54,12 +59,16 @@ func queryPlural(commandBar: UILabel) {
 
   if wordToReturn != "isPlural" {
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
+      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else {
-    proxy.insertText(noun + " ")
+    if inputWordIsCapitalized {
+      proxy.insertText(noun.capitalized + getOptionalSpace())
+    } else {
+      proxy.insertText(noun + getOptionalSpace())
+    }
     commandState = .alreadyPlural
   }
 }

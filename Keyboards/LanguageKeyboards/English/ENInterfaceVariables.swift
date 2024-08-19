@@ -160,19 +160,19 @@ func setENKeyboardLayout() {
   numericAutosuggestions = ["is", "to", "and"]
   verbsAfterPronounsArray = ["have", "be", "can"]
   pronounAutosuggestionTenses = [
-    "I": "presFPS",
-    "you": "presSPS",
+    "I": "presSimp",
+    "you": "presSimp",
     "he": "presTPS",
     "she": "presTPS",
     "it": "presTPS",
-    "we": "presFPP",
-    "they": "presTPP"
+    "we": "presSimp",
+    "they": "presSimp"
   ]
 
   translateKeyLbl = "Translate"
-  translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePrompt = commandPromptSpacing + "Currently not utilized" // "en -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt // + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor // + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 

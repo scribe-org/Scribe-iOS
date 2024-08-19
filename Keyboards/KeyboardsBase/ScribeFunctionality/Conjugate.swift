@@ -21,6 +21,7 @@ import UIKit
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjTitleDict: [String: Any] = [
+  "English": enGetConjugationTitle,
   "French": frGetConjugationTitle,
   "German": deGetConjugationTitle,
   "Italian": itGetConjugationTitle,
@@ -32,6 +33,7 @@ let keyboardConjTitleDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjStateDict: [String: Any] = [
+  "English": enGetConjugationState,
   "French": frGetConjugationState,
   "German": deGetConjugationState,
   "Italian": itGetConjugationState,
@@ -43,6 +45,7 @@ let keyboardConjStateDict: [String: Any] = [
 
 // Dictionary for accessing keyboard conjugation state.
 let keyboardConjLabelDict: [String: Any] = [
+  "English": enSetConjugationLabels,
   "French": frSetConjugationLabels,
   "German": deSetConjugationLabels,
   "Italian": itSetConjugationLabels,
@@ -66,12 +69,12 @@ func returnDeclension(keyPressed: UIButton) {
   }
 
   if !(wordPressed.contains("/") || wordPressed.contains("∗")) {
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
   } else if controllerLanguage == "Russian" { // pronoun selection paths not implemented for Russian
-    proxy.insertText(wordPressed + " ")
+    proxy.insertText(wordPressed + getOptionalSpace())
     deCaseVariantDeclensionState = .disabled
     autoActionState = .suggest
     commandState = .idle
@@ -204,7 +207,12 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
     let endIndex = commandBarText.index(commandBarText.endIndex, offsetBy: -1)
     verbToConjugate = String(commandBarText[startIndex ..< endIndex])
   }
-  verbToConjugate = String(verbToConjugate.trailingSpacesTrimmed)
+
+  return isVerbInConjugationTable(queriedVerbToConjugate: verbToConjugate)
+}
+
+func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
+  verbToConjugate = String(queriedVerbToConjugate.trailingSpacesTrimmed)
 
   // Check to see if the input was uppercase to return an uppercase conjugation.
   let firstLetter = verbToConjugate.substring(toIdx: 1)
@@ -244,19 +252,52 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
         // Don't return a space as well as we have a perfect verb and the cursor will be between.
         proxy.insertText(wordToReturn.capitalize())
       } else {
-        proxy.insertText(wordToReturn.capitalized + " ")
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
       }
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
+    }
+  } else if formsDisplayDimensions == .view3x1 {
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: getOptionalSpace())
+
+    if inputWordIsCapitalized {
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
+    } else {
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   } else if formsDisplayDimensions == .view2x2 {
     wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
     potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
 
     if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + " ")
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
     } else {
-      proxy.insertText(wordToReturn + " ")
+      proxy.insertText(wordToReturn + getOptionalSpace())
+    }
+  } else if formsDisplayDimensions == .view1x2 {
+    wordToReturn = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)[0]
+    potentialWordsToReturn = wordToReturn.components(separatedBy: " ")
+
+    if inputWordIsCapitalized {
+      if controllerLanguage == "English", potentialWordsToReturn.count > 1 {
+        // Don't return a space as well as we have a perfect verb and the cursor will be between.
+        proxy.insertText(wordToReturn.capitalize())
+      } else {
+        proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
+      }
+    } else {
+      proxy.insertText(wordToReturn + getOptionalSpace())
     }
   }
 
@@ -278,7 +319,9 @@ func returnConjugation(keyPressed: UIButton, requestedForm: String) {
 /// Returns the conjugation state to its initial conjugation based on the keyboard language.
 func resetVerbConjugationState() {
   conjViewShiftButtonsState = .leftInactive
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationState = .present
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationState = .indicativePresent
   } else if controllerLanguage == "German" {
     deConjugationState = .indicativePresent
@@ -331,7 +374,9 @@ func resetCaseDeclensionState() {
 
 /// Runs an action associated with the left view switch button of the conjugation state based on the keyboard language.
 func conjugationStateLeft() {
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationStateLeft()
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationStateLeft()
   } else if controllerLanguage == "German" {
     deConjugationStateLeft()
@@ -350,7 +395,9 @@ func conjugationStateLeft() {
 
 /// Runs an action associated with the right view switch button of the conjugation state based on the keyboard language.
 func conjugationStateRight() {
-  if controllerLanguage.prefix("French".count) == "French" {
+  if controllerLanguage == "English" {
+    enConjugationStateRight()
+  } else if controllerLanguage.prefix("French".count) == "French" {
     frConjugationStateRight()
   } else if controllerLanguage == "German" {
     deConjugationStateRight()

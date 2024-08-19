@@ -12,6 +12,7 @@
 [![language](https://img.shields.io/badge/Swift%205-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg?label=%20)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+[![weblate](https://img.shields.io/badge/Weblate-144D3F.svg?logo=weblate&logoColor=ffffff)](https://hosted.weblate.org/projects/scribe/scribe-i18n)
 [![mastodon](https://img.shields.io/badge/Mastodon-6364FF.svg?logo=mastodon&logoColor=ffffff)](https://wikis.world/@scribe)
 [![matrix](https://img.shields.io/badge/Matrix-000000.svg?logo=matrix&logoColor=ffffff)](https://matrix.to/#/#scribe_community:matrix.org)
 
@@ -92,7 +93,7 @@ After your first few pull requests organization members would be happy to discus
 
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
-- [Localization](https://github.com/scribe-org/Scribe-i18n) for the app and App Store 🌐
+- [Localization](https://github.com/scribe-org/Scribe-i18n) for the app and App Store via our [Weblate project](https://hosted.weblate.org/projects/scribe/scribe-i18n) 🌐
 - [Documentation](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
@@ -175,6 +176,8 @@ pre-commit install
    - Select a device to run the app on
    - Press the run button marked `Start the active scheme`
    - From here code edits that are made will be reflected in the app each time the active scheme is restarted
+
+6. Build the developer documentation by selecting `Product` > `Build Documentation` (^⇧⌘D)
 
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
