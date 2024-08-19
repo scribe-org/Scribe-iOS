@@ -329,18 +329,27 @@ extension LanguageDBManager {
   }
 
   /// Query the translation of word in `translations`.
-  func queryTranslation(of word: String, langCode: String) -> [String] {
+  func queryTranslation(of word: String) -> [String] {
+    var langCode = "en"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      if let selectedLang = userDefaults.string(forKey: getControllerLanguageAbbr() + "TranslateLanguage") {
+        langCode = selectedLang
+      } else {
+        userDefaults.set("en", forKey: getControllerLanguageAbbr() + "TranslateLanguage")
+      }
+    }
+
     let query = """
     SELECT
       *
 
     FROM
-      \(langCode)_translations
+      translations
 
     WHERE
-      word = ?
+      \(langCode) = ?
     """
-    let outputCols = ["translation"]
+    let outputCols = ["word"]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
