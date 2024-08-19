@@ -102,8 +102,8 @@ enum SettingsTableData {
 
     let customKeyboardExtension = appBundleIdentifier + "."
     for keyboard in keyboards where keyboard.hasPrefix(customKeyboardExtension) {
-        let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
-        installedKeyboards.append(lang.capitalized)
+      let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
+      installedKeyboards.append(lang.capitalized)
     }
 
     var sections = [Section]()

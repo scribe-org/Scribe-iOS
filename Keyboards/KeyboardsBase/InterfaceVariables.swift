@@ -184,10 +184,8 @@ let languagesStringDict = [
 ]
 
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
-  for (key, value) in dict {
-    if value == givenValue {
-      return key
-    }
+  for (key, value) in dict where value == givenValue {
+    return key
   }
   return ""
 }

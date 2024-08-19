@@ -62,12 +62,10 @@ final class TableViewTemplateViewController: BaseTableViewController {
 
   // Refreshes to check for changes when a translation language is selected
   override func viewWillAppear(_ animated: Bool) {
-    for cell in tableView.visibleCells as! [InfoChildTableViewCell] {
-      if cell.section?.sectionState == .translateLang {
-        let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
-        let currentLang = "_global." + langTranslateLanguage.lowercased()
-        cell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
-      }
+    for cell in tableView.visibleCells as! [InfoChildTableViewCell] where cell.section?.sectionState == .translateLang {
+      let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
+      let currentLang = "_global." + langTranslateLanguage.lowercased()
+      cell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
     }
   }
 }
