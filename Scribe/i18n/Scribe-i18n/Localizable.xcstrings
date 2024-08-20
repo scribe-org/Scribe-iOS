@@ -1423,6 +1423,17 @@
         }
       }
     },
+    "app.settings.functionality.doubleSpacePeriods" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double space periods"
+          }
+        }
+      }
+    },
     "app.settings.installedKeyboards" : {
       "comment" : "",
       "localizations" : {
@@ -1564,6 +1575,17 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Ta bort tangenter med accenter på den primära tangentbordslayouten."
+          }
+        }
+      }
+    },
+    "app.settings.layout.doubleSpacePeriods.description" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Automatically insert a period when the space key is pressed twice."
           }
         }
       }

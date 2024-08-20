@@ -65,6 +65,12 @@ enum SettingsTableData {
       headingTitle: NSLocalizedString("app.settings.functionality", value: "Functionality", comment: ""),
       section: [
         Section(
+          sectionTitle: NSLocalizedString("app.settings.functionality.doubleSpacePeriods", value: "Double space periods", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.doubleSpacePeriods),
+          shortDescription: NSLocalizedString("app.settings.layout.doubleSpacePeriods.description", value: "Automatically insert a period when the space key is pressed twice.", comment: "")
+        ),
+        Section(
           sectionTitle: NSLocalizedString("app.settings.functionality.autoSuggestEmoji", value: "Autosuggest emojis", comment: ""),
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
