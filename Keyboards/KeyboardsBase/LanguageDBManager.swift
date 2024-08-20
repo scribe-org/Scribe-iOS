@@ -330,14 +330,7 @@ extension LanguageDBManager {
 
   /// Query the translation of word in `translations`.
   func queryTranslation(of word: String) -> [String] {
-    var langCode = "en"
-    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
-      if let selectedLang = userDefaults.string(forKey: getControllerLanguageAbbr() + "TranslateLanguage") {
-        langCode = selectedLang
-      } else {
-        userDefaults.set("en", forKey: getControllerLanguageAbbr() + "TranslateLanguage")
-      }
-    }
+    let langCode = getControllerTranslateLangCode()
 
     let query = """
     SELECT

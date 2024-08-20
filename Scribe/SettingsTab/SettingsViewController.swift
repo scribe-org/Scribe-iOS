@@ -181,7 +181,7 @@ extension SettingsViewController: UITableViewDelegate {
           for menuOption in data[1].section {
             if menuOption.sectionState == .none(.toggleAccentCharacters) ||
                 menuOption.sectionState == .none(.toggleCommaAndPeriod) {
-              data[1].section.remove(at: 1)
+              data[1].section.remove(at: 0)
             }
           }
           if data[1].section.isEmpty {

@@ -198,7 +198,7 @@ func getControllerLanguageAbbr() -> String {
   return abbreviation
 }
 
-func getControllerTranslateLang() -> String {
+func getControllerTranslateLangCode() -> String {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
   let key = getControllerLanguageAbbr() + "TranslateLanguage"
   if let translateLang = userDefaults.string(forKey: key) {
@@ -231,7 +231,7 @@ func setKeyboard() {
 /// Sets the keyboard layouts given the chosen keyboard and device type.
 func setKeyboardLayout() {
   if commandState == .translate {
-    let translateLanguage = getKeyInDict(givenValue: getControllerTranslateLang(), dict: languagesAbbrDict)
+    let translateLanguage = getKeyInDict(givenValue: getControllerTranslateLangCode(), dict: languagesAbbrDict)
     if let setLayoutFxn = keyboardLayoutDict[translateLanguage] {
       setLayoutFxn()
     } else {

@@ -1707,27 +1707,35 @@ class KeyboardViewController: UIInputViewController {
         var leftPadding = CGFloat(0)
         if DeviceType.isPhone
           && key == "y"
-          && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate
-          && disableAccentCharacters != true {
+          && (
+            (
+              commandState != .translate
+              && ["German", "Swedish"].contains(controllerLanguage)
+            ) || (
+              commandState == .translate
+              && ["de", "sv"].contains(getControllerTranslateLangCode())
+            )
+          )
+          && !disableAccentCharacters {
           leftPadding = keyWidth / 3
           addPadding(to: stackView2, width: leftPadding, key: "y")
         }
         if DeviceType.isPhone
           && key == "a"
           && (
-            controllerLanguage == "English"
-            || controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
-            || commandState == .translate
-            || (
-              (
-                controllerLanguage == "German"
-                || controllerLanguage == "Spanish"
-                || controllerLanguage == "Swedish"
+            (
+              commandState != .translate
+              && (
+                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                || (
+                  ["German", "Spanish", "Swedish"].contains(controllerLanguage)
+                  && disableAccentCharacters
+                )
               )
-              && disableAccentCharacters == true
-            )) {
+            ) || (
+              commandState == .translate
+              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+          )) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
         }
@@ -1735,11 +1743,13 @@ class KeyboardViewController: UIInputViewController {
           && key == "a"
           && !usingExpandedKeyboard
           && (
-            controllerLanguage == "English"
-            || controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
-            || commandState == .translate
-          ) {
+            (
+              commandState != .translate
+              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+            ) || (
+              commandState == .translate
+              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+          )) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
         }
@@ -1747,10 +1757,13 @@ class KeyboardViewController: UIInputViewController {
           && key == "@"
           && !usingExpandedKeyboard
           && (
-            controllerLanguage == "English"
-            || controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
-            || commandState == .translate) {
+            (
+              commandState != .translate
+              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+            ) || (
+              commandState == .translate
+              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+          )) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "@")
         }
@@ -1758,9 +1771,13 @@ class KeyboardViewController: UIInputViewController {
           && key == "€"
           && !usingExpandedKeyboard
           && (
-            controllerLanguage == "English"
-            || controllerLanguage == "Portuguese"
-            || commandState == .translate) {
+            (
+              commandState != .translate
+              && ["English", "Portuguese"].contains(controllerLanguage)
+            ) || (
+              commandState == .translate
+              && ["en", "pt"].contains(getControllerTranslateLangCode())
+          )) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "€")
         }
@@ -1847,27 +1864,35 @@ class KeyboardViewController: UIInputViewController {
         var rightPadding = CGFloat(0)
         if DeviceType.isPhone
           && key == "m"
-          && ["German", "Swedish"].contains(controllerLanguage)
-          && commandState != .translate
-          && disableAccentCharacters != true {
+          && (
+            (
+              commandState != .translate
+              && ["German", "Swedish"].contains(controllerLanguage)
+            ) || (
+              commandState == .translate
+              && ["de", "sv"].contains(getControllerTranslateLangCode())
+            )
+          )
+          && !disableAccentCharacters {
           rightPadding = keyWidth / 3
           addPadding(to: stackView2, width: rightPadding, key: "m")
         }
         if DeviceType.isPhone
           && key == "l"
           && (
-            controllerLanguage == "English"
-            || controllerLanguage == "Portuguese"
-            || controllerLanguage == "Italian"
-            || commandState == .translate
-            || (
-              (
-                controllerLanguage == "German"
-                || controllerLanguage == "Spanish"
-                || controllerLanguage == "Swedish"
+            (
+              commandState != .translate
+              && (
+                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                || (
+                  ["German", "Spanish", "Swedish"].contains(controllerLanguage)
+                  && disableAccentCharacters
+                )
               )
-              && disableAccentCharacters == true
-            )) {
+            ) || (
+              commandState == .translate
+              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+          )) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
         }
