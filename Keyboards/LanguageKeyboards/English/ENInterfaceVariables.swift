@@ -178,6 +178,7 @@ func setENKeyboardLayout() {
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   conjugateKeyLbl = "Conjugate"
+  conjugatePlaceholder = "Enter a verb"
   conjugatePrompt = commandPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
@@ -185,6 +186,7 @@ func setENKeyboardLayout() {
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   pluralKeyLbl = "Plural"
+  pluralPlaceholder = "Enter a noun"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
