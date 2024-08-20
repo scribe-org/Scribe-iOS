@@ -2227,7 +2227,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
   }
-  
+
   func doubleSpacePeriodsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {

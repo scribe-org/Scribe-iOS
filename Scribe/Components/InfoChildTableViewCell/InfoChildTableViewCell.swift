@@ -131,8 +131,7 @@ final class InfoChildTableViewCell: UITableViewCell {
     case .doubleSpacePeriods:
       let dictionaryKey = languageCode + "DoubleSpacePeriods"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
-      break;
-      
+
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
@@ -160,7 +159,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       } else {
         toggleSwitch.isOn = false  // Default value
       }
-      
+
     case .doubleSpacePeriods:
       let dictionaryKey = languageCode + "DoubleSpacePeriods"
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
