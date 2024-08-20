@@ -170,9 +170,10 @@ func setENKeyboardLayout() {
   ]
 
   translateKeyLbl = "Translate"
-  translatePrompt = commandPromptSpacing + "Currently not utilized" // "en -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt // + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor // + " " + translatePlaceholder
+  translatePlaceholder = "Enter a word"
+  translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
