@@ -26,12 +26,12 @@ class LanguageDBManager {
   private var languageDB: DatabaseQueue?
 
   private init() {
-    languageDB = openDBQueue()
+    languageDB = openDBQueue(getControllerLanguageAbbr())
   }
 
   /// Makes a connection to the language database given the value for controllerLanguage.
-  private func openDBQueue() -> DatabaseQueue {
-    let dbName = "\(String(describing: getControllerLanguageAbbr().uppercased()))LanguageData"
+  private func openDBQueue(_ langAbbr: String) -> DatabaseQueue {
+    let dbName = "\(String(describing: langAbbr.uppercased()))LanguageData"
     let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
     let fileManager = FileManager.default
     do {
@@ -72,10 +72,18 @@ class LanguageDBManager {
   private func queryDBRow(query: String, outputCols: [String], args: StatementArguments) -> [String] {
     var outputValues = [String]()
     do {
-      try languageDB?.read { db in
-        if let row = try Row.fetchOne(db, sql: query, arguments: args) {
-          for col in outputCols {
-            outputValues.append(row[col])
+      if commandState == .translate {
+        try openDBQueue(getControllerTranslateLangCode()).read { db in
+          if let row = try Row.fetchOne(db, sql: query, arguments: args) {
+            outputValues.append(row[outputCols[0]])
+          }
+        }
+      } else {
+        try languageDB?.read { db in
+          if let row = try Row.fetchOne(db, sql: query, arguments: args) {
+            for col in outputCols {
+              outputValues.append(row[col])
+            }
           }
         }
       }
@@ -330,8 +338,6 @@ extension LanguageDBManager {
 
   /// Query the translation of word in `translations`.
   func queryTranslation(of word: String) -> [String] {
-    let langCode = getControllerTranslateLangCode()
-
     let query = """
     SELECT
       *
@@ -340,9 +346,9 @@ extension LanguageDBManager {
       translations
 
     WHERE
-      \(langCode) = ?
+      word = ?
     """
-    let outputCols = ["word"]
+    let outputCols = [getControllerLanguageAbbr()]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))

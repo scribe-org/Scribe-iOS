@@ -1563,7 +1563,7 @@ class KeyboardViewController: UIInputViewController {
             } else {
               conjugationToDisplay = "was/were " + conjugationToDisplay
             }
-          } else if index == 3 && allConjugations[index] == "presPerfTPS" {
+          } else if index == 2 && allConjugations[index] == "presPerfTPS" {
             conjugationToDisplay = "have/" + conjugationToDisplay
           } else if index == 3 && allConjugations[index] == "presPerfTPSCont" {
             conjugationToDisplay = "have/" + conjugationToDisplay
@@ -2362,6 +2362,7 @@ class KeyboardViewController: UIInputViewController {
 
     case "Translate":
       if let selectedText = proxy.selectedText {
+        commandState = .translate
         queryWordToTranslate(queriedWordToTranslate: selectedText)
 
         if commandState == .invalid { // invalid state
