@@ -90,22 +90,33 @@ func genPadLetterKeys() -> [[String]] {
     .build()
 }
 
-func genPadNumberKeys() -> [[String]] {
+func genPadNumberKeys(currencyKey: String) -> [[String]] {
   return KeyboardBuilder()
     .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
     .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
     .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
     .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+    .replaceKey(row: 1, column: 2, to: currencyKey)
     .build()
 }
 
-func genPadSymbolKeys() -> [[String]] {
-  return KeyboardBuilder()
+func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
+  let keyboardBuilder = KeyboardBuilder()
     .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
     .addRow(["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"])
     .addRow(["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"])
     .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
-    .build()
+
+  if currencyKeys.count < 3 {
+    return keyboardBuilder.build()
+  } else {
+    // Replace currencies
+    return keyboardBuilder
+      .replaceKey(row: 1, column: 0, to: currencyKeys[0])
+      .replaceKey(row: 1, column: 1, to: currencyKeys[1])
+      .replaceKey(row: 1, column: 2, to: currencyKeys[2])
+      .build()
+  }
 }
 
 func genPadExpandedLetterKeys() -> [[String]] {
@@ -132,23 +143,23 @@ func genPadExpandedSymbolKeys() -> [[String]] {
 
 /// Gets the keys for the English keyboard.
 func getENKeys() {
+  guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
+    fatalError()
+  }
+
+  var currencyKey = EnglishKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = EnglishKeyboardConstants.currencyKeys
+  let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
+  if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
+    currencyKey = currencyValue
+  } else {
+    userDefaults.setValue(currencyKey, forKey: dictionaryKey)
+  }
+  if let index = currencyKeys.firstIndex(of: currencyKey) {
+    currencyKeys.remove(at: index)
+  }
+
   if DeviceType.isPhone {
-    guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-      fatalError()
-    }
-
-    var currencyKeys = EnglishKeyboardConstants.currencyKeys
-    var currencyKey = EnglishKeyboardConstants.defaultCurrencyKey
-    let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
-    if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
-      currencyKey = currencyValue
-    } else {
-      userDefaults.setValue(currencyKey, forKey: dictionaryKey)
-    }
-    if let index = currencyKeys.firstIndex(of: currencyKey) {
-      currencyKeys.remove(at: index)
-    }
-
     letterKeys = genPhoneLetterKeys()
     numberKeys = genPhoneNumberKeys(currencyKey: currencyKey)
     symbolKeys = genPhoneSymbolKeys(currencyKeys: currencyKeys)
@@ -166,8 +177,8 @@ func getENKeys() {
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       letterKeys = genPadLetterKeys()
-      numberKeys = genPadNumberKeys()
-      symbolKeys = genPadSymbolKeys()
+      numberKeys = genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
