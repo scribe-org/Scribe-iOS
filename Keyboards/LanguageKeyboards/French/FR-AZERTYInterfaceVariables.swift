@@ -20,67 +20,8 @@
 import UIKit
 
 public enum FrenchKeyboardConstants {
-  // iPhone keyboard layouts.
-  static let letterKeysPhone = [
-    ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
-    ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
-    ["shift", "w", "x", "c", "v", "b", "n", "´", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let numberKeysPhone = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let symbolKeysPhone = [
-    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  // iPad keyboard layouts.
-  static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
-    ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
-    ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"],
-    ["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
-  ]
-
-  static let numberKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
-    ["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"],
-    ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
-  ]
-
-  static let symbolKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
-    ["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"],
-    ["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
-  ]
-
-  // Expanded iPad keyboard layouts for wider devices.
-  static let letterKeysPadExpanded = [
-    ["@", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ç", "à", "delete"],
-    [SpecialKeys.indent, "a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "^", "+", "*"],
-    [SpecialKeys.capsLock, "q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "ù", "#", "return"],
-    ["shift", "/", "w", "x", "c", "v", "b", "n", ":", "-", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
-  ]
-
-  static let symbolKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    [SpecialKeys.indent, "\"", "|", "§", "[", "]", "{", "}", "-", "%", "=", "^", "+", "*"],
-    [SpecialKeys.capsLock, "/", "…", "_", "(", ")", "&", "$", "£", "¥", "€", "@", "#", "return"], // "undo"
-    ["shift", "'", "?", "!", "~", "≠", "°", ";", ":", "-", ",", ".", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
-  ]
+  static let defaultCurrencyKey = "€"
+  static let currencyKeys = ["€", "$", "£", "¥"]
 
   // Alternate key vars.
   static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "c", "n"]
@@ -97,12 +38,128 @@ public enum FrenchKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
+struct FrenchKeyboardProvider: KeyboardProviderProtocol {
+  // iPhone keyboard layouts.
+  static func genPhoneLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"])
+      .addRow(["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"])
+      .addRow(["shift", "w", "x", "c", "v", "b", "n", "´", "delete"])
+      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .build()
+  }
+
+  static func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
+      .addRow(["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""])
+      .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .replaceKey(row: 1, column: 6, to: currencyKey)
+      .build()
+  }
+
+  static func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
+      .addRow(["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"])
+      .addRow(["123", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 6, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 7, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 8, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // iPad keyboard layouts.
+  static func genPadLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
+      .addRow(["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
+      .addRow(["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"])
+      .addRow(["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .build()
+  }
+
+  static func genPadNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
+      .addRow(["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"])
+      .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .replaceKey(row: 1, column: 4, to: currencyKey)
+      .build()
+  }
+
+  static func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
+      .addRow(["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"])
+      .addRow(["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 7, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 8, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 9, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // Expanded iPad keyboard layouts for wider devices.
+  static func genPadExpandedLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["@", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ç", "à", "delete"])
+      .addRow([SpecialKeys.indent, "a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "^", "+", "*"])
+      .addRow([SpecialKeys.capsLock, "q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "ù", "#", "return"])
+      .addRow(["shift", "/", "w", "x", "c", "v", "b", "n", ":", "-", ",", ".", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+
+  static func genPadExpandedSymbolKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
+      .addRow([SpecialKeys.indent, "\"", "|", "§", "[", "]", "{", "}", "-", "%", "=", "^", "+", "*"])
+      .addRow([SpecialKeys.capsLock, "/", "…", "_", "(", ")", "&", "$", "£", "¥", "€", "@", "#", "return"]) // "undo"
+      .addRow(["shift", "'", "?", "!", "~", "≠", "°", ";", ":", "-", ",", ".", "shift"]) // "redo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+}
+
 /// Gets the keys for the French keyboard.
 func getFRKeys() {
+  guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
+    fatalError()
+  }
+
+  var currencyKey = FrenchKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = FrenchKeyboardConstants.currencyKeys
+  let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
+  if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
+    currencyKey = currencyValue
+  } else {
+    userDefaults.setValue(currencyKey, forKey: dictionaryKey)
+  }
+  if let index = currencyKeys.firstIndex(of: currencyKey) {
+    currencyKeys.remove(at: index)
+  }
+
   if DeviceType.isPhone {
-    letterKeys = FrenchKeyboardConstants.letterKeysPhone
-    numberKeys = FrenchKeyboardConstants.numberKeysPhone
-    symbolKeys = FrenchKeyboardConstants.symbolKeysPhone
+    letterKeys = FrenchKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = FrenchKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = FrenchKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["a", "q", "1", "-", "[", "_"]
@@ -111,14 +168,14 @@ func getFRKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = FrenchKeyboardConstants.letterKeysPadExpanded
-      symbolKeys = FrenchKeyboardConstants.symbolKeysPadExpanded
+      letterKeys = FrenchKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = FrenchKeyboardProvider.genPadExpandedSymbolKeys()
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = FrenchKeyboardConstants.letterKeysPad
-      numberKeys = FrenchKeyboardConstants.numberKeysPad
-      symbolKeys = FrenchKeyboardConstants.symbolKeysPad
+      letterKeys = FrenchKeyboardProvider.genPadLetterKeys()
+      numberKeys = FrenchKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = FrenchKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
