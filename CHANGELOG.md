@@ -19,6 +19,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ✨ New Features
 
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
+- Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
 
 ### ♻️ Code Refactoring
 

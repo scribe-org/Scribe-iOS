@@ -2253,6 +2253,17 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  func doubleSpacePeriodsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      let dictionaryKey = langCode + "DoubleSpacePeriods"
+
+      return userDefaults.bool(forKey: dictionaryKey)
+    } else {
+      return true // return the default value
+    }
+  }
+
   func emojiAutosuggestIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
@@ -2930,7 +2941,8 @@ class KeyboardViewController: UIInputViewController {
       if touch.tapCount == 2
         && (originalKey == spaceBar || originalKey == languageTextForSpaceBar)
         && proxy.documentContextBeforeInput?.count != 1
-        && doubleSpacePeriodPossible {
+        && doubleSpacePeriodPossible
+        && doubleSpacePeriodsEnabled() {
         // The first condition prevents a period if the prior characters are spaces as the user wants a series of spaces.
         if proxy.documentContextBeforeInput?.suffix(2) != "  " && ![.translate, .conjugate, .plural].contains(commandState) {
           proxy.deleteBackward()
