@@ -69,7 +69,6 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
     } else {
-      // Replace currencies
       return keyboardBuilder
         .replaceKey(row: 1, column: 6, to: currencyKeys[0])
         .replaceKey(row: 1, column: 7, to: currencyKeys[1])
@@ -109,7 +108,6 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
     } else {
-      // Replace currencies
       return keyboardBuilder
         .replaceKey(row: 1, column: 7, to: currencyKeys[0])
         .replaceKey(row: 1, column: 8, to: currencyKeys[1])
@@ -138,7 +136,6 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
       .build()
   }
-
 }
 
 /// Gets the keys for the French keyboard.

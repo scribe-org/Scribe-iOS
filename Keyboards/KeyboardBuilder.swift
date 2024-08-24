@@ -1,5 +1,5 @@
 /**
- * Building a keyboard layout using a builder pattern
+ * Building a keyboard layout using a builder pattern.
  *
  * Copyright (C) 2024 Scribe
  *

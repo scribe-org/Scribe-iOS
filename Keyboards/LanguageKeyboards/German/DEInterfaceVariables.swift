@@ -84,7 +84,6 @@ struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisable
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
     } else {
-      // Replace currencies
       return keyboardBuilder
         .replaceKey(row: 1, column: 6, to: currencyKeys[0])
         .replaceKey(row: 1, column: 7, to: currencyKeys[1])
@@ -134,7 +133,6 @@ struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisable
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
     } else {
-      // Replace currencies
       return keyboardBuilder
         .replaceKey(row: 1, column: 0, to: currencyKeys[0])
         .replaceKey(row: 1, column: 1, to: currencyKeys[1])
