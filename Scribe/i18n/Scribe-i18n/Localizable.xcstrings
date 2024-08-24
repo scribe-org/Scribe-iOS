@@ -1739,7 +1739,6 @@
     },
     "app.settings.translation" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1769,7 +1768,6 @@
     },
     "app.settings.translation.translateLang" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1799,7 +1797,6 @@
     },
     "app.settings.translation.translateLang.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

@@ -31,6 +31,14 @@ final class InfoChildTableViewCell: UITableViewCell {
   @IBOutlet var titleLabelPad: UILabel!
   var titleLabel: UILabel!
 
+  @IBOutlet var subLabelPhone: UILabel!
+  @IBOutlet var subLabelPad: UILabel!
+  var subLabel: UILabel!
+
+  @IBOutlet var iconImageViewPhone: UIImageView!
+  @IBOutlet var iconImageViewPad: UIImageView!
+  var iconImageView: UIImageView!
+
   @IBOutlet var toggleSwitchPhone: UISwitch!
   @IBOutlet var toggleSwitchPad: UISwitch!
   var toggleSwitch: UISwitch!
@@ -45,18 +53,26 @@ final class InfoChildTableViewCell: UITableViewCell {
   func setTableView() {
     if DeviceType.isPad {
       titleLabel = titleLabelPad
+      subLabel = subLabelPad
+      iconImageView = iconImageViewPad
       toggleSwitch = toggleSwitchPad
       descriptionLabel = descriptionLabelPad
 
       titleLabelPhone.removeFromSuperview()
+      subLabelPhone.removeFromSuperview()
+      iconImageViewPhone.removeFromSuperview()
       toggleSwitchPhone.removeFromSuperview()
       descriptionLabelPhone.removeFromSuperview()
     } else {
       titleLabel = titleLabelPhone
+      subLabel = subLabelPhone
+      iconImageView = iconImageViewPhone
       toggleSwitch = toggleSwitchPhone
       descriptionLabel = descriptionLabelPhone
 
       titleLabelPad.removeFromSuperview()
+      subLabelPad.removeFromSuperview()
+      iconImageViewPad.removeFromSuperview()
       toggleSwitchPad.removeFromSuperview()
       descriptionLabelPad.removeFromSuperview()
     }
@@ -96,26 +112,33 @@ final class InfoChildTableViewCell: UITableViewCell {
       descriptionLabel.removeFromSuperview()
     }
 
-    if !section.hasToggle {
-      let disclosureIcon = UIImage(systemName: "chevron.right")
-      let accessory  = UIImageView(
-        frame: CGRect(
-          x: 0, y: 0, width: (disclosureIcon?.size.width)!, height: (disclosureIcon?.size.height)!
-        )
-      )
-      accessory.image = disclosureIcon
-      accessory.tintColor = menuOptionColor
-      accessoryView = accessory
-      toggleSwitch.isHidden = true
-    } else {
+    if section.hasToggle {
       accessoryType = .none
       toggleSwitch.isHidden = false
+
+      fetchSwitchStateForCell()
+
+      toggleSwitch.onTintColor = .init(ScribeColor.scribeCTA).withAlphaComponent(0.4)
+      toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
+    } else {
+      iconImageView.image = UIImage(systemName: "chevron.right")
+      iconImageView.tintColor = menuOptionColor
+      toggleSwitch.isHidden = true
     }
 
-    fetchSwitchStateForCell()
-
-    toggleSwitch.onTintColor = .init(ScribeColor.scribeCTA).withAlphaComponent(0.4)
-    toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
+    if section.sectionState == .translateLang {
+      var langTranslateLanguage = "English"
+      if let selectedLang = userDefaults.string(forKey: languageCode + "TranslateLanguage") {
+        langTranslateLanguage = getKeyInDict(givenValue: selectedLang, dict: languagesAbbrDict)
+      } else {
+        userDefaults.set("en", forKey: languageCode + "TranslateLanguage")
+      }
+      let currentLang = "_global." + langTranslateLanguage.lowercased()
+      subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
+      subLabel.textColor = menuOptionColor
+    } else {
+      subLabel.removeFromSuperview()
+    }
   }
 
   @IBAction func switchDidChange(_: UISwitch) {

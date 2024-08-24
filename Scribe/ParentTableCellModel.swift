@@ -57,6 +57,7 @@ struct Section {
 enum SectionState: Equatable {
   case github
   case matrix
+  case mastodon
   case wikimedia
   case shareScribe
   case rateScribe
@@ -69,9 +70,9 @@ enum SectionState: Equatable {
   case licenses
   case appLang
   case specificLang(String)
-  case none(UserInteractiveState)
+  case translateLang
   case externalLink
-  case mastodon
+  case none(UserInteractiveState)
 }
 
 enum UserInteractiveState {
