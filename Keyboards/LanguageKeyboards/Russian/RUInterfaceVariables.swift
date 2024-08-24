@@ -20,67 +20,8 @@
 import UIKit
 
 public enum RussianKeyboardConstants {
-  // iPhone keyboard layouts.
-  static let letterKeysPhone = [
-    ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"],
-    ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"],
-    ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let numberKeysPhone = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "₽", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["АБВ", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let symbolKeysPhone = [
-    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "$", "€", "£", "·"],
-    ["123", ".", ",", "?", "!", "'", "delete"],
-    ["АБВ", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  // iPad keyboard layouts.
-  static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
-    ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "delete"],
-    ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "return"],
-    ["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
-  ]
-
-  static let numberKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
-    ["@", "#", "№", "₽", "ʼ", "&", "*", "(", ")", "'", "\"", "return"],
-    ["#+=", "%", "_", "-", "+", "=", "≠", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "АБВ", "space", "АБВ", "hideKeyboard"] // "undo"
-  ]
-
-  static let symbolKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"],
-    ["$", "€", "£", "¥", "±", "·", "`", "[", "]", "{", "}", "return"],
-    ["123", "§", "|", "~", "...", "^", "\\", "<", ">", "!", "?", "123"],
-    ["selectKeyboard", "АБВ", "space", "АБВ", "hideKeyboard"] // "undo"
-  ]
-
-  // Expanded iPad keyboard layouts for wider devices.
-  static let letterKeysPadExpanded = [
-    ["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
-    [SpecialKeys.indent, "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ", "+"],
-    [SpecialKeys.capsLock, "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "ё", "return"],
-    ["shift", "'", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
-  ]
-
-  static let symbolKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\\", "|", "₽"],
-    [SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"], // "undo"
-    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", "-", ",", ".", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
-  ]
+  static let defaultCurrencyKey = "₽"
+  static let currencyKeys = ["₽", "$", "€", "£"]
 
   // Alternate key vars.
   static let keysWithAlternates = ["е", "ь"]
@@ -91,12 +32,130 @@ public enum RussianKeyboardConstants {
   static let ьAlternateKeys = ["Ъ"]
 }
 
+struct RussianKeyboardProvider: KeyboardProviderProtocol {
+  // iPhone keyboard layouts.
+  static func genPhoneLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"])
+      .addRow(["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"])
+      .addRow(["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "delete"])
+      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .build()
+  }
+
+  static func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
+      .addRow(["-", "/", ":", ";", "(", ")", "₽", "&", "@", "\""])
+      .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["АБВ", "selectKeyboard", "space", "return"]) // "undo"
+      .replaceKey(row: 1, column: 6, to: currencyKey)
+      .build()
+  }
+
+  static func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder =  KeyboardBuilder()
+      .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
+      .addRow(["_", "\\", "|", "~", "<", ">", "$", "€", "£", "·"])
+      .addRow(["123", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["АБВ", "selectKeyboard", "space", "return"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      // Replace currencies
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 6, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 7, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 8, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // iPad keyboard layouts.
+  static func genPadLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
+      .addRow(["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "delete"])
+      .addRow(["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "return"])
+      .addRow(["shift", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", ".", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .build()
+  }
+
+  static func genPadNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"])
+      .addRow(["@", "#", "№", "₽", "ʼ", "&", "*", "(", ")", "'", "\"", "return"])
+      .addRow(["#+=", "%", "_", "-", "+", "=", "≠", ";", ":", ",", ".", "#+="])
+      .addRow(["selectKeyboard", "АБВ", "space", "АБВ", "hideKeyboard"]) // "undo"
+      .replaceKey(row: 1, column: 3, to: currencyKey)
+      .build()
+  }
+
+  static func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "—", "delete"])
+      .addRow(["$", "€", "£", "¥", "±", "·", "`", "[", "]", "{", "}", "return"])
+      .addRow(["123", "§", "|", "~", "...", "^", "\\", "<", ">", "!", "?", "123"])
+      .addRow(["selectKeyboard", "АБВ", "space", "АБВ", "hideKeyboard"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      // Replace currencies
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 0, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 1, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 2, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // Expanded iPad keyboard layouts for wider devices.
+  static func genPadExpandedLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
+      .addRow([SpecialKeys.indent, "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ", "+"])
+      .addRow([SpecialKeys.capsLock, "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э", "ё", "return"])
+      .addRow(["shift", "'", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "/", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+
+  static func genPadExpandedSymbolKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
+      .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\\", "|", "₽"])
+      .addRow([SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"]) // "undo"
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", "-", ",", ".", "shift"]) // "redo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+}
+
 /// Gets the keys for the Russian keyboard.
 func getRUKeys() {
+  guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
+    fatalError()
+  }
+
+  var currencyKey = RussianKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = RussianKeyboardConstants.currencyKeys
+  let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
+  if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
+    currencyKey = currencyValue
+  } else {
+    userDefaults.setValue(currencyKey, forKey: dictionaryKey)
+  }
+  if let index = currencyKeys.firstIndex(of: currencyKey) {
+    currencyKeys.remove(at: index)
+  }
+
   if DeviceType.isPhone {
-    letterKeys = RussianKeyboardConstants.letterKeysPhone
-    numberKeys = RussianKeyboardConstants.numberKeysPhone
-    symbolKeys = RussianKeyboardConstants.symbolKeysPhone
+    letterKeys = RussianKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = RussianKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = RussianKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["й", "ф", "1", "-", "[", "_"]
@@ -105,14 +164,14 @@ func getRUKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = RussianKeyboardConstants.letterKeysPadExpanded
-      symbolKeys = RussianKeyboardConstants.symbolKeysPadExpanded
+      letterKeys = RussianKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = RussianKeyboardProvider.genPadExpandedSymbolKeys()
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = RussianKeyboardConstants.letterKeysPad
-      numberKeys = RussianKeyboardConstants.numberKeysPad
-      symbolKeys = RussianKeyboardConstants.symbolKeysPad
+      letterKeys = RussianKeyboardProvider.genPadLetterKeys()
+      numberKeys = RussianKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = RussianKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 

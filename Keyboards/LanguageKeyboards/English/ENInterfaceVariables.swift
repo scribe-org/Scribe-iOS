@@ -40,103 +40,105 @@ public enum EnglishKeyboardConstants {
   static let zAlternateKeys = ["ž", "ź", "ż"]
 }
 
-// MARK: iPhone keyboard layouts.
-func genPhoneLetterKeys() -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"])
-    .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l"])
-    .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "delete"])
-    .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
-    .build()
-}
-
-func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
-    .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
-    .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-    .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
-    .replaceKey(row: 1, column: 6, to: currencyKey)
-    .build()
-}
-
-func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
-  let keyboardBuilder = KeyboardBuilder()
-    .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
-    .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
-    .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-    .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
-
-  if currencyKeys.count < 3 {
-    return keyboardBuilder.build()
-  } else {
-    // Replace currencies
-    return keyboardBuilder
-      .replaceKey(row: 1, column: 6, to: currencyKeys[0])
-      .replaceKey(row: 1, column: 7, to: currencyKeys[1])
-      .replaceKey(row: 1, column: 8, to: currencyKeys[2])
+struct EnglishKeyboardProvider: KeyboardProviderProtocol {
+  // iPhone keyboard layouts.
+  static func genPhoneLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"])
+      .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l"])
+      .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "delete"])
+      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
       .build()
   }
-}
 
-// MARK: iPad keyboard layouts.
-func genPadLetterKeys() -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
-    .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
-    .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
-    .addRow(["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"])
-    .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
-    .build()
-}
-
-func genPadNumberKeys(currencyKey: String) -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
-    .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
-    .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
-    .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
-    .replaceKey(row: 1, column: 2, to: currencyKey)
-    .build()
-}
-
-func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
-  let keyboardBuilder = KeyboardBuilder()
-    .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
-    .addRow(["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"])
-    .addRow(["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"])
-    .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
-
-  if currencyKeys.count < 3 {
-    return keyboardBuilder.build()
-  } else {
-    // Replace currencies
-    return keyboardBuilder
-      .replaceKey(row: 1, column: 0, to: currencyKeys[0])
-      .replaceKey(row: 1, column: 1, to: currencyKeys[1])
-      .replaceKey(row: 1, column: 2, to: currencyKeys[2])
+  static func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
+      .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
+      .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
-}
 
-func genPadExpandedLetterKeys() -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
-    .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"])
-    .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "'", "return"])
-    .addRow(["shift", "-", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
-    .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
-    .build()
-}
+  static func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
+      .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
+      .addRow(["123", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
 
-func genPadExpandedSymbolKeys() -> [[String]] {
-  return KeyboardBuilder()
-    .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
-    .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "~", "°"])
-    .addRow([SpecialKeys.capsLock, "-", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"]) // "undo"
-    .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "|", "_", ".", ",", "/", "shift"]) // "redo"
-    .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
-    .build()
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      // Replace currencies
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 6, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 7, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 8, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // iPad keyboard layouts.
+  static func genPadLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
+      .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
+      .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
+      .addRow(["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .build()
+  }
+
+  static func genPadNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
+      .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
+      .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .replaceKey(row: 1, column: 2, to: currencyKey)
+      .build()
+  }
+
+  static func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
+      .addRow(["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"])
+      .addRow(["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      // Replace currencies
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 0, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 1, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 2, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  static func genPadExpandedLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
+      .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"])
+      .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "'", "return"])
+      .addRow(["shift", "-", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+
+  static func genPadExpandedSymbolKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
+      .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "~", "°"])
+      .addRow([SpecialKeys.capsLock, "-", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"]) // "undo"
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "|", "_", ".", ",", "/", "shift"]) // "redo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
 }
 
 // MARK: Generate and set keyboard
@@ -160,9 +162,9 @@ func getENKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = genPhoneLetterKeys()
-    numberKeys = genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = EnglishKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = EnglishKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = EnglishKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -171,14 +173,14 @@ func getENKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = genPadExpandedLetterKeys()
-      symbolKeys = genPadExpandedSymbolKeys()
+      letterKeys = EnglishKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = EnglishKeyboardProvider.genPadExpandedSymbolKeys()
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = genPadLetterKeys()
-      numberKeys = genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = EnglishKeyboardProvider.genPadLetterKeys()
+      numberKeys = EnglishKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = EnglishKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
