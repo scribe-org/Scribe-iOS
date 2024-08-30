@@ -1,3 +1,22 @@
+/**
+ * Constants and functions to load the Hebrew Scribe keyboard.
+ *
+ * Copyright (C) 2024 Scribe
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 //  HEInterfaceVariablesTemp.swift
 //  Scribe
 
@@ -14,7 +33,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
   // iPhone keyboard layouts.
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
-      .addRow(["פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "❌"])
+      .addRow(["פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"])
       .addRow(["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"])
       .addRow(["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז"])
       .addRow(["123", "selectKeyboard", "רווח", "הכנס"])
@@ -25,7 +44,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
-      .addRow(["#+=", ".", ",", "?", "!", "'", "❌"])
+      .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
       .addRow(["אבג", "selectKeyboard", "רווח", "הכנס"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
@@ -35,7 +54,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     let keyboardBuilder = KeyboardBuilder()
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
-      .addRow(["123", ".", ",", "?", "!", "'", "❌"])
+      .addRow(["123", ".", ",", "?", "!", "'", "delete"])
       .addRow(["אבג", "selectKeyboard", "רווח", "הכנס"])
 
     if currencyKeys.count < 3 {
@@ -53,7 +72,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
    static func genPadLetterKeys() -> [[String]] {
      return KeyboardBuilder()
        .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
-       .addRow([",", ".", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "❌"])
+       .addRow([",", ".", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"])
        .addRow(["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"])
        .addRow(["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", "הכנס"])
        .addRow(["selectKeyboard", ".?123", "רווח", ".?123", "hideKeyboard"])
@@ -62,7 +81,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
 
    static func genPadNumberKeys(currencyKey: String) -> [[String]] {
      return KeyboardBuilder()
-       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "❌"])
+       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
        .addRow(["!", "@", "#", "&", "_", "-", "'", "\"", "(", ")", "הכנס"])
        .addRow(["#+=", "%", "...", "&", ";", ":", "=", "+", "/", "?", "#+="])
        .addRow(["selectKeyboard", "אבג", "רווח", "אבג", "hideKeyboard"])
@@ -72,7 +91,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
 
    static func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
      let keyboardBuilder = KeyboardBuilder()
-       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "❌"])
+       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"])
        .addRow(["^", "€", "$", "£", "[", "]", "'", "\"", "<", ">", "הכנס"])
        .addRow(["123", "§", "|", "~", "*", "·", "{", "}", "\\", "~", "123"])
        .addRow(["selectKeyboard", "אבג", "רווח", "אבג", "hideKeyboard"])
@@ -91,7 +110,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
   // Expanded iPad keyboard layouts for wider devices.
     static func genPadExpandedLetterKeys() -> [[String]] {
       return KeyboardBuilder()
-        .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "❌"])
+        .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
         .addRow([SpecialKeys.indent, "/", "'", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "[", "]", "+"])
         .addRow([SpecialKeys.capsLock, "ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש", ",", "\"", "הכנס"])
         .addRow(["⇧", ";", "ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", ".", "⇧"])
@@ -101,7 +120,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
 
     static func genPadExpandedSymbolKeys() -> [[String]] {
       return KeyboardBuilder()
-        .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "❌"])
+        .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
         .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "—"])
         .addRow([SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "€", "הכנס"])
         .addRow(["⇧", "…", "?", "!", "~", "≠", "'", "\"", "_", ",", ".", "-", "⇧"])
