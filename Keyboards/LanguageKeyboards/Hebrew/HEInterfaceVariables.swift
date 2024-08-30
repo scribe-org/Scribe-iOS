@@ -19,15 +19,15 @@
 
 import UIKit
 
-public enum HebrewKeyboardConstants {
-  static let defaultCurrencyKey = "$"
-  static let currencyKeys = ["$", "€", "£", "¥"]
-
-  // Alternate key vars.
-  static let keysWithAlternates = [""]
-  static let keysWithAlternatesLeft = [""]
-  static let keysWithAlternatesRight = [""]
-}
+//public enum HebrewKeyboardConstants {
+//  static let defaultCurrencyKey = "$"
+//  static let currencyKeys = ["$", "€", "£", "¥"]
+//
+//  // Alternate key vars.
+//  static let keysWithAlternates = [""]
+//  static let keysWithAlternatesLeft = [""]
+//  static let keysWithAlternatesRight = [""]
+//}
 
 struct HebrewKeyboardProvider: KeyboardProviderProtocol {
   // iPhone keyboard layouts.
