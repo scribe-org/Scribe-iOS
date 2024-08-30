@@ -8,20 +8,6 @@ public enum HebrewKeyboardConstants {
   static let defaultCurrencyKey = "₪"
   static let currencyKeys = ["₪", "€", "£", "$"]
 
-  // Alternate key vars.
-  // Add "sofit" letters here
-  static let keysWithAlternates = ["ך","ח", "נ", "צ", "ק", "ת", "פ", "א"]
-    static let keysWithAlternatesLeft = ["ח", "נ", "פ"]
-    static let keysWithAlternatesRight = ["צ", "ק", "ת"]
-    
-    static let alephAlternateKeys = ["א׳"]
-    static let memAlternateKeys = ["ם"]
-    static let nunAlternateKeys = ["ן"]
-    static let tzadiAlternateKeys = ["ץ"]
-    static let kafAlternateKeys = ["ק"]
-    static let kafSofitAlternateKeys = ["ך"]
-    static let tavAlternateKeys = ["ת"]
-    static let peySofitAlternateKeys = ["פ׳"]
   
 }
 
@@ -125,6 +111,96 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
+/// Gets the keys for the Hebrew keyboard.
+
+
+func getHEKeys() {
+  guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
+    fatalError()
+  }
+  
+  var currencyKey = HebrewKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = HebrewKeyboardConstants.currencyKeys
+  let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
+  
+  if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
+    currencyKey = currencyValue
+  } else {
+    userDefaults.setValue(currencyKey, forKey: dictionaryKey)
+  }
+  if let index = currencyKeys.firstIndex(of: currencyKey) {
+    currencyKeys.remove(at: index)
+  }
+  
+  if DeviceType.isPhone {
+    letterKeys = HebrewKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = HebrewKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = HebrewKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    
+    leftKeyChars = ["ק", "1", "-", "[", "_"]
+    rightKeyChars = ["פ", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
+  } else {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = HebrewKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = HebrewKeyboardProvider.genPadExpandedSymbolKeys()
+      
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
+      letterKeys = HebrewKeyboardProvider.genPadLetterKeys()
+      numberKeys = HebrewKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = HebrewKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      
+      letterKeys.removeFirst(1)
+      
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    }
+    
+    leftKeyChars = ["1", "ק"]
+    rightKeyChars = ["הכנס", "hideKeyboard"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
+  }
+}
+
+
+func setHEKeyboardLayout() {
+  getRUKeys()
+
+  currencySymbol = ""
+  currencySymbolAlternates = roubleAlternateKeys
+  spaceBar = ""
+  language = ""
+  invalidCommandMsg = ""
+  baseAutosuggestions = ["я", "а", "в"]
+  numericAutosuggestions = ["в", "и", "я"]
+
+  translateKeyLbl = ""
+  translatePlaceholder = ""
+  translatePrompt = commandPromptSpacing + "he -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+
+  conjugateKeyLbl = ""
+  conjugatePlaceholder = ""
+  conjugatePrompt = commandPromptSpacing + ""
+  conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+
+  pluralKeyLbl = ""
+  pluralPlaceholder = ""
+  pluralPrompt = commandPromptSpacing + ""
+  pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+  alreadyPluralMsg = ""
+}
+
 
 //  Created by Daniel Geva on 2024/08/30.
-//
