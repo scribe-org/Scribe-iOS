@@ -1,4 +1,3 @@
-//
 //  HEInterfaceVariablesTemp.swift
 //  Scribe
 
@@ -166,40 +165,40 @@ func getHEKeys() {
 
 
 func setHEKeyboardLayout() {
-  getRUKeys()
+  getHEKeys()
 
   currencySymbol = ""
   currencySymbolAlternates = roubleAlternateKeys
-  spaceBar = ""
-  language = ""
-  invalidCommandMsg = ""
-  baseAutosuggestions = ["я", "а", "в"]
-  numericAutosuggestions = ["в", "и", "я"]
+  spaceBar = "רווח"
+  language = "עברית"
+  invalidCommandMsg = "אין מידע"
+  baseAutosuggestions = ["אתמ", "אני", "היי"]
+  numericAutosuggestions = ["", "", ""]
 
-  translateKeyLbl = ""
-  translatePlaceholder = ""
+  translateKeyLbl = "Translate"
+  translatePlaceholder = "Translate"
   translatePrompt = commandPromptSpacing + "he -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
-  conjugateKeyLbl = ""
-  conjugatePlaceholder = ""
-  conjugatePrompt = commandPromptSpacing + ""
+  conjugateKeyLbl = "Conjugate"
+  conjugatePlaceholder = "Conjugate"
+  conjugatePrompt = commandPromptSpacing + "Conjucation: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
-  pluralKeyLbl = ""
-  pluralPlaceholder = ""
-  pluralPrompt = commandPromptSpacing + ""
+  pluralKeyLbl = "Plural"
+  pluralPlaceholder = "Plural"
+  pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
-  alreadyPluralMsg = ""
+  alreadyPluralMsg = "Already in plural form"
 }
 
 
