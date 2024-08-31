@@ -20,13 +20,8 @@
 import UIKit
 
 public enum HebrewKeyboardConstants {
-  static let defaultCurrencyKey = "$"
-  static let currencyKeys = ["$", "€", "£", "¥"]
-
-  // Alternate key vars.
-  static let keysWithAlternates = [""]
-  static let keysWithAlternatesLeft = [""]
-  static let keysWithAlternatesRight = [""]
+  static let defaultCurrencyKey = "₪"
+  static let currencyKeys = ["₪", "€", "£", "$"]
 }
 
 struct HebrewKeyboardProvider: KeyboardProviderProtocol {
@@ -36,7 +31,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"])
       .addRow(["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"])
       .addRow(["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז"])
-      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo", "accent"
+      .addRow(["123", "selectKeyboard", "space", "return"])
       .build()
   }
 
@@ -45,7 +40,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo", "accent"
+      .addRow(["אבג", "selectKeyboard", "space", "return"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
@@ -55,7 +50,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo", "accent"
+      .addRow(["אבג", "selectKeyboard", "space", "return"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -75,7 +70,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow([",", ".", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"])
       .addRow(["ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש"])
       .addRow(["ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", "return"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -84,7 +79,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["!", "@", "#", "&", "_", "-", "'", "\"", "(", ")", "return"])
       .addRow(["#+=", "%", "...", "&", ";", ":", "=", "+", "/", "?", "#+="])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "אבג", "space", "אבג", "hideKeyboard"])
       // .replaceKey(row: 1, column: 4, to: currencyKey)
       .build()
   }
@@ -94,7 +89,7 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"])
       .addRow(["^", "€", "$", "£", "[", "]", "'", "\"", "<", ">", "return"])
       .addRow(["123", "§", "|", "~", "*", "·", "{", "}", "\\", "~", "123"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "אבג", "space", "אבג", "hideKeyboard"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -113,8 +108,8 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
       .addRow([SpecialKeys.indent, "/", "'", "פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "[", "]", "+"])
       .addRow([SpecialKeys.capsLock, "ף", "ך", "ל", "ח", "י", "ע", "כ", "ג", "ד", "ש", ",", "\"", "return"])
-      .addRow(["shift", ";", "ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", ".", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow(["⇧", ";", "ץ", "ת", "צ", "מ", "נ", "ה", "ב", "ס", "ז", ".", "⇧"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -122,15 +117,97 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
       .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "—"])
-      .addRow([SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "€", "return"]) // "undo"
-      .addRow(["shift", "…", "?", "!", "~", "≠", "'", "\"", "_", ",", ".", "-", "shift"]) // "redo"
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow([SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "€", "return"])
+      .addRow(["⇧", "…", "?", "!", "~", "≠", "'", "\"", "_", ",", ".", "-", "⇧"])
+      .addRow(["selectKeyboard", "אבג", "space", "אבג", "hideKeyboard"])
       .build()
   }
 }
 
 /// Gets the keys for the Hebrew keyboard.
-func getHEKeys() {}
+func getHEKeys() {
+  guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
+    fatalError()
+  }
 
-/// Provides the Hebrew keyboard layout.
-func setHEKeyboardLayout() {}
+  var currencyKey = HebrewKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = HebrewKeyboardConstants.currencyKeys
+  let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
+
+  if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
+    currencyKey = currencyValue
+  } else {
+    userDefaults.setValue(currencyKey, forKey: dictionaryKey)
+  }
+  if let index = currencyKeys.firstIndex(of: currencyKey) {
+    currencyKeys.remove(at: index)
+  }
+
+  if DeviceType.isPhone {
+    letterKeys = HebrewKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = HebrewKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = HebrewKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+
+    leftKeyChars = ["ק", "1", "-", "[", "_"]
+    rightKeyChars = ["פ", "0", "\"", "=", "·"]
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
+  } else {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
+    if usingExpandedKeyboard {
+      letterKeys = HebrewKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = HebrewKeyboardProvider.genPadExpandedSymbolKeys()
+
+      allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
+    } else {
+      letterKeys = HebrewKeyboardProvider.genPadLetterKeys()
+      numberKeys = HebrewKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = HebrewKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+
+      letterKeys.removeFirst(1)
+
+      allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
+    }
+
+    leftKeyChars = ["1", "ק"]
+    rightKeyChars = []
+    centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
+  }
+}
+
+func setHEKeyboardLayout() {
+  getHEKeys()
+
+  currencySymbol = ""
+  currencySymbolAlternates = roubleAlternateKeys
+  spaceBar = "רווח"
+  language = "עברית"
+  invalidCommandMsg = "אין מידע"
+  baseAutosuggestions = ["אתמ", "אני", "היי"]
+  numericAutosuggestions = ["", "", ""]
+
+  translateKeyLbl = "לְתַרְגֵם"
+  translatePlaceholder = "לְתַרְגֵם"
+  translatePrompt = commandPromptSpacing + "he -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
+  translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
+  translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+
+  conjugateKeyLbl = "לְהַטוֹת"
+  conjugatePlaceholder = "לְהַטוֹת"
+  conjugatePrompt = commandPromptSpacing + " :נְטִיָה"
+  conjugatePromptAndCursor = conjugatePrompt + commandCursor
+  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
+  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
+  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+
+  pluralKeyLbl = "רַבִּים"
+  pluralPlaceholder = "רַבִּים"
+  pluralPrompt = commandPromptSpacing + " :רַבִּים"
+  pluralPromptAndCursor = pluralPrompt + commandCursor
+  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
+  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
+  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
+  alreadyPluralMsg = "כבר בצורת רבים"
+}
