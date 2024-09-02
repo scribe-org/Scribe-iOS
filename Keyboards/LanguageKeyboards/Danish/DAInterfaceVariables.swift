@@ -20,67 +20,8 @@
 import UIKit
 
 public enum DanishKeyboardConstants {
-  // iPhone keyboard layouts.
-  static let letterKeysPhone = [
-    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å"],
-    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "æ", "ø"],
-    ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let numberKeysPhone = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-    ["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""],
-    ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  static let symbolKeysPhone = [
-    ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
-    ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
-    ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
-  ]
-
-  // iPad keyboard layouts.
-  static let letterKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
-    ["q", "w", "e", "r", "t", "y", "u", "i", "o", "æ", "ø", "delete"],
-    ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"],
-    ["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
-  ]
-
-  static let numberKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "delete"],
-    ["@", "#", "kr", "&", "*", "(", ")", "'", "\"", "+", "·", "return"],
-    ["#+=", "%", "_", "-", "=", "/", ";", ":", ",", ".", "?", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
-  ]
-
-  static let symbolKeysPad = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "'", "delete"],
-    ["€", "$", "£", "^", "[", "]", "{", "}", "―", "ᵒ", "...", "return"],
-    ["123", "§", "|", "~", "≠", "≈", "\\", "<", ">", "!", "?", "123"],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
-  ]
-
-  // Expanded iPad keyboard layouts for wider devices.
-  static let letterKeysPadExpanded = [
-    ["kr", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"],
-    [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å", "@", "¨"],
-    [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "æ", "ø", "'", "return"],
-    ["shift", "*", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
-  ]
-
-  static let symbolKeysPadExpanded = [
-    ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
-    [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "—"],
-    [SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", ",", ".", "-", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
-  ]
+  static let defaultCurrencyKey = "kr"
+  static let currencyKeys = ["kr", "€", "$", "£", "¥"]
 
   // Alternate key vars.
   static let keysWithAlternates = ["a", "e", "i", "o", "u", "y", "æ", "ø", "d", "l", "n", "s"]
@@ -99,6 +40,106 @@ public enum DanishKeyboardConstants {
   static let lAlternateKeys = ["ł"]
   static let nAlternateKeys = ["ń", "ñ"]
   static let sAlternateKeys = ["ß", "ś", "š"]
+}
+
+struct DanishKeyboardProvider: KeyboardProviderProtocol {
+  // iPhone keyboard layouts.
+  static func genPhoneLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å"])
+      .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "æ", "ø"])
+      .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "delete"])
+      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .build()
+  }
+
+  static func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
+      .addRow(["-", "/", ":", ";", "(", ")", "kr", "&", "@", "\""])
+      .addRow( ["#+=", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .replaceKey(row: 1, column: 6, to: currencyKey)
+      .build()
+  }
+
+  static func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
+      .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
+      .addRow(["123", ".", ",", "?", "!", "'", "delete"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 6, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 7, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 8, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // iPad keyboard layouts.
+  static func genPadLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
+      .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "æ", "ø", "delete"])
+      .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"])
+      .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .build()
+  }
+
+  static func genPadNumberKeys(currencyKey: String) -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "delete"])
+      .addRow(["@", "#", "kr", "&", "*", "(", ")", "'", "\"", "+", "·", "return"])
+      .addRow(["#+=", "%", "_", "-", "=", "/", ";", ":", ",", ".", "?", "#+="])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .replaceKey(row: 1, column: 2, to: currencyKey)
+      .build()
+  }
+
+  static func genPadSymbolKeys(currencyKeys: [String]) -> [[String]] {
+    let keyboardBuilder = KeyboardBuilder()
+      .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "'", "delete"])
+      .addRow(["€", "$", "£", "^", "[", "]", "{", "}", "―", "ᵒ", "...", "return"])
+      .addRow(["123", "§", "|", "~", "≠", "≈", "\\", "<", ">", "!", "?", "123"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+
+    if currencyKeys.count < 3 {
+      return keyboardBuilder.build()
+    } else {
+      return keyboardBuilder
+        .replaceKey(row: 1, column: 0, to: currencyKeys[0])
+        .replaceKey(row: 1, column: 1, to: currencyKeys[1])
+        .replaceKey(row: 1, column: 2, to: currencyKeys[2])
+        .build()
+    }
+  }
+
+  // Expanded iPad keyboard layouts for wider devices.
+  static func genPadExpandedLetterKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["kr", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"])
+      .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å", "@", "¨"])
+      .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "æ", "ø", "'", "return"])
+      .addRow(["shift", "*", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
+
+  static func genPadExpandedSymbolKeys() -> [[String]] {
+    return KeyboardBuilder()
+      .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
+      .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "—"])
+      .addRow([SpecialKeys.capsLock, "°", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"]) // "undo"
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", ",", ".", "-", "shift"]) // "redo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .build()
+  }
 }
 
 /// Gets the keys for the Danish keyboard.

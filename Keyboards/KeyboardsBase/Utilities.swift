@@ -24,6 +24,8 @@
 func get_iso_code(keyboardLanguage: String) -> String {
   var iso = ""
   switch keyboardLanguage {
+  case "English":
+    iso = "en"
   case "French":
     iso = "fr"
   case "German":
@@ -43,4 +45,13 @@ func get_iso_code(keyboardLanguage: String) -> String {
   }
 
   return iso
+}
+
+/// Checks if an extra space is needed in the text field when generated text is inserted
+func getOptionalSpace() -> String {
+  if proxy.documentContextAfterInput?.first == " " {
+    return ""
+  } else {
+    return " "
+  }
 }

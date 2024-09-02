@@ -24,14 +24,14 @@ jobs:
           $SourceDiff = $diff | Where-Object { $_ -match '^Scribe-i18n/' -and $_ -match '.json$' }
           $HasDiff = $SourceDiff.Length -gt 0
 
-          Write-Host "json_changed=$HasDiff >> $GITHUB_OUTPUT"
+          Write-Host "json_changed=$HasDiff" >> "$GITHUB_OUTPUT"
 
   # Run xcstrings conversion script if needed.
   conditional_job:
     runs-on: ubuntu-latest
     needs:
       - conditional_job_check_files
-    if: needs.conditional_job_check_files.outputs.json_changed == 'True'
+    if: needs.conditional_job_check_files.outputs.json_changed == True
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5

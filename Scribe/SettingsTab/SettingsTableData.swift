@@ -65,6 +65,12 @@ enum SettingsTableData {
       headingTitle: NSLocalizedString("app.settings.functionality", value: "Functionality", comment: ""),
       section: [
         Section(
+          sectionTitle: NSLocalizedString("app.settings.functionality.doubleSpacePeriods", value: "Double space periods", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.doubleSpacePeriods),
+          shortDescription: NSLocalizedString("app.settings.layout.doubleSpacePeriods.description", value: "Automatically insert a period when the space key is pressed twice.", comment: "")
+        ),
+        Section(
           sectionTitle: NSLocalizedString("app.settings.functionality.autoSuggestEmoji", value: "Autosuggest emojis", comment: ""),
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
@@ -83,21 +89,19 @@ enum SettingsTableData {
     guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else { return [] }
 
     let customKeyboardExtension = appBundleIdentifier + "."
-    for keyboard in keyboards {
-      if keyboard.hasPrefix(customKeyboardExtension) {
+    for keyboard in keyboards where keyboard.hasPrefix(customKeyboardExtension) {
         let lang = keyboard.replacingOccurrences(of: customKeyboardExtension, with: "")
         installedKeyboards.append(lang.capitalized)
-      }
     }
 
     var sections = [Section]()
 
-    for language in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[language] else {
-        fatalError("Abbreviation not found for language: \(language)")
+    for lang in installedKeyboards {
+      guard let abbreviation = languagesAbbrDict[lang] else {
+        fatalError("Abbreviation not found for language: \(lang)")
       }
       let newSection = Section(
-        sectionTitle: NSLocalizedString("_global.\(language.lowercased())", value: language, comment: ""),
+        sectionTitle: languagesStringDict[lang]!,
         sectionState: .specificLang(abbreviation)
       )
 

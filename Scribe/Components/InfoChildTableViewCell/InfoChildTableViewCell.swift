@@ -21,11 +21,11 @@ import UIKit
 
 final class InfoChildTableViewCell: UITableViewCell {
 
-  // MARK: - Constants
+  // MARK: Constants
 
   static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var titleLabelPhone: UILabel!
   @IBOutlet var titleLabelPad: UILabel!
@@ -78,7 +78,7 @@ final class InfoChildTableViewCell: UITableViewCell {
     return action
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   func configureCell(for section: Section) {
     self.section = section
@@ -128,6 +128,10 @@ final class InfoChildTableViewCell: UITableViewCell {
       let dictionaryKey = languageCode + "AccentCharacters"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+    case .doubleSpacePeriods:
+      let dictionaryKey = languageCode + "DoubleSpacePeriods"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
@@ -154,6 +158,14 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = false  // Default value
+      }
+
+    case .doubleSpacePeriods:
+      let dictionaryKey = languageCode + "DoubleSpacePeriods"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = true  // Default value
       }
 
     case .autosuggestEmojis:

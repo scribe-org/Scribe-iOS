@@ -132,18 +132,14 @@ class InstallationVC: UIViewController {
     if DeviceType.isPad {
       topIconPhone.isHidden = true
       topIconPad.isHidden = false
-      for constraint in settingsCorner.constraints {
-        if constraint.identifier == "settingsCorner" {
+      for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
           constraint.constant = 125
-        }
       }
     } else {
       topIconPhone.isHidden = false
       topIconPad.isHidden = true
-      for constraint in settingsCorner.constraints {
-        if constraint.identifier == "settingsCorner" {
+      for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
           constraint.constant = 70
-        }
       }
     }
   }
@@ -225,16 +221,10 @@ class InstallationVC: UIViewController {
   func setCurrentUI() {
     // Sets the font size for the text in the app screen and corresponding UIImage icons.
     if DeviceType.isPhone {
-      if Locale.userSystemLanguage == "DE" {
-        fontSize = UIScreen.main.bounds.height / 61
-      } else {
-        if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
-          print(UIScreen.main.bounds.width)
-          fontSize = UIScreen.main.bounds.height / 59
-        } else if UIScreen.main.bounds.width <= 413 && UIScreen.main.bounds.width > 375 {
-          print(UIScreen.main.bounds.width)
-          fontSize = UIScreen.main.bounds.height / 50
-        }
+      if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
+        fontSize = UIScreen.main.bounds.height / 59
+      } else if UIScreen.main.bounds.width <= 413 && UIScreen.main.bounds.width > 375 {
+        fontSize = UIScreen.main.bounds.height / 50
       }
 
     } else if DeviceType.isPad {
@@ -278,7 +268,7 @@ class InstallationVC: UIViewController {
   }
 }
 
-// MARK: - TipHintView
+// MARK: TipHintView
 
 extension InstallationVC {
   private func showTipCardView() {

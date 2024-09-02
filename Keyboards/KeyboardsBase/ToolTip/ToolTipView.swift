@@ -22,7 +22,7 @@ import UIKit
 final class ToolTipView: UIView, ToolTipViewUpdatable {
   var didUpdatePage: ((ConjViewShiftButtonsState) -> Void)?
 
-  // MARK: - Private propeties
+  // MARK: Private propeties
 
   private var currentIndex: Int = 0 {
     didSet {
@@ -38,7 +38,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
 
   private var datasources: [ToolTipViewDatasourceable]
 
-  // MARK: - Private UI
+  // MARK: Private UI
 
   private(set) lazy var contentLabel: UILabel = {
     let tempLabel = UILabel()
@@ -64,7 +64,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
 
   private(set) var pageControl = UIPageControl()
 
-  // MARK: - Init
+  // MARK: Init
 
   init(datasources: [ToolTipViewDatasourceable]) {
     self.datasources = datasources
@@ -85,7 +85,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     fatalError("init(coder:) has not been implemented")
   }
 
-  // MARK: - Overrides
+  // MARK: Overrides
 
   override func layoutSubviews() {
     let datasource = getCurrentDatasource()
@@ -103,7 +103,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     }
   }
 
-  // MARK: - Methods
+  // MARK: Methods
 
   func updateNext() {
     let tempCurrentIndex = currentIndex + 1
@@ -126,7 +126,7 @@ final class ToolTipView: UIView, ToolTipViewUpdatable {
     animateDatasourceChange(newDatasource: newDatasource)
   }
 
-  // MARK: - Private methods
+  // MARK: Private methods
 
   private func getCurrentDatasource() -> ToolTipViewDatasourceable {
     datasources[currentIndex]

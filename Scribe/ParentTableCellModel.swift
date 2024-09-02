@@ -76,6 +76,7 @@ enum SectionState: Equatable {
 
 enum UserInteractiveState {
   case toggleCommaAndPeriod
+  case doubleSpacePeriods
   case autosuggestEmojis
   case toggleAccentCharacters
   case none

@@ -64,7 +64,7 @@ import UIKit
 // }
 //
 
-// MARK: - UITableViewDelegate
+// MARK: UITableViewDelegate
 
 //
 ///// Function implementation conforming to the UITableViewDelegate protocol.

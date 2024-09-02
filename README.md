@@ -12,6 +12,7 @@
 [![language](https://img.shields.io/badge/Swift%205-F0513C.svg?logo=swift&logoColor=ffffff)](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/scribe-org/Scribe-iOS.svg?label=%20)](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt)
 [![coc](https://img.shields.io/badge/Contributor%20Covenant-ff69b4.svg)](https://github.com/scribe-org/Scribe-iOS/blob/main/.github/CODE_OF_CONDUCT.md)
+[![weblate](https://img.shields.io/badge/Weblate-144D3F.svg?logo=weblate&logoColor=ffffff)](https://hosted.weblate.org/projects/scribe/scribe-i18n)
 [![mastodon](https://img.shields.io/badge/Mastodon-6364FF.svg?logo=mastodon&logoColor=ffffff)](https://wikis.world/@scribe)
 [![matrix](https://img.shields.io/badge/Matrix-000000.svg?logo=matrix&logoColor=ffffff)](https://matrix.to/#/#scribe_community:matrix.org)
 
@@ -92,7 +93,7 @@ After your first few pull requests organization members would be happy to discus
 
 - [Reporting bugs](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=bug&template=bug_report.yml) as they're found 🐞
 - Working on [new features](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) ✨
-- [Localization](https://github.com/scribe-org/Scribe-i18n) for the app and App Store 🌐
+- [Localization](https://github.com/scribe-org/Scribe-i18n) for the app and App Store via our [Weblate project](https://hosted.weblate.org/projects/scribe/scribe-i18n) 🌐
 - [Documentation](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
@@ -176,6 +177,8 @@ pre-commit install
    - Press the run button marked `Start the active scheme`
    - From here code edits that are made will be reflected in the app each time the active scheme is restarted
 
+6. Build the developer documentation by selecting `Product` > `Build Documentation` (^⇧⌘D)
+
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
 
@@ -207,13 +210,13 @@ The following table shows the supported languages and the amount of data availab
 
 | Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
 | :--------- | ------: | ----: | -------------: | ------------: | -------------: |
-| French     |  18,044 | 6,574 |         67,652 |             - |          2,488 |
-| German     | 194,687 | 3,634 |         67,652 |           215 |          2,898 |
-| Italian    |  59,191 | 7,649 |         67,652 |             - |          2,457 |
-| Portuguese |   5,268 |   538 |         67,652 |             - |          2,327 |
+| French     |  18,082 | 6,575 |         67,652 |             - |          2,488 |
+| German     | 194,762 | 3,637 |         67,652 |           215 |          2,898 |
+| Italian    |  59,910 | 7,654 |         67,652 |             - |          2,457 |
+| Portuguese |   5,281 |   539 |         67,652 |             - |          2,327 |
 | Russian    | 194,567 |    15 |         67,652 |            15 |          3,827 |
-| Spanish    |  61,650 | 7,912 |         67,652 |             - |          3,134 |
-| Swedish    |  47,007 | 4,678 |         67,652 |             - |          2,913 |
+| Spanish    |  62,949 | 7,938 |         67,652 |             - |          3,134 |
+| Swedish    |  47,039 | 4,682 |         67,652 |             - |          2,913 |
 
 `*` Given the current **`beta`** status where words are machine translated.
 

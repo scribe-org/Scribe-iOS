@@ -93,7 +93,7 @@ var allColoredPrompts: [NSAttributedString] = []
 let languagesWithCapitalizedNouns = ["German"]
 let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
 
-// MARK: - Translate Variables
+// MARK: Translate Variables
 
 var translateKeyLbl = ""
 var translatePrompt = ""
@@ -103,7 +103,7 @@ var translatePromptAndPlaceholder = ""
 var translatePromptAndColorPlaceholder = NSMutableAttributedString()
 var wordToTranslate = ""
 
-// MARK: - Conjugate Variables
+// MARK: Conjugate Variables
 
 var conjugateKeyLbl = ""
 var conjugatePrompt = ""
@@ -155,8 +155,8 @@ var formLabelsDict = [
   "SPP": "",
   "TPP": "",
   "Top": "",
-  "Bottom": "",
   "Middle": "",
+  "Bottom": "",
   "TL": "",
   "TR": "",
   "BL": "",
@@ -171,7 +171,7 @@ var verbToDisplay = ""
 var wordToDisplay = ""
 var conjugationToDisplay = ""
 
-// MARK: - Plural Variables
+// MARK: Plural Variables
 
 var pluralKeyLbl = ""
 var pluralPrompt = ""

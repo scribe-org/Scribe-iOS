@@ -10,11 +10,50 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Upcoming] Scribe-iOS 3.1.0
+# [Upcoming] Scribe-iOS 3.2.0
+
+### ⌨️ New Keyboards
+
+- Adds an English keyboard ([#7](https://github.com/scribe-org/Scribe-iOS/issues/7)).
+
+### ✨ New Features
+
+- Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
+- Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
+
+### ♻️ Code Refactoring
+
+- All orphaned documentation comments have been removed from the codebase ([#425](https://github.com/scribe-org/Scribe-iOS/issues/425)).
+- All if clauses within for loops have been removed from the codebase ([#428](https://github.com/scribe-org/Scribe-iOS/issues/428)).
+
+# Scribe-iOS 3.1.1
+
+### ✨ New Features
+
+- A warning is added to trying to change the app localization if the user only has one language installed on their device ([#481](https://github.com/scribe-org/Scribe-iOS/issues/481)).
+
+### 🌐 Localization
+
+- Localization strings for English, German, Swedish and Spanish have been added for all remaining app texts ([Scribe-i18n#28](https://github.com/scribe-org/Scribe-i18n/issues/28)).
+
+### 🐞 Bug Fixes
+
+- The plural command now reacts to the capitalization of the input word when a word that's already plural is entered.
+
+# Scribe-iOS 3.1.0
 
 ### ✨ New Features
 
 - The About tab now includes a link to Scribe's Mastodon account ([#474](https://github.com/scribe-org/Scribe-iOS/issues/474)).
+
+### 🗃️ Data Added
+
+- French: 38 nouns, 1 verb
+- German: 75 nouns, 3 verbs
+- Italian: 719 nouns, 5 verbs
+- Portuguese: 13 nouns, 1 verb
+- Spanish: 1,299 nouns, 26 verbs
+- Swedish: 32 nouns, 4 verbs
 
 ### 🎨 Design Changes
 
@@ -28,14 +67,14 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) localization process has been fully integrated into the Scribe-iOS workflow.
   - All strings for the application have been converted over to localizable strings.
   - Localization is version controlled via [Weblate](https://weblate.org/en/) and new texts are added to Scribe-iOS via Git subtrees.
-  - The new menu of the Scribe application has been localized into German ([Scribe-i18n#13](https://github.com/scribe-org/Scribe-i18n/issues/13)).
+  - The new menu of the Scribe application has been localized into German, Swedish and Spanish ([Scribe-i18n#11](https://github.com/scribe-org/Scribe-i18n/issues/11), [Scribe-i18n#13](https://github.com/scribe-org/Scribe-i18n/issues/13)).
 
 ### 🐞 Bug Fixes
 
 - The user will no longer click a menu option beneath an app hint as the hints will disappear on scroll ([#465](https://github.com/scribe-org/Scribe-iOS/issues/465)).
 - The installation app hints tooltip's vertical location is programmatically determined based on if the device has a home button or not ([#467](https://github.com/scribe-org/Scribe-iOS/issues/467)).
 - Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)).
-<!-- - The disable accent characters option has been removed on iPads and will no longer crashes the app settings ([#477](https://github.com/scribe-org/Scribe-iOS/issues/477)). -->
+- The disable accent characters option has been removed on iPads and will no longer crashes the app settings ([#477](https://github.com/scribe-org/Scribe-iOS/issues/477)).
 
 # Scribe-iOS 3.0.0
 
