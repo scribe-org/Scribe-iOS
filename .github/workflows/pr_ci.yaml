@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_15.app
+      run: sudo xcode-select -switch /Applications/Xcode.app
 
     - name: Build and Test
       run: |
