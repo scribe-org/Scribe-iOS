@@ -1,0 +1,33 @@
+name: pr_ci
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, reopened, synchronize]
+
+jobs:
+  test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Cache DerivedData
+        uses: actions/cache@v3
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ${{ runner.os }}-xcode-${{ hashFiles('**/*.swift', '**/project.pbxproj') }}
+          restore-keys: |
+            ${{ runner.os }}-xcode-
+      - name: Build
+        run: |
+          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' clean build
+
+      - name: Test
+        run: |
+          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test
