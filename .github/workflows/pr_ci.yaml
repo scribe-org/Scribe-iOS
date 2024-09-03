@@ -1,5 +1,4 @@
 name: pr_ci
-
 on:
   pull_request:
     branches:
@@ -9,6 +8,7 @@ on:
 jobs:
   test:
     runs-on: macos-latest
+    name: Run Unit Tests
 
     steps:
       - name: Checkout code
