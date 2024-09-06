@@ -86,7 +86,7 @@ class KeyboardStylingTest: XCTestCase {
 // MARK: getPhoneIconConfig
 
 extension KeyboardStylingTest {
-  func testGetPhoneIconConfigWithInvalidIconNameInPortaint() {
+  func testGetPhoneIconConfigWithInvalidIconNameInPortrait() {
     letterKeyWidth = 100
     isLandscapeView = false
     let iconName = "abc"
@@ -101,7 +101,7 @@ extension KeyboardStylingTest {
     XCTAssertEqual(expected, result)
   }
 
-  func testGetPhoneIconConfigWithValidIconNameInPortaint() {
+  func testGetPhoneIconConfigWithValidIconNameInPortrait() {
     letterKeyWidth = 100
     isLandscapeView = false
     let iconName = "delete.left"
@@ -150,7 +150,7 @@ extension KeyboardStylingTest {
 // MARK: getPadIconConfig
 
 extension KeyboardStylingTest {
-  func testGetPadIconConfigWithInvalidIconNameInPortraint() {
+  func testGetPadIconConfigWithInvalidIconNameInPortrait() {
     letterKeyWidth = 100
     isLandscapeView = false
     let expected = UIImage.SymbolConfiguration(
@@ -164,7 +164,7 @@ extension KeyboardStylingTest {
     XCTAssertEqual(expected, result)
   }
 
-  func testGetPadIconConfigWithValidIconNameInPortraint() {
+  func testGetPadIconConfigWithValidIconNameInPortrait() {
     letterKeyWidth = 100
     isLandscapeView = false
     let iconName = "delete.left"
@@ -248,19 +248,19 @@ extension KeyboardStylingTest {
 extension KeyboardStylingTest {
   func testStyleDeleteButton() {
     let pressedButton = UIButton()
-    let unpressButton = UIButton()
+    let unpressedButton = UIButton()
     let pressedIconName = "delete.left.fill"
-    let unpressIconName = "delete.left"
+    let unpressedIconName = "delete.left"
     let pressedButtonIconConfig = getPhoneIconConfig(iconName: pressedIconName)
-    let unpressButtonIconConfig = getPhoneIconConfig(iconName: unpressIconName)
+    let unpressedButtonIconConfig = getPhoneIconConfig(iconName: unpressedIconName)
     let pressedButtonImage = UIImage(systemName: pressedIconName, withConfiguration: pressedButtonIconConfig)
-    let unpressButtonImage = UIImage(systemName: unpressIconName, withConfiguration: unpressButtonIconConfig)
+    let unpressedButtonImage = UIImage(systemName: unpressedIconName, withConfiguration: unpressedButtonIconConfig)
 
     styleDeleteButton(pressedButton, isPressed: true)
-    styleDeleteButton(unpressButton, isPressed: false)
+    styleDeleteButton(unpressedButton, isPressed: false)
 
     XCTAssertEqual(pressedButton.imageView?.image, pressedButtonImage)
-    XCTAssertEqual(unpressButton.imageView?.image, unpressButtonImage)
+    XCTAssertEqual(unpressedButton.imageView?.image, unpressedButtonImage)
   }
 }
 
