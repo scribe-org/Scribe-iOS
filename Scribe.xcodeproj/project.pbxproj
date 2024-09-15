@@ -834,6 +834,18 @@
 		D1CDEDDA2A85AE9C00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDB2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
+		D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
@@ -1101,6 +1113,7 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
+		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
@@ -1378,13 +1391,6 @@
 			path = German;
 			sourceTree = "<group>";
 		};
-		5A03802B2C74FC1600D4AADD /* Databases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Databases;
-			sourceTree = "<group>";
-		};
 		5A0A4C312C2AF4A7003ADE27 /* SelectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1608,7 +1614,6 @@
 		D1CCA15B2742B9F700902744 /* LanguageKeyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5A03802B2C74FC1600D4AADD /* Databases */,
 				D1AFDE7829CA658B0033BF27 /* Danish */,
 				D1AFDE6929CA65740033BF27 /* English */,
 				D109A20C275B6888005E2271 /* French */,
@@ -1620,6 +1625,7 @@
 				D1671A61275A1E8700A7C118 /* Russian */,
 				D1608666270B6D3C00134D48 /* Spanish */,
 				D18EA89A2760D4A6001E1358 /* Swedish */,
+				D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */,
 			);
 			path = LanguageKeyboards;
 			sourceTree = "<group>";
@@ -2025,6 +2031,7 @@
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
+				D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
 			);
@@ -2037,6 +2044,7 @@
 				D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				5A03800F2C74D71C00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
 				5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
@@ -2055,6 +2063,7 @@
 				D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
 				5A03800E2C74D71B00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
 				5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
@@ -2073,6 +2082,7 @@
 				5A037FFE2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				5A0380132C74D72000D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
@@ -2091,6 +2101,7 @@
 				5A0380142C74D72100D4AADD /* RULanguageData.sqlite in Resources */,
 				5A0380002C74D70600D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */,
@@ -2109,6 +2120,7 @@
 				5A037FFF2C74D70500D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */,
+				D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
@@ -2127,6 +2139,7 @@
 				5A0380152C74D72200D4AADD /* RULanguageData.sqlite in Resources */,
 				5A0380012C74D70700D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A03801F2C74D72E00D4AADD /* ESLanguageData.sqlite in Resources */,
+				D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
 				5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
@@ -2145,6 +2158,7 @@
 				5A037FDF2C74D6CC00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */,
 				5A0380122C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
 				5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
@@ -2163,6 +2177,7 @@
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
 				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				5A03800D2C74D71A00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
 				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
@@ -2181,6 +2196,7 @@
 				5A037FDA2C74D6C800D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */,
 				5A03800C2C74D71900D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
 				5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */,
@@ -2199,6 +2215,7 @@
 				5A037FDD2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */,
 				5A0380102C74D71D00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
 				5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */,
@@ -2217,6 +2234,7 @@
 				D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				5A0380112C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
 				5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */,
