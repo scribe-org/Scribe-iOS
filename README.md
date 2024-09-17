@@ -2,10 +2,6 @@
   <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeGitHubOrgBanner.png" width=1024 alt="Scribe Logo"></a>
 </div>
 
-<!---
-[![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
---->
-
 [![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver&label=%20)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS?label=%20&logo=github)](https://github.com/scribe-org/Scribe-iOS/issues)
@@ -26,7 +22,7 @@
 </p>
 </details>
 
-## iOS app with keyboards for language learners
+### iOS app with keyboards for language learners
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
 
