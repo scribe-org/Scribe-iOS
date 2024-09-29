@@ -85,6 +85,12 @@ struct AboutTableData {
           externalLink: true
         ),
         Section(
+          sectionTitle: NSLocalizedString("app.about.version", value: "Check version", comment: ""),
+          imageString: "bookmark",
+          sectionState: .version,
+          externalLink: true
+        ),
+        Section(
           sectionTitle: NSLocalizedString("app.about.appHints", value: "Reset app hints", comment: ""),
           imageString: "lightbulb.max",
           hasNestedNavigation: true,

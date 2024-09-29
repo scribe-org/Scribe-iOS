@@ -62,6 +62,7 @@ enum SectionState: Equatable {
   case rateScribe
   case bugReport
   case email
+  case version
   // case downloadData
   // case checkData
   case appHints
