@@ -171,6 +171,8 @@ func getFRKeys() {
       letterKeys = FrenchKeyboardProvider.genPadExpandedLetterKeys()
       symbolKeys = FrenchKeyboardProvider.genPadExpandedSymbolKeys()
 
+      leftKeyChars = ["@", "`"]
+      rightKeyChars = ["*"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       letterKeys = FrenchKeyboardProvider.genPadLetterKeys()
@@ -179,12 +181,11 @@ func getFRKeys() {
 
       letterKeys.removeFirst(1)
 
+      leftKeyChars = ["q", "a", "1", "@", "~"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["q", "a", "1", "@", "~"]
-    // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
