@@ -217,7 +217,8 @@ func getDEKeys() {
         letterKeys = GermanKeyboardProvider.genPadExpandedLetterKeys()
       }
       symbolKeys = GermanKeyboardProvider.genPadExpandedSymbolKeys()
-
+      leftKeyChars = ["^", "`"]
+      rightKeyChars = ["*"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       if userDefaults.bool(forKey: "deAccentCharacters") {
@@ -229,13 +230,11 @@ func getDEKeys() {
       symbolKeys = GermanKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
-
+      leftKeyChars = ["q", "a", "1", "\"", "$"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["q", "a", "1", "\"", "$"]
-    // TODO: add "ü" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 

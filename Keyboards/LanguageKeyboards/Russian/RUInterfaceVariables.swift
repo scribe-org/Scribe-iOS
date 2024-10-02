@@ -165,6 +165,8 @@ func getRUKeys() {
       letterKeys = RussianKeyboardProvider.genPadExpandedLetterKeys()
       symbolKeys = RussianKeyboardProvider.genPadExpandedSymbolKeys()
 
+      leftKeyChars = ["§", "`"]
+      rightKeyChars = ["+", "₽"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       letterKeys = RussianKeyboardProvider.genPadLetterKeys()
@@ -173,12 +175,11 @@ func getRUKeys() {
 
       letterKeys.removeFirst(1)
 
+      leftKeyChars = ["й", "ф", "1", "@", "$"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["й", "ф", "1", "@", "$"]
-    // TODO: add "х" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 

@@ -214,6 +214,8 @@ func getESKeys() {
       }
       symbolKeys = SpanishKeyboardProvider.genPadExpandedSymbolKeys()
 
+      leftKeyChars = ["|", "`"]
+      rightKeyChars = ["*", "§"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       if userDefaults.bool(forKey: "esAccentCharacters") {
@@ -226,12 +228,11 @@ func getESKeys() {
 
       letterKeys.removeFirst(1)
 
+      leftKeyChars = ["q", "a", "1", "@", "€"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["q", "a", "1", "@", "€"]
-    // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
