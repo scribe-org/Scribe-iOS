@@ -28,12 +28,20 @@ jobs:
 
             ### Maintainer checklist
 
-            - [ ] The commit messages for the remote branch should be checked to make sure the contributor's email is set up correctly so that they receive credit for their contribution
-              - The contributor's name and icon in remote commits should be the same as what appears in the PR
-              - If there's a mismatch, the contributor needs to make sure that the [email they use for GitHub](https://github.com/settings/emails) matches what they have for `git config user.email` in their local Scribe-iOS repo
-
             - [ ] The linting and formatting workflows within the [PR checks](https://github.com/scribe-org/Scribe-iOS/pull/${{ github.event.pull_request.number }}/checks) do not indicate new errors in the files changed
 
             - [ ] The CI unit test workflows within the [PR checks](https://github.com/scribe-org/Scribe-iOS/pull/${{ github.event.pull_request.number }}/checks) do not indicate new errors in the files changed
 
             - [ ] The [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) has been updated with a description of the changes for the upcoming release and the corresponding issue (if necessary)
+          
+      - name: First PR Contributor Email Check
+        id: first_interaction
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: |
+            ## First PR Commit Check
+
+            - [ ] The commit messages for the remote branch should be checked to make sure the contributor's email is set up correctly so that they receive credit for their contribution
+            - The contributor's name and icon in remote commits should be the same as what appears in the PR
+            - If there's a mismatch, the contributor needs to make sure that the [email they use for GitHub](https://github.com/settings/emails) matches what they have for `git config user.email` in their local Scribe-iOS repo
