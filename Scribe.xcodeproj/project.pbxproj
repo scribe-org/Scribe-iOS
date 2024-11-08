@@ -1422,6 +1422,7 @@
 				5A0A4C342C2AF52D003ADE27 /* RadioTableViewCell.xib */,
 			);
 			path = SelectionView;
+		};
 		693150442C881DAB005F99E8 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
