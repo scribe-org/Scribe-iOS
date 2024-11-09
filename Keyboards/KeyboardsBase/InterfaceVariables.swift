@@ -173,14 +173,14 @@ let languagesAbbrDict = [
 ]
 
 let languagesStringDict = [
-  "English": NSLocalizedString("_global.english", value: "English", comment: ""),
-  "French": NSLocalizedString("_global.french", value: "French", comment: ""),
-  "German": NSLocalizedString("_global.german", value: "German", comment: ""),
-  "Italian": NSLocalizedString("_global.italian", value: "Italian", comment: ""),
-  "Portuguese": NSLocalizedString("_global.portuguese", value: "Portuguese", comment: ""),
-  "Russian": NSLocalizedString("_global.russian", value: "Russian", comment: ""),
-  "Spanish": NSLocalizedString("_global.spanish", value: "Spanish", comment: ""),
-  "Swedish": NSLocalizedString("_global.swedish", value: "Swedish", comment: "")
+  "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
+  "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
+  "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
+  "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
+  "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
+  "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
+  "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
+  "Swedish": NSLocalizedString("app._global.swedish", value: "Swedish", comment: "")
 ]
 
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {

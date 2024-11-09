@@ -196,21 +196,14 @@ extension SettingsViewController: UITableViewDelegate {
           ]
 
           let accentKeyOptionIndex = SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""))
+            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
           }) ?? -1
 
           // If there are no accent keys we can remove the `Disable accent characters` option.
           if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
             data[1].section.remove(at: accentKeyOptionIndex)
           } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-            data[1].section.insert(Section(
-              sectionTitle: NSLocalizedString("app.settings.layout.disableAccentCharacters", value: "Disable accent characters", comment: ""),
-              imageString: "info.circle",
-              hasToggle: true,
-              sectionState: .none(.toggleAccentCharacters),
-              shortDescription: NSLocalizedString("app.settings.layout.disableAccentCharacters.description", value: "Include accented letter keys on the primary keyboard layout.", comment: "")
-            ), at: 1
-            )
+            data[1].section.insert(SettingsTableData.languageSettingsData[2].section[2], at: 1)
           }
         }
 

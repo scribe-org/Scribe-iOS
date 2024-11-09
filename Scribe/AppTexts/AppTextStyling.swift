@@ -172,29 +172,21 @@ func switchAttachmentOnThemeChange(for attributedString: NSAttributedString) -> 
 
 /// Formats and returns the text of the Scribe privacy policy with links activated.
 func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedString {
-  let wikidataDataLicensing = "https://www.wikidata.org/wiki/Wikidata:Licensing"
-  let wikipediaDataLicensing = "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content"
-  let unicodeDataLicense = "https://www.unicode.org/license.txt"
-  let huggingFaceLicensing = "https://github.com/huggingface/transformers/blob/master/LICENSE"
-  let scribeGitHub = "https://github.com/scribe-org"
-  let scribeEmail = "scribe.langauge@gmail.com"
-  let gitHubLogoLicensing = "https://github.com/logos"
-  let wikidataLogoLicensing = "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy"
-  let customKeyboardLicense = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+  let links = [
+    "https://www.wikidata.org/wiki/Wikidata:Licensing",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content",
+    "https://www.unicode.org/license.txt",
+    "https://github.com/huggingface/transformers/blob/master/LICENSE",
+    "https://github.com/scribe-org",
+    "scribe.langauge@gmail.com",
+    "https://github.com/logos",
+    "https://foundation.wikimedia.org/wiki/Policy:Trademark_policy",
+    "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+  ]
 
   let privacyPolicyTextWithLinks = addHyperLinks(
     originalText: text,
-    links: [
-      wikidataDataLicensing: wikidataDataLicensing,
-      wikipediaDataLicensing: wikipediaDataLicensing,
-      unicodeDataLicense: unicodeDataLicense,
-      huggingFaceLicensing: huggingFaceLicensing,
-      scribeGitHub: scribeGitHub,
-      scribeEmail: "mailto:" + scribeEmail,
-      gitHubLogoLicensing: gitHubLogoLicensing,
-      wikidataLogoLicensing: wikidataLogoLicensing,
-      customKeyboardLicense: customKeyboardLicense
-    ],
+    links: pairLinks(links),
     fontSize: fontSize
   )
 
@@ -202,19 +194,18 @@ func setPrivacyPolicy(fontSize: CGFloat, text: String) -> NSMutableAttributedStr
 }
 
 /// Formats and returns the text of the Scribe third-party licenses with links activated and list indents.
-func setThirdPartyLicenses(fontSize: CGFloat, text: String, listElements: [String]) -> NSMutableAttributedString {
-  let licensesLink = "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+func setThirdPartyLicenses(fontSize: CGFloat, text: String) -> NSMutableAttributedString {
+  let links = [
+    "https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE",
+    "https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+  ]
   let thirdPartyLicensesTextWithLink = addHyperLinks(
     originalText: text,
-    links: [
-      licensesLink: licensesLink
-    ],
+    links: pairLinks(links),
     fontSize: fontSize
   )
 
-  let thirdPartyLicensesTextWithLinkAndIndents = addTabStops(attributedOriginalText: thirdPartyLicensesTextWithLink, links: listElements)
-
-  return thirdPartyLicensesTextWithLinkAndIndents
+  return thirdPartyLicensesTextWithLink
 }
 
 /// Formats and returns the text of the Wikimedia and Scribe screen with images.
@@ -243,4 +234,16 @@ func setWikimediaAndScribe(text: [String], fontSize: CGFloat, imageWidth: CGFloa
   wikimediaAndScribeTextWithImages.append(attributedTextBySections[2])
 
   return wikimediaAndScribeTextWithImages
+}
+
+func pairLinks(_ linkList: [String]) -> [String: String] {
+  var pairedLinks: [String: String] = [:]
+  for hyperlink in linkList {
+    if hyperlink.contains("@") && hyperlink.range(of: #"https?://"#, options: .regularExpression) == nil {
+      pairedLinks[hyperlink] = "mailto:\(hyperlink)"
+    } else {
+      pairedLinks[hyperlink] = hyperlink
+    }
+  }
+  return pairedLinks
 }
