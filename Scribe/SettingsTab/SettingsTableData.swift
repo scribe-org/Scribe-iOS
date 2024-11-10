@@ -47,7 +47,8 @@ enum SettingsTableData {
       section: [
         Section(
           sectionTitle: NSLocalizedString("app.settings.keyboard.translation.select_source.title", value: "Translation source language", comment: ""),
-          sectionState: .translateLang
+          sectionState: .translateLang,
+          shortDescription: NSLocalizedString("app.settings.keyboard.translation.select_source_description", value: "Change the language to translate from.", comment: "")
         )
       ],
       hasDynamicData: nil
@@ -93,7 +94,7 @@ enum SettingsTableData {
 
   static let translateLangSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.keyboard.translation.select_source_description", value: "Choose a language to translate from", comment: ""),
+      headingTitle: NSLocalizedString("app.settings.keyboard.translation.select_source.caption", value: "What the source language is", comment: ""),
       section: getTranslateLanguages(),
       hasDynamicData: nil
     )

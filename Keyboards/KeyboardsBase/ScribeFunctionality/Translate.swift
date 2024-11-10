@@ -45,16 +45,19 @@ func queryWordToTranslate(queriedWordToTranslate: String) {
   // Check to see if the input was uppercase to return an uppercase conjugation.
   inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase
 
-  wordToReturn = LanguageDBManager.translations.queryTranslation(of: wordToTranslate.capitalized)[0]
+  wordToReturn = LanguageDBManager.translations.queryTranslation(of: wordToTranslate.lowercased())[0]
 
-  guard !wordToReturn.isEmpty else {
-    commandState = .invalid
-    return
+  if wordToReturn.isEmpty {
+    wordToReturn = LanguageDBManager.translations.queryTranslation(of: wordToTranslate)[0]
+    guard !wordToReturn.isEmpty else {
+      commandState = .invalid
+      return
+    }
   }
 
   if inputWordIsCapitalized {
     proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
   } else {
-    proxy.insertText(wordToReturn.lowercased() + getOptionalSpace())
+    proxy.insertText(wordToReturn + getOptionalSpace())
   }
 }
