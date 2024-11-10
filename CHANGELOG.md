@@ -18,6 +18,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
+- The Scribe translation functionality now allows the user to select which language to translate from via a convenient menu selector within the settings of each keyboard ([#255](https://github.com/scribe-org/Scribe-iOS/issues/255), [#307](https://github.com/scribe-org/Scribe-iOS/issues/307), [#469](https://github.com/scribe-org/Scribe-iOS/issues/469), [#470](https://github.com/scribe-org/Scribe-iOS/issues/470))
+  - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
 - Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
 
@@ -35,6 +37,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🌐 Localization
 
 - Localization strings for English, German, Swedish and Spanish have been added for all remaining app texts ([Scribe-i18n#28](https://github.com/scribe-org/Scribe-i18n/issues/28)).
+- Localizations have been added for Arabic, Bengali Hindi, Korean and Marathi ([Scribe-i18n#12](https://github.com/scribe-org/Scribe-i18n/issues/12), [Scribe-i18n#51](https://github.com/scribe-org/Scribe-i18n/issues/51), [Scribe-i18n#53](https://github.com/scribe-org/Scribe-i18n/issues/53), [Scribe-i18n#55](https://github.com/scribe-org/Scribe-i18n/issues/55)).
 
 ### 🐞 Bug Fixes
 
