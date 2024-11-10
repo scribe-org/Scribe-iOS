@@ -17,36 +17,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/// Returns the ISO code given a language.
-///
-/// - Parameters
-///   - language: the language an ISO code should be returned for.
-func get_iso_code(keyboardLanguage: String) -> String {
-  var iso = ""
-  switch keyboardLanguage {
-  case "English":
-    iso = "en"
-  case "French":
-    iso = "fr"
-  case "German":
-    iso = "de"
-  case "Italian":
-    iso = "it"
-  case "Portuguese":
-    iso = "pt"
-  case "Russian":
-    iso = "ru"
-  case "Spanish":
-    iso = "es"
-  case "Swedish":
-    iso = "sv"
-  default:
-    break
-  }
-
-  return iso
-}
-
 /// Checks if an extra space is needed in the text field when generated text is inserted
 func getOptionalSpace() -> String {
   if proxy.documentContextAfterInput?.first == " " {

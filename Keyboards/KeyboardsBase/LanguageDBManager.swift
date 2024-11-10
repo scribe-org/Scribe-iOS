@@ -22,16 +22,20 @@ import GRDB
 import SwiftyJSON
 
 class LanguageDBManager {
-  static let shared = LanguageDBManager()
-  private var languageDB: DatabaseQueue?
+  static let shared = LanguageDBManager(translate: false)
+  static let translations = LanguageDBManager(translate: true)
+  private var database: DatabaseQueue?
 
-  private init() {
-    languageDB = openDBQueue()
+  private init(translate: Bool) {
+    if translate {
+      database = openDBQueue("TranslationData")
+    } else {
+      database = openDBQueue("\(getControllerLanguageAbbr().uppercased())LanguageData")
+    }
   }
 
   /// Makes a connection to the language database given the value for controllerLanguage.
-  private func openDBQueue() -> DatabaseQueue {
-    let dbName = "\(String(describing: get_iso_code(keyboardLanguage: controllerLanguage).uppercased()))LanguageData"
+  private func openDBQueue(_ dbName: String) -> DatabaseQueue {
     let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
     let fileManager = FileManager.default
     do {
@@ -72,7 +76,7 @@ class LanguageDBManager {
   private func queryDBRow(query: String, outputCols: [String], args: StatementArguments) -> [String] {
     var outputValues = [String]()
     do {
-      try languageDB?.read { db in
+      try database?.read { db in
         if let row = try Row.fetchOne(db, sql: query, arguments: args) {
           for col in outputCols {
             outputValues.append(row[col])
@@ -105,7 +109,7 @@ class LanguageDBManager {
   private func queryDBRows(query: String, outputCols _: [String], args: StatementArguments) -> [String] {
     var outputValues = [String]()
     do {
-      guard let languageDB = languageDB else { return [] }
+      guard let languageDB = database else { return [] }
       let rows = try languageDB.read { db in
         try Row.fetchAll(db, sql: query, arguments: args)
       }
@@ -136,7 +140,7 @@ class LanguageDBManager {
   ///   - args: arguments to pass to `query`.
   private func writeDBRow(query: String, args: StatementArguments) {
     do {
-      try languageDB?.write { db in
+      try database?.write { db in
         try db.execute(sql: query, arguments: args)
       }
     } catch let error as DatabaseError {
@@ -156,7 +160,7 @@ class LanguageDBManager {
   ///   - args: arguments to pass to `query`.
   private func deleteDBRow(query: String, args: StatementArguments? = nil) {
     do {
-      try languageDB?.write { db in
+      try database?.write { db in
         guard let args = args else {
           try db.execute(sql: query)
           return
@@ -328,19 +332,20 @@ extension LanguageDBManager {
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 
-  /// Query the translation of word in `translations`.
+  /// Query the translation of word in the current language. Only works with the `translations` manager.
   func queryTranslation(of word: String) -> [String] {
+    let translateLanguage = getKeyInDict(givenValue: getControllerTranslateLangCode(), dict: languagesAbbrDict)
     let query = """
     SELECT
       *
 
     FROM
-      translations
+      \(translateLanguage)
 
     WHERE
       word = ?
     """
-    let outputCols = ["translation"]
+    let outputCols = [getControllerLanguageAbbr()]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
