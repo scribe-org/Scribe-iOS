@@ -1,97 +1,8 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "_global.english" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "English"
-          }
-        }
-      }
-    },
-    "_global.french" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "French"
-          }
-        }
-      }
-    },
-    "_global.german" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "German"
-          }
-        }
-      }
-    },
-    "_global.italian" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Italian"
-          }
-        }
-      }
-    },
-    "_global.portuguese" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Portuguese"
-          }
-        }
-      }
-    },
-    "_global.russian" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Russian"
-          }
-        }
-      }
-    },
-    "_global.spanish" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Spanish"
-          }
-        }
-      }
-    },
-    "_global.swedish" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Swedish"
-          }
-        }
-      }
-    },
     "app._global.english" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -135,6 +46,12 @@
             "value" : "अंग्रेज़ी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "영어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -151,7 +68,6 @@
     },
     "app._global.french" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -195,6 +111,12 @@
             "value" : "फ्रेंच"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "프랑스어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -211,7 +133,6 @@
     },
     "app._global.german" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -255,6 +176,12 @@
             "value" : "जर्मन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "독일어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -271,7 +198,6 @@
     },
     "app._global.italian" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -315,6 +241,12 @@
             "value" : "इतालवी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이탈리아어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -331,7 +263,6 @@
     },
     "app._global.portuguese" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -375,6 +306,12 @@
             "value" : "पुर्तगाली"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "포르투갈어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -391,7 +328,6 @@
     },
     "app._global.russian" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -435,6 +371,12 @@
             "value" : "रूसी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "러시아어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -451,7 +393,6 @@
     },
     "app._global.spanish" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -495,6 +436,12 @@
             "value" : "स्पेनिश"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "스페인어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -511,7 +458,6 @@
     },
     "app._global.swedish" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -555,6 +501,12 @@
             "value" : "स्वीडिश"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "스웨덴어"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -571,7 +523,6 @@
     },
     "app.about.app_hint" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -615,6 +566,12 @@
             "value" : "यहां आप स्क्राइब और इसकी समुदाय के बारे में और जान सकते हैं।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "여기서 Scribe와 커뮤니티에 대해 더 알아볼 수 있습니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -629,53 +586,8 @@
         }
       }
     },
-    "app.about.appHint" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Here's where you can learn more about Scribe and its community."
-          }
-        }
-      }
-    },
-    "app.about.appHints" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Reset app hints"
-          }
-        }
-      }
-    },
-    "app.about.bugReport" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Report a bug"
-          }
-        }
-      }
-    },
-    "app.about.community" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Community"
-          }
-        }
-      }
-    },
     "app.about.community.github" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -719,6 +631,12 @@
             "value" : "गिटहब पर कोड देखें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "GitHub에서 코드보러 가기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -735,7 +653,6 @@
     },
     "app.about.community.mastodon" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -779,6 +696,12 @@
             "value" : "हमें मस्तोडान पर फॉलो करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mastodon 팔로우하러 가기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -795,7 +718,6 @@
     },
     "app.about.community.matrix" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -837,6 +759,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "मैट्रिक्स पर टीम से बात करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Matrix 채팅하러 가기"
           }
         },
         "mr" : {
@@ -893,6 +821,12 @@
             "value" : "स्क्राइब कोंजूगेट साझा करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 활용 공유하기e"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -903,7 +837,6 @@
     },
     "app.about.community.share_scribe" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -947,6 +880,12 @@
             "value" : "स्क्राइब साझा करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 공유하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -963,7 +902,6 @@
     },
     "app.about.community.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1007,6 +945,12 @@
             "value" : "समुदाय"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "커뮤니티"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1023,7 +967,6 @@
     },
     "app.about.community.view_apps" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1067,6 +1010,12 @@
             "value" : "सभी स्क्राइब ऐप्स देखें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "모든 Scribe 앱 보러 가기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1083,7 +1032,6 @@
     },
     "app.about.community.wikimedia" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1127,6 +1075,12 @@
             "value" : "विकिमीडिया और स्क्राइब"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia 및 Scribe"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1143,7 +1097,6 @@
     },
     "app.about.community.wikimedia.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1187,6 +1140,12 @@
             "value" : "हम कैसे एक साथ काम करते हैं"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "우리가 함께 일하는 방식"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1203,7 +1162,6 @@
     },
     "app.about.community.wikimedia.text_1" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1247,6 +1205,12 @@
             "value" : "स्क्राइब विकिमीडिया योगदानकर्ताओं द्वारा समर्थित कई परियोजनाओं में योगदान के बिना संभव नहीं होता। विशेष रूप से स्क्राइब, विकिडेटा शब्दकोशीय डेटा समुदाय से डेटा और स्क्राइब द्वारा समर्थित प्रत्येक भाषा के लिए विकिपीडिया से डेटा का उपयोग करता है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe는 수많은 위키미디어 기여자들의 도움 없이는 불가능했을 것입니다. 특히 Scribe는 위키데이터의 어휘 데이터와 Scribe가 지원하는 각 언어의 위키피디아 데이터를 사용하고 있습니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1263,7 +1227,6 @@
     },
     "app.about.community.wikimedia.text_2" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1307,6 +1270,12 @@
             "value" : "विकिडेटा एक सहयोगी संपादित बहुभाषीय ज्ञान ग्राफ है जो विकिमीडिया फाउंडेशन द्वारा होस्ट किया गया है। यह स्वतंत्र रूप से उपलब्ध डेटा प्रदान करता है जिसका कोई भी क्रिएटिव कॉमन्स पब्लिक डोमेन लाइसेंस (CC0) के तहत उपयोग कर सकता है। स्क्राइब, उपयोगकर्ताओं को क्रिया रूपांतरण, संज्ञा-फॉर्म एनोटेशन, संज्ञा बहुवचन और कई अन्य विशेषताएं प्रदान करने के लिए विकिडेटा से भाषा डेटा का उपयोग करता है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "위키데이터는 위키미디어 재단이 운영하는 다국어 협업 지식 그래프 입니다. 누구나 사용할 수 있는 자유로운 데이터로, CC0(Creative Commons Public Domain license) 하에 제공됩니다. Scribe는 위키데이터의 언어 데이터를 활용하여 사용자에게 동사 활용, 명사 형태, 명사 복수형 등 다양한 기능을 제공합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1323,7 +1292,6 @@
     },
     "app.about.community.wikimedia.text_3" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1367,6 +1335,12 @@
             "value" : "विकिपीडिया एक बहुभाषीय स्वतंत्र ऑनलाइन विश्वकोश है जिसे स्वैच्छिक समुदाय द्वारा ओपन सहयोग और विकि-आधारित संपादन प्रणाली के माध्यम से लिखा और बनाए रखा जाता है। स्क्राइब, भाषा में सबसे सामान्य शब्दों के साथ-साथ उनके बाद आने वाले सबसे सामान्य शब्दों को निकालकर ऑटो-सुझाव उत्पन्न करने के लिए विकिपीडिया से डेटा का उपयोग करता है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "위키피디아는 자원봉사자 커뮤니티가 개방형 협업과 위키 기반 편집 시스템을 통해 작성하고 유지하는 다국어 무료 온라인 백과사전입니다. Scribe는 위키피디아의 데이터를 활용하여 언어에서 가장 일반적인 단어와 그 뒤에 오는 가장 일반적인 단어를 기반으로 자동 추천을 생성합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1381,31 +1355,8 @@
         }
       }
     },
-    "app.about.email" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Send us an email"
-          }
-        }
-      }
-    },
-    "app.about.feedback" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Feedback and support"
-          }
-        }
-      }
-    },
     "app.about.feedback.app_hints" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1449,6 +1400,12 @@
             "value" : "ऐप सुझाव रीसेट करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱 도움말 초기화"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1465,7 +1422,6 @@
     },
     "app.about.feedback.bug_report" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1509,6 +1465,12 @@
             "value" : "बग की रिपोर्ट करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "버그 제보하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1525,7 +1487,6 @@
     },
     "app.about.feedback.email" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1567,6 +1528,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "हमें ईमेल भेजें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이메일 보내기"
           }
         },
         "mr" : {
@@ -1623,6 +1590,12 @@
             "value" : "स्क्राइब कोंजूगेट की रेटिंग करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 활용 평가하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1633,7 +1606,6 @@
     },
     "app.about.feedback.rate_scribe" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1677,6 +1649,12 @@
             "value" : "स्क्राइब की रेटिंग करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 평가하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1693,7 +1671,6 @@
     },
     "app.about.feedback.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1735,6 +1712,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "फीडबैक और समर्थन"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "피드백 및 지원"
           }
         },
         "mr" : {
@@ -1791,6 +1774,12 @@
             "value" : "संस्करण"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "버전"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1801,7 +1790,6 @@
     },
     "app.about.legal.privacy_policy" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1845,6 +1833,12 @@
             "value" : "गोपनीयता नीति"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "제3자 정책"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1861,7 +1855,6 @@
     },
     "app.about.legal.privacy_policy.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1905,6 +1898,12 @@
             "value" : "आपकी सुरक्षा का ध्यान रखना"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "안전 유지"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1921,7 +1920,6 @@
     },
     "app.about.legal.privacy_policy.text" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1965,6 +1963,12 @@
             "value" : "कृपया ध्यान दें कि इस नीति का अंग्रेज़ी संस्करण अन्य सभी संस्करणों पर प्राथमिकता रखता है।\n\nस्क्राइब  डेवलपर्स (स्क्राइब ) ने iOS एप्लिकेशन \"स्क्राइब  - Language भाषा कीबोर्डs\" (सेवा) को एक ओपन-सोर्स एप्लिकेशन के रूप में बनाया। यह सेवा स्क्राइब  द्वारा निःशुल्क प्रदान की जाती है और इसका उपयोग यथास्थिति के आधार पर किया जा सकता है।\n\nयह गोपनीयता नीति (नीति) पाठक को उन नीतियों के बारे में सूचित करने के लिए है जिनका उपयोग इस सेवा (उपयोगकर्ताओं) के उपयोगकर्ताओं की व्यक्तिगत जानकारी (उपयोगकर्ता की सूचना) और उपयोग डेटा (उपयोगकर्ता का डेटा) तक पहुँच, ट्रैकिंग, संग्रह, रखरखाव, उपयोग और प्रकटीकरण के लिए किया जाता है।\n\nउपयोगकर्ता की सूचना को विशेष रूप से उन जानकारी के रूप में परिभाषित किया गया है जो उपयोगकर्ता या उनके द्वारा उपयोग किए जाने वाले उपकरणों से संबंधित होती हैं।\n\nउपयोगकर्ता का डेटा को विशेष रूप से उन पाठों के रूप में परिभाषित किया गया है जिन्हें उपयोगकर्ता इस सेवा का उपयोग करते समय टाइप करते हैं या किए गए क्रियाओं के रूप में परिभाषित किया गया है।\n\n1. नीति वक्तव्य\n\nयह सेवा कोई भी USER उपयोगकर्ता की सूचना या उपयोगकर्ता का डेटा तक पहुँच, ट्रैक, संग्रह, रखरखाव, उपयोग या प्रकटीकरण नहीं करती है।\n\n2. ट्रैक न करें\n\nउपयोगकर्ता जो स्क्राइब  से संपर्क करते हैं और अपनी उपयोगकर्ता की सूचना और उपयोगकर्ता का डेटा को ट्रैक न करने के लिए कहते हैं, उन्हें इस नीति की एक प्रति और सभी स्रोत कोड का लिंक प्रदान किया जाएगा, यह प्रमाण देने के लिए कि उन्हें ट्रैक नहीं किया जा रहा है।\n\n3. तृतीय-पक्ष डेटा\n\nयह सेवा तृतीय-पक्ष डेटा का उपयोग करती है। इस सेवा के निर्माण में उपयोग किया गया सभी डेटा ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में अनुमति देते हैं। विशेष रूप से, इस सेवा का डेटा विकिडेटा, विकिपीडिया और यूनिकोड से आता है। विकिडेटा बताता है कि, \"मुख्य, प्रॉपर्टी और लेक्सिम नेमस्पेस में उपलब्ध सभी संरचित डेटा क्रिएटिव कॉमन्स CC0 लाइसेंस के तहत उपलब्ध है; अन्य नेमस्पेस में उपलब्ध टेक्स्ट क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयर अलाइक लाइसेंस के तहत उपलब्ध है।\" विकिडेटा डेटा उपयोग के बारे में नीति https://www.wikidata.org/wiki/Wikidata:Licensing पर पाई जा सकती है। विकिपीडिया बताता है कि टेक्स्ट डेटा, जिसे इस सेवा द्वारा उपयोग किया जाता है, \"… क्रिएटिव कॉमन्स एट्रिब्यूशन शेयर-अलाइक लाइसेंस की शर्तों के तहत उपयोग किया जा सकता है\"। विकिपीडिया डेटा उपयोग के बारे में नीति https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content पर पाई जा सकती है। यूनिकोड यह अनुमति प्रदान करता है, \"… किसी भी व्यक्ति को यूनिकोड डेटा फाइलों और संबंधित दस्तावेज़ीकरण की एक प्रति प्राप्त करने की अनुमति है (\"डेटा फाइल\") या यूनिकोड सॉफ़्टवेयर और संबंधित दस्तावेज़ीकरण (\"सॉफ़्टवेयर\") को बिना किसी प्रतिबंध के उपयोग करने की अनुमति देता है।\" यूनिकोड डेटा उपयोग के बारे में नीति https://www.unicode.org/license.txt पर पाई जा सकती है।\n\n4. तृतीय-पक्ष स्रोत कोड\n\nयह सेवा तृतीय-पक्ष कोड पर आधारित है। इस सेवा के निर्माण में उपयोग किया गया सभी स्रोत कोड ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में पूरी तरह से अनुमति देते हैं। विशेष रूप से, इस परियोजना का आधार Ethan Sarif-Kattan द्वारा बनाया गया कस्टम कीबोर्ड प्रोजेक्ट था। कस्टम कीबोर्डकस्टम कीबोर्ड को MIT लाइसेंस के तहत जारी किया गया था, जो https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE पर उपलब्ध है।\n\n5. तृतीय-पक्ष सेवाएं\n\nयह सेवा तृतीय-पक्ष सेवाओं का उपयोग करती है ताकि कुछ तृतीय-पक्ष डेटा को परिवर्तित किया जा सके। विशेष रूप से, डेटा Hugging Face transformers के मॉडल का उपयोग करके अनुवाद किया गया है। यह सेवा Apache License 2.0 के तहत आती है, जो इसके व्यावसायिक उपयोग, संशोधन, वितरण, पेटेंट उपयोग और निजी उपयोग के लिए उपलब्ध है। उपरोक्त सेवा का लाइसेंस https://github.com/huggingface/transformers/blob/master/LICENSE पर पाया जा सकता है।\n\n6. तृतीय-पक्ष लिंक\n\nयह सेवा बाहरी वेबसाइटों के लिंक शामिल करती है। यदि उपयोगकर्ता तृतीय-पक्ष लिंक पर क्लिक करते हैं, तो उन्हें एक वेबसाइट पर निर्देशित किया जाएगा। ध्यान दें कि ये बाहरी वेबसाइटें इस सेवा द्वारा संचालित नहीं हैं। इसलिए, उपयोगकर्ता को इन वेबसाइटों की गोपनीयता नीति की समीक्षा करने की सिफारिश की जाती है। यह सेवा किसी भी तृतीय-पक्ष साइटों या सेवाओं की सामग्री, गोपनीयता नीतियों या प्रथाओं के लिए कोई ज़िम्मेदारी नहीं लेती है।\n\n7. तृतीय-पक्ष छवियां\n\nयह सेवा तृतीय-पक्ष द्वारा कॉपीराइट की गई छवियां शामिल करती है। विशेष रूप से, इस एप में गिटहब, Inc. के लोगो की एक प्रति शामिल है और विकिडेटा का लोगो, जिसे Wikimedia फाउंडेशन, Inc. द्वारा ट्रेडमार्क किया गया है। गिटहब लोगो के उपयोग की शर्तें https://github.com/logos पर पाई जाती हैं, और विकिडेटा लोगो के उपयोग की शर्तें निम्नलिखित Wikimedia पेज पर पाई जाती हैं: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy। यह सेवा कॉपीराइट की गई छवियों का उपयोग उन मानदंडों के अनुसार करती है, जिसमें केवल गिटहब लोगो की एक घुमाव शामिल होती है, जो ओपन-सोर्स समुदाय में यह इंगित करने के लिए सामान्य है कि गिटहब वेबसाइट का लिंक है।\n\n8. सामग्री सूचना\n\nयह सेवा उपयोगकर्ता को भाषाई सामग्री (CONTENT) तक पहुँचने की अनुमति देती है। कुछ CONTENT को बच्चों और नाबालिगों के लिए अनुपयुक्त माना जा सकता है। सेवा का उपयोग करके CONTENT तक पहुँच इस तरह से किया जाता है कि जानकारी तब तक अनुपलब्ध होती है जब तक उसे विशेष रूप से नहीं जाना जाता। विशेष रूप से, उपयोगकर्ता \"शब्दों\" का अनुवाद कर सकते हैं, क्रियाओं को संयोजित कर सकते हैं और CONTENT की अन्य व्याकरणिक विशेषताओं तक पहुँच सकते हैं, जो यौन, हिंसक या अन्यथा अनुचित प्रकृति की हो सकती है। उपयोगकर्ता \"ऐसी सामग्री\" का अनुवाद नहीं कर सकते, क्रियाओं को संयोजित नहीं कर सकते और CONTENT की अन्य व्याकरणिक विशेषताओं तक पहुँच नहीं सकते, जब तक वे पहले से CONTENT की प्रकृति के बारे में नहीं जानते हों। स्क्राइब  ऐसी सामग्री तक पहुँच की ज़िम्मेदारी नहीं लेता है।\n\n9. परिवर्तन\n\nयह नीति परिवर्तन के अधीन है। इस नीति में किए गए अपडेट सभी पिछले संस्करणों को प्रतिस्थापित करेंगे, और यदि इसे महत्वपूर्ण माना गया, तो यह अगले संबंधित अपडेट में स्पष्ट रूप से उल्लिखित होगा। स्क्राइब  उपयोगकर्ता को हमारी गोपनीयता प्रथाओं पर नवीनतम जानकारी के लिए समय-समय पर इस नीति की समीक्षा करने और किसी भी परिवर्तन से परिचित होने के लिए प्रोत्साहित करता है।\n\n10. संपर्क करें\n\nयदि आपके कोई प्रश्न, चिंताएँ, या सुझाव हैं तो कृपया https://github.com/scribe-org पर जाएँ या स्क्राइब  से स्क्राइब .langauge@gmail.com पर संपर्क करें। ऐसे पूछताछ के लिए जिम्मेदार व्यक्ति Andrew Tavis McAllister हैं।\n\n11. प्रभावी तिथि\n\nयह नीति 24 मई, 2022 से प्रभावी है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이 정책의 영어 버전을 다른 모든 버전보다 우선시합니다.\n\nScribe 개발자들(이하 \"SCRIBE\")은 \"Scribe - 언어 키보드\"(이하 \"서비스\")라는 iOS 애플리케이션을 오픈소스 애플리케이션으로 개발했습니다. 이 서비스는 SCRIBE에 의해 무료로 제공되며, 설치 후 바로 사용할 수 있도록 설계되었습니다.\n\n이 개인정보 보호정책(이하 \"정책\")은 이 서비스를 이용하는 모든 개인(이하 \"사용자\")의 접근, 추적, 수집, 보존, 사용 및 개인 정보(이하 \"사용자 정보\")와 사용 데이터(이하 \"사용자 데이터\")의 공개에 대한 정책을 독자에게 알리기 위해 작성되었습니다.\n\n사용자 정보는 사용자 자신 또는 그들이 서비스에 접근하는 데 사용하는 기기와 관련된 모든 정보를 구체적으로 정의합니다.\n\n사용자 데이터는 사용자가 서비스를 사용할 때 입력하는 텍스트나 수행하는 행동을 구체적으로 정의합니다.\n\n1. 정책 선언\n\n이 서비스는 어떤 사용자 정보나 사용자 데이터를 접근, 추적, 수집, 보존, 사용 또는 공개하지 않습니다.\n\n2. 추적 금지\n\nSCRIBE에 연락하여 자신의 사용자 정보 및 사용자 데이터가 추적되지 않기를 요청하는 사용자에게는 이 정책의 사본과 함께 추적되고 있지 않다는 증거를 모든 소스 코드에 대한 링크가 제공됩니다.\n\n3. 제3자 데이터\n\n이 서비스는 제3자 데이터를 사용합니다. 이 서비스의 생성에 사용된 모든 데이터는 서비스에서 사용되는 방식으로 완전하게 사용을 허용하는 출처에서 가져왔습니다. 구체적으로, 이 서비스의 데이터는 위키데이터, 위키피디아 및 유니코드에서 나옵니다. 위키데이터는 \"주요, 속성 및 단어 형태 네임스페이스의 모든 구조화된 데이터는 Creative Commons CC0 라이선스에 따라 제공됩니다; 다른 네임스페이스의 텍스트는 Creative Commons 저작자 표시-동일 조건 하에 공유 라이선스에 따라 제공됩니다.\"라고 명시하고 있습니다. 위키데이터의 데이터 사용에 대한 정책은 https://www.wikidata.org/wiki/Wikidata:Licensing 에서 확인할 수 있습니다. 위키피디아는 서비스에서 사용되는 텍스트 데이터는 \"...Creative Commons 저작자 표시-동일 조건 하에 공유 라이선스의 조건에 따라 사용할 수 있습니다.\"라고 명시하고 있습니다. 위키피디아의 데이터 사용에 대한 정책은 https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content 에서 확인할 수 있습니다. 유니코드는 \"...유니코드 데이터 파일 및 관련 문서(이하 \"데이터 파일\") 또는 유니코드 소프트웨어 및 관련 문서(이하 \"소프트웨어\")의 사본을 얻은 모든 사람에게 데이터 파일 또는 소프트웨어를 제한 없이 사용할 수 있는 권한을 무료로 제공합니다...\"라고 허가하고 있습니다. 유니코드의 데이터 사용에 대한 정책은 https://www.unicode.org/license.txt 에서 확인할 수 있습니다.\n\n4. 제3자 소스코드\n\n이 서비스는 제3자 코드를 기반으로 합니다. 이 서비스를 만드는 데 사용된 모든 소스 코드는 서비스에서 제공하는 방식으로 완전히 사용할 수 있는 출처에서 제공됩니다. 특히 이 프로젝트의 기반은 Ethan Sarif-Kattan의 커스텀 키보드 프로젝트였습니다. 커스텀 키보드는 MIT 라이선스에 따라 출시되었으며, 해당 라이선스는 https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE 에서 확인할 수 있습니다.\n\n5. 제3자 서비스\n\n이 서비스는 일부 제3자 데이터를 처리하기 위해 제3자 서비스를 사용합니다. 구체적으로, Hugging Face의 트랜스포머의 모델을 사용하여 데이터를 번역했습니다. 이 서비스는 Apache 라이선스 2.0의 적용을 받으며, 상업용, 수정, 배포, 특허 사용 및 개인적 사용이 가능합니다. 해당 서비스의 라이선스는 https://github.com/huggingface/transformers/blob/master/LICENSE 에서 확인할 수 있습니다.\n\n6. 제3자 링크\n\n이 서비스에는 외부 웹사이트에 대한 링크가 포함되어 있습니다. 사용자가 이 링크를 클릭하면 해당 웹사이트로 연결됩니다. 이러한 외부 사이트는 이 서비스에서 운영하지 않으므로, 사용자는 해당 웹사이트의 개인정보 보호정책을 검토하는 것이 좋습니다. 이 서비스는 제3자 사이트나 서비스의 콘텐츠, 개인정보 보호정책 또는 관행에 대해 통제할 수 없으며 이에 대한 책임도 지지 않습니다.\n\n7. 제3자 이미지\n\n이 서비스에는 제3자가 저작권을 보유한 이미지가 포함되어 있습니다. 특히 이 앱에는 GitHub, Inc.의 로고와 위키미디어 재단, Inc.의 상표인 위키데이터 로고의 복사본이 포함되어 있습니다. GitHub로고는 https://github.com/logos 에서 확인할 수 있으며, 위키데이터 로고에 대한 조건은 다음 위키미디어 페이지에서 확인할 수 있습니다:  https://foundation.wikimedia.org/wiki/Policy:Trademark_policy . 이 서비스는 이러한 기준에 맞게 저작권이 있는 이미지를 사용하며, 유일한 예외는 오픈 소스 커뮤니티에서 일반적으로 사용되는 GitHub 로고의 회전입니다.\n\n8. 콘텐츠 공지\n\n이 서비스를 통해 사용자는 언어 콘텐츠(이하 \"콘텐츠\")에 접근할 수 있습니다. 이 콘텐츠 중 일부는 어린이 및 법정 미성년자에게 부적절할 수 있습니다. 서비스를 사용하여 콘텐츠에 접근하는 것은 명시적으로 알려지지 않은 한 정보가 제공되지 않도록 되어 있습니다. 특히, 사용자는 성적이거나 폭력적이거나 기타 부적절한 성격의 콘텐츠에서 다른 문법적 기능에 접근할 수 있습니다. 사용자가 이 콘텐츠의 성격에 대해 아직 알지 못하는 경우, 부적절한 콘텐츠에 대한 접근이 불가능합니다. SCRIBE는 이러한 콘텐츠에 대한 액세스에 대해 어떠한 책임도 지지 않습니다.\n\n9. 변경 사항\n\n이 정책은 변경될 수 있습니다. 이 정책에 대한 업데이트는 모든 이전 버전을 대체하며, 중요한 변경 사항의 경우 다음 서비스 업데이트에서 추가로 명확하게 안내될 것입니다. SCRIBE는 사용자가 최신 개인정보 보호 관행에 대한 정보를 확인하고 변경 사항에 숙지하기 위해 주기적으로 이 정책을 검토할 것을 권장합니다.\n\n10. 연락\n\n이 정책에 대해 궁금한 점, 우려 사항 또는 제안이 있는 경우 주저하지 말고 https://github.com/scribe-org 를 방문하거나 scribe.langauge@gmail.com 에서 SCRIBE에게 문의하세요. 이러한 문의에 대한 책임자는 Andrew Tavis McAllister 입니다.\n\n11. 발효일\n\n이 정책은 2022년 5월 24일부로 발효됩니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -1979,9 +1983,19 @@
         }
       }
     },
+    "app.about.legal.third_legal.entry_simple_keyboard" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Simple Keyboard\n• Author: Simple Mobile Tools\n• License: GPL-3.0\n• Link: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+          }
+        }
+      }
+    },
     "app.about.legal.third_party" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2025,6 +2039,12 @@
             "value" : "तृतीय-पक्ष लाइसेंस"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "제3자 라이선스"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2041,7 +2061,6 @@
     },
     "app.about.legal.third_party.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2085,6 +2104,12 @@
             "value" : "जिनका कोड हमने उपयोग किया"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "사용된 코드의 소유자"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2101,7 +2126,6 @@
     },
     "app.about.legal.third_party.entry_custom_keyboard" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2143,6 +2167,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कस्टम कीबोर्ड\n• लेखक: एथें स क\n• लाइसेंस: एमआईटी\n• लिंक: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "커스텀 키보드\n• 저자: EthanSK\n• 라이선스: MIT\n• 링크: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         },
         "mr" : {
@@ -2205,6 +2235,12 @@
             "value" : "सिंपल कीबोर्ड \n• लेखक: सिंपल मोबाइल उपकरण\n• लाइसेंस: जीपीएल-3.0\n• लिंक: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "기본 키보드\n• 저자: Simple Mobile Tools\n• 라이선스: GPL-3.0\n• 링크: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2221,7 +2257,6 @@
     },
     "app.about.legal.third_party.text" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2265,6 +2300,12 @@
             "value" : "स्क्राइब  डेवलपर्स (स्क्राइब ) ने आईओएस एप्लिकेशन \"स्क्राइब  - भाषा कीबोर्ड\" (सेवा) का निर्माण तृतीय-पक्ष कोड का उपयोग करके किया है। इस सेवा के निर्माण में उपयोग किया गया सभी स्रोत कोड ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में अनुमति देते हैं। इस खंड में उन स्रोत कोड की सूची दी गई है, जिन पर सेवा ही प्रत्येक का संबंधित लाइसेंस।\n\nनिम्नलिखित सभी उपयोग किए गए स्रोत कोड की सूची है, कोड के मुख्य लेखक या लेखक, उस समय जारी किए गए लाइसेंस और लाइसेंस के लिंक।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 개발자(SCRIBE)는 제3자 코드를 사용하여 iOS 애플리케이션 \"Scribe - 언어 키보드\"(서비스)를 제작했습니다. 이 서비스 제작에 사용된 모든 소스 코드는 서비스에서 사용된 방식으로 완전하게 활용할 수 있는 소스에서 비롯되었습니다. 이 섹션에서는 서비스의 기반이 된 소스 코드와 각 코드에 해당하는 라이선스를 나열합니다.\n\n다음은 사용된 모든 소스 코드 목록, 코드의 주요 저자 또는 저자들, 사용 당시의 라이선스, 그리고 라이선스 링크입니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2281,7 +2322,6 @@
     },
     "app.about.legal.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2325,6 +2365,12 @@
             "value" : "कानूनी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "법률"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2335,160 +2381,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Legalitet"
-          }
-        }
-      }
-    },
-    "app.about.mastodon" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Follow us on Mastodon"
-          }
-        }
-      }
-    },
-    "app.about.matrix" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Chat with the team on Matrix"
-          }
-        }
-      }
-    },
-    "app.about.privacyPolicy" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Privacy policy"
-          }
-        }
-      }
-    },
-    "app.about.privacyPolicy.body" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Please set the app language to English and return to this view"
-          }
-        }
-      }
-    },
-    "app.about.privacyPolicy.caption" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Keeping you safe"
-          }
-        }
-      }
-    },
-    "app.about.rate" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Rate Scribe"
-          }
-        }
-      }
-    },
-    "app.about.scribe" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "View all Scribe apps"
-          }
-        }
-      }
-    },
-    "app.about.share" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Share Scribe"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Third-party licenses"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty.author" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Author"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty.body" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "The Scribe developers (SCRIBE) built the iOS application \"Scribe - Language Keyboards\" (SERVICE) using third party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. This section lists the source code on which the SERVICE was based as well as the coinciding licenses of each.\n\nThe following is a list of all used source code, the main author or authors of the code, the license under which it was released at time of usage, and a link to the license.\n\n1. Custom Keyboard\n• Author: EthanSK\n• License: MIT\n• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty.caption" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Whose code we used"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty.license" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "License"
-          }
-        }
-      }
-    },
-    "app.about.thirdParty.link" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Link"
           }
         }
       }
@@ -2538,6 +2430,12 @@
             "value" : "के बारे में"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "정보"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2548,61 +2446,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Om"
-          }
-        }
-      }
-    },
-    "app.about.wikimedia" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Wikimedia and Scribe"
-          }
-        }
-      }
-    },
-    "app.about.wikimedia.caption" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "How we work together"
-          }
-        }
-      }
-    },
-    "app.about.wikimedia.text1" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Specifically Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports."
-          }
-        }
-      }
-    },
-    "app.about.wikimedia.text2" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation. It provides freely available data that anyone can use under a Creative Commons Public Domain license (CC0).  Scribe uses language data from Wikidata to provide users with verb conjugations, noun-form annotations, noun plurals, and many other features."
-          }
-        }
-      }
-    },
-    "app.about.wikimedia.text3" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Wikipedia is a multilingual free online encyclopedia written and maintained by a community of volunteers through open collaboration and a wiki-based editing system. Scribe uses data from Wikipedia to produce autosuggestions by deriving the most common words in a language as well as the most common words that follow them."
           }
         }
       }
@@ -2645,6 +2488,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "काल चुनें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "시제 선택"
           }
         },
         "mr" : {
@@ -2695,6 +2544,12 @@
             "value" : "नीचे से एक संयोजन चुनें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "아래에서 활용형을 선택하세요."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2741,6 +2596,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "हाल ही में संयोजित"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "최근 활용한"
           }
         },
         "mr" : {
@@ -2791,6 +2652,12 @@
             "value" : "संयोजन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "활용"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2837,6 +2704,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "क्रियाओं के लिए खोजें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "동사 검색"
           }
         },
         "mr" : {
@@ -2887,6 +2760,12 @@
             "value" : "क्रियाओं का संयोजन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "동사 활용"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -2933,6 +2812,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "स्क्राइब  संयोजन में नया डेटा जोड़ें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 활용에 새로운 데이터를 추가합니다."
           }
         },
         "mr" : {
@@ -2983,6 +2868,12 @@
             "value" : "क्रिया डेटा डाउनलोड करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "동사 데이터 다운로드"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3031,6 +2922,12 @@
             "value" : "संयोजन शुरू करने के लिए डेटा डाउनलोड करें!"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "활용을 시작하려면 데이터를 다운로드하세요!"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3041,6 +2938,7 @@
     },
     "app.download.menu_option.conjugate_title" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3076,6 +2974,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "क्रिया डेटा"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "동사 데이터"
           }
         },
         "mr" : {
@@ -3126,6 +3030,12 @@
             "value" : "स्क्राइब कीबोर्ड में नया डेटा जोड़ें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 키보드에 새로운 데이터를 추가합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3136,6 +3046,7 @@
     },
     "app.download.menu_option.scribe_download_data" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3171,6 +3082,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कीबोर्ड डेटा डाउनलोड करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드 데이터 다운로드"
           }
         },
         "mr" : {
@@ -3221,6 +3138,12 @@
             "value" : "भाषा डेटा"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "언어 데이터"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3267,6 +3190,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "सभी भाषाएँ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "모든 언어"
           }
         },
         "mr" : {
@@ -3317,6 +3246,12 @@
             "value" : "डाउनलोड करने के लिए डेटा चुनें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "다운로드 할 데이터 선택"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3363,6 +3298,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "डेटा डाउनलोड करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "다운로드"
           }
         },
         "mr" : {
@@ -3413,6 +3354,12 @@
             "value" : "नए डेटा की जांच करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "새로운 데이터 확인하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3459,6 +3406,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "नियमित रूप से डेटा अपडेट करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "정기적으로 데이터 업데이트히기"
           }
         },
         "mr" : {
@@ -3509,6 +3462,12 @@
             "value" : "डेटा अपडेट करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "업데이트"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3519,7 +3478,6 @@
     },
     "app.installation.app_hint" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3563,6 +3521,12 @@
             "value" : "अपने डिवाइस पर स्क्राइब  कीबोर्ड इंस्टॉल करने के लिए नीचे दिए गए निर्देशों का पालन करें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "아래 지침에 따라 Scribe 키보드를 기기에 설치하세요."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3573,17 +3537,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Följ instruktionerna nedan för att installera Scribe-tangentbord på din enhet."
-          }
-        }
-      }
-    },
-    "app.installation.appHint" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Follow the directions below to install Scribe keyboards on your device."
           }
         }
       }
@@ -3626,6 +3579,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "त्वरित ट्यूटोरियल"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "빠른 튜토리얼"
           }
         },
         "mr" : {
@@ -3676,6 +3635,12 @@
             "value" : "कीबोर्ड सेटिंग्स खोलें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드 설정 열기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3686,7 +3651,6 @@
     },
     "app.installation.keyboard.keyboards_bold" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3730,6 +3694,12 @@
             "value" : "कीबोर्ड"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3746,7 +3716,6 @@
     },
     "app.installation.keyboard.scribe_settings" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3790,6 +3759,12 @@
             "value" : "स्क्राइब  सेटिंग्स खोलें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 설정 열기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3806,7 +3781,6 @@
     },
     "app.installation.keyboard.text_1" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3850,6 +3824,12 @@
             "value" : "चुनें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "선택하기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3866,7 +3846,6 @@
     },
     "app.installation.keyboard.text_2" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3910,6 +3889,12 @@
             "value" : "उन कीबोर्ड को सक्रिय करें जिन्हें आप उपयोग करना चाहते हैं"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "사용할 키보드 활성화"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3926,7 +3911,6 @@
     },
     "app.installation.keyboard.text_3" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3970,6 +3954,12 @@
             "value" : "टाइप करते समय दबाएं"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "입력 시, 다음을 누르세요"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -3986,7 +3976,6 @@
     },
     "app.installation.keyboard.text_4" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4030,6 +4019,12 @@
             "value" : "कीबोर्ड चुनने के लिए"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드를 선택할 수 있습니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4046,7 +4041,6 @@
     },
     "app.installation.keyboard.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4090,6 +4084,12 @@
             "value" : "कीबोर्ड इंस्टॉलेशन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드 설치"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4104,52 +4104,9 @@
         }
       }
     },
-    "app.installation.settingsLink" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Open Scribe settings"
-          }
-        }
-      }
-    },
-    "app.installation.text1" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Select"
-          }
-        }
-      }
-    },
-    "app.installation.text2" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Activate keyboards that you want to use\n\n4. When typing press"
-          }
-        }
-      }
-    },
-    "app.installation.text3" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "to select keyboards"
-          }
-        }
-      }
-    },
     "app.installation.title" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4193,6 +4150,12 @@
             "value" : "इंस्टॉलेशन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "설치"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4207,20 +4170,8 @@
         }
       }
     },
-    "app.keyboards" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Keyboards"
-          }
-        }
-      }
-    },
     "app.settings.app_hint" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4264,6 +4215,12 @@
             "value" : "ऐप और इंस्टॉल किए गए भाषा कीबोर्ड की सेटिंग्स यहाँ मिलेंगी।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱 설정과 설치된 언어 키보드는 여기서 찾을 수 있습니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4274,39 +4231,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Inställningar för appen och installerade tangentbord finns här."
-          }
-        }
-      }
-    },
-    "app.settings.appHint" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Settings for the app and installed language keyboards are found here."
-          }
-        }
-      }
-    },
-    "app.settings.appSettings" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App settings"
-          }
-        }
-      }
-    },
-    "app.settings.appSettings.appLanguage" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App language"
           }
         }
       }
@@ -4349,6 +4273,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कीबोर्ड इंस्टॉल करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드 설치하기"
           }
         },
         "mr" : {
@@ -4399,6 +4329,12 @@
             "value" : "अनोटेट सुझाव/समाप्ति"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "추천 및 완성 설명"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4447,6 +4383,12 @@
             "value" : "टाइप करते समय सुझाव और समाप्ति को रेखांकित करें ताकि उनके लिंग दिख सकें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "입력 시 성별에 따라 다른 단어가 제안될 때, 해당 단어에 밑줄 쳐서 성별을 나타낸다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4457,7 +4399,6 @@
     },
     "app.settings.keyboard.functionality.auto_suggest_emoji" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4501,6 +4442,12 @@
             "value" : "इमोजी का स्वतः सुझाव दें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이모지 추천"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4517,7 +4464,6 @@
     },
     "app.settings.keyboard.functionality.auto_suggest_emoji_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4559,6 +4505,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "अधिक अभिव्यक्तिपूर्ण टाइपिंग के लिए इमोजी सुझाव और समाप्ति चालू करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "더 표현력 있는 입력을 위해 이모지 추천 및 완성을 켭니다."
           }
         },
         "mr" : {
@@ -4615,6 +4567,12 @@
             "value" : "डिफ़ॉल्ट इमोजी त्वचा का रंग"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이모지 피부 톤 기본값 설정"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4663,58 +4621,16 @@
             "value" : "उपयोग होने वाला त्वचा का रंग"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "사용할 피부 톤"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
             "value" : "वापरल्या जाणाऱ्या त्वचेचा रंग"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.functionality.default_emoji_tone.caption" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Skin tone to be used"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
           }
         }
       }
@@ -4757,6 +4673,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "शब्द दर शब्द हटाएं"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "삭제 키 길게 눌러 단어 단위로 삭제"
           }
         },
         "mr" : {
@@ -4807,6 +4729,12 @@
             "value" : "जब डिलीट कुंजी को दबाकर रखा जाता है तो पाठ को शब्द दर शब्द हटाएं।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "삭제 키를 길게 눌렀을 때 텍스트가 단어 단위로 삭제됩니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4817,7 +4745,6 @@
     },
     "app.settings.keyboard.functionality.double_space_period" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4855,6 +4782,12 @@
             "value" : "डबल स्पेस के लिए अवधि"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "스페이스 두 번 눌러 마침표 추가"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4865,7 +4798,6 @@
     },
     "app.settings.keyboard.functionality.double_space_period_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4901,6 +4833,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "स्पेस कुंजी को दो बार दबाने पर स्वचालित रूप से एक अवधि डालें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "스페이스 키를 두 번 누르면 자동으로 마침표를 삽입합니다."
           }
         },
         "mr" : {
@@ -4951,6 +4889,12 @@
             "value" : "वैकल्पिक वर्णों के लिए होल्ड करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "길게 눌러 문자 대체"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -4997,6 +4941,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "चाबियाँ पकड़कर और इच्छित वर्ण पर खींचकर वैकल्पिक वर्ण चुनें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키를 누른 채로 원하는 문자로 드래그하여 대체 문자를 선택합니다."
           }
         },
         "mr" : {
@@ -5047,6 +4997,12 @@
             "value" : "कीप्रेस पर पॉपअप दिखाएं"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키를 눌러서 팝업 보기"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5093,6 +5049,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कुंजियों को दबाने पर उनकी पॉपअप दिखाएं।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키를 눌렀을 때 해당 키에 대한 팝업을 표시합니다."
           }
         },
         "mr" : {
@@ -5143,6 +5105,12 @@
             "value" : "विराम चिह्न स्थान निकालें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "문장부호 앞 공백 제거"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5191,6 +5159,12 @@
             "value" : "विराम चिह्नों से पहले अतिरिक्त स्थान हटाएं।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "문장부호 앞의 불필요한 공백을 제거합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5201,7 +5175,6 @@
     },
     "app.settings.keyboard.functionality.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5243,6 +5216,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कार्यक्षमता"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "기능"
           }
         },
         "mr" : {
@@ -5299,6 +5278,12 @@
             "value" : "की प्रेस पर कंपन करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "입력 시 진동"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5345,6 +5330,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "जब कुंजियाँ दबाई जाती हैं तो डिवाइस कंपन करे।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "입력할 때 기기가 진동하도록 합니다."
           }
         },
         "mr" : {
@@ -5395,6 +5386,12 @@
             "value" : "डिफ़ॉल्ट मुद्रा प्रतीक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "통화 기호 기본값"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5443,58 +5440,16 @@
             "value" : "123 कुंजियों के लिए प्रतीक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "숫자 키 기호"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
             "value" : "123 किजसाठी चिन्ह"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.layout.default_currency.caption" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Select which currency symbol appears on the number keys."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
           }
         }
       }
@@ -5539,58 +5494,16 @@
             "value" : "डिफ़ॉल्ट कीबोर्ड"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "키보드 형식"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
             "value" : "डिफॉल्ट कीबोर्ड"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.layout.default_layout.caption" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "التخطيط المستخدم"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "ব্যবহার করার জন্য লেআউট"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Select a keyboard layout that suits your typing preference and language needs."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Disposición de uso"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Disposition à utiliser"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "उपयोग होने वाला लेआउट"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "वापरले जाणारे लेआउट"
           }
         }
       }
@@ -5635,6 +5548,12 @@
             "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "선호도와 언어 필요에 맞는 키보드 레이아웃을 선택하세요."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5643,9 +5562,62 @@
         }
       }
     },
-    "app.settings.keyboard.layout.disable_accent_characters" : {
+    "app.settings.keyboard.layout.default_layout.caption" : {
       "comment" : "",
       "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "التخطيط المستخدم"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "ব্যবহার করার জন্য লেআউট"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Select a keyboard layout that suits your typing preference and language needs."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Disposición de uso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Disposition à utiliser"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "उपयोग होने वाला लेआउट"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "적용할 레이아웃"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "वापरले जाणारे लेआउट"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.layout.disable_accent_characters" : {
+      "comment" : "",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5689,6 +5661,12 @@
             "value" : "एक्सेंट वर्णों को अक्षम करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "악센트 문자 비활성화"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5705,7 +5683,6 @@
     },
     "app.settings.keyboard.layout.disable_accent_characters_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5749,6 +5726,12 @@
             "value" : "प्राथमिक कीबोर्ड लेआउट पर उच्चारित अक्षर कुंजियों को निकालें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "기본 키보드 레이아웃에서 악센트 문자 키를 제거합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5765,7 +5748,6 @@
     },
     "app.settings.keyboard.layout.period_and_comma" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5809,6 +5791,12 @@
             "value" : "ABC पर अवधि और कॉमा"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "기본 키보드에서 마침표와 쉼표"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5825,7 +5813,6 @@
     },
     "app.settings.keyboard.layout.period_and_comma_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5869,6 +5856,12 @@
             "value" : "सुविधाजनक टाइपिंग के लिए मुख्य कीबोर्ड पर अवधि और कॉमा कुंजियाँ शामिल करें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "편리한 입력을 위해 기본 키보드에 마침표와 쉼표 키를 포함합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5885,7 +5878,6 @@
     },
     "app.settings.keyboard.layout.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5929,6 +5921,12 @@
             "value" : "लेआउट"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "레이아웃"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -5945,7 +5943,6 @@
     },
     "app.settings.keyboard.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5987,6 +5984,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "इंस्टॉल किए गए कीबोर्ड चुनें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "설치된 키보드 선택"
           }
         },
         "mr" : {
@@ -6043,10 +6046,27 @@
             "value" : "भाषा चुनें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "언어 선택"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
             "value" : "भाषा निवडा"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.translation.select_source_description" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Choose a language to translate from"
           }
         }
       }
@@ -6091,6 +6111,12 @@
             "value" : "स्रोत भाषा क्या है"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "원본 언어는 무엇인가요"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6101,7 +6127,6 @@
     },
     "app.settings.keyboard.translation.select_source.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6143,6 +6168,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "अनुवाद भाषा"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "번역 언어"
           }
         },
         "mr" : {
@@ -6190,7 +6221,7 @@
       }
     },
     "app.settings.layout" : {
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -6210,6 +6241,12 @@
             "value" : "जिस भाषा से अनुवाद करना है, उसे बदलें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "번역할 언어를 변경하세요."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6224,64 +6261,13 @@
         }
       }
     },
-    "app.settings.keyboard.translation.title" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "لغة مصدر الترجمة"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "অনুবাদের উৎস ভাষা"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Include accented letter keys on the primary keyboard layout."
-          }
-        }
-      }
-    },
-    "app.settings.layout.doubleSpacePeriods.description" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Automatically insert a period when the space key is pressed twice."
-          }
-        }
-      }
-    },
-    "app.settings.layout.periodAndComma" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Period and comma on ABC"
-          }
-        }
-      }
-    },
     "app.settings.layout.periodAndComma.description" : {
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Include comma and period keys on the main keyboard for convenient typing."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Translation source language"
           }
         },
         "es" : {
@@ -6293,13 +6279,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Langue source de la traduction"
+            "value" : "Translation source language"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "",
             "value" : "अनुवाद स्रोत भाषा"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "번역할 언어"
           }
         },
         "mr" : {
@@ -6350,6 +6342,12 @@
             "value" : "डार्क मोड"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "다크 모드"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6398,6 +6396,12 @@
             "value" : "ऐप प्रदर्शनी को डार्क मोड में बदलें।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱 디스플레이를 다크 모드로 변경합니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6408,7 +6412,6 @@
     },
     "app.settings.menu.app_language" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6450,6 +6453,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ऐप की भाषा"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "언어 설정"
           }
         },
         "mr" : {
@@ -6524,6 +6533,12 @@
             "value" : "ऐप टेक्स्ट के लिए भाषा चुनें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱에서 사용할 언어 선택"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6576,6 +6591,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "आपके डिवाइस पर केवल एक भाषा स्थापित है। कृपया सेटिंग्स में अधिक भाषाएँ स्थापित करें और फिर आप स्क्राइब  के विभिन्न स्थानीयकरण का चयन कर सकते हैं।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "현재 기기에 설치된 언어는 하나뿐입니다. 설정에서 추가 언어를 설치한 후 Scribe의 다양한 지역화를 선택할 수 있습니다."
           }
         },
         "mr" : {
@@ -6638,6 +6659,12 @@
             "value" : "केवल एक डिवाइस भाषा"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "기기 언어가 하나뿐입니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6648,53 +6675,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Endast ett enhetsspråk"
-          }
-        }
-      }
-    },
-    "app.settings.menu.app_language_description" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "تغيير اللغة التي يتم بها عرض تطبيق Scribe."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe অ্যাপ কোন ভাষায় থাকবে তা পরিবর্তন করুন।"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Change which language the Scribe app is in."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Cambiar el idioma de la aplicación Scribe."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Modifier la langue de l'application Scribe."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
           }
         }
       }
@@ -6737,6 +6717,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "उच्च रंग कंट्रास्ट"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "강한 색상 대비"
           }
         },
         "mr" : {
@@ -6787,6 +6773,12 @@
             "value" : "बेहतर दृश्यता और स्पष्ट देखने के अनुभव के लिए रंग कंट्रास्ट बढ़ाएँ।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "접근성을 높이고 더 선명히 보기 위해 색상 대비를 증가시킵니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6833,6 +6825,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ऐप टेक्स्ट का आकार बढ़ाएं"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱 글자 크기 키우기"
           }
         },
         "mr" : {
@@ -6883,6 +6881,12 @@
             "value" : "बेहतर पठनीयता के लिए मेनू टेक्स्ट का आकार बढ़ाएँ।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "읽기 편하도록 메뉴 글자 크기를 늘립니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -6893,7 +6897,6 @@
     },
     "app.settings.menu.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6935,6 +6938,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ऐप सेटिंग्स"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "앱 설정"
           }
         },
         "mr" : {
@@ -6996,6 +7005,12 @@
             "value" : "सेटिंग्स"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "설정"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -7049,6 +7064,12 @@
             "value" : "अनुवाद"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "번역"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -7059,7 +7080,6 @@
     },
     "keyboard.not_in_wikidata.explanation_1" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7103,6 +7123,12 @@
             "value" : "विकिडाटा एक सहयोगात्मक रूप से संपादित ज्ञान ग्राफ है जिसे विकिमीडिया फाउंडेशन द्वारा बनाए रखा जाता है। यह विकिपीडिया और अन्य कई परियोजनाओं के लिए ओपन डेटा का स्रोत है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "위키데이터는 위키미디어 재단에 의해 유지되는 협업 편집 지식 그래프입니다. 이는 위키백과와 수많은 다른 프로젝트를 위한 개방형 데이터의 출처로 사용됩니다."
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -7119,7 +7145,6 @@
     },
     "keyboard.not_in_wikidata.explanation_2" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7163,6 +7188,12 @@
             "value" : "स्क्राइब  विकिडाटा की भाषा डेटा का उपयोग करता है अपने कई मुख्य विशेषताओं के लिए। हमें इस डेटा से संज्ञा के लिंग, क्रिया रूपांतरण और बहुत कुछ जानकारी मिलती है!"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe는 많은 핵심 기능에서 위키데이터의 언어 데이터를 사용합니다. 우리는 명사의 성별, 동사의 활용 등 다양한 정보를 얻습니다!"
+          }
+        },
         "mr" : {
           "stringUnit" : {
             "state" : "",
@@ -7179,7 +7210,6 @@
     },
     "keyboard.not_in_wikidata.explanation_3" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7221,6 +7251,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "आप wikidata.org पर खाता बनाकर उस समुदाय में शामिल हो सकते हैं जो स्क्राइब  और कई अन्य परियोजनाओं का समर्थन कर रहा है। हमारी मदद करें मुफ्त जानकारी दुनिया तक पहुँचाने में!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "wikidata.org에서 계정을 만들면 Scribe와 많은 다른 프로젝트를 지원하는 커뮤니티에 참여할 수 있습니다. 함께 세상에 유용한 정보를 나누는 데 도움을 주세요!"
           }
         },
         "mr" : {
