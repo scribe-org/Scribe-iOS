@@ -2,6 +2,10 @@
   <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeGitHubOrgBanner.png" width=1024 alt="Scribe Logo"></a>
 </div>
 
+<!---
+[![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
+--->
+
 [![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver&label=%20)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS?label=%20&logo=github)](https://github.com/scribe-org/Scribe-iOS/issues)
@@ -22,7 +26,7 @@
 </p>
 </details>
 
-### iOS app with keyboards for language learners
+## iOS app with keyboards for language learners
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
 
@@ -314,6 +318,14 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
 
 <strong>2024</strong>
 
+- October: [Blog post on Medium](https://medium.com/@arpita151103/scribe-an-open-source-solution-for-language-learning-and-data-accessibility-092dab026fd6) discussing the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) development process, community and features
+- October: [Blog post on medium](https://medium.com/@mhmohona/ins-and-outs-of-scribe-data-cli-bd51202aa7c6) describing the main features of [Scribe-Data](https://github.com/scribe-org/Scribe-Data)
+- September: [Final Google Summer of Code report](https://medium.com/@mhmohona/the-final-stretch-gsoc-journey-with-scribe-data-1740084c958d) on the creation of the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
+- August: [Final Google Summer of Code report](https://jagmarcel.hashnode.dev/gsoc-2024-final-report) on the creation of Scribe's cross-language translation functionality
+- July: [Blog post on Medium](https://medium.com/@mhmohona/halfway-there-my-gsoc-adventure-with-scribe-data-cli-2ffe6d727ecb) about the progress on creating the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
+- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/gsoc-2024-midterm-report) providing an midterm report on the localization and translation expansion for [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
+- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/my-first-experiences-with-gsoc) about the initial steps towards the localization of [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
+- June: [Blog post on Medium](https://medium.com/@mhmohona/first-month-as-a-gsoc-intern-building-scribe-data-cli-d0c12c9e8371) about the planned [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
 - April: [Blog post on Medium](https://medium.com/@mhmohona/scribe-data-a-guide-to-open-source-language-data-a801c59db4c9) about [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and its functionalities
 - February: [Presentation slides](https://docs.google.com/presentation/d/1lMhYiQx1R99SVGhbikUGjOVaFgPPASvbzM2Bsu3NXSg/edit?usp=sharing) for Scribe's participation at the [Wikimedia Tech Safari Program](https://www.mediawiki.org/wiki/Wikimedia_Tech_Safari_Program)
 
@@ -343,7 +355,14 @@ A future feature of Scribe is language practice within the app itself. Scribe pr
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://www.mediawiki.org/wiki/New_Developers#Scribe"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WikimediaFoundationLogo.png" alt="Wikimedia Foundation logo linking to the MediaWiki new developers page."></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>
+</div>
+
+<div align="center">
+  <br>
     <a href="https://summerofcode.withgoogle.com/"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/GSoCLogo.png" alt="Google Summer of Code logo linking to its website."></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.outreachy.org/"><img height="90" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/OutreachyLogo.png" alt="Outreachy logo linking to its website."></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
 </div>
