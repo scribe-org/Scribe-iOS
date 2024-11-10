@@ -10,11 +10,11 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 func heSetConjugationLabels() {
@@ -115,13 +115,29 @@ func heGetConjugationState() -> [String] {
 /// Action associated with the left view switch button of the conjugation state.
 func heConjugationStateLeft() {
   switch heConjugationState {
-  case .present, .presSimp, .presCont, .presPerf, .presPerfCont, .pastCont:
+  case .present:
     break
-  case .past:
+  case .presSimp:
     conjViewShiftButtonsState = .leftInactive
     heConjugationState = .present
-  case .future:
+  case .presCont:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presSimp
+  case .presPerf:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presCont
+  case .presPerfCont:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presPerf
+  case .past:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presPerfCont
+  case .pastCont:
+    conjViewShiftButtonsState = .bothActive
     heConjugationState = .past
+  case .future:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .pastCont
   case .conditional:
     conjViewShiftButtonsState = .bothActive
     heConjugationState = .future
@@ -131,15 +147,31 @@ func heConjugationStateLeft() {
 /// Action associated with the right view switch button of the conjugation state.
 func heConjugationStateRight() {
   switch heConjugationState {
-  case .presSimp, .presCont, .presPerf, .presPerfCont, .pastCont, .conditional:
-    break
   case .present:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presSimp
+  case .presSimp:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presCont
+  case .presCont:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presPerf
+  case .presPerf:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .presPerfCont
+  case .presPerfCont:
     conjViewShiftButtonsState = .bothActive
     heConjugationState = .past
   case .past:
+    conjViewShiftButtonsState = .bothActive
+    heConjugationState = .pastCont
+  case .pastCont:
+    conjViewShiftButtonsState = .bothActive
     heConjugationState = .future
   case .future:
     conjViewShiftButtonsState = .rightInactive
     heConjugationState = .conditional
+  case .conditional:
+    break
   }
 }
