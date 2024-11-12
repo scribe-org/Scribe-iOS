@@ -171,6 +171,8 @@ func getITKeys() {
       letterKeys = ItalianKeyboardProvider.genPadExpandedLetterKeys()
       symbolKeys = ItalianKeyboardProvider.genPadExpandedSymbolKeys()
 
+      leftKeyChars = ["\\", "`"]
+      rightKeyChars = ["*", "§"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       letterKeys = ItalianKeyboardProvider.genPadLetterKeys()
@@ -179,12 +181,11 @@ func getITKeys() {
 
       letterKeys.removeFirst(1)
 
+      leftKeyChars = ["q", "1"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["q", "1"]
-    // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
