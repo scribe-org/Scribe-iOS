@@ -125,7 +125,90 @@
 		38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		5A037FDA2C74D6C800D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FDD2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FDF2C74D6CC00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
+		5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FEA2C74D6D900D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FEB2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FEC2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FED2C74D6DB00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
+		5A037FEE2C74D6E200D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FEF2C74D6E300D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF02C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF12C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF32C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF62C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF72C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
+		5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFE2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A037FFF2C74D70500D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A0380002C74D70600D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A0380012C74D70700D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
+		5A0380022C74D70B00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380032C74D70C00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380042C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380052C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380062C74D70E00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380072C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380082C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
+		5A03800C2C74D71900D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A03800D2C74D71A00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A03800E2C74D71B00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A03800F2C74D71C00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380102C74D71D00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380112C74D71F00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380122C74D71F00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380132C74D72000D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380142C74D72100D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380152C74D72200D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
+		5A0380162C74D72600D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A0380172C74D72700D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A0380182C74D72700D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A0380192C74D72800D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801A2C74D72900D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801B2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801C2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801D2C74D72C00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801E2C74D72D00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A03801F2C74D72E00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
+		5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
+		5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */; };
+		5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */; };
+		5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */; };
 		5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
 		693150472C881DCE005F99E8 /* BaseTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */; };
@@ -754,6 +837,18 @@
 		D1CDEDDA2A85AE9C00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDB2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
+		D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
@@ -927,6 +1022,9 @@
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTableViewCell.swift; sourceTree = "<group>"; };
+		5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioTableViewCell.xib; sourceTree = "<group>"; };
+		5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewTemplateViewController.swift; sourceTree = "<group>"; };
 		5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ENLanguageData.sqlite; sourceTree = "<group>"; };
 		693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerTest.swift; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
@@ -948,7 +1046,7 @@
 		D13E0DC62C86530E007F00AF /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13E0DC82C86530E007F00AF /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D155AD282BDC6CC20075B18C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FRLanguageData.sqlite; path = Keyboards/LanguageKeyboards/French/FRLanguageData.sqlite; sourceTree = SOURCE_ROOT; };
+		D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = FRLanguageData.sqlite; sourceTree = "<group>"; };
 		D15E298129E41B56006B2C81 /* DELanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DELanguageData.sqlite; sourceTree = "<group>"; };
 		D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ITLanguageData.sqlite; sourceTree = "<group>"; };
 		D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTLanguageData.sqlite; sourceTree = "<group>"; };
@@ -1029,6 +1127,7 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
+		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
@@ -1157,16 +1256,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1406B7832A2DFCA2001DF45B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
-				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
-				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1279,7 +1368,6 @@
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				CE1378C128F5D7AC00E1CBC2 /* Colors */,
-				1406B7832A2DFCA2001DF45B /* Components */,
 				EDEE62232B2DE64A00A0B9C1 /* Extensions */,
 				1406B7882A2DFE4C001DF45B /* InstallationTab */,
 				D198B5CD2BFA954100E1BF4F /* i18n */,
@@ -1304,14 +1392,33 @@
 		38BD214D22D592CA00C6795D /* German */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298129E41B56006B2C81 /* DELanguageData.sqlite */,
 				D1D8B23C2AE408AC0070B817 /* German.entitlements */,
 				D17193FF27AECCD10038660B /* DECommandVariables.swift */,
 				D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */,
 				38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */,
-				D15E298129E41B56006B2C81 /* DELanguageData.sqlite */,
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		5A68DA402CDE7B7900897FAD /* RadioTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */,
+				5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */,
+			);
+			path = RadioTableViewCell;
+			sourceTree = "<group>";
+		};
+		5A68DA442CDE7D2900897FAD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */,
+				5A68DA402CDE7B7900897FAD /* RadioTableViewCell */,
+				ED2486F02B0B4E610038AE6A /* UITableViewCells */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		693150442C881DAB005F99E8 /* Scribe */ = {
@@ -1351,12 +1458,12 @@
 		D109A20C275B6888005E2271 /* French */ = {
 			isa = PBXGroup;
 			children = (
+				D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */,
 				D1D8B23D2AE408C50070B817 /* French.entitlements */,
 				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */,
 				D180EC0228FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift */,
 				D109A20D275B6888005E2271 /* FRKeyboardViewController.swift */,
-				D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */,
 				D109A20F275B6888005E2271 /* Info.plist */,
 			);
 			path = French;
@@ -1365,11 +1472,11 @@
 		D109A21B275B68B3005E2271 /* Portuguese */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */,
 				D1D8B23A2AE408850070B817 /* Portuguese.entitlements */,
 				D171940727AECCE50038660B /* PTCommandVariables.swift */,
 				D17193D727AECA450038660B /* PTInterfaceVariables.swift */,
 				D109A21C275B68B3005E2271 /* PTKeyboardViewController.swift */,
-				D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */,
 				D109A21E275B68B3005E2271 /* Info.plist */,
 			);
 			path = Portuguese;
@@ -1404,11 +1511,11 @@
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */,
 				D1D8B2382AE408620070B817 /* Spanish.entitlements */,
 				D171941727AECD070038660B /* ESCommandVariables.swift */,
 				D17193E727AECAE60038660B /* ESInterfaceVariables.swift */,
 				D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */,
-				D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */,
 				D1608669270B6D3C00134D48 /* Info.plist */,
 			);
 			path = Spanish;
@@ -1417,11 +1524,11 @@
 		D1671A61275A1E8700A7C118 /* Russian */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */,
 				D1D8B2392AE408720070B817 /* Russian.entitlements */,
 				D171940F27AECCF50038660B /* RUCommandVariables.swift */,
 				D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */,
 				D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */,
-				D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */,
 				D166FCF1275A197B0047E62B /* Info.plist */,
 			);
 			path = Russian;
@@ -1444,11 +1551,11 @@
 		D18EA89A2760D4A6001E1358 /* Swedish */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */,
 				D1D8B2372AE4084D0070B817 /* Swedish.entitlements */,
 				D171941F27AECD170038660B /* SVCommandVariables.swift */,
 				D17193EF27AECB350038660B /* SVInterfaceVariables.swift */,
 				D18EA89B2760D4A6001E1358 /* SVKeyboardViewController.swift */,
-				D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */,
 				D18EA89D2760D4A6001E1358 /* Info.plist */,
 			);
 			path = Swedish;
@@ -1521,11 +1628,11 @@
 		D1AFDE6929CA65740033BF27 /* English */ = {
 			isa = PBXGroup;
 			children = (
+				5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */,
 				D1FF8ED12C6C282500EF50AC /* English.entitlements */,
 				D1CDED782A859FB600098546 /* ENCommandVariables.swift */,
 				D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */,
 				D1AFDE6A29CA65740033BF27 /* ENKeyboardViewController.swift */,
-				5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */,
 				D1AFDE6C29CA65740033BF27 /* Info.plist */,
 			);
 			path = English;
@@ -1556,11 +1663,11 @@
 		D1B81D2027BBB5320085FE5E /* Italian */ = {
 			isa = PBXGroup;
 			children = (
+				D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */,
 				D1D8B23B2AE4089C0070B817 /* Italian.entitlements */,
 				D1B81D4927BBBA200085FE5E /* ITCommandVariables.swift */,
 				D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */,
 				D1B81D2127BBB5320085FE5E /* ITKeyboardViewController.swift */,
-				D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */,
 				D1B81D2327BBB5320085FE5E /* Info.plist */,
 			);
 			path = Italian;
@@ -1580,6 +1687,7 @@
 				D1671A61275A1E8700A7C118 /* Russian */,
 				D1608666270B6D3C00134D48 /* Spanish */,
 				D18EA89A2760D4A6001E1358 /* Swedish */,
+				D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */,
 			);
 			path = LanguageKeyboards;
 			sourceTree = "<group>";
@@ -1608,7 +1716,10 @@
 		EDB4601F2B03B3B400BEA967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A68DA442CDE7D2900897FAD /* Cells */,
 				EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */,
+				5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */,
+				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2004,9 +2115,11 @@
 			files = (
 				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
+				5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
+				D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
 			);
@@ -2018,8 +2131,16 @@
 			files = (
 				D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
+				5A03800F2C74D71C00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FF02C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380052C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A0380192C74D72800D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2029,8 +2150,16 @@
 			files = (
 				D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
+				5A03800E2C74D71B00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */,
+				5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
+				5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */,
 				D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */,
+				5A0380042C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A0380182C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2038,10 +2167,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A037FFE2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				5A0380132C74D72000D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
+				5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
+				5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FEA2C74D6D900D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
+				5A03801D2C74D72C00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2056,9 +2193,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0380142C74D72100D4AADD /* RULanguageData.sqlite in Resources */,
+				5A0380002C74D70600D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
+				5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
+				5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
+				5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FF62C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A037FEC2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
 				D15E298A29E41BAD006B2C81 /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2067,10 +2212,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A037FFF2C74D70500D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */,
+				D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */,
+				5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
+				5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
+				5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FEB2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
+				5A03801E2C74D72D00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2078,9 +2231,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0380152C74D72200D4AADD /* RULanguageData.sqlite in Resources */,
+				5A0380012C74D70700D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A03801F2C74D72E00D4AADD /* ESLanguageData.sqlite in Resources */,
+				D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
+				5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
+				5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
+				5A037FF72C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A037FED2C74D6DB00D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2089,9 +2250,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A037FDF2C74D6CC00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */,
+				5A0380122C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
+				5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FF32C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380082C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A03801C2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2101,8 +2271,16 @@
 			files = (
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
 				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
+				5A03800D2C74D71A00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */,
+				5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
+				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
+				5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FEF2C74D6E300D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380032C74D70C00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A0380172C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2110,9 +2288,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A037FDA2C74D6C800D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */,
+				5A03800C2C74D71900D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
+				5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FEE2C74D6E200D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380022C74D70B00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A0380162C74D72600D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2120,9 +2307,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A037FDD2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */,
+				5A0380102C74D71D00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
+				5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */,
+				5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
+				5A037FF12C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A0380062C74D70E00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A03801A2C74D72900D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2132,8 +2328,16 @@
 			files = (
 				D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
+				5A0380112C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
+				D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */,
+				5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
+				5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */,
+				5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
+				5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
+				5A0380072C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
+				5A03801B2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2208,6 +2412,7 @@
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				30489C1E2936DAB700B59393 /* ToolTipView.swift in Sources */,
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
+				5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
 				D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */,
 				EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */,
@@ -2228,6 +2433,7 @@
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
 				30453967293B9D31003AE55B /* ViewThemeable.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
+				5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */,
 				ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* InstallScreen.swift in Sources */,
 				D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */,

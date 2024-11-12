@@ -23,12 +23,10 @@ import UIKit
 func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
   let globeString = getGlobeIcon(fontSize: fontSize)
 
-  let startOfBody = NSMutableAttributedString(string: """
-  1.\u{0020}
-  """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  let startOfBody = NSMutableAttributedString(string: "1. ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
   var settingsLink = NSMutableAttributedString()
-  let linkText = NSLocalizedString("app.installation.settingsLink", value: "Open Scribe settings", comment: "")
+  let linkText = NSLocalizedString("app.installation.keyboard.scribe_settings", value: "Open Scribe settings", comment: "")
   settingsLink = addHyperLinks(
     originalText: linkText,
     links: [linkText: "MakeTextLink"], // placeholder as there's a button over it
@@ -37,21 +35,17 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
 
   let installStart = concatAttributedStrings(left: startOfBody, right: settingsLink)
 
-  let installDirections = NSMutableAttributedString(string: "\n\n2. " + NSLocalizedString("app.installation.text1", value: "Select", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  let installDirections = NSMutableAttributedString(string: "\n\n2. " + NSLocalizedString("app.installation.keyboard.text_1", value: "Select", comment: "") + " ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
 
-  let toAppend = NSMutableAttributedString(string: " " + NSLocalizedString("app.keyboards", value: "Keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
-  toAppend.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize), range: NSRange(location: 0, length: toAppend.length))
-  installDirections.append(toAppend)
+  let boldText = NSMutableAttributedString(string: NSLocalizedString("app.installation.keyboard.keyboards_bold", value: "Keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+  boldText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize), range: NSRange(location: 0, length: boldText.length))
+  installDirections.append(boldText)
 
-  installDirections.append(NSMutableAttributedString(string: "\n\n3. " + NSLocalizedString("app.installation.text2", value: """
-  Activate keyboards that you want to use
-
-  4. When typing press
-  """, comment: "") + " ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  installDirections.append(NSMutableAttributedString(string: "\n\n3. " + NSLocalizedString("app.installation.keyboard.text_2", value: "Activate keyboards that you want to use", comment: "") + "\n\n4. " + NSLocalizedString("app.installation.keyboard.text_3", value: "When typing, press", comment: "") + " ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   installDirections.append(globeString)
 
-  installDirections.append(NSMutableAttributedString(string: " " + NSLocalizedString("app.installation.text3", value: "to select keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
+  installDirections.append(NSMutableAttributedString(string: " " + NSLocalizedString("app.installation.keyboard.text_4", value: "to select keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   return concatAttributedStrings(left: installStart, right: installDirections)
 }

@@ -159,7 +159,6 @@ func checkLandscapeMode() {
 
 // Keyboard language variables.
 var controllerLanguage = String()
-var controllerLanguageAbbr = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [
@@ -174,15 +173,22 @@ let languagesAbbrDict = [
 ]
 
 let languagesStringDict = [
-  "English": NSLocalizedString("_global.english", value: "English", comment: ""),
-  "French": NSLocalizedString("_global.french", value: "French", comment: ""),
-  "German": NSLocalizedString("_global.german", value: "German", comment: ""),
-  "Italian": NSLocalizedString("_global.italian", value: "Italian", comment: ""),
-  "Portuguese": NSLocalizedString("_global.portuguese", value: "Portuguese", comment: ""),
-  "Russian": NSLocalizedString("_global.russian", value: "Russian", comment: ""),
-  "Spanish": NSLocalizedString("_global.spanish", value: "Spanish", comment: ""),
-  "Swedish": NSLocalizedString("_global.swedish", value: "Swedish", comment: "")
+  "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
+  "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
+  "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
+  "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
+  "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
+  "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
+  "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
+  "Swedish": NSLocalizedString("app._global.swedish", value: "Swedish", comment: "")
 ]
+
+func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
+  for (key, value) in dict where value == givenValue {
+    return key
+  }
+  return ""
+}
 
 /// Returns the abbreviation of the language for use in commands.
 func getControllerLanguageAbbr() -> String {
@@ -190,6 +196,17 @@ func getControllerLanguageAbbr() -> String {
     return ""
   }
   return abbreviation
+}
+
+func getControllerTranslateLangCode() -> String {
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
+  let key = getControllerLanguageAbbr() + "TranslateLanguage"
+  if let translateLang = userDefaults.string(forKey: key) {
+    return translateLang
+  } else {
+    userDefaults.set("en", forKey: key)
+    return "en"
+  }
 }
 
 // Dictionary for accessing keyboard abbreviations and layouts.
@@ -214,7 +231,12 @@ func setKeyboard() {
 /// Sets the keyboard layouts given the chosen keyboard and device type.
 func setKeyboardLayout() {
   if commandState == .translate {
-    setENKeyboardLayout()
+    let translateLanguage = getKeyInDict(givenValue: getControllerTranslateLangCode(), dict: languagesAbbrDict)
+    if let setLayoutFxn = keyboardLayoutDict[translateLanguage] {
+      setLayoutFxn()
+    } else {
+      setENKeyboardLayout()
+    }
   } else if let setLayoutFxn = keyboardLayoutDict[controllerLanguage] {
     setLayoutFxn()
   }
