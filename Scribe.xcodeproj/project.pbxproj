@@ -2037,7 +2037,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					38BD212F22D5907E00C6795D = {
@@ -3360,7 +3360,6 @@
 		38BD214622D5908100C6795D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -3389,7 +3388,6 @@
 		38BD214722D5908100C6795D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4258,8 +4256,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
