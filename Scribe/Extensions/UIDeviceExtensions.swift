@@ -20,9 +20,19 @@
 import UIKit
 
 extension UIDevice {
-  public static var hasNotch: Bool {
-    if UIApplication.shared.windows.count == 0 { return false }
-    let top = UIApplication.shared.windows[0].safeAreaInsets.top
-    return top > 24
-  }
+    public static var hasNotch: Bool {
+      guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+        return false
+      }
+      if windowScene.windows.count == 0 { return false }
+      let top = scene.windows.first?.safeAreaInsets.top ?? 0
+      return top > 24
+    }
+
+    private static var scene: UIWindowScene {
+      guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+        fatalError("No connected scenes.")
+      }
+      return windowScene
+    }
 }

@@ -109,6 +109,10 @@ extension AboutViewController {
       openURLString(
         urlString: "https://github.com/scribe-org/Scribe-iOS/issues", withEncoding: false
       )
+    case .version:
+      openURLString(
+        urlString: "https://github.com/scribe-org/Scribe-iOS/releases", withEncoding: false
+      )
 
     case .email:
       showEmailUI()
