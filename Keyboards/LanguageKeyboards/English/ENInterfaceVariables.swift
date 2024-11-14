@@ -174,6 +174,8 @@ func getENKeys() {
       letterKeys = EnglishKeyboardProvider.genPadExpandedLetterKeys()
       symbolKeys = EnglishKeyboardProvider.genPadExpandedSymbolKeys()
 
+      leftKeyChars = ["~", "`"]
+      rightKeyChars = ["\\", "°"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       letterKeys = EnglishKeyboardProvider.genPadLetterKeys()
@@ -182,12 +184,11 @@ func getENKeys() {
 
       letterKeys.removeFirst(1)
 
+      leftKeyChars = ["q", "1"]
+      rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
 
-    leftKeyChars = ["q", "1"]
-    // TODO: add "p" to rightKeyChar if the keyboard has 4 rows.
-    rightKeyChars = []
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
@@ -228,13 +229,15 @@ func setENKeyboardLayout() {
   ]
 
   translateKeyLbl = "Translate"
-  translatePrompt = commandPromptSpacing + "Currently not utilized" // "en -› \(getControllerLanguageAbbr()): "
-  translatePromptAndCursor = translatePrompt // + commandCursor
-  translatePromptAndPlaceholder = translatePromptAndCursor // + " " + translatePlaceholder
+  translatePlaceholder = "Enter a word"
+  translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
+  translatePromptAndCursor = translatePrompt + commandCursor
+  translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   conjugateKeyLbl = "Conjugate"
+  conjugatePlaceholder = "Enter a verb"
   conjugatePrompt = commandPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
@@ -242,6 +245,7 @@ func setENKeyboardLayout() {
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
   pluralKeyLbl = "Plural"
+  pluralPlaceholder = "Enter a noun"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
