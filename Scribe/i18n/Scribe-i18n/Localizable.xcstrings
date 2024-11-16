@@ -797,6 +797,12 @@
             "value" : "Scribe Conjugate শেয়ার করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe Conjugate teilen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -831,6 +837,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "स्क्राइब कॉन्जुगेट शेअर करा"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dela Scribe"
           }
         }
       }
@@ -1566,6 +1578,12 @@
             "value" : "Scribe Conjugate মূল্যায়ন করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe Conjugate bewerten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -1600,6 +1618,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "स्क्राइब कॉन्जुगेटला रेट करा"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Betygsätt Scribe"
           }
         }
       }
@@ -1750,6 +1774,12 @@
             "value" : "সংস্করণ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Version"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -1784,6 +1814,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "आवृत्ती"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Version"
           }
         }
       }
@@ -2466,6 +2502,12 @@
             "value" : "কাল নির্বাচন করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tempus auswählen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -2501,6 +2543,12 @@
             "state" : "",
             "value" : "काल निवडा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj tempus"
+          }
         }
       }
     },
@@ -2518,6 +2566,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "নিচের একটি conjugation নির্বাচন করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wähle unten eine Konjugation"
           }
         },
         "en" : {
@@ -2555,6 +2609,12 @@
             "state" : "",
             "value" : "खालीलपैकी एक संयोजन निवडा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en konjugering nedan"
+          }
         }
       }
     },
@@ -2572,6 +2632,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "সাম্প্রতিক সময়ের conjugated"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kürzlich konjugiert"
           }
         },
         "en" : {
@@ -2609,6 +2675,12 @@
             "state" : "",
             "value" : "अलीकडे संयोजित केलेले"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nyligen konjugerade"
+          }
         }
       }
     },
@@ -2626,6 +2698,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Conjugate"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Konjugieren"
           }
         },
         "en" : {
@@ -2663,6 +2741,12 @@
             "state" : "",
             "value" : "संयोजन"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Konjugera"
+          }
         }
       }
     },
@@ -2680,6 +2764,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ক্রিয়াপদ অনুসন্ধান করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nach Verben suchen"
           }
         },
         "en" : {
@@ -2717,6 +2807,12 @@
             "state" : "",
             "value" : "क्रियापद शोधा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sök efter verb"
+          }
         }
       }
     },
@@ -2734,6 +2830,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ক্রিয়াপদ সংযুগ করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Verben konjugieren"
           }
         },
         "en" : {
@@ -2771,6 +2873,12 @@
             "state" : "",
             "value" : "क्रियापद संयोजन"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Konjugera verb"
+          }
         }
       }
     },
@@ -2788,6 +2896,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Scribe Conjugate-এ নতুন ডেটা যোগ করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Neue Daten zu Scribe Conjugate hinzufügen."
           }
         },
         "en" : {
@@ -2825,6 +2939,12 @@
             "state" : "",
             "value" : "स्क्राइब संयोजनात नवीन डेटा जोडा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lägg till ny data till Scribe Conjugate."
+          }
         }
       }
     },
@@ -2842,6 +2962,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ক্রিয়াপদ ডেটা ডাউনলোড করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Daten für Verben herunterladen"
           }
         },
         "en" : {
@@ -2879,6 +3005,12 @@
             "state" : "",
             "value" : "क्रियापद डेटा डाउनलोड करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ladda ner verb-data"
+          }
         }
       }
     },
@@ -2896,6 +3028,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "সংযুগ করা শুরু করতে ডেটা ডাউনলোড করুন!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lade Daten herunter, um mit dem Konjugieren anzufangen!"
           }
         },
         "en" : {
@@ -2933,6 +3071,12 @@
             "state" : "",
             "value" : "संयोजन करण्यासाठी डेटा डाउनलोड करा!"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ladda ner data för att börja konjugera!"
+          }
         }
       }
     },
@@ -2950,6 +3094,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ক্রিয়াপদ ডেটা"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Verbdaten"
           }
         },
         "en" : {
@@ -2987,6 +3137,12 @@
             "state" : "",
             "value" : "क्रियापद डेटा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Verb-data"
+          }
         }
       }
     },
@@ -3004,6 +3160,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Scribe কীবোর্ডে নতুন ডেটা যোগ করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Neue Daten zu Scribe-Tastaturen hinzufügen."
           }
         },
         "en" : {
@@ -3041,6 +3203,12 @@
             "state" : "",
             "value" : "स्क्राइब कीबोर्डमध्ये नवीन डेटा जोडा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lägg till ny data för Scribe-tangentbord."
+          }
         }
       }
     },
@@ -3058,6 +3226,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কীবোর্ড ডেটা ডাউনলোড করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tastaturdaten hinzufügen"
           }
         },
         "en" : {
@@ -3095,6 +3269,12 @@
             "state" : "",
             "value" : "कीबोर्ड डेटा डाउनलोड करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ladda ner tangentbords-data"
+          }
         }
       }
     },
@@ -3112,6 +3292,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ভাষার ডেটা"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sprachdaten"
           }
         },
         "en" : {
@@ -3149,6 +3335,12 @@
             "state" : "",
             "value" : "भाषा डेटा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Språk-data"
+          }
         }
       }
     },
@@ -3166,6 +3358,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "সমস্ত ভাষা"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alle Sprachen"
           }
         },
         "en" : {
@@ -3203,6 +3401,12 @@
             "state" : "",
             "value" : "सर्व भाषा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alla språk"
+          }
         }
       }
     },
@@ -3220,6 +3424,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডাউনলোড করার জন্য ডেটা নির্বাচন করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Herunterzuladende Daten auswählen"
           }
         },
         "en" : {
@@ -3257,6 +3467,12 @@
             "state" : "",
             "value" : "डाउनलोड करण्यासाठी डेटा निवडा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj data att ladda ner"
+          }
         }
       }
     },
@@ -3274,6 +3490,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডেটা ডাউনলোড করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Daten herunterladen"
           }
         },
         "en" : {
@@ -3311,6 +3533,12 @@
             "state" : "",
             "value" : "डेटा डाउनलोड करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ladda ner data"
+          }
         }
       }
     },
@@ -3328,6 +3556,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "নতুন ডেটার জন্য চেক করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nach neuen Daten prüfen"
           }
         },
         "en" : {
@@ -3365,6 +3599,12 @@
             "state" : "",
             "value" : "नवीन डेटाची तपासणी करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kolla efter ny data"
+          }
         }
       }
     },
@@ -3382,6 +3622,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "নিয়মিত ডেটা আপডেট করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Regelmäßig Daten aktualisieren"
           }
         },
         "en" : {
@@ -3419,6 +3665,12 @@
             "state" : "",
             "value" : "नियमित डेटा अद्ययावत करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uppdatera regelbundet data"
+          }
         }
       }
     },
@@ -3436,6 +3688,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডেটা আপডেট করুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Daten aktualisieren"
           }
         },
         "en" : {
@@ -3472,6 +3730,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "डेटा अद्ययावत करा"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uppdatera data"
           }
         }
       }
@@ -3557,6 +3821,12 @@
             "value" : "দ্রুত টিউটোরিয়াল"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Schnelltutorial"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -3592,6 +3862,12 @@
             "state" : "",
             "value" : "त्वरित ट्युटोरियल"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Snabb genomgång"
+          }
         }
       }
     },
@@ -3609,6 +3885,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কীবোর্ড সেটিংস খুলুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tastatureinstellungen öffnen"
           }
         },
         "en" : {
@@ -3645,6 +3927,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "कीबोर्ड सेटिंग्ज उघडा"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Öppna tangentbords-inställningar"
           }
         }
       }
@@ -4251,6 +4539,12 @@
             "value" : "কীবোর্ড ইনস্টল করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tastaturen installieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -4286,6 +4580,12 @@
             "state" : "",
             "value" : "कीबोर्ड इंस्टॉल करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Installera tangentbord"
+          }
         }
       }
     },
@@ -4303,6 +4603,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "প্রস্তাবনা/সম্পূর্ণ করতে টীকা দিন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vorschläge annotieren"
           }
         },
         "en" : {
@@ -4340,6 +4646,12 @@
             "state" : "",
             "value" : "सुचवण्या/समाप्ति वर्णन करा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kommentera förslag/kompletteringar"
+          }
         }
       }
     },
@@ -4357,6 +4669,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "টাইপ করার সময় প্রস্তাবনা এবং পূর্ণকরণের অধীনে তাদের লিঙ্গ প্রদর্শন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vorschläge unterstreichen, um ihr Genus beim Tippen anzuzeigen."
           }
         },
         "en" : {
@@ -4393,6 +4711,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "टाइप करताना सुचवण्या आणि समाप्ति रेखांकित करा जेणेकरून त्यांच्या लिंगाची माहिती मिळू शकेल."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Stryk under förslag och kompletteringar och visa deras genus medan du skriver."
           }
         }
       }
@@ -4543,6 +4867,12 @@
             "value" : "ডিফল্ট ইমোজি স্কিন টোন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hautfarbe für Emoji"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -4578,6 +4908,12 @@
             "state" : "",
             "value" : "डिफॉल्ट इमोजी त्वचा रंग"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Standard-hudton för emojis"
+          }
         }
       }
     },
@@ -4595,6 +4931,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ব্যবহার করা স্কিন টোন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Die zu benutzende Hautfarbe"
           }
         },
         "en" : {
@@ -4632,6 +4974,77 @@
             "state" : "",
             "value" : "वापरल्या जाणाऱ्या त्वचेचा रंग"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hudton som ska användas"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.functionality.default_emoji_tone_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Stelle einen Standardhautton für automatische Emoji-Vorschläge ein."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Set a default skin tone for emoji autosuggestions and completions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이모지 자동 추천 및 완성을 위한 피부 톤의 기본값을 설정합니다."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
+          }
         }
       }
     },
@@ -4649,6 +5062,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "প্রতি শব্দ ধরে মুছে ফেলুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Rücktaste halten löscht Wort für Wort"
           }
         },
         "en" : {
@@ -4686,6 +5105,12 @@
             "state" : "",
             "value" : "शब्द दर शब्द हटवा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nedtryckt delete tar bort ord för ord"
+          }
         }
       }
     },
@@ -4703,6 +5128,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডিলিট কী প্রেস এবং ধরে রাখলে শব্দ ধরে ধরে টেক্সট মুছে ফেলুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Den Text Wort für Wort löschen, wenn die Rücktaste länger gedrückt wird."
           }
         },
         "en" : {
@@ -4740,6 +5171,12 @@
             "state" : "",
             "value" : "डिलीट की थांबून धरल्यास शब्द दर शब्द हटवा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ta bort text ord för ord när delete-knappen är intryckt."
+          }
         }
       }
     },
@@ -4756,6 +5193,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডাবল স্পেসে পিরিয়ড"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Punkt bei doppelter Leertaste"
           }
         },
         "en" : {
@@ -4793,6 +5236,12 @@
             "state" : "",
             "value" : "दुहेरी स्पेससाठी अवधि"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dubbla mellanslag blir punkt"
+          }
         }
       }
     },
@@ -4809,6 +5258,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "স্পেস কী দুইবার প্রেস করলে স্বয়ংক্রিয়ভাবে একটি পিরিয়ড প্রবেশ করান।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Automatisch einen Punkt einsetzen, wenn zweimal die Leertaste bedient wird."
           }
         },
         "en" : {
@@ -4846,6 +5301,12 @@
             "state" : "",
             "value" : "स्पेस की दोनदा दाबल्यावर स्वयंचलितपणे अवधि घाला."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lägg automatiskt in en punkt när mellanslag trycks två gånger."
+          }
         }
       }
     },
@@ -4863,6 +5324,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "বিকল্প অক্ষরের জন্য ধরে রাখুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Für alternative Zeichen halten"
           }
         },
         "en" : {
@@ -4900,6 +5367,12 @@
             "state" : "",
             "value" : "वैकल्पिक अक्षरांसाठी थांबा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Håll ner för alternativa tecken"
+          }
         }
       }
     },
@@ -4917,6 +5390,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কী ধরে রাখুন এবং প্রয়োজনীয় অক্ষরে টেনে আনুন বিকল্প অক্ষর নির্বাচন করতে।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Für alternative Zeichen eine Taste lange drücken und zum gewünschten Zeichen ziehen."
           }
         },
         "en" : {
@@ -4954,6 +5433,12 @@
             "state" : "",
             "value" : "कुञ्जी धरून इच्छित अक्षरावर खीचून वैकल्पिक अक्षर निवडा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj alternativa tecken genom att hålla ner tangenten och dra fingret till önskat tecken."
+          }
         }
       }
     },
@@ -4971,6 +5456,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কী প্রেসে পপআপ দেখান"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pop-up bei Tastendruck anzeigen"
           }
         },
         "en" : {
@@ -5008,6 +5499,12 @@
             "state" : "",
             "value" : "कुञ्जी दाबण्यावर पॉपअप दाखवा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Visa popup vid tangenttryck"
+          }
         }
       }
     },
@@ -5025,6 +5522,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কী প্রেস করলে তাদের পপআপ দেখান।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ein Pop-up einer Taste anzeigen, wenn sie gedrückt wird."
           }
         },
         "en" : {
@@ -5062,6 +5565,12 @@
             "state" : "",
             "value" : "कुञ्जी दाबण्यावर पॉपअप दाखवा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Visa en popup av tangenter medan de trycks."
+          }
         }
       }
     },
@@ -5079,6 +5588,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "বিরামচিহ্নের ব্যবধান মুছুন"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Leerzeichen bei Zeichensetzung löschen"
           }
         },
         "en" : {
@@ -5116,6 +5631,12 @@
             "state" : "",
             "value" : "विरामचिन्ह स्थान काढा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ta bort skiljeteckenavstånd"
+          }
         }
       }
     },
@@ -5133,6 +5654,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "বিরামচিহ্নের আগে অতিরিক্ত স্থান সরিয়ে দিন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Überflüssige Leerzeichen vor Zeichensetzung automatisch entfernen."
           }
         },
         "en" : {
@@ -5169,6 +5696,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "विरामचिन्हांपूर्वीचे अतिरिक्त स्थान काढा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ta bort överflödiga mellanslag före skiljetecken."
           }
         }
       }
@@ -5254,6 +5787,12 @@
             "value" : "কী প্রেসে ভাইব্রেশন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bei Tastendruck vibrieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -5289,6 +5828,12 @@
             "state" : "",
             "value" : "कुञ्जी दाबण्यावर कंपन"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vibrera på tangenttryck"
+          }
         }
       }
     },
@@ -5306,6 +5851,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "কী প্রেস করলে ডিভাইস ভাইব্রেট করবে।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Das Gerät vibrieren lassen, wenn Tasten gedrückt werden."
           }
         },
         "en" : {
@@ -5343,6 +5894,12 @@
             "state" : "",
             "value" : "कुञ्जी दाबल्यावर डिव्हाइस कंपन करेल."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Låt enheten vibrera när du trycker på knapparna."
+          }
         }
       }
     },
@@ -5360,6 +5917,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডিফল্ট মুদ্রা প্রতীক"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Standardwährungssymbol"
           }
         },
         "en" : {
@@ -5397,6 +5960,12 @@
             "state" : "",
             "value" : "डिफॉल्ट चलन चिन्ह"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Standard-symbol för valuta"
+          }
         }
       }
     },
@@ -5414,6 +5983,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "১২৩ কীগুলির জন্য প্রতীক"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Symbol für Nummerntasten"
           }
         },
         "en" : {
@@ -5451,6 +6026,77 @@
             "state" : "",
             "value" : "123 किजसाठी चिन्ह"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Symbol för 123-tangenter"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.layout.default_currency_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Auswählen, welches Währungssymbol bei den Nummerntasten auftaucht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Select which currency symbol appears on the number keys."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "숫자 키에 어떤 통화 기호가 표시될지를 선택하세요."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
+          }
         }
       }
     },
@@ -5468,6 +6114,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডিফল্ট কীবোর্ড"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Standardtastatur"
           }
         },
         "en" : {
@@ -5505,6 +6157,12 @@
             "state" : "",
             "value" : "डिफॉल्ट कीबोर्ड"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Standardtangentbord"
+          }
         }
       }
     },
@@ -5521,7 +6179,13 @@
         "bn" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "আপনার টাইপিং পছন্দ এবং ভাষার প্রয়োজন অনুযায়ী কীবোর্ড বিন্যাস নির্বাচন করুন।"
+            "value" : "ব্যবহার করার জন্য লেআউট"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Zu benutzendes Layout"
           }
         },
         "en" : {
@@ -5545,19 +6209,25 @@
         "hi" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
+            "value" : "उपयोग होने वाला लेआउट"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "선호도와 언어 필요에 맞는 키보드 레이아웃을 선택하세요."
+            "value" : "적용할 레이아웃"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "तुमच्या टाइपिंग आवडीनुसार आणि भाषा गरजेनुसार कीबोर्ड लेआउट निवडा."
+            "value" : "वापरले जाणारे लेआउट"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Layout som ska användas"
           }
         }
       }
@@ -5575,7 +6245,13 @@
         "bn" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "ব্যবহার করার জন্য লেআউট"
+            "value" : "আপনার টাইপিং পছন্দ এবং ভাষার প্রয়োজন অনুযায়ী কীবোর্ড বিন্যাস নির্বাচন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ein Tastaturlayout auswählen, das den eigenen Vorlieben und der Sprache entspricht."
           }
         },
         "en" : {
@@ -5599,19 +6275,25 @@
         "hi" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "उपयोग होने वाला लेआउट"
+            "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "적용할 레이아웃"
+            "value" : "선호도와 언어 필요에 맞는 키보드 레이아웃을 선택하세요."
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "वापरले जाणारे लेआउट"
+            "value" : "तुमच्या टाइपिंग आवडीनुसार आणि भाषा गरजेनुसार कीबोर्ड लेआउट निवडा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en tangentbordslayout som passar dina skrivpreferenser och språkbehov."
           }
         }
       }
@@ -6022,6 +6704,12 @@
             "value" : "ভাষা নির্বাচন করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sprache auswählen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -6057,16 +6745,11 @@
             "state" : "",
             "value" : "भाषा निवडा"
           }
-        }
-      }
-    },
-    "app.settings.keyboard.translation.select_source_description" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
+        },
+        "sv" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Choose a language to translate from"
+            "state" : "",
+            "value" : "Välj språk"
           }
         }
       }
@@ -6085,6 +6768,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "উৎস ভাষা কী"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Die verwendete Ausgangssprache"
           }
         },
         "en" : {
@@ -6121,6 +6810,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "स्रोत भाषा काय आहे"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vilket är källspråket"
           }
         }
       }
@@ -6209,7 +6904,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Translation source language"
+            "value" : "Wähle die Sprache, von der übersetzt wird."
           }
         },
         "es" : {
@@ -6264,6 +6959,24 @@
     "app.settings.layout.periodAndComma.description" : {
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "لغة مصدر الترجمة"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "অনুবাদের উৎস ভাষা"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ausgangssprache für die Übersetzung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -6299,6 +7012,12 @@
             "state" : "",
             "value" : "अनुवाद स्रोत भाषा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Källspråk för översättning"
+          }
         }
       }
     },
@@ -6316,6 +7035,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "ডার্ক মোড"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dunkler Modus"
           }
         },
         "en" : {
@@ -6353,6 +7078,12 @@
             "state" : "",
             "value" : "डार्क मोड"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mörkt läge"
+          }
         }
       }
     },
@@ -6370,6 +7101,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "অ্যাপ্লিকেশনের প্রদর্শন ডার্ক মোডে পরিবর্তন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Die App-Darstellung auf dunkel umstellen."
           }
         },
         "en" : {
@@ -6406,6 +7143,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "अ‍ॅप डिस्प्ले डार्क मोडमध्ये बदला."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ändra programmets visning till mörkt läge."
           }
         }
       }
@@ -6509,6 +7252,12 @@
             "value" : "অ্যাপের টেক্সটগুলির জন্য ভাষা নির্বাচন করুন"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "App-Sprache auswählen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -6543,6 +7292,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "अ‍ॅप टेक्स्टसाठी भाषा निवडा"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj språk för apptexter"
           }
         }
       }
@@ -6679,6 +7434,71 @@
         }
       }
     },
+    "app.settings.menu.app_language_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "تغيير اللغة التي يتم بها عرض تطبيق Scribe."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe অ্যাপ কোন ভাষায় থাকবে তা পরিবর্তন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ändern, welche Sprache für die Scribe-App benutzt wird."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Change which language the Scribe app is in."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Cambiar el idioma de la aplicación Scribe."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Modifier la langue de l'application Scribe."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 앱에서 사용할 언어를 변경합니다."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ändra vilket språk Scribe-appen är på."
+          }
+        }
+      }
+    },
     "app.settings.menu.high_color_contrast" : {
       "comment" : "",
       "extractionState" : "stale",
@@ -6693,6 +7513,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "বেশি রঙের পার্থক্য"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hoher Farbkontrast"
           }
         },
         "en" : {
@@ -6730,6 +7556,12 @@
             "state" : "",
             "value" : "उच्च रंग कंट्रास्ट"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hög färgkontrast"
+          }
         }
       }
     },
@@ -6747,6 +7579,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "উন্নত অ্যাক্সেসিবিলিটির জন্য রঙের কনট্রাস্ট বাড়ান এবং আরও স্পষ্ট দর্শন প্রদান করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Farbkontrast für eine vereinfachte Bedienung und bessere Erkennbarkeit."
           }
         },
         "en" : {
@@ -6784,6 +7622,12 @@
             "state" : "",
             "value" : "चांगली दृश्यमानता आणि स्पष्ट पाहण्याच्या अनुभवासाठी रंग कंट्रास्ट वाढवा."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Öka färgkontrasten för förbättrad tillgänglighet och en tydligare tittarupplevelse."
+          }
         }
       }
     },
@@ -6801,6 +7645,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "অ্যাপ টেক্সটের আকার বাড়ান"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Text in der App vergrößern"
           }
         },
         "en" : {
@@ -6838,6 +7688,12 @@
             "state" : "",
             "value" : "अ‍ॅप टेक्स्टचा आकार वाढवा"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Öka appens textstorlek"
+          }
         }
       }
     },
@@ -6855,6 +7711,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "আরও ভালোভাবে পড়ার জন্য মেনুর টেক্সটগুলির আকার বাড়ান।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Die Menütexte in der App für bessere Lesbarkeit vergrößern."
           }
         },
         "en" : {
@@ -6891,6 +7753,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "चांगली वाचनीयता मिळवण्यासाठी मेनू टेक्स्टचा आकार वाढवा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Öka storleken på menytexterna för bättre läsbarhet."
           }
         }
       }
@@ -7040,6 +7908,12 @@
             "value" : "অনুবাদ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Übersetzung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "",
@@ -7074,6 +7948,12 @@
           "stringUnit" : {
             "state" : "",
             "value" : "अनुवाद"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Översättning"
           }
         }
       }
