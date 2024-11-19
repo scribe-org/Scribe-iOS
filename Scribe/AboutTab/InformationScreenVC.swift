@@ -60,7 +60,6 @@ class InformationScreenVC: UIViewController {
       contentContainerViewPhone.removeFromSuperview()
       headingLabelPhone.removeFromSuperview()
       textViewPhone.removeFromSuperview()
-      
     } else {
       scrollContainerView = scrollContainerViewPhone
       relativeView = relativeViewPhone
