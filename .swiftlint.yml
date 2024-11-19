@@ -1,7 +1,5 @@
-# SwiftLint Configuration File
-
 disabled_rules:
-  # ERRORS IN PROJECT CURRENTLY
+  # Currently raise errors:
   - cyclomatic_complexity
   - identifier_name
   - function_body_length
@@ -10,8 +8,6 @@ disabled_rules:
   - line_length
   - file_length
   - type_body_length
-  # WARNINGS IN PROJECT CURRENTLY
-  - todo
 
 identifier_name:
   min_length: 1

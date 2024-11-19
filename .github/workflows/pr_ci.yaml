@@ -26,8 +26,8 @@ jobs:
             ${{ runner.os }}-xcode-
       - name: Build
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' clean build
+          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
 
       - name: Test
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test
+          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
