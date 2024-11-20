@@ -16,6 +16,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Learning the tech stack](#learning-the-tech)
 - [Development environment](#dev-env)
   - [Note on debugging](#note-on-debugging)
+- [Testing](#testing)
 - [Issues and projects](#issues-projects)
 - [Bug reports](#bug-reports)
 - [Feature requests](#feature-requests)
@@ -146,13 +147,41 @@ The Xcode debugger often doesn't work as expected for Scribe as the keyboards th
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
 - Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for keyboard testing
 
-### Adding the file header template to Xcode
+### Adding file header template to Xcode
 
 As [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) licensed technology, Scribe is expected to include a license header in all files within the codebase. A template for this has been provided in the `ScribeTemplates` directory. You can have this header automatically added to the top of files by executing the following commands to add it to your Xcode templates:
 
 ```bash
 mkdir ~/Library/Developer/Xcode/Templates
 ln -s PATH_TO_LOCAL_SCRIBE_DIRECTORY/Scribe-iOS/ScribeTemplates ~/Library/Developer/Xcode/Templates/
+```
+
+<a id="testing"></a>
+
+## Testing [`⇧`](#contents)
+
+Writing unit tests is essential to guarantee the dependability and sustainability of the Scribe-iOS codebase. Unit tests confirm that individual components of the application work as intended by detecting errors at an early stage, thus making the debugging process easier and boosting assurance for upcoming modifications. An unchanging testing method helps new team members grasp project norms and anticipated actions.
+
+In addition to the [pre-commit](https://pre-commit.com/) hooks that are set up during the [development environment section](#dev-env), Scribe-iOS includes a testing suite that should be ran before all pull requests and subsequent commits.
+
+Please run the following in the project root:
+
+```bash
+# Build and test the application:
+xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
+xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
+
+# If you don't have swiftlint installed:
+# brew install swiftlint
+
+# Lint the project:
+swiftlint --strict
+```
+
+If you see that there are linting errors above, then please run the following command to hopefully fix them automatically:
+
+```bash
+swiftlint --fix
 ```
 
 <a id="issues-projects"></a>

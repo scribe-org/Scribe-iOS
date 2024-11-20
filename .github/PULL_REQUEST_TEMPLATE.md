@@ -7,6 +7,7 @@ Thank you for your pull request! 🚀
 <!-- Please replace the empty checkboxes [] below with checked ones [x] accordingly. -->
 
 - [] This pull request is on a [separate branch](https://docs.github.com/en/get-started/quickstart/github-flow) and not the main branch
+- [] I have tested my code with the `xcodebuild` and `swiftlint --strict` commands as directed in the [testing section of the contributing guide](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md#testing)
 
 ---
 
