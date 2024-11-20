@@ -23,6 +23,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
 - Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
 
+### 🎨 Design Changes
+
+- The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/425)).
+
 ### ♻️ Code Refactoring
 
 - All orphaned documentation comments have been removed from the codebase ([#425](https://github.com/scribe-org/Scribe-iOS/issues/425)).
