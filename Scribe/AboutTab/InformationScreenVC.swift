@@ -43,14 +43,6 @@ class InformationScreenVC: UIViewController {
   @IBOutlet var textViewPad: UITextView!
   var textView: UITextView!
 
-  @IBOutlet var cornerImageViewPhone: UIImageView!
-  @IBOutlet var cornerImageViewPad: UIImageView!
-  var cornerImageView: UIImageView!
-
-  @IBOutlet var iconImageViewPhone: UIImageView!
-  @IBOutlet var iconImageViewPad: UIImageView!
-  var iconImageView: UIImageView!
-
   var text: String = ""
   var section: SectionState = .privacyPolicy
 
@@ -61,8 +53,6 @@ class InformationScreenVC: UIViewController {
       contentContainerView = contentContainerViewPad
       headingLabel = headingLabelPad
       textView = textViewPad
-      cornerImageView = cornerImageViewPad
-      iconImageView = iconImageViewPad
 
       scrollViewPhone.removeFromSuperview()
       scrollContainerViewPhone.removeFromSuperview()
@@ -70,17 +60,12 @@ class InformationScreenVC: UIViewController {
       contentContainerViewPhone.removeFromSuperview()
       headingLabelPhone.removeFromSuperview()
       textViewPhone.removeFromSuperview()
-      cornerImageViewPhone.removeFromSuperview()
-      iconImageViewPhone.removeFromSuperview()
-
     } else {
       scrollContainerView = scrollContainerViewPhone
       relativeView = relativeViewPhone
       contentContainerView = contentContainerViewPhone
       headingLabel = headingLabelPhone
       textView = textViewPhone
-      cornerImageView = cornerImageViewPhone
-      iconImageView = iconImageViewPhone
 
       scrollViewPad.removeFromSuperview()
       scrollContainerViewPad.removeFromSuperview()
@@ -88,8 +73,6 @@ class InformationScreenVC: UIViewController {
       contentContainerViewPad.removeFromSuperview()
       headingLabelPad.removeFromSuperview()
       textViewPad.removeFromSuperview()
-      cornerImageViewPad.removeFromSuperview()
-      iconImageViewPad.removeFromSuperview()
     }
   }
 
@@ -122,7 +105,6 @@ class InformationScreenVC: UIViewController {
 
   func setupInformationPageUI() {
     setAppTextView()
-    setCornerImageView()
 
     textView.backgroundColor = .clear
     scrollContainerView.backgroundColor = .clear
@@ -131,22 +113,9 @@ class InformationScreenVC: UIViewController {
     contentContainerView.backgroundColor = lightWhiteDarkBlackColor
     applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
 
-    cornerImageView.clipsToBounds = true
     contentContainerView.clipsToBounds = true
 
     textView.isEditable = false
-  }
-
-  func setCornerImageView() {
-    if DeviceType.isPhone {
-      for constraint in cornerImageView.constraints where constraint.identifier == "cornerImageView" {
-          constraint.constant = 70
-      }
-    } else if DeviceType.isPad {
-      for constraint in cornerImageView.constraints where constraint.identifier == "cornerImageView" {
-          constraint.constant = 125
-      }
-    }
   }
 
   func setupPrivacyPolicyPage() {
@@ -214,9 +183,6 @@ This POLICY is effective as of the 24th of May, 2022.
     textView.linkTextAttributes = [
       NSAttributedString.Key.foregroundColor: linkBlueColor
     ]
-
-    iconImageView.image = UIImage.availableIconImage(with: "lock.shield")
-    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupLicensesPage() {
@@ -232,9 +198,6 @@ This POLICY is effective as of the 24th of May, 2022.
     textView.linkTextAttributes = [
       NSAttributedString.Key.foregroundColor: linkBlueColor
     ]
-
-    iconImageView.image = UIImage.availableIconImage(with: "doc.text")
-    iconImageView.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
   }
 
   func setupWikimediaAndScribePage() {
@@ -247,6 +210,5 @@ This POLICY is effective as of the 24th of May, 2022.
       text: wikimediaAndScribeText, fontSize: fontSize, imageWidth: contentContainerView.frame.width * 0.6
     )
     textView.textColor = keyCharColor
-    iconImageView.image = UIImage.availableIconImage(with: "wikimediaInfoPage")
   }
 }

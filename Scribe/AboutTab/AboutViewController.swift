@@ -178,7 +178,7 @@ extension AboutViewController {
 
       present(mailComposeViewController, animated: true, completion: nil)
     } else {
-      /// Show alert mentioning the email address
+      // Show alert mentioning the email address.
       let alert = UIAlertController(
         title: "Send us an email?", message: "Reach out to us at team@scri.be", preferredStyle: .alert
       )
@@ -241,12 +241,12 @@ extension AboutViewController {
     let currentOffset = scrollView.contentOffset.y
 
     if currentOffset > tableViewOffset {
-      // Scrolling up
+      // Scrolling up.
       UIView.animate(withDuration: 0.2) {
         hostingController.view.alpha = 0
       }
     } else if currentOffset == tableViewOffset {
-      // Show the view only when scrolled to the top
+      // Show the view only when scrolled to the top.
       UIView.animate(withDuration: 0.1) {
         hostingController.view.alpha = 1
       }

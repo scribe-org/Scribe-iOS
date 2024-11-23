@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -147,19 +147,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utw-Av-57D" userLabel="ContentContainerViewPhone">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="263.33333333333331"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkCornerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WCN-LS-ohh" userLabel="CornerImageViewPhone">
-                                                                <rect key="frame" x="280" y="0.0" width="65" height="65"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="65" identifier="cornerImageView" id="FnV-tP-2Hh"/>
-                                                                    <constraint firstAttribute="width" secondItem="WCN-LS-ohh" secondAttribute="height" multiplier="1:1" id="LQo-2d-Plx"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jlT-uf-n6p" userLabel="IconImageViewPhone">
-                                                                <rect key="frame" x="310.66666666666669" y="4.9999999999999982" width="29.333333333333314" height="29.333333333333329"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="jlT-uf-n6p" secondAttribute="height" multiplier="1:1" id="NA4-rt-Q1X"/>
-                                                                </constraints>
-                                                            </imageView>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5si-aN-b15" userLabel="InfoTextViewPhone">
                                                                 <rect key="frame" x="15" y="15.000000000000014" width="315" height="233.33333333333337"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -171,13 +158,8 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="jlT-uf-n6p" firstAttribute="width" secondItem="WCN-LS-ohh" secondAttribute="width" multiplier="0.45" id="AtU-s4-DGC"/>
-                                                            <constraint firstAttribute="trailing" secondItem="WCN-LS-ohh" secondAttribute="trailing" id="C6F-gj-0X1"/>
                                                             <constraint firstAttribute="trailing" secondItem="5si-aN-b15" secondAttribute="trailing" constant="15" id="GZW-qz-Sdz"/>
                                                             <constraint firstItem="5si-aN-b15" firstAttribute="leading" secondItem="utw-Av-57D" secondAttribute="leading" constant="15" id="JAB-P5-eWe"/>
-                                                            <constraint firstAttribute="trailing" secondItem="jlT-uf-n6p" secondAttribute="trailing" constant="5" id="Qg8-uN-j1o"/>
-                                                            <constraint firstItem="WCN-LS-ohh" firstAttribute="top" secondItem="utw-Av-57D" secondAttribute="top" id="Wmw-8t-6Rb"/>
-                                                            <constraint firstItem="jlT-uf-n6p" firstAttribute="top" secondItem="utw-Av-57D" secondAttribute="top" constant="5" id="gF1-Bz-aSR"/>
                                                             <constraint firstItem="5si-aN-b15" firstAttribute="top" secondItem="utw-Av-57D" secondAttribute="top" constant="15" id="tUH-ih-CCK"/>
                                                             <constraint firstAttribute="bottom" secondItem="5si-aN-b15" secondAttribute="bottom" constant="15" id="xOI-5W-7ox"/>
                                                         </constraints>
@@ -232,12 +214,8 @@
                     <connections>
                         <outlet property="contentContainerViewPad" destination="8hd-gU-IBe" id="EPP-0N-Z1i"/>
                         <outlet property="contentContainerViewPhone" destination="utw-Av-57D" id="2qw-tq-nge"/>
-                        <outlet property="cornerImageViewPad" destination="AKE-81-A9j" id="2xT-09-IDc"/>
-                        <outlet property="cornerImageViewPhone" destination="WCN-LS-ohh" id="Kjr-73-jbI"/>
                         <outlet property="headingLabelPad" destination="QQb-Sb-zfQ" id="Uwk-bl-aHo"/>
                         <outlet property="headingLabelPhone" destination="Hsr-GS-NQS" id="oUb-sN-G8x"/>
-                        <outlet property="iconImageViewPad" destination="qIq-U8-VFG" id="ZIm-Yr-Lev"/>
-                        <outlet property="iconImageViewPhone" destination="jlT-uf-n6p" id="96Z-OI-L30"/>
                         <outlet property="relativeViewPad" destination="BdK-Gj-AOl" id="AVm-c6-wST"/>
                         <outlet property="relativeViewPhone" destination="61J-Jd-qbi" id="oof-TL-fd2"/>
                         <outlet property="scrollContainerViewPad" destination="E9S-tJ-4qs" id="2Zr-oj-WqG"/>

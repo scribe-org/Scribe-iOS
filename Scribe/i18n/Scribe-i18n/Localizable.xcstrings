@@ -1369,6 +1369,7 @@
     },
     "app.about.feedback.app_hints" : {
       "comment" : "",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1428,6 +1429,17 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Återställ app-tips"
+          }
+        }
+      }
+    },
+    "app.about.feedback.appHints" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reset app hints"
           }
         }
       }
@@ -1760,7 +1772,6 @@
     },
     "app.about.feedback.version" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4917,6 +4928,72 @@
         }
       }
     },
+    "app.settings.keyboard.functionality.default_emoji_tone_description" : {
+      "comment" : "",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Stelle einen Standardhautton für automatische Emoji-Vorschläge ein."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Set a default skin tone for emoji autosuggestions and completions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이모지 자동 추천 및 완성을 위한 피부 톤의 기본값을 설정합니다."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.functionality.default_emoji_tone.caption" : {
       "comment" : "",
       "extractionState" : "stale",
@@ -4979,71 +5056,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Hudton som ska användas"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.functionality.default_emoji_tone_description" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Stelle einen Standardhautton für automatische Emoji-Vorschläge ein."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Set a default skin tone for emoji autosuggestions and completions."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "이모지 자동 추천 및 완성을 위한 피부 톤의 기본값을 설정합니다."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
           }
         }
       }
@@ -5969,6 +5981,72 @@
         }
       }
     },
+    "app.settings.keyboard.layout.default_currency_description" : {
+      "comment" : "",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Auswählen, welches Währungssymbol bei den Nummerntasten auftaucht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Select which currency symbol appears on the number keys."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "숫자 키에 어떤 통화 기호가 표시될지를 선택하세요."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.layout.default_currency.caption" : {
       "comment" : "",
       "extractionState" : "stale",
@@ -6031,71 +6109,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Symbol för 123-tangenter"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.layout.default_currency_description" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Auswählen, welches Währungssymbol bei den Nummerntasten auftaucht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Select which currency symbol appears on the number keys."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "숫자 키에 어떤 통화 기호가 표시될지를 선택하세요."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
           }
         }
       }
@@ -6754,9 +6767,19 @@
         }
       }
     },
+    "app.settings.keyboard.translation.select_source_description" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Change the language to translate from."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.translation.select_source.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7430,71 +7453,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Endast ett enhetsspråk"
-          }
-        }
-      }
-    },
-    "app.settings.menu.app_language_description" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "تغيير اللغة التي يتم بها عرض تطبيق Scribe."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe অ্যাপ কোন ভাষায় থাকবে তা পরিবর্তন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ändern, welche Sprache für die Scribe-App benutzt wird."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Change which language the Scribe app is in."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Cambiar el idioma de la aplicación Scribe."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Modifier la langue de l'application Scribe."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe 앱에서 사용할 언어를 변경합니다."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ändra vilket språk Scribe-appen är på."
           }
         }
       }
