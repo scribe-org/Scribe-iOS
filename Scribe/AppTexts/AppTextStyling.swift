@@ -19,6 +19,8 @@
 
 import UIKit
 
+let preferredLanguage = Locale.preferredLanguages[0]
+
 var fontSize = CGFloat(0)
 
 /// Concatenates attributed strings.
