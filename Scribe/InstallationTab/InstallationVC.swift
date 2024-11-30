@@ -166,7 +166,13 @@ class InstallationVC: UIViewController {
 
   /// Sets properties for the app screen given the current device.
   func setUIDeviceProperties() {
-    settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner
+    // Flips coloured corner with settings icon based on orientation of text.
+    settingsCorner.image = settingsCorner.image?.imageFlippedForRightToLeftLayoutDirection()
+    if UIView.userInterfaceLayoutDirection(for: appTextView.semanticContentAttribute) == .rightToLeft {
+      settingsCorner.layer.maskedCorners = .layerMinXMinYCorner // "top-left"
+    } else {
+      settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner // "top-right"
+    }
     settingsCorner.layer.cornerRadius = DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
 
     settingsBtn.setTitle("", for: .normal)

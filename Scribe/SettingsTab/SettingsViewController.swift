@@ -229,7 +229,14 @@ extension SettingsViewController: UITableViewDelegate {
       headerView = UIView(frame: CGRect(x: 0, y: 0, width: parentTable.bounds.width, height: 32))
     }
 
-    let label = UILabel(frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: 32))
+    let label = UILabel(
+      frame: CGRect(
+        x: preferredLanguage.prefix(2) == "ar" ? -1 * headerView.bounds.width / 10: 0,
+        y: 0,
+        width: headerView.bounds.width,
+        height: 32
+      )
+    )
 
     label.text = tableData[section].headingTitle
     label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)

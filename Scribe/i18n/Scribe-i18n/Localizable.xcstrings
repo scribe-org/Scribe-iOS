@@ -1369,7 +1369,6 @@
     },
     "app.about.feedback.app_hints" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1429,17 +1428,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Återställ app-tips"
-          }
-        }
-      }
-    },
-    "app.about.feedback.appHints" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Reset app hints"
           }
         }
       }

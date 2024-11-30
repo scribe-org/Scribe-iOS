@@ -121,7 +121,9 @@ final class InfoChildTableViewCell: UITableViewCell {
       toggleSwitch.onTintColor = .init(ScribeColor.scribeCTA).withAlphaComponent(0.4)
       toggleSwitch.thumbTintColor = toggleSwitch.isOn ? .init(.scribeCTA) : .lightGray
     } else {
-      iconImageView.image = UIImage(systemName: "chevron.right")
+      iconImageView.image = UIImage(
+        systemName: preferredLanguage.prefix(2) == "ar" ? "chevron.left": "chevron.right"
+      )
       iconImageView.tintColor = menuOptionColor
       toggleSwitch.isHidden = true
     }

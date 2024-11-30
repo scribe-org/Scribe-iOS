@@ -87,7 +87,9 @@ final class AboutTableViewCell: UITableViewCell {
 
     if section.hasNestedNavigation {
       let resetIcon = UIImage(systemName: "arrow.circlepath")
-      let disclosureIcon = UIImage(systemName: "chevron.right")
+      let disclosureIcon = UIImage(
+        systemName: preferredLanguage.prefix(2) == "ar" ? "chevron.left": "chevron.right"
+      )
       let rightIcon = section.sectionState == .appHints ? resetIcon : disclosureIcon
       let accessory  = UIImageView(
         frame: CGRect(
