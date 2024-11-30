@@ -45,7 +45,7 @@ func getInstallationDirections(fontSize: CGFloat) -> NSMutableAttributedString {
   let boldText = NSMutableAttributedString(string: NSLocalizedString("app.installation.keyboard.keyboards_bold", value: "Keyboards", comment: ""), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
   boldText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: fontSize), range: NSRange(location: 0, length: boldText.length))
   installDirections.append(boldText)
-  
+
   installDirections.append(NSMutableAttributedString(string: thirdLineNumber + NSLocalizedString("app.installation.keyboard.text_2", value: "Activate keyboards that you want to use", comment: "") + fourthLineNumber + NSLocalizedString("app.installation.keyboard.text_3", value: "When typing, press", comment: "") + " ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]))
 
   installDirections.append(globeString)
