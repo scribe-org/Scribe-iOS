@@ -77,7 +77,9 @@ final class AboutTableViewCell: UITableViewCell {
     }
     if let link = section.externalLink {
       if link {
-        linkImageView.image = UIImage.availableIconImage(with: "externalLink")
+        linkImageView.image = UIImage.availableIconImage(
+          with: preferredLanguage.prefix(2) == "ar" ? "externalLinkRTL" : "externalLink"
+        )
       } else {
         linkImageView.image = nil
       }
