@@ -26,7 +26,7 @@ import UIKit
 func queryTranslation(commandBar: UILabel) {
   // Cancel via a return press.
   if let commandBarText = commandBar.text,
-     commandBarText == translatePromptAndCursor || commandBarText == translatePromptAndPlaceholder {
+      commandBarText == translatePromptAndCursor || commandBarText == translatePromptAndPlaceholder {
     return
   }
 
