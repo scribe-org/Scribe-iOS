@@ -74,7 +74,7 @@ extension BaseTableViewController {
 
 extension BaseTableViewController {
   override func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    headerView(for: section)
+    return headerView(for: section)
   }
 
   private func headerView(for section: Int) -> UIView? {
@@ -88,14 +88,45 @@ extension BaseTableViewController {
       )
     }
 
-    let label = UILabel(
-      frame: CGRect(x: 0, y: 0, width: headerView.bounds.width, height: sectionHeaderHeight)
-    )
+    let label = UILabel()
     label.text = dataSet[section].headingTitle
     label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
     label.textColor = keyCharColor
+    label.numberOfLines = 0
+    label.lineBreakMode = .byWordWrapping
+    label.adjustsFontSizeToFitWidth = true
+    label.minimumScaleFactor = 0.8
+    label.textAlignment = .natural
+
+    label.translatesAutoresizingMaskIntoConstraints = false
     headerView.addSubview(label)
 
+    let horizontalPadding: CGFloat = 8
+    let verticalPadding: CGFloat = 4
+
+    NSLayoutConstraint.activate([
+      label.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: horizontalPadding),
+      label.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -horizontalPadding),
+      label.topAnchor.constraint(equalTo: headerView.topAnchor, constant: verticalPadding),
+      label.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -verticalPadding)
+    ])
+
     return headerView
+  }
+
+  override func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    let label = UILabel()
+    label.text = dataSet[section].headingTitle
+    label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
+    label.numberOfLines = 0
+    label.lineBreakMode = .byWordWrapping
+
+    let horizontalPadding: CGFloat = 32
+    let verticalPadding: CGFloat = 24
+
+    let constrainedWidth = tableView.bounds.width - horizontalPadding
+    let size = label.sizeThatFits(CGSize(width: constrainedWidth, height: CGFloat.greatestFiniteMagnitude))
+
+    return size.height + verticalPadding
   }
 }
