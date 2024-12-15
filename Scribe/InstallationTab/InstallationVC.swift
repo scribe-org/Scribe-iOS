@@ -91,9 +91,9 @@ class InstallationVC: UIViewController {
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
-    
+
     title = NSLocalizedString("app.about.title", value: "Installation", comment: "")
-    
+
     super.viewDidLoad()
     setCurrentUI()
     showTipCardView()
