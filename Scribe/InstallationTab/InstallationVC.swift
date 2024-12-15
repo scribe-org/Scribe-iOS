@@ -92,6 +92,17 @@ class InstallationVC: UIViewController {
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    self.tabBarController?.viewControllers?[0].title = NSLocalizedString(
+      "app.installation.title", value: "Installation", comment: ""
+    )
+    self.tabBarController?.viewControllers?[1].title = NSLocalizedString(
+      "app.settings.title", value: "Settings", comment: ""
+    )
+    self.tabBarController?.viewControllers?[2].title = NSLocalizedString(
+      "app.about.title", value: "About", comment: ""
+    )
+
     setCurrentUI()
     showTipCardView()
   }
@@ -237,7 +248,9 @@ class InstallationVC: UIViewController {
       fontSize = UIScreen.main.bounds.height / 50
     }
 
-    installationHeaderLabel.text = NSLocalizedString("app.installation.keyboard.title", value: "Keyboard installation", comment: "")
+    installationHeaderLabel.text = NSLocalizedString(
+      "app.installation.keyboard.title", value: "Keyboard installation", comment: ""
+    )
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 
     setAppTextView()

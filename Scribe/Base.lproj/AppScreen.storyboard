@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -325,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="-2766" y="-100"/>
         </scene>
-        <!--Installation-->
+        <!--app.installation.title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InstallationVC" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
@@ -475,7 +476,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrH-BQ-4ti" secondAttribute="trailing" constant="15" id="zOe-dD-pB6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Installation" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
+                    <tabBarItem key="tabBarItem" title="app.installation.title" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
                     <connections>
                         <outlet property="appTextBackgroundPad" destination="Z6Q-k0-ggs" id="cdi-Kv-7aq"/>
                         <outlet property="appTextBackgroundPhone" destination="uV9-hG-bLi" id="s6y-0B-0qh"/>
@@ -498,11 +499,11 @@
             </objects>
             <point key="canvasLocation" x="-1831.2" y="-836.45320197044339"/>
         </scene>
-        <!--About-->
+        <!--app.about.title-->
         <scene sceneID="6lj-MX-SxG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wV-q3-U0F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="app.about.title" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jq3-G5-4j6">
                         <rect key="frame" x="0.0" y="50" width="375" height="96"/>
@@ -519,11 +520,13 @@
             </objects>
             <point key="canvasLocation" x="-1831.2" y="640.64039408866995"/>
         </scene>
-        <!--Settings-->
+        <!--app.settings.title-->
         <scene sceneID="3xr-BX-tfK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ffy-3M-wWx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="JtD-kc-GDx"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="app.settings.title" id="JtD-kc-GDx">
+                        <imageReference key="image" image="gearshape" catalog="system" variableValue="0.80000000000000004"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="IHJ-rg-pcl">
                         <rect key="frame" x="0.0" y="50" width="375" height="96"/>
