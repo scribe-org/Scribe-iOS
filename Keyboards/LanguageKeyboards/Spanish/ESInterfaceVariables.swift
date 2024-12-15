@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum SpanishKeyboardConstants {
   static let defaultCurrencyKey = "$"
   static let currencyKeys = ["$", "€", "£", "¥"]
@@ -41,7 +43,8 @@ public enum SpanishKeyboardConstants {
 }
 
 struct SpanishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"])
@@ -88,7 +91,8 @@ struct SpanishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisabl
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -137,7 +141,8 @@ struct SpanishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisabl
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
     .addRow(["|", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "?", "¿", "delete"])
@@ -169,7 +174,8 @@ static func genPadExpandedSymbolKeys() -> [[String]] {
 }
 }
 
-/// Gets the keys for the Spanish keyboard.
+// MARK: Get Keys
+
 func getESKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -255,7 +261,8 @@ func getESKeys() {
   }
 }
 
-/// Provides the Spanish keyboard layout.
+// MARK: Provide Layout
+
 func setESKeyboardLayout() {
   getESKeys()
 

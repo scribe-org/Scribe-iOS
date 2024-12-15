@@ -19,13 +19,16 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum HebrewKeyboardConstants {
   static let defaultCurrencyKey = "₪"
   static let currencyKeys = ["₪", "€", "£", "$"]
 }
 
 struct HebrewKeyboardProvider: KeyboardProviderProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["פ", "ם", "ן", "ו", "ט", "א", "ר", "ק", "delete"])
@@ -63,7 +66,8 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -102,7 +106,8 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
@@ -124,7 +129,8 @@ struct HebrewKeyboardProvider: KeyboardProviderProtocol {
   }
 }
 
-/// Gets the keys for the Hebrew keyboard.
+// MARK: Get Keys
+
 func getHEKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -174,6 +180,8 @@ func getHEKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 }
+
+// MARK: Provide Layout
 
 func setHEKeyboardLayout() {
   getHEKeys()
