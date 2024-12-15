@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum FrenchKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
@@ -39,7 +41,8 @@ public enum FrenchKeyboardConstants {
 }
 
 struct FrenchKeyboardProvider: KeyboardProviderProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"])
@@ -77,7 +80,8 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -116,7 +120,8 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["@", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ç", "à", "delete"])
@@ -138,7 +143,8 @@ struct FrenchKeyboardProvider: KeyboardProviderProtocol {
   }
 }
 
-/// Gets the keys for the French keyboard.
+// MARK: Get Keys
+
 func getFRKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -202,7 +208,8 @@ func getFRKeys() {
   nAlternateKeys = FrenchKeyboardConstants.nAlternateKeys
 }
 
-/// Provides the French keyboard layout.
+// MARK: Provide Layout
+
 func setFRKeyboardLayout() {
   getFRKeys()
 

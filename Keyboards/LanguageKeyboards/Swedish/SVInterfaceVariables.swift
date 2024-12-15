@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum SwedishKeyboardConstants {
   static let defaultCurrencyKey = "kr"
   static let currencyKeys = ["kr", "€", "$", "£"]
@@ -45,7 +47,8 @@ public enum SwedishKeyboardConstants {
 }
 
 struct SwedishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å"])
@@ -92,7 +95,8 @@ struct SwedishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisabl
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -141,7 +145,8 @@ struct SwedishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisabl
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"])
@@ -176,7 +181,8 @@ struct SwedishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisabl
 
 // MARK: Generate and set keyboard
 
-/// Gets the keys for the Swedish keyboard.
+// MARK: Get Keys
+
 func getSVKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -266,7 +272,8 @@ func getSVKeys() {
   }
 }
 
-/// Provides the Swedish keyboard layout.
+// MARK: Provide Layout
+
 func setSVKeyboardLayout() {
   getSVKeys()
 

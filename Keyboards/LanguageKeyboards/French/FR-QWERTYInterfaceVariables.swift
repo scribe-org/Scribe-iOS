@@ -40,7 +40,8 @@ public enum FrenchQWERTYKeyboardConstants {
     ["ABC", "selectKeyboard", "space", "return"] // "undo"
   ]
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static let letterKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"],
     ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
@@ -63,7 +64,8 @@ public enum FrenchQWERTYKeyboardConstants {
     ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undo"
   ]
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static let letterKeysPadExpanded = [
     ["/", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"],
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "ç", ":"],
@@ -95,7 +97,8 @@ public enum FrenchQWERTYKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
-/// Gets the keys for the French keyboard.
+// MARK: Get Keys
+
 func getFRQWERTYKeys() {
   if DeviceType.isPhone {
     letterKeys = FrenchQWERTYKeyboardConstants.letterKeysPhone

@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum RussianKeyboardConstants {
   static let defaultCurrencyKey = "₽"
   static let currencyKeys = ["₽", "$", "€", "£"]
@@ -33,7 +35,8 @@ public enum RussianKeyboardConstants {
 }
 
 struct RussianKeyboardProvider: KeyboardProviderProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х"])
@@ -71,7 +74,8 @@ struct RussianKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -110,7 +114,8 @@ struct RussianKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
@@ -132,7 +137,8 @@ struct RussianKeyboardProvider: KeyboardProviderProtocol {
   }
 }
 
-/// Gets the keys for the Russian keyboard.
+// MARK: Get Keys
+
 func getRUKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -190,7 +196,8 @@ func getRUKeys() {
   ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
 }
 
-/// Provides the Russian keyboard layout.
+// MARK: Provide Layout
+
 func setRUKeyboardLayout() {
   getRUKeys()
 

@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum DanishKeyboardConstants {
   static let defaultCurrencyKey = "kr"
   static let currencyKeys = ["kr", "€", "$", "£", "¥"]
@@ -43,7 +45,8 @@ public enum DanishKeyboardConstants {
 }
 
 struct DanishKeyboardProvider: KeyboardProviderProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å"])
@@ -81,7 +84,8 @@ struct DanishKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -120,7 +124,8 @@ struct DanishKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["kr", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "delete"])
@@ -142,8 +147,10 @@ struct DanishKeyboardProvider: KeyboardProviderProtocol {
   }
 }
 
-/// Gets the keys for the Danish keyboard.
+// MARK: Get Keys
+
 func getDAKeys() {}
 
-/// Provides the Danish keyboard layout.
+// MARK: Provide Layout
+
 func setDAKeyboardLayout() {}

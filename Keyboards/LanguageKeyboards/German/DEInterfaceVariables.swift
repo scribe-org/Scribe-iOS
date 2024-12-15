@@ -19,6 +19,8 @@
 
 import UIKit
 
+// MARK: Constants
+
 public enum GermanKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
@@ -45,7 +47,8 @@ public enum GermanKeyboardConstants {
 }
 
 struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
-  // iPhone keyboard layouts.
+  // MARK: iPhone Layouts
+
   static func genPhoneLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "ü"])
@@ -92,7 +95,8 @@ struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisable
     }
   }
 
-  // iPad keyboard layouts.
+  // MARK: iPad Layouts
+
   static func genPadLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
@@ -141,7 +145,8 @@ struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisable
     }
   }
 
-  // Expanded iPad keyboard layouts for wider devices.
+  // MARK: Expanded iPad Layouts
+
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["^", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß", "´", "delete"])
@@ -173,7 +178,8 @@ struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisable
   }
 }
 
-/// Gets the keys for the German keyboard.
+// MARK: Get Keys
+
 func getDEKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError()
@@ -261,7 +267,8 @@ func getDEKeys() {
   }
 }
 
-/// Provides the German keyboard layout.
+// MARK: Provide Layout
+
 func setDEKeyboardLayout() {
   getDEKeys()
 
