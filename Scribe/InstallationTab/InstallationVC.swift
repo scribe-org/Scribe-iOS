@@ -92,7 +92,7 @@ class InstallationVC: UIViewController {
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     self.tabBarController?.viewControllers?[0].title = NSLocalizedString(
       "app.installation.title", value: "Installation", comment: ""
     )
