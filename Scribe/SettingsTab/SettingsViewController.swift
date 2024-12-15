@@ -55,7 +55,6 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
     showTipCardView()
 
-    title = NSLocalizedString("app.settings.title", value: "Settings", comment: "")
     navigationItem.backButtonTitle = title
 
     parentTable.register(
