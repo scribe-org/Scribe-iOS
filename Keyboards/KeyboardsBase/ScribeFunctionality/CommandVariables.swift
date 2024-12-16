@@ -90,8 +90,8 @@ var newAutoActionAnnotationSeparators = [UIView]()
 var allPrompts = [""]
 var allColoredPrompts: [NSAttributedString] = []
 
-let languagesWithCapitalizedNouns = ["German"]
-let languagesWithCaseDependantOnPrepositions = ["German", "Russian"]
+let languagesWithCapitalizedNouns = ["de"]
+let languagesWithCaseDependantOnPrepositions = ["de", "ru"]
 
 // MARK: Translate Variables
 
