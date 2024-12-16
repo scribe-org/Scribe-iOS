@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum PortugueseKeyboardConstants {
+public enum ptKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
 
@@ -39,7 +39,7 @@ public enum PortugueseKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
-struct PortugueseKeyboardProvider: KeyboardProviderProtocol {
+struct ptKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -119,7 +119,7 @@ struct PortugueseKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
-  // MARK: Expanded iPad Layouts
+ // MARK: Expanded iPad Layouts
 
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
@@ -149,8 +149,8 @@ func getPTKeys() {
     fatalError()
   }
 
-  var currencyKey = PortugueseKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = PortugueseKeyboardConstants.currencyKeys
+  var currencyKey = ptKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = ptKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -162,9 +162,9 @@ func getPTKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = PortugueseKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = PortugueseKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = PortugueseKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = ptKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = ptKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = ptKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -173,16 +173,16 @@ func getPTKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = PortugueseKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = PortugueseKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = ptKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = ptKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["~", "`"]
       rightKeyChars = ["\\", "~"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = PortugueseKeyboardProvider.genPadLetterKeys()
-      numberKeys = PortugueseKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = PortugueseKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = ptKeyboardProvider.genPadLetterKeys()
+      numberKeys = ptKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = ptKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -194,16 +194,16 @@ func getPTKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = PortugueseKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = PortugueseKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = PortugueseKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = PortugueseKeyboardConstants.aAlternateKeys
-  eAlternateKeys = PortugueseKeyboardConstants.eAlternateKeys
-  iAlternateKeys = PortugueseKeyboardConstants.iAlternateKeys
-  oAlternateKeys = PortugueseKeyboardConstants.oAlternateKeys
-  uAlternateKeys = PortugueseKeyboardConstants.uAlternateKeys
-  cAlternateKeys = PortugueseKeyboardConstants.cAlternateKeys
-  nAlternateKeys = PortugueseKeyboardConstants.nAlternateKeys
+  keysWithAlternates = ptKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = ptKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = ptKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = ptKeyboardConstants.aAlternateKeys
+  eAlternateKeys = ptKeyboardConstants.eAlternateKeys
+  iAlternateKeys = ptKeyboardConstants.iAlternateKeys
+  oAlternateKeys = ptKeyboardConstants.oAlternateKeys
+  uAlternateKeys = ptKeyboardConstants.uAlternateKeys
+  cAlternateKeys = ptKeyboardConstants.cAlternateKeys
+  nAlternateKeys = ptKeyboardConstants.nAlternateKeys
 }
 
 // MARK: Provide Layout
