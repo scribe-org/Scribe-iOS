@@ -162,10 +162,12 @@ var controllerLanguage = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [
+  "Danish": "da",
   "English": "en",
   "French": "fr",
   "German": "de",
   "Italian": "it",
+  "Norwegian": "nb",
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",
@@ -173,14 +175,14 @@ let languagesAbbrDict = [
 ]
 
 let languagesStringDict = [
-  "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
-  "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
-  "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
-  "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
-  "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
-  "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
-  "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
-  "Swedish": NSLocalizedString("app._global.swedish", value: "Swedish", comment: "")
+  "EN": NSLocalizedString("app._global.en", value: "EN", comment: ""),
+  "FR": NSLocalizedString("app._global.fr", value: "FR", comment: ""),
+  "DE": NSLocalizedString("app._global.de", value: "DE", comment: ""),
+  "IT": NSLocalizedString("app._global.it", value: "IT", comment: ""),
+  "PT": NSLocalizedString("app._global.pt", value: "PT", comment: ""),
+  "RU": NSLocalizedString("app._global.ru", value: "RU", comment: ""),
+  "ES": NSLocalizedString("app._global.es", value: "ES", comment: ""),
+  "SV": NSLocalizedString("app._global.sv", value: "SV", comment: "")
 ]
 
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
@@ -212,14 +214,14 @@ func getControllerTranslateLangCode() -> String {
 // Dictionary for accessing keyboard abbreviations and layouts.
 let keyboardLayoutDict: [String: () -> Void] = [
   // Layouts for French checked within setFRKeyboardLayout.
-  "English": setENKeyboardLayout,
-  "French": setFRKeyboardLayout,
-  "German": setDEKeyboardLayout,
-  "Italian": setITKeyboardLayout,
-  "Portuguese": setPTKeyboardLayout,
-  "Russian": setRUKeyboardLayout,
-  "Spanish": setESKeyboardLayout,
-  "Swedish": setSVKeyboardLayout
+  "en": setENKeyboardLayout,
+  "fr": setFRKeyboardLayout,
+  "de": setDEKeyboardLayout,
+  "it": setITKeyboardLayout,
+  "pt": setPTKeyboardLayout,
+  "ru": setRUKeyboardLayout,
+  "es": setESKeyboardLayout,
+  "sv": setSVKeyboardLayout
 ]
 
 /// Sets the keyboard layout and its alternate keys.
