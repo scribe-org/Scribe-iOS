@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum RussianKeyboardConstants {
+public enum ruKeyboardConstants {
   static let defaultCurrencyKey = "₽"
   static let currencyKeys = ["₽", "$", "€", "£"]
 
@@ -34,7 +34,7 @@ public enum RussianKeyboardConstants {
   static let ьAlternateKeys = ["Ъ"]
 }
 
-struct RussianKeyboardProvider: KeyboardProviderProtocol {
+struct ruKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -144,8 +144,8 @@ func getRUKeys() {
     fatalError()
   }
 
-  var currencyKey = RussianKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = RussianKeyboardConstants.currencyKeys
+  var currencyKey = ruKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = ruKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -157,9 +157,9 @@ func getRUKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = RussianKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = RussianKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = RussianKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = ruKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = ruKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = ruKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["й", "ф", "1", "-", "[", "_"]
@@ -168,16 +168,16 @@ func getRUKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = RussianKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = RussianKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = ruKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = ruKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["§", "`"]
       rightKeyChars = ["+", "₽"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = RussianKeyboardProvider.genPadLetterKeys()
-      numberKeys = RussianKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = RussianKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = ruKeyboardProvider.genPadLetterKeys()
+      numberKeys = ruKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = ruKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -189,11 +189,11 @@ func getRUKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = RussianKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = RussianKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = RussianKeyboardConstants.keysWithAlternatesRight
-  еAlternateKeys = RussianKeyboardConstants.еAlternateKeys
-  ьAlternateKeys = RussianKeyboardConstants.ьAlternateKeys
+  keysWithAlternates = ruKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = ruKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = ruKeyboardConstants.keysWithAlternatesRight
+  еAlternateKeys = ruKeyboardConstants.еAlternateKeys
+  ьAlternateKeys = ruKeyboardConstants.ьAlternateKeys
 }
 
 // MARK: Provide Layout
