@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum nbBokmålKeyboardConstants {
+public enum NBlKeyboardConstants {
   static let defaultCurrencyKey = "kr"
   static let currencyKeys = ["kr", "€", "$", "£", "¥"]
 
@@ -38,7 +38,7 @@ public enum nbBokmålKeyboardConstants {
   static let øAlternateKeys = ["ö"]
 }
 
-struct nbBokmålKeyboardProvider: KeyboardProviderProtocol {
+struct NBlKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {

@@ -214,14 +214,14 @@ func getControllerTranslateLangCode() -> String {
 // Dictionary for accessing keyboard abbreviations and layouts.
 let keyboardLayoutDict: [String: () -> Void] = [
   // Layouts for French checked within setFRKeyboardLayout.
-  "en": setENKeyboardLayout,
-  "fr": setFRKeyboardLayout,
-  "de": setDEKeyboardLayout,
-  "it": setITKeyboardLayout,
-  "pt": setPTKeyboardLayout,
-  "ru": setRUKeyboardLayout,
-  "es": setESKeyboardLayout,
-  "sv": setSVKeyboardLayout
+  "English": setENKeyboardLayout,
+  "French": setFRKeyboardLayout,
+  "German": setDEKeyboardLayout,
+  "Italian": setITKeyboardLayout,
+  "Portuguese": setPTKeyboardLayout,
+  "Russian": setRUKeyboardLayout,
+  "Spanish": setESKeyboardLayout,
+  "Swedish": setSVKeyboardLayout
 ]
 
 /// Sets the keyboard layout and its alternate keys.

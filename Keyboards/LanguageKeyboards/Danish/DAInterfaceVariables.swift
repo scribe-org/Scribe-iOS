@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum daKeyboardConstants {
+public enum DAKeyboardConstants {
   static let defaultCurrencyKey = "kr"
   static let currencyKeys = ["kr", "€", "$", "£", "¥"]
 
@@ -44,7 +44,7 @@ public enum daKeyboardConstants {
   static let sAlternateKeys = ["ß", "ś", "š"]
 }
 
-struct daKeyboardProvider: KeyboardProviderProtocol {
+struct DAKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {

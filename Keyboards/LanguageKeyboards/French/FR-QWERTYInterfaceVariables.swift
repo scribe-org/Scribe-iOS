@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-public enum frQWERTYKeyboardConstants {
+public enum FRQWERTYKeyboardConstants {
   // iPhone keyboard layouts.
   static let letterKeysPhone = [
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
@@ -101,9 +101,9 @@ public enum frQWERTYKeyboardConstants {
 
 func getFRQWERTYKeys() {
   if DeviceType.isPhone {
-    letterKeys = frQWERTYKeyboardConstants.letterKeysPhone
-    numberKeys = frQWERTYKeyboardConstants.numberKeysPhone
-    symbolKeys = frQWERTYKeyboardConstants.symbolKeysPhone
+    letterKeys = FRQWERTYKeyboardConstants.letterKeysPhone
+    numberKeys = FRQWERTYKeyboardConstants.numberKeysPhone
+    symbolKeys = FRQWERTYKeyboardConstants.symbolKeysPhone
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["a", "q", "1", "-", "[", "_"]
@@ -112,14 +112,14 @@ func getFRQWERTYKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = frQWERTYKeyboardConstants.letterKeysPadExpanded
-      symbolKeys = frQWERTYKeyboardConstants.symbolKeysPadExpanded
+      letterKeys = FRQWERTYKeyboardConstants.letterKeysPadExpanded
+      symbolKeys = FRQWERTYKeyboardConstants.symbolKeysPadExpanded
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = frQWERTYKeyboardConstants.letterKeysPad
-      numberKeys = frQWERTYKeyboardConstants.numberKeysPad
-      symbolKeys = frQWERTYKeyboardConstants.symbolKeysPad
+      letterKeys = FRQWERTYKeyboardConstants.letterKeysPad
+      numberKeys = FRQWERTYKeyboardConstants.numberKeysPad
+      symbolKeys = FRQWERTYKeyboardConstants.symbolKeysPad
 
       letterKeys.removeFirst(1)
 
@@ -131,15 +131,15 @@ func getFRQWERTYKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = frQWERTYKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = frQWERTYKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = frQWERTYKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = frQWERTYKeyboardConstants.aAlternateKeys
-  eAlternateKeys = frQWERTYKeyboardConstants.eAlternateKeys
-  iAlternateKeys = frQWERTYKeyboardConstants.iAlternateKeys
-  oAlternateKeys = frQWERTYKeyboardConstants.oAlternateKeys
-  uAlternateKeys = frQWERTYKeyboardConstants.uAlternateKeys
-  yAlternateKeys = frQWERTYKeyboardConstants.yAlternateKeys
-  cAlternateKeys = frQWERTYKeyboardConstants.cAlternateKeys
-  nAlternateKeys = frQWERTYKeyboardConstants.nAlternateKeys
+  keysWithAlternates = FRQWERTYKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = FRQWERTYKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = FRQWERTYKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = FRQWERTYKeyboardConstants.aAlternateKeys
+  eAlternateKeys = FRQWERTYKeyboardConstants.eAlternateKeys
+  iAlternateKeys = FRQWERTYKeyboardConstants.iAlternateKeys
+  oAlternateKeys = FRQWERTYKeyboardConstants.oAlternateKeys
+  uAlternateKeys = FRQWERTYKeyboardConstants.uAlternateKeys
+  yAlternateKeys = FRQWERTYKeyboardConstants.yAlternateKeys
+  cAlternateKeys = FRQWERTYKeyboardConstants.cAlternateKeys
+  nAlternateKeys = FRQWERTYKeyboardConstants.nAlternateKeys
 }

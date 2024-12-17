@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum frKeyboardConstants {
+public enum FRKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
 
@@ -40,7 +40,7 @@ public enum frKeyboardConstants {
   static let nAlternateKeys = ["ń", "ñ"]
 }
 
-struct frKeyboardProvider: KeyboardProviderProtocol {
+struct FRKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -150,8 +150,8 @@ func getFRKeys() {
     fatalError()
   }
 
-  var currencyKey = frKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = frKeyboardConstants.currencyKeys
+  var currencyKey = FRKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = FRKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -163,9 +163,9 @@ func getFRKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = frKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = frKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = frKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = FRKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = FRKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = FRKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["a", "q", "1", "-", "[", "_"]
@@ -174,16 +174,16 @@ func getFRKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = frKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = frKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = FRKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = FRKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["@", "`"]
       rightKeyChars = ["*"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = frKeyboardProvider.genPadLetterKeys()
-      numberKeys = frKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = frKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = FRKeyboardProvider.genPadLetterKeys()
+      numberKeys = FRKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = FRKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -195,17 +195,17 @@ func getFRKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = frKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = frKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = frKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = frKeyboardConstants.aAlternateKeys
-  eAlternateKeys = frKeyboardConstants.eAlternateKeys
-  iAlternateKeys = frKeyboardConstants.iAlternateKeys
-  oAlternateKeys = frKeyboardConstants.oAlternateKeys
-  uAlternateKeys = frKeyboardConstants.uAlternateKeys
-  yAlternateKeys = frKeyboardConstants.yAlternateKeys
-  cAlternateKeys = frKeyboardConstants.cAlternateKeys
-  nAlternateKeys = frKeyboardConstants.nAlternateKeys
+  keysWithAlternates = FRKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = FRKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = FRKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = FRKeyboardConstants.aAlternateKeys
+  eAlternateKeys = FRKeyboardConstants.eAlternateKeys
+  iAlternateKeys = FRKeyboardConstants.iAlternateKeys
+  oAlternateKeys = FRKeyboardConstants.oAlternateKeys
+  uAlternateKeys = FRKeyboardConstants.uAlternateKeys
+  yAlternateKeys = FRKeyboardConstants.yAlternateKeys
+  cAlternateKeys = FRKeyboardConstants.cAlternateKeys
+  nAlternateKeys = FRKeyboardConstants.nAlternateKeys
 }
 
 // MARK: Provide Layout

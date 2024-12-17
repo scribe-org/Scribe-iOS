@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum svKeyboardConstants {
+public enum SVKeyboardConstants {
   static let defaultCurrencyKey = "kr"
   static let currencyKeys = ["kr", "€", "$", "£"]
 
@@ -46,7 +46,7 @@ public enum svKeyboardConstants {
   static let sAlternateKeys = ["ß", "ś", "š"]
 }
 
-struct svKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
+struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
  // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -188,8 +188,8 @@ func getSVKeys() {
     fatalError()
   }
 
-  var currencyKey = svKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = svKeyboardConstants.currencyKeys
+  var currencyKey = SVKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = SVKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -202,12 +202,12 @@ func getSVKeys() {
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "svAccentCharacters") {
-      letterKeys = svKeyboardProvider.genPhoneDisableAccentsLetterKeys()
+      letterKeys = SVKeyboardProvider.genPhoneDisableAccentsLetterKeys()
     } else {
-      letterKeys = svKeyboardProvider.genPhoneLetterKeys()
+      letterKeys = SVKeyboardProvider.genPhoneLetterKeys()
     }
-    numberKeys = svKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = svKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    numberKeys = SVKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = SVKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
@@ -221,23 +221,23 @@ func getSVKeys() {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       if userDefaults.bool(forKey: "svAccentCharacters") {
-        letterKeys = svKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
+        letterKeys = SVKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
       } else {
-        letterKeys = svKeyboardProvider.genPadExpandedLetterKeys()
+        letterKeys = SVKeyboardProvider.genPadExpandedLetterKeys()
       }
-      symbolKeys = svKeyboardProvider.genPadExpandedSymbolKeys()
+      symbolKeys = SVKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["§", "`"]
       rightKeyChars = ["§", "*"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       if userDefaults.bool(forKey: "svAccentCharacters") {
-        letterKeys = svKeyboardProvider.genPadDisableAccentsLetterKeys()
+        letterKeys = SVKeyboardProvider.genPadDisableAccentsLetterKeys()
       } else {
-        letterKeys = svKeyboardProvider.genPadLetterKeys()
+        letterKeys = SVKeyboardProvider.genPadLetterKeys()
       }
-      numberKeys = svKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = svKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      numberKeys = SVKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = SVKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -249,26 +249,26 @@ func getSVKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternatesLeft = svKeyboardConstants.keysWithAlternatesLeft
-  eAlternateKeys = svKeyboardConstants.eAlternateKeys
-  iAlternateKeys = svKeyboardConstants.iAlternateKeys
-  uAlternateKeys = svKeyboardConstants.uAlternateKeys
-  sAlternateKeys = svKeyboardConstants.sAlternateKeys
-  cAlternateKeys = svKeyboardConstants.cAlternateKeys
-  nAlternateKeys = svKeyboardConstants.nAlternateKeys
+  keysWithAlternatesLeft = SVKeyboardConstants.keysWithAlternatesLeft
+  eAlternateKeys = SVKeyboardConstants.eAlternateKeys
+  iAlternateKeys = SVKeyboardConstants.iAlternateKeys
+  uAlternateKeys = SVKeyboardConstants.uAlternateKeys
+  sAlternateKeys = SVKeyboardConstants.sAlternateKeys
+  cAlternateKeys = SVKeyboardConstants.cAlternateKeys
+  nAlternateKeys = SVKeyboardConstants.nAlternateKeys
 
   if userDefaults.bool(forKey: "svAccentCharacters") {
-    keysWithAlternates = svKeyboardConstants.keysWithAlernatesDisableAccents
-    keysWithAlternatesRight = svKeyboardConstants.keysWithAlternatesRightDisableAccents
-    aAlternateKeys = svKeyboardConstants.aAlternateKeysDisableAccents
-    oAlternateKeys = svKeyboardConstants.oAlternateKeysDisableAccents
+    keysWithAlternates = SVKeyboardConstants.keysWithAlernatesDisableAccents
+    keysWithAlternatesRight = SVKeyboardConstants.keysWithAlternatesRightDisableAccents
+    aAlternateKeys = SVKeyboardConstants.aAlternateKeysDisableAccents
+    oAlternateKeys = SVKeyboardConstants.oAlternateKeysDisableAccents
   } else {
-    keysWithAlternates = svKeyboardConstants.keysWithAlternates
-    keysWithAlternatesRight = svKeyboardConstants.keysWithAlternatesRight
-    aAlternateKeys = svKeyboardConstants.aAlternateKeys
-    oAlternateKeys = svKeyboardConstants.oAlternateKeys
-    äAlternateKeys = svKeyboardConstants.äAlternateKeys
-    öAlternateKeys = svKeyboardConstants.öAlternateKeys
+    keysWithAlternates = SVKeyboardConstants.keysWithAlternates
+    keysWithAlternatesRight = SVKeyboardConstants.keysWithAlternatesRight
+    aAlternateKeys = SVKeyboardConstants.aAlternateKeys
+    oAlternateKeys = SVKeyboardConstants.oAlternateKeys
+    äAlternateKeys = SVKeyboardConstants.äAlternateKeys
+    öAlternateKeys = SVKeyboardConstants.öAlternateKeys
   }
 }
 

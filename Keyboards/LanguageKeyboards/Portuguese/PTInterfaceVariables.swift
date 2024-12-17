@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum ptKeyboardConstants {
+public enum PTKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
 
@@ -39,7 +39,7 @@ public enum ptKeyboardConstants {
   static let nAlternateKeys = ["ñ"]
 }
 
-struct ptKeyboardProvider: KeyboardProviderProtocol {
+struct PTKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -149,8 +149,8 @@ func getPTKeys() {
     fatalError()
   }
 
-  var currencyKey = ptKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = ptKeyboardConstants.currencyKeys
+  var currencyKey = PTKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = PTKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -162,9 +162,9 @@ func getPTKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = ptKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = ptKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = ptKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = PTKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = PTKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = PTKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -173,16 +173,16 @@ func getPTKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = ptKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = ptKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = PTKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = PTKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["~", "`"]
       rightKeyChars = ["\\", "~"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = ptKeyboardProvider.genPadLetterKeys()
-      numberKeys = ptKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = ptKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = PTKeyboardProvider.genPadLetterKeys()
+      numberKeys = PTKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = PTKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -194,16 +194,16 @@ func getPTKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = ptKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = ptKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = ptKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = ptKeyboardConstants.aAlternateKeys
-  eAlternateKeys = ptKeyboardConstants.eAlternateKeys
-  iAlternateKeys = ptKeyboardConstants.iAlternateKeys
-  oAlternateKeys = ptKeyboardConstants.oAlternateKeys
-  uAlternateKeys = ptKeyboardConstants.uAlternateKeys
-  cAlternateKeys = ptKeyboardConstants.cAlternateKeys
-  nAlternateKeys = ptKeyboardConstants.nAlternateKeys
+  keysWithAlternates = PTKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = PTKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = PTKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = PTKeyboardConstants.aAlternateKeys
+  eAlternateKeys = PTKeyboardConstants.eAlternateKeys
+  iAlternateKeys = PTKeyboardConstants.iAlternateKeys
+  oAlternateKeys = PTKeyboardConstants.oAlternateKeys
+  uAlternateKeys = PTKeyboardConstants.uAlternateKeys
+  cAlternateKeys = PTKeyboardConstants.cAlternateKeys
+  nAlternateKeys = PTKeyboardConstants.nAlternateKeys
 }
 
 // MARK: Provide Layout

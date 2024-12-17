@@ -513,7 +513,7 @@ class KeyboardViewController: UIInputViewController {
           suggestion = verbsAfterPronounsArray[i]
         }
 
-        if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "es" {
+        if suggestion == "REFLEXIVE_PRONOUN" && controllerLanguage == "Spanish" {
           suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
         }
 
@@ -572,7 +572,7 @@ class KeyboardViewController: UIInputViewController {
 
     if prefix.isNumeric {
       completionWords = numericAutosuggestions
-    } else if ["en", "fr", "de", "es"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
+    } else if ["English", "French", "German", "Spanish"].contains(controllerLanguage) && pronounAutosuggestionTenses.keys.contains(prefix.lowercased()) {
       getPronounAutosuggestions()
     } else {
       // We have to consider these different cases as the key always has to match.
@@ -1227,13 +1227,13 @@ class KeyboardViewController: UIInputViewController {
     keyboardView.addGestureRecognizer(swipeLeft)
 
     // Set the conjugation view to 2x2 for Swedish and Russian past tense.
-    if controllerLanguage == "sv" {
+    if controllerLanguage == "Swedish" {
       formsDisplayDimensions = .view2x2
-    } else if controllerLanguage == "ru" && ruConjugationState == .past {
+    } else if controllerLanguage == "Russian" && ruConjugationState == .past {
       formsDisplayDimensions = .view2x2
     } else if
       commandState == .selectCaseDeclension
-      && controllerLanguage == "de"
+      && controllerLanguage == "German"
       && deCaseVariantDeclensionState != .disabled {
       switch deCaseVariantDeclensionState {
       case .disabled:
@@ -1257,14 +1257,14 @@ class KeyboardViewController: UIInputViewController {
       }
     } else if
       commandState == .selectCaseDeclension
-      && controllerLanguage == "de"
+      && controllerLanguage == "German"
       && [
         .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
         .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
         .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
       ].contains(deCaseDeclensionState) {
       formsDisplayDimensions = .view2x2
-    } else if controllerLanguage == "en" {
+    } else if controllerLanguage == "English" {
       switch enConjugationState {
       case .present, .presCont, .past, .future, .conditional:
         formsDisplayDimensions = .view2x2
@@ -1372,7 +1372,7 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: btn)
       }
 
-      if controllerLanguage == "de"
+      if controllerLanguage == "German"
         && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
         formKeyBR.isUserInteractionEnabled = false
       }
@@ -1432,14 +1432,14 @@ class KeyboardViewController: UIInputViewController {
       conjugationStateFxn = conjugationFxn
     }
 
-    if !["en", "ru", "sv"].contains(controllerLanguage) {
+    if !["English", "Russian", "Swedish"].contains(controllerLanguage) {
       formFPS = conjugationStateFxn() + "FPS"
       formSPS = conjugationStateFxn() + "SPS"
       formTPS = conjugationStateFxn() + "TPS"
       formFPP = conjugationStateFxn() + "FPP"
       formSPP = conjugationStateFxn() + "SPP"
       formTPP = conjugationStateFxn() + "TPP"
-    } else if controllerLanguage == "ru" {
+    } else if controllerLanguage == "Russian" {
       if formsDisplayDimensions == .view3x2 {
         formFPS = ruGetConjugationState() + "FPS"
         formSPS = ruGetConjugationState() + "SPS"
@@ -1453,14 +1453,14 @@ class KeyboardViewController: UIInputViewController {
         formBottomLeft = "pastNeutral"
         formBottomRight = "pastPlural"
       }
-    } else if controllerLanguage == "sv" {
+    } else if controllerLanguage == "Swedish" {
       let svTenses = svGetConjugationState()
 
       formTopLeft = svTenses[0]
       formTopRight = svTenses[1]
       formBottomLeft = svTenses[2]
       formBottomRight = svTenses[3]
-    } else if controllerLanguage == "en" {
+    } else if controllerLanguage == "English" {
       if formsDisplayDimensions == .view2x2 {
         let enTenses = enGetConjugationState()
 
@@ -1499,10 +1499,10 @@ class KeyboardViewController: UIInputViewController {
     if !["ru", "sv"].contains(controllerLanguage) {
       commandBar.text = conjugationTitleFxn()
       conjugationLabelsFxn()
-    } else if controllerLanguage == "ru" {
+    } else if controllerLanguage == "Russian" {
       commandBar.text = ruGetConjugationTitle()
       ruSetConjugationLabels()
-    } else if controllerLanguage == "sv" {
+    } else if controllerLanguage == "Swedish" {
       commandBar.text = svGetConjugationTitle()
       svSetConjugationLabels()
     }
@@ -1553,7 +1553,7 @@ class KeyboardViewController: UIInputViewController {
         styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
       } else {
         conjugationToDisplay = conjugationsToDisplay[index]
-        if controllerLanguage == "en" {
+        if controllerLanguage == "English" {
           if index == 0 && allConjugations[index] == "presTPS" {
             let simple = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: ["presSimp"])
             conjugationToDisplay = simple[0] + "/" + conjugationToDisplay
@@ -1570,7 +1570,7 @@ class KeyboardViewController: UIInputViewController {
           }
         }
         if inputWordIsCapitalized {
-          if controllerLanguage == "en", conjugationToDisplay.count(of: " ") > 0 {
+          if controllerLanguage == "English", conjugationToDisplay.count(of: " ") > 0 {
             conjugationToDisplay = conjugationToDisplay.capitalize()
           } else if deConjugationState != .indicativePerfect {
             conjugationToDisplay = conjugationToDisplay.capitalized
@@ -1591,7 +1591,7 @@ class KeyboardViewController: UIInputViewController {
       conjugationsFxn = deSetCaseVariantDeclensions
     }
 
-    if controllerLanguage == "ru" {
+    if controllerLanguage == "Russian" {
       conjugationTitleFxn = ruGetCaseDeclensionTitle
       conjugationLabelsFxn = ruSetCaseDeclensionLabels
       conjugationsFxn = ruSetCaseDeclensions
@@ -2456,7 +2456,7 @@ class KeyboardViewController: UIInputViewController {
         }
       } else {
         commandState = .plural
-        if controllerLanguage == "de" { // capitalize for nouns
+        if controllerLanguage == "German" { // capitalize for nouns
           if shiftButtonState == .normal {
             shiftButtonState = .shift
           }
@@ -2510,7 +2510,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "formTopLeft":
-      if controllerLanguage == "en" && enConjugationState == .present {
+      if controllerLanguage == "English" && enConjugationState == .present {
         enConjugationState = .presSimp
         conjViewShiftButtonsState = .bothInactive
       } else {
@@ -2519,7 +2519,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "formTopRight":
-      if controllerLanguage == "en" {
+      if controllerLanguage == "English" {
         if enConjugationState == .present {
           enConjugationState = .presCont
           conjViewShiftButtonsState = .bothInactive
@@ -2535,7 +2535,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "formBottomLeft":
-      if controllerLanguage == "en" && enConjugationState == .present {
+      if controllerLanguage == "English" && enConjugationState == .present {
         enConjugationState = .presPerf
         conjViewShiftButtonsState = .bothInactive
       } else {
@@ -2544,7 +2544,7 @@ class KeyboardViewController: UIInputViewController {
       loadKeys()
 
     case "formBottomRight":
-      if controllerLanguage == "en" && enConjugationState == .present {
+      if controllerLanguage == "English" && enConjugationState == .present {
         enConjugationState = .presPerfCont
         conjViewShiftButtonsState = .bothInactive
       } else {

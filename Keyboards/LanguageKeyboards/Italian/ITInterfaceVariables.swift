@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum itKeyboardConstants {
+public enum ITKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
 
@@ -40,7 +40,7 @@ public enum itKeyboardConstants {
   static let sAlternateKeys = ["ß", "ś", "š"]
 }
 
-struct itKeyboardProvider: KeyboardProviderProtocol {
+struct ITKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -150,8 +150,8 @@ func getITKeys() {
     fatalError()
   }
 
-  var currencyKey = itKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = itKeyboardConstants.currencyKeys
+  var currencyKey = ITKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = ITKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -163,9 +163,9 @@ func getITKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = itKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = itKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = itKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = ITKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = ITKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = ITKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -174,16 +174,16 @@ func getITKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = itKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = itKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = ITKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = ITKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["\\", "`"]
       rightKeyChars = ["*", "§"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = itKeyboardProvider.genPadLetterKeys()
-      numberKeys = itKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = itKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = ITKeyboardProvider.genPadLetterKeys()
+      numberKeys = ITKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = ITKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -195,17 +195,17 @@ func getITKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = itKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = itKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = itKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = itKeyboardConstants.aAlternateKeys
-  eAlternateKeys = itKeyboardConstants.eAlternateKeys
-  iAlternateKeys = itKeyboardConstants.iAlternateKeys
-  oAlternateKeys = itKeyboardConstants.oAlternateKeys
-  uAlternateKeys = itKeyboardConstants.uAlternateKeys
-  sAlternateKeys = itKeyboardConstants.sAlternateKeys
-  cAlternateKeys = itKeyboardConstants.cAlternateKeys
-  nAlternateKeys = itKeyboardConstants.nAlternateKeys
+  keysWithAlternates = ITKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = ITKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = ITKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = ITKeyboardConstants.aAlternateKeys
+  eAlternateKeys = ITKeyboardConstants.eAlternateKeys
+  iAlternateKeys = ITKeyboardConstants.iAlternateKeys
+  oAlternateKeys = ITKeyboardConstants.oAlternateKeys
+  uAlternateKeys = ITKeyboardConstants.uAlternateKeys
+  sAlternateKeys = ITKeyboardConstants.sAlternateKeys
+  cAlternateKeys = ITKeyboardConstants.cAlternateKeys
+  nAlternateKeys = ITKeyboardConstants.nAlternateKeys
 }
 
 // MARK: Provide Layout

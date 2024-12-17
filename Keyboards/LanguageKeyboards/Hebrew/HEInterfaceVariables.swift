@@ -21,12 +21,12 @@ import UIKit
 
 // MARK: Constants
 
-public enum HebrewKeyboardConstants {
+public enum HEKeyboardConstants {
   static let defaultCurrencyKey = "₪"
   static let currencyKeys = ["₪", "€", "£", "$"]
 }
 
-struct HebrewKeyboardProvider: KeyboardProviderProtocol {
+struct HEKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -136,8 +136,8 @@ func getHEKeys() {
     fatalError()
   }
 
-  var currencyKey = HebrewKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = HebrewKeyboardConstants.currencyKeys
+  var currencyKey = HEKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = HEKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
 
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
@@ -150,9 +150,9 @@ func getHEKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = HebrewKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = HebrewKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = HebrewKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = HEKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = HEKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = HEKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["ק", "1", "-", "[", "_"]
@@ -161,14 +161,14 @@ func getHEKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = HebrewKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = HebrewKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = HEKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = HEKeyboardProvider.genPadExpandedSymbolKeys()
 
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = HebrewKeyboardProvider.genPadLetterKeys()
-      numberKeys = HebrewKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = HebrewKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = HEKeyboardProvider.genPadLetterKeys()
+      numberKeys = HEKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = HEKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
