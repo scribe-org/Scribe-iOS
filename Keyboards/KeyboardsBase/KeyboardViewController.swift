@@ -1496,7 +1496,7 @@ class KeyboardViewController: UIInputViewController {
       conjugationLabelsFxn = labelsFxn
     }
 
-    if !["ru", "sv"].contains(controllerLanguage) {
+    if !["Russian", "Swedish"].contains(controllerLanguage) {
       commandBar.text = conjugationTitleFxn()
       conjugationLabelsFxn()
     } else if controllerLanguage == "Russian" {
