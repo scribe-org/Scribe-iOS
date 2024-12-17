@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum SpanishKeyboardConstants {
+public enum ESKeyboardConstants {
   static let defaultCurrencyKey = "$"
   static let currencyKeys = ["$", "€", "£", "¥"]
 
@@ -42,7 +42,7 @@ public enum SpanishKeyboardConstants {
   static let sAlternateKeys = ["š"]
 }
 
-struct SpanishKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
+struct ESKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -181,8 +181,8 @@ func getESKeys() {
     fatalError()
   }
 
-  var currencyKey = SpanishKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = SpanishKeyboardConstants.currencyKeys
+  var currencyKey = ESKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = ESKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -195,12 +195,12 @@ func getESKeys() {
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "esAccentCharacters") {
-      letterKeys = SpanishKeyboardProvider.genPhoneDisableAccentsLetterKeys()
+      letterKeys = ESKeyboardProvider.genPhoneDisableAccentsLetterKeys()
     } else {
-      letterKeys = SpanishKeyboardProvider.genPhoneLetterKeys()
+      letterKeys = ESKeyboardProvider.genPhoneLetterKeys()
     }
-    numberKeys = SpanishKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = SpanishKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    numberKeys = ESKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = ESKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
@@ -214,23 +214,23 @@ func getESKeys() {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       if userDefaults.bool(forKey: "esAccentCharacters") {
-        letterKeys = SpanishKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
+        letterKeys = ESKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
       } else {
-        letterKeys = SpanishKeyboardProvider.genPadExpandedLetterKeys()
+        letterKeys = ESKeyboardProvider.genPadExpandedLetterKeys()
       }
-      symbolKeys = SpanishKeyboardProvider.genPadExpandedSymbolKeys()
+      symbolKeys = ESKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["|", "`"]
       rightKeyChars = ["*", "§"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       if userDefaults.bool(forKey: "esAccentCharacters") {
-        letterKeys = SpanishKeyboardProvider.genPadDisableAccentsLetterKeys()
+        letterKeys = ESKeyboardProvider.genPadDisableAccentsLetterKeys()
       } else {
-        letterKeys = SpanishKeyboardProvider.genPadLetterKeys()
+        letterKeys = ESKeyboardProvider.genPadLetterKeys()
       }
-      numberKeys = SpanishKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = SpanishKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      numberKeys = ESKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = ESKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -242,22 +242,22 @@ func getESKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = SpanishKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = SpanishKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = SpanishKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = SpanishKeyboardConstants.aAlternateKeys
-  eAlternateKeys = SpanishKeyboardConstants.eAlternateKeys
-  iAlternateKeys = SpanishKeyboardConstants.iAlternateKeys
-  oAlternateKeys = SpanishKeyboardConstants.oAlternateKeys
-  uAlternateKeys = SpanishKeyboardConstants.uAlternateKeys
-  sAlternateKeys = SpanishKeyboardConstants.sAlternateKeys
-  dAlternateKeys = SpanishKeyboardConstants.dAlternateKeys
-  cAlternateKeys = SpanishKeyboardConstants.cAlternateKeys
+  keysWithAlternates = ESKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = ESKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = ESKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = ESKeyboardConstants.aAlternateKeys
+  eAlternateKeys = ESKeyboardConstants.eAlternateKeys
+  iAlternateKeys = ESKeyboardConstants.iAlternateKeys
+  oAlternateKeys = ESKeyboardConstants.oAlternateKeys
+  uAlternateKeys = ESKeyboardConstants.uAlternateKeys
+  sAlternateKeys = ESKeyboardConstants.sAlternateKeys
+  dAlternateKeys = ESKeyboardConstants.dAlternateKeys
+  cAlternateKeys = ESKeyboardConstants.cAlternateKeys
 
   if userDefaults.bool(forKey: "esAccentCharacters") {
-    nAlternateKeys = SpanishKeyboardConstants.nAlternateKeysDisableAccents
+    nAlternateKeys = ESKeyboardConstants.nAlternateKeysDisableAccents
   } else {
-    nAlternateKeys = SpanishKeyboardConstants.nAlternateKeys
+    nAlternateKeys = ESKeyboardConstants.nAlternateKeys
   }
 }
 

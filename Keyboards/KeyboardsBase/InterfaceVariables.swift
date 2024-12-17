@@ -162,10 +162,12 @@ var controllerLanguage = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [
+  "Danish": "da",
   "English": "en",
   "French": "fr",
   "German": "de",
   "Italian": "it",
+  "Norwegian": "nb",
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",

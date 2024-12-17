@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum GermanKeyboardConstants {
+public enum DEKeyboardConstants {
   static let defaultCurrencyKey = "€"
   static let currencyKeys = ["€", "$", "£", "¥"]
 
@@ -46,7 +46,7 @@ public enum GermanKeyboardConstants {
   static let zAlternateKeys = ["ź", "ż"]
 }
 
-struct GermanKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
+struct DEKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAccentsProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -185,8 +185,8 @@ func getDEKeys() {
     fatalError()
   }
 
-  var currencyKey = GermanKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = GermanKeyboardConstants.currencyKeys
+  var currencyKey = DEKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = DEKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -199,12 +199,12 @@ func getDEKeys() {
 
   if DeviceType.isPhone {
     if userDefaults.bool(forKey: "deAccentCharacters") {
-      letterKeys = GermanKeyboardProvider.genPhoneDisableAccentsLetterKeys()
+      letterKeys = DEKeyboardProvider.genPhoneDisableAccentsLetterKeys()
     } else {
-      letterKeys = GermanKeyboardProvider.genPhoneLetterKeys()
+      letterKeys = DEKeyboardProvider.genPhoneLetterKeys()
     }
-    numberKeys = GermanKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = GermanKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    numberKeys = DEKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = DEKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "a", "1", "-", "[", "_"]
@@ -218,22 +218,22 @@ func getDEKeys() {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       if userDefaults.bool(forKey: "deAccentCharacters") {
-        letterKeys = GermanKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
+        letterKeys = DEKeyboardProvider.genPadExpandedDisableAccentsLetterKeys()
       } else {
-        letterKeys = GermanKeyboardProvider.genPadExpandedLetterKeys()
+        letterKeys = DEKeyboardProvider.genPadExpandedLetterKeys()
       }
-      symbolKeys = GermanKeyboardProvider.genPadExpandedSymbolKeys()
+      symbolKeys = DEKeyboardProvider.genPadExpandedSymbolKeys()
       leftKeyChars = ["^", "`"]
       rightKeyChars = ["*"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
       if userDefaults.bool(forKey: "deAccentCharacters") {
-        letterKeys = GermanKeyboardProvider.genPadDisableAccentsLetterKeys()
+        letterKeys = DEKeyboardProvider.genPadDisableAccentsLetterKeys()
       } else {
-        letterKeys = GermanKeyboardProvider.genPadLetterKeys()
+        letterKeys = DEKeyboardProvider.genPadLetterKeys()
       }
-      numberKeys = GermanKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = GermanKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      numberKeys = DEKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = DEKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
       leftKeyChars = ["q", "a", "1", "\"", "$"]
@@ -244,26 +244,26 @@ func getDEKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = GermanKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = GermanKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = GermanKeyboardConstants.keysWithAlternatesRight
-  eAlternateKeys = GermanKeyboardConstants.eAlternateKeys
-  iAlternateKeys = GermanKeyboardConstants.iAlternateKeys
-  yAlternateKeys = GermanKeyboardConstants.yAlternateKeys
-  sAlternateKeys = GermanKeyboardConstants.sAlternateKeys
-  lAlternateKeys = GermanKeyboardConstants.lAlternateKeys
-  zAlternateKeys = GermanKeyboardConstants.zAlternateKeys
-  cAlternateKeys = GermanKeyboardConstants.cAlternateKeys
-  nAlternateKeys = GermanKeyboardConstants.nAlternateKeys
+  keysWithAlternates = DEKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = DEKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = DEKeyboardConstants.keysWithAlternatesRight
+  eAlternateKeys = DEKeyboardConstants.eAlternateKeys
+  iAlternateKeys = DEKeyboardConstants.iAlternateKeys
+  yAlternateKeys = DEKeyboardConstants.yAlternateKeys
+  sAlternateKeys = DEKeyboardConstants.sAlternateKeys
+  lAlternateKeys = DEKeyboardConstants.lAlternateKeys
+  zAlternateKeys = DEKeyboardConstants.zAlternateKeys
+  cAlternateKeys = DEKeyboardConstants.cAlternateKeys
+  nAlternateKeys = DEKeyboardConstants.nAlternateKeys
 
   if userDefaults.bool(forKey: "deAccentCharacters") {
-    aAlternateKeys = GermanKeyboardConstants.aAlternateKeysDisableAccents
-    oAlternateKeys = GermanKeyboardConstants.oAlternateKeysDisableAccents
-    uAlternateKeys = GermanKeyboardConstants.uAlternateKeysDisableAccents
+    aAlternateKeys = DEKeyboardConstants.aAlternateKeysDisableAccents
+    oAlternateKeys = DEKeyboardConstants.oAlternateKeysDisableAccents
+    uAlternateKeys = DEKeyboardConstants.uAlternateKeysDisableAccents
   } else {
-    aAlternateKeys = GermanKeyboardConstants.aAlternateKeys
-    oAlternateKeys = GermanKeyboardConstants.oAlternateKeys
-    uAlternateKeys = GermanKeyboardConstants.uAlternateKeys
+    aAlternateKeys = DEKeyboardConstants.aAlternateKeys
+    oAlternateKeys = DEKeyboardConstants.oAlternateKeys
+    uAlternateKeys = DEKeyboardConstants.uAlternateKeys
   }
 }
 

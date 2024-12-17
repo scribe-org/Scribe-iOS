@@ -1454,25 +1454,25 @@ class KeyboardViewController: UIInputViewController {
         formBottomRight = "pastPlural"
       }
     } else if controllerLanguage == "Swedish" {
-      let swedishTenses = svGetConjugationState()
+      let svTenses = svGetConjugationState()
 
-      formTopLeft = swedishTenses[0]
-      formTopRight = swedishTenses[1]
-      formBottomLeft = swedishTenses[2]
-      formBottomRight = swedishTenses[3]
+      formTopLeft = svTenses[0]
+      formTopRight = svTenses[1]
+      formBottomLeft = svTenses[2]
+      formBottomRight = svTenses[3]
     } else if controllerLanguage == "English" {
       if formsDisplayDimensions == .view2x2 {
-        let englishTenses = enGetConjugationState()
+        let enTenses = enGetConjugationState()
 
-        formTopLeft = englishTenses[0]
-        formTopRight = englishTenses[1]
-        formBottomLeft = englishTenses[2]
-        formBottomRight = englishTenses[3]
+        formTopLeft = enTenses[0]
+        formTopRight = enTenses[1]
+        formBottomLeft = enTenses[2]
+        formBottomRight = enTenses[3]
       } else if formsDisplayDimensions == .view1x2 {
-        let englishTenses = enGetConjugationState()
+        let enTenses = enGetConjugationState()
 
-        formLeft = englishTenses[0]
-        formRight = englishTenses[1]
+        formLeft = enTenses[0]
+        formRight = enTenses[1]
       } else if formsDisplayDimensions == .view3x1 {
         formTop = "presPart"
         formMiddle = "pastSimpCont"

@@ -21,7 +21,7 @@ import UIKit
 
 // MARK: Constants
 
-public enum EnglishKeyboardConstants {
+public enum ENKeyboardConstants {
   static let defaultCurrencyKey = "$"
   static let currencyKeys = ["$", "€", "£", "¥"]
 
@@ -42,7 +42,7 @@ public enum EnglishKeyboardConstants {
   static let zAlternateKeys = ["ž", "ź", "ż"]
 }
 
-struct EnglishKeyboardProvider: KeyboardProviderProtocol {
+struct ENKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -152,8 +152,8 @@ func getENKeys() {
     fatalError()
   }
 
-  var currencyKey = EnglishKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = EnglishKeyboardConstants.currencyKeys
+  var currencyKey = ENKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = ENKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -165,9 +165,9 @@ func getENKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = EnglishKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = EnglishKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = EnglishKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = ENKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = ENKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = ENKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -176,16 +176,16 @@ func getENKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = EnglishKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = EnglishKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = ENKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = ENKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["~", "`"]
       rightKeyChars = ["\\", "°"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = EnglishKeyboardProvider.genPadLetterKeys()
-      numberKeys = EnglishKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = EnglishKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = ENKeyboardProvider.genPadLetterKeys()
+      numberKeys = ENKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = ENKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
@@ -197,19 +197,19 @@ func getENKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = EnglishKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = EnglishKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = EnglishKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = EnglishKeyboardConstants.aAlternateKeys
-  eAlternateKeys = EnglishKeyboardConstants.eAlternateKeys
-  iAlternateKeys = EnglishKeyboardConstants.iAlternateKeys
-  oAlternateKeys = EnglishKeyboardConstants.oAlternateKeys
-  uAlternateKeys = EnglishKeyboardConstants.uAlternateKeys
-  sAlternateKeys = EnglishKeyboardConstants.sAlternateKeys
-  lAlternateKeys = EnglishKeyboardConstants.lAlternateKeys
-  zAlternateKeys = EnglishKeyboardConstants.zAlternateKeys
-  cAlternateKeys = EnglishKeyboardConstants.cAlternateKeys
-  nAlternateKeys = EnglishKeyboardConstants.nAlternateKeys
+  keysWithAlternates = ENKeyboardConstants.keysWithAlternates
+  keysWithAlternatesLeft = ENKeyboardConstants.keysWithAlternatesLeft
+  keysWithAlternatesRight = ENKeyboardConstants.keysWithAlternatesRight
+  aAlternateKeys = ENKeyboardConstants.aAlternateKeys
+  eAlternateKeys = ENKeyboardConstants.eAlternateKeys
+  iAlternateKeys = ENKeyboardConstants.iAlternateKeys
+  oAlternateKeys = ENKeyboardConstants.oAlternateKeys
+  uAlternateKeys = ENKeyboardConstants.uAlternateKeys
+  sAlternateKeys = ENKeyboardConstants.sAlternateKeys
+  lAlternateKeys = ENKeyboardConstants.lAlternateKeys
+  zAlternateKeys = ENKeyboardConstants.zAlternateKeys
+  cAlternateKeys = ENKeyboardConstants.cAlternateKeys
+  nAlternateKeys = ENKeyboardConstants.nAlternateKeys
 }
 
 // MARK: Provide Layout

@@ -36,6 +36,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - All orphaned documentation comments have been removed from the codebase ([#425](https://github.com/scribe-org/Scribe-iOS/issues/425)).
 - All if clauses within for loops have been removed from the codebase ([#428](https://github.com/scribe-org/Scribe-iOS/issues/428)).
 - The app interface was refactored to allow for right to left languages for the app texts ([#513](https://github.com/scribe-org/Scribe-iOS/issues/513)).
+- Variables with language references were changed to only use ISO-2 codes rather than full language names to simplify the code ([#494](https://github.com/scribe-org/Scribe-iOS/issues/494)).
 
 # Scribe-iOS 3.1.1
 
