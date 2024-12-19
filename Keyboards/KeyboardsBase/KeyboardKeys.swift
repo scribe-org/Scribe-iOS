@@ -254,81 +254,48 @@ class KeyboardKey: UIButton {
       scalarReturnKeyWidth = 1.3
       scalarShiftKeyWidth = 1.5
       scalarSpecialKeysWidth = 1.0
-
-      if ["ABC", "АБВ"].contains(key) {
+      switch key {
+      case "ABC", "АБВ":
         layer.setValue(true, forKey: "isSpecial")
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["#+=", "selectKeyboard"].contains(key) {
+      case "#+=", "selectKeyboard":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
-      } else if ["delete"].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.0).isActive = true
+      case "delete":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth).isActive = true
-      } else if [SpecialKeys.capsLock].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.65).isActive = true
+        
+      case SpecialKeys.capsLock:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
-      } else if [SpecialKeys.indent].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.3).isActive = true
+      case SpecialKeys.indent:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
-      } else if ["shift"].contains(key) && idx == 0 {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.0).isActive = true
+      case "shift" where idx == 0:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
-      } else if ["shift"].contains(key) && (idx > 0) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+      case "shift" where idx > 0:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
-      } else if ["return"].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+      case "return":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
-      } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.3).isActive = true
+      case "123", ".?123", "return", "hideKeyboard":
         if DeviceType.isPad
-          && key == "return"
-          && (
-            (
-              commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
-            ) || (
-              commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
-            )
-          )
-          && row == 1 {
-          layer.setValue(true, forKey: "isSpecial")
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
-        } else {
-          layer.setValue(true, forKey: "isSpecial")
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-        }
-      } else if key != spaceBar && key != languageTextForSpaceBar {
-        widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
-      }
-    } else {
-      if ["ABC", "АБВ"].contains(key) {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["delete", "#+=", "shift", "selectKeyboard", SpecialKeys.indent, SpecialKeys.capsLock].contains(key) {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
-        if DeviceType.isPad
-          && key == "return"
-          && (
-            (
-              commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
-            ) || (
-              commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
-            )
-          )
-          && row == 1 {
+            && key == "return"
+            && ((commandState != .translate && ["English", "Portuguese", "Italian"].contains(controllerLanguage)) ||
+                (commandState == .translate && ["en", "pt", "it"].contains(getControllerTranslateLangCode())))
+            && row == 1 {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
         } else {
           layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
         }
-      } else if key != spaceBar && key != languageTextForSpaceBar {
-        widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+      default:
+        if key != spaceBar && key != languageTextForSpaceBar {
+          widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+        }
       }
     }
   }
