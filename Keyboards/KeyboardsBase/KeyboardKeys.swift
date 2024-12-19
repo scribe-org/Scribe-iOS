@@ -260,26 +260,25 @@ class KeyboardKey: UIButton {
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
       case "#+=", "selectKeyboard":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.0).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
       case "delete":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.65).isActive = true
-        
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth).isActive = true
       case SpecialKeys.capsLock:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.3).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
       case SpecialKeys.indent:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.0).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
       case "shift" where idx == 0:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
       case "shift" where idx > 0:
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
       case "return":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.3).isActive = true
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
       case "123", ".?123", "return", "hideKeyboard":
         if DeviceType.isPad
             && key == "return"
