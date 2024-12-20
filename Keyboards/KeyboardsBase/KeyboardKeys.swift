@@ -278,19 +278,17 @@ class KeyboardKey: UIButton {
         widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
       case "return":
         layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
-      case "123", ".?123", "return", "hideKeyboard":
         if DeviceType.isPad
-            && key == "return"
             && ((commandState != .translate && ["English", "Portuguese", "Italian"].contains(controllerLanguage)) ||
                 (commandState == .translate && ["en", "pt", "it"].contains(getControllerTranslateLangCode())))
             && row == 1 {
-          layer.setValue(true, forKey: "isSpecial")
           widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
         } else {
-          layer.setValue(true, forKey: "isSpecial")
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
         }
+      case "123", ".?123", "hideKeyboard":
+        layer.setValue(true, forKey: "isSpecial")
+        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
       default:
         if key != spaceBar && key != languageTextForSpaceBar {
           widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
