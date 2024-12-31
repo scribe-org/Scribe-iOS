@@ -56,6 +56,8 @@ Scribe is very open to contributions from people in the early stages of their co
 
 - [Mozilla Developer Network Learning Area](https://developer.mozilla.org/en-US/docs/Learn)
   - Doing MDN sections for HTML, CSS and JavaScript is the best ways to get into web development!
+- [Open Source Guides](https://opensource.guide/)
+  - Guides from GitHub about open-source software including how to start and much more!
 
 </p>
 </details>
