@@ -121,9 +121,9 @@ our privacy practices and to familiarize themselves with any changes.
 
 If you have any questions, concerns, or suggestions about this POLICY
 or SCRIBE, do not hesitate to visit https://github.com/scribe-org or
-contact SCRIBE at scribe.langauge@gmail.com. The person responsible
-for such inquiries is Andrew Tavis McAllister.
+contact SCRIBE at team@scri.be. The person responsible for such inquiries
+is Andrew Tavis McAllister.
 
 11. Effective Date
 
-This POLICY is effective as of the 24th of May, 2022.
+This POLICY is effective as of the 5th of January, 2025.
