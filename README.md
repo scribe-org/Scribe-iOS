@@ -2,10 +2,6 @@
   <a href="https://github.com/scribe-org/Scribe-iOS"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/logo/ScribeGitHubOrgBanner.png" width=1024 alt="Scribe Logo"></a>
 </div>
 
-<!---
-[![ci](https://img.shields.io/github/workflow/status/scribe-org/Scribe-iOS/CI?logo=github)](https://github.com/scribe-org/Scribe-iOS/actions?query=workflow%3ACI)
---->
-
 [![platforms](https://img.shields.io/static/v1?message=iOS%20│%20iPadOS&logo=apple&color=999999&logoColor=white&label=%20)](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)
 [![version](https://img.shields.io/github/v/release/scribe-org/Scribe-iOS?color=%2300550&sort=semver&label=%20)](https://github.com/scribe-org/Scribe-iOS/releases/)
 [![issues](https://img.shields.io/github/issues/scribe-org/Scribe-iOS?label=%20&logo=github)](https://github.com/scribe-org/Scribe-iOS/issues)
@@ -89,6 +85,14 @@ After your first few pull requests organization members would be happy to discus
 - [Documentation](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation) for onboarding and project cohesion 📝
 - Adding language data to [Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) via [Wikidata](https://www.wikidata.org/)! 🗃️
 - [Sharing Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues/181) with others! 🚀
+
+<details><summary><strong>View Scribe-i18n localization progress</strong></summary>
+    <p>
+        <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+            <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
+        </a>
+    </p>
+</details>
 
 ### Road Map [`⇧`](#contents)
 
@@ -213,16 +217,6 @@ The following table shows the supported languages and the amount of data availab
 `*` Given the current **`beta`** status where words are machine translated.
 
 `†` Only for languages for which preposition annotation is needed.
-
-Updates to the above data can be done using [scribe_data/load/update_data.py](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/load/update_data.py).
-
-<details><summary><strong>View Scribe-i18n localization progress</strong></summary>
-    <p>
-        <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
-            <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
-        </a>
-    </p>
-</details>
 
 <a id="keyboard-features"></a>
 
