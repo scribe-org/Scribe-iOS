@@ -1,5 +1,6 @@
 name: 🎨 Design improvement
 description: Make a suggestion for Scribe's UX/UI designs.
+type: "task"
 labels: ["design"]
 projects: ["scribe-org/1"]
 body:

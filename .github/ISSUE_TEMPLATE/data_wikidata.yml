@@ -1,5 +1,6 @@
 name: 🗃️ Data and Wikidata
 description: Help Scribe bring open-source language data to your fingertips.
+type: "task"
 labels: ["data"]
 projects: ["scribe-org/1"]
 body:
