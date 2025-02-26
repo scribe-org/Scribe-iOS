@@ -22,9 +22,7 @@ enum SettingsTableData {
     ),
     ParentTableCellModel(
       headingTitle: NSLocalizedString("app.settings.keyboard.title", value: "Select installed keyboard", comment: ""),
-      section: [
-        // Section(sectionTitle: "All keyboards", imageString: "globe", sectionState: .specificLang("all")),
-      ],
+      section: [],
       hasDynamicData: .installedKeyboards
     )
   ]
