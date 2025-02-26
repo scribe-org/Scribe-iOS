@@ -14,7 +14,8 @@ enum SettingsTableData {
         Section(
           sectionTitle: NSLocalizedString("app.settings.menu.app_language", value: "App language", comment: ""),
           hasToggle: false,
-          sectionState: .appLang
+          sectionState: .appLang,
+          shortDescription: NSLocalizedString("app.settings.menu.app_language.caption", value: "Select language for app texts.", comment: "")
         )
       ],
       hasDynamicData: nil
