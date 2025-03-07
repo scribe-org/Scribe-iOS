@@ -12,7 +12,12 @@
 [![mastodon](https://img.shields.io/badge/Mastodon-6364FF.svg?logo=mastodon&logoColor=ffffff)](https://wikis.world/@scribe)
 [![matrix](https://img.shields.io/badge/Matrix-000000.svg?logo=matrix&logoColor=ffffff)](https://matrix.to/#/#scribe_community:matrix.org)
 
-<a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/badges/app_store_badge.png' height='60px'/></a>
+<div align="left">
+  <br>
+  <a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='Available on the App Store' src='https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/badges/app_store_badge.png' height='80px'/></a>
+  <a href='https://apps.apple.com/app/scribe-language-keyboards/id1596613886'><img alt='App Store QR Code' src='https://raw.githubusercontent.com/scribe-org/Organization/main/promotional/qr_codes/scribe_ios_qr_code.png' height='80px'/></a>
+  <br>
+</div>
 
 ## iOS app with keyboards for language learners
 
