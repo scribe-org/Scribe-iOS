@@ -21,9 +21,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/Library/Developer/Xcode/DerivedData
-          key: ${{ runner.os }}-xcode-${{ hashFiles('**/project.pbxproj') }}
+          key: macOS-xcode-${{ hashFiles('**/project.pbxproj', '**/*.swift', '**/*.h', '**/*.m') }}
           restore-keys: |
-            ${{ runner.os }}-xcode-
+            macOS-xcode-
 
       - name: Build
         run: |
