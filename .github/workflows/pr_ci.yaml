@@ -21,9 +21,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/Library/Developer/Xcode/DerivedData
-          key: macOS-xcode-${{ hashFiles('**/project.pbxproj', '**/*.swift', '**/*.h', '**/*.m') }}
+          key: ${{ runner.os }}-xcode-${{ hashFiles('**/project.pbxproj') }}
           restore-keys: |
-            macOS-xcode-
+            ${{ runner.os }}-xcode-
 
       - name: Build
         run: |
@@ -31,7 +31,7 @@ jobs:
 
       - name: Test and Generate Coverage
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
           xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
 
       - name: Parse Coverage and Print to Terminal
