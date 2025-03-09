@@ -6,36 +6,36 @@
 
 import Foundation
 
+struct Function: Codable {
+	let coveredLines: Int
+	let executableLines: Int
+	let executionCount: Int
+	let lineCoverage: Double
+	let lineNumber: Int
+	let name: String
+}
+
+struct File: Codable {
+	let coveredLines: Int
+	let executableLines: Int
+	let functions: [Function]
+	let lineCoverage: Double
+	let name: String
+	let path: String
+}
+
+struct Target: Codable {
+	let buildProductPath: String
+	let coveredLines: Int
+	let executableLines: Int
+	let files: [File]
+}
+
 struct CoverageReport: Codable {
 	let coveredLines: Int
 	let executableLines: Int
 	let lineCoverage: Double
 	let targets: [Target]
-
-	struct Target: Codable {
-		let buildProductPath: String
-		let coveredLines: Int
-		let executableLines: Int
-		let files: [File]
-
-		struct File: Codable {
-			let coveredLines: Int
-			let executableLines: Int
-			let functions: [Function]
-			let lineCoverage: Double
-			let name: String
-			let path: String
-
-			struct Function: Codable {
-				let coveredLines: Int
-				let executableLines: Int
-				let executionCount: Int
-				let lineCoverage: Double
-				let lineNumber: Int
-				let name: String
-			}
-		}
-	}
 }
 
 func loadCoverageReport(from filePath: String) -> CoverageReport? {
