@@ -24,10 +24,10 @@ jobs:
           key: ${{ runner.os }}-xcode-${{ hashFiles('**/project.pbxproj') }}
           restore-keys: |
             ${{ runner.os }}-xcode-
-      - name: Build
+      - name: Build, Test and Generate Coverage
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' clean build
+          xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
 
-      - name: Test
-        run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test
+      - name: Parse Coverage and Print to Terminal
+        run: swift Tests/ProcessCoverageReport.swift code_coverage.json 5

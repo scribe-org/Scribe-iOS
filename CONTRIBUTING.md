@@ -160,10 +160,6 @@ In addition to the [pre-commit](https://pre-commit.com/) hooks that are set up d
 Please run the following in the project root:
 
 ```bash
-# Build and test the application:
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
-
 # If you don't have swiftlint installed:
 # brew install swiftlint
 
@@ -175,6 +171,30 @@ If you see that there are linting errors above, then please run the following co
 
 ```bash
 swiftlint --fix
+```
+
+For testing and code coverage, please run the following command:
+
+```bash
+# Clear prior builds if needed:
+# rm -rf Build
+
+xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+```
+
+Generate the coverage report JSON with the following:
+
+```bash
+xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
+```
+
+And finally view the coverage report in the terminal:
+
+```bash
+swift Tests/ProcessCoverageReport.swift code_coverage.json
+
+# You can also pass an integer or double to check against a threshold:
+# swift Tests/ProcessCoverageReport.swift code_coverage.json NUMERIC_THRESHOLD
 ```
 
 <a id="issues-projects"></a>
