@@ -191,11 +191,14 @@ xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > 
 And finally view the coverage report in the terminal:
 
 ```bash
-swift Tests/ProcessCoverageReport.swift
+swift Tests/ProcessCoverageReport.swift code_coverage.json
+
+# You can also pass an integer or double to check against a threshold:
+# swift Tests/ProcessCoverageReport.swift code_coverage.json NUMERIC_THRESHOLD
 ```
 
 > [!NOTE]
-> The code coverage threshold is set within Tests/ProcessCoverageReport.swift.
+> See [Tests/ProcessCoverageReport.swift](./Tests/ProcessCoverageReport.swift) for details.
 
 <a id="issues-projects"></a>
 

@@ -11,6 +11,8 @@ jobs:
 
     name: Run Unit Tests
     steps:
+      - uses: swift-actions/setup-swift@v2
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -36,4 +38,4 @@ jobs:
 
       - name: Parse Coverage and Print to Terminal
         run: |
-          swift Tests/ProcessCoverageReport.swift
+          swift Tests/ProcessCoverageReport.swift code_coverage.json 5

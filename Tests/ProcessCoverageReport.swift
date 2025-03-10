@@ -6,8 +6,6 @@
 
 import Foundation
 
-let coverageJSONFile: String = "code_coverage.json"
-let coverageThreshold: Double = 5
 struct Function: Codable {
 	let coveredLines: Int
 	let executableLines: Int
@@ -42,9 +40,9 @@ struct CoverageReport: Codable {
 
 func loadCoverageReport(from filePath: String) -> CoverageReport? {
 	do {
-		let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
-		let decoder = JSONDecoder()
-		let report = try decoder.decode(CoverageReport.self, from: data)
+		let data: Data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+		let decoder: JSONDecoder = JSONDecoder()
+		let report: CoverageReport = try decoder.decode(CoverageReport.self, from: data)
 		return report
 	} catch {
 		print("Failed to load or decode JSON: \(error)")
@@ -54,8 +52,8 @@ func loadCoverageReport(from filePath: String) -> CoverageReport? {
 
 func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	var reportDict: [String: [String: Double]] = [:]
-	for target in report.targets {
-		for file in target.files {
+	for target: Target in report.targets {
+		for file: File in target.files {
 			if !file.path.contains("Build/SourcePackages") && !file.path.contains("/Tests/") {
 				reportDict[file.path.components(separatedBy: "scribe-org/Scribe-iOS")[1]] = [
 					"coveredLines": Double(file.coveredLines),
@@ -74,7 +72,7 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	print("\("\nFile".padding(toLength: maxFileNameLength, withPad: " ", startingAt: 0))   Cover")
 	print("\("".padding(toLength: maxFileNameLength, withPad: "-", startingAt: 0))-------")
 	for (f, c) in reportDict.sorted(by: { $0.0 < $1.0 }) {
-		let fileNamePadded = f.padding(toLength: maxFileNameLength, withPad: " ", startingAt: 0)
+		let fileNamePadded: String = f.padding(toLength: maxFileNameLength, withPad: " ", startingAt: 0)
 		print("\(fileNamePadded)  \(String(format: "%.0f", c["lineCoverage"]! * 100))%")
 		coveredLinesProject += c["coveredLines"]!
 		executableLinesProject += c["executableLines"]!
@@ -94,6 +92,21 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 		print("\nError: Code coverage did not meet the \(threshold)% threshold.\n")
 		exit(1)
 	}
+}
+
+if ![2, 3].contains(CommandLine.arguments.count) {
+	print("Arguments for ProcessCoverageReport were not passed correctly.")
+	print("Note: <coverageThreshold> is optional and needed only for threshold checks.")
+	print("Usage: swift ProcessCoverageReport.swift <coverageJSONFile> <coverageThreshold>")
+	exit(1)
+}
+
+let coverageJSONFile: String = CommandLine.arguments[1]
+let coverageThreshold: Double
+if CommandLine.arguments.count == 3 {
+	coverageThreshold = Double(CommandLine.arguments[2]) ?? 0.0
+} else {
+	coverageThreshold = 0.0
 }
 
 if let report: CoverageReport = loadCoverageReport(from: coverageJSONFile) {
