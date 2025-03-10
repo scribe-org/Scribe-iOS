@@ -6,6 +6,8 @@
 
 import Foundation
 
+let coverageJSONFile: String = "code_coverage.json"
+let coverageThreshold: Double = 5
 struct Function: Codable {
 	let coveredLines: Int
 	let executableLines: Int
@@ -94,25 +96,7 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	}
 }
 
-if ![2, 3].contains(CommandLine.arguments.count) {
-	print("Arguments for ProcessCoverageReport were not passed correctly.")
-	print("Note: <coverageThreshold> is optional and needed only for threshold checks.")
-	print("Usage: swift ProcessCoverageReport.swift <coverageJSONFile> <coverageThreshold>")
-	exit(1)
-}
-
-let coverageJSONFile = CommandLine.arguments[1]
-print("coverageJSONFile: \(coverageJSONFile)")
-
-let coverageThreshold: Double
-if CommandLine.arguments.count == 3 {
-	coverageThreshold = Double(CommandLine.arguments[2]) ?? 0.0
-	print("coverageThreshold: \(coverageThreshold)")
-} else {
-	coverageThreshold = 0.0
-}
-
-if let report = loadCoverageReport(from: coverageJSONFile) {
+if let report: CoverageReport = loadCoverageReport(from: coverageJSONFile) {
 	printCoverageReport(report, threshold: coverageThreshold)
 } else {
 	print("Failed to load the coverage report.")

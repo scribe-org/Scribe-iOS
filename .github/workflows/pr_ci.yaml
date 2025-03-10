@@ -36,5 +36,4 @@ jobs:
 
       - name: Parse Coverage and Print to Terminal
         run: |
-          chmod +x Tests/ProcessCoverageReport.swift
-          swift Tests/ProcessCoverageReport.swift code_coverage.json 5
+          swift Tests/ProcessCoverageReport.swift
