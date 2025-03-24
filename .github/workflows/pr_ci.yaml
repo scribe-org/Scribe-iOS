@@ -11,8 +11,6 @@ jobs:
 
     name: Run Unit Tests
     steps:
-      - uses: swift-actions/setup-swift@v2
-
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -36,6 +34,7 @@ jobs:
           xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
           xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
 
+      - uses: swift-actions/setup-swift@v2
       - name: Parse Coverage and Print to Terminal
         run: |
           swift Tests/ProcessCoverageReport.swift code_coverage.json 5
