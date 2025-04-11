@@ -81,11 +81,11 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	let lineCoverageProject: Double = coveredLinesProject / executableLinesProject * 100
 
 	print("\("".padding(toLength: maxFileNameLength, withPad: "-", startingAt: 0))-------")
-	print("\("Total".padding(toLength: maxFileNameLength, withPad: " ", startingAt: 0))  \(String(format: "%.0f", lineCoverageProject))%")
+	print("\("Total".padding(toLength: maxFileNameLength, withPad: " ", startingAt: 0))  \(String(format: "%.0f", lineCoverageProject))%\n")
 
 	if lineCoverageProject >= threshold {
 		if threshold > 0 {
-			print("\nRequired test coverage of \(threshold)% reached. Total coverage: \(String(format: "%.2f", lineCoverageProject))%\n")
+			print("Required test coverage of \(threshold)% reached. Total coverage: \(String(format: "%.2f", lineCoverageProject))%\n")
 		}
 		exit(0)
 	} else {
