@@ -91,12 +91,11 @@ final class InfoChildTableViewCell: UITableViewCell {
     titleLabel.text = section.sectionTitle
 
     if let shortDescription = section.shortDescription {
-      descriptionLabel.text = shortDescription
-
-      contentView.addSubview(descriptionLabel)
+        descriptionLabel.text = shortDescription
+        descriptionLabel.isHidden = false
     } else {
-      descriptionLabel.text = nil
-      descriptionLabel.removeFromSuperview()
+        descriptionLabel.text = nil
+        descriptionLabel.isHidden = true
     }
 
     if section.hasToggle {

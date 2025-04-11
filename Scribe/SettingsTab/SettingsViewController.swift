@@ -207,6 +207,14 @@ extension SettingsViewController: UITableViewDelegate {
     }
   }
 
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      let section = tableData[indexPath.section]
+      let setting = section.section[indexPath.row]
+
+      let hasDescription = setting.shortDescription != nil
+      return hasDescription ? 80.0 : 48.0
+    }
+
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let headerView: UIView
 
