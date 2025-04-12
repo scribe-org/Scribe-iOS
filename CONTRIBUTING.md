@@ -160,10 +160,6 @@ In addition to the [pre-commit](https://pre-commit.com/) hooks that are set up d
 Please run the following in the project root:
 
 ```bash
-# Build and test the application:
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
-
 # If you don't have swiftlint installed:
 # brew install swiftlint
 
@@ -176,6 +172,33 @@ If you see that there are linting errors above, then please run the following co
 ```bash
 swiftlint --fix
 ```
+
+For testing and code coverage, please run the following command:
+
+```bash
+# Clear prior builds if needed:
+# rm -rf Build
+
+xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+```
+
+Generate the coverage report JSON with the following:
+
+```bash
+xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
+```
+
+And finally view the coverage report in the terminal:
+
+```bash
+swift Tests/ProcessCoverageReport.swift code_coverage.json
+
+# You can also pass an integer or double to check against a threshold:
+# swift Tests/ProcessCoverageReport.swift code_coverage.json NUMERIC_THRESHOLD
+```
+
+> [!NOTE]
+> See [Tests/ProcessCoverageReport.swift](./Tests/ProcessCoverageReport.swift) for details.
 
 <a id="issues-projects"></a>
 
@@ -210,7 +233,7 @@ Guidelines for bug reports:
 - What actually happens
 - Notes (why this might be happening, things tried that didn't work, etc)
 
-To make the above steps easier, the Scribe team asks that contributors report bugs using the [bug report template](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=bug_report.yml), with these issues further being marked with the [`bug`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Abug) label.
+To make the above steps easier, the Scribe team asks that contributors report bugs using the [bug report template](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=bug_report.yml), with these issues further being marked with the [`Bug`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue%20state%3Aopen%20type%3ABug) type.
 
 Again, thank you for your time in reporting issues!
 
@@ -218,7 +241,7 @@ Again, thank you for your time in reporting issues!
 
 # Feature requests [`⇧`](#contents)
 
-Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`feature`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Afeature) label, and can be made using the [feature request](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
+Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`Feature`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature) type, and can be made using the [feature request](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
 
 <a id="pull-requests"></a>
 
