@@ -40,6 +40,10 @@ class InstallationVC: UIViewController {
 
   @IBOutlet var installationHeaderLabel: UILabel!
 
+  @IBOutlet var downloadKeyboardBtnPhone: UIButton!
+  @IBOutlet var downloadKeyboardBtnPad: UIButton!
+  var downloadKeyboardBtn: UIButton!
+
   private let installationTipCardState: Bool = {
     let userDefault = UserDefaults.standard
     let state = userDefault.object(forKey: "installationTipCardState") as? Bool ?? true
@@ -54,12 +58,14 @@ class InstallationVC: UIViewController {
       settingsBtn = settingsBtnPad
       settingsCorner = settingsCornerPad
       settingCornerWidthConstraint = settingCornerWidthConstraintPad
+      downloadKeyboardBtn = downloadKeyboardBtnPad
 
       appTextViewPhone.removeFromSuperview()
       appTextBackgroundPhone.removeFromSuperview()
       topIconPhone.removeFromSuperview()
       settingsBtnPhone.removeFromSuperview()
       settingsCornerPhone.removeFromSuperview()
+
     } else {
       appTextView = appTextViewPhone
       appTextBackground = appTextBackgroundPhone
@@ -73,6 +79,7 @@ class InstallationVC: UIViewController {
       topIconPad.removeFromSuperview()
       settingsBtnPad.removeFromSuperview()
       settingsCornerPad.removeFromSuperview()
+
     }
   }
 
@@ -146,6 +153,15 @@ class InstallationVC: UIViewController {
   func setSettingsBtn() {
     settingsBtn.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
     settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+  }
+
+  func setDownloadKeyboardBtn() {
+    downloadKeyboardBtn.setTitle(NSLocalizedString("app.installation.download", value: "Download Keyboard", comment: ""), for: .normal)
+    downloadKeyboardBtn.setTitleColor(.white, for: .normal)
+    downloadKeyboardBtn.backgroundColor = scribeCTAColor
+    downloadKeyboardBtn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize * 0.9, weight: .medium)
+    downloadKeyboardBtn.clipsToBounds = true
+    downloadKeyboardBtn.addTarget(self, action: #selector(handleDownloadKeyboard), for: .touchUpInside)
   }
 
   /// Sets constant properties for the app screen.
@@ -246,6 +262,7 @@ class InstallationVC: UIViewController {
     setUIConstantProperties()
     setUIDeviceProperties()
     setInstallationUI()
+    setDownloadKeyboardBtn()
   }
 
   /// Function to open the settings app that is targeted by settingsBtn.
@@ -254,6 +271,12 @@ class InstallationVC: UIViewController {
       fatalError("Failed to create settings URL.")
     }
     UIApplication.shared.open(settingsURL)
+  }
+
+  /// Function to link download data button
+  @objc func handleDownloadKeyboard() {
+    let downloadVC = DownloadDataVC()
+    navigationController?.pushViewController(downloadVC, animated: true)
   }
 
   /// Function to change the key coloration given a touch down.
