@@ -8,11 +8,11 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    name: Run Unit Tests
 
+    name: Run Unit Tests
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Xcode
         run: sudo xcode-select -switch /Applications/Xcode.app
@@ -24,10 +24,16 @@ jobs:
           key: ${{ runner.os }}-xcode-${{ hashFiles('**/project.pbxproj') }}
           restore-keys: |
             ${{ runner.os }}-xcode-
+
       - name: Build
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' clean build
+          xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
 
-      - name: Test
+      - name: Test and Generate Coverage
         run: |
-          xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test
+          xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
+
+      - name: Parse Coverage and Print to Terminal
+        run: |
+          python3 Tests/process_coverage_report.py code_coverage.json 5
