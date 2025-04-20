@@ -94,21 +94,27 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	}
 }
 
-guard CommandLine.arguments.count >= 2 else {
-	print("Usage: \(CommandLine.arguments[0]) <coverage-json-file> [coverage-threshold]"); exit(1)
+struct Script {
+  static func main() {
+    guard CommandLine.arguments.count >= 2 else {
+      print("Usage: \(CommandLine.arguments[0]) <coverage-json-file> [coverage-threshold]"); exit(1)
+    }
+
+    let coverageJSONFile: String = CommandLine.arguments[1]
+    let coverageThreshold: Double
+    if CommandLine.arguments.count == 3 {
+      coverageThreshold = Double(CommandLine.arguments[2]) ?? 0.0
+    } else {
+      coverageThreshold = 0.0
+    }
+
+    if let report: CoverageReport = loadCoverageReport(from: coverageJSONFile) {
+      printCoverageReport(report, threshold: coverageThreshold)
+    } else {
+      print("Failed to load the coverage report.")
+      exit(1)
+    }
+  }
 }
 
-let coverageJSONFile: String = CommandLine.arguments[1]
-let coverageThreshold: Double
-if CommandLine.arguments.count == 3 {
-	coverageThreshold = Double(CommandLine.arguments[2]) ?? 0.0
-} else {
-	coverageThreshold = 0.0
-}
-
-if let report: CoverageReport = loadCoverageReport(from: coverageJSONFile) {
-	printCoverageReport(report, threshold: coverageThreshold)
-} else {
-	print("Failed to load the coverage report.")
-	exit(1)
-}
+Script.main()
