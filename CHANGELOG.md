@@ -31,6 +31,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The tab bar titles are now localized for the application ([#517](https://github.com/scribe-org/Scribe-iOS/issues/517)).
 
+### ✅ Tests
+
+- A coverage report has been added to all pull requests to keep track of which files need testing ([#531](https://github.com/scribe-org/Scribe-iOS/issues/531)).
+
 ### ⚖️ Legal
 
 - The contact email in the privacy policy was updated.
