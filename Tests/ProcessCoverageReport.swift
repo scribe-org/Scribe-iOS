@@ -94,11 +94,8 @@ func printCoverageReport(_ report: CoverageReport, threshold: Double) {
 	}
 }
 
-if ![2, 3].contains(CommandLine.arguments.count) {
-	print("Arguments for ProcessCoverageReport were not passed correctly.")
-	print("Note: <coverageThreshold> is optional and needed only for threshold checks.")
-	print("Usage: swift ProcessCoverageReport.swift <coverageJSONFile> <coverageThreshold>")
-	exit(1)
+guard CommandLine.arguments.count >= 2 else {
+	print("Usage: \(CommandLine.arguments[0]) <coverage-json-file> [coverage-threshold]"); exit(1)
 }
 
 let coverageJSONFile: String = CommandLine.arguments[1]
