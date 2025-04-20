@@ -101,6 +101,11 @@ if ![2, 3].contains(CommandLine.arguments.count) {
 	exit(1)
 }
 
+guard CommandLine.arguments.count >= 2 else {
+    print("Usage: \(CommandLine.arguments[0]) <coverage-json-file> [coverage-threshold]")
+    exit(1)
+}
+
 let coverageJSONFile: String = CommandLine.arguments[1]
 let coverageThreshold: Double
 if CommandLine.arguments.count == 3 {
