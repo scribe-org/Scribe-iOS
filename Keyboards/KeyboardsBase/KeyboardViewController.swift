@@ -2231,11 +2231,13 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "CommaAndPeriod"
       let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
+      let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
 
       if letterKeysHaveCommaPeriod {
-        let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
         letterKeys[3].insert(",", at: spaceIndex!)
         letterKeys[3].insert(".", at: spaceIndex! + 2)
+      } else if proxy.keyboardType == .webSearch {
+        letterKeys[3].insert(".", at: spaceIndex! + 1)
       }
     }
   }

@@ -22,6 +22,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
   - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
 - Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
+- A period is added to the letter keys if the keyboard is being used in a search bar ([#447](https://github.com/scribe-org/Scribe-iOS/issues/447)).
 
 ### 🎨 Design Changes
 
