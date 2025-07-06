@@ -28,6 +28,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/514)).
 
+### 🌐 Localization
+
+- Localized the "Not in Wikidata" explanation messages to match the device language ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538)).
+
 ### 🐞 Bug Fixes
 
 - The tab bar titles are now localized for the application ([#517](https://github.com/scribe-org/Scribe-iOS/issues/517)).
@@ -53,9 +57,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - A warning is added to trying to change the app localization if the user only has one language installed on their device ([#481](https://github.com/scribe-org/Scribe-iOS/issues/481)).
 
-
 ### 🌐 Localization
-- Localized "Not in Wikidata" message and UI strings ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538))
 
 - Localization strings for English, German, Swedish and Spanish have been added for all remaining app texts ([Scribe-i18n#28](https://github.com/scribe-org/Scribe-i18n/issues/28)).
 - Localizations have been added for Arabic, Bengali Hindi, Korean and Marathi ([Scribe-i18n#12](https://github.com/scribe-org/Scribe-i18n/issues/12), [Scribe-i18n#51](https://github.com/scribe-org/Scribe-i18n/issues/51), [Scribe-i18n#53](https://github.com/scribe-org/Scribe-i18n/issues/53), [Scribe-i18n#55](https://github.com/scribe-org/Scribe-i18n/issues/55)).
