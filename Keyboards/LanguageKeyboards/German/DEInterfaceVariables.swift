@@ -169,7 +169,7 @@ struct DEKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
 
 func getDEKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-    fatalError()
+    fatalError("Unable to access shared user defaults")
   }
 
   var currencyKey = DEKeyboardConstants.defaultCurrencyKey

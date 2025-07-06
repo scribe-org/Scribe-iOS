@@ -306,6 +306,17 @@
 		D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		D1608668270B6D3C00134D48 /* ESKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1662A6F2E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A702E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A712E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A722E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A732E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A742E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A752E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A762E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A772E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A782E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
+		D1662A792E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RUKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -2135,6 +2146,7 @@
 				D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				D1662A722E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2154,6 +2166,7 @@
 				D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
+				D1662A712E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2173,6 +2186,7 @@
 				D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
+				D1662A762E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
 				5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2199,6 +2213,7 @@
 				D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
+				D1662A782E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2218,6 +2233,7 @@
 				D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */,
+				D1662A772E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2237,6 +2253,7 @@
 				D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
+				D1662A792E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
@@ -2256,6 +2273,7 @@
 				D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
+				D1662A752E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2275,6 +2293,7 @@
 				D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
+				D1662A702E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
 				5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2294,6 +2313,7 @@
 				D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
+				D1662A6F2E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2313,6 +2333,7 @@
 				D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
+				D1662A732E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2332,6 +2353,7 @@
 				D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
+				D1662A742E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,

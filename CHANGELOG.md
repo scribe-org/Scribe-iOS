@@ -28,6 +28,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/514)).
 
+### 🌐 Localization
+
+- Localized the "Not in Wikidata" explanation messages to match the device language ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538)).
+
 ### 🐞 Bug Fixes
 
 - The tab bar titles are now localized for the application ([#517](https://github.com/scribe-org/Scribe-iOS/issues/517)).
