@@ -37,7 +37,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l"])
       .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "delete"])
-      .addRow(["123", "selectKeyboard", "space", "return"])
+      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
       .build()
   }
 
@@ -46,7 +46,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
@@ -56,7 +56,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"])
+      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -77,7 +77,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
       .addRow(["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
       .build()
   }
 
@@ -86,7 +86,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
       .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
       .replaceKey(row: 1, column: 2, to: currencyKey)
       .build()
   }
@@ -96,7 +96,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"])
       .addRow(["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -115,7 +115,7 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
       .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"])
       .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "'", "return"])
       .addRow(["shift", "-", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
       .build()
   }
 
@@ -123,9 +123,9 @@ struct ENKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
       .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "~", "°"])
-      .addRow([SpecialKeys.capsLock, "-", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"])
-      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "|", "_", ".", ",", "/", "shift"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
+      .addRow([SpecialKeys.capsLock, "-", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"]) // "undo"
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "|", "_", ".", ",", "/", "shift"]) // "redo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
       .build()
   }
 }
@@ -142,13 +142,11 @@ func getENKeys() {
   var currencyKey = ENKeyboardConstants.defaultCurrencyKey
   var currencyKeys = ENKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
-  
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
   } else {
     userDefaults.setValue(currencyKey, forKey: dictionaryKey)
   }
-  
   if let index = currencyKeys.firstIndex(of: currencyKey) {
     currencyKeys.remove(at: index)
   }
@@ -163,6 +161,7 @@ func getENKeys() {
     rightKeyChars = ["p", "0", "\"", "=", "·"]
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   } else {
+    // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
       letterKeys = ENKeyboardProvider.genPadExpandedLetterKeys()
       symbolKeys = ENKeyboardProvider.genPadExpandedSymbolKeys()
@@ -174,6 +173,7 @@ func getENKeys() {
       letterKeys = ENKeyboardProvider.genPadLetterKeys()
       numberKeys = ENKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
       symbolKeys = ENKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+
       letterKeys.removeFirst(1)
 
       leftKeyChars = ["q", "1"]
@@ -207,7 +207,7 @@ func setENKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
-  invalidCommandMsg = NSLocalizedString("keyboard.not_in_wikidata", comment: "Message shown when a word isn't found in Wikidata")
+  invalidCommandMsg = "Not in Wikidata"
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
   verbsAfterPronounsArray = ["have", "be", "can"]
@@ -221,29 +221,28 @@ func setENKeyboardLayout() {
     "they": "presSimp"
   ]
 
-  translateKeyLbl = NSLocalizedString("keyboard.translate", comment: "Translate key label")
-  translatePlaceholder = NSLocalizedString("keyboard.enter_word", comment: "Translate placeholder text")
+  translateKeyLbl = "Translate"
+  translatePlaceholder = "Enter a word"
   translatePrompt = commandPromptSpacing + "en -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
-  conjugateKeyLbl = NSLocalizedString("keyboard.conjugate", comment: "Conjugate key label")
-  conjugatePlaceholder = NSLocalizedString("keyboard.enter_verb", comment: "Conjugate placeholder text")
+  conjugateKeyLbl = "Conjugate"
+  conjugatePlaceholder = "Enter a verb"
   conjugatePrompt = commandPromptSpacing + "Conjugate: "
   conjugatePromptAndCursor = conjugatePrompt + commandCursor
   conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
   conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
   conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
 
-  pluralKeyLbl = NSLocalizedString("keyboard.plural", comment: "Plural key label")
-  pluralPlaceholder = NSLocalizedString("keyboard.enter_noun", comment: "Plural placeholder text")
+  pluralKeyLbl = "Plural"
+  pluralPlaceholder = "Enter a noun"
   pluralPrompt = commandPromptSpacing + "Plural: "
   pluralPromptAndCursor = pluralPrompt + commandCursor
   pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
   pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
   pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
-  alreadyPluralMsg = NSLocalizedString("keyboard.already_plural", comment: "Message shown when word is already plural")
+  alreadyPluralMsg = "Already plural"
 }
-

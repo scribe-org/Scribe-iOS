@@ -133,7 +133,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
 
 func getPTKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-    fatalError()
+    fatalError("Unable to access shared user defaults")
   }
 
   var currencyKey = PTKeyboardConstants.defaultCurrencyKey
