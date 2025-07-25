@@ -2004,13 +2004,13 @@ class KeyboardViewController: UIInputViewController {
       requestSupplementaryLexicon { (userLexicon: UILexicon?) in
         if let lexicon = userLexicon {
           for item in lexicon.entries where item.documentText.count > 1 {
-              LanguageDBManager.shared.insertAutocompleteLexion(of: item.documentText)
+              LanguageDBManager.shared.insertAutocompleteLexicon(of: item.documentText)
           }
         }
       }
 
       // Drop non-unique values in case the lexicon has added words that were already present.
-      LanguageDBManager.shared.deleteNonUniqueAutosuggestions()
+      LanguageDBManager.shared.deleteNonUniqueAutocompletions()
     }
 
     setKeyboard()

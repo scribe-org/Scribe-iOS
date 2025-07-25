@@ -168,7 +168,7 @@ class LanguageDBManager {
 
 extension LanguageDBManager {
   /// Delete non-unique values in case the lexicon has added words that were already present.
-  func deleteNonUniqueAutosuggestions() {
+  func deleteNonUniqueAutocompletions() {
     let query = """
     DELETE FROM
       autocomplete_lexicon
@@ -189,7 +189,7 @@ extension LanguageDBManager {
   }
 
   /// Add words  to autocompletions.
-  func insertAutocompleteLexion(of word: String) {
+  func insertAutocompleteLexicon(of word: String) {
     let query = """
     INSERT OR IGNORE INTO
       autocomplete_lexicon (word)
