@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 """
 Converts from Scribe-i18n localization JSON files to string.xml files.
 
@@ -63,4 +64,4 @@ for lang, translations in lang_data.items():
 
         xml_file.write("</resources>\n")
 
-print("Scribe-i18n localization JSON files successfully converted to the strings file.")
+print("Scribe-i18n localization JSON files successfully converted to the strings files.")
