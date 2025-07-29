@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 """
 Converts from the Scribe-i18n Localizable.xcstrings file to localization JSON files.
 

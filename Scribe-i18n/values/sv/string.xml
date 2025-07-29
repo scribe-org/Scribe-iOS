@@ -18,7 +18,7 @@
     <string name="app.about.community.view_apps">Visa all Scribe-applikationer</string>
     <string name="app.about.community.wikimedia">Wikimedia och Scribe</string>
     <string name="app.about.community.wikimedia.caption">Om vårt samarbete</string>
-    <string name="app.about.community.wikimedia.text_1">Scribe skulle inte vara möjligt utan de otaliga bidrag som görs till de olika Wikimedia-projekten. Scribe använder sig specifikt av data från Wikidata Lexicographical data community, och data från Wikipedia för de olika språk som Scribe stöder.</string>
+    <string name="app.about.community.wikimedia.text_1">Scribe skulle inte vara möjligt utan de otaliga bidrag som görs till de olika Wikimedia-projekten. Scribe använder sig av data från Wikidata Lexicographical data gemenskapen, och data från Wikipedia för de olika språk som Scribe stöder.</string>
     <string name="app.about.community.wikimedia.text_2">Wikidata är en flerspråkig kunskapsgraf som underhålls kollektivt. Den hostas av Wikimedia Foundation. Den tillhandahåller data som kan användas under Creative Commons Public Domain-licensen (CC0). Scribe använder sig av språk-relaterad data från Wikidata för att ge användare tillgång till diverse grammatiska funktioner.</string>
     <string name="app.about.community.wikimedia.text_3">Wikipedia är en flerspråkig gratis online-encyklopedi skriven och underhållen av en gemenskap av volontärer genom öppet samarbete och ett wiki-baserat redigeringssystem. Scribe använder data från Wikipedia för att producera autoförslag genom att härleda de vanligaste orden i ett språk samt de vanligaste orden som följer dem.</string>
     <string name="app.about.feedback.app_hints">Återställ app-tips</string>

@@ -46,6 +46,12 @@
             "value" : "अंग्रेज़ी"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Inggris"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -58,10 +64,22 @@
             "value" : "इंग्रजी"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inglês"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Engelska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İngilizce"
           }
         }
       }
@@ -111,6 +129,12 @@
             "value" : "फ्रेंच"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Prancis"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -123,10 +147,22 @@
             "value" : "फ्रेंच"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Francês"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Franska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fransızca"
           }
         }
       }
@@ -176,6 +212,12 @@
             "value" : "जर्मन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Jerman"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -188,10 +230,22 @@
             "value" : "जर्मन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alemão"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Tyska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Almanca"
           }
         }
       }
@@ -241,6 +295,12 @@
             "value" : "इतालवी"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Italia"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -253,10 +313,22 @@
             "value" : "इटालियन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Italiano"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Italienska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İtalyanca"
           }
         }
       }
@@ -306,6 +378,12 @@
             "value" : "पुर्तगाली"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Portugis"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -318,10 +396,22 @@
             "value" : "पोर्तुगीज"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Português"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Portugisiska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Portekizce"
           }
         }
       }
@@ -371,6 +461,12 @@
             "value" : "रूसी"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Rusia"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -383,10 +479,22 @@
             "value" : "रशियन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Russo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ryska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Rusça"
           }
         }
       }
@@ -436,6 +544,12 @@
             "value" : "स्पेनिश"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Spanyol"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -448,10 +562,22 @@
             "value" : "स्पॅनिश"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Espanhol"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Spanska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İspanyolca"
           }
         }
       }
@@ -501,6 +627,12 @@
             "value" : "स्वीडिश"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa Swedia"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -513,10 +645,22 @@
             "value" : "स्वीडिश"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sueco"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Svenska"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İsveççe"
           }
         }
       }
@@ -566,6 +710,12 @@
             "value" : "यहां आप स्क्राइब और इसकी समुदाय के बारे में और जान सकते हैं।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Di sini kamu bisa mengetahui lebih banyak tentang Scribe dan komunitasnya."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -578,10 +728,22 @@
             "value" : "इथे तुम्ही स्क्राइब आणि त्याच्या समुदायाबद्दल अधिक जाणून घेऊ शकता."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Saiba mais sobre este aplicativo e a nossa comunidade."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Här kan du lära dig mer om Scribe och dess community."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe ve topluluğu hakkında daha fazla bilgi edinebileceğiniz yer burası."
           }
         }
       }
@@ -631,6 +793,12 @@
             "value" : "गिटहब पर कोड देखें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lihat kode di GitHub"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -643,10 +811,22 @@
             "value" : "गिटहबवर कोड पहा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Veja o código no GitHub"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "See koden på GitHub"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "GitHub'da kodu gör"
           }
         }
       }
@@ -696,6 +876,12 @@
             "value" : "हमें मस्तोडान पर फॉलो करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ikuti kami di Mastodon"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -708,10 +894,22 @@
             "value" : "आम्हाला मॅस्टोडॉनवर फॉलो करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Siga-nos no Mastodon"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Följ oss på Mastodon"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mastodon'da bizi takip et"
           }
         }
       }
@@ -761,6 +959,12 @@
             "value" : "मैट्रिक्स पर टीम से बात करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mengobrol dengan tim di Matrix"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -773,10 +977,22 @@
             "value" : "मॅट्रिक्सवर टीमशी बोला"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Converse conosco no Matrix"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Chatta med teamet på Matrix"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Matrix'te ekiple sohbet et"
           }
         }
       }
@@ -826,6 +1042,12 @@
             "value" : "स्क्राइब कोंजूगेट साझा करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bagikan Konjugasi Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -838,10 +1060,22 @@
             "value" : "स्क्राइब कॉन्जुगेट शेअर करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Compartilhe o Scribe Conjugate"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Dela Scribe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe Conjugate'i paylaş"
           }
         }
       }
@@ -891,6 +1125,12 @@
             "value" : "स्क्राइब साझा करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bagikan Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -903,10 +1143,22 @@
             "value" : "स्क्राइब शेअर करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Compartilhe o Scribe"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Dela Scribe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe'ı paylaş"
           }
         }
       }
@@ -956,6 +1208,12 @@
             "value" : "समुदाय"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Komunitas"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -968,10 +1226,22 @@
             "value" : "समुदाय"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Comunidade"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Community"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Topluluk"
           }
         }
       }
@@ -1021,6 +1291,12 @@
             "value" : "सभी स्क्राइब ऐप्स देखें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tampilkan semua aplikasi Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1033,10 +1309,22 @@
             "value" : "सर्व स्क्राइब अ‍ॅप्स पहा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Veja todos os aplicativos Scribe"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Visa all Scribe-applikationer"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tüm Scribe uygulamalarını görüntüle"
           }
         }
       }
@@ -1086,6 +1374,12 @@
             "value" : "विकिमीडिया और स्क्राइब"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia dan Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1098,10 +1392,22 @@
             "value" : "विकिमीडियाचे योगदान आणि स्क्राइब"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia e Scribe"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Wikimedia och Scribe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia ve Scribe"
           }
         }
       }
@@ -1151,6 +1457,12 @@
             "value" : "हम कैसे एक साथ काम करते हैं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bagaimana kami bekerjasama"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1163,10 +1475,22 @@
             "value" : "आम्ही एकत्र कसे काम करतो"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Como nós trabalhamos juntos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Om vårt samarbete"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nasıl birlikte çalışıyoruz"
           }
         }
       }
@@ -1189,31 +1513,37 @@
         "de" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Scribe wäre ohne die etlichen Mitwirkungen von Wikimedia Mitwirkenden, den Projekten, die sie unterstützen, gegenüber, nicht möglich. Genauer benutzt Scribe Daten der Lexikografischen Datencommunity in Wikidata, sowie solche von Wikipedia für jede von Scribe unterstützte Sprache."
+            "value" : "Scribe wäre ohne die etlichen Mitwirkungen von Wikimedia Mitwirkenden, den Projekten, die sie unterstützen, gegenüber, nicht möglich. Scribe benutzt Daten der Lexikografischen Datencommunity in Wikidata, sowie solche von Wikipedia für jede von Scribe unterstützte Sprache."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Specifically Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports."
+            "value" : "Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Scribe no sería posible sin las innumerables contribuciones de los colaboradores de Wikimedia a los numerosos proyectos que apoya. En concreto, Scribe utiliza datos de la comunidad de datos lexicográficos de Wikidata, así como datos de Wikipedia para cada idioma que Scribe admite."
+            "value" : "Scribe no sería posible sin las innumerables contribuciones de los colaboradores de Wikimedia a los numerosos proyectos que apoya. Scribe utiliza datos de la comunidad de datos lexicográficos de Wikidata, así como datos de Wikipedia para cada idioma que Scribe admite."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Scribe ne pourrait pas exister sans les nombreuses contributions des contributeurs de Wikimedia aux nombreux projets qu'ils soutiennent. En particulier, Scribe utilise les données de la communauté de données lexicographiques Wikidata, ainsi que les données de Wikipédia pour chaque langue prise en charge par Scribe."
+            "value" : "Scribe ne pourrait pas exister sans les nombreuses contributions des contributeurs de Wikimedia aux nombreux projets qu'ils soutiennent. Scribe utilise les données de la communauté de données lexicographiques Wikidata, ainsi que les données de Wikipédia pour chaque langue prise en charge par Scribe."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "",
             "value" : "स्क्राइब विकिमीडिया योगदानकर्ताओं द्वारा समर्थित कई परियोजनाओं में योगदान के बिना संभव नहीं होता। विशेष रूप से स्क्राइब, विकिडेटा शब्दकोशीय डेटा समुदाय से डेटा और स्क्राइब द्वारा समर्थित प्रत्येक भाषा के लिए विकिपीडिया से डेटा का उपयोग करता है।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe tidak akan mungkin ada tanpa kontribusi yang tak terhitung jumlahnya oleh kontributor Wikimedia dan proyek-proyek yang didukungnya. Secara khusus, Scribe memanfaatkan data dari komunitas data Lexicographical Wikidata, serta data dari Wikipedia untuk setiap bahasa yang didukung oleh Scribe."
           }
         },
         "ko" : {
@@ -1228,10 +1558,22 @@
             "value" : "विकिमीडिया योगदानकर्त्यांच्या समर्थनाशिवाय स्क्राइब शक्य झाले नसते. विशेषतः स्क्राइब विकिडेटा शब्दकोशीय डेटा आणि विविध भाषांसाठी विकिपीडियाच्या डेटाचा वापर करतो."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "O Scribe não seria possível sem as incontáveis contribuições feitas pelos contribuidores da Wikimedia aos diversos projetos que ela apoia. O Scribe usa dados da comunidade de dados lexográficos da Wikidata, bem como dados da Wikipédia, para cada idioma ofertado pelo Scribe."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
-            "value" : "Scribe skulle inte vara möjligt utan de otaliga bidrag som görs till de olika Wikimedia-projekten. Scribe använder sig specifikt av data från Wikidata Lexicographical data community, och data från Wikipedia för de olika språk som Scribe stöder."
+            "value" : "Scribe skulle inte vara möjligt utan de otaliga bidrag som görs till de olika Wikimedia-projekten. Scribe använder sig av data från Wikidata Lexicographical data gemenskapen, och data från Wikipedia för de olika språk som Scribe stöder."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe, Wikimedia projelerine katkıda bulunan sayısız katkıcının desteği olmadan mümkün olamazdı. Scribe, desteklediği her dil için Wikidata Lexicographical veri topluluğundan ve Wikipedia'dan veri kullanır."
           }
         }
       }
@@ -1281,6 +1623,12 @@
             "value" : "विकिडेटा एक सहयोगी संपादित बहुभाषीय ज्ञान ग्राफ है जो विकिमीडिया फाउंडेशन द्वारा होस्ट किया गया है। यह स्वतंत्र रूप से उपलब्ध डेटा प्रदान करता है जिसका कोई भी क्रिएटिव कॉमन्स पब्लिक डोमेन लाइसेंस (CC0) के तहत उपयोग कर सकता है। स्क्राइब, उपयोगकर्ताओं को क्रिया रूपांतरण, संज्ञा-फॉर्म एनोटेशन, संज्ञा बहुवचन और कई अन्य विशेषताएं प्रदान करने के लिए विकिडेटा से भाषा डेटा का उपयोग करता है।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata adalah grafik pengetahuan multibahasa yang disunting secara kolaboratif dan diselenggarakan oleh Wikimedia Foundation. Wikidata menyediakan data yang tersedia secara bebas yang dapat digunakan oleh siapa saja di bawah lisensi Creative Commons Public Domain (CC0). Scribe menggunakan data bahasa dari Wikidata untuk menyediakan konjugasi kata kerja, anotasi bentuk kata benda, bentuk jamak kata benda, dan banyak fitur lainnya kepada pengguna."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1293,10 +1641,22 @@
             "value" : "विकिडेटा हा विकिमीडिया फाउंडेशनद्वारे होस्ट केलेला एक सहयोगी संपादित बहुभाषिक ज्ञान ग्राफ आहे. याचा डेटा क्रिएटिव्ह कॉमन्स पब्लिक डोमेन (CC0) अंतर्गत उपलब्ध आहे."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "A Wikidata é um grafo de conhecimento multilíngue editado colaborativamente e hospedado pela Fundação Wikimedia. A Wikidata fornece dados de uso gratuito por qualquer pessoa sob a licença Creative Commons de Domínio Público (CC0). O Scribe usa dados linguísticos da Wikidata para fornecer aos seus usuários conjugações de verbos, anotações de substantivos, plurais, e muitas outras funcionalidades."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Wikidata är en flerspråkig kunskapsgraf som underhålls kollektivt. Den hostas av Wikimedia Foundation. Den tillhandahåller data som kan användas under Creative Commons Public Domain-licensen (CC0). Scribe använder sig av språk-relaterad data från Wikidata för att ge användare tillgång till diverse grammatiska funktioner."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia Vakfı tarafından barındırılan Wikidata, kolaboratif çok dilli bir bilgi grafiğidir. Herkesin ücretsiz olarak kullanabileceği verileri, Creative Commons Kamu Malı lisansı (CC0) altında erişebilir kılar. Scribe, kullanıcılarına fiil çekimleri, isim formları açıklamaları, isim çoğulları ve daha birçok özellik sağlamak için Wikidata'nın dil verilerini kullanır."
           }
         }
       }
@@ -1346,6 +1706,12 @@
             "value" : "विकिपीडिया एक बहुभाषीय स्वतंत्र ऑनलाइन विश्वकोश है जिसे स्वैच्छिक समुदाय द्वारा ओपन सहयोग और विकि-आधारित संपादन प्रणाली के माध्यम से लिखा और बनाए रखा जाता है। स्क्राइब, भाषा में सबसे सामान्य शब्दों के साथ-साथ उनके बाद आने वाले सबसे सामान्य शब्दों को निकालकर ऑटो-सुझाव उत्पन्न करने के लिए विकिपीडिया से डेटा का उपयोग करता है।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikipedia adalah ensiklopedia multibahasa online gratis yang ditulis dan dikelola oleh komunitas sukarelawan memalui kolaborase terbuka dan sistem penyuntingan berbasis wiki. Scribe menggunakan data dari Wikipedia untuk menghasilkan saran otomatis dengan cara menghasilkan daftar kata yang paling umum dalam suatu bahasa, termasuk kata-kata yang umum muncul setelahnya."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1358,10 +1724,22 @@
             "value" : "विकिपीडिया हे एक बहुभाषिक मुक्त ऑनलाइन विश्वकोश आहे. स्क्राइब शब्दांच्या सुचवण्या करण्यासाठी विकिपीडियाच्या डेटाचा वापर करतो."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "A Wikipédia é uma enciclopédia multilíngue online e gratuita, escrita e mantida por uma comunidade de voluntários através de colaboração aberta e um sistema de edição baseado em wiki. O Scribe usa dados da Wikiédia para fornecer sugestões automáticas das palavras mais comuns em um idioma, bem como as palavras que mais comumente as sucedem."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Wikipedia är en flerspråkig gratis online-encyklopedi skriven och underhållen av en gemenskap av volontärer genom öppet samarbete och ett wiki-baserat redigeringssystem. Scribe använder data från Wikipedia för att producera autoförslag genom att härleda de vanligaste orden i ett språk samt de vanligaste orden som följer dem."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikipedia, topluluğu gönüllülerden oluşan ve toplu işbirlik yoluyla yazılan ve sürdürülen, çok dilli bir ücretsiz çevrimiçi ansiklopedidir. Scribe, bir dildeki en yaygın kelimeleri ve onları takip eden en yaygın kelimeleri kullanarak otomatik öneriler üretmek için Wikipedia'dan veri kullanır."
           }
         }
       }
@@ -1411,6 +1789,12 @@
             "value" : "ऐप सुझाव रीसेट करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Reset petunjuk aplikasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1423,10 +1807,22 @@
             "value" : "अ‍ॅप सूचनांचे पुनरावलोकन करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Restaurar as dicas"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Återställ app-tips"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama ipuçlarını sıfırla"
           }
         }
       }
@@ -1476,6 +1872,12 @@
             "value" : "बग की रिपोर्ट करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Laporkan masalah"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1488,10 +1890,22 @@
             "value" : "बग रिपोर्ट करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Reportar um bug"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Rapportera ett fel"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hata bildir"
           }
         }
       }
@@ -1541,6 +1955,12 @@
             "value" : "हमें ईमेल भेजें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kirimi kami email"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1553,10 +1973,22 @@
             "value" : "आम्हाला ईमेल पाठवा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fale conosco"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Skicka ett e-mail till oss"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bize e-posta gönder"
           }
         }
       }
@@ -1606,6 +2038,12 @@
             "value" : "स्क्राइब कोंजूगेट की रेटिंग करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nilai Konjugasi Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1618,10 +2056,22 @@
             "value" : "स्क्राइब कॉन्जुगेटला रेट करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Avaliar o Scribe Conjugar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Betygsätt Scribe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe Conjugate'i değerlendir"
           }
         }
       }
@@ -1671,6 +2121,12 @@
             "value" : "स्क्राइब की रेटिंग करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nilai Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1683,10 +2139,22 @@
             "value" : "स्क्राइबला रेट करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Avaliar o Scribe"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Betygsätt Scribe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe'ı değerlendir"
           }
         }
       }
@@ -1736,6 +2204,12 @@
             "value" : "फीडबैक और समर्थन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Umpan balik dan dukungan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1748,10 +2222,22 @@
             "value" : "प्रतिक्रिया आणि समर्थन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Feedback e suporte"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Feedback och support"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Geri bildirim ve destek"
           }
         }
       }
@@ -1801,6 +2287,12 @@
             "value" : "संस्करण"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Versi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1813,10 +2305,22 @@
             "value" : "आवृत्ती"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Versão"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Version"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sürüm"
           }
         }
       }
@@ -1866,6 +2370,12 @@
             "value" : "गोपनीयता नीति"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kebijakan privasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1878,10 +2388,22 @@
             "value" : "गोपनीयता धोरण"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Política de privacidade"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Integritetspolicy"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Gizlilik politikası"
           }
         }
       }
@@ -1931,6 +2453,12 @@
             "value" : "आपकी सुरक्षा का ध्यान रखना"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Menjaga kamu tetap aman"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -1943,10 +2471,22 @@
             "value" : "तुमच्या सुरक्षेची काळजी"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sua segurança é nossa prioridade"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Håller dig säker"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sizi güvende tutmak"
           }
         }
       }
@@ -1996,6 +2536,12 @@
             "value" : "कृपया ध्यान दें कि इस नीति का अंग्रेज़ी संस्करण अन्य सभी संस्करणों पर प्राथमिकता रखता है।\n\nस्क्राइब  डेवलपर्स (स्क्राइब ) ने iOS एप्लिकेशन \"स्क्राइब  - Language भाषा कीबोर्डs\" (सेवा) को एक ओपन-सोर्स एप्लिकेशन के रूप में बनाया। यह सेवा स्क्राइब  द्वारा निःशुल्क प्रदान की जाती है और इसका उपयोग यथास्थिति के आधार पर किया जा सकता है।\n\nयह गोपनीयता नीति (नीति) पाठक को उन नीतियों के बारे में सूचित करने के लिए है जिनका उपयोग इस सेवा (उपयोगकर्ताओं) के उपयोगकर्ताओं की व्यक्तिगत जानकारी (उपयोगकर्ता की सूचना) और उपयोग डेटा (उपयोगकर्ता का डेटा) तक पहुँच, ट्रैकिंग, संग्रह, रखरखाव, उपयोग और प्रकटीकरण के लिए किया जाता है।\n\nउपयोगकर्ता की सूचना को विशेष रूप से उन जानकारी के रूप में परिभाषित किया गया है जो उपयोगकर्ता या उनके द्वारा उपयोग किए जाने वाले उपकरणों से संबंधित होती हैं।\n\nउपयोगकर्ता का डेटा को विशेष रूप से उन पाठों के रूप में परिभाषित किया गया है जिन्हें उपयोगकर्ता इस सेवा का उपयोग करते समय टाइप करते हैं या किए गए क्रियाओं के रूप में परिभाषित किया गया है।\n\n1. नीति वक्तव्य\n\nयह सेवा कोई भी USER उपयोगकर्ता की सूचना या उपयोगकर्ता का डेटा तक पहुँच, ट्रैक, संग्रह, रखरखाव, उपयोग या प्रकटीकरण नहीं करती है।\n\n2. ट्रैक न करें\n\nउपयोगकर्ता जो स्क्राइब  से संपर्क करते हैं और अपनी उपयोगकर्ता की सूचना और उपयोगकर्ता का डेटा को ट्रैक न करने के लिए कहते हैं, उन्हें इस नीति की एक प्रति और सभी स्रोत कोड का लिंक प्रदान किया जाएगा, यह प्रमाण देने के लिए कि उन्हें ट्रैक नहीं किया जा रहा है।\n\n3. तृतीय-पक्ष डेटा\n\nयह सेवा तृतीय-पक्ष डेटा का उपयोग करती है। इस सेवा के निर्माण में उपयोग किया गया सभी डेटा ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में अनुमति देते हैं। विशेष रूप से, इस सेवा का डेटा विकिडेटा, विकिपीडिया और यूनिकोड से आता है। विकिडेटा बताता है कि, \"मुख्य, प्रॉपर्टी और लेक्सिम नेमस्पेस में उपलब्ध सभी संरचित डेटा क्रिएटिव कॉमन्स CC0 लाइसेंस के तहत उपलब्ध है; अन्य नेमस्पेस में उपलब्ध टेक्स्ट क्रिएटिव कॉमन्स एट्रिब्यूशन-शेयर अलाइक लाइसेंस के तहत उपलब्ध है।\" विकिडेटा डेटा उपयोग के बारे में नीति https://www.wikidata.org/wiki/Wikidata:Licensing पर पाई जा सकती है। विकिपीडिया बताता है कि टेक्स्ट डेटा, जिसे इस सेवा द्वारा उपयोग किया जाता है, \"… क्रिएटिव कॉमन्स एट्रिब्यूशन शेयर-अलाइक लाइसेंस की शर्तों के तहत उपयोग किया जा सकता है\"। विकिपीडिया डेटा उपयोग के बारे में नीति https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content पर पाई जा सकती है। यूनिकोड यह अनुमति प्रदान करता है, \"… किसी भी व्यक्ति को यूनिकोड डेटा फाइलों और संबंधित दस्तावेज़ीकरण की एक प्रति प्राप्त करने की अनुमति है (\"डेटा फाइल\") या यूनिकोड सॉफ़्टवेयर और संबंधित दस्तावेज़ीकरण (\"सॉफ़्टवेयर\") को बिना किसी प्रतिबंध के उपयोग करने की अनुमति देता है।\" यूनिकोड डेटा उपयोग के बारे में नीति https://www.unicode.org/license.txt पर पाई जा सकती है।\n\n4. तृतीय-पक्ष स्रोत कोड\n\nयह सेवा तृतीय-पक्ष कोड पर आधारित है। इस सेवा के निर्माण में उपयोग किया गया सभी स्रोत कोड ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में पूरी तरह से अनुमति देते हैं। विशेष रूप से, इस परियोजना का आधार Ethan Sarif-Kattan द्वारा बनाया गया कस्टम कीबोर्ड प्रोजेक्ट था। कस्टम कीबोर्डकस्टम कीबोर्ड को MIT लाइसेंस के तहत जारी किया गया था, जो https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE पर उपलब्ध है।\n\n5. तृतीय-पक्ष सेवाएं\n\nयह सेवा तृतीय-पक्ष सेवाओं का उपयोग करती है ताकि कुछ तृतीय-पक्ष डेटा को परिवर्तित किया जा सके। विशेष रूप से, डेटा Hugging Face transformers के मॉडल का उपयोग करके अनुवाद किया गया है। यह सेवा Apache License 2.0 के तहत आती है, जो इसके व्यावसायिक उपयोग, संशोधन, वितरण, पेटेंट उपयोग और निजी उपयोग के लिए उपलब्ध है। उपरोक्त सेवा का लाइसेंस https://github.com/huggingface/transformers/blob/master/LICENSE पर पाया जा सकता है।\n\n6. तृतीय-पक्ष लिंक\n\nयह सेवा बाहरी वेबसाइटों के लिंक शामिल करती है। यदि उपयोगकर्ता तृतीय-पक्ष लिंक पर क्लिक करते हैं, तो उन्हें एक वेबसाइट पर निर्देशित किया जाएगा। ध्यान दें कि ये बाहरी वेबसाइटें इस सेवा द्वारा संचालित नहीं हैं। इसलिए, उपयोगकर्ता को इन वेबसाइटों की गोपनीयता नीति की समीक्षा करने की सिफारिश की जाती है। यह सेवा किसी भी तृतीय-पक्ष साइटों या सेवाओं की सामग्री, गोपनीयता नीतियों या प्रथाओं के लिए कोई ज़िम्मेदारी नहीं लेती है।\n\n7. तृतीय-पक्ष छवियां\n\nयह सेवा तृतीय-पक्ष द्वारा कॉपीराइट की गई छवियां शामिल करती है। विशेष रूप से, इस एप में गिटहब, Inc. के लोगो की एक प्रति शामिल है और विकिडेटा का लोगो, जिसे Wikimedia फाउंडेशन, Inc. द्वारा ट्रेडमार्क किया गया है। गिटहब लोगो के उपयोग की शर्तें https://github.com/logos पर पाई जाती हैं, और विकिडेटा लोगो के उपयोग की शर्तें निम्नलिखित Wikimedia पेज पर पाई जाती हैं: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy। यह सेवा कॉपीराइट की गई छवियों का उपयोग उन मानदंडों के अनुसार करती है, जिसमें केवल गिटहब लोगो की एक घुमाव शामिल होती है, जो ओपन-सोर्स समुदाय में यह इंगित करने के लिए सामान्य है कि गिटहब वेबसाइट का लिंक है।\n\n8. सामग्री सूचना\n\nयह सेवा उपयोगकर्ता को भाषाई सामग्री (CONTENT) तक पहुँचने की अनुमति देती है। कुछ CONTENT को बच्चों और नाबालिगों के लिए अनुपयुक्त माना जा सकता है। सेवा का उपयोग करके CONTENT तक पहुँच इस तरह से किया जाता है कि जानकारी तब तक अनुपलब्ध होती है जब तक उसे विशेष रूप से नहीं जाना जाता। विशेष रूप से, उपयोगकर्ता \"शब्दों\" का अनुवाद कर सकते हैं, क्रियाओं को संयोजित कर सकते हैं और CONTENT की अन्य व्याकरणिक विशेषताओं तक पहुँच सकते हैं, जो यौन, हिंसक या अन्यथा अनुचित प्रकृति की हो सकती है। उपयोगकर्ता \"ऐसी सामग्री\" का अनुवाद नहीं कर सकते, क्रियाओं को संयोजित नहीं कर सकते और CONTENT की अन्य व्याकरणिक विशेषताओं तक पहुँच नहीं सकते, जब तक वे पहले से CONTENT की प्रकृति के बारे में नहीं जानते हों। स्क्राइब  ऐसी सामग्री तक पहुँच की ज़िम्मेदारी नहीं लेता है।\n\n9. परिवर्तन\n\nयह नीति परिवर्तन के अधीन है। इस नीति में किए गए अपडेट सभी पिछले संस्करणों को प्रतिस्थापित करेंगे, और यदि इसे महत्वपूर्ण माना गया, तो यह अगले संबंधित अपडेट में स्पष्ट रूप से उल्लिखित होगा। स्क्राइब  उपयोगकर्ता को हमारी गोपनीयता प्रथाओं पर नवीनतम जानकारी के लिए समय-समय पर इस नीति की समीक्षा करने और किसी भी परिवर्तन से परिचित होने के लिए प्रोत्साहित करता है।\n\n10. संपर्क करें\n\nयदि आपके कोई प्रश्न, चिंताएँ, या सुझाव हैं तो कृपया https://github.com/scribe-org पर जाएँ या स्क्राइब  से स्क्राइब .langauge@gmail.com पर संपर्क करें। ऐसे पूछताछ के लिए जिम्मेदार व्यक्ति Andrew Tavis McAllister हैं।\n\n11. प्रभावी तिथि\n\nयह नीति 24 मई, 2022 से प्रभावी है।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Harap diperhatikan bahwa versi Bahasa Inggris dari kebijakan ini memiliki prioritas dibandingkan semua versi lainnya.\n\nPengembang Scribe (SCRIBE) membuat aplikasi iOS \"Scribe - Keyboard Bahasa\" (LAYANAN) sebagai aplikasi sumber terbuka. LAYANAN ini disediakan oleh SCRIBE tanpa biaya dan ditujukan untuk digunakan sebagaimana adanya.\n\nKebijakan privasi (KEBIJAKAN) digunakan untuk menginformasikan kepada pembaca kebijakan akan akses, pelacakan, pengumpulan, penyimpanan, penggunaan, dan pengungkapan informasi pribadi (INFORMASI PENGGUNA) dan penggunaan data (DATA PENGGUNA) untuk semua individu yang menggunakan LAYANAN ini (PENGGUNA).\n\nINFORMASI PENGGUNA secara khusus didefinisikan sebagai segala informasi yang berkaitan dengan PENGGUNA atau perangkat yang mereka gunakan untuk mengakses LAYANAN.\n\nDATA PENGGUNA secara khusus didefinisikan sebagai segala teks yang diketik atau tindakan yang dilakukan oleh PENGGUNA ketika menggunakan LAYANAN.\n\n1. Pernyataan Kebijakan\n\nLAYANAN ini tidak mengakses, melacak, mengumpulkan, menyimpan, menggunakan, atau membocorkan INFORMASI PENGGUNA atau DATA PENGGUNA apapun.\n\n2. Tidak Melacak\n\nPENGGUNA yang menghubungi SCRIBE untuk meminta agar INFORMASI PENGGUNA dan DATA PENGGUNA mereka tidak dilacak akan menerima salinan KEBIJAKAN ini beserta tautan ke seluruh kode sumber sebagai bukti bahwa pelacakan tidak dilakukan.\n\n3. Data Pihak Ketiga\n\nLayanan ini memanfaatkan data pihak ketiga. Semua data yang digunakan dalam pembuatan LAYANAN ini berasal dari sumber yang memperbolehkan penggunaan secara penuh sebagaimana dilakukan oleh LAYANAN. Secara khusus, data untuk LAYANAN ini berasal dari Wikidata, Wikipedia dan Unicode. Wikidata menyatakan, \"Semua data yang terstruktur di namespace utama, properti dan lexeme tersedia di bawah Lisensi Creative Commons CC0; teks di namespace lain tersedia di bawah Lisensi Creative Commons Attribution-Share Alike.\" Kebijakan yang menguraikan penggunaan data Wikidata dapat ditemukan di https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia menyatakan bahwa data teks, tipe data yang digunakan oleh LAYANAN, \"… dapat digunakan di bawah ketentuan lisensi Creative Commons Attribution Share-Alike\". Kebijakan yang menguraikan penggunaan data Wikipedia bisa ditemukan di https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode menyedikan izin, \"… bebas biaya, untuk siapapun memperoleh salinan dari berkas data Unicode dan dokumentasi terkait (\"Berkas Data\") atau perangkat lunak Unicode dan dokumentasi terkait (\"Perangkat Lunak\") untuk mengelola Berkas Data atau Perangkat Lunak tanpa pembatasan…\" Kebijakan yang menguraikan penggunaan data Unicode bisa ditemukan di https://www.unicode.org/license.txt.\n\n4. Sumber Kode Pihak Ketiga\n\nLAYANAN ini berbasis pada kode pihak ketiga. Seluruh kode sumber yang digunakan dalam pembuatan LAYANAN ini berasal dari sumber yang mengizinkan penggunaannya secara penuh sebagaimana dilakukan oleh LAYANAN ini. Secara khusus, dasar dari proyek ini adalah proyek Custom Keyboard oleh Ethan Sarif-Kattan. Custom Keyboard dirilis di bawah lisensi MIT,lisensi ini tersedia di https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Layanan Pihak Ketiga\n\nLAYANAN ini menggunakan layanan pihak ketiga untuk memproses sebagian data pihak ketiga. Secara khusus, data telah diterjemahkan menggunakan model dari Hugging Face transformers. Layanan ini dilindungi oleh Lisensi Apache 2.0, yang menyatakan bahwa ia tersedia untuk penggunaan komersil, modifikasi, distribusi, penggunaan paten, dan penggunaan pribadi. Lisensi untuk layanan tersebut di atas dapat ditemukan di https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Tautan Pihak Ketiga\n\nLAYANAN ini mengandung tautan-tautan ke situs web eksternal. Jika PENGGUNA mengeklik tautan pihak ketiga, ia akan diarahkan ke sebuah situs web. Perlu dicatat bahwa situs web eksternal ini tidak dioperasikan oleh LAYANAN ini. Oleh karena itu, PENGGUNA sangat disarankan untuk membaca dan meninjau kebijakan privasi situs web tersebut. LAYANAN ini tidak memiliki kendali dan tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik-praktik dari situs-situs atau layanan-layanan pihak ketiga.\n\n7. Gambar Pihak Ketiga\n\nLAYANAN ini berisi gambar-gambar yang dilindungi hak cipta oleh pihak ketiga. Secara khusus, aplikasi ini menyertakan salinan dari logo-logo GitHub, Inc dan Wikidata, terdaftar sebagai merek dagang oleh Wikimedia Foundation, Inc. Ketentuan penggunaan logo Github bisa ditemukan di https://github.com/logos, dan ketentuan untuk logo Wikidata bisa ditemukan di halaman Wikimedia berikut: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. LAYANAN ini menggunakan gambar-gambar berhak cipta sesuai dengan ketentuan tersebut, dengan satu-satunya pengecualian yaitu rotasi logo GitHub yang umum digunakan dalam komunitas open-source untuk menandakan adanya tautan ke situs web GitHub.\n\n8. Pemberitahuan Konten\n\nLAYANAN ini memperbolehkan PENGGUNA untuk mengakses konten linguistik (KONTEN). Sebagian dari KONTEN ini mungkin dianggap tidak pantas untuk anak-anak dan remaja di bawah umur. Mengakses KONTEN menggunakan LAYANAN dilakukan sedemikian rupa sehingga informasi tersebut tidak dapat diakses kecuali jika diketahui secara jelas. Secara khusus, PENGGUNA \"dapat\" menerjemahkan kata, mengkonjugasi kata kerja, dan mengakses fitur gramatikal lainnya dari KONTEN yang mungkin bersifat seksual, kekerasan, atau dengan cara lain yang tidak pantas. PENGGUNA \"tidak dapat\" menerjemahkan kata, mengkonjugasi kata kerja, dan mengakses fitur gramatikal lainnya dari KONTEN yang mungkin bersifat seksual, kekerasan, atau dengan cara lain yang tidak pantas jika mereka belum mengetahui tentang sifat dari KONTEN ini. SCRIBE tidak bertanggung jawab atas akses terhadap KONTEN tersebut.\n\n9. Perubahan\n\nKEBIJAKAN ini dapat berubah sewaktu-waktu. Perubahan pada KEBIJAKAN ini akan menggantikan semua ketentuan sebelumnya, dan jika dianggap penting, akan disampaikan dengan jelas dalam pembaruan LAYANAN berikutnya. SCRIBE menyarankan para PENGGUNA agar secara berkala memeriksa KEBIJAKAN ini demi mendapatkan informasi terkini mengenai praktik privasi kami serta membiasakan diri dengan perubahan yang mungkin berlaku.\n\n10. KONTAK\n\nJika kamu memiliki pertanyaan, kekhawatiran, atau saran terkait KEBIJAKAN ini, jangan ragu untuk mengunjungi https://github.com/scribe-org atau kontak SCRIBE di scribe.langauge@gmail.com. Orang yang bertanggung jawab atas pertanyaan tersebut adalah Andrew Tavis McAllister.\n\n11.Tanggal Efektif\n\nKEBIJAKAN ini berlaku efektif sejak 24 Mei 2022."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2008,10 +2554,22 @@
             "value" : "कृपया लक्षात ठेवा की या धोरणाचा इंग्रजी आवृत्ती इतर सर्व आवृत्त्यांवर प्राधान्य देते.\n\nस्क्राइब डेव्हलपर्सनी (स्क्राइब) आयओएस अ‍ॅप्लिकेशन \"स्क्राइब - भाषा कीबोर्ड्स\" हे खुले-स्रोत अ‍ॅप्लिकेशन म्हणून तयार केले आहे. हे सेवा स्क्राइबद्वारे विनामूल्य प्रदान केली जाते."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Esteja ciente de que a versão em inglês desta política prevalece sobre todas as outras versões.\n\nOs desenvolvedores do Scribe (SCRIBE) criaram o aplicativo iOS \"Scribe - Teclados de Idiomas\" (SERVIÇO) como um aplicativo de código aberto. Este SERVIÇO é fornecido pelo SCRIBE sem custo e para ser utilizado como está.\n\nEsta política de privacidade (POLÍTICA) serve para informar sobre as políticas de acesso, rastreamento, coleta, retenção, uso e divulgação de informações pessoais (INFORMAÇÕES DO USUÁRIO) e dados de uso (DADOS DO USUÁRIO) para todos os indivíduos que utilizam este SERVIÇO (USUÁRIOS).\n\nAs INFORMAÇÕES DO USUÁRIO são especificamente definidas como quaisquer informações relacionadas aos próprios USUÁRIOS ou aos dispositivos que eles utilizam para acessar o SERVIÇO.\n\nOs DADOS DO USUÁRIO são especificamente definidos como qualquer texto digitado ou ações realizadas pelos USUÁRIOS durante o uso do SERVIÇO.\n\n1. Declaração de Política\n\nEste SERVIÇO não acessa, rastreia, coleta, retém, usa ou divulga quaisquer INFORMAÇÕES DO USUÁRIO ou DADOS DO USUÁRIO.\n\n2. Não Rastreamento\n\nOs USUÁRIOS que entrarem em contato com o SCRIBE para solicitar que suas INFORMAÇÕES DE USUÁRIO e DADOS DE USUÁRIO não sejam rastreados receberão uma cópia desta POLÍTICA, bem como um link para todos os códigos-fonte como prova de que não estão sendo rastreados.\n\n3. Dados de Terceiros\n\nEste SERVIÇO utiliza dados de terceiros. Todos os dados utilizados na criação deste SERVIÇO provêm de fontes que permitem seu uso integral na forma como é feito pelo SERVIÇO. Especificamente, os dados para este SERVIÇO provêm da Wikidata, Wikipédia e Unicode. A Wikidata declara que \"Todos os dados estruturados do espaço nominal principal e do de propriedade são disponibilizados ao abrigo da Licença Creative Commons CC0; o texto nos restantes espaços nominais é disponibilizado ao abrigo da Licença Atribuição-CompartilhaIgual da Creative Commons\". A política que detalha o uso de dados do Wikidata pode ser encontrada em https://www.wikidata.org/wiki/Wikidata:Licensing. A Wikipédia declara que dados de texto, o tipo de dado utilizado pelo SERVIÇO, \"... podem ser utilizados sob os termos da licença Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0) da Creative Commons\". A política que detalha o uso de dados da Wikipédia pode ser encontrada em https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. O Unicode concede permissão, \"... gratuitamente, a qualquer pessoa que obtenha uma cópia dos arquivos de dados Unicode e qualquer documentação associada (os \"Arquivos de Dados\") ou software Unicode e qualquer documentação associada (o \"Software\") para lidar com os Arquivos de Dados ou Software sem restrições...\" A política que detalha o uso de dados Unicode pode ser encontrada em https://www.unicode.org/license.txt.\n\n4. Código-fonte de terceiros\n\nEste SERVIÇO é baseado em código de terceiros. Todo o código-fonte utilizado na criação deste SERVIÇO provém de fontes que permitem seu pleno uso da forma como é feito pelo SERVIÇO. Especificamente, a base deste projeto foi o projeto Teclado Personalizado de Ethan Sarif-Kattan. O Teclado Personalizado foi lançado sob uma licença MIT, disponível em https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Serviços de Terceiros\n\nEste SERVIÇO utiliza serviços de terceiros para manipular alguns dos dados de terceiros. Especificamente, os dados foram traduzidos usando modelos de transformadores da Hugging Face. Este serviço é coberto pela Licença Apache 2.0, que declara que está disponível para uso comercial, modificação, distribuição, uso de patentes e uso privado. A licença para o serviço mencionado pode ser encontrada em https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Links de Terceiros\n\nEste SERVIÇO contém links para sites externos. Se os USUÁRIOS clicarem em um link de terceiros, serão direcionados para um site. Esteja ciente de que esses sites externos não são operados por este SERVIÇO. Portanto, é altamente recomendável que os USUÁRIOS revisem a política de privacidade desses sites. Este SERVIÇO não tem controle e não assume qualquer responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros.\n\n7. Imagens de Terceiros\n\nEste SERVIÇO contém imagens de terceiros protegidas por direitos autorais. Especificamente, este aplicativo inclui uma cópia dos logotipos do GitHub, Inc., e da Wikidata, marca registrada da Wikimedia Foundation, Inc. Os termos pelos quais o logotipo do GitHub pode ser usado podem ser encontrados em https://github.com/logos, e os termos para o uso do logotipo da Wikidata podem ser encontrados na seguinte página da Wikimedia: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. Este SERVIÇO usa as imagens protegidas por direitos autorais de uma forma que atende a esses critérios, com a única diferença sendo uma rotação do logotipo do GitHub, comum na comunidade de código aberto, para indicar que contém um link para o site do GitHub.\n\n8. Aviso de Conteúdo\n\nEste SERVIÇO permite que os USUÁRIOS acessem conteúdo linguístico (CONTEÚDO). Parte deste CONTEÚDO pode ser considerada inapropriada para crianças e menores de idade. O acesso ao CONTEÚDO por meio do SERVIÇO é feito de forma que as informações não se façam disponíveis a menos que sejam explicitamente conhecidas. Especificamente, os USUÁRIOS \"podem\" traduzir palavras, conjugar verbos e acessar outras características gramaticais do CONTEÚDO que possam ser de natureza sexual, violenta, ou de alguma forma inapropriada. Os USUÁRIOS \"não podem\" traduzir palavras, conjugar verbos e acessar outras características gramaticais do CONTEÚDO que possam ser de natureza sexual, violenta, ou de alguma forma inapropriada, se ainda não tiverem conhecimento da natureza deste CONTEÚDO. O SCRIBE não se responsabiliza pelo acesso a tal CONTEÚDO.\n\n9. Alterações\n\nEsta POLÍTICA está sujeita a alterações. As atualizações desta POLÍTICA substituirão todas as ocorrências anteriores e, se consideradas relevantes, serão claramente declaradas na próxima atualização aplicável do SERVIÇO. O SCRIBE incentiva os USUÁRIOS a revisarem periodicamente esta POLÍTICA para obter as informações mais recentes sobre nossas práticas de privacidade e se familiarizarem com quaisquer alterações.\n\n10. Contato\n\nCaso tenha alguma dúvida, preocupação, ou sugestão sobre esta POLÍTICA, não hesite em visitar https://github.com/scribe-org ou entrar em contato com o SCRIBE pelo e-mail scribe.langauge@gmail.com. O responsável pelos canais de contato é Andrew Tavis McAllister.\n\n11. Data de Vigência\n\nEsta POLÍTICA entra em vigor em 24 de maio de 2022."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Observera att den engelska versionen av denna policy har företräde framför alla andra versioner.\n\nScribe-utvecklarna (SCRIBE) byggde iOS-applikationen \"Scribe - Language Keyboards\" (SERVICE) som en applikation med öppen källkod.\nDenna TJÄNST tillhandahålls av SCRIBE utan kostnad och är avsedd att användas i befintligt skick.\n\nDenna sekretesspolicy (POLICY) används för att informera läsaren om policyerna för åtkomst, spårning, insamling, lagring, användning och utlämnande av personlig information (ANVÄNDARINFORMATION) och användningsdata (ANVÄNDARDATA) för alla individer som använder denna TJÄNST (ANVÄNDARE).\n\nANVÄNDARINFORMATION definieras specifikt som all information som är relaterad till användarna själva eller de enheter de använder för att få tillgång till tjänsten.\n\nANVÄNDARDATA definieras specifikt som all text som skrivs eller åtgärder som utförs av ANVÄNDARNA när de använder TJÄNSTEN.\n\n1. Uttalande om policy\n\nDenna TJÄNST får inte tillgång till, spårar, samlar in, behåller, använder eller avslöjar någon ANVÄNDARINFORMATION eller ANVÄNDARDATA.\n\n2. Spårar inte\n\nANVÄNDARE som kontaktar SCRIBE för att be om att deras ANVÄNDARINFORMATION och ANVÄNDARDATA inte spåras kommer att förses med en kopia av denna POLICY samt en länk till alla källkoder som bevis på att de inte spåras.\n\n3. Uppgifter från tredje part\n\nDenna TJÄNST använder sig av data från tredje part. All data som används vid skapandet av denna TJÄNST kommer från källor som tillåter dess fulla användning på det sätt som görs av TJÄNSTEN. Specifikt kommer data för denna TJÄNST från Wikidata, Wikipedia och Unicode. Wikidata säger att \"All strukturerad data i namnrymderna main, property och lexeme görs tillgänglig under Creative Commons CC0-licensen; text i andra namnrymder görs tillgänglig under Creative Commons Attribution-Share Alike-Licens.\" Policyn som beskriver Wikidatas dataanvändning finns på https://www.wikidata.org/wiki/Wikidata:Licensing. Wikipedia anger att textdata, den typ av data som används av TJÄNSTEN, \"... kan användas enligt villkoren i Creative Commons Attribution-Share Alike-licensen\". Policyn som beskriver Wikipedias dataanvändning kan hittas på https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content. Unicode ger tillstånd, \"... kostnadsfritt, till alla personer som erhåller en kopia av Unicode-datafilerna och all tillhörande dokumentation (\"datafilerna\") eller Unicode-programvaran och all tillhörande dokumentation (\"programvaran\") för att hantera datafilerna eller programvaran utan begränsning...\" Policyn för användning av Unicode-data finns på https://www.unicode.org/license.txt.\n\n4. Källkod från tredje part\n\nDenna TJÄNST baserades på kod från tredje part. All källkod som används vid skapandet av denna TJÄNST kommer från källor som tillåter dess fulla användning på det sätt som görs av TJÄNSTEN. Grunden för detta projekt var projektet Custom Keyboard av Ethan Sarif-Kattan. Custom Keyboard släpptes under en MIT-licens, och denna licens är tillgänglig på https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE.\n\n5. Tjänster från tredje part\n\nDenna TJÄNST använder sig av tjänster från tredje part för att manipulera en del av data från tredje part. Specifikt har data översatts med hjälp av modeller från Hugging Face-transformatorer. Denna tjänst omfattas av en Apache License 2.0, som anger att den är tillgänglig för kommersiellt bruk, modifiering, distribution, patentanvändning och privat bruk. Licensen för ovannämnda tjänst finns på https://github.com/huggingface/transformers/blob/master/LICENSE.\n\n6. Länkar till tredje part\n\nDenna TJÄNST innehåller länkar till externa webbplatser. Om ANVÄNDARE klickar på en länk från tredje part kommer de att dirigeras till en webbplats. Observera att dessa externa webbplatser inte drivs av denna TJÄNST. Därför rekommenderas ANVÄNDARE starkt att granska sekretesspolicyn för dessa webbplatser. Denna TJÄNST har ingen kontroll över och tar inget ansvar för innehållet, sekretesspolicyn eller praxis på tredje parts webbplatser eller tjänster.\n\n7. Bilder från tredje part\n\nDenna TJÄNST innehåller bilder som är upphovsrättsskyddade av tredje part. Specifikt innehåller den här appen en kopia av logotyperna för GitHub, Inc och Wikidata, varumärkesskyddade av Wikimedia Foundation, Inc. Villkoren för hur GitHub-logotypen kan användas finns på https://github.com/logos, och villkoren för Wikidata-logotypen finns på följande Wikimedia-sida: https://foundation.wikimedia.org/wiki/Policy:Trademark_policy. Den här tjänsten använder de upphovsrättsskyddade bilderna på ett sätt som matchar dessa kriterier, med den enda avvikelsen är en rotation av GitHub-logotypen som är vanlig i öppen källkodsgemenskapen för att indikera att det finns en länk till GitHub-webbplatsen.\n\n8. Meddelande om innehåll\n\nDenna TJÄNST gör det möjligt för ANVÄNDARE att få tillgång till språkligt innehåll (INNEHÅLL). En del av detta INNEHÅLL kan anses vara olämpligt för barn och minderåriga som har rätt att göra det. Åtkomst till INNEHÅLL med hjälp av TJÄNSTEN görs på ett sätt så att informationen inte är tillgänglig om den inte uttryckligen är känd. Specifikt \"kan\" ANVÄNDARE översätta ord, böja verb och få tillgång till andra grammatiska egenskaper i INNEHÅLL som kan vara sexuella, våldsamma eller på annat sätt olämpliga till sin natur. ANVÄNDARE \"kan\" översätta ord, böja verb och få tillgång till andra grammatiska egenskaper i INNEHÅLL som kan vara sexuella, våldsamma eller på annat sätt olämpliga till sin natur om de inte redan känner till detta INNEHÅLLS natur. SCRIBE tar inget ansvar för åtkomsten till sådant INNEHÅLL.\n\n9. Ändringar\n\nDenna POLICY kan komma att ändras. Uppdateringar av denna POLICY kommer att ersätta alla tidigare instanser, och om de anses vara väsentliga kommer de att anges tydligt i nästa tillämpliga uppdatering av TJÄNSTEN. SCRIBE uppmuntrar ANVÄNDARE att regelbundet granska denna POLICY för den senaste informationen om vår integritetspraxis och att bekanta sig med eventuella ändringar.\n\n10. Kontakt\n\nOm du har några frågor, funderingar eller förslag om denna POLICY, tveka inte att besöka https://github.com/scribe-org eller kontakta SCRIBE på scribe.langauge@gmail.com. Ansvarig för sådana förfrågningar är Andrew Tavis McAllister.\n\n11. Ikraftträdande\n\nDenna POLICY gäller från och med den 24 maj 2022."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bu politikanın İngilizce versiyonunun diğer tüm versiyonlara üstün geldiğini lütfen unutmayın.\n\nScribe geliştiricileri (SCRIBE) \"Scribe - Language Keyboards\" adlı iOS uygulamasını (HİZMET) açık kaynaklı bir uygulama olarak oluşturdu. Bu HİZMET, SCRIBE tarafından maliyetsiz olarak sunulmakta ve olduğu gibi kullanılmak üzere tasarlanmıştır.\n\nBu gizlilik politikası (POLİTİKA), bu HİZMET'i (KULLANICILAR) kullanan tüm bireylerin kişisel bilgileri (KULLANICI BİLGİLERİ) ve kullanım verileri (KULLANICI VERİLERİ) erişimi, takibi, toplanması, saklanması, kullanımı ve açıklanması politikalarını okuyucuya bildirmek için kullanılmaktadır.\n\nKULLANICI BİLGİLERİ, KULLANICILAR ya da bu HİZMET'e erişmek için kullandıkları cihazlarla ilgili herhangi bir bilgi olarak özellikle tanımlanmıştır.\n\nKULLANICI VERİLERİ, KULLANICILAR tarafından bu HİZMET'i kullanırken yazılan veya yapılan herhangi bir işlem olarak özellikle tanımlanmıştır.\n\n1. Politika Beyanı\n\nBu HİZMET, herhangi bir KULLANICI BİLGİSİ ya da KULLANICI VERİSİ'ni erişmez, takip etmez, toplamaz, saklamaz, kullanmaz veya ifşa etmez.\n\n2. Takip Etmeme\n\nKULLANICILAR, KULLANICI BİLGİLERİ ve KULLANICI VERİLERİ'nin takip edilmemesini talep etmek için SCRIBE ile iletişime geçtiğinde, kendilerine bu POLİTİKA'nın bir kopyası ve takip edilmediklerine dair bir kanıt olarak tüm kaynak kodlarına bir bağlantı sağlanacaktır.\n\n3. Üçüncü Taraf Verileri\n\nBu HİZMET, üçüncü taraf verilerini kullanır. Bu HİZMET'in oluşturulmasında kullanılan tüm veriler, bu HİZMET tarafından yapılan şekilde tamamen kullanılmasına izin veren kaynaklardan gelmektedir. Özellikle, bu HİZMET'in verileri Wikidata, Wikipedia ve Unicode'dan gelmektedir. Wikidata, \"Ana, özellik ve lexeme ad alanlarındaki tüm yapılandırılmış veriler Creative Commons CC0 Lisansı altında sunulmaktadır; diğer ad alanlarındaki metinler Creative Commons Attribution-Share Alike Lisansı altında sunulmaktadır.\" demektedir. Wikidata veri kullanımını detaylandıran politika https://www.wikidata.org/wiki/Wikidata:Licensing adresinde bulunabilir. Wikipedia, kullanılan metin verileri için \"… Creative Commons Attribution Share-Alike lisansı şartlarına göre kullanılabilir.\" demektedir. Wikipedia veri kullanımını detaylandıran politika https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content adresinde bulunabilir. Unicode, \"… Unicode veri dosyalarını ve ilişkili dokümantasyonu (\"Veri Dosyaları\") veya Unicode yazılımını ve ilişkili dokümantasyonu (\"Yazılım\") herhangi bir kısıtlama olmaksızın işlemek için herhangi bir kişiye ücretsiz olarak izin verir.\" demektedir. Unicode veri kullanımını detaylandıran politika https://www.unicode.org/license.txt adresinde bulunabilir.\n\n4. Üçüncü Taraf Kaynak Kodu\n\nBu HİZMET, üçüncü taraf kodlarına dayanmaktadır. Bu HİZMET'in oluşturulmasında kullanılan tüm kaynak kodları, bu HİZMET tarafından yapılan şekilde tamamen kullanılmasına izin veren kaynaklardan gelmektedir. Özellikle, bu projenin temeli Ethan Sarif-Kattan'ın Custom Keyboard projesiydi. Custom Keyboard, MIT lisansı altında yayınlandı ve bu lisans https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE adresinde bulunabilir.\n\n5. Üçüncü Taraf Hizmetler\n\nBu HİZMET, bazı üçüncü taraf verilerini manipüle etmek için üçüncü taraf hizmetlerini kullanır. Özellikle, veriler Hugging Face transformers modelleri kullanılarak çevrilmiştir. Bu hizmet, Apache Lisansı 2.0 kapsamındadır ve bu lisans, ticari kullanım, değiştirme, dağıtım, patent kullanımı ve özel kullanım için uygundur. Söz konusu hizmetin lisansı https://github.com/huggingface/transformers/blob/master/LICENSE adresinde bulunabilir.\n\n6. Üçüncü Taraf Bağlantılar\n\nBu HİZMET, dış web sitelerine bağlantılar içerir. KULLANICILAR, üçüncü taraf bir bağlantıya tıkladığında bir web sitesine yönlendirilir. Bu dış web sitelerinin bu HİZMET tarafından işletilmediğini unutmayın. Bu nedenle, KULLANICILAR'ın bu web sitelerinin gizlilik politikasını incelemeleri şiddetle tavsiye edilir. Bu HİZMET'in üçüncü taraf sitelerin veya hizmetlerin içeriği, gizlilik politikaları veya uygulamaları üzerinde hiçbir kontrolü yoktur ve hiçbir sorumluluk kabul etmez.\n\n7. Üçüncü Taraf Görseller\n\nBu HİZMET, üçüncü taraflarca telif hakkı alınmış görseller içerir. Özellikle, bu uygulama GitHub, Inc.'in ve Wikimedia Vakfı, Inc. tarafından tescil edilen Wikidata'nın logolarının bir kopyasını içermektedir. GitHub logosunun kullanım şartları https://github.com/logos adresinde bulunabilir ve Wikidata logosunun şartları https://foundation.wikimedia.org/wiki/Policy:Trademark_policy adresinde bulunabilir. Bu HİZMET, bu kriterlere uygun bir şekilde telif hakkı alınmış görselleri kullanır, yalnızca GitHub logosunun döndürülmesi gibi bir sapma vardır ve bu, açık kaynak topluluğunda GitHub web sitesine bir bağlantı olduğunu göstermek için yaygındır.\n\n8. İçerik Uyarısı\n\nBu HİZMET, KULLANICILAR'ın dilbilimsel içeriğe (İÇERİK) erişmesine izin verir. Bu İÇERİK'ten bazıları çocuklar ve yasal reşit olmayanlar için uygunsuz görülebilir. Bu HİZMET'i kullanarak İÇERİK'e erişmek, bilgi açıkça bilinmedikçe olanaksızdır. Özellikle, KULLANICILAR cinsel, şiddet içeren veya başka bir şekilde uygunsuz nitelikte olabilecek İÇERİK'in kelimelerini çevirebilir, fiil çekimlerini yapabilir ve diğer gramer özelliklerine erişebilir. KULLANICILAR, cinsel, şiddet içeren veya başka bir şekilde uygunsuz nitelikte olabilecek İÇERİK'in kelimelerini çeviremez, fiil çekimlerini yapamaz ve diğer gramer özelliklerine erişemez, bunların doğasını açıkça bilmiyorlarsa. SCRIBE, bu tür İÇERİK'e erişimden sorumlu değildir.\n\n9. Değişiklikler\n\nBu POLİTİKA değiştirilebilir. Bu POLİTİKA'daki güncellemeler, tüm önceki örneklerin yerini alacak ve eğer önemli olarak kabul edilirse, HİZMET'in bir sonraki uygun güncellemesinde açıkça belirtilecektir. SCRIBE, KULLANICILAR'ı gizlilik uygulamalarımız hakkında en son bilgileri almak ve herhangi bir değişikliği öğrenmek için bu POLİTİKA'yı periyodik olarak gözden geçirmeye teşvik eder.\n\n10. İletişim\n\nBu POLİTİKA hakkında herhangi bir soru, endişe veya öneriniz varsa, https://github.com/scribe-org adresini ziyaret etmekten veya SCRIBE ile scribe.langauge@gmail.com adresinden iletişime geçmekten çekinmeyin. Bu tür sorular için sorumlu kişi Andrew Tavis McAllister'dır.\n\n11. Yürürlük Tarihi\n\nBu POLİTİKA, 24 Mayıs 2022 tarihinden itibaren geçerlidir."
           }
         }
       }
@@ -2061,6 +2619,12 @@
             "value" : "तृतीय-पक्ष लाइसेंस"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Lisensi pihak ketiga"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2073,10 +2637,22 @@
             "value" : "तृतीय-पक्ष परवाने"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Licenças de terceiros"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Licenser från tredje part"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Üçüncü taraf lisanslar"
           }
         }
       }
@@ -2126,6 +2702,12 @@
             "value" : "जिनका कोड हमने उपयोग किया"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kode siapa yang kami gunakan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2138,10 +2720,22 @@
             "value" : "ज्यांचा कोड आम्ही वापरला आहे"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fontes dos códigos que utilizamos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Vems kod vi använde"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kimin kodunu kullandık"
           }
         }
       }
@@ -2191,6 +2785,12 @@
             "value" : "कस्टम कीबोर्ड\n• लेखक: एथें स क\n• लाइसेंस: एमआईटी\n• लिंक: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Custom Keyboard\n• Penulis: EthanSK\n• License: MIT\n• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2203,10 +2803,22 @@
             "value" : "कस्टम कीबोर्ड\n• लेखक: एथेन एस के\n• परवाना: एमआयटी\n• लिंक: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Teclado Personalizado\n• Autor: EthanSK\n• Licença: MIT\n• Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Custom Keyboard\n• Upphovsman: EthanSK\n• Licens: MIT\n• Länk: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Custom Keyboard\n• Yazar: EthanSK\n• Lisans: MIT\n• Bağlantı: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE"
           }
         }
       }
@@ -2256,6 +2868,12 @@
             "value" : "सिंपल कीबोर्ड \n• लेखक: सिंपल मोबाइल उपकरण\n• लाइसेंस: जीपीएल-3.0\n• लिंक: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Simple Keyboard\n• Penulis: Simple Mobile Tools\n• License: GPL-3.0\n• Link: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2268,10 +2886,22 @@
             "value" : "सिंपल कीबोर्ड\n• लेखक: सिंपल मोबाईल टूल्स\n• परवाना: GPL-3.0\n• लिंक: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Teclado Simples\n• Autor: Simple Mobile Tools\n• Licença: GPL-3.0\n• Link: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Simple Keyboard\n• Upphovsman: Simple Mobile Tools\n• Licens: GPL-3.0\n• Länk: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Simple Keyboard\n• Yazar: Simple Mobile Tools\n• Lisans: GPL-3.0\n• Bağlantı: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
           }
         }
       }
@@ -2321,6 +2951,12 @@
             "value" : "स्क्राइब  डेवलपर्स (स्क्राइब ) ने आईओएस एप्लिकेशन \"स्क्राइब  - भाषा कीबोर्ड\" (सेवा) का निर्माण तृतीय-पक्ष कोड का उपयोग करके किया है। इस सेवा के निर्माण में उपयोग किया गया सभी स्रोत कोड ऐसे स्रोतों से आता है जो इसे इस सेवा द्वारा किए गए उपयोग में अनुमति देते हैं। इस खंड में उन स्रोत कोड की सूची दी गई है, जिन पर सेवा ही प्रत्येक का संबंधित लाइसेंस।\n\nनिम्नलिखित सभी उपयोग किए गए स्रोत कोड की सूची है, कोड के मुख्य लेखक या लेखक, उस समय जारी किए गए लाइसेंस और लाइसेंस के लिंक।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pengembang Scribe (SCRIBE) membuat aplikasi iOS application \"Scribe - Language Keyboards\" (SERVICE) menggunakan kode pihak ketiga. Semua kode sumber yang digunakan dalam pembuatan LAYANAN ini berasal dari sumber yang memperbolehkan penggunaan sepenuhnya sesuai dengan cara yang dilakukan oleh LAYANAN. Bagian ini mencantumkan semua kode sumber yang menjadi dasar LAYANAN serta lisensi yang sesuai dari masing-masing.\n\nBerikut adalah daftar semua kode sumber yang digunakan, penulis-penulis utama kode, lisensi yang digunakan pada saat penggunaan, dan tautan ke lisensi tersebut."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2333,10 +2969,22 @@
             "value" : "स्क्राइब डेव्हलपर्सनी आयओएस अ‍ॅप्लिकेशन 'स्क्राइब - भाषा कीबोर्ड्स' तृतीय-पक्ष कोडचा वापर करून तयार केले आहे."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Os desenvolvedores do Scribe (SCRIBE) criaram o aplicativo iOS \"Scribe - Teclados de Idiomas\" (SERVIÇO) usando código de terceiros. Todo o código-fonte usado na criação deste SERVIÇO vem de fontes que permitem o seu uso por completo da forma como é feito pelo SERVIÇO. Esta seção lista o código-fonte no qual o SERVIÇO se baseia, bem como suas respectivas licenças.\n\nA seguir você encontrará uma lista de todos os códigos-fontes utilizados, seus autores, suas licenças de uso no momento em que foram disponibilizados, e links para suas licenças."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Utvecklarna på Scribe (SCRIBE) har utvecklat iOS-applikationen \"Scribe - Language Keyboards\" (TJÄNST) med hjälp av kod från tredje part. All källkod använd i skapelsen av denna TJÄNST kommer ifrån källor som ger oss full tillåtelse att använda koden på det sätt som görs av TJÄNSTEN. Nedan listas källkoden som TJÄNSTEN är baserad på och licenserna som sammanfaller. \n\nFöljande lista listar all källkod, upphovsmän, licensen som gällde vid tillfället av användandet och en länk till licensen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe geliştiricileri (SCRIBE), \"Scribe - Language Keyboards\" adlı iOS uygulamasını (HİZMET) üçüncü taraf kodları kullanarak oluşturdu. Bu HİZMET'in oluşturulmasında kullanılan tüm kaynak kodları, bu HİZMET tarafından yapılan şekilde tamamen kullanılmasına izin veren kaynaklardan gelmektedir. Bu bölüm, HİZMET'in temel aldığı kaynak kodları ve her birinin denk gelen lisanslarını listeler.\n\nAşağıda kullanılan tüm kaynak kodlarının, kodun ana yazarı veya yazarlarının, kullanım sırasında yayınlanan lisansının ve lisansın bir bağlantısının bir listesi bulunmaktadır."
           }
         }
       }
@@ -2386,6 +3034,12 @@
             "value" : "कानूनी"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Legal"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2398,10 +3052,22 @@
             "value" : "कायदेशीर"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Legalidades"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Legalitet"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yasal"
           }
         }
       }
@@ -2451,6 +3117,12 @@
             "value" : "के बारे में"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tentang"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2463,10 +3135,22 @@
             "value" : "बद्दल"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sobre"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Om"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hakkında"
           }
         }
       }
@@ -2516,6 +3200,12 @@
             "value" : "काल चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih tense"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2528,10 +3218,22 @@
             "value" : "काल निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecionar tempo verbal"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj tempus"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Zaman seç"
           }
         }
       }
@@ -2581,6 +3283,12 @@
             "value" : "नीचे से एक संयोजन चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih konjugasi di bawah"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2593,10 +3301,22 @@
             "value" : "खालीलपैकी एक संयोजन निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Escolha uma conjugação abaixo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj en konjugering nedan"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aşağıdan bir çekim seç"
           }
         }
       }
@@ -2646,6 +3366,12 @@
             "value" : "हाल ही में संयोजित"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Baru saja dikonjugasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2658,10 +3384,22 @@
             "value" : "अलीकडे संयोजित केलेले"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Recentemente conjugado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Nyligen konjugerade"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Son çekim yapılanlar"
           }
         }
       }
@@ -2711,6 +3449,12 @@
             "value" : "संयोजन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Konjugasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2723,10 +3467,22 @@
             "value" : "संयोजन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Conjugar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Konjugera"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çekimle"
           }
         }
       }
@@ -2776,6 +3532,12 @@
             "value" : "क्रियाओं के लिए खोजें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Cari kata kerja"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2788,10 +3550,22 @@
             "value" : "क्रियापद शोधा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Busque um verbo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Sök efter verb"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fiillerde ara"
           }
         }
       }
@@ -2841,6 +3615,12 @@
             "value" : "क्रियाओं का संयोजन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Konjugasi kata kerja"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2853,10 +3633,22 @@
             "value" : "क्रियापद संयोजन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Conjugar verbos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Konjugera verb"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fiil çekimle"
           }
         }
       }
@@ -2906,6 +3698,12 @@
             "value" : "स्क्राइब  संयोजन में नया डेटा जोड़ें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tambahkan data baru untuk Konjugasi Scribe."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2918,10 +3716,22 @@
             "value" : "स्क्राइब संयोजनात नवीन डेटा जोडा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Adicionar novos dados ao Scribe Conjugate."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Lägg till ny data till Scribe Conjugate."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe Conjugate'e yeni veri ekle."
           }
         }
       }
@@ -2971,6 +3781,12 @@
             "value" : "क्रिया डेटा डाउनलोड करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Unduh data kata kerja"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -2983,10 +3799,22 @@
             "value" : "क्रियापद डेटा डाउनलोड करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Baixar dados do verbo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ladda ner verb-data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fiil verilerini indir"
           }
         }
       }
@@ -3036,6 +3864,12 @@
             "value" : "संयोजन शुरू करने के लिए डेटा डाउनलोड करें!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Unduh data untuk mulai mengkonjugasi!"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3048,10 +3882,22 @@
             "value" : "संयोजन करण्यासाठी डेटा डाउनलोड करा!"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Baixe os dados para começar a conjugar!"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ladda ner data för att börja konjugera!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çekime başlamak için verileri indir!"
           }
         }
       }
@@ -3101,6 +3947,12 @@
             "value" : "क्रिया डेटा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Data kata kerja"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3113,10 +3965,22 @@
             "value" : "क्रियापद डेटा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dados dos verbos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Verb-data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fiil verisi"
           }
         }
       }
@@ -3166,6 +4030,12 @@
             "value" : "स्क्राइब कीबोर्ड में नया डेटा जोड़ें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tambahkan data baru untuk keyboard Scribe."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3178,10 +4048,22 @@
             "value" : "स्क्राइब कीबोर्डमध्ये नवीन डेटा जोडा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Adicionar novos dados aos teclados Scribe."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Lägg till ny data för Scribe-tangentbord."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe klavyelerine yeni veri ekle."
           }
         }
       }
@@ -3231,6 +4113,12 @@
             "value" : "कीबोर्ड डेटा डाउनलोड करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Unduh data keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3243,10 +4131,22 @@
             "value" : "कीबोर्ड डेटा डाउनलोड करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Baixar dados do teclado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ladda ner tangentbords-data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Klavye verilerini indir"
           }
         }
       }
@@ -3296,6 +4196,12 @@
             "value" : "भाषा डेटा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Data bahasa"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3308,10 +4214,22 @@
             "value" : "भाषा डेटा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dados do idioma"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Språk-data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dil verisi"
           }
         }
       }
@@ -3361,6 +4279,12 @@
             "value" : "सभी भाषाएँ"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Semua bahasa"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3373,10 +4297,22 @@
             "value" : "सर्व भाषा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Todos os idiomas"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Alla språk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tüm diller"
           }
         }
       }
@@ -3426,6 +4362,12 @@
             "value" : "डाउनलोड करने के लिए डेटा चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih data yang ingin diunduh"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3438,10 +4380,22 @@
             "value" : "डाउनलोड करण्यासाठी डेटा निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecionar dados para baixar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj data att ladda ner"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İndirilecek veriyi seç"
           }
         }
       }
@@ -3491,6 +4445,12 @@
             "value" : "डेटा डाउनलोड करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Unduh data"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3503,10 +4463,22 @@
             "value" : "डेटा डाउनलोड करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Baixar dados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ladda ner data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Veri indir"
           }
         }
       }
@@ -3556,6 +4528,12 @@
             "value" : "नए डेटा की जांच करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Periksa data baru"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3568,10 +4546,22 @@
             "value" : "नवीन डेटाची तपासणी करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Verificar se há novos dados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Kolla efter ny data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yeni verileri kontrol et"
           }
         }
       }
@@ -3621,6 +4611,12 @@
             "value" : "नियमित रूप से डेटा अपडेट करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Perbarui data secara rutin"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3633,10 +4629,22 @@
             "value" : "नियमित डेटा अद्ययावत करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Atualizar dados continuamente"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Uppdatera regelbundet data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Veriyi düzenli olarak güncelle"
           }
         }
       }
@@ -3686,6 +4694,12 @@
             "value" : "डेटा अपडेट करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Perbarui data"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3698,10 +4712,22 @@
             "value" : "डेटा अद्ययावत करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Atualizar dados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Uppdatera data"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Veriyi güncelle"
           }
         }
       }
@@ -3751,6 +4777,12 @@
             "value" : "अपने डिवाइस पर स्क्राइब  कीबोर्ड इंस्टॉल करने के लिए नीचे दिए गए निर्देशों का पालन करें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ikuti petunjuk di bawah untuk memasang keyboard Scribe di perangkatmu."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3763,10 +4795,22 @@
             "value" : "तुमच्या डिव्हाइसवर स्क्राइब कीबोर्ड इंस्टॉल करण्यासाठी खालील सूचनांचे पालन करा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Siga as instruções abaixo para instalar teclados Scribe no seu dispositivo."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Följ instruktionerna nedan för att installera Scribe-tangentbord på din enhet."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe klavyelerini cihazına yüklemek için aşağıdaki talimatları izleyin."
           }
         }
       }
@@ -3816,6 +4860,12 @@
             "value" : "त्वरित ट्यूटोरियल"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tutorial singkat"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3828,10 +4878,22 @@
             "value" : "त्वरित ट्युटोरियल"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tutorial rápido"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Snabb genomgång"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hızlı eğitim"
           }
         }
       }
@@ -3881,6 +4943,12 @@
             "value" : "कीबोर्ड सेटिंग्स खोलें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Buka pengaturan keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3893,10 +4961,22 @@
             "value" : "कीबोर्ड सेटिंग्ज उघडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Acesse as configurações de teclado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Öppna tangentbords-inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Klavye ayarlarını aç"
           }
         }
       }
@@ -3946,6 +5026,12 @@
             "value" : "कीबोर्ड"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -3958,10 +5044,22 @@
             "value" : "कीबोर्ड"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Teclados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Tangentbord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Klavye"
           }
         }
       }
@@ -4011,6 +5109,12 @@
             "value" : "स्क्राइब  सेटिंग्स खोलें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Buka pengaturan Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4023,10 +5127,22 @@
             "value" : "स्क्राइब सेटिंग्ज उघडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Acesse as configurações do Scribe"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Öppna Scribe-inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe ayarlarını aç"
           }
         }
       }
@@ -4076,6 +5192,12 @@
             "value" : "चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4088,10 +5210,22 @@
             "value" : "निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seç"
           }
         }
       }
@@ -4141,6 +5275,12 @@
             "value" : "उन कीबोर्ड को सक्रिय करें जिन्हें आप उपयोग करना चाहते हैं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aktifkan keyboard yang ingin kamu gunakan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4153,10 +5293,22 @@
             "value" : "तुम्हाला वापरायचे असलेले कीबोर्ड सक्रिय करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ative os teclados que você deseja usar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Aktivera tangenbort som du vill använda"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kullanmak istediğiniz klavyeleri etkinleştir"
           }
         }
       }
@@ -4206,6 +5358,12 @@
             "value" : "टाइप करते समय दबाएं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Saat mengetik, tekan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4218,10 +5376,22 @@
             "value" : "टाइप करताना दाबा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ao digitar, aperte"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Medans du skriver, tryck"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yazarken, bas"
           }
         }
       }
@@ -4271,6 +5441,12 @@
             "value" : "कीबोर्ड चुनने के लिए"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "untuk memilih keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4283,10 +5459,22 @@
             "value" : "कीबोर्ड निवडण्यासाठी"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "para selecionar teclados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "För att välja tangentbord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "klavyeleri seçmek için"
           }
         }
       }
@@ -4336,6 +5524,12 @@
             "value" : "कीबोर्ड इंस्टॉलेशन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Instalasi Keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4348,10 +5542,22 @@
             "value" : "कीबोर्ड इंस्टॉलेशन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Como instalar um teclado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Tangentbords-installation"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Klavye kurulumu"
           }
         }
       }
@@ -4401,6 +5607,12 @@
             "value" : "इंस्टॉलेशन"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Instalasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4413,10 +5625,22 @@
             "value" : "इंस्टॉलेशन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Instalação"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Installation"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kurulum"
           }
         }
       }
@@ -4466,6 +5690,12 @@
             "value" : "ऐप और इंस्टॉल किए गए भाषा कीबोर्ड की सेटिंग्स यहाँ मिलेंगी।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pengaturan aplikasi dan keyboard bahasa yang terpasang bisa ditemukan di sini."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4478,10 +5708,22 @@
             "value" : "अ‍ॅप आणि इंस्टॉल केलेल्या भाषा कीबोर्डची सेटिंग्ज इथे मिळतील."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aqui você encontra as configurações do aplicativo e teclados de idioma instalados."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Inställningar för appen och installerade tangentbord finns här."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama ve yüklenmiş dil klavyelerinin ayarlarını burada bulun."
           }
         }
       }
@@ -4531,6 +5773,12 @@
             "value" : "कीबोर्ड इंस्टॉल करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pasang keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4543,10 +5791,22 @@
             "value" : "कीबोर्ड इंस्टॉल करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Instalar teclados"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Installera tangentbord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Klavye yükle"
           }
         }
       }
@@ -4596,6 +5856,12 @@
             "value" : "अनोटेट सुझाव/समाप्ति"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Anotasi saran/pelengkapan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4608,10 +5874,22 @@
             "value" : "सुचवण्या/समाप्ति वर्णन करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sugestões e autocompletar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Kommentera förslag/kompletteringar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Önerileri/otomatik tamamlamayı etkinleştir"
           }
         }
       }
@@ -4661,6 +5939,12 @@
             "value" : "टाइप करते समय सुझाव और समाप्ति को रेखांकित करें ताकि उनके लिंग दिख सकें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Garis bawahi saran dan pelengkapan kata untuk menunjukkan gender saat kamu mengetik."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4673,10 +5957,22 @@
             "value" : "टाइप करताना सुचवण्या आणि समाप्ति रेखांकित करा जेणेकरून त्यांच्या लिंगाची माहिती मिळू शकेल."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sublinhar sugestões para indicar o gênero enquanto você digita."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Stryk under förslag och kompletteringar och visa deras genus medan du skriver."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yazarken önerilerin ve otomatik tamamlamaların altını çizerek cinsiyetlerini gösterin."
           }
         }
       }
@@ -4726,6 +6022,12 @@
             "value" : "इमोजी का स्वतः सुझाव दें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Saran emoji otomatis"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4738,10 +6040,22 @@
             "value" : "इमोजीचा स्वयंचलित सुचवण्या"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sugerir emojis"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Föreslå automatiskt emojis"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Emojileri otomatik öner"
           }
         }
       }
@@ -4791,6 +6105,12 @@
             "value" : "अधिक अभिव्यक्तिपूर्ण टाइपिंग के लिए इमोजी सुझाव और समाप्ति चालू करें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aktifkan saran dan penyelesaian emoji untuk mengetik yang lebih ekspresif."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4803,10 +6123,22 @@
             "value" : "अधिक अभिव्यक्तीपूर्ण टाइपिंगसाठी इमोजीच्या सुचवण्या आणि समाप्ति सक्षम करा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ativa sugestões de emoji e autocompletar para digitar de maneira mais expressiva."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Aktivera emojiförslag och kompletteringar för mer uttrycksfullt skrivande."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Daha ifade edici bir yazım için emoji önerilerini ve otomatik tamamlama özelliğini açın."
           }
         }
       }
@@ -4856,6 +6188,12 @@
             "value" : "डिफ़ॉल्ट इमोजी त्वचा का रंग"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Warna kulit emoji default"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4868,10 +6206,22 @@
             "value" : "डिफॉल्ट इमोजी त्वचा रंग"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tom de pele padrão dos emojis"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Standard-hudton för emojis"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Varsayılan emoji tonu"
           }
         }
       }
@@ -4921,6 +6271,12 @@
             "value" : "उपयोग होने वाला त्वचा का रंग"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Warna kulit yang digunakan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4933,10 +6289,22 @@
             "value" : "वापरल्या जाणाऱ्या त्वचेचा रंग"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tom de pele a ser usado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Hudton som ska användas"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kullanılacak cilt tonu"
           }
         }
       }
@@ -4986,6 +6354,12 @@
             "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Atur warna kulit default untuk saran otomatis dan pelengkapan emoji."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -4998,10 +6372,22 @@
             "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Defina um tom de pele padrão para as sugestões de emoji."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Emoji önerileri ve otomatik tamamlama için varsayılan cilt tonunu ayarlayın."
           }
         }
       }
@@ -5051,6 +6437,12 @@
             "value" : "शब्द दर शब्द हटाएं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tekan dan tahan tombol hapus untuk menghapus per kata"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5063,10 +6455,22 @@
             "value" : "शब्द दर शब्द हटवा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Deletar palavra por palavra"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Nedtryckt delete tar bort ord för ord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kelime silme tuşu"
           }
         }
       }
@@ -5116,6 +6520,12 @@
             "value" : "जब डिलीट कुंजी को दबाकर रखा जाता है तो पाठ को शब्द दर शब्द हटाएं।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hapus teks kata demi kata saat tombol hapus ditekan dan ditahan."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5128,10 +6538,22 @@
             "value" : "डिलीट की थांबून धरल्यास शब्द दर शब्द हटवा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Apagar texto palavra por palavra ao manter a tecla \"deletar\" pressionada."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ta bort text ord för ord när delete-knappen är intryckt."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Silme tuşuna basılı tutulduğunda metni kelime kelime sil."
           }
         }
       }
@@ -5181,6 +6603,12 @@
             "value" : "डबल स्पेस के लिए अवधि"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Spasi dua kali = titik"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5193,10 +6621,22 @@
             "value" : "दुहेरी स्पेससाठी अवधि"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ponto via espaço duplo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Dubbla mellanslag blir punkt"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çift boşluk ile nokta ekle"
           }
         }
       }
@@ -5246,6 +6686,12 @@
             "value" : "स्पेस कुंजी को दो बार दबाने पर स्वचालित रूप से एक अवधि डालें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Secara otomatis menambahkan tanda titik jika tombol spasi ditekan dua kali."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5258,10 +6704,22 @@
             "value" : "स्पेस की दोनदा दाबल्यावर स्वयंचलितपणे अवधि घाला."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inserir um ponto automaticamente ao pressionar a tecla de espaço duas vezes."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Lägg automatiskt in en punkt när mellanslag trycks två gånger."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Boşluk tuşuna iki kez basıldığında otomatik olarak bir nokta ekle."
           }
         }
       }
@@ -5311,6 +6769,12 @@
             "value" : "वैकल्पिक वर्णों के लिए होल्ड करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tahan untuk karakter alternatif"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5323,10 +6787,22 @@
             "value" : "वैकल्पिक अक्षरांसाठी थांबा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Segurar tecla para acentos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Håll ner för alternativa tecken"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alternatif karakterler için basılı tutun"
           }
         }
       }
@@ -5376,6 +6852,12 @@
             "value" : "चाबियाँ पकड़कर और इच्छित वर्ण पर खींचकर वैकल्पिक वर्ण चुनें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih karakter alternatif dengan menekan tombol dan menggesernya ke karakter yang diinginkan."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5388,10 +6870,22 @@
             "value" : "कुञ्जी धरून इच्छित अक्षरावर खीचून वैकल्पिक अक्षर निवडा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione caracteres alternativos ao manter uma tecla pressionada."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj alternativa tecken genom att hålla ner tangenten och dra fingret till önskat tecken."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tuşlara basılı tutup istenen karaktere sürükleyerek alternatif karakterleri seç."
           }
         }
       }
@@ -5441,6 +6935,12 @@
             "value" : "कीप्रेस पर पॉपअप दिखाएं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tampilkan pop-up saat tombol ditekan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5453,10 +6953,22 @@
             "value" : "कुञ्जी दाबण्यावर पॉपअप दाखवा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mostrar pop-up ao teclar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Visa popup vid tangenttryck"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tuşa basıldığında açılır pencere göster"
           }
         }
       }
@@ -5506,6 +7018,12 @@
             "value" : "कुंजियों को दबाने पर उनकी पॉपअप दिखाएं।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Menampilkan pop-up saat tombol ditekan."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5518,10 +7036,22 @@
             "value" : "कुञ्जी दाबण्यावर पॉपअप दाखवा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mostrar um pop-up de cada tecla à medida que você digita."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Visa en popup av tangenter medan de trycks."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tuşlara basıldığında açılır pencere göster."
           }
         }
       }
@@ -5571,6 +7101,12 @@
             "value" : "विराम चिह्न स्थान निकालें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hapus spasi di sekitar tanda baca"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5583,10 +7119,22 @@
             "value" : "विरामचिन्ह स्थान काढा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Deletar espaço de pontuação"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ta bort skiljeteckenavstånd"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Noktalama boşluklarını silin"
           }
         }
       }
@@ -5636,6 +7184,12 @@
             "value" : "विराम चिह्नों से पहले अतिरिक्त स्थान हटाएं।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Menghilangkan spasi berlebih sebelum tanda baca."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5648,10 +7202,22 @@
             "value" : "विरामचिन्हांपूर्वीचे अतिरिक्त स्थान काढा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Eliminar espaços em excesso antes de pontuação."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ta bort överflödiga mellanslag före skiljetecken."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Noktalama işaretlerinden önceki gereksiz boşlukları kaldırın."
           }
         }
       }
@@ -5701,6 +7267,12 @@
             "value" : "कार्यक्षमता"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fungsionalitas"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5713,10 +7285,44 @@
             "value" : "कार्यक्षमता"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Funcionalidade"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Funktionalitet"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "İşlevsellik"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.keypress_sound" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Play sound on key press"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.keypress_sound_description" : {
+      "comment" : "",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Have the device play a sound when keys are pressed."
           }
         }
       }
@@ -5766,6 +7372,12 @@
             "value" : "की प्रेस पर कंपन करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Getar saat tombol ditekan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5778,10 +7390,22 @@
             "value" : "कुञ्जी दाबण्यावर कंपन"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Vibrar ao digitar"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Vibrera på tangenttryck"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tuşlara basıldığında titreşim"
           }
         }
       }
@@ -5831,6 +7455,12 @@
             "value" : "जब कुंजियाँ दबाई जाती हैं तो डिवाइस कंपन करे।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Buat perangkat bergetar saat tombol ditekan."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5843,10 +7473,22 @@
             "value" : "कुञ्जी दाबल्यावर डिव्हाइस कंपन करेल."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Fazer o dispositivo vibrar ao pressionar as teclas."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Låt enheten vibrera när du trycker på knapparna."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tuşlara basıldığında cihazın titreşmesini sağlayın."
           }
         }
       }
@@ -5896,6 +7538,12 @@
             "value" : "डिफ़ॉल्ट मुद्रा प्रतीक"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Simbol mata uang default"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5908,10 +7556,22 @@
             "value" : "डिफॉल्ट चलन चिन्ह"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Símbolo de moeda padrão"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Standard-symbol för valuta"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Varsayılan para birimi simgesi"
           }
         }
       }
@@ -5961,6 +7621,12 @@
             "value" : "123 कुंजियों के लिए प्रतीक"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Simbol untuk tombol 123"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -5973,10 +7639,22 @@
             "value" : "123 किजसाठी चिन्ह"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Símbolo para as teclas 123"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Symbol för 123-tangenter"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "123 tuşları için sembol"
           }
         }
       }
@@ -6026,6 +7704,12 @@
             "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih simbol mata uang yang ingin ditampilkan di tombol angka."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6038,10 +7722,22 @@
             "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione qual símbolo de moeda aparecerá nas teclas de número."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sayı tuşlarında hangi para biriminin görüneceğini seçin."
           }
         }
       }
@@ -6091,6 +7787,12 @@
             "value" : "डिफ़ॉल्ट कीबोर्ड"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Default keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6103,10 +7805,22 @@
             "value" : "डिफॉल्ट कीबोर्ड"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Teclado padrão"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Standardtangentbord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Varsayılan klavye"
           }
         }
       }
@@ -6156,6 +7870,12 @@
             "value" : "उपयोग होने वाला लेआउट"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Layout yang digunakan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6168,10 +7888,22 @@
             "value" : "वापरले जाणारे लेआउट"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Layout a ser usado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Layout som ska användas"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kullanılacak klavye düzeni"
           }
         }
       }
@@ -6221,6 +7953,12 @@
             "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih layout keyboard sesuai preferensi mengetik dan kebutuhan bahasamu."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6233,10 +7971,22 @@
             "value" : "तुमच्या टाइपिंग आवडीनुसार आणि भाषा गरजेनुसार कीबोर्ड लेआउट निवडा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione um layout de teclado conforme suas preferências de digitação e idioma."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj en tangentbordslayout som passar dina skrivpreferenser och språkbehov."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yazma tercihlerinize ve dil ihtiyaçlarınıza uygun bir klavye düzeni seçin."
           }
         }
       }
@@ -6286,6 +8036,12 @@
             "value" : "एक्सेंट वर्णों को अक्षम करें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Nonaktifkan karakter aksen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6298,10 +8054,22 @@
             "value" : "अक्सेंट अक्षरे अक्षम करा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Desativar caracteres de acentos"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Inaktivera accenter"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aksanlı karakterleri devre dışı bırak"
           }
         }
       }
@@ -6351,6 +8119,12 @@
             "value" : "प्राथमिक कीबोर्ड लेआउट पर उच्चारित अक्षर कुंजियों को निकालें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sembunyikan karakter beraksen pada keyboard utama."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6363,10 +8137,22 @@
             "value" : "प्राथमिक कीबोर्ड लेआउटवर अक्सेंट अक्षरे काढा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Remove os caracteres com acento do seu layout de teclado padrão."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ta bort tangenter med accenter på den primära tangentbordslayouten."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Birincil klavye düzeninden aksanlı harf tuşlarını kaldırın."
           }
         }
       }
@@ -6416,6 +8202,12 @@
             "value" : "ABC पर अवधि और कॉमा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Titik dan koma di ABC"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6428,10 +8220,22 @@
             "value" : "ABC वर अवधि आणि कॉमा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ponto e vírgula no ABC"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Punk och komma på ABC"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "ABC'de nokta ve virgül"
           }
         }
       }
@@ -6481,6 +8285,12 @@
             "value" : "सुविधाजनक टाइपिंग के लिए मुख्य कीबोर्ड पर अवधि और कॉमा कुंजियाँ शामिल करें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sertakan tombol titik dan koma pada keyboard utama untuk kemudahan mengetik."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6493,10 +8303,22 @@
             "value" : "सुलभ टाइपिंगसाठी मुख्य कीबोर्डवर अवधि आणि कॉमा कुञ्जी समाविष्ट करा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Inclui teclas de ponto e vírgula no seu teclado principal para facilitar a digitação."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Inkludera punkt- och kommatangenter på huvudtangentbordet för att underlätta skrivandet."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kolay yazma için ana klavyeye nokta ve virgül tuşlarını ekleyin."
           }
         }
       }
@@ -6546,6 +8368,12 @@
             "value" : "लेआउट"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tata Letak Keyboard"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6558,10 +8386,22 @@
             "value" : "लेआउट"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Layout"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Layout"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Düzen"
           }
         }
       }
@@ -6611,6 +8451,12 @@
             "value" : "इंस्टॉल किए गए कीबोर्ड चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih keyboard terpasang"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6623,10 +8469,22 @@
             "value" : "इंस्टॉल केलेले कीबोर्ड निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecionar o teclado instalado"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj installerade tangentbord"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yüklenen klavyeyi seçin"
           }
         }
       }
@@ -6676,6 +8534,12 @@
             "value" : "भाषा चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih bahasa"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6688,10 +8552,22 @@
             "value" : "भाषा निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecionar idioma"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj språk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Dili seçin"
           }
         }
       }
@@ -6741,6 +8617,12 @@
             "value" : "स्रोत भाषा क्या है"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Apa bahasa asalnya"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6753,10 +8635,22 @@
             "value" : "स्रोत भाषा काय आहे"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "O idioma de origem"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Vilket är källspråket"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kaynak dil nedir"
           }
         }
       }
@@ -6806,6 +8700,12 @@
             "value" : "अनुवाद भाषा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa terjemahan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6818,10 +8718,22 @@
             "value" : "अनुवाद भाषा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Idioma da tradução"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Språk för översättning"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çeviri dili"
           }
         }
       }
@@ -6871,6 +8783,12 @@
             "value" : "जिस भाषा से अनुवाद करना है, उसे बदलें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ubah bahasa untuk diterjemahkan dari."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6883,10 +8801,22 @@
             "value" : "अनुवाद करायची भाषा बदला."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Altere o idioma a ser traduzido."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj ett språk att översätta ifrån"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çevrilecek dili değiştirin."
           }
         }
       }
@@ -6936,6 +8866,12 @@
             "value" : "अनुवाद स्रोत भाषा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa asal terjemahan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -6948,10 +8884,22 @@
             "value" : "अनुवाद स्रोत भाषा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Idioma de origem da tradução"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Källspråk för översättning"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çeviri kaynak dili"
           }
         }
       }
@@ -7001,6 +8949,12 @@
             "value" : "डार्क मोड"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Mode gelap"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7013,10 +8967,22 @@
             "value" : "डार्क मोड"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Modo escuro"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Mörkt läge"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Karanlık mod"
           }
         }
       }
@@ -7066,6 +9032,12 @@
             "value" : "ऐप प्रदर्शनी को डार्क मोड में बदलें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aktifkan mode gelap untuk tampilan aplikasi."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7078,10 +9050,22 @@
             "value" : "अ‍ॅप डिस्प्ले डार्क मोडमध्ये बदला."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Muda o visual do aplicativo para o modo escuro."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ändra programmets visning till mörkt läge."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama görünümünü karanlık mod olarak değiştirin."
           }
         }
       }
@@ -7131,6 +9115,12 @@
             "value" : "ऐप की भाषा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Bahasa aplikasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7143,10 +9133,22 @@
             "value" : "अ‍ॅपची भाषा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Idioma do aplicativo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "App-språk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama dili"
           }
         }
       }
@@ -7196,6 +9198,12 @@
             "value" : "ऐप टेक्स्ट के लिए भाषा चुनें"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih bahasa untuk tampilan teks aplikasi. "
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7208,10 +9216,22 @@
             "value" : "अ‍ॅप टेक्स्टसाठी भाषा निवडा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione o idioma para os textos do aplicativo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Välj språk för apptexter"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama metinleri için dil seçin"
           }
         }
       }
@@ -7261,6 +9281,12 @@
             "value" : "आपके डिवाइस पर केवल एक भाषा स्थापित है। कृपया सेटिंग्स में अधिक भाषाएँ स्थापित करें और फिर आप स्क्राइब  के विभिन्न स्थानीयकरण का चयन कर सकते हैं।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kamu hanya memiliki satu bahasa yang terpasang di perangkatmu. Silakan pasang lebih banyak bahasa di Pengaturan dan kamu akan bisa memilih lokalisasi Scribe yang berbeda."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7273,10 +9299,22 @@
             "value" : "तुमच्या डिव्हाइसवर फक्त एक भाषा स्थापित आहे. कृपया सेटिंग्जमध्ये अधिक भाषांचे संयोजन स्थापित करा आणि नंतर तुम्ही स्क्राइबच्या वेगवेगळ्या स्थानिकीकरण निवडू शकता."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Você tem apenas um idioma instalado no seu dispositivo. Por favor, instale mais idiomas nas Configurações para então selecionar diferentes versões de idioma do Scribe."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Du har bara ett språk installerat på din enhet. Installera fler språk i Inställningar och efter det kan du välja olika lokaliseringar av Scribe."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Cihazınızda yalnızca bir dil yüklü. Ayarlardan daha fazla dil yükleyin ve ardından Scribe'ın farklı yerelleştirmelerini seçin."
           }
         }
       }
@@ -7326,6 +9364,12 @@
             "value" : "केवल एक डिवाइस भाषा"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Hanya satu bahasa perangkat"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7338,10 +9382,22 @@
             "value" : "फक्त एक डिव्हाइस भाषा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Apenas um idioma no dispositivo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Endast ett enhetsspråk"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yalnızca bir cihaz dili"
           }
         }
       }
@@ -7391,6 +9447,12 @@
             "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ubah bahasa yang digunakan pada aplikasi Scribe"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7403,10 +9465,22 @@
             "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Altere o idioma do aplicativo Scribe."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Ändra vilket språk Scribe-appen är på."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe uygulamasının hangi dilde olduğunu değiştirin."
           }
         }
       }
@@ -7456,6 +9530,12 @@
             "value" : "उच्च रंग कंट्रास्ट"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kontras warna tinggi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7468,10 +9548,22 @@
             "value" : "उच्च रंग कंट्रास्ट"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Alto contraste de cor"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Hög färgkontrast"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yüksek renk kontrastı"
           }
         }
       }
@@ -7521,6 +9613,12 @@
             "value" : "बेहतर दृश्यता और स्पष्ट देखने के अनुभव के लिए रंग कंट्रास्ट बढ़ाएँ।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tingkatkan kontras warna untuk kemudahan akses dan tampilan yang lebih jelas."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7533,10 +9631,22 @@
             "value" : "चांगली दृश्यमानता आणि स्पष्ट पाहण्याच्या अनुभवासाठी रंग कंट्रास्ट वाढवा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aumenta o contraste de cor para melhor nitidez e acessibilidade."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Öka färgkontrasten för förbättrad tillgänglighet och en tydligare tittarupplevelse."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Geliştirilmiş erişilebilirlik ve daha net bir görüntüleme deneyimi için renk kontrastını artırın."
           }
         }
       }
@@ -7586,6 +9696,12 @@
             "value" : "ऐप टेक्स्ट का आकार बढ़ाएं"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Perbesar ukuran teks app"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7598,10 +9714,22 @@
             "value" : "अ‍ॅप टेक्स्टचा आकार वाढवा"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aumentar tamanho do texto"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Öka appens textstorlek"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama metin boyutunu artır"
           }
         }
       }
@@ -7651,6 +9779,12 @@
             "value" : "बेहतर पठनीयता के लिए मेनू टेक्स्ट का आकार बढ़ाएँ।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Perbesar ukuran teks agar lebih mudah dibaca."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7663,10 +9797,22 @@
             "value" : "चांगली वाचनीयता मिळवण्यासाठी मेनू टेक्स्टचा आकार वाढवा."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Aumenta o tamanho dos textos no menu para melhor leitura."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Öka storleken på menytexterna för bättre läsbarhet."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Daha iyi okunabilirlik için menü metinlerinin boyutunu artırın."
           }
         }
       }
@@ -7716,6 +9862,12 @@
             "value" : "ऐप सेटिंग्स"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pengaturan aplikasi"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7728,10 +9880,22 @@
             "value" : "अ‍ॅप सेटिंग्ज"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Configurações do aplicativo"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "App-inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Uygulama ayarları"
           }
         }
       }
@@ -7781,6 +9945,12 @@
             "value" : "सेटिंग्स"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pengaturan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7793,10 +9963,22 @@
             "value" : "सेटिंग्ज"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Configurações"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ayarlar"
           }
         }
       }
@@ -7846,6 +10028,12 @@
             "value" : "अनुवाद"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pengaturan Terjemahan"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7858,10 +10046,22 @@
             "value" : "अनुवाद"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Tradução"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Översättning"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çeviri"
           }
         }
       }
@@ -7911,6 +10111,12 @@
             "value" : "विकिडाटा एक सहयोगात्मक रूप से संपादित ज्ञान ग्राफ है जिसे विकिमीडिया फाउंडेशन द्वारा बनाए रखा जाता है। यह विकिपीडिया और अन्य कई परियोजनाओं के लिए ओपन डेटा का स्रोत है।"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikidata adalah grafik pengetahuan yang disunting secara kolaboratif yang dikelola oleh Wikimedia Foundation. Ia berfungsi sebagai sumber data terbuka bagi proyek seperti Wikipedia dan berbagai proyek lainnya."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7923,10 +10129,22 @@
             "value" : "विकिडाटा हे सहयोगाने संपादित ज्ञान ग्राफ आहे, जे विकिमीडिया फाउंडेशनद्वारे देखभाल केले जाते. हे विकिपीडिया आणि इतर अनेक प्रकल्पांसाठी खुला डेटा स्रोत आहे."
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "A Wikidata é um grafo de conhecimento editado colaborativamente e mantivo pela Fundação Wikimedia. A Wikidata é uma fonte de dados públicos para projetos como a Wikipédia e muitos outros."
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Wikidata är en gemensamt redigerad kunskapsgraf som underhålls av Wikimedia Foundation. Det fungerar som en källa till öppen data för projekt som Wikipedia och flera andra."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wikimedia Vakfı tarafından barındırılan Wikidata, kolaboratif çok dilli bir bilgi grafiğidir. Wikipedia ve diğer birçok projeler için açık veri kaynağı olarak hizmet eder."
           }
         }
       }
@@ -7976,6 +10194,12 @@
             "value" : "स्क्राइब  विकिडाटा की भाषा डेटा का उपयोग करता है अपने कई मुख्य विशेषताओं के लिए। हमें इस डेटा से संज्ञा के लिंग, क्रिया रूपांतरण और बहुत कुछ जानकारी मिलती है!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe menggunakan data bahasa milik Wikidata untuk banyak fitur utama. Kami mendapatkan informasi seperti kata benda bergender, konjugasi kata kerja, dan banyak lagi!"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -7988,10 +10212,22 @@
             "value" : "स्क्राइब विकिडाटाच्या भाषा डेटाचा वापर त्याच्या अनेक मुख्य वैशिष्ट्यांसाठी करतो. आम्हाला या डेटामधून संज्ञा लिंग, क्रियापद रूपांतरण आणि इतर माहिती मिळते!"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "O Scribe usa dados linguísticos da Wikidata para muitas de suas funcionalidades. Temos informações sobre gêneros de substantivos, conjugações de verbos, e muito mais!"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Scribe använder Wikidatas språkdata för många av sina kärnfunktioner. Vi får information som substantiv, genus, verbböjningar och mycket mer!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe, birçok temel özelliği için Wikidata'nın dil verilerini kullanır. İsim cinsiyetleri, fiil çekimleri ve çok daha fazlasını Wikidata'dan alırız!"
           }
         }
       }
@@ -8041,6 +10277,12 @@
             "value" : "आप wikidata.org पर खाता बनाकर उस समुदाय में शामिल हो सकते हैं जो स्क्राइब  और कई अन्य परियोजनाओं का समर्थन कर रहा है। हमारी मदद करें मुफ्त जानकारी दुनिया तक पहुँचाने में!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Kamu bisa membuat akun di wikidata.org untuk bergabung dengan komunitas yang mendukung Scribe dan banyak proyek lainnya. Bantu kami membawakan informasi secara gratis untuk dunia!"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "",
@@ -8053,10 +10295,22 @@
             "value" : "तुम्ही wikidata.org वर खाती बनवून त्या समुदायात सामील होऊ शकता, जो स्क्राइब आणि इतर अनेक प्रकल्पांना समर्थन देत आहे. आमच्यासोबत मोफत माहिती जगभर पोहचविण्यात मदत करा!"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Você pode criar uma conta em wikidata.org e se juntar à comunidade que apoia o Scribe e muitos outros projetos. Ajude-nos a fornecer dados gratuitos para o mundo!"
+          }
+        },
         "sv" : {
           "stringUnit" : {
             "state" : "",
             "value" : "Du kan skapa ett konto på wikidata.org för att gå med i communityn som stöder Scribe och så många andra projekt. Hjälp oss att ge gratis information till världen!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "wikidata.org adresinde bir hesap oluşturabilir, Scribe'ı ve diğer birçok projeyi destekleyen bu topluluğa katılabilirsiniz. Dünya'ya ücretsiz bilgi getirmemize yardımcı olun!"
           }
         }
       }
