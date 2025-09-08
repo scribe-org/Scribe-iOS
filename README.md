@@ -345,7 +345,7 @@ Many thanks to all the [Scribe-iOS contributors](https://github.com/scribe-org/S
 
 ### Code and Dependencies
 
-The Scribe team would like to thank all the great software that made Scribe-iOS' development possible, with special thanks going to:
+The Scribe community would like to thank all the great software that made Scribe-iOS' development possible, with special thanks going to:
 
 - [GRDB](https://github.com/groue/GRDB.swift) by [groue](https://github.com/groue) ([License](https://github.com/groue/GRDB.swift/blob/master/LICENSE))
 - [SwipeableTabBarController](https://github.com/marcosgriselli/SwipeableTabBarController) by [marcosgriselli](https://github.com/marcosgriselli) ([License](https://github.com/marcosgriselli/SwipeableTabBarController/blob/master/LICENSE))
