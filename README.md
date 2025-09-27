@@ -176,7 +176,7 @@ pre-commit install
 
 5. In order to run Scribe on an emulator:
 
-   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
+   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
    - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
    - Select a device to run the app on
