@@ -279,6 +279,12 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
 
+  // Toggles visibility of the Conjugate and Plural buttons
+  func hideConjugateAndPluralKeys(state: Bool) {
+    conjugateKey.isHidden = state
+    pluralKey.isHidden = state
+  }
+
   // Logic to create notification tooltip.
   func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
     let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
@@ -639,6 +645,10 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: padEmojiKey0)
       deactivateBtn(btn: padEmojiKey1)
       deactivateBtn(btn: padEmojiKey2)
+
+      if controllerLanguage == "Indonesian" {
+        hideConjugateAndPluralKeys(state: false)
+      }
 
       if autoAction0Visible {
         allowUndo = false
@@ -2133,10 +2143,12 @@ class KeyboardViewController: UIInputViewController {
 
       if commandState == .selectCommand {
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
-        if controllerLanguage != "Indonesian" {
-          styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
-          styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
-        }
+        if controllerLanguage == "Indonesian" {
+          hideConjugateAndPluralKeys(state: true)
+        } else {
+            styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
+            styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+}
 
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()

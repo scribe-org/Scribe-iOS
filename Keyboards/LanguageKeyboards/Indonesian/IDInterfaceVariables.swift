@@ -167,6 +167,20 @@ func getIDKeys() {
 
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
+
+  keysWithAlternates = []
+  keysWithAlternatesLeft = []
+  keysWithAlternatesRight = []
+  aAlternateKeys = []
+  eAlternateKeys = []
+  iAlternateKeys = []
+  oAlternateKeys = []
+  uAlternateKeys = []
+  cAlternateKeys = []
+  lAlternateKeys = []
+  nAlternateKeys = []
+  sAlternateKeys = []
+  zAlternateKeys = []
 }
 
 // MARK: Provide Layout
