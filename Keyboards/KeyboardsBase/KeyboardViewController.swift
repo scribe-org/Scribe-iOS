@@ -440,7 +440,7 @@ class KeyboardViewController: UIInputViewController {
             for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
+              } else if shiftButtonState == .capsLocked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -456,7 +456,7 @@ class KeyboardViewController: UIInputViewController {
             for i in 0 ..< 3 {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
+              } else if shiftButtonState == .capsLocked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -504,11 +504,12 @@ class KeyboardViewController: UIInputViewController {
           suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
         }
 
-        if shiftButtonState == .shift {
+        switch shiftButtonState {
+        case .shift:
           completionWords.append(suggestion.capitalize())
-        } else if capsLockButtonState == .locked {
+        case .capsLocked:
           completionWords.append(suggestion.uppercased())
-        } else {
+        default:
           completionWords.append(suggestion)
         }
       }
@@ -523,11 +524,13 @@ class KeyboardViewController: UIInputViewController {
         completionWords.append(previousWord)
         continue
       }
-      if shiftButtonState == .shift {
+
+      switch shiftButtonState {
+      case .shift:
         completionWords.append(baseAutosuggestions[i].capitalize())
-      } else if capsLockButtonState == .locked {
+      case .capsLocked:
         completionWords.append(baseAutosuggestions[i].uppercased())
-      } else {
+      default:
         completionWords.append(baseAutosuggestions[i])
       }
     }
@@ -576,7 +579,7 @@ class KeyboardViewController: UIInputViewController {
           }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
-          } else if capsLockButtonState == .locked {
+          } else if shiftButtonState == .capsLocked {
             completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
             let nounForm = LanguageDBManager.shared.queryNounForm(of: suggestionsLowerCasePrefix[i])[0]
@@ -599,7 +602,7 @@ class KeyboardViewController: UIInputViewController {
 
           if shiftButtonState == .shift {
             completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
-          } else if capsLockButtonState == .locked {
+          } else if shiftButtonState == .capsLocked {
             completionWords.append(suggestionsCapitalizedPrefix[i].uppercased())
           } else {
             completionWords.append(suggestionsCapitalizedPrefix[i])
@@ -2762,9 +2765,8 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "shift":
-      if capsLockButtonState == .locked {
+      if shiftButtonState == .capsLocked {
         // Return capitalization to default.
-        capsLockButtonState = .normal
         shiftButtonState = .normal
       } else {
         shiftButtonState = shiftButtonState == .normal ? .shift : .normal
@@ -2956,8 +2958,7 @@ class KeyboardViewController: UIInputViewController {
 
   private func switchToFullCaps() {
     // Return SHIFT button to normal state as the CAPSLOCK button will be enabled.
-    shiftButtonState = .normal
-    capsLockButtonState = capsLockButtonState == .normal ? .locked : .normal
+    shiftButtonState = .capsLocked
 
     loadKeys()
     conditionallySetAutoActionBtns()

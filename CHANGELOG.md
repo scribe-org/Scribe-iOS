@@ -35,6 +35,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🐞 Bug Fixes
 
 - The tab bar titles are now localized for the application ([#517](https://github.com/scribe-org/Scribe-iOS/issues/517)).
+- Using capslock would always output the lowercase version of the tapped character ([#540](https://github.com/scribe-org/Scribe-iOS/issues/540)).
 
 ### ✅ Tests
 
