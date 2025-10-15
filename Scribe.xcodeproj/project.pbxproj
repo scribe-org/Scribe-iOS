@@ -883,6 +883,7 @@
 		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		E996495A2E98A12100200F53 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = E99649592E98A12100200F53 /* GRDB */; };
 		E996495B2E98A31B00200F53 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */; };
 		E996495C2E98A32900200F53 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
@@ -2547,6 +2548,7 @@
 				E99649972E98B11100200F53 /* Assets.xcassets in Resources */,
 				D161510D2E9DBE3600131732 /* PTLanguageData.sqlite in Resources */,
 				D161510F2E9DBE4500131732 /* ESLanguageData.sqlite in Resources */,
+				E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
