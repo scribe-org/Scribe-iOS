@@ -47,6 +47,18 @@
 		19DC86032C7772FC006E32FD /* KeyboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */; };
 		19DC86042C7772FC006E32FD /* KeyboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */; };
 		19DC86052C7772FC006E32FD /* KeyboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */; };
+		1CBB41E92E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41EA2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41EB2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41EC2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41ED2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41EE2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41EF2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41F02E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41F12E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41F22E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41F32E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
+		1CBB41F42E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */; };
 		30453951293B9106003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		30453953293B9107003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
 		30453954293B9107003AE55B /* InstallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DCB027AD37BD0057A10D /* InstallScreen.swift */; };
@@ -1014,6 +1026,8 @@
 		1900C00D2C88BF980017A874 /* TestKeyboardStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyboardStyling.swift; sourceTree = "<group>"; };
 		198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProvider.swift; sourceTree = "<group>"; };
 		19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBuilder.swift; sourceTree = "<group>"; };
+		1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = text; path = NBLanguageData.sqlite; sourceTree = "<group>"; };
+		1CBB42022E9FE5B900D26BF4 /* Norwegian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Norwegian.entitlements; sourceTree = "<group>"; };
 		30453963293B9D18003AE55B /* InformationToolTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToolTipData.swift; sourceTree = "<group>"; };
 		30453966293B9D31003AE55B /* ViewThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThemeable.swift; sourceTree = "<group>"; };
 		30453968293B9DB4003AE55B /* ToolTipViewUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipViewUpdatable.swift; sourceTree = "<group>"; };
@@ -1628,6 +1642,8 @@
 		D1AB5B1629C7554A00CCB0C1 /* Norwegian */ = {
 			isa = PBXGroup;
 			children = (
+				1CBB42022E9FE5B900D26BF4 /* Norwegian.entitlements */,
+				1CBB41E82E9FD45400D26BF4 /* NBLanguageData.sqlite */,
 				D1CDED822A85A12C00098546 /* NBCommandVariables.swift */,
 				D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */,
 				D1AB5B1729C7554A00CCB0C1 /* NBKeyboardViewController.swift */,
@@ -2125,6 +2141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
+				1CBB41EA2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
@@ -2151,6 +2168,7 @@
 				5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FF02C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41EF2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380052C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A0380192C74D72800D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2171,6 +2189,7 @@
 				5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */,
 				D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */,
+				1CBB41F02E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380042C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A0380182C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2191,6 +2210,7 @@
 				5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FEA2C74D6D900D4AADD /* ENLanguageData.sqlite in Resources */,
+				1CBB41F22E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				5A03801D2C74D72C00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2218,6 +2238,7 @@
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FF62C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41EC2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A037FEC2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
 				D15E298A29E41BAD006B2C81 /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2238,6 +2259,7 @@
 				5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FEB2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
+				1CBB41EB2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 				5A03801E2C74D72D00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2258,6 +2280,7 @@
 				5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				5A037FF72C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41F12E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A037FED2C74D6DB00D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 			);
@@ -2278,6 +2301,7 @@
 				5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FF32C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41ED2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380082C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A03801C2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2298,6 +2322,7 @@
 				5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FEF2C74D6E300D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41F32E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380032C74D70C00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A0380172C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2318,6 +2343,7 @@
 				5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FEE2C74D6E200D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41E92E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380022C74D70B00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A0380162C74D72600D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2338,6 +2364,7 @@
 				5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
 				5A037FF12C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
+				1CBB41EE2E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380062C74D70E00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A03801A2C74D72900D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -2358,6 +2385,7 @@
 				5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
+				1CBB41F42E9FD46C00D26BF4 /* NBLanguageData.sqlite in Resources */,
 				5A0380072C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
 				5A03801B2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
@@ -3843,6 +3871,7 @@
 		D1AB5B5D29C757A100CCB0C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Norwegian/Norwegian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3856,7 +3885,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.norwegian;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3872,6 +3901,7 @@
 		D1AB5B5E29C757A100CCB0C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboards/LanguageKeyboards/Norwegian/Norwegian.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3885,7 +3915,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.norwegian;
+				PRODUCT_BUNDLE_IDENTIFIER = org.scribe.portuguese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

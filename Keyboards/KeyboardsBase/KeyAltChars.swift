@@ -26,6 +26,9 @@ func setKeyboardAlternateKeys() {
     "u": uAlternateKeys,
     "ä": äAlternateKeys,
     "ö": öAlternateKeys,
+    "å": åAlternateKeys,  // NW
+    "æ": æAlternateKeys,  // NW
+    "ø": øAlternateKeys,  // NW
     "y": yAlternateKeys,
     "s": sAlternateKeys,
     "l": lAlternateKeys,
@@ -91,6 +94,9 @@ var uAlternateKeys = [String]()
 var yAlternateKeys = [String]()
 var äAlternateKeys = [String]()
 var öAlternateKeys = [String]()
+var åAlternateKeys = [String]()
+var æAlternateKeys = [String]()
+var øAlternateKeys = [String]()
 var sAlternateKeys = [String]()
 var lAlternateKeys = [String]()
 var zAlternateKeys = [String]()

@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Scribe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D1AB5B2229C757A100CCB0C1"
+               BuildableName = "Norwegian.appex"
+               BlueprintName = "Norwegian"
+               ReferencedContainer = "container:Scribe.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
