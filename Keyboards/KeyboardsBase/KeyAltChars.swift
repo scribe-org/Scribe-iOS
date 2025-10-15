@@ -26,6 +26,9 @@ func setKeyboardAlternateKeys() {
     "u": uAlternateKeys,
     "ä": äAlternateKeys,
     "ö": öAlternateKeys,
+    "å": åAlternateKeys,
+    "æ": æAlternateKeys,
+    "ø": øAlternateKeys,
     "y": yAlternateKeys,
     "s": sAlternateKeys,
     "l": lAlternateKeys,
@@ -98,6 +101,9 @@ var dAlternateKeys = [String]()
 var cAlternateKeys = [String]()
 var nAlternateKeys = [String]()
 var ьAlternateKeys = [String]()
+var åAlternateKeys = [String]()
+var æAlternateKeys = [String]()
+var øAlternateKeys = [String]()
 
 /// Creates the shape that allows left most buttons to pop up after being pressed.
 ///
