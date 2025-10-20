@@ -209,7 +209,7 @@ For more information on features and use cases, see [Keyboard Features](#keyboar
 
 # Supported Languages [`⇧`](#contents)
 
-Scribe's goal is functional, feature-rich keyboards for all languages. You can check the currently available data for all Scribe applications on our website at [scri.be/docs/server/available-data](https://scri.be/docs/server/available-data).
+Scribe's goal is functional, feature-rich keyboards for all languages. You can check the currently available languages and data for Scribe applications on our website at [scri.be/docs/server/available-data](https://scri.be/docs/server/available-data).
 
 See [scribe_data/wikidata/language_data_extraction](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/wikidata/language_data_extraction) for queries in the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) project for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
 
