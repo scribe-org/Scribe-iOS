@@ -64,7 +64,7 @@ class KeyboardKey: UIButton {
     } else {
       capsKey = key
     }
-    let keyToDisplay = shiftButtonState == .shift || capsLockButtonState == .locked ? capsKey : key
+    let keyToDisplay = shiftButtonState == .shift || shiftButtonState == .capsLocked ? capsKey : key
     setTitleColor(keyCharColor, for: .normal)
     layer.setValue(key, forKey: "original")
     layer.setValue(keyToDisplay, forKey: "keyToDisplay")
@@ -302,14 +302,14 @@ class KeyboardKey: UIButton {
       backgroundColor = specialKeyColor
 
     case SpecialKeys.capsLock:
-      switch capsLockButtonState {
-      case .normal:
-        backgroundColor = specialKeyColor
-        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
-
-      case .locked:
+      switch shiftButtonState {
+      case .capsLocked:
         backgroundColor = keyPressedColor
         styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
+
+      default:
+        backgroundColor = specialKeyColor
+        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
       }
 
     case "shift":
@@ -317,7 +317,7 @@ class KeyboardKey: UIButton {
         backgroundColor = keyPressedColor
 
         styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
-      } else if DeviceType.isPhone && capsLockButtonState == .locked {
+      } else if DeviceType.isPhone && shiftButtonState == .capsLocked {
         // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller.
         backgroundColor = keyPressedColor
 

@@ -17,9 +17,12 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            ## Thank you for the pull request! ❤️
+            ## Thank you for the pull request! 💙
 
             The Scribe-iOS team will do our best to address your contribution as soon as we can. If you're not already a member of our [public Matrix community](https://matrix.to/#/#scribe_community:matrix.org), please consider joining! We'd suggest that you use the [Element](https://element.io/) client as well as [Element X](https://element.io/app) for a mobile app, and definitely join the `General` and `iOS` rooms once you're in. Also consider attending our [bi-weekly Saturday dev syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync). It'd be great to meet you 😊
+
+            > [!NOTE]
+            > Scribe uses [Conventional Comments](https://conventionalcomments.org/) in reviews to make sure that communication is as clear as possible.
 
       - name: Add Checklist
         uses: thollander/actions-comment-pull-request@v2

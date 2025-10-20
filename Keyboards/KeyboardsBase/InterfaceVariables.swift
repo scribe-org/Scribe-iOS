@@ -81,14 +81,7 @@ enum KeyboardState {
 enum ShiftButtonState {
   case normal
   case shift
-}
-
-/// What the keyboard state is in regards to the all caps key.
-/// - normal: not capitalized
-/// - locked: caps-lock
-enum CapsLockButtonState {
-  case normal
-  case locked
+  case capsLocked
 }
 
 /// States of the keyboard corresponding to which commands the user is executing.
@@ -122,7 +115,6 @@ enum ConjViewShiftButtonsState {
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
-var capsLockButtonState: CapsLockButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive

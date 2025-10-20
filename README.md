@@ -40,7 +40,6 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 - [App Setup](#app-setup)
 - [Supported Languages](#supported-languages)
 - [Keyboard Features](#keyboard-features)
-- [Language Practice](#language-practice)
 - [Featured By](#featured-by)
 
 <a id="preview-videos"></a>
@@ -122,7 +121,7 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 > [!NOTE]\
 > Please see the [Wikidata and Scribe Guide](https://github.com/scribe-org/Organization/blob/main/WIKIDATAGUIDE.md) for an overview of [Wikidata](https://www.wikidata.org/) and how Scribe uses it.
 
-Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Conjugate-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
+Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
 <a id="environment-setup"></a>
 
@@ -210,23 +209,9 @@ For more information on features and use cases, see [Keyboard Features](#keyboar
 
 # Supported Languages [`⇧`](#contents)
 
-Scribe's goal is functional, feature-rich keyboards for all languages. Check [scribe_data/extract_transform](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/extract_transform) for queries for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
+Scribe's goal is functional, feature-rich keyboards for all languages. You can check the currently available languages and data for Scribe applications on our website at [scri.be/docs/server/available-data](https://scri.be/docs/server/available-data).
 
-The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/) and via [Unicode CLDR](https://github.com/unicode-org/cldr) for emojis:
-
-| Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
-| :--------- | ------: | ----: | -------------: | ------------: | -------------: |
-| French     |  18,082 | 6,575 |         67,652 |             - |          2,488 |
-| German     | 194,762 | 3,637 |         67,652 |           215 |          2,898 |
-| Italian    |  59,910 | 7,654 |         67,652 |             - |          2,457 |
-| Portuguese |   5,281 |   539 |         67,652 |             - |          2,327 |
-| Russian    | 194,567 |    15 |         67,652 |            15 |          3,827 |
-| Spanish    |  62,949 | 7,938 |         67,652 |             - |          3,134 |
-| Swedish    |  47,039 | 4,682 |         67,652 |             - |          2,913 |
-
-`*` Given the current **`beta`** status where words are machine translated.
-
-`†` Only for languages for which preposition annotation is needed.
+See [scribe_data/wikidata/language_data_extraction](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/wikidata/language_data_extraction) for queries in the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) project for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
 
 <a id="keyboard-features"></a>
 
@@ -238,9 +223,9 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 ### Translation [`⇧`](#contents)
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option. Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
-As of now translations are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
+As of now translations are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations to be directly queried.
 
 ### Verb Conjugation [`⇧`](#contents)
 
@@ -298,12 +283,6 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 </p>
 </details>
-
-<a id="language-practice"></a>
-
-# Language Practice [`⇧`](#contents)
-
-A future feature of Scribe is language practice within the app itself. Scribe presents users with information that is directly relevant to their current struggles with a second language. This information can be saved in-app and used to create personalized lessons such as flashcards to reinforce the information that Scribe has provided.
 
 <a id="featured-by"></a>
 
