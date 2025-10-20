@@ -2766,7 +2766,6 @@ class KeyboardViewController: UIInputViewController {
 
     case "shift":
       if shiftButtonState == .capsLocked {
-        // Return capitalization to default.
         shiftButtonState = .normal
       } else {
         shiftButtonState = shiftButtonState == .normal ? .shift : .normal
@@ -2957,7 +2956,6 @@ class KeyboardViewController: UIInputViewController {
   }
 
   private func switchToFullCaps() {
-    // Return SHIFT button to normal state as the CAPSLOCK button will be enabled.
     shiftButtonState = .capsLocked
 
     loadKeys()
