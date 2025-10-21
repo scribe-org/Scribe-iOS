@@ -3,6 +3,7 @@
 /**
  * Variables associated with commands for the Norwegian Bokmål Scribe keyboard.
  */
+
 func nbSetConjugationLabels() {
   // Reset all form labels prior to assignment.
   for k in formLabelsDict.keys {
@@ -45,7 +46,7 @@ func nbGetConjugationState() -> String {
 func nbConjugationStateLeft() {
   switch nbConjugationState {
   case .present:
-    // Transition to other states if applicable
+    // Note: Transition to other states once verb data is added.
     break
   }
 }
@@ -54,7 +55,7 @@ func nbConjugationStateLeft() {
 func nbConjugationStateRight() {
   switch nbConjugationState {
   case .present:
-    // Transition to other states if applicable
+    // Note: Transition to other states once verb data is added.
     break
   }
 }
