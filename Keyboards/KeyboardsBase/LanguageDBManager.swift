@@ -69,7 +69,7 @@ class LanguageDBManager {
             if let stringValue = row[col] as? String {
               outputValues.append(stringValue)
             } else {
-              outputValues.append("")  // Default to empty string if NULL or wrong type
+              outputValues.append("")  // default to empty string if NULL or wrong type
             }
           }
         }

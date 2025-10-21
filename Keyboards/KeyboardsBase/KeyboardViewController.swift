@@ -279,7 +279,7 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
 
-  // Toggles visibility of the Conjugate and Plural buttons
+  // Toggles visibility of the Conjugate and Plural buttons.
   func hideConjugateAndPluralKeys(state: Bool) {
     conjugateKey.isHidden = state
     pluralKey.isHidden = state
@@ -1729,7 +1729,7 @@ class KeyboardViewController: UIInputViewController {
             (
               commandState != .translate
               && (
-                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
                 || (
                   ["German", "Spanish", "Swedish"].contains(controllerLanguage)
                   && disableAccentCharacters
@@ -1737,7 +1737,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1748,10 +1748,10 @@ class KeyboardViewController: UIInputViewController {
           && (
             (
               commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+              && ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1762,10 +1762,10 @@ class KeyboardViewController: UIInputViewController {
           && (
             (
               commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+              && ["English", "Italian", "Portuguese"].contains(controllerLanguage)
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "@")
@@ -1886,7 +1886,7 @@ class KeyboardViewController: UIInputViewController {
             (
               commandState != .translate
               && (
-                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
                 || (
                   ["German", "Spanish", "Swedish"].contains(controllerLanguage)
                   && disableAccentCharacters
@@ -1894,7 +1894,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
