@@ -1737,7 +1737,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1751,7 +1751,7 @@ class KeyboardViewController: UIInputViewController {
               && ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
             ) || (
               commandState == .translate
-              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1894,7 +1894,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "in", "it", "pt"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
