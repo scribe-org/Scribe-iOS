@@ -288,7 +288,7 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 
 # Featured By [`⇧`](#contents)
 
-Please see the [blog posts page on our website](https://scri.be/docs/about/blog-posts) for a list of articles on Scribe, and feel free to open a pull request to add one that you've written at [scribe-org/scri.be](github.com/scribe-org/scri.be)!
+Please see the [blog posts page on our website](https://scri.be/docs/about/blog-posts) for a list of articles on Scribe, and feel free to open a pull request to add one that you've written at [scribe-org/scri.be](https://github.com/scribe-org/scri.be)!
 
 ### Organizations
 
