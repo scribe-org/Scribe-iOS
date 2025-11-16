@@ -26,6 +26,7 @@ repos:
     rev: 0.62.2
     hooks:
       - id: swiftlint
+        name: run swiftlint linting check
         entry: swiftlint --strict
 
   - repo: https://github.com/to-sta/spdx-checker-pre-commit
