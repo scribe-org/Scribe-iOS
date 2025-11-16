@@ -1,6 +1,21 @@
+# Setting up a Python environment and pre-commit.
+
+# Unix or MacOS:
+# >>> python3 -m venv venv
+# >>> source venv/bin/activate
+
+# Windows:
+# >>> python -m venv venv
+# >>> venv\Scripts\activate.bat
+
+# >>> pip install --upgrade pip
+# >>> pip install pre-commit
+# >>> pre-commit install
+# >>> pre-commit run --all-files
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -8,7 +23,15 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/realm/SwiftLint
-    rev: 0.55.1
+    rev: 0.62.2
     hooks:
       - id: swiftlint
         entry: swiftlint --strict
+
+  - repo: https://github.com/to-sta/spdx-checker-pre-commit
+    rev: 0.1.3
+    hooks:
+      - id: spdx-license-checker
+        name: run spdx-checker license check
+        args: [-l, GPL-3.0-or-later]
+        types_or: [swift]
