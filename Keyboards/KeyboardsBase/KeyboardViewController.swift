@@ -901,22 +901,22 @@ class KeyboardViewController: UIInputViewController {
       backspaceTimer = nil
     }
   }
-  
+
   func deleteWordBackward() {
     guard let documentText = proxy.documentContextBeforeInput else {
       return
     }
-    
+
     var words = documentText.split(separator: " ").map(String.init)
-    
+
     guard !words.isEmpty else {
       return
     }
-    
+
     words.removeLast()
-    
+
     let updatedText = words.joined(separator: " ")
-    
+
     for _ in documentText {
         proxy.deleteBackward()
     }
@@ -2317,17 +2317,17 @@ class KeyboardViewController: UIInputViewController {
       return true // return the default value
     }
   }
-  
+
   func wordForWordDeletionIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "WordForWord"
-      
+
       return userDefaults.bool(forKey: dictionaryKey)
     } else {
       return false // return the default value
     }
-  
+
   }
 
   // MARK: Button Actions
@@ -3035,8 +3035,8 @@ class KeyboardViewController: UIInputViewController {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
-    
-    longPressOnDelete = true //This variable can be used for word-for-word deletion
+
+    longPressOnDelete = true // This variable can be used for word-for-word deletion
 
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0
