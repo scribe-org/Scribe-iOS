@@ -886,7 +886,11 @@ class KeyboardViewController: UIInputViewController {
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
     if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-      proxy.deleteBackward()
+      if wordForWordDeletionIsEnabled() && longPressOnDelete {
+        deleteWordBackward()
+      } else {
+        proxy.deleteBackward()
+      }
     } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text ?? "") || allColoredPrompts.contains(commandBar.attributedText ?? NSAttributedString())) {
       guard let inputText = commandBar.text, !inputText.isEmpty else {
         return
@@ -896,6 +900,32 @@ class KeyboardViewController: UIInputViewController {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
     }
+  }
+  
+  func deleteWordBackward() {
+    guard let documentText = proxy.documentContextBeforeInput else {
+      return
+    }
+    
+    var words = documentText.split(separator: " ").map(String.init)
+    
+    guard !words.isEmpty else {
+      return
+    }
+    
+    words.removeLast()
+    
+    let updatedText = words.joined(separator: " ")
+    
+    for _ in documentText {
+        proxy.deleteBackward()
+    }
+
+    for character in updatedText {
+        proxy.insertText(String(character))
+    }
+
+    proxy.adjustTextPosition(byCharacterOffset: 0)
   }
 
   // The button used to display Scribe commands and its shadow.
@@ -2287,6 +2317,18 @@ class KeyboardViewController: UIInputViewController {
       return true // return the default value
     }
   }
+  
+  func wordForWordDeletionIsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      let dictionaryKey = langCode + "WordForWord"
+      
+      return userDefaults.bool(forKey: dictionaryKey)
+    } else {
+      return false // return the default value
+    }
+  
+  }
 
   // MARK: Button Actions
 
@@ -2993,6 +3035,8 @@ class KeyboardViewController: UIInputViewController {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
+    //This variable can be used for word-for-word deletion
+    longPressOnDelete = true
 
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0
@@ -3019,6 +3063,7 @@ class KeyboardViewController: UIInputViewController {
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
+      longPressOnDelete = false
       if let button = gesture.view as? UIButton {
         button.backgroundColor = specialKeyColor
         styleDeleteButton(button, isPressed: false)

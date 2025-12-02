@@ -72,6 +72,13 @@ enum SettingsTableData {
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
           shortDescription: NSLocalizedString("app.settings.keyboard.functionality.auto_suggest_emoji_description", value: "Turn on emoji suggestions and completions for more expressive typing.", comment: "")
+        ),
+        Section(
+          sectionTitle: NSLocalizedString("app.word_for_word", value: "Word for word deletion on long press", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.toggleWordForWordDeletion),
+          shortDescription: NSLocalizedString("word for word deletion",
+          value: "Word for word deletion.", comment: "")
         )
       ],
       hasDynamicData: nil

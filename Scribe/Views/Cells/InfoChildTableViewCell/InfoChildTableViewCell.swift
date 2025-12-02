@@ -146,7 +146,11 @@ final class InfoChildTableViewCell: UITableViewCell {
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
-
+      
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWord"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+      
     case .none: break
     }
 
@@ -185,6 +189,14 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = true  // Default value
+      }
+      
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWord"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = false //Default value
       }
 
     case .none: break
