@@ -3035,8 +3035,8 @@ class KeyboardViewController: UIInputViewController {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
-    //This variable can be used for word-for-word deletion
-    longPressOnDelete = true
+    
+    longPressOnDelete = true //This variable can be used for word-for-word deletion
 
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0

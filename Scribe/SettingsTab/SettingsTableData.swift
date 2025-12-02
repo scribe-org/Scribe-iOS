@@ -77,8 +77,7 @@ enum SettingsTableData {
           sectionTitle: NSLocalizedString("app.word_for_word", value: "Word for word deletion on long press", comment: ""),
           hasToggle: true,
           sectionState: .none(.toggleWordForWordDeletion),
-          shortDescription: NSLocalizedString("word for word deletion",
-          value: "Word for word deletion.", comment: "")
+          shortDescription: NSLocalizedString("word for word deletion", value: "Word for word deletion.", comment: "")
         )
       ],
       hasDynamicData: nil

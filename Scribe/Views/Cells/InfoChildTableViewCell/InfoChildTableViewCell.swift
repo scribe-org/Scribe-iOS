@@ -198,7 +198,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       } else {
         toggleSwitch.isOn = false //Default value
       }
-
+      
     case .none: break
     }
   }
