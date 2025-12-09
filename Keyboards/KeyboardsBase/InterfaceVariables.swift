@@ -141,13 +141,13 @@ var controllerLanguage = String()
 
 // Dictionary for accessing language abbreviations.
 let languagesAbbrDict = [
-  "Danish": "da",
+//  "Danish": "da",
   "English": "en",
   "French": "fr",
   "German": "de",
-  "Indonesian": "id",
+//  "Indonesian": "id",
   "Italian": "it",
-  "Norwegian": "nb",
+//  "Norwegian": "nb",
   "Portuguese": "pt",
   "Russian": "ru",
   "Spanish": "es",
@@ -158,9 +158,9 @@ let languagesStringDict = [
   "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
   "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
   "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
-  "Indonesian": NSLocalizedString("app._global.indonesian", value: "Indonesian", comment: ""),
+//  "Indonesian": NSLocalizedString("app._global.indonesian", value: "Indonesian", comment: ""),
   "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
-  "Norwegian": NSLocalizedString("app._global.norwegian", value: "Norwegian", comment: ""),
+//  "Norwegian": NSLocalizedString("app._global.norwegian", value: "Norwegian", comment: ""),
   "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
   "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
   "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
