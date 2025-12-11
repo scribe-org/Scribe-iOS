@@ -81,14 +81,7 @@ enum KeyboardState {
 enum ShiftButtonState {
   case normal
   case shift
-}
-
-/// What the keyboard state is in regards to the all caps key.
-/// - normal: not capitalized
-/// - locked: caps-lock
-enum CapsLockButtonState {
-  case normal
-  case locked
+  case capsLocked
 }
 
 /// States of the keyboard corresponding to which commands the user is executing.
@@ -122,7 +115,6 @@ enum ConjViewShiftButtonsState {
 // Baseline state variables.
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
-var capsLockButtonState: CapsLockButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
@@ -153,6 +145,7 @@ let languagesAbbrDict = [
   "English": "en",
   "French": "fr",
   "German": "de",
+  "Indonesian": "id",
   "Italian": "it",
   "Norwegian": "nb",
   "Portuguese": "pt",
@@ -165,7 +158,9 @@ let languagesStringDict = [
   "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
   "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
   "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
+  "Indonesian": NSLocalizedString("app._global.indonesian", value: "Indonesian", comment: ""),
   "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
+  "Norwegian": NSLocalizedString("app._global.norwegian", value: "Norwegian", comment: ""),
   "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
   "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
   "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
@@ -204,7 +199,9 @@ let keyboardLayoutDict: [String: () -> Void] = [
   "English": setENKeyboardLayout,
   "French": setFRKeyboardLayout,
   "German": setDEKeyboardLayout,
+  "Indonesian": setIDKeyboardLayout,
   "Italian": setITKeyboardLayout,
+  "Norwegian": setNBKeyboardLayout,
   "Portuguese": setPTKeyboardLayout,
   "Russian": setRUKeyboardLayout,
   "Spanish": setESKeyboardLayout,

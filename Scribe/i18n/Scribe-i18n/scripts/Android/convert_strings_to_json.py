@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 """
 Converts from string.xml files to Scribe-i18n localization JSON files.
 

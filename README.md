@@ -40,7 +40,6 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 - [App Setup](#app-setup)
 - [Supported Languages](#supported-languages)
 - [Keyboard Features](#keyboard-features)
-- [Language Practice](#language-practice)
 - [Featured By](#featured-by)
 
 <a id="preview-videos"></a>
@@ -71,7 +70,7 @@ https://user-images.githubusercontent.com/24387426/231612346-af8b3f62-adf1-4f24-
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/MatrixLogoGrey.png" width="175" alt="Public Matrix Chat" align="right">
 </a>
 
-Scribe uses [Matrix](https://matrix.org/) for communications. You're more than welcome to [join us in our public chat rooms](https://matrix.to/#/#scribe_community:matrix.org) to share ideas, ask questions or just say hi :)
+Scribe uses [Matrix](https://matrix.org/) for communications. You're more than welcome to [join us in our public chat rooms](https://matrix.to/#/#scribe_community:matrix.org) to share ideas, ask questions or just say hi to the team :) We'd suggest that you use the [Element](https://element.io/) client and [Element X](https://element.io/app) for a mobile app.
 
 Please also see the [contribution guidelines](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md) if you are interested in contributing to Scribe-iOS. Work that is in progress or could be implemented is tracked in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) and [projects](https://github.com/scribe-org/Scribe-iOS/projects).
 
@@ -122,7 +121,7 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 > [!NOTE]\
 > Please see the [Wikidata and Scribe Guide](https://github.com/scribe-org/Organization/blob/main/WIKIDATAGUIDE.md) for an overview of [Wikidata](https://www.wikidata.org/) and how Scribe uses it.
 
-Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Conjugate-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
+Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
 <a id="environment-setup"></a>
 
@@ -176,7 +175,7 @@ pre-commit install
 
 5. In order to run Scribe on an emulator:
 
-   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
+   - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
    - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
    - Select a device to run the app on
@@ -210,23 +209,9 @@ For more information on features and use cases, see [Keyboard Features](#keyboar
 
 # Supported Languages [`⇧`](#contents)
 
-Scribe's goal is functional, feature-rich keyboards for all languages. Check [scribe_data/extract_transform](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/extract_transform) for queries for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
+Scribe's goal is functional, feature-rich keyboards for all languages. You can check the currently available languages and data for Scribe applications on our website at [scri.be/docs/server/available-data](https://scri.be/docs/server/available-data).
 
-The following table shows the supported languages and the amount of data available for each on [Wikidata](https://www.wikidata.org/) and via [Unicode CLDR](https://github.com/unicode-org/cldr) for emojis:
-
-| Languages  |   Nouns | Verbs | Translations\* | Prepositions† | Emoji Keywords |
-| :--------- | ------: | ----: | -------------: | ------------: | -------------: |
-| French     |  18,082 | 6,575 |         67,652 |             - |          2,488 |
-| German     | 194,762 | 3,637 |         67,652 |           215 |          2,898 |
-| Italian    |  59,910 | 7,654 |         67,652 |             - |          2,457 |
-| Portuguese |   5,281 |   539 |         67,652 |             - |          2,327 |
-| Russian    | 194,567 |    15 |         67,652 |            15 |          3,827 |
-| Spanish    |  62,949 | 7,938 |         67,652 |             - |          3,134 |
-| Swedish    |  47,039 | 4,682 |         67,652 |             - |          2,913 |
-
-`*` Given the current **`beta`** status where words are machine translated.
-
-`†` Only for languages for which preposition annotation is needed.
+See [scribe_data/wikidata/language_data_extraction](https://github.com/scribe-org/Scribe-Data/tree/main/src/scribe_data/wikidata/language_data_extraction) for queries in the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) project for currently supported languages and those that have substantial data on [Wikidata](https://www.wikidata.org/). Also see the [`new keyboard`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+keyboard%22) label in the [Issues](https://github.com/scribe-org/Scribe-iOS/issues) for keyboards that are currently in progress or being discussed, and [suggest a new keyboard](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=new+keyboard&template=new_keyboard.yml&title=Add+%3Clanguage%3E+keyboard) if you don't see it being worked on already!
 
 <a id="keyboard-features"></a>
 
@@ -238,9 +223,9 @@ Keyboard features are accessed via the `Scribe key` at the top left of any Scrib
 
 ### Translation [`⇧`](#contents)
 
-The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/49). Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
+The **`beta`** `Translate` feature can translate single words or phrases from English into the language of the current keyboard when the `return` key is pressed. The goal is that `Translate` will eventually provide options for entered words where a user can use grammatical categories and synonyms to select the best option. Then the feature will expand to allow translations from system and chosen languages. More advanced methods will be planned once this feature is out of **`beta`**.
 
-As of now translations are not widely available on [Wikidata](https://www.wikidata.org/) [(see issue)](https://github.com/scribe-org/Scribe-iOS/issues/40). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations and synonyms to all be directly queried.
+As of now translations are not widely available on [Wikidata](https://www.wikidata.org/). The current functionality is thus based on [🤗 Transformers](https://github.com/huggingface/transformers) machine translations of words queried from [Wikidata](https://www.wikidata.org/). The ultimate goal is for the translations to be directly queried.
 
 ### Verb Conjugation [`⇧`](#contents)
 
@@ -299,51 +284,15 @@ The goal is for Scribe to have all the functionality of system keyboards. See th
 </p>
 </details>
 
-<a id="language-practice"></a>
-
-# Language Practice [`⇧`](#contents)
-
-A future feature of Scribe is language practice within the app itself. Scribe presents users with information that is directly relevant to their current struggles with a second language. This information can be saved in-app and used to create personalized lessons such as flashcards to reinforce the information that Scribe has provided.
-
 <a id="featured-by"></a>
 
 # Featured By [`⇧`](#contents)
 
-<details open><summary><strong>Articles and Presentations on Scribe</strong></summary>
-<p>
+Please see the [blog posts page on our website](https://scri.be/docs/about/blog-posts) for a list of articles on Scribe, and feel free to open a pull request to add one that you've written at [scribe-org/scri.be](https://github.com/scribe-org/scri.be)!
 
-<strong>2024</strong>
+### Organizations
 
-- October: [Blog post on Medium](https://medium.com/@arpita151103/scribe-an-open-source-solution-for-language-learning-and-data-accessibility-092dab026fd6) discussing the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) development process, community and features
-- October: [Blog post on medium](https://medium.com/@mhmohona/ins-and-outs-of-scribe-data-cli-bd51202aa7c6) describing the main features of [Scribe-Data](https://github.com/scribe-org/Scribe-Data)
-- September: [Final Google Summer of Code report](https://medium.com/@mhmohona/the-final-stretch-gsoc-journey-with-scribe-data-1740084c958d) on the creation of the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
-- August: [Final Google Summer of Code report](https://jagmarcel.hashnode.dev/gsoc-2024-final-report) on the creation of Scribe's cross-language translation functionality
-- July: [Blog post on Medium](https://medium.com/@mhmohona/halfway-there-my-gsoc-adventure-with-scribe-data-cli-2ffe6d727ecb) about the progress on creating the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
-- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/gsoc-2024-midterm-report) providing an midterm report on the localization and translation expansion for [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
-- July: [Blog post on Hashnode](https://jagmarcel.hashnode.dev/my-first-experiences-with-gsoc) about the initial steps towards the localization of [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS)
-- June: [Blog post on Medium](https://medium.com/@mhmohona/first-month-as-a-gsoc-intern-building-scribe-data-cli-d0c12c9e8371) about the planned [Scribe-Data](https://github.com/scribe-org/Scribe-Data) CLI
-- April: [Blog post on Medium](https://medium.com/@mhmohona/scribe-data-a-guide-to-open-source-language-data-a801c59db4c9) about [Scribe-Data](https://github.com/scribe-org/Scribe-Data) and its functionalities
-- February: [Presentation slides](https://docs.google.com/presentation/d/1lMhYiQx1R99SVGhbikUGjOVaFgPPASvbzM2Bsu3NXSg/edit?usp=sharing) for Scribe's participation at the [Wikimedia Tech Safari Program](https://www.mediawiki.org/wiki/Wikimedia_Tech_Safari_Program)
-
-<strong>2023</strong>
-
-- August: [Scribe-iOS final submission report for Google Summer of Code 2023](https://saurabhjamadagni.hashnode.dev/gsoc-23-final-work-submission)
-- June: [Scribe-iOS development blog post on Nested UITableViews & Apple's built-in ViewControllers in app menu](https://saurabhjamadagni.hashnode.dev/nested-uitableviews-apples-built-in-viewcontrollers) for [GSoC '23](https://www.mediawiki.org/wiki/Google_Summer_of_Code/2023#Accepted_projects:~:text=links%3A%20Phabricator%20issue-,3.%20Adding%20a%20Menu%20and%20Keyboards%20to%20Scribe%2DiOS,-%5Bedit%5D)
-- March: [Presentation slides](https://docs.google.com/presentation/d/1W4ZkGi9UDDiTxM_silEij0gTE8YEubluHxe78xoqEP0/edit?usp=sharing) for a talk at [Berlin Hack and Tell](https://bhnt.c-base.org/) ([Hack of the month winner 🏆](https://bhnt.c-base.org/2023-03-28-no87-moore-hacks))
-
-<strong>2022</strong>
-
-- August: [Presentation slides](https://docs.google.com/presentation/d/12WNSt5xgNIAmSxPfvjno9-sBMGlvxG_xSaAxmHQDRNQ/edit?usp=sharing) for a session at the [2022 Wikimania Hackathon](https://wikimania.wikimedia.org/wiki/2022:Hackathon)
-- July: [Presentation slides](https://docs.google.com/presentation/d/10Ai0-b8XUj5u9Hw4UgBtB7ufiPhvfFrb1vEUEyXYr5w/edit?usp=sharing) for a talk at [CocoaHeads Berlin](https://www.meetup.com/cocoaheads-berlin/)
-- July: [Video on Scribe](https://www.youtube.com/watch?v=4GpFN0gGmy4&list=PL66MRMNlLyR7p9wsYVfuqJOjKZpbuwp8U&index=6) for [Wikimedia Celtic Knot 2022](https://meta.wikimedia.org/wiki/Celtic_Knot_Conference_2022)
-- June: [Presentation slides](https://docs.google.com/presentation/d/1K2lj8PPgdx12I-xuhm--CBLrGm-Cz50NJmbp96zpGrk/edit?usp=sharing) for a talk with the [LD4 Wikidata Affinity Group](https://www.wikidata.org/wiki/Wikidata:WikiProject_LD4_Wikidata_Affinity_Group)
-- June: [Scribe](https://github.com/scribe-org) featured for new developers on [MediaWiki](https://www.mediawiki.org/wiki/New_Developers#Scribe)
-- May: [Presentation slides](https://docs.google.com/presentation/d/1Cu3VwQ3lJUp5W84YDe0AFYS-6zfBxKsm0MI-OMl_IzY/edit?usp=sharing) for [Wikimedia Hackathon 2022](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2022)
-- March: [Blog post](https://tech-news.wikimedia.de/en/2022/03/18/lexicographical-data-for-language-learners-the-wikidata-based-app-scribe/) on [Scribe-iOS](https://github.com/scribe-org/Scribe-iOS) for [Wikimedia Tech News](https://tech-news.wikimedia.de/en/homepage/) ([DE](https://tech-news.wikimedia.de/2022/03/18/sprachenlernen-mit-lexikografische-daten-die-wikidata-basierte-app-scribe/) / [Tweet](https://twitter.com/wikidata/status/1507335538596106257?s=20&t=YGRGamftI-5B_VwQ_bFRhA))
-- March: [Presentation slides](https://docs.google.com/presentation/d/16ld_rCbwJCiAdRrfhF-Fq9Wm_ciHCbk_HCzGQs6TB1Q/edit?usp=sharing) for [Wikidata Data Reuse Days 2022](https://diff.wikimedia.org/event/wikidata-data-reuse-days-2022/)
-
-</p>
-</details>
+The following organizations have supported the development of Scribe projects through various programs. Thank you all! 💙
 
 <div align="center">
   <br>
@@ -375,7 +324,7 @@ Many thanks to all the [Scribe-iOS contributors](https://github.com/scribe-org/S
 
 ### Code and Dependencies
 
-The Scribe team would like to thank all the great software that made Scribe-iOS' development possible 💙
+The Scribe community would like to thank all the great software that made Scribe-iOS' development possible, with special thanks going to:
 
 - [GRDB](https://github.com/groue/GRDB.swift) by [groue](https://github.com/groue) ([License](https://github.com/groue/GRDB.swift/blob/master/LICENSE))
 - [SwipeableTabBarController](https://github.com/marcosgriselli/SwipeableTabBarController) by [marcosgriselli](https://github.com/marcosgriselli) ([License](https://github.com/marcosgriselli/SwipeableTabBarController/blob/master/LICENSE))

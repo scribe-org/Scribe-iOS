@@ -34,7 +34,7 @@ Thank you for your interest in contributing to Scribe-iOS! We look forward to we
 
 - Please join the [public Matrix chat](https://matrix.to/#/#scribe_community:matrix.org) to connect with the community
   - [Matrix](https://matrix.org/) is a network for secure, decentralized communication
-  - Scribe would suggest that you use the [Element](https://element.io/) client
+  - We'd suggest that you use the [Element](https://element.io/) client and [Element X](https://element.io/app) for a mobile app
   - The [General](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) and [iOS](https://matrix.to/#/#ScribeiOS:matrix.org) channels would be great places to start!
   - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
 - Read through this contributing guide for all the information you need to contribute

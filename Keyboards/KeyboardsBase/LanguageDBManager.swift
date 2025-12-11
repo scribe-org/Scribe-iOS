@@ -66,7 +66,11 @@ class LanguageDBManager {
       try database?.read { db in
         if let row = try Row.fetchOne(db, sql: query, arguments: args) {
           for col in outputCols {
-            outputValues.append(row[col])
+            if let stringValue = row[col] as? String {
+              outputValues.append(stringValue)
+            } else {
+              outputValues.append("")  // default to empty string if NULL or wrong type
+            }
           }
         }
       }
@@ -79,7 +83,7 @@ class LanguageDBManager {
       )
     } catch {}
 
-    if outputValues == [String]() {
+    if outputValues.isEmpty {
       // Append an empty string so that we can check for it and trigger commandState = .invalid.
       outputValues.append("")
     }
@@ -168,7 +172,7 @@ class LanguageDBManager {
 
 extension LanguageDBManager {
   /// Delete non-unique values in case the lexicon has added words that were already present.
-  func deleteNonUniqueAutosuggestions() {
+  func deleteNonUniqueAutocompletions() {
     let query = """
     DELETE FROM
       autocomplete_lexicon
@@ -189,7 +193,7 @@ extension LanguageDBManager {
   }
 
   /// Add words  to autocompletions.
-  func insertAutocompleteLexion(of word: String) {
+  func insertAutocompleteLexicon(of word: String) {
     let query = """
     INSERT OR IGNORE INTO
       autocomplete_lexicon (word)

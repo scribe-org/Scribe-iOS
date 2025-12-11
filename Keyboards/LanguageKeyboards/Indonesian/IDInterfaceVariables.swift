@@ -1,32 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /**
- * Constants and functions to load the Portuguese Scribe keyboard.
+ * Constants and functions to load the Indonesian Scribe keyboard.
  */
 
 import UIKit
 
 // MARK: Constants
 
-public enum PTKeyboardConstants {
-  static let defaultCurrencyKey = "€"
-  static let currencyKeys = ["€", "$", "£", "¥"]
-
-  // Alternate key vars.
-  static let keysWithAlternates = ["a", "e", "i", "o", "u", "c", "n"]
-  static let keysWithAlternatesLeft = ["a", "e", "c"]
-  static let keysWithAlternatesRight = ["i", "o", "u", "n"]
-
-  static let aAlternateKeys = ["á", "ã", "à", "â", "ä", "å", "æ", "ᵃ"]
-  static let eAlternateKeys = ["é", "ê", "è", "ę", "ė", "ē", "ë"]
-  static let iAlternateKeys = ["ī", "į", "ï", "ì", "î", "í"]
-  static let oAlternateKeys = ["ᵒ", "ō", "ø", "œ", "ö", "ò", "ô", "õ", "ó"]
-  static let uAlternateKeys = ["ū", "û", "ù", "ü", "ú"]
-  static let cAlternateKeys = ["ç"]
-  static let nAlternateKeys = ["ñ"]
+public enum IDKeyboardConstants {
+  static let defaultCurrencyKey = "$"
+  static let currencyKeys = ["$", "€", "£", "¥"]
 }
 
-struct PTKeyboardProvider: KeyboardProviderProtocol {
+struct IDKeyboardProvider: KeyboardProviderProtocol {
   // MARK: iPhone Layouts
 
   static func genPhoneLetterKeys() -> [[String]] {
@@ -41,7 +28,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
   static func genPhoneNumberKeys(currencyKey: String) -> [[String]] {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
-      .addRow(["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""])
+      .addRow(["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
       .addRow(["ABC", "selectKeyboard", "space", "return"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
@@ -49,9 +36,9 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
   }
 
   static func genPhoneSymbolKeys(currencyKeys: [String]) -> [[String]] {
-    let keyboardBuilder =  KeyboardBuilder()
+    let keyboardBuilder = KeyboardBuilder()
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
-      .addRow(["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"])
+      .addRow(["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
       .addRow(["ABC", "selectKeyboard", "space", "return"])
 
@@ -73,7 +60,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"])
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
-      .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "!", "?", "shift"])
+      .addRow(["shift", "w", "x", "c", "v", "b", "n", "m", ",", ".", "shift"])
       .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
@@ -82,7 +69,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
-      .addRow(["#+=", "%", "-", "+", "=", "/", ";", ":", ",", ".", "#+="])
+      .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
       .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .replaceKey(row: 1, column: 2, to: currencyKey)
       .build()
@@ -106,14 +93,12 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
     }
   }
 
- // MARK: Expanded iPad Layouts
-
   static func genPadExpandedLetterKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "delete"])
       .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"])
-      .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "ç", "return"])
-      .addRow(["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
+      .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "'", "return"])
+      .addRow(["shift", "-", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
       .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
@@ -121,23 +106,25 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
   static func genPadExpandedSymbolKeys() -> [[String]] {
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
-      .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "|", "~"])
-      .addRow([SpecialKeys.capsLock, "°", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"])
-      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "-", ",", ".", "/", "shift"])
+      .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "~", "°"])
+      .addRow([SpecialKeys.capsLock, "-", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"])
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "|", "_", ".", ",", "/", "shift"])
       .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .build()
   }
 }
 
+// MARK: Generate and set keyboard
+
 // MARK: Get Keys
 
-func getPTKeys() {
+func getIDKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
     fatalError("Unable to access shared user defaults")
   }
 
-  var currencyKey = PTKeyboardConstants.defaultCurrencyKey
-  var currencyKeys = PTKeyboardConstants.currencyKeys
+  var currencyKey = IDKeyboardConstants.defaultCurrencyKey
+  var currencyKeys = IDKeyboardConstants.currencyKeys
   let dictionaryKey = controllerLanguage + "defaultCurrencySymbol"
   if let currencyValue = userDefaults.string(forKey: dictionaryKey) {
     currencyKey = currencyValue
@@ -149,9 +136,9 @@ func getPTKeys() {
   }
 
   if DeviceType.isPhone {
-    letterKeys = PTKeyboardProvider.genPhoneLetterKeys()
-    numberKeys = PTKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
-    symbolKeys = PTKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
+    letterKeys = IDKeyboardProvider.genPhoneLetterKeys()
+    numberKeys = IDKeyboardProvider.genPhoneNumberKeys(currencyKey: currencyKey)
+    symbolKeys = IDKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
     allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
     leftKeyChars = ["q", "1", "-", "[", "_"]
@@ -160,20 +147,20 @@ func getPTKeys() {
   } else {
     // Use the expanded keys layout if the iPad is wide enough and has no home button.
     if usingExpandedKeyboard {
-      letterKeys = PTKeyboardProvider.genPadExpandedLetterKeys()
-      symbolKeys = PTKeyboardProvider.genPadExpandedSymbolKeys()
+      letterKeys = IDKeyboardProvider.genPadExpandedLetterKeys()
+      symbolKeys = IDKeyboardProvider.genPadExpandedSymbolKeys()
 
       leftKeyChars = ["~", "`"]
-      rightKeyChars = ["\\", "~"]
+      rightKeyChars = ["\\", "°"]
       allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
     } else {
-      letterKeys = PTKeyboardProvider.genPadLetterKeys()
-      numberKeys = PTKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
-      symbolKeys = PTKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
+      letterKeys = IDKeyboardProvider.genPadLetterKeys()
+      numberKeys = IDKeyboardProvider.genPadNumberKeys(currencyKey: currencyKey)
+      symbolKeys = IDKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
       letterKeys.removeFirst(1)
 
-      leftKeyChars = ["q", "1", "$"]
+      leftKeyChars = ["q", "1"]
       rightKeyChars = []
       allKeys = Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
     }
@@ -181,53 +168,39 @@ func getPTKeys() {
     centralKeyChars = allKeys.filter { !leftKeyChars.contains($0) && !rightKeyChars.contains($0) }
   }
 
-  keysWithAlternates = PTKeyboardConstants.keysWithAlternates
-  keysWithAlternatesLeft = PTKeyboardConstants.keysWithAlternatesLeft
-  keysWithAlternatesRight = PTKeyboardConstants.keysWithAlternatesRight
-  aAlternateKeys = PTKeyboardConstants.aAlternateKeys
-  eAlternateKeys = PTKeyboardConstants.eAlternateKeys
-  iAlternateKeys = PTKeyboardConstants.iAlternateKeys
-  oAlternateKeys = PTKeyboardConstants.oAlternateKeys
-  uAlternateKeys = PTKeyboardConstants.uAlternateKeys
-  cAlternateKeys = PTKeyboardConstants.cAlternateKeys
-  nAlternateKeys = PTKeyboardConstants.nAlternateKeys
+  keysWithAlternates = []
+  keysWithAlternatesLeft = []
+  keysWithAlternatesRight = []
+  aAlternateKeys = []
+  eAlternateKeys = []
+  iAlternateKeys = []
+  oAlternateKeys = []
+  uAlternateKeys = []
+  cAlternateKeys = []
+  lAlternateKeys = []
+  nAlternateKeys = []
+  sAlternateKeys = []
+  zAlternateKeys = []
 }
 
 // MARK: Provide Layout
 
-func setPTKeyboardLayout() {
-  getPTKeys()
+func setIDKeyboardLayout() {
+  getIDKeys()
 
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
-  spaceBar = "espaço"
-  language = "Português"
-  invalidCommandMsg = "Não está no Wikidata"
-  baseAutosuggestions = ["o", "a", "eu"]
-  numericAutosuggestions = ["de", "que", "a"]
+  spaceBar = "spasi"
+  invalidCommandMsg = "Tidak ada di Wikidata"
+  baseAutosuggestions = ["aku", "saya", "itu"]
+  numericAutosuggestions = ["adalah", "untuk", "dan"]
+  verbsAfterPronounsArray = ["sudah", "sedang", "bisa"]
 
-  translateKeyLbl = "Traduzir"
-  translatePlaceholder = "Digite uma palavra"
-  translatePrompt = commandPromptSpacing + "pt -› \(getControllerLanguageAbbr()): "
+  translateKeyLbl = "Terjemahkan"
+  translatePlaceholder = "Masukkan kata"
+  translatePrompt = commandPromptSpacing + "id -› \(getControllerLanguageAbbr()): "
   translatePromptAndCursor = translatePrompt + commandCursor
   translatePromptAndPlaceholder = translatePromptAndCursor + " " + translatePlaceholder
   translatePromptAndColorPlaceholder = NSMutableAttributedString(string: translatePromptAndPlaceholder)
   translatePromptAndColorPlaceholder.setColorForText(textForAttribute: translatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
-
-  conjugateKeyLbl = "Conjugar"
-  conjugatePlaceholder = "Digite um verbo"
-  conjugatePrompt = commandPromptSpacing + "Conjugar: "
-  conjugatePromptAndCursor = conjugatePrompt + commandCursor
-  conjugatePromptAndPlaceholder = conjugatePromptAndCursor + " " + conjugatePlaceholder
-  conjugatePromptAndColorPlaceholder = NSMutableAttributedString(string: conjugatePromptAndPlaceholder)
-  conjugatePromptAndColorPlaceholder.setColorForText(textForAttribute: conjugatePlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
-
-  pluralKeyLbl = "Plural"
-  pluralPlaceholder = "Digite um substantivo"
-  pluralPrompt = commandPromptSpacing + "Plural: "
-  pluralPromptAndCursor = pluralPrompt + commandCursor
-  pluralPromptAndPlaceholder = pluralPromptAndCursor + " " + pluralPlaceholder
-  pluralPromptAndColorPlaceholder = NSMutableAttributedString(string: pluralPromptAndPlaceholder)
-  pluralPromptAndColorPlaceholder.setColorForText(textForAttribute: pluralPlaceholder, withColor: UIColor(cgColor: commandBarPlaceholderColorCG))
-  alreadyPluralMsg = "Já plural"
 }
