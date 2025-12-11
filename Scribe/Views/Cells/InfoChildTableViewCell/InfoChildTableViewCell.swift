@@ -89,7 +89,7 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     setTableView()
     titleLabel.text = section.sectionTitle
-    
+
     // Apply corner radius to fix iOS 26 inconsistent border radius
     contentView.layer.cornerRadius = 12
     contentView.layer.masksToBounds = true
