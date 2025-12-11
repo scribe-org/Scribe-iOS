@@ -56,6 +56,12 @@ final class AboutTableViewCell: UITableViewCell {
 
     setTableView()
     titleLabel.text = section.sectionTitle
+    
+    // Apply corner radius to fix iOS 26 inconsistent border radius
+    contentView.layer.cornerRadius = 12
+    contentView.layer.masksToBounds = true
+    self.layer.cornerRadius = 12
+    self.clipsToBounds = false
 
     if let icon = section.imageString {
       iconImageView.image = UIImage.availableIconImage(with: icon)
