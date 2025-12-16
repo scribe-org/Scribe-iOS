@@ -32,9 +32,7 @@ jobs:
 
             The following is a checklist for maintainers to make sure this process goes as well as possible. Feel free to address the points below yourself in further commits if you realize that actions are needed :)
 
-            - [ ] The linting and formatting workflows within the [PR checks](https://github.com/scribe-org/Scribe-iOS/pull/${{ github.event.pull_request.number }}/checks) do not indicate new errors in the files changed
-
-            - [ ] The CI unit test workflows within the [PR checks](https://github.com/scribe-org/Scribe-iOS/pull/${{ github.event.pull_request.number }}/checks) do not indicate new errors in the files changed
+            - [ ] Tests for changes have been written and the CI unit test, linting and formatting workflows within the [PR checks](https://github.com/scribe-org/Scribe-iOS/pull/${{ github.event.pull_request.number }}/checks) do not indicate new errors in the files changed
 
             - [ ] The [CHANGELOG](https://github.com/scribe-org/Scribe-iOS/blob/main/CHANGELOG.md) has been updated with a description of the changes for the upcoming release and the corresponding issue (if necessary)
 
