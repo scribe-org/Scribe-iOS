@@ -951,6 +951,7 @@
 		E9FAC3A02E98972D008E00AC /* IDCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */; };
 		E9FAC3A12E98972D008E00AC /* IDKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */; };
 		E9FAC3A72E989A84008E00AC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E9FAC3A62E989A84008E00AC /* SwiftyJSON */; };
+		E9FEE6CB2EF14351003A9266 /* WrapperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE6CA2EF1433E003A9266 /* WrapperCell.swift */; };
 		ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */; };
 		ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
 		EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */; };
@@ -1246,6 +1247,7 @@
 		E9FAC3932E989712008E00AC /* Indonesian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Indonesian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FAC3A42E9898B5008E00AC /* GRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GRDB.swift; path = "/Users/purnamadev/Library/Developer/Xcode/DerivedData/Scribe-dbrvuamymhbpcmeozftkkqqvrdof/SourcePackages/checkouts/GRDB.swift"; sourceTree = "<absolute>"; };
 		E9FAC3A52E9898B9008E00AC /* GRDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GRDB.swift; path = "/Users/purnamadev/Library/Developer/Xcode/DerivedData/Scribe-dbrvuamymhbpcmeozftkkqqvrdof/SourcePackages/checkouts/GRDB.swift"; sourceTree = "<absolute>"; };
+		E9FEE6CA2EF1433E003A9266 /* WrapperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperCell.swift; sourceTree = "<group>"; };
 		ED2486F12B0B4E8C0038AE6A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -1385,6 +1387,7 @@
 		1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E9FEE6CA2EF1433E003A9266 /* WrapperCell.swift */,
 				147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */,
 				147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */,
 			);
@@ -2651,6 +2654,7 @@
 				D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */,
+				E9FEE6CB2EF14351003A9266 /* WrapperCell.swift in Sources */,
 				1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */,
 				3045396B293B9DC9003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
