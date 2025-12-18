@@ -16,69 +16,95 @@ struct ConfirmDialogView: View {
   var infoText: String
   var changeButtonText: String
   var confirmButtonText: String
+  var onDismiss: () -> Void
+  var onChange: () -> Void
+  var onConfirm: () -> Void
 
   var body: some View {
-    VStack(spacing: 10) {
-      HStack(alignment: .center) {
-        Image(systemName: "info.circle")
-          .resizable()
-          .frame(width: iconSize, height: iconSize)
-          .foregroundColor(Color.scribeCTA)
+    ZStack {
+      Color.clear
+        .contentShape(Rectangle())
+        .onTapGesture {
+          onDismiss()
+        }
+      VStack(spacing: 10) {
+        HStack(alignment: .center) {
+          Image(systemName: "info.circle")
+            .resizable()
+            .frame(width: iconSize, height: iconSize)
+            .foregroundColor(Color.scribeCTA)
 
-        Text(infoText)
-          .font(.system(size: DeviceType.isPad ? 22 : 0))
-          .fixedSize(horizontal: false, vertical: true)
-      }
+          Text(infoText)
+            .font(.system(size: DeviceType.isPad ? 22 : 0))
+            .fixedSize(horizontal: false, vertical: true)
+        }
 
-      HStack {
-        Spacer()
-        Button(
-            action: {},
-            label: {
-                Text(changeButtonText)
-                .foregroundColor(Color.keyChar)
-                })
-          .buttonStyle(.borderedProminent)
-          .tint(Color.keySpecial)
-          .shadow(
-            color: shadowColor,
-            radius: 1,
-            x: 0,
-            y: 3
-          )
-        Button(
-            action: {},
-            label: {
-                Text(confirmButtonText)
-                .foregroundColor(Color.keyChar)
-                })
-          .buttonStyle(.borderedProminent)
-          .tint(Color.scribeBlue)
-          .shadow(
-            color: shadowColor,
-            radius: 3,
-            x: 0,
-            y: 3
-          )
-      }
-    }
-    .padding(cardPadding)
-    .background(
-        RoundedRectangle(cornerRadius: cardCornerRadius)
-            .fill(Color.lightWhiteDarkBlack)
+        HStack {
+          Spacer()
+          Button(
+              action: {},
+              label: {
+                  Text(changeButtonText)
+                  .font(.system(size: DeviceType.isPad ? 22 : 0))
+                  .foregroundColor(Color.keyChar)
+                  })
+            .buttonStyle(.borderedProminent)
+            .tint(Color.keySpecial)
+            .shadow(
+              color: shadowColor,
+              radius: 1,
+              x: 0,
+              y: 3
+            )
+          Button(
+              action: onConfirm,
+              label: {
+                  Text(confirmButtonText)
+                  .font(.system(size: DeviceType.isPad ? 22 : 0))
+                  .foregroundColor(Color.keyChar)
+                  })
+            .buttonStyle(.borderedProminent)
+            .tint(Color.scribeBlue)
             .shadow(
               color: shadowColor,
               radius: 3,
               x: 0,
-              y: 4
+              y: 3
             )
-    )
-    .padding(externalPadding)
-  }
+        }
+      }
+      .padding(cardPadding)
+      .background(
+          RoundedRectangle(cornerRadius: cardCornerRadius)
+              .fill(Color.lightWhiteDarkBlack)
+              .shadow(
+                color: shadowColor,
+                radius: 3,
+                x: 0,
+                y: 4
+              )
+      )
+      .padding(externalPadding)
+
+    }
+   }
 }
 
 struct ConfirmTranslationSource: View {
+  var infoText: String
+  var changeButtonText: String
+  var confirmButtonText: String
+  var onDismiss: () -> Void
+  var onChange: () -> Void
+  var onConfirm: () -> Void
   var body: some View {
-    ConfirmDialogView(infoText: "The data you will download will allow you to translate from  English to German. Do you want to change the language you'll translate  from?", changeButtonText: "Change language", confirmButtonText: "Use English")
+    ConfirmDialogView(
+      infoText: infoText,
+      changeButtonText: changeButtonText,
+      confirmButtonText: confirmButtonText,
+      onDismiss: onDismiss,
+      onChange: onChange,
+      onConfirm: onConfirm
+    )
   }
 }

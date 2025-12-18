@@ -92,6 +92,7 @@ class InstallationVC: UIViewController {
 
     setCurrentUI()
     showTipCardView()
+    addPopupButton()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
@@ -322,4 +323,53 @@ extension InstallationVC {
       }, completion: nil
     )
   }
+
+  private func addPopupButton() {
+          // Create a button
+          let popupButton = UIButton(type: .system)
+          popupButton.setTitle("Open Popup", for: .normal)
+          popupButton.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+          popupButton.backgroundColor = .systemBlue
+          popupButton.setTitleColor(.white, for: .normal)
+          popupButton.layer.cornerRadius = 10
+          popupButton.translatesAutoresizingMaskIntoConstraints = false
+
+          // Add action
+          popupButton.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
+
+          // Add to view
+          view.addSubview(popupButton)
+
+          // Position it at the bottom
+          NSLayoutConstraint.activate([
+              popupButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+              popupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+              popupButton.widthAnchor.constraint(equalToConstant: 150),
+              popupButton.heightAnchor.constraint(equalToConstant: 44)
+          ])
+      }
+
+      @objc private func showPopup() {
+        var sourceLanguage = "English"
+        var destLanguage = "German"
+        var infoText = "The data you will download will allow you to translate from  \(sourceLanguage) to \(destLanguage). Do you want to change the language you'll translate  from?"
+        var changeText = "Change language"
+        var confirmText = "Use \(sourceLanguage)"
+
+        let popupView = ConfirmTranslationSource(
+          infoText: infoText,
+          changeButtonText: changeText,
+          confirmButtonText: confirmText,
+          onDismiss: {self.dismiss(animated: true)},
+          onChange: {},
+          onConfirm: {self.dismiss(animated: true)},
+
+        )
+          let hostingController = UIHostingController(rootView: popupView)
+          hostingController.modalPresentationStyle = .overFullScreen
+          hostingController.modalTransitionStyle = .crossDissolve
+          hostingController.view.backgroundColor = .clear
+
+          present(hostingController, animated: true)
+      }
 }
