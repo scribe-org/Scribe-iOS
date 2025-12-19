@@ -129,6 +129,13 @@ final class InfoChildTableViewCell: UITableViewCell {
     }
   }
 
+  override func layoutSubviews() {
+    super.layoutSubviews()
+
+    contentView.layer.cornerRadius = 16
+    contentView.layer.masksToBounds = true
+  }
+
   @IBAction func switchDidChange(_: UISwitch) {
     switch togglePurpose {
     case .toggleCommaAndPeriod:

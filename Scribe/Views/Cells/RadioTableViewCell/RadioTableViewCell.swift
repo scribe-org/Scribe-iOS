@@ -66,4 +66,11 @@ final class RadioTableViewCell: UITableViewCell {
     titleLabel.text = section.sectionTitle
     iconImageView.image = UIImage(named: "radioButton")
   }
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+
+    contentView.layer.cornerRadius = 16
+    contentView.layer.masksToBounds = true
+  }
 }
