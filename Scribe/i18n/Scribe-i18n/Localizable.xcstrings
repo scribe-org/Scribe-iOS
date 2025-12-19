@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "app._global.danish" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Danish"
+          }
+        }
+      }
+    },
     "app._global.english" : {
       "comment" : "",
       "localizations" : {
