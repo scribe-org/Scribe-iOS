@@ -42,7 +42,7 @@ struct ConfirmDialogView: View {
         HStack {
           Spacer()
           Button(
-              action: {},
+              action: onChange,
               label: {
                   Text(changeButtonText)
                   .font(.system(size: DeviceType.isPad ? 22 : 0))

@@ -80,6 +80,10 @@ class InstallationVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    navigationController?.setNavigationBarHidden(true, animated: false)
+    edgesForExtendedLayout = .all
+    extendedLayoutIncludesOpaqueBars = true
+
     self.tabBarController?.viewControllers?[0].title = NSLocalizedString(
       "app.installation.title", value: "Installation", comment: ""
     )
@@ -104,6 +108,7 @@ class InstallationVC: UIViewController {
   /// Includes a call to set the UI for the app screen.
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: animated)
     setCurrentUI()
   }
 
@@ -361,7 +366,57 @@ extension InstallationVC {
           changeButtonText: changeText,
           confirmButtonText: confirmText,
           onDismiss: {self.dismiss(animated: true)},
-          onChange: {},
+          onChange: {
+                self.dismiss(animated: true) {
+                    if let translationLangController = self.storyboard?.instantiateViewController(
+                    identifier: "SelectionViewTemplateViewController"
+                    ) as? SelectionViewTemplateViewController {
+
+                    var data = SettingsTableData.translateLangSettingsData
+                    let langCode = "de"
+
+                    // Remove the current keyboard language from translation
+                    let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
+                        s.sectionState == .specificLang(langCode)
+                    }) ?? -1
+                    if langCodeIndex >= 0 {
+                        data[0].section.remove(at: langCodeIndex)
+                    }
+
+                    let sectionTitle = getKeyInDict(givenValue: langCode, dict: languagesAbbrDict)
+
+                    let parentSection = Section(
+                              sectionTitle: sectionTitle,
+                              imageString: nil,
+                              hasToggle: false,
+                              hasNestedNavigation: true,
+                              sectionState: .translateLang,
+                              shortDescription: nil,
+                              externalLink: false
+                            )
+
+                    translationLangController.configureTable(
+                        for: data,
+                        parentSection: parentSection,
+                        langCode: langCode
+                    )
+
+                    translationLangController.edgesForExtendedLayout = .all
+
+                    // COPY the navigation bar appearance from Settings tab
+                    if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+                        // Copy all the styling from Settings' nav controller
+                        self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
+                        self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
+                        self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
+                        self.navigationController?.navigationBar.barTintColor = settingsNavController.navigationBar.barTintColor
+                        }
+
+                    self.navigationController?.setNavigationBarHidden(false, animated: false)
+                    self.navigationController?.pushViewController(translationLangController, animated: true)
+                    }
+                }
+            },
           onConfirm: {self.dismiss(animated: true)},
 
         )

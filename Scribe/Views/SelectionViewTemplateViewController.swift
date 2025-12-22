@@ -25,6 +25,8 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    edgesForExtendedLayout = .all
+    extendedLayoutIncludesOpaqueBars = true
     tableView.register(
       UINib(nibName: "RadioTableViewCell", bundle: nil),
       forCellReuseIdentifier: RadioTableViewCell.reuseIdentifier
