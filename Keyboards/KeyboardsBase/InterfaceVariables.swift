@@ -155,6 +155,7 @@ let languagesAbbrDict = [
 ]
 
 let languagesStringDict = [
+  "Danish": NSLocalizedString("app._global.danish", value: "Danish", comment: ""),
   "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
   "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
   "German": NSLocalizedString("app._global.german", value: "German", comment: ""),

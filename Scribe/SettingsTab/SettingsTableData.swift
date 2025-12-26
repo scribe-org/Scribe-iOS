@@ -102,11 +102,13 @@ enum SettingsTableData {
     var sections = [Section]()
 
     for lang in installedKeyboards {
-      guard let abbreviation = languagesAbbrDict[lang] else {
-        fatalError("Abbreviation not found for language: \(lang)")
+      guard let abbreviation = languagesAbbrDict[lang],
+            let title = languagesStringDict[lang] else {
+        continue
       }
+
       let newSection = Section(
-        sectionTitle: languagesStringDict[lang]!,
+        sectionTitle: title,
         sectionState: .specificLang(abbreviation)
       )
 
@@ -120,11 +122,13 @@ enum SettingsTableData {
     var sections = [Section]()
 
     for lang in languagesAbbrDict.keys.sorted() {
-      guard let abbreviation = languagesAbbrDict[lang] else {
-        fatalError("Abbreviation not found for language: \(lang)")
+      guard let abbreviation = languagesAbbrDict[lang],
+            let title = languagesStringDict[lang] else {
+        continue
       }
+
       let newSection = Section(
-        sectionTitle: languagesStringDict[lang]!,
+        sectionTitle: title,
         sectionState: .specificLang(abbreviation)
       )
 
