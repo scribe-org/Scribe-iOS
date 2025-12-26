@@ -310,10 +310,10 @@
         <scene sceneID="sLs-HO-3by">
             <objects>
                 <tabBarController id="z4h-ME-igh" customClass="SwipeableTabBarController" customModule="SwipeableTabBarController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="pcg-48-jfk">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="YES" itemPositioning="fill" id="pcg-48-jfk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="lightWhiteDarkBlack"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" name="linkBlue"/>
                     </tabBar>
                     <connections>

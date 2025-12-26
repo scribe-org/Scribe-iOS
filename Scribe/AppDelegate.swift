@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Override point for customization after application launch.
+
+    if #available(iOS 15.0, *) {
+      let appearance = UITabBarAppearance()
+      appearance.configureWithTransparentBackground()
+      appearance.backgroundEffect = UIBlurEffect(style: .systemChromeMaterial)
+      appearance.backgroundColor = .clear
+
+      let tabBarAppearance = UITabBar.appearance()
+      tabBarAppearance.standardAppearance = appearance
+      tabBarAppearance.scrollEdgeAppearance = appearance
+    } else {
+      let tabBarAppearance = UITabBar.appearance()
+      tabBarAppearance.backgroundImage = UIImage()
+      tabBarAppearance.shadowImage = UIImage()
+      tabBarAppearance.isTranslucent = true
+      tabBarAppearance.barTintColor = .clear
+      tabBarAppearance.backgroundColor = .clear
+    }
+
     return true
   }
 
