@@ -6,7 +6,7 @@
 
 import UIKit
 
-// class DownloadDataVC: UIViewController {
+ class DownloadDataVC: UIViewController {
 //  @IBOutlet var outerTable: UITableView!
 //
 //  let tableData = DownloadDataTable.downloadDataTable
@@ -48,7 +48,7 @@ import UIKit
 //
 //    return cell
 //  }
-// }
+ }
 //
 
 // MARK: UITableViewDelegate
