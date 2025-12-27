@@ -17,8 +17,8 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Adds an English keyboard ([#7](https://github.com/scribe-org/Scribe-iOS/issues/7)).
 
 ### ✨ New Features
-- Users can now delete text word for word instead of character by character by enabling a function in the settings menu. The words are deleted by holding down backspace.
-([#301](https://github.com/scribe-org/Scribe-iOS/issues/301))
+
+- Users can now delete text word for word instead of character by character by enabling a function in the settings menu. The words are deleted by holding down backspace ([#301](https://github.com/scribe-org/Scribe-iOS/issues/301)).
 - The Scribe translation functionality now allows the user to select which language to translate from via a convenient menu selector within the settings of each keyboard ([#255](https://github.com/scribe-org/Scribe-iOS/issues/255), [#307](https://github.com/scribe-org/Scribe-iOS/issues/307), [#469](https://github.com/scribe-org/Scribe-iOS/issues/469), [#470](https://github.com/scribe-org/Scribe-iOS/issues/470))
   - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).

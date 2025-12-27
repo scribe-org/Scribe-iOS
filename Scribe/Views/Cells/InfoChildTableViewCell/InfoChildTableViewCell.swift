@@ -148,7 +148,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
     case .toggleWordForWordDeletion:
-      let dictionaryKey = languageCode + "WordForWord"
+      let dictionaryKey = languageCode + "WordForWordDeletion"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
     case .none: break
@@ -192,7 +192,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       }
 
     case .toggleWordForWordDeletion:
-      let dictionaryKey = languageCode + "WordForWord"
+      let dictionaryKey = languageCode + "WordForWordDeletion"
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {

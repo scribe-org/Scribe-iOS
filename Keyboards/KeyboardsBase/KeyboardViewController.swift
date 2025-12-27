@@ -2321,7 +2321,7 @@ class KeyboardViewController: UIInputViewController {
   func wordForWordDeletionIsEnabled() -> Bool {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
-      let dictionaryKey = langCode + "WordForWord"
+      let dictionaryKey = langCode + "WordForWordDeletion"
 
       return userDefaults.bool(forKey: dictionaryKey)
     } else {
@@ -3036,7 +3036,7 @@ class KeyboardViewController: UIInputViewController {
       commandBar.conditionallyAddPlaceholder()
     }
 
-    longPressOnDelete = true // This variable can be used for word-for-word deletion
+    longPressOnDelete = true
 
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0
