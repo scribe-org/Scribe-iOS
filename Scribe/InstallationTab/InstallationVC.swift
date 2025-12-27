@@ -330,7 +330,6 @@ extension InstallationVC {
   }
 
   private func addPopupButton() {
-          // Create a button
           let popupButton = UIButton(type: .system)
           popupButton.setTitle("Open Popup", for: .normal)
           popupButton.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
@@ -339,13 +338,9 @@ extension InstallationVC {
           popupButton.layer.cornerRadius = 10
           popupButton.translatesAutoresizingMaskIntoConstraints = false
 
-          // Add action
           popupButton.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
-
-          // Add to view
           view.addSubview(popupButton)
 
-          // Position it at the bottom
           NSLayoutConstraint.activate([
               popupButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
               popupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -375,7 +370,7 @@ extension InstallationVC {
                     var data = SettingsTableData.translateLangSettingsData
                     let langCode = "de"
 
-                    // Remove the current keyboard language from translation
+                    // Remove the current keyboard language from translation.
                     let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
                         s.sectionState == .specificLang(langCode)
                     }) ?? -1
@@ -403,9 +398,9 @@ extension InstallationVC {
 
                     translationLangController.edgesForExtendedLayout = .all
 
-                    // COPY the navigation bar appearance from Settings tab
+                    // COPY the navigation bar appearance from Settings tab.
                     if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
-                        // Copy all the styling from Settings' nav controller
+                        // Copy all the styling from Settings' nav controller.
                         self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
                         self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
                         self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor

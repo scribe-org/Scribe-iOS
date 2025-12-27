@@ -69,12 +69,11 @@ extension SelectionViewTemplateViewController {
     let oldLang = userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"
     let newLang = cell.selectedLang ?? "en"
 
-    // Deselect the row
     if let selectedIndexPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedIndexPath, animated: true)
     }
 
-    // Only show popup if selecting a different language
+    // Only show popup if selecting a different language.
     if newLang != oldLang {
         let oldIndexPath = selectedPath
         updateRadioButton(to: indexPath, in: tableView)
@@ -83,13 +82,11 @@ extension SelectionViewTemplateViewController {
   }
 
   private func updateRadioButton(to indexPath: IndexPath, in tableView: UITableView) {
-    // Deselect previous
     if selectedPath != nil {
       let previousCell = tableView.cellForRow(at: selectedPath!) as! RadioTableViewCell
       previousCell.iconImageView.image = UIImage(named: "radioButton")
     }
 
-    // Select new
     let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
     cell.iconImageView.image = UIImage(named: "radioButtonSelected")
     selectedPath = indexPath
@@ -102,7 +99,7 @@ extension SelectionViewTemplateViewController {
     let infoText = "You've changed your source translation language. Would you like to download new data so that you can translate from \(newLangName)?"
 
     func onKeep() {
-        // Keep old language - revert and dismiss
+        // Keep old language - revert and dismiss.
         self.dismiss(animated: true) {
             if let oldPath = oldIndexPath {
                 self.updateRadioButton(to: oldPath, in: tableView)
@@ -111,7 +108,7 @@ extension SelectionViewTemplateViewController {
     }
 
     func confirmDownload() {
-        // Download data - save new language
+        // Download data - save new language.
         self.dismiss(animated: true) {
             let dictionaryKey = self.langCode + "TranslateLanguage"
             self.userDefaults.setValue(newLang, forKey: dictionaryKey)

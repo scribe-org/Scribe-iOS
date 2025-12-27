@@ -250,17 +250,6 @@
         }
       }
     },
-    "app._global.indonesian" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Indonesian"
-          }
-        }
-      }
-    },
     "app._global.italian" : {
       "comment" : "",
       "localizations" : {
@@ -340,17 +329,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "İtalyanca"
-          }
-        }
-      }
-    },
-    "app._global.norwegian" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Norwegian"
           }
         }
       }
@@ -1021,7 +999,6 @@
     },
     "app.about.community.share_conjugate" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2018,7 +1995,6 @@
     },
     "app.about.feedback.rate_conjugate" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2598,17 +2574,6 @@
         }
       }
     },
-    "app.about.legal.third_legal.entry_simple_keyboard" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Simple Keyboard\n• Author: Simple Mobile Tools\n• License: GPL-3.0\n• Link: https://github.com/SimpleMobileTools/Simple-Keyboard/blob/main/LICENSE"
-          }
-        }
-      }
-    },
     "app.about.legal.third_party" : {
       "comment" : "",
       "localizations" : {
@@ -2860,7 +2825,6 @@
     },
     "app.about.legal.third_party.entry_simple_keyboard" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3193,7 +3157,6 @@
     },
     "app.conjugate.choose_conjugation.select_tense" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3277,7 +3240,6 @@
     },
     "app.conjugate.choose_conjugation.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3361,7 +3323,6 @@
     },
     "app.conjugate.recently_conjugated.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3445,7 +3406,6 @@
     },
     "app.conjugate.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3529,7 +3489,6 @@
     },
     "app.conjugate.verbs_search.placeholder" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3613,7 +3572,6 @@
     },
     "app.conjugate.verbs_search.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3697,7 +3655,6 @@
     },
     "app.download.menu_option.conjugate_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3781,7 +3738,6 @@
     },
     "app.download.menu_option.conjugate_download_data" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3865,7 +3821,6 @@
     },
     "app.download.menu_option.conjugate_download_data_start" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3949,7 +3904,6 @@
     },
     "app.download.menu_option.conjugate_title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4033,7 +3987,6 @@
     },
     "app.download.menu_option.scribe_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4117,7 +4070,6 @@
     },
     "app.download.menu_option.scribe_download_data" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4201,7 +4153,6 @@
     },
     "app.download.menu_option.scribe_title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4285,7 +4236,6 @@
     },
     "app.download.menu_ui.select.all_languages" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4369,7 +4319,6 @@
     },
     "app.download.menu_ui.select.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4453,7 +4402,6 @@
     },
     "app.download.menu_ui.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4537,7 +4485,6 @@
     },
     "app.download.menu_ui.update_data.check_new" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4621,7 +4568,6 @@
     },
     "app.download.menu_ui.update_data.regular_update" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4705,7 +4651,6 @@
     },
     "app.download.menu_ui.update_data.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4872,7 +4817,6 @@
     },
     "app.installation.button_quick_tutorial" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4956,7 +4900,6 @@
     },
     "app.installation.keyboard.keyboard_settings" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5787,7 +5730,6 @@
     },
     "app.settings.button_install_keyboards" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5871,7 +5813,6 @@
     },
     "app.settings.keyboard.functionality.annotate_suggestions" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5955,7 +5896,6 @@
     },
     "app.settings.keyboard.functionality.annotate_suggestions_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6205,7 +6145,6 @@
     },
     "app.settings.keyboard.functionality.default_emoji_tone" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6287,93 +6226,8 @@
         }
       }
     },
-    "app.settings.keyboard.functionality.default_emoji_tone_description" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Stelle einen Standardhautton für automatische Emoji-Vorschläge ein."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Set a default skin tone for emoji autosuggestions and completions."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Atur warna kulit default untuk saran otomatis dan pelengkapan emoji."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "이모지 자동 추천 및 완성을 위한 피부 톤의 기본값을 설정합니다."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Defina um tom de pele padrão para as sugestões de emoji."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Emoji önerileri ve otomatik tamamlama için varsayılan cilt tonunu ayarlayın."
-          }
-        }
-      }
-    },
     "app.settings.keyboard.functionality.default_emoji_tone.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6455,9 +6309,91 @@
         }
       }
     },
+    "app.settings.keyboard.functionality.default_emoji_tone_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "حدد لون البشرة الافتراضي لاقتراحات واكتملات الرموز التعبيرية."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "ইমোজি প্রস্তাবনা এবং পূর্ণকরণের জন্য একটি ডিফল্ট স্কিন টোন সেট করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Stelle einen Standardhautton für automatische Emoji-Vorschläge ein."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Set a default skin tone for emoji autosuggestions and completions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Establece un tono de piel predeterminado para las autosugerencias y los complementos emoji."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Définir la couleur de peau par défaut pour les suggestions automatiques et les complétions des émojis."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजी सुझाव और समाप्ति के लिए एक डिफ़ॉल्ट त्वचा रंग सेट करें।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Atur warna kulit default untuk saran otomatis dan pelengkapan emoji."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "이모지 자동 추천 및 완성을 위한 피부 톤의 기본값을 설정합니다."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "इमोजीच्या सुचवण्या आणि समाप्ति साठी डिफॉल्ट त्वचा रंग सेट करा."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Defina um tom de pele padrão para as sugestões de emoji."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en standard-hudton för automatiska förslag och komplettering gällande emojis."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Emoji önerileri ve otomatik tamamlama için varsayılan cilt tonunu ayarlayın."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.functionality.delete_word_by_word" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6541,7 +6477,6 @@
     },
     "app.settings.keyboard.functionality.delete_word_by_word_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6791,7 +6726,6 @@
     },
     "app.settings.keyboard.functionality.hold_for_alt_chars" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6875,7 +6809,6 @@
     },
     "app.settings.keyboard.functionality.hold_for_alt_chars_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -6959,7 +6892,6 @@
     },
     "app.settings.keyboard.functionality.popup_on_keypress" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7043,7 +6975,6 @@
     },
     "app.settings.keyboard.functionality.popup_on_keypress_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7127,7 +7058,6 @@
     },
     "app.settings.keyboard.functionality.punctuation_spacing" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7211,7 +7141,6 @@
     },
     "app.settings.keyboard.functionality.punctuation_spacing_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7378,7 +7307,6 @@
     },
     "app.settings.keyboard.keypress_sound" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -7390,7 +7318,6 @@
     },
     "app.settings.keyboard.keypress_sound_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -7402,7 +7329,6 @@
     },
     "app.settings.keyboard.keypress_vibration" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7486,7 +7412,6 @@
     },
     "app.settings.keyboard.keypress_vibration_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7570,7 +7495,6 @@
     },
     "app.settings.keyboard.layout.default_currency" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7652,93 +7576,8 @@
         }
       }
     },
-    "app.settings.keyboard.layout.default_currency_description" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Auswählen, welches Währungssymbol bei den Nummerntasten auftaucht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Select which currency symbol appears on the number keys."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Pilih simbol mata uang yang ingin ditampilkan di tombol angka."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "숫자 키에 어떤 통화 기호가 표시될지를 선택하세요."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Selecione qual símbolo de moeda aparecerá nas teclas de número."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Sayı tuşlarında hangi para biriminin görüneceğini seçin."
-          }
-        }
-      }
-    },
     "app.settings.keyboard.layout.default_currency.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7820,9 +7659,91 @@
         }
       }
     },
+    "app.settings.keyboard.layout.default_currency_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "اختر أي رمز للعملة يظهر على مفاتيح الأرقام."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "সংখ্যার কীগুলিতে কোন মুদ্রা প্রতীক প্রদর্শিত হবে তা নির্বাচন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Auswählen, welches Währungssymbol bei den Nummerntasten auftaucht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Select which currency symbol appears on the number keys."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Seleccione el símbolo de moneda que aparecerá en las teclas numéricas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sélectionner le symbole de la devise qui apparaît sur les touches numériques."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संख्या कुंजियों पर कौन सा मुद्रा प्रतीक दिखाई देगा, उसका चयन करें।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih simbol mata uang yang ingin ditampilkan di tombol angka."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "숫자 키에 어떤 통화 기호가 표시될지를 선택하세요."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "संक्येत कुञ्जींवर कोणते चलन चिन्ह दिसेल ते निवडा."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione qual símbolo de moeda aparecerá nas teclas de número."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj vilken valutasymbol som ska visas på sifferknapparna."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sayı tuşlarında hangi para biriminin görüneceğini seçin."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.layout.default_layout" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7904,93 +7825,8 @@
         }
       }
     },
-    "app.settings.keyboard.layout.default_layout_description" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "اختر تخطيط لوحة مفاتيح يناسب تفضيلات الكتابة واحتياجات اللغة الخاصة بك."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "আপনার টাইপিং পছন্দ এবং ভাষার প্রয়োজন অনুযায়ী কীবোর্ড বিন্যাস নির্বাচন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ein Tastaturlayout auswählen, das den eigenen Vorlieben und der Sprache entspricht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Select a keyboard layout that suits your typing preference and language needs."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Selecciona una distribución para el teclado que se adapta a tus preferencias de escritura y a tus necesidades lingüísticas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Sélectionnez une disposition de clavier adaptée à vos préférences de frappe et à vos besoins linguistiques."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Pilih layout keyboard sesuai preferensi mengetik dan kebutuhan bahasamu."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "선호도와 언어 필요에 맞는 키보드 레이아웃을 선택하세요."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "तुमच्या टाइपिंग आवडीनुसार आणि भाषा गरजेनुसार कीबोर्ड लेआउट निवडा."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Selecione um layout de teclado conforme suas preferências de digitação e idioma."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj en tangentbordslayout som passar dina skrivpreferenser och språkbehov."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Yazma tercihlerinize ve dil ihtiyaçlarınıza uygun bir klavye düzeni seçin."
-          }
-        }
-      }
-    },
     "app.settings.keyboard.layout.default_layout.caption" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -8068,6 +7904,89 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Kullanılacak klavye düzeni"
+          }
+        }
+      }
+    },
+    "app.settings.keyboard.layout.default_layout_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "اختر تخطيط لوحة مفاتيح يناسب تفضيلات الكتابة واحتياجات اللغة الخاصة بك."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "আপনার টাইপিং পছন্দ এবং ভাষার প্রয়োজন অনুযায়ী কীবোর্ড বিন্যাস নির্বাচন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ein Tastaturlayout auswählen, das den eigenen Vorlieben und der Sprache entspricht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Select a keyboard layout that suits your typing preference and language needs."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecciona una distribución para el teclado que se adapta a tus preferencias de escritura y a tus necesidades lingüísticas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Sélectionnez une disposition de clavier adaptée à vos préférences de frappe et à vos besoins linguistiques."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "एक कीबोर्ड लेआउट चुनें जो आपके टाइपिंग प्राथमिकता और भाषा आवश्यकताओं के अनुसार हो।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Pilih layout keyboard sesuai preferensi mengetik dan kebutuhan bahasamu."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "선호도와 언어 필요에 맞는 키보드 레이아웃을 선택하세요."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "तुमच्या टाइपिंग आवडीनुसार आणि भाषा गरजेनुसार कीबोर्ड लेआउट निवडा."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Selecione um layout de teclado conforme suas preferências de digitação e idioma."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj en tangentbordslayout som passar dina skrivpreferenser och språkbehov."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Yazma tercihlerinize ve dil ihtiyaçlarınıza uygun bir klavye düzeni seçin."
           }
         }
       }
@@ -8572,7 +8491,6 @@
     },
     "app.settings.keyboard.translation.select_source" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -8650,89 +8568,6 @@
           "stringUnit" : {
             "state" : "",
             "value" : "Dili seçin"
-          }
-        }
-      }
-    },
-    "app.settings.keyboard.translation.select_source_description" : {
-      "comment" : "",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "تغيير اللغة للترجمة منها."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "যে ভাষা থেকে অনুবাদ করা হবে তা পরিবর্তন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Wähle die Sprache, von der übersetzt wird."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Change the language to translate from."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Elige un idioma para traducir"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Modifier la langue à partir de laquelle la traduction doit être effectuée."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "जिस भाषा से अनुवाद करना है, उसे बदलें।"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ubah bahasa untuk diterjemahkan dari."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "번역할 언어를 변경하세요."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "अनुवाद करायची भाषा बदला."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Altere o idioma a ser traduzido."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Välj ett språk att översätta ifrån"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Çevrilecek dili değiştirin."
           }
         }
       }
@@ -8903,9 +8738,91 @@
         }
       }
     },
+    "app.settings.keyboard.translation.select_source_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "تغيير اللغة للترجمة منها."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "যে ভাষা থেকে অনুবাদ করা হবে তা পরিবর্তন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Wähle die Sprache, von der übersetzt wird."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Change the language to translate from."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Elige un idioma para traducir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Modifier la langue à partir de laquelle la traduction doit être effectuée."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "जिस भाषा से अनुवाद करना है, उसे बदलें।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ubah bahasa untuk diterjemahkan dari."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "번역할 언어를 변경하세요."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "अनुवाद करायची भाषा बदला."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Altere o idioma a ser traduzido."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Välj ett språk att översätta ifrån"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Çevrilecek dili değiştirin."
+          }
+        }
+      }
+    },
     "app.settings.keyboard.translation.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -8989,7 +8906,6 @@
     },
     "app.settings.menu.app_color_mode" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9073,7 +8989,6 @@
     },
     "app.settings.menu.app_color_mode_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9238,90 +9153,6 @@
         }
       }
     },
-    "app.settings.menu.app_language_description" : {
-      "comment" : "",
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "تغيير اللغة التي يتم بها عرض تطبيق Scribe."
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe অ্যাপ কোন ভাষায় থাকবে তা পরিবর্তন করুন।"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ändern, welche Sprache für die Scribe-App benutzt wird."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Change which language the Scribe app is in."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Cambiar el idioma de la aplicación Scribe."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Modifier la langue de l'application Scribe."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ubah bahasa yang digunakan pada aplikasi Scribe"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe 앱에서 사용할 언어를 변경합니다."
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Altere o idioma do aplicativo Scribe."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Ändra vilket språk Scribe-appen är på."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "",
-            "value" : "Scribe uygulamasının hangi dilde olduğunu değiştirin."
-          }
-        }
-      }
-    },
     "app.settings.menu.app_language.caption" : {
       "comment" : "",
       "localizations" : {
@@ -9407,7 +9238,6 @@
     },
     "app.settings.menu.app_language.one_device_language_warning.message" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9491,7 +9321,6 @@
     },
     "app.settings.menu.app_language.one_device_language_warning.title" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9573,9 +9402,91 @@
         }
       }
     },
+    "app.settings.menu.app_language_description" : {
+      "comment" : "",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "تغيير اللغة التي يتم بها عرض تطبيق Scribe."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe অ্যাপ কোন ভাষায় থাকবে তা পরিবর্তন করুন।"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ändern, welche Sprache für die Scribe-App benutzt wird."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Change which language the Scribe app is in."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Cambiar el idioma de la aplicación Scribe."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Modifier la langue de l'application Scribe."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "स्क्राइब  ऐप किस भाषा में होगा, उसे बदलें।"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ubah bahasa yang digunakan pada aplikasi Scribe"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe 앱에서 사용할 언어를 변경합니다."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "स्क्राइब अ‍ॅप कोणत्या भाषेत असेल ते बदला."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Altere o idioma do aplicativo Scribe."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Ändra vilket språk Scribe-appen är på."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "",
+            "value" : "Scribe uygulamasının hangi dilde olduğunu değiştirin."
+          }
+        }
+      }
+    },
     "app.settings.menu.high_color_contrast" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9659,7 +9570,6 @@
     },
     "app.settings.menu.high_color_contrast_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9743,7 +9653,6 @@
     },
     "app.settings.menu.increase_text_size" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9827,7 +9736,6 @@
     },
     "app.settings.menu.increase_text_size_description" : {
       "comment" : "",
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
