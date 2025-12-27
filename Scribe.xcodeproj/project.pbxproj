@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1253,6 +1253,10 @@
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E9DADB332EF3CF9B00702783 /* ConfirmDialog */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ConfirmDialog; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		38BD212D22D5907E00C6795D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -1492,6 +1496,7 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				CE1378C128F5D7AC00E1CBC2 /* Colors */,
@@ -1913,6 +1918,9 @@
 				D1AFE01529CA6F980033BF27 /* PBXTargetDependency */,
 				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
 				E9FAC3992E989712008E00AC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 			);
 			name = Scribe;
 			packageProductDependencies = (
