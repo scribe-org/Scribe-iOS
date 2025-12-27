@@ -10,21 +10,21 @@ public enum FRQWERTYKeyboardConstants {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "´"],
     ["shift", "z", "x", "c", "v", "b", "n", "m", "delete"],
-    ["123", "selectKeyboard", "space", "return"] // "undo"
+    ["123", "selectKeyboard", "space", "return"]
   ]
 
   static let numberKeysPhone = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     ["-", "/", ":", ";", "(", ")", "$", "&", "@", "\""],
     ["#+=", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
+    ["ABC", "selectKeyboard", "space", "return"]
   ]
 
   static let symbolKeysPhone = [
     ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="],
     ["_", "\\", "|", "~", "<", ">", "€", "£", "¥", "·"],
     ["123", ".", ",", "?", "!", "'", "delete"],
-    ["ABC", "selectKeyboard", "space", "return"] // "undo"
+    ["ABC", "selectKeyboard", "space", "return"]
   ]
 
   // MARK: iPad Layouts
@@ -34,21 +34,21 @@ public enum FRQWERTYKeyboardConstants {
     ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"],
     ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"],
     ["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "undo"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]
   ]
 
   static let numberKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"],
     ["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="],
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "undo"
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]
   ]
 
   static let symbolKeysPad = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"],
     ["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"],
     ["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"],
-    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"] // "undo"
+    ["ABC", "selectKeyboard", "space", "ABC", "hideKeyboard"]
   ]
 
   // MARK: Expanded iPad Layouts
@@ -58,15 +58,15 @@ public enum FRQWERTYKeyboardConstants {
     [SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "^", "ç", ":"],
     [SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "è", "à", "return"],
     ["shift", "ù", "z", "x", "c", "v", "b", "n", "m", ",", ".", "é", "shift"],
-    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"] // "microphone", "scribble"
+    ["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]
   ]
 
   static let symbolKeysPadExpanded = [
     ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"],
     [SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "\"", "|", "~"],
-    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"], // "undo"
-    ["shift", "…", "?", "!", "≠", "°", "'", "\"", "_", ",", ".", "€", "shift"], // "redo"
-    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"] // "microphone", "scribble"
+    [SpecialKeys.capsLock, "-", "/", ":", ";", "(", ")", "$", "&", "@", "£", "¥", "~", "return"],
+    ["shift", "…", "?", "!", "≠", "°", "'", "\"", "_", ",", ".", "€", "shift"],
+    ["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]
   ]
 
   // Alternate key vars.

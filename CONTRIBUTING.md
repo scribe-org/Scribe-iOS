@@ -34,7 +34,7 @@ Thank you for your interest in contributing to Scribe-iOS! We look forward to we
 
 - Please join the [public Matrix chat](https://matrix.to/#/#scribe_community:matrix.org) to connect with the community
   - [Matrix](https://matrix.org/) is a network for secure, decentralized communication
-  - Scribe would suggest that you use the [Element](https://element.io/) client
+  - We'd suggest that you use the [Element](https://element.io/) client and [Element X](https://element.io/app) for a mobile app
   - The [General](https://matrix.to/#/!yQJjLmluvlkWttNhKo:matrix.org?via=matrix.org) and [iOS](https://matrix.to/#/#ScribeiOS:matrix.org) channels would be great places to start!
   - Feel free to introduce yourself and tell us what your interests are if you're comfortable :)
 - Read through this contributing guide for all the information you need to contribute
@@ -160,10 +160,6 @@ In addition to the [pre-commit](https://pre-commit.com/) hooks that are set up d
 Please run the following in the project root:
 
 ```bash
-# Build and test the application:
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build
-xcodebuild -scheme Scribe -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
-
 # If you don't have swiftlint installed:
 # brew install swiftlint
 
@@ -177,6 +173,33 @@ If you see that there are linting errors above, then please run the following co
 swiftlint --fix
 ```
 
+For testing and code coverage, please run the following command:
+
+```bash
+# Clear prior builds if needed:
+# rm -rf Build
+
+xcodebuild -scheme Scribe -derivedDataPath Build/ -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' clean build test -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+```
+
+Generate the coverage report JSON with the following:
+
+```bash
+xcrun xccov view --report $(find ./Build/Logs/Test -name '*.xcresult') --json > code_coverage.json
+```
+
+And finally view the coverage report in the terminal:
+
+```bash
+python3 Tests/process_coverage_report.py code_coverage.json
+
+# You can also pass an integer or double to check against a threshold:
+# python3 Tests/process_coverage_report.py code_coverage.json NUMERIC_THRESHOLD
+```
+
+> [!NOTE]
+> See [Tests/process_coverage_report.py](./Tests/process_coverage_report.py) for details.
+
 <a id="issues-projects"></a>
 
 # Issues and projects [`⇧`](#contents)
@@ -184,9 +207,9 @@ swiftlint --fix
 The [issue tracker for Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues) is the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests) and [submitting pull requests](#pull-requests). Scribe also organizes related issues into [projects](https://github.com/scribe-org/Scribe-iOS/projects).
 
 > [!NOTE]\
-> Just because an issue is assigned on GitHub doesn't mean that the team isn't interested in your contribution! Feel free to write [in the issues](https://github.com/scribe-org/Scribe-iOS/issues) and we can potentially reassign it to you.
+> Just because an issue is assigned on GitHub doesn't mean the team isn't open to your contribution! Feel free to write [in the issues](https://github.com/scribe-org/Scribe-iOS/issues) and we can potentially reassign it to you.
 
-Be sure to check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first time contributors.
+Be sure to check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first-time contributors.
 
 <a id="bug-reports"></a>
 
@@ -210,7 +233,7 @@ Guidelines for bug reports:
 - What actually happens
 - Notes (why this might be happening, things tried that didn't work, etc)
 
-To make the above steps easier, the Scribe team asks that contributors report bugs using the [bug report template](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=bug_report.yml), with these issues further being marked with the [`bug`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Abug) label.
+To make the above steps easier, the Scribe team asks that contributors report bugs using the [bug report template](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=bug_report.yml), with these issues further being marked with the [`Bug`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue%20state%3Aopen%20type%3ABug) type.
 
 Again, thank you for your time in reporting issues!
 
@@ -218,7 +241,7 @@ Again, thank you for your time in reporting issues!
 
 # Feature requests [`⇧`](#contents)
 
-Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`feature`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Afeature) label, and can be made using the [feature request](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
+Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`Feature`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature) type, and can be made using the [feature request](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
 
 <a id="pull-requests"></a>
 
@@ -280,6 +303,10 @@ Scribe does not accept direct edits to the grammar files as they are sourced fro
 
 # Localization [`⇧`](#contents)
 
+<a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
+  <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" width="125" alt="Visit Weblate project" align="right">
+</a>
+
 Being an app that focusses on language learning, localization plays a big part in what Scribe will eventually be. Those interested are more than welcome to join the team at [scribe-org/Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where we work on localizing all Scribe applications via [Weblate](https://weblate.org/).
 
 Please run the [update_i18n_keys.sh](https://github.com/scribe-org/Scribe-iOS/blob/main/update_i18n_keys.sh) script to load in the most recent version of the [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) app texts into Scribe-iOS.
@@ -300,7 +327,9 @@ Documentation is an invaluable way to contribute to coding projects as it allows
 
 # Design [`⇧`](#contents)
 
-<a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464"><img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/figma_logo.png" height="50" alt="Public Figma Designs" align="right"></a>
+<a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464">
+  <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/FigmaLogo.png" width="100" alt="Public Figma Designs" align="right">
+</a>
 
 Designs for Scribe are done in the [public design file in Figma](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464). Those interested in helping with Scribe's design are also welcome to share their ideas using the [design improvement](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) template that makes an issue marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
 

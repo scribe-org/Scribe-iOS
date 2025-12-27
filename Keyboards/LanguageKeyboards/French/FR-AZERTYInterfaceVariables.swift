@@ -35,7 +35,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"])
       .addRow(["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"])
       .addRow(["shift", "w", "x", "c", "v", "b", "n", "´", "delete"])
-      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["123", "selectKeyboard", "space", "return"])
       .build()
   }
 
@@ -44,7 +44,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
@@ -54,7 +54,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -75,7 +75,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
       .addRow(["q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "return"])
       .addRow(["shift", "w", "x", "c", "v", "b", "n", "´", ",", ".", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -84,7 +84,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["@", "#", "&", "\"", "€", "(", "!", ")", "-", "*", "return"])
       .addRow(["#+=", "%", "_", "+", "=", "/", ";", ":", ",", ".", "#+="])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .replaceKey(row: 1, column: 4, to: currencyKey)
       .build()
   }
@@ -94,7 +94,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["~", "ᵒ", "[", "]", "{", "}", "^", "$", "£", "¥", "return"])
       .addRow(["123", "§", "<", ">", "|", "\\", "...", "·", "?", "'", "123"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -115,7 +115,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
       .addRow([SpecialKeys.indent, "a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "^", "+", "*"])
       .addRow([SpecialKeys.capsLock, "q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "ù", "#", "return"])
       .addRow(["shift", "/", "w", "x", "c", "v", "b", "n", ":", "-", ",", ".", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -123,9 +123,9 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
       .addRow([SpecialKeys.indent, "\"", "|", "§", "[", "]", "{", "}", "-", "%", "=", "^", "+", "*"])
-      .addRow([SpecialKeys.capsLock, "/", "…", "_", "(", ")", "&", "$", "£", "¥", "€", "@", "#", "return"]) // "undo"
-      .addRow(["shift", "'", "?", "!", "~", "≠", "°", ";", ":", "-", ",", ".", "shift"]) // "redo"
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow([SpecialKeys.capsLock, "/", "…", "_", "(", ")", "&", "$", "£", "¥", "€", "@", "#", "return"])
+      .addRow(["shift", "'", "?", "!", "~", "≠", "°", ";", ":", "-", ",", ".", "shift"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .build()
   }
 }
@@ -134,7 +134,7 @@ struct FRKeyboardProvider: KeyboardProviderProtocol {
 
 func getFRKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-    fatalError()
+    fatalError("Unable to access shared user defaults")
   }
 
   var currencyKey = FRKeyboardConstants.defaultCurrencyKey

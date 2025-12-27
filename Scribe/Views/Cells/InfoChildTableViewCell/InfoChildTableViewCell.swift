@@ -91,12 +91,11 @@ final class InfoChildTableViewCell: UITableViewCell {
     titleLabel.text = section.sectionTitle
 
     if let shortDescription = section.shortDescription {
-      descriptionLabel.text = shortDescription
-
-      contentView.addSubview(descriptionLabel)
+        descriptionLabel.text = shortDescription
+        descriptionLabel.isHidden = false
     } else {
-      descriptionLabel.text = nil
-      descriptionLabel.removeFromSuperview()
+        descriptionLabel.text = nil
+        descriptionLabel.isHidden = true
     }
 
     if section.hasToggle {
@@ -148,6 +147,10 @@ final class InfoChildTableViewCell: UITableViewCell {
       let dictionaryKey = languageCode + "EmojiAutosuggest"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWordDeletion"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .none: break
     }
 
@@ -186,6 +189,14 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = true  // Default value
+      }
+
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWordDeletion"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = false // Default value
       }
 
     case .none: break

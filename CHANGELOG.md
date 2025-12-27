@@ -18,18 +18,29 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
+- Users can now delete text word for word instead of character by character by enabling a function in the settings menu. The words are deleted by holding down backspace ([#301](https://github.com/scribe-org/Scribe-iOS/issues/301)).
 - The Scribe translation functionality now allows the user to select which language to translate from via a convenient menu selector within the settings of each keyboard ([#255](https://github.com/scribe-org/Scribe-iOS/issues/255), [#307](https://github.com/scribe-org/Scribe-iOS/issues/307), [#469](https://github.com/scribe-org/Scribe-iOS/issues/469), [#470](https://github.com/scribe-org/Scribe-iOS/issues/470))
   - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
 - Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
+- A period is added to the letter keys if the keyboard is being used in a search bar ([#447](https://github.com/scribe-org/Scribe-iOS/issues/447)).
 
 ### 🎨 Design Changes
 
 - The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/514)).
 
+### 🌐 Localization
+
+- Localized the "Not in Wikidata" explanation messages to match the device language ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538)).
+
 ### 🐞 Bug Fixes
 
 - The tab bar titles are now localized for the application ([#517](https://github.com/scribe-org/Scribe-iOS/issues/517)).
+- Using capslock would always output the lowercase version of the tapped character ([#540](https://github.com/scribe-org/Scribe-iOS/issues/540)).
+
+### ✅ Tests
+
+- A coverage report has been added to all pull requests to keep track of which files need testing ([#531](https://github.com/scribe-org/Scribe-iOS/issues/531)).
 
 ### ⚖️ Legal
 

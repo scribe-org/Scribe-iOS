@@ -16,13 +16,16 @@ Thank you for your pull request! 🚀
 <!--
 Describe briefly what your pull request proposes to change. Especially if you have more than one commit, it is helpful to give a summary of what your contribution is trying to solve.
 
-Also, please describe shortly how you tested that your change actually works.
+Also consider including the following:
+- A description of the main files changed and what has been done in them (helps maintainers focus their review)
+- A description of how you tested that your change actually works
+- Pictures or a video of your change (if possible)
 -->
 
 ### Related issue
 
 <!--- Scribe-iOS prefers that pull requests be related to already open issues. -->
 <!--- If applicable, please link to the issue by replacing ISSUE_NUMBER with the appropriate number below. -->
-<!--- Feel free to delete this section if this does not apply. -->
+<!--- You can also put "Closes" before the # to close the issue on merge, or say there is no related issue. -->
 
 - #ISSUE_NUMBER

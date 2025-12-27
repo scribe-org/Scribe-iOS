@@ -41,7 +41,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"])
       .addRow(["shift", "y", "x", "c", "v", "b", "n", "m", "delete"])
-      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["123", "selectKeyboard", "space", "return"])
       .build()
   }
 
@@ -50,7 +50,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l"])
       .addRow(["shift", "y", "x", "c", "v", "b", "n", "m", "delete"])
-      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["123", "selectKeyboard", "space", "return"])
       .build()
   }
 
@@ -59,7 +59,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "kr", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
@@ -69,7 +69,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "€", "$", "£", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -90,7 +90,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "å", "delete"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "return"])
       .addRow(["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "?", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -100,7 +100,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "delete"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
       .addRow(["shift", "y", "x", "c", "v", "b", "n", "m", ",", ".", "?", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -109,7 +109,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "delete"])
       .addRow(["@", "#", "kr", "&", "*", "(", ")", "'", "\"", "+", "·", "return"])
       .addRow(["#+=", "%", "≈", "±", "=", "/", ";", ":", ",", ".", "-", "#+="])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .replaceKey(row: 1, column: 2, to: currencyKey)
       .build()
   }
@@ -119,7 +119,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "delete"])
       .addRow(["€", "$", "£", "^", "[", "]", "{", "}", "―", "ᵒ", "...", "return"])
       .addRow(["123", "§", "|", "~", "≠", "\\", "<", ">", "!", "?", "_", "123"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -140,7 +140,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å", "^", "*"])
       .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä", "'", "return"])
       .addRow(["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -150,7 +150,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
       .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "\"", "^", "*"])
       .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", "(", ")", "'", "return"])
       .addRow(["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "-", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -158,9 +158,9 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
       .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "°", "|", "§"])
-      .addRow([SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"]) // "undo"
-      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", ",", ".", "-", "shift"]) // "redo"
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow([SpecialKeys.capsLock, "—", "/", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "~", "return"])
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "€", ",", ".", "-", "shift"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .build()
   }
 
@@ -172,7 +172,7 @@ struct SVKeyboardProvider: KeyboardProviderProtocol, KeyboardProviderDisableAcce
 
 func getSVKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-    fatalError()
+    fatalError("Unable to access shared user defaults")
   }
 
   var currencyKey = SVKeyboardConstants.defaultCurrencyKey

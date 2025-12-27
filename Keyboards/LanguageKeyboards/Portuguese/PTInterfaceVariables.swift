@@ -34,7 +34,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l"])
       .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "delete"])
-      .addRow(["123", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["123", "selectKeyboard", "space", "return"])
       .build()
   }
 
@@ -43,7 +43,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
       .addRow(["-", "/", ":", ";", "(", ")", "€", "&", "@", "\""])
       .addRow(["#+=", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
       .replaceKey(row: 1, column: 6, to: currencyKey)
       .build()
   }
@@ -53,7 +53,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["[", "]", "{", "}", "#", "%", "^", "*", "+", "="])
       .addRow(["_", "\\", "|", "~", "<", ">", "$", "£", "¥", "·"])
       .addRow(["123", ".", ",", "?", "!", "'", "delete"])
-      .addRow(["ABC", "selectKeyboard", "space", "return"]) // "undo"
+      .addRow(["ABC", "selectKeyboard", "space", "return"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -74,7 +74,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "delete"])
       .addRow(["a", "s", "d", "f", "g", "h", "j", "k", "l", "return"])
       .addRow(["shift", "z", "x", "c", "v", "b", "n", "m", "!", "?", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -83,7 +83,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["@", "#", "$", "&", "*", "(", ")", "'", "\"", "return"])
       .addRow(["#+=", "%", "-", "+", "=", "/", ";", ":", ",", ".", "#+="])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .replaceKey(row: 1, column: 2, to: currencyKey)
       .build()
   }
@@ -93,7 +93,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"])
       .addRow(["€", "£", "¥", "_", "^", "[", "]", "{", "}", "return"])
       .addRow(["123", "§", "|", "~", "...", "\\", "<", ">", "!", "?", "123"])
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "undo"
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
 
     if currencyKeys.count < 3 {
       return keyboardBuilder.build()
@@ -114,7 +114,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
       .addRow([SpecialKeys.indent, "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"])
       .addRow([SpecialKeys.capsLock, "a", "s", "d", "f", "g", "h", "j", "k", "l", ":", ";", "ç", "return"])
       .addRow(["shift", "'", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "shift"])
-      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow(["selectKeyboard", ".?123", "space", ".?123", "hideKeyboard"])
       .build()
   }
 
@@ -122,9 +122,9 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
     return KeyboardBuilder()
       .addRow(["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "<", ">", "delete"])
       .addRow([SpecialKeys.indent, "[", "]", "{", "}", "#", "%", "^", "*", "+", "=", "—", "|", "~"])
-      .addRow([SpecialKeys.capsLock, "°", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"]) // "undo"
-      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "-", ",", ".", "/", "shift"]) // "redo"
-      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"]) // "microphone", "scribble"
+      .addRow([SpecialKeys.capsLock, "°", "\\", ":", ";", "(", ")", "&", "@", "$", "£", "¥", "€", "return"])
+      .addRow(["shift", "…", "?", "!", "≠", "'", "\"", "_", "-", ",", ".", "/", "shift"])
+      .addRow(["selectKeyboard", "ABC", "space", "ABC", "hideKeyboard"])
       .build()
   }
 }
@@ -133,7 +133,7 @@ struct PTKeyboardProvider: KeyboardProviderProtocol {
 
 func getPTKeys() {
   guard let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") else {
-    fatalError()
+    fatalError("Unable to access shared user defaults")
   }
 
   var currencyKey = PTKeyboardConstants.defaultCurrencyKey

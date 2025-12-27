@@ -18,7 +18,7 @@
     <string name="app.about.community.view_apps">View all Scribe apps</string>
     <string name="app.about.community.wikimedia">Wikimedia and Scribe</string>
     <string name="app.about.community.wikimedia.caption">How we work together</string>
-    <string name="app.about.community.wikimedia.text_1">Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Specifically Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports.</string>
+    <string name="app.about.community.wikimedia.text_1">Scribe would not be possible without countless contributions by Wikimedia contributors to the many projects that they support. Scribe makes use of data from the Wikidata Lexicographical data community, as well as data from Wikipedia for each language that Scribe supports.</string>
     <string name="app.about.community.wikimedia.text_2">Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation. It provides freely available data that anyone can use under a Creative Commons Public Domain license (CC0). Scribe uses language data from Wikidata to provide users with verb conjugations, noun-form annotations, noun plurals, and many other features.</string>
     <string name="app.about.community.wikimedia.text_3">Wikipedia is a multilingual free online encyclopedia written and maintained by a community of volunteers through open collaboration and a wiki-based editing system. Scribe uses data from Wikipedia to produce autosuggestions by deriving the most common words in a language as well as the most common words that follow them.</string>
     <string name="app.about.feedback.app_hints">Reset app hints</string>
@@ -88,6 +88,8 @@
     <string name="app.settings.keyboard.functionality.punctuation_spacing">Delete punctuation spacing</string>
     <string name="app.settings.keyboard.functionality.punctuation_spacing_description">Remove excess spaces before punctuation marks.</string>
     <string name="app.settings.keyboard.functionality.title">Functionality</string>
+    <string name="app.settings.keyboard.keypress_sound">Play sound on key press</string>
+    <string name="app.settings.keyboard.keypress_sound_description">Have the device play a sound when keys are pressed.</string>
     <string name="app.settings.keyboard.keypress_vibration">Vibrate on key press</string>
     <string name="app.settings.keyboard.keypress_vibration_description">Have the device vibrate when keys are pressed.</string>
     <string name="app.settings.keyboard.layout.default_currency">Default currency symbol</string>

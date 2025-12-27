@@ -279,6 +279,12 @@ class KeyboardViewController: UIInputViewController {
     rightAutoPartition.backgroundColor = .clear
   }
 
+  // Toggles visibility of the Conjugate and Plural buttons.
+  func hideConjugateAndPluralKeys(state: Bool) {
+    conjugateKey.isHidden = state
+    pluralKey.isHidden = state
+  }
+
   // Logic to create notification tooltip.
   func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
     let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
@@ -440,7 +446,7 @@ class KeyboardViewController: UIInputViewController {
             for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
+              } else if shiftButtonState == .capsLocked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -456,7 +462,7 @@ class KeyboardViewController: UIInputViewController {
             for i in 0 ..< 3 {
               if shiftButtonState == .shift {
                 completionWords[i] = completionOptions[i].capitalize()
-              } else if capsLockButtonState == .locked {
+              } else if shiftButtonState == .capsLocked {
                 completionWords[i] = completionOptions[i].uppercased()
               } else if currentPrefix.isCapitalized {
                 if completionOptions[i].isUppercase {
@@ -504,11 +510,12 @@ class KeyboardViewController: UIInputViewController {
           suggestion = getESReflexivePronoun(pronoun: prefix.lowercased())
         }
 
-        if shiftButtonState == .shift {
+        switch shiftButtonState {
+        case .shift:
           completionWords.append(suggestion.capitalize())
-        } else if capsLockButtonState == .locked {
+        case .capsLocked:
           completionWords.append(suggestion.uppercased())
-        } else {
+        default:
           completionWords.append(suggestion)
         }
       }
@@ -523,11 +530,13 @@ class KeyboardViewController: UIInputViewController {
         completionWords.append(previousWord)
         continue
       }
-      if shiftButtonState == .shift {
+
+      switch shiftButtonState {
+      case .shift:
         completionWords.append(baseAutosuggestions[i].capitalize())
-      } else if capsLockButtonState == .locked {
+      case .capsLocked:
         completionWords.append(baseAutosuggestions[i].uppercased())
-      } else {
+      default:
         completionWords.append(baseAutosuggestions[i])
       }
     }
@@ -576,7 +585,7 @@ class KeyboardViewController: UIInputViewController {
           }
           if shiftButtonState == .shift {
             completionWords.append(suggestionsLowerCasePrefix[i].capitalize())
-          } else if capsLockButtonState == .locked {
+          } else if shiftButtonState == .capsLocked {
             completionWords.append(suggestionsLowerCasePrefix[i].uppercased())
           } else {
             let nounForm = LanguageDBManager.shared.queryNounForm(of: suggestionsLowerCasePrefix[i])[0]
@@ -599,7 +608,7 @@ class KeyboardViewController: UIInputViewController {
 
           if shiftButtonState == .shift {
             completionWords.append(suggestionsCapitalizedPrefix[i].capitalize())
-          } else if capsLockButtonState == .locked {
+          } else if shiftButtonState == .capsLocked {
             completionWords.append(suggestionsCapitalizedPrefix[i].uppercased())
           } else {
             completionWords.append(suggestionsCapitalizedPrefix[i])
@@ -639,6 +648,10 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: padEmojiKey0)
       deactivateBtn(btn: padEmojiKey1)
       deactivateBtn(btn: padEmojiKey2)
+
+      if controllerLanguage == "Indonesian" {
+        hideConjugateAndPluralKeys(state: false)
+      }
 
       if autoAction0Visible {
         allowUndo = false
@@ -873,7 +886,11 @@ class KeyboardViewController: UIInputViewController {
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
     if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-      proxy.deleteBackward()
+      if wordForWordDeletionIsEnabled() && longPressOnDelete {
+        deleteWordBackward()
+      } else {
+        proxy.deleteBackward()
+      }
     } else if [.translate, .conjugate, .plural].contains(commandState) && !(allPrompts.contains(commandBar.text ?? "") || allColoredPrompts.contains(commandBar.attributedText ?? NSAttributedString())) {
       guard let inputText = commandBar.text, !inputText.isEmpty else {
         return
@@ -883,6 +900,32 @@ class KeyboardViewController: UIInputViewController {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
     }
+  }
+
+  func deleteWordBackward() {
+    guard let documentText = proxy.documentContextBeforeInput else {
+      return
+    }
+
+    var words = documentText.split(separator: " ").map(String.init)
+
+    guard !words.isEmpty else {
+      return
+    }
+
+    words.removeLast()
+
+    let updatedText = words.joined(separator: " ")
+
+    for _ in documentText {
+        proxy.deleteBackward()
+    }
+
+    for character in updatedText {
+        proxy.insertText(String(character))
+    }
+
+    proxy.adjustTextPosition(byCharacterOffset: 0)
   }
 
   // The button used to display Scribe commands and its shadow.
@@ -913,12 +956,14 @@ class KeyboardViewController: UIInputViewController {
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
     setBtn(btn: translateKey, color: commandKeyColor, name: "Translate", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canBeCapitalized: false, isSpecial: false)
-
     activateBtn(btn: translateKey)
-    activateBtn(btn: conjugateKey)
-    activateBtn(btn: pluralKey)
+
+    if controllerLanguage != "Indonesian" {
+      setBtn(btn: conjugateKey, color: commandKeyColor, name: "Conjugate", canBeCapitalized: false, isSpecial: false)
+      setBtn(btn: pluralKey, color: commandKeyColor, name: "Plural", canBeCapitalized: false, isSpecial: false)
+      activateBtn(btn: conjugateKey)
+      activateBtn(btn: pluralKey)
+    }
   }
 
   /// Hides all emoji dividers based on conditions determined by the keyboard state.
@@ -1207,6 +1252,7 @@ class KeyboardViewController: UIInputViewController {
   /// Sets up all buttons and labels for the conjugation view given constraints to determine the dimensions.
   func setConjugationBtns() {
     // Add swipe functionality to the conjugation and declension views.
+    guard controllerLanguage != "Indonesian" else { return }
     let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(shiftLeft))
     keyboardView.addGestureRecognizer(swipeRight)
     let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(shiftRight))
@@ -1713,7 +1759,7 @@ class KeyboardViewController: UIInputViewController {
             (
               commandState != .translate
               && (
-                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
                 || (
                   ["German", "Spanish", "Swedish"].contains(controllerLanguage)
                   && disableAccentCharacters
@@ -1721,7 +1767,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           leftPadding = keyWidth / 4
           addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1732,10 +1778,10 @@ class KeyboardViewController: UIInputViewController {
           && (
             (
               commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+              && ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
             leftPadding = keyWidth / 3
             addPadding(to: stackView1, width: leftPadding, key: "a")
@@ -1746,10 +1792,10 @@ class KeyboardViewController: UIInputViewController {
           && (
             (
               commandState != .translate
-              && ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+              && ["English", "Italian", "Portuguese"].contains(controllerLanguage)
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           leftPadding = keyWidth / 3
           addPadding(to: stackView1, width: leftPadding, key: "@")
@@ -1870,7 +1916,7 @@ class KeyboardViewController: UIInputViewController {
             (
               commandState != .translate
               && (
-                ["English", "Portuguese", "Italian"].contains(controllerLanguage)
+                ["English", "Indonesian", "Italian", "Portuguese"].contains(controllerLanguage)
                 || (
                   ["German", "Spanish", "Swedish"].contains(controllerLanguage)
                   && disableAccentCharacters
@@ -1878,7 +1924,7 @@ class KeyboardViewController: UIInputViewController {
               )
             ) || (
               commandState == .translate
-              && ["en", "pt", "it"].contains(getControllerTranslateLangCode())
+              && ["en", "id", "it", "pt"].contains(getControllerTranslateLangCode())
           )) {
           rightPadding = keyWidth / 4
           addPadding(to: stackView1, width: rightPadding, key: "l")
@@ -2004,20 +2050,22 @@ class KeyboardViewController: UIInputViewController {
       requestSupplementaryLexicon { (userLexicon: UILexicon?) in
         if let lexicon = userLexicon {
           for item in lexicon.entries where item.documentText.count > 1 {
-              LanguageDBManager.shared.insertAutocompleteLexion(of: item.documentText)
+              LanguageDBManager.shared.insertAutocompleteLexicon(of: item.documentText)
           }
         }
       }
 
       // Drop non-unique values in case the lexicon has added words that were already present.
-      LanguageDBManager.shared.deleteNonUniqueAutosuggestions()
+      LanguageDBManager.shared.deleteNonUniqueAutocompletions()
     }
 
     setKeyboard()
     setCommaAndPeriodKeysConditionally()
     setCommandBackground()
     setCommandBtns()
-    setConjugationBtns()
+    if controllerLanguage != "Indonesian" {
+      setConjugationBtns()
+    }
 
     // Clear annotation state if a keyboard state change dictates it.
     if !annotationState {
@@ -2128,8 +2176,12 @@ class KeyboardViewController: UIInputViewController {
 
       if commandState == .selectCommand {
         styleBtn(btn: translateKey, title: translateKeyLbl, radius: commandKeyCornerRadius)
-        styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
-        styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+        if controllerLanguage == "Indonesian" {
+          hideConjugateAndPluralKeys(state: true)
+        } else {
+            styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
+            styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
+}
 
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()
@@ -2138,9 +2190,11 @@ class KeyboardViewController: UIInputViewController {
         commandBar.hide()
         hideAutoActionPartitions()
       } else {
-        deactivateBtn(btn: conjugateKey)
+        if controllerLanguage != "Indonesian" {
+          deactivateBtn(btn: conjugateKey)
+          deactivateBtn(btn: pluralKey)
+        }
         deactivateBtn(btn: translateKey)
-        deactivateBtn(btn: pluralKey)
 
         deactivateBtn(btn: phoneEmojiKey0)
         deactivateBtn(btn: phoneEmojiKey1)
@@ -2231,11 +2285,13 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "CommaAndPeriod"
       let letterKeysHaveCommaPeriod = userDefaults.bool(forKey: dictionaryKey)
+      let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
 
       if letterKeysHaveCommaPeriod {
-        let spaceIndex = letterKeys[3].firstIndex(where: { $0 == "space" })
         letterKeys[3].insert(",", at: spaceIndex!)
         letterKeys[3].insert(".", at: spaceIndex! + 2)
+      } else if proxy.keyboardType == .webSearch {
+        letterKeys[3].insert(".", at: spaceIndex! + 1)
       }
     }
   }
@@ -2260,6 +2316,18 @@ class KeyboardViewController: UIInputViewController {
     } else {
       return true // return the default value
     }
+  }
+
+  func wordForWordDeletionIsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      let dictionaryKey = langCode + "WordForWordDeletion"
+
+      return userDefaults.bool(forKey: dictionaryKey)
+    } else {
+      return false // return the default value
+    }
+
   }
 
   // MARK: Button Actions
@@ -2760,9 +2828,7 @@ class KeyboardViewController: UIInputViewController {
       }
 
     case "shift":
-      if capsLockButtonState == .locked {
-        // Return capitalization to default.
-        capsLockButtonState = .normal
+      if shiftButtonState == .capsLocked {
         shiftButtonState = .normal
       } else {
         shiftButtonState = shiftButtonState == .normal ? .shift : .normal
@@ -2953,9 +3019,7 @@ class KeyboardViewController: UIInputViewController {
   }
 
   private func switchToFullCaps() {
-    // Return SHIFT button to normal state as the CAPSLOCK button will be enabled.
-    shiftButtonState = .normal
-    capsLockButtonState = capsLockButtonState == .normal ? .locked : .normal
+    shiftButtonState = .capsLocked
 
     loadKeys()
     conditionallySetAutoActionBtns()
@@ -2971,6 +3035,8 @@ class KeyboardViewController: UIInputViewController {
       gesture.state = .cancelled
       commandBar.conditionallyAddPlaceholder()
     }
+
+    longPressOnDelete = true
 
     // Delete is sped up based on the number of deletes that have been completed.
     var deleteCount = 0
@@ -2997,6 +3063,7 @@ class KeyboardViewController: UIInputViewController {
     } else if gesture.state == .ended || gesture.state == .cancelled {
       backspaceTimer?.invalidate()
       backspaceTimer = nil
+      longPressOnDelete = false
       if let button = gesture.view as? UIButton {
         button.backgroundColor = specialKeyColor
         styleDeleteButton(button, isPressed: false)

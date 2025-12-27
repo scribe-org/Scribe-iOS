@@ -27,3 +27,6 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+# Testing
+code_coverage.json
