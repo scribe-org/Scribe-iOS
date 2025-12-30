@@ -42,7 +42,7 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
     showTipCardView()
 
-    title = NSLocalizedString("app.settings.title", value: "Settings", comment: "")
+    title = NSLocalizedString("i18n.app.settings.title", value: "Settings", comment: "")
     navigationItem.backButtonTitle = title
 
     parentTable.register(
@@ -183,7 +183,7 @@ extension SettingsViewController: UITableViewDelegate {
           ]
 
           let accentKeyOptionIndex = SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
+            s.sectionTitle.elementsEqual(NSLocalizedString("i18n.app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
           }) ?? -1
 
           // If there are no accent keys we can remove the `Disable accent characters` option.

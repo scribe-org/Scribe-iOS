@@ -121,7 +121,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       } else {
         userDefaults.set("en", forKey: languageCode + "TranslateLanguage")
       }
-      let currentLang = "app._global." + langTranslateLanguage.lowercased()
+      let currentLang = "i18n.app._global." + langTranslateLanguage.lowercased()
       subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
       subLabel.textColor = menuOptionColor
     } else {

@@ -26,7 +26,7 @@ final class AboutViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     showTipCardView()
-    title = NSLocalizedString("app.about.title", value: "About", comment: "")
+    title = NSLocalizedString("i18n.app.about.title", value: "About", comment: "")
 
     tableView.register(
       UINib(nibName: "AboutTableViewCell", bundle: nil),
