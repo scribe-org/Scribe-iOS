@@ -143,16 +143,19 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 >
 > To run git commands with SSH, remember then to substitute the HTTPS URL, `https://github.com/...`, with the SSH one, `git@github.com:...`.
 >
-> - e.g. Cloning now becomes `git clone git@github.com:<your-username>/Scribe-iOS.git`
+> - e.g. Cloning (with submodules) now becomes `git clone --recurse-submodules git@github.com:<your-username>/Scribe-iOS.git`
 >
 > GitHub also has their documentation on how to [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 🔑
 >
 > </p>
 > </details>
 
+> [!NOTE]
+> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized. When pulling changes from `main`, you should also run the following command: `git submodule update --init --recursive`.
+
 ```bash
-# Clone your fork of the repo into the current directory.
-git clone https://github.com/<your-username>/Scribe-iOS.git
+# Clone your fork of the repo into the current directory (including submodules).
+git clone --recurse-submodules https://github.com/<your-username>/Scribe-iOS.git
 # Navigate to the newly cloned directory.
 cd Scribe-iOS
 # Assign the original repo to a remote called "upstream".
