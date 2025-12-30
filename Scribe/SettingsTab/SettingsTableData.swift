@@ -15,7 +15,7 @@ enum SettingsTableData {
           sectionTitle: NSLocalizedString("i18n.app.settings.menu.app_language", value: "App language", comment: ""),
           hasToggle: false,
           sectionState: .appLang,
-          shortDescription: NSLocalizedString("i18n.app.settings.menu.app_language.caption", value: "Select language for app texts.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source", value: "Select language for app texts.", comment: "")
         )
       ],
       hasDynamicData: nil
@@ -32,7 +32,7 @@ enum SettingsTableData {
       headingTitle: NSLocalizedString("i18n.app.settings.translation", value: "Translation", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source.title", value: "Translation source language", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.translation.title", value: "Translation source language", comment: ""),
           sectionState: .translateLang,
           shortDescription: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source_description", value: "Change the language to translate from.", comment: "")
         )

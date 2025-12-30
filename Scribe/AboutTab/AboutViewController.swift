@@ -26,7 +26,9 @@ final class AboutViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     showTipCardView()
-    title = NSLocalizedString("i18n.app.about.title", value: "About", comment: "")
+    title = NSLocalizedString("i18n.app.about.title",
+                              value: "About",
+                              comment: "")
 
     tableView.register(
       UINib(nibName: "AboutTableViewCell", bundle: nil),
@@ -166,7 +168,10 @@ extension AboutViewController {
     } else {
       // Show alert mentioning the email address.
       let alert = UIAlertController(
-        title: "Send us an email?", message: "Reach out to us at team@scri.be", preferredStyle: .alert
+        title: NSLocalizedString("i18n.app.about.feedback.send_email",
+                                 value: "Send us an email",
+                                 comment: ""),
+        message: "Reach out to us at team@scri.be", preferredStyle: .alert
       )
       alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
       present(alert, animated: true)

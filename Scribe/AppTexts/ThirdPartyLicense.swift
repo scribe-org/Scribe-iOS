@@ -6,19 +6,26 @@
 
 import SwiftUI
 
-let thirdPartyLicensesTitle = NSLocalizedString("i18n.app.about.legal.third_party", value: "Third-party licenses", comment: "")
-let thirdPartyLicensesCaption = NSLocalizedString("i18n.app.about.legal.third_party.caption", value: "Whose code we used", comment: "")
+let thirdPartyLicensesTitle = NSLocalizedString("i18n.app.about.legal.third_party",
+                                                value: "Third-party licenses",
+                                                comment: "")
+let thirdPartyLicensesCaption = NSLocalizedString("i18n.app.about.legal.third_party.caption",
+                                                  value: "Whose code we used",
+                                                  comment: "")
 
-let thirdPartyLicensesText = NSLocalizedString("i18n.app.about.legal.third_party.text", value: """
+let thirdPartyLicensesText = NSLocalizedString("i18n.app.about.legal.third_party.text",
+                                               value: """
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) using third party code. All source code used in the creation of this SERVICE comes from sources that allow its full use in the manner done so by the SERVICE. This section lists the source code on which the SERVICE was based as well as the coinciding licenses of each.
 
 The following is a list of all used source code, the main author or authors of the code, the license under which it was released at time of usage, and a link to the license.
-""", comment: "") + "\n\n1. " + NSLocalizedString("i18n.app.about.legal.third_party.entry_custom_keyboard", value: """
+""",
+                                               comment: "") + "\n\n1. " + NSLocalizedString("i18n.app.about.legal.third_party.entry_custom_keyboard", value: """
 Custom Keyboard
 • Author: EthanSK
 • License: MIT
 • Link: https://github.com/EthanSK/CustomKeyboard/blob/master/LICENSE
-""", comment: "") + "\n\n2. " + NSLocalizedString("i18n.app.about.legal.third_legal.entry_simple_keyboard", value: """
+""",
+                                                                                            comment: "") + "\n\n2. " + NSLocalizedString("i18n.app.about.legal.third_party.entry_simple_keyboard", value: """
 Simple Keyboard
 • Author: Simple Mobile Tools
 • License: GPL-3.0
