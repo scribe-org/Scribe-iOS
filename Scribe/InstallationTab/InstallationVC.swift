@@ -333,7 +333,9 @@ extension InstallationVC {
   }
 
   private func showDownloadButton() {
-    let downloadButton = InstallationDownload()
+    let downloadButton = InstallationDownload(onDownloadTapped: { [weak self] in
+      self?.navigateToDownloadDataScreen()
+    })
 
     let hostingController = UIHostingController(rootView: downloadButton)
     hostingController.view.backgroundColor = .clear
@@ -377,6 +379,41 @@ extension InstallationVC {
     ])
 
     hostingController.didMove(toParent: self)
+  }
+
+  private func navigateToDownloadDataScreen() {
+    let downloadDataView = DownloadDataScreen()
+    let hostingController = UIHostingController(rootView: downloadDataView)
+
+    hostingController.view.backgroundColor = scribeAppBackgroundColor
+
+    hostingController.edgesForExtendedLayout = .all
+    hostingController.extendedLayoutIncludesOpaqueBars = true
+    hostingController.additionalSafeAreaInsets = .zero
+
+    hostingController.title = NSLocalizedString(
+      "i18n.app.download_data",
+      value: "Download data",
+      comment: ""
+    )
+
+    self.navigationItem.backButtonTitle = NSLocalizedString(
+      "app.installation.title",
+      value: "Installation",
+      comment: ""
+    )
+
+    if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+      self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
+      self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
+      self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
+      self.navigationController?.navigationBar.prefersLargeTitles = settingsNavController.navigationBar.prefersLargeTitles
+    }
+
+    hostingController.navigationItem.largeTitleDisplayMode = .always
+
+    self.navigationController?.setNavigationBarHidden(false, animated: false)
+    self.navigationController?.pushViewController(hostingController, animated: true)
   }
 
   private func addPopupButton() {

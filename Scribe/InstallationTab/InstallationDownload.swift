@@ -44,13 +44,14 @@ struct CardView: View {
 }
 
 struct InstallationDownload: View {
+  var onDownloadTapped: (() -> Void)
   var body: some View {
     CardView(
       title: NSLocalizedString("app.installation.download.title", value: "Language data", comment: ""),
       mainText: NSLocalizedString("app.installation.download.main_text", value: "Download keyboard data", comment: ""),
       subtitle: NSLocalizedString("app.installation.download.subtitle", value: "Add new data to Scribe keyboards.", comment: "")
     ) {
-      print("Card tapped")
+      onDownloadTapped()
     }
   }
 }

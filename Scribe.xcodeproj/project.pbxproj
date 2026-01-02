@@ -936,6 +936,8 @@
 		E99649952E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */; };
 		E99649962E98B03C00200F53 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		E99649972E98B11100200F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
+		E9CE5EA82F063E230068A930 /* DownloadDataScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */; };
+		E9FAC39A2E989712008E00AC /* Indonesian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E9FAC3932E989712008E00AC /* Indonesian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9FAC39F2E98972D008E00AC /* IDInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */; };
 		E9FAC3A02E98972D008E00AC /* IDCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */; };
 		E9FAC3A12E98972D008E00AC /* IDKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */; };
@@ -1220,6 +1222,7 @@
 		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
+		E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataScreen.swift; sourceTree = "<group>"; };
 		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCommandVariables.swift; sourceTree = "<group>"; };
 		E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDInterfaceVariables.swift; sourceTree = "<group>"; };
@@ -1385,6 +1388,7 @@
 			isa = PBXGroup;
 			children = (
 				E96111472F04EC62001E4F95 /* InstallationDownload.swift */,
+				E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */,
 				1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */,
 				1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */,
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
@@ -2604,6 +2608,7 @@
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
 				5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
+				E9CE5EA82F063E230068A930 /* DownloadDataScreen.swift in Sources */,
 				D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */,
 				EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */,
 				D1CDED752A859DDD00098546 /* DAInterfaceVariables.swift in Sources */,
