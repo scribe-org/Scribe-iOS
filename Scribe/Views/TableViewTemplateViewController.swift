@@ -70,7 +70,7 @@ final class TableViewTemplateViewController: BaseTableViewController {
         }
 
       let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
-      let currentLang = "app._global." + langTranslateLanguage.lowercased()
+      let currentLang = "i18n.app._global." + langTranslateLanguage.lowercased()
       innerCell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
     }
   }

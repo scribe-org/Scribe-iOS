@@ -5,6 +5,7 @@
  */
 
 import UIKit
+import SwiftUI
 
 final class SelectionViewTemplateViewController: BaseTableViewController {
   // MARK: - Properties
@@ -25,6 +26,8 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    edgesForExtendedLayout = .all
+    extendedLayoutIncludesOpaqueBars = true
     tableView.register(
       UINib(nibName: "RadioTableViewCell", bundle: nil),
       forCellReuseIdentifier: RadioTableViewCell.reuseIdentifier
@@ -62,6 +65,23 @@ extension SelectionViewTemplateViewController {
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
+    let oldLang = userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"
+    let newLang = cell.selectedLang ?? "en"
+
+    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedIndexPath, animated: true)
+    }
+
+    // Only show popup if selecting a different language.
+    if newLang != oldLang {
+        let oldIndexPath = selectedPath
+        updateRadioButton(to: indexPath, in: tableView)
+        showPopup(oldLang: oldLang, newLang: newLang, oldIndexPath: oldIndexPath, newIndexPath: indexPath, tableView: tableView)
+    }
+  }
+
+  private func updateRadioButton(to indexPath: IndexPath, in tableView: UITableView) {
     if selectedPath != nil {
       let previousCell = tableView.cellForRow(at: selectedPath!) as! RadioTableViewCell
       previousCell.iconImageView.image = UIImage(named: "radioButton")
@@ -70,13 +90,47 @@ extension SelectionViewTemplateViewController {
     let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
     cell.iconImageView.image = UIImage(named: "radioButtonSelected")
     selectedPath = indexPath
+  }
 
-    let dictionaryKey = langCode + "TranslateLanguage"
-    userDefaults.setValue(cell.selectedLang, forKey: dictionaryKey)
+  private func showPopup(oldLang: String, newLang: String, oldIndexPath: IndexPath?, newIndexPath: IndexPath, tableView: UITableView) {
+    let oldLangName = getKeyInDict(givenValue: oldLang, dict: languagesAbbrDict)
+    let newLangName = getKeyInDict(givenValue: newLang, dict: languagesAbbrDict)
 
-    if let selectedIndexPath = tableView.indexPathForSelectedRow {
-      tableView.deselectRow(at: selectedIndexPath, animated: true)
+    let infoText = NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.download_warning", value: "You've changed your source translation language. Would you like to download new data so that you can translate from \(newLangName)?", comment: "")
+
+    func onKeep() {
+        // Keep old language - revert and dismiss.
+        self.dismiss(animated: true) {
+            if let oldPath = oldIndexPath {
+                self.updateRadioButton(to: oldPath, in: tableView)
+            }
+        }
     }
-    navigationController?.popViewController(animated: true)
+
+    func confirmDownload() {
+        // Download data - save new language.
+        self.dismiss(animated: true) {
+            let dictionaryKey = self.langCode + "TranslateLanguage"
+            self.userDefaults.setValue(newLang, forKey: dictionaryKey)
+
+            self.navigationController?.popViewController(animated: true)
+            }
+    }
+
+    let popupView = ConfirmTranslationSource(
+        infoText: infoText,
+        changeButtonText: NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.keep_source_language", value: "Keep \(oldLangName)", comment: ""),
+        confirmButtonText: NSLocalizedString("i18n.app._global.download_data", value: "Download data", comment: ""),
+        onDismiss: { onKeep() },
+        onChange: { onKeep()},
+        onConfirm: { confirmDownload() }
+    )
+
+    let hostingController = UIHostingController(rootView: popupView)
+    hostingController.modalPresentationStyle = .overFullScreen
+    hostingController.modalTransitionStyle = .crossDissolve
+    hostingController.view.backgroundColor = .clear
+
+    present(hostingController, animated: true)
   }
 }

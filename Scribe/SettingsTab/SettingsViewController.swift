@@ -43,7 +43,7 @@ final class SettingsViewController: UIViewController {
     setHeaderHeight()
     showTipCardView()
 
-    title = NSLocalizedString("app.settings.title", value: "Settings", comment: "")
+    title = NSLocalizedString("i18n.app.settings.title", value: "Settings", comment: "")
     navigationItem.backButtonTitle = title
 
     parentTable.register(
@@ -93,7 +93,7 @@ final class SettingsViewController: UIViewController {
       parentTable.tableFooterView?.isHidden = false
     }
 
-    footerButton.setTitle("Install keyboards", for: .normal)
+    footerButton.setTitle(NSLocalizedString("i18n.app.settings.button_install_keyboards", value: "Install keyboards", comment: ""), for: .normal)
     footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
 
     footerButton.backgroundColor = appBtnColor
@@ -158,7 +158,11 @@ extension SettingsViewController: UITableViewDelegate {
       let preferredLanguages = NSLocale.preferredLanguages
       if preferredLanguages.count == 1 {
         let alert = UIAlertController(
-          title: "No languages installed", message: "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.", preferredStyle: .alert
+          title: NSLocalizedString("i18n.app.settings.menu.app_language.one_device_language_warning.title",
+          value: "No languages installed",
+          comment: ""),
+          message: NSLocalizedString("i18n.app.settings.menu.app_language.one_device_language_warning.message", value: "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.", comment: ""),
+          preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true)
@@ -192,7 +196,7 @@ extension SettingsViewController: UITableViewDelegate {
           ]
 
           let accentKeyOptionIndex = SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual(NSLocalizedString("app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
+            s.sectionTitle.elementsEqual(NSLocalizedString("i18n.app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
           }) ?? -1
 
           // If there are no accent keys we can remove the `Disable accent characters` option.

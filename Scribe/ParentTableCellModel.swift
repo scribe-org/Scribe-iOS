@@ -68,6 +68,7 @@ enum UserInteractiveState {
   case doubleSpacePeriods
   case autosuggestEmojis
   case toggleAccentCharacters
+  case toggleWordForWordDeletion
   case none
 }
 
