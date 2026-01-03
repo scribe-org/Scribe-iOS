@@ -101,7 +101,7 @@ Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) co
 > </details>
 
 > [!NOTE]
-> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized. When pulling changes from `main`, you should also run the following command: `git submodule update --init --recursive`.
+> Cloning this repository with `--recurse-submodules` also clones a copy of [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) where the texts for Scribe projects are localized. When pulling changes from `main`, you should also run the following command: `git submodule update --init --recursive` to get the copy of the localization files currently on main (you can also run [update_project_and_submodule.sh](./update_project_and_submodule.sh)). To get the most up to date version of Scribe-i18n, change to its directory in `Scribe/i18n` and run `git pull origin main`.
 
 ```bash
 # Clone your fork of the repo into the current directory (including submodules).
