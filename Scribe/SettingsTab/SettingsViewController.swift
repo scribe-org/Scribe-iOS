@@ -12,6 +12,7 @@ final class SettingsViewController: UIViewController {
 
   private var sectionHeaderHeight: CGFloat = 0
   private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+  private let cornerRadius: CGFloat = 12
 
   private let settingsTipCardState: Bool = {
     let userDefault = UserDefaults.standard
@@ -44,6 +45,11 @@ final class SettingsViewController: UIViewController {
 
     title = NSLocalizedString("i18n.app.settings.title", value: "Settings", comment: "")
     navigationItem.backButtonTitle = title
+
+    parentTable.register(
+        WrapperCell.self,
+        forCellReuseIdentifier: WrapperCell.reuseIdentifier
+    )
 
     parentTable.register(
       UINib(nibName: "InfoChildTableViewCell", bundle: nil),
@@ -121,17 +127,20 @@ extension SettingsViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      withIdentifier: WrapperCell.reuseIdentifier,
       for: indexPath
-    ) as? InfoChildTableViewCell else {
-      fatalError("Failed to dequeue InfoChildTableViewCell")
+    ) as? WrapperCell else {
+      fatalError("Failed to dequeue WrapperCell")
     }
 
     let section = tableData[indexPath.section]
     let setting = section.section[indexPath.row]
 
-    cell.configureCell(for: setting)
-    cell.backgroundColor = lightWhiteDarkBlackColor
+    cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting)
+
+    let isFirstRow = indexPath.row == 0
+    let isLastRow = indexPath.row == section.section.count - 1
+    WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
 
     return cell
   }

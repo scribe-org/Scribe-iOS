@@ -22,6 +22,7 @@ final class AboutViewController: BaseTableViewController {
 
   private var tipHostingController: UIHostingController<AboutTipCardView>!
   private var tableViewOffset: CGFloat?
+  private let cornerRadius: CGFloat = 12
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +30,11 @@ final class AboutViewController: BaseTableViewController {
     title = NSLocalizedString("i18n.app.about.title",
                               value: "About",
                               comment: "")
+
+    tableView.register(
+      WrapperCell.self,
+      forCellReuseIdentifier: WrapperCell.reuseIdentifier
+    )
 
     tableView.register(
       UINib(nibName: "AboutTableViewCell", bundle: nil),
@@ -50,13 +56,20 @@ final class AboutViewController: BaseTableViewController {
 extension AboutViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: AboutTableViewCell.reuseIdentifier,
+      withIdentifier: WrapperCell.reuseIdentifier,
       for: indexPath
-    ) as? AboutTableViewCell else {
-      fatalError("Failed to dequeue AboutTableViewCell.")
+    ) as? WrapperCell else {
+      fatalError("Failed to dequeue WrapperCell")
     }
-    cell.configureCell(for: dataSet[indexPath.section].section[indexPath.row])
-    cell.backgroundColor = lightWhiteDarkBlackColor
+
+    let section = dataSet[indexPath.section]
+    let setting = section.section[indexPath.row]
+
+    cell.configure(withCellNamed: "AboutTableViewCell", section: setting)
+
+    let isFirstRow = indexPath.row == 0
+    let isLastRow = indexPath.row == section.section.count - 1
+    WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
 
     return cell
   }
@@ -65,6 +78,14 @@ extension AboutViewController {
 // MARK: UITableViewDelegate
 
 extension AboutViewController {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let section = dataSet[indexPath.section]
+    let setting = section.section[indexPath.row]
+
+    let hasDescription = setting.shortDescription != nil
+    return hasDescription ? 80.0 : 48.0
+  }
+
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let tableSection = dataSet[indexPath.section]
     let section = tableSection.section[indexPath.row]

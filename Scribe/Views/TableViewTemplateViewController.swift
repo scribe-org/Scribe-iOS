@@ -15,6 +15,7 @@ final class TableViewTemplateViewController: BaseTableViewController {
 
   private var tableData: [ParentTableCellModel] = []
   private var parentSection: Section?
+  private let cornerRadius: CGFloat = 12
 
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
@@ -35,6 +36,11 @@ final class TableViewTemplateViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    tableView.register(
+      WrapperCell.self,
+      forCellReuseIdentifier: WrapperCell.reuseIdentifier
+    )
+
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 250
     tableView.separatorStyle = .none
@@ -47,12 +53,25 @@ final class TableViewTemplateViewController: BaseTableViewController {
     title = parentSection.sectionTitle
   }
 
-  // Refreshes to check for changes when a translation language is selected
+  // Refreshes to check for changes when a translation language is selected.
   override func viewWillAppear(_ animated: Bool) {
-    for cell in tableView.visibleCells as! [InfoChildTableViewCell] where cell.section?.sectionState == .translateLang {
+    super.viewWillAppear(animated)
+
+    for visibleCell in tableView.visibleCells {
+        // Cast to wrapper cell first.
+        guard let wrapperCell = visibleCell as? WrapperCell,
+          let innerCell = wrapperCell.wrappedCell as? InfoChildTableViewCell else {
+          continue
+        }
+
+        // Now check if it's a translate lang section.
+        guard innerCell.section?.sectionState == .translateLang else {
+          continue
+        }
+
       let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
       let currentLang = "i18n.app._global." + langTranslateLanguage.lowercased()
-      cell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
+      innerCell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
     }
   }
 }
@@ -62,17 +81,32 @@ final class TableViewTemplateViewController: BaseTableViewController {
 extension TableViewTemplateViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: InfoChildTableViewCell.reuseIdentifier,
+      withIdentifier: WrapperCell.reuseIdentifier,
       for: indexPath
-    ) as? InfoChildTableViewCell else {
-      fatalError("Failed to dequeue InfoChildTableViewCell.")
+    ) as? WrapperCell else {
+      fatalError("Failed to dequeue WrapperCell")
     }
-    cell.parentSection = parentSection
-    cell.configureCell(for: tableData[indexPath.section].section[indexPath.row])
-    cell.backgroundColor = lightWhiteDarkBlackColor
+
+    let section = dataSet[indexPath.section]
+    let setting = section.section[indexPath.row]
+
+    cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting)
+
+    let isFirstRow = indexPath.row == 0
+    let isLastRow = indexPath.row == section.section.count - 1
+    WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
 
     return cell
   }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = tableData[indexPath.section]
+        let setting = section.section[indexPath.row]
+
+        // If has description, give it more height.
+        let hasDescription = setting.shortDescription != nil
+        return hasDescription ? 100.0 : 60.0
+    }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let tableSection = tableData[indexPath.section]
@@ -84,7 +118,7 @@ extension TableViewTemplateViewController {
       ) as? SelectionViewTemplateViewController {
         var data = SettingsTableData.translateLangSettingsData
 
-        // Removes keyboard language from possible translation languages
+        // Removes keyboard language from possible translation languages.
         let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
           s.sectionState == .specificLang(langCode)
         }) ?? -1
