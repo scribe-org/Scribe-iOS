@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-ME-igh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,7 +16,7 @@
             <objects>
                 <tableViewController id="4qA-Bq-SU4" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="6fu-7Z-I4m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <sections/>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKP-ZG-fIn" userLabel="ScrollViewPad">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="644"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-tJ-4qs" userLabel="ScrollContainerViewPad">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="351"/>
@@ -128,7 +128,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="cHX-BU-8Mr"/>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="equ-8g-tuH" userLabel="ScrollViewPhone">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="644"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYp-UM-US6" userLabel="ScrollContainerViewPhone">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="316.33333333333331"/>
@@ -236,13 +236,13 @@
             <objects>
                 <viewController id="cQF-42-ekB" userLabel="Settings" customClass="SettingsViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rjV-Tb-pQl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
-                                <rect key="frame" x="0.0" y="102" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="162" width="375" height="533"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="2AI-Eq-Aoc" userLabel="footerContainer">
-                                    <rect key="frame" x="0.0" y="116.99999809265137" width="375" height="130"/>
+                                    <rect key="frame" x="0.0" y="107" width="375" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-l8-ZuO">
@@ -275,10 +275,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dummyCell" id="O9h-lq-niX">
-                                        <rect key="frame" x="16" y="55.333332061767578" width="343" height="43.666667938232422"/>
+                                        <rect key="frame" x="16" y="38" width="343" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9h-lq-niX" id="78r-CS-l4A">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -317,7 +317,7 @@
                         <color key="selectedImageTintColor" name="linkBlue"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YCU-Xu-zWn"/>
+                        <segue destination="lVT-tc-LdF" kind="relationship" relationship="viewControllers" id="YCU-Xu-zWn"/>
                         <segue destination="Ffy-3M-wWx" kind="relationship" relationship="viewControllers" id="65S-F4-qdB"/>
                         <segue destination="1wV-q3-U0F" kind="relationship" relationship="viewControllers" id="SyS-sS-udg"/>
                     </connections>
@@ -326,36 +326,36 @@
             </objects>
             <point key="canvasLocation" x="-2766" y="-100"/>
         </scene>
-        <!--app.installation.title-->
+        <!--InstallationVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InstallationVC" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyk-EK-raM" userLabel="TopSpace">
-                                <rect key="frame" x="0.0" y="50" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="27"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScribeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Oxz-Zq-2g7">
-                                <rect key="frame" x="81.333333333333329" y="84" width="212.33333333333337" height="101.66666666666669"/>
+                                <rect key="frame" x="103" y="181" width="169" height="81.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Oxz-Zq-2g7" secondAttribute="height" multiplier="981:471" id="fLZ-Jn-Qjj"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOG-9z-mVQ" userLabel="LogoSpace">
-                                <rect key="frame" x="0.0" y="185.66666666666666" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="262.33333333333331" width="375" height="27"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-BQ-4ti" userLabel="InstallationLabel">
-                                <rect key="frame" x="15" y="219.66666666666666" width="345" height="20.333333333333343"/>
+                                <rect key="frame" x="15" y="289.33333333333331" width="345" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-k0-ggs" userLabel="AppTextBkrdPad">
-                                <rect key="frame" x="15" y="244" width="345" height="304"/>
+                                <rect key="frame" x="15" y="313.66666666666669" width="345" height="304.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWe-iO-9F6" userLabel="SettingsBtnPad">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="304"/>
@@ -403,7 +403,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV9-hG-bLi" userLabel="AppTextBkrdPhone">
-                                <rect key="frame" x="15" y="244" width="345" height="255.33333333333337"/>
+                                <rect key="frame" x="15" y="313.66666666666669" width="345" height="255.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpZ-Pp-c4F" userLabel="SettingsBtnPhone">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="255.33333333333334"/>
@@ -427,7 +427,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-Me-0zA" userLabel="TopIconPhone">
-                                        <rect key="frame" x="309" y="6" width="30" height="30"/>
+                                        <rect key="frame" x="309" y="6.0000000000000018" width="30" height="29.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="l1f-Me-0zA" secondAttribute="height" multiplier="1:1" id="ePU-rX-Uqv"/>
                                         </constraints>
@@ -476,7 +476,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrH-BQ-4ti" secondAttribute="trailing" constant="15" id="zOe-dD-pB6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="app.installation.title" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
+                    <navigationItem key="navigationItem" id="lXy-sa-sMd"/>
                     <connections>
                         <outlet property="appTextBackgroundPad" destination="Z6Q-k0-ggs" id="cdi-Kv-7aq"/>
                         <outlet property="appTextBackgroundPhone" destination="uV9-hG-bLi" id="s6y-0B-0qh"/>
@@ -497,16 +497,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1831.2" y="-836.45320197044339"/>
+            <point key="canvasLocation" x="53.600000000000001" y="-836.45320197044339"/>
         </scene>
         <!--app.about.title-->
         <scene sceneID="6lj-MX-SxG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wV-q3-U0F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="app.about.title" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="i18n.app.about.title" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jq3-G5-4j6">
-                        <rect key="frame" x="0.0" y="50" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="100" width="375" height="106"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="keyChar"/>
                         <color key="barTintColor" name="scribeAppBackground"/>
@@ -524,12 +524,12 @@
         <scene sceneID="3xr-BX-tfK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ffy-3M-wWx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="app.settings.title" id="JtD-kc-GDx">
+                    <tabBarItem key="tabBarItem" tag="1" title="i18n.app.settings.title" id="JtD-kc-GDx">
                         <imageReference key="image" image="gearshape" catalog="system" variableValue="0.80000000000000004"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="IHJ-rg-pcl">
-                        <rect key="frame" x="0.0" y="50" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="100" width="375" height="106"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="keyChar"/>
                         <color key="barTintColor" name="scribeAppBackground"/>
@@ -548,7 +548,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <connections>
@@ -570,7 +570,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SelectionViewTemplateViewController" id="oOM-lN-cEA" userLabel="Selection View Template View Controller" customClass="SelectionViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="SS2-uh-4eH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
                         <connections>
@@ -583,6 +583,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2o-Rh-3Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="-100"/>
+        </scene>
+        <!--app.installation.title-->
+        <scene sceneID="2my-SI-kbz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lVT-tc-LdF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="i18n.app.installation.title" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="04t-RY-ghe">
+                        <rect key="frame" x="0.0" y="100" width="375" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m83-Ov-JKO" kind="relationship" relationship="rootViewController" id="Ijq-FZ-AI3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpS-P1-qZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831.2" y="-836.45320197044339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b2a-sJ-8WG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m83-Ov-JKO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nmU-tX-MuE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Z6-K9-pyl">
+                        <rect key="frame" x="0.0" y="100" width="375" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="okW-AA-iFJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ued-CT-zP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888.79999999999995" y="-836.45320197044339"/>
         </scene>
     </scenes>
     <color key="tintColor" name="scribeAppBackground"/>

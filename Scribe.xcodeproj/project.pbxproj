@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -205,7 +205,6 @@
 		5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
 		5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */; };
 		5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */; };
 		5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */; };
@@ -327,17 +326,6 @@
 		D161510E2E9DBE3D00131732 /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
 		D161510F2E9DBE4500131732 /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
 		D16151102E9DBE4C00131732 /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		D1662A6F2E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A702E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A712E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A722E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A732E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A742E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A752E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A762E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A772E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A782E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
-		D1662A792E1B025A0043AF30 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RUKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -883,6 +871,7 @@
 		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
 		E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		E996495A2E98A12100200F53 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = E99649592E98A12100200F53 /* GRDB */; };
 		E996495B2E98A31B00200F53 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */; };
@@ -1129,7 +1118,6 @@
 		38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTableViewCell.swift; sourceTree = "<group>"; };
 		5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioTableViewCell.xib; sourceTree = "<group>"; };
 		5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewTemplateViewController.swift; sourceTree = "<group>"; };
@@ -1238,6 +1226,7 @@
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
+		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCommandVariables.swift; sourceTree = "<group>"; };
 		E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDInterfaceVariables.swift; sourceTree = "<group>"; };
 		E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -1252,6 +1241,10 @@
 		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E9DADB332EF3CF9B00702783 /* ConfirmDialog */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ConfirmDialog; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		38BD212D22D5907E00C6795D /* Frameworks */ = {
@@ -1492,6 +1485,7 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 				147797A92A2CD2B50044A53E /* AboutTab */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				CE1378C128F5D7AC00E1CBC2 /* Colors */,
@@ -1512,6 +1506,7 @@
 				38BD213F22D5908100C6795D /* LaunchScreen.storyboard */,
 				144B56F22A568AC200C2F447 /* Scribe.entitlements */,
 				38BD214222D5908100C6795D /* Info.plist */,
+				E93179A32F03AE77002ED334 /* Localizable.xcstrings */,
 			);
 			path = Scribe;
 			sourceTree = "<group>";
@@ -1707,18 +1702,9 @@
 			path = KeyboardsBase;
 			sourceTree = "<group>";
 		};
-		D198B5C92BFA954100E1BF4F /* Scribe-i18n */ = {
-			isa = PBXGroup;
-			children = (
-				5A0A4C2B2C207C34003ADE27 /* Localizable.xcstrings */,
-			);
-			path = "Scribe-i18n";
-			sourceTree = "<group>";
-		};
 		D198B5CD2BFA954100E1BF4F /* i18n */ = {
 			isa = PBXGroup;
 			children = (
-				D198B5C92BFA954100E1BF4F /* Scribe-i18n */,
 			);
 			path = i18n;
 			sourceTree = "<group>";
@@ -1913,6 +1899,9 @@
 				D1AFE01529CA6F980033BF27 /* PBXTargetDependency */,
 				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
 				E9FAC3992E989712008E00AC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 			);
 			name = Scribe;
 			packageProductDependencies = (
@@ -2287,8 +2276,8 @@
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
 				5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
-				5A0A4C2E2C207C34003ADE27 /* Localizable.xcstrings in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
+				E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */,
 				D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
@@ -2305,7 +2294,6 @@
 				D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
-				D1662A722E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2326,7 +2314,6 @@
 				D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
-				D1662A712E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2347,7 +2334,6 @@
 				D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
-				D1662A762E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
 				5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2375,7 +2361,6 @@
 				D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
-				D1662A782E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
 				5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2396,7 +2381,6 @@
 				D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */,
-				D1662A772E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2417,7 +2401,6 @@
 				D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
-				D1662A792E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
 				5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
@@ -2438,7 +2421,6 @@
 				D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
-				D1662A752E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2459,7 +2441,6 @@
 				D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
-				D1662A702E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
 				5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2480,7 +2461,6 @@
 				D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
-				D1662A6F2E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2501,7 +2481,6 @@
 				D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
-				D1662A732E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */,
 				5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
@@ -2522,7 +2501,6 @@
 				D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */,
 				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
-				D1662A742E1B025A0043AF30 /* Localizable.xcstrings in Resources */,
 				5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */,
 				5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
 				5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,

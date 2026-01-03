@@ -121,7 +121,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       } else {
         userDefaults.set("en", forKey: languageCode + "TranslateLanguage")
       }
-      let currentLang = "app._global." + langTranslateLanguage.lowercased()
+      let currentLang = "i18n.app._global." + langTranslateLanguage.lowercased()
       subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
       subLabel.textColor = menuOptionColor
     } else {
@@ -152,6 +152,10 @@ final class InfoChildTableViewCell: UITableViewCell {
 
     case .autosuggestEmojis:
       let dictionaryKey = languageCode + "EmojiAutosuggest"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWordDeletion"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
     case .none: break
@@ -192,6 +196,14 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = true  // Default value
+      }
+
+    case .toggleWordForWordDeletion:
+      let dictionaryKey = languageCode + "WordForWordDeletion"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = false // Default value
       }
 
     case .none: break

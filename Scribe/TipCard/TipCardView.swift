@@ -56,7 +56,9 @@ struct InstallationTipCardView: View {
 
   var body: some View {
     TipCardView(
-      infoText: NSLocalizedString("app.installation.app_hint", value: "Follow the directions below to install Scribe keyboards on your device.", comment: ""),
+      infoText: NSLocalizedString("i18n.app.installation.app_hint_tooltip",
+                                  value: "Follow the directions below to install Scribe keyboards on your device.",
+                                  comment: ""),
       tipCardState: $installationTipCardState
     )
   }
@@ -68,7 +70,7 @@ struct SettingsTipCardView: View {
 
   var body: some View {
     TipCardView(
-      infoText: NSLocalizedString("app.settings.app_hint", value: "Settings for the app and installed language keyboards are found here.", comment: ""),
+      infoText: NSLocalizedString("i18n.app.settings.app_hint_tooltip", value: "Settings for the app and installed language keyboards are found here.", comment: ""),
       tipCardState: $settingsTipCardState,
       onDismiss: onDismiss
     )
@@ -80,7 +82,7 @@ struct AboutTipCardView: View {
 
   var body: some View {
     TipCardView(
-      infoText: NSLocalizedString("app.about.app_hint", value: "Here's where you can learn more about Scribe and its community.", comment: ""),
+      infoText: NSLocalizedString("i18n.app.about.app_hint_tooltip", value: "Here's where you can learn more about Scribe and its community.", comment: ""),
       tipCardState: $aboutTipCardState
     )
   }

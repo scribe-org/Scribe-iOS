@@ -32,6 +32,7 @@ var previousWord = ""
 var currentPrefix = ""
 var pastStringInTextProxy = ""
 var backspaceTimer: Timer?
+var longPressOnDelete: Bool = false
 
 var baseAutosuggestions = [String]()
 var completionWords = [String]()

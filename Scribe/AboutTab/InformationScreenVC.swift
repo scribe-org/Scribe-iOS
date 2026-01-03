@@ -106,12 +106,12 @@ class InformationScreenVC: UIViewController {
   }
 
   func setupPrivacyPolicyPage() {
-    navigationItem.title = NSLocalizedString("app.about.legal.privacy_policy", value: "Privacy policy", comment: "")
+    navigationItem.title = NSLocalizedString("i18n._global.privacy_policy", value: "Privacy policy", comment: "")
     headingLabel.attributedText = NSMutableAttributedString(
-      string: NSLocalizedString("app.about.legal.privacy_policy.caption", value: "Keeping you safe", comment: ""),
+      string: NSLocalizedString("i18n.app.about.legal.privacy_policy.caption", value: "Keeping you safe", comment: ""),
       attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * 1.1)]
     )
-    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: NSLocalizedString("app.about.legal.privacy_policy.text", value: """
+    textView.attributedText = setPrivacyPolicy(fontSize: fontSize, text: NSLocalizedString("i18n.app.about.legal.privacy_policy.text", value: """
 Please note that the English version of this policy takes precedence over all other versions.
 
 The Scribe developers (SCRIBE) built the iOS application "Scribe - Language Keyboards" (SERVICE) as an open-source application. This SERVICE is provided by SCRIBE at no cost and is intended for use as is.

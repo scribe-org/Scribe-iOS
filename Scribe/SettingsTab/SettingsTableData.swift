@@ -9,19 +9,19 @@ import Foundation
 enum SettingsTableData {
   static let settingsTableData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.menu.title", value: "App settings", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.menu.title", value: "App settings", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("app.settings.menu.app_language", value: "App language", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.menu.app_language", value: "App language", comment: ""),
           hasToggle: false,
           sectionState: .appLang,
-          shortDescription: NSLocalizedString("app.settings.menu.app_language.caption", value: "Select language for app texts.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source", value: "Select language for app texts.", comment: "")
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.keyboard.title", value: "Select installed keyboard", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.keyboard.title", value: "Select installed keyboard", comment: ""),
       section: [],
       hasDynamicData: .installedKeyboards
     )
@@ -29,49 +29,55 @@ enum SettingsTableData {
 
   static let languageSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.translation", value: "Translation", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.translation", value: "Translation", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("app.settings.keyboard.translation.select_source.title", value: "Translation source language", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.translation.title", value: "Translation source language", comment: ""),
           sectionState: .translateLang,
-          shortDescription: NSLocalizedString("app.settings.keyboard.translation.select_source_description", value: "Change the language to translate from.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source_description", value: "Change the language to translate from.", comment: "")
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.keyboard.layout.title", value: "Layout", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.keyboard.layout.title", value: "Layout", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("app.settings.keyboard.layout.period_and_comma", value: "Period and comma on ABC", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.layout.period_and_comma", value: "Period and comma on ABC", comment: ""),
           hasToggle: true,
           sectionState: .none(.toggleCommaAndPeriod),
-          shortDescription: NSLocalizedString("app.settings.keyboard.layout.period_and_comma_description", value: "Include comma and period keys on the main keyboard for convenient typing.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.layout.period_and_comma_description", value: "Include comma and period keys on the main keyboard for convenient typing.", comment: "")
         ),
         Section(
-          sectionTitle: NSLocalizedString("app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""),
           imageString: "info.circle",
           hasToggle: true,
           sectionState: .none(.toggleAccentCharacters),
-          shortDescription: NSLocalizedString("app.settings.keyboard.layout.disable_accent_characters_description", value: "Remove accented letter keys on the primary keyboard layout.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.layout.disable_accent_characters_description", value: "Remove accented letter keys on the primary keyboard layout.", comment: "")
         )
       ],
       hasDynamicData: nil
     ),
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.keyboard.functionality.title", value: "Functionality", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.keyboard.functionality.title", value: "Functionality", comment: ""),
       section: [
         Section(
-          sectionTitle: NSLocalizedString("app.settings.keyboard.functionality.double_space_period", value: "Double space periods", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.functionality.double_space_period", value: "Double space periods", comment: ""),
           hasToggle: true,
           sectionState: .none(.doubleSpacePeriods),
-          shortDescription: NSLocalizedString("app.settings.keyboard.functionality.double_space_period_description", value: "Automatically insert a period when the space key is pressed twice.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.functionality.double_space_period_description", value: "Automatically insert a period when the space key is pressed twice.", comment: "")
         ),
         Section(
-          sectionTitle: NSLocalizedString("app.settings.keyboard.functionality.auto_suggest_emoji", value: "Autosuggest emojis", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.functionality.auto_suggest_emoji", value: "Autosuggest emojis", comment: ""),
           hasToggle: true,
           sectionState: .none(.autosuggestEmojis),
-          shortDescription: NSLocalizedString("app.settings.keyboard.functionality.auto_suggest_emoji_description", value: "Turn on emoji suggestions and completions for more expressive typing.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.functionality.auto_suggest_emoji_description", value: "Turn on emoji suggestions and completions for more expressive typing.", comment: "")
+        ),
+        Section(
+          sectionTitle: NSLocalizedString("i18n.app.word_for_word", value: "Word for word deletion on long press", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.toggleWordForWordDeletion),
+          shortDescription: NSLocalizedString("i18n.app.word_for_word.description", value: "Word for word deletion.", comment: "")
         )
       ],
       hasDynamicData: nil
@@ -80,7 +86,7 @@ enum SettingsTableData {
 
   static let translateLangSettingsData: [ParentTableCellModel] = [
     ParentTableCellModel(
-      headingTitle: NSLocalizedString("app.settings.keyboard.translation.select_source.caption", value: "What the source language is", comment: ""),
+      headingTitle: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source.caption", value: "What the source language is", comment: ""),
       section: getTranslateLanguages(),
       hasDynamicData: nil
     )
