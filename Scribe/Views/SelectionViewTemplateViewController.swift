@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 
 final class SelectionViewTemplateViewController: BaseTableViewController {
-  // MARK: - Properties
+  // MARK: Properties
 
   override var dataSet: [ParentTableCellModel] {
     tableData
@@ -22,7 +22,7 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
 
   private var langCode: String = "de"
 
-  // MARK: - Functions
+  // MARK: Functions
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,7 +43,7 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
   }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: UITableViewDataSource
 
 extension SelectionViewTemplateViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

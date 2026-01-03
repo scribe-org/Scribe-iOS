@@ -31,8 +31,9 @@ final class AboutViewController: BaseTableViewController {
                               value: "About",
                               comment: "")
 
-    tableView.register(WrapperCell.self,
-    forCellReuseIdentifier: WrapperCell.reuseIdentifier
+    tableView.register(
+      WrapperCell.self,
+      forCellReuseIdentifier: WrapperCell.reuseIdentifier
     )
 
     tableView.register(
@@ -71,7 +72,7 @@ extension AboutViewController {
     WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
 
     return cell
-}
+  }
 }
 
 // MARK: UITableViewDelegate

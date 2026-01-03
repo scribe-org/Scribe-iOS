@@ -53,20 +53,20 @@ final class TableViewTemplateViewController: BaseTableViewController {
     title = parentSection.sectionTitle
   }
 
-  // Refreshes to check for changes when a translation language is selected
+  // Refreshes to check for changes when a translation language is selected.
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
     for visibleCell in tableView.visibleCells {
-        // Cast to wrapper cell first
+        // Cast to wrapper cell first.
         guard let wrapperCell = visibleCell as? WrapperCell,
-            let innerCell = wrapperCell.wrappedCell as? InfoChildTableViewCell else {  // Cast to specific type
-        continue
+          let innerCell = wrapperCell.wrappedCell as? InfoChildTableViewCell else {
+          continue
         }
 
-        // Now check if it's a translate lang section
+        // Now check if it's a translate lang section.
         guard innerCell.section?.sectionState == .translateLang else {
-        continue
+          continue
         }
 
       let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)

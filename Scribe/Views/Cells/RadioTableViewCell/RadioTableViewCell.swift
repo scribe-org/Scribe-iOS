@@ -8,11 +8,11 @@ import UIKit
 
 final class RadioTableViewCell: UITableViewCell {
 
-  // MARK: - Constants
+  // MARK: Constants
 
   static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
 
-  // MARK: - Properties
+  // MARK: Properties
 
   @IBOutlet var titleLabelPhone: UILabel!
   @IBOutlet var titleLabelPad: UILabel!
@@ -56,7 +56,7 @@ final class RadioTableViewCell: UITableViewCell {
     return action
   }
 
-  // MARK: - Functions
+  // MARK: Functions
 
   func configureCell(for section: Section) {
     self.section = section

@@ -130,7 +130,7 @@ extension SettingsViewController: UITableViewDataSource {
       withIdentifier: WrapperCell.reuseIdentifier,
       for: indexPath
     ) as? WrapperCell else {
-        fatalError("Failed to dequeue WrapperCell")
+      fatalError("Failed to dequeue WrapperCell")
     }
 
     let section = tableData[indexPath.section]

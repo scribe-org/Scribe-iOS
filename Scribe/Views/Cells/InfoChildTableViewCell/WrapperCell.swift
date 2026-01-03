@@ -6,7 +6,7 @@ protocol RoundableCell {
   func applyCornerRadius(corners: CACornerMask, radius: CGFloat)
   func removeCornerRadius()
 }
-/// Generic wrapper cell that can wrap any UITableViewCell with padding and corner radius support
+/// Generic wrapper cell that can wrap any UITableViewCell with padding and corner radius support.
 class WrapperCell: UITableViewCell {
   static let reuseIdentifier = "WrapperCell"
 
@@ -39,7 +39,7 @@ class WrapperCell: UITableViewCell {
     ])
   }
 
-  /// Configure with any cell loaded from XIB
+  /// Configure with any cell loaded from XIB.
   func configure(withCellNamed nibName: String, section: Section) {
     wrappedCell?.removeFromSuperview()
 
@@ -83,9 +83,9 @@ class WrapperCell: UITableViewCell {
     containerView.layer.masksToBounds = false
   }
 
-  // MARK: - Static Helper
+  // MARK: Static Helper
 
-  /// Apply corner radius to a cell based on its position in the section
+  /// Apply corner radius to a cell based on its position in the section.
   static func applyCornerRadius(
     to cell: UITableViewCell,
     isFirst: Bool,
