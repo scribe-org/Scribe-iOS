@@ -32,6 +32,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🌐 Localization
 
 - Localized the "Not in Wikidata" explanation messages to match the device language ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538)).
+- Localization is now handled via a [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) submodule ([#564](https://github.com/scribe-org/Scribe-iOS/issues/564)).
 
 ### 🐞 Bug Fixes
 
