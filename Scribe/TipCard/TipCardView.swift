@@ -10,7 +10,7 @@ struct TipCardView: View {
   private let buttonHeight = 70.0
   private let multiplicityPadding = 0.5
   private let leadingPadding = 40.0
-  private let cardCornerRadius: CGFloat = 16
+  private let cardCornerRadius: CGFloat = 10
   var infoText: String
   @Binding var tipCardState: Bool
   var onDismiss: (() -> Void)?

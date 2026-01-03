@@ -98,7 +98,7 @@ class InformationScreenVC: UIViewController {
     relativeView.backgroundColor = .clear
 
     contentContainerView.backgroundColor = lightWhiteDarkBlackColor
-    applyCornerRadius(elem: contentContainerView, radius: 16)
+    applyCornerRadius(elem: contentContainerView, radius: contentContainerView.frame.width * 0.05)
 
     contentContainerView.clipsToBounds = true
 

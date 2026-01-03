@@ -96,8 +96,8 @@ final class SettingsViewController: UIViewController {
       footerButton.layer.borderColor = scribeCTAColor.cgColor
     }
     footerButton.setTitleColor(lightTextDarkCTA, for: .normal)
-    footerFrame.layer.cornerRadius = 16
-    footerButton.layer.cornerRadius = 16
+    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.025
+    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.025
     footerButton.layer.shadowColor = UIColor(red: 0.247, green: 0.247, blue: 0.275, alpha: 0.25).cgColor
     footerButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
     footerButton.layer.shadowOpacity = 1.0
