@@ -96,7 +96,7 @@ extension SelectionViewTemplateViewController {
     let oldLangName = getKeyInDict(givenValue: oldLang, dict: languagesAbbrDict)
     let newLangName = getKeyInDict(givenValue: newLang, dict: languagesAbbrDict)
 
-    let infoText = "You've changed your source translation language. Would you like to download new data so that you can translate from \(newLangName)?"
+    let infoText = NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.download_warning", value: "You've changed your source translation language. Would you like to download new data so that you can translate from \(newLangName)?", comment: "")
 
     func onKeep() {
         // Keep old language - revert and dismiss.
@@ -119,8 +119,8 @@ extension SelectionViewTemplateViewController {
 
     let popupView = ConfirmTranslationSource(
         infoText: infoText,
-        changeButtonText: "Keep \(oldLangName)",
-        confirmButtonText: "Download data",
+        changeButtonText: NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.keep_source_language", value: "Keep \(oldLangName)", comment: ""),
+        confirmButtonText: NSLocalizedString("i18n.app._global.download_data", value: "Download data", comment: ""),
         onDismiss: { onKeep() },
         onChange: { onKeep()},
         onConfirm: { confirmDownload() }

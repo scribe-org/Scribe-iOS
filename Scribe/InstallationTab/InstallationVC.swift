@@ -85,13 +85,13 @@ class InstallationVC: UIViewController {
     extendedLayoutIncludesOpaqueBars = true
 
     self.tabBarController?.viewControllers?[0].title = NSLocalizedString(
-      "app.installation.title", value: "Installation", comment: ""
+      "i18n.app.installation.title", value: "Installation", comment: ""
     )
     self.tabBarController?.viewControllers?[1].title = NSLocalizedString(
-      "app.settings.title", value: "Settings", comment: ""
+      "i18n.app.settings.title", value: "Settings", comment: ""
     )
     self.tabBarController?.viewControllers?[2].title = NSLocalizedString(
-      "app.about.title", value: "About", comment: ""
+      "i18n.app.about.title", value: "About", comment: ""
     )
 
     setCurrentUI()
@@ -242,7 +242,7 @@ class InstallationVC: UIViewController {
     }
 
     installationHeaderLabel.text = NSLocalizedString(
-      "app.installation.keyboard.title", value: "Keyboard installation", comment: ""
+      "i18n.app.installation.keyboard.title", value: "Keyboard installation", comment: ""
     )
     installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
 
@@ -352,9 +352,15 @@ extension InstallationVC {
       @objc private func showPopup() {
         var sourceLanguage = "English"
         var destLanguage = "German"
-        var infoText = "The data you will download will allow you to translate from  \(sourceLanguage) to \(destLanguage). Do you want to change the language you'll translate  from?"
-        var changeText = "Change language"
-        var confirmText = "Use \(sourceLanguage)"
+        var infoText = NSLocalizedString("i18n.app.download.menu_ui.translation_source_tooltip.download_warning",
+        value: "The data you will download will allow you to translate from  \(sourceLanguage) to \(destLanguage). Do you want to change the language you'll translate  from?",
+        comment: "")
+        var changeText = NSLocalizedString("i18n.app.download.menu_ui.translation_source_tooltip.change_language",
+        value: "Change language",
+        comment: "")
+        var confirmText = NSLocalizedString("i18n.app.download.menu_ui.translation_source_tooltip.use_source_language",
+        value: "Use \(sourceLanguage)",
+        comment: "")
 
         let popupView = ConfirmTranslationSource(
           infoText: infoText,

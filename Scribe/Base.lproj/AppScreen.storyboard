@@ -503,7 +503,7 @@
         <scene sceneID="6lj-MX-SxG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wV-q3-U0F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="app.about.title" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="i18n.app.about.title" image="info.circle" catalog="system" id="U3y-iM-H0G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Jq3-G5-4j6">
                         <rect key="frame" x="0.0" y="100" width="375" height="106"/>
@@ -524,7 +524,7 @@
         <scene sceneID="3xr-BX-tfK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ffy-3M-wWx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="app.settings.title" id="JtD-kc-GDx">
+                    <tabBarItem key="tabBarItem" tag="1" title="i18n.app.settings.title" id="JtD-kc-GDx">
                         <imageReference key="image" image="gearshape" catalog="system" variableValue="0.80000000000000004"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -588,7 +588,7 @@
         <scene sceneID="2my-SI-kbz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lVT-tc-LdF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="app.installation.title" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
+                    <tabBarItem key="tabBarItem" title="i18n.app.installation.title" image="keyboard" catalog="system" id="HNz-5D-1T0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="04t-RY-ghe">
                         <rect key="frame" x="0.0" y="100" width="375" height="54"/>

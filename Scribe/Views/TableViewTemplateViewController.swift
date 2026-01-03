@@ -51,7 +51,7 @@ final class TableViewTemplateViewController: BaseTableViewController {
   override func viewWillAppear(_ animated: Bool) {
     for cell in tableView.visibleCells as! [InfoChildTableViewCell] where cell.section?.sectionState == .translateLang {
       let langTranslateLanguage = getKeyInDict(givenValue: (userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"), dict: languagesAbbrDict)
-      let currentLang = "app._global." + langTranslateLanguage.lowercased()
+      let currentLang = "i18n.app._global." + langTranslateLanguage.lowercased()
       cell.subLabel.text = NSLocalizedString(currentLang, value: langTranslateLanguage, comment: "")
     }
   }

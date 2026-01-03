@@ -1,0 +1,3 @@
+[submodule "Scribe/i18n"]
+	path = Scribe/i18n
+	url = https://github.com/scribe-org/Scribe-i18n.git

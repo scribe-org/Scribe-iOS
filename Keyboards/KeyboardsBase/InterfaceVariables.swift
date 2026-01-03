@@ -155,16 +155,16 @@ let languagesAbbrDict = [
 ]
 
 let languagesStringDict = [
-  "English": NSLocalizedString("app._global.english", value: "English", comment: ""),
-  "French": NSLocalizedString("app._global.french", value: "French", comment: ""),
-  "German": NSLocalizedString("app._global.german", value: "German", comment: ""),
-  // "Indonesian": NSLocalizedString("app._global.indonesian", value: "Indonesian", comment: ""),
-  "Italian": NSLocalizedString("app._global.italian", value: "Italian", comment: ""),
-  // "Norwegian": NSLocalizedString("app._global.norwegian", value: "Norwegian", comment: ""),
-  "Portuguese": NSLocalizedString("app._global.portuguese", value: "Portuguese", comment: ""),
-  "Russian": NSLocalizedString("app._global.russian", value: "Russian", comment: ""),
-  "Spanish": NSLocalizedString("app._global.spanish", value: "Spanish", comment: ""),
-  "Swedish": NSLocalizedString("app._global.swedish", value: "Swedish", comment: "")
+  "English": NSLocalizedString("i18n.app._global.english", value: "English", comment: ""),
+  "French": NSLocalizedString("i18n.app._global.french", value: "French", comment: ""),
+  "German": NSLocalizedString("i18n.app._global.german", value: "German", comment: ""),
+  // "Indonesian": NSLocalizedString("i18n.app._global.indonesian", value: "Indonesian", comment: ""),
+  "Italian": NSLocalizedString("i18n.app._global.italian", value: "Italian", comment: ""),
+  // "Norwegian": NSLocalizedString("i18n.app._global.norwegian", value: "Norwegian", comment: ""),
+  "Portuguese": NSLocalizedString("i18n.app._global.portuguese", value: "Portuguese", comment: ""),
+  "Russian": NSLocalizedString("i18n.app._global.russian", value: "Russian", comment: ""),
+  "Spanish": NSLocalizedString("i18n.app._global.spanish", value: "Spanish", comment: ""),
+  "Swedish": NSLocalizedString("i18n.app._global.swedish", value: "Swedish", comment: "")
 ]
 
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
