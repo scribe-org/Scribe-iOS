@@ -97,13 +97,13 @@ extension TableViewTemplateViewController {
     WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
 
     return cell
-}
+  }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = tableData[indexPath.section]
         let setting = section.section[indexPath.row]
 
-        // If has description, give it more height
+        // If has description, give it more height.
         let hasDescription = setting.shortDescription != nil
         return hasDescription ? 100.0 : 60.0
     }
@@ -118,7 +118,7 @@ extension TableViewTemplateViewController {
       ) as? SelectionViewTemplateViewController {
         var data = SettingsTableData.translateLangSettingsData
 
-        // Removes keyboard language from possible translation languages
+        // Removes keyboard language from possible translation languages.
         let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
           s.sectionState == .specificLang(langCode)
         }) ?? -1
