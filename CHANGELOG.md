@@ -28,6 +28,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/514)).
+- Border radii where standardized throughout the application ([#555](https://github.com/scribe-org/Scribe-iOS/issues/555)).
 
 ### 🌐 Localization
 
