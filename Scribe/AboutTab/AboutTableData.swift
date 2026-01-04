@@ -30,17 +30,17 @@ struct AboutTableData {
           externalLink: true
         ),
         Section(
+          sectionTitle: NSLocalizedString("i18n.app.about.community.view_apps", value: "View all Scribe apps", comment: ""),
+          imageString: "scribeKeyIcon",
+          sectionState: .scribeApps,
+          externalLink: true
+        ),
+        Section(
           sectionTitle: NSLocalizedString("i18n.app.about.community.share_scribe", value: "Share Scribe", comment: ""),
           imageString: "square.and.arrow.up",
           sectionState: .shareScribe,
           externalLink: true
         ),
-//        Section(
-//          sectionTitle: NSLocalizedString("i18n.app.about.community.view_apps", value: "View all Scribe apps", comment: ""),
-//          imageString: "scribeIcon",
-//          sectionState: .scribeApps,
-//          externalLink: true
-//        ),
         Section(
           sectionTitle: NSLocalizedString("i18n.app.about.community.wikimedia",
                                           value: "Wikimedia and Scribe",

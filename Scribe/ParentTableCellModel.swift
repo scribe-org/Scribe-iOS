@@ -45,6 +45,7 @@ enum SectionState: Equatable {
   case github
   case matrix
   case mastodon
+  case scribeApps
   case wikimedia
   case shareScribe
   case rateScribe
