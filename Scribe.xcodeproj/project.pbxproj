@@ -935,7 +935,6 @@
 		E99649952E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */; };
 		E99649962E98B03C00200F53 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		E99649972E98B11100200F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
-		E9FAC39A2E989712008E00AC /* Indonesian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E9FAC3932E989712008E00AC /* Indonesian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9FAC39F2E98972D008E00AC /* IDInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */; };
 		E9FAC3A02E98972D008E00AC /* IDCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */; };
 		E9FAC3A12E98972D008E00AC /* IDKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */; };
@@ -1051,13 +1050,6 @@
 			remoteGlobalIDString = D1B81D1E27BBB5320085FE5E;
 			remoteInfo = Italian;
 		};
-		E9FAC3982E989712008E00AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9FAC3922E989712008E00AC;
-			remoteInfo = Indonesian;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1067,7 +1059,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E9FAC39A2E989712008E00AC /* Indonesian.appex in Embed Foundation Extensions */,
 				D1B81D2627BBB5320085FE5E /* Italian.appex in Embed Foundation Extensions */,
 				D18EA8A02760D4A6001E1358 /* Swedish.appex in Embed Foundation Extensions */,
 				38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */,
@@ -1901,7 +1892,6 @@
 				D1AFDFC329CA68660033BF27 /* PBXTargetDependency */,
 				D1AFE01529CA6F980033BF27 /* PBXTargetDependency */,
 				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
-				E9FAC3992E989712008E00AC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
@@ -3472,11 +3462,6 @@
 			isa = PBXTargetDependency;
 			target = D1B81D1E27BBB5320085FE5E /* Italian */;
 			targetProxy = D1B81D2427BBB5320085FE5E /* PBXContainerItemProxy */;
-		};
-		E9FAC3992E989712008E00AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9FAC3922E989712008E00AC /* Indonesian */;
-			targetProxy = E9FAC3982E989712008E00AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
