@@ -1216,6 +1216,7 @@
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
+		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
 		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };

@@ -78,6 +78,65 @@ struct UpdateDataCardView: View {
       .padding()
       .background(Color(.systemBackground))
       .cornerRadius(12)
+      .padding(.horizontal, 16)
+    }
+  }
+}
+
+struct LanguageDownloadCard: View {
+  let language: String
+  var body: some View {
+    VStack(alignment: .leading, spacing: 12) {
+      HStack {
+        Text(language)
+          .font(.body)
+          .foregroundColor(.primary)
+
+        Spacer()
+
+        DownloadButton(state: .ready, action: {})
+      }
+    }
+  }}
+
+struct LanguageListView: View {
+  private let title = NSLocalizedString(
+    "i18n.app.download.menu_ui.download_data.title",
+    value: "Select data to download",
+    comment: ""
+  )
+
+  private let allLanguagesText = NSLocalizedString(
+    "i18n.app.download.menu_ui.download_data.all_languages",
+    value: "All languages",
+    comment: ""
+  )
+
+  let languages = SettingsTableData.getInstalledKeyboardsSections()
+
+  var body: some View {
+    VStack(alignment: .leading, spacing: 6) {
+      Text(title)
+        .font(.system(size: 19, weight: .semibold))
+        .foregroundColor(.primary)
+
+      VStack(spacing: 0) {
+        LanguageDownloadCard(language: allLanguagesText)
+        Divider()
+              .padding(.vertical, 8)
+        ForEach(Array(languages.enumerated()), id: \.offset) { index, section in
+          LanguageDownloadCard(language: section.sectionTitle)
+
+          if index < languages.count - 1 {
+            Divider()
+              .padding(.vertical, 8)
+          }
+        }
+      }
+      .padding()
+      .background(Color(.systemBackground))
+      .cornerRadius(12)
+      .padding(.horizontal, 16)
     }
   }
 }
@@ -87,6 +146,7 @@ struct DownloadDataScreen: View {
     ScrollView {
       VStack(spacing: 20) {
         UpdateDataCardView()
+        LanguageListView()
       }
       .padding()
       .background(Color(UIColor.scribeAppBackground))
