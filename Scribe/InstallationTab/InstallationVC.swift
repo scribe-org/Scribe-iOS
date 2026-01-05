@@ -39,6 +39,7 @@ class InstallationVC: UIViewController {
   @IBOutlet var logoSpace: UIView!
 
   @IBOutlet var installationHeaderLabel: UILabel!
+  private var downloadButtonController: UIHostingController<InstallationDownload>?
 
   private let installationTipCardState: Bool = {
     let userDefault = UserDefaults.standard
@@ -96,7 +97,9 @@ class InstallationVC: UIViewController {
 
     setCurrentUI()
     showTipCardView()
-    addPopupButton()
+    showDownloadButton()
+    showCTAButton()
+    // addPopupButton()
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
@@ -137,13 +140,13 @@ class InstallationVC: UIViewController {
       topIconPhone.isHidden = true
       topIconPad.isHidden = false
       for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
-          constraint.constant = 125
+        constraint.constant = 125
       }
     } else {
       topIconPhone.isHidden = false
       topIconPad.isHidden = true
       for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
-          constraint.constant = 70
+        constraint.constant = 70
       }
     }
   }
@@ -329,25 +332,72 @@ extension InstallationVC {
     )
   }
 
-  private func addPopupButton() {
-          let popupButton = UIButton(type: .system)
-          popupButton.setTitle("Open Popup", for: .normal)
-          popupButton.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
-          popupButton.backgroundColor = .systemBlue
-          popupButton.setTitleColor(.white, for: .normal)
-          popupButton.layer.cornerRadius = 10
-          popupButton.translatesAutoresizingMaskIntoConstraints = false
+  private func showDownloadButton() {
+    let downloadButton = InstallationDownload()
 
-          popupButton.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
-          view.addSubview(popupButton)
+    let hostingController = UIHostingController(rootView: downloadButton)
+    hostingController.view.backgroundColor = .clear
 
-          NSLayoutConstraint.activate([
-              popupButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-              popupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-              popupButton.widthAnchor.constraint(equalToConstant: 150),
-              popupButton.heightAnchor.constraint(equalToConstant: 44)
-          ])
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+
+    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+    NSLayoutConstraint.activate([
+      hostingController.view.topAnchor.constraint(equalTo: appTextBackground.bottomAnchor, constant: 20),
+      hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      hostingController.view.heightAnchor.constraint(equalToConstant: 120)
+    ])
+
+    hostingController.didMove(toParent: self)
+    self.downloadButtonController = hostingController
+  }
+
+  private func showCTAButton() {
+    let ctaButton = CTAButton(
+      title: NSLocalizedString("i18n.app.installation.button_quick_tutorial", value: "Quick tutorial", comment: ""),
+      action: {
       }
+    )
+
+    let hostingController = UIHostingController(rootView: ctaButton)
+    hostingController.view.backgroundColor = .clear
+
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
+
+    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+    NSLayoutConstraint.activate([
+      hostingController.view.topAnchor.constraint(equalTo: downloadButtonController!.view.bottomAnchor, constant: 20),
+      hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+      hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+      hostingController.view.heightAnchor.constraint(equalToConstant: 60)
+    ])
+
+    hostingController.didMove(toParent: self)
+  }
+
+  private func addPopupButton() {
+    let popupButton = UIButton(type: .system)
+    popupButton.setTitle("Open Popup", for: .normal)
+    popupButton.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+    popupButton.backgroundColor = .systemBlue
+    popupButton.setTitleColor(.white, for: .normal)
+    popupButton.layer.cornerRadius = 10
+    popupButton.translatesAutoresizingMaskIntoConstraints = false
+
+    popupButton.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
+    view.addSubview(popupButton)
+
+    NSLayoutConstraint.activate([
+      popupButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+      popupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      popupButton.widthAnchor.constraint(equalToConstant: 150),
+      popupButton.heightAnchor.constraint(equalToConstant: 44)
+    ])
+  }
 
       @objc private func showPopup() {
         var sourceLanguage = "English"
@@ -362,70 +412,70 @@ extension InstallationVC {
         value: "Use \(sourceLanguage)",
         comment: "")
 
-        let popupView = ConfirmTranslationSource(
-          infoText: infoText,
-          changeButtonText: changeText,
-          confirmButtonText: confirmText,
-          onDismiss: {self.dismiss(animated: true)},
-          onChange: {
-                self.dismiss(animated: true) {
-                    if let translationLangController = self.storyboard?.instantiateViewController(
-                    identifier: "SelectionViewTemplateViewController"
-                    ) as? SelectionViewTemplateViewController {
+    let popupView = ConfirmTranslationSource(
+      infoText: infoText,
+      changeButtonText: changeText,
+      confirmButtonText: confirmText,
+      onDismiss: {self.dismiss(animated: true)},
+      onChange: {
+        self.dismiss(animated: true) {
+          if let translationLangController = self.storyboard?.instantiateViewController(
+            identifier: "SelectionViewTemplateViewController"
+          ) as? SelectionViewTemplateViewController {
 
-                    var data = SettingsTableData.translateLangSettingsData
-                    let langCode = "de"
+            var data = SettingsTableData.translateLangSettingsData
+            let langCode = "de"
 
-                    // Remove the current keyboard language from translation.
-                    let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
-                        s.sectionState == .specificLang(langCode)
-                    }) ?? -1
-                    if langCodeIndex >= 0 {
-                        data[0].section.remove(at: langCodeIndex)
-                    }
+            // Remove the current keyboard language from translation.
+            let langCodeIndex = SettingsTableData.translateLangSettingsData[0].section.firstIndex(where: { s in
+              s.sectionState == .specificLang(langCode)
+            }) ?? -1
+            if langCodeIndex >= 0 {
+              data[0].section.remove(at: langCodeIndex)
+            }
 
-                    let sectionTitle = getKeyInDict(givenValue: langCode, dict: languagesAbbrDict)
+            let sectionTitle = getKeyInDict(givenValue: langCode, dict: languagesAbbrDict)
 
-                    let parentSection = Section(
-                              sectionTitle: sectionTitle,
-                              imageString: nil,
-                              hasToggle: false,
-                              hasNestedNavigation: true,
-                              sectionState: .translateLang,
-                              shortDescription: nil,
-                              externalLink: false
-                            )
+            let parentSection = Section(
+              sectionTitle: sectionTitle,
+              imageString: nil,
+              hasToggle: false,
+              hasNestedNavigation: true,
+              sectionState: .translateLang,
+              shortDescription: nil,
+              externalLink: false
+            )
 
-                    translationLangController.configureTable(
-                        for: data,
-                        parentSection: parentSection,
-                        langCode: langCode
-                    )
+            translationLangController.configureTable(
+              for: data,
+              parentSection: parentSection,
+              langCode: langCode
+            )
 
-                    translationLangController.edgesForExtendedLayout = .all
+            translationLangController.edgesForExtendedLayout = .all
 
-                    // COPY the navigation bar appearance from Settings tab.
-                    if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
-                        // Copy all the styling from Settings' nav controller.
-                        self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
-                        self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
-                        self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
-                        self.navigationController?.navigationBar.barTintColor = settingsNavController.navigationBar.barTintColor
-                        }
+            // COPY the navigation bar appearance from Settings tab.
+            if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+              // Copy all the styling from Settings' nav controller.
+              self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
+              self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
+              self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
+              self.navigationController?.navigationBar.barTintColor = settingsNavController.navigationBar.barTintColor
+            }
 
-                    self.navigationController?.setNavigationBarHidden(false, animated: false)
-                    self.navigationController?.pushViewController(translationLangController, animated: true)
-                    }
-                }
-            },
-          onConfirm: {self.dismiss(animated: true)},
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
+            self.navigationController?.pushViewController(translationLangController, animated: true)
+          }
+        }
+      },
+      onConfirm: {self.dismiss(animated: true)},
 
-        )
-          let hostingController = UIHostingController(rootView: popupView)
-          hostingController.modalPresentationStyle = .overFullScreen
-          hostingController.modalTransitionStyle = .crossDissolve
-          hostingController.view.backgroundColor = .clear
+    )
+    let hostingController = UIHostingController(rootView: popupView)
+    hostingController.modalPresentationStyle = .overFullScreen
+    hostingController.modalTransitionStyle = .crossDissolve
+    hostingController.view.backgroundColor = .clear
 
-          present(hostingController, animated: true)
-      }
+    present(hostingController, animated: true)
+  }
 }
