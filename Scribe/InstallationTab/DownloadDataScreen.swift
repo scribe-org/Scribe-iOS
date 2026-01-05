@@ -32,17 +32,17 @@ struct RadioCircle: View {
 
 struct UpdateDataCardView: View {
   private let title = NSLocalizedString(
-    "i18n.app.update_data",
+    "i18n.app.download.menu_ui.update_data",
     value: "Update data",
     comment: ""
   )
   private let checkText = NSLocalizedString(
-    "i18n.app.update_data",
+    "i18n.app.download.menu_ui.update_data.check_new",
     value: "Check for new data",
     comment: ""
   )
   private let regularUpdateText = NSLocalizedString(
-    "i18n.app.regular_update",
+    "i18n.app.download.menu_ui.update_data.regular_update",
     value: "Regularly update data",
     comment: ""
   )

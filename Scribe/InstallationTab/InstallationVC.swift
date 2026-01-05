@@ -392,13 +392,13 @@ extension InstallationVC {
     hostingController.additionalSafeAreaInsets = .zero
 
     hostingController.title = NSLocalizedString(
-      "i18n.app.download_data",
+      "i18n.app._global.download_data",
       value: "Download data",
       comment: ""
     )
 
     self.navigationItem.backButtonTitle = NSLocalizedString(
-      "app.installation.title",
+      "i18n.app.installation.title",
       value: "Installation",
       comment: ""
     )
