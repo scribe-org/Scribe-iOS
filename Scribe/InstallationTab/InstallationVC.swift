@@ -356,7 +356,7 @@ extension InstallationVC {
 
   private func showCTAButton() {
     let ctaButton = CTAButton(
-      title: NSLocalizedString("app.installation.quick_tutorial", value: "Quick tutorial", comment: ""),
+      title: NSLocalizedString("i18n.app.installation.button_quick_tutorial", value: "Quick tutorial", comment: ""),
       action: {
       }
     )
