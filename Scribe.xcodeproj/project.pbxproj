@@ -12,8 +12,6 @@
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
-		1455C87C2BD0EE4200F12BD4 /* DownloadDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */; };
-		1455C87D2BD0EE4200F12BD4 /* DownloadDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */; };
 		146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 146B70BC2A853A3800710BD4 /* SwipeableTabBarController */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
 		147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */; };
@@ -937,7 +935,6 @@
 		E99649962E98B03C00200F53 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		E99649972E98B11100200F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		E9CE5EA82F063E230068A930 /* DownloadDataScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */; };
-		E9FAC39A2E989712008E00AC /* Indonesian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E9FAC3932E989712008E00AC /* Indonesian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9FAC39F2E98972D008E00AC /* IDInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */; };
 		E9FAC3A02E98972D008E00AC /* IDCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */; };
 		E9FAC3A12E98972D008E00AC /* IDKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */; };
@@ -1083,8 +1080,6 @@
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
-		1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataTable.swift; sourceTree = "<group>"; };
-		1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDataVC.swift; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
 		147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoChildTableViewCell.xib; sourceTree = "<group>"; };
 		147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableCellModel.swift; sourceTree = "<group>"; };
@@ -1221,9 +1216,9 @@
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
+		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
 		E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataScreen.swift; sourceTree = "<group>"; };
-		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCommandVariables.swift; sourceTree = "<group>"; };
 		E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDInterfaceVariables.swift; sourceTree = "<group>"; };
 		E9FAC38A2E9894F9008E00AC /* IDKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -1389,8 +1384,6 @@
 			children = (
 				E96111472F04EC62001E4F95 /* InstallationDownload.swift */,
 				E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */,
-				1455C87A2BD0EE4200F12BD4 /* DownloadDataTable.swift */,
-				1455C87B2BD0EE4200F12BD4 /* DownloadDataVC.swift */,
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 			);
 			path = InstallationTab;
@@ -2579,7 +2572,6 @@
 				D17193F827AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D171945827AF237C0038660B /* ScribeKey.swift in Sources */,
 				1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */,
-				1455C87D2BD0EE4200F12BD4 /* DownloadDataVC.swift in Sources */,
 				D1B81D4A27BBBA200085FE5E /* ITCommandVariables.swift in Sources */,
 				D180EC0328FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */,
@@ -2594,7 +2586,6 @@
 				EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */,
 				D1CDED772A859E4800098546 /* DACommandVariables.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
-				1455C87C2BD0EE4200F12BD4 /* DownloadDataTable.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
 				19DC85FA2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				198369CC2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
