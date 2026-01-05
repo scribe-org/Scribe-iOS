@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Override point for customization after application launch.
+    if #available(iOS 13.0, *) {
+      let appearance = UITabBarAppearance()
+      appearance.configureWithOpaqueBackground()
+      appearance.backgroundColor = .white
+      UITabBar.appearance().standardAppearance = appearance
+      UITabBar.appearance().scrollEdgeAppearance = appearance
+    } else {
+      // Fallback for earlier versions: non-transparent
+      UITabBar.appearance().isTranslucent = false
+      UITabBar.appearance().barTintColor = .white // Default non-transparent color
+    }
+
     return true
   }
 

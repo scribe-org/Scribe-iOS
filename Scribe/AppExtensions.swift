@@ -73,7 +73,7 @@ extension UIImage {
 
   func fitInSquareCanvas(size: CGSize) -> UIImage {
     let renderer = UIGraphicsImageRenderer(size: size)
-    return renderer.image { context in
+    return renderer.image { _ in
       let rect = CGRect(origin: .zero, size: size)
       let aspectRatio = self.size.width / self.size.height
 
