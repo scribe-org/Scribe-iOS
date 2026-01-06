@@ -47,9 +47,9 @@ struct InstallationDownload: View {
   var onDownloadTapped: (() -> Void)
   var body: some View {
     CardView(
-      title: NSLocalizedString("app.installation.download.title", value: "Language data", comment: ""),
-      mainText: NSLocalizedString("app.installation.download.main_text", value: "Download keyboard data", comment: ""),
-      subtitle: NSLocalizedString("app.installation.download.subtitle", value: "Add new data to Scribe keyboards.", comment: "")
+      title: NSLocalizedString("i18n.app.download.menu_option.scribe_title", value: "Language data", comment: ""),
+      mainText: NSLocalizedString("i18n.app.download.menu_option.scribe_download_data", value: "Download keyboard data", comment: ""),
+      subtitle: NSLocalizedString("i18n.app.download.menu_option.scribe_description", value: "Add new data to Scribe keyboards.", comment: "")
     ) {
       onDownloadTapped()
     }
