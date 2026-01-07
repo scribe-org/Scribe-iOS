@@ -19,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if #available(iOS 13.0, *) {
       let appearance = UITabBarAppearance()
       appearance.configureWithOpaqueBackground()
-      appearance.backgroundColor = .white
+      if UITraitCollection.current.userInterfaceStyle == .dark {
+        appearance.backgroundColor = .black
+      } else {
+        appearance.backgroundColor = .white
+      }
       UITabBar.appearance().standardAppearance = appearance
       UITabBar.appearance().scrollEdgeAppearance = appearance
     } else {
