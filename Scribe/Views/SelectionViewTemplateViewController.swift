@@ -127,13 +127,13 @@ extension SelectionViewTemplateViewController {
     }
 
     func confirmDownload() {
-        // Download data - save new language.
-        self.dismiss(animated: true) {
-            let dictionaryKey = self.langCode + "TranslateLanguage"
-            self.userDefaults.setValue(newLang, forKey: dictionaryKey)
+      self.dismiss(animated: true) {
+        let dictionaryKey = self.langCode + "TranslateLanguage"
+        self.userDefaults.setValue(newLang, forKey: dictionaryKey)
 
-            self.navigationController?.popViewController(animated: true)
-            }
+        self.tabBarController?.selectedIndex = 0
+        NotificationCenter.default.post(name: NSNotification.Name("NavigateToDownloadScreen"), object: nil)
+      }
     }
 
     let popupView = ConfirmTranslationSource(

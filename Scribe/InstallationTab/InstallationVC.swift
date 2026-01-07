@@ -100,6 +100,21 @@ class InstallationVC: UIViewController {
     showDownloadButton()
     showCTAButton()
     // addPopupButton()
+
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(handleNavigateToDownloadScreen),
+      name: NSNotification.Name("NavigateToDownloadScreen"),
+      object: nil
+    )
+  }
+
+  @objc private func handleNavigateToDownloadScreen() {
+    navigateToDownloadDataScreen()
+  }
+
+  deinit {
+    NotificationCenter.default.removeObserver(self)
   }
 
   /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
