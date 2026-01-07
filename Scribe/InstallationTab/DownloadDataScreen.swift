@@ -103,6 +103,7 @@ struct LanguageDownloadCard: View {
 }
 
 struct LanguageListView: View {
+  var onNavigateToTranslationSource: ((String, String) -> Void)?
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.download_data.title",
     value: "Select data to download",
@@ -180,10 +181,10 @@ struct LanguageListView: View {
     let sourceLanguage = getKeyInDict(givenValue: selectedSourceLang, dict: languagesAbbrDict)
 
     let localizedSourceLanguage = NSLocalizedString(
-          "i18n.app._global." + sourceLanguage.lowercased(),
-          value: sourceLanguage,
-          comment: ""
-        )
+      "i18n.app._global." + sourceLanguage.lowercased(),
+      value: sourceLanguage,
+      comment: ""
+    )
 
     return ConfirmTranslationSource(
       infoText: NSLocalizedString(
@@ -209,7 +210,7 @@ struct LanguageListView: View {
       },
       onChange: {
         showConfirmDialog = false
-        // Navigate to language selection screen
+        onNavigateToTranslationSource?(selectedLanguageCode, targetLanguage)
       },
       onConfirm: {
         showConfirmDialog = false
@@ -220,11 +221,12 @@ struct LanguageListView: View {
 }
 
 struct DownloadDataScreen: View {
+  var onNavigateToTranslationSource: ((String, String) -> Void)?
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
         UpdateDataCardView()
-        LanguageListView()
+        LanguageListView(onNavigateToTranslationSource: onNavigateToTranslationSource)
       }
       .padding()
       .background(Color(UIColor.scribeAppBackground))

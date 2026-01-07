@@ -382,7 +382,11 @@ extension InstallationVC {
   }
 
   private func navigateToDownloadDataScreen() {
-    let downloadDataView = DownloadDataScreen()
+    let downloadDataView = DownloadDataScreen(
+      onNavigateToTranslationSource: { [weak self] languageCode, languageName in
+        self?.navigateToTranslationSourceSelection(languageCode: languageCode, languageName: languageName)
+      }
+    )
     let hostingController = UIHostingController(rootView: downloadDataView)
 
     hostingController.view.backgroundColor = scribeAppBackgroundColor
@@ -415,6 +419,47 @@ extension InstallationVC {
     self.navigationController?.setNavigationBarHidden(false, animated: false)
     self.navigationController?.pushViewController(hostingController, animated: true)
   }
+
+  private func navigateToTranslationSourceSelection(languageCode: String, languageName: String) {
+      guard let selectionVC = self.storyboard?.instantiateViewController(
+        identifier: "SelectionViewTemplateViewController"
+      ) as? SelectionViewTemplateViewController else {
+        return
+      }
+
+      var translateData = SettingsTableData.translateLangSettingsData
+
+      // Remove the current keyboard language from translation options
+      if let langCodeIndex = translateData[0].section.firstIndex(where: { s in
+        s.sectionState == .specificLang(languageCode)
+      }) {
+        translateData[0].section.remove(at: langCodeIndex)
+      }
+
+      let parentSection = Section(
+        sectionTitle: languageName,
+        imageString: nil,
+        hasToggle: false,
+        hasNestedNavigation: true,
+        sectionState: .translateLang,
+        shortDescription: nil,
+        externalLink: false
+      )
+
+      selectionVC.configureTable(for: translateData, parentSection: parentSection, langCode: languageCode)
+      selectionVC.edgesForExtendedLayout = .all
+
+      // Copy navigation bar appearance from Settings tab
+      if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+        self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
+        self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
+        self.navigationController?.navigationBar.barTintColor = settingsNavController.navigationBar.barTintColor
+      }
+
+      self.navigationController?.setNavigationBarHidden(false, animated: false)
+      self.navigationController?.pushViewController(selectionVC, animated: true)
+    }
 
   private func addPopupButton() {
     let popupButton = UIButton(type: .system)
