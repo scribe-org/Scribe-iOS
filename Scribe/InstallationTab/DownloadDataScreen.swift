@@ -119,7 +119,7 @@ struct LanguageListView: View {
 
   @State private var showConfirmDialog = false
   @State private var targetLanguage = ""
-  @State private var sourceLanguage = "English"
+  @State private var selectedLanguageCode = ""
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   var body: some View {
@@ -134,6 +134,7 @@ struct LanguageListView: View {
             language: allLanguagesText,
             action: {
               targetLanguage = allLanguagesText
+              selectedLanguageCode = "all"
               showConfirmDialog = true
             }
           )
@@ -146,6 +147,11 @@ struct LanguageListView: View {
               language: section.sectionTitle,
               action: {
                 targetLanguage = section.sectionTitle
+
+                if case let .specificLang(langCode) = section.sectionState {
+                  selectedLanguageCode = langCode
+                }
+
                 showConfirmDialog = true
               }
             )
@@ -163,41 +169,47 @@ struct LanguageListView: View {
       }
 
       if showConfirmDialog {
-            let languageCode = "en"
-            if let selectedSourceLang = userDefaults.string(forKey: languageCode + "TranslateLanguage") {
-            sourceLanguage = getKeyInDict(givenValue: selectedSourceLang, dict: languagesAbbrDict)
-        }
-        ConfirmTranslationSource(
-          infoText: NSLocalizedString(
-            "i18n.app.download.menu_ui.translation_source_tooltip.download_warning",
-            value: "The data you will download will allow you to translate from {source_language} to {destination_language}. Do you want to change the language you'll translate from?",
-            comment: ""
-          ).replacingOccurrences(of: "{source_language}", with: sourceLanguage)
-            .replacingOccurrences(of: "{target_language}", with: targetLanguage),
-          changeButtonText: NSLocalizedString(
-            "i18n.app.download.menu_ui.translation_source_tooltip.change_language",
-            value: "Change language",
-            comment: ""
-          ),
-          confirmButtonText: NSLocalizedString(
-            "i18n.app.download.menu_ui.translation_source_tooltip.use_source_language",
-            value: "Use {source_language}",
-            comment: ""
-          ).replacingOccurrences(of: "{source_language}", with: sourceLanguage),
-          onDismiss: {
-            showConfirmDialog = false
-          },
-          onChange: {
-            showConfirmDialog = false
-            // Navigate to language selection screen
-          },
-          onConfirm: {
-            showConfirmDialog = false
-            // Start download with current source language
-          }
-        )
+        confirmDialogView
       }
     }
+  }
+
+  private var confirmDialogView: some View {
+    let languageCode = selectedLanguageCode.isEmpty ? "en" : selectedLanguageCode
+    let selectedSourceLang = userDefaults.string(forKey: languageCode + "TranslateLanguage") ?? "en"
+    let sourceLanguage = getKeyInDict(givenValue: selectedSourceLang, dict: languagesAbbrDict)
+
+    return ConfirmTranslationSource(
+      infoText: NSLocalizedString(
+        "i18n.app.download.menu_ui.translation_source_tooltip.download_warning",
+        value: "The data you will download will allow you to translate from {source_language} to {destination_language}. Do you want to change the language you'll translate from?",
+        comment: ""
+      )
+      .replacingOccurrences(of: "{source_language}", with: sourceLanguage)
+      .replacingOccurrences(of: "{target_language}", with: targetLanguage),
+      changeButtonText: NSLocalizedString(
+        "i18n.app.download.menu_ui.translation_source_tooltip.change_language",
+        value: "Change language",
+        comment: ""
+      ),
+      confirmButtonText: NSLocalizedString(
+        "i18n.app.download.menu_ui.translation_source_tooltip.use_source_language",
+        value: "Use {source_language}",
+        comment: ""
+      )
+      .replacingOccurrences(of: "{source_language}", with: sourceLanguage),
+      onDismiss: {
+        showConfirmDialog = false
+      },
+      onChange: {
+        showConfirmDialog = false
+        // Navigate to language selection screen
+      },
+      onConfirm: {
+        showConfirmDialog = false
+        // Start download with current source language
+      }
+    )
   }
 }
 
