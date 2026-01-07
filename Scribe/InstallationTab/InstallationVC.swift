@@ -427,6 +427,14 @@ extension InstallationVC {
         return
       }
 
+      if let hostingController = self.navigationController?.viewControllers.last as? UIHostingController<DownloadDataScreen> {
+        hostingController.navigationItem.backButtonTitle = NSLocalizedString(
+        "i18n.app._global." + languageName.lowercased(),
+        value: languageName,
+        comment: ""
+        )
+      }
+
       var translateData = SettingsTableData.translateLangSettingsData
 
       // Remove the current keyboard language from translation options

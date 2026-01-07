@@ -39,7 +39,11 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
     self.parentSection = parentSection
     self.langCode = langCode
 
-    title = parentSection.sectionTitle
+    title = NSLocalizedString(
+    "i18n.app.settings.keyboard.translation.select_source.title",
+    value: "Translation language",
+    comment: ""
+  )
   }
 }
 
