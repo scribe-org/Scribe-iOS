@@ -18,6 +18,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
+- Users can now delete text word for word instead of character by character by enabling a function in the settings menu. The words are deleted by holding down backspace ([#301](https://github.com/scribe-org/Scribe-iOS/issues/301)).
 - The Scribe translation functionality now allows the user to select which language to translate from via a convenient menu selector within the settings of each keyboard ([#255](https://github.com/scribe-org/Scribe-iOS/issues/255), [#307](https://github.com/scribe-org/Scribe-iOS/issues/307), [#469](https://github.com/scribe-org/Scribe-iOS/issues/469), [#470](https://github.com/scribe-org/Scribe-iOS/issues/470))
   - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
@@ -27,10 +28,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### 🎨 Design Changes
 
 - The About tab corner icons were removed to make RTL language menus easier to maintain ([#514](https://github.com/scribe-org/Scribe-iOS/issues/514)).
+- Border radii where standardized throughout the application ([#555](https://github.com/scribe-org/Scribe-iOS/issues/555)).
 
 ### 🌐 Localization
 
 - Localized the "Not in Wikidata" explanation messages to match the device language ([#538](https://github.com/scribe-org/Scribe-iOS/issues/538)).
+- Localization is now handled via a [Scribe-i18n](https://github.com/scribe-org/Scribe-i18n) submodule ([#564](https://github.com/scribe-org/Scribe-iOS/issues/564)).
 
 ### 🐞 Bug Fixes
 
