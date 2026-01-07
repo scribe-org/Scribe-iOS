@@ -483,3 +483,38 @@ extension InstallationVC {
     self.navigationController?.pushViewController(selectionVC, animated: true)
   }
 }
+
+extension InstallationVC {
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    if let tabBar = self.tabBarController?.tabBar {
+      // Remove existing gesture recognizers to avoid duplicates
+      tabBar.gestureRecognizers?.forEach { tabBar.removeGestureRecognizer($0) }
+
+      // Add tap gesture recognizer
+      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTabBarTap(_:)))
+      tapGesture.cancelsTouchesInView = false
+      tabBar.addGestureRecognizer(tapGesture)
+    }
+  }
+
+  @objc private func handleTabBarTap(_ gesture: UITapGestureRecognizer) {
+    guard let tabBar = self.tabBarController?.tabBar else { return }
+
+    let location = gesture.location(in: tabBar)
+
+    // Calculate which tab was tapped
+    let tabWidth = tabBar.bounds.width / CGFloat(tabBar.items?.count ?? 1)
+    let tappedIndex = Int(location.x / tabWidth)
+
+    // If Installation tab (index 0) was tapped and we're already on it
+    if tappedIndex == 0 && self.tabBarController?.selectedIndex == 0 {
+      if let navController = self.navigationController,
+         navController.viewControllers.count > 1 {
+        navController.popToRootViewController(animated: true)
+        navController.setNavigationBarHidden(true, animated: true)
+      }
+    }
+  }
+}
