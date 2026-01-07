@@ -179,13 +179,19 @@ struct LanguageListView: View {
     let selectedSourceLang = userDefaults.string(forKey: languageCode + "TranslateLanguage") ?? "en"
     let sourceLanguage = getKeyInDict(givenValue: selectedSourceLang, dict: languagesAbbrDict)
 
+    let localizedSourceLanguage = NSLocalizedString(
+          "i18n.app._global." + sourceLanguage.lowercased(),
+          value: sourceLanguage,
+          comment: ""
+        )
+
     return ConfirmTranslationSource(
       infoText: NSLocalizedString(
         "i18n.app.download.menu_ui.translation_source_tooltip.download_warning",
-        value: "The data you will download will allow you to translate from {source_language} to {destination_language}. Do you want to change the language you'll translate from?",
+        value: "The data you will download will allow you to translate from {source_language} to {target_language}. Do you want to change the language you'll translate from?",
         comment: ""
       )
-      .replacingOccurrences(of: "{source_language}", with: sourceLanguage)
+      .replacingOccurrences(of: "{source_language}", with: localizedSourceLanguage)
       .replacingOccurrences(of: "{target_language}", with: targetLanguage),
       changeButtonText: NSLocalizedString(
         "i18n.app.download.menu_ui.translation_source_tooltip.change_language",
@@ -197,7 +203,7 @@ struct LanguageListView: View {
         value: "Use {source_language}",
         comment: ""
       )
-      .replacingOccurrences(of: "{source_language}", with: sourceLanguage),
+      .replacingOccurrences(of: "{source_language}", with: localizedSourceLanguage),
       onDismiss: {
         showConfirmDialog = false
       },
