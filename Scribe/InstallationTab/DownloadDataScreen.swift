@@ -85,6 +85,7 @@ struct UpdateDataCardView: View {
 
 struct LanguageDownloadCard: View {
   let language: String
+  let state: ButtonState
   let action: () -> Void
 
   var body: some View {
@@ -96,7 +97,10 @@ struct LanguageDownloadCard: View {
 
         Spacer()
 
-        DownloadButton(state: .ready, action: action)
+        DownloadButton(
+          state: state,
+          action: action
+        )
       }
     }
   }
@@ -104,6 +108,9 @@ struct LanguageDownloadCard: View {
 
 struct LanguageListView: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
+
+  @ObservedObject private var stateManager = DownloadStateManager.shared
+
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.download_data.title",
     value: "Select data to download",
@@ -123,6 +130,17 @@ struct LanguageListView: View {
   @State private var selectedLanguageCode = ""
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
+  private func handleButtonClick(targetLang: String, langCode: String) {
+    targetLanguage = targetLang
+    selectedLanguageCode = langCode
+    let currentState = stateManager.downloadStates[langCode] ?? .ready
+    if currentState == .ready {
+      showConfirmDialog = true
+    } else {
+      stateManager.handleDownloadAction(key: langCode)
+    }
+  }
+
   var body: some View {
     ZStack {
       VStack(alignment: .leading, spacing: 6) {
@@ -133,10 +151,9 @@ struct LanguageListView: View {
         VStack(spacing: 0) {
           LanguageDownloadCard(
             language: allLanguagesText,
+            state: stateManager.downloadStates["all"] ?? .ready,
             action: {
-              targetLanguage = allLanguagesText
-              selectedLanguageCode = "all"
-              showConfirmDialog = true
+              handleButtonClick(targetLang: allLanguagesText, langCode: "all")
             }
           )
 
@@ -144,16 +161,18 @@ struct LanguageListView: View {
             .padding(.vertical, 8)
 
           ForEach(Array(languages.enumerated()), id: \.offset) { index, section in
+            let langCode: String = {
+              if case let .specificLang(code) = section.sectionState {
+                return code
+              }
+              return ""
+            }()
+
             LanguageDownloadCard(
               language: section.sectionTitle,
+              state: stateManager.downloadStates[langCode] ?? .ready,
               action: {
-                targetLanguage = section.sectionTitle
-
-                if case let .specificLang(langCode) = section.sectionState {
-                  selectedLanguageCode = langCode
-                }
-
-                showConfirmDialog = true
+                handleButtonClick(targetLang: section.sectionTitle, langCode: langCode)
               }
             )
 
@@ -214,7 +233,7 @@ struct LanguageListView: View {
       },
       onConfirm: {
         showConfirmDialog = false
-        // Start download with current source language
+        stateManager.handleDownloadAction(key: selectedLanguageCode)
       }
     )
   }
