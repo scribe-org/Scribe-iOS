@@ -78,6 +78,12 @@ enum SettingsTableData {
           hasToggle: true,
           sectionState: .none(.toggleWordForWordDeletion),
           shortDescription: NSLocalizedString("i18n.app.word_for_word.description", value: "Word for word deletion.", comment: "")
+        ),
+        Section(
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.functionality.colon_to_emoji", value: "Colon to emoji entry", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.colonToEmoji),
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.functionality.colon_to_emoji_description", value: "Type : followed by a keyword to suggest emojis.", comment: "")
         )
       ],
       hasDynamicData: nil

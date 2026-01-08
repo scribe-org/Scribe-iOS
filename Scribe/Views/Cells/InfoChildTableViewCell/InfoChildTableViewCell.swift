@@ -151,6 +151,10 @@ final class InfoChildTableViewCell: UITableViewCell {
       let dictionaryKey = languageCode + "WordForWordDeletion"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+    case .colonToEmoji:
+      let dictionaryKey = languageCode + "ColonToEmoji"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .none: break
     }
 
@@ -197,6 +201,14 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = false // Default value
+      }
+
+    case .colonToEmoji:
+      let dictionaryKey = languageCode + "ColonToEmoji"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = true // Default value
       }
 
     case .none: break

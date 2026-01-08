@@ -24,6 +24,7 @@ enum EmojisToShow {
 var emojisToShow: EmojisToShow = .zero
 var currentEmojiTriggerWord = ""
 var emojiAutoActionRepeatPossible = false
+var colonSearchString = ""
 
 var firstCompletionIsHighlighted = false
 var spaceAutoInsertIsPossible = false

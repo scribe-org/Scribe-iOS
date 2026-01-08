@@ -70,6 +70,7 @@ enum UserInteractiveState {
   case autosuggestEmojis
   case toggleAccentCharacters
   case toggleWordForWordDeletion
+  case colonToEmoji
   case none
 }
 
