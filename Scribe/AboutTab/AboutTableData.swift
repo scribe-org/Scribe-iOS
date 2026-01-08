@@ -30,8 +30,8 @@ struct AboutTableData {
           externalLink: true
         ),
         Section(
-          sectionTitle: NSLocalizedString("i18n.app.about.community.view_apps", value: "View all Scribe apps", comment: ""),
-          imageString: "scribeKeyIcon",
+          sectionTitle: NSLocalizedString("i18n.app.about.community.visit_website", value: "Visit the Scribe website", comment: ""),
+          imageString: "globe",
           sectionState: .scribeApps,
           externalLink: true
         ),
