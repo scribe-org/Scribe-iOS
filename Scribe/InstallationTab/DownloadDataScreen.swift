@@ -31,6 +31,7 @@ struct RadioCircle: View {
 }
 
 struct UpdateDataCardView: View {
+  var languages: [Section]
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.update_data",
     value: "Update data",
@@ -56,17 +57,18 @@ struct UpdateDataCardView: View {
         .foregroundColor(.primary)
 
       VStack(alignment: .leading, spacing: 12) {
-        HStack {
-          Text(checkText)
-            .font(.body)
-            .foregroundColor(.primary)
+        if !languages.isEmpty {
+          HStack {
+            Text(checkText)
+              .font(.body)
+              .foregroundColor(.primary)
 
-          Spacer()
+            Spacer()
 
-          RadioCircle(isSelected: $isCheckNew)
+            RadioCircle(isSelected: $isCheckNew)
+          }
+          Divider()
         }
-
-        Divider()
 
         Toggle(isOn: $isRegularUpdate) {
           HStack {
@@ -106,8 +108,36 @@ struct LanguageDownloadCard: View {
   }
 }
 
+struct EmptyStateView: View {
+  private var noKeyboardText = NSLocalizedString(
+    "i18n.app.download.menu_ui.no_keyboards_installed",
+    value: "You currently do not have any Scribe keyboard installed. Please click the Install keyboards button below to install a Scribe keyboard and then come back to download the needed data.",
+    comment: ""
+  )
+
+  private var installText = NSLocalizedString(
+    "i18n.app.settings.button_install_keyboards",
+    value: "Install keyboards",
+    comment: "")
+
+  var body: some View {
+    VStack(alignment: .leading, spacing: 24) {
+      Text(noKeyboardText)
+        .foregroundColor(.primary)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(12)
+
+      CTAButton(title: installText, action: {})
+    }
+    .padding(.horizontal, 16)
+  }
+}
+
 struct LanguageListView: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
+  var languages: [Section]
 
   @ObservedObject private var stateManager = DownloadStateManager.shared
 
@@ -122,8 +152,6 @@ struct LanguageListView: View {
     value: "All languages",
     comment: ""
   )
-
-  let languages = SettingsTableData.getInstalledKeyboardsSections()
 
   @State private var showConfirmDialog = false
   @State private var targetLanguage = ""
@@ -147,45 +175,48 @@ struct LanguageListView: View {
         Text(title)
           .font(.system(size: 19, weight: .semibold))
           .foregroundColor(.primary)
-
-        VStack(spacing: 0) {
-          LanguageDownloadCard(
-            language: allLanguagesText,
-            state: stateManager.downloadStates["all"] ?? .ready,
-            action: {
-              handleButtonClick(targetLang: allLanguagesText, langCode: "all")
-            }
-          )
-
-          Divider()
-            .padding(.vertical, 8)
-
-          ForEach(Array(languages.enumerated()), id: \.offset) { index, section in
-            let langCode: String = {
-              if case let .specificLang(code) = section.sectionState {
-                return code
-              }
-              return ""
-            }()
-
+        if languages.isEmpty {
+          EmptyStateView()
+        } else {
+          VStack(spacing: 0) {
             LanguageDownloadCard(
-              language: section.sectionTitle,
-              state: stateManager.downloadStates[langCode] ?? .ready,
+              language: allLanguagesText,
+              state: stateManager.downloadStates["all"] ?? .ready,
               action: {
-                handleButtonClick(targetLang: section.sectionTitle, langCode: langCode)
+                handleButtonClick(targetLang: allLanguagesText, langCode: "all")
               }
             )
 
-            if index < languages.count - 1 {
-              Divider()
-                .padding(.vertical, 8)
+            Divider()
+              .padding(.vertical, 8)
+
+            ForEach(Array(languages.enumerated()), id: \.offset) { index, section in
+              let langCode: String = {
+                if case let .specificLang(code) = section.sectionState {
+                  return code
+                }
+                return ""
+              }()
+
+              LanguageDownloadCard(
+                language: section.sectionTitle,
+                state: stateManager.downloadStates[langCode] ?? .ready,
+                action: {
+                  handleButtonClick(targetLang: section.sectionTitle, langCode: langCode)
+                }
+              )
+
+              if index < languages.count - 1 {
+                Divider()
+                  .padding(.vertical, 8)
+              }
             }
           }
+          .padding()
+          .background(Color(.systemBackground))
+          .cornerRadius(12)
+          .padding(.horizontal, 16)
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .padding(.horizontal, 16)
       }
 
       if showConfirmDialog {
@@ -241,11 +272,12 @@ struct LanguageListView: View {
 
 struct DownloadDataScreen: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
+  let languages = SettingsTableData.getInstalledKeyboardsSections()
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
-        UpdateDataCardView()
-        LanguageListView(onNavigateToTranslationSource: onNavigateToTranslationSource)
+        UpdateDataCardView(languages: languages)
+        LanguageListView(onNavigateToTranslationSource: onNavigateToTranslationSource, languages: languages)
       }
       .padding()
       .background(Color(UIColor.scribeAppBackground))
