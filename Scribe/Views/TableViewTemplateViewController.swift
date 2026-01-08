@@ -105,7 +105,7 @@ extension TableViewTemplateViewController {
 
         // If has description, give it more height.
         let hasDescription = setting.shortDescription != nil
-        return hasDescription ? 100.0 : 60.0
+        return hasDescription ? 110.0 : 60.0
     }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
