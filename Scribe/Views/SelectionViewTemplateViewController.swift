@@ -21,6 +21,7 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   private var langCode: String = "de"
+  @ObservedObject private var stateManager = DownloadStateManager.shared
 
   // MARK: Functions
 
@@ -131,6 +132,7 @@ extension SelectionViewTemplateViewController {
         let dictionaryKey = self.langCode + "TranslateLanguage"
         self.userDefaults.setValue(newLang, forKey: dictionaryKey)
 
+        self.stateManager.handleDownloadAction(key: self.langCode)
         self.tabBarController?.selectedIndex = 0
         NotificationCenter.default.post(name: NSNotification.Name("NavigateToDownloadScreen"), object: nil)
       }
