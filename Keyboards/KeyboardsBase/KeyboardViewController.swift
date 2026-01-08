@@ -404,6 +404,51 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  func getEmojiAutoSuggestionsPatternMatching(for word: String) {
+    let emojisToDisplay = LanguageDBManager.shared.queryEmojisPatternMatching(of: word.lowercased())
+
+    if !emojisToDisplay[0].isEmpty {
+      emojisToDisplayArray = [String]()
+      currentEmojiTriggerWord = ":" + word.lowercased()
+
+      if !emojisToDisplay[2].isEmpty && DeviceType.isPad {
+        for i in 0 ..< 3 {
+          emojisToDisplayArray.append(emojisToDisplay[i])
+        }
+        autoAction2Visible = false
+        emojisToShow = .three
+
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          padEmojiDivider0.backgroundColor = specialKeyColor
+          padEmojiDivider1.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        }
+        conditionallyHideEmojiDividers()
+      } else if !emojisToDisplay[1].isEmpty {
+        for i in 0 ..< 2 {
+          emojisToDisplayArray.append(emojisToDisplay[i])
+        }
+        autoAction2Visible = false
+        emojisToShow = .two
+
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          phoneEmojiDivider.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        }
+        conditionallyHideEmojiDividers()
+      } else {
+        emojisToDisplayArray.append(emojisToDisplay[0])
+
+        emojisToShow = .one
+      }
+    } else {
+      emojisToShow = .zero
+    }
+  }
+
   /// Generates an array of the three autocomplete words.
   func getAutocompletions() {
     completionWords = [" ", " ", " "]
@@ -633,12 +678,14 @@ class KeyboardViewController: UIInputViewController {
     autoActionAnnotationSeparators.forEach { $0.removeFromSuperview() }
     autoActionAnnotationSeparators.removeAll()
 
-    if autoActionState == .suggest {
+    if commandState == .colonToEmoji {
+      getEmojiAutoSuggestionsPatternMatching(for: colonSearchString)
+    } else if autoActionState == .suggest {
       getAutosuggestions()
     } else {
       getAutocompletions()
     }
-    if commandState == .idle {
+    if [.idle, .colonToEmoji].contains(commandState) {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: pluralKey)
@@ -841,6 +888,16 @@ class KeyboardViewController: UIInputViewController {
       currentPrefix = (proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? "") + " "
       previousWord = ""
       allowUndo = false
+    }
+
+    if commandState == .colonToEmoji {
+      for _ in 0 ... colonSearchString.count {
+        proxy.deleteBackward()
+      }
+      proxy.insertText(keyPressed.titleLabel?.text ?? "")
+      commandState = .idle
+      loadKeys()
+      return
     }
 
     clearPrefixFromTextFieldProxy()
@@ -2330,6 +2387,17 @@ class KeyboardViewController: UIInputViewController {
 
   }
 
+  func colonToEmojiIsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      let dictionaryKey = langCode + "ColonToEmoji"
+
+      return userDefaults.bool(forKey: dictionaryKey)
+    } else {
+      return true // return the default value
+    }
+  }
+
   // MARK: Button Actions
 
   /// Triggers actions based on the press of a key.
@@ -2716,6 +2784,15 @@ class KeyboardViewController: UIInputViewController {
           pastStringInTextProxy = ""
         }
 
+        if commandState == .colonToEmoji {
+          if !colonSearchString.isEmpty {
+            colonSearchString.removeLast()
+          } else {
+            commandState = .idle
+            loadKeys()
+          }
+        }
+
         handleDeleteButtonPressed()
         autoCapAtStartOfProxy()
 
@@ -2870,7 +2947,20 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .normal
         loadKeys()
       }
-      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+
+      if keyToDisplay == ":" && commandState == .idle && colonToEmojiIsEnabled() {
+        commandState = .colonToEmoji
+        colonSearchString = ""
+      } else if commandState == .colonToEmoji {
+        if keyToDisplay.rangeOfCharacter(from: CharacterSet.alphanumerics) != nil {
+          colonSearchString += keyToDisplay
+        } else {
+          commandState = .idle
+          loadKeys()
+        }
+      }
+
+      if [.idle, .selectCommand, .alreadyPlural, .invalid, .colonToEmoji].contains(commandState) {
         proxy.insertText(keyToDisplay)
       } else {
         if let currentText = commandBar.text {
