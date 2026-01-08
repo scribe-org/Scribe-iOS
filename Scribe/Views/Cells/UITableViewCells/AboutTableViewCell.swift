@@ -59,6 +59,7 @@ final class AboutTableViewCell: UITableViewCell {
 
     if let icon = section.imageString {
       iconImageView.image = UIImage.availableIconImage(with: icon)
+      iconImageView.contentMode = .scaleAspectFit
     } else {
       iconImageView.image = nil
     }
