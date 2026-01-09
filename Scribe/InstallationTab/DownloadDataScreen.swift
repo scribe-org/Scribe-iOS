@@ -120,6 +120,13 @@ struct EmptyStateView: View {
     value: "Install keyboards",
     comment: "")
 
+  func openSettingsApp() {
+      guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+          return
+      }
+      UIApplication.shared.open(settingsURL)
+  }
+
   var body: some View {
     VStack(alignment: .leading, spacing: 24) {
       Text(noKeyboardText)
@@ -129,7 +136,7 @@ struct EmptyStateView: View {
         .background(Color(.systemBackground))
         .cornerRadius(12)
 
-      CTAButton(title: installText, action: {})
+      CTAButton(title: installText, action: {openSettingsApp()})
     }
     .padding(.horizontal, 16)
   }
@@ -272,7 +279,7 @@ struct LanguageListView: View {
 
 struct DownloadDataScreen: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
-  let languages = SettingsTableData.getInstalledKeyboardsSections()
+  @State private var languages = SettingsTableData.getInstalledKeyboardsSections()
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
@@ -281,6 +288,10 @@ struct DownloadDataScreen: View {
       }
       .padding()
       .background(Color(UIColor.scribeAppBackground))
+    }
+    .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+      // Refresh when returning from Settings
+      languages = SettingsTableData.getInstalledKeyboardsSections()
     }
   }
 }
