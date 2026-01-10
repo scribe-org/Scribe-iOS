@@ -90,7 +90,7 @@ extension TableViewTemplateViewController {
     let section = dataSet[indexPath.section]
     let setting = section.section[indexPath.row]
 
-    cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting)
+    cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting, parentSection: self.parentSection)
 
     let isFirstRow = indexPath.row == 0
     let isLastRow = indexPath.row == section.section.count - 1

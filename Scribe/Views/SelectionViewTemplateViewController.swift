@@ -21,6 +21,7 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   private var langCode: String = "de"
+  @ObservedObject private var stateManager = DownloadStateManager.shared
 
   // MARK: Functions
 
@@ -39,7 +40,11 @@ final class SelectionViewTemplateViewController: BaseTableViewController {
     self.parentSection = parentSection
     self.langCode = langCode
 
-    title = parentSection.sectionTitle
+    title = NSLocalizedString(
+    "i18n.app.settings.keyboard.translation.select_source.title",
+    value: "Translation language",
+    comment: ""
+  )
   }
 }
 
@@ -93,10 +98,25 @@ extension SelectionViewTemplateViewController {
   }
 
   private func showPopup(oldLang: String, newLang: String, oldIndexPath: IndexPath?, newIndexPath: IndexPath, tableView: UITableView) {
-    let oldLangName = getKeyInDict(givenValue: oldLang, dict: languagesAbbrDict)
-    let newLangName = getKeyInDict(givenValue: newLang, dict: languagesAbbrDict)
+    let oldSourceLanguage = getKeyInDict(givenValue: oldLang, dict: languagesAbbrDict)
+    let newSourceLanguage = getKeyInDict(givenValue: newLang, dict: languagesAbbrDict)
 
-    let infoText = NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.download_warning", value: "You've changed your source translation language. Would you like to download new data so that you can translate from \(newLangName)?", comment: "")
+    let infoText = NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.download_warning", value: "You've changed your source translation language. Would you like to download new data so that you can translate from {source_language}?", comment: "")
+
+    let changeButtonText = NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.keep_source_language", value: "Keep {source_language}", comment: "")
+
+    let confirmButtonText = NSLocalizedString("i18n.app._global.download_data", value: "Download data", comment: "")
+
+    let localizedOldSourceLanguage = NSLocalizedString(
+          "i18n.app._global." + oldSourceLanguage.lowercased(),
+          value: oldSourceLanguage,
+          comment: ""
+        )
+    let localizedNewSourceLanguage = NSLocalizedString(
+          "i18n.app._global." + newSourceLanguage.lowercased(),
+          value: newSourceLanguage,
+          comment: ""
+        )
 
     func onKeep() {
         // Keep old language - revert and dismiss.
@@ -108,19 +128,20 @@ extension SelectionViewTemplateViewController {
     }
 
     func confirmDownload() {
-        // Download data - save new language.
-        self.dismiss(animated: true) {
-            let dictionaryKey = self.langCode + "TranslateLanguage"
-            self.userDefaults.setValue(newLang, forKey: dictionaryKey)
+      self.dismiss(animated: true) {
+        let dictionaryKey = self.langCode + "TranslateLanguage"
+        self.userDefaults.setValue(newLang, forKey: dictionaryKey)
 
-            self.navigationController?.popViewController(animated: true)
-            }
+        self.stateManager.handleDownloadAction(key: self.langCode)
+        self.tabBarController?.selectedIndex = 0
+        NotificationCenter.default.post(name: NSNotification.Name("NavigateToDownloadScreen"), object: nil)
+      }
     }
 
     let popupView = ConfirmTranslationSource(
-        infoText: infoText,
-        changeButtonText: NSLocalizedString("i18n.app.settings.keyboard.translation.change_source_tooltip.keep_source_language", value: "Keep \(oldLangName)", comment: ""),
-        confirmButtonText: NSLocalizedString("i18n.app._global.download_data", value: "Download data", comment: ""),
+        infoText: infoText.replacingOccurrences(of: "{source_language}", with: localizedNewSourceLanguage).replacingOccurrences(of: "{source_language}", with: localizedNewSourceLanguage),
+        changeButtonText: changeButtonText.replacingOccurrences(of: "{source_language}", with: localizedOldSourceLanguage),
+        confirmButtonText: confirmButtonText,
         onDismiss: { onKeep() },
         onChange: { onKeep()},
         onConfirm: { confirmDownload() }
