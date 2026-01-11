@@ -2358,7 +2358,7 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "DoubleSpacePeriods"
 
-      return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
     } else {
       return true // return the default value
     }
@@ -2369,7 +2369,7 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "EmojiAutosuggest"
 
-      return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
     } else {
       return true // return the default value
     }
@@ -2392,7 +2392,7 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "ColonToEmoji"
 
-      return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
     } else {
       return true // return the default value
     }
