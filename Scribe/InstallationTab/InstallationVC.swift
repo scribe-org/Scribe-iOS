@@ -451,7 +451,7 @@ extension InstallationVC {
 
     var translateData = SettingsTableData.translateLangSettingsData
 
-    // Remove the current keyboard language from translation options
+    // Remove the current keyboard language from translation options.
     if let langCodeIndex = translateData[0].section.firstIndex(where: { s in
       s.sectionState == .specificLang(languageCode)
     }) {
@@ -471,7 +471,7 @@ extension InstallationVC {
     selectionVC.configureTable(for: translateData, parentSection: parentSection, langCode: languageCode)
     selectionVC.edgesForExtendedLayout = .all
 
-    // Copy navigation bar appearance from Settings tab
+    // Copy navigation bar appearance from Settings tab.
     if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
       self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
       self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
@@ -489,10 +489,10 @@ extension InstallationVC {
     super.viewDidAppear(animated)
 
     if let tabBar = self.tabBarController?.tabBar {
-      // Remove existing gesture recognizers to avoid duplicates
+      // Remove existing gesture recognizers to avoid duplicates.
       tabBar.gestureRecognizers?.forEach { tabBar.removeGestureRecognizer($0) }
 
-      // Add tap gesture recognizer
+      // Add tap gesture recognizer.
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTabBarTap(_:)))
       tapGesture.cancelsTouchesInView = false
       tabBar.addGestureRecognizer(tapGesture)
@@ -504,14 +504,14 @@ extension InstallationVC {
 
     let location = gesture.location(in: tabBar)
 
-    // Calculate which tab was tapped
+    // Calculate which tab was tapped.
     let tabWidth = tabBar.bounds.width / CGFloat(tabBar.items?.count ?? 1)
     let tappedIndex = Int(location.x / tabWidth)
 
-    // If Installation tab (index 0) was tapped and we're already on it
+    // If Installation tab (index 0) was tapped and we're already on it.
     if tappedIndex == 0 && self.tabBarController?.selectedIndex == 0 {
       if let navController = self.navigationController,
-         navController.viewControllers.count > 1 {
+        navController.viewControllers.count > 1 {
         navController.popToRootViewController(animated: true)
         navController.setNavigationBarHidden(true, animated: true)
       }

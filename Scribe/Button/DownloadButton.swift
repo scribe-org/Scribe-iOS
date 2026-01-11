@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /**
- * Download Button for each language.
+ * Download Button for making calls for updated data for each language.
  */
 
 import SwiftUI
 
-// Define button states
 enum ButtonState {
   case ready
   case downloading

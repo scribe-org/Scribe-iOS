@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /**
- * Download data screen.
+ * Download data UI for getting new data for keyboards.
  */
 
 import SwiftUI
