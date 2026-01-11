@@ -168,7 +168,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // default value
       }
 
     case .toggleAccentCharacters:
@@ -176,7 +176,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // default value
       }
 
     case .doubleSpacePeriods:
@@ -184,7 +184,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // default value
       }
 
     case .autosuggestEmojis:
@@ -192,7 +192,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // default value
       }
 
     case .toggleWordForWordDeletion:
@@ -200,7 +200,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false // Default value
+        toggleSwitch.isOn = false // default value
       }
 
     case .colonToEmoji:
@@ -208,7 +208,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true // Default value
+        toggleSwitch.isOn = true // default value
       }
 
     case .none: break
