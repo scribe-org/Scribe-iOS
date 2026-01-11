@@ -100,6 +100,9 @@ extension AboutViewController {
     case .mastodon:
       openURLString(urlString: "https://wikis.world/@scribe", withEncoding: false)
 
+    case .scribeApps:
+      openURLString(urlString: "https://scri.be/", withEncoding: false)
+
     case .wikimedia:
       if let viewController = storyboard?.instantiateViewController(
         identifier: "InformationScreenVC"

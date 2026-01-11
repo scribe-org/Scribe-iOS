@@ -869,6 +869,7 @@
 		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
+		E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */; };
 		E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
 		E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		E96111482F04EC6B001E4F95 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
@@ -1216,7 +1217,7 @@
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
 		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
-		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
+		E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadStateManager.swift; sourceTree = "<group>"; };
 		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
 		E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataScreen.swift; sourceTree = "<group>"; };
@@ -1384,6 +1385,7 @@
 			isa = PBXGroup;
 			children = (
 				E96111472F04EC62001E4F95 /* InstallationDownload.swift */,
+				E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */,
 				E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */,
 				38BD213522D5907F00C6795D /* InstallationVC.swift */,
 			);
@@ -2564,6 +2566,7 @@
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
 				147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */,
 				1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */,
+				E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */,
 				E996498A2E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */,
