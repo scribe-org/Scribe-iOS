@@ -12,19 +12,22 @@ class EmojiQueryTests: XCTestCase {
         let keyword = "happ"
         let results = LanguageDBManager.shared.queryEmojisPatternMatching(of: keyword)
 
-        XCTAssertEqual(results.count, 3, "Should always return 3 elements (including empty strings)")
+        XCTAssertEqual(results.count, 6, "Should always return 6 elements (including empty strings)")
     }
 
     func testQueryEmojisPatternMatchingWithEmptyKeyword() {
         let results = LanguageDBManager.shared.queryEmojisPatternMatching(of: "")
-        XCTAssertEqual(results.count, 3)
+        XCTAssertEqual(results.count, 6)
     }
 
     func testQueryEmojisPatternMatchingWithNonExistentKeyword() {
         let results = LanguageDBManager.shared.queryEmojisPatternMatching(of: "nonexistentkeyword12345")
-        XCTAssertEqual(results.count, 3)
+        XCTAssertEqual(results.count, 6)
         XCTAssertEqual(results[0], "")
         XCTAssertEqual(results[1], "")
         XCTAssertEqual(results[2], "")
+        XCTAssertEqual(results[3], "")
+        XCTAssertEqual(results[4], "")
+        XCTAssertEqual(results[5], "")
     }
 }

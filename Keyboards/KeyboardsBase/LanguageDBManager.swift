@@ -294,19 +294,21 @@ extension LanguageDBManager {
         for row in rows {
           for col in ["emoji_keyword_0", "emoji_keyword_1", "emoji_keyword_2"] {
             if let val = row[col] as? String, !val.isEmpty {
-              outputValues.append(val)
-              if outputValues.count == 3 { return }
+              if !outputValues.contains(val) {
+                outputValues.append(val)
+              }
+              if outputValues.count == 6 { return }
             }
           }
         }
       }
     } catch {}
 
-    while outputValues.count < 3 {
+    while outputValues.count < 6 {
       outputValues.append("")
     }
 
-    return Array(outputValues.prefix(3))
+    return Array(outputValues.prefix(6))
   }
 
   /// Query the noun form of word in `nonuns`.

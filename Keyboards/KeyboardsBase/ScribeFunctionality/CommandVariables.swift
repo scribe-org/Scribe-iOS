@@ -14,11 +14,14 @@ var autoAction0Visible = true
 var autoAction2Visible = true
 
 /// States of the emoji display corresponding to the number to show.
-enum EmojisToShow {
-  case zero
-  case one
-  case two
-  case three
+enum EmojisToShow: Int {
+  case zero = 0
+  case one = 1
+  case two = 2
+  case three = 3
+  case four = 4
+  case five = 5
+  case six = 6
 }
 
 var emojisToShow: EmojisToShow = .zero
