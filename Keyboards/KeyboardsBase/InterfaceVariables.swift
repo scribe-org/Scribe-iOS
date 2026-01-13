@@ -96,6 +96,7 @@ enum CommandState {
   case alreadyPlural
   case invalid
   case displayInformation
+  case colonToEmoji
 }
 
 /// States of the keyboard corresponding to which auto actions should be presented.

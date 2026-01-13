@@ -268,6 +268,49 @@ extension LanguageDBManager {
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
   }
 
+  /// Query emojis of word in `emoji_keywords` using pattern matching.
+  func queryEmojisPatternMatching(of word: String) -> [String] {
+    var outputValues = [String]()
+    let query = """
+    SELECT
+      emoji_keyword_0, emoji_keyword_1, emoji_keyword_2
+
+    FROM
+      emoji_keywords
+
+    WHERE
+      word LIKE ?
+
+    ORDER BY
+      LENGTH(word) ASC
+
+    LIMIT
+      3
+    """
+    let args = StatementArguments(["\(word.lowercased())%"])
+    do {
+      try database?.read { db in
+        let rows = try Row.fetchAll(db, sql: query, arguments: args)
+        for row in rows {
+          for col in ["emoji_keyword_0", "emoji_keyword_1", "emoji_keyword_2"] {
+            if let val = row[col] as? String, !val.isEmpty {
+              if !outputValues.contains(val) {
+                outputValues.append(val)
+              }
+              if outputValues.count == 6 { return }
+            }
+          }
+        }
+      }
+    } catch {}
+
+    while outputValues.count < 6 {
+      outputValues.append("")
+    }
+
+    return Array(outputValues.prefix(6))
+  }
+
   /// Query the noun form of word in `nonuns`.
   func queryNounForm(of word: String) -> [String] {
     let query = """

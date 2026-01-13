@@ -404,6 +404,53 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  func getEmojiAutoSuggestionsPatternMatching(for word: String) {
+    let emojisToDisplay = LanguageDBManager.shared.queryEmojisPatternMatching(of: word.lowercased())
+
+    emojisToDisplayArray = [String]()
+    if !emojisToDisplay[0].isEmpty {
+      currentEmojiTriggerWord = ":" + word.lowercased()
+
+      for emoji in emojisToDisplay where !emoji.isEmpty {
+        emojisToDisplayArray.append(emoji)
+      }
+
+      switch emojisToDisplayArray.count {
+      case 1: emojisToShow = .one
+      case 2: emojisToShow = .two
+      case 3: emojisToShow = .three
+      case 4: emojisToShow = .four
+      case 5: emojisToShow = .five
+      case 6: emojisToShow = .six
+      default: emojisToShow = .zero
+      }
+
+      if commandState == .colonToEmoji {
+        autoAction0Visible = false
+        autoAction2Visible = false
+      }
+
+      if DeviceType.isPad && emojisToShow.rawValue >= 2 {
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          padEmojiDivider0.backgroundColor = specialKeyColor
+          padEmojiDivider1.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        }
+      } else if DeviceType.isPhone && emojisToShow.rawValue >= 2 {
+        if UITraitCollection.current.userInterfaceStyle == .light {
+          phoneEmojiDivider.backgroundColor = specialKeyColor
+        } else if UITraitCollection.current.userInterfaceStyle == .dark {
+          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        }
+      }
+      conditionallyHideEmojiDividers()
+    } else {
+      emojisToShow = .zero
+    }
+  }
+
   /// Generates an array of the three autocomplete words.
   func getAutocompletions() {
     completionWords = [" ", " ", " "]
@@ -633,12 +680,14 @@ class KeyboardViewController: UIInputViewController {
     autoActionAnnotationSeparators.forEach { $0.removeFromSuperview() }
     autoActionAnnotationSeparators.removeAll()
 
-    if autoActionState == .suggest {
+    if commandState == .colonToEmoji {
+      getEmojiAutoSuggestionsPatternMatching(for: colonSearchString)
+    } else if autoActionState == .suggest {
       getAutosuggestions()
     } else {
       getAutocompletions()
     }
-    if commandState == .idle {
+    if [.idle, .colonToEmoji].contains(commandState) {
       deactivateBtn(btn: translateKey)
       deactivateBtn(btn: conjugateKey)
       deactivateBtn(btn: pluralKey)
@@ -653,144 +702,168 @@ class KeyboardViewController: UIInputViewController {
         hideConjugateAndPluralKeys(state: false)
       }
 
-      if autoAction0Visible {
-        allowUndo = false
-        firstCompletionIsHighlighted = false
-        // Highlight if the current prefix is the first autocompletion.
-        if currentPrefix == completionWords[0] && completionWords[1] != " " {
-          firstCompletionIsHighlighted = true
+      if commandState == .colonToEmoji && emojisToShow != .zero {
+        let emojiButtons: [UIButton]
+        if DeviceType.isPad {
+          emojiButtons = [translateKey, conjugateKey, pluralKey, padEmojiKey0, padEmojiKey1, padEmojiKey2]
+        } else {
+          emojiButtons = [translateKey, conjugateKey, pluralKey, phoneEmojiKey0, phoneEmojiKey1]
         }
+
+        for (index, emoji) in emojisToDisplayArray.enumerated() {
+          if index < emojiButtons.count {
+            let btn = emojiButtons[index]
+            setBtn(btn: btn, color: keyboardBgColor, name: "EmojiKey\(index)", canBeCapitalized: false, isSpecial: false)
+            styleBtn(btn: btn, title: emoji, radius: commandKeyCornerRadius)
+            if DeviceType.isPhone {
+              btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+            } else {
+              btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+            }
+            activateBtn(btn: btn)
+          }
+        }
+        conditionallyHideEmojiDividers()
+      } else {
+        if autoAction0Visible {
+          allowUndo = false
+          firstCompletionIsHighlighted = false
+          // Highlight if the current prefix is the first autocompletion.
+          if currentPrefix == completionWords[0] && completionWords[1] != " " {
+            firstCompletionIsHighlighted = true
+          }
+          setBtn(
+            btn: translateKey,
+            color: firstCompletionIsHighlighted ? keyColor.withAlphaComponent(0.5) : keyboardBgColor,
+            name: "AutoAction0",
+            canBeCapitalized: false,
+            isSpecial: false
+          )
+          styleBtn(
+            btn: translateKey,
+            title: completionWords[0],
+            radius: firstCompletionIsHighlighted ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius
+          )
+          if translateKey.currentTitle != " " {
+            activateBtn(btn: translateKey)
+          }
+          autoActionAnnotation(autoActionWord: completionWords[0], index: 0, KVC: self)
+        }
+
+        // Add the current word being typed to the completion words if there is only one option that's highlighted.
+        if firstCompletionIsHighlighted && completionWords[1] == " " && completionWords[0] != currentPrefix {
+          //        spaceAutoInsertIsPossible = true
+          completionWords[1] = currentPrefix
+        }
+
         setBtn(
-          btn: translateKey,
-          color: firstCompletionIsHighlighted ? keyColor.withAlphaComponent(0.5) : keyboardBgColor,
-          name: "AutoAction0",
+          btn: conjugateKey,
+          color: keyboardBgColor, name: "AutoAction1",
           canBeCapitalized: false,
           isSpecial: false
         )
         styleBtn(
-          btn: translateKey,
-          title: completionWords[0],
-          radius: firstCompletionIsHighlighted ? commandKeyCornerRadius / 2.5 : commandKeyCornerRadius
-        )
-        if translateKey.currentTitle != " " {
-          activateBtn(btn: translateKey)
-        }
-        autoActionAnnotation(autoActionWord: completionWords[0], index: 0, KVC: self)
-      }
-
-      // Add the current word being typed to the completion words if there is only one option that's highlighted.
-      if firstCompletionIsHighlighted && completionWords[1] == " " && completionWords[0] != currentPrefix {
-//        spaceAutoInsertIsPossible = true
-        completionWords[1] = currentPrefix
-      }
-
-      setBtn(
-        btn: conjugateKey,
-        color: keyboardBgColor, name: "AutoAction1",
-        canBeCapitalized: false,
-        isSpecial: false
-      )
-      styleBtn(
-        btn: conjugateKey,
-        title: !autoAction0Visible ? completionWords[0] : completionWords[1],
-        radius: commandKeyCornerRadius
-      )
-      if conjugateKey.currentTitle != " " {
-        activateBtn(btn: conjugateKey)
-      }
-      autoActionAnnotation(
-        autoActionWord: !autoAction0Visible ? completionWords[0] : completionWords[1], index: 1, KVC: self
-      )
-
-      if autoAction2Visible && emojisToShow == .zero {
-        setBtn(
-          btn: pluralKey,
-          color: keyboardBgColor,
-          name: "AutoAction2",
-          canBeCapitalized: false,
-          isSpecial: false
-        )
-        styleBtn(
-          btn: pluralKey,
-          title: !autoAction0Visible ? completionWords[1] : completionWords[2],
+          btn: conjugateKey,
+          title: !autoAction0Visible ? completionWords[0] : completionWords[1],
           radius: commandKeyCornerRadius
         )
-        if pluralKey.currentTitle != " " {
-          activateBtn(btn: pluralKey)
+        if conjugateKey.currentTitle != " " {
+          activateBtn(btn: conjugateKey)
         }
         autoActionAnnotation(
-          autoActionWord: !autoAction0Visible ? completionWords[1] : completionWords[2], index: 2, KVC: self
+          autoActionWord: !autoAction0Visible ? completionWords[0] : completionWords[1], index: 1, KVC: self
         )
 
-        conditionallyHideEmojiDividers()
-      } else if autoAction2Visible && emojisToShow == .one {
-        setBtn(
-          btn: pluralKey,
-          color: keyboardBgColor,
-          name: "AutoAction2",
-          canBeCapitalized: false,
-          isSpecial: false
-        )
-        styleBtn(
-          btn: pluralKey,
-          title: emojisToDisplayArray[0],
-          radius: commandKeyCornerRadius
-        )
-        if DeviceType.isPhone {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
-        } else if DeviceType.isPad {
-          pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+        if autoAction2Visible && emojisToShow == .zero {
+          setBtn(
+            btn: pluralKey,
+            color: keyboardBgColor,
+            name: "AutoAction2",
+            canBeCapitalized: false,
+            isSpecial: false
+          )
+          styleBtn(
+            btn: pluralKey,
+            title: !autoAction0Visible ? completionWords[1] : completionWords[2],
+            radius: commandKeyCornerRadius
+          )
+          if pluralKey.currentTitle != " " {
+            activateBtn(btn: pluralKey)
+          }
+          autoActionAnnotation(
+            autoActionWord: !autoAction0Visible ? completionWords[1] : completionWords[2], index: 2, KVC: self
+          )
+
+          conditionallyHideEmojiDividers()
+        } else if autoAction2Visible && emojisToShow == .one {
+          setBtn(
+            btn: pluralKey,
+            color: keyboardBgColor,
+            name: "AutoAction2",
+            canBeCapitalized: false,
+            isSpecial: false
+          )
+          styleBtn(
+            btn: pluralKey,
+            title: emojisToDisplayArray[0],
+            radius: commandKeyCornerRadius
+          )
+          if DeviceType.isPhone {
+            pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+          } else if DeviceType.isPad {
+            pluralKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+          }
+          activateBtn(btn: pluralKey)
+
+          conditionallyHideEmojiDividers()
+        } else if !autoAction2Visible && emojisToShow.rawValue >= 2 {
+          if DeviceType.isPhone || emojisToShow == .two {
+            setBtn(
+              btn: phoneEmojiKey0,
+              color: keyboardBgColor,
+              name: "EmojiKey0",
+              canBeCapitalized: false,
+              isSpecial: false
+            )
+            setBtn(
+              btn: phoneEmojiKey1,
+              color: keyboardBgColor,
+              name: "EmojiKey1",
+              canBeCapitalized: false,
+              isSpecial: false
+            )
+            styleBtn(btn: phoneEmojiKey0, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
+            styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
+
+            if DeviceType.isPhone {
+              phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+              phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+            } else if DeviceType.isPad {
+              phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+              phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
+            }
+
+            activateBtn(btn: phoneEmojiKey0)
+            activateBtn(btn: phoneEmojiKey1)
+          } else if DeviceType.isPad && emojisToShow.rawValue >= 3 {
+            setBtn(btn: padEmojiKey0, color: keyboardBgColor, name: "EmojiKey0", canBeCapitalized: false, isSpecial: false)
+            setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canBeCapitalized: false, isSpecial: false)
+            setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canBeCapitalized: false, isSpecial: false)
+            styleBtn(btn: padEmojiKey0, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
+            styleBtn(btn: padEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
+            styleBtn(btn: padEmojiKey2, title: emojisToDisplayArray[2], radius: commandKeyCornerRadius)
+
+            padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
+            padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
+            padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
+
+            activateBtn(btn: padEmojiKey0)
+            activateBtn(btn: padEmojiKey1)
+            activateBtn(btn: padEmojiKey2)
+          }
+
+          conditionallyHideEmojiDividers()
         }
-        activateBtn(btn: pluralKey)
-
-        conditionallyHideEmojiDividers()
-      } else if !autoAction2Visible && emojisToShow == .two {
-        setBtn(
-          btn: phoneEmojiKey0,
-          color: keyboardBgColor,
-          name: "EmojiKey0",
-          canBeCapitalized: false,
-          isSpecial: false
-        )
-        setBtn(
-          btn: phoneEmojiKey1,
-          color: keyboardBgColor,
-          name: "EmojiKey1",
-          canBeCapitalized: false,
-          isSpecial: false
-        )
-        styleBtn(btn: phoneEmojiKey0, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
-        styleBtn(btn: phoneEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
-
-        if DeviceType.isPhone {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
-        } else if DeviceType.isPad {
-          phoneEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
-          phoneEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
-        }
-
-        activateBtn(btn: phoneEmojiKey0)
-        activateBtn(btn: phoneEmojiKey1)
-
-        conditionallyHideEmojiDividers()
-      } else if !autoAction2Visible && emojisToShow == .three {
-        setBtn(btn: padEmojiKey0, color: keyboardBgColor, name: "EmojiKey0", canBeCapitalized: false, isSpecial: false)
-        setBtn(btn: padEmojiKey1, color: keyboardBgColor, name: "EmojiKey1", canBeCapitalized: false, isSpecial: false)
-        setBtn(btn: padEmojiKey2, color: keyboardBgColor, name: "EmojiKey2", canBeCapitalized: false, isSpecial: false)
-        styleBtn(btn: padEmojiKey0, title: emojisToDisplayArray[0], radius: commandKeyCornerRadius)
-        styleBtn(btn: padEmojiKey1, title: emojisToDisplayArray[1], radius: commandKeyCornerRadius)
-        styleBtn(btn: padEmojiKey2, title: emojisToDisplayArray[2], radius: commandKeyCornerRadius)
-
-        padEmojiKey0.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
-        padEmojiKey1.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
-        padEmojiKey2.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarEmojiKeyFont)
-
-        activateBtn(btn: padEmojiKey0)
-        activateBtn(btn: padEmojiKey1)
-        activateBtn(btn: padEmojiKey2)
-
-        conditionallyHideEmojiDividers()
       }
 
       translateKey.layer.shadowColor = UIColor.clear.cgColor
@@ -841,6 +914,16 @@ class KeyboardViewController: UIInputViewController {
       currentPrefix = (proxy.documentContextBeforeInput?.components(separatedBy: " ").secondToLast() ?? "") + " "
       previousWord = ""
       allowUndo = false
+    }
+
+    if commandState == .colonToEmoji {
+      for _ in 0 ... colonSearchString.count {
+        proxy.deleteBackward()
+      }
+      proxy.insertText(keyPressed.titleLabel?.text ?? "")
+      commandState = .idle
+      loadKeys()
+      return
     }
 
     clearPrefixFromTextFieldProxy()
@@ -2301,7 +2384,7 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "DoubleSpacePeriods"
 
-      return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
     } else {
       return true // return the default value
     }
@@ -2312,7 +2395,7 @@ class KeyboardViewController: UIInputViewController {
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
       let dictionaryKey = langCode + "EmojiAutosuggest"
 
-      return userDefaults.bool(forKey: dictionaryKey)
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
     } else {
       return true // return the default value
     }
@@ -2328,6 +2411,17 @@ class KeyboardViewController: UIInputViewController {
       return false // return the default value
     }
 
+  }
+
+  func colonToEmojiIsEnabled() -> Bool {
+    let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      let dictionaryKey = langCode + "ColonToEmoji"
+
+      return userDefaults.object(forKey: dictionaryKey) as? Bool ?? true
+    } else {
+      return true // return the default value
+    }
   }
 
   // MARK: Button Actions
@@ -2630,30 +2724,8 @@ class KeyboardViewController: UIInputViewController {
         loadKeys()
       }
 
-    case "EmojiKey0":
-      if DeviceType.isPhone || emojisToShow == .two {
-        executeAutoAction(keyPressed: phoneEmojiKey0)
-      } else if DeviceType.isPad {
-        executeAutoAction(keyPressed: padEmojiKey0)
-      }
-      if shiftButtonState == .normal {
-        shiftButtonState = .shift
-      }
-      loadKeys()
-
-    case "EmojiKey1":
-      if DeviceType.isPhone || emojisToShow == .two {
-        executeAutoAction(keyPressed: phoneEmojiKey1)
-      } else if DeviceType.isPad {
-        executeAutoAction(keyPressed: padEmojiKey1)
-      }
-      if shiftButtonState == .normal {
-        shiftButtonState = .shift
-      }
-      loadKeys()
-
-    case "EmojiKey2":
-      executeAutoAction(keyPressed: padEmojiKey2)
+    case "EmojiKey0", "EmojiKey1", "EmojiKey2", "EmojiKey3", "EmojiKey4", "EmojiKey5":
+      executeAutoAction(keyPressed: sender)
       if shiftButtonState == .normal {
         shiftButtonState = .shift
       }
@@ -2714,6 +2786,15 @@ class KeyboardViewController: UIInputViewController {
         } else if keyboardState == .letters && shiftButtonState == .normal && proxy.documentContextBeforeInput == nil {
           autoCapAtStartOfProxy()
           pastStringInTextProxy = ""
+        }
+
+        if commandState == .colonToEmoji {
+          if !colonSearchString.isEmpty {
+            colonSearchString.removeLast()
+          } else {
+            commandState = .idle
+            loadKeys()
+          }
         }
 
         handleDeleteButtonPressed()
@@ -2870,7 +2951,20 @@ class KeyboardViewController: UIInputViewController {
         shiftButtonState = .normal
         loadKeys()
       }
-      if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+
+      if keyToDisplay == ":" && commandState == .idle && colonToEmojiIsEnabled() {
+        commandState = .colonToEmoji
+        colonSearchString = ""
+      } else if commandState == .colonToEmoji {
+        if keyToDisplay.rangeOfCharacter(from: CharacterSet.alphanumerics) != nil {
+          colonSearchString += keyToDisplay
+        } else {
+          commandState = .idle
+          loadKeys()
+        }
+      }
+
+      if [.idle, .selectCommand, .alreadyPlural, .invalid, .colonToEmoji].contains(commandState) {
         proxy.insertText(keyToDisplay)
       } else {
         if let currentText = commandBar.text {
@@ -2887,7 +2981,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Reset emoji repeat functionality.
     if !(
-      ["EmojiKey0", "EmojiKey1", "EmojiKey2"].contains(originalKey)
+      ["EmojiKey0", "EmojiKey1", "EmojiKey2", "EmojiKey3", "EmojiKey4", "EmojiKey5"].contains(originalKey)
         || (originalKey == "AutoAction2" && emojisToShow == .one)
     ) {
       emojiAutoActionRepeatPossible = false
