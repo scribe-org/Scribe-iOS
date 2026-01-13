@@ -103,12 +103,12 @@ extension TableViewTemplateViewController {
     let section = dataSet[indexPath.section]
     let setting = section.section[indexPath.row]
 
-    // If there's no description, return a fixed small height
+    // If there's no description, return a fixed small height.
     guard let description = setting.shortDescription else {
         return 54.0
     }
 
-    // Calculate available width for text
+    // Calculate available width for text.
     let availableWidth = tableView.bounds.width - 32
 
     let titleFont: UIFont
@@ -122,7 +122,7 @@ extension TableViewTemplateViewController {
       descFont = UIFont.systemFont(ofSize: 14)
     }
 
-    // Calculate actual height needed for title text
+    // Calculate actual height needed for title text.
     let titleHeight = setting.sectionTitle.boundingRect(
       with: CGSize(width: availableWidth, height: .greatestFiniteMagnitude),
       options: .usesLineFragmentOrigin,
@@ -130,7 +130,7 @@ extension TableViewTemplateViewController {
       context: nil
     ).height
 
-    // Calculate actual height needed for description text
+    // Calculate actual height needed for description text.
     let descHeight = description.boundingRect(
       with: CGSize(width: availableWidth, height: .greatestFiniteMagnitude),
       options: .usesLineFragmentOrigin,
@@ -138,7 +138,7 @@ extension TableViewTemplateViewController {
       context: nil
     ).height
 
-    // Return total height: title + description + padding buffer
+    // Return total height: title + description + padding buffer.
     return ceil(titleHeight + descHeight + 52)
   }
 
