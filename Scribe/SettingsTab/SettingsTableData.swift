@@ -74,10 +74,10 @@ enum SettingsTableData {
           shortDescription: NSLocalizedString("i18n.app.settings.keyboard.functionality.auto_suggest_emoji_description", value: "Turn on emoji suggestions and completions for more expressive typing.", comment: "")
         ),
         Section(
-          sectionTitle: NSLocalizedString("i18n.app.word_for_word", value: "Word for word deletion on long press", comment: ""),
+          sectionTitle: NSLocalizedString("i18n.app.settings.keyboard.functionality.delete_word_by_word", value: "Word for word deletion on long press", comment: ""),
           hasToggle: true,
           sectionState: .none(.toggleWordForWordDeletion),
-          shortDescription: NSLocalizedString("i18n.app.word_for_word.description", value: "Word for word deletion.", comment: "")
+          shortDescription: NSLocalizedString("i18n.app.settings.keyboard.functionality.delete_word_by_word_description", value: "Delete text word by word when the delete key is pressed and held.", comment: "")
         )
       ],
       hasDynamicData: nil

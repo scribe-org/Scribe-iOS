@@ -19,10 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="424" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-83-3eC" userLabel="TitleLabelPad">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-83-3eC" userLabel="TitleLabelPad">
                         <rect key="frame" x="24.000000000000004" y="12" width="58.333333333333343" height="42"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="42" id="trX-iS-h3L"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="trX-iS-h3L"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                         <color key="textColor" name="keyChar"/>
@@ -44,7 +44,7 @@
                             <action selector="switchDidChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9ge-t9-By6"/>
                         </connections>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-In-Sru" userLabel="DescriptionLabelPad">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-In-Sru" userLabel="DescriptionLabelPad">
                         <rect key="frame" x="24" y="62" width="376" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="h5P-Y8-JKH"/>
@@ -53,10 +53,10 @@
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-w6-QQi" userLabel="TitleLabelPhone">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-w6-QQi" userLabel="TitleLabelPhone">
                         <rect key="frame" x="15.999999999999996" y="8" width="40.666666666666657" height="28"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="28" id="FRe-ww-FJ2"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="FRe-ww-FJ2"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <color key="textColor" name="keyChar"/>
@@ -87,7 +87,7 @@
                             <action selector="switchDidChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2aX-9q-Xm3"/>
                         </connections>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-gs-N4L" userLabel="DescriptionLabelPhone">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-gs-N4L" userLabel="DescriptionLabelPhone">
                         <rect key="frame" x="16" y="44" width="392" height="88"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ynu-Q0-G95"/>
@@ -132,6 +132,8 @@
                     <constraint firstItem="iEK-aH-VJH" firstAttribute="centerY" secondItem="Y7l-w6-QQi" secondAttribute="centerY" id="pgQ-hV-7VG"/>
                     <constraint firstAttribute="trailing" secondItem="Z37-gs-N4L" secondAttribute="trailing" constant="16" id="v6o-1J-9JP"/>
                     <constraint firstAttribute="trailing" secondItem="SWG-JP-Qz7" secondAttribute="trailing" constant="16" id="vSZ-Y9-0VH"/>
+                    <constraint firstItem="FbK-yb-cab" firstAttribute="leading" secondItem="XI7-83-3eC" secondAttribute="trailing" constant="16" id="mN7-pQ-8Kx"/>
+                    <constraint firstItem="iEK-aH-VJH" firstAttribute="leading" secondItem="Y7l-w6-QQi" secondAttribute="trailing" constant="16" id="oP9-rS-4Lm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

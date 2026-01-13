@@ -99,14 +99,48 @@ extension TableViewTemplateViewController {
     return cell
   }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let section = tableData[indexPath.section]
-        let setting = section.section[indexPath.row]
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let section = dataSet[indexPath.section]
+    let setting = section.section[indexPath.row]
 
-        // If has description, give it more height.
-        let hasDescription = setting.shortDescription != nil
-        return hasDescription ? 100.0 : 60.0
+    // If there's no description, return a fixed small height.
+    guard let description = setting.shortDescription else {
+        return 54.0
     }
+
+    // Calculate available width for text.
+    let availableWidth = tableView.bounds.width - 32
+
+    let titleFont: UIFont
+    let descFont: UIFont
+
+    if DeviceType.isPad {
+      titleFont = UIFont.systemFont(ofSize: 24, weight: .medium)
+      descFont = UIFont.systemFont(ofSize: 18)
+    } else {
+      titleFont = UIFont.systemFont(ofSize: 16, weight: .medium)
+      descFont = UIFont.systemFont(ofSize: 14)
+    }
+
+    // Calculate actual height needed for title text.
+    let titleHeight = setting.sectionTitle.boundingRect(
+      with: CGSize(width: availableWidth, height: .greatestFiniteMagnitude),
+      options: .usesLineFragmentOrigin,
+      attributes: [.font: titleFont],
+      context: nil
+    ).height
+
+    // Calculate actual height needed for description text.
+    let descHeight = description.boundingRect(
+      with: CGSize(width: availableWidth, height: .greatestFiniteMagnitude),
+      options: .usesLineFragmentOrigin,
+      attributes: [.font: descFont],
+      context: nil
+    ).height
+
+    // Return total height: title + description + padding buffer.
+    return ceil(titleHeight + descHeight + 52)
+  }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let tableSection = tableData[indexPath.section]
