@@ -66,6 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if tabBarController.selectedIndex != 0 {
         tabBarController.selectedIndex = 0
       }
+
+      // Pop to root in Installation tab's navigation controller
+      if let navController = tabBarController.viewControllers?[0] as? UINavigationController {
+        navController.popToRootViewController(animated: false)
+      }
     }
   }
 
