@@ -4889,7 +4889,7 @@
 		F786BB3D2F1E8F70003F7505 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ConjugateAppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -4917,7 +4917,7 @@
 		F786BB3E2F1E8F70003F7505 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ConjugateAppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribe/Scribe.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
