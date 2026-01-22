@@ -270,18 +270,18 @@ extension LanguageDBManager {
 
   /// Query the noun form of word in `nonuns`.
   func queryNounForm(of word: String) -> [String] {
+    // Load contract
+    let contract = ContractManager.shared.loadContract(language: getControllerLanguageAbbr())
+
+    // Get column names from contract
+    let singularCol = contract.numbers?.keys.first ?? "singular"
+    let genderCol = contract.genders?.canonical?.first ?? "gender"
+
     let query = """
-    SELECT
-      *
-
-    FROM
-      nouns
-
-    WHERE
-      noun = ?
-      OR noun = ?
-    """
-    let outputCols = ["form"]
+      SELECT * FROM nouns
+      WHERE \(singularCol) = ? OR \(singularCol) = ?
+      """
+    let outputCols = [genderCol]
     let args = [word, word.lowercased()]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))

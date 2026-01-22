@@ -123,91 +123,10 @@
 		38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		5A037FDA2C74D6C800D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FDD2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FDF2C74D6CC00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FEA2C74D6D900D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FEB2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FEC2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FED2C74D6DB00D4AADD /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		5A037FEE2C74D6E200D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FEF2C74D6E300D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF02C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF12C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF32C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF62C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF72C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFE2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A037FFF2C74D70500D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A0380002C74D70600D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A0380012C74D70700D4AADD /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		5A0380022C74D70B00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380032C74D70C00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380042C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380052C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380062C74D70E00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380072C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380082C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		5A03800C2C74D71900D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A03800D2C74D71A00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A03800E2C74D71B00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A03800F2C74D71C00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380102C74D71D00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380112C74D71F00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380122C74D71F00D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380132C74D72000D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380142C74D72100D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380152C74D72200D4AADD /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		5A0380162C74D72600D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A0380172C74D72700D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A0380182C74D72700D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A0380192C74D72800D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801A2C74D72900D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801B2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801C2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801D2C74D72C00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801E2C74D72D00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A03801F2C74D72E00D4AADD /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
-		5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */; };
 		5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */; };
 		5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */; };
 		5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
 		693150472C881DCE005F99E8 /* BaseTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
@@ -294,13 +213,6 @@
 		D12EB9C52C81C10900181765 /* HEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12EB9B92C81C0E700181765 /* HEInterfaceVariables.swift */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D13E0DC92C86530E007F00AF /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E0DC82C86530E007F00AF /* TestExtensions.swift */; };
-		D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		D15E298A29E41BAD006B2C81 /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		D1608668270B6D3C00134D48 /* ESKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D16150FC2E9DBDC500131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
@@ -316,14 +228,6 @@
 		D16151062E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
 		D16151072E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
 		D16151082E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
-		D16151092E9DBE0400131732 /* DELanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298129E41B56006B2C81 /* DELanguageData.sqlite */; };
-		D161510A2E9DBE1400131732 /* FRLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */; };
-		D161510B2E9DBE1D00131732 /* ENLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */; };
-		D161510C2E9DBE2B00131732 /* ITLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */; };
-		D161510D2E9DBE3600131732 /* PTLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */; };
-		D161510E2E9DBE3D00131732 /* RULanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */; };
-		D161510F2E9DBE4500131732 /* ESLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */; };
-		D16151102E9DBE4C00131732 /* SVLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RUKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -772,23 +676,11 @@
 		D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */; };
 		D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */; };
 		D1CDED752A859DDD00098546 /* DAInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */; };
-		D1CDED772A859E4800098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
 		D1CDED792A859FB600098546 /* ENCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED782A859FB600098546 /* ENCommandVariables.swift */; };
 		D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */; };
 		D1CDED7F2A85A05C00098546 /* HECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED7E2A85A05C00098546 /* HECommandVariables.swift */; };
 		D1CDED812A85A12400098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDED832A85A12C00098546 /* NBCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED822A85A12C00098546 /* NBCommandVariables.swift */; };
-		D1CDED842A85AE5800098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED852A85AE5900098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED862A85AE5A00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED872A85AE5A00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED882A85AE5B00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED892A85AE5B00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED8A2A85AE5C00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED8B2A85AE5C00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED8C2A85AE5D00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED8D2A85AE5E00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
-		D1CDED8E2A85AE5E00098546 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
 		D1CDED8F2A85AE6100098546 /* DAInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */; };
 		D1CDED902A85AE6100098546 /* DAInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */; };
 		D1CDED912A85AE6200098546 /* DAInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */; };
@@ -855,24 +747,37 @@
 		D1CDEDDA2A85AE9C00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDB2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
 		D1CDEDDC2A85AE9D00098546 /* NBInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED802A85A12400098546 /* NBInterfaceVariables.swift */; };
-		D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
-		D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1F0367227AAE12200CD7921 /* InterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2492741B31F00705659 /* InterfaceVariables.swift */; };
 		D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2462741B24F00705659 /* CommandVariables.swift */; };
 		E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */; };
 		E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
-		E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		E96111482F04EC6B001E4F95 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
+		E98E74B62F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74B72F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74B82F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74B92F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BA2F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BB2F21C9DA005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BC2F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BD2F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BE2F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74BF2F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74C02F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74C12F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74C22F21C9DB005EEDA3 /* DataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74B52F21C9D2005EEDA3 /* DataContract.swift */; };
+		E98E74C42F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74C52F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74C62F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74C72F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74C82F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74C92F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CA2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CB2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CC2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CD2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CE2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74CF2F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
+		E98E74D02F21CA28005EEDA3 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98E74C32F21CA20005EEDA3 /* ContractManager.swift */; };
 		E996495A2E98A12100200F53 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = E99649592E98A12100200F53 /* GRDB */; };
 		E996495B2E98A31B00200F53 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */; };
 		E996495C2E98A32900200F53 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
@@ -1112,7 +1017,6 @@
 		5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTableViewCell.swift; sourceTree = "<group>"; };
 		5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioTableViewCell.xib; sourceTree = "<group>"; };
 		5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewTemplateViewController.swift; sourceTree = "<group>"; };
-		5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ENLanguageData.sqlite; sourceTree = "<group>"; };
 		693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerTest.swift; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
@@ -1133,13 +1037,6 @@
 		D13E0DC62C86530E007F00AF /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13E0DC82C86530E007F00AF /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D155AD282BDC6CC20075B18C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = FRLanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298129E41B56006B2C81 /* DELanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DELanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ITLanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTLanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = RULanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ESLanguageData.sqlite; sourceTree = "<group>"; };
-		D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SVLanguageData.sqlite; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1202,7 +1099,6 @@
 		D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITInterfaceVariables.swift; sourceTree = "<group>"; };
 		D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAInterfaceVariables.swift; sourceTree = "<group>"; };
-		D1CDED762A859E4800098546 /* DACommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DACommandVariables.swift; sourceTree = "<group>"; };
 		D1CDED782A859FB600098546 /* ENCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENCommandVariables.swift; sourceTree = "<group>"; };
 		D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENInterfaceVariables.swift; sourceTree = "<group>"; };
 		D1CDED7E2A85A05C00098546 /* HECommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HECommandVariables.swift; sourceTree = "<group>"; };
@@ -1215,11 +1111,12 @@
 		D1D8B23B2AE4089C0070B817 /* Italian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Italian.entitlements; sourceTree = "<group>"; };
 		D1D8B23C2AE408AC0070B817 /* German.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = German.entitlements; sourceTree = "<group>"; };
 		D1D8B23D2AE408C50070B817 /* French.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = French.entitlements; sourceTree = "<group>"; };
-		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TranslationData.sqlite; sourceTree = "<group>"; };
 		D1FF8ED12C6C282500EF50AC /* English.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = English.entitlements; sourceTree = "<group>"; };
 		E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadStateManager.swift; sourceTree = "<group>"; };
 		E93179A32F03AE77002ED334 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = i18n/i18n/Localizable.xcstrings; sourceTree = "<group>"; };
 		E96111472F04EC62001E4F95 /* InstallationDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationDownload.swift; sourceTree = "<group>"; };
+		E98E74B52F21C9D2005EEDA3 /* DataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContract.swift; sourceTree = "<group>"; };
+		E98E74C32F21CA20005EEDA3 /* ContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		E9CE5EA72F063D870068A930 /* DownloadDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataScreen.swift; sourceTree = "<group>"; };
 		E9FAC3882E9894F9008E00AC /* IDCommandVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCommandVariables.swift; sourceTree = "<group>"; };
 		E9FAC3892E9894F9008E00AC /* IDInterfaceVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDInterfaceVariables.swift; sourceTree = "<group>"; };
@@ -1237,8 +1134,361 @@
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E98E74352F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1AFDF7D29CA66F40033BF27 /* Danish */;
+		};
+		E98E74362F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1AFDF0029CA66D00033BF27 /* English */;
+		};
+		E98E74372F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D109A20A275B6888005E2271 /* French */;
+		};
+		E98E74382F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = 38BD214B22D592CA00C6795D /* German */;
+		};
+		E98E74392F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1AFDFD329CA6E900033BF27 /* Hebrew */;
+		};
+		E98E743A2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = E9FAC3922E989712008E00AC /* Indonesian */;
+		};
+		E98E743B2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1B81D1E27BBB5320085FE5E /* Italian */;
+		};
+		E98E743C2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1AB5B2229C757A100CCB0C1 /* Norwegian */;
+		};
+		E98E743D2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D109A219275B68B3005E2271 /* Portuguese */;
+		};
+		E98E743E2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1671A5F275A1E8700A7C118 /* Russian */;
+		};
+		E98E743F2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D1608664270B6D3C00134D48 /* Spanish */;
+		};
+		E98E74402F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DELanguageData.sqlite,
+				ENLanguageData.sqlite,
+				ESLanguageData.sqlite,
+				FRLanguageData.sqlite,
+				ITLanguageData.sqlite,
+				PTLanguageData.sqlite,
+				RULanguageData.sqlite,
+				SVLanguageData.sqlite,
+				TranslationData.sqlite,
+			);
+			target = D18EA8982760D4A6001E1358 /* Swedish */;
+		};
+		E98E74A92F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1AFDF7D29CA66F40033BF27 /* Danish */;
+		};
+		E98E74AA2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1AFDF0029CA66D00033BF27 /* English */;
+		};
+		E98E74AB2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D109A20A275B6888005E2271 /* French */;
+		};
+		E98E74AC2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = 38BD214B22D592CA00C6795D /* German */;
+		};
+		E98E74AD2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1AFDFD329CA6E900033BF27 /* Hebrew */;
+		};
+		E98E74AE2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = E9FAC3922E989712008E00AC /* Indonesian */;
+		};
+		E98E74AF2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1B81D1E27BBB5320085FE5E /* Italian */;
+		};
+		E98E74B02F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1AB5B2229C757A100CCB0C1 /* Norwegian */;
+		};
+		E98E74B12F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D109A219275B68B3005E2271 /* Portuguese */;
+		};
+		E98E74B22F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1671A5F275A1E8700A7C118 /* Russian */;
+		};
+		E98E74B32F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D1608664270B6D3C00134D48 /* Spanish */;
+		};
+		E98E74B42F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				de.json,
+				en.json,
+				es.json,
+				fr.json,
+				it.json,
+				pt.json,
+				ru.json,
+				sv.json,
+			);
+			target = D18EA8982760D4A6001E1358 /* Swedish */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E943457E2F05638700DFDB20 /* Button */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Button; sourceTree = "<group>"; };
+		E98E73BE2F20D8AA005EEDA3 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E98E74352F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74362F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74372F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74382F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74392F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743A2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743B2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743C2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743D2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743E2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743F2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74402F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		E98E73BF2F20D8C3005EEDA3 /* DataContracts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E98E74A92F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AA2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AB2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AC2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AD2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AE2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74AF2F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74B02F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74B12F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74B22F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74B32F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74B42F20EF74005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DataContracts; sourceTree = "<group>"; };
 		E9DADB332EF3CF9B00702783 /* ConfirmDialog */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ConfirmDialog; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -1444,6 +1694,8 @@
 		38BD212722D5907E00C6795D = {
 			isa = PBXGroup;
 			children = (
+				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
+				E98E73BE2F20D8AA005EEDA3 /* Data */,
 				D1FECBC9270E1A1500C8BC60 /* Keyboards */,
 				38BD213222D5907F00C6795D /* Scribe */,
 				D174F8A22756893200DCE106 /* CHANGELOG.md */,
@@ -1513,7 +1765,6 @@
 		38BD214D22D592CA00C6795D /* German */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298129E41B56006B2C81 /* DELanguageData.sqlite */,
 				D1D8B23C2AE408AC0070B817 /* German.entitlements */,
 				D17193FF27AECCD10038660B /* DECommandVariables.swift */,
 				D17193CF27AEC9EC0038660B /* DEInterfaceVariables.swift */,
@@ -1579,7 +1830,6 @@
 		D109A20C275B6888005E2271 /* French */ = {
 			isa = PBXGroup;
 			children = (
-				D15E297E29E41B3B006B2C81 /* FRLanguageData.sqlite */,
 				D1D8B23D2AE408C50070B817 /* French.entitlements */,
 				D17193F727AECC930038660B /* FRCommandVariables.swift */,
 				D17693DC28FC8CC300DF0FBB /* FR-QWERTYInterfaceVariables.swift */,
@@ -1593,7 +1843,6 @@
 		D109A21B275B68B3005E2271 /* Portuguese */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298529E41B8F006B2C81 /* PTLanguageData.sqlite */,
 				D1D8B23A2AE408850070B817 /* Portuguese.entitlements */,
 				D171940727AECCE50038660B /* PTCommandVariables.swift */,
 				D17193D727AECA450038660B /* PTInterfaceVariables.swift */,
@@ -1632,7 +1881,6 @@
 		D1608666270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298929E41BAD006B2C81 /* ESLanguageData.sqlite */,
 				D1D8B2382AE408620070B817 /* Spanish.entitlements */,
 				D171941727AECD070038660B /* ESCommandVariables.swift */,
 				D17193E727AECAE60038660B /* ESInterfaceVariables.swift */,
@@ -1645,7 +1893,6 @@
 		D1671A61275A1E8700A7C118 /* Russian */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298729E41BA1006B2C81 /* RULanguageData.sqlite */,
 				D1D8B2392AE408720070B817 /* Russian.entitlements */,
 				D171940F27AECCF50038660B /* RUCommandVariables.swift */,
 				D17193DF27AECAA60038660B /* RUInterfaceVariables.swift */,
@@ -1672,7 +1919,6 @@
 		D18EA89A2760D4A6001E1358 /* Swedish */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298B29E41BBE006B2C81 /* SVLanguageData.sqlite */,
 				D1D8B2372AE4084D0070B817 /* Swedish.entitlements */,
 				D171941F27AECD170038660B /* SVCommandVariables.swift */,
 				D17193EF27AECB350038660B /* SVInterfaceVariables.swift */,
@@ -1694,6 +1940,8 @@
 				D1B0719627C63C9100FD7DBD /* KeyAnimation.swift */,
 				D171942E27AEDE110038660B /* KeyboardKeys.swift */,
 				D190B2592742565500705659 /* KeyboardViewController.swift */,
+				E98E74B52F21C9D2005EEDA3 /* DataContract.swift */,
+				E98E74C32F21CA20005EEDA3 /* ContractManager.swift */,
 				D190B24D2741B61000705659 /* LanguageDBManager.swift */,
 				D16DD3A429E78A1500FB9022 /* Utilities.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
@@ -1742,7 +1990,6 @@
 		D1AFDE6929CA65740033BF27 /* English */ = {
 			isa = PBXGroup;
 			children = (
-				5A8FFB6E2C5E575B00F4B571 /* ENLanguageData.sqlite */,
 				D1FF8ED12C6C282500EF50AC /* English.entitlements */,
 				D1CDED782A859FB600098546 /* ENCommandVariables.swift */,
 				D1CDED7A2A859FBF00098546 /* ENInterfaceVariables.swift */,
@@ -1755,7 +2002,6 @@
 		D1AFDE7829CA658B0033BF27 /* Danish */ = {
 			isa = PBXGroup;
 			children = (
-				D1CDED762A859E4800098546 /* DACommandVariables.swift */,
 				D1CDED742A859DDD00098546 /* DAInterfaceVariables.swift */,
 				D1AFDE7929CA658B0033BF27 /* DAKeyboardViewController.swift */,
 				D1AFDE7B29CA658B0033BF27 /* Info.plist */,
@@ -1777,7 +2023,6 @@
 		D1B81D2027BBB5320085FE5E /* Italian */ = {
 			isa = PBXGroup;
 			children = (
-				D15E298329E41B74006B2C81 /* ITLanguageData.sqlite */,
 				D1D8B23B2AE4089C0070B817 /* Italian.entitlements */,
 				D1B81D4927BBBA200085FE5E /* ITCommandVariables.swift */,
 				D1B81D5227BBBA360085FE5E /* ITInterfaceVariables.swift */,
@@ -1802,7 +2047,6 @@
 				D1671A61275A1E8700A7C118 /* Russian */,
 				D1608666270B6D3C00134D48 /* Spanish */,
 				D18EA89A2760D4A6001E1358 /* Swedish */,
-				D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */,
 			);
 			path = LanguageKeyboards;
 			sourceTree = "<group>";
@@ -2277,7 +2521,6 @@
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
 				E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */,
-				D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
 			);
@@ -2289,17 +2532,8 @@
 			files = (
 				D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
-				5A03800F2C74D71C00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385142C977FD200DCE538 /* TranslationData.sqlite in Resources */,
-				D15E298229E41B56006B2C81 /* DELanguageData.sqlite in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
-				5A037FE62C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A037FFB2C74D70200D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380232C74D73300D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151012E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FF02C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380052C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A0380192C74D72800D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2309,17 +2543,8 @@
 			files = (
 				D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
-				5A03800E2C74D71B00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385132C977FD200DCE538 /* TranslationData.sqlite in Resources */,
-				5A037FDC2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
-				5A037FE52C74D6D500D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A037FFA2C74D70100D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380222C74D73200D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151002E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				D15E297F29E41B3B006B2C81 /* FRLanguageData.sqlite in Resources */,
-				5A0380042C74D70D00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A0380182C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2327,19 +2552,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A037FFE2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				5A0380132C74D72000D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385182C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
-				5A037FE02C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
-				D15E298629E41B8F006B2C81 /* PTLanguageData.sqlite in Resources */,
-				5A037FF42C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380272C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151052E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FEA2C74D6D900D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
-				5A03801D2C74D72C00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2354,19 +2570,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0380142C74D72100D4AADD /* RULanguageData.sqlite in Resources */,
-				5A0380002C74D70600D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				D1E3851A2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
-				5A037FE22C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
-				5A03800A2C74D71300D4AADD /* PTLanguageData.sqlite in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
-				5A0380292C74D73700D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151072E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FF62C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A037FEC2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
-				D15E298A29E41BAD006B2C81 /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2374,19 +2581,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A037FFF2C74D70500D4AADD /* ITLanguageData.sqlite in Resources */,
 				D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				D15E298829E41BA1006B2C81 /* RULanguageData.sqlite in Resources */,
-				D1E385192C977FD200DCE538 /* TranslationData.sqlite in Resources */,
-				5A037FE12C74D6CD00D4AADD /* DELanguageData.sqlite in Resources */,
-				5A0380092C74D71100D4AADD /* PTLanguageData.sqlite in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
-				5A037FF52C74D6E900D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380282C74D73600D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151062E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FEB2C74D6DA00D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
-				5A03801E2C74D72D00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2394,18 +2592,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0380152C74D72200D4AADD /* RULanguageData.sqlite in Resources */,
-				5A0380012C74D70700D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A03801F2C74D72E00D4AADD /* ESLanguageData.sqlite in Resources */,
-				D1E3851B2C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				D15E298C29E41BBE006B2C81 /* SVLanguageData.sqlite in Resources */,
-				5A037FE32C74D6CE00D4AADD /* DELanguageData.sqlite in Resources */,
-				5A03800B2C74D71400D4AADD /* PTLanguageData.sqlite in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				D16151082E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FF72C74D6EA00D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A037FED2C74D6DB00D4AADD /* ENLanguageData.sqlite in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2414,19 +2603,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A037FDF2C74D6CC00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */,
-				5A0380122C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385172C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
-				5A037FE92C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A037FFD2C74D70400D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380262C74D73500D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151042E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FF32C74D6E800D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380082C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A03801C2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2436,17 +2616,8 @@
 			files = (
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
 				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
-				5A03800D2C74D71A00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385122C977FD200DCE538 /* TranslationData.sqlite in Resources */,
-				5A037FDB2C74D6C900D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
-				5A8FFB702C5E5A6F00F4B571 /* ENLanguageData.sqlite in Resources */,
-				5A037FF92C74D70000D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380212C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16150FF2E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FEF2C74D6E300D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380032C74D70C00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A0380172C74D72700D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2454,19 +2625,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A037FDA2C74D6C800D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */,
-				5A03800C2C74D71900D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385112C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
-				5A037FE42C74D6D400D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A037FF82C74D6FF00D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380202C74D73100D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16150FE2E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FEE2C74D6E200D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380022C74D70B00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A0380162C74D72600D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2474,19 +2636,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A037FDD2C74D6CA00D4AADD /* DELanguageData.sqlite in Resources */,
 				D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */,
-				5A0380102C74D71D00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385152C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
-				5A037FE72C74D6D600D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A037FFC2C74D70300D4AADD /* ITLanguageData.sqlite in Resources */,
-				5A0380242C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151022E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
-				5A037FF12C74D6E500D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A0380062C74D70E00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A03801A2C74D72900D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2496,17 +2649,8 @@
 			files = (
 				D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
-				5A0380112C74D71F00D4AADD /* RULanguageData.sqlite in Resources */,
-				D1E385162C977FD200DCE538 /* TranslationData.sqlite in Resources */,
-				5A037FDE2C74D6CB00D4AADD /* DELanguageData.sqlite in Resources */,
-				D15E298429E41B74006B2C81 /* ITLanguageData.sqlite in Resources */,
-				5A037FF22C74D6E600D4AADD /* FRLanguageData.sqlite in Resources */,
-				5A037FE82C74D6D800D4AADD /* ENLanguageData.sqlite in Resources */,
-				5A0380252C74D73400D4AADD /* SVLanguageData.sqlite in Resources */,
 				D16151032E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
-				5A0380072C74D70F00D4AADD /* PTLanguageData.sqlite in Resources */,
-				5A03801B2C74D72B00D4AADD /* ESLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2514,18 +2658,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D16151092E9DBE0400131732 /* DELanguageData.sqlite in Resources */,
-				D161510A2E9DBE1400131732 /* FRLanguageData.sqlite in Resources */,
-				D161510E2E9DBE3D00131732 /* RULanguageData.sqlite in Resources */,
 				D16150FC2E9DBDC500131732 /* IDLanguageData.sqlite in Resources */,
 				E99649962E98B03C00200F53 /* Keyboard.xib in Resources */,
-				D161510B2E9DBE1D00131732 /* ENLanguageData.sqlite in Resources */,
-				D161510C2E9DBE2B00131732 /* ITLanguageData.sqlite in Resources */,
-				D16151102E9DBE4C00131732 /* SVLanguageData.sqlite in Resources */,
 				E99649972E98B11100200F53 /* Assets.xcassets in Resources */,
-				D161510D2E9DBE3600131732 /* PTLanguageData.sqlite in Resources */,
-				D161510F2E9DBE4500131732 /* ESLanguageData.sqlite in Resources */,
-				E937C5CF2E9FF94E00F94F99 /* TranslationData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2588,7 +2723,6 @@
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
 				E96111482F04EC6B001E4F95 /* InstallationDownload.swift in Sources */,
 				EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */,
-				D1CDED772A859E4800098546 /* DACommandVariables.swift in Sources */,
 				D171943827AEF0560038660B /* KeyboardStyling.swift in Sources */,
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
 				19DC85FA2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
@@ -2613,6 +2747,8 @@
 				30453964293B9D18003AE55B /* InformationToolTipData.swift in Sources */,
 				30453969293B9DB4003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				E98E74C22F21C9DB005EEDA3 /* DataContract.swift in Sources */,
+				E98E74D02F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				D1B81D5327BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D12EB9C32C81C10900181765 /* HEInterfaceVariables.swift in Sources */,
@@ -2658,7 +2794,6 @@
 				D1B81D5527BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943127AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C212936DAFF00B59393 /* ToolTipView.swift in Sources */,
-				D1CDED872A85AE5A00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED912A85AE6200098546 /* DAInterfaceVariables.swift in Sources */,
 				D171941A27AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D1B071A227C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -2676,9 +2811,11 @@
 				D190B242274056D400705659 /* ColorVariables.swift in Sources */,
 				198369D02C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D17193EA27AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
+				E98E74BD2F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				30453984293B9E12003AE55B /* InformationToolTipData.swift in Sources */,
 				D111E9B427AFE79500746F92 /* Translate.swift in Sources */,
 				D17193E227AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
+				E98E74C42F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC85FE2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D190B2472741B24F00705659 /* CommandVariables.swift in Sources */,
 				D16DD3AA29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -2721,7 +2858,6 @@
 				D1B81D5427BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943027AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C1F2936DAFE00B59393 /* ToolTipView.swift in Sources */,
-				D1CDED862A85AE5A00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED922A85AE6300098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193F927AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A127C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -2739,9 +2875,11 @@
 				D109A228275B6A8B005E2271 /* Extensions.swift in Sources */,
 				198369CF2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				30453982293B9E11003AE55B /* InformationToolTipData.swift in Sources */,
+				E98E74BC2F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				D111E9B327AFE79500746F92 /* Translate.swift in Sources */,
 				D171940127AECCD10038660B /* DECommandVariables.swift in Sources */,
 				D171940927AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				E98E74CA2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC85FD2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D16DD3A829E78A1500FB9022 /* Utilities.swift in Sources */,
 				D17193D927AECA450038660B /* PTInterfaceVariables.swift in Sources */,
@@ -2784,7 +2922,6 @@
 				D1B81D5727BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943227AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C232936DB0100B59393 /* ToolTipView.swift in Sources */,
-				D1CDED8B2A85AE5C00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED962A85AE6400098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193FB27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A427C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -2802,9 +2939,11 @@
 				D109A22E275B6A8C005E2271 /* Extensions.swift in Sources */,
 				198369D42C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D109A22D275B6A8C005E2271 /* KeyboardViewController.swift in Sources */,
+				E98E74C02F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				30453986293B9E13003AE55B /* InformationToolTipData.swift in Sources */,
 				D111E9B527AFE79500746F92 /* Translate.swift in Sources */,
 				D171940327AECCD10038660B /* DECommandVariables.swift in Sources */,
+				E98E74CF2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86022C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D171940B27AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D16DD3AE29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -2857,7 +2996,6 @@
 				D1B81D5927BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943427AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C252936DB0100B59393 /* ToolTipView.swift in Sources */,
-				D1CDED8D2A85AE5E00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED992A85AE6600098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193FD27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A627C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -2875,9 +3013,11 @@
 				D190B243274056D400705659 /* ColorVariables.swift in Sources */,
 				198369D62C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D190B2482741B24F00705659 /* CommandVariables.swift in Sources */,
+				E98E74BF2F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				30453981293B9E11003AE55B /* InformationToolTipData.swift in Sources */,
 				D111E9B727AFE79500746F92 /* Translate.swift in Sources */,
 				D171940527AECCD10038660B /* DECommandVariables.swift in Sources */,
+				E98E74C82F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86042C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D171940D27AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D16DD3B029E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -2920,7 +3060,6 @@
 				D1B81D5827BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943327AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C242936DB0100B59393 /* ToolTipView.swift in Sources */,
-				D1CDED8C2A85AE5D00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED972A85AE6500098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193FC27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A527C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -2938,9 +3077,11 @@
 				D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */,
 				198369D52C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1671A73275A1FC000A7C118 /* InterfaceVariables.swift in Sources */,
+				E98E74BA2F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				30453987293B9E13003AE55B /* InformationToolTipData.swift in Sources */,
 				D111E9B627AFE79500746F92 /* Translate.swift in Sources */,
 				D171940427AECCD10038660B /* DECommandVariables.swift in Sources */,
+				E98E74CD2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86032C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D171940C27AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D16DD3AF29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -2983,7 +3124,6 @@
 				D1B81D5A27BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D171943527AEDE110038660B /* KeyboardKeys.swift in Sources */,
 				30489C262936DB0200B59393 /* ToolTipView.swift in Sources */,
-				D1CDED8E2A85AE5E00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED982A85AE6500098546 /* DAInterfaceVariables.swift in Sources */,
 				D17193FE27AECC930038660B /* FRCommandVariables.swift in Sources */,
 				D1B071A727C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -3001,9 +3141,11 @@
 				D18EA8A92760D6F5001E1358 /* Extensions.swift in Sources */,
 				198369D72C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D18EA89C2760D4A6001E1358 /* SVKeyboardViewController.swift in Sources */,
+				E98E74BE2F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				30453980293B9E10003AE55B /* InformationToolTipData.swift in Sources */,
 				D111E9B827AFE79500746F92 /* Translate.swift in Sources */,
 				D171940627AECCD10038660B /* DECommandVariables.swift in Sources */,
+				E98E74C92F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86052C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D171940E27AECCE50038660B /* PTCommandVariables.swift in Sources */,
 				D16DD3B129E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3046,7 +3188,6 @@
 				D1AB5B2D29C757A100CCB0C1 /* ITInterfaceVariables.swift in Sources */,
 				D1AB5B2E29C757A100CCB0C1 /* PTInterfaceVariables.swift in Sources */,
 				D1AB5B2F29C757A100CCB0C1 /* ToolTipView.swift in Sources */,
-				D1CDED8A2A85AE5C00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED952A85AE6400098546 /* DAInterfaceVariables.swift in Sources */,
 				D1AB5B3029C757A100CCB0C1 /* DECommandVariables.swift in Sources */,
 				D1AB5B3129C757A100CCB0C1 /* KeyAltChars.swift in Sources */,
@@ -3064,9 +3205,11 @@
 				D1AB5B3C29C757A100CCB0C1 /* DEInterfaceVariables.swift in Sources */,
 				198369D32C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1AB5B3D29C757A100CCB0C1 /* Annotate.swift in Sources */,
+				E98E74B82F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				D1AB5B3E29C757A100CCB0C1 /* InformationToolTipData.swift in Sources */,
 				D16D975429C75A4900E33F86 /* NBKeyboardViewController.swift in Sources */,
 				D1AB5B3F29C757A100CCB0C1 /* LanguageDBManager.swift in Sources */,
+				E98E74CE2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86012C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D1AB5B4029C757A100CCB0C1 /* CommandVariables.swift in Sources */,
 				D16DD3AD29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3109,7 +3252,6 @@
 				D1AFDF0B29CA66D00033BF27 /* ITInterfaceVariables.swift in Sources */,
 				D1AFDF0C29CA66D00033BF27 /* PTInterfaceVariables.swift in Sources */,
 				D1AFDF0D29CA66D00033BF27 /* ToolTipView.swift in Sources */,
-				D1CDED852A85AE5900098546 /* DACommandVariables.swift in Sources */,
 				D1CDED902A85AE6100098546 /* DAInterfaceVariables.swift in Sources */,
 				D1AFDF0E29CA66D00033BF27 /* DECommandVariables.swift in Sources */,
 				D1AFDF0F29CA66D00033BF27 /* KeyAltChars.swift in Sources */,
@@ -3127,9 +3269,11 @@
 				D1AFDF1A29CA66D00033BF27 /* DEInterfaceVariables.swift in Sources */,
 				198369CE2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1AFDFBD29CA67F10033BF27 /* ENKeyboardViewController.swift in Sources */,
+				E98E74B92F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				D1AFDF1B29CA66D00033BF27 /* Annotate.swift in Sources */,
 				D1AFDF1C29CA66D00033BF27 /* InformationToolTipData.swift in Sources */,
 				D1AFDF1D29CA66D00033BF27 /* LanguageDBManager.swift in Sources */,
+				E98E74CC2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC85FC2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D1AFDF1E29CA66D00033BF27 /* CommandVariables.swift in Sources */,
 				D16DD3A729E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3172,7 +3316,6 @@
 				D1AFDF8829CA66F40033BF27 /* ITInterfaceVariables.swift in Sources */,
 				D1AFDF8929CA66F40033BF27 /* PTInterfaceVariables.swift in Sources */,
 				D1AFDF8A29CA66F40033BF27 /* ToolTipView.swift in Sources */,
-				D1CDED842A85AE5800098546 /* DACommandVariables.swift in Sources */,
 				D1CDED8F2A85AE6100098546 /* DAInterfaceVariables.swift in Sources */,
 				D1AFDF8B29CA66F40033BF27 /* DECommandVariables.swift in Sources */,
 				D1AFDF8C29CA66F40033BF27 /* KeyAltChars.swift in Sources */,
@@ -3190,9 +3333,11 @@
 				D1AFDF9729CA66F40033BF27 /* DEInterfaceVariables.swift in Sources */,
 				198369CD2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1AFDF9829CA66F40033BF27 /* Annotate.swift in Sources */,
+				E98E74B72F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				D1AFDF9929CA66F40033BF27 /* InformationToolTipData.swift in Sources */,
 				D1AFDFBC29CA67EE0033BF27 /* DAKeyboardViewController.swift in Sources */,
 				D1AFDF9A29CA66F40033BF27 /* LanguageDBManager.swift in Sources */,
+				E98E74C52F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC85FB2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D1AFDF9B29CA66F40033BF27 /* CommandVariables.swift in Sources */,
 				D16DD3A629E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3235,7 +3380,6 @@
 				D1AFDFDE29CA6E900033BF27 /* ITInterfaceVariables.swift in Sources */,
 				D1AFDFDF29CA6E900033BF27 /* PTInterfaceVariables.swift in Sources */,
 				D1AFDFE029CA6E900033BF27 /* ToolTipView.swift in Sources */,
-				D1CDED892A85AE5B00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED932A85AE6300098546 /* DAInterfaceVariables.swift in Sources */,
 				D1AFDFE129CA6E900033BF27 /* DECommandVariables.swift in Sources */,
 				D1AFDFE229CA6E900033BF27 /* KeyAltChars.swift in Sources */,
@@ -3253,9 +3397,11 @@
 				D1AFDFED29CA6E900033BF27 /* DEInterfaceVariables.swift in Sources */,
 				198369D12C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1AFDFEE29CA6E900033BF27 /* Annotate.swift in Sources */,
+				E98E74C12F21C9DB005EEDA3 /* DataContract.swift in Sources */,
 				D1AFDFEF29CA6E900033BF27 /* InformationToolTipData.swift in Sources */,
 				D1AFDFF029CA6E900033BF27 /* LanguageDBManager.swift in Sources */,
 				D1AFDFF129CA6E900033BF27 /* CommandVariables.swift in Sources */,
+				E98E74CB2F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC85FF2C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D1AFE01229CA6F360033BF27 /* HEKeyboardViewController.swift in Sources */,
 				D16DD3AB29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3298,7 +3444,6 @@
 				D1B81D5627BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D1B81D2F27BBB69E0085FE5E /* PTInterfaceVariables.swift in Sources */,
 				30489C222936DB0000B59393 /* ToolTipView.swift in Sources */,
-				D1CDED882A85AE5B00098546 /* DACommandVariables.swift in Sources */,
 				D1CDED942A85AE6300098546 /* DAInterfaceVariables.swift in Sources */,
 				D1B81D2A27BBB6780085FE5E /* DECommandVariables.swift in Sources */,
 				D1B071A327C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
@@ -3316,9 +3461,11 @@
 				D1B81D2B27BBB6830085FE5E /* DEInterfaceVariables.swift in Sources */,
 				198369D22C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				D1B81D4327BBB71C0085FE5E /* Annotate.swift in Sources */,
+				E98E74B62F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				30453985293B9E12003AE55B /* InformationToolTipData.swift in Sources */,
 				D1B81D4027BBB70C0085FE5E /* LanguageDBManager.swift in Sources */,
 				D1B81D4227BBB71C0085FE5E /* CommandVariables.swift in Sources */,
+				E98E74C62F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				19DC86002C7772FC006E32FD /* KeyboardBuilder.swift in Sources */,
 				D1B81D4727BBB71C0085FE5E /* Translate.swift in Sources */,
 				D16DD3AC29E78A1500FB9022 /* Utilities.swift in Sources */,
@@ -3350,6 +3497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99649642E98A41A00200F53 /* ViewThemeable.swift in Sources */,
+				E98E74C72F21CA28005EEDA3 /* ContractManager.swift in Sources */,
 				E996495D2E98A34C00200F53 /* ToolTipView.swift in Sources */,
 				E99649702E98A61D00200F53 /* DECommandVariables.swift in Sources */,
 				E99649772E98A6F000200F53 /* ESCommandVariables.swift in Sources */,
@@ -3373,6 +3521,7 @@
 				E996497B2E98A7E600200F53 /* ToolTipViewDatasourceable.swift in Sources */,
 				E99649762E98A6E500200F53 /* RUCommandVariables.swift in Sources */,
 				E99649882E98AAB200200F53 /* NBCommandVariables.swift in Sources */,
+				E98E74BB2F21C9DA005EEDA3 /* DataContract.swift in Sources */,
 				E99649872E98A9FB00200F53 /* KeyAnimation.swift in Sources */,
 				E99649682E98A4BF00200F53 /* ScribeColor.swift in Sources */,
 				E996497F2E98A82200200F53 /* PTInterfaceVariables.swift in Sources */,

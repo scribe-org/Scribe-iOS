@@ -32,6 +32,20 @@ let prepAnnotationConversionDict = [
   "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
 
+// Converts full gender names to abbreviations (e.g., "feminine" → "F")
+func convertFullGenderToAbbr(_ genderFull: String) -> String {
+    let genderMap: [String: String] = [
+        "feminine": "F",
+        "masculine": "M",
+        "neuter": "N",
+        "common": "C",
+        "common of two genders": "C",
+        "PL": "PL"
+    ]
+
+    return genderMap[genderFull.lowercased()] ?? genderFull
+}
+
 /// The base function for annotation that's accessed by `typedWordAnnotation`.
 ///
 /// - Parameters
@@ -114,6 +128,13 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
         let annotationBtn = Annotation()
         var annotationSep = UIView()
         var annotationToDisplay: String = annotationsToAssign[i]
+
+        print("AAAAA", annotationToDisplay)
+
+        if ["feminine", "masculine", "neuter", "common"].contains(annotationToDisplay.lowercased()) {
+          annotationToDisplay = convertFullGenderToAbbr(annotationToDisplay)
+          annotationsToAssign[i] = annotationToDisplay  // Update the array too
+        }
 
         if nounFormToColorDict.keys.contains(annotationToDisplay) {
           if numAnnotations > 3 {
