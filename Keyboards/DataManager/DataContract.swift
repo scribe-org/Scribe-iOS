@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 import Foundation
 
+/** DataContract represents the structure of the data used in the application.
+*/
 struct DataContract: Codable {
     let numbers: [String: String]?
     let genders: GenderContract?

@@ -129,8 +129,6 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
         var annotationSep = UIView()
         var annotationToDisplay: String = annotationsToAssign[i]
 
-        print("AAAAA", annotationToDisplay)
-
         if ["feminine", "masculine", "neuter", "common"].contains(annotationToDisplay.lowercased()) {
           annotationToDisplay = convertFullGenderToAbbr(annotationToDisplay)
           annotationsToAssign[i] = annotationToDisplay  // Update the array too
@@ -285,6 +283,12 @@ func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewC
     for i in 0 ..< numAnnotations {
       let annotationBtn = Annotation()
       var annotationSep = UIView()
+      var annotationToDisplay = newAutoActionAnnotationsToAssign[i]
+
+      if ["feminine", "masculine", "neuter", "common"].contains(annotationToDisplay.lowercased()) {
+        annotationToDisplay = convertFullGenderToAbbr(annotationToDisplay)
+        newAutoActionAnnotationsToAssign[i] = annotationToDisplay
+      }
 
       if numAnnotations > 3 {
         annotationBtn.setAnnotationSize(

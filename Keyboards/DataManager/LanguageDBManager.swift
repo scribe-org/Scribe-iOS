@@ -270,21 +270,33 @@ extension LanguageDBManager {
 
   /// Query the noun form of word in `nonuns`.
   func queryNounForm(of word: String) -> [String] {
-    // Load contract
-    let contract = ContractManager.shared.loadContract(language: getControllerLanguageAbbr())
+    let language = getControllerLanguageAbbr()
+    let contract = ContractManager.shared.loadContract(language: language)
 
-    // Get column names from contract
-    let singularCol = contract.numbers?.keys.first ?? "singular"
-    let genderCol = contract.genders?.canonical?.first ?? "gender"
+    let queries = GenderManager.shared.buildGenderQueries(word: word, contract: contract)
 
-    let query = """
-      SELECT * FROM nouns
-      WHERE \(singularCol) = ? OR \(singularCol) = ?
-      """
-    let outputCols = [genderCol]
-    let args = [word, word.lowercased()]
+    for queryInfo in queries {
+      let result = queryDBRow(
+        query: queryInfo.query,
+        outputCols: queryInfo.outputCols,
+        args: StatementArguments(queryInfo.args)
+      )
 
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+      // For canonical gender: return the actual gender value from DB
+      if queryInfo.fallbackGender == nil {
+        if !result.isEmpty && !result[0].isEmpty {
+          return result
+        }
+      }
+      // For masculine/feminine: if word found, return the fallback gender
+      else {
+        if !result.isEmpty && !result[0].isEmpty {
+          return [queryInfo.fallbackGender!]
+        }
+      }
+    }
+
+    return [""]
   }
 
   /// Query the plural form of word in `nouns`.
