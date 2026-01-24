@@ -23,7 +23,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/realm/SwiftLint
-    rev: 0.62.2
+    rev: 0.63.1
     hooks:
       - id: swiftlint
         name: run swiftlint linting check
