@@ -52,7 +52,15 @@ func convertFullGenderToAbbr(_ genderFull: String) -> String {
 ///   - wordToAnnotate: the word that an annotation should be created for.
 ///   - KVC: the keyboard view controller.
 func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
-  let nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
+  var nounForm: String
+
+  // Check if word is plural first
+  if let pluralWords = pluralWords, pluralWords.contains(wordToAnnotate.lowercased()) {
+    nounForm = "PL"
+  } else {
+    nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
+  }
+
   prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate.lowercased())[0]
 
   hasNounForm = !nounForm.isEmpty
@@ -254,7 +262,14 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
 ///   - index: the auto action key index that the annotation should be set for.
 ///   - KVC: the keyboard view controller.
 func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewController) {
-  let nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
+  var nounForm: String
+
+  // Check if word is plural first
+  if let pluralWords = pluralWords, pluralWords.contains(autoActionWord.lowercased()) {
+    nounForm = "PL"
+  } else {
+    nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
+  }
 
   hasNounForm = !nounForm.isEmpty
 

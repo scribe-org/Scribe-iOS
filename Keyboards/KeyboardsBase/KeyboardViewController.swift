@@ -2057,6 +2057,11 @@ class KeyboardViewController: UIInputViewController {
 
       // Drop non-unique values in case the lexicon has added words that were already present.
       LanguageDBManager.shared.deleteNonUniqueAutocompletions()
+
+      // Load plural words for the current language
+      if let allPlurals = LanguageDBManager.shared.queryAllPluralForms() {
+        pluralWords = Set(allPlurals.map { $0.lowercased() })
+      }
     }
 
     setKeyboard()

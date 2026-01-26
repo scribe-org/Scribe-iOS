@@ -97,7 +97,7 @@ class LanguageDBManager {
   ///   - query: the query to run against the language database.
   ///   - outputCols: the columns from which the values should come.
   ///   - args: arguments to pass to `query`.
-  private func queryDBRows(query: String, outputCols _: [String], args: StatementArguments) -> [String] {
+  private func queryDBRows(query: String, outputCols: [String], args: StatementArguments) -> [String] {
     var outputValues = [String]()
     do {
       guard let languageDB = database else { return [] }
@@ -105,8 +105,14 @@ class LanguageDBManager {
         try Row.fetchAll(db, sql: query, arguments: args)
       }
       for r in rows {
-        outputValues.append(r["word"])
-      }
+        // Loop through all columns.
+        for col in outputCols {
+            if let value = r[col] as? String,
+                   !value.trimmingCharacters(in: .whitespaces).isEmpty {
+                    outputValues.append(value)
+                }
+            }
+        }
     } catch let error as DatabaseError {
       let errorMessage = error.message
       let errorSQL = error.sql
@@ -301,20 +307,47 @@ extension LanguageDBManager {
 
   /// Query the plural form of word in `nouns`.
   func queryNounPlural(of word: String) -> [String] {
-    let query = """
-    SELECT
-      *
+    let language = getControllerLanguageAbbr()
+    let contract = ContractManager.shared.loadContract(language: language)
 
-    FROM
-      nouns
+    let queryInfos = PluralManager.shared.buildPluralQuery(
+      word: word,
+      contract: contract
+    )
 
-    WHERE
-      noun = ?
-    """
-    let outputCols = ["plural"]
-    let args = [word]
+    // Try each query until we find a result.
+    for queryInfo in queryInfos {
+      let result = queryDBRow(
+        query: queryInfo.query,
+        outputCols: queryInfo.outputCols,
+        args: StatementArguments(queryInfo.args)
+      )
 
-    return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+      // If we found a result, return it.
+      if result.count >= 2 && !result[1].isEmpty {
+        return [result[1]]
+      }
+    }
+
+    return []
+  }
+
+  /// Query all plural forms for the current language.
+  func queryAllPluralForms() -> [String]? {
+    let language = getControllerLanguageAbbr()
+    let contract = ContractManager.shared.loadContract(language: language)
+
+    guard let queryInfo = PluralManager.shared.buildAllPluralsQuery(contract: contract) else {
+      return nil
+    }
+
+    let result = queryDBRows(
+      query: queryInfo.query,
+      outputCols: queryInfo.outputCols,
+      args: StatementArguments()
+    )
+
+    return result == [""] ? nil : result
   }
 
   /// Query preposition form of word in `prepositions`.

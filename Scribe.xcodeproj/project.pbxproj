@@ -826,7 +826,7 @@
 		F740686D2F1FB28E00E8560B /* ConjugateAppScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F740686B2F1FB28E00E8560B /* ConjugateAppScreen.storyboard */; };
 		F786BAD32F1E8F70003F7505 /* RUCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940F27AECCF50038660B /* RUCommandVariables.swift */; };
 		F786BAD42F1E8F70003F7505 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
-		F786BAD52F1E8F70003F7505 /* LanguageDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B24D2741B61000705659 /* LanguageDBManager.swift */; };
+		F786BAD52F1E8F70003F7505 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F786BAD62F1E8F70003F7505 /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
 		F786BAD72F1E8F70003F7505 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		F786BAD82F1E8F70003F7505 /* Conjugate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171946427AF31770038660B /* Conjugate.swift */; };
@@ -854,7 +854,7 @@
 		F786BAEE2F1E8F70003F7505 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B2592742565500705659 /* KeyboardViewController.swift */; };
 		F786BAEF2F1E8F70003F7505 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
 		F786BAF02F1E8F70003F7505 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */; };
-		F786BAF12F1E8F70003F7505 /* DACommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED762A859E4800098546 /* DACommandVariables.swift */; };
+		F786BAF12F1E8F70003F7505 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F786BAF22F1E8F70003F7505 /* KeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171943727AEF0560038660B /* KeyboardStyling.swift */; };
 		F786BAF32F1E8F70003F7505 /* Annotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E9B927AFE7B200746F92 /* Annotate.swift */; };
 		F786BAF42F1E8F70003F7505 /* KeyboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */; };
@@ -915,7 +915,7 @@
 		F786BB2D2F1E8F70003F7505 /* InfoChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */; };
 		F786BB2E2F1E8F70003F7505 /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
 		F786BB2F2F1E8F70003F7505 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
-		F786BB302F1E8F70003F7505 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
+		F786BB302F1E8F70003F7505 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F786BB312F1E8F70003F7505 /* AppScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213722D5907F00C6795D /* AppScreen.storyboard */; };
 		F786BB322F1E8F70003F7505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		F786BB342F1E8F70003F7505 /* Italian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1B81D1F27BBB5320085FE5E /* Italian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -1488,6 +1488,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = 38BD212F22D5907E00C6795D /* Scribe */;
 		};
@@ -1498,6 +1499,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1AFDF7D29CA66F40033BF27 /* Danish */;
 		};
@@ -1508,6 +1510,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1AFDF0029CA66D00033BF27 /* English */;
 		};
@@ -1518,6 +1521,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D109A20A275B6888005E2271 /* French */;
 		};
@@ -1528,6 +1532,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = 38BD214B22D592CA00C6795D /* German */;
 		};
@@ -1538,6 +1543,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1AFDFD329CA6E900033BF27 /* Hebrew */;
 		};
@@ -1548,6 +1554,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = E9FAC3922E989712008E00AC /* Indonesian */;
 		};
@@ -1558,6 +1565,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1B81D1E27BBB5320085FE5E /* Italian */;
 		};
@@ -1568,6 +1576,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1AB5B2229C757A100CCB0C1 /* Norwegian */;
 		};
@@ -1578,6 +1587,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D109A219275B68B3005E2271 /* Portuguese */;
 		};
@@ -1588,6 +1598,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1671A5F275A1E8700A7C118 /* Russian */;
 		};
@@ -1598,6 +1609,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D1608664270B6D3C00134D48 /* Spanish */;
 		};
@@ -1608,6 +1620,7 @@
 				DataContract.swift,
 				GenderManager.swift,
 				LanguageDBManager.swift,
+				PluralManager.swift,
 			);
 			target = D18EA8982760D4A6001E1358 /* Swedish */;
 		};
@@ -2901,7 +2914,7 @@
 				F786BB2D2F1E8F70003F7505 /* InfoChildTableViewCell.xib in Resources */,
 				F786BB2E2F1E8F70003F7505 /* AboutTableViewCell.xib in Resources */,
 				F786BB2F2F1E8F70003F7505 /* Localizable.xcstrings in Resources */,
-				F786BB302F1E8F70003F7505 /* TranslationData.sqlite in Resources */,
+				F786BB302F1E8F70003F7505 /* (null) in Resources */,
 				F786BB312F1E8F70003F7505 /* AppScreen.storyboard in Resources */,
 				F786BB322F1E8F70003F7505 /* Assets.xcassets in Resources */,
 			);
@@ -3780,7 +3793,7 @@
 			files = (
 				F786BAD32F1E8F70003F7505 /* RUCommandVariables.swift in Sources */,
 				F786BAD42F1E8F70003F7505 /* ThirdPartyLicense.swift in Sources */,
-				F786BAD52F1E8F70003F7505 /* LanguageDBManager.swift in Sources */,
+				F786BAD52F1E8F70003F7505 /* (null) in Sources */,
 				F786BAD62F1E8F70003F7505 /* AppTextStyling.swift in Sources */,
 				F786BAD72F1E8F70003F7505 /* ScribeColor.swift in Sources */,
 				F786BAD82F1E8F70003F7505 /* Conjugate.swift in Sources */,
@@ -3808,7 +3821,7 @@
 				F786BAEE2F1E8F70003F7505 /* KeyboardViewController.swift in Sources */,
 				F786BAEF2F1E8F70003F7505 /* InstallationDownload.swift in Sources */,
 				F786BAF02F1E8F70003F7505 /* UIEdgeInsetsExtensions.swift in Sources */,
-				F786BAF12F1E8F70003F7505 /* DACommandVariables.swift in Sources */,
+				F786BAF12F1E8F70003F7505 /* (null) in Sources */,
 				F786BAF22F1E8F70003F7505 /* KeyboardStyling.swift in Sources */,
 				F786BAF32F1E8F70003F7505 /* Annotate.swift in Sources */,
 				F786BAF42F1E8F70003F7505 /* KeyboardBuilder.swift in Sources */,
