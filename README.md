@@ -198,6 +198,19 @@ pre-commit install
 
 # App Setup [`⇧`](#contents)
 
+### Codebase Overview 
+
+The Scribe-iOS codebase consists of two separate applications. 
+
+- Keyboard Application — the Scribe Language Keyboards application (IME)
+
+- Conjugate Application — the Scribe verb conjugations application
+
+To select each variant you should select the scheme from the top bar next to device selection. 
+
+1. Scribe - Keyboard application 
+2. Conjugate - Conjugate Output 
+
 Users access Scribe language keyboards through the following:
 
 - Download **Scribe - Language Keyboards** from the [App Store](https://apps.apple.com/app/scribe-language-keyboards/id1596613886)

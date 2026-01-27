@@ -126,7 +126,9 @@ pre-commit install
 
 4. Open the Scribe-iOS directory in Xcode
 
-5. In order to run Scribe on an emulator:
+5. The application has mainly 2 build schemes, Conjugate and Scribe for the Conjugate and the whole keyboard application. There are other build schemes for individual keyboard which need not be worried about. More about this could be read at [here](#build-scheme)  
+
+6. In order to run Scribe on an emulator:
 
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
@@ -152,8 +154,21 @@ The Xcode debugger often doesn't work as expected for Scribe as the keyboards th
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
 - Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for keyboard testing
 
-<a id="testing"></a>
 
+
+<a id="build-scheme"></a>
+
+## Build Schemes Selection [`⇧`](#contents)
+
+The project includes mainly two build schemes, each corresponding to a different application.There are other targets corresponding to the indiviudal keyboards which is shipped within the `Scribe` target. 
+
+Build schemes can be selected from the top bar next to device selection. 
+
+1. Scribe → Scribe Language Keyboards app (IME)
+2. Conjugate → Scribe Conjugate verb conjugation app
+
+
+<a id="testing"></a>
 ## Testing [`⇧`](#contents)
 
 Writing unit tests is essential to guarantee the dependability and sustainability of the Scribe-iOS codebase. Unit tests confirm that individual components of the application work as intended by detecting errors at an early stage, thus making the debugging process easier and boosting assurance for upcoming modifications. An unchanging testing method helps new team members grasp project norms and anticipated actions.
