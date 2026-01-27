@@ -279,30 +279,36 @@ extension LanguageDBManager {
     let language = getControllerLanguageAbbr()
     let contract = ContractManager.shared.loadContract(language: language)
 
+    var allGenders: [String] = []
+
     let queries = GenderManager.shared.buildGenderQueries(word: word, contract: contract)
 
     for queryInfo in queries {
-      let result = queryDBRow(
+      let results = queryDBRows(
         query: queryInfo.query,
         outputCols: queryInfo.outputCols,
         args: StatementArguments(queryInfo.args)
       )
 
-      // For canonical gender: return the actual gender value from DB
+      // For canonical gender: results are the actual genders
       if queryInfo.fallbackGender == nil {
-        if !result.isEmpty && !result[0].isEmpty {
-          return result
+        for gender in results where !gender.isEmpty {
+          if !allGenders.contains(gender) {
+            allGenders.append(gender)
+          }
         }
       }
-      // For masculine/feminine: if word found, return the fallback gender
+      // For masculine/feminine: if any result, use fallback
       else {
-        if !result.isEmpty && !result[0].isEmpty {
-          return [queryInfo.fallbackGender!]
+        if !results.isEmpty && !results[0].isEmpty,
+           let fallback = queryInfo.fallbackGender,
+           !allGenders.contains(fallback) {
+          allGenders.append(fallback)
         }
       }
     }
 
-    return [""]
+    return allGenders.isEmpty ? [""] : [allGenders.joined(separator: "/")]
   }
 
   /// Query the plural form of word in `nouns`.

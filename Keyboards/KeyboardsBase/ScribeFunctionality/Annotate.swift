@@ -52,18 +52,33 @@ func convertFullGenderToAbbr(_ genderFull: String) -> String {
 ///   - wordToAnnotate: the word that an annotation should be created for.
 ///   - KVC: the keyboard view controller.
 func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
-  var nounForm: String
+  var genderAnnotations: [String] = []
+  var pluralAnnotation: String?
 
-  // Check if word is plural first
-  if let pluralWords = pluralWords, pluralWords.contains(wordToAnnotate.lowercased()) {
-    nounForm = "PL"
-  } else {
-    nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
+  // Get gender(s)
+  let nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
+  if !nounForm.isEmpty {
+    // nounForm might already be "M/F" if multiple genders found
+    genderAnnotations = nounForm.components(separatedBy: "/")
   }
+
+  // Check if plural
+  if let pluralWords = pluralWords, pluralWords.contains(wordToAnnotate.lowercased()) {
+    pluralAnnotation = "PL"
+  }
+
+  // Combine: gender(s) first, then PL if applicable
+  var allAnnotations = genderAnnotations
+  if let pl = pluralAnnotation, !allAnnotations.contains("PL") {
+    allAnnotations.append(pl)
+  }
+
+  // Join back with "/"
+  let combinedNounForm = allAnnotations.joined(separator: "/")
 
   prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate.lowercased())[0]
 
-  hasNounForm = !nounForm.isEmpty
+  hasNounForm = !combinedNounForm.isEmpty
   hasPrepForm = !prepAnnotationForm.isEmpty
 
   annotationsToAssign = [String]()
@@ -105,10 +120,10 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     )
   } else {
     if hasNounForm {
-      if !nounForm.contains("/") {
-        annotationsToAssign.append(nounForm)
+      if !combinedNounForm.contains("/") {
+        annotationsToAssign.append(combinedNounForm)
       } else {
-        for a in nounForm.components(separatedBy: "/") {
+        for a in combinedNounForm.components(separatedBy: "/") {
           annotationsToAssign.append(a)
         }
       }
@@ -262,16 +277,29 @@ func typedWordAnnotation(KVC: KeyboardViewController) {
 ///   - index: the auto action key index that the annotation should be set for.
 ///   - KVC: the keyboard view controller.
 func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewController) {
-  var nounForm: String
+  var genderAnnotations: [String] = []
+  var pluralAnnotation: String?
 
-  // Check if word is plural first
-  if let pluralWords = pluralWords, pluralWords.contains(autoActionWord.lowercased()) {
-    nounForm = "PL"
-  } else {
-    nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
+  // Get gender(s)
+  let nounForm = LanguageDBManager.shared.queryNounForm(of: autoActionWord)[0]
+  if !nounForm.isEmpty {
+    genderAnnotations = nounForm.components(separatedBy: "/")
   }
 
-  hasNounForm = !nounForm.isEmpty
+  // Check if plural
+  if let pluralWords = pluralWords, pluralWords.contains(autoActionWord.lowercased()) {
+    pluralAnnotation = "PL"
+  }
+
+  // Combine
+  var allAnnotations = genderAnnotations
+  if let pl = pluralAnnotation, !allAnnotations.contains("PL") {
+    allAnnotations.append(pl)
+  }
+
+  let combinedNounForm = allAnnotations.joined(separator: "/")
+
+  hasNounForm = !combinedNounForm.isEmpty
 
   newAutoActionAnnotationsToAssign = [String]()
   newAutoActionAnnotationBtns = [UIButton]()
@@ -282,10 +310,10 @@ func autoActionAnnotation(autoActionWord: String, index: Int, KVC: KeyboardViewC
   let annotationHeight = KVC.scribeKey.frame.height * 0.1
 
   if hasNounForm {
-    if !nounForm.contains("/") {
-      newAutoActionAnnotationsToAssign.append(nounForm)
+    if !combinedNounForm.contains("/") {
+      newAutoActionAnnotationsToAssign.append(combinedNounForm)
     } else {
-      for a in nounForm.components(separatedBy: "/") {
+      for a in combinedNounForm.components(separatedBy: "/") {
         newAutoActionAnnotationsToAssign.append(a)
       }
     }
