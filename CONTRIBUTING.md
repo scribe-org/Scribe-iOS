@@ -16,6 +16,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Learning the tech stack](#learning-the-tech)
 - [Development environment](#dev-env)
   - [Note on debugging](#note-on-debugging)
+- [Build Schemes Selection](#build-scheme)
 - [Testing](#testing)
 - [Issues and projects](#issues-projects)
 - [Bug reports](#bug-reports)
@@ -126,8 +127,11 @@ pre-commit install
 
 4. Open the Scribe-iOS directory in Xcode
 
-5. In order to run Scribe on an emulator:
+5. The application has 2 build schemes, Conjugate and Scribe for the verb conjugation and the language keyboards applications
+   - There are other build schemes for individual keyboard which don't need to be selected unless you're trying to debug a keyboard
+   - More about this could be read in the [Build Schemes Selection](#build-scheme) section
 
+6. In order to run Scribe on an emulator:
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
    - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
@@ -135,7 +139,7 @@ pre-commit install
    - Press the run button marked `Start the active scheme`
    - From here code edits that are made will be reflected in the app each time the active scheme is restarted
 
-6. Build the developer documentation by selecting `Product` > `Build Documentation` (^⇧⌘D)
+7. Build the developer documentation by selecting `Product` > `Build Documentation` (^⇧⌘D)
 
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
@@ -151,6 +155,17 @@ The Xcode debugger often doesn't work as expected for Scribe as the keyboards th
 - Hit the run button (or ⌘-R) to start the active scheme
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
 - Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for keyboard testing
+
+<a id="build-scheme"></a>
+
+## Build Schemes Selection [`⇧`](#contents)
+
+The project includes two build schemes, each corresponding to a different application.There are other targets corresponding to the individual keyboards which are shipped within the `Scribe` target.
+
+Build schemes can be selected from the top bar next to device selection.
+
+1. Scribe → Scribe Language Keyboards app (IME)
+2. Conjugate → Scribe Conjugate verb conjugation app
 
 <a id="testing"></a>
 
