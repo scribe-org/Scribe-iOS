@@ -1,0 +1,63 @@
+{
+    "numbers": { "singular": "plural" },
+    "genders": {
+      "canonical": ["gender"],
+      "feminines": [],
+      "masculines": [],
+      "commons": [],
+      "neuters": []
+    },
+    "conjugations": {
+      "1": {
+        "title": "Presente",
+        "conjugationTypes": {
+        "1": {
+          "title": "Presente",
+          "conjugationForms": {
+            "io": "presentIndicativeFirstPersonSingular",
+            "tu": "presentIndicativeFirstPersonPlural",
+            "lei/lui": "presentIndicativeSecondPersonSingular",
+            "noi": "presentIndicativeSecondPersonPlural",
+            "voi": "presentIndicativeThirdPersonSingular",
+            "loro": "presentIndicativeThirdPersonPlural"
+          }
+        }
+        }
+
+      },
+      "2": {
+        "title": "Preterito",
+        "conjugationTypes": {
+          "1": {
+          "title": "Preterito",
+          "conjugationForms": {
+            "io": "preteriteFirstPersonSingular",
+            "tu": "preteriteFirstPersonPlural",
+            "lei/lui": "preteriteSecondPersonSingular",
+            "noi": "preteriteSecondPersonPlural",
+            "voi": "preteriteThirdPersonSingular",
+            "loro": "preteriteThirdPersonPlural"
+          }
+        }
+        }
+
+      },
+      "3": {
+        "title": "Imperfetto",
+         "conjugationTypes": {
+          "1": {
+          "title": "Imperfetto",
+          "conjugationForms": {
+            "io": "pastImperfectFirstPersonSingular",
+            "tu": "pastImperfectFirstPersonPlural",
+            "lei/lui": "pastImperfectSecondPersonSingular",
+            "noi": "pastImperfectSecondPersonPlural",
+            "voi": "pastImperfectThirdPersonSingular",
+            "loro": "pastImperfectThirdPersonPlural"
+          }
+        }
+         }
+
+      }
+    }
+  }

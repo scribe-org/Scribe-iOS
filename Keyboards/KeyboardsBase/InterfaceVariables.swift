@@ -118,6 +118,7 @@ var shiftButtonState: ShiftButtonState = .normal
 var commandState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
+var pluralWords: Set<String>?
 
 // Variables and functions to determine display parameters.
 enum DeviceType {
