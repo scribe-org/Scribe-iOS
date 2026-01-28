@@ -12,6 +12,7 @@ class LanguageDBManager {
   static let shared = LanguageDBManager(translate: false)
   static let translations = LanguageDBManager(translate: true)
   private var database: DatabaseQueue?
+  private var cachedHasGrammaticalCase: Bool?
 
   private init(translate: Bool) {
     if translate {
@@ -358,20 +359,44 @@ extension LanguageDBManager {
 
   /// Query preposition form of word in `prepositions`.
   func queryPrepForm(of word: String) -> [String] {
+    // Check if this language's database has grammaticalCase column
+    guard hasGrammaticalCaseColumn() else {
+      return [""]
+    }
+
     let query = """
-    SELECT
-      *
-
-    FROM
-      prepositions
-
-    WHERE
-      preposition = ?
-    """
-    let outputCols = ["form"]
+      SELECT grammaticalCase
+      FROM prepositions
+      WHERE preposition = ?
+      """
+    let outputCols = ["grammaticalCase"]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Check if the prepositions table has a grammaticalCase column.
+  /// Result is cached to avoid repeated PRAGMA queries.
+  private func hasGrammaticalCaseColumn() -> Bool {
+    if let cached = cachedHasGrammaticalCase {
+      return cached
+    }
+
+    var hasColumn = false
+
+    do {
+      try database?.read { db in
+        let columns = try Row.fetchAll(db, sql: "PRAGMA table_info(prepositions)")
+        hasColumn = columns.contains { row in
+          (row["name"] as? String) == "grammaticalCase"
+        }
+      }
+    } catch {
+      hasColumn = false
+    }
+
+    cachedHasGrammaticalCase = hasColumn
+    return hasColumn
   }
 
   /// Query the translation of word in the current language. Only works with the `translations` manager.

@@ -34,16 +34,30 @@ let prepAnnotationConversionDict = [
 
 // Converts full gender names to abbreviations (e.g., "feminine" → "F")
 func convertFullGenderToAbbr(_ genderFull: String) -> String {
-    let genderMap: [String: String] = [
-        "feminine": "F",
-        "masculine": "M",
-        "neuter": "N",
-        "common": "C",
-        "common of two genders": "C",
-        "PL": "PL"
-    ]
+  let genderMap: [String: String] = [
+    "feminine": "F",
+    "masculine": "M",
+    "neuter": "N",
+    "common": "C",
+    "common of two genders": "C",
+    "PL": "PL"
+  ]
 
-    return genderMap[genderFull.lowercased()] ?? genderFull
+  return genderMap[genderFull.lowercased()] ?? genderFull
+}
+
+// Converts full preposition to abbreviations
+func convertFullPrepositionToAbbr(_ prepositionFull: String) -> String {
+  let prepositionMap: [String: String] = [
+    "genitive case": "Gen",
+    "accusative case": "Acc",
+    "dative case": "Dat",
+    "locative case": "Loc",
+    "prepositional case": "Pre",
+    "instrumental case": "Ins"
+  ]
+
+  return prepositionMap[prepositionFull.lowercased()] ?? prepositionFull
 }
 
 /// The base function for annotation that's accessed by `typedWordAnnotation`.
@@ -77,6 +91,9 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
   let combinedNounForm = allAnnotations.joined(separator: "/")
 
   prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate.lowercased())[0]
+  if !prepAnnotationForm.isEmpty {
+    prepAnnotationForm = convertFullPrepositionToAbbr(prepAnnotationForm)
+  }
 
   hasNounForm = !combinedNounForm.isEmpty
   hasPrepForm = !prepAnnotationForm.isEmpty
