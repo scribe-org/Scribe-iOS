@@ -1308,22 +1308,67 @@ class KeyboardViewController: UIInputViewController {
       }
     } else if commandState == .displayInformation {
       formsDisplayDimensions = .view1x1
+    } else if commandState == .selectNounGender {
+      // Noun gender selection UI
+      // Get the noun forms for the current word
+      let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+      let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+      let genderOptions = nounForm.components(separatedBy: "/")
+      // Choose grid size: 1x2 for 2, 2x2 for 3-4, 3x2 for more
+      if genderOptions.count == 2 {
+        formsDisplayDimensions = .view1x2
+        setFormDisplay1x2View()
+        // Set button titles
+        formKeyLeft.setTitle(genderOptions[0], for: .normal)
+        formKeyRight.setTitle(genderOptions[1], for: .normal)
+      } else if genderOptions.count <= 4 {
+        formsDisplayDimensions = .view2x2
+        setFormDisplay2x2View()
+        let btns = get2x2FormDisplayButtons()
+        for (i, btn) in btns.enumerated() {
+          if i < genderOptions.count {
+            btn.setTitle(genderOptions[i], for: .normal)
+            btn.isHidden = false
+          } else {
+            btn.setTitle("", for: .normal)
+            btn.isHidden = true
+          }
+        }
+      } else {
+        formsDisplayDimensions = .view3x2
+        setFormDisplay3x2View()
+        let btns = get3x2FormDisplayButtons()
+        for (i, btn) in btns.enumerated() {
+          if i < genderOptions.count {
+            btn.setTitle(genderOptions[i], for: .normal)
+            btn.isHidden = false
+          } else {
+            btn.setTitle("", for: .normal)
+            btn.isHidden = true
+          }
+        }
+      }
+      // Optionally, set a prompt in the command bar
+      commandBar.text = "Select the correct gender for this noun."
     } else {
       formsDisplayDimensions = .view3x2
+      setFormDisplay3x2View()
     }
 
     // The base conjugation view is 3x2 for first, second, and third person in singular and plural.
-    switch formsDisplayDimensions {
-    case .view3x2:
-      setFormDisplay3x2View()
-    case .view3x1:
-      setFormDisplay3x1View()
-    case .view2x2:
-      setFormDisplay2x2View()
-    case .view1x2:
-      setFormDisplay1x2View()
-    case .view1x1:
-      setFormDisplay1x1View()
+    if commandState != .selectNounGender {
+      switch formsDisplayDimensions {
+      case .view3x2:
+        setFormDisplay3x2View()
+      case .view3x1:
+        setFormDisplay3x1View()
+      case .view2x2:
+        setFormDisplay2x2View()
+      case .view1x2:
+        setFormDisplay1x2View()
+      case .view1x1:
+        setFormDisplay1x1View()
+      }
     }
 
     // Setup the view shift buttons.
@@ -2337,6 +2382,51 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - sender: the button pressed as sender.
   @IBAction func executeKeyActions(_ sender: UIButton) {
+
+        // Handle noun gender selection UI
+        if commandState == .selectNounGender {
+          // Determine which button was pressed and what gender it represents
+          let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+          let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+          let genderOptions = nounForm.components(separatedBy: "/")
+          var selectedGender: String? = nil
+          // Check which button was pressed based on formsDisplayDimensions
+          switch formsDisplayDimensions {
+          case .view1x2:
+            if sender == formKeyLeft {
+              selectedGender = genderOptions[0]
+            } else if sender == formKeyRight {
+              selectedGender = genderOptions[1]
+            }
+          case .view2x2:
+            let btns = get2x2FormDisplayButtons()
+            for (i, btn) in btns.enumerated() {
+              if sender == btn, i < genderOptions.count {
+                selectedGender = genderOptions[i]
+                break
+              }
+            }
+          case .view3x2:
+            let btns = get3x2FormDisplayButtons()
+            for (i, btn) in btns.enumerated() {
+              if sender == btn, i < genderOptions.count {
+                selectedGender = genderOptions[i]
+                break
+              }
+            }
+          default:
+            break
+          }
+          if let selected = selectedGender {
+            // TODO: Use selected gender for future logic (e.g., correction feature)
+            // For now, just return to idle and reset UI
+            commandState = .idle
+            loadKeys()
+            // Optionally, show a confirmation or update the command bar
+            commandBar.text = "Selected gender: \(selected)"
+          }
+          return
+        }
     guard let originalKey = sender.layer.value(
       forKey: "original"
     ) as? String,
@@ -2682,6 +2772,17 @@ class KeyboardViewController: UIInputViewController {
             wordToCheck = lastWordTyped!
           }
         }
+      }
+
+      // Check for multiple noun genders
+      let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+      let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+      let hasMultipleGenders = nounForm.contains("/")
+      if hasMultipleGenders {
+        // Trigger noun gender selection UI
+        commandState = .selectNounGender
+        loadKeys()
+        return
       }
 
       let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck.lowercased())[0]
