@@ -1,0 +1,77 @@
+{
+    "numbers": { "singular": "plural" },
+    "genders": {
+      "canonical": ["gender"],
+      "feminines": [],
+      "masculines": [],
+      "commons": [],
+      "neuters": []
+    },
+    "conjugations": {
+      "1": {
+        "title": "Présent",
+        "conjugationTypes": {
+        "1": {
+          "title": "Présent",
+          "conjugationForms": {
+            "je": "indicativePresentFirstPersonSingular",
+            "tu": "indicativePresentFirstPersonPlural",
+            "il/elle": "indicativePresentSecondPersonSingular",
+            "nous": "indicativePresentSecondPersonPlural",
+            "vous": "indicativePresentThirdPersonSingular",
+            "ils/elles": "indicativePresentThirdPersonPlural"
+          }
+        }
+        }
+      },
+      "2": {
+        "title": "Passé simple",
+        "conjugationTypes": {
+          "1": {
+          "title": "Passé simple",
+          "conjugationForms": {
+            "je": "indicativePreteriteFirstPersonSingular",
+            "tu": "indicativePreteriteFirstPersonPlural",
+            "il/elle": "indicativePreteriteSecondPersonSingular",
+            "nous": "indicativePreteriteSecondPersonPlural",
+            "vous": "indicativePreteriteThirdPersonSingular",
+            "ils/elles": "indicativePreteriteThirdPersonPlural"
+          }
+        }
+        }
+      },
+      "3": {
+        "title": "Imparfait",
+          "conjugationTypes": {
+            "1": {
+          "title": "Imparfait",
+          "conjugationForms": {
+            "je": "indicativeImperfectFirstPersonSingular",
+            "tu": "indicativeImperfectFirstPersonPlural",
+            "il/elle": "indicativeImperfectSecondPersonSingular",
+            "nous": "indicativeImperfectSecondPersonPlural",
+            "vous": "indicativeImperfectThirdPersonSingular",
+            "ils/elles": "indicativeImperfectThirdPersonPlural"
+          }
+        }
+          }
+
+      },
+      "4": {
+        "title": "Futur",
+        "conjugationTypes":{
+ "1": {
+          "title": "Futur",
+          "conjugationForms": {
+            "je": "indicativeSimpleFutureFirstPersonSingular",
+            "tu": "indicativeSimpleFutureFirstPersonPlural",
+            "il/elle": "indicativeSimpleFutureSecondPersonSingular",
+            "nous": "indicativeSimpleFutureSecondPersonPlural",
+            "vous": "indicativeSimpleFutureThirdPersonSingular",
+            "ils/elles": "indicativeSimpleFutureThirdPersonPlural"
+          }
+        }
+        }
+      }
+    }
+  }

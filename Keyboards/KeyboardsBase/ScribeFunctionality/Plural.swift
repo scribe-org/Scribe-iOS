@@ -13,7 +13,7 @@ import UIKit
 func queryPlural(commandBar: UILabel) {
   // Cancel via a return press.
   if let commandBarText = commandBar.text,
-    commandBarText == pluralPromptAndCursor || commandBarText == pluralPromptAndCursor {
+    commandBarText == pluralPromptAndCursor {
     return
   }
 
@@ -37,25 +37,25 @@ func queryPluralNoun(queriedNoun: String) {
     noun = noun.lowercased()
   }
 
-  wordToReturn = LanguageDBManager.shared.queryNounPlural(of: noun)[0]
+  // Check if the word is already plural (always use lowercase for Set lookup).
+  let lowercaseNoun = noun.lowercased()
+  let isAlreadyPlural = pluralWords?.contains(lowercaseNoun) == true
 
-  guard !wordToReturn.isEmpty else {
-    commandState = .invalid
-    return
+  if isAlreadyPlural {
+    wordToReturn = noun  // Use original capitalization.
+    commandState = .alreadyPlural
+  } else {
+    let result = LanguageDBManager.shared.queryNounPlural(of: noun)
+    guard !result.isEmpty, !result[0].isEmpty else {
+      commandState = .invalid
+      return
+    }
+    wordToReturn = result[0]
   }
 
-  if wordToReturn != "isPlural" {
-    if inputWordIsCapitalized {
-      proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
-    } else {
-      proxy.insertText(wordToReturn + getOptionalSpace())
-    }
+  if inputWordIsCapitalized {
+    proxy.insertText(wordToReturn.capitalized + getOptionalSpace())
   } else {
-    if inputWordIsCapitalized {
-      proxy.insertText(noun.capitalized + getOptionalSpace())
-    } else {
-      proxy.insertText(noun + getOptionalSpace())
-    }
-    commandState = .alreadyPlural
+    proxy.insertText(wordToReturn + getOptionalSpace())
   }
 }
