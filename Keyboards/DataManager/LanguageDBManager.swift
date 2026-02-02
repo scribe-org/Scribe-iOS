@@ -420,6 +420,7 @@ extension LanguageDBManager {
 
   /// Query the verb form of word in `verbs`.
   func queryVerb(of word: String) -> [String] {
+    let columnName = (controllerLanguage == "Swedish") ? "verb" : "infinitive"
     let query = """
     SELECT
       *
@@ -428,9 +429,9 @@ extension LanguageDBManager {
       verbs
 
     WHERE
-      verb = ?
+      \(columnName) = ?
     """
-    let outputCols = ["verb"]
+    let outputCols = [columnName]
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
@@ -439,8 +440,11 @@ extension LanguageDBManager {
   /// Query specific form of word in `verbs`.
   ///
   /// - Parameters:
+  ///   - word: The value to search for
+  ///   - identifierColumn: The column to search in (default: "infinitive" or "verb" for Swedish)
   ///   - outputCols: Specific form want to output
-  func queryVerb(of word: String, with outputCols: [String]) -> [String] {
+  func queryVerb(of word: String, identifierColumn: String? = nil, with outputCols: [String]) -> [String] {
+    let columnName = identifierColumn ?? ((controllerLanguage == "Swedish") ? "verb" : "infinitive")
     let query = """
     SELECT
       *
@@ -449,7 +453,7 @@ extension LanguageDBManager {
       verbs
 
     WHERE
-      verb = ?
+      \(columnName) = ?
     """
     let args = [word]
 
