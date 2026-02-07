@@ -13,11 +13,12 @@ class PluralManager {
     let args: [String]
   }
 
-  /**Builds a query to find the plural form of a word based on the contract structure
-   - Parameters:
-   - word: The singular word to find the plural for
-   - contract: The data contract defining the database structure
-   - Returns: Query info to execute, or nil if contract is invalid
+  /**
+   * Builds a query to find the plural form of a word based on the contract structure
+   * - Parameters:
+   * - word: The singular word to find the plural for
+   * - contract: The data contract defining the database structure
+   * - Returns: Query info to execute, or nil if contract is invalid
    */
   func buildPluralQuery(word: String, contract: DataContract?) -> [PluralQueryInfo] {  // ← Return array!
     guard let contract = contract,
@@ -29,7 +30,7 @@ class PluralManager {
 
     var queries: [PluralQueryInfo] = []
 
-    // Build a query for EACH singular/plural pair
+    // Build a query for EACH singular/plural pair.
     for (singularCol, pluralCol) in numbers {
       let query = """
             SELECT `\(singularCol)`, `\(pluralCol)`
@@ -47,9 +48,10 @@ class PluralManager {
     return queries
   }
 
-  /**Builds a query to get all plural forms for a language
-   - Parameter contract: The data contract defining plural columns
-   - Returns: Query info to execute, or nil if contract is invalid
+  /**
+   * Builds a query to get all plural forms for a language
+   * - Parameter contract: The data contract defining plural columns.
+   * - Returns: Query info to execute, or nil if contract is invalid.
    */
   func buildAllPluralsQuery(contract: DataContract?) -> PluralQueryInfo? {
     guard let contract = contract,

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 import Foundation
 
-/// Manages gender query logic based on data contracts
+/// Manages gender query logic based on data contracts.
 class GenderManager {
   static let shared = GenderManager()
 
@@ -14,11 +14,12 @@ class GenderManager {
     let fallbackGender: String?
   }
 
-  /**Builds the appropriate gender queries based on the contract structure
-    - Parameters:
-        - word: The word to query
-        - contract: The data contract defining gender structure
-    - Returns: Array of query info objects to execute
+  /**
+   * Builds the appropriate gender queries based on the contract structure
+   * - Parameters:
+   *   - word: The word to query
+   *   - contract: The data contract defining gender structure
+   * - Returns: Array of query info objects to execute
   */
   func buildGenderQueries(word: String, contract: DataContract) -> [GenderQueryInfo] {
 
@@ -35,21 +36,21 @@ class GenderManager {
     return []
   }
 
-  // MARK: - Private Helper Methods
+  // MARK: Private Helper Methods
 
-  /// Checks if the data contract defines a single, canonical gender column
+  /// Checks if the data contract defines a single, canonical gender column.
   private func hasCanonicalGender(_ contract: DataContract) -> Bool {
     return contract.genders?.canonical?.first?.isEmpty == false
   }
 
-  /// Checks if the data contract defines separate columns for masculine and feminine genders
+  /// Checks if the data contract defines separate columns for masculine and feminine genders.
   private func hasMasculineFeminine(_ contract: DataContract) -> Bool {
     let hasMasculine = !(contract.genders?.masculines?.isEmpty ?? true)
     let hasFeminine = !(contract.genders?.feminines?.isEmpty ?? true)
     return hasMasculine && hasFeminine
   }
 
-  /// Builds query for canonical gender structure
+  /// Builds query for canonical gender structure.
   private func buildCanonicalQuery(word: String, contract: DataContract) -> GenderQueryInfo? {
     guard let nounCol = contract.numbers?.keys.first,
           let genderCol = contract.genders?.canonical?.first else {
@@ -70,11 +71,11 @@ class GenderManager {
     )
   }
 
-  /// Builds queries for masculine/feminine gender structure
+  /// Builds queries for masculine/feminine gender structure.
   private func buildMasculineFeminineQueries(word: String, contract: DataContract) -> [GenderQueryInfo] {
     var queries: [GenderQueryInfo] = []
 
-    // Masculine column query
+    // Masculine column query.
     if let masculineCol = contract.genders?.masculines?.first {
       let query = """
                 SELECT `\(masculineCol)` FROM nouns
@@ -88,7 +89,7 @@ class GenderManager {
       ))
     }
 
-    // Feminine column query
+    // Feminine column query.
     if let feminineCol = contract.genders?.feminines?.first {
       let query = """
                 SELECT `\(feminineCol)` FROM nouns
