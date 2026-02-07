@@ -1,0 +1,79 @@
+{
+    "numbers": { "singular": "plural" },
+    "genders": {
+      "canonical": ["gender"],
+      "feminines": [],
+      "masculines": [],
+      "commons": [],
+      "neuters": []
+    },
+    "conjugations": {
+      "1": {
+        "title": "Presente",
+        "conjugationTypes": {
+            "1": {
+          "title": "Presente",
+          "conjugationForms": {
+            "eu": "indicativePresentFirstPersonSingular",
+            "tu": "indicativePresentFirstPersonPlural",
+            "ele/ela/você": "indicativePresentSecondPersonSingular",
+            "nós": "indicativePresentSecondPersonPlural",
+            "vós": "indicativePresentThirdPersonSingular",
+            "eles/elas/vocês": "indicativePresentThirdPersonPlural"
+          }
+        }
+        }
+      },
+      "2": {
+        "title": "Pretérito Perfeito",
+        "conjugationTypes": {
+"1": {
+          "title": "Pretérito Perfeito",
+          "conjugationForms": {
+            "eu": "indicativePastPerfectFirstPersonSingular",
+            "tu": "indicativePastPerfectFirstPersonPlural",
+            "ele/ela/você": "indicativePastPerfectSecondPersonSingular",
+            "nós": "indicativePastPerfectSecondPersonPlural",
+            "vós": "indicativePastPerfectThirdPersonSingular",
+            "eles/elas/vocês": "indicativePastPerfectThirdPersonPlural"
+          }
+        }
+        }
+
+      },
+      "3": {
+        "title": "Pretérito Imperfeito",
+        "conjugationTypes": {
+"1": {
+          "title": "Pretérito Imperfeito",
+          "conjugationForms": {
+            "eu": "indicativePastImperfectFirstPersonSingular",
+            "tu": "indicativePastImperfectFirstPersonPlural",
+            "ele/ela/você": "indicativePastImperfectSecondPersonSingular",
+            "nós": "indicativePastImperfectSecondPersonPlural",
+            "vós": "indicativePastImperfectThirdPersonSingular",
+            "eles/elas/vocês": "indicativePastImperfectThirdPersonPlural"
+          }
+        }
+        }
+
+      },
+      "4": {
+        "title": "Futuro Simples",
+        "conjugationTypes": {
+"1": {
+          "title": "Futuro Simples",
+          "conjugationForms": {
+            "eu": "indicativePluperfectFirstPersonSingular",
+            "tu": "indicativePluperfectFirstPersonPlural",
+            "ele/ela/você": "indicativePluperfectSecondPersonSingular",
+            "nós": "indicativePluperfectSecondPersonPlural",
+            "vós": "indicativePluperfectThirdPersonSingular",
+            "eles/elas/vocês": "indicativePluperfectThirdPersonPlural"
+          }
+        }
+        }
+
+      }
+    }
+  }

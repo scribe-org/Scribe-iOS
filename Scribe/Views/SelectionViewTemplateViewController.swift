@@ -132,9 +132,30 @@ extension SelectionViewTemplateViewController {
         let dictionaryKey = self.langCode + "TranslateLanguage"
         self.userDefaults.setValue(newLang, forKey: dictionaryKey)
 
-        self.stateManager.handleDownloadAction(key: self.langCode)
-        self.tabBarController?.selectedIndex = 0
-        NotificationCenter.default.post(name: NSNotification.Name("NavigateToDownloadScreen"), object: nil)
+        // Trigger download state change.
+        DownloadStateManager.shared.handleDownloadAction(key: self.langCode)
+
+        guard let tabBarController = self.tabBarController else { return }
+
+        guard let installationNavController = tabBarController.viewControllers?[0] as? UINavigationController else { return }
+
+        // Check if download screen exists in nav stack.
+        if let downloadScreen = installationNavController.viewControllers.first(where: { $0 is UIHostingController<DownloadDataScreen> }) {
+          // Download screen found - popping to it.
+          tabBarController.selectedIndex = 0
+          installationNavController.popToViewController(downloadScreen, animated: true)
+        } else {
+          // Download screen not found - creating new one.
+          tabBarController.selectedIndex = 0
+          installationNavController.popToRootViewController(animated: false)
+
+          DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            NotificationCenter.default.post(
+              name: NSNotification.Name("NavigateToDownloadScreen"),
+              object: nil
+            )
+          }
+        }
       }
     }
 

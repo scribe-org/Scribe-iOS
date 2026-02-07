@@ -1,0 +1,44 @@
+{
+    "numbers": {
+        "nominativeSingular": "nominativePlural"
+    },
+    "genders": {
+        "canonical": ["gender"],
+        "feminines": [],
+        "masculines": [],
+        "commons": [],
+        "neuters": []
+    },
+    "conjugations": {
+        "1": {
+            "title": "Настоящее (Present)",
+            "conjugationTypes": {
+                "1": {
+                    "title": "Indicative Present",
+                    "conjugationForms": {
+                        "я (I)": "indicativePresentFirstPersonSingular",
+                        "ты (you, sing.)": "indicativePresentSecondPersonSingular",
+                        "он/она/оно (he/she/it)": "indicativePresentThirdPersonSingular",
+                        "мы (we)": "indicativePresentFirstPersonPlural",
+                        "вы (you, pl.)": "indicativePresentSecondPersonPlural",
+                        "они (they)": "indicativePresentThirdPersonPlural"
+                    }
+                }
+            }
+        },
+        "2": {
+            "title": "Прошедшее (Past)",
+            "conjugationTypes": {
+                "1": {
+                    "title": "Indicative Past",
+                    "conjugationForms": {
+                        "я/ты/она (I/you/she, fem.)": "feminineIndicativePast",
+                        "я/ты/он (I/you/he, masc.)": "masculineIndicativePast",
+                        "оно (it, neut.)": "neuterIndicativePast",
+                        "мы/вы/они (we/you/they)": "indicativePastPlural"
+                    }
+                }
+            }
+        }
+    }
+}
