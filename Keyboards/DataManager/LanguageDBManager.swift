@@ -304,18 +304,18 @@ extension LanguageDBManager {
               if !outputValues.contains(val) {
                 outputValues.append(val)
               }
-              if outputValues.count == 6 { return }
+              if outputValues.count == 9 { return }
             }
           }
         }
       }
     } catch {}
 
-    while outputValues.count < 6 {
+    while outputValues.count < 9 {
       outputValues.append("")
     }
 
-    return Array(outputValues.prefix(6))
+    return Array(outputValues.prefix(9))
   }
 
   /// Query the noun form of word in `nonuns`.

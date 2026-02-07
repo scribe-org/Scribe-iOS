@@ -375,12 +375,25 @@ class KeyboardViewController: UIInputViewController {
         autoAction2Visible = false
         emojisToShow = .three
 
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          padEmojiDivider0.backgroundColor = specialKeyColor
-          padEmojiDivider1.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
-          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+      let dividerColor: UIColor
+      if UITraitCollection.current.userInterfaceStyle == .light {
+        dividerColor = specialKeyColor
+      } else {
+        dividerColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+      }
+
+      if !emojisToDisplay[2].isEmpty && DeviceType.isPad {
+        for i in 0 ..< 3 {
+          emojisToDisplayArray.append(emojisToDisplay[i])
+        }
+        autoAction2Visible = false
+        emojisToShow = .three
+
+        let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
+        for i in 0 ..< padDividers.count {
+          if emojisToShow.rawValue > i + 1 {
+            padDividers[i].backgroundColor = dividerColor
+          }
         }
         conditionallyHideEmojiDividers()
       } else if !emojisToDisplay[1].isEmpty {
@@ -390,10 +403,11 @@ class KeyboardViewController: UIInputViewController {
         autoAction2Visible = false
         emojisToShow = .two
 
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          phoneEmojiDivider.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+        let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
+        for i in 0 ..< phoneDividers.count {
+          if emojisToShow.rawValue > i + 1 {
+            phoneDividers[i].backgroundColor = dividerColor
+          }
         }
         conditionallyHideEmojiDividers()
       } else {
@@ -422,6 +436,9 @@ class KeyboardViewController: UIInputViewController {
       case 4: emojisToShow = .four
       case 5: emojisToShow = .five
       case 6: emojisToShow = .six
+      case 7: emojisToShow = .seven
+      case 8: emojisToShow = .eight
+      case 9: emojisToShow = .nine
       default: emojisToShow = .zero
       }
 
@@ -430,19 +447,26 @@ class KeyboardViewController: UIInputViewController {
         autoAction2Visible = false
       }
 
-      if DeviceType.isPad && emojisToShow.rawValue >= 2 {
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          padEmojiDivider0.backgroundColor = specialKeyColor
-          padEmojiDivider1.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          padEmojiDivider0.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
-          padEmojiDivider1.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+      let dividerColor: UIColor
+      if UITraitCollection.current.userInterfaceStyle == .light {
+        dividerColor = specialKeyColor
+      } else {
+        dividerColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+      }
+
+      if DeviceType.isPad {
+        let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
+        for i in 0 ..< padDividers.count {
+          if emojisToShow.rawValue > i + 1 {
+            padDividers[i].backgroundColor = dividerColor
+          }
         }
-      } else if DeviceType.isPhone && emojisToShow.rawValue >= 2 {
-        if UITraitCollection.current.userInterfaceStyle == .light {
-          phoneEmojiDivider.backgroundColor = specialKeyColor
-        } else if UITraitCollection.current.userInterfaceStyle == .dark {
-          phoneEmojiDivider.backgroundColor = UIColor(cgColor: commandBarPlaceholderColorCG)
+      } else if DeviceType.isPhone {
+        let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
+        for i in 0 ..< phoneDividers.count {
+          if emojisToShow.rawValue > i + 1 {
+            phoneDividers[i].backgroundColor = dividerColor
+          }
         }
       }
       conditionallyHideEmojiDividers()
@@ -694,9 +718,19 @@ class KeyboardViewController: UIInputViewController {
 
       deactivateBtn(btn: phoneEmojiKey0)
       deactivateBtn(btn: phoneEmojiKey1)
+      deactivateBtn(btn: phoneEmojiKey2)
+      deactivateBtn(btn: phoneEmojiKey3)
+      deactivateBtn(btn: phoneEmojiKey4)
+      deactivateBtn(btn: phoneEmojiKey5)
       deactivateBtn(btn: padEmojiKey0)
       deactivateBtn(btn: padEmojiKey1)
       deactivateBtn(btn: padEmojiKey2)
+      deactivateBtn(btn: padEmojiKey3)
+      deactivateBtn(btn: padEmojiKey4)
+      deactivateBtn(btn: padEmojiKey5)
+      deactivateBtn(btn: padEmojiKey6)
+      deactivateBtn(btn: padEmojiKey7)
+      deactivateBtn(btn: padEmojiKey8)
 
       if controllerLanguage == "Indonesian" {
         hideConjugateAndPluralKeys(state: false)
@@ -705,9 +739,9 @@ class KeyboardViewController: UIInputViewController {
       if commandState == .colonToEmoji && emojisToShow != .zero {
         let emojiButtons: [UIButton]
         if DeviceType.isPad {
-          emojiButtons = [translateKey, conjugateKey, pluralKey, padEmojiKey0, padEmojiKey1, padEmojiKey2]
+          emojiButtons = [translateKey, conjugateKey, pluralKey, padEmojiKey0, padEmojiKey1, padEmojiKey2, padEmojiKey3, padEmojiKey4, padEmojiKey5]
         } else {
-          emojiButtons = [translateKey, conjugateKey, pluralKey, phoneEmojiKey0, phoneEmojiKey1]
+          emojiButtons = [translateKey, conjugateKey, pluralKey, phoneEmojiKey0, phoneEmojiKey1, phoneEmojiKey2]
         }
 
         for (index, emoji) in emojisToDisplayArray.enumerated() {
@@ -1028,13 +1062,27 @@ class KeyboardViewController: UIInputViewController {
 
   @IBOutlet var phoneEmojiKey0: UIButton!
   @IBOutlet var phoneEmojiKey1: UIButton!
+  @IBOutlet var phoneEmojiKey2: UIButton!
+  @IBOutlet var phoneEmojiKey3: UIButton!
+  @IBOutlet var phoneEmojiKey4: UIButton!
+  @IBOutlet var phoneEmojiKey5: UIButton!
   @IBOutlet var phoneEmojiDivider: UILabel!
+  @IBOutlet var phoneEmojiDivider1: UILabel!
 
   @IBOutlet var padEmojiKey0: UIButton!
   @IBOutlet var padEmojiKey1: UIButton!
   @IBOutlet var padEmojiKey2: UIButton!
+  @IBOutlet var padEmojiKey3: UIButton!
+  @IBOutlet var padEmojiKey4: UIButton!
+  @IBOutlet var padEmojiKey5: UIButton!
+  @IBOutlet var padEmojiKey6: UIButton!
+  @IBOutlet var padEmojiKey7: UIButton!
+  @IBOutlet var padEmojiKey8: UIButton!
   @IBOutlet var padEmojiDivider0: UILabel!
   @IBOutlet var padEmojiDivider1: UILabel!
+  @IBOutlet var padEmojiDivider2: UILabel!
+  @IBOutlet var padEmojiDivider3: UILabel!
+  @IBOutlet var padEmojiDivider4: UILabel!
 
   /// Sets up all buttons that are associated with Scribe commands.
   func setCommandBtns() {
@@ -1051,18 +1099,30 @@ class KeyboardViewController: UIInputViewController {
 
   /// Hides all emoji dividers based on conditions determined by the keyboard state.
   func conditionallyHideEmojiDividers() {
+    let dividers: [UILabel]
+    if DeviceType.isPhone {
+      dividers = [phoneEmojiDivider, phoneEmojiDivider1]
+    } else {
+      dividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
+    }
+
     if commandState == .idle {
       if [.zero, .one, .three].contains(emojisToShow) {
         phoneEmojiDivider.backgroundColor = .clear
       }
+      phoneEmojiDivider1.backgroundColor = .clear
+
       if [.zero, .one, .two].contains(emojisToShow) {
         padEmojiDivider0.backgroundColor = .clear
         padEmojiDivider1.backgroundColor = .clear
       }
+      padEmojiDivider2.backgroundColor = .clear
+      padEmojiDivider3.backgroundColor = .clear
+      padEmojiDivider4.backgroundColor = .clear
     } else {
-      phoneEmojiDivider.backgroundColor = .clear
-      padEmojiDivider0.backgroundColor = .clear
-      padEmojiDivider1.backgroundColor = .clear
+      for divider in dividers {
+        divider.backgroundColor = .clear
+      }
     }
   }
 
@@ -2286,9 +2346,19 @@ class KeyboardViewController: UIInputViewController {
 
         deactivateBtn(btn: phoneEmojiKey0)
         deactivateBtn(btn: phoneEmojiKey1)
+        deactivateBtn(btn: phoneEmojiKey2)
+        deactivateBtn(btn: phoneEmojiKey3)
+        deactivateBtn(btn: phoneEmojiKey4)
+        deactivateBtn(btn: phoneEmojiKey5)
         deactivateBtn(btn: padEmojiKey0)
         deactivateBtn(btn: padEmojiKey1)
         deactivateBtn(btn: padEmojiKey2)
+        deactivateBtn(btn: padEmojiKey3)
+        deactivateBtn(btn: padEmojiKey4)
+        deactivateBtn(btn: padEmojiKey5)
+        deactivateBtn(btn: padEmojiKey6)
+        deactivateBtn(btn: padEmojiKey7)
+        deactivateBtn(btn: padEmojiKey8)
 
         if [.translate, .conjugate, .plural].contains(commandState) {
           scribeKey.setPartialCornerRadius()
@@ -2343,9 +2413,19 @@ class KeyboardViewController: UIInputViewController {
 
       deactivateBtn(btn: phoneEmojiKey0)
       deactivateBtn(btn: phoneEmojiKey1)
+      deactivateBtn(btn: phoneEmojiKey2)
+      deactivateBtn(btn: phoneEmojiKey3)
+      deactivateBtn(btn: phoneEmojiKey4)
+      deactivateBtn(btn: phoneEmojiKey5)
       deactivateBtn(btn: padEmojiKey0)
       deactivateBtn(btn: padEmojiKey1)
       deactivateBtn(btn: padEmojiKey2)
+      deactivateBtn(btn: padEmojiKey3)
+      deactivateBtn(btn: padEmojiKey4)
+      deactivateBtn(btn: padEmojiKey5)
+      deactivateBtn(btn: padEmojiKey6)
+      deactivateBtn(btn: padEmojiKey7)
+      deactivateBtn(btn: padEmojiKey8)
 
       activateConjugationDisplay()
       styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
