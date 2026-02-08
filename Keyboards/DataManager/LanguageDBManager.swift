@@ -291,7 +291,7 @@ extension LanguageDBManager {
         args: StatementArguments(queryInfo.args)
       )
 
-      // For canonical gender: results are the actual genders
+      // For canonical gender: results are the actual genders.
       if queryInfo.fallbackGender == nil {
         for gender in results where !gender.isEmpty {
           if !allGenders.contains(gender) {
@@ -299,7 +299,7 @@ extension LanguageDBManager {
           }
         }
       }
-      // For masculine/feminine: if any result, use fallback
+      // For masculine/feminine: if any result, use fallback.
       else {
         if !results.isEmpty && !results[0].isEmpty,
            let fallback = queryInfo.fallbackGender,
@@ -359,7 +359,7 @@ extension LanguageDBManager {
 
   /// Query preposition form of word in `prepositions`.
   func queryPrepForm(of word: String) -> [String] {
-    // Check if this language's database has grammaticalCase column
+    // Check if this language's database has grammaticalCase column.
     guard hasGrammaticalCaseColumn() else {
       return [""]
     }

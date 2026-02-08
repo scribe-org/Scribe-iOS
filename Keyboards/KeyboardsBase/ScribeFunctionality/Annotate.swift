@@ -32,7 +32,7 @@ let prepAnnotationConversionDict = [
   "Russian": ["Acc": "Вин", "Dat": "Дат", "Gen": "Род", "Loc": "Мес", "Pre": "Пре", "Ins": "Инс"]
 ]
 
-// Converts full gender names to abbreviations (e.g., "feminine" → "F")
+// Converts full gender names to abbreviations (e.g., "feminine" → "F").
 func convertFullGenderToAbbr(_ genderFull: String) -> String {
   let genderMap: [String: String] = [
     "feminine": "F",
@@ -46,7 +46,7 @@ func convertFullGenderToAbbr(_ genderFull: String) -> String {
   return genderMap[genderFull.lowercased()] ?? genderFull
 }
 
-// Converts full preposition to abbreviations
+// Converts full preposition to abbreviations.
 func convertFullPrepositionToAbbr(_ prepositionFull: String) -> String {
   let prepositionMap: [String: String] = [
     "genitive case": "Gen",
@@ -72,7 +72,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
   // Get gender(s)
   let nounForm = LanguageDBManager.shared.queryNounForm(of: wordToAnnotate)[0]
   if !nounForm.isEmpty {
-    // nounForm might already be "M/F" if multiple genders found
+    // nounForm might already be "M/F" if multiple genders found.
     genderAnnotations = nounForm.components(separatedBy: "/")
   }
 
@@ -81,13 +81,13 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
     pluralAnnotation = "PL"
   }
 
-  // Combine: gender(s) first, then PL if applicable
+  // Combine: gender(s) first, then PL if applicable.
   var allAnnotations = genderAnnotations
   if let pl = pluralAnnotation, !allAnnotations.contains("PL") {
     allAnnotations.append(pl)
   }
 
-  // Join back with "/"
+  // Join back with "/".
   let combinedNounForm = allAnnotations.joined(separator: "/")
 
   prepAnnotationForm = LanguageDBManager.shared.queryPrepForm(of: wordToAnnotate.lowercased())[0]
@@ -171,7 +171,7 @@ func wordAnnotation(wordToAnnotate: String, KVC: KeyboardViewController) {
 
         if ["feminine", "masculine", "neuter", "common"].contains(annotationToDisplay.lowercased()) {
           annotationToDisplay = convertFullGenderToAbbr(annotationToDisplay)
-          annotationsToAssign[i] = annotationToDisplay  // Update the array too
+          annotationsToAssign[i] = annotationToDisplay  // update the array too
         }
 
         if nounFormToColorDict.keys.contains(annotationToDisplay) {

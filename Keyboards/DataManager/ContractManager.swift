@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 import Foundation
 
-/** ContractManager is responsible for loading and caching DataContract instances
- based on language codes.
-*/
+/**
+ * ContractManager is responsible for loading and caching DataContract instances based on language codes.
+ */
 class ContractManager {
     static let shared = ContractManager()
     private var contractCache: [String: DataContract] = [:]
@@ -18,7 +18,7 @@ class ContractManager {
             return cached
         }
 
-        // Load JSON file (e.g., "de.json", "en.json", "es.json")
+        // Load JSON file (e.g., "de.json", "en.json", "es.json").
         guard let jsonResourcePath = Bundle.main.path(
             forResource: languageCode,
             ofType: "json"
