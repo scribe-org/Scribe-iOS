@@ -1,29 +1,29 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Recursive navigation structure for dynamic conjugation and declension views.
- * Supports arbitrary depth navigation.
- */
+/// Recursive navigation structure for dynamic conjugation and declension views.
+/// Supports arbitrary depth navigation.
 
 import Foundation
 
-/// Represents a single option in the navigation
+/// Represents a single option in the navigation.
 enum NavigationNode {
-  case nextLevel(NavigationLevel, displayValue: String?)  // Navigate deeper, with optional display value
-  case finalValue(String)                                   // Terminal node - insert this text
+  case nextLevel(NavigationLevel, displayValue: String?)  // navigate deeper, with optional display value
+  case finalValue(String)                                 // terminal node, insert this text
 }
 
-/// Represents a level in the navigation hierarchy
+/// Represents a level in the navigation hierarchy.
 struct NavigationLevel {
   let title: String                              // Title for command bar
   let options: [(label: String, node: NavigationNode)]  // Buttons to display
 }
 
-/// Builds navigation trees for conjugations and declensions
+/// Builds navigation trees for conjugations and declensions.
 struct NavigationBuilder {
 
-  /// Builds conjugation navigation tree from ConjugationManager data
-  /// Returns array of tense levels for linear navigation
+  /// Builds the conjugation navigation levels for a given verb and language.
+  /// - Parameters:
+  ///   - verb: The verb to conjugate.
+  ///   - language: The language code (e.g., "de", "ru").
   static func buildConjugationCases(
     verb: String,
     language: String
@@ -51,11 +51,11 @@ struct NavigationBuilder {
         ))
 
       } else {
-        // Multiple types: create type selection buttons with display values
+        // Multiple types: create type selection buttons with display values.
         var typeOptions: [(label: String, node: NavigationNode)] = []
 
         for (typeTitle, forms) in conjugationTypes {
-          // Create display value from first 2-3 forms
+          // Create display value from first 2-3 forms.
           let displayValue = forms.prefix(3).map { $0.1 }.joined(separator: "/")
 
           let formOptions = forms.map { (pronoun, conjugatedForm) in
@@ -78,12 +78,14 @@ struct NavigationBuilder {
     return tenseLevels
   }
 
-  /// Returns array of all declension cases for linear navigation
+  /// Loads declension cases for a given language.
+  /// - Parameters:
+  ///   -language: The language code (e.g., "de", "ru").
   static func getDeclensionCases(language: String) -> [NavigationLevel]? {
     return DeclensionManager.shared.loadDeclensions(language: language)
   }
 
-  /// Finds the starting index for a declension case based on prep form
+  /// Finds the starting index for a declension case based on prep form.
   static func findStartingCaseIndex(prepForm: String, language: String) -> Int {
     if language == "de" {
       if prepForm.contains("Acc") {

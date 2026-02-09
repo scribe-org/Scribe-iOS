@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Variables associated with the base keyboard interface.
- */
+/// Variables associated with the base keyboard interface.
 
 import UIKit
 
@@ -168,6 +166,7 @@ let languagesStringDict = [
   "Swedish": NSLocalizedString("i18n.app._global.swedish", value: "Swedish", comment: "")
 ]
 
+/// Returns the key in a dictionary for a given value.
 func getKeyInDict(givenValue: String, dict: [String: String]) -> String {
   for (key, value) in dict where value == givenValue {
     return key
@@ -183,6 +182,7 @@ func getControllerLanguageAbbr() -> String {
   return abbreviation
 }
 
+/// Returns the translation language code for the current controller language.
 func getControllerTranslateLangCode() -> String {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
   let key = getControllerLanguageAbbr() + "TranslateLanguage"

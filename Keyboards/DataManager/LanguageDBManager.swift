@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Functions for loading in data to the keyboards.
- */
+/// Functions for loading in data to the keyboards.
 
 import Foundation
 import GRDB
@@ -419,6 +417,8 @@ extension LanguageDBManager {
   }
 
   /// Query the verb form of word in `verbs`.
+  /// - Parameters:
+  ///   - word: The value to search for.
   func queryVerb(of word: String) -> [String] {
     let columnName = (controllerLanguage == "Swedish") ? "verb" : "infinitive"
     let query = """

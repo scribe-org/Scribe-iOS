@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Classes for the parent keyboard view controller that language keyboards.
- */
+/// Classes for the parent keyboard view controller that language keyboards.
 
 import GRDB
 import UIKit
@@ -1535,7 +1533,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    // Always hide old form buttons first
+    // Always hide old form buttons first.
     formKeyFPS?.isHidden = true
     formKeySPS?.isHidden = true
     formKeyTPS?.isHidden = true
@@ -1571,7 +1569,7 @@ class KeyboardViewController: UIInputViewController {
     shiftFormsDisplayLeft?.isHidden = true
     shiftFormsDisplayRight?.isHidden = true
 
-    // Handle displayInformation separately
+    // Handle displayInformation separately.
     if commandState == .displayInformation {
       for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = false
@@ -1597,10 +1595,10 @@ class KeyboardViewController: UIInputViewController {
       deactivateBtn(btn: padEmojiKey2)
 
       setInformationState()
-      return  // Return here to skip normal keyboard setup
+      return  // return to skip normal keyboard setup
     }
 
-    // Normal keyboard view
+    // Normal keyboard view.
       for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
@@ -1897,7 +1895,7 @@ class KeyboardViewController: UIInputViewController {
         let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
         if verbInTable {
           commandState = .dynamicConjugation
-          // Show dynamic conjugation view instead of old hardcoded one
+          // Show dynamic conjugation view.
           showDynamicConjugationView(verb: verbToConjugate)
           return
         } else {
@@ -2312,6 +2310,9 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Shows the conjugation view for verbs.
+  /// - Parameters
+  ///   - verb: the verb to show conjugations for.
   func showDynamicConjugationView(verb: String) {
     // Remove any existing view
     children.forEach { child in
@@ -2364,8 +2365,11 @@ class KeyboardViewController: UIInputViewController {
     conjugationVC.didMove(toParent: self)
   }
 
+  /// Shows the declension view for prepositions with declensions.
+  /// - Parameters
+  ///   - preposition: the preposition to show declensions for.
   func showDynamicDeclensionView(preposition: String) {
-    // Remove any existing view
+    // Remove any existing view.
     children.forEach { child in
       if child is DynamicConjugationViewController {
         child.removeFromParent()
@@ -2373,7 +2377,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    // Set up UI state
+    // Set up UI state.
     deactivateBtn(btn: translateKey)
     deactivateBtn(btn: conjugateKey)
     deactivateBtn(btn: pluralKey)
@@ -2387,13 +2391,13 @@ class KeyboardViewController: UIInputViewController {
     commandBar.setCornerRadiusAndShadow()
     commandBar.backgroundColor = commandBarColor
 
-    // Build declension cases array
+    // Build declension cases array.
     let language = languagesAbbrDict[controllerLanguage] ?? ""
     guard let cases = NavigationBuilder.getDeclensionCases(language: language) else {
       return
     }
 
-    // Find starting index
+    // Find starting index.
     let startingIndex = NavigationBuilder.findStartingCaseIndex(
       prepForm: prepAnnotationForm,
       language: language

@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Functions and elements that control the conjugation command.
- */
+/// Functions and elements that control the conjugation command.
 
 import UIKit
 
@@ -26,6 +24,10 @@ func triggerVerbConjugation(commandBar: UILabel) -> Bool {
   return isVerbInConjugationTable(queriedVerbToConjugate: verbToConjugate)
 }
 
+/// Checks if the verb to conjugate exists in the conjugation table.
+/// - Parameters:
+///   - queriedVerbToConjugate: The verb to check for existence.
+/// - Returns: True if the verb exists in the conjugation table, false otherwise.
 func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
   verbToConjugate = String(queriedVerbToConjugate.trailingSpacesTrimmed)
 
@@ -33,7 +35,7 @@ func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
   inputWordIsCapitalized = firstLetter.isUppercase
   verbToConjugate = verbToConjugate.lowercased()
 
-  // Try to query any conjugation form to verify verb exists
+  // Try to query any conjugation form to verify verb exists.
   let columnName = (controllerLanguage == "Swedish") ? "verb" : "infinitive"
   let results = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: [columnName])
 

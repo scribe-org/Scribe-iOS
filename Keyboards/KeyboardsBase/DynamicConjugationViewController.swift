@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Dynamic view controller for arbitrary-depth navigation.
- * Handles conjugations and declensions.
- */
+/// Dynamic view controller for arbitrary-depth navigation.
+/// Handles conjugations and declensions.
 
 import UIKit
 
@@ -17,10 +15,10 @@ class DynamicConjugationViewController: UIViewController {
 
   // MARK: Navigation Data
 
-  // For tree navigation (conjugations and variant declensions)
+  // For tree navigation (conjugations and variant declensions).
   private var navigationStack: [NavigationLevel] = []
 
-  // For linear navigation (declension cases)
+  // For linear navigation (declension cases).
   private var linearCases: [NavigationLevel]?
   private var currentCaseIndex: Int = 0
 
@@ -28,14 +26,14 @@ class DynamicConjugationViewController: UIViewController {
 
   // MARK: Initialization
 
-  // Tree navigation (conjugations)
+  // Tree navigation (conjugations).
   init(navigationTree: NavigationLevel, commandBar: CommandBar) {
     self.commandBar = commandBar
     super.init(nibName: nil, bundle: nil)
     navigationStack = [navigationTree]
   }
 
-  // Linear navigation (declensions)
+  // Linear navigation (declensions).
   init(linearCases: [NavigationLevel], commandBar: CommandBar, startingIndex: Int = 0) {
     self.commandBar = commandBar
     self.linearCases = linearCases
@@ -69,6 +67,7 @@ class DynamicConjugationViewController: UIViewController {
 
   // MARK: Setup
 
+  /// Sets up the UI components.
   private func setupUI() {
     buttonContainerView = UIView()
     buttonContainerView.backgroundColor = .clear
@@ -121,6 +120,7 @@ class DynamicConjugationViewController: UIViewController {
 
   // MARK: Display
 
+  /// Displays the current navigation level.
   private func displayCurrentLevel() {
     buttonContainerView.subviews.forEach { $0.removeFromSuperview() }
 
@@ -138,7 +138,7 @@ class DynamicConjugationViewController: UIViewController {
       return
     }
 
-    // Create button grid
+    // Create button grid.
     let count = options.count
     let (rows, cols) = getGridLayout(forCount: count)
     let spacing: CGFloat = 4
@@ -149,105 +149,107 @@ class DynamicConjugationViewController: UIViewController {
     let buttonHeight = (containerHeight - CGFloat(rows + 1) * spacing) / CGFloat(rows)
 
     for (index, option) in options.enumerated() {
-  let row = index / cols
-  let col = index % cols
+      let row = index / cols
+      let col = index % cols
 
-  let button = UIButton(type: .custom)
-  button.frame = CGRect(
-    x: CGFloat(col) * (buttonWidth + spacing) + spacing,
-    y: CGFloat(row) * (buttonHeight + spacing) + spacing,
-    width: buttonWidth,
-    height: buttonHeight
-  )
+      let button = UIButton(type: .custom)
+      button.frame = CGRect(
+        x: CGFloat(col) * (buttonWidth + spacing) + spacing,
+        y: CGFloat(row) * (buttonHeight + spacing) + spacing,
+        width: buttonWidth,
+        height: buttonHeight
+      )
 
-  button.setTitleColor(keyCharColor, for: .normal)
-  button.backgroundColor = keyColor
-  button.titleLabel?.font = .systemFont(ofSize: 16)
-  button.titleLabel?.numberOfLines = 0
-  button.titleLabel?.adjustsFontSizeToFitWidth = true
-  button.titleLabel?.minimumScaleFactor = 0.6
-  button.titleLabel?.textAlignment = .center
-  button.contentVerticalAlignment = .center
-  button.layer.cornerRadius = keyCornerRadius
-  button.layer.shadowColor = keyShadowColor
-  button.layer.shadowOffset = CGSize(width: 0, height: 1)
-  button.layer.shadowOpacity = 1.0
-  button.layer.shadowRadius = 0
-  button.tag = index
-  button.addTarget(self, action: #selector(optionButtonTapped(_:)), for: .touchUpInside)
+      button.setTitleColor(keyCharColor, for: .normal)
+      button.backgroundColor = keyColor
+      button.titleLabel?.font = .systemFont(ofSize: 16)
+      button.titleLabel?.numberOfLines = 0
+      button.titleLabel?.adjustsFontSizeToFitWidth = true
+      button.titleLabel?.minimumScaleFactor = 0.6
+      button.titleLabel?.textAlignment = .center
+      button.contentVerticalAlignment = .center
+      button.layer.cornerRadius = keyCornerRadius
+      button.layer.shadowColor = keyShadowColor
+      button.layer.shadowOffset = CGSize(width: 0, height: 1)
+      button.layer.shadowOpacity = 1.0
+      button.layer.shadowRadius = 0
+      button.tag = index
+      button.addTarget(self, action: #selector(optionButtonTapped(_:)), for: .touchUpInside)
 
-  // Determine the display value
-  let displayValue: String?
-  switch option.node {
-  case .finalValue(let value):
-    displayValue = value.isEmpty ? nil : value
-  case .nextLevel(_, let value):
-    displayValue = value
-  }
+      // Determine the display value.
+      let displayValue: String?
+      switch option.node {
+      case .finalValue(let value):
+        displayValue = value.isEmpty ? nil : value
+      case .nextLevel(_, let value):
+        displayValue = value
+      }
 
-  // Add label at top-left
-  let label = UILabel()
-  label.text = "  " + option.label
-  label.font = .systemFont(ofSize: 11)
-  label.textColor = commandBarPlaceholderColor
-  label.translatesAutoresizingMaskIntoConstraints = false
-  button.addSubview(label)
+      // Add label at top-left.
+      let label = UILabel()
+      label.text = "  " + option.label
+      label.font = .systemFont(ofSize: 11)
+      label.textColor = commandBarPlaceholderColor
+      label.translatesAutoresizingMaskIntoConstraints = false
+      button.addSubview(label)
 
-  // Set value in center (if exists)
-  if let value = displayValue {
-    button.setTitle(value, for: .normal)
-  }
+      // Set value in center (if exists).
+      if let value = displayValue {
+        button.setTitle(value, for: .normal)
+      }
 
-  NSLayoutConstraint.activate([
-    label.topAnchor.constraint(equalTo: button.topAnchor, constant: 2),
-    label.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 2)
-  ])
+      NSLayoutConstraint.activate([
+        label.topAnchor.constraint(equalTo: button.topAnchor, constant: 2),
+        label.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 2)
+      ])
 
-  buttonContainerView.addSubview(button)
-}
+      buttonContainerView.addSubview(button)
+    }
 
     updateArrowButtons()
   }
 
+  /// Handles option button taps.
   @objc private func optionButtonTapped(_ sender: UIButton) {
-  guard let currentLevel = navigationStack.last,
-        sender.tag < currentLevel.options.count else {
-    return
+    guard let currentLevel = navigationStack.last,
+          sender.tag < currentLevel.options.count else {
+      return
+    }
+
+    let selectedOption = currentLevel.options[sender.tag]
+
+    switch selectedOption.node {
+    case .nextLevel(let nextLevel, _):
+      // Navigate deeper.
+      navigationStack.append(nextLevel)
+      displayCurrentLevel()
+
+    case .finalValue(let value):
+      // Skip empty values.
+      guard !value.isEmpty else { return }
+
+      // Insert text and close.
+      proxy.insertText(value + " ")
+      closeTapped()
+    }
   }
 
-  let selectedOption = currentLevel.options[sender.tag]
-
-  switch selectedOption.node {
-  case .nextLevel(let nextLevel, _):  // ← Add underscore for displayValue
-    // Navigate deeper
-    navigationStack.append(nextLevel)
-    displayCurrentLevel()
-
-  case .finalValue(let value):
-    // Skip empty values
-    guard !value.isEmpty else { return }
-
-    // Insert text and close
-    proxy.insertText(value + " ")
-    closeTapped()
-  }
-}
-
+  /// Handles left arrow button tap.
   @objc private func leftArrowTapped() {
     if let cases = linearCases {
-      // Linear mode: navigate between cases OR go back in tree
+      // Linear mode: navigate between cases or go back in tree.
       if navigationStack.count > 1 {
-        // In a variant - go back
+        // In a variant - go back.
         navigationStack.removeLast()
         displayCurrentLevel()
       } else if currentCaseIndex > 0 {
-        // At root level - go to previous case
+        // At root level - go to previous case.
         currentCaseIndex -= 1
         navigationStack = [cases[currentCaseIndex]]
         displayCurrentLevel()
       }
     } else {
-      // Tree mode: just go back
+      // Tree mode: just go back.
       if navigationStack.count > 1 {
         navigationStack.removeLast()
         displayCurrentLevel()
@@ -255,45 +257,47 @@ class DynamicConjugationViewController: UIViewController {
     }
   }
 
+  /// Handles right arrow button tap.
   @objc private func rightArrowTapped() {
     if let cases = linearCases {
-      // Linear mode: navigate to next case
+      // Linear mode: navigate to next case.
       if navigationStack.count > 1 {
-        // In a variant - can't navigate cases
+        // In a variant - can't navigate cases.
         return
       } else if currentCaseIndex < cases.count - 1 {
-        // At root level - go to next case
+        // At root level - go to next case.
         currentCaseIndex += 1
         navigationStack = [cases[currentCaseIndex]]
         displayCurrentLevel()
       }
     }
-    // Tree mode: right arrow does nothing
+    // Tree mode: right arrow does nothing.
   }
 
+  /// Updates the enabled state of arrow buttons.
   private func updateArrowButtons() {
     if let cases = linearCases {
-      // Linear mode
+      // Linear mode.
       if navigationStack.count > 1 {
-        // In a variant - left goes back, right disabled
+        // In a variant - left goes back, right disabled.
         leftArrowButton.isEnabled = true
         leftArrowButton.alpha = 1.0
         rightArrowButton.isEnabled = false
         rightArrowButton.alpha = 1.0
       } else {
-        // At root case level - arrows navigate cases
+        // At root case level - arrows navigate cases.
         leftArrowButton.isEnabled = currentCaseIndex > 0
-
         rightArrowButton.isEnabled = currentCaseIndex < cases.count - 1
       }
     } else {
-      // Tree mode - left goes back, right disabled
+      // Tree mode - left goes back, right disabled.
       leftArrowButton.isEnabled = navigationStack.count > 1
 
       rightArrowButton.isEnabled = false
     }
   }
 
+  /// Closes the dynamic conjugation view.
   @objc private func closeTapped() {
     commandState = .idle
     autoActionState = .suggest
@@ -307,6 +311,9 @@ class DynamicConjugationViewController: UIViewController {
     kvc?.conditionallySetAutoActionBtns()
   }
 
+  /// Determines grid layout based on button count.
+  /// - Parameters:
+    ///   - count: The number of buttons to display.
   private func getGridLayout(forCount count: Int) -> (rows: Int, cols: Int) {
     switch count {
     case 1: return (1, 1)
