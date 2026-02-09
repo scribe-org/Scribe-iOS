@@ -12,12 +12,12 @@ class DeclensionManager {
   func loadDeclensions(language: String) -> [NavigationLevel]? {
     let languageCode = language.lowercased()
 
-    // Load declensions JSON file (e.g., "de_declensions.json")
+    // Load contract JSON file (e.g., "de.json")
     guard let jsonResourcePath = Bundle.main.path(
-      forResource: "\(languageCode)_declensions",
+      forResource: "\(languageCode)",
       ofType: "json"
     ) else {
-      NSLog("Declensions not found: \(languageCode)_declensions.json")
+      NSLog("Declensions not found: \(languageCode).json")
       return nil
     }
 

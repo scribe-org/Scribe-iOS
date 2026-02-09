@@ -60,5 +60,481 @@
                 }
             }
         }
+    },
+    "declensions": {
+    "1": {
+      "title": "Akkusativ Definitpronomen",
+      "forms": {
+        "M": "den",
+        "F": "die",
+        "N": "das",
+        "PL": "die"
+      }
+    },
+    "2": {
+      "title": "Akkusativ Indefinitpronomen",
+      "forms": {
+        "M": "einen",
+        "F": "eine",
+        "N": "ein",
+        "PL": ""
+      }
+    },
+    "3": {
+      "title": "Akkusativ Personalpronomen",
+      "forms": {
+        "ich": "mich",
+        "du/Sie": {
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": "dich",
+            "formell": "Sie"
+          }
+        },
+        "er/sie/es": {
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": "ihn",
+            "sie": "sie",
+            "es": "es"
+          }
+        },
+        "wir": "uns",
+        "ihr": "euch",
+        "sie": "sie"
+      }
+    },
+    "4": {
+      "title": "Akkusativ Possessivpronomen",
+      "forms": {
+        "ich": {
+          "displayValue": "mein*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "meinen",
+            "F": "meine",
+            "N": "mein",
+            "PL": "meine"
+          }
+        },
+        "du/Sie": {
+          "displayValue": "dein*/Ihr*",
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": {
+              "displayValue": "dein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "deinen",
+                "F": "deine",
+                "N": "dein",
+                "PL": "deine"
+              }
+            },
+            "formell": {
+              "displayValue": "Ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "Ihren",
+                "F": "Ihre",
+                "N": "Ihr",
+                "PL": "Ihre"
+              }
+            }
+          }
+        },
+        "er/sie/es": {
+          "displayValue": "sein*/ihr*/sein*",
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seinen",
+                "F": "seine",
+                "N": "sein",
+                "PL": "seine"
+              }
+            },
+            "sie": {
+              "displayValue": "ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "ihren",
+                "F": "ihre",
+                "N": "ihr",
+                "PL": "ihre"
+              }
+            },
+            "es": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seinen",
+                "F": "seine",
+                "N": "sein",
+                "PL": "seine"
+              }
+            }
+          }
+        },
+        "wir": {
+          "displayValue": "unser*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "unsren",
+            "F": "unsre",
+            "N": "unser",
+            "PL": "unsre"
+          }
+        },
+        "ihr": {
+          "displayValue": "euer*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "euren",
+            "F": "eure",
+            "N": "euer",
+            "PL": "eure"
+          }
+        },
+        "sie": {
+          "displayValue": "ihr*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "ihren",
+            "F": "ihre",
+            "N": "ihr",
+            "PL": "ihre"
+          }
+        }
+      }
+    },
+    "5": {
+      "title": "Akkusativ Demonstrativpronomen",
+      "forms": {
+        "M": "diesen",
+        "F": "diese",
+        "N": "dieses",
+        "PL": "diese"
+      }
+    },
+    "6": {
+      "title": "Dativ Definitpronomen",
+      "forms": {
+        "M": "dem",
+        "F": "der",
+        "N": "dem",
+        "PL": "den"
+      }
+    },
+    "7": {
+      "title": "Dativ Indefinitpronomen",
+      "forms": {
+        "M": "einem",
+        "F": "einer",
+        "N": "einem",
+        "PL": ""
+      }
+    },
+    "8": {
+      "title": "Dativ Personalpronomen",
+      "forms": {
+        "ich": "mir",
+        "du/Sie": {
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": "dir",
+            "formell": "Ihnen"
+          }
+        },
+        "er/sie/es": {
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": "ihm",
+            "sie": "ihr",
+            "es": "ihm"
+          }
+        },
+        "wir": "uns",
+        "ihr": "euch",
+        "sie": "ihnen"
+      }
+    },
+    "9": {
+      "title": "Dativ Possessivpronomen",
+      "forms": {
+        "ich": {
+          "displayValue": "mein*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "meinem",
+            "F": "meiner",
+            "N": "meinem",
+            "PL": "meinen"
+          }
+        },
+        "du/Sie": {
+          "displayValue": "dein*/Ihr*",
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": {
+              "displayValue": "dein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "deinem",
+                "F": "deiner",
+                "N": "deinem",
+                "PL": "deinen"
+              }
+            },
+            "formell": {
+              "displayValue": "Ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "Ihrem",
+                "F": "Ihrer",
+                "N": "Ihrem",
+                "PL": "Ihren"
+              }
+            }
+          }
+        },
+        "er/sie/es": {
+          "displayValue": "sein*/ihr*/sein*",
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seinem",
+                "F": "seiner",
+                "N": "seinem",
+                "PL": "seinen"
+              }
+            },
+            "sie": {
+              "displayValue": "ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "ihrem",
+                "F": "ihrer",
+                "N": "ihrem",
+                "PL": "ihren"
+              }
+            },
+            "es": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seinem",
+                "F": "seiner",
+                "N": "seinem",
+                "PL": "seinen"
+              }
+            }
+          }
+        },
+        "wir": {
+          "displayValue": "unser*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "unsrem",
+            "F": "unsrer",
+            "N": "unsrem",
+            "PL": "unsren"
+          }
+        },
+        "ihr": {
+          "displayValue": "euer*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "eurem",
+            "F": "eurer",
+            "N": "eurem",
+            "PL": "euren"
+          }
+        },
+        "sie": {
+          "displayValue": "ihr*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "ihrem",
+            "F": "ihrer",
+            "N": "ihrem",
+            "PL": "ihren"
+          }
+        }
+      }
+    },
+    "10": {
+      "title": "Dativ Demonstrativpronomen",
+      "forms": {
+        "M": "diesem",
+        "F": "dieser",
+        "N": "diesem",
+        "PL": "diesen"
+      }
+    },
+    "11": {
+      "title": "Genitiv Definitpronomen",
+      "forms": {
+        "M": "des",
+        "F": "der",
+        "N": "des",
+        "PL": "der"
+      }
+    },
+    "12": {
+      "title": "Genitiv Indefinitpronomen",
+      "forms": {
+        "M": "eines",
+        "F": "einer",
+        "N": "eines",
+        "PL": ""
+      }
+    },
+    "13": {
+      "title": "Genitiv Personalpronomen",
+      "forms": {
+        "ich": "meiner",
+        "du/Sie": {
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": "deiner",
+            "formell": "Ihrer"
+          }
+        },
+        "er/sie/es": {
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": "seiner",
+            "sie": "ihrer",
+            "es": "seiner"
+          }
+        },
+        "wir": "unser",
+        "ihr": "euer",
+        "sie": "ihrer"
+      }
+    },
+    "14": {
+      "title": "Genitiv Possessivpronomen",
+      "forms": {
+        "ich": {
+          "displayValue": "mein*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "meines",
+            "F": "meiner",
+            "N": "meines",
+            "PL": "meiner"
+          }
+        },
+        "du/Sie": {
+          "displayValue": "dein*/Ihr*",
+          "title": "Formalität des Subjekts?",
+          "forms": {
+            "informell": {
+              "displayValue": "dein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "deines",
+                "F": "deiner",
+                "N": "deines",
+                "PL": "deiner"
+              }
+            },
+            "formell": {
+              "displayValue": "Ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "Ihres",
+                "F": "Ihrer",
+                "N": "Ihres",
+                "PL": "Ihrer"
+              }
+            }
+          }
+        },
+        "er/sie/es": {
+          "displayValue": "sein*/ihr*/sein*",
+          "title": "Geschlecht des Subjekts?",
+          "forms": {
+            "er": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seines",
+                "F": "seiner",
+                "N": "seines",
+                "PL": "seiner"
+              }
+            },
+            "sie": {
+              "displayValue": "ihr*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "ihres",
+                "F": "ihr",
+                "N": "ihres",
+                "PL": "ihr"
+              }
+            },
+            "es": {
+              "displayValue": "sein*",
+              "title": "Geschlecht des Objekts?",
+              "forms": {
+                "M": "seines",
+                "F": "seiner",
+                "N": "seines",
+                "PL": "seiner"
+              }
+            }
+          }
+        },
+        "wir": {
+          "displayValue": "unser*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "unsres",
+            "F": "unsrer",
+            "N": "unsres",
+            "PL": "unsrer"
+          }
+        },
+        "ihr": {
+          "displayValue": "euer*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "eures",
+            "F": "eurer",
+            "N": "eures",
+            "PL": "eurer"
+          }
+        },
+        "sie": {
+          "displayValue": "ihr*",
+          "title": "Geschlecht des Objekts?",
+          "forms": {
+            "M": "ihres",
+            "F": "ihrer",
+            "N": "ihres",
+            "PL": "ihrer"
+          }
+        }
+      }
+    },
+    "15": {
+      "title": "Genitiv Demonstrativpronomen",
+      "forms": {
+        "M": "dieses",
+        "F": "dieser",
+        "N": "dieses",
+        "PL": "dieser"
+      }
     }
+  }
 }
