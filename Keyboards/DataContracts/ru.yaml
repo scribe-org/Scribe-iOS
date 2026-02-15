@@ -1,0 +1,180 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table depict its gender.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  nominativeSingular: nominativePlural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Настоящее
+    tenses:
+      1:
+        tenseTitle: Indicative Present
+        tenseForms:
+          я: indicativePresentFirstPersonSingular
+          ты: indicativePresentSecondPersonSingular
+          он/она/оно: indicativePresentThirdPersonSingular
+          мы: indicativePresentFirstPersonPlural
+          вы: indicativePresentSecondPersonPlural
+          они: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Прошедшее
+    tenses:
+      1:
+        tenseTitle: Indicative Past
+        tenseForms:
+          я/ты/она: feminineIndicativePast
+          я/ты/он: masculineIndicativePast
+          оно: neuterIndicativePast
+          мы/вы/они: indicativePastPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Выберите тип переводимого слова
+
+    adjective:
+      displayValue: прилагательное
+      sectionTitle: Выберите перевод прилагательного
+
+    adverb:
+      displayValue: наречие
+      sectionTitle: Выберите перевод наречия
+
+    article:
+      displayValue: статья
+      sectionTitle: Выберите перевод статьи
+
+    conjunction:
+      displayValue: соединение
+      sectionTitle: Выберите перевод союза
+
+    noun:
+      displayValue: существительное
+      sectionTitle: Выберите перевод существительного
+
+    postposition:
+      displayValue: послелог
+      sectionTitle: Выберите перевод послелога
+
+    preposition:
+      displayValue: предлог
+      sectionTitle: Выберите перевод предлога
+
+    proper_noun:
+      displayValue: имя собственное
+      sectionTitle: Выберите перевод имени собственного.
+
+    pronoun:
+      displayValue: местоимение
+      sectionTitle: Выберите перевод местоимения
+
+    verb:
+      displayValue: глагол
+      sectionTitle: Выберите инфинитив глагола
+
+# MARK: Decline
+
+# Map of pronoun declensions given cases.
+declensions:
+  1:
+    title: Винительные местоимения
+    declensionForms:
+      я: меня
+      ты: тебя
+      он/она/оно:
+        displayValue: его/её/его
+        title: Пол объекта?
+        declensionForms:
+          он: его
+          она: её
+          оно: его
+      мы: нас
+      вы: вас
+      они: их
+
+  2:
+    title: Дательные местоимения
+    declensionForms:
+      я: мне
+      ты: тебе
+      он/она/оно:
+        displayValue: ему/ей/ему
+        title: Пол объекта?
+        declensionForms:
+          он: ему
+          она: ей
+          оно: ему
+      мы: нам
+      вы: вам
+      они: им
+
+  3:
+    title: Родительные местоимения
+    declensionForms:
+      я: меня
+      ты: тебя
+      он/она/оно:
+        displayValue: его/её/его
+        title: Пол объекта?
+        declensionForms:
+          он: его
+          она: её
+          оно: его
+      мы: нас
+      вы: вас
+      они: их
+
+  4:
+    title: Творительные местоимения
+    declensionForms":
+      я: мной
+      ты: тобой
+      он/она/оно:
+        displayValue: им/ей/им
+        title: Пол объекта?
+        declensionForms:
+          он: им
+          она: ей
+          оно: им
+      мы: нами
+      вы: вами
+      они: ими
+
+  5:
+    title: Предложные местоимения
+    declensionForms:
+      я: мне
+      ты": тебе
+      он/она/оно:
+        displayValue: нём/ней/нём
+        title: Пол объекта?
+        declensionForms:
+          он: нём
+          она: ней
+          оно: нём
+      мы: нас
+      вы: вас
+      они: них

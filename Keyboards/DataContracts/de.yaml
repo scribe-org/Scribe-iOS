@@ -1,0 +1,535 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table depict its gender.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  nominativeSingular: nominativePlural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Präsens
+    tenses:
+      1:
+        tenseTitle: Präsens
+        tenseForms:
+          ich: indicativePresentFirstPersonSingular
+          du: indicativePresentSecondPersonSingular
+          er/sie/es: indicativePresentThirdPersonSingular
+          wir: indicativePresentFirstPersonPlural
+          ihr: indicativePresentSecondPersonPlural
+          sie/Sie: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Preterite
+    tenses:
+      1:
+        tenseTitle: Preterite
+        tenseForms:
+          ich: indicativePreteriteFirstPersonSingular
+          du: indicativePreteriteFirstPersonPlural
+          er/sie/es: indicativePreteriteSecondPersonSingular
+          wir: indicativePreteriteSecondPersonPlural
+          ihr: indicativePreteriteThirdPersonSingular
+          sie/Sie: indicativePreteriteThirdPersonPlural
+
+  3:
+    sectionTitle: Perfekt
+    tenses:
+      1:
+        tenseTitle: Perfekt
+        tenseForms:
+          ich: "[indicativePresentFirstPersonSingular auxiliaryVerb] pastParticiple"
+          du: "[indicativePresentSecondPersonSingular auxiliaryVerb] pastParticiple"
+          er/sie/es: "[indicativePresentThirdPersonSingular auxiliaryVerb] pastParticiple"
+          wir: "[indicativePresentFirstPersonPlural auxiliaryVerb] pastParticiple"
+          ihr: "[indicativePresentSecondPersonPlural auxiliaryVerb] pastParticiple"
+          sie/Sie: "[indicativePresentThirdPersonPlural auxiliaryVerb] pastParticiple"
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Übersetzungsworttyp auswählen
+
+    adjective:
+      displayValue: Adjektiv
+      sectionTitle: Adjektiv Übersetzung auswählen
+
+    adverb:
+      displayValue: Adverb
+      sectionTitle: Adjektiv Übersetzung auswählen
+
+    article:
+      displayValue: Artikel
+      sectionTitle: Artikel Übersetzung auswählen
+
+    conjunction:
+      displayValue: Konjunktion
+      sectionTitle: Konjunktion Übersetzung auswählen
+
+    noun:
+      displayValue: Nomen
+      sectionTitle: Nomen Übersetzung auswählen
+
+    postposition:
+      displayValue: Postposition
+      sectionTitle: Postposition Übersetzung auswählen
+
+    preposition:
+      displayValue: Preposition
+      sectionTitle: Preposition Übersetzung auswählen
+
+    proper_noun:
+      displayValue: Eigenname
+      sectionTitle: Eigenname Übersetzung auswählen
+
+    pronoun:
+      displayValue: Pronomen
+      sectionTitle: Pronomen Übersetzung auswählen
+
+    verb:
+      displayValue: Verb
+      sectionTitle: Verb Übersetzung auswählen
+
+# MARK: Decline
+
+# Map of pronoun declensions given cases.
+declensions:
+    1:
+      sectionTitle: Akkusativ Definitpronomen
+      declensionForms:
+        M: den
+        F: die
+        N: das
+        PL: die
+
+    2:
+      sectionTitle: Akkusativ Indefinitpronomen
+      declensionForms:
+        M: einen
+        F: eine
+        N: ein
+        PL: welche
+
+    3:
+      sectionTitle: Akkusativ Personalpronomen
+      declensionForms:
+        ich: mich
+
+        du/Sie:
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell: dich
+            formell: Sie
+
+        er/sie/es:
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er: ihn
+            sie: sie
+            es: es
+
+        wir: uns
+
+        ihr: euch
+
+        sie: sie
+
+    4:
+      sectionTitle: Akkusativ Possessivpronomen
+      declensionForms:
+        ich:
+          displayValue: mein*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: meinen
+            F: meine
+            N: mein
+            PL: meine
+
+        du/Sie:
+          displayValue: dein*/Ihr*
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell:
+              displayValue: dein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: deinen
+                F: deine
+                N: dein
+                PL: deine
+
+            formell:
+              displayValue: Ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: Ihren
+                F: Ihre
+                N: Ihr
+                PL: Ihre
+
+        er/sie/es:
+          displayValue: sein*/ihr*/sein*
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seinen
+                F: seine
+                N: sein
+                PL: seine
+
+            sie:
+              displayValue: ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: ihren
+                F: ihre
+                N: ihr
+                PL: ihre
+
+            es:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seinen
+                F: seine
+                N: sein
+                PL: seine
+
+        wir:
+          displayValue: unser*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: unsren
+            F: unsre
+            N: unser
+            PL: unsre
+
+        ihr:
+          displayValue: euer*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: euren
+            F: eure
+            N: euer
+            PL: eure
+
+        sie:
+          displayValue: ihr*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: ihren
+            F: ihre
+            N: ihr
+            PL: ihre
+
+    5:
+      sectionTitle: Akkusativ Demonstrativpronomen
+      declensionForms:
+        M: diesen
+        F: diese
+        N: dieses
+        PL: diese
+
+    6:
+      sectionTitle: Dativ Definitpronomen
+      declensionForms:
+        M: dem
+        F: der
+        N: dem
+        PL: den
+
+    7:
+      sectionTitle: Dativ Indefinitpronomen
+      declensionForms:
+        M: einem
+        F: einer
+        N: einem
+        PL: welchen
+
+    8:
+      sectionTitle: Dativ Personalpronomen
+      declensionForms:
+        ich: mir
+
+        du/Sie:
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell: dir
+            formell: Ihnen
+
+        er/sie/es:
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er: ihm
+            sie: ihr
+            es: ihm
+
+        wir: uns
+
+        ihr: euch
+
+        sie: ihnen
+
+    9:
+      sectionTitle: Dativ Possessivpronomen
+      declensionForms:
+        ich:
+          displayValue: mein*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: meinem
+            F: meiner
+            N: meinem
+            PL: meinen
+
+        du/Sie:
+          displayValue: dein*/Ihr*
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell:
+              displayValue: dein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: deinem
+                F: deiner
+                N: deinem
+                PL: deinen
+
+            formell:
+              displayValue: Ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: Ihrem
+                F: Ihrer
+                N: Ihrem
+                PL: Ihren
+
+        er/sie/es:
+          displayValue: sein*/ihr*/sein*
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seinem
+                F: seiner
+                N: seinem
+                PL: seinen
+
+            sie:
+              displayValue: ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: ihrem
+                F: ihrer
+                N: ihrem
+                PL: ihren
+
+            es:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seinem
+                F: seiner
+                N: seinem
+                PL: seinen
+
+        wir:
+          displayValue: unser*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: unsrem
+            F: unsrer
+            N: unsrem
+            PL: unsren
+
+        ihr:
+          displayValue: euer*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: eurem
+            F: eurer
+            N: eurem
+            PL: euren
+
+        sie:
+          displayValue: ihr*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: ihrem
+            F: ihrer
+            N: ihrem
+            PL: ihren
+
+    10:
+      sectionTitle: Dativ Demonstrativpronomen
+      declensionForms:
+        M: diesem
+        F: dieser
+        N: diesem
+        PL: diesen
+
+    11:
+      sectionTitle: Genitiv Definitpronomen
+      declensionForms:
+        M: des
+        F: der
+        N: des
+        PL: der
+
+    12:
+      sectionTitle: Genitiv Indefinitpronomen
+      declensionForms:
+        M: eines
+        F: einer
+        N: eines
+        PL: welcher
+
+    13:
+      sectionTitle: Genitiv Personalpronomen
+      declensionForms:
+        ich: meiner
+
+        du/Sie:
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell: deiner
+            formell: Ihrer
+
+        er/sie/es:
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er: seiner
+            sie: ihrer
+            es: seiner
+
+        wir: unser
+
+        ihr: euer
+
+        sie: ihrer
+
+    14:
+      sectionTitle: Genitiv Possessivpronomen
+      declensionForms:
+        ich:
+          displayValue: mein*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: meines
+            F: meiner
+            N: meines
+            PL: meiner
+
+        du/Sie:
+          displayValue: dein*/Ihr*
+          title: Formalität des Subjekts?
+          declensionForms:
+            informell:
+              displayValue: dein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: deines
+                F: deiner
+                N: deines
+                PL: deiner
+
+            formell:
+              displayValue: Ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: Ihres
+                F: Ihrer
+                N: Ihres
+                PL: Ihrer
+
+        er/sie/es:
+          displayValue: sein*/ihr*/sein*
+          title: Geschlecht des Subjekts?
+          declensionForms:
+            er:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seines
+                F: seiner
+                N: seines
+                PL: seiner
+
+            sie:
+              displayValue: ihr*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: ihres
+                F: ihr
+                N: ihres
+                PL: ihr
+
+            es:
+              displayValue: sein*
+              title: Geschlecht des Objekts?
+              declensionForms:
+                M: seines
+                F: seiner
+                N: seines
+                PL: seiner
+
+        wir:
+          displayValue: unser*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: unsres
+            F: unsrer
+            N: unsres
+            PL: unsrer
+
+        ihr:
+          displayValue: euer*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: eures
+            F: eurer
+            N: eures
+            PL: eurer
+
+        sie:
+          displayValue: ihr*
+          title: Geschlecht des Objekts?
+          declensionForms:
+            M: ihres
+            F: ihrer
+            N: ihres
+            PL: ihrer
+
+    15:
+      sectionTitle: Genitiv Demonstrativpronomen
+      declensionForms:
+        M: dieses
+        F: dieser
+        N: dieses
+        PL: dieser

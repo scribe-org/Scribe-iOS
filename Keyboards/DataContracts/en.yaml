@@ -1,0 +1,170 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table depict its gender.
+genders:
+  canonical: []
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  singular: plural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Present
+    tenses:
+      1:
+        tenseTitle: Pr. Simple
+        tenseForms:
+          I/you/plural: simplePresent
+          he/she/it: simplePresentThirdPersonSingular
+
+      2:
+        tenseTitle: Pr. Perfect
+        tenseForms:
+          I/you/plural: "[have] pastParticiple"
+          he/she/it: "[has] pastParticiple"
+
+      3:
+        tenseTitle: Pr. Continuous
+        tenseForms:
+          I: "[am] presentParticiple"
+          you/plural: "[are] presentParticiple"
+          he/she/it: "[is] presentParticiple"
+
+      4:
+        tenseTitle: Pr. Perf. Continuous
+        tenseForms:
+          I/you/plural: "[have been] presentParticiple"
+          he/she/it: "[has been] presentParticiple"
+
+  2:
+    sectionTitle: Past
+    tenses:
+      1:
+        tenseTitle: Past Simple
+        tenseForms:
+          all: simplePast
+
+      2:
+        tenseTitle: Past Perfect
+        tenseForms:
+          all: "[had] pastParticiple"
+
+      3:
+        tenseTitle: Past Continuous
+        tenseForms:
+          I/he/she/it: "[was] presentParticiple"
+          you/plural: "[were] presentParticiple"
+
+      4:
+        tenseTitle: Past Perf. Continuous
+        tenseForms:
+          all: "[had been] presentParticiple"
+
+  3:
+    sectionTitle: Future
+    tenses:
+      1:
+        tenseTitle: Fut. Simple
+        tenseForms:
+          all: "[will] infinitive"
+
+      2:
+        tenseTitle: Fut. Perfect
+        tenseForms:
+          all: "[will have] pastParticiple"
+
+      3:
+        tenseTitle: Fut. Continuous
+        tenseForms:
+          all: "[will be] presentParticiple"
+
+      4:
+        tenseTitle: Fut. Perf. Continuous
+        tenseForms:
+          all: "[will have been] presentParticiple"
+
+  4:
+    sectionTitle: Conditional
+    tenses:
+      1:
+        tenseTitle: Cond. Simple
+        tenseForms:
+          all: "[would] infinitive"
+
+      2:
+        tenseTitle: Cond. Perfect
+        tenseForms:
+          all: "[would have] pastParticiple"
+
+      3:
+        tenseTitle: Cond. Continuous
+        tenseForms:
+          all: "[would be] presentParticiple"
+
+      4:
+        tenseTitle: Cond. Perf. Continuous
+        tenseForms:
+          all: "[would have been] presentParticiple"
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Select translation word type
+
+    adjective:
+      displayValue: adjective
+      sectionTitle: Select adjective translation
+
+    adverb:
+      displayValue: adverb
+      sectionTitle: Select adverb translation
+
+    article:
+      displayValue: article
+      sectionTitle: Select article translation
+
+    conjunction:
+      displayValue: conjunction
+      sectionTitle: Select conjunction translation
+
+    noun:
+      displayValue: noun
+      sectionTitle: Select noun translation
+
+    postposition:
+      displayValue: postposition
+      sectionTitle: Select postposition translation
+
+    preposition:
+      displayValue: preposition
+      sectionTitle: Select preposition translation
+
+    proper_noun:
+      displayValue: proper noun
+      sectionTitle: Select proper noun translation
+
+    pronoun:
+      displayValue: pronoun
+      sectionTitle: Select pronoun translation
+
+    verb:
+      displayValue: verb
+      sectionTitle: Select verb infinitive

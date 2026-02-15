@@ -1,0 +1,124 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table depict its gender.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  singular: plural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Presente
+    tenses:
+      1:
+        tenseTitle: Presente
+        tenseForms:
+          eu: indicativePresentFirstPersonSingular
+          tu: indicativePresentFirstPersonPlural
+          ele/ela/você: indicativePresentSecondPersonSingular
+          nós: indicativePresentSecondPersonPlural
+          vós: indicativePresentThirdPersonSingular
+          eles/elas/vocês: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Pretérito Perfeito
+    tenses:
+      1:
+        tenseTitle: Pretérito Perfeito
+        tenseForms:
+          eu: indicativePastPerfectFirstPersonSingular
+          tu: indicativePastPerfectFirstPersonPlural
+          ele/ela/você: indicativePastPerfectSecondPersonSingular
+          nós: indicativePastPerfectSecondPersonPlural
+          vós: indicativePastPerfectThirdPersonSingular
+          eles/elas/vocês: indicativePastPerfectThirdPersonPlural
+
+  3:
+    sectionTitle: Pretérito Imperfeito
+    tenses:
+      1:
+        tenseTitle: Pretérito Imperfeito
+        tenseForms:
+          eu: indicativePastImperfectFirstPersonSingular
+          tu: indicativePastImperfectFirstPersonPlural
+          ele/ela/você: indicativePastImperfectSecondPersonSingular
+          nós: indicativePastImperfectSecondPersonPlural
+          vós: indicativePastImperfectThirdPersonSingular
+          eles/elas/vocês: indicativePastImperfectThirdPersonPlural
+
+  4:
+    sectionTitle: Futuro Simples
+    tenses:
+      1:
+        tenseTitle: Futuro Simples
+        tenseForms:
+          eu: indicativePluperfectFirstPersonSingular
+          tu: indicativePluperfectFirstPersonPlural
+          ele/ela/você: indicativePluperfectSecondPersonSingular
+          nós: indicativePluperfectSecondPersonPlural
+          vós: indicativePluperfectThirdPersonSingular
+          eles/elas/vocês: indicativePluperfectThirdPersonPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Selecione o tipo a ser traduzida
+
+    adjective:
+      displayValue: adjetivo
+      sectionTitle: Selecione a tradução do adjetivo
+
+    adverb:
+      displayValue: advérbio
+      sectionTitle: Selecione a tradução do advérbio
+
+    article:
+      displayValue: artigo
+      sectionTitle: Selecione a tradução do artigo
+
+    conjunction:
+      displayValue: conjunção
+      sectionTitle: Selecione a tradução da conjunção
+
+    noun:
+      displayValue: nome
+      sectionTitle: Selecione a tradução do substantivo
+
+    postposition:
+      displayValue: posposição
+      sectionTitle: Selecione a tradução de posposição
+
+    preposition:
+      displayValue: preposição
+      sectionTitle: Selecione a tradução da preposiçãon
+
+    proper_noun:
+      displayValue: nome próprio
+      sectionTitle: Selecione a tradução do nome próprio
+
+    pronoun:
+      displayValue: pronome
+      sectionTitle: Selecione a tradução do pronome
+
+    verb:
+      displayValue: verbo
+      sectionTitle: Selecione o verbo no infinitivo
