@@ -3,7 +3,7 @@
 
 # MARK: Noun Gender
 
-# A map of which columns in the nouns table depict its gender.
+# A map of which columns in the nouns table contain gender information.
 genders:
   canonical: []
   feminines: [feminineSingular]
