@@ -27,17 +27,17 @@ class ConjugationManager {
 
     var result: [(String, [(String, [(String, String)])])] = []
 
-    for (_, tenseGroup) in conjugations.sorted(by: {
+    for (_, conjugationSection) in conjugations.sorted(by: {
       Int($0.key) ?? 0 < Int($1.key) ?? 0
     }) {
-      var conjugationTypes: [(String, [(String, String)])] = []
+      var conjugationTenses: [(String, [(String, String)])] = []
 
-      for (_, conjugationType) in tenseGroup.conjugationTypes.sorted(by: {
+      for (_, conjugationTense) in conjugationSection.tenses.sorted(by: {
         Int($0.key) ?? 0 < Int($1.key) ?? 0
       }) {
         var forms: [(String, String)] = []
 
-        for (pronoun, columnName) in conjugationType.conjugationForms {
+        for (pronoun, columnName) in conjugationTense.tenseForms {
           let conjugatedForm = queryConjugatedForm(
             verb: verb,
             columnName: columnName,
@@ -46,10 +46,10 @@ class ConjugationManager {
           forms.append((pronoun, conjugatedForm))
         }
 
-        conjugationTypes.append((conjugationType.title, forms))
+        conjugationTenses.append((conjugationTense.tenseTitle, forms))
       }
 
-      result.append((tenseGroup.title, conjugationTypes))
+      result.append((conjugationSection.sectionTitle, conjugationTenses))
     }
 
     return result.isEmpty ? nil : result

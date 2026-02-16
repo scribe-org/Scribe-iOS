@@ -622,6 +622,19 @@
 		E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */; };
 		E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
 		E96111482F04EC6B001E4F95 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
+		E978B3E42F431BE6006AED44 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E978B3E32F431BE6006AED44 /* Yams */; };
+		E97D5A4D2F43235D00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A4C2F43235D00DE18B7 /* Yams */; };
+		E97D5A4F2F43236600DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A4E2F43236600DE18B7 /* Yams */; };
+		E97D5A512F43236D00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A502F43236D00DE18B7 /* Yams */; };
+		E97D5A532F43237100DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A522F43237100DE18B7 /* Yams */; };
+		E97D5A552F43237600DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A542F43237600DE18B7 /* Yams */; };
+		E97D5A572F43237B00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A562F43237B00DE18B7 /* Yams */; };
+		E97D5A592F43238100DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A582F43238100DE18B7 /* Yams */; };
+		E97D5A5B2F43238600DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A5A2F43238600DE18B7 /* Yams */; };
+		E97D5A5D2F43238B00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A5C2F43238B00DE18B7 /* Yams */; };
+		E97D5A5F2F43238F00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A5E2F43238F00DE18B7 /* Yams */; };
+		E97D5A612F43239400DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A602F43239400DE18B7 /* Yams */; };
+		E97D5A632F43239900DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A622F43239900DE18B7 /* Yams */; };
 		E97E650A2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E65092F2CDD5B0070810A /* ESInterfaceVariables.swift */; };
 		E97E650B2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E65092F2CDD5B0070810A /* ESInterfaceVariables.swift */; };
 		E97E650C2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E65092F2CDD5B0070810A /* ESInterfaceVariables.swift */; };
@@ -1561,6 +1574,7 @@
 			files = (
 				D16DD37029E7850600FB9022 /* SwiftyJSON in Frameworks */,
 				146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */,
+				E978B3E42F431BE6006AED44 /* Yams in Frameworks */,
 				D16DD37329E7853800FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1570,6 +1584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37D29E785B100FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A532F43237100DE18B7 /* Yams in Frameworks */,
 				D16DD39529E786A500FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1579,6 +1594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37929E785A600FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A512F43236D00DE18B7 /* Yams in Frameworks */,
 				D16DD39129E7869D00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1588,6 +1604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38529E785C300FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A5D2F43238B00DE18B7 /* Yams in Frameworks */,
 				D16DD39D29E786B500FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1604,6 +1621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38929E785CE00FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A612F43239400DE18B7 /* Yams in Frameworks */,
 				D16DD3A129E786BD00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1613,6 +1631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38729E785C900FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A5F2F43238F00DE18B7 /* Yams in Frameworks */,
 				D16DD39F29E786B900FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1622,6 +1641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38B29E785D200FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A632F43239900DE18B7 /* Yams in Frameworks */,
 				D16DD3A329E786C100FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1631,6 +1651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38329E785BE00FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A5B2F43238600DE18B7 /* Yams in Frameworks */,
 				D16DD39B29E786B200FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1640,6 +1661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37729E785A100FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A4F2F43236600DE18B7 /* Yams in Frameworks */,
 				D16DD38F29E7869800FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1649,6 +1671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37529E7859C00FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A4D2F43235D00DE18B7 /* Yams in Frameworks */,
 				D16DD38D29E7869300FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1658,6 +1681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD37F29E785B500FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A552F43237600DE18B7 /* Yams in Frameworks */,
 				D16DD39729E786AA00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1667,6 +1691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DD38129E785BA00FB9022 /* SwiftyJSON in Frameworks */,
+				E97D5A592F43238100DE18B7 /* Yams in Frameworks */,
 				D16DD39929E786AD00FB9022 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1676,6 +1701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FAC3A72E989A84008E00AC /* SwiftyJSON in Frameworks */,
+				E97D5A572F43237B00DE18B7 /* Yams in Frameworks */,
 				E996495A2E98A12100200F53 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2224,6 +2250,7 @@
 				D16DD36F29E7850600FB9022 /* SwiftyJSON */,
 				D16DD37229E7853800FB9022 /* GRDB */,
 				146B70BC2A853A3800710BD4 /* SwipeableTabBarController */,
+				E978B3E32F431BE6006AED44 /* Yams */,
 			);
 			productName = EmojiKeyboard;
 			productReference = 38BD213022D5907E00C6795D /* Scribe.app */;
@@ -2248,6 +2275,7 @@
 			packageProductDependencies = (
 				D16DD37C29E785B100FB9022 /* SwiftyJSON */,
 				D16DD39429E786A500FB9022 /* GRDB */,
+				E97D5A522F43237100DE18B7 /* Yams */,
 			);
 			productName = typEmoji;
 			productReference = 38BD214C22D592CA00C6795D /* German.appex */;
@@ -2272,6 +2300,7 @@
 			packageProductDependencies = (
 				D16DD37829E785A600FB9022 /* SwiftyJSON */,
 				D16DD39029E7869D00FB9022 /* GRDB */,
+				E97D5A502F43236D00DE18B7 /* Yams */,
 			);
 			productName = French;
 			productReference = D109A20B275B6888005E2271 /* French.appex */;
@@ -2296,6 +2325,7 @@
 			packageProductDependencies = (
 				D16DD38429E785C300FB9022 /* SwiftyJSON */,
 				D16DD39C29E786B500FB9022 /* GRDB */,
+				E97D5A5C2F43238B00DE18B7 /* Yams */,
 			);
 			productName = Portuguese;
 			productReference = D109A21A275B68B3005E2271 /* Portuguese.appex */;
@@ -2338,6 +2368,7 @@
 			packageProductDependencies = (
 				D16DD38829E785CE00FB9022 /* SwiftyJSON */,
 				D16DD3A029E786BD00FB9022 /* GRDB */,
+				E97D5A602F43239400DE18B7 /* Yams */,
 			);
 			productName = CustomKeyboard2Extension;
 			productReference = D1608665270B6D3C00134D48 /* Spanish.appex */;
@@ -2362,6 +2393,7 @@
 			packageProductDependencies = (
 				D16DD38629E785C900FB9022 /* SwiftyJSON */,
 				D16DD39E29E786B900FB9022 /* GRDB */,
+				E97D5A5E2F43238F00DE18B7 /* Yams */,
 			);
 			productName = Russian;
 			productReference = D1671A60275A1E8700A7C118 /* Russian.appex */;
@@ -2386,6 +2418,7 @@
 			packageProductDependencies = (
 				D16DD38A29E785D200FB9022 /* SwiftyJSON */,
 				D16DD3A229E786C100FB9022 /* GRDB */,
+				E97D5A622F43239900DE18B7 /* Yams */,
 			);
 			productName = Swedish;
 			productReference = D18EA8992760D4A6001E1358 /* Swedish.appex */;
@@ -2410,6 +2443,7 @@
 			packageProductDependencies = (
 				D16DD38229E785BE00FB9022 /* SwiftyJSON */,
 				D16DD39A29E786B200FB9022 /* GRDB */,
+				E97D5A5A2F43238600DE18B7 /* Yams */,
 			);
 			productName = Italian;
 			productReference = D1AB5B5F29C757A100CCB0C1 /* Norwegian.appex */;
@@ -2434,6 +2468,7 @@
 			packageProductDependencies = (
 				D16DD37629E785A100FB9022 /* SwiftyJSON */,
 				D16DD38E29E7869800FB9022 /* GRDB */,
+				E97D5A4E2F43236600DE18B7 /* Yams */,
 			);
 			productName = Italian;
 			productReference = D1AFDF3D29CA66D00033BF27 /* English.appex */;
@@ -2458,6 +2493,7 @@
 			packageProductDependencies = (
 				D16DD37429E7859C00FB9022 /* SwiftyJSON */,
 				D16DD38C29E7869300FB9022 /* GRDB */,
+				E97D5A4C2F43235D00DE18B7 /* Yams */,
 			);
 			productName = Italian;
 			productReference = D1AFDFBA29CA66F40033BF27 /* Danish.appex */;
@@ -2482,6 +2518,7 @@
 			packageProductDependencies = (
 				D16DD37E29E785B500FB9022 /* SwiftyJSON */,
 				D16DD39629E786AA00FB9022 /* GRDB */,
+				E97D5A542F43237600DE18B7 /* Yams */,
 			);
 			productName = Italian;
 			productReference = D1AFE01029CA6E900033BF27 /* Hebrew.appex */;
@@ -2506,6 +2543,7 @@
 			packageProductDependencies = (
 				D16DD38029E785BA00FB9022 /* SwiftyJSON */,
 				D16DD39829E786AD00FB9022 /* GRDB */,
+				E97D5A582F43238100DE18B7 /* Yams */,
 			);
 			productName = Italian;
 			productReference = D1B81D1F27BBB5320085FE5E /* Italian.appex */;
@@ -2530,6 +2568,7 @@
 			packageProductDependencies = (
 				E9FAC3A62E989A84008E00AC /* SwiftyJSON */,
 				E99649592E98A12100200F53 /* GRDB */,
+				E97D5A562F43237B00DE18B7 /* Yams */,
 			);
 			productName = Indonesian;
 			productReference = E9FAC3932E989712008E00AC /* Indonesian.appex */;
@@ -2635,6 +2674,7 @@
 				D16DD36E29E7850600FB9022 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
 				146B70BB2A853A3800710BD4 /* XCRemoteSwiftPackageReference "SwipeableTabBarController" */,
+				E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = 38BD213122D5907E00C6795D /* Products */;
 			projectDirPath = "";
@@ -5008,6 +5048,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
 		F786BACC2F1E8F70003F7505 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -5159,6 +5207,71 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D16DD37129E7853800FB9022 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		E978B3E32F431BE6006AED44 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A4C2F43235D00DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A4E2F43236600DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A502F43236D00DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A522F43237100DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A542F43237600DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A562F43237B00DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A582F43238100DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A5A2F43238600DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A5C2F43238B00DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A5E2F43238F00DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A602F43239400DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		E97D5A622F43239900DE18B7 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E978B3E22F431BE6006AED44 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
 		};
 		E99649592E98A12100200F53 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;

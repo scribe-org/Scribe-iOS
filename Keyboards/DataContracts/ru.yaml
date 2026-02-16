@@ -149,7 +149,7 @@ declensions:
 
   4:
     title: Творительные местоимения
-    declensionForms":
+    declensionForms:
       я: мной
       ты: тобой
       он/она/оно:
@@ -167,7 +167,7 @@ declensions:
     title: Предложные местоимения
     declensionForms:
       я: мне
-      ты": тебе
+      ты: тебе
       он/она/оно:
         displayValue: нём/ней/нём
         title: Пол объекта?
