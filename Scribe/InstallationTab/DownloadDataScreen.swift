@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Download data UI for getting new data for keyboards.
- */
-
 import SwiftUI
+
+/// Download data UI for getting new data for keyboards.
 
 struct RadioCircle: View {
   @Binding var isSelected: Bool
@@ -280,6 +278,8 @@ struct LanguageListView: View {
 struct DownloadDataScreen: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
   @State private var languages = SettingsTableData.getInstalledKeyboardsSections()
+  @StateObject private var stateManager = DownloadStateManager.shared
+
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
@@ -289,6 +289,7 @@ struct DownloadDataScreen: View {
       .padding()
       .background(Color(UIColor.scribeAppBackground))
     }
+    .toast(manager: stateManager)
     .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
       // Refresh when returning from Settings
       languages = SettingsTableData.getInstalledKeyboardsSections()
