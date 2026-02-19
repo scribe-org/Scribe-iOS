@@ -119,10 +119,10 @@ struct EmptyStateView: View {
     comment: "")
 
   func openSettingsApp() {
-      guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-          return
-      }
-      UIApplication.shared.open(settingsURL)
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      return
+    }
+    UIApplication.shared.open(settingsURL)
   }
 
   var body: some View {
@@ -290,6 +290,16 @@ struct DownloadDataScreen: View {
       .background(Color(UIColor.scribeAppBackground))
     }
     .toast(manager: stateManager)
+    .onAppear {
+      // Extract language abbreviations from sections.
+      let languageKeys = languages.compactMap { section -> String? in
+        if case .specificLang(let abbreviation) = section.sectionState {
+          return abbreviation.lowercased()  // Convert to lowercase for API calls
+        }
+        return nil
+      }
+      stateManager.initializeStates(languages: languageKeys)
+    }
     .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
       // Refresh when returning from Settings
       languages = SettingsTableData.getInstalledKeyboardsSections()
