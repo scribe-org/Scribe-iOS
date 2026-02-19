@@ -164,6 +164,16 @@ struct LanguageListView: View {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   private func handleButtonClick(targetLang: String, langCode: String) {
+    if langCode == "all" {
+        let toDownload = stateManager.downloadStates.keys.filter {
+            stateManager.downloadStates[$0] != .updated && stateManager.downloadStates[$0] != .downloading
+        }
+        for lang in toDownload {
+            stateManager.handleDownloadAction(key: lang)
+        }
+        return
+    }
+
     targetLanguage = targetLang
     selectedLanguageCode = langCode
     let currentState = stateManager.downloadStates[langCode] ?? .ready
@@ -173,6 +183,14 @@ struct LanguageListView: View {
       stateManager.handleDownloadAction(key: langCode)
     }
   }
+
+  private var allLanguagesState: ButtonState {
+    let states = stateManager.downloadStates.values
+    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
+    if states.allSatisfy({ $0 == .updated }) { return .updated }
+    if states.contains(.update) { return .update }
+    return .ready
+}
 
   var body: some View {
     ZStack {
@@ -186,7 +204,7 @@ struct LanguageListView: View {
           VStack(spacing: 0) {
             LanguageDownloadCard(
               language: allLanguagesText,
-              state: stateManager.downloadStates["all"] ?? .ready,
+              state: allLanguagesState,
               action: {
                 handleButtonClick(targetLang: allLanguagesText, langCode: "all")
               }
