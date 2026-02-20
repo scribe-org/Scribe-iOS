@@ -457,7 +457,7 @@ class KeyboardViewController: UIInputViewController {
         // Get options for completion that start with the current prefix and are not just one letter.
         let completionOptions = LanguageDBManager.shared.queryAutocompletions(word: currentPrefix)
 
-        if !completionOptions[0].isEmpty {
+        if !completionOptions.isEmpty && !completionOptions[0].isEmpty {
           if completionOptions.count <= 3 {
             for i in 0 ..< completionOptions.count {
               if shiftButtonState == .shift {

@@ -1229,186 +1229,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E98E74352F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1AFDF7D29CA66F40033BF27 /* Danish */;
-		};
-		E98E74362F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1AFDF0029CA66D00033BF27 /* English */;
-		};
-		E98E74372F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D109A20A275B6888005E2271 /* French */;
-		};
-		E98E74382F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = 38BD214B22D592CA00C6795D /* German */;
-		};
-		E98E74392F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1AFDFD329CA6E900033BF27 /* Hebrew */;
-		};
-		E98E743A2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = E9FAC3922E989712008E00AC /* Indonesian */;
-		};
-		E98E743B2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1B81D1E27BBB5320085FE5E /* Italian */;
-		};
-		E98E743C2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1AB5B2229C757A100CCB0C1 /* Norwegian */;
-		};
-		E98E743D2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D109A219275B68B3005E2271 /* Portuguese */;
-		};
-		E98E743E2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1671A5F275A1E8700A7C118 /* Russian */;
-		};
-		E98E743F2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D1608664270B6D3C00134D48 /* Spanish */;
-		};
-		E98E74402F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DELanguageData.sqlite,
-				ENLanguageData.sqlite,
-				ESLanguageData.sqlite,
-				FRLanguageData.sqlite,
-				ITLanguageData.sqlite,
-				PTLanguageData.sqlite,
-				RULanguageData.sqlite,
-				SVLanguageData.sqlite,
-				TranslationData.sqlite,
-			);
-			target = D18EA8982760D4A6001E1358 /* Swedish */;
-		};
 		E9B89DCE2F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -1581,8 +1401,8 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E90EF8AD2F485B91007D967C /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
 		E943457E2F05638700DFDB20 /* Button */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Button; sourceTree = "<group>"; };
-		E98E73BE2F20D8AA005EEDA3 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E98E74352F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74362F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74372F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74382F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74392F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743A2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743B2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743C2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743D2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743E2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E743F2F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E98E74402F20EA5E005EEDA3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
 		E98E73BF2F20D8C3005EEDA3 /* DataContracts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DataContracts; sourceTree = "<group>"; };
 		E9B89DCD2F226757003E396F /* DataManager */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E9B89DCE2F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DCF2F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD02F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD12F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD22F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD32F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD42F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD52F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD62F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD72F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD82F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DD92F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9B89DDA2F22676B003E396F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DataManager; sourceTree = "<group>"; };
 		E9DADB332EF3CF9B00702783 /* ConfirmDialog */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ConfirmDialog; sourceTree = "<group>"; };
@@ -2168,6 +1988,7 @@
 		D1FECBC9270E1A1500C8BC60 /* Keyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				D190B2452741B1FE00705659 /* KeyboardsBase */,
 				D1CCA15B2742B9F700902744 /* LanguageKeyboards */,
 				EDC364682AE408F20001E456 /* InterfaceConstants.swift */,
@@ -2175,7 +1996,6 @@
 				198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */,
 				E9B89DCD2F226757003E396F /* DataManager */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
-				E98E73BE2F20D8AA005EEDA3 /* Data */,
 			);
 			path = Keyboards;
 			sourceTree = "<group>";
@@ -2299,6 +2119,7 @@
 				5A8FFB6D2C5A9D9C00F4B571 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E943457E2F05638700DFDB20 /* Button */,
 				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 			);
@@ -2326,6 +2147,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = German;
@@ -2351,6 +2173,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = French;
@@ -2376,6 +2199,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Portuguese;
@@ -2419,6 +2243,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Spanish;
@@ -2444,6 +2269,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Russian;
@@ -2469,6 +2295,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Swedish;
@@ -2494,6 +2321,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Norwegian;
@@ -2519,6 +2347,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = English;
@@ -2544,6 +2373,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Danish;
@@ -2569,6 +2399,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Hebrew;
@@ -2594,6 +2425,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Italian;
@@ -2619,6 +2451,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
 			name = Indonesian;
@@ -2658,6 +2491,7 @@
 				F786BAC92F1E8F70003F7505 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				E90EF8AD2F485B91007D967C /* Data */,
 				E943457E2F05638700DFDB20 /* Button */,
 				E9DADB332EF3CF9B00702783 /* ConfirmDialog */,
 			);

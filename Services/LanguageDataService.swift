@@ -47,16 +47,11 @@ final class LanguageDataService {
     language: String,
     response: DataResponse
   ) throws {
+    guard let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.be.scri.userDefaultsContainer") else {
+        throw NSError(domain: "AppGroup", code: -1, userInfo: [NSLocalizedDescriptionKey: "App group container not found"])
+    }
 
-    let dbURL = try FileManager.default
-        .url(
-            for: .applicationSupportDirectory,
-            in: .userDomainMask,
-            appropriateFor: nil,
-            create: true
-        )
-        .appendingPathComponent("\(language.uppercased())LanguageData_Downloaded.sqlite")
-
+    let dbURL = containerURL.appendingPathComponent("\(language.uppercased())LanguageData.sqlite")
     let dbQueue = try DatabaseQueue(path: dbURL.path)
 
     try dbQueue.write { db in
