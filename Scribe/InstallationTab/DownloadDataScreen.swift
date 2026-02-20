@@ -6,6 +6,7 @@ import SwiftUI
 
 struct RadioCircle: View {
   @Binding var isSelected: Bool
+  var onSelect: () -> Void
 
   var body: some View {
     ZStack {
@@ -23,6 +24,7 @@ struct RadioCircle: View {
     .onTapGesture {
       withAnimation(.spring()) {
         isSelected.toggle()
+        if isSelected { onSelect() }
       }
     }
   }
@@ -30,6 +32,7 @@ struct RadioCircle: View {
 
 struct UpdateDataCardView: View {
   var languages: [Section]
+  var onInitializeStates: () -> Void
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.update_data",
     value: "Update data",
@@ -63,7 +66,9 @@ struct UpdateDataCardView: View {
 
             Spacer()
 
-            RadioCircle(isSelected: $isCheckNew)
+            RadioCircle(isSelected: $isCheckNew, onSelect: {
+              onInitializeStates()
+            })
           }
           Divider()
         }
@@ -186,11 +191,12 @@ struct LanguageListView: View {
 
   private var allLanguagesState: ButtonState {
     let states = stateManager.downloadStates.values
-    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
     if states.allSatisfy({ $0 == .updated }) { return .updated }
-    if states.contains(.update) { return .update }
+    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
+    let actionable = states.filter({ $0 != .updated })
+    if actionable.allSatisfy({ $0 == .update }) { return .update }
     return .ready
-}
+  }
 
   var body: some View {
     ZStack {
@@ -298,10 +304,21 @@ struct DownloadDataScreen: View {
   @State private var languages = SettingsTableData.getInstalledKeyboardsSections()
   @StateObject private var stateManager = DownloadStateManager.shared
 
+  private func initializeLanguageStates() {
+     // Extract language abbreviations from sections.
+    let languageKeys = languages.compactMap { section -> String? in
+        if case .specificLang(let abbreviation) = section.sectionState {
+        return abbreviation.lowercased()
+        }
+        return nil
+    }
+    stateManager.initializeStates(languages: languageKeys)
+ }
+
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
-        UpdateDataCardView(languages: languages)
+        UpdateDataCardView(languages: languages, onInitializeStates: initializeLanguageStates)
         LanguageListView(onNavigateToTranslationSource: onNavigateToTranslationSource, languages: languages)
       }
       .padding()
@@ -309,14 +326,7 @@ struct DownloadDataScreen: View {
     }
     .toast(manager: stateManager)
     .onAppear {
-      // Extract language abbreviations from sections.
-      let languageKeys = languages.compactMap { section -> String? in
-        if case .specificLang(let abbreviation) = section.sectionState {
-          return abbreviation.lowercased()  // Convert to lowercase for API calls
-        }
-        return nil
-      }
-      stateManager.initializeStates(languages: languageKeys)
+        initializeLanguageStates()
     }
     .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
       // Refresh when returning from Settings
