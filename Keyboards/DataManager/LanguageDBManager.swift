@@ -42,6 +42,7 @@ class LanguageDBManager {
     }
   }
 
+  /// Opens a connection to the downloaded language database for the current language.
   private func openDownloadedDBQueue(_ dbName: String) -> DatabaseQueue? {
     let fileManager = FileManager.default
     guard let containerURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.be.scri.userDefaultsContainer") else {

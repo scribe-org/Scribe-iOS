@@ -189,6 +189,7 @@ struct LanguageListView: View {
     }
   }
 
+  // Determines the button state for the "All languages" option based on the states of individual languages.
   private var allLanguagesState: ButtonState {
     let states = stateManager.downloadStates.values
     if states.allSatisfy({ $0 == .updated }) { return .updated }
@@ -304,6 +305,7 @@ struct DownloadDataScreen: View {
   @State private var languages = SettingsTableData.getInstalledKeyboardsSections()
   @StateObject private var stateManager = DownloadStateManager.shared
 
+  // Initializes the download states for all languages based on the currently installed keyboards.
   private func initializeLanguageStates() {
      // Extract language abbreviations from sections.
     let languageKeys = languages.compactMap { section -> String? in
