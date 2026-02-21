@@ -2399,7 +2399,7 @@ class KeyboardViewController: UIInputViewController {
 
     // Find starting index.
     let startingIndex = NavigationBuilder.findStartingCaseIndex(
-      prepForm: prepAnnotationForm,
+      prepForm: convertFullPrepositionToAbbr(prepAnnotationForm),
       language: language
     )
 
