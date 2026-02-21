@@ -136,12 +136,14 @@ declensions:
         ich: mich
 
         du/Sie:
+          displayValue: dich/Sie
           title: Formalität des Subjekts?
           declensionForms:
             informell: dich
             formell: Sie
 
         er/sie/es:
+          displayValue: ihn/sie/es
           title: Geschlecht des Subjekts?
           declensionForms:
             er: ihn
@@ -276,12 +278,14 @@ declensions:
         ich: mir
 
         du/Sie:
+          displayValue: dir/Ihnen
           title: Formalität des Subjekts?
           declensionForms:
             informell: dir
             formell: Ihnen
 
         er/sie/es:
+          displayValue: ihm/ihr/ihm
           title: Geschlecht des Subjekts?
           declensionForms:
             er: ihm
@@ -416,12 +420,14 @@ declensions:
         ich: meiner
 
         du/Sie:
+          displayValue: deiner/Ihrer
           title: Formalität des Subjekts?
           declensionForms:
             informell: deiner
             formell: Ihrer
 
         er/sie/es:
+          displayValue: seiner/ihrer/seiner
           title: Geschlecht des Subjekts?
           declensionForms:
             er: seiner
