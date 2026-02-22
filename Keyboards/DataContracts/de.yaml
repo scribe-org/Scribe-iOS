@@ -28,12 +28,24 @@ conjugations:
       1:
         tenseTitle: Präsens
         tenseForms:
-          ich: indicativePresentFirstPersonSingular
-          du: indicativePresentSecondPersonSingular
-          er/sie/es: indicativePresentThirdPersonSingular
-          wir: indicativePresentFirstPersonPlural
-          ihr: indicativePresentSecondPersonPlural
-          sie/Sie: indicativePresentThirdPersonPlural
+          1:
+            label: ich
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: du
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: er/sie/es
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: wir
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: ihr
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: sie/Sie
+            value: indicativePresentThirdPersonPlural
 
   2:
     sectionTitle: Preterite
@@ -41,12 +53,24 @@ conjugations:
       1:
         tenseTitle: Preterite
         tenseForms:
-          ich: indicativePreteriteFirstPersonSingular
-          du: indicativePreteriteFirstPersonPlural
-          er/sie/es: indicativePreteriteSecondPersonSingular
-          wir: indicativePreteriteSecondPersonPlural
-          ihr: indicativePreteriteThirdPersonSingular
-          sie/Sie: indicativePreteriteThirdPersonPlural
+          1:
+            label: ich
+            value: indicativePreteriteFirstPersonSingular
+          2:
+            label: du
+            value: indicativePreteriteSecondPersonSingular
+          3:
+            label: er/sie/es
+            value: indicativePreteriteThirdPersonSingular
+          4:
+            label: wir
+            value: indicativePreteriteFirstPersonPlural
+          5:
+            label: ihr
+            value: indicativePreteriteSecondPersonPlural
+          6:
+            label: sie/Sie
+            value: indicativePreteriteThirdPersonPlural
 
   3:
     sectionTitle: Perfekt
@@ -54,12 +78,24 @@ conjugations:
       1:
         tenseTitle: Perfekt
         tenseForms:
-          ich: "[indicativePresentFirstPersonSingular auxiliaryVerb] pastParticiple"
-          du: "[indicativePresentSecondPersonSingular auxiliaryVerb] pastParticiple"
-          er/sie/es: "[indicativePresentThirdPersonSingular auxiliaryVerb] pastParticiple"
-          wir: "[indicativePresentFirstPersonPlural auxiliaryVerb] pastParticiple"
-          ihr: "[indicativePresentSecondPersonPlural auxiliaryVerb] pastParticiple"
-          sie/Sie: "[indicativePresentThirdPersonPlural auxiliaryVerb] pastParticiple"
+          1:
+            label: ich
+            value: "[indicativePresentFirstPersonSingular auxiliaryVerb] pastParticiple"
+          2:
+            label: du
+            value: "[indicativePresentSecondPersonSingular auxiliaryVerb] pastParticiple"
+          3:
+            label: er/sie/es
+            value: "[indicativePresentThirdPersonSingular auxiliaryVerb] pastParticiple"
+          4:
+            label: wir
+            value: "[indicativePresentFirstPersonPlural auxiliaryVerb] pastParticiple"
+          5:
+            label: ihr
+            value: "[indicativePresentSecondPersonPlural auxiliaryVerb] pastParticiple"
+          6:
+            label: sie/Sie
+            value: "[indicativePresentThirdPersonPlural auxiliaryVerb] pastParticiple"
 
 # MARK: Translate
 
@@ -117,425 +153,806 @@ declensions:
     1:
       sectionTitle: Akkusativ Definitpronomen
       declensionForms:
-        M: den
-        F: die
-        N: das
-        PL: die
+        1:
+          label: M
+          value: den
+        2:
+          label: F
+          value: die
+        3:
+          label: N
+          value: das
+        4:
+          label: PL
+          value: die
 
     2:
       sectionTitle: Akkusativ Indefinitpronomen
       declensionForms:
-        M: einen
-        F: eine
-        N: ein
-        PL: welche
+        1:
+          label: M
+          value: einen
+        2:
+          label: F
+          value: eine
+        3:
+          label: N
+          value: ein
+        4:
+          label: PL
+          value: welche
 
     3:
       sectionTitle: Akkusativ Personalpronomen
       declensionForms:
-        ich: mich
+        1:
+          label: ich
+          value: mich
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: dich/Sie
           title: Formalität des Subjekts?
           declensionForms:
-            informell: dich
-            formell: Sie
+            1:
+              label: informell
+              value: dich
+            2:
+              label: formell
+              value: Sie
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: ihn/sie/es
           title: Geschlecht des Subjekts?
           declensionForms:
-            er: ihn
-            sie: sie
-            es: es
+            1:
+              label: er
+              value: ihn
+            2:
+              label: sie
+              value: sie
+            3:
+              label: es
+              value: es
 
-        wir: uns
+        4:
+          label: wir
+          value: uns
 
-        ihr: euch
+        5:
+          label: ihr
+          value: euch
 
-        sie: sie
+        6:
+          label: sie
+          value: sie
 
     4:
       sectionTitle: Akkusativ Possessivpronomen
       declensionForms:
-        ich:
+        1:
+          label: ich
           displayValue: mein*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: meinen
-            F: meine
-            N: mein
-            PL: meine
+            1:
+              label: M
+              value: meinen
+            2:
+              label: F
+              value: meine
+            3:
+              label: N
+              value: mein
+            4:
+              label: PL
+              value: meine
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: dein*/Ihr*
           title: Formalität des Subjekts?
           declensionForms:
-            informell:
+            1:
+              label: informell
               displayValue: dein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: deinen
-                F: deine
-                N: dein
-                PL: deine
+                1:
+                  label: M
+                  value: deinen
+                2:
+                  label: F
+                  value: deine
+                3:
+                  label: N
+                  value: dein
+                4:
+                  label: PL
+                  value: deine
 
-            formell:
+            2:
+              label: formell
               displayValue: Ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: Ihren
-                F: Ihre
-                N: Ihr
-                PL: Ihre
+                1:
+                  label: M
+                  value: Ihren
+                2:
+                  label: F
+                  value: Ihre
+                3:
+                  label: N
+                  value: Ihr
+                4:
+                  label: PL
+                  value: Ihre
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: sein*/ihr*/sein*
           title: Geschlecht des Subjekts?
           declensionForms:
-            er:
+            1:
+              label: er
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seinen
-                F: seine
-                N: sein
-                PL: seine
+                1:
+                  label: M
+                  value: seinen
+                2:
+                  label: F
+                  value: seine
+                3:
+                  label: N
+                  value: sein
+                4:
+                  label: PL
+                  value: seine
 
-            sie:
+            2:
+              label: sie
               displayValue: ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: ihren
-                F: ihre
-                N: ihr
-                PL: ihre
+                1:
+                  label: M
+                  value: ihren
+                2:
+                  label: F
+                  value: ihre
+                3:
+                  label: N
+                  value: ihr
+                4:
+                  label: PL
+                  value: ihre
 
-            es:
+            3:
+              label: es
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seinen
-                F: seine
-                N: sein
-                PL: seine
+                1:
+                  label: M
+                  value: seinen
+                2:
+                  label: F
+                  value: seine
+                3:
+                  label: N
+                  value: sein
+                4:
+                  label: PL
+                  value: seine
 
-        wir:
+        4:
+          label: wir
           displayValue: unser*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: unsren
-            F: unsre
-            N: unser
-            PL: unsre
+            1:
+              label: M
+              value: unsren
+            2:
+              label: F
+              value: unsre
+            3:
+              label: N
+              value: unser
+            4:
+              label: PL
+              value: unsre
 
-        ihr:
+        5:
+          label: ihr
           displayValue: euer*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: euren
-            F: eure
-            N: euer
-            PL: eure
+            1:
+              label: M
+              value: euren
+            2:
+              label: F
+              value: eure
+            3:
+              label: N
+              value: euer
+            4:
+              label: PL
+              value: eure
 
-        sie:
+        6:
+          label: sie
           displayValue: ihr*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: ihren
-            F: ihre
-            N: ihr
-            PL: ihre
+            1:
+              label: M
+              value: ihren
+            2:
+              label: F
+              value: ihre
+            3:
+              label: N
+              value: ihr
+            4:
+              label: PL
+              value: ihre
 
     5:
       sectionTitle: Akkusativ Demonstrativpronomen
       declensionForms:
-        M: diesen
-        F: diese
-        N: dieses
-        PL: diese
+        1:
+          label: M
+          value: diesen
+        2:
+          label: F
+          value: diese
+        3:
+          label: N
+          value: dieses
+        4:
+          label: PL
+          value: diese
 
     6:
       sectionTitle: Dativ Definitpronomen
       declensionForms:
-        M: dem
-        F: der
-        N: dem
-        PL: den
+        1:
+          label: M
+          value: dem
+        2:
+          label: F
+          value: der
+        3:
+          label: N
+          value: dem
+        4:
+          label: PL
+          value: den
 
     7:
       sectionTitle: Dativ Indefinitpronomen
       declensionForms:
-        M: einem
-        F: einer
-        N: einem
-        PL: welchen
+        1:
+          label: M
+          value: einem
+        2:
+          label: F
+          value: einer
+        3:
+          label: N
+          value: einem
+        4:
+          label: PL
+          value: welchen
 
     8:
       sectionTitle: Dativ Personalpronomen
       declensionForms:
-        ich: mir
+        1:
+          label: ich
+          value: mir
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: dir/Ihnen
           title: Formalität des Subjekts?
           declensionForms:
-            informell: dir
-            formell: Ihnen
+            1:
+              label: informell
+              value: dir
+            2:
+              label: formell
+              value: Ihnen
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: ihm/ihr/ihm
           title: Geschlecht des Subjekts?
           declensionForms:
-            er: ihm
-            sie: ihr
-            es: ihm
+            1:
+              label: er
+              value: ihm
+            2:
+              label: sie
+              value: ihr
+            3:
+              label: es
+              value: ihm
 
-        wir: uns
+        4:
+          label: wir
+          value: uns
 
-        ihr: euch
+        5:
+          label: ihr
+          value: euch
 
-        sie: ihnen
+        6:
+          label: sie
+          value: ihnen
 
     9:
       sectionTitle: Dativ Possessivpronomen
       declensionForms:
-        ich:
+        1:
+          label: ich
           displayValue: mein*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: meinem
-            F: meiner
-            N: meinem
-            PL: meinen
+            1:
+              label: M
+              value: meinem
+            2:
+              label: F
+              value: meiner
+            3:
+              label: N
+              value: meinem
+            4:
+              label: PL
+              value: meinen
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: dein*/Ihr*
           title: Formalität des Subjekts?
           declensionForms:
-            informell:
+            1:
+              label: informell
               displayValue: dein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: deinem
-                F: deiner
-                N: deinem
-                PL: deinen
+                1:
+                  label: M
+                  value: deinem
+                2:
+                  label: F
+                  value: deiner
+                3:
+                  label: N
+                  value: deinem
+                4:
+                  label: PL
+                  value: deinen
 
-            formell:
+            2:
+              label: formell
               displayValue: Ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: Ihrem
-                F: Ihrer
-                N: Ihrem
-                PL: Ihren
+                1:
+                  label: M
+                  value: Ihrem
+                2:
+                  label: F
+                  value: Ihrer
+                3:
+                  label: N
+                  value: Ihrem
+                4:
+                  label: PL
+                  value: Ihren
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: sein*/ihr*/sein*
           title: Geschlecht des Subjekts?
           declensionForms:
-            er:
+            1:
+              label: er
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seinem
-                F: seiner
-                N: seinem
-                PL: seinen
+                1:
+                  label: M
+                  value: seinem
+                2:
+                  label: F
+                  value: seiner
+                3:
+                  label: N
+                  value: seinem
+                4:
+                  label: PL
+                  value: seinen
 
-            sie:
+            2:
+              label: sie
               displayValue: ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: ihrem
-                F: ihrer
-                N: ihrem
-                PL: ihren
+                1:
+                  label: M
+                  values: ihrem
+                2:
+                  label: F
+                  value: ihrer
+                3:
+                  label: N
+                  value: ihrem
+                4:
+                  label: PL
+                  value: ihren
 
-            es:
+            3:
+              label: es
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seinem
-                F: seiner
-                N: seinem
-                PL: seinen
+                1:
+                  label: M
+                  value: seinem
+                2:
+                  label: F
+                  value: seiner
+                3:
+                  label: N
+                  value: seinem
+                4:
+                  label: PL
+                  value: seinen
 
-        wir:
+        4:
+          label: wir
           displayValue: unser*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: unsrem
-            F: unsrer
-            N: unsrem
-            PL: unsren
+            1:
+              label: M
+              value: unsrem
+            2:
+              label: F
+              value: unsrer
+            3:
+              label: N
+              value: unsrem
+            4:
+              label: PL
+              value: unsren
 
-        ihr:
+        5:
+          label: ihr
           displayValue: euer*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: eurem
-            F: eurer
-            N: eurem
-            PL: euren
+            1:
+              label: M
+              value: eurem
+            2:
+              label: F
+              value: eurer
+            3:
+              label: N
+              value: eurem
+            4:
+              label: PL
+              value: euren
 
-        sie:
+        6:
+          label: sie
           displayValue: ihr*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: ihrem
-            F: ihrer
-            N: ihrem
-            PL: ihren
+            1:
+              label: M
+              value: ihrem
+            2:
+              label: F
+              value: ihrer
+            3:
+              label: N
+              value: ihrem
+            4:
+              label: PL
+              value: ihren
 
     10:
       sectionTitle: Dativ Demonstrativpronomen
       declensionForms:
-        M: diesem
-        F: dieser
-        N: diesem
-        PL: diesen
+        1:
+          label: M
+          value: diesem
+        2:
+          label: F
+          valaue: dieser
+        3:
+          label: N
+          value: diesem
+        4:
+          label: PL
+          value: diesen
 
     11:
       sectionTitle: Genitiv Definitpronomen
       declensionForms:
-        M: des
-        F: der
-        N: des
-        PL: der
+        1:
+          label: M
+          value: des
+        2:
+          label: F
+          value: der
+        3:
+          label: N
+          value: des
+        4:
+          label: PL
+          value: der
 
     12:
       sectionTitle: Genitiv Indefinitpronomen
       declensionForms:
-        M: eines
-        F: einer
-        N: eines
-        PL: welcher
+        1:
+          label: M
+          value: eines
+        2:
+          label: F
+          value: einer
+        3:
+          label: N
+          value: eines
+        4:
+          label: PL
+          value: welcher
 
     13:
       sectionTitle: Genitiv Personalpronomen
       declensionForms:
-        ich: meiner
+        1:
+          label: ich
+          value: meiner
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: deiner/Ihrer
           title: Formalität des Subjekts?
           declensionForms:
-            informell: deiner
-            formell: Ihrer
+            1:
+              label: informell
+              value: deiner
+            2:
+              label: formell
+              value: Ihrer
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: seiner/ihrer/seiner
           title: Geschlecht des Subjekts?
           declensionForms:
-            er: seiner
-            sie: ihrer
-            es: seiner
+            1:
+              label: er
+              value: seiner
+            2:
+              label: sie
+              value: ihrer
+            3:
+              label: es
+              value: seiner
 
-        wir: unser
+        4:
+          label: wir
+          value: unser
 
-        ihr: euer
+        5:
+          label: ihr
+          value: euer
 
-        sie: ihrer
+        6:
+          label: sie
+          value: ihrer
 
     14:
       sectionTitle: Genitiv Possessivpronomen
       declensionForms:
-        ich:
+        1:
+          label: ich
           displayValue: mein*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: meines
-            F: meiner
-            N: meines
-            PL: meiner
+            1:
+              label: M
+              value: meines
+            2:
+              label: F
+              value: meiner
+            3:
+              label: N
+              value: meines
+            4:
+              label: PL
+              value: meiner
 
-        du/Sie:
+        2:
+          label: du/Sie
           displayValue: dein*/Ihr*
           title: Formalität des Subjekts?
           declensionForms:
-            informell:
+            1:
+              label: informell
               displayValue: dein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: deines
-                F: deiner
-                N: deines
-                PL: deiner
+                1:
+                  label: M
+                  value: deines
+                2:
+                  label: F
+                  value: deiner
+                3:
+                  label: N
+                  value: deines
+                4:
+                  label: PL
+                  value: deiner
 
-            formell:
+            2:
+              label: formell
               displayValue: Ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: Ihres
-                F: Ihrer
-                N: Ihres
-                PL: Ihrer
+                1:
+                  label: M
+                  value: Ihres
+                2:
+                  label: F
+                  value: Ihrer
+                3:
+                  label: N
+                  value: Ihres
+                4:
+                  label: PL
+                  value: Ihrer
 
-        er/sie/es:
+        3:
+          label: er/sie/es
           displayValue: sein*/ihr*/sein*
           title: Geschlecht des Subjekts?
           declensionForms:
-            er:
+            1:
+              label: er
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seines
-                F: seiner
-                N: seines
-                PL: seiner
+                1:
+                  label: M
+                  value: seines
+                2:
+                  label: F
+                  value: seiner
+                3:
+                  label: N
+                  value: seines
+                4:
+                  label: PL
+                  value: seiner
 
-            sie:
+            2:
+              label: sie
               displayValue: ihr*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: ihres
-                F: ihr
-                N: ihres
-                PL: ihr
+                1:
+                  label: M
+                  value: ihres
+                2:
+                  label: F
+                  value: ihr
+                3:
+                  label: N
+                  value: ihres
+                4:
+                  label: PL
+                  value: ihr
 
-            es:
+            3:
+              label: es
               displayValue: sein*
               title: Geschlecht des Objekts?
               declensionForms:
-                M: seines
-                F: seiner
-                N: seines
-                PL: seiner
+                1:
+                  label: M
+                  value: seines
+                2:
+                  label: F
+                  value: seiner
+                3:
+                  label: N
+                  value: seines
+                4:
+                  label: PL
+                  value: seiner
 
-        wir:
+        4:
+          label: wir
           displayValue: unser*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: unsres
-            F: unsrer
-            N: unsres
-            PL: unsrer
+            1:
+              label: M
+              value: unsres
+            2:
+              label: F
+              value: unsrer
+            3:
+              label: N
+              value: unsres
+            4:
+              label: PL
+              value: unsrer
 
-        ihr:
+        5:
+          label: ihr
           displayValue: euer*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: eures
-            F: eurer
-            N: eures
-            PL: eurer
+            1:
+              label: M
+              value: eures
+            2:
+              label: F
+              value: eurer
+            3:
+              label: N
+              value: eures
+            4:
+              label: PL
+              value: eurer
 
-        sie:
+        6:
+          label: sie
           displayValue: ihr*
           title: Geschlecht des Objekts?
           declensionForms:
-            M: ihres
-            F: ihrer
-            N: ihres
-            PL: ihrer
+            1:
+              label: M
+              value: ihres
+            2:
+              label: F
+              value: ihrer
+            3:
+              label: N
+              value: ihres
+            4:
+              label: PL
+              value: ihrer
 
     15:
       sectionTitle: Genitiv Demonstrativpronomen
       declensionForms:
-        M: dieses
-        F: dieser
-        N: dieses
-        PL: dieser
+        1:
+          label: M
+          value: dieses
+        2:
+          label: F
+          value: dieser
+        3:
+          label: N
+          value: dieses
+        4:
+          label: PL
+          value: dieser

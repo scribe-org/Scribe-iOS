@@ -28,12 +28,24 @@ conjugations:
       1:
         tenseTitle: Indicative Present
         tenseForms:
-          я: indicativePresentFirstPersonSingular
-          ты: indicativePresentSecondPersonSingular
-          он/она/оно: indicativePresentThirdPersonSingular
-          мы: indicativePresentFirstPersonPlural
-          вы: indicativePresentSecondPersonPlural
-          они: indicativePresentThirdPersonPlural
+          1:
+            label: я
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: ты
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: он/она/оно
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: мы
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: вы
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: они
+            value: indicativePresentThirdPersonPlural
 
   2:
     sectionTitle: Прошедшее
@@ -41,10 +53,18 @@ conjugations:
       1:
         tenseTitle: Indicative Past
         tenseForms:
-          я/ты/она: feminineIndicativePast
-          я/ты/он: masculineIndicativePast
-          оно: neuterIndicativePast
-          мы/вы/они: indicativePastPlural
+          1:
+            label: я/ты/она
+            value: feminineIndicativePast
+          2:
+            label: я/ты/он
+            value: masculineIndicativePast
+          3:
+            label: оно
+            value: neuterIndicativePast
+          4:
+            label: мы/вы/они
+            value: indicativePastPlural
 
 # MARK: Translate
 
@@ -102,79 +122,194 @@ declensions:
   1:
     title: Винительные местоимения
     declensionForms:
-      я: меня
-      ты: тебя
-      он/она/оно:
+      1:
+        label: я
+        value: меня
+
+      2:
+        label: ты
+        value: тебя
+
+      3:
+        label: он/она/оно
         displayValue: его/её/его
         title: Пол объекта?
         declensionForms:
-          он: его
-          она: её
-          оно: его
-      мы: нас
-      вы: вас
-      они: их
+          1:
+            label: он
+            value: его
+          2:
+            label: она
+            value: её
+          3:
+            label: оно
+            value: его
+
+      4:
+        label: мы
+        value: нас
+
+      5:
+        label: вы
+        value: вас
+
+      6:
+        label: они
+        value: их
 
   2:
     title: Дательные местоимения
     declensionForms:
-      я: мне
-      ты: тебе
-      он/она/оно:
+      1:
+        label: я
+        value: мне
+
+      2:
+        label: ты
+        value: тебе
+
+      3:
+        label: он/она/оно
         displayValue: ему/ей/ему
         title: Пол объекта?
         declensionForms:
-          он: ему
-          она: ей
-          оно: ему
-      мы: нам
-      вы: вам
-      они: им
+          1:
+            label: он
+            value: ему
+
+          2:
+            label: она
+            value: ей
+
+          3:
+            label: оно
+            value: ему
+
+      4:
+        label: мы
+        value: нам
+
+      5:
+        label: вы
+        value: вам
+      6:
+        label: они
+        value: им
 
   3:
     title: Родительные местоимения
     declensionForms:
-      я: меня
-      ты: тебя
-      он/она/оно:
+      1:
+        label: я
+        value: меня
+
+      2:
+        label: ты
+        value: тебя
+
+      3:
+        label: он/она/оно
         displayValue: его/её/его
         title: Пол объекта?
         declensionForms:
-          он: его
-          она: её
-          оно: его
-      мы: нас
-      вы: вас
-      они: их
+          1:
+            label: он
+            value: его
+
+          2:
+            label: она
+            value: её
+
+          3:
+            label: оно
+            value: его
+
+      4:
+        label: мы
+        value: нас
+
+      5:
+        label: вы
+        value: вас
+
+      6:
+        label: они
+        value: их
 
   4:
     title: Творительные местоимения
     declensionForms:
-      я: мной
-      ты: тобой
-      он/она/оно:
+      1:
+        label: я
+        value: мной
+
+      2:
+        label: ты
+        value: тобой
+
+      3:
+        label: он/она/оно
         displayValue: им/ей/им
         title: Пол объекта?
         declensionForms:
-          он: им
-          она: ей
-          оно: им
-      мы: нами
-      вы: вами
-      они: ими
+          1:
+            label: он
+            value: им
+          2:
+            label: она
+            value: ей
+          3:
+            label: оно
+            value: им
+
+      4:
+        label: мы
+        value: нами
+
+      5:
+        label: вы
+        value: вами
+
+      6:
+        label: они
+        value: ими
 
   5:
     title: Предложные местоимения
     declensionForms:
-      я: мне
-      ты: тебе
-      он/она/оно:
+      1:
+        label: я
+        value: мне
+
+      2:
+        label: ты
+        value: тебе
+
+      3:
+        label: он/она/оно
         displayValue: нём/ней/нём
         title: Пол объекта?
         declensionForms:
-          он: нём
-          она: ней
-          оно: нём
-      мы: нас
-      вы: вас
-      они: них
+          1:
+            label: он
+            value: нём
+
+          2:
+            label: она
+            value: ней
+
+          3:
+            label: оно
+            value: нём
+
+      4:
+        label: мы
+        value: нас
+
+      5:
+        label: вы
+        value: вас
+
+      6:
+        label: они
+        value: них

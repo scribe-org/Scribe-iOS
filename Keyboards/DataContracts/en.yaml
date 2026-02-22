@@ -28,27 +28,45 @@ conjugations:
       1:
         tenseTitle: Pr. Simple
         tenseForms:
-          I/you/plural: simplePresent
-          he/she/it: simplePresentThirdPersonSingular
+          1:
+            label: I/you/plural
+            value: simplePresent
+          2:
+            label: he/she/it
+            value: simplePresentThirdPersonSingular
 
       2:
         tenseTitle: Pr. Perfect
         tenseForms:
-          I/you/plural: "[have] pastParticiple"
-          he/she/it: "[has] pastParticiple"
+          1:
+            label: I/you/plural
+            value: "[have] pastParticiple"
+          2:
+            label: he/she/it
+            value: "[has] pastParticiple"
 
       3:
         tenseTitle: Pr. Continuous
         tenseForms:
-          I: "[am] presentParticiple"
-          you/plural: "[are] presentParticiple"
-          he/she/it: "[is] presentParticiple"
+          1:
+            label: I
+            value: "[am] presentParticiple"
+          2:
+            label: you/plural
+            value: "[are] presentParticiple"
+          3:
+            label: he/she/it
+            value: "[is] presentParticiple"
 
       4:
         tenseTitle: Pr. Perf. Continuous
         tenseForms:
-          I/you/plural: "[have been] presentParticiple"
-          he/she/it: "[has been] presentParticiple"
+          1:
+            label: I/you/plural
+            value: "[have been] presentParticiple"
+          2:
+            label: he/she/it
+            value: "[has been] presentParticiple"
 
   2:
     sectionTitle: Past
@@ -56,23 +74,33 @@ conjugations:
       1:
         tenseTitle: Past Simple
         tenseForms:
-          all: simplePast
+          1:
+            label: all
+            value: simplePast
 
       2:
         tenseTitle: Past Perfect
         tenseForms:
-          all: "[had] pastParticiple"
+          1:
+            label: all
+            value: "[had] pastParticiple"
 
       3:
         tenseTitle: Past Continuous
         tenseForms:
-          I/he/she/it: "[was] presentParticiple"
-          you/plural: "[were] presentParticiple"
+          1:
+            label: I/he/she/it
+            value: "[was] presentParticiple"
+          2:
+            label: you/plural
+            value: "[were] presentParticiple"
 
       4:
         tenseTitle: Past Perf. Continuous
         tenseForms:
-          all: "[had been] presentParticiple"
+          1:
+            label: all
+            value: "[had been] presentParticiple"
 
   3:
     sectionTitle: Future
@@ -80,22 +108,30 @@ conjugations:
       1:
         tenseTitle: Fut. Simple
         tenseForms:
-          all: "[will] infinitive"
+          1:
+            label: all
+            value: "[will] infinitive"
 
       2:
         tenseTitle: Fut. Perfect
         tenseForms:
-          all: "[will have] pastParticiple"
+          1:
+            label: all
+            value: "[will have] pastParticiple"
 
       3:
         tenseTitle: Fut. Continuous
         tenseForms:
-          all: "[will be] presentParticiple"
+          1:
+            label: all
+            value: "[will be] presentParticiple"
 
       4:
         tenseTitle: Fut. Perf. Continuous
         tenseForms:
-          all: "[will have been] presentParticiple"
+          1:
+            label: all
+            value: "[will have been] presentParticiple"
 
   4:
     sectionTitle: Conditional
@@ -103,22 +139,30 @@ conjugations:
       1:
         tenseTitle: Cond. Simple
         tenseForms:
-          all: "[would] infinitive"
+          1:
+            label: all
+            value: "[would] infinitive"
 
       2:
         tenseTitle: Cond. Perfect
         tenseForms:
-          all: "[would have] pastParticiple"
+          1:
+            label: all
+            value: "[would have] pastParticiple"
 
       3:
         tenseTitle: Cond. Continuous
         tenseForms:
-          all: "[would be] presentParticiple"
+          1:
+            label: all
+            value: "[would be] presentParticiple"
 
       4:
         tenseTitle: Cond. Perf. Continuous
         tenseForms:
-          all: "[would have been] presentParticiple"
+          1:
+            label: all
+            value: "[would have been] presentParticiple"
 
 # MARK: Translate
 

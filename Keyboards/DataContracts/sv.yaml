@@ -29,10 +29,18 @@ conjugations:
       1:
         tenseTitle: Aktiv
         tenseForms:
-          infinitiv: activeInfinitive
-          presens: activePresent
-          preteritum: activePreterite
-          supinum: activeSupine
+          1:
+            label: infinitiv
+            value: activeInfinitive
+          2:
+            label: presens
+            value: activePresent
+          3:
+            label: preteritum
+            value: activePreterite
+          4:
+            label: supinum
+            value: activeSupine
 
   2:
     sectionTitle: Passiv
@@ -40,10 +48,18 @@ conjugations:
       1:
         tenseTitle: Passiv
         tenseForms:
-          infinitiv: passiveInfinitive
-          presens: passivePresent
-          preteritum: passivePreterite
-          supinum: passiveSupine
+          1:
+            label: infinitiv
+            value: passiveInfinitive
+          2:
+            label: presens
+            value: passivePresent
+          3:
+            label: preteritum
+            value: passivePreterite
+          4:
+            label: supinum
+            value: passiveSupine
 
 # MARK: Translate
 

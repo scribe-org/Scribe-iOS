@@ -28,12 +28,24 @@ conjugations:
       1:
         tenseTitle: Presente
         tenseForms:
-          eu: indicativePresentFirstPersonSingular
-          tu: indicativePresentFirstPersonPlural
-          ele/ela/você: indicativePresentSecondPersonSingular
-          nós: indicativePresentSecondPersonPlural
-          vós: indicativePresentThirdPersonSingular
-          eles/elas/vocês: indicativePresentThirdPersonPlural
+          1:
+            label: eu
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePresentThirdPersonPlural
 
   2:
     sectionTitle: Pretérito Perfeito
@@ -41,12 +53,24 @@ conjugations:
       1:
         tenseTitle: Pretérito Perfeito
         tenseForms:
-          eu: indicativePastPerfectFirstPersonSingular
-          tu: indicativePastPerfectFirstPersonPlural
-          ele/ela/você: indicativePastPerfectSecondPersonSingular
-          nós: indicativePastPerfectSecondPersonPlural
-          vós: indicativePastPerfectThirdPersonSingular
-          eles/elas/vocês: indicativePastPerfectThirdPersonPlural
+          1:
+            label: eu
+            value: indicativePastPerfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePastPerfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePastPerfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePastPerfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePastPerfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePastPerfectThirdPersonPlural
 
   3:
     sectionTitle: Pretérito Imperfeito
@@ -54,12 +78,24 @@ conjugations:
       1:
         tenseTitle: Pretérito Imperfeito
         tenseForms:
-          eu: indicativePastImperfectFirstPersonSingular
-          tu: indicativePastImperfectFirstPersonPlural
-          ele/ela/você: indicativePastImperfectSecondPersonSingular
-          nós: indicativePastImperfectSecondPersonPlural
-          vós: indicativePastImperfectThirdPersonSingular
-          eles/elas/vocês: indicativePastImperfectThirdPersonPlural
+          1:
+            label: eu
+            value: indicativePastImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePastImperfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePastImperfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePastImperfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePastImperfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePastImperfectThirdPersonPlural
 
   4:
     sectionTitle: Futuro Simples
@@ -67,12 +103,24 @@ conjugations:
       1:
         tenseTitle: Futuro Simples
         tenseForms:
-          eu: indicativePluperfectFirstPersonSingular
-          tu: indicativePluperfectFirstPersonPlural
-          ele/ela/você: indicativePluperfectSecondPersonSingular
-          nós: indicativePluperfectSecondPersonPlural
-          vós: indicativePluperfectThirdPersonSingular
-          eles/elas/vocês: indicativePluperfectThirdPersonPlural
+          1:
+            label: eu
+            value: indicativePluperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePluperfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePluperfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePluperfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePluperfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePluperfectThirdPersonPlural
 
 # MARK: Translate
 
