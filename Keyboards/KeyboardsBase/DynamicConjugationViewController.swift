@@ -149,8 +149,15 @@ class DynamicConjugationViewController: UIViewController {
     let buttonHeight = (containerHeight - CGFloat(rows + 1) * spacing) / CGFloat(rows)
 
     for (index, option) in options.enumerated() {
-      let row = index / cols
-      let col = index % cols
+      let row: Int
+      let col: Int
+      if cols == 1 {
+        row = index
+        col = 0
+      } else {
+        col = index / rows
+        row = index % rows
+     }
 
       let button = UIButton(type: .custom)
       button.frame = CGRect(
@@ -317,11 +324,11 @@ class DynamicConjugationViewController: UIViewController {
   private func getGridLayout(forCount count: Int) -> (rows: Int, cols: Int) {
     switch count {
     case 1: return (1, 1)
-    case 2: return (1, 2)
+    case 2: return (2, 1)
     case 3: return (3, 1)
     case 4: return (2, 2)
     case 6: return (3, 2)
-    default: return (3, 2)
+    default: return (count, 1)
     }
   }
 }

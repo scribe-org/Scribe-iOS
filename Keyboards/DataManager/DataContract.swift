@@ -26,33 +26,24 @@ struct ConjugationSection: Codable {
 
 struct ConjugationTense: Codable {
     let tenseTitle: String
-    let tenseForms: [String: String]
+    let tenseForms: [Int: TenseForm]
+}
+
+struct TenseForm: Codable {
+    let label: String
+    let value: String
 }
 
 struct DeclensionSection: Codable {
     let title: String?
     let sectionTitle: String?
-    let declensionForms: [String: DeclensionForm]?
+    let declensionForms: [Int: DeclensionNode]?
 }
 
-enum DeclensionForm: Codable {
-    case value(String)
-    case nested([String: DeclensionForm])
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let string = try? container.decode(String.self) {
-            self = .value(string)
-        } else {
-            self = .nested(try container.decode([String: DeclensionForm].self))
-        }
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .value(let string): try container.encode(string)
-        case .nested(let dict):  try container.encode(dict)
-        }
-    }
+struct DeclensionNode: Codable {
+    let label: String?
+    let value: String?
+    let displayValue: String?
+    let title: String?
+    let declensionForms: [Int: DeclensionNode]?
 }
