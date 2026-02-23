@@ -589,7 +589,7 @@ declensions:
               declensionForms:
                 1:
                   label: M
-                  values: ihrem
+                  value: ihrem
                 2:
                   label: F
                   value: ihrer
@@ -680,7 +680,7 @@ declensions:
           value: diesem
         2:
           label: F
-          valaue: dieser
+          value: dieser
         3:
           label: N
           value: diesem
