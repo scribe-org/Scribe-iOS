@@ -28,22 +28,24 @@ class ConjugationManager {
     var result: [(String, [(String, [(String, String)])])] = []
 
     for (_, conjugationSection) in conjugations.sorted(by: {
-      Int($0.key) ?? 0 < Int($1.key) ?? 0
+      $0.key < $1.key
     }) {
       var conjugationTenses: [(String, [(String, String)])] = []
 
       for (_, conjugationTense) in conjugationSection.tenses.sorted(by: {
-        Int($0.key) ?? 0 < Int($1.key) ?? 0
+        $0.key < $1.key
       }) {
         var forms: [(String, String)] = []
 
-        for (pronoun, columnName) in conjugationTense.tenseForms {
+        for (_, tenseForm) in conjugationTense.tenseForms.sorted(by: {
+            $0.key < $1.key
+        }) {
           let conjugatedForm = queryConjugatedForm(
             verb: verb,
-            columnName: columnName,
+            columnName: tenseForm.value,
             language: language
           )
-          forms.append((pronoun, conjugatedForm))
+          forms.append((tenseForm.label, conjugatedForm))
         }
 
         conjugationTenses.append((conjugationTense.tenseTitle, forms))

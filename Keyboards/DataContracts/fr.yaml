@@ -28,12 +28,24 @@ conjugations:
       1:
         tenseTitle: Présent
         tenseForms:
-          je: indicativePresentFirstPersonSingular
-          tu: indicativePresentFirstPersonPlural
-          il/elle: indicativePresentSecondPersonSingular
-          nous: indicativePresentSecondPersonPlural
-          vous: indicativePresentThirdPersonSingular
-          ils/elles: indicativePresentThirdPersonPlural
+          1:
+            label: je
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nous
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vous
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativePresentThirdPersonPlural
 
   2:
     sectionTitle: Passé simple
@@ -41,12 +53,24 @@ conjugations:
       1:
         tenseTitle: Passé simple
         tenseForms:
-          je: indicativePreteriteFirstPersonSingular
-          tu: indicativePreteriteFirstPersonPlural
-          il/elle: indicativePreteriteSecondPersonSingular
-          nous: indicativePreteriteSecondPersonPlural
-          vous: indicativePreteriteThirdPersonSingular
-          ils/elles: indicativePreteriteThirdPersonPlural
+          1:
+            label: je
+            value: indicativePreteriteFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePreteriteSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativePreteriteThirdPersonSingular
+          4:
+            label: nous
+            value: indicativePreteriteFirstPersonPlural
+          5:
+            label: vous
+            value: indicativePreteriteSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativePreteriteThirdPersonPlural
 
   3:
     sectionTitle: Imparfait
@@ -54,12 +78,24 @@ conjugations:
       1:
         tenseTitle: Imparfait
         tenseForms:
-          je: indicativeImperfectFirstPersonSingular
-          tu: indicativeImperfectFirstPersonPlural
-          il/elle: indicativeImperfectSecondPersonSingular
-          nous: indicativeImperfectSecondPersonPlural
-          vous: indicativeImperfectThirdPersonSingular
-          ils/elles: indicativeImperfectThirdPersonPlural
+          1:
+            label: je
+            value: indicativeImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativeImperfectSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativeImperfectThirdPersonSingular
+          4:
+            label: nous
+            value: indicativeImperfectFirstPersonPlural
+          5:
+            label: vous
+            value: indicativeImperfectSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativeImperfectThirdPersonPlural
 
   4:
     sectionTitle: Futur
@@ -67,12 +103,24 @@ conjugations:
       1:
         tenseTitle: Futur
         tenseForms:
-          je: indicativeSimpleFutureFirstPersonSingular
-          tu: indicativeSimpleFutureFirstPersonPlural
-          il/elle: indicativeSimpleFutureSecondPersonSingular
-          nous: indicativeSimpleFutureSecondPersonPlural
-          vous: indicativeSimpleFutureThirdPersonSingular
-          ils/elles: indicativeSimpleFutureThirdPersonPlural
+          1:
+            label: je
+            value: indicativeSimpleFutureFirstPersonSingular
+          2:
+            label: tu
+            value: indicativeSimpleFutureSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativeSimpleFutureThirdPersonSingular
+          4:
+            label: nous
+            value: indicativeSimpleFutureFirstPersonPlural
+          5:
+            label: vous
+            value: indicativeSimpleFutureSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativeSimpleFutureThirdPersonPlural
 
 # MARK: Translate
 

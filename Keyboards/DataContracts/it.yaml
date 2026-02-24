@@ -28,12 +28,24 @@ conjugations:
       1:
         tenseTitle: Presente
         tenseForms:
-          io: presentIndicativeFirstPersonSingular
-          tu: presentIndicativeFirstPersonPlural
-          lei/lui: presentIndicativeSecondPersonSingular
-          noi: presentIndicativeSecondPersonPlural
-          voi: presentIndicativeThirdPersonSingular
-          loro: presentIndicativeThirdPersonPlural
+          1:
+            label: io
+            value: presentIndicativeFirstPersonSingular
+          2:
+            label: tu
+            value: presentIndicativeSecondPersonSingular
+          3:
+            label: lei/lui
+            value: presentIndicativeThirdPersonSingular
+          4:
+            label: noi
+            value: presentIndicativeFirstPersonPlural
+          5:
+            label: voi
+            value: presentIndicativeSecondPersonPlural
+          6:
+            label: loro
+            value: presentIndicativeThirdPersonPlural
 
   2:
     sectionTitle: Preterito
@@ -41,12 +53,24 @@ conjugations:
       1:
         tenseTitle: Preterito
         tenseForms:
-          io: preteriteFirstPersonSingular
-          tu: preteriteFirstPersonPlural
-          lei/lui: preteriteSecondPersonSingular
-          noi: preteriteSecondPersonPlural
-          voi: preteriteThirdPersonSingular
-          loro: preteriteThirdPersonPlural
+          1:
+            label: io
+            value: preteriteFirstPersonSingular
+          2:
+            label: tu
+            value: preteriteSecondPersonSingular
+          3:
+            label: lei/lui
+            value: preteriteThirdPersonSingular
+          4:
+            label: noi
+            value: preteriteFirstPersonPlural
+          5:
+            label: voi
+            value: preteriteSecondPersonPlural
+          6:
+            label: loro
+            value: preteriteThirdPersonPlural
 
   3:
     sectionTitle: Imperfetto
@@ -54,12 +78,24 @@ conjugations:
       1:
         tenseTitle: Imperfetto
         tenseForms:
-          io: pastImperfectFirstPersonSingular
-          tu: pastImperfectFirstPersonPlural
-          lei/lui: pastImperfectSecondPersonSingular
-          noi: pastImperfectSecondPersonPlural
-          voi: pastImperfectThirdPersonSingular
-          loro: pastImperfectThirdPersonPlural
+          1:
+            label: io
+            value: pastImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: pastImperfectSecondPersonSingular
+          3:
+            label: lei/lui
+            value: pastImperfectThirdPersonSingular
+          4:
+            label: noi
+            value: pastImperfectFirstPersonPlural
+          5:
+            label: voi
+            value: pastImperfectSecondPersonPlural
+          6:
+            label: loro
+            value: pastImperfectThirdPersonPlural
 
 # MARK: Translate
 

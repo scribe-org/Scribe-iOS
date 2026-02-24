@@ -8,13 +8,13 @@ import Foundation
 /// Represents a single option in the navigation.
 enum NavigationNode {
   case nextLevel(NavigationLevel, displayValue: String?)  // navigate deeper, with optional display value
-  case finalValue(String)                                 // terminal node, insert this text
+  case finalValue(String)  // terminal node, insert this text
 }
 
 /// Represents a level in the navigation hierarchy.
 struct NavigationLevel {
-  let title: String                              // Title for command bar
-  let options: [(label: String, node: NavigationNode)]  // Buttons to display
+  let title: String  // title for command bar
+  let options: [(label: String, node: NavigationNode)]  // buttons to display
 }
 
 /// Builds navigation trees for conjugations and declensions.
@@ -39,7 +39,7 @@ struct NavigationBuilder {
 
     for (tenseTitle, conjugationTypes) in conjugationData {
       if conjugationTypes.count == 1 {
-        // Single type: show forms directly
+        // Single type: show forms directly.
         let (_, forms) = conjugationTypes[0]
         let formOptions = forms.map { (pronoun, conjugatedForm) in
           (label: pronoun, node: NavigationNode.finalValue(conjugatedForm))

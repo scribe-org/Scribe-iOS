@@ -29,12 +29,24 @@ conjugations:
       1:
         tenseTitle: Presente
         tenseForms:
-          yo: indicativePresentFirstPersonSingular
-          tú: indicativePresentFirstPersonPlural
-          él/ella/Ud.: indicativePresentSecondPersonSingular
-          nosotros: indicativePresentSecondPersonPlural
-          vosotros: indicativePresentThirdPersonSingular
-          ellos/ellas/Uds.: indicativePresentThirdPersonPlural
+          1:
+            label: yo
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tú
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nosotros
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vosotros
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: indicativePresentThirdPersonPlural
 
   2:
     sectionTitle: Pretérito
@@ -42,12 +54,24 @@ conjugations:
       1:
         tenseTitle: Pretérito
         tenseForms:
-          yo: preteriteFirstPersonSingular
-          tú: preteriteFirstPersonPlural
-          él/ella/Ud.: preteriteSecondPersonSingular
-          nosotros: preteriteSecondPersonPlural
-          vosotros: preteriteThirdPersonSingular
-          ellos/ellas/Uds.: preteriteThirdPersonPlural
+          1:
+            label: yo
+            value: preteriteFirstPersonSingular
+          2:
+            label: tú
+            value: preteriteSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: preteriteThirdPersonSingular
+          4:
+            label: nosotros
+            value: preteriteFirstPersonPlural
+          5:
+            label: vosotros
+            value: preteriteSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: preteriteThirdPersonPlural
 
   3:
     sectionTitle: Imperfecto
@@ -55,12 +79,24 @@ conjugations:
       1:
         tenseTitle: Imperfecto
         tenseForms:
-          yo: pastImperfectFirstPersonSingular
-          tú: pastImperfectFirstPersonPlural
-          él/ella/Ud.: pastImperfectSecondPersonSingular
-          nosotros: pastImperfectSecondPersonPlural
-          vosotros: pastImperfectThirdPersonSingular
-          ellos/ellas/Uds.: pastImperfectThirdPersonPlural
+          1:
+            label: yo
+            value: pastImperfectFirstPersonSingular
+          2:
+            label: tú
+            value: pastImperfectSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: pastImperfectThirdPersonSingular
+          4:
+            label: nosotros
+            value: pastImperfectFirstPersonPlural
+          5:
+            label: vosotros
+            value: pastImperfectSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: pastImperfectThirdPersonPlural
 
 # MARK: Translate
 
