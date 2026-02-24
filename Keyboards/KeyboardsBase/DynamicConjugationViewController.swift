@@ -320,7 +320,7 @@ class DynamicConjugationViewController: UIViewController {
 
   /// Determines grid layout based on button count.
   /// - Parameters:
-    ///   - count: The number of buttons to display.
+  ///   - count: The number of buttons to display.
   private func getGridLayout(forCount count: Int) -> (rows: Int, cols: Int) {
     switch count {
     case 1: return (1, 1)

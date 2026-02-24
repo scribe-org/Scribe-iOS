@@ -1791,7 +1791,7 @@ class KeyboardViewController: UIInputViewController {
           .plural,
           .dynamicConjugation].contains(commandState) { // escape
 
-        // If closing dynamic conjugation, remove the view
+        // If closing dynamic conjugation, remove the view.
         if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
           children.forEach { child in
             if child is DynamicConjugationViewController {
@@ -2314,7 +2314,7 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - verb: the verb to show conjugations for.
   func showDynamicConjugationView(verb: String) {
-    // Remove any existing view
+    // Remove any existing view.
     children.forEach { child in
       if child is DynamicConjugationViewController {
         child.removeFromParent()
@@ -2322,23 +2322,23 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    // Hide the command buttons
+    // Hide the command buttons.
     deactivateBtn(btn: translateKey)
     deactivateBtn(btn: conjugateKey)
     deactivateBtn(btn: pluralKey)
     hideAutoActionPartitions()
 
-    // Update Scribe key to escape mode
+    // Update Scribe key to escape mode.
     scribeKey.toEscape()
     scribeKey.setPartialCornerRadius()
     scribeKey.setPartialShadow()
 
-    // Set up command bar with verb title
+    // Set up command bar with verb title.
     commandBar.set()
     commandBar.setCornerRadiusAndShadow()
     commandBar.backgroundColor = commandBarColor
 
-    // Build conjugation cases array
+    // Build conjugation cases array.
     guard let cases = NavigationBuilder.buildConjugationCases(
       verb: verb,
       language: languagesAbbrDict[controllerLanguage] ?? ""
@@ -2349,7 +2349,7 @@ class KeyboardViewController: UIInputViewController {
     let conjugationVC = DynamicConjugationViewController(
       linearCases: cases,
       commandBar: commandBar,
-      startingIndex: 0  // Always start at first tense
+      startingIndex: 0  // always start at first tense
     )
 
     addChild(conjugationVC)
