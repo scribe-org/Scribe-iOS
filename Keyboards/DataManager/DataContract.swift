@@ -7,7 +7,8 @@ import Foundation
 struct DataContract: Codable {
     let numbers: [String: String]?
     let genders: GenderContract?
-    let conjugations: [String: ConjugationTense]?
+    let conjugations: [Int: ConjugationSection]?
+    let declensions: [Int: DeclensionSection]?
 }
 
 struct GenderContract: Codable {
@@ -18,12 +19,31 @@ struct GenderContract: Codable {
     let neuters: [String]?
 }
 
-struct ConjugationTense: Codable {
-    let title: String
-    let conjugationTypes: [String: ConjugationType]
+struct ConjugationSection: Codable {
+    let sectionTitle: String
+    let tenses: [Int: ConjugationTense]
 }
 
-struct ConjugationType: Codable {
-    let title: String
-    let conjugationForms: [String: String]
+struct ConjugationTense: Codable {
+    let tenseTitle: String
+    let tenseForms: [Int: TenseForm]
+}
+
+struct TenseForm: Codable {
+    let label: String
+    let value: String
+}
+
+struct DeclensionSection: Codable {
+    let title: String?
+    let sectionTitle: String?
+    let declensionForms: [Int: DeclensionNode]?
+}
+
+struct DeclensionNode: Codable {
+    let label: String?
+    let value: String?
+    let displayValue: String?
+    let title: String?
+    let declensionForms: [Int: DeclensionNode]?
 }
