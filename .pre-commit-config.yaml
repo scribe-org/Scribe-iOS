@@ -1,4 +1,4 @@
-# Setting up a Python environment and pre-commit.
+# Set up a Python environment and prek for pre-commit hooks.
 
 # Unix or MacOS:
 # >>> python3 -m venv venv
@@ -9,9 +9,9 @@
 # >>> venv\Scripts\activate.bat
 
 # >>> pip install --upgrade pip
-# >>> pip install pre-commit
-# >>> pre-commit install
-# >>> pre-commit run --all-files
+# >>> pip install prek
+# >>> prek install
+# >>> prek run --all-files
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
