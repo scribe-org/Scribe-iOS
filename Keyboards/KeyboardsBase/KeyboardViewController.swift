@@ -406,10 +406,8 @@ class KeyboardViewController: UIInputViewController {
         emojisToShow = .three
 
         let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
-        for i in 0 ..< padDividers.count {
-          if emojisToShow.rawValue > i + 1 {
-            padDividers[i].backgroundColor = dividerColor
-          }
+        for i in 0 ..< padDividers.count where emojisToShow.rawValue > i + 1 {
+          padDividers[i].backgroundColor = dividerColor
         }
         conditionallyHideEmojiDividers()
       } else if !emojisToDisplay[1].isEmpty {
@@ -420,10 +418,8 @@ class KeyboardViewController: UIInputViewController {
         emojisToShow = .two
 
         let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
-        for i in 0 ..< phoneDividers.count {
-          if emojisToShow.rawValue > i + 1 {
-            phoneDividers[i].backgroundColor = dividerColor
-          }
+        for i in 0 ..< phoneDividers.count where emojisToShow.rawValue > i + 1 {
+          phoneDividers[i].backgroundColor = dividerColor
         }
         conditionallyHideEmojiDividers()
       } else {
@@ -472,17 +468,13 @@ class KeyboardViewController: UIInputViewController {
 
       if DeviceType.isPad {
         let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
-        for i in 0 ..< padDividers.count {
-          if emojisToShow.rawValue > i + 1 {
-            padDividers[i].backgroundColor = dividerColor
-          }
+        for i in 0 ..< padDividers.count where emojisToShow.rawValue > i + 1 {
+          padDividers[i].backgroundColor = dividerColor
         }
       } else if DeviceType.isPhone {
         let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
-        for i in 0 ..< phoneDividers.count {
-          if emojisToShow.rawValue > i + 1 {
-            phoneDividers[i].backgroundColor = dividerColor
-          }
+        for i in 0 ..< phoneDividers.count where emojisToShow.rawValue > i + 1 {
+          phoneDividers[i].backgroundColor = dividerColor
         }
       }
       conditionallyHideEmojiDividers()
@@ -760,18 +752,16 @@ class KeyboardViewController: UIInputViewController {
           emojiButtons = [translateKey, conjugateKey, pluralKey, phoneEmojiKey0, phoneEmojiKey1, phoneEmojiKey2]
         }
 
-        for (index, emoji) in emojisToDisplayArray.enumerated() {
-          if index < emojiButtons.count {
-            let btn = emojiButtons[index]
-            setBtn(btn: btn, color: keyboardBgColor, name: "EmojiKey\(index)", canBeCapitalized: false, isSpecial: false)
-            styleBtn(btn: btn, title: emoji, radius: commandKeyCornerRadius)
-            if DeviceType.isPhone {
-              btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
-            } else {
-              btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
-            }
-            activateBtn(btn: btn)
+        for (index, emoji) in emojisToDisplayArray.enumerated() where index < emojiButtons.count {
+          let btn = emojiButtons[index]
+          setBtn(btn: btn, color: keyboardBgColor, name: "EmojiKey\(index)", canBeCapitalized: false, isSpecial: false)
+          styleBtn(btn: btn, title: emoji, radius: commandKeyCornerRadius)
+          if DeviceType.isPhone {
+            btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPhone)
+          } else {
+            btn.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarFontPad)
           }
+          activateBtn(btn: btn)
         }
         conditionallyHideEmojiDividers()
       } else {
