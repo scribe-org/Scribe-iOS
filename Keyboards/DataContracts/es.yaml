@@ -1,0 +1,148 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table contain gender information.
+genders:
+  canonical: []
+  feminines: [feminineSingular]
+  masculines: [masculineSingular]
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  feminineSingular: femininePlural
+  masculineSingular: masculinePlural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Presente
+    tenses:
+      1:
+        tenseTitle: Presente
+        tenseForms:
+          1:
+            label: yo
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tú
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nosotros
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vosotros
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Pretérito
+    tenses:
+      1:
+        tenseTitle: Pretérito
+        tenseForms:
+          1:
+            label: yo
+            value: preteriteFirstPersonSingular
+          2:
+            label: tú
+            value: preteriteSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: preteriteThirdPersonSingular
+          4:
+            label: nosotros
+            value: preteriteFirstPersonPlural
+          5:
+            label: vosotros
+            value: preteriteSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: preteriteThirdPersonPlural
+
+  3:
+    sectionTitle: Imperfecto
+    tenses:
+      1:
+        tenseTitle: Imperfecto
+        tenseForms:
+          1:
+            label: yo
+            value: pastImperfectFirstPersonSingular
+          2:
+            label: tú
+            value: pastImperfectSecondPersonSingular
+          3:
+            label: él/ella/Ud.
+            value: pastImperfectThirdPersonSingular
+          4:
+            label: nosotros
+            value: pastImperfectFirstPersonPlural
+          5:
+            label: vosotros
+            value: pastImperfectSecondPersonPlural
+          6:
+            label: ellos/ellas/Uds.
+            value: pastImperfectThirdPersonPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Seleccione el tipo de traducción
+
+    adjective:
+      displayValue: adjetivo
+      sectionTitle: Seleccione traducción de adjetivo
+
+    adverb:
+      displayValue: adverbio
+      sectionTitle: Seleccione traducción de adverbio
+
+    article:
+      displayValue: artículo
+      sectionTitle: Seleccione traducción de artículo
+
+    conjunction:
+      displayValue: conjunción
+      sectionTitle: Seleccione traducción de conjunción
+
+    noun:
+      displayValue: sustantivo
+      sectionTitle: Seleccione traducción de sustantivo
+
+    postposition:
+      displayValue: posposición
+      sectionTitle: Seleccione traducción de posposición
+
+    preposition:
+      displayValue: preposición
+      sectionTitle: Seleccione traducción de preposición
+
+    proper_noun:
+      displayValue: nombre propio
+      sectionTitle: Seleccione traducción de nombre propio
+
+    pronoun:
+      displayValue: pronombre
+      sectionTitle: Seleccione traducción de pronombre
+
+    verb:
+      displayValue: verbo
+      sectionTitle: Seleccionar verbo infinitivo

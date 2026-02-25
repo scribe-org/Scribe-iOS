@@ -1,0 +1,147 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table contain gender information.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  singular: plural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Presente
+    tenses:
+      1:
+        tenseTitle: Presente
+        tenseForms:
+          1:
+            label: io
+            value: presentIndicativeFirstPersonSingular
+          2:
+            label: tu
+            value: presentIndicativeSecondPersonSingular
+          3:
+            label: lei/lui
+            value: presentIndicativeThirdPersonSingular
+          4:
+            label: noi
+            value: presentIndicativeFirstPersonPlural
+          5:
+            label: voi
+            value: presentIndicativeSecondPersonPlural
+          6:
+            label: loro
+            value: presentIndicativeThirdPersonPlural
+
+  2:
+    sectionTitle: Preterito
+    tenses:
+      1:
+        tenseTitle: Preterito
+        tenseForms:
+          1:
+            label: io
+            value: preteriteFirstPersonSingular
+          2:
+            label: tu
+            value: preteriteSecondPersonSingular
+          3:
+            label: lei/lui
+            value: preteriteThirdPersonSingular
+          4:
+            label: noi
+            value: preteriteFirstPersonPlural
+          5:
+            label: voi
+            value: preteriteSecondPersonPlural
+          6:
+            label: loro
+            value: preteriteThirdPersonPlural
+
+  3:
+    sectionTitle: Imperfetto
+    tenses:
+      1:
+        tenseTitle: Imperfetto
+        tenseForms:
+          1:
+            label: io
+            value: pastImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: pastImperfectSecondPersonSingular
+          3:
+            label: lei/lui
+            value: pastImperfectThirdPersonSingular
+          4:
+            label: noi
+            value: pastImperfectFirstPersonPlural
+          5:
+            label: voi
+            value: pastImperfectSecondPersonPlural
+          6:
+            label: loro
+            value: pastImperfectThirdPersonPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Seleziona il tipo da tradurre
+
+    adjective:
+      displayValue: aggettivo
+      sectionTitle: Seleziona la traduzione dell'aggettivo
+
+    adverb:
+      displayValue: avverbio
+      sectionTitle: Seleziona la traduzione dell'avverbio
+
+    article:
+      displayValue: articolo
+      sectionTitle: Seleziona la traduzione dell'articolo
+
+    conjunction:
+      displayValue: congiunzione
+      sectionTitle: Seleziona la traduzione della congiunzione
+
+    noun:
+      displayValue: nome
+      sectionTitle: Seleziona la traduzione del nome
+
+    postposition:
+      displayValue: posposizione
+      sectionTitle: Seleziona la traduzione della posposizione
+
+    preposition:
+      displayValue: preposizione
+      sectionTitle: Seleziona la traduzione della preposizione
+
+    proper_noun:
+      displayValue: nome proprio
+      sectionTitle: Seleziona la traduzione del nome proprio
+
+    pronoun:
+      displayValue: pronome
+      sectionTitle: Seleziona la traduzione del pronome
+
+    verb:
+      displayValue: verbo
+      sectionTitle: Seleziona il verbo infinito

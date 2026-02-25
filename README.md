@@ -38,6 +38,7 @@ Check out Scribe's [architecture diagrams](https://github.com/scribe-org/Organiz
 - [Contributing](#contributing)
 - [Environment Setup](#environment-setup)
 - [App Setup](#app-setup)
+  - [Codebase Overview](#codebase-overview)
 - [Supported Languages](#supported-languages)
 - [Keyboard Features](#keyboard-features)
 - [Featured By](#featured-by)
@@ -177,7 +178,6 @@ pre-commit install
 4. Open the Scribe-iOS directory in Xcode
 
 5. In order to run Scribe on an emulator:
-
    - Read the [documentation from Apple](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) if need be
    - In the top bar select Scribe as the scheme
    - If you're debugging you'll need to select the keyboard you're testing as the scheme (see the [note on debugging](#note-on-debugging) below)
@@ -197,6 +197,21 @@ pre-commit install
 <a id="app-setup"></a>
 
 # App Setup [`⇧`](#contents)
+
+<a id="codebase-overview"></a>
+
+### Codebase Overview
+
+The Scribe-iOS codebase consists of two separate applications.
+
+- Keyboard Application — the Scribe Language Keyboards application (IME)
+
+- Conjugate Application — the Scribe verb conjugations application
+
+To select each variant you should select the scheme from the top bar next to device selection.
+
+1. Scribe → Scribe Language Keyboards app (IME)
+2. Conjugate → Scribe Conjugate verb conjugation app
 
 Users access Scribe language keyboards through the following:
 

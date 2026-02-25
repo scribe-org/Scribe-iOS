@@ -1,0 +1,172 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table contain gender information.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  singular: plural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Presente
+    tenses:
+      1:
+        tenseTitle: Presente
+        tenseForms:
+          1:
+            label: eu
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Pretérito Perfeito
+    tenses:
+      1:
+        tenseTitle: Pretérito Perfeito
+        tenseForms:
+          1:
+            label: eu
+            value: indicativePastPerfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePastPerfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePastPerfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePastPerfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePastPerfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePastPerfectThirdPersonPlural
+
+  3:
+    sectionTitle: Pretérito Imperfeito
+    tenses:
+      1:
+        tenseTitle: Pretérito Imperfeito
+        tenseForms:
+          1:
+            label: eu
+            value: indicativePastImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePastImperfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePastImperfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePastImperfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePastImperfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePastImperfectThirdPersonPlural
+
+  4:
+    sectionTitle: Futuro Simples
+    tenses:
+      1:
+        tenseTitle: Futuro Simples
+        tenseForms:
+          1:
+            label: eu
+            value: indicativePluperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePluperfectSecondPersonSingular
+          3:
+            label: ele/ela/você
+            value: indicativePluperfectThirdPersonSingular
+          4:
+            label: nós
+            value: indicativePluperfectFirstPersonPlural
+          5:
+            label: vós
+            value: indicativePluperfectSecondPersonPlural
+          6:
+            label: eles/elas/vocês
+            value: indicativePluperfectThirdPersonPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Selecione o tipo a ser traduzida
+
+    adjective:
+      displayValue: adjetivo
+      sectionTitle: Selecione a tradução do adjetivo
+
+    adverb:
+      displayValue: advérbio
+      sectionTitle: Selecione a tradução do advérbio
+
+    article:
+      displayValue: artigo
+      sectionTitle: Selecione a tradução do artigo
+
+    conjunction:
+      displayValue: conjunção
+      sectionTitle: Selecione a tradução da conjunção
+
+    noun:
+      displayValue: nome
+      sectionTitle: Selecione a tradução do substantivo
+
+    postposition:
+      displayValue: posposição
+      sectionTitle: Selecione a tradução de posposição
+
+    preposition:
+      displayValue: preposição
+      sectionTitle: Selecione a tradução da preposiçãon
+
+    proper_noun:
+      displayValue: nome próprio
+      sectionTitle: Selecione a tradução do nome próprio
+
+    pronoun:
+      displayValue: pronome
+      sectionTitle: Selecione a tradução do pronome
+
+    verb:
+      displayValue: verbo
+      sectionTitle: Selecione o verbo no infinitivo

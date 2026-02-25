@@ -1,0 +1,172 @@
+# Database column mappings that are read by Scribe applications to structure how data is displayed to the user.
+# Includes interface titles and the order that values should be presented (chronological or alphabetical).
+
+# MARK: Noun Gender
+
+# A map of which columns in the nouns table contain gender information.
+genders:
+  canonical: [gender]
+  feminines: []
+  masculines: []
+  commons: []
+  neuters: []
+
+# MARK: Plural
+
+# Key-value pairs that link the key of a noun singular to its plural for the Plural command.
+numbers:
+  singular: plural
+
+# MARK: Conjugate
+
+# Map of verb tenses to their conjugations for the Conjugate command.
+# Sections provide meta tense selections if there is more than one tense included.
+conjugations:
+  1:
+    sectionTitle: Présent
+    tenses:
+      1:
+        tenseTitle: Présent
+        tenseForms:
+          1:
+            label: je
+            value: indicativePresentFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePresentSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativePresentThirdPersonSingular
+          4:
+            label: nous
+            value: indicativePresentFirstPersonPlural
+          5:
+            label: vous
+            value: indicativePresentSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativePresentThirdPersonPlural
+
+  2:
+    sectionTitle: Passé simple
+    tenses:
+      1:
+        tenseTitle: Passé simple
+        tenseForms:
+          1:
+            label: je
+            value: indicativePreteriteFirstPersonSingular
+          2:
+            label: tu
+            value: indicativePreteriteSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativePreteriteThirdPersonSingular
+          4:
+            label: nous
+            value: indicativePreteriteFirstPersonPlural
+          5:
+            label: vous
+            value: indicativePreteriteSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativePreteriteThirdPersonPlural
+
+  3:
+    sectionTitle: Imparfait
+    tenses:
+      1:
+        tenseTitle: Imparfait
+        tenseForms:
+          1:
+            label: je
+            value: indicativeImperfectFirstPersonSingular
+          2:
+            label: tu
+            value: indicativeImperfectSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativeImperfectThirdPersonSingular
+          4:
+            label: nous
+            value: indicativeImperfectFirstPersonPlural
+          5:
+            label: vous
+            value: indicativeImperfectSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativeImperfectThirdPersonPlural
+
+  4:
+    sectionTitle: Futur
+    tenses:
+      1:
+        tenseTitle: Futur
+        tenseForms:
+          1:
+            label: je
+            value: indicativeSimpleFutureFirstPersonSingular
+          2:
+            label: tu
+            value: indicativeSimpleFutureSecondPersonSingular
+          3:
+            label: il/elle
+            value: indicativeSimpleFutureThirdPersonSingular
+          4:
+            label: nous
+            value: indicativeSimpleFutureFirstPersonPlural
+          5:
+            label: vous
+            value: indicativeSimpleFutureSecondPersonPlural
+          6:
+            label: ils/elles
+            value: indicativeSimpleFutureThirdPersonPlural
+
+# MARK: Translate
+
+# Map of interface titles to display for the Translate command.
+# Needed database columns are the same across languages (descriptions are labels for values).
+# Note: Descriptions for article and pronoun translations are their genders.
+translations:
+  wordType:
+    sectionTitle: Sélectionnez le type à traduire
+
+    adjective:
+      displayValue: adjectif
+      sectionTitle: Sélectionner la traduction de l'adjectif
+
+    adverb:
+      displayValue: adverbe
+      sectionTitle: Sélectionner la traduction de l'adverbe
+
+    article:
+      displayValue: article
+      sectionTitle: Sélectionner la traduction de l'article
+
+    conjunction:
+      displayValue: conjonction
+      sectionTitle: Sélectionner la traduction de conjonction
+
+    noun:
+      displayValue: nom
+      sectionTitle: Sélectionner la traduction du nom
+
+    postposition:
+      displayValue: postposition
+      sectionTitle: Sélectionnez la traduction de la postposition
+
+    preposition:
+      displayValue: préposition
+      sectionTitle: Sélectionnez la traduction de la préposition
+
+    proper_noun:
+      displayValue: nom propre
+      sectionTitle: Sélectionnez la traduction du nom propre
+
+    pronoun:
+      displayValue: pronom
+      sectionTitle: Sélectionner la traduction des pronoms
+
+    verb:
+      displayValue: verbe
+      sectionTitle: Sélectionnez l'infinitif du verbe

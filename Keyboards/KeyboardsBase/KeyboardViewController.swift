@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Classes for the parent keyboard view controller that language keyboards.
- */
+/// Classes for the parent keyboard view controller that language keyboards.
 
 import GRDB
 import UIKit
@@ -294,6 +292,9 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
+    formKeySingle?.isHidden = false
+    formKeySingle?.alpha = 1.0
+
     setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
     let datasources = contentData.compactMap { text in
@@ -316,6 +317,21 @@ class KeyboardViewController: UIInputViewController {
     tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor).isActive = true
     tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor).isActive = true
     styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
+
+    shiftFormsDisplayLeft?.isHidden = false
+    shiftFormsDisplayRight?.isHidden = false
+
+    setBtn(btn: shiftFormsDisplayLeft, color: keyColor, name: "shiftFormsDisplayLeft", canBeCapitalized: false, isSpecial: false)
+    setBtn(btn: shiftFormsDisplayRight, color: keyColor, name: "shiftFormsDisplayRight", canBeCapitalized: false, isSpecial: false)
+
+    activateBtn(btn: shiftFormsDisplayLeft)
+    activateBtn(btn: shiftFormsDisplayRight)
+
+    styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
+    styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
+
+    styleIconBtn(btn: shiftFormsDisplayLeft, color: commandBarPlaceholderColor, iconName: "chevron.left")
+    styleIconBtn(btn: shiftFormsDisplayRight, color: keyCharColor, iconName: "chevron.right")
   }
 
   // Shifts the view of the information tooltip view.
@@ -996,15 +1012,6 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var formKeySPP: UIButton!
   @IBOutlet var formKeyTPP: UIButton!
 
-  /// Returns all buttons for the 3x2 conjugation display.
-  func get3x2FormDisplayButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      formKeyFPS, formKeySPS, formKeyTPS, formKeyFPP, formKeySPP, formKeyTPP
-    ]
-
-    return conjugationButtons
-  }
-
   // Labels for the conjugation view buttons.
   // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
   @IBOutlet var formLblFPS: UIButton!
@@ -1014,194 +1021,28 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var formLblSPP: UIButton!
   @IBOutlet var formLblTPP: UIButton!
 
-  /// Returns all labels for the 3x2 conjugation display.
-  func get3x2FormDisplayLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      formLblFPS, formLblSPS, formLblTPS, formLblFPP, formLblSPP, formLblTPP
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 3x2 conjugation display.
-  func setFormDisplay3x2View() {
-    let conjugationNames: [String] = [
-      "firstPersonSingular",
-      "secondPersonSingular",
-      "thirdPersonSingular",
-      "firstPersonPlural",
-      "secondPersonPlural",
-      "thirdPersonPlural"
-    ]
-
-    let displayBtns = get3x2FormDisplayButtons()
-
-    for (idx, btn) in displayBtns.enumerated() {
-      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
-      activateBtn(btn: btn)
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get3x2FormDisplayButtons() {
-        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
-
   @IBOutlet var formKeyTop: UIButton!
   @IBOutlet var formKeyMiddle: UIButton!
   @IBOutlet var formKeyBottom: UIButton!
 
-  /// Returns all buttons for the 3x1 conjugation display
-  func get3x1FormDisplayButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      formKeyTop, formKeyMiddle, formKeyBottom
-    ]
-
-    return conjugationButtons
-  }
-
   @IBOutlet var formLblTop: UIButton!
   @IBOutlet var formLblMiddle: UIButton!
   @IBOutlet var formLblBottom: UIButton!
-
-  /// Returns all labels for the 3x1 conjugation display.
-  func get3x1FormDisplayLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      formLblTop, formLblMiddle, formLblBottom
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
-  func setFormDisplay3x1View() {
-    let conjugationNames: [String] = [
-      "formTop", "formMiddle", "formBottom"
-    ]
-
-    let displayBtns = get3x1FormDisplayButtons()
-
-    for (idx, btn) in displayBtns.enumerated() {
-      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
-      activateBtn(btn: btn)
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get3x1FormDisplayButtons() {
-        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
-
   @IBOutlet var formKeyTL: UIButton!
   @IBOutlet var formKeyTR: UIButton!
   @IBOutlet var formKeyBL: UIButton!
   @IBOutlet var formKeyBR: UIButton!
-
-  /// Returns all buttons for the 2x2 conjugation display
-  func get2x2FormDisplayButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      formKeyTL, formKeyTR, formKeyBL, formKeyBR
-    ]
-
-    return conjugationButtons
-  }
 
   @IBOutlet var formLblTL: UIButton!
   @IBOutlet var formLblTR: UIButton!
   @IBOutlet var formLblBL: UIButton!
   @IBOutlet var formLblBR: UIButton!
 
-  /// Returns all labels for the 2x2 conjugation display.
-  func get2x2FormDisplayLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      formLblTL, formLblTR, formLblBL, formLblBR
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 2x2 conjugation display.
-  func setFormDisplay2x2View() {
-    let conjugationNames: [String] = [
-      "formTopLeft", "formTopRight", "formBottomLeft", "formBottomRight"
-    ]
-
-    let displayBtns = get2x2FormDisplayButtons()
-
-    for (idx, btn) in displayBtns.enumerated() {
-      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
-      activateBtn(btn: btn)
-      btn.isEnabled = true
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get2x2FormDisplayButtons() {
-        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
-
   @IBOutlet var formKeyLeft: UIButton!
   @IBOutlet var formKeyRight: UIButton!
 
-  /// Returns all buttons for the 1x2 conjugation display
-  func get1x2FormDisplayButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      formKeyLeft, formKeyRight
-    ]
-
-    return conjugationButtons
-  }
-
   @IBOutlet var formLblLeft: UIButton!
   @IBOutlet var formLblRight: UIButton!
-
-  /// Returns all labels for the 1x2 conjugation display.
-  func get1x2FormDisplayLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      formLblLeft, formLblRight
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 3x1 conjugation display.
-  func setFormDisplay1x2View() {
-    let conjugationNames: [String] = [
-      "formLeft", "formRight"
-    ]
-
-    let displayBtns = get1x2FormDisplayButtons()
-
-    for (idx, btn) in displayBtns.enumerated() {
-      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
-      activateBtn(btn: btn)
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get1x2FormDisplayButtons() {
-        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
 
   @IBOutlet var formKeySingle: UIButton!
 
@@ -1732,18 +1573,12 @@ class KeyboardViewController: UIInputViewController {
   @objc func shiftLeft() {
     if commandState == .displayInformation {
       tipView?.updatePrevious()
-    } else {
-      conjugationStateLeft()
-      loadKeys()
     }
   }
 
   @objc func shiftRight() {
     if commandState == .displayInformation {
       tipView?.updateNext()
-    } else {
-      conjugationStateRight()
-      loadKeys()
     }
   }
 
@@ -2057,6 +1892,10 @@ class KeyboardViewController: UIInputViewController {
 
   /// Loads the keys given the current constraints.
   func loadKeys() {
+    // Early returns for dynamic views
+    if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
+      return
+    }
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
@@ -2102,15 +1941,17 @@ class KeyboardViewController: UIInputViewController {
 
       // Drop non-unique values in case the lexicon has added words that were already present.
       LanguageDBManager.shared.deleteNonUniqueAutocompletions()
+
+      // Load plural words for the current language.
+      if let allPlurals = LanguageDBManager.shared.queryAllPluralForms() {
+        pluralWords = Set(allPlurals.map { $0.lowercased() })
+      }
     }
 
     setKeyboard()
     setCommaAndPeriodKeysConditionally()
     setCommandBackground()
     setCommandBtns()
-    if controllerLanguage != "Indonesian" {
-      setConjugationBtns()
-    }
 
     // Clear annotation state if a keyboard state change dictates it.
     if !annotationState {
@@ -2165,9 +2006,72 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    if ![
-      .selectVerbConjugation, .selectCaseDeclension, .displayInformation
-    ].contains(commandState) { // normal keyboard view
+    // Always hide old form buttons first.
+    formKeyFPS?.isHidden = true
+    formKeySPS?.isHidden = true
+    formKeyTPS?.isHidden = true
+    formKeyFPP?.isHidden = true
+    formKeySPP?.isHidden = true
+    formKeyTPP?.isHidden = true
+    formKeyTop?.isHidden = true
+    formKeyMiddle?.isHidden = true
+    formKeyBottom?.isHidden = true
+    formKeyTL?.isHidden = true
+    formKeyTR?.isHidden = true
+    formKeyBL?.isHidden = true
+    formKeyBR?.isHidden = true
+    formKeyLeft?.isHidden = true
+    formKeyRight?.isHidden = true
+    formKeySingle?.isHidden = true
+    formLblFPS?.isHidden = true
+    formLblSPS?.isHidden = true
+    formLblTPS?.isHidden = true
+    formLblFPP?.isHidden = true
+    formLblSPP?.isHidden = true
+    formLblTPP?.isHidden = true
+    formLblTop?.isHidden = true
+    formLblMiddle?.isHidden = true
+    formLblBottom?.isHidden = true
+    formLblTL?.isHidden = true
+    formLblTR?.isHidden = true
+    formLblBL?.isHidden = true
+    formLblBR?.isHidden = true
+    formLblLeft?.isHidden = true
+    formLblRight?.isHidden = true
+    formLblSingle?.isHidden = true
+    shiftFormsDisplayLeft?.isHidden = true
+    shiftFormsDisplayRight?.isHidden = true
+
+    // Handle displayInformation separately.
+    if commandState == .displayInformation {
+      for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
+        view?.isUserInteractionEnabled = false
+      }
+
+      scribeKey.toEscape()
+      scribeKey.setPartialShadow()
+      scribeKey.setPartialCornerRadius()
+
+      commandBar.backgroundColor = commandBarColor
+      commandBar.textColor = keyCharColor
+      commandBar.set()
+      commandBar.setCornerRadiusAndShadow()
+      hideAutoActionPartitions()
+
+      deactivateBtn(btn: conjugateKey)
+      deactivateBtn(btn: translateKey)
+      deactivateBtn(btn: pluralKey)
+      deactivateBtn(btn: phoneEmojiKey0)
+      deactivateBtn(btn: phoneEmojiKey1)
+      deactivateBtn(btn: padEmojiKey0)
+      deactivateBtn(btn: padEmojiKey1)
+      deactivateBtn(btn: padEmojiKey2)
+
+      setInformationState()
+      return  // return to skip normal keyboard setup
+    }
+
+    // Normal keyboard view.
       for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
         view?.isUserInteractionEnabled = true
         view?.isLayoutMarginsRelativeArrangement = true
@@ -2207,8 +2111,6 @@ class KeyboardViewController: UIInputViewController {
       scribeKey.setTitle("", for: .normal)
       commandBar.set() // set here so text spacing is appropriate
       conditionallyShowAutoActionPartitions()
-      deactivateConjugationDisplay(deactivateShiftForms: true)
-
       if DeviceType.isPhone {
         translateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
         conjugateKey.titleLabel?.font = .systemFont(ofSize: scribeKey.frame.height * scalarCommandKeyHeightPhone)
@@ -2226,12 +2128,11 @@ class KeyboardViewController: UIInputViewController {
         } else {
             styleBtn(btn: conjugateKey, title: conjugateKeyLbl, radius: commandKeyCornerRadius)
             styleBtn(btn: pluralKey, title: pluralKeyLbl, radius: commandKeyCornerRadius)
-}
+        }
 
         scribeKey.toEscape()
         scribeKey.setFullCornerRadius()
         scribeKey.setFullShadow()
-
         commandBar.hide()
         hideAutoActionPartitions()
       } else {
@@ -2240,7 +2141,6 @@ class KeyboardViewController: UIInputViewController {
           deactivateBtn(btn: pluralKey)
         }
         deactivateBtn(btn: translateKey)
-
         deactivateBtn(btn: phoneEmojiKey0)
         deactivateBtn(btn: phoneEmojiKey1)
         deactivateBtn(btn: padEmojiKey0)
@@ -2277,52 +2177,6 @@ class KeyboardViewController: UIInputViewController {
       }
 
       setKeyPadding()
-
-    } else {
-      // Load conjugation view.
-      for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
-        view?.isUserInteractionEnabled = false
-      }
-
-      scribeKey.toEscape()
-      scribeKey.setPartialShadow()
-      scribeKey.setPartialCornerRadius()
-
-      commandBar.backgroundColor = commandBarColor
-      commandBar.textColor = keyCharColor
-      commandBar.set()
-      commandBar.setCornerRadiusAndShadow()
-      hideAutoActionPartitions()
-
-      deactivateBtn(btn: conjugateKey)
-      deactivateBtn(btn: translateKey)
-      deactivateBtn(btn: pluralKey)
-
-      deactivateBtn(btn: phoneEmojiKey0)
-      deactivateBtn(btn: phoneEmojiKey1)
-      deactivateBtn(btn: padEmojiKey0)
-      deactivateBtn(btn: padEmojiKey1)
-      deactivateBtn(btn: padEmojiKey2)
-
-      activateConjugationDisplay()
-      styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: shiftFormsDisplayLeft,
-                   color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
-                   iconName: "chevron.left")
-      styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-      styleIconBtn(btn: shiftFormsDisplayRight,
-                   color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
-                   iconName: "chevron.right")
-
-      if commandState == .selectVerbConjugation {
-        setVerbConjugationState()
-      } else if commandState == .displayInformation {
-        deactivateConjugationDisplay(deactivateShiftForms: false) // Ensures that previously displayed buttons disappear before showing the info view
-        setInformationState()
-      } else {
-        setCaseDeclensionState()
-      }
-    }
   }
 
   func setCommaAndPeriodKeysConditionally() {
@@ -2451,11 +2305,20 @@ class KeyboardViewController: UIInputViewController {
     case "Scribe":
       if [.translate,
           .conjugate,
-          .selectVerbConjugation,
           .selectCaseDeclension,
-          .plural].contains(commandState) { // escape
+          .plural,
+          .dynamicConjugation].contains(commandState) { // escape
+
+        // If closing dynamic conjugation, remove the view.
+        if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
+          children.forEach { child in
+            if child is DynamicConjugationViewController {
+              child.removeFromParent()
+              child.view.removeFromSuperview()
+            }
+          }
+        }
         commandState = .idle
-        deCaseVariantDeclensionState = .disabled
       } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
         commandState = .selectCommand
         activateBtn(btn: translateKey)
@@ -2463,7 +2326,6 @@ class KeyboardViewController: UIInputViewController {
         activateBtn(btn: pluralKey)
       } else { // escape
         commandState = .idle
-        deCaseVariantDeclensionState = .disabled
       }
       loadKeys()
 
@@ -2480,11 +2342,10 @@ class KeyboardViewController: UIInputViewController {
       } else if commandState == .translate {
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
-        resetVerbConjugationState()
         let conjugationTblTriggered = triggerVerbConjugation(commandBar: commandBar)
         if conjugationTblTriggered {
-          commandState = .selectVerbConjugation
-          loadKeys() // go to conjugation view
+          commandState = .dynamicConjugation
+          showDynamicConjugationView(verb: verbToConjugate)
           return
         } else {
           commandState = .invalid
@@ -2548,11 +2409,11 @@ class KeyboardViewController: UIInputViewController {
 
     case "Conjugate":
       if let selectedText = proxy.selectedText {
-        resetVerbConjugationState()
         let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
         if verbInTable {
-          commandState = .selectVerbConjugation
-          loadKeys() // go to conjugation view
+          commandState = .dynamicConjugation
+          // Show dynamic conjugation view.
+          showDynamicConjugationView(verb: verbToConjugate)
           return
         } else {
           commandState = .invalid
@@ -2617,93 +2478,6 @@ class KeyboardViewController: UIInputViewController {
 
     case "shiftFormsDisplayRight":
       shiftRight()
-
-    case "firstPersonSingular":
-      returnConjugation(keyPressed: sender, requestedForm: formFPS)
-      loadKeys()
-
-    case "secondPersonSingular":
-      returnConjugation(keyPressed: sender, requestedForm: formSPS)
-      loadKeys()
-
-    case "thirdPersonSingular":
-      returnConjugation(keyPressed: sender, requestedForm: formTPS)
-      loadKeys()
-
-    case "firstPersonPlural":
-      returnConjugation(keyPressed: sender, requestedForm: formFPP)
-      loadKeys()
-
-    case "secondPersonPlural":
-      returnConjugation(keyPressed: sender, requestedForm: formSPP)
-      loadKeys()
-
-    case "thirdPersonPlural":
-      returnConjugation(keyPressed: sender, requestedForm: formTPP)
-      loadKeys()
-
-    case "formTop":
-      returnConjugation(keyPressed: sender, requestedForm: formTop)
-      loadKeys()
-
-    case "formMiddle":
-      returnConjugation(keyPressed: sender, requestedForm: formMiddle)
-      loadKeys()
-
-    case "formBottom":
-      returnConjugation(keyPressed: sender, requestedForm: formBottom)
-      loadKeys()
-
-    case "formTopLeft":
-      if controllerLanguage == "English" && enConjugationState == .present {
-        enConjugationState = .presSimp
-        conjViewShiftButtonsState = .bothInactive
-      } else {
-        returnConjugation(keyPressed: sender, requestedForm: formTopLeft)
-      }
-      loadKeys()
-
-    case "formTopRight":
-      if controllerLanguage == "English" {
-        if enConjugationState == .present {
-          enConjugationState = .presCont
-          conjViewShiftButtonsState = .bothInactive
-        } else if enConjugationState == .past {
-          enConjugationState = .pastCont
-          conjViewShiftButtonsState = .bothInactive
-        } else {
-          returnConjugation(keyPressed: sender, requestedForm: formTopRight)
-        }
-      } else {
-        returnConjugation(keyPressed: sender, requestedForm: formTopRight)
-      }
-      loadKeys()
-
-    case "formBottomLeft":
-      if controllerLanguage == "English" && enConjugationState == .present {
-        enConjugationState = .presPerf
-        conjViewShiftButtonsState = .bothInactive
-      } else {
-        returnConjugation(keyPressed: sender, requestedForm: formBottomLeft)
-      }
-      loadKeys()
-
-    case "formBottomRight":
-      if controllerLanguage == "English" && enConjugationState == .present {
-        enConjugationState = .presPerfCont
-        conjViewShiftButtonsState = .bothInactive
-      } else {
-        returnConjugation(keyPressed: sender, requestedForm: formBottomRight)
-      }
-      loadKeys()
-
-    case "formLeft":
-      returnConjugation(keyPressed: sender, requestedForm: formLeft)
-      loadKeys()
-
-    case "formRight":
-      returnConjugation(keyPressed: sender, requestedForm: formRight)
-      loadKeys()
 
     case "AutoAction0":
       executeAutoAction(keyPressed: translateKey)
@@ -2788,9 +2562,9 @@ class KeyboardViewController: UIInputViewController {
       let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck.lowercased())[0]
       hasPrepForm = !prepForm.isEmpty
       if hasPrepForm {
-        resetCaseDeclensionState()
+        prepAnnotationForm = prepForm
         commandState = .selectCaseDeclension
-        loadKeys() // go to conjugation view
+        showDynamicDeclensionView(preposition: wordToCheck)
         return
       } else {
         return
@@ -3019,7 +2793,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     // Remove tipview if it's present.
-    if formsDisplayDimensions != .view1x1, tipView != nil {
+    if commandState != .displayInformation && formsDisplayDimensions != .view1x1, tipView != nil {
       tipView?.removeFromSuperview()
       tipView = nil
     }
@@ -3062,6 +2836,118 @@ class KeyboardViewController: UIInputViewController {
     } else {
       sender.backgroundColor = keyPressedColor
     }
+  }
+
+  /// Shows the conjugation view for verbs.
+  /// - Parameters
+  ///   - verb: the verb to show conjugations for.
+  func showDynamicConjugationView(verb: String) {
+    // Remove any existing view.
+    children.forEach { child in
+      if child is DynamicConjugationViewController {
+        child.removeFromParent()
+        child.view.removeFromSuperview()
+      }
+    }
+
+    // Hide the command buttons.
+    deactivateBtn(btn: translateKey)
+    deactivateBtn(btn: conjugateKey)
+    deactivateBtn(btn: pluralKey)
+    hideAutoActionPartitions()
+
+    // Update Scribe key to escape mode.
+    scribeKey.toEscape()
+    scribeKey.setPartialCornerRadius()
+    scribeKey.setPartialShadow()
+
+    // Set up command bar with verb title.
+    commandBar.set()
+    commandBar.setCornerRadiusAndShadow()
+    commandBar.backgroundColor = commandBarColor
+
+    // Build conjugation cases array.
+    guard let cases = NavigationBuilder.buildConjugationCases(
+      verb: verb,
+      language: languagesAbbrDict[controllerLanguage] ?? ""
+    ) else {
+      return
+    }
+
+    let conjugationVC = DynamicConjugationViewController(
+      linearCases: cases,
+      commandBar: commandBar,
+      startingIndex: 0  // always start at first tense
+    )
+
+    addChild(conjugationVC)
+
+    conjugationVC.view.frame = CGRect(
+      x: 0,
+      y: commandBar.frame.maxY,
+      width: view.bounds.width,
+      height: view.bounds.height - commandBar.frame.maxY
+    )
+
+    view.addSubview(conjugationVC.view)
+    conjugationVC.didMove(toParent: self)
+  }
+
+  /// Shows the declension view for prepositions with declensions.
+  /// - Parameters
+  ///   - preposition: the preposition to show declensions for.
+  func showDynamicDeclensionView(preposition: String) {
+    // Remove any existing view.
+    children.forEach { child in
+      if child is DynamicConjugationViewController {
+        child.removeFromParent()
+        child.view.removeFromSuperview()
+      }
+    }
+
+    // Set up UI state.
+    deactivateBtn(btn: translateKey)
+    deactivateBtn(btn: conjugateKey)
+    deactivateBtn(btn: pluralKey)
+    hideAutoActionPartitions()
+
+    scribeKey.toEscape()
+    scribeKey.setPartialCornerRadius()
+    scribeKey.setPartialShadow()
+
+    commandBar.set()
+    commandBar.setCornerRadiusAndShadow()
+    commandBar.backgroundColor = commandBarColor
+
+    // Build declension cases array.
+    let language = languagesAbbrDict[controllerLanguage] ?? ""
+    guard let cases = NavigationBuilder.getDeclensionCases(language: language) else {
+      return
+    }
+
+    // Find starting index.
+    let startingIndex = NavigationBuilder.findStartingCaseIndex(
+      prepForm: convertFullPrepositionToAbbr(prepAnnotationForm),
+      language: language
+    )
+
+    let declensionVC = DynamicConjugationViewController(
+      linearCases: cases,
+      commandBar: commandBar,
+      startingIndex: startingIndex
+    )
+
+    addChild(declensionVC)
+
+    declensionVC.view.frame = CGRect(
+      x: 0,
+      y: commandBar.frame.maxY,
+      width: view.bounds.width,
+      height: view.bounds.height - commandBar.frame.maxY
+    )
+
+    view.addSubview(declensionVC.view)
+    declensionVC.didMove(toParent: self)
   }
 
   /// Defines events that occur given multiple presses of a single key.

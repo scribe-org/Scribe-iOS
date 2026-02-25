@@ -40,7 +40,7 @@ class WrapperCell: UITableViewCell {
   }
 
   /// Configure with any cell loaded from XIB.
-  func configure(withCellNamed nibName: String, section: Section) {
+  func configure(withCellNamed nibName: String, section: Section, parentSection: Section? = nil) {
     wrappedCell?.removeFromSuperview()
 
     guard let cell = Bundle.main.loadNibNamed(
@@ -52,6 +52,7 @@ class WrapperCell: UITableViewCell {
     }
 
     if let infoCell = cell as? InfoChildTableViewCell {
+      infoCell.parentSection = parentSection
       infoCell.configureCell(for: section)
     } else if let aboutCell = cell as? AboutTableViewCell {
       aboutCell.configureCell(for: section)
