@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import Foundation
-@testable import Scribe
 import XCTest
+
+@testable import Scribe
 
 class EmojiQueryTests: XCTestCase {
 
@@ -12,7 +13,9 @@ class EmojiQueryTests: XCTestCase {
         let keyword = "happ"
         let results = LanguageDBManager.shared.queryEmojisPatternMatching(of: keyword)
 
-        XCTAssertEqual(results.count, 6, "Should always return 6 elements (including empty strings)")
+        XCTAssertEqual(
+            results.count, 6, "Should always return 6 elements (including empty strings)"
+        )
     }
 
     func testQueryEmojisPatternMatchingWithEmptyKeyword() {
@@ -21,7 +24,9 @@ class EmojiQueryTests: XCTestCase {
     }
 
     func testQueryEmojisPatternMatchingWithNonExistentKeyword() {
-        let results = LanguageDBManager.shared.queryEmojisPatternMatching(of: "nonexistentkeyword12345")
+        let results = LanguageDBManager.shared.queryEmojisPatternMatching(
+            of: "nonexistentkeyword12345"
+        )
         XCTAssertEqual(results.count, 6)
         XCTAssertEqual(results[0], "")
         XCTAssertEqual(results[1], "")
