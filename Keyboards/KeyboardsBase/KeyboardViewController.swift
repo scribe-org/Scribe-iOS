@@ -406,7 +406,7 @@ class KeyboardViewController: UIInputViewController {
         autoAction2Visible = false
         emojisToShow = .three
 
-        let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
+        let padDividers: [UILabel] = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
         for i in 0 ..< padDividers.count where emojisToShow.rawValue > i + 1 {
           padDividers[i].backgroundColor = dividerColor
         }
@@ -418,7 +418,7 @@ class KeyboardViewController: UIInputViewController {
         autoAction2Visible = false
         emojisToShow = .two
 
-        let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
+        let phoneDividers: [UILabel] = [phoneEmojiDivider, phoneEmojiDivider1]
         for i in 0 ..< phoneDividers.count where emojisToShow.rawValue > i + 1 {
           phoneDividers[i].backgroundColor = dividerColor
         }
@@ -468,12 +468,12 @@ class KeyboardViewController: UIInputViewController {
       }
 
       if DeviceType.isPad {
-        let padDividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
+        let padDividers: [UILabel] = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
         for i in 0 ..< padDividers.count where emojisToShow.rawValue > i + 1 {
           padDividers[i].backgroundColor = dividerColor
         }
       } else if DeviceType.isPhone {
-        let phoneDividers = [phoneEmojiDivider, phoneEmojiDivider1]
+        let phoneDividers: [UILabel] = [phoneEmojiDivider, phoneEmojiDivider1]
         for i in 0 ..< phoneDividers.count where emojisToShow.rawValue > i + 1 {
           phoneDividers[i].backgroundColor = dividerColor
         }
