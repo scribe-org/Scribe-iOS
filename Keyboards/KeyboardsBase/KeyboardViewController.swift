@@ -430,6 +430,7 @@ class KeyboardViewController: UIInputViewController {
       }
     }
   }
+  }
 
   func getEmojiAutoSuggestionsPatternMatching(for word: String) {
     let emojisToDisplay = LanguageDBManager.shared.queryEmojisPatternMatching(of: word.lowercased())
@@ -1848,8 +1849,6 @@ class KeyboardViewController: UIInputViewController {
       }
 
       setKeyPadding()
-
-  }
 
   func setCommaAndPeriodKeysConditionally() {
     let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
