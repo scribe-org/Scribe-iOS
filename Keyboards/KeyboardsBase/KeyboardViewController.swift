@@ -390,6 +390,7 @@ class KeyboardViewController: UIInputViewController {
         }
         autoAction2Visible = false
         emojisToShow = .three
+      }
 
       let dividerColor: UIColor
       if UITraitCollection.current.userInterfaceStyle == .light {
@@ -1847,7 +1848,6 @@ class KeyboardViewController: UIInputViewController {
       }
 
       setKeyPadding()
-  }
 
   }
 
