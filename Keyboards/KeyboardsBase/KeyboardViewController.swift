@@ -292,10 +292,8 @@ class KeyboardViewController: UIInputViewController {
 
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
-    formKeySingle?.isHidden = false
-    formKeySingle?.alpha = 1.0
 
-    setFormDisplay1x1View()
+//    setFormDisplay1x1View()
     let contentData = InformationToolTipData.getContent()
     let datasources = contentData.compactMap { text in
       createInformationStateDatasource(text: text, backgroundColor: keyColor)
@@ -306,17 +304,6 @@ class KeyboardViewController: UIInputViewController {
 
     guard let tipView = tipView else { return }
     tipView.translatesAutoresizingMaskIntoConstraints = false
-    formKeySingle.addSubview(tipView)
-    formKeySingle.isUserInteractionEnabled = false
-    tipView.leadingAnchor.constraint(
-      equalTo: formKeySingle.leadingAnchor
-    ).isActive = true
-    tipView.trailingAnchor.constraint(
-      equalTo: formKeySingle.trailingAnchor
-    ).isActive = true
-    tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor).isActive = true
-    tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor).isActive = true
-    styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
 
     shiftFormsDisplayLeft?.isHidden = false
     shiftFormsDisplayRight?.isHidden = false
@@ -1005,91 +992,6 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var shiftFormsDisplayLeft: UIButton!
   @IBOutlet var shiftFormsDisplayRight: UIButton!
 
-  @IBOutlet var formKeyFPS: UIButton!
-  @IBOutlet var formKeySPS: UIButton!
-  @IBOutlet var formKeyTPS: UIButton!
-  @IBOutlet var formKeyFPP: UIButton!
-  @IBOutlet var formKeySPP: UIButton!
-  @IBOutlet var formKeyTPP: UIButton!
-
-  // Labels for the conjugation view buttons.
-  // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
-  @IBOutlet var formLblFPS: UIButton!
-  @IBOutlet var formLblSPS: UIButton!
-  @IBOutlet var formLblTPS: UIButton!
-  @IBOutlet var formLblFPP: UIButton!
-  @IBOutlet var formLblSPP: UIButton!
-  @IBOutlet var formLblTPP: UIButton!
-
-  @IBOutlet var formKeyTop: UIButton!
-  @IBOutlet var formKeyMiddle: UIButton!
-  @IBOutlet var formKeyBottom: UIButton!
-
-  @IBOutlet var formLblTop: UIButton!
-  @IBOutlet var formLblMiddle: UIButton!
-  @IBOutlet var formLblBottom: UIButton!
-  @IBOutlet var formKeyTL: UIButton!
-  @IBOutlet var formKeyTR: UIButton!
-  @IBOutlet var formKeyBL: UIButton!
-  @IBOutlet var formKeyBR: UIButton!
-
-  @IBOutlet var formLblTL: UIButton!
-  @IBOutlet var formLblTR: UIButton!
-  @IBOutlet var formLblBL: UIButton!
-  @IBOutlet var formLblBR: UIButton!
-
-  @IBOutlet var formKeyLeft: UIButton!
-  @IBOutlet var formKeyRight: UIButton!
-
-  @IBOutlet var formLblLeft: UIButton!
-  @IBOutlet var formLblRight: UIButton!
-
-  @IBOutlet var formKeySingle: UIButton!
-
-  /// Returns all buttons for the 1x1 conjugation display
-  func get1x1FormDisplayButtons() -> [UIButton] {
-    let conjugationButtons: [UIButton] = [
-      formKeySingle
-    ]
-
-    return conjugationButtons
-  }
-
-  @IBOutlet var formLblSingle: UIButton!
-
-  /// Returns all labels for the 1x1 conjugation display.
-  func get1x1FormDisplayLabels() -> [UIButton] {
-    let conjugationLabels: [UIButton] = [
-      formLblSingle
-    ]
-
-    return conjugationLabels
-  }
-
-  /// Sets up all buttons and labels that are associated with the 1x1 conjugation display.
-  func setFormDisplay1x1View() {
-    let conjugationNames: [String] = [
-      "formSingle"
-    ]
-
-    let displayBtns = get1x1FormDisplayButtons()
-
-    for (idx, btn) in displayBtns.enumerated() {
-      setBtn(btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false, isSpecial: false)
-      activateBtn(btn: btn)
-    }
-
-    if DeviceType.isPad {
-      var conjugationFontDivisor = 3.5
-      if isLandscapeView {
-        conjugationFontDivisor = 4
-      }
-      for btn in get1x1FormDisplayButtons() {
-        btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-      }
-    }
-  }
-
   /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
   func conditionallyDisplayAnnotation() {
     if [.idle, .alreadyPlural, .invalid].contains(commandState) {
@@ -1533,39 +1435,6 @@ class KeyboardViewController: UIInputViewController {
       }
     }
 
-    // Always hide old form buttons first.
-    formKeyFPS?.isHidden = true
-    formKeySPS?.isHidden = true
-    formKeyTPS?.isHidden = true
-    formKeyFPP?.isHidden = true
-    formKeySPP?.isHidden = true
-    formKeyTPP?.isHidden = true
-    formKeyTop?.isHidden = true
-    formKeyMiddle?.isHidden = true
-    formKeyBottom?.isHidden = true
-    formKeyTL?.isHidden = true
-    formKeyTR?.isHidden = true
-    formKeyBL?.isHidden = true
-    formKeyBR?.isHidden = true
-    formKeyLeft?.isHidden = true
-    formKeyRight?.isHidden = true
-    formKeySingle?.isHidden = true
-    formLblFPS?.isHidden = true
-    formLblSPS?.isHidden = true
-    formLblTPS?.isHidden = true
-    formLblFPP?.isHidden = true
-    formLblSPP?.isHidden = true
-    formLblTPP?.isHidden = true
-    formLblTop?.isHidden = true
-    formLblMiddle?.isHidden = true
-    formLblBottom?.isHidden = true
-    formLblTL?.isHidden = true
-    formLblTR?.isHidden = true
-    formLblBL?.isHidden = true
-    formLblBR?.isHidden = true
-    formLblLeft?.isHidden = true
-    formLblRight?.isHidden = true
-    formLblSingle?.isHidden = true
     shiftFormsDisplayLeft?.isHidden = true
     shiftFormsDisplayRight?.isHidden = true
 
