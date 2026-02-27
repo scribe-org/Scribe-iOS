@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -41,37 +43,49 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="257"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr3-T8-7HB" userLabel="DisplayLeft">
+                    <rect key="frame" x="3" y="45.5" width="24" height="209.5"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=""/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epX-eh-uqd" userLabel="DisplayRight">
+                    <rect key="frame" x="293" y="45.5" width="24" height="209.5"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=""/>
+                </button>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-bi-XMS" userLabel="StackV3">
-                    <rect key="frame" x="3" y="178.5" width="314" height="46.5"/>
+                    <rect key="frame" x="3" y="204.5" width="314" height="50.5"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-8I-Rya" userLabel="StackV2">
-                    <rect key="frame" x="3" y="133" width="314" height="46.5"/>
+                    <rect key="frame" x="3" y="155.5" width="314" height="50"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-Ji-4P7" userLabel="StackV1">
-                    <rect key="frame" x="3" y="86.5" width="314" height="46.5"/>
+                    <rect key="frame" x="3" y="105" width="314" height="50.5"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xYB-wV-ziM" userLabel="StackV0">
-                    <rect key="frame" x="3" y="42" width="314" height="46.5"/>
+                    <rect key="frame" x="3" y="56.5" width="314" height="50.5"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6un-y7-fLx" userLabel="StackVNum">
-                    <rect key="frame" x="3" y="39.5" width="314" height="4.5"/>
+                    <rect key="frame" x="3" y="42.5" width="314" height="16"/>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-jy-JTf" userLabel="CommandBack">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3q-kx-6Dw" userLabel="ComBarShadow">
-                    <rect key="frame" x="56.5" y="4" width="260.5" height="31.5"/>
+                    <rect key="frame" x="56.5" y="4.5" width="260.5" height="34"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-Kd-kHd" userLabel="CommandBar" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
-                    <rect key="frame" x="56.5" y="4" width="260.5" height="31.5"/>
+                    <rect key="frame" x="56.5" y="4.5" width="260.5" height="34"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,7 +93,7 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-B4-WMk" userLabel="AutoPartitionR" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
-                    <rect key="frame" x="233" y="7" width="1" height="25"/>
+                    <rect key="frame" x="233" y="7.5" width="1" height="27.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="UYy-iH-Oi3"/>
@@ -90,7 +104,7 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-BE-21v" userLabel="AutoPartitionL" customClass="CommandBar" customModule="Danish" customModuleProvider="target">
-                    <rect key="frame" x="146.5" y="7" width="1" height="25"/>
+                    <rect key="frame" x="146.5" y="7.5" width="1" height="27.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="nke-LU-myO"/>
@@ -101,7 +115,7 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-CW-jQ3" userLabel="PadEmojiDivider1">
-                    <rect key="frame" x="291" y="7" width="1" height="25"/>
+                    <rect key="frame" x="291" y="7.5" width="1" height="27.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="tpJ-mW-Pri"/>
@@ -112,7 +126,7 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxG-Xy-AGP" userLabel="PadEmojiDivider0">
-                    <rect key="frame" x="262" y="7" width="1" height="25"/>
+                    <rect key="frame" x="262" y="7.5" width="1" height="27.5"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="tKt-Hx-wsq"/>
@@ -123,22 +137,22 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2V-5i-PgI" userLabel="PadEmoji2">
-                    <rect key="frame" x="295" y="4" width="22" height="31.5"/>
+                    <rect key="frame" x="295" y="4.5" width="22" height="34"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf3-vY-iiK" userLabel="PadEmoji1">
-                    <rect key="frame" x="266" y="4" width="22" height="31.5"/>
+                    <rect key="frame" x="266" y="4.5" width="22" height="34"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahf-6u-wyz" userLabel="PadEmoji0">
-                    <rect key="frame" x="237" y="4" width="22" height="31.5"/>
+                    <rect key="frame" x="237" y="4.5" width="22" height="34"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-gU-SO5" userLabel="PhoneEmojiDivider">
-                    <rect key="frame" x="276.5" y="7" width="1" height="25"/>
+                    <rect key="frame" x="276.5" y="7.5" width="1" height="27.5"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="zWH-sF-yfI"/>
@@ -149,45 +163,45 @@
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ai-vdF" userLabel="PhoneEmoji1">
-                    <rect key="frame" x="280.5" y="4" width="36.5" height="31.5"/>
+                    <rect key="frame" x="280.5" y="4.5" width="36.5" height="34"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="PhoneEmoji0">
-                    <rect key="frame" x="237" y="4" width="36.5" height="31.5"/>
+                    <rect key="frame" x="237" y="4.5" width="36.5" height="34"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgS-T1-2rI" userLabel="PluralKey">
-                    <rect key="frame" x="237" y="4" width="80" height="31.5"/>
+                    <rect key="frame" x="237" y="4.5" width="80" height="34"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP7-7a-des" userLabel="ConjugateKey">
-                    <rect key="frame" x="150.5" y="4" width="79.5" height="31.5"/>
+                    <rect key="frame" x="150.5" y="4.5" width="79.5" height="34"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-80-zkW" userLabel="TranslateKey">
-                    <rect key="frame" x="63.5" y="4" width="80" height="31.5"/>
+                    <rect key="frame" x="63.5" y="4.5" width="80" height="34"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7p-5k-iDr" userLabel="ScribeKeyShadow">
-                    <rect key="frame" x="3" y="4" width="53.5" height="31.5"/>
+                    <rect key="frame" x="3" y="4.5" width="53.5" height="34"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=" "/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-7F-dNd" userLabel="ScribeKey" customClass="ScribeKey" customModule="Danish" customModuleProvider="target">
-                    <rect key="frame" x="3" y="4" width="53.5" height="31.5"/>
+                    <rect key="frame" x="3" y="4.5" width="53.5" height="34"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title=""/>
@@ -197,9 +211,12 @@
             <color key="backgroundColor" systemColor="systemGray4Color"/>
             <constraints>
                 <constraint firstItem="xYB-wV-ziM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="0Yc-gH-7mM"/>
+                <constraint firstItem="Y6B-bi-XMS" firstAttribute="bottom" secondItem="epX-eh-uqd" secondAttribute="bottom" id="2uW-KB-gGa"/>
                 <constraint firstItem="OeW-Ji-4P7" firstAttribute="centerX" secondItem="xYB-wV-ziM" secondAttribute="centerX" id="3rH-KH-oUo"/>
                 <constraint firstItem="9j4-80-zkW" firstAttribute="width" secondItem="rP7-7a-des" secondAttribute="width" id="401-bJ-40v"/>
+                <constraint firstItem="Y6B-bi-XMS" firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" id="4iG-zD-TqT"/>
                 <constraint firstItem="ahf-6u-wyz" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="5DU-k8-ygE"/>
+                <constraint firstItem="Yr3-T8-7HB" firstAttribute="height" secondItem="epX-eh-uqd" secondAttribute="height" id="6BY-6c-CFb"/>
                 <constraint firstItem="rP7-7a-des" firstAttribute="centerY" secondItem="9j4-80-zkW" secondAttribute="centerY" id="6f9-VW-kcg"/>
                 <constraint firstItem="rP7-7a-des" firstAttribute="leading" secondItem="9j4-80-zkW" secondAttribute="trailing" constant="7" id="6ob-5g-ihe"/>
                 <constraint firstAttribute="trailing" secondItem="O2V-5i-PgI" secondAttribute="trailing" constant="3" id="7OT-I1-a8u"/>
@@ -225,12 +242,12 @@
                 <constraint firstItem="9j4-80-zkW" firstAttribute="leading" secondItem="MCB-7F-dNd" secondAttribute="trailing" constant="7" id="HyJ-Pr-SAc"/>
                 <constraint firstItem="a5v-CW-jQ3" firstAttribute="leading" secondItem="rf3-vY-iiK" secondAttribute="trailing" constant="3" id="J8h-JL-n4s"/>
                 <constraint firstItem="Y6B-bi-XMS" firstAttribute="width" secondItem="lVo-8I-Rya" secondAttribute="width" id="JPN-X5-ELE"/>
-                <constraint firstItem="xYB-wV-ziM" firstAttribute="top" secondItem="RVF-jy-JTf" secondAttribute="bottom" constant="3" id="M1o-gF-9On"/>
                 <constraint firstItem="rP7-7a-des" firstAttribute="leading" secondItem="0Dt-BE-21v" secondAttribute="trailing" constant="3" id="MSJ-p0-96C"/>
                 <constraint firstItem="0Dt-BE-21v" firstAttribute="leading" secondItem="9j4-80-zkW" secondAttribute="trailing" constant="3" id="MnG-vd-bR5"/>
                 <constraint firstItem="6un-y7-fLx" firstAttribute="centerX" secondItem="xYB-wV-ziM" secondAttribute="centerX" id="Nh3-qx-pUY"/>
                 <constraint firstItem="OeW-Ji-4P7" firstAttribute="width" secondItem="xYB-wV-ziM" secondAttribute="width" id="O8a-9m-ZXs"/>
                 <constraint firstItem="i3q-kx-6Dw" firstAttribute="leading" secondItem="IR7-Kd-kHd" secondAttribute="leading" id="OvY-iK-u1g"/>
+                <constraint firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" constant="2" id="QQB-oe-BPi"/>
                 <constraint firstItem="vxG-Xy-AGP" firstAttribute="leading" secondItem="ahf-6u-wyz" secondAttribute="trailing" constant="3" id="RiM-Kd-5Ua"/>
                 <constraint firstItem="6DZ-gU-SO5" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="Rsf-tU-mXM"/>
                 <constraint firstItem="KVC-Ai-vdF" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="SXN-Cf-JJG"/>
@@ -257,12 +274,14 @@
                 <constraint firstItem="9j4-80-zkW" firstAttribute="height" secondItem="FgS-T1-2rI" secondAttribute="height" id="fso-ew-dYc"/>
                 <constraint firstItem="hPX-B4-WMk" firstAttribute="leading" secondItem="rP7-7a-des" secondAttribute="trailing" constant="3" id="fxY-Hv-X2u"/>
                 <constraint firstItem="a5v-CW-jQ3" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="gbQ-6Z-Ols"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="epX-eh-uqd" secondAttribute="trailing" constant="3" id="hOn-Fl-Wib"/>
                 <constraint firstAttribute="trailing" secondItem="xYB-wV-ziM" secondAttribute="trailing" constant="3" id="hYD-jR-Ym1"/>
                 <constraint firstItem="i3q-kx-6Dw" firstAttribute="bottom" secondItem="IR7-Kd-kHd" secondAttribute="bottom" id="iSB-Ba-mj8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RVF-jy-JTf" secondAttribute="trailing" id="jMI-6S-fFW"/>
                 <constraint firstItem="ahf-6u-wyz" firstAttribute="width" secondItem="O2V-5i-PgI" secondAttribute="width" id="jwl-9V-b20"/>
                 <constraint firstItem="IR7-Kd-kHd" firstAttribute="height" secondItem="xYB-wV-ziM" secondAttribute="height" multiplier="0.675" id="lGd-9o-Zkv"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="width" secondItem="xYB-wV-ziM" secondAttribute="width" multiplier="0.17" id="mTx-iv-lKC"/>
+                <constraint firstAttribute="bottom" secondItem="epX-eh-uqd" secondAttribute="bottom" constant="2" id="njL-9E-4RK"/>
                 <constraint firstItem="6un-y7-fLx" firstAttribute="top" secondItem="IR7-Kd-kHd" secondAttribute="bottom" constant="4" id="ou2-Gs-k7o"/>
                 <constraint firstItem="Y6B-bi-XMS" firstAttribute="height" secondItem="lVo-8I-Rya" secondAttribute="height" id="p74-K6-fdw"/>
                 <constraint firstItem="RVF-jy-JTf" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="pg5-CS-Mv4"/>
@@ -272,12 +291,15 @@
                 <constraint firstItem="OeW-Ji-4P7" firstAttribute="height" secondItem="xYB-wV-ziM" secondAttribute="height" id="qnr-jX-Vl0"/>
                 <constraint firstItem="O2V-5i-PgI" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="rES-fU-CIb"/>
                 <constraint firstItem="0Dt-BE-21v" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="rEb-fq-pir"/>
+                <constraint firstItem="Yr3-T8-7HB" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.075" id="red-IA-YW6"/>
                 <constraint firstItem="Y6B-bi-XMS" firstAttribute="top" secondItem="lVo-8I-Rya" secondAttribute="bottom" constant="-1" id="rio-05-F5t"/>
                 <constraint firstItem="ahf-6u-wyz" firstAttribute="width" secondItem="rf3-vY-iiK" secondAttribute="width" id="sMi-g6-KX2"/>
                 <constraint firstItem="6DZ-gU-SO5" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="sZC-1y-hxz"/>
                 <constraint firstItem="vxG-Xy-AGP" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="tk8-jw-qgK"/>
                 <constraint firstItem="lVo-8I-Rya" firstAttribute="width" secondItem="OeW-Ji-4P7" secondAttribute="width" id="tme-WK-QNd"/>
+                <constraint firstItem="Yr3-T8-7HB" firstAttribute="top" secondItem="RVF-jy-JTf" secondAttribute="bottom" constant="3" id="txl-J9-Oyr"/>
                 <constraint firstItem="RVF-jy-JTf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uCN-XA-77n"/>
+                <constraint firstItem="Yr3-T8-7HB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="uGZ-fC-FEO"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="height" secondItem="rP7-7a-des" secondAttribute="height" id="uRB-KO-ZUk"/>
                 <constraint firstItem="lVo-8I-Rya" firstAttribute="top" secondItem="OeW-Ji-4P7" secondAttribute="bottom" id="uYK-ND-3X0"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="v8j-uv-siq"/>
@@ -298,16 +320,19 @@
     </objects>
     <resources>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.67450980392156867" green="0.49803921568627452" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.79607843137254897" green="0.18823529411764706" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.76470588235294112" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
