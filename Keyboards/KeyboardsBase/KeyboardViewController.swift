@@ -16,8 +16,6 @@ class KeyboardViewController: UIInputViewController {
   @IBOutlet var stackView2: UIStackView!
   @IBOutlet var stackView3: UIStackView!
 
-  private var tipView: ToolTipView?
-
   /// Changes the height of `stackViewNum` depending on device type and size.
   func conditionallyShowTopNumbersRow() {
     if DeviceType.isPhone {
@@ -94,7 +92,7 @@ class KeyboardViewController: UIInputViewController {
     commandBar.infoButtonTapHandler = { [weak self] in
       commandState = .displayInformation
       conjViewShiftButtonsState = .leftInactive
-      self?.loadKeys()
+      self?.setInformationState()
     }
   }
 
@@ -283,82 +281,47 @@ class KeyboardViewController: UIInputViewController {
     pluralKey.isHidden = state
   }
 
-  // Logic to create notification tooltip.
-  func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
-    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
-
-    return ToolTipViewDatasource(content: text, theme: theme)
-  }
-
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
-
-//    setFormDisplay1x1View()
-    let contentData = InformationToolTipData.getContent()
-    let datasources = contentData.compactMap { text in
-      createInformationStateDatasource(text: text, backgroundColor: keyColor)
+    children.forEach { child in
+        if child is DynamicConjugationViewController {
+        child.removeFromParent()
+        child.view.removeFromSuperview()
+        }
     }
-    tipView = ToolTipView(datasources: datasources)
 
-    bindTooltipview()
+    deactivateBtn(btn: translateKey)
+    deactivateBtn(btn: conjugateKey)
+    deactivateBtn(btn: pluralKey)
+    hideAutoActionPartitions()
 
-    guard let tipView = tipView else { return }
-    tipView.translatesAutoresizingMaskIntoConstraints = false
+    scribeKey.toEscape()
+    scribeKey.setPartialCornerRadius()
+    scribeKey.setPartialShadow()
 
-    shiftFormsDisplayLeft?.isHidden = false
-    shiftFormsDisplayRight?.isHidden = false
+    commandBar.set()
+    commandBar.setCornerRadiusAndShadow()
+    commandBar.backgroundColor = commandBarColor
 
-    setBtn(btn: shiftFormsDisplayLeft, color: keyColor, name: "shiftFormsDisplayLeft", canBeCapitalized: false, isSpecial: false)
-    setBtn(btn: shiftFormsDisplayRight, color: keyColor, name: "shiftFormsDisplayRight", canBeCapitalized: false, isSpecial: false)
+    let cases = NavigationBuilder.buildInformationCases()
 
-    activateBtn(btn: shiftFormsDisplayLeft)
-    activateBtn(btn: shiftFormsDisplayRight)
+    let infoVC = DynamicConjugationViewController(
+        linearCases: cases,
+        commandBar: commandBar,
+        startingIndex: 0
+    )
 
-    styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-    styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-
-    styleIconBtn(btn: shiftFormsDisplayLeft, color: commandBarPlaceholderColor, iconName: "chevron.left")
-    styleIconBtn(btn: shiftFormsDisplayRight, color: keyCharColor, iconName: "chevron.right")
-  }
-
-  // Shifts the view of the information tooltip view.
-  private func bindTooltipview() {
-    tipView?.didUpdatePage = { [weak self] currentState in
-      conjViewShiftButtonsState = currentState
-
-      guard let weakSelf = self else { return }
-
-      switch currentState {
-      case .rightInactive:
-        weakSelf.shiftFormsDisplayRight.isUserInteractionEnabled = false
-      case .leftInactive:
-        weakSelf.shiftFormsDisplayLeft.isUserInteractionEnabled = false
-      case .bothActive:
-        weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayLeft)
-        weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayRight)
-      default:
-        break
-      }
-
-      weakSelf.styleShiftButtons()
+    infoVC.isInfoState = true
+    addChild(infoVC)
+    infoVC.view.frame = CGRect(
+        x: 0,
+        y: commandBar.frame.maxY,
+        width: view.bounds.width,
+        height: view.bounds.height - commandBar.frame.maxY
+    )
+    view.addSubview(infoVC.view)
+    infoVC.didMove(toParent: self)
     }
-  }
-
-  /// Styles the shift buttons for the displayInformation states.
-  private func styleShiftButtons() {
-    styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-    styleIconBtn(
-      btn: shiftFormsDisplayLeft,
-      color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
-      iconName: "chevron.left"
-    )
-    styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-    styleIconBtn(
-      btn: shiftFormsDisplayRight,
-      color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState) ? keyCharColor : commandBarPlaceholderColor,
-      iconName: "chevron.right"
-    )
-  }
 
   /// Generate emoji suggestions or completions for a given word.
   ///
@@ -999,18 +962,6 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  @objc func shiftLeft() {
-    if commandState == .displayInformation {
-      tipView?.updatePrevious()
-    }
-  }
-
-  @objc func shiftRight() {
-    if commandState == .displayInformation {
-      tipView?.updateNext()
-    }
-  }
-
   // MARK: Key Sizing
 
   func setKeywidth() {
@@ -1322,9 +1273,9 @@ class KeyboardViewController: UIInputViewController {
   /// Loads the keys given the current constraints.
   func loadKeys() {
     // Early returns for dynamic views
-    if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
-      return
-    }
+    if [.dynamicConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) {
+        return
+}
     // The name of the language keyboard that's referencing KeyboardViewController.
     controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
     if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
@@ -1437,35 +1388,6 @@ class KeyboardViewController: UIInputViewController {
 
     shiftFormsDisplayLeft?.isHidden = true
     shiftFormsDisplayRight?.isHidden = true
-
-    // Handle displayInformation separately.
-    if commandState == .displayInformation {
-      for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
-        view?.isUserInteractionEnabled = false
-      }
-
-      scribeKey.toEscape()
-      scribeKey.setPartialShadow()
-      scribeKey.setPartialCornerRadius()
-
-      commandBar.backgroundColor = commandBarColor
-      commandBar.textColor = keyCharColor
-      commandBar.set()
-      commandBar.setCornerRadiusAndShadow()
-      hideAutoActionPartitions()
-
-      deactivateBtn(btn: conjugateKey)
-      deactivateBtn(btn: translateKey)
-      deactivateBtn(btn: pluralKey)
-      deactivateBtn(btn: phoneEmojiKey0)
-      deactivateBtn(btn: phoneEmojiKey1)
-      deactivateBtn(btn: padEmojiKey0)
-      deactivateBtn(btn: padEmojiKey1)
-      deactivateBtn(btn: padEmojiKey2)
-
-      setInformationState()
-      return  // return to skip normal keyboard setup
-    }
 
     // Normal keyboard view.
       for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
@@ -1658,10 +1580,11 @@ class KeyboardViewController: UIInputViewController {
           .conjugate,
           .selectCaseDeclension,
           .plural,
-          .dynamicConjugation].contains(commandState) { // escape
+          .dynamicConjugation,
+          .displayInformation].contains(commandState) { // escape
 
         // If closing dynamic conjugation, remove the view.
-        if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
+        if [.dynamicConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) {
           children.forEach { child in
             if child is DynamicConjugationViewController {
               child.removeFromParent()
@@ -1823,12 +1746,6 @@ class KeyboardViewController: UIInputViewController {
         commandBar.textColor = keyCharColor
         commandBar.attributedText = pluralPromptAndColorPlaceholder
       }
-
-    case "shiftFormsDisplayLeft":
-      shiftLeft()
-
-    case "shiftFormsDisplayRight":
-      shiftRight()
 
     case "AutoAction0":
       executeAutoAction(keyPressed: translateKey)
@@ -2130,12 +2047,6 @@ class KeyboardViewController: UIInputViewController {
       let viewWithTag = view.viewWithTag(1001)
       viewWithTag?.removeFromSuperview()
       alternatesShapeLayer.removeFromSuperlayer()
-    }
-
-    // Remove tipview if it's present.
-    if commandState != .displayInformation && formsDisplayDimensions != .view1x1, tipView != nil {
-      tipView?.removeFromSuperview()
-      tipView = nil
     }
   }
 

@@ -110,4 +110,14 @@ struct NavigationBuilder {
     }
     return 0
   }
+
+  /// Builds information navigation levels for tooltips.
+ static func buildInformationCases() -> [NavigationLevel] {
+  return InformationToolTipData.getContent().map { attributedText in
+    NavigationLevel(
+      title: "Information",
+      options: [(label: "", node: .finalValue(attributedText.string))]
+    )
+  }
+}
 }

@@ -6,12 +6,14 @@
 import UIKit
 
 class DynamicConjugationViewController: UIViewController {
+  var isInfoState: Bool = false
 
   // MARK: UI Components
 
   private var leftArrowButton: UIButton!
   private var rightArrowButton: UIButton!
   private var buttonContainerView: UIView!
+  private var pageControl: UIPageControl?
 
   // MARK: Navigation Data
 
@@ -55,6 +57,7 @@ class DynamicConjugationViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = keyboardBgColor
     setupUI()
+    setupPageControl()
   }
 
   override func viewDidLayoutSubviews() {
@@ -118,6 +121,26 @@ class DynamicConjugationViewController: UIViewController {
     ])
   }
 
+  /// Builds page control for linear navigation mode.
+  private func setupPageControl() {
+    guard isInfoState, let cases = linearCases else { return }
+
+    let pc = UIPageControl()
+    pc.numberOfPages = cases.count
+    pc.currentPage = currentCaseIndex
+    pc.pageIndicatorTintColor = keyCharColor.withAlphaComponent(0.3)
+    pc.currentPageIndicatorTintColor = keyCharColor
+    pc.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(pc)
+
+    NSLayoutConstraint.activate([
+        pc.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        pc.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12)
+    ])
+
+    self.pageControl = pc
+  }
+
   // MARK: Display
 
   /// Displays the current navigation level.
@@ -133,10 +156,7 @@ class DynamicConjugationViewController: UIViewController {
     commandBar?.isShowingInfoButton = false
 
     let options = currentLevel.options
-    guard !options.isEmpty else {
-      commandBar?.text = commandPromptSpacing + "No options available"
-      return
-    }
+    guard !options.isEmpty else { return }
 
     // Create button grid.
     let count = options.count
@@ -182,6 +202,9 @@ class DynamicConjugationViewController: UIViewController {
       button.layer.shadowRadius = 0
       button.tag = index
       button.addTarget(self, action: #selector(optionButtonTapped(_:)), for: .touchUpInside)
+      if isInfoState {
+        button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+      }
 
       // Determine the display value.
       let displayValue: String?
@@ -233,7 +256,7 @@ class DynamicConjugationViewController: UIViewController {
 
     case .finalValue(let value):
       // Skip empty values.
-      guard !value.isEmpty else { return }
+      guard !value.isEmpty, !isInfoState else { return }
 
       // Insert text and close.
       proxy.insertText(value + " ")
@@ -262,6 +285,8 @@ class DynamicConjugationViewController: UIViewController {
         displayCurrentLevel()
       }
     }
+
+    pageControl?.currentPage = currentCaseIndex
   }
 
   /// Handles right arrow button tap.
@@ -279,6 +304,8 @@ class DynamicConjugationViewController: UIViewController {
       }
     }
     // Tree mode: right arrow does nothing.
+
+    pageControl?.currentPage = currentCaseIndex
   }
 
   /// Updates the enabled state of arrow buttons.
