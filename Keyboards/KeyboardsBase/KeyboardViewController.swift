@@ -793,7 +793,6 @@ class KeyboardViewController: UIInputViewController {
 
         // Add the current word being typed to the completion words if there is only one option that's highlighted.
         if firstCompletionIsHighlighted && completionWords[1] == " " && completionWords[0] != currentPrefix {
-          //        spaceAutoInsertIsPossible = true
           completionWords[1] = currentPrefix
         }
 

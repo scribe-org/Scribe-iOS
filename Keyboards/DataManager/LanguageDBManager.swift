@@ -25,12 +25,12 @@ class LanguageDBManager {
     let bundle = Bundle(for: LanguageDBManager.self)
     var dbResourcePath = bundle.path(forResource: dbName, ofType: "sqlite")
 
-    // Fallback to main bundle if not found in class bundle
+    // Fallback to main bundle if not found in class bundle.
     if dbResourcePath == nil {
       dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
     }
 
-    // If still nil, handle gracefully
+    // If still nil, handle gracefully.
     guard let resourcePath = dbResourcePath else {
       print("Database \(dbName).sqlite not found. Using empty in-memory database.")
       return try! DatabaseQueue()
