@@ -22,7 +22,20 @@ class LanguageDBManager {
 
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue(_ dbName: String) -> DatabaseQueue {
-    let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
+    let bundle = Bundle(for: LanguageDBManager.self)
+    var dbResourcePath = bundle.path(forResource: dbName, ofType: "sqlite")
+    
+    // Fallback to main bundle if not found in class bundle
+    if dbResourcePath == nil {
+      dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
+    }
+    
+    // If still nil, handle gracefully
+    guard let resourcePath = dbResourcePath else {
+      print("Database \(dbName).sqlite not found. Using empty in-memory database.")
+      return try! DatabaseQueue()
+    }
+    
     let fileManager = FileManager.default
     do {
       let dbPath = try fileManager
@@ -32,12 +45,12 @@ class LanguageDBManager {
       if fileManager.fileExists(atPath: dbPath) {
         try fileManager.removeItem(atPath: dbPath)
       }
-      try fileManager.copyItem(atPath: dbResourcePath, toPath: dbPath)
+      try fileManager.copyItem(atPath: resourcePath, toPath: dbPath)
       let dbQueue = try DatabaseQueue(path: dbPath)
       return dbQueue
     } catch {
-      print("An error occurred: UILexicon not available")
-      let dbQueue = try! DatabaseQueue(path: dbResourcePath)
+      print("An error occurred during DB setup: \(error). Using resource path directly.")
+      let dbQueue = try! DatabaseQueue(path: resourcePath)
       return dbQueue
     }
   }
