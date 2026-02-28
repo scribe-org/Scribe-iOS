@@ -6,7 +6,7 @@ import XCTest
 @testable import Scribe
 
 class EmojiQueryTests: XCTestCase {
-    
+
     override func setUpWithError() throws {
         controllerLanguage = "English"
     }
