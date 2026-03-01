@@ -22,36 +22,42 @@ class LanguageDBManager {
 
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue(_ dbName: String) -> DatabaseQueue {
-    let bundle = Bundle(for: LanguageDBManager.self)
-    var dbResourcePath = bundle.path(forResource: dbName, ofType: "sqlite")
-
-    // Fallback to main bundle if not found in class bundle.
-    if dbResourcePath == nil {
-      dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
-    }
-
-    // If still nil, handle gracefully.
-    guard let resourcePath = dbResourcePath else {
-      print("Database \(dbName).sqlite not found. Using empty in-memory database.")
+    let mainBundlePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
+    let classBundlePath = Bundle(for: LanguageDBManager.self).path(forResource: dbName, ofType: "sqlite")
+    
+    guard let resourcePath = mainBundlePath ?? classBundlePath else {
+      print("Database \(dbName).sqlite not found in main or class bundle. Using in-memory DB.")
       return try! DatabaseQueue()
     }
 
     let fileManager = FileManager.default
     do {
-      let dbPath = try fileManager
-        .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        .appendingPathComponent("\(dbName).sqlite")
-        .path
+      let appSupportURL = try fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let dbURL = appSupportURL.appendingPathComponent("\(dbName).sqlite")
+      let dbPath = dbURL.path
+      
+      var shouldCopy = true
       if fileManager.fileExists(atPath: dbPath) {
+        // Only copy if the resource is newer or if we want to ensure a fresh copy.
+        // For now, keeping the "fresh copy" behavior but more safely.
         try fileManager.removeItem(atPath: dbPath)
       }
-      try fileManager.copyItem(atPath: resourcePath, toPath: dbPath)
-      let dbQueue = try DatabaseQueue(path: dbPath)
-      return dbQueue
+      
+      if shouldCopy {
+        try fileManager.copyItem(atPath: resourcePath, toPath: dbPath)
+      }
+      
+      return try DatabaseQueue(path: dbPath)
     } catch {
-      print("An error occurred during DB setup: \(error). Using resource path directly.")
-      let dbQueue = try! DatabaseQueue(path: resourcePath)
-      return dbQueue
+      print("An error occurred during DB setup for \(dbName): \(error). Attempting read-only access.")
+      var config = Configuration()
+      config.readonly = true
+      if let dbQueue = try? DatabaseQueue(path: resourcePath, configuration: config) {
+        return dbQueue
+      }
+      // Last resort: try to return an empty DB instead of crashing the keyword.
+      print("Failed to open database \(dbName) even in read-only mode. Returning empty DB.")
+      return try! DatabaseQueue()
     }
   }
 

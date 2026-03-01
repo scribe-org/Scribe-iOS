@@ -80,7 +80,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Function to load the keyboard interface into which keyboardView is instantiated.
   func loadInterface() {
-    let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
+    let keyboardNib = UINib(nibName: "Keyboard", bundle: Bundle(for: KeyboardViewController.self))
     keyboardView = keyboardNib.instantiate(withOwner: self, options: nil)[0] as? UIView
     keyboardView.translatesAutoresizingMaskIntoConstraints = true
     view.addSubview(keyboardView)
@@ -102,25 +102,25 @@ class KeyboardViewController: UIInputViewController {
   ///
   /// - Parameters
   ///   - btn: the button to be activated.
-  func activateBtn(btn: UIButton) {
-    btn.addTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
-    btn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-    btn.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
-    btn.isUserInteractionEnabled = true
+  func activateBtn(btn: UIButton?) {
+    btn?.addTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
+    btn?.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+    btn?.addTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+    btn?.isUserInteractionEnabled = true
   }
 
   /// Deactivates a button by removing key touch functions for their given actions and making it clear.
   ///
   /// - Parameters
   ///   - btn: the button to be deactivated.
-  func deactivateBtn(btn: UIButton) {
-    btn.setTitle("", for: .normal)
-    btn.configuration?.image = nil
-    btn.backgroundColor = UIColor.clear
-    btn.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
-    btn.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-    btn.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
-    btn.isUserInteractionEnabled = false
+  func deactivateBtn(btn: UIButton?) {
+    btn?.setTitle("", for: .normal)
+    btn?.configuration?.image = nil
+    btn?.backgroundColor = UIColor.clear
+    btn?.removeTarget(self, action: #selector(executeKeyActions), for: .touchUpInside)
+    btn?.removeTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+    btn?.removeTarget(self, action: #selector(keyUntouched), for: .touchDragExit)
+    btn?.isUserInteractionEnabled = false
   }
 
   // MARK: Override UIInputViewController Functions
