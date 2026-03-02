@@ -949,12 +949,6 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  // MARK: Conjugation Variables and Functions
-
-  // Note that we use "form" to describe both conjugations and declensions.
-  @IBOutlet var shiftFormsDisplayLeft: UIButton!
-  @IBOutlet var shiftFormsDisplayRight: UIButton!
-
   /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
   func conditionallyDisplayAnnotation() {
     if [.idle, .alreadyPlural, .invalid].contains(commandState) {
@@ -1385,9 +1379,6 @@ class KeyboardViewController: UIInputViewController {
         commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPad
       }
     }
-
-    shiftFormsDisplayLeft?.isHidden = true
-    shiftFormsDisplayRight?.isHidden = true
 
     // Normal keyboard view.
       for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
