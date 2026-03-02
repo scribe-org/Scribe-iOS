@@ -115,7 +115,7 @@ struct NavigationBuilder {
  static func buildInformationCases() -> [NavigationLevel] {
   return InformationToolTipData.getContent().map { attributedText in
     NavigationLevel(
-      title: "Information",
+      title: invalidCommandMsg,
       options: [(label: "", node: .finalValue(attributedText.string))]
     )
   }
