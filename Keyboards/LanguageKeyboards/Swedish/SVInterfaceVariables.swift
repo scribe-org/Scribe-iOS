@@ -268,7 +268,7 @@ func setSVKeyboardLayout() {
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellanslag"
   language = "Svenska"
-  invalidCommandMsg = "Inte i Wikidata"
+  invalidCommandMsg = "Inte i Wiktionary"
   baseAutosuggestions = ["jag", "det", "men"]
   numericAutosuggestions = ["jag", "det", "och"]
 

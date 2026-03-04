@@ -33,10 +33,10 @@ class KeyboardStylingTest: XCTestCase {
 
   func testStyleBtnWithInvalidCommandMsg() {
     let button = UIButton(type: .system)
-    let title = "Not in Wikidata"
+    let title = "Not in Wiktionary"
     let radius = 4.0
 
-    invalidCommandMsg = "Not in Wikidata"
+    invalidCommandMsg = "Not in Wiktionary"
     styleBtn(btn: button, title: title, radius: radius)
 
     XCTAssertEqual(button.configuration?.baseForegroundColor, UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor)

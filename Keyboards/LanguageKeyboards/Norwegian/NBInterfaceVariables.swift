@@ -208,7 +208,7 @@ func setNBKeyboardLayout() {
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellomrom"
   language = "Norsk"
-  invalidCommandMsg = "Ikke i Wikidata"
+  invalidCommandMsg = "Ikke i Wiktionary"
   baseAutosuggestions = ["jeg", "det", "er"]
   numericAutosuggestions = ["prosent", "millioner", "meter"]
   verbsAfterPronounsArray = ["har", "være", "kan"]

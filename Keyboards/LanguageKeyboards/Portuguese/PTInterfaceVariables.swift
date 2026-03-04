@@ -202,7 +202,7 @@ func setPTKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espaço"
   language = "Português"
-  invalidCommandMsg = "Não está no Wikidata"
+  invalidCommandMsg = "Não está no Wiktionary"
   baseAutosuggestions = ["o", "a", "eu"]
   numericAutosuggestions = ["de", "que", "a"]
 
