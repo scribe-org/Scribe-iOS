@@ -1627,7 +1627,8 @@ class KeyboardViewController: UIInputViewController {
         autoCapAtStartOfProxy()
 
         if commandState == .invalid {
-          commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+          let invalidMsg = prevToInvalidState == .translate ? invalidTranslationMsg : invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidMsg
           commandBar.isShowingInfoButton = true
         } else {
           commandBar.isShowingInfoButton = false
@@ -1655,7 +1656,7 @@ class KeyboardViewController: UIInputViewController {
           loadKeys()
           proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
-          commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+          commandBar.text = commandPromptSpacing + invalidTranslationMsg
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
           return
