@@ -24,7 +24,7 @@ class LanguageDBManager {
   private func openDBQueue(_ dbName: String) -> DatabaseQueue {
     let mainBundlePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
     let classBundlePath = Bundle(for: LanguageDBManager.self).path(forResource: dbName, ofType: "sqlite")
-    
+
     guard let resourcePath = mainBundlePath ?? classBundlePath else {
       print("Database \(dbName).sqlite not found in main or class bundle. Using in-memory DB.")
       return try! DatabaseQueue()
@@ -35,18 +35,18 @@ class LanguageDBManager {
       let appSupportURL = try fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
       let dbURL = appSupportURL.appendingPathComponent("\(dbName).sqlite")
       let dbPath = dbURL.path
-      
+
       var shouldCopy = true
       if fileManager.fileExists(atPath: dbPath) {
         // Only copy if the resource is newer or if we want to ensure a fresh copy.
         // For now, keeping the "fresh copy" behavior but more safely.
         try fileManager.removeItem(atPath: dbPath)
       }
-      
+
       if shouldCopy {
         try fileManager.copyItem(atPath: resourcePath, toPath: dbPath)
       }
-      
+
       return try DatabaseQueue(path: dbPath)
     } catch {
       print("An error occurred during DB setup for \(dbName): \(error). Attempting read-only access.")
