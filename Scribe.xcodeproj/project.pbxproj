@@ -550,6 +550,18 @@
 		E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9202DEF2F0FAA0C001590FC /* DownloadStateManager.swift */; };
 		E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
 		E96111482F04EC6B001E4F95 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
+		E970C3672F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C3682F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C3692F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36A2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36B2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36C2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36D2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36E2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C36F2F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C3702F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C3712F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
+		E970C3722F59E73600502DA3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
 		E978B3E42F431BE6006AED44 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E978B3E32F431BE6006AED44 /* Yams */; };
 		E97D5A4D2F43235D00DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A4C2F43235D00DE18B7 /* Yams */; };
 		E97D5A4F2F43236600DE18B7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = E97D5A4E2F43236600DE18B7 /* Yams */; };
@@ -2619,6 +2631,7 @@
 				D1895BD62C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606928FC4DB1005FDAA1 /* Assets.xcassets in Resources */,
 				D1C0ACDA2719E0AA001E11C3 /* Keyboard.xib in Resources */,
+				E970C36A2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16151012E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2630,6 +2643,7 @@
 				D1895BD52C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A22B275B6A8B005E2271 /* Keyboard.xib in Resources */,
 				CE2C606828FC4DB0005FDAA1 /* Assets.xcassets in Resources */,
+				E970C3692F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16151002E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2641,6 +2655,7 @@
 				D1895BDA2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D109A231275B6A8C005E2271 /* Keyboard.xib in Resources */,
 				D16151052E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
+				E970C36F2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				CE2C606B28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2659,6 +2674,7 @@
 				D1895BDC2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				CE2C606D28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 				D190B2582742525C00705659 /* Keyboard.xib in Resources */,
+				E970C3712F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16151072E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2670,6 +2686,7 @@
 				D1895BDB2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1671A74275A1FC000A7C118 /* Keyboard.xib in Resources */,
 				D16151062E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
+				E970C3702F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				CE2C606C28FC4DB3005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2681,6 +2698,7 @@
 				D1895BDD2C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D18EA8A42760D6EE001E1358 /* Keyboard.xib in Resources */,
 				D16151082E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
+				E970C3722F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				CE2C606E28FC4DB4005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2692,6 +2710,7 @@
 				D1AB5B5629C757A100CCB0C1 /* Keyboard.xib in Resources */,
 				D1895BD92C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AB5B5929C757A100CCB0C1 /* Assets.xcassets in Resources */,
+				E970C36E2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16151042E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2703,6 +2722,7 @@
 				D1AFDF3429CA66D00033BF27 /* Keyboard.xib in Resources */,
 				D1895BD42C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDF3729CA66D00033BF27 /* Assets.xcassets in Resources */,
+				E970C3682F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16150FF2E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2714,6 +2734,7 @@
 				D1AFDFB129CA66F40033BF27 /* Keyboard.xib in Resources */,
 				D1895BD32C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFDFB429CA66F40033BF27 /* Assets.xcassets in Resources */,
+				E970C3672F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16150FE2E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2725,6 +2746,7 @@
 				D1AFE00729CA6E900033BF27 /* Keyboard.xib in Resources */,
 				D1895BD72C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1AFE00A29CA6E900033BF27 /* Assets.xcassets in Resources */,
+				E970C36B2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16151022E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2736,6 +2758,7 @@
 				D1895BD82C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				D1B81D4127BBB70E0085FE5E /* Keyboard.xib in Resources */,
 				D16151032E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
+				E970C36D2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				CE2C606A28FC4DB2005FDAA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2744,6 +2767,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E970C36C2F59E73600502DA3 /* Localizable.xcstrings in Resources */,
 				D16150FC2E9DBDC500131732 /* IDLanguageData.sqlite in Resources */,
 				E99649962E98B03C00200F53 /* Keyboard.xib in Resources */,
 				E99649972E98B11100200F53 /* Assets.xcassets in Resources */,
