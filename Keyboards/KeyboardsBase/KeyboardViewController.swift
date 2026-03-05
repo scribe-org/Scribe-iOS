@@ -303,8 +303,7 @@ class KeyboardViewController: UIInputViewController {
     commandBar.setCornerRadiusAndShadow()
     commandBar.backgroundColor = commandBarColor
 
-    let title = prevToInvalidState == .translate ? invalidTranslationMsg : invalidCommandMsg
-    let cases = NavigationBuilder.buildInformationCases(title: title)
+    let cases = NavigationBuilder.buildInformationCases(isTranslate: prevToInvalidState == .translate)
 
     let infoVC = DynamicConjugationViewController(
         linearCases: cases,

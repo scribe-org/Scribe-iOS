@@ -112,10 +112,12 @@ struct NavigationBuilder {
   }
 
   /// Builds information navigation levels for tooltips.
- static func buildInformationCases(title: String = invalidCommandMsg) -> [NavigationLevel] {
-  return InformationToolTipData.getContent().map { attributedText in
+ static func buildInformationCases(isTranslate: Bool = false) -> [NavigationLevel] {
+  let content = isTranslate ? InformationToolTipData.getWiktionaryContent() : InformationToolTipData.getContent()
+
+  return content.map { attributedText in
     NavigationLevel(
-      title: title,
+      title: isTranslate ? invalidTranslationMsg : invalidCommandMsg,
       options: [(label: "", node: .finalValue(attributedText.string))]
     )
   }
