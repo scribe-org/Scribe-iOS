@@ -209,6 +209,7 @@ func setNBKeyboardLayout() {
   spaceBar = "mellomrom"
   language = "Norsk"
   invalidCommandMsg = "Ikke i Wikidata"
+  invalidTranslationMsg = "Ikke i Wiktionary"
   baseAutosuggestions = ["jeg", "det", "er"]
   numericAutosuggestions = ["prosent", "millioner", "meter"]
   verbsAfterPronounsArray = ["har", "være", "kan"]

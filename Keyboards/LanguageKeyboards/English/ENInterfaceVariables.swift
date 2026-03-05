@@ -208,6 +208,7 @@ func setENKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
   invalidCommandMsg = "Not in Wikidata"
+  invalidTranslationMsg = "Not in Wiktionary"
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
   verbsAfterPronounsArray = ["have", "be", "can"]

@@ -205,6 +205,7 @@ func setITKeyboardLayout() {
   spaceBar = "spazio"
   language = "Italiano"
   invalidCommandMsg = "Non in Wikidata"
+  invalidTranslationMsg = "Non in Wiktionary"
   baseAutosuggestions = ["ho", "non", "ma"]
   numericAutosuggestions = ["utenti", "anni", "e"]
 

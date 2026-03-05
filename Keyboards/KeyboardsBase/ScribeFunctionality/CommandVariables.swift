@@ -50,6 +50,7 @@ var inputWordIsCapitalized = false
 var wordToReturn = ""
 var potentialWordsToReturn = [String]()
 var invalidCommandMsg = ""
+var invalidTranslationMsg = ""
 
 // Annotation variables.
 var annotationState = false

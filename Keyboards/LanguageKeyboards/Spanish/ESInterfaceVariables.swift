@@ -258,6 +258,7 @@ func setESKeyboardLayout() {
   spaceBar = "espacio"
   language = "Español"
   invalidCommandMsg = "No en Wikidata"
+  invalidTranslationMsg = "No en Wiktionary"
   baseAutosuggestions = ["el", "la", "no"]
   numericAutosuggestions = ["que", "de", "en"]
   verbsAfterPronounsArray = ["ser", "REFLEXIVE_PRONOUN", "no"]

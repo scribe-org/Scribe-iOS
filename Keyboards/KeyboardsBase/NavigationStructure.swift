@@ -112,10 +112,10 @@ struct NavigationBuilder {
   }
 
   /// Builds information navigation levels for tooltips.
- static func buildInformationCases() -> [NavigationLevel] {
+ static func buildInformationCases(title: String = invalidCommandMsg) -> [NavigationLevel] {
   return InformationToolTipData.getContent().map { attributedText in
     NavigationLevel(
-      title: invalidCommandMsg,
+      title: title,
       options: [(label: "", node: .finalValue(attributedText.string))]
     )
   }

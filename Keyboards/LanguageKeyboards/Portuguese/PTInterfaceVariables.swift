@@ -203,6 +203,7 @@ func setPTKeyboardLayout() {
   spaceBar = "espaço"
   language = "Português"
   invalidCommandMsg = "Não está no Wikidata"
+  invalidTranslationMsg = "Não está no Wiktionary"
   baseAutosuggestions = ["o", "a", "eu"]
   numericAutosuggestions = ["de", "que", "a"]
 

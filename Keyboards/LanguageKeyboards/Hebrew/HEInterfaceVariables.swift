@@ -178,6 +178,7 @@ func setHEKeyboardLayout() {
   spaceBar = "רווח"
   language = "עברית"
   invalidCommandMsg = "אין מידע"
+  invalidTranslationMsg = "לא בוויקימילון"
   baseAutosuggestions = ["אתמ", "אני", "היי"]
   numericAutosuggestions = ["", "", ""]
 

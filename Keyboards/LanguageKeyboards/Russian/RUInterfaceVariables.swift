@@ -193,6 +193,7 @@ func setRUKeyboardLayout() {
   spaceBar = "Пробел"
   language = "Pусский"
   invalidCommandMsg = "Нет в Викиданных"
+  invalidTranslationMsg = "Нет в Викисловаре"
   baseAutosuggestions = ["я", "а", "в"]
   numericAutosuggestions = ["в", "и", "я"]
 

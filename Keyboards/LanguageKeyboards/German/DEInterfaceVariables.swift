@@ -264,6 +264,7 @@ func setDEKeyboardLayout() {
   spaceBar = "Leerzeichen"
   language = "Deutsch"
   invalidCommandMsg = "Nicht in Wikidata"
+  invalidTranslationMsg = "Nicht in Wiktionary"
   baseAutosuggestions = ["ich", "die", "das"]
   numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
   verbsAfterPronounsArray = ["haben", "sein", "können"]

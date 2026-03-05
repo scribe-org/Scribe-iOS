@@ -269,6 +269,7 @@ func setSVKeyboardLayout() {
   spaceBar = "mellanslag"
   language = "Svenska"
   invalidCommandMsg = "Inte i Wikidata"
+  invalidTranslationMsg = "Inte i Wiktionary"
   baseAutosuggestions = ["jag", "det", "men"]
   numericAutosuggestions = ["jag", "det", "och"]
 

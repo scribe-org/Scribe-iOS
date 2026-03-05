@@ -303,7 +303,8 @@ class KeyboardViewController: UIInputViewController {
     commandBar.setCornerRadiusAndShadow()
     commandBar.backgroundColor = commandBarColor
 
-    let cases = NavigationBuilder.buildInformationCases()
+    let title = prevToInvalidState == .translate ? invalidTranslationMsg : invalidCommandMsg
+    let cases = NavigationBuilder.buildInformationCases(title: title)
 
     let infoVC = DynamicConjugationViewController(
         linearCases: cases,
@@ -1605,8 +1606,10 @@ class KeyboardViewController: UIInputViewController {
         conditionallySetAutoActionBtns()
         loadKeys()
       } else if commandState == .translate {
+        prevToInvalidState = .translate
         queryTranslation(commandBar: commandBar)
       } else if commandState == .conjugate {
+        prevToInvalidState = .conjugate
         let conjugationTblTriggered = triggerVerbConjugation(commandBar: commandBar)
         if conjugationTblTriggered {
           commandState = .dynamicConjugation
@@ -1616,6 +1619,7 @@ class KeyboardViewController: UIInputViewController {
           commandState = .invalid
         }
       } else if commandState == .plural {
+        prevToInvalidState = .plural
         queryPlural(commandBar: commandBar)
       }
 
@@ -1624,7 +1628,8 @@ class KeyboardViewController: UIInputViewController {
         autoCapAtStartOfProxy()
 
         if commandState == .invalid {
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          let invalidMsg = prevToInvalidState == .translate ? invalidTranslationMsg : invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidMsg
           commandBar.isShowingInfoButton = true
         } else {
           commandBar.isShowingInfoButton = false
@@ -1645,13 +1650,14 @@ class KeyboardViewController: UIInputViewController {
     case "Translate":
       if let selectedText = proxy.selectedText {
         commandState = .translate
+        prevToInvalidState = .translate
         queryWordToTranslate(queriedWordToTranslate: selectedText)
 
         if commandState == .invalid { // invalid state
           loadKeys()
           proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidTranslationMsg
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
           return
@@ -1681,6 +1687,7 @@ class KeyboardViewController: UIInputViewController {
           showDynamicConjugationView(verb: verbToConjugate)
           return
         } else {
+          prevToInvalidState = .conjugate
           commandState = .invalid
           loadKeys()
           proxy.insertText(selectedText)
@@ -1700,6 +1707,7 @@ class KeyboardViewController: UIInputViewController {
 
     case "Plural":
       if let selectedText = proxy.selectedText {
+        prevToInvalidState = .plural
         queryPluralNoun(queriedNoun: selectedText)
 
         if [.invalid, .alreadyPlural].contains(commandState) {
