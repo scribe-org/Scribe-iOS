@@ -60,10 +60,14 @@
                 <outlet property="padEmojiKey4" destination="d-PaEK-4" id="c-PaEK-4"/>
                 <outlet property="padEmojiKey5" destination="d-PaEK-5" id="c-PaEK-5"/>
                 <outlet property="phoneEmojiDivider" destination="6DZ-gU-SO5" id="VXK-ZI-d4Q"/>
+                <outlet property="phoneEmojiDivider1" destination="d-PED-1" id="c-PED-1"/>
+                <outlet property="phoneEmojiDivider2" destination="d-PED-2" id="c-PED-2"/>
                 <outlet property="phoneEmojiKey0" destination="pTv-BK-rKh" id="U16-av-iWx"/>
                 <outlet property="phoneEmojiKey1" destination="KVC-Ai-vdF" id="iYf-s9-OKK"/>
                 <outlet property="phoneEmojiKey2" destination="d-PEK-2" id="c-PEK-2"/>
-                <outlet property="phoneEmojiDivider1" destination="d-PED-1" id="c-PED-1"/>
+                <outlet property="phoneEmojiKey3" destination="d-PEK-3" id="c-PEK-3"/>
+                <outlet property="phoneEmojiKey4" destination="d-PEK-4" id="c-PEK-4"/>
+                <outlet property="phoneEmojiKey5" destination="d-PEK-5" id="c-PEK-5"/>
                 <outlet property="pluralKey" destination="FgS-T1-2rI" id="NSp-W5-nas"/>
                 <outlet property="rightAutoPartition" destination="hPX-B4-WMk" id="vhl-ch-h5H"/>
                 <outlet property="scribeKey" destination="MCB-7F-dNd" id="AzX-VF-3Nj"/>
@@ -383,7 +387,7 @@
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-gU-SO5" userLabel="PhoneEmojiDivider">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-gU-SO5" userLabel="PhoneEmojiDivider0">
                     <rect key="frame" x="276.5" y="7" width="1" height="24.5"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -394,13 +398,13 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ai-vdF" userLabel="PhoneEmoji1">
-                    <rect key="frame" x="280.5" y="4" width="36.5" height="30.5"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="PhoneEmoji0">
+                    <rect key="frame" x="237" y="4" width="36.5" height="30.5"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-BK-rKh" userLabel="PhoneEmoji0">
-                    <rect key="frame" x="237" y="4" width="36.5" height="30.5"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ai-vdF" userLabel="PhoneEmoji1">
+                    <rect key="frame" x="280.5" y="4" width="36.5" height="30.5"/>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
@@ -443,11 +447,37 @@
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d-PEK-3" userLabel="PhoneEmoji3">
+                    <rect key="frame" x="237" y="4" width="36.5" height="30.5"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d-PEK-4" userLabel="PhoneEmoji4">
+                    <rect key="frame" x="237" y="4" width="36.5" height="30.5"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d-PEK-5" userLabel="PhoneEmoji5">
+                    <rect key="frame" x="237" y="4" width="36.5" height="30.5"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d-PED-1" userLabel="PhoneEmojiDivider1">
                     <rect key="frame" x="276.5" y="7" width="1" height="24.5"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="c-PED-1-w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d-PED-2" userLabel="PhoneEmojiDivider2">
+                    <rect key="frame" x="276.5" y="7" width="1" height="24.5"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="c-PED-2-w"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -743,13 +773,52 @@
                 <constraint firstItem="92Z-QS-QCN" firstAttribute="leading" secondItem="dOA-cy-aGo" secondAttribute="leading" id="v6s-O1-2Hv"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="v8j-uv-siq"/>
                 <constraint firstItem="kON-8k-vtV" firstAttribute="bottom" secondItem="Yr3-T8-7HB" secondAttribute="bottom" id="vMW-zj-MNc"/>
-                <constraint firstItem="d-PED-1" firstAttribute="leading" secondItem="KVC-Ai-vdF" secondAttribute="trailing" constant="3" id="c-CED-1-l"/>
-                <constraint firstItem="d-PEK-2" firstAttribute="leading" secondItem="d-PED-1" secondAttribute="trailing" constant="3" id="c-CEK-2-l"/>
-                <constraint firstAttribute="trailing" secondItem="d-PEK-2" secondAttribute="trailing" constant="3" id="c-CEK-2-t"/>
-                <constraint firstItem="d-PEK-2" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="c-CEK-2-cy"/>
-                <constraint firstItem="d-PEK-2" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="c-CEK-2-h"/>
-                <constraint firstItem="d-PEK-2" firstAttribute="width" secondItem="pTv-BK-rKh" secondAttribute="width" id="c-CEK-2-w"/>
-                <constraint firstItem="d-PED-1" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="c-CED-1-cy"/>
+                <!-- PhoneEmojiKey0 Constraints -->
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="leading" secondItem="MCB-7F-dNd" secondAttribute="trailing" constant="3" id="PEK0_L"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK0_CY"/>
+                <constraint firstItem="pTv-BK-rKh" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK0_H"/>
+                <constraint firstItem="6DZ-gU-SO5" firstAttribute="leading" secondItem="pTv-BK-rKh" secondAttribute="trailing" constant="2" id="PED0_L"/>
+                
+                <!-- PhoneEmojiKey1 Constraints -->
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="leading" secondItem="6DZ-gU-SO5" secondAttribute="trailing" constant="2" id="PEK1_L"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="trailing" secondItem="0Dt-BE-21v" secondAttribute="leading" constant="-3" id="PEK1_T"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK1_CY"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK1_H"/>
+                <constraint firstItem="KVC-Ai-vdF" firstAttribute="width" secondItem="pTv-BK-rKh" secondAttribute="width" id="PEK1_W"/>
+
+                <!-- PhoneEmojiKey2 Constraints -->
+                <constraint firstItem="d-PEK-2" firstAttribute="leading" secondItem="0Dt-BE-21v" secondAttribute="trailing" constant="3" id="PEK2_L"/>
+                <constraint firstItem="d-PEK-2" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK2_CY"/>
+                <constraint firstItem="d-PEK-2" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK2_H"/>
+                <constraint firstItem="d-PED-1" firstAttribute="leading" secondItem="d-PEK-2" secondAttribute="trailing" constant="2" id="PED1_L"/>
+
+                <!-- PhoneEmojiKey3 Constraints -->
+                <constraint firstItem="d-PEK-3" firstAttribute="leading" secondItem="d-PED-1" secondAttribute="trailing" constant="2" id="PEK3_L"/>
+                <constraint firstItem="d-PEK-3" firstAttribute="trailing" secondItem="hPX-B4-WMk" secondAttribute="leading" constant="-3" id="PEK3_T"/>
+                <constraint firstItem="d-PEK-3" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK3_CY"/>
+                <constraint firstItem="d-PEK-3" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK3_H"/>
+                <constraint firstItem="d-PEK-3" firstAttribute="width" secondItem="d-PEK-2" secondAttribute="width" id="PEK3_W"/>
+
+                <!-- PhoneEmojiKey4 Constraints -->
+                <constraint firstItem="d-PEK-4" firstAttribute="leading" secondItem="hPX-B4-WMk" secondAttribute="trailing" constant="3" id="PEK4_L"/>
+                <constraint firstItem="d-PEK-4" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK4_CY"/>
+                <constraint firstItem="d-PEK-4" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK4_H"/>
+                <constraint firstItem="d-PED-2" firstAttribute="leading" secondItem="d-PEK-4" secondAttribute="trailing" constant="2" id="PED2_L"/>
+
+                <!-- PhoneEmojiKey5 Constraints -->
+                <constraint firstItem="d-PEK-5" firstAttribute="leading" secondItem="d-PED-2" secondAttribute="trailing" constant="2" id="PEK5_L"/>
+                <constraint firstItem="d-PEK-5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-3" id="PEK5_T"/>
+                <constraint firstItem="d-PEK-5" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PEK5_CY"/>
+                <constraint firstItem="d-PEK-5" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" id="PEK5_H"/>
+                <constraint firstItem="d-PEK-5" firstAttribute="width" secondItem="d-PEK-4" secondAttribute="width" id="PEK5_W"/>
+
+                <!-- Dividers CenterY and Height -->
+                <constraint firstItem="6DZ-gU-SO5" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PED0_CY"/>
+                <constraint firstItem="d-PED-1" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PED1_CY"/>
+                <constraint firstItem="d-PED-2" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="PED2_CY"/>
+                <constraint firstItem="6DZ-gU-SO5" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="PED0_H"/>
+                <constraint firstItem="d-PED-1" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="PED1_H"/>
+                <constraint firstItem="d-PED-2" firstAttribute="height" secondItem="MCB-7F-dNd" secondAttribute="height" multiplier="0.8" id="PED2_H"/>
                 <constraint firstItem="MCB-7F-dNd" firstAttribute="centerY" secondItem="RVF-jy-JTf" secondAttribute="centerY" id="vss-sR-d39"/>
                 <constraint firstItem="pTv-BK-rKh" firstAttribute="centerY" secondItem="MCB-7F-dNd" secondAttribute="centerY" id="vzM-1R-szV"/>
                 <constraint firstItem="i3q-kx-6Dw" firstAttribute="trailing" secondItem="IR7-Kd-kHd" secondAttribute="trailing" id="wB9-7V-mOo"/>

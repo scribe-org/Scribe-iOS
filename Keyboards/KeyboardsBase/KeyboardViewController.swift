@@ -715,10 +715,16 @@ class KeyboardViewController: UIInputViewController {
 
     if commandState == .colonToEmoji {
       getEmojiAutoSuggestionsPatternMatching(for: colonSearchString)
+      commandBar.hide()
+      commandBarShadow.isHidden = true
     } else if autoActionState == .suggest {
       getAutosuggestions()
     } else {
       getAutocompletions()
+      if [.translate, .conjugate, .plural].contains(commandState) {
+        commandBar.set()
+        commandBarShadow.isHidden = false
+      }
     }
     if [.idle, .colonToEmoji].contains(commandState) {
       deactivateBtn(btn: translateKey)
@@ -750,7 +756,7 @@ class KeyboardViewController: UIInputViewController {
         if DeviceType.isPad {
           emojiButtons = [translateKey, conjugateKey, pluralKey, padEmojiKey0, padEmojiKey1, padEmojiKey2, padEmojiKey3, padEmojiKey4, padEmojiKey5]
         } else {
-          emojiButtons = [translateKey, conjugateKey, pluralKey, phoneEmojiKey0, phoneEmojiKey1, phoneEmojiKey2]
+          emojiButtons = [phoneEmojiKey0, phoneEmojiKey1, phoneEmojiKey2, phoneEmojiKey3, phoneEmojiKey4, phoneEmojiKey5]
         }
 
         for (index, emoji) in emojisToDisplayArray.enumerated() where index < emojiButtons.count {
@@ -1008,7 +1014,7 @@ class KeyboardViewController: UIInputViewController {
 
   /// Deletes in the proxy or command bar given the current constraints.
   func handleDeleteButtonPressed() {
-    if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+    if [.idle, .selectCommand, .alreadyPlural, .invalid, .colonToEmoji].contains(commandState) {
       if wordForWordDeletionIsEnabled() && longPressOnDelete {
         deleteWordBackward()
       } else {
@@ -1107,21 +1113,27 @@ class KeyboardViewController: UIInputViewController {
   func conditionallyHideEmojiDividers() {
     let dividers: [UILabel]
     if DeviceType.isPhone {
-      dividers = [phoneEmojiDivider, phoneEmojiDivider1]
+      dividers = [phoneEmojiDivider, phoneEmojiDivider1, phoneEmojiDivider2]
     } else {
       dividers = [padEmojiDivider0, padEmojiDivider1, padEmojiDivider2, padEmojiDivider3, padEmojiDivider4]
     }
 
-    if commandState == .idle {
-      if [.zero, .one, .three].contains(emojisToShow) {
-        phoneEmojiDivider.backgroundColor = .clear
+    if commandState == .idle || commandState == .colonToEmoji {
+      if DeviceType.isPhone {
+        phoneEmojiDivider.backgroundColor = emojisToShow.rawValue >= 2 ? .lightGray : .clear
+        phoneEmojiDivider1.backgroundColor = emojisToShow.rawValue >= 4 ? .lightGray : .clear
+        phoneEmojiDivider2.backgroundColor = emojisToShow.rawValue >= 6 ? .lightGray : .clear
+      } else {
+        padEmojiDivider0.backgroundColor = emojisToShow.rawValue >= 2 ? .lightGray : .clear
+        padEmojiDivider1.backgroundColor = emojisToShow.rawValue >= 3 ? .lightGray : .clear
+        padEmojiDivider2.backgroundColor = emojisToShow.rawValue >= 4 ? .lightGray : .clear
+        padEmojiDivider3.backgroundColor = emojisToShow.rawValue >= 5 ? .lightGray : .clear
+        padEmojiDivider4.backgroundColor = emojisToShow.rawValue >= 6 ? .lightGray : .clear
       }
-      phoneEmojiDivider1.backgroundColor = .clear
-
-      if [.zero, .one, .two].contains(emojisToShow) {
-        padEmojiDivider0.backgroundColor = .clear
-        padEmojiDivider1.backgroundColor = .clear
-      }
+    } else {
+      dividers.forEach { $0.backgroundColor = .clear }
+    }
+  }
       padEmojiDivider2.backgroundColor = .clear
       padEmojiDivider3.backgroundColor = .clear
       padEmojiDivider4.backgroundColor = .clear
