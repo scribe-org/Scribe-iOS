@@ -102,7 +102,7 @@ class DownloadStateManager: ObservableObject {
 
   /// Check all downloaded languages for updates.
   func checkAllForUpdates() {
-    for (language, state) in downloadStates where language != "all" && state == .updated {
+    for (language, state) in downloadStates where state == .updated {
       checkForUpdates(language: language)
     }
   }

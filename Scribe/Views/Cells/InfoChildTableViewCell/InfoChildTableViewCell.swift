@@ -69,7 +69,7 @@ final class InfoChildTableViewCell: UITableViewCell {
 
   var languageCode: String {
     guard let parentSection = parentSection,
-          case let .specificLang(lang) = parentSection.sectionState else { return "all" }
+          case let .specificLang(lang) = parentSection.sectionState else { return "" }
 
     return lang
   }
