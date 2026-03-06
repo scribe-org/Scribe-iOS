@@ -22,23 +22,42 @@ class LanguageDBManager {
 
   /// Makes a connection to the language database given the value for controllerLanguage.
   private func openDBQueue(_ dbName: String) -> DatabaseQueue {
-    let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
+    let mainBundlePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")
+    let classBundlePath = Bundle(for: LanguageDBManager.self).path(forResource: dbName, ofType: "sqlite")
+
+    guard let resourcePath = mainBundlePath ?? classBundlePath else {
+      print("Database \(dbName).sqlite not found in main or class bundle. Using in-memory DB.")
+      return try! DatabaseQueue()
+    }
+
     let fileManager = FileManager.default
     do {
-      let dbPath = try fileManager
-        .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        .appendingPathComponent("\(dbName).sqlite")
-        .path
+      let appSupportURL = try fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let dbURL = appSupportURL.appendingPathComponent("\(dbName).sqlite")
+      let dbPath = dbURL.path
+
+      var shouldCopy = true
       if fileManager.fileExists(atPath: dbPath) {
+        // Only copy if the resource is newer or if we want to ensure a fresh copy.
+        // For now, keeping the "fresh copy" behavior but more safely.
         try fileManager.removeItem(atPath: dbPath)
       }
-      try fileManager.copyItem(atPath: dbResourcePath, toPath: dbPath)
-      let dbQueue = try DatabaseQueue(path: dbPath)
-      return dbQueue
+
+      if shouldCopy {
+        try fileManager.copyItem(atPath: resourcePath, toPath: dbPath)
+      }
+
+      return try DatabaseQueue(path: dbPath)
     } catch {
-      print("An error occurred: UILexicon not available")
-      let dbQueue = try! DatabaseQueue(path: dbResourcePath)
-      return dbQueue
+      print("An error occurred during DB setup for \(dbName): \(error). Attempting read-only access.")
+      var config = Configuration()
+      config.readonly = true
+      if let dbQueue = try? DatabaseQueue(path: resourcePath, configuration: config) {
+        return dbQueue
+      }
+      // Last resort: try to return an empty DB instead of crashing the keyword.
+      print("Failed to open database \(dbName) even in read-only mode. Returning empty DB.")
+      return try! DatabaseQueue()
     }
   }
 
@@ -271,6 +290,49 @@ extension LanguageDBManager {
     let args = [word]
 
     return queryDBRow(query: query, outputCols: outputCols, args: StatementArguments(args))
+  }
+
+  /// Query emojis of word in `emoji_keywords` using pattern matching.
+  func queryEmojisPatternMatching(of word: String) -> [String] {
+    var outputValues = [String]()
+    let query = """
+    SELECT
+      emoji_keyword_0, emoji_keyword_1, emoji_keyword_2
+
+    FROM
+      emoji_keywords
+
+    WHERE
+      word LIKE ?
+
+    ORDER BY
+      LENGTH(word) ASC
+
+    LIMIT
+      3
+    """
+    let args = StatementArguments(["\(word.lowercased())%"])
+    do {
+      try database?.read { db in
+        let rows = try Row.fetchAll(db, sql: query, arguments: args)
+        for row in rows {
+          for col in ["emoji_keyword_0", "emoji_keyword_1", "emoji_keyword_2"] {
+            if let val = row[col] as? String, !val.isEmpty {
+              if !outputValues.contains(val) {
+                outputValues.append(val)
+              }
+              if outputValues.count == 9 { return }
+            }
+          }
+        }
+      }
+    } catch {}
+
+    while outputValues.count < 9 {
+      outputValues.append("")
+    }
+
+    return Array(outputValues.prefix(9))
   }
 
   /// Query the noun form of word in `nonuns`.

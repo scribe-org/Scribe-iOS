@@ -151,6 +151,10 @@ final class InfoChildTableViewCell: UITableViewCell {
       let dictionaryKey = languageCode + "WordForWordDeletion"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+    case .colonToEmoji:
+      let dictionaryKey = languageCode + "ColonToEmoji"
+      userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
     case .none: break
     }
 
@@ -164,7 +168,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // default value
       }
 
     case .toggleAccentCharacters:
@@ -172,7 +176,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // default value
       }
 
     case .doubleSpacePeriods:
@@ -180,7 +184,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // default value
       }
 
     case .autosuggestEmojis:
@@ -188,7 +192,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // default value
       }
 
     case .toggleWordForWordDeletion:
@@ -196,7 +200,15 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false // Default value
+        toggleSwitch.isOn = false // default value
+      }
+
+    case .colonToEmoji:
+      let dictionaryKey = languageCode + "ColonToEmoji"
+      if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = true // default value
       }
 
     case .none: break

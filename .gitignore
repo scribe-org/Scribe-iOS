@@ -30,3 +30,6 @@ DerivedData/
 
 # Testing
 code_coverage.json
+
+# Python virtual environment
+venv/

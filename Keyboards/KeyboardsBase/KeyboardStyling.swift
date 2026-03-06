@@ -37,7 +37,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   }
 
   // Needed to prevent an unnecessary shadow.
-  if commandState != .selectCommand, [.one, .two, .three].contains(emojisToShow) {
+  if commandState == .colonToEmoji || (commandState != .selectCommand && emojisToShow != .zero) {
     btn.layer.shadowOpacity = 0
   }
 }
