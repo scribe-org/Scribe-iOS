@@ -157,27 +157,22 @@ struct LanguageListView: View {
     comment: ""
   )
 
-  private let allLanguagesText = NSLocalizedString(
-    "i18n.app.download.menu_ui.download_data.all_languages",
-    value: "All languages",
-    comment: ""
-  )
-
   @State private var showConfirmDialog = false
   @State private var targetLanguage = ""
   @State private var selectedLanguageCode = ""
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
-  private func handleButtonClick(targetLang: String, langCode: String) {
-    if langCode == "all" {
-        let toDownload = stateManager.downloadStates.keys.filter {
+  private func handleUpdateAllLanguages() {
+    let toDownload = stateManager.downloadStates.keys.filter {
             stateManager.downloadStates[$0] != .updated && stateManager.downloadStates[$0] != .downloading
-        }
-        for lang in toDownload {
+    }
+
+    for lang in toDownload {
             stateManager.handleDownloadAction(key: lang)
         }
-        return
-    }
+  }
+
+  private func handleButtonClick(targetLang: String, langCode: String) {
 
     targetLanguage = targetLang
     selectedLanguageCode = langCode
@@ -187,16 +182,6 @@ struct LanguageListView: View {
     } else {
       stateManager.handleDownloadAction(key: langCode)
     }
-  }
-
-  // Determines the button state for the "All languages" option based on the states of individual languages.
-  private var allLanguagesState: ButtonState {
-    let states = stateManager.downloadStates.values
-    if states.allSatisfy({ $0 == .updated }) { return .updated }
-    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
-    let actionable = states.filter({ $0 != .updated })
-    if actionable.allSatisfy({ $0 == .update }) { return .update }
-    return .ready
   }
 
   var body: some View {
@@ -209,17 +194,22 @@ struct LanguageListView: View {
           EmptyStateView()
         } else {
           VStack(spacing: 0) {
-            LanguageDownloadCard(
-              language: allLanguagesText,
-              state: allLanguagesState,
-              action: {
-                handleButtonClick(targetLang: allLanguagesText, langCode: "all")
+            HStack {
+              Spacer()
+              Text(NSLocalizedString(
+                "i18n.app.download.menu_ui.download_data.update_all",
+                value: "Update all",
+                comment: ""
+              ))
+              .foregroundColor(Color("linkBlue"))
+              .font(.system(size: 20, weight: .medium))
+              .padding(.horizontal, 12)
+              .padding(.bottom, 10)
+              .onTapGesture {
+                handleUpdateAllLanguages()
               }
-            )
-
-            Divider()
-              .padding(.vertical, 8)
-
+            }
+            .padding(.horizontal, 4)
             ForEach(Array(languages.enumerated()), id: \.offset) { index, section in
               let langCode: String = {
                 if case let .specificLang(code) = section.sectionState {

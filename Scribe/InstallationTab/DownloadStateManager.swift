@@ -21,7 +21,7 @@ class DownloadStateManager: ObservableObject {
 
   /// Initialize download states for languages.
   func initializeStates(languages: [String]) {
-    for language in languages where language != "all" {
+    for language in languages {
       if downloadStates[language] != nil { continue }
 
       // Check if data exists locally.
