@@ -1,17 +1,17 @@
-# Setting up a Python environment and pre-commit.
+# Setting up a Python environment and prek (pre-commit hooks).
+
+# >>> python3 -m venv .venv
 
 # Unix or MacOS:
-# >>> python3 -m venv venv
-# >>> source venv/bin/activate
+# >>> source .venv/bin/activate
 
 # Windows:
-# >>> python -m venv venv
-# >>> venv\Scripts\activate.bat
+# >>> .venv\Scripts\activate.bat
 
 # >>> pip install --upgrade pip
-# >>> pip install pre-commit
-# >>> pre-commit install
-# >>> pre-commit run --all-files
+# >>> pip install prek
+# >>> prek install
+# >>> prek run --all-files
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -22,7 +22,7 @@ repos:
       - id: check-yaml
 
   - repo: https://github.com/realm/SwiftLint
-    rev: 0.63.1
+    rev: 0.63.2
     hooks:
       - id: swiftlint
         name: run swiftlint linting check

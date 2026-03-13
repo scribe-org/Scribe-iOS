@@ -167,12 +167,13 @@ git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
   - `origin` (forked repository)
   - `upstream` (Scribe-iOS repository)
 
-3. (Optional) Install [pre-commit](https://pre-commit.com/) and its hooks to check for and correct common errors in commits:
+3. (Suggested) Install [prek](https://prek.j178.dev/) pre-commit hooks to check for and correct common errors in commits:
 
 ```bash
-pip install pre-commit
-pre-commit install
-# pre-commit run --all-files
+pip install --upgrade pip  # make sure that pip is at the latest version
+pip install prek
+prek install
+# prek --all-files
 ```
 
 4. Open the Scribe-iOS directory in Xcode

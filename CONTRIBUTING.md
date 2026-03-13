@@ -117,12 +117,13 @@ git remote add upstream https://github.com/scribe-org/Scribe-iOS.git
   - `origin` (forked repository)
   - `upstream` (Scribe-iOS repository)
 
-3. (Optional) Install [pre-commit](https://pre-commit.com/) and its hooks to check for and correct common errors in commits:
+3. (Optional) Install [prek](https://prek.j178.dev/) pre-commit hooks to check for and correct common errors in commits:
 
 ```bash
-pip install pre-commit
-pre-commit install
-# pre-commit run --all-files
+pip install --upgrade pip  # make sure that pip is at the latest version
+pip install prek
+prek install
+# prek --all-files
 ```
 
 4. Open the Scribe-iOS directory in Xcode
@@ -173,7 +174,7 @@ Build schemes can be selected from the top bar next to device selection.
 
 Writing unit tests is essential to guarantee the dependability and sustainability of the Scribe-iOS codebase. Unit tests confirm that individual components of the application work as intended by detecting errors at an early stage, thus making the debugging process easier and boosting assurance for upcoming modifications. An unchanging testing method helps new team members grasp project norms and anticipated actions.
 
-In addition to the [pre-commit](https://pre-commit.com/) hooks that are set up during the [development environment section](#dev-env), Scribe-iOS includes a testing suite that should be ran before all pull requests and subsequent commits.
+In addition to the [prek](https://prek.j178.dev/) pre-commit hooks that are set up during the [development environment section](#dev-env), Scribe-iOS includes a testing suite that should be ran before all pull requests and subsequent commits.
 
 Please run the following in the project root:
 
