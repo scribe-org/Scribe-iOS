@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 # Contributing to Scribe-iOS
 
 Thank you for your interest in contributing!
@@ -8,17 +10,16 @@ Following these guidelines helps to communicate that you respect the time of the
 
 If you have questions or would like to communicate with the team, please [join us in our public Matrix chat rooms](https://matrix.to/#/#scribe_community:matrix.org). We'd be happy to hear from you!
 
-<a id="contents"></a>
+## Contents
 
-# **Contents**
-
-- [First steps as a contributor](#first-steps)
+- [First steps as a contributor](#first-steps-as-a-contributor)
+- [Mentorship and Growth](#mentorship-and-growth)
 - [Learning the tech stack](#learning-the-tech)
-- [Development environment](#dev-env)
+- [Development environment](#development-environment)
   - [Note on debugging](#note-on-debugging)
-- [Build Schemes Selection](#build-scheme)
+- [Build Schemes Selection](#build-scheme-selection)
 - [Testing](#testing)
-- [Issues and projects](#issues-projects)
+- [Issues and projects](#issues-and-projects)
 - [Bug reports](#bug-reports)
 - [Feature requests](#feature-requests)
 - [Pull requests](#pull-requests)
@@ -27,9 +28,7 @@ If you have questions or would like to communicate with the team, please [join u
 - [Documentation](#documentation)
 - [Design](#design)
 
-<a id="first-steps"></a>
-
-## First steps as a contributor [`⇧`](#contents)
+## First steps as a contributor
 
 Thank you for your interest in contributing to Scribe-iOS! We look forward to welcoming you to the community and working with you to build an tools for language learners to communicate effectively :) The following are some suggested steps for people interested in joining our community:
 
@@ -46,9 +45,25 @@ Thank you for your interest in contributing to Scribe-iOS! We look forward to we
 > [!NOTE]
 > Those new to Swift or wanting to work on their Swift skills are more than welcome to contribute! The team would be happy to help you on your development journey :)
 
-<a id="learning-the-tech"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Learning the tech stack [`⇧`](#contents)
+## Mentorship and Growth
+
+Onboarding and mentoring new members is vital to a healthy open-source community.
+
+We need contributors who are onboarded to gain new skills and take on greater roles by triaging issues, reviewing contributions, and maintaining the project. We also need them to help new contributors to grow as well. Please let us know if you have goals to develop as an open-source contributor and we'll work with you to achieve them.
+
+We also have expectations about the behavior of those who want to grow with us. Mentorship is earned, not given.
+
+To be blunt, those who are mainly sending AI generated contributions are not demonstrating an interest in growing their skills and are not helping to develop the project. This is not to say that all uses of AI for contributions are bad, but **AI should be a tool, not the contributor itself**.
+
+Continued constructive contributions, new open issues, and clear communication helps the project. We would be happy to help community members who can make these contributions to expand their skills and take on further responsibilities.
+
+If you like the sound of this, then we look forward to working with you!
+
+<sub><a href="#top">Back to top.</a></sub>
+
+## Learning the tech stack
 
 Scribe is very open to contributions from people in the early stages of their coding journey! The following is a select list of documentation pages to help you understand the technologies we use.
 
@@ -74,9 +89,9 @@ Scribe is very open to contributions from people in the early stages of their co
 </p>
 </details>
 
-<a id="dev-env"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Development environment [`⇧`](#contents)
+## Development environment
 
 Scribe-iOS is developed using the [Swift](https://developer.apple.com/swift/) coding language. Those new to Swift or wanting to develop their skills are more than welcome to contribute! The first step on your Swift journey would be to read through the [Swift documentation](https://docs.swift.org/swift-book/index.html). The general steps to setting up a development environment are:
 
@@ -145,7 +160,7 @@ prek install
 > [!NOTE]
 > Feel free to contact the team in the [iOS room on Matrix](https://matrix.to/#/#ScribeiOS:matrix.org) if you're having problems getting your environment setup!
 
-<a id="note-on-debugging"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
 ### Note on debugging
 
@@ -157,9 +172,9 @@ The Xcode debugger often doesn't work as expected for Scribe as the keyboards th
 - When you get a window telling you to "choose an app to run", don't choose Scribe as you might expect, but instead scroll down and select Xcode Previews
 - Occasionally you'll be met with just a black screen on startup, in which case you can press Home (or ⇧-⌘-H) and then go directly to Scribe or an app for keyboard testing
 
-<a id="build-scheme"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Build Schemes Selection [`⇧`](#contents)
+## Build Schemes Selection
 
 The project includes two build schemes, each corresponding to a different application.There are other targets corresponding to the individual keyboards which are shipped within the `Scribe` target.
 
@@ -168,9 +183,9 @@ Build schemes can be selected from the top bar next to device selection.
 1. Scribe → Scribe Language Keyboards app (IME)
 2. Conjugate → Scribe Conjugate verb conjugation app
 
-<a id="testing"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-## Testing [`⇧`](#contents)
+## Testing
 
 Writing unit tests is essential to guarantee the dependability and sustainability of the Scribe-iOS codebase. Unit tests confirm that individual components of the application work as intended by detecting errors at an early stage, thus making the debugging process easier and boosting assurance for upcoming modifications. An unchanging testing method helps new team members grasp project norms and anticipated actions.
 
@@ -219,9 +234,9 @@ python3 Tests/process_coverage_report.py code_coverage.json
 > [!NOTE]
 > See [Tests/process_coverage_report.py](./Tests/process_coverage_report.py) for details.
 
-<a id="issues-projects"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Issues and projects [`⇧`](#contents)
+## Issues and projects
 
 The [issue tracker for Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issues) is the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests) and [submitting pull requests](#pull-requests). Scribe also organizes related issues into [projects](https://github.com/scribe-org/Scribe-iOS/projects).
 
@@ -230,9 +245,9 @@ The [issue tracker for Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/issu
 
 Be sure to check the [`-next release-`](https://github.com/scribe-org/Scribe-iOS/labels/-next%20release-) and [`-priority-`](https://github.com/scribe-org/Scribe-iOS/labels/-priority-) labels in the [issues](https://github.com/scribe-org/Scribe-iOS/issues) for those that are most important, as well as those marked [`good first issue`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that are tailored for first-time contributors.
 
-<a id="bug-reports"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Bug reports [`⇧`](#contents)
+## Bug reports
 
 A bug is a _demonstrable problem_ that is caused by the code in the repository. Good bug reports are extremely helpful - thank you!
 
@@ -256,15 +271,15 @@ To make the above steps easier, the Scribe team asks that contributors report bu
 
 Again, thank you for your time in reporting issues!
 
-<a id="feature-requests"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Feature requests [`⇧`](#contents)
+## Feature requests
 
 Feature requests are more than welcome! Please take a moment to find out whether your idea fits with the scope and aims of the project. When making a suggestion, provide as much detail and context as possible, and further make clear the degree to which you would like to contribute in its development. Feature requests are marked with the [`Feature`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature) type, and can be made using the [feature request](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=feature&template=feature_request.yml) template.
 
-<a id="pull-requests"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Pull requests [`⇧`](#contents)
+## Pull requests
 
 Good pull requests - patches, improvements and new features - are the foundation of our community making Scribe-iOS. They should remain focused in scope and avoid containing unrelated commits. Note that all contributions to this project will be made under [the specified license](https://github.com/scribe-org/Scribe-iOS/blob/main/LICENSE.txt) and should follow the coding indentation and style standards ([contact us](https://matrix.to/#/#scribe_community:matrix.org) if unsure).
 
@@ -309,18 +324,18 @@ When making a contribution, adhering to the [GitHub flow](https://guides.github.
 
 Thank you in advance for your contributions!
 
-<a id="data-edits"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Data edits [`⇧`](#contents)
+## Data edits
 
 > [!NOTE]\
 > Please see the [Wikidata and Scribe Guide](https://github.com/scribe-org/Organization/blob/main/WIKIDATAGUIDE.md) for an overview of [Wikidata](https://www.wikidata.org/) and how Scribe uses it.
 
 Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Conjugate-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
-<a id="localization"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Localization [`⇧`](#contents)
+## Localization
 
 <a href="https://hosted.weblate.org/projects/scribe/scribe-i18n">
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WeblateLogo.png" width="125" alt="Visit Weblate project" align="right">
@@ -336,15 +351,15 @@ Please run the [update_i18n_keys.sh](https://github.com/scribe-org/Scribe-iOS/bl
     <img src="https://hosted.weblate.org/widget/scribe/scribe-i18n/multi-auto.svg" alt="Translation status" />
 </a>
 
-<a id="documentation"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Documentation [`⇧`](#contents)
+## Documentation
 
 Documentation is an invaluable way to contribute to coding projects as it allows others to more easily understand the project structure and contribute. Issues related to documentation are marked with the [`documentation`](https://github.com/scribe-org/Scribe-iOS/labels/documentation) label.
 
-<a id="design"></a>
+<sub><a href="#top">Back to top.</a></sub>
 
-# Design [`⇧`](#contents)
+## Design
 
 <a href="https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464">
   <img src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/FigmaLogo.png" width="100" alt="Public Figma Designs" align="right">
@@ -353,3 +368,5 @@ Documentation is an invaluable way to contribute to coding projects as it allows
 Designs for Scribe are done in the [public design file in Figma](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scribe_public_designs?node-id=405%3A464). Those interested in helping with Scribe's design are also welcome to share their ideas using the [design improvement](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=design&template=design_improvement.yml) template that makes an issue marked with the [`design`](https://github.com/scribe-org/Scribe-iOS/issues?q=is%3Aopen+is%3Aissue+label%3Adesign) label.
 
 All branding elements such as logos, icons, colors and fonts should follow those that are set out in [scribe-org/Organization](https://github.com/scribe-org/Organization). As the project is fully open source, these elements are also open for discussion. Efforts in making Scribe products professional with a distinct and cohesive identity are much appreciated!
+
+<sub><a href="#top">Back to top.</a></sub>
