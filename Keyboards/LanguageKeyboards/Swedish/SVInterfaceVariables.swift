@@ -268,8 +268,17 @@ func setSVKeyboardLayout() {
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellanslag"
   language = "Svenska"
+
   invalidCommandMsg = "Inte i Wikidata"
+  invalidWikidataMsg_1 = "Wikidata är en gemensamt redigerad kunskapsgraf som underhålls av Wikimedia Foundation. Det fungerar som en källa till öppen data för projekt som Wikipedia och flera andra."
+  invalidWikidataMsg_2 = "Scribe använder Wikidatas språkdata för många av sina kärnfunktioner. Vi får information som substantiv, genus, verbböjningar och mycket mer!"
+  invalidWikidataMsg_3 = "Du kan skapa ett konto på wikidata.org för att gå med i communityn som stöder Scribe och så många andra projekt. Hjälp oss att ge gratis information till världen!"
+
   invalidTranslationMsg = "Inte i Wiktionary"
+  invalidWiktionaryMsg_1 = "Wiktionary är en gemensamt redigerad ordbok på hundratals olika språk som sköts av Wikimedia Foundation."
+  invalidWiktionaryMsg_2 = "Scribe använder översättningar från Wiktionary i sin översättningsfunktion! Du kan välja mellan flera översättningar per ord beroende på den specifika betydelsen."
+  invalidWiktionaryMsg_3 = "Du kan skapa ett konto på wiktionary.org för att bli en del av gemenskapen som stöder Scribe och många andra projekt. Hjälp oss att sprida fri information till hela världen!"
+
   baseAutosuggestions = ["jag", "det", "men"]
   numericAutosuggestions = ["jag", "det", "och"]
 

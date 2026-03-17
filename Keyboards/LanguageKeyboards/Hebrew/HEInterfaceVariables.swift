@@ -177,8 +177,17 @@ func setHEKeyboardLayout() {
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "רווח"
   language = "עברית"
+
   invalidCommandMsg = "אין מידע"
-  invalidTranslationMsg = "לא בוויקימילון"
+  invalidWikidataMsg_1 = "ויקינתונים הוא גרף ידע הנערך בשיתוף פעולה ומתוחזק על ידי קרן ויקימדיה. הוא משמש כמקור לנתונים פתוחים עבור פרויקטים כמו ויקיפדיה ועוד רבים אחרים."
+  invalidWikidataMsg_2 = "Scribe משתמש בנתוני השפה של ויקינתונים עבור רבות מתכונות הליבה שלו. אנו מקבלים מידע כמו מין שמות עצם, צורות פועל ועוד הרבה יותר!"
+  invalidWikidataMsg_3 = "אתה יכול ליצור חשבון ב-wikidata.org כדי להצטרף לקהילה התומכת ב-Scribe ובפרויקטים רבים אחרים. עזור לנו להביא מידע חופשי לעולם!"
+
+  invalidTranslationMsg = "לא קיים בוויקימילון"
+  invalidWiktionaryMsg_1 = "ויקימילון הוא מילון בעריכה שיתופית במאות שפות שונות, המנוהל על ידי קרן ויקימדיה."
+  invalidWiktionaryMsg_2 = "Scribe משתמש בתרגומים של Wiktionary עבור פונקציית התרגום שלנו! ניתן לבחור מבין מספר תרגומים לכל מילה בהתאם למשמעות הספציפית."
+  invalidWiktionaryMsg_3 = "ניתן ליצור חשבון ב-wiktionary.org כדי להצטרף לקהילה התומכת ב-Scribe ובפרויקטים רבים אחרים. עזרו לנו להביא מידע חופשי לעולם!"
+
   baseAutosuggestions = ["אתמ", "אני", "היי"]
   numericAutosuggestions = ["", "", ""]
 

@@ -208,8 +208,17 @@ func setNBKeyboardLayout() {
   currencySymbolAlternates = kronaAlternateKeys
   spaceBar = "mellomrom"
   language = "Norsk"
+
   invalidCommandMsg = "Ikke i Wikidata"
+  invalidWikidataMsg_1 = "Wikidata er en kunnskapsbase som redigeres i fellesskap og vedlikeholdes av Wikimedia Foundation. Den fungerer som en kilde til åpne data for prosjekter som Wikipedia og utallige andre."
+  invalidWikidataMsg_2 = "Scribe bruker Wikidatas språkdata til mange av sine kjernefunksjoner. Vi får informasjon som substantivkjønn, verbkonjugasjoner og mye mer!"
+  invalidWikidataMsg_3 = "Du kan opprette en konto på wikidata.org for å bli med i fellesskapet som støtter Scribe og så mange andre prosjekter. Hjelp oss med å bringe gratis informasjon til verden!"
+
   invalidTranslationMsg = "Ikke i Wiktionary"
+  invalidWiktionaryMsg_1 = "Wiktionary er en samarbeidsredigert ordbok på hundrevis av forskjellige språk som vedlikeholdes av Wikimedia Foundation."
+  invalidWiktionaryMsg_2 = "Scribe bruker Wiktionarys oversettelser til vår oversettelsesfunksjon! Du kan velge mellom flere oversettelser per ord basert på den spesifikke betydningen."
+  invalidWiktionaryMsg_3 = "Du kan opprette en konto på wiktionary.org for å bli med i fellesskapet som støtter Scribe og så mange andre prosjekter. Hjelp oss med å bringe gratis informasjon til verden!"
+
   baseAutosuggestions = ["jeg", "det", "er"]
   numericAutosuggestions = ["prosent", "millioner", "meter"]
   verbsAfterPronounsArray = ["har", "være", "kan"]

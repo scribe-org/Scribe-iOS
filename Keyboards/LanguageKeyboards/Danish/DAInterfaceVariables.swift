@@ -140,4 +140,14 @@ func getDAKeys() {}
 
 // MARK: Provide Layout
 
-func setDAKeyboardLayout() {}
+func setDAKeyboardLayout() {
+  invalidCommandMsg = "Findes ikke i Wikidata"
+  invalidWikidataMsg_1 = "Wikidata er en videnbase, der redigeres i fællesskab og vedligeholdes af Wikimedia Foundation. Den fungerer som en kilde til åbne data for projekter som Wikipedia og utallige andre."
+  invalidWikidataMsg_2 = "Scribe bruger Wikidatas sprogdata til mange af sine kernefunktioner. Vi får oplysninger som navneords køn, verbkonjugationer og meget mere!"
+  invalidWikidataMsg_3 = "Du kan oprette en konto på wikidata.org for at blive en del af det fællesskab, der støtter Scribe og så mange andre projekter. Hjælp os med at bringe gratis information ud i verden!"
+
+  invalidTranslationMsg = "Ikke i Wiktionary"
+  invalidWiktionaryMsg_1 = "Wiktionary er en fællesredigeret ordbog på hundredvis af forskellige sprog, der vedligeholdes af Wikimedia Foundation."
+  invalidWiktionaryMsg_2 = "Scribe bruger Wiktionarys oversættelser til vores oversættelsesfunktion! Du kan vælge mellem flere oversættelser pr. ord baseret på den specifikke betydning."
+  invalidWiktionaryMsg_3 = "Du kan oprette en konto på wiktionary.org for at blive en del af det fællesskab, der støtter Scribe og så mange andre projekter. Hjælp os med at bringe gratis information ud til verden!"
+}

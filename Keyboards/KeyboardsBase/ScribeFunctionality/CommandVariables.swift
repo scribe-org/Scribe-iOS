@@ -50,7 +50,14 @@ var inputWordIsCapitalized = false
 var wordToReturn = ""
 var potentialWordsToReturn = [String]()
 var invalidCommandMsg = ""
+var invalidWikidataMsg_1 = ""
+var invalidWikidataMsg_2 = ""
+var invalidWikidataMsg_3 = ""
+
 var invalidTranslationMsg = ""
+var invalidWiktionaryMsg_1 = ""
+var invalidWiktionaryMsg_2 = ""
+var invalidWiktionaryMsg_3 = ""
 
 // Annotation variables.
 var annotationState = false
