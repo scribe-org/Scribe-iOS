@@ -1,9 +1,4 @@
-//
-//  ConjugateView.swift
-//  Scribe
-//
-//  Created by Gautham Mohanraj on 18/03/26.
-//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 import SwiftUI
 
