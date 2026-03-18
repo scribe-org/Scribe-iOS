@@ -263,7 +263,10 @@ func setDEKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "Leerzeichen"
   language = "Deutsch"
-  invalidCommandMsg = "Nicht in Wikidata"
+
+  invalidCommandMsgWikidata = "Nicht in Wikidata"
+  invalidCommandMsgWiktionary = "Nicht in Wiktionary"
+
   baseAutosuggestions = ["ich", "die", "das"]
   numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
   verbsAfterPronounsArray = ["haben", "sein", "können"]

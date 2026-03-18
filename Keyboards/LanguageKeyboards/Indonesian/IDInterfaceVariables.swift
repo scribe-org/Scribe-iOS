@@ -191,7 +191,9 @@ func setIDKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "spasi"
-  invalidCommandMsg = "Tidak ada di Wikidata"
+  invalidCommandMsgWikidata = "Tidak ada di Wikidata"
+  invalidCommandMsgWiktionary = "Tidak ada di Wiktionary"
+
   baseAutosuggestions = ["aku", "saya", "itu"]
   numericAutosuggestions = ["adalah", "untuk", "dan"]
   verbsAfterPronounsArray = ["sudah", "sedang", "bisa"]

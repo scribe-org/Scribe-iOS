@@ -49,7 +49,8 @@ var commandPromptSpacing = ""
 var inputWordIsCapitalized = false
 var wordToReturn = ""
 var potentialWordsToReturn = [String]()
-var invalidCommandMsg = ""
+var invalidCommandMsgWikidata = ""
+var invalidCommandMsgWiktionary = ""
 
 // Annotation variables.
 var annotationState = false

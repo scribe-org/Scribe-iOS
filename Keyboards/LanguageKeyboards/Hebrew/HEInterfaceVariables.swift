@@ -177,7 +177,9 @@ func setHEKeyboardLayout() {
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "רווח"
   language = "עברית"
-  invalidCommandMsg = "אין מידע"
+  invalidCommandMsgWikidata = "אין מידע"
+  invalidCommandMsgWiktionary = "אין מידע"
+
   baseAutosuggestions = ["אתמ", "אני", "היי"]
   numericAutosuggestions = ["", "", ""]
 
