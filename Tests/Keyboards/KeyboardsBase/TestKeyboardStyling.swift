@@ -31,18 +31,32 @@ class KeyboardStylingTest: XCTestCase {
     XCTAssertEqual(button.layer.shadowRadius, 0.0)
   }
 
-  func testStyleBtnWithInvalidCommandMsg() {
-    let button = UIButton(type: .system)
-    let title = "Not in Wikidata"
-    let radius = 4.0
+  func testStyleBtnWithWikidataInvalidCommandMsg() {
+      let button = UIButton(type: .system)
+      let title = "Not in Wikidata"
+      let radius = 4.0
 
-    invalidCommandMsg = "Not in Wikidata"
-    styleBtn(btn: button, title: title, radius: radius)
+      invalidCommandMsgWikidata = "Not in Wikidata"
+      styleBtn(btn: button, title: title, radius: radius)
 
-    XCTAssertEqual(button.configuration?.baseForegroundColor, UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor)
-    XCTAssertEqual(button.configuration?.image, UIImage(systemName: "info.circle.fill"))
-    XCTAssertEqual(button.configuration?.imagePlacement, .trailing)
-    XCTAssertEqual(button.configuration?.imagePadding, 3)
+      XCTAssertEqual(button.configuration?.baseForegroundColor, UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor)
+      XCTAssertEqual(button.configuration?.image, UIImage(systemName: "info.circle.fill"))
+      XCTAssertEqual(button.configuration?.imagePlacement, .trailing)
+      XCTAssertEqual(button.configuration?.imagePadding, 3)
+  }
+
+  func testStyleBtnWithWiktionaryInvalidCommandMsg() {
+      let button = UIButton(type: .system)
+      let title = "Not in Wiktionary"
+      let radius = 4.0
+
+      invalidCommandMsgWiktionary = "Not in Wiktionary"
+      styleBtn(btn: button, title: title, radius: radius)
+
+      XCTAssertEqual(button.configuration?.baseForegroundColor, UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor)
+      XCTAssertEqual(button.configuration?.image, UIImage(systemName: "info.circle.fill"))
+      XCTAssertEqual(button.configuration?.imagePlacement, .trailing)
+      XCTAssertEqual(button.configuration?.imagePadding, 3)
   }
 
   func testStyleBtnWitheScribeTitle() {
