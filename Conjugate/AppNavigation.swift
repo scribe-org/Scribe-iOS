@@ -1,3 +1,5 @@
+import SwiftUI
+
 struct AppNavigation<Content: View>: View {
     let content: () -> Content
     
