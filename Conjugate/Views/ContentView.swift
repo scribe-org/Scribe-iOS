@@ -9,12 +9,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Conjugate", systemImage: "character.book.closed")
                 }
-            
+
             SettingsTab()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
-            
+
             AboutTab()
                 .tabItem {
                     Label("About", systemImage: "info.circle")
