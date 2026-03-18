@@ -1841,7 +1841,7 @@ class KeyboardViewController: UIInputViewController {
         autoCapAtStartOfProxy()
 
         if commandState == .invalid {
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
           commandBar.isShowingInfoButton = true
         } else {
           commandBar.isShowingInfoButton = false
@@ -1868,7 +1868,7 @@ class KeyboardViewController: UIInputViewController {
           loadKeys()
           proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
           return
@@ -1902,7 +1902,7 @@ class KeyboardViewController: UIInputViewController {
           loadKeys()
           proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
-          commandBar.text = commandPromptSpacing + invalidCommandMsg
+          commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
           return
@@ -1924,7 +1924,7 @@ class KeyboardViewController: UIInputViewController {
 
           if commandState == .invalid {
             proxy.insertText(selectedText)
-            commandBar.text = commandPromptSpacing + invalidCommandMsg
+            commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
             commandBar.isShowingInfoButton = true
           } else {
             commandBar.isShowingInfoButton = false
