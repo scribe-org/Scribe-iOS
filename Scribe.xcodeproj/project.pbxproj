@@ -749,7 +749,17 @@
 		EDC364732AE409000001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
 		EDC364742AE409000001E456 /* InterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC364682AE408F20001E456 /* InterfaceConstants.swift */; };
 		EDEE62252B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */; };
+<<<<<<< Updated upstream
 		F740686D2F1FB28E00E8560B /* ConjugateAppScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F740686B2F1FB28E00E8560B /* ConjugateAppScreen.storyboard */; };
+=======
+		F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CADD2F6A72BC00A8C950 /* ConjugateApp.swift */; };
+		F725CAE02F6A72D300A8C950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CADF2F6A72D300A8C950 /* ContentView.swift */; };
+		F725CAE52F6A782900A8C950 /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE42F6A782500A8C950 /* ConjugateTab.swift */; };
+		F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE62F6A782D00A8C950 /* SettingsTab.swift */; };
+		F725CAE92F6A783A00A8C950 /* AboutTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE82F6A783700A8C950 /* AboutTab.swift */; };
+		F725CAEB2F6A78CA00A8C950 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAEA2F6A78CA00A8C950 /* AppNavigation.swift */; };
+		F786BAD32F1E8F70003F7505 /* RUCommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171940F27AECCF50038660B /* RUCommandVariables.swift */; };
+>>>>>>> Stashed changes
 		F786BAD42F1E8F70003F7505 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
 		F786BAD52F1E8F70003F7505 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F786BAD62F1E8F70003F7505 /* AppTextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193BF27AEA33A0038660B /* AppTextStyling.swift */; };
@@ -782,7 +792,11 @@
 		F786BAF62F1E8F70003F7505 /* UIColor+ScribeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */; };
 		F786BAF72F1E8F70003F7505 /* SVInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17193EF27AECB350038660B /* SVInterfaceVariables.swift */; };
 		F786BAF92F1E8F70003F7505 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
+<<<<<<< Updated upstream
 		F786BAFB2F1E8F70003F7505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD213322D5907F00C6795D /* AppDelegate.swift */; };
+=======
+		F786BAFA2F1E8F70003F7505 /* HECommandVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDED7E2A85A05C00098546 /* HECommandVariables.swift */; };
+>>>>>>> Stashed changes
 		F786BAFC2F1E8F70003F7505 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		F786BAFD2F1E8F70003F7505 /* ToolTipViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045396E293B9DF2003AE55B /* ToolTipViewTheme.swift */; };
 		F786BAFE2F1E8F70003F7505 /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */; };
@@ -1202,7 +1216,12 @@
 		EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		EDC364682AE408F20001E456 /* InterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceConstants.swift; sourceTree = "<group>"; };
 		EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
-		F740686C2F1FB28E00E8560B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ConjugateAppScreen.storyboard; sourceTree = "<group>"; };
+		F725CADD2F6A72BC00A8C950 /* ConjugateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateApp.swift; sourceTree = "<group>"; };
+		F725CADF2F6A72D300A8C950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F725CAE42F6A782500A8C950 /* ConjugateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateTab.swift; sourceTree = "<group>"; };
+		F725CAE62F6A782D00A8C950 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
+		F725CAE82F6A783700A8C950 /* AboutTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTab.swift; sourceTree = "<group>"; };
+		F725CAEA2F6A78CA00A8C950 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		F786BB3F2F1E8F70003F7505 /* Conjugate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conjugate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F786BB422F1E8F70003F7505 /* ConjugateApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ConjugateApp-Info.plist"; path = "/Users/gauthammohanraj/Developer/Scribe-iOS/ConjugateApp-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -2204,10 +2223,63 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F725CAE12F6A77E300A8C950 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAE32F6A781F00A8C950 /* Tabs */,
+				F725CADF2F6A72D300A8C950 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F725CAE32F6A781F00A8C950 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAED2F6A79DC00A8C950 /* About */,
+				F725CAEE2F6A79E600A8C950 /* Settings */,
+				F725CAEF2F6A79EF00A8C950 /* Conjugate */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		F725CAED2F6A79DC00A8C950 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAE82F6A783700A8C950 /* AboutTab.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		F725CAEE2F6A79E600A8C950 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAE62F6A782D00A8C950 /* SettingsTab.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F725CAEF2F6A79EF00A8C950 /* Conjugate */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAE42F6A782500A8C950 /* ConjugateTab.swift */,
+			);
+			path = Conjugate;
+			sourceTree = "<group>";
+		};
+		F725CAF02F6A79FF00A8C950 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F725CAEA2F6A78CA00A8C950 /* AppNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F75BB4282F1FA72200C90392 /* Conjugate */ = {
 			isa = PBXGroup;
 			children = (
-				F740686B2F1FB28E00E8560B /* ConjugateAppScreen.storyboard */,
+				F725CAF02F6A79FF00A8C950 /* Navigation */,
+				F725CAE12F6A77E300A8C950 /* Views */,
+				F725CADD2F6A72BC00A8C950 /* ConjugateApp.swift */,
 			);
 			path = Conjugate;
 			sourceTree = "<group>";
@@ -2862,7 +2934,6 @@
 				F786BB2A2F1E8F70003F7505 /* Settings.bundle in Resources */,
 				F786BB2B2F1E8F70003F7505 /* LaunchScreen.storyboard in Resources */,
 				F786BB2C2F1E8F70003F7505 /* RadioTableViewCell.xib in Resources */,
-				F740686D2F1FB28E00E8560B /* ConjugateAppScreen.storyboard in Resources */,
 				F786BB2D2F1E8F70003F7505 /* InfoChildTableViewCell.xib in Resources */,
 				F786BB2E2F1E8F70003F7505 /* AboutTableViewCell.xib in Resources */,
 				F786BB2F2F1E8F70003F7505 /* Localizable.xcstrings in Resources */,
@@ -3666,12 +3737,22 @@
 				F786BADC2F1E8F70003F7505 /* IDInterfaceVariables.swift in Sources */,
 				F786BADE2F1E8F70003F7505 /* ToolTipViewDatasource.swift in Sources */,
 				F786BADF2F1E8F70003F7505 /* Translate.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				F786BAE02F1E8F70003F7505 /* ESCommandVariables.swift in Sources */,
+				F786BAE12F1E8F70003F7505 /* DECommandVariables.swift in Sources */,
+				F786BAE22F1E8F70003F7505 /* FRCommandVariables.swift in Sources */,
+				F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */,
+>>>>>>> Stashed changes
 				F786BAE32F1E8F70003F7505 /* ScribeKey.swift in Sources */,
+				F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */,
 				F786BAE42F1E8F70003F7505 /* AppExtensions.swift in Sources */,
 				F786BAE62F1E8F70003F7505 /* FR-AZERTYInterfaceVariables.swift in Sources */,
+				F725CAE92F6A783A00A8C950 /* AboutTab.swift in Sources */,
 				F786BAE72F1E8F70003F7505 /* ENInterfaceVariables.swift in Sources */,
 				F786BAE82F1E8F70003F7505 /* InstallationVC.swift in Sources */,
 				F786BAE92F1E8F70003F7505 /* DEInterfaceVariables.swift in Sources */,
+				F725CAEB2F6A78CA00A8C950 /* AppNavigation.swift in Sources */,
 				F786BAEA2F1E8F70003F7505 /* SettingsTableData.swift in Sources */,
 				F786BAEB2F1E8F70003F7505 /* InformationScreenVC.swift in Sources */,
 				F786BAEC2F1E8F70003F7505 /* InfoChildTableViewCell.swift in Sources */,
@@ -3687,7 +3768,11 @@
 				F786BAF62F1E8F70003F7505 /* UIColor+ScribeColors.swift in Sources */,
 				F786BAF72F1E8F70003F7505 /* SVInterfaceVariables.swift in Sources */,
 				F786BAF92F1E8F70003F7505 /* TableViewTemplateViewController.swift in Sources */,
+<<<<<<< Updated upstream
 				F786BAFB2F1E8F70003F7505 /* AppDelegate.swift in Sources */,
+=======
+				F786BAFA2F1E8F70003F7505 /* HECommandVariables.swift in Sources */,
+>>>>>>> Stashed changes
 				F786BAFC2F1E8F70003F7505 /* ToolTipView.swift in Sources */,
 				F786BAFD2F1E8F70003F7505 /* ToolTipViewTheme.swift in Sources */,
 				F786BAFE2F1E8F70003F7505 /* RadioTableViewCell.swift in Sources */,
@@ -3712,10 +3797,12 @@
 				F786BB122F1E8F70003F7505 /* ViewThemeable.swift in Sources */,
 				F786BB132F1E8F70003F7505 /* ColorVariables.swift in Sources */,
 				F786BB142F1E8F70003F7505 /* SelectionViewTemplateViewController.swift in Sources */,
+				F725CAE02F6A72D300A8C950 /* ContentView.swift in Sources */,
 				F786BB152F1E8F70003F7505 /* AboutTableViewCell.swift in Sources */,
 				F786BB162F1E8F70003F7505 /* InstallScreen.swift in Sources */,
 				F786BB182F1E8F70003F7505 /* KeyboardKeys.swift in Sources */,
 				F786BB192F1E8F70003F7505 /* ParentTableCellModel.swift in Sources */,
+				F725CAE52F6A782900A8C950 /* ConjugateTab.swift in Sources */,
 				F786BB1A2F1E8F70003F7505 /* WrapperCell.swift in Sources */,
 				F786BB1B2F1E8F70003F7505 /* WikimediaAndScribe.swift in Sources */,
 				F786BB1C2F1E8F70003F7505 /* ToolTipViewDatasourceable.swift in Sources */,
@@ -3874,14 +3961,6 @@
 				38BD214022D5908100C6795D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F740686B2F1FB28E00E8560B /* ConjugateAppScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F740686C2F1FB28E00E8560B /* Base */,
-			);
-			name = ConjugateAppScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
