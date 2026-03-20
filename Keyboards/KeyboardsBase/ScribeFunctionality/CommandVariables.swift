@@ -49,15 +49,16 @@ var commandPromptSpacing = ""
 var inputWordIsCapitalized = false
 var wordToReturn = ""
 var potentialWordsToReturn = [String]()
-var invalidCommandMsg = ""
-var invalidWikidataMsg_1 = ""
-var invalidWikidataMsg_2 = ""
-var invalidWikidataMsg_3 = ""
 
-var invalidTranslationMsg = ""
-var invalidWiktionaryMsg_1 = ""
-var invalidWiktionaryMsg_2 = ""
-var invalidWiktionaryMsg_3 = ""
+var invalidCommandMsgWikidata = ""
+var invalidCommandTextWikidata1 = ""
+var invalidCommandTextWikidata2 = ""
+var invalidCommandTextWikidata3 = ""
+
+var invalidCommandMsgWiktionary = ""
+var invalidCommandTextWiktionary1 = ""
+var invalidCommandTextWiktionary2 = ""
+var invalidCommandTextWiktionary3 = ""
 
 // Annotation variables.
 var annotationState = false

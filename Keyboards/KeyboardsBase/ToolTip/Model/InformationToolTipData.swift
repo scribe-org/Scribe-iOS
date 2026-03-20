@@ -9,7 +9,7 @@ import UIKit
 
 enum InformationToolTipData {
   static let wikiDataExplanation = NSMutableAttributedString(
-    string: invalidWikidataMsg_1,
+    string: invalidCommandTextWikidata1,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
@@ -18,46 +18,19 @@ enum InformationToolTipData {
   )
 
   static let wikiDataContationOrigin = NSMutableAttributedString(
-    string: invalidWikidataMsg_2,
+    string: invalidCommandTextWikidata2,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
       )
     ]
   )
-
   static let howToContribute = NSMutableAttributedString(
-    string: invalidWikidataMsg_3,
-    attributes: [
-      NSAttributedString.Key.font: UIFont.systemFont(
-        ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75
-      )
-    ]
-  )
-
-  static let wiktionaryExplanation = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_1,
-    attributes: [
-      NSAttributedString.Key.font: UIFont.systemFont(
-      ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-        )
-    ]
-  )
-
-  static let wiktionaryTranslationOrigin = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_2,
-    attributes: [
-      NSAttributedString.Key.font: UIFont.systemFont(
-        ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
-      )
-    ]
-  )
-
-  static let howToContributeWiktionary = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_3,
+    string: invalidCommandTextWikidata3,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
       ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75
+        ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
       )
     ]
   )

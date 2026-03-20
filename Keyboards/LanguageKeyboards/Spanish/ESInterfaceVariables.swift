@@ -257,15 +257,16 @@ func setESKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espacio"
   language = "Español"
-  invalidCommandMsg = "No en Wikidata"
-  invalidWikidataMsg_1 = "Wikidata es un gráfico de conocimiento editado de forma colaborativa y mantenido por la Fundación Wikimedia. Sirve como fuente de datos abiertos para proyectos como Wikipedia y muchos otros."
-  invalidWikidataMsg_2 = "Scribe utiliza los datos lingüísticos de Wikidata para muchas de sus funciones principales. ¡Obtenemos información como géneros de sustantivos, conjugaciones de verbos y mucho más!"
-  invalidWikidataMsg_3 = "Puedes crear una cuenta en wikidata.org para unirte a la comunidad que apoya a Scribe y a muchos otros proyectos. ¡Ayúdanos a llevar información gratuita al mundo!"
 
-  invalidTranslationMsg = "No en Wiktionary"
-  invalidWiktionaryMsg_1 = "Wiktionary es un diccionario editado de forma colaborativa en cientos de idiomas diferentes y mantenido por la Fundación Wikimedia."
-  invalidWiktionaryMsg_2 = "¡Scribe utiliza las traducciones de Wiktionary para su función de traducción! Puedes elegir entre varias traducciones por palabra en función del significado específico."
-  invalidWiktionaryMsg_3 = "Puedes crear una cuenta en wiktionary.org para unirte a la comunidad que apoya a Scribe y a tantos otros proyectos. ¡Ayúdanos a llevar información gratuita al mundo!"
+  invalidCommandMsgWikidata = "No en Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata es un gráfico de conocimiento editado de forma colaborativa y mantenido por la Fundación Wikimedia. Sirve como fuente de datos abiertos para proyectos como Wikipedia y muchos otros."
+  invalidCommandTextWikidata2 = "Scribe utiliza los datos lingüísticos de Wikidata para muchas de sus funciones principales. ¡Obtenemos información como géneros de sustantivos, conjugaciones de verbos y mucho más!"
+  invalidCommandTextWikidata3 = "Puedes crear una cuenta en wikidata.org para unirte a la comunidad que apoya a Scribe y a muchos otros proyectos. ¡Ayúdanos a llevar información gratuita al mundo!"
+
+  invalidCommandMsgWiktionary = "No en Wiktionary"
+  invalidCommandTextWiktionary1 = "Wikcionario es un diccionario editado de forma colaborativa y mantenido por la Fundación Wikimedia. Sirve como fuente de datos lingüísticos gratuitos para proyectos como Wikipedia y muchos otros."
+  invalidCommandTextWiktionary2 = "Scribe utiliza los datos de Wikcionario para proporcionar traducciones para su comando Traducir. ¡Nuestros datos provienen de los numerosos pares de idiomas que la comunidad de Wikcionario ha creado!"
+  invalidCommandTextWiktionary3 = "Puedes crear una cuenta en wiktionary.org para unirte a la comunidad que apoya a Scribe y a muchos otros proyectos. ¡Ayúdanos a llevar información gratuita al mundo!"
 
   baseAutosuggestions = ["el", "la", "no"]
   numericAutosuggestions = ["que", "de", "en"]

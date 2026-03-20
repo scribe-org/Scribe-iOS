@@ -192,15 +192,15 @@ func setIDKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "spasi"
 
-  invalidCommandMsg = "Tidak ada di Wikidata"
-  invalidWikidataMsg_1 = "Wikidata adalah grafik pengetahuan yang diedit secara kolaboratif dan dikelola oleh Wikimedia Foundation. Wikidata berfungsi sebagai sumber data terbuka untuk proyek-proyek seperti Wikipedia dan banyak proyek lainnya."
-  invalidWikidataMsg_2 = "Scribe menggunakan data bahasa dari Wikidata untuk banyak fitur intinya. Kami mendapatkan informasi seperti jenis kelamin kata benda, konjugasi kata kerja, dan banyak lagi!"
-  invalidWikidataMsg_3 = "Anda dapat membuat akun di wikidata.org untuk bergabung dengan komunitas yang mendukung Scribe dan banyak proyek lainnya. Bantu kami menyebarkan informasi gratis ke seluruh dunia!"
+  invalidCommandMsgWikidata = "Tidak ada di Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata adalah knowledge graph yang diedit secara kolaboratif dan dikelola oleh Wikimedia Foundation. Wikidata berfungsi sebagai sumber data terbuka untuk proyek-proyek seperti Wikipedia dan banyak proyek lainnya."
+  invalidCommandTextWikidata2 = "Scribe menggunakan data bahasa Wikidata untuk banyak fitur intinya. Kami mendapatkan informasi seperti jenis kelamin kata benda, konjugasi kata kerja, dan banyak lagi!"
+  invalidCommandTextWikidata3 = "Anda dapat membuat akun di wikidata.org untuk bergabung dengan komunitas yang mendukung Scribe dan banyak proyek lainnya. Bantu kami menghadirkan informasi gratis ke dunia!"
 
-  invalidTranslationMsg = "Tidak ada di Wiktionary"
-  invalidWiktionaryMsg_1 = "Wiktionary adalah kamus yang diedit secara kolaboratif dalam ratusan bahasa berbeda yang dikelola oleh Wikimedia Foundation."
-  invalidWiktionaryMsg_2 = "Scribe menggunakan terjemahan Wiktionary untuk fungsi terjemahan kami! Anda dapat memilih dari beberapa terjemahan per kata berdasarkan makna spesifiknya."
-  invalidWiktionaryMsg_3 = "Anda dapat membuat akun di wiktionary.org untuk bergabung dengan komunitas yang mendukung Scribe dan banyak proyek lainnya. Bantu kami menghadirkan informasi gratis ke seluruh dunia!"
+  invalidCommandMsgWiktionary = "Tidak ada di Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary adalah kamus yang diedit secara kolaboratif dan dikelola oleh Wikimedia Foundation. Wiktionary berfungsi sebagai sumber data linguistik gratis untuk proyek-proyek seperti Wikipedia dan banyak proyek lainnya."
+  invalidCommandTextWiktionary2 = "Scribe menggunakan data Wiktionary untuk menyediakan terjemahan untuk perintah Terjemahannya. Data kami berasal dari banyak pasangan bahasa yang telah dibuat oleh komunitas Wiktionary!"
+  invalidCommandTextWiktionary3 = "Anda dapat membuat akun di wiktionary.org untuk bergabung dengan komunitas yang mendukung Scribe dan banyak proyek lainnya. Bantu kami menghadirkan informasi gratis ke dunia!"
 
   baseAutosuggestions = ["aku", "saya", "itu"]
   numericAutosuggestions = ["adalah", "untuk", "dan"]

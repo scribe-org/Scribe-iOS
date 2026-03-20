@@ -205,15 +205,15 @@ func setFRKeyboardLayout() {
   spaceBar = "espace"
   language = "Français"
 
-  invalidCommandMsg = "Pas dans Wikidata"
-  invalidWikidataMsg_1 = "Wikidata est un réseau de connaissances collaboratif géré par la fondation Wikimedia. Il sert de source de données ouvertes pour des projets tels que Wikipédia et bien d'autres."
-  invalidWikidataMsg_2 = "Scribe utilise les données linguistiques de Wikidata pour un grand nombre de ses fonctionnalités de base. Nous obtenons des informations telles que le genre des noms, la conjugaison des verbes et bien plus encore !"
-  invalidWikidataMsg_3 = "Vous pouvez créer un compte sur wikidata.org pour rejoindre la communauté qui soutient Scribe et bien d'autres projets. Contribuez à la diffusion d'informations gratuites dans le monde entier !"
+  invalidCommandMsgWikidata = "Pas dans Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata est un réseau de connaissances collaboratif géré par la fondation Wikimedia. Il sert de source de données ouvertes pour des projets tels que Wikipédia et bien d'autres."
+  invalidCommandTextWikidata2 = "Scribe utilise les données linguistiques de Wikidata pour un grand nombre de ses fonctionnalités de base. Nous obtenons des informations telles que le genre des noms, la conjugaison des verbes et bien plus encore !"
+  invalidCommandTextWikidata3 = "Vous pouvez créer un compte sur wikidata.org pour rejoindre la communauté qui soutient Scribe et bien d'autres projets. Contribuez à la diffusion d'informations gratuites dans le monde entier !"
 
-  invalidTranslationMsg = "Pas dans Wiktionary"
-  invalidWiktionaryMsg_1 = "Wiktionnaire est un dictionnaire collaboratif disponible dans des centaines de langues différentes, géré par la Fondation Wikimedia."
-  invalidWiktionaryMsg_2 = "Scribe utilise les traductions de Wiktionnaire pour sa fonctionnalité de traduction ! Vous pouvez choisir parmi plusieurs traductions par mot en fonction de la signification spécifique."
-  invalidWiktionaryMsg_3 = "Vous pouvez créer un compte sur wiktionary.org pour rejoindre la communauté qui soutient Scribe et tant d'autres projets. Aidez-nous à diffuser des informations libres dans le monde entier !"
+  invalidCommandMsgWiktionary = "Pas dans Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary est un dictionnaire collaboratif maintenu par la Fondation Wikimedia. Il sert de source de données linguistiques libres pour des projets comme Wikipédia et bien d'autres."
+  invalidCommandTextWiktionary2 = "Scribe utilise les données de Wiktionary pour fournir des traductions à sa commande « Traduire ». Nos données proviennent des nombreuses paires de langues créées par la communauté de Wiktionary !"
+  invalidCommandTextWiktionary3 = "Vous pouvez créer un compte sur wiktionary.org pour rejoindre la communauté qui soutient Scribe et de nombreux autres projets. Aidez-nous à diffuser l'information libre dans le monde entier !"
 
   baseAutosuggestions = ["je", "il", "le"]
   numericAutosuggestions = ["je", "que", "c’est"]

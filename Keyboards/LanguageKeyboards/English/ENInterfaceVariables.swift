@@ -208,15 +208,15 @@ func setENKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
 
-  invalidCommandMsg = "Not in Wikidata"
-  invalidWikidataMsg_1 = "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others."
-  invalidWikidataMsg_2 = "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!"
-  invalidWikidataMsg_3 = "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
+  invalidCommandMsgWikidata = "Not in Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others."
+  invalidCommandTextWikidata2 = "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!"
+  invalidCommandTextWikidata3 = "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
 
-  invalidTranslationMsg = "Not in Wiktionary"
-  invalidWiktionaryMsg_1 = "Wiktionary is a collaboratively edited dictionary in hundreds of different languages that's maintained by Wikimedia Foundation."
-  invalidWiktionaryMsg_2 = "Scribe uses Wiktionary's translations for our translation functionality! You can choose from multiple translations per word based on the specific meaning."
-  invalidWiktionaryMsg_3 = "You can make an account at wiktionary.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
+  invalidCommandMsgWiktionary = "Not in Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary is a collaboratively edited dictionary that's maintained by the Wikimedia Foundation. It serves as a source of free linguistic data for projects like Wikipedia and countless others."
+  invalidCommandTextWiktionary2 = "Scribe uses Wiktionary's data to provide translations for its Translate command. Our data is derived from the many language pairs that Wiktionary's community has created!"
+  invalidCommandTextWiktionary3 = "You can make an account at wiktionary.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
 
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]

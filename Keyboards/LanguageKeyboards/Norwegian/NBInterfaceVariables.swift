@@ -209,15 +209,15 @@ func setNBKeyboardLayout() {
   spaceBar = "mellomrom"
   language = "Norsk"
 
-  invalidCommandMsg = "Ikke i Wikidata"
-  invalidWikidataMsg_1 = "Wikidata er en kunnskapsbase som redigeres i fellesskap og vedlikeholdes av Wikimedia Foundation. Den fungerer som en kilde til åpne data for prosjekter som Wikipedia og utallige andre."
-  invalidWikidataMsg_2 = "Scribe bruker Wikidatas språkdata til mange av sine kjernefunksjoner. Vi får informasjon som substantivkjønn, verbkonjugasjoner og mye mer!"
-  invalidWikidataMsg_3 = "Du kan opprette en konto på wikidata.org for å bli med i fellesskapet som støtter Scribe og så mange andre prosjekter. Hjelp oss med å bringe gratis informasjon til verden!"
+  invalidCommandMsgWikidata = "Ikke i Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata er en samarbeidsredigert kunnskapsgraf som vedlikeholdes av Wikimedia Foundation. Den fungerer som en kilde til åpne data for prosjekter som Wikipedia og utallige andre."
+  invalidCommandTextWikidata2 = "Scribe bruker Wikidatas språkdata for mange av kjernefunksjonene. Vi får informasjon som substantivkjønn, verbkonjugasjoner og mye mer!"
+  invalidCommandTextWikidata3 = "Du kan opprette en konto på wikidata.org for å bli med i fellesskapet som støtter Scribe og mange andre prosjekter. Hjelp oss å bringe gratis informasjon til verden!"
 
-  invalidTranslationMsg = "Ikke i Wiktionary"
-  invalidWiktionaryMsg_1 = "Wiktionary er en samarbeidsredigert ordbok på hundrevis av forskjellige språk som vedlikeholdes av Wikimedia Foundation."
-  invalidWiktionaryMsg_2 = "Scribe bruker Wiktionarys oversettelser til vår oversettelsesfunksjon! Du kan velge mellom flere oversettelser per ord basert på den spesifikke betydningen."
-  invalidWiktionaryMsg_3 = "Du kan opprette en konto på wiktionary.org for å bli med i fellesskapet som støtter Scribe og så mange andre prosjekter. Hjelp oss med å bringe gratis informasjon til verden!"
+  invalidCommandMsgWiktionary = "Ikke i Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary er en samarbeidsredigert ordbok som vedlikeholdes av Wikimedia Foundation. Den fungerer som en kilde til gratis språkdata for prosjekter som Wikipedia og utallige andre."
+  invalidCommandTextWiktionary2 = "Scribe bruker Wiktionarys data for å tilby oversettelser for sin Oversett-kommando. Dataene våre er hentet fra de mange språkparene som Wiktionarys fellesskap har laget!"
+  invalidCommandTextWiktionary3 = "Du kan opprette en konto på wiktionary.org for å bli med i fellesskapet som støtter Scribe og mange andre prosjekter. Hjelp oss å bringe gratis informasjon til verden!"
 
   baseAutosuggestions = ["jeg", "det", "er"]
   numericAutosuggestions = ["prosent", "millioner", "meter"]
