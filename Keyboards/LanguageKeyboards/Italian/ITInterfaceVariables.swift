@@ -204,7 +204,17 @@ func setITKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "spazio"
   language = "Italiano"
-  invalidCommandMsg = "Non in Wikidata"
+
+  invalidCommandMsgWikidata = "Non in Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata è un grafo della conoscenza modificabile in modo collaborativo, gestito dalla Wikimedia Foundation. Serve come fonte di dati aperti per progetti come Wikipedia e innumerevoli altri."
+  invalidCommandTextWikidata2 = "Scribe utilizza i dati linguistici di Wikidata per molte delle sue funzionalità principali. Otteniamo informazioni come il genere dei sostantivi, la coniugazione dei verbi e molto altro!"
+  invalidCommandTextWikidata3 = "Puoi creare un account su wikidata.org per unirti alla comunità che supporta Scribe e tanti altri progetti. Aiutaci a diffondere informazioni libere in tutto il mondo!"
+
+  invalidCommandMsgWiktionary = "Non in Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary è un dizionario modificato in modo collaborativo e gestito dalla Wikimedia Foundation. Serve come fonte di dati linguistici liberi per progetti come Wikipedia e innumerevoli altri."
+  invalidCommandTextWiktionary2 = "Scribe utilizza i dati di Wiktionary per fornire traduzioni per il suo comando Traduci. I nostri dati derivano dalle numerose coppie linguistiche create dalla community di Wiktionary!"
+  invalidCommandTextWiktionary3 = "Puoi creare un account su wiktionary.org per unirti alla community che supporta Scribe e tanti altri progetti. Aiutaci a diffondere informazioni libere in tutto il mondo!"
+
   baseAutosuggestions = ["ho", "non", "ma"]
   numericAutosuggestions = ["utenti", "anni", "e"]
 

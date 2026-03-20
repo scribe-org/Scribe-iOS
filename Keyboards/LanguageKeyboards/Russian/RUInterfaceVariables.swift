@@ -192,7 +192,17 @@ func setRUKeyboardLayout() {
   currencySymbolAlternates = roubleAlternateKeys
   spaceBar = "Пробел"
   language = "Pусский"
-  invalidCommandMsg = "Нет в Викиданных"
+
+  invalidCommandMsgWikidata = "Нет в Викиданных"
+  invalidCommandTextWikidata1 = "Wikidata — это совместно редактируемый граф знаний, поддерживаемый Фондом Викимедиа. Он служит источником открытых данных для таких проектов, как Википедия и бесчисленное множество других."
+  invalidCommandTextWikidata2 = "Scribe использует языковые данные Wikidata для многих своих основных функций. Мы получаем информацию о родах существительных, спряжениях глаголов и многом другом!"
+  invalidCommandTextWikidata3 = "Вы можете создать учетную запись на wikidata.org, чтобы присоединиться к сообществу, поддерживающему Scribe и многие другие проекты. Помогите нам предоставлять бесплатную информацию миру!"
+
+  invalidCommandMsgWiktionary = "Нет в Викисловаре"
+  invalidCommandTextWiktionary1 = "Wiktionary — это совместно редактируемый словарь, поддерживаемый Фондом Викимедиа. Он служит источником бесплатных лингвистических данных для таких проектов, как Википедия и бесчисленное множество других."
+  invalidCommandTextWiktionary2 = "Scribe использует данные Wiktionary для предоставления переводов для своей команды «Перевести». Наши данные получены из множества языковых пар, созданных сообществом Wiktionary!"
+  invalidCommandTextWiktionary3 = "Вы можете создать учетную запись на wiktionary.org, чтобы присоединиться к сообществу, поддерживающему Scribe и многие другие проекты. Помогите нам донести бесплатную информацию до всего мира!"
+
   baseAutosuggestions = ["я", "а", "в"]
   numericAutosuggestions = ["в", "и", "я"]
 
