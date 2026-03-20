@@ -49,8 +49,16 @@ var commandPromptSpacing = ""
 var inputWordIsCapitalized = false
 var wordToReturn = ""
 var potentialWordsToReturn = [String]()
+
 var invalidCommandMsgWikidata = ""
+var invalidCommandTextWikidata1 = ""
+var invalidCommandTextWikidata2 = ""
+var invalidCommandTextWikidata3 = ""
+
 var invalidCommandMsgWiktionary = ""
+var invalidCommandTextWiktionary1 = ""
+var invalidCommandTextWiktionary2 = ""
+var invalidCommandTextWiktionary3 = ""
 
 // Annotation variables.
 var annotationState = false
@@ -152,7 +160,7 @@ var formLabelsDict = [
   "BR": "",
   "Left": "",
   "Right": "",
-  "Single": ""
+  "Single": "",
 ]
 
 var verbToConjugate = ""
