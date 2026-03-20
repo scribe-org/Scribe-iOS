@@ -38,7 +38,7 @@ enum InformationToolTipData {
     [
       InformationToolTipData.wikiDataExplanation,
       InformationToolTipData.wikiDataContationOrigin,
-      InformationToolTipData.howToContribute,
+      InformationToolTipData.howToContribute
     ]
   }
 }
