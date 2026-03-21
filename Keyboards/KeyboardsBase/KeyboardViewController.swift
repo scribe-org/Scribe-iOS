@@ -1090,6 +1090,479 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
+  /// Sets up all buttons and labels for the conjugation view given constraints to determine the dimensions.
+  func setConjugationBtns() {
+    // Add swipe functionality to the conjugation and declension views.
+    guard controllerLanguage != "Indonesian" else { return }
+    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(shiftLeft))
+    keyboardView.addGestureRecognizer(swipeRight)
+    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(shiftRight))
+    swipeLeft.direction = .left
+    keyboardView.addGestureRecognizer(swipeLeft)
+
+    // Set the conjugation view to 2x2 for Swedish and Russian past tense.
+    if controllerLanguage == "Swedish" {
+      formsDisplayDimensions = .view2x2
+    } else if controllerLanguage == "Russian" && ruConjugationState == .past {
+      formsDisplayDimensions = .view2x2
+    } else if
+      commandState == .selectCaseDeclension
+      && controllerLanguage == "German"
+      && deCaseVariantDeclensionState != .disabled {
+      switch deCaseVariantDeclensionState {
+      case .disabled:
+        break
+      case .accusativePersonalSPS, .dativePersonalSPS, .genitivePersonalSPS,
+          .accusativePossessiveSPS, .dativePossessiveSPS, .genitivePossessiveSPS:
+        formsDisplayDimensions = .view1x2
+      case .accusativePersonalTPS, .dativePersonalTPS, .genitivePersonalTPS,
+          .accusativePossessiveTPS, .dativePossessiveTPS, .genitivePossessiveTPS:
+        formsDisplayDimensions = .view3x1
+      case .accusativePossessiveFPS, .accusativePossessiveSPSInformal, .accusativePossessiveSPSFormal,
+          .accusativePossessiveTPSMasculine, .accusativePossessiveTPSFeminine, .accusativePossessiveTPSNeutral,
+          .accusativePossessiveFPP, .accusativePossessiveSPP, .accusativePossessiveTPP,
+          .dativePossessiveFPS, .dativePossessiveSPSInformal, .dativePossessiveSPSFormal,
+          .dativePossessiveTPSMasculine, .dativePossessiveTPSFeminine, .dativePossessiveTPSNeutral,
+          .dativePossessiveFPP, .dativePossessiveSPP, .dativePossessiveTPP,
+          .genitivePossessiveFPS, .genitivePossessiveSPSInformal, .genitivePossessiveSPSFormal,
+          .genitivePossessiveTPSMasculine, .genitivePossessiveTPSFeminine, .genitivePossessiveTPSNeutral,
+          .genitivePossessiveFPP, .genitivePossessiveSPP, .genitivePossessiveTPP:
+        formsDisplayDimensions = .view2x2
+      }
+    } else if
+      commandState == .selectCaseDeclension
+      && controllerLanguage == "German"
+      && [
+        .accusativeDefinite, .accusativeIndefinite, .accusativeDemonstrative,
+        .dativeDefinite, .dativeIndefinite, .dativeDemonstrative,
+        .genitiveDefinite, .genitiveIndefinite, .genitiveDemonstrative
+      ].contains(deCaseDeclensionState) {
+      formsDisplayDimensions = .view2x2
+    } else if controllerLanguage == "English" {
+      switch enConjugationState {
+      case .present, .presCont, .past, .future, .conditional:
+        formsDisplayDimensions = .view2x2
+      case .presSimp, .presPerf, .presPerfCont:
+        formsDisplayDimensions = .view1x2
+      case .pastCont:
+        formsDisplayDimensions = .view3x1
+      }
+    } else if commandState == .displayInformation {
+      formsDisplayDimensions = .view1x1
+    } else if commandState == .selectNounGender {
+      // Noun gender selection UI
+      // Get the noun forms for the current word
+      let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+      let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+      let genderOptions = nounForm.components(separatedBy: "/")
+      // Choose grid size: 1x2 for 2, 2x2 for 3-4, 3x2 for more
+      if genderOptions.count == 2 {
+        formsDisplayDimensions = .view1x2
+        setFormDisplay1x2View()
+        // Set button titles
+        formKeyLeft.setTitle(genderOptions[0], for: .normal)
+        formKeyRight.setTitle(genderOptions[1], for: .normal)
+      } else if genderOptions.count <= 4 {
+        formsDisplayDimensions = .view2x2
+        setFormDisplay2x2View()
+        let btns = get2x2FormDisplayButtons()
+        for (i, btn) in btns.enumerated() {
+          if i < genderOptions.count {
+            btn.setTitle(genderOptions[i], for: .normal)
+            btn.isHidden = false
+          } else {
+            btn.setTitle("", for: .normal)
+            btn.isHidden = true
+          }
+        }
+      } else {
+        formsDisplayDimensions = .view3x2
+        setFormDisplay3x2View()
+        let btns = get3x2FormDisplayButtons()
+        for (i, btn) in btns.enumerated() {
+          if i < genderOptions.count {
+            btn.setTitle(genderOptions[i], for: .normal)
+            btn.isHidden = false
+          } else {
+            btn.setTitle("", for: .normal)
+            btn.isHidden = true
+          }
+        }
+      }
+      // Optionally, set a prompt in the command bar
+      commandBar.text = "Select the correct gender for this noun."
+    } else {
+      formsDisplayDimensions = .view3x2
+      setFormDisplay3x2View()
+    }
+
+    // The base conjugation view is 3x2 for first, second, and third person in singular and plural.
+    if commandState != .selectNounGender {
+      switch formsDisplayDimensions {
+      case .view3x2:
+        setFormDisplay3x2View()
+      case .view3x1:
+        setFormDisplay3x1View()
+      case .view2x2:
+        setFormDisplay2x2View()
+      case .view1x2:
+        setFormDisplay1x2View()
+      case .view1x1:
+        setFormDisplay1x1View()
+      }
+    }
+
+    // Setup the view shift buttons.
+    setBtn(
+      btn: shiftFormsDisplayLeft,
+      color: keyColor,
+      name: "shiftFormsDisplayLeft",
+      canBeCapitalized: false,
+      isSpecial: false
+    )
+    setBtn(
+      btn: shiftFormsDisplayRight,
+      color: keyColor,
+      name: "shiftFormsDisplayRight",
+      canBeCapitalized: false,
+      isSpecial: false
+    )
+
+    if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayLeft)
+    } else {
+      shiftFormsDisplayLeft.isUserInteractionEnabled = false
+    }
+    if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayRight)
+    } else {
+      shiftFormsDisplayRight.isUserInteractionEnabled = false
+    }
+
+    // Make all labels clear and set their font for if they will be used.
+    let allFormDisplayLabels: [UIButton] =
+      get3x2FormDisplayLabels()
+        + get3x1FormDisplayLabels()
+        + get2x2FormDisplayLabels()
+        + get1x2FormDisplayLabels()
+        + get1x1FormDisplayLabels()
+    for lbl in allFormDisplayLabels {
+      lbl.backgroundColor = UIColor.clear
+      lbl.setTitleColor(commandBarPlaceholderColor, for: .normal)
+      lbl.isUserInteractionEnabled = false
+      if DeviceType.isPad {
+        lbl.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
+      }
+    }
+  }
+
+  /// Activates all buttons that are associated with the conjugation display.
+  func activateConjugationDisplay() {
+    if [.bothActive, .rightInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayLeft)
+    } else {
+      shiftFormsDisplayLeft.isUserInteractionEnabled = false
+    }
+    if [.bothActive, .leftInactive].contains(conjViewShiftButtonsState) {
+      activateBtn(btn: shiftFormsDisplayRight)
+    } else {
+      shiftFormsDisplayRight.isUserInteractionEnabled = false
+    }
+
+    switch formsDisplayDimensions {
+    case .view3x2:
+      for btn in get3x2FormDisplayButtons() {
+        activateBtn(btn: btn)
+      }
+
+      for btn in get3x1FormDisplayButtons() + get2x2FormDisplayButtons() + get1x2FormDisplayButtons() {
+        deactivateBtn(btn: btn)
+      }
+    case .view3x1:
+      for btn in get3x1FormDisplayButtons() {
+        activateBtn(btn: btn)
+      }
+
+      for btn in get3x2FormDisplayButtons() + get2x2FormDisplayButtons() + get1x2FormDisplayButtons() {
+        deactivateBtn(btn: btn)
+      }
+    case .view2x2:
+      for btn in get2x2FormDisplayButtons() {
+        activateBtn(btn: btn)
+      }
+
+      if controllerLanguage == "German"
+        && [.accusativeIndefinite, .dativeIndefinite, .genitiveIndefinite].contains(deCaseDeclensionState) {
+        formKeyBR.isUserInteractionEnabled = false
+      }
+
+      for btn in get3x2FormDisplayButtons() + get3x1FormDisplayButtons() + get1x2FormDisplayButtons() {
+        deactivateBtn(btn: btn)
+      }
+    case .view1x2:
+      for btn in get1x2FormDisplayButtons() {
+        activateBtn(btn: btn)
+      }
+
+      for btn in get3x2FormDisplayButtons() + get3x1FormDisplayButtons() + get2x2FormDisplayButtons() {
+        deactivateBtn(btn: btn)
+      }
+    case .view1x1:
+      break
+    }
+  }
+
+  /// Deactivates all buttons that are associated with the conjugation display.
+  func deactivateConjugationDisplay(deactivateShiftForms: Bool) {
+    if deactivateShiftForms {
+      deactivateBtn(btn: shiftFormsDisplayLeft)
+      shiftFormsDisplayLeft.tintColor = UIColor.clear
+      deactivateBtn(btn: shiftFormsDisplayRight)
+      shiftFormsDisplayRight.tintColor = UIColor.clear
+    }
+
+    let allFormDisplayButtons: [UIButton] =
+      get3x2FormDisplayButtons()
+        + get3x1FormDisplayButtons()
+        + get2x2FormDisplayButtons()
+        + get1x2FormDisplayButtons()
+        + get1x1FormDisplayButtons()
+    let allFormDisplayLabels: [UIButton] =
+      get3x2FormDisplayLabels()
+        + get3x1FormDisplayLabels()
+        + get2x2FormDisplayLabels()
+        + get1x2FormDisplayLabels()
+        + get1x1FormDisplayLabels()
+    let allConjElements: [UIButton] = allFormDisplayButtons + allFormDisplayLabels
+
+    for elem in allConjElements {
+      deactivateBtn(btn: elem)
+    }
+
+    for lbl in allFormDisplayLabels {
+      lbl.setTitle("", for: .normal)
+    }
+  }
+
+  /// Assign the verb conjugations that will be selectable in the conjugation display.
+  func assignVerbConjStates() {
+    var conjugationStateFxn: () -> String = deGetConjugationState
+    if let conjugationFxn = keyboardConjStateDict[controllerLanguage] as? () -> String {
+      conjugationStateFxn = conjugationFxn
+    }
+
+    if !["English", "Russian", "Swedish"].contains(controllerLanguage) {
+      formFPS = conjugationStateFxn() + "FPS"
+      formSPS = conjugationStateFxn() + "SPS"
+      formTPS = conjugationStateFxn() + "TPS"
+      formFPP = conjugationStateFxn() + "FPP"
+      formSPP = conjugationStateFxn() + "SPP"
+      formTPP = conjugationStateFxn() + "TPP"
+    } else if controllerLanguage == "Russian" {
+      if formsDisplayDimensions == .view3x2 {
+        formFPS = ruGetConjugationState() + "FPS"
+        formSPS = ruGetConjugationState() + "SPS"
+        formTPS = ruGetConjugationState() + "TPS"
+        formFPP = ruGetConjugationState() + "FPP"
+        formSPP = ruGetConjugationState() + "SPP"
+        formTPP = ruGetConjugationState() + "TPP"
+      } else {
+        formTopLeft = "pastMasculine"
+        formTopRight = "pastFeminine"
+        formBottomLeft = "pastNeutral"
+        formBottomRight = "pastPlural"
+      }
+    } else if controllerLanguage == "Swedish" {
+      let svTenses = svGetConjugationState()
+
+      formTopLeft = svTenses[0]
+      formTopRight = svTenses[1]
+      formBottomLeft = svTenses[2]
+      formBottomRight = svTenses[3]
+    } else if controllerLanguage == "English" {
+      if formsDisplayDimensions == .view2x2 {
+        let enTenses = enGetConjugationState()
+
+        formTopLeft = enTenses[0]
+        formTopRight = enTenses[1]
+        formBottomLeft = enTenses[2]
+        formBottomRight = enTenses[3]
+      } else if formsDisplayDimensions == .view1x2 {
+        let enTenses = enGetConjugationState()
+
+        formLeft = enTenses[0]
+        formRight = enTenses[1]
+      } else if formsDisplayDimensions == .view3x1 {
+        formTop = "presPart"
+        formMiddle = "pastSimpCont"
+        formBottom = "pastSimpPluralCont"
+      }
+    }
+  }
+
+  /// Sets the label of the conjugation state and assigns the current tenses that are accessed to label the buttons.
+  func setVerbConjugationState() {
+    // Assign the conjugations that will be selectable.
+    assignVerbConjStates()
+
+    // Set the view title and its labels.
+    var conjugationTitleFxn: () -> String = deGetConjugationTitle
+    var conjugationLabelsFxn: () -> Void = deSetConjugationLabels
+    if let titleFxn = keyboardConjTitleDict[controllerLanguage] as? () -> String {
+      conjugationTitleFxn = titleFxn
+    }
+    if let labelsFxn = keyboardConjLabelDict[controllerLanguage] as? () -> Void {
+      conjugationLabelsFxn = labelsFxn
+    }
+
+    if !["Russian", "Swedish"].contains(controllerLanguage) {
+      commandBar.text = conjugationTitleFxn()
+      conjugationLabelsFxn()
+    } else if controllerLanguage == "Russian" {
+      commandBar.text = ruGetConjugationTitle()
+      ruSetConjugationLabels()
+    } else if controllerLanguage == "Swedish" {
+      commandBar.text = svGetConjugationTitle()
+      svSetConjugationLabels()
+    }
+
+    // Assign labels that have been set by SetConjugationLabels function.
+    formLblFPS.setTitle("  " + (formLabelsDict["FPS"] ?? ""), for: .normal)
+    formLblSPS.setTitle("  " + (formLabelsDict["SPS"] ?? ""), for: .normal)
+    formLblTPS.setTitle("  " + (formLabelsDict["TPS"] ?? ""), for: .normal)
+    formLblFPP.setTitle("  " + (formLabelsDict["FPP"] ?? ""), for: .normal)
+    formLblSPP.setTitle("  " + (formLabelsDict["SPP"] ?? ""), for: .normal)
+    formLblTPP.setTitle("  " + (formLabelsDict["TPP"] ?? ""), for: .normal)
+
+    formLblTop.setTitle("  " + (formLabelsDict["Top"] ?? ""), for: .normal)
+    formLblMiddle.setTitle("  " + (formLabelsDict["Middle"] ?? ""), for: .normal)
+    formLblBottom.setTitle("  " + (formLabelsDict["Bottom"] ?? ""), for: .normal)
+
+    formLblTL.setTitle("  " + (formLabelsDict["TL"] ?? ""), for: .normal)
+    formLblTR.setTitle("  " + (formLabelsDict["TR"] ?? ""), for: .normal)
+    formLblBL.setTitle("  " + (formLabelsDict["BL"] ?? ""), for: .normal)
+    formLblBR.setTitle("  " + (formLabelsDict["BR"] ?? ""), for: .normal)
+
+    formLblLeft.setTitle("  " + (formLabelsDict["Left"] ?? ""), for: .normal)
+    formLblRight.setTitle("  " + (formLabelsDict["Right"] ?? ""), for: .normal)
+
+    switch formsDisplayDimensions {
+    case .view3x2:
+      allConjugations = [formFPS, formSPS, formTPS, formFPP, formSPP, formTPP]
+      allConjugationBtns = get3x2FormDisplayButtons()
+    case .view3x1:
+      allConjugations = [formTop, formMiddle, formBottom]
+      allConjugationBtns = get3x1FormDisplayButtons()
+    case .view2x2:
+      allConjugations = [formTopLeft, formTopRight, formBottomLeft, formBottomRight]
+      allConjugationBtns = get2x2FormDisplayButtons()
+    case .view1x2:
+      allConjugations = [formLeft, formRight]
+      allConjugationBtns = get1x2FormDisplayButtons()
+    case .view1x1:
+      break
+    }
+
+    // Populate conjugation view buttons.
+    let outputCols = allConjugations
+    let conjugationsToDisplay = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: outputCols)
+    for index in 0 ..< allConjugations.count {
+      if conjugationsToDisplay[index] == "" {
+        // Assign the invalid message if the conjugation isn't present in the directory.
+        styleBtn(btn: allConjugationBtns[index], title: invalidCommandMsg, radius: keyCornerRadius)
+      } else {
+        conjugationToDisplay = conjugationsToDisplay[index]
+        if controllerLanguage == "English" {
+          if index == 0 && allConjugations[index] == "presTPS" {
+            let simple = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: ["presSimp"])
+            conjugationToDisplay = simple[0] + "/" + conjugationToDisplay
+          } else if index == 1 && allConjugations[index] == "presPart" {
+            if enConjugationState == .present {
+              conjugationToDisplay = "am/are/is " + conjugationToDisplay
+            } else {
+              conjugationToDisplay = "was/were " + conjugationToDisplay
+            }
+          } else if index == 2 && allConjugations[index] == "presPerfTPS" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          } else if index == 3 && allConjugations[index] == "presPerfTPSCont" {
+            conjugationToDisplay = "have/" + conjugationToDisplay
+          }
+        }
+        if inputWordIsCapitalized {
+          if controllerLanguage == "English", conjugationToDisplay.count(of: " ") > 0 {
+            conjugationToDisplay = conjugationToDisplay.capitalize()
+          } else if deConjugationState != .indicativePerfect {
+            conjugationToDisplay = conjugationToDisplay.capitalized
+          }
+        }
+        styleBtn(btn: allConjugationBtns[index], title: conjugationToDisplay, radius: keyCornerRadius)
+      }
+    }
+  }
+
+  /// Sets the label of the conjugation state and assigns pronoun conjugations for the given case.
+  func setCaseDeclensionState() {
+    // Set the view title and its labels.
+    var conjugationTitleFxn: () -> String = deGetCaseDeclensionTitle
+    var conjugationLabelsFxn: () -> Void = deSetCaseDeclensionLabels
+    var conjugationsFxn: () -> Void = deSetCaseDeclensions
+    if deCaseVariantDeclensionState != .disabled {
+      conjugationsFxn = deSetCaseVariantDeclensions
+    }
+
+    if controllerLanguage == "Russian" {
+      conjugationTitleFxn = ruGetCaseDeclensionTitle
+      conjugationLabelsFxn = ruSetCaseDeclensionLabels
+      conjugationsFxn = ruSetCaseDeclensions
+    }
+
+    commandBar.text = conjugationTitleFxn()
+    conjugationLabelsFxn()
+    conjugationsFxn()
+
+    // Assign labels that have been set by SetCaseDeclensionLabels function.
+    formLblFPS.setTitle("  " + (formLabelsDict["FPS"] ?? ""), for: .normal)
+    formLblSPS.setTitle("  " + (formLabelsDict["SPS"] ?? ""), for: .normal)
+    formLblTPS.setTitle("  " + (formLabelsDict["TPS"] ?? ""), for: .normal)
+    formLblFPP.setTitle("  " + (formLabelsDict["FPP"] ?? ""), for: .normal)
+    formLblSPP.setTitle("  " + (formLabelsDict["SPP"] ?? ""), for: .normal)
+    formLblTPP.setTitle("  " + (formLabelsDict["TPP"] ?? ""), for: .normal)
+
+    formLblTop.setTitle("  " + (formLabelsDict["Top"] ?? ""), for: .normal)
+    formLblMiddle.setTitle("  " + (formLabelsDict["Middle"] ?? ""), for: .normal)
+    formLblBottom.setTitle("  " + (formLabelsDict["Bottom"] ?? ""), for: .normal)
+
+    formLblTL.setTitle("  " + (formLabelsDict["TL"] ?? ""), for: .normal)
+    formLblTR.setTitle("  " + (formLabelsDict["TR"] ?? ""), for: .normal)
+    formLblBL.setTitle("  " + (formLabelsDict["BL"] ?? ""), for: .normal)
+    formLblBR.setTitle("  " + (formLabelsDict["BR"] ?? ""), for: .normal)
+
+    formLblLeft.setTitle("  " + (formLabelsDict["Left"] ?? ""), for: .normal)
+    formLblRight.setTitle("  " + (formLabelsDict["Right"] ?? ""), for: .normal)
+
+    switch formsDisplayDimensions {
+    case .view3x2:
+      allConjugations = [formFPS, formSPS, formTPS, formFPP, formSPP, formTPP]
+      allConjugationBtns = get3x2FormDisplayButtons()
+    case .view3x1:
+      allConjugations = [formTop, formMiddle, formBottom]
+      allConjugationBtns = get3x1FormDisplayButtons()
+    case .view2x2:
+      allConjugations = [formTopLeft, formTopRight, formBottomLeft, formBottomRight]
+      allConjugationBtns = get2x2FormDisplayButtons()
+    case .view1x2:
+      allConjugations = [formLeft, formRight]
+      allConjugationBtns = get1x2FormDisplayButtons()
+    case .view1x1:
+      break
+    }
+
+    // Populate conjugation view buttons.
+    for index in 0 ..< allConjugations.count {
+      styleBtn(btn: allConjugationBtns[index], title: allConjugations[index], radius: keyCornerRadius)
+    }
+  }
+
   /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
   func conditionallyDisplayAnnotation() {
     if [.idle, .alreadyPlural, .invalid].contains(commandState) {
@@ -1763,6 +2236,51 @@ class KeyboardViewController: UIInputViewController {
   /// - Parameters
   ///   - sender: the button pressed as sender.
   @IBAction func executeKeyActions(_ sender: UIButton) {
+
+        // Handle noun gender selection UI
+        if commandState == .selectNounGender {
+          // Determine which button was pressed and what gender it represents
+          let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+          let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+          let genderOptions = nounForm.components(separatedBy: "/")
+          var selectedGender: String? = nil
+          // Check which button was pressed based on formsDisplayDimensions
+          switch formsDisplayDimensions {
+          case .view1x2:
+            if sender == formKeyLeft {
+              selectedGender = genderOptions[0]
+            } else if sender == formKeyRight {
+              selectedGender = genderOptions[1]
+            }
+          case .view2x2:
+            let btns = get2x2FormDisplayButtons()
+            for (i, btn) in btns.enumerated() {
+              if sender == btn, i < genderOptions.count {
+                selectedGender = genderOptions[i]
+                break
+              }
+            }
+          case .view3x2:
+            let btns = get3x2FormDisplayButtons()
+            for (i, btn) in btns.enumerated() {
+              if sender == btn, i < genderOptions.count {
+                selectedGender = genderOptions[i]
+                break
+              }
+            }
+          default:
+            break
+          }
+          if let selected = selectedGender {
+            // TODO: Use selected gender for future logic (e.g., correction feature)
+            // For now, just return to idle and reset UI
+            commandState = .idle
+            loadKeys()
+            // Optionally, show a confirmation or update the command bar
+            commandBar.text = "Selected gender: \(selected)"
+          }
+          return
+        }
     guard let originalKey = sender.layer.value(
       forKey: "original"
     ) as? String,
@@ -2028,6 +2546,17 @@ class KeyboardViewController: UIInputViewController {
             wordToCheck = lastWordTyped!
           }
         }
+      }
+
+      // Check for multiple noun genders
+      let nounForms = LanguageDBManager.shared.queryNounForm(of: wordToCheck)
+      let nounForm = nounForms.isEmpty ? "" : nounForms[0]
+      let hasMultipleGenders = nounForm.contains("/")
+      if hasMultipleGenders {
+        // Trigger noun gender selection UI
+        commandState = .selectNounGender
+        loadKeys()
+        return
       }
 
       let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck.lowercased())[0]

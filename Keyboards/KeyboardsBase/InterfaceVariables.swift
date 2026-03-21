@@ -89,6 +89,7 @@ enum CommandState {
   case translate
   case conjugate
   case selectCaseDeclension
+  case selectNounGender // NEW: For noun gender selection UI
   case plural
   case alreadyPlural
   case invalid
