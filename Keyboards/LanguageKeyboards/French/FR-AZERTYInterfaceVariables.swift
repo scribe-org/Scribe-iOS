@@ -204,7 +204,17 @@ func setFRKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "espace"
   language = "Français"
-  invalidCommandMsg = "Pas dans Wikidata"
+
+  invalidCommandMsgWikidata = "Pas dans Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata est un réseau de connaissances collaboratif géré par la fondation Wikimedia. Il sert de source de données ouvertes pour des projets tels que Wikipédia et bien d'autres."
+  invalidCommandTextWikidata2 = "Scribe utilise les données linguistiques de Wikidata pour un grand nombre de ses fonctionnalités de base. Nous obtenons des informations telles que le genre des noms, la conjugaison des verbes et bien plus encore !"
+  invalidCommandTextWikidata3 = "Vous pouvez créer un compte sur wikidata.org pour rejoindre la communauté qui soutient Scribe et bien d'autres projets. Contribuez à la diffusion d'informations gratuites dans le monde entier !"
+
+  invalidCommandMsgWiktionary = "Pas dans Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary est un dictionnaire collaboratif maintenu par la Fondation Wikimedia. Il sert de source de données linguistiques libres pour des projets comme Wikipédia et bien d'autres."
+  invalidCommandTextWiktionary2 = "Scribe utilise les données de Wiktionary pour fournir des traductions à sa commande « Traduire ». Nos données proviennent des nombreuses paires de langues créées par la communauté de Wiktionary !"
+  invalidCommandTextWiktionary3 = "Vous pouvez créer un compte sur wiktionary.org pour rejoindre la communauté qui soutient Scribe et de nombreux autres projets. Aidez-nous à diffuser l'information libre dans le monde entier !"
+
   baseAutosuggestions = ["je", "il", "le"]
   numericAutosuggestions = ["je", "que", "c’est"]
   verbsAfterPronounsArray = ["être", "avoir", "ne"]

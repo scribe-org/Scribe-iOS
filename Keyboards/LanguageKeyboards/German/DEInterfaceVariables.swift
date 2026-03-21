@@ -263,7 +263,17 @@ func setDEKeyboardLayout() {
   currencySymbolAlternates = euroAlternateKeys
   spaceBar = "Leerzeichen"
   language = "Deutsch"
-  invalidCommandMsg = "Nicht in Wikidata"
+
+  invalidCommandMsgWikidata = "Nicht in Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata ist ein kollaborativ gestalteter, mehrsprachiger Wissensgraf, der von der Wikimedia Foundation gehostet wird. Sie dient als Quelle für offene Daten für unzählige Projekte, beispielsweise Wikipedia."
+  invalidCommandTextWikidata2 = "Scribe nutzt Sprachdaten von Wikidata für viele Kernfunktionen. Von dort erhalten wir Informationen wie Genera, Verbkonjugationen und viele mehr!"
+  invalidCommandTextWikidata3 = "Du kannst auf wikidata.org einen Account erstellen, um der Community, die Scribe und viele andere Projekte unterstützt, beizutreten. Hilf uns dabei, der Welt freie Informationen zu geben!"
+
+  invalidCommandMsgWiktionary = "Nicht in Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary ist ein gemeinschaftlich bearbeitetes Wörterbuch, das von der Wikimedia Foundation gepflegt wird. Es dient als Quelle freier Sprachdaten für Projekte wie Wikipedia und unzählige andere."
+  invalidCommandTextWiktionary2 = "Scribe verwendet die Daten von Wiktionary, um Übersetzungen für den Befehl „Übersetzen“ bereitzustellen. Unsere Daten stammen aus den vielen Sprachpaaren, die die Wiktionary-Community erstellt hat!"
+  invalidCommandTextWiktionary3 = "Erstellen Sie ein Konto auf wiktionary.org, um der Community beizutreten, die Scribe und viele andere Projekte unterstützt. Helfen Sie uns, freie Informationen in die Welt zu bringen!"
+
   baseAutosuggestions = ["ich", "die", "das"]
   numericAutosuggestions = ["Prozent", "Milionen", "Meter"]
   verbsAfterPronounsArray = ["haben", "sein", "können"]

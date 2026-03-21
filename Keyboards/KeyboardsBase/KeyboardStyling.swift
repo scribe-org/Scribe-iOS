@@ -17,7 +17,7 @@ func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
   btn.layer.masksToBounds = false
   btn.layer.cornerRadius = radius
   btn.setTitle(title, for: .normal)
-  if title == invalidCommandMsg {
+  if title == invalidCommandMsgWikidata || title == invalidCommandMsgWiktionary {
     btn.configuration = UIButton.Configuration.plain()
     btn.configuration?.baseForegroundColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
     btn.configuration?.image = UIImage(systemName: "info.circle.fill")

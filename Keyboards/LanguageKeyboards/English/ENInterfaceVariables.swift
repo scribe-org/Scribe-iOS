@@ -207,7 +207,17 @@ func setENKeyboardLayout() {
   currencySymbol = "$"
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "space"
-  invalidCommandMsg = "Not in Wikidata"
+
+  invalidCommandMsgWikidata = "Not in Wikidata"
+  invalidCommandTextWikidata1 = "Wikidata is a collaboratively edited knowledge graph that's maintained by the Wikimedia Foundation. It serves as a source of open data for projects like Wikipedia and countless others."
+  invalidCommandTextWikidata2 = "Scribe uses Wikidata's language data for many of its core features. We get information like noun genders, verb conjugations and much more!"
+  invalidCommandTextWikidata3 = "You can make an account at wikidata.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
+
+  invalidCommandMsgWiktionary = "Not in Wiktionary"
+  invalidCommandTextWiktionary1 = "Wiktionary is a collaboratively edited dictionary that's maintained by the Wikimedia Foundation. It serves as a source of free linguistic data for projects like Wikipedia and countless others."
+  invalidCommandTextWiktionary2 = "Scribe uses Wiktionary's data to provide translations for its Translate command. Our data is derived from the many language pairs that Wiktionary's community has created!"
+  invalidCommandTextWiktionary3 = "You can make an account at wiktionary.org to join the community that's supporting Scribe and so many other projects. Help us bring free information to the world!"
+
   baseAutosuggestions = ["I", "I'm", "we"]
   numericAutosuggestions = ["is", "to", "and"]
   verbsAfterPronounsArray = ["have", "be", "can"]

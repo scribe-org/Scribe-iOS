@@ -202,7 +202,17 @@ func setPTKeyboardLayout() {
   currencySymbolAlternates = dollarAlternateKeys
   spaceBar = "espaço"
   language = "Português"
-  invalidCommandMsg = "Não está no Wikidata"
+
+  invalidCommandMsgWikidata = "Não está no Wikidata"
+  invalidCommandTextWikidata1 = "A Wikidata é um grafo de conhecimento editado colaborativamente e mantivo pela Fundação Wikimedia. A Wikidata é uma fonte de dados públicos para projetos como a Wikipédia e muitos outros."
+  invalidCommandTextWikidata2 = "O Scribe usa dados linguísticos da Wikidata para muitas de suas funcionalidades. Temos informações sobre gêneros de substantivos, conjugações de verbos, e muito mais!"
+  invalidCommandTextWikidata3 = "Você pode criar uma conta em wikidata.org e se juntar à comunidade que apoia o Scribe e muitos outros projetos. Ajude-nos a fornecer dados gratuitos para o mundo!"
+
+  invalidCommandMsgWiktionary = "Não está no Wiktionary"
+  invalidCommandTextWiktionary1 = "O Wikcionário é um dicionário editado colaborativamente e mantido pela Fundação Wikimedia. Ele serve como fonte de dados linguísticos gratuitos para projetos como a Wikipédia e inúmeros outros."
+  invalidCommandTextWiktionary2 = "O Scribe utiliza os dados do Wikcionário para fornecer traduções para o seu comando Traduzir. Nossos dados são derivados dos diversos pares de idiomas criados pela comunidade do Wikcionário!"
+  invalidCommandTextWiktionary3 = "Você pode criar uma conta em wiktionary.org para se juntar à comunidade que apoia o Scribe e muitos outros projetos. Ajude-nos a levar informação gratuita para o mundo!"
+
   baseAutosuggestions = ["o", "a", "eu"]
   numericAutosuggestions = ["de", "que", "a"]
 
