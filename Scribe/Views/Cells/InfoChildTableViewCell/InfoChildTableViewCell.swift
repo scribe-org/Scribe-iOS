@@ -88,6 +88,8 @@ final class InfoChildTableViewCell: UITableViewCell {
     selectionStyle = .none
 
     setTableView()
+    titleLabel.font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
+    descriptionLabel.font = UIFont.systemFont(ofSize: fontSize * 0.9)
     titleLabel.text = section.sectionTitle
 
     if let shortDescription = section.shortDescription {
@@ -151,6 +153,11 @@ final class InfoChildTableViewCell: UITableViewCell {
       let dictionaryKey = languageCode + "WordForWordDeletion"
       userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+    case .increaseTextSize:
+      userDefaults.setValue(toggleSwitch.isOn, forKey: "increaseTextSize")
+      initializeFontSize()
+      NotificationCenter.default.post(name: .fontSizeUpdatedNotification, object: nil)
+
     case .none: break
     }
 
@@ -197,6 +204,13 @@ final class InfoChildTableViewCell: UITableViewCell {
         toggleSwitch.isOn = toggleValue
       } else {
         toggleSwitch.isOn = false // Default value
+      }
+
+    case .increaseTextSize:
+      if let toggleValue = userDefaults.object(forKey: "increaseTextSize") as? Bool {
+        toggleSwitch.isOn = toggleValue
+      } else {
+        toggleSwitch.isOn = false // Default off
       }
 
     case .none: break

@@ -9,7 +9,22 @@ import UIKit
 let preferredLanguage = Locale.preferredLanguages[0]
 
 var fontSize = CGFloat(0)
+func initializeFontSize() {
+  if DeviceType.isPhone {
+    if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
+      fontSize = UIScreen.main.bounds.height / 59
+    } else {
+      fontSize = UIScreen.main.bounds.height / 50
+    }
+  } else if DeviceType.isPad {
+    fontSize = UIScreen.main.bounds.height / 50
+  }
 
+  let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
+  if userDefaults.bool(forKey: "increaseTextSize") {
+    fontSize *= 1.25
+  }
+}
 /// Concatenates attributed strings.
 ///
 /// - Parameters
