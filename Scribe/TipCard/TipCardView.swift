@@ -7,6 +7,10 @@
 import SwiftUI
 
 struct TipCardView: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
   private let buttonHeight = 70.0
   private let multiplicityPadding = 0.5
   private let leadingPadding = 40.0
@@ -26,7 +30,7 @@ struct TipCardView: View {
           .foregroundColor(Color.scribeCTA)
           .padding(.horizontal)
         Text(infoText)
-          .font(Font.system(size: DeviceType.isPad ? 22 : 0, weight: .medium))
+          .font(Font.system(size: DeviceType.isPad ? 22 * textSizeMultiplier : 17 * textSizeMultiplier, weight: .medium))
         Spacer()
         Button {
           tipCardState = false

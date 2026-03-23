@@ -31,6 +31,10 @@ struct RadioCircle: View {
 }
 
 struct UpdateDataCardView: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
   var languages: [Section]
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.update_data",
@@ -53,14 +57,14 @@ struct UpdateDataCardView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 6) {
       Text(title)
-        .font(.system(size: 19, weight: .semibold))
+        .font(.system(size: 19 * textSizeMultiplier, weight: .semibold))
         .foregroundColor(.primary)
 
       VStack(alignment: .leading, spacing: 12) {
         if !languages.isEmpty {
           HStack {
             Text(checkText)
-              .font(.body)
+              .font(.system(size: 17 * textSizeMultiplier))
               .foregroundColor(.primary)
 
             Spacer()
@@ -86,6 +90,9 @@ struct UpdateDataCardView: View {
 }
 
 struct LanguageDownloadCard: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
   let language: String
   let state: ButtonState
   let action: () -> Void
@@ -94,7 +101,7 @@ struct LanguageDownloadCard: View {
     VStack(alignment: .leading, spacing: 12) {
       HStack {
         Text(language)
-          .font(.body)
+          .font(.system(size: 17 * textSizeMultiplier))
           .foregroundColor(.primary)
 
         Spacer()
@@ -145,6 +152,9 @@ struct EmptyStateView: View {
 struct LanguageListView: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
   var languages: [Section]
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
 
   @ObservedObject private var stateManager = DownloadStateManager.shared
 
@@ -180,7 +190,7 @@ struct LanguageListView: View {
     ZStack {
       VStack(alignment: .leading, spacing: 6) {
         Text(title)
-          .font(.system(size: 19, weight: .semibold))
+          .font(.system(size: 19 * textSizeMultiplier, weight: .semibold))
           .foregroundColor(.primary)
         if languages.isEmpty {
           EmptyStateView()
