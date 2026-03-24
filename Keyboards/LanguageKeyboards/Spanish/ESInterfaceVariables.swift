@@ -353,4 +353,5 @@ func setESKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Ya en plural"
+    downloadDataMsg = "Por favor descarga los datos del idioma"
 }

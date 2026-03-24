@@ -356,4 +356,5 @@ func setDEKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Schon Plural"
+    downloadDataMsg = "Bitte Sprachdaten herunterladen"
 }

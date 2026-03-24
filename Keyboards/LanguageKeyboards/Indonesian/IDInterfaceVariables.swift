@@ -244,4 +244,5 @@ func setIDKeyboardLayout() {
         textForAttribute: translatePlaceholder,
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
+    downloadDataMsg = "Unduh data bahasa"
 }

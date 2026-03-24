@@ -279,4 +279,5 @@ func setPTKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Já plural"
+    downloadDataMsg = "Por favor baixe os dados do idioma"
 }

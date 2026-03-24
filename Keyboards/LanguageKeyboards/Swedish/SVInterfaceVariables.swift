@@ -349,4 +349,5 @@ func setSVKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Redan plural"
+    downloadDataMsg = "Ladda ner språkdata"
 }
