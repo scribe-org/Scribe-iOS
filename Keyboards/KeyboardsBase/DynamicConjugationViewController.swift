@@ -12,6 +12,7 @@ class DynamicConjugationViewController: UIViewController {
   private var leftArrowButton: UIButton!
   private var rightArrowButton: UIButton!
   private var buttonContainerView: UIView!
+  private var tenseSelectorButton: UIButton!
 
   // MARK: Navigation Data
 
@@ -69,6 +70,28 @@ class DynamicConjugationViewController: UIViewController {
 
   /// Sets up the UI components.
   private func setupUI() {
+    // Tense selector button (only shown in linear/conjugation mode).
+    tenseSelectorButton = UIButton(type: .system)
+    tenseSelectorButton.setTitle(NSLocalizedString("app.conjugate.select_tense", value: "Select tense", comment: "Tense filter dropdown placeholder"), for: .normal)
+    tenseSelectorButton.setTitleColor(.white, for: .normal)
+    tenseSelectorButton.backgroundColor = UIColor(red: 0.95, green: 0.65, blue: 0.0, alpha: 1.0)
+    tenseSelectorButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
+    tenseSelectorButton.contentHorizontalAlignment = .left
+    tenseSelectorButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+    tenseSelectorButton.layer.cornerRadius = keyCornerRadius
+    tenseSelectorButton.translatesAutoresizingMaskIntoConstraints = false
+    // Chevron icon on the right.
+    let chevron = UIImageView(image: UIImage(systemName: "chevron.up.chevron.down"))
+    chevron.tintColor = .white
+    chevron.translatesAutoresizingMaskIntoConstraints = false
+    tenseSelectorButton.addSubview(chevron)
+    NSLayoutConstraint.activate([
+      chevron.trailingAnchor.constraint(equalTo: tenseSelectorButton.trailingAnchor, constant: -12),
+      chevron.centerYAnchor.constraint(equalTo: tenseSelectorButton.centerYAnchor)
+    ])
+    tenseSelectorButton.isHidden = linearCases == nil
+    view.addSubview(tenseSelectorButton)
+
     buttonContainerView = UIView()
     buttonContainerView.backgroundColor = .clear
     buttonContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -100,22 +123,64 @@ class DynamicConjugationViewController: UIViewController {
     rightArrowButton.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(rightArrowButton)
 
+    let selectorHeight: CGFloat = linearCases != nil ? 36 : 0
+    let selectorBottomSpacing: CGFloat = linearCases != nil ? 4 : 0
+
     NSLayoutConstraint.activate([
+      tenseSelectorButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+      tenseSelectorButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+      tenseSelectorButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+      tenseSelectorButton.heightAnchor.constraint(equalToConstant: selectorHeight),
+
       leftArrowButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-      leftArrowButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+      leftArrowButton.topAnchor.constraint(equalTo: tenseSelectorButton.bottomAnchor, constant: selectorBottomSpacing),
       leftArrowButton.widthAnchor.constraint(equalToConstant: 40),
       leftArrowButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
 
       rightArrowButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
-      rightArrowButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+      rightArrowButton.topAnchor.constraint(equalTo: tenseSelectorButton.bottomAnchor, constant: selectorBottomSpacing),
       rightArrowButton.widthAnchor.constraint(equalToConstant: 40),
       rightArrowButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
 
-      buttonContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+      buttonContainerView.topAnchor.constraint(equalTo: tenseSelectorButton.bottomAnchor, constant: selectorBottomSpacing),
       buttonContainerView.leadingAnchor.constraint(equalTo: leftArrowButton.trailingAnchor, constant: 4),
       buttonContainerView.trailingAnchor.constraint(equalTo: rightArrowButton.leadingAnchor, constant: -4),
       buttonContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
     ])
+
+    updateTenseSelectorMenu()
+  }
+
+  /// Builds and assigns the UIMenu for the tense selector button.
+  private func updateTenseSelectorMenu() {
+    guard let cases = linearCases else { return }
+
+    let actions = cases.enumerated().map { (index, level) in
+      // Extract just the tense name (before the colon).
+      let tenseTitle = level.title.components(separatedBy: ":").first ?? level.title
+      return UIAction(
+        title: tenseTitle,
+        state: index == currentCaseIndex ? .on : .off
+      ) { [weak self] _ in
+        self?.jumpToTense(at: index)
+      }
+    }
+
+    tenseSelectorButton.menu = UIMenu(title: "", children: actions)
+    tenseSelectorButton.showsMenuAsPrimaryAction = true
+
+    // Update button label to current tense.
+    let currentTitle = cases[currentCaseIndex].title.components(separatedBy: ":").first ?? cases[currentCaseIndex].title
+    tenseSelectorButton.setTitle(currentTitle, for: .normal)
+  }
+
+  /// Jumps directly to the tense at the given index.
+  private func jumpToTense(at index: Int) {
+    guard let cases = linearCases, index < cases.count else { return }
+    currentCaseIndex = index
+    navigationStack = [cases[index]]
+    displayCurrentLevel()
+    updateTenseSelectorMenu()
   }
 
   // MARK: Display
@@ -229,6 +294,7 @@ class DynamicConjugationViewController: UIViewController {
     case .nextLevel(let nextLevel, _):
       // Navigate deeper.
       navigationStack.append(nextLevel)
+      tenseSelectorButton?.isHidden = true
       displayCurrentLevel()
 
     case .finalValue(let value):
@@ -248,12 +314,17 @@ class DynamicConjugationViewController: UIViewController {
       if navigationStack.count > 1 {
         // In a variant - go back.
         navigationStack.removeLast()
+        if navigationStack.count == 1 {
+          tenseSelectorButton?.isHidden = false
+          updateTenseSelectorMenu()
+        }
         displayCurrentLevel()
       } else if currentCaseIndex > 0 {
         // At root level - go to previous case.
         currentCaseIndex -= 1
         navigationStack = [cases[currentCaseIndex]]
         displayCurrentLevel()
+        updateTenseSelectorMenu()
       }
     } else {
       // Tree mode: just go back.
@@ -276,6 +347,7 @@ class DynamicConjugationViewController: UIViewController {
         currentCaseIndex += 1
         navigationStack = [cases[currentCaseIndex]]
         displayCurrentLevel()
+        updateTenseSelectorMenu()
       }
     }
     // Tree mode: right arrow does nothing.
