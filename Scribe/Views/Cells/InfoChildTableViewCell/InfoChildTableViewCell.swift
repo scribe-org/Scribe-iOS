@@ -171,7 +171,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // Default off
       }
 
     case .toggleAccentCharacters:
@@ -179,7 +179,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false  // Default value
+        toggleSwitch.isOn = false  // Default off
       }
 
     case .doubleSpacePeriods:
@@ -187,7 +187,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // Default on
       }
 
     case .autosuggestEmojis:
@@ -195,7 +195,7 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = true  // Default value
+        toggleSwitch.isOn = true  // Default on
       }
 
     case .toggleWordForWordDeletion:
@@ -203,14 +203,14 @@ final class InfoChildTableViewCell: UITableViewCell {
       if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false // Default value
+        toggleSwitch.isOn = false // default off
       }
 
     case .increaseTextSize:
       if let toggleValue = userDefaults.object(forKey: "increaseTextSize") as? Bool {
         toggleSwitch.isOn = toggleValue
       } else {
-        toggleSwitch.isOn = false // Default off
+        toggleSwitch.isOn = false // default off
       }
 
     case .none: break

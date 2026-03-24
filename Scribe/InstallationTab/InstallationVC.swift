@@ -259,7 +259,7 @@ class InstallationVC: UIViewController {
   /// Creates the current app UI by applying constraints and calling child UI functions.
   func setCurrentUI() {
 
-    // Sets the font size for the text in the app screen and corresponding UIImage icons
+    // Sets the font size for the text in the app screen and corresponding UIImage icons.
     initializeFontSize()
 
     installationHeaderLabel.text = NSLocalizedString(
