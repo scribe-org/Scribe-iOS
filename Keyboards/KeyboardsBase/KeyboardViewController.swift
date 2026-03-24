@@ -1656,7 +1656,7 @@ class KeyboardViewController: UIInputViewController {
           loadKeys()
           proxy.insertText(selectedText)
           autoCapAtStartOfProxy()
-          commandBar.text = commandPromptSpacing + invalidTranslationMsg
+          commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
           commandBar.isShowingInfoButton = true
           commandBar.textColor = keyCharColor
           return
