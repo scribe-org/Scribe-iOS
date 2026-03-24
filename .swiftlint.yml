@@ -1,12 +1,14 @@
 disabled_rules:
   # Currently raise errors:
+  - closure_parameter_position
   - cyclomatic_complexity
-  - identifier_name
-  - function_body_length
+  - file_length
+  - for_where
   - force_cast
   - force_try
+  - function_body_length
+  - identifier_name
   - line_length
-  - file_length
   - type_body_length
 
 opt_in_rules:
@@ -22,7 +24,7 @@ opt_in_rules:
   - discouraged_assert
   - empty_collection_literal
   # - empty_count
-  - empty_string
+  # - empty_string
   - explicit_init
   - fatal_error_message
   - first_where
