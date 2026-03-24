@@ -7,6 +7,10 @@
 import SwiftUI
 
 struct CTAButton: View {
+    @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+    var increaseTextSize: Bool = false
+    var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
     let title: String
     let action: () -> Void
     @Environment(\.colorScheme) var colorScheme
@@ -14,7 +18,7 @@ struct CTAButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 20 * textSizeMultiplier, weight: .bold))
                 .foregroundColor(Color("lightTextDarkCTA"))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)

@@ -9,6 +9,7 @@ import SwiftUI
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class InstallationVC: UIViewController {
+
   // Variables linked to elements in AppScreen.storyboard.
   @IBOutlet var appTextViewPhone: UITextView!
   @IBOutlet var appTextViewPad: UITextView!
@@ -106,7 +107,18 @@ class InstallationVC: UIViewController {
       name: NSNotification.Name("NavigateToDownloadScreen"),
       object: nil
     )
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(handleFontSizeUpdate),
+      name: .fontSizeUpdatedNotification,
+      object: nil
+        )
   }
+  @objc func handleFontSizeUpdate() {
+     DispatchQueue.main.async {
+       self.setCurrentUI()
+     }
+   }
 
   @objc private func handleNavigateToDownloadScreen() {
     navigateToDownloadDataScreen()
@@ -246,17 +258,9 @@ class InstallationVC: UIViewController {
 
   /// Creates the current app UI by applying constraints and calling child UI functions.
   func setCurrentUI() {
-    // Sets the font size for the text in the app screen and corresponding UIImage icons.
-    if DeviceType.isPhone {
-      if UIScreen.main.bounds.width > 413 || UIScreen.main.bounds.width <= 375 {
-        fontSize = UIScreen.main.bounds.height / 59
-      } else if UIScreen.main.bounds.width <= 413 && UIScreen.main.bounds.width > 375 {
-        fontSize = UIScreen.main.bounds.height / 50
-      }
 
-    } else if DeviceType.isPad {
-      fontSize = UIScreen.main.bounds.height / 50
-    }
+    // Sets the font size for the text in the app screen and corresponding UIImage icons.
+    initializeFontSize()
 
     installationHeaderLabel.text = NSLocalizedString(
       "i18n.app.installation.keyboard.title", value: "Keyboard installation", comment: ""

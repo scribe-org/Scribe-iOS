@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
- * Download data UI for getting new data for keyboards.
- */
-
 import SwiftUI
+
+/// Download data UI for getting new data for keyboards.
 
 enum CheckDataState {
   case idle
@@ -102,7 +100,12 @@ struct CheckDataSpinner: View {
 }
 
 struct UpdateDataCardView: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
   var languages: [Section]
+  var onInitializeStates: () -> Void
   private let title = NSLocalizedString(
     "i18n.app.download.menu_ui.update_data",
     value: "Update data",
@@ -124,14 +127,14 @@ struct UpdateDataCardView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 6) {
       Text(title)
-        .font(.system(size: 19, weight: .semibold))
+        .font(.system(size: 19 * textSizeMultiplier, weight: .semibold))
         .foregroundColor(.primary)
 
       VStack(alignment: .leading, spacing: 12) {
         if !languages.isEmpty {
           HStack {
             Text(checkText)
-              .font(.body)
+              .font(.system(size: 17 * textSizeMultiplier))
               .foregroundColor(.primary)
 
             Spacer()
@@ -157,6 +160,9 @@ struct UpdateDataCardView: View {
 }
 
 struct LanguageDownloadCard: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
   let language: String
   let state: ButtonState
   let action: () -> Void
@@ -165,7 +171,7 @@ struct LanguageDownloadCard: View {
     VStack(alignment: .leading, spacing: 12) {
       HStack {
         Text(language)
-          .font(.body)
+          .font(.system(size: 17 * textSizeMultiplier))
           .foregroundColor(.primary)
 
         Spacer()
@@ -192,10 +198,10 @@ struct EmptyStateView: View {
     comment: "")
 
   func openSettingsApp() {
-      guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-          return
-      }
-      UIApplication.shared.open(settingsURL)
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+      return
+    }
+    UIApplication.shared.open(settingsURL)
   }
 
   var body: some View {
@@ -216,6 +222,9 @@ struct EmptyStateView: View {
 struct LanguageListView: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
   var languages: [Section]
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
 
   @ObservedObject private var stateManager = DownloadStateManager.shared
 
@@ -237,6 +246,16 @@ struct LanguageListView: View {
   let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")!
 
   private func handleButtonClick(targetLang: String, langCode: String) {
+    if langCode == "all" {
+        let toDownload = stateManager.downloadStates.keys.filter {
+            stateManager.downloadStates[$0] != .updated && stateManager.downloadStates[$0] != .downloading
+        }
+        for lang in toDownload {
+            stateManager.handleDownloadAction(key: lang)
+        }
+        return
+    }
+
     targetLanguage = targetLang
     selectedLanguageCode = langCode
     let currentState = stateManager.downloadStates[langCode] ?? .ready
@@ -247,11 +266,21 @@ struct LanguageListView: View {
     }
   }
 
+  // Determines the button state for the "All languages" option based on the states of individual languages.
+  private var allLanguagesState: ButtonState {
+    let states = stateManager.downloadStates.values
+    if states.allSatisfy({ $0 == .updated }) { return .updated }
+    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
+    let actionable = states.filter({ $0 != .updated })
+    if actionable.allSatisfy({ $0 == .update }) { return .update }
+    return .ready
+  }
+
   var body: some View {
     ZStack {
       VStack(alignment: .leading, spacing: 6) {
         Text(title)
-          .font(.system(size: 19, weight: .semibold))
+          .font(.system(size: 19 * textSizeMultiplier, weight: .semibold))
           .foregroundColor(.primary)
         if languages.isEmpty {
           EmptyStateView()
@@ -259,7 +288,7 @@ struct LanguageListView: View {
           VStack(spacing: 0) {
             LanguageDownloadCard(
               language: allLanguagesText,
-              state: stateManager.downloadStates["all"] ?? .ready,
+              state: allLanguagesState,
               action: {
                 handleButtonClick(targetLang: allLanguagesText, langCode: "all")
               }
@@ -351,14 +380,32 @@ struct LanguageListView: View {
 struct DownloadDataScreen: View {
   var onNavigateToTranslationSource: ((String, String) -> Void)?
   @State private var languages = SettingsTableData.getInstalledKeyboardsSections()
+  @StateObject private var stateManager = DownloadStateManager.shared
+
+  // Initializes the download states for all languages based on the currently installed keyboards.
+  private func initializeLanguageStates() {
+     // Extract language abbreviations from sections.
+    let languageKeys = languages.compactMap { section -> String? in
+        if case .specificLang(let abbreviation) = section.sectionState {
+        return abbreviation.lowercased()
+        }
+        return nil
+    }
+    stateManager.initializeStates(languages: languageKeys)
+ }
+
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
-        UpdateDataCardView(languages: languages)
+        UpdateDataCardView(languages: languages, onInitializeStates: initializeLanguageStates)
         LanguageListView(onNavigateToTranslationSource: onNavigateToTranslationSource, languages: languages)
       }
       .padding()
       .background(Color(UIColor.scribeAppBackground))
+    }
+    .toast(manager: stateManager)
+    .onAppear {
+        initializeLanguageStates()
     }
     .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
       // Refresh when returning from Settings

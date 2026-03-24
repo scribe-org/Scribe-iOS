@@ -16,7 +16,7 @@ class LanguageDBManager {
     if translate {
       database = openDBQueue("TranslationData")
     } else {
-      database = openDBQueue("\(getControllerLanguageAbbr().uppercased())LanguageData")
+      database = openDownloadedDBQueue("\(getControllerLanguageAbbr().uppercased())LanguageData")
     }
   }
 
@@ -41,6 +41,21 @@ class LanguageDBManager {
       return dbQueue
     }
   }
+
+  /// Opens a connection to the downloaded language database for the current language.
+  private func openDownloadedDBQueue(_ dbName: String) -> DatabaseQueue? {
+    let fileManager = FileManager.default
+    guard let containerURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.be.scri.userDefaultsContainer") else {
+        print("App group container not found")
+        return nil
+    }
+    let dbPath = containerURL.appendingPathComponent("\(dbName).sqlite").path
+    guard fileManager.fileExists(atPath: dbPath) else {
+        print("\(dbName).sqlite not found in app group container")
+        return nil
+    }
+    return try? DatabaseQueue(path: dbPath)
+}
 
   /// Loads a JSON file that contains grammatical information into a dictionary.
   ///
