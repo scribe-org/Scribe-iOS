@@ -1,69 +1,70 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * DESCRIPTION_OF_THE_PURPOSE_OF_THE_FILE
  */
 
 import UIKit
 
 final class RadioTableViewCell: UITableViewCell {
+    // MARK: Constants
 
-  // MARK: Constants
+    static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
 
-  static let reuseIdentifier = String(describing: InfoChildTableViewCell.self)
+    // MARK: Properties
 
-  // MARK: Properties
+    @IBOutlet var titleLabelPhone: UILabel!
+    @IBOutlet var titleLabelPad: UILabel!
+    var titleLabel: UILabel!
 
-  @IBOutlet var titleLabelPhone: UILabel!
-  @IBOutlet var titleLabelPad: UILabel!
-  var titleLabel: UILabel!
+    @IBOutlet var iconImageViewPhone: UIImageView!
+    @IBOutlet var iconImageViewPad: UIImageView!
+    var iconImageView: UIImageView!
 
-  @IBOutlet var iconImageViewPhone: UIImageView!
-  @IBOutlet var iconImageViewPad: UIImageView!
-  var iconImageView: UIImageView!
+    var section: Section?
+    var parentSection: Section?
+    var inUse: Bool = false
 
-  var section: Section?
-  var parentSection: Section?
-  var inUse: Bool = false
+    func setTableView() {
+        if DeviceType.isPad {
+            titleLabel = titleLabelPad
+            iconImageView = iconImageViewPad
 
-  func setTableView() {
-    if DeviceType.isPad {
-      titleLabel = titleLabelPad
-      iconImageView = iconImageViewPad
+            titleLabelPhone.removeFromSuperview()
+            iconImageViewPhone.removeFromSuperview()
+        } else {
+            titleLabel = titleLabelPhone
+            iconImageView = iconImageViewPhone
 
-      titleLabelPhone.removeFromSuperview()
-      iconImageViewPhone.removeFromSuperview()
-    } else {
-      titleLabel = titleLabelPhone
-      iconImageView = iconImageViewPhone
-
-      titleLabelPad.removeFromSuperview()
-      iconImageViewPad.removeFromSuperview()
+            titleLabelPad.removeFromSuperview()
+            iconImageViewPad.removeFromSuperview()
+        }
     }
-  }
 
-  var selectedLang: String {
-    guard let section = section,
-          case let .specificLang(lang) = section.sectionState else { return "n/a" }
+    var selectedLang: String {
+        guard let section = section,
+              case let .specificLang(lang) = section.sectionState
+        else { return "n/a" }
 
-    return lang
-  }
+        return lang
+    }
 
-  var togglePurpose: UserInteractiveState {
-    guard let section = section,
-          case let .none(action) = section.sectionState else { return .none }
+    var togglePurpose: UserInteractiveState {
+        guard let section = section,
+              case let .none(action) = section.sectionState
+        else { return .none }
 
-    return action
-  }
+        return action
+    }
 
-  // MARK: Functions
+    // MARK: Functions
 
-  func configureCell(for section: Section) {
-    self.section = section
-    selectionStyle = .none
+    func configureCell(for section: Section) {
+        self.section = section
+        selectionStyle = .none
 
-    setTableView()
-    titleLabel.text = section.sectionTitle
-    iconImageView.image = UIImage(named: "radioButton")
-  }
+        setTableView()
+        titleLabel.text = section.sectionTitle
+        iconImageView.image = UIImage(named: "radioButton")
+    }
 }

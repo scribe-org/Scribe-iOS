@@ -1,15 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Call to Action Button.
  */
 
 import SwiftUI
 
 struct CTAButton: View {
-    @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+    @AppStorage(
+        "increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")
+    )
     var increaseTextSize: Bool = false
-    var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+    var textSizeMultiplier: CGFloat {
+        increaseTextSize ? 1.25 : 1.0
+    }
 
     let title: String
     let action: () -> Void
@@ -26,7 +30,9 @@ struct CTAButton: View {
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(colorScheme == .dark ? Color("scribeCTA") : Color.clear, lineWidth: 1)
+                        .stroke(
+                            colorScheme == .dark ? Color("scribeCTA") : Color.clear, lineWidth: 1
+                        )
                 )
                 .shadow(
                     color: Color(red: 0.247, green: 0.247, blue: 0.275, opacity: 0.25),

@@ -1,338 +1,377 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Functions for the Settings tab.
  */
 
-import UIKit
 import SwiftUI
+import UIKit
 
 final class SettingsViewController: UIViewController {
-  // MARK: Constants
+    // MARK: Constants
 
-  private var sectionHeaderHeight: CGFloat = 0
-  private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
-  private let cornerRadius: CGFloat = 12
+    private var sectionHeaderHeight: CGFloat = 0
+    private let separatorInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+    private let cornerRadius: CGFloat = 12
 
-  private let settingsTipCardState: Bool = {
-    let userDefault = UserDefaults.standard
-    let state = userDefault.object(forKey: "settingsTipCardState") as? Bool ?? true
-    return state
-  }()
+    private let settingsTipCardState: Bool = {
+        let userDefault = UserDefaults.standard
+        return userDefault.object(forKey: "settingsTipCardState") as? Bool ?? true
+    }()
 
-  func setHeaderHeight() {
-    if DeviceType.isPad {
-      sectionHeaderHeight = 42
-    } else {
-      sectionHeaderHeight = 32
-    }
-  }
-
-  // MARK: Properties
-
-  @IBOutlet var footerFrame: UIView!
-  @IBOutlet var footerButton: UIButton!
-  @IBOutlet var parentTable: UITableView!
-
-  var tableData = SettingsTableData.settingsTableData
-
-  // MARK: Functions
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    setHeaderHeight()
-    showTipCardView()
-
-    title = NSLocalizedString("i18n.app.settings.title", value: "Settings", comment: "")
-    navigationItem.backButtonTitle = title
-
-    parentTable.register(
-        WrapperCell.self,
-        forCellReuseIdentifier: WrapperCell.reuseIdentifier
-    )
-
-    parentTable.register(
-      UINib(nibName: "InfoChildTableViewCell", bundle: nil),
-      forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier
-    )
-    parentTable.dataSource = self
-    parentTable.delegate = self
-    parentTable.backgroundColor = .clear
-    parentTable.sectionHeaderHeight = sectionHeaderHeight
-    parentTable.separatorInset = separatorInset
-
-    setFooterButtonView()
-
-    DispatchQueue.main.async {
-      self.parentTable.reloadData()
-
-      self.commonMethodToRefresh()
-    }
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(handleFontSizeUpdate),
-      name: .fontSizeUpdatedNotification,
-      object: nil
-    )
-  }
-  @objc func handleFontSizeUpdate() {
-      DispatchQueue.main.async {
-        self.parentTable.reloadData()
-        self.setFooterButtonView()
-      }
+    func setHeaderHeight() {
+        if DeviceType.isPad {
+            sectionHeaderHeight = 42
+        } else {
+            sectionHeaderHeight = 32
+        }
     }
 
-  deinit {
-      NotificationCenter.default.removeObserver(self)
+    // MARK: Properties
+
+    @IBOutlet var footerFrame: UIView!
+    @IBOutlet var footerButton: UIButton!
+    @IBOutlet var parentTable: UITableView!
+
+    var tableData = SettingsTableData.settingsTableData
+
+    // MARK: Functions
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setHeaderHeight()
+        showTipCardView()
+
+        title = NSLocalizedString("i18n.app.settings.title", value: "Settings", comment: "")
+        navigationItem.backButtonTitle = title
+
+        parentTable.register(
+            WrapperCell.self,
+            forCellReuseIdentifier: WrapperCell.reuseIdentifier
+        )
+
+        parentTable.register(
+            UINib(nibName: "InfoChildTableViewCell", bundle: nil),
+            forCellReuseIdentifier: InfoChildTableViewCell.reuseIdentifier
+        )
+        parentTable.dataSource = self
+        parentTable.delegate = self
+        parentTable.backgroundColor = .clear
+        parentTable.sectionHeaderHeight = sectionHeaderHeight
+        parentTable.separatorInset = separatorInset
+
+        setFooterButtonView()
+
+        DispatchQueue.main.async {
+            self.parentTable.reloadData()
+
+            self.commonMethodToRefresh()
+        }
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleFontSizeUpdate),
+            name: .fontSizeUpdatedNotification,
+            object: nil
+        )
     }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    commonMethodToRefresh()
-  }
-
-  func commonMethodToRefresh() {
-    DispatchQueue.main.async {
-      self.tableData[1].section = SettingsTableData.getInstalledKeyboardsSections()
-      self.parentTable.reloadData()
-      self.setFooterButtonView()
+    @objc func handleFontSizeUpdate() {
+        DispatchQueue.main.async {
+            self.parentTable.reloadData()
+            self.setFooterButtonView()
+        }
     }
 
-    let notification = Notification(name: .keyboardsUpdatedNotification, object: nil, userInfo: nil)
-    NotificationCenter.default.post(notification)
-  }
-
-  func setFooterButtonView() {
-    if tableData.count > 1 && tableData[1].section.count != 0 {
-      parentTable.tableFooterView?.isHidden = true
-    } else {
-      parentTable.tableFooterView?.isHidden = false
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
-    footerButton.setTitle(NSLocalizedString("i18n.app.settings.button_install_keyboards", value: "Install keyboards", comment: ""), for: .normal)
-    footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
-
-    footerButton.backgroundColor = appBtnColor
-    if UITraitCollection.current.userInterfaceStyle == .dark {
-      footerButton.layer.borderWidth = 1
-      footerButton.layer.borderColor = scribeCTAColor.cgColor
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        commonMethodToRefresh()
     }
-    footerButton.setTitleColor(lightTextDarkCTA, for: .normal)
-    footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.025
-    footerButton.layer.cornerRadius = footerFrame.frame.width * 0.025
-    footerButton.layer.shadowColor = UIColor(red: 0.247, green: 0.247, blue: 0.275, alpha: 0.25).cgColor
-    footerButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-    footerButton.layer.shadowOpacity = 1.0
-    footerButton.layer.masksToBounds = false
 
-    footerButton.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
-    footerButton.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-  }
+    func commonMethodToRefresh() {
+        DispatchQueue.main.async {
+            self.tableData[1].section = SettingsTableData.getInstalledKeyboardsSections()
+            self.parentTable.reloadData()
+            self.setFooterButtonView()
+        }
+
+        let notification = Notification(
+            name: .keyboardsUpdatedNotification, object: nil, userInfo: nil
+        )
+        NotificationCenter.default.post(notification)
+    }
+
+    func setFooterButtonView() {
+        if tableData.count > 1, tableData[1].section.count != 0 {
+            parentTable.tableFooterView?.isHidden = true
+        } else {
+            parentTable.tableFooterView?.isHidden = false
+        }
+
+        footerButton.setTitle(
+            NSLocalizedString(
+                "i18n.app.settings.button_install_keyboards", value: "Install keyboards",
+                comment: ""
+            ),
+            for: .normal
+        )
+        footerButton.titleLabel?.font = .systemFont(ofSize: fontSize * 1.5, weight: .bold)
+
+        footerButton.backgroundColor = appBtnColor
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+            footerButton.layer.borderWidth = 1
+            footerButton.layer.borderColor = scribeCTAColor.cgColor
+        }
+        footerButton.setTitleColor(lightTextDarkCTA, for: .normal)
+        footerFrame.layer.cornerRadius = footerFrame.frame.width * 0.025
+        footerButton.layer.cornerRadius = footerFrame.frame.width * 0.025
+        footerButton.layer.shadowColor =
+            UIColor(red: 0.247, green: 0.247, blue: 0.275, alpha: 0.25).cgColor
+        footerButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        footerButton.layer.shadowOpacity = 1.0
+        footerButton.layer.masksToBounds = false
+
+        footerButton.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
+        footerButton.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+    }
 }
 
 // MARK: UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource {
-  func numberOfSections(in _: UITableView) -> Int {
-    tableData.count
-  }
-
-  func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-    tableData[section].section.count
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: WrapperCell.reuseIdentifier,
-      for: indexPath
-    ) as? WrapperCell else {
-      fatalError("Failed to dequeue WrapperCell")
+    func numberOfSections(in _: UITableView) -> Int {
+        tableData.count
     }
 
-    let section = tableData[indexPath.section]
-    let setting = section.section[indexPath.row]
+    func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableData[section].section.count
+    }
 
-    cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: WrapperCell.reuseIdentifier,
+                for: indexPath
+            ) as? WrapperCell
+        else {
+            fatalError("Failed to dequeue WrapperCell")
+        }
 
-    let isFirstRow = indexPath.row == 0
-    let isLastRow = indexPath.row == section.section.count - 1
-    WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
+        let section = tableData[indexPath.section]
+        let setting = section.section[indexPath.row]
 
-    return cell
-  }
+        cell.configure(withCellNamed: "InfoChildTableViewCell", section: setting)
+
+        let isFirstRow = indexPath.row == 0
+        let isLastRow = indexPath.row == section.section.count - 1
+        WrapperCell.applyCornerRadius(to: cell, isFirst: isFirstRow, isLast: isLastRow)
+
+        return cell
+    }
 }
 
 // MARK: UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let tableSection = tableData[indexPath.section]
-    let section = tableSection.section[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tableSection = tableData[indexPath.section]
+        let section = tableSection.section[indexPath.row]
 
-    switch section.sectionState {
-    case .appLang:
-      let preferredLanguages = NSLocale.preferredLanguages
-      if preferredLanguages.count == 1 {
-        let alert = UIAlertController(
-          title: NSLocalizedString("i18n.app.settings.menu.app_language.one_device_language_warning.title",
-          value: "No languages installed",
-          comment: ""),
-          message: NSLocalizedString("i18n.app.settings.menu.app_language.one_device_language_warning.message", value: "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.", comment: ""),
-          preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(alert, animated: true)
-      } else {
-        openSettingsApp()
-      }
-
-    case .specificLang:
-      if let viewController = storyboard?.instantiateViewController(
-        identifier: "TableViewTemplateViewController"
-      ) as? TableViewTemplateViewController {
-        // Copy base settings.
-        var data = SettingsTableData.languageSettingsData
-        // Check if the device is an iPad to remove the Layout Section.
-        if DeviceType.isPad {
-          for menuOption in data[1].section {
-            if menuOption.sectionState == .none(.toggleAccentCharacters) ||
-                menuOption.sectionState == .none(.toggleCommaAndPeriod) {
-              data[1].section.remove(at: 0)
+        switch section.sectionState {
+        case .appLang:
+            let preferredLanguages = NSLocale.preferredLanguages
+            if preferredLanguages.count == 1 {
+                let alert = UIAlertController(
+                    title: NSLocalizedString(
+                        "i18n.app.settings.menu.app_language.one_device_language_warning.title",
+                        value: "No languages installed",
+                        comment: ""
+                    ),
+                    message: NSLocalizedString(
+                        "i18n.app.settings.menu.app_language.one_device_language_warning.message",
+                        value:
+                        "You only have one language installed on your device. Please install more languages in Settings and then you can select different localizations of Scribe.",
+                        comment: ""
+                    ),
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                present(alert, animated: true)
+            } else {
+                openSettingsApp()
             }
-          }
-          if data[1].section.isEmpty {
-            data.remove(at: 1)
-          }
-        } else {
-          // Languages where we can disable accent keys.
-          let accentKeyLanguages: [String] = [
-            languagesStringDict["German"]!,
-            languagesStringDict["Spanish"]!,
-            languagesStringDict["Swedish"]!
-          ]
 
-          let accentKeyOptionIndex = SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
-            s.sectionTitle.elementsEqual(NSLocalizedString("i18n.app.settings.keyboard.layout.disable_accent_characters", value: "Disable accent characters", comment: ""))
-          }) ?? -1
+        case .specificLang:
+            if let viewController = storyboard?.instantiateViewController(
+                identifier: "TableViewTemplateViewController"
+            ) as? TableViewTemplateViewController {
+                // Copy base settings.
+                var data = SettingsTableData.languageSettingsData
+                // Check if the device is an iPad to remove the Layout Section.
+                if DeviceType.isPad {
+                    for menuOption in data[1].section {
+                        if menuOption.sectionState == .none(.toggleAccentCharacters)
+                            || menuOption.sectionState == .none(.toggleCommaAndPeriod) {
+                            data[1].section.remove(at: 0)
+                        }
+                    }
+                    if data[1].section.isEmpty {
+                        data.remove(at: 1)
+                    }
+                } else {
+                    // Languages where we can disable accent keys.
+                    let accentKeyLanguages: [String] = [
+                        languagesStringDict["German"]!,
+                        languagesStringDict["Spanish"]!,
+                        languagesStringDict["Swedish"]!
+                    ]
 
-          // If there are no accent keys we can remove the `Disable accent characters` option.
-          if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil && accentKeyOptionIndex != -1 {
-            data[1].section.remove(at: accentKeyOptionIndex)
-          } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil && accentKeyOptionIndex == -1 {
-            data[1].section.insert(SettingsTableData.languageSettingsData[2].section[2], at: 1)
-          }
+                    let accentKeyOptionIndex =
+                        SettingsTableData.languageSettingsData[1].section.firstIndex(where: { s in
+                            s.sectionTitle.elementsEqual(
+                                NSLocalizedString(
+                                    "i18n.app.settings.keyboard.layout.disable_accent_characters",
+                                    value: "Disable accent characters", comment: ""
+                                )
+                            )
+                        }) ?? -1
+
+                    // If there are no accent keys we can remove the `Disable accent characters` option.
+                    if accentKeyLanguages.firstIndex(of: section.sectionTitle) == nil,
+                       accentKeyOptionIndex != -1 {
+                        data[1].section.remove(at: accentKeyOptionIndex)
+                    } else if accentKeyLanguages.firstIndex(of: section.sectionTitle) != nil,
+                              accentKeyOptionIndex == -1 {
+                        data[1].section.insert(
+                            SettingsTableData.languageSettingsData[2].section[2], at: 1
+                        )
+                    }
+                }
+
+                viewController.configureTable(for: data, parentSection: section)
+
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+
+        default: break
         }
 
-        viewController.configureTable(for: data, parentSection: section)
-
-        navigationController?.pushViewController(viewController, animated: true)
-      }
-
-    default: break
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: false)
+        }
     }
 
-    if let selectedIndexPath = tableView.indexPathForSelectedRow {
-      tableView.deselectRow(at: selectedIndexPath, animated: false)
-    }
-  }
+    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = tableData[indexPath.section]
+        let setting = section.section[indexPath.row]
 
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      let section = tableData[indexPath.section]
-      let setting = section.section[indexPath.row]
-
-      let hasDescription = setting.shortDescription != nil
-      return hasDescription ? 80.0 : 48.0
+        let hasDescription = setting.shortDescription != nil
+        return hasDescription ? 80.0 : 48.0
     }
 
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let headerView: UIView
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: UIView
 
-    if let reusableHeaderView = tableView.headerView(forSection: section) {
-      headerView = reusableHeaderView
-    } else {
-      headerView = UIView(frame: CGRect(x: 0, y: 0, width: parentTable.bounds.width, height: 32))
+        if let reusableHeaderView = tableView.headerView(forSection: section) {
+            headerView = reusableHeaderView
+        } else {
+            headerView = UIView(
+                frame: CGRect(x: 0, y: 0, width: parentTable.bounds.width, height: 32)
+            )
+        }
+
+        let label = UILabel(
+            frame: CGRect(
+                x: preferredLanguage.prefix(2) == "ar" ? -1 * headerView.bounds.width / 10 : 0,
+                y: 0,
+                width: headerView.bounds.width,
+                height: 32
+            )
+        )
+
+        label.text = tableData[section].headingTitle
+        label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
+        label.textColor = keyCharColor
+        headerView.addSubview(label)
+
+        return headerView
     }
 
-    let label = UILabel(
-      frame: CGRect(
-        x: preferredLanguage.prefix(2) == "ar" ? -1 * headerView.bounds.width / 10: 0,
-        y: 0,
-        width: headerView.bounds.width,
-        height: 32
-      )
-    )
-
-    label.text = tableData[section].headingTitle
-    label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
-    label.textColor = keyCharColor
-    headerView.addSubview(label)
-
-    return headerView
-  }
-
-  /// Function to open the settings app that is targeted by settingsBtn.
-  @objc func openSettingsApp() {
-    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-      fatalError("Failed to create settings URL.")
+    /// Function to open the settings app that is targeted by settingsBtn.
+    @objc func openSettingsApp() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString)
+        else {
+            fatalError("Failed to create settings URL.")
+        }
+        UIApplication.shared.open(settingsURL)
     }
-    UIApplication.shared.open(settingsURL)
-  }
 
-  /// Function to change the key coloration given a touch down.
-  ///
-  /// - Parameters
-  ///  - sender: the button that has been pressed.
-  @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = .black
-    sender.alpha = 0.2
+    /// Function to change the key coloration given a touch down.
+    ///
+    /// - Parameters
+    ///  - sender: the button that has been pressed.
+    @objc func keyTouchDown(_ sender: UIButton) {
+        sender.backgroundColor = .black
+        sender.alpha = 0.2
 
-    // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-      sender.backgroundColor = .clear
-      sender.alpha = 1.0
+        // Bring sender's opacity back up to fully opaque and replace the background color.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            sender.backgroundColor = .clear
+            sender.alpha = 1.0
+        }
     }
-  }
 }
 
 // MARK: TipCardView
+
 extension SettingsViewController {
-  private func showTipCardView() {
-    let overlayView = SettingsTipCardView(
-      settingsTipCardState: settingsTipCardState
-    )
+    private func showTipCardView() {
+        let overlayView = SettingsTipCardView(
+            settingsTipCardState: settingsTipCardState
+        )
 
-    let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: -20)
-    hostingController.view.backgroundColor = .clear
-    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        let hostingController = UIHostingController(rootView: overlayView)
+        hostingController.view.frame = CGRect(
+            x: 0, y: 0, width: view.bounds.width, height: -20
+        )
+        hostingController.view.backgroundColor = .clear
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
 
-    let navigationView = navigationController?.navigationBar
-    guard let navigationView else { return }
-    navigationView.addSubview(hostingController.view)
-    navigationView.bringSubviewToFront(hostingController.view)
+        let navigationView = navigationController?.navigationBar
+        guard let navigationView else { return }
+        navigationView.addSubview(hostingController.view)
+        navigationView.bringSubviewToFront(hostingController.view)
 
-    NSLayoutConstraint.activate([
-      hostingController.view.topAnchor.constraint(equalTo: navigationView.topAnchor, constant: 30),
-      hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
-      hostingController.view.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor)
-    ])
-    hostingController.didMove(toParent: self)
-    startGlowingEffect(on: hostingController.view)
-  }
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(
+                equalTo: navigationView.topAnchor, constant: 30
+            ),
+            hostingController.view.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(
+                equalTo: navigationView.trailingAnchor
+            )
+        ])
+        hostingController.didMove(toParent: self)
+        startGlowingEffect(on: hostingController.view)
+    }
 
-  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
-    view.layer.shadowColor = UIColor.scribeCTA.cgColor
-    view.layer.shadowRadius = 8
-    view.layer.shadowOpacity = 0.0
-    view.layer.shadowOffset = CGSize(width: 0, height: 0)
+    func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+        view.layer.shadowColor = UIColor.scribeCTA.cgColor
+        view.layer.shadowRadius = 8
+        view.layer.shadowOpacity = 0.0
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
 
-    UIView.animate(
-      withDuration: duration,
-      delay: 0,
-      options: [.curveEaseOut, .autoreverse],
-      animations: {
-        view.layer.shadowOpacity = 0.6
-      }, completion: nil)
-  }
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: [.curveEaseOut, .autoreverse],
+            animations: {
+                view.layer.shadowOpacity = 0.6
+            }, completion: nil
+        )
+    }
 }

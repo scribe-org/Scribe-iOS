@@ -1,524 +1,566 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * The ViewController for the Installation screen of the Scribe app.
  */
 
-import UIKit
 import SwiftUI
+import UIKit
 
 /// A UIViewController that provides instructions on how to install Keyboards as well as information about Scribe.
 class InstallationVC: UIViewController {
+    // Variables linked to elements in AppScreen.storyboard.
+    @IBOutlet var appTextViewPhone: UITextView!
+    @IBOutlet var appTextViewPad: UITextView!
+    var appTextView: UITextView!
 
-  // Variables linked to elements in AppScreen.storyboard.
-  @IBOutlet var appTextViewPhone: UITextView!
-  @IBOutlet var appTextViewPad: UITextView!
-  var appTextView: UITextView!
+    @IBOutlet var appTextBackgroundPhone: UIView!
+    @IBOutlet var appTextBackgroundPad: UIView!
+    var appTextBackground: UIView!
 
-  @IBOutlet var appTextBackgroundPhone: UIView!
-  @IBOutlet var appTextBackgroundPad: UIView!
-  var appTextBackground: UIView!
+    @IBOutlet var topIconPhone: UIImageView!
+    @IBOutlet var topIconPad: UIImageView!
+    var topIcon: UIImageView!
 
-  @IBOutlet var topIconPhone: UIImageView!
-  @IBOutlet var topIconPad: UIImageView!
-  var topIcon: UIImageView!
+    @IBOutlet var settingsBtnPhone: UIButton!
+    @IBOutlet var settingsBtnPad: UIButton!
+    var settingsBtn: UIButton!
 
-  @IBOutlet var settingsBtnPhone: UIButton!
-  @IBOutlet var settingsBtnPad: UIButton!
-  var settingsBtn: UIButton!
+    @IBOutlet var settingsCornerPhone: UIImageView!
+    @IBOutlet var settingsCornerPad: UIImageView!
+    var settingsCorner: UIImageView!
 
-  @IBOutlet var settingsCornerPhone: UIImageView!
-  @IBOutlet var settingsCornerPad: UIImageView!
-  var settingsCorner: UIImageView!
+    @IBOutlet var settingCornerWidthConstraintPhone: NSLayoutConstraint!
+    @IBOutlet var settingCornerWidthConstraintPad: NSLayoutConstraint!
+    var settingCornerWidthConstraint: NSLayoutConstraint!
 
-  @IBOutlet var settingCornerWidthConstraintPhone: NSLayoutConstraint!
-  @IBOutlet var settingCornerWidthConstraintPad: NSLayoutConstraint!
-  var settingCornerWidthConstraint: NSLayoutConstraint!
+    // Spacing views to size app screen proportionally.
+    @IBOutlet var topSpace: UIView!
+    @IBOutlet var logoSpace: UIView!
 
-  // Spacing views to size app screen proportionally.
-  @IBOutlet var topSpace: UIView!
-  @IBOutlet var logoSpace: UIView!
+    @IBOutlet var installationHeaderLabel: UILabel!
+    private var downloadButtonController: UIHostingController<InstallationDownload>?
 
-  @IBOutlet var installationHeaderLabel: UILabel!
-  private var downloadButtonController: UIHostingController<InstallationDownload>?
+    private let installationTipCardState: Bool = {
+        let userDefault = UserDefaults.standard
+        return userDefault.object(forKey: "installationTipCardState") as? Bool ?? true
+    }()
 
-  private let installationTipCardState: Bool = {
-    let userDefault = UserDefaults.standard
-    let state = userDefault.object(forKey: "installationTipCardState") as? Bool ?? true
-    return state
-  }()
+    func setAppTextView() {
+        if DeviceType.isPad {
+            appTextView = appTextViewPad
+            appTextBackground = appTextBackgroundPad
+            topIcon = topIconPad
+            settingsBtn = settingsBtnPad
+            settingsCorner = settingsCornerPad
+            settingCornerWidthConstraint = settingCornerWidthConstraintPad
 
-  func setAppTextView() {
-    if DeviceType.isPad {
-      appTextView = appTextViewPad
-      appTextBackground = appTextBackgroundPad
-      topIcon = topIconPad
-      settingsBtn = settingsBtnPad
-      settingsCorner = settingsCornerPad
-      settingCornerWidthConstraint = settingCornerWidthConstraintPad
+            appTextViewPhone.removeFromSuperview()
+            appTextBackgroundPhone.removeFromSuperview()
+            topIconPhone.removeFromSuperview()
+            settingsBtnPhone.removeFromSuperview()
+            settingsCornerPhone.removeFromSuperview()
+        } else {
+            appTextView = appTextViewPhone
+            appTextBackground = appTextBackgroundPhone
+            topIcon = topIconPhone
+            settingsBtn = settingsBtnPhone
+            settingsCorner = settingsCornerPhone
+            settingCornerWidthConstraint = settingCornerWidthConstraintPhone
 
-      appTextViewPhone.removeFromSuperview()
-      appTextBackgroundPhone.removeFromSuperview()
-      topIconPhone.removeFromSuperview()
-      settingsBtnPhone.removeFromSuperview()
-      settingsCornerPhone.removeFromSuperview()
-    } else {
-      appTextView = appTextViewPhone
-      appTextBackground = appTextBackgroundPhone
-      topIcon = topIconPhone
-      settingsBtn = settingsBtnPhone
-      settingsCorner = settingsCornerPhone
-      settingCornerWidthConstraint = settingCornerWidthConstraintPhone
-
-      appTextViewPad.removeFromSuperview()
-      appTextBackgroundPad.removeFromSuperview()
-      topIconPad.removeFromSuperview()
-      settingsBtnPad.removeFromSuperview()
-      settingsCornerPad.removeFromSuperview()
+            appTextViewPad.removeFromSuperview()
+            appTextBackgroundPad.removeFromSuperview()
+            topIconPad.removeFromSuperview()
+            settingsBtnPad.removeFromSuperview()
+            settingsCornerPad.removeFromSuperview()
+        }
     }
-  }
 
-  /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    navigationController?.setNavigationBarHidden(true, animated: false)
-    edgesForExtendedLayout = .all
-    extendedLayoutIncludesOpaqueBars = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        edgesForExtendedLayout = .all
+        extendedLayoutIncludesOpaqueBars = true
 
-    self.tabBarController?.viewControllers?[0].title = NSLocalizedString(
-      "i18n.app.installation.title", value: "Installation", comment: ""
-    )
-    self.tabBarController?.viewControllers?[1].title = NSLocalizedString(
-      "i18n.app.settings.title", value: "Settings", comment: ""
-    )
-    self.tabBarController?.viewControllers?[2].title = NSLocalizedString(
-      "i18n.app.about.title", value: "About", comment: ""
-    )
-
-    setCurrentUI()
-    showTipCardView()
-    showDownloadButton()
-    showCTAButton()
-
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(handleNavigateToDownloadScreen),
-      name: NSNotification.Name("NavigateToDownloadScreen"),
-      object: nil
-    )
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(handleFontSizeUpdate),
-      name: .fontSizeUpdatedNotification,
-      object: nil
+        tabBarController?.viewControllers?[0].title = NSLocalizedString(
+            "i18n.app.installation.title", value: "Installation", comment: ""
         )
-  }
-  @objc func handleFontSizeUpdate() {
-     DispatchQueue.main.async {
-       self.setCurrentUI()
-     }
-   }
+        tabBarController?.viewControllers?[1].title = NSLocalizedString(
+            "i18n.app.settings.title", value: "Settings", comment: ""
+        )
+        tabBarController?.viewControllers?[2].title = NSLocalizedString(
+            "i18n.app.about.title", value: "About", comment: ""
+        )
 
-  @objc private func handleNavigateToDownloadScreen() {
-    navigateToDownloadDataScreen()
-  }
+        setCurrentUI()
+        showTipCardView()
+        showDownloadButton()
+        showCTAButton()
 
-  deinit {
-    NotificationCenter.default.removeObserver(self)
-  }
-
-  /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    setCurrentUI()
-  }
-
-  /// Includes a call to set the UI for the app screen.
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: animated)
-    setCurrentUI()
-  }
-
-  /// Includes a call to set the UI for the app screen.
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    super.viewWillTransition(to: size, with: coordinator)
-    setCurrentUI()
-  }
-
-  /// Includes a call to set the UI for the app screen.
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    setCurrentUI()
-  }
-
-  // Lock the device into portrait mode to avoid resizing issues.
-  var orientations = UIInterfaceOrientationMask.portrait
-  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    get { return orientations }
-    set { orientations = newValue }
-  }
-
-  /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
-  func setTopIcon() {
-    if DeviceType.isPad {
-      topIconPhone.isHidden = true
-      topIconPad.isHidden = false
-      for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
-        constraint.constant = 125
-      }
-    } else {
-      topIconPhone.isHidden = false
-      topIconPad.isHidden = true
-      for constraint in settingsCorner.constraints where constraint.identifier == "settingsCorner" {
-        constraint.constant = 70
-      }
-    }
-  }
-
-  /// Sets the functionality of the button over the keyboard installation guide that opens Settings.
-  func setSettingsBtn() {
-    settingsBtn.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
-    settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
-  }
-
-  /// Sets constant properties for the app screen.
-  func setUIConstantProperties() {
-    // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
-    let scrollbarAppearance = UINavigationBarAppearance()
-    scrollbarAppearance.configureWithOpaqueBackground()
-
-    // Disable spacing views.
-    let allSpacingViews: [UIView] = [topSpace, logoSpace]
-    for view in allSpacingViews {
-      view.isUserInteractionEnabled = false
-      view.backgroundColor = .clear
-    }
-  }
-
-  /// Sets properties for the app screen given the current device.
-  func setUIDeviceProperties() {
-    // Flips coloured corner with settings icon based on orientation of text.
-    settingsCorner.image = settingsCorner.image?.imageFlippedForRightToLeftLayoutDirection()
-    if UIView.userInterfaceLayoutDirection(for: appTextView.semanticContentAttribute) == .rightToLeft {
-      settingsCorner.layer.maskedCorners = .layerMinXMinYCorner // "top-left"
-    } else {
-      settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner // "top-right"
-    }
-    settingsCorner.layer.cornerRadius = DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
-
-    settingsBtn.setTitle("", for: .normal)
-    settingsBtn.clipsToBounds = true
-    settingsBtn.layer.masksToBounds = false
-    settingsBtn.layer.cornerRadius = DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
-
-    let allTextViews: [UITextView] = [appTextView]
-
-    // Disable text views.
-    for textView in allTextViews {
-      textView.isUserInteractionEnabled = false
-      textView.backgroundColor = .clear
-      textView.isEditable = false
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleNavigateToDownloadScreen),
+            name: NSNotification.Name("NavigateToDownloadScreen"),
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleFontSizeUpdate),
+            name: .fontSizeUpdatedNotification,
+            object: nil
+        )
     }
 
-    // Set backgrounds and corner radii.
-    appTextBackground.isUserInteractionEnabled = true
-    appTextBackground.clipsToBounds = true
-    applyCornerRadius(
-      elem: appTextBackground,
-      radius: DeviceType.isPad ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
-    )
-
-    // Set link attributes for all textViews.
-    for textView in allTextViews {
-      textView.linkTextAttributes = [
-        NSAttributedString.Key.foregroundColor: linkBlueColor,
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-      ]
+    @objc func handleFontSizeUpdate() {
+        DispatchQueue.main.async {
+            self.setCurrentUI()
+        }
     }
-  }
 
-  /// Sets the necessary properties for the installation UI including calling text generation functions.
-  func setInstallationUI() {
-    let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize * 0.9)
-    topIconPhone.image = settingsSymbol
-    topIconPad.image = settingsSymbol
-    topIconPhone.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
-    topIconPad.tintColor = UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
-
-    // Enable installation directions and GitHub notice elements.
-    settingsBtn.isUserInteractionEnabled = true
-    appTextBackground.backgroundColor = lightWhiteDarkBlackColor
-
-    // Set the texts for the fields.
-    appTextView.attributedText = setInstallation(fontSize: fontSize)
-    appTextView.textColor = keyCharColor
-  }
-
-  /// Creates the current app UI by applying constraints and calling child UI functions.
-  func setCurrentUI() {
-
-    // Sets the font size for the text in the app screen and corresponding UIImage icons.
-    initializeFontSize()
-
-    installationHeaderLabel.text = NSLocalizedString(
-      "i18n.app.installation.keyboard.title", value: "Keyboard installation", comment: ""
-    )
-    installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
-
-    setAppTextView()
-    setTopIcon()
-    setSettingsBtn()
-    setUIConstantProperties()
-    setUIDeviceProperties()
-    setInstallationUI()
-  }
-
-  /// Function to open the settings app that is targeted by settingsBtn.
-  @objc func openSettingsApp() {
-    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-      fatalError("Failed to create settings URL.")
+    @objc private func handleNavigateToDownloadScreen() {
+        navigateToDownloadDataScreen()
     }
-    UIApplication.shared.open(settingsURL)
-  }
 
-  /// Function to change the key coloration given a touch down.
-  ///
-  /// - Parameters
-  ///  - sender: the button that has been pressed.
-  @objc func keyTouchDown(_ sender: UIButton) {
-    sender.backgroundColor = UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
-    sender.alpha = 0.2
-    topIcon.alpha = 0.2
-
-    // Bring sender's opacity back up to fully opaque and replace the background color.
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in
-      sender.backgroundColor = .clear
-      sender.alpha = 1.0
-      self?.topIcon.alpha = 1.0
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
-  }
+
+    /// Includes a call to checkDarkModeSetColors to set brand colors and a call to set the UI for the app screen.
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setCurrentUI()
+    }
+
+    /// Includes a call to set the UI for the app screen.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        setCurrentUI()
+    }
+
+    /// Includes a call to set the UI for the app screen.
+    override func viewWillTransition(
+        to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator
+    ) {
+        super.viewWillTransition(to: size, with: coordinator)
+        setCurrentUI()
+    }
+
+    /// Includes a call to set the UI for the app screen.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setCurrentUI()
+    }
+
+    // Lock the device into portrait mode to avoid resizing issues.
+    var orientations = UIInterfaceOrientationMask.portrait
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        get { return orientations }
+        set { orientations = newValue }
+    }
+
+    /// Sets the top icon for the app screen given the device to assure that it's oriented correctly to its background.
+    func setTopIcon() {
+        if DeviceType.isPad {
+            topIconPhone.isHidden = true
+            topIconPad.isHidden = false
+            for constraint in settingsCorner.constraints
+                where constraint.identifier == "settingsCorner" {
+                constraint.constant = 125
+            }
+        } else {
+            topIconPhone.isHidden = false
+            topIconPad.isHidden = true
+            for constraint in settingsCorner.constraints
+                where constraint.identifier == "settingsCorner" {
+                constraint.constant = 70
+            }
+        }
+    }
+
+    /// Sets the functionality of the button over the keyboard installation guide that opens Settings.
+    func setSettingsBtn() {
+        settingsBtn.addTarget(self, action: #selector(openSettingsApp), for: .touchUpInside)
+        settingsBtn.addTarget(self, action: #selector(keyTouchDown), for: .touchDown)
+    }
+
+    /// Sets constant properties for the app screen.
+    func setUIConstantProperties() {
+        // Set the scroll bar so that it appears on a white background regardless of light or dark mode.
+        let scrollbarAppearance = UINavigationBarAppearance()
+        scrollbarAppearance.configureWithOpaqueBackground()
+
+        // Disable spacing views.
+        let allSpacingViews: [UIView] = [topSpace, logoSpace]
+        for view in allSpacingViews {
+            view.isUserInteractionEnabled = false
+            view.backgroundColor = .clear
+        }
+    }
+
+    /// Sets properties for the app screen given the current device.
+    func setUIDeviceProperties() {
+        // Flips coloured corner with settings icon based on orientation of text.
+        settingsCorner.image = settingsCorner.image?.imageFlippedForRightToLeftLayoutDirection()
+        if UIView.userInterfaceLayoutDirection(for: appTextView.semanticContentAttribute)
+            == .rightToLeft {
+            settingsCorner.layer.maskedCorners = .layerMinXMinYCorner // "top-left"
+        } else {
+            settingsCorner.layer.maskedCorners = .layerMaxXMinYCorner // "top-right"
+        }
+        settingsCorner.layer.cornerRadius =
+            DeviceType.isPad
+                ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
+
+        settingsBtn.setTitle("", for: .normal)
+        settingsBtn.clipsToBounds = true
+        settingsBtn.layer.masksToBounds = false
+        settingsBtn.layer.cornerRadius =
+            DeviceType.isPad
+                ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
+
+        let allTextViews: [UITextView] = [appTextView]
+
+        // Disable text views.
+        for textView in allTextViews {
+            textView.isUserInteractionEnabled = false
+            textView.backgroundColor = .clear
+            textView.isEditable = false
+        }
+
+        // Set backgrounds and corner radii.
+        appTextBackground.isUserInteractionEnabled = true
+        appTextBackground.clipsToBounds = true
+        applyCornerRadius(
+            elem: appTextBackground,
+            radius: DeviceType.isPad
+                ? appTextBackground.frame.width * 0.02 : appTextBackground.frame.width * 0.05
+        )
+
+        // Set link attributes for all textViews.
+        for textView in allTextViews {
+            textView.linkTextAttributes = [
+                NSAttributedString.Key.foregroundColor: linkBlueColor,
+                NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        }
+    }
+
+    /// Sets the necessary properties for the installation UI including calling text generation functions.
+    func setInstallationUI() {
+        let settingsSymbol: UIImage = getSettingsSymbol(fontSize: fontSize * 0.9)
+        topIconPhone.image = settingsSymbol
+        topIconPad.image = settingsSymbol
+        topIconPhone.tintColor =
+            UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
+        topIconPad.tintColor =
+            UITraitCollection.current.userInterfaceStyle == .dark ? scribeCTAColor : keyCharColor
+
+        // Enable installation directions and GitHub notice elements.
+        settingsBtn.isUserInteractionEnabled = true
+        appTextBackground.backgroundColor = lightWhiteDarkBlackColor
+
+        // Set the texts for the fields.
+        appTextView.attributedText = setInstallation(fontSize: fontSize)
+        appTextView.textColor = keyCharColor
+    }
+
+    /// Creates the current app UI by applying constraints and calling child UI functions.
+    func setCurrentUI() {
+        // Sets the font size for the text in the app screen and corresponding UIImage icons.
+        initializeFontSize()
+
+        installationHeaderLabel.text = NSLocalizedString(
+            "i18n.app.installation.keyboard.title", value: "Keyboard installation", comment: ""
+        )
+        installationHeaderLabel.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
+
+        setAppTextView()
+        setTopIcon()
+        setSettingsBtn()
+        setUIConstantProperties()
+        setUIDeviceProperties()
+        setInstallationUI()
+    }
+
+    /// Function to open the settings app that is targeted by settingsBtn.
+    @objc func openSettingsApp() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString)
+        else {
+            fatalError("Failed to create settings URL.")
+        }
+        UIApplication.shared.open(settingsURL)
+    }
+
+    /// Function to change the key coloration given a touch down.
+    ///
+    /// - Parameters
+    ///  - sender: the button that has been pressed.
+    @objc func keyTouchDown(_ sender: UIButton) {
+        sender.backgroundColor =
+            UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
+        sender.alpha = 0.2
+        topIcon.alpha = 0.2
+
+        // Bring sender's opacity back up to fully opaque and replace the background color.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in
+            sender.backgroundColor = .clear
+            sender.alpha = 1.0
+            self?.topIcon.alpha = 1.0
+        }
+    }
 }
 
 // MARK: TipHintView
 
 extension InstallationVC {
-  private func showTipCardView() {
-    let overlayView = InstallationTipCardView(
-      installationTipCardState: installationTipCardState
-    )
+    private func showTipCardView() {
+        let overlayView = InstallationTipCardView(
+            installationTipCardState: installationTipCardState
+        )
 
-    let hostingController = UIHostingController(rootView: overlayView)
-    hostingController.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 178)
-    hostingController.view.backgroundColor = .clear
+        let hostingController = UIHostingController(rootView: overlayView)
+        hostingController.view.frame = CGRect(
+            x: 0, y: 0, width: view.bounds.width, height: 178
+        )
+        hostingController.view.backgroundColor = .clear
 
-    if !UIDevice.hasNotch {
-      startGlowingEffect(on: hostingController.view)
-      addChild(hostingController)
-      view.addSubview(hostingController.view)
-      hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        if !UIDevice.hasNotch {
+            startGlowingEffect(on: hostingController.view)
+            addChild(hostingController)
+            view.addSubview(hostingController.view)
+            hostingController.view.translatesAutoresizingMaskIntoConstraints = false
 
-      NSLayoutConstraint.activate([
-        hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-        hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-        hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-      ])
-
-    } else {
-      startGlowingEffect(on: hostingController.view)
-      addChild(hostingController)
-      view.addSubview(hostingController.view)
-
-    }
-    hostingController.didMove(toParent: self)
-  }
-
-  func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
-    view.layer.shadowColor = UIColor.scribeCTA.cgColor
-    view.layer.shadowRadius = 8
-    view.layer.shadowOpacity = 0.0
-    view.layer.shadowOffset = CGSize(width: 0, height: 0)
-
-    UIView.animate(
-      withDuration: duration,
-      delay: 0,
-      options: [.curveEaseOut, .autoreverse],
-      animations: {
-        view.layer.shadowOpacity = 0.6
-      }, completion: nil
-    )
-  }
-
-  private func showDownloadButton() {
-    let downloadButton = InstallationDownload(onDownloadTapped: { [weak self] in
-      self?.navigateToDownloadDataScreen()
-    })
-
-    let hostingController = UIHostingController(rootView: downloadButton)
-    hostingController.view.backgroundColor = .clear
-
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
-
-    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-
-    NSLayoutConstraint.activate([
-      hostingController.view.topAnchor.constraint(equalTo: appTextBackground.bottomAnchor, constant: 20),
-      hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      hostingController.view.heightAnchor.constraint(equalToConstant: 120)
-    ])
-
-    hostingController.didMove(toParent: self)
-    self.downloadButtonController = hostingController
-  }
-
-  private func showCTAButton() {
-    let ctaButton = CTAButton(
-      title: NSLocalizedString("i18n.app.installation.button_quick_tutorial", value: "Quick tutorial", comment: ""),
-      action: {
-      }
-    )
-
-    let hostingController = UIHostingController(rootView: ctaButton)
-    hostingController.view.backgroundColor = .clear
-
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
-
-    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-
-    NSLayoutConstraint.activate([
-      hostingController.view.topAnchor.constraint(equalTo: downloadButtonController!.view.bottomAnchor, constant: 20),
-      hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-      hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-      hostingController.view.heightAnchor.constraint(equalToConstant: 60)
-    ])
-
-    hostingController.didMove(toParent: self)
-  }
-
-  private func navigateToDownloadDataScreen() {
-    let downloadDataView = DownloadDataScreen(
-      onNavigateToTranslationSource: { [weak self] languageCode, languageName in
-        self?.navigateToTranslationSourceSelection(languageCode: languageCode, languageName: languageName)
-      }
-    )
-    let hostingController = UIHostingController(rootView: downloadDataView)
-
-    hostingController.view.backgroundColor = scribeAppBackgroundColor
-
-    hostingController.edgesForExtendedLayout = .all
-    hostingController.extendedLayoutIncludesOpaqueBars = true
-    hostingController.additionalSafeAreaInsets = .zero
-
-    hostingController.title = NSLocalizedString(
-      "i18n.app._global.download_data",
-      value: "Download data",
-      comment: ""
-    )
-
-    self.navigationItem.backButtonTitle = NSLocalizedString(
-      "i18n.app.installation.title",
-      value: "Installation",
-      comment: ""
-    )
-
-    if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
-      self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
-      self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
-      self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
-      self.navigationController?.navigationBar.prefersLargeTitles = settingsNavController.navigationBar.prefersLargeTitles
+            NSLayoutConstraint.activate([
+                hostingController.view.topAnchor.constraint(
+                    equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30
+                ),
+                hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            ])
+        } else {
+            startGlowingEffect(on: hostingController.view)
+            addChild(hostingController)
+            view.addSubview(hostingController.view)
+        }
+        hostingController.didMove(toParent: self)
     }
 
-    hostingController.navigationItem.largeTitleDisplayMode = .always
+    func startGlowingEffect(on view: UIView, duration: TimeInterval = 1.0) {
+        view.layer.shadowColor = UIColor.scribeCTA.cgColor
+        view.layer.shadowRadius = 8
+        view.layer.shadowOpacity = 0.0
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
 
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
-    self.navigationController?.pushViewController(hostingController, animated: true)
-  }
-
-  private func navigateToTranslationSourceSelection(languageCode: String, languageName: String) {
-    guard let selectionVC = self.storyboard?.instantiateViewController(
-      identifier: "SelectionViewTemplateViewController"
-    ) as? SelectionViewTemplateViewController else {
-      return
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: [.curveEaseOut, .autoreverse],
+            animations: {
+                view.layer.shadowOpacity = 0.6
+            }, completion: nil
+        )
     }
 
-    if let hostingController = self.navigationController?.viewControllers.last as? UIHostingController<DownloadDataScreen> {
-      hostingController.navigationItem.backButtonTitle = NSLocalizedString(
-        "i18n.app._global." + languageName.lowercased(),
-        value: languageName,
-        comment: ""
-      )
+    private func showDownloadButton() {
+        let downloadButton = InstallationDownload(onDownloadTapped: { [weak self] in
+            self?.navigateToDownloadDataScreen()
+        })
+
+        let hostingController = UIHostingController(rootView: downloadButton)
+        hostingController.view.backgroundColor = .clear
+
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(
+                equalTo: appTextBackground.bottomAnchor, constant: 20
+            ),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.heightAnchor.constraint(equalToConstant: 120)
+        ])
+
+        hostingController.didMove(toParent: self)
+        downloadButtonController = hostingController
     }
 
-    var translateData = SettingsTableData.translateLangSettingsData
+    private func showCTAButton() {
+        let ctaButton = CTAButton(
+            title: NSLocalizedString(
+                "i18n.app.installation.button_quick_tutorial", value: "Quick tutorial", comment: ""
+            ),
+            action: {}
+        )
 
-    // Remove the current keyboard language from translation options.
-    if let langCodeIndex = translateData[0].section.firstIndex(where: { s in
-      s.sectionState == .specificLang(languageCode)
-    }) {
-      translateData[0].section.remove(at: langCodeIndex)
+        let hostingController = UIHostingController(rootView: ctaButton)
+        hostingController.view.backgroundColor = .clear
+
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(
+                equalTo: downloadButtonController!.view.bottomAnchor, constant: 20
+            ),
+            hostingController.view.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor, constant: 16
+            ),
+            hostingController.view.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor, constant: -16
+            ),
+            hostingController.view.heightAnchor.constraint(equalToConstant: 60)
+        ])
+
+        hostingController.didMove(toParent: self)
     }
 
-    let parentSection = Section(
-      sectionTitle: languageName,
-      imageString: nil,
-      hasToggle: false,
-      hasNestedNavigation: true,
-      sectionState: .translateLang,
-      shortDescription: nil,
-      externalLink: false
-    )
+    private func navigateToDownloadDataScreen() {
+        let downloadDataView = DownloadDataScreen(
+            onNavigateToTranslationSource: { [weak self] languageCode, languageName in
+                self?.navigateToTranslationSourceSelection(
+                    languageCode: languageCode, languageName: languageName
+                )
+            }
+        )
+        let hostingController = UIHostingController(rootView: downloadDataView)
 
-    selectionVC.configureTable(for: translateData, parentSection: parentSection, langCode: languageCode)
-    selectionVC.edgesForExtendedLayout = .all
+        hostingController.view.backgroundColor = scribeAppBackgroundColor
 
-    // Copy navigation bar appearance from Settings tab.
-    if let settingsNavController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
-      self.navigationController?.navigationBar.standardAppearance = settingsNavController.navigationBar.standardAppearance
-      self.navigationController?.navigationBar.scrollEdgeAppearance = settingsNavController.navigationBar.scrollEdgeAppearance
-      self.navigationController?.navigationBar.tintColor = settingsNavController.navigationBar.tintColor
-      self.navigationController?.navigationBar.barTintColor = settingsNavController.navigationBar.barTintColor
+        hostingController.edgesForExtendedLayout = .all
+        hostingController.extendedLayoutIncludesOpaqueBars = true
+        hostingController.additionalSafeAreaInsets = .zero
+
+        hostingController.title = NSLocalizedString(
+            "i18n.app._global.download_data",
+            value: "Download data",
+            comment: ""
+        )
+
+        navigationItem.backButtonTitle = NSLocalizedString(
+            "i18n.app.installation.title",
+            value: "Installation",
+            comment: ""
+        )
+
+        if let settingsNavController = tabBarController?.viewControllers?[1]
+            as? UINavigationController {
+            navigationController?.navigationBar.standardAppearance =
+                settingsNavController.navigationBar.standardAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance =
+                settingsNavController.navigationBar.scrollEdgeAppearance
+            navigationController?.navigationBar.tintColor =
+                settingsNavController.navigationBar.tintColor
+            navigationController?.navigationBar.prefersLargeTitles =
+                settingsNavController.navigationBar.prefersLargeTitles
+        }
+
+        hostingController.navigationItem.largeTitleDisplayMode = .always
+
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(hostingController, animated: true)
     }
 
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
-    self.navigationController?.pushViewController(selectionVC, animated: true)
-  }
+    private func navigateToTranslationSourceSelection(languageCode: String, languageName: String) {
+        guard
+            let selectionVC = storyboard?.instantiateViewController(
+                identifier: "SelectionViewTemplateViewController"
+            ) as? SelectionViewTemplateViewController
+        else {
+            return
+        }
+
+        if let hostingController = navigationController?.viewControllers.last
+            as? UIHostingController<DownloadDataScreen> {
+            hostingController.navigationItem.backButtonTitle = NSLocalizedString(
+                "i18n.app._global." + languageName.lowercased(),
+                value: languageName,
+                comment: ""
+            )
+        }
+
+        var translateData = SettingsTableData.translateLangSettingsData
+
+        // Remove the current keyboard language from translation options.
+        if let langCodeIndex = translateData[0].section.firstIndex(where: { s in
+            s.sectionState == .specificLang(languageCode)
+        }) {
+            translateData[0].section.remove(at: langCodeIndex)
+        }
+
+        let parentSection = Section(
+            sectionTitle: languageName,
+            imageString: nil,
+            hasToggle: false,
+            hasNestedNavigation: true,
+            sectionState: .translateLang,
+            shortDescription: nil,
+            externalLink: false
+        )
+
+        selectionVC.configureTable(
+            for: translateData, parentSection: parentSection, langCode: languageCode
+        )
+        selectionVC.edgesForExtendedLayout = .all
+
+        // Copy navigation bar appearance from Settings tab.
+        if let settingsNavController = tabBarController?.viewControllers?[1]
+            as? UINavigationController {
+            navigationController?.navigationBar.standardAppearance =
+                settingsNavController.navigationBar.standardAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance =
+                settingsNavController.navigationBar.scrollEdgeAppearance
+            navigationController?.navigationBar.tintColor =
+                settingsNavController.navigationBar.tintColor
+            navigationController?.navigationBar.barTintColor =
+                settingsNavController.navigationBar.barTintColor
+        }
+
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(selectionVC, animated: true)
+    }
 }
 
 extension InstallationVC {
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-    if let tabBar = self.tabBarController?.tabBar {
-      // Remove existing gesture recognizers to avoid duplicates.
-      tabBar.gestureRecognizers?.forEach { tabBar.removeGestureRecognizer($0) }
+        if let tabBar = tabBarController?.tabBar {
+            // Remove existing gesture recognizers to avoid duplicates.
+            tabBar.gestureRecognizers?.forEach { tabBar.removeGestureRecognizer($0) }
 
-      // Add tap gesture recognizer.
-      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTabBarTap(_:)))
-      tapGesture.cancelsTouchesInView = false
-      tabBar.addGestureRecognizer(tapGesture)
+            // Add tap gesture recognizer.
+            let tapGesture = UITapGestureRecognizer(
+                target: self, action: #selector(handleTabBarTap(_:))
+            )
+            tapGesture.cancelsTouchesInView = false
+            tabBar.addGestureRecognizer(tapGesture)
+        }
     }
-  }
 
-  @objc private func handleTabBarTap(_ gesture: UITapGestureRecognizer) {
-    guard let tabBar = self.tabBarController?.tabBar else { return }
+    @objc private func handleTabBarTap(_ gesture: UITapGestureRecognizer) {
+        guard let tabBar = tabBarController?.tabBar else { return }
 
-    let location = gesture.location(in: tabBar)
+        let location = gesture.location(in: tabBar)
 
-    // Calculate which tab was tapped.
-    let tabWidth = tabBar.bounds.width / CGFloat(tabBar.items?.count ?? 1)
-    let tappedIndex = Int(location.x / tabWidth)
+        // Calculate which tab was tapped.
+        let tabWidth = tabBar.bounds.width / CGFloat(tabBar.items?.count ?? 1)
+        let tappedIndex = Int(location.x / tabWidth)
 
-    // If Installation tab (index 0) was tapped and we're already on it.
-    if tappedIndex == 0 && self.tabBarController?.selectedIndex == 0 {
-      if let navController = self.navigationController,
-        navController.viewControllers.count > 1 {
-        navController.popToRootViewController(animated: true)
-        navController.setNavigationBarHidden(true, animated: true)
-      }
+        // If Installation tab (index 0) was tapped and we're already on it.
+        if tappedIndex == 0, tabBarController?.selectedIndex == 0 {
+            if let navController = navigationController,
+               navController.viewControllers.count > 1 {
+                navController.popToRootViewController(animated: true)
+                navController.setNavigationBarHidden(true, animated: true)
+            }
+        }
     }
-  }
 }

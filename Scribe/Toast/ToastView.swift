@@ -8,7 +8,6 @@ struct ToastView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-
             Text(message)
                 .font(.subheadline)
 
@@ -24,6 +23,7 @@ struct ToastView: View {
 }
 
 // MARK: Toast Modifier
+
 struct ToastModifier: ViewModifier {
     @ObservedObject var manager: DownloadStateManager
 

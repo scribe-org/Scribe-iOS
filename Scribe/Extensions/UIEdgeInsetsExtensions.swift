@@ -1,16 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Extensions for UIEdgeInsets.
  */
 
 import UIKit
 
 extension UIEdgeInsets {
+    // MARK: Initialization
 
-  // MARK: Initialisation
-
-  init(vertical: CGFloat, horizontal: CGFloat) {
-    self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
-  }
+    init(vertical: CGFloat, horizontal: CGFloat) {
+        self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
+    }
 }

@@ -2,9 +2,7 @@
 import Foundation
 import Yams
 
-/**
- * ContractManager is responsible for loading and caching DataContract instances based on language codes.
- */
+/// ContractManager is responsible for loading and caching DataContract instances based on language codes.
 class ContractManager {
     static let shared = ContractManager()
     private var contractCache: [String: DataContract] = [:]
@@ -20,10 +18,12 @@ class ContractManager {
         }
 
         // Load YAML file (e.g., "de.yaml", "en.yaml", "es.yaml").
-        guard let yamlResourcePath = Bundle.main.path(
-            forResource: languageCode,
-            ofType: "yaml"
-        ) else {
+        guard
+            let yamlResourcePath = Bundle.main.path(
+                forResource: languageCode,
+                ofType: "yaml"
+            )
+        else {
             NSLog("Contract not found: \(languageCode).yaml")
             return createDefaultContract()
         }
@@ -45,7 +45,7 @@ class ContractManager {
             numbers: nil,
             genders: nil,
             conjugations: nil,
-            declensions: nil,
+            declensions: nil
         )
     }
 }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Variables associated with Scribe commands.
  */
 
@@ -15,10 +15,10 @@ var autoAction2Visible = true
 
 /// States of the emoji display corresponding to the number to show.
 enum EmojisToShow {
-  case zero
-  case one
-  case two
-  case three
+    case zero
+    case one
+    case two
+    case three
 }
 
 var emojisToShow: EmojisToShow = .zero
@@ -111,11 +111,11 @@ var conjugatePromptAndColorPlaceholder = NSMutableAttributedString()
 
 /// What the view of the conjugation display to display to the user.
 enum FormsDisplayDimensions {
-  case view3x2
-  case view3x1
-  case view2x2
-  case view1x2
-  case view1x1
+    case view3x2
+    case view3x1
+    case view2x2
+    case view1x2
+    case view1x1
 }
 
 var formsDisplayDimensions: FormsDisplayDimensions = .view3x2
@@ -145,22 +145,22 @@ var formRight = ""
 var formSingle = ""
 
 var formLabelsDict = [
-  "FPS": "",
-  "SPS": "",
-  "TPS": "",
-  "FPP": "",
-  "SPP": "",
-  "TPP": "",
-  "Top": "",
-  "Middle": "",
-  "Bottom": "",
-  "TL": "",
-  "TR": "",
-  "BL": "",
-  "BR": "",
-  "Left": "",
-  "Right": "",
-  "Single": ""
+    "FPS": "",
+    "SPS": "",
+    "TPS": "",
+    "FPP": "",
+    "SPP": "",
+    "TPP": "",
+    "Top": "",
+    "Middle": "",
+    "Bottom": "",
+    "TL": "",
+    "TR": "",
+    "BL": "",
+    "BR": "",
+    "Left": "",
+    "Right": "",
+    "Single": ""
 ]
 
 var verbToConjugate = ""

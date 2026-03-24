@@ -3,6 +3,7 @@
 import Foundation
 
 // MARK: Network Error
+
 enum NetworkError: Error, LocalizedError {
     case invalidURL
     case invalidResponse
@@ -15,18 +16,19 @@ enum NetworkError: Error, LocalizedError {
             return "Invalid URL"
         case .invalidResponse:
             return "Invalid server response"
-        case .httpError(let code, let message):
+        case let .httpError(code, message):
             if let message = message {
                 return "HTTP error \(code): \(message)"
             }
             return "HTTP error: \(code)"
-        case .decodingError(let error):
+        case let .decodingError(error):
             return "Decoding failed: \(error.localizedDescription)"
         }
     }
 }
 
 // MARK: API Client
+
 /// APIClient handles all network interactions with the Scribe server, including fetching language data and version information.
 final class LanguageDataAPIClient {
     static let shared = LanguageDataAPIClient()
@@ -49,11 +51,12 @@ final class LanguageDataAPIClient {
         self.session = session ?? URLSession(configuration: config)
 
         // Configure decoder
-        self.decoder = JSONDecoder()
-        self.decoder.dateDecodingStrategy = .iso8601
+        decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
     }
 
     // MARK: Fetch Language Data
+
     /// Fetches the complete language data including contract and data tables
     /// - Parameter language: The language code (e.g., "en", "es", "fr")
     /// - Returns: DataResponse containing language data
@@ -63,6 +66,7 @@ final class LanguageDataAPIClient {
     }
 
     // MARK: Fetch Data Version
+
     /// Fetches the version information for a specific language
     /// - Parameter language: The language code (e.g., "en", "es", "fr")
     /// - Returns: DataVersionResponse containing version information
@@ -72,11 +76,13 @@ final class LanguageDataAPIClient {
     }
 
     // MARK: Generic Fetch
+
     private func fetch<T: Decodable>(
-        _ type: T.Type,
+        _: T.Type,
         from endpoint: String
     ) async throws -> T {
-        guard let url = URL(string: endpoint, relativeTo: baseURL) else {
+        guard let url = URL(string: endpoint, relativeTo: baseURL)
+        else {
             throw NetworkError.invalidURL
         }
 
@@ -84,12 +90,14 @@ final class LanguageDataAPIClient {
         let (data, response) = try await session.data(for: request)
 
         // Validate response.
-        guard let httpResponse = response as? HTTPURLResponse else {
+        guard let httpResponse = response as? HTTPURLResponse
+        else {
             throw NetworkError.invalidResponse
         }
 
         // Handle non-success status codes.
-        guard (200...299).contains(httpResponse.statusCode) else {
+        guard (200 ... 299).contains(httpResponse.statusCode)
+        else {
             let errorMessage = try? JSONDecoder().decode(
                 ErrorResponse.self,
                 from: data
@@ -110,6 +118,7 @@ final class LanguageDataAPIClient {
 }
 
 // MARK: Error Response
+
 private struct ErrorResponse: Decodable {
     let message: String
 }

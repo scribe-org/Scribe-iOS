@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Functions to style keyboard elements.
  */
 
@@ -13,46 +13,47 @@ import UIKit
 ///  - title: the title to be assigned.
 ///  - radius: the corner radius of the button.
 func styleBtn(btn: UIButton, title: String, radius: CGFloat) {
-  btn.clipsToBounds = true
-  btn.layer.masksToBounds = false
-  btn.layer.cornerRadius = radius
-  btn.setTitle(title, for: .normal)
-  if title == invalidCommandMsgWikidata || title == invalidCommandMsgWiktionary {
-    btn.configuration = UIButton.Configuration.plain()
-    btn.configuration?.baseForegroundColor = UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
-    btn.configuration?.image = UIImage(systemName: "info.circle.fill")
-    btn.configuration?.imagePlacement = .trailing
-    btn.configuration?.imagePadding = 3
-  } else {
-    btn.configuration = nil
-  }
-  btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
-  btn.setTitleColor(keyCharColor, for: .normal)
+    btn.clipsToBounds = true
+    btn.layer.masksToBounds = false
+    btn.layer.cornerRadius = radius
+    btn.setTitle(title, for: .normal)
+    if title == invalidCommandMsgWikidata || title == invalidCommandMsgWiktionary {
+        btn.configuration = UIButton.Configuration.plain()
+        btn.configuration?.baseForegroundColor =
+            UITraitCollection.current.userInterfaceStyle == .light ? specialKeyColor : keyColor
+        btn.configuration?.image = UIImage(systemName: "info.circle.fill")
+        btn.configuration?.imagePlacement = .trailing
+        btn.configuration?.imagePadding = 3
+    } else {
+        btn.configuration = nil
+    }
+    btn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
+    btn.setTitleColor(keyCharColor, for: .normal)
 
-  if title != "Scribe" {
-    btn.layer.shadowColor = keyShadowColor
-    btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-    btn.layer.shadowOpacity = 1.0
-    btn.layer.shadowRadius = 0.0
-  }
+    if title != "Scribe" {
+        btn.layer.shadowColor = keyShadowColor
+        btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        btn.layer.shadowOpacity = 1.0
+        btn.layer.shadowRadius = 0.0
+    }
 
-  // Needed to prevent an unnecessary shadow.
-  if commandState != .selectCommand, [.one, .two, .three].contains(emojisToShow) {
-    btn.layer.shadowOpacity = 0
-  }
+    // Needed to prevent an unnecessary shadow.
+    if commandState != .selectCommand, [.one, .two, .three].contains(emojisToShow) {
+        btn.layer.shadowOpacity = 0
+    }
 }
 
-// The names of symbols whose keys should be slightly larger than the default size.
+/// The names of symbols whose keys should be slightly larger than the default size.
 var keysThatAreSlightlyLarger = [
-  "delete.left",
-  "chevron.left",
-  "chevron.right",
-  "shift",
-  "shift.fill",
-  "capslock",
-  "capslock.fill",
-  "arrow.forward.to.line",
-  "arrowtriangle.right.fill"
+    "delete.left",
+    "chevron.left",
+    "chevron.right",
+    "shift",
+    "shift.fill",
+    "capslock",
+    "capslock.fill",
+    "arrow.forward.to.line",
+    "arrowtriangle.right.fill"
 ]
 
 /// Get the icon configurations for keys if the device is an iPhone.
@@ -60,33 +61,33 @@ var keysThatAreSlightlyLarger = [
 /// - Parameters
 ///  - iconName: the name of the UIImage systemName icon to be used.
 func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
-  var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterKeyWidth / 1.75,
-    weight: .light,
-    scale: .medium
-  )
-  if keysThatAreSlightlyLarger.contains(iconName) {
-    iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterKeyWidth / 1.55,
-      weight: .light,
-      scale: .medium
-    )
-  }
-  if isLandscapeView {
-    iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterKeyWidth / 3.5,
-      weight: .light,
-      scale: .medium
-    )
-    if keysThatAreSlightlyLarger.contains(iconName) {
-      iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterKeyWidth / 3.2,
+    var iconConfig = UIImage.SymbolConfiguration(
+        pointSize: letterKeyWidth / 1.75,
         weight: .light,
         scale: .medium
-      )
+    )
+    if keysThatAreSlightlyLarger.contains(iconName) {
+        iconConfig = UIImage.SymbolConfiguration(
+            pointSize: letterKeyWidth / 1.55,
+            weight: .light,
+            scale: .medium
+        )
     }
-  }
-  return iconConfig
+    if isLandscapeView {
+        iconConfig = UIImage.SymbolConfiguration(
+            pointSize: letterKeyWidth / 3.5,
+            weight: .light,
+            scale: .medium
+        )
+        if keysThatAreSlightlyLarger.contains(iconName) {
+            iconConfig = UIImage.SymbolConfiguration(
+                pointSize: letterKeyWidth / 3.2,
+                weight: .light,
+                scale: .medium
+            )
+        }
+    }
+    return iconConfig
 }
 
 /// Get the icon configurations for keys if the device is an iPad.
@@ -94,35 +95,35 @@ func getPhoneIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 /// - Parameters
 ///  - iconName: the name of the UIImage systemName icon to be used.
 func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
-  keysThatAreSlightlyLarger.append("globe")
-  var iconConfig = UIImage.SymbolConfiguration(
-    pointSize: letterKeyWidth / 3,
-    weight: .light,
-    scale: .medium
-  )
-  if keysThatAreSlightlyLarger.contains(iconName) {
-    iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterKeyWidth / 2.75,
-      weight: .light,
-      scale: .medium
-    )
-  }
-  if isLandscapeView {
-    iconConfig = UIImage.SymbolConfiguration(
-      pointSize: letterKeyWidth / 3.75,
-      weight: .light,
-      scale: .medium
-    )
-    if keysThatAreSlightlyLarger.contains(iconName) {
-      iconConfig = UIImage.SymbolConfiguration(
-        pointSize: letterKeyWidth / 3.4,
+    keysThatAreSlightlyLarger.append("globe")
+    var iconConfig = UIImage.SymbolConfiguration(
+        pointSize: letterKeyWidth / 3,
         weight: .light,
         scale: .medium
-      )
+    )
+    if keysThatAreSlightlyLarger.contains(iconName) {
+        iconConfig = UIImage.SymbolConfiguration(
+            pointSize: letterKeyWidth / 2.75,
+            weight: .light,
+            scale: .medium
+        )
     }
-  }
-  keysThatAreSlightlyLarger.removeAll { $0 == "globe" }
-  return iconConfig
+    if isLandscapeView {
+        iconConfig = UIImage.SymbolConfiguration(
+            pointSize: letterKeyWidth / 3.75,
+            weight: .light,
+            scale: .medium
+        )
+        if keysThatAreSlightlyLarger.contains(iconName) {
+            iconConfig = UIImage.SymbolConfiguration(
+                pointSize: letterKeyWidth / 3.4,
+                weight: .light,
+                scale: .medium
+            )
+        }
+    }
+    keysThatAreSlightlyLarger.removeAll { $0 == "globe" }
+    return iconConfig
 }
 
 /// Styles buttons that have icon keys.
@@ -132,14 +133,14 @@ func getPadIconConfig(iconName: String) -> UIImage.SymbolConfiguration {
 ///  - color: the tint color for the icon on the key.
 ///  - iconName: the name of the UIImage systemName icon to be used.
 func styleIconBtn(btn: UIButton, color: UIColor, iconName: String, btnTitle _: String = "") {
-  btn.setTitle("", for: .normal)
-  var iconConfig = getPhoneIconConfig(iconName: iconName)
-  if DeviceType.isPad {
-    iconConfig = getPadIconConfig(iconName: iconName)
-  }
+    btn.setTitle("", for: .normal)
+    var iconConfig = getPhoneIconConfig(iconName: iconName)
+    if DeviceType.isPad {
+        iconConfig = getPadIconConfig(iconName: iconName)
+    }
 
-  btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
-  btn.tintColor = color
+    btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
+    btn.tintColor = color
 }
 
 /// Sets icon of delete button for pressed or non-pressed state.
@@ -147,8 +148,10 @@ func styleIconBtn(btn: UIButton, color: UIColor, iconName: String, btnTitle _: S
 ///   - button: The delete button.
 ///   - isPressed: Determines if icon for pressed or non-pressed state will be set.
 func styleDeleteButton(_ button: UIButton, isPressed: Bool) {
-  styleIconBtn(btn: button, color: keyCharColor,
-               iconName: isPressed ? "delete.left.fill" : "delete.left")
+    styleIconBtn(
+        btn: button, color: keyCharColor,
+        iconName: isPressed ? "delete.left.fill" : "delete.left"
+    )
 }
 
 /// Adds padding to keys to position them.
@@ -158,12 +161,12 @@ func styleDeleteButton(_ button: UIButton, isPressed: Bool) {
 ///  - width: the width of the padding.
 ///  - key: the key associated with the button.
 func addPadding(to stackView: UIStackView, width: CGFloat, key _: String) {
-  let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-  padding.setTitleColor(.clear, for: .normal)
-  padding.alpha = 0.0
-  padding.widthAnchor.constraint(equalToConstant: width).isActive = true
-  padding.isUserInteractionEnabled = false
+    let padding = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    padding.setTitleColor(.clear, for: .normal)
+    padding.alpha = 0.0
+    padding.widthAnchor.constraint(equalToConstant: width).isActive = true
+    padding.isUserInteractionEnabled = false
 
-  paddingViews.append(padding)
-  stackView.addArrangedSubview(padding)
+    paddingViews.append(padding)
+    stackView.addArrangedSubview(padding)
 }
