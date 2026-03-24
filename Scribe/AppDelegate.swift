@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _: UIApplication,
     didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    initializeFontSize()
     // Override point for customization after application launch.
     if #available(iOS 13.0, *) {
       let appearance = UITabBarAppearance()

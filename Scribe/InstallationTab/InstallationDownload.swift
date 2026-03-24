@@ -11,17 +11,23 @@ struct CardView: View {
   let mainText: String
   let subtitle: String
   let action: () -> Void
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+
+  var textSizeMultiplier: CGFloat {
+      increaseTextSize ? 1.25 : 1.0
+    }
 
   var body: some View {
     VStack(alignment: .leading, spacing: 6) {
       Text(title)
-        .font(.system(size: 19, weight: .semibold))
+        .font(.system(size: 19 * textSizeMultiplier, weight: .semibold))
         .foregroundColor(.primary)
 
       VStack(alignment: .leading, spacing: 6) {
         HStack {
           Text(mainText)
-            .font(.body)
+            .font(.system(size: 17 * textSizeMultiplier))
             .foregroundColor(.primary)
 
           Spacer()
@@ -31,7 +37,7 @@ struct CardView: View {
         }
 
         Text(subtitle)
-          .font(.subheadline)
+          .font(.system(size: 15 * textSizeMultiplier))
           .foregroundColor(.secondary)
       }
       .padding()

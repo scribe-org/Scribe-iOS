@@ -115,11 +115,11 @@ extension TableViewTemplateViewController {
     let descFont: UIFont
 
     if DeviceType.isPad {
-      titleFont = UIFont.systemFont(ofSize: 24, weight: .medium)
-      descFont = UIFont.systemFont(ofSize: 18)
+      titleFont = UIFont.systemFont(ofSize: fontSize * 1.5, weight: .medium)
+      descFont = UIFont.systemFont(ofSize: fontSize * 1.1)
     } else {
-      titleFont = UIFont.systemFont(ofSize: 16, weight: .medium)
-      descFont = UIFont.systemFont(ofSize: 14)
+      titleFont = UIFont.systemFont(ofSize: fontSize, weight: .medium)
+      descFont = UIFont.systemFont(ofSize: fontSize * 0.9)
     }
 
     // Calculate actual height needed for title text.

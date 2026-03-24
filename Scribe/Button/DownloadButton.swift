@@ -70,6 +70,10 @@ struct ButtonConfig {
 }
 
 struct DownloadButton: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
   let state: ButtonState
   let action: () -> Void
   @Environment(\.colorScheme) var colorScheme
@@ -86,7 +90,7 @@ struct DownloadButton: View {
           Image(systemName: state.config.icon)
         }
       }
-      .font(.system(size: 12, weight: .semibold))
+      .font(.system(size: 12 * textSizeMultiplier, weight: .semibold))
       .foregroundColor(state.config.foregroundColor)
       .frame(width: 120, height: 20)
       .padding(.vertical, 6)

@@ -53,4 +53,6 @@ extension Locale {
 
 extension Notification.Name {
   static let keyboardsUpdatedNotification = Notification.Name("keyboardsHaveUpdated")
+  static let fontSizeUpdatedNotification = Notification.Name("fontSizeHasUpdated")
+
 }

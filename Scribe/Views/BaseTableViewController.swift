@@ -42,7 +42,25 @@ class BaseTableViewController: UITableViewController {
     if let tabBarController = tabBarController as? SwipeableTabBarController {
       tabBarController.isCyclingEnabled = true
     }
+
+    NotificationCenter.default.addObserver(
+          self,
+          selector: #selector(handleFontSizeUpdate),
+          name: .fontSizeUpdatedNotification,
+          object: nil
+        )
+
   }
+
+ @objc func handleFontSizeUpdate() {
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }
+
+ deinit {
+      NotificationCenter.default.removeObserver(self)
+    }
 }
 
 // MARK: UITableViewDataSource
