@@ -51,4 +51,3 @@ struct AboutTipCardView: View {
     .shadow(color: Color("keyShadow").opacity(0.4), radius: 5, x: 0, y: 2)
   }
 }
-

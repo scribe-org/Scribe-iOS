@@ -175,4 +175,3 @@ private let thirdPartyLicensesBodyText: String = {
   )
   return "\(intro)\n\n1. \(entry1)\n\n2. \(entry2)"
 }()
-
