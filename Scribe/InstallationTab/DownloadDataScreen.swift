@@ -4,29 +4,98 @@ import SwiftUI
 
 /// Download data UI for getting new data for keyboards.
 
-struct RadioCircle: View {
-  @Binding var isSelected: Bool
-  var onSelect: () -> Void
+enum CheckDataState {
+  case idle
+  case checking
+  case checked
+}
+
+struct CheckDataSpinner: View {
+  @Binding var state: CheckDataState
+  @State private var rotation: Double = 0
+  @State private var spinnerTimer: Timer?
 
   var body: some View {
     ZStack {
-      Circle()
-        .stroke(isSelected ? Color("scribeCTA") : Color.gray, lineWidth: 2)
-        .frame(width: 24, height: 24)
-
-      if isSelected {
+      switch state {
+      case .idle:
+        // Empty gray circle
         Circle()
-          .fill(Color("scribeCTA"))
-          .frame(width: 12, height: 12)
+          .stroke(Color.gray, lineWidth: 2)
+          .frame(width: 28, height: 28)
+          .contentShape(Circle())
+          .onTapGesture { startChecking() }
+
+      case .checking:
+        // Rotating arc (orange) with X cancel
+        ZStack {
+          Circle()
+            .stroke(Color.gray.opacity(0.3), lineWidth: 2.5)
+            .frame(width: 28, height: 28)
+
+          Circle()
+            .trim(from: 0, to: 0.7)
+            .stroke(Color("scribeCTA"), style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
+            .frame(width: 28, height: 28)
+            .rotationEffect(.degrees(rotation))
+            .onAppear { startRotation() }
+            .onDisappear { stopRotation() }
+
+          Image(systemName: "xmark")
+            .font(.system(size: 10, weight: .bold))
+            .foregroundColor(Color("scribeCTA"))
+        }
+        .contentShape(Circle())
+        .onTapGesture { cancelChecking() }
+
+      case .checked:
+        // Filled orange circle with checkmark
+        ZStack {
+          Circle()
+            .fill(Color("scribeCTA"))
+            .frame(width: 28, height: 28)
+
+          Image(systemName: "checkmark")
+            .font(.system(size: 12, weight: .bold))
+            .foregroundColor(.white)
+        }
+        .contentShape(Circle())
+        .onTapGesture { resetToIdle() }
       }
     }
-    .contentShape(Circle())
-    .onTapGesture {
-      withAnimation(.spring()) {
-        isSelected.toggle()
-        if isSelected { onSelect() }
-      }
+    .animation(.easeInOut(duration: 0.2), value: state == .idle)
+  }
+
+  private func startChecking() {
+    withAnimation { state = .checking }
+    // Simulate a check completing after 2 seconds
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      guard state == .checking else { return }
+      stopRotation()
+      withAnimation { state = .checked }
     }
+  }
+
+  private func cancelChecking() {
+    stopRotation()
+    withAnimation { state = .idle }
+  }
+
+  private func resetToIdle() {
+    withAnimation { state = .idle }
+  }
+
+  private func startRotation() {
+    rotation = 0
+    spinnerTimer?.invalidate()
+    spinnerTimer = Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { _ in
+      rotation += 4
+    }
+  }
+
+  private func stopRotation() {
+    spinnerTimer?.invalidate()
+    spinnerTimer = nil
   }
 }
 
@@ -52,7 +121,7 @@ struct UpdateDataCardView: View {
     value: "Regularly update data",
     comment: ""
   )
-  @State private var isCheckNew = false
+  @State private var checkState: CheckDataState = .idle
   @State private var isRegularUpdate = false
 
   var body: some View {
@@ -70,9 +139,7 @@ struct UpdateDataCardView: View {
 
             Spacer()
 
-            RadioCircle(isSelected: $isCheckNew, onSelect: {
-              onInitializeStates()
-            })
+            CheckDataSpinner(state: $checkState)
           }
           Divider()
         }
