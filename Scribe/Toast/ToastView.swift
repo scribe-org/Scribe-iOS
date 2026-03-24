@@ -24,7 +24,6 @@ struct ToastView: View {
 }
 
 // MARK: Toast Modifier
-
 struct ToastModifier: ViewModifier {
     @ObservedObject var manager: DownloadStateManager
 

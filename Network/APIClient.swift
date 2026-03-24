@@ -3,7 +3,6 @@
 import Foundation
 
 // MARK: Network Error
-
 enum NetworkError: Error, LocalizedError {
     case invalidURL
     case invalidResponse
@@ -28,7 +27,6 @@ enum NetworkError: Error, LocalizedError {
 }
 
 // MARK: API Client
-
 /// APIClient handles all network interactions with the Scribe server, including fetching language data and version information.
 final class LanguageDataAPIClient {
     static let shared = LanguageDataAPIClient()
@@ -56,7 +54,6 @@ final class LanguageDataAPIClient {
     }
 
     // MARK: Fetch Language Data
-
     /// Fetches the complete language data including contract and data tables
     /// - Parameter language: The language code (e.g., "en", "es", "fr")
     /// - Returns: DataResponse containing language data
@@ -66,7 +63,6 @@ final class LanguageDataAPIClient {
     }
 
     // MARK: Fetch Data Version
-
     /// Fetches the version information for a specific language
     /// - Parameter language: The language code (e.g., "en", "es", "fr")
     /// - Returns: DataVersionResponse containing version information
@@ -76,7 +72,6 @@ final class LanguageDataAPIClient {
     }
 
     // MARK: Generic Fetch
-
     private func fetch<T: Decodable>(
         _ type: T.Type,
         from endpoint: String
@@ -115,7 +110,6 @@ final class LanguageDataAPIClient {
 }
 
 // MARK: Error Response
-
 private struct ErrorResponse: Decodable {
     let message: String
 }

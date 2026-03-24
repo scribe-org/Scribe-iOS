@@ -194,6 +194,16 @@ struct LanguageListView: View {
     }
   }
 
+  // Determines the button state for the "All languages" option based on the states of individual languages.
+  private var allLanguagesState: ButtonState {
+    let states = stateManager.downloadStates.values
+    if states.allSatisfy({ $0 == .updated }) { return .updated }
+    if states.allSatisfy({ $0 == .downloading }) { return .downloading }
+    let actionable = states.filter({ $0 != .updated })
+    if actionable.allSatisfy({ $0 == .update }) { return .update }
+    return .ready
+  }
+
   var body: some View {
     ZStack {
       VStack(alignment: .leading, spacing: 6) {

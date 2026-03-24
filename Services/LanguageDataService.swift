@@ -13,7 +13,6 @@ final class LanguageDataService {
   private init() {}
 
   // MARK: Download Data
-
   func downloadData(language: String, forceDownload: Bool = false) async throws {
     let localLastUpdate = getLastUpdate(for: language) ?? "1970-01-01"
 
@@ -29,7 +28,6 @@ final class LanguageDataService {
   }
 
   // MARK: Check for Updates
-
   func checkForUpdates(language: String) async throws -> Bool {
     let localLastUpdate = getLastUpdate(for: language) ?? "1970-01-01"
     let versionResponse = try await apiClient.fetchDataVersion(language: language)
@@ -40,13 +38,11 @@ final class LanguageDataService {
   }
 
   // MARK: Has Data
-
   func hasData(for language: String) -> Bool {
     return getLastUpdate(for: language) != nil
   }
 
   // MARK: Sync Database
-
   private func syncDatabaseForLanguage(
     language: String,
     response: DataResponse
@@ -102,7 +98,6 @@ final class LanguageDataService {
   }
 
   // MARK: Private Helpers
-
   private func isUpdateAvailable(local: String, server: String) -> Bool {
     let localDate = String(local.prefix(10))
     let serverDate = String(server.prefix(10))
