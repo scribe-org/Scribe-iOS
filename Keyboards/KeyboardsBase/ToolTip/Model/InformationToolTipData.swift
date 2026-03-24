@@ -35,7 +35,7 @@ enum InformationToolTipData {
   )
 
   static let wiktionaryExplanation = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_1,
+    string: invalidCommandTextWiktionary1,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
       ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
@@ -44,7 +44,7 @@ enum InformationToolTipData {
   )
 
   static let wiktionaryTranslationOrigin = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_2,
+    string: invalidCommandTextWiktionary2,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
         ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.5
