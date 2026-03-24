@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Classes and variables that define keys for Scribe keyboards.
  */
 
@@ -12,334 +12,349 @@ var paddingViews: [UIButton] = []
 
 /// Class of UIButton that allows the tap area to be increased so that edges between keys can still receive user input.
 class KeyboardKey: UIButton {
-  // Properties for the touch area - passing negative values will expand the touch area.
-  var topShift = CGFloat(0)
-  var leftShift = CGFloat(0)
-  var bottomShift = CGFloat(0)
-  var rightShift = CGFloat(0)
+    // Properties for the touch area - passing negative values will expand the touch area.
+    var topShift = CGFloat(0)
+    var leftShift = CGFloat(0)
+    var bottomShift = CGFloat(0)
+    var rightShift = CGFloat(0)
 
-  /// Allows the bounds of the key to be expanded.
-  override func point(inside point: CGPoint, with _: UIEvent?) -> Bool {
-    return bounds.inset(by: UIEdgeInsets(
-      top: topShift,
-      left: leftShift,
-      bottom: bottomShift,
-      right: rightShift
-    )
-    ).contains(point)
-  }
-
-  var row: Int!
-  var idx: Int!
-  var key: String!
-
-  /// Styles the key with a color, corner radius and shadow.
-  func style() {
-    backgroundColor = keyColor
-    layer.cornerRadius = keyCornerRadius
-    layer.shadowColor = keyShadowColor
-    layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-    layer.shadowOpacity = 1.0
-    layer.shadowRadius = 0.0
-    layer.masksToBounds = false
-  }
-
-  /// Sets the character of the key and defines its capitalized state.
-  func setChar() {
-    key = keyboard[row][idx]
-
-    if key == "space" {
-      key = showKeyboardLanguage ? languageTextForSpaceBar : spaceBar
-      layer.setValue(true, forKey: "isSpecial")
+    /// Allows the bounds of the key to be expanded.
+    override func point(inside point: CGPoint, with _: UIEvent?) -> Bool {
+        return bounds.inset(
+            by: UIEdgeInsets(
+                top: topShift,
+                left: leftShift,
+                bottom: bottomShift,
+                right: rightShift
+            )
+        ).contains(point)
     }
-    var capsKey = ""
 
-    if key != "ß"
-      && key != "´"
-      && key != spaceBar
-      && key != languageTextForSpaceBar
-      && key != "ABC"
-      && key != "АБВ" {
-      capsKey = keyboard[row][idx].capitalized
-    } else {
-      capsKey = key
+    var row: Int!
+    var idx: Int!
+    var key: String!
+
+    /// Styles the key with a color, corner radius and shadow.
+    func style() {
+        backgroundColor = keyColor
+        layer.cornerRadius = keyCornerRadius
+        layer.shadowColor = keyShadowColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        layer.shadowOpacity = 1.0
+        layer.shadowRadius = 0.0
+        layer.masksToBounds = false
     }
-    let keyToDisplay = shiftButtonState == .shift || shiftButtonState == .capsLocked ? capsKey : key
-    setTitleColor(keyCharColor, for: .normal)
-    layer.setValue(key, forKey: "original")
-    layer.setValue(keyToDisplay, forKey: "keyToDisplay")
-    layer.setValue(false, forKey: "isSpecial")
-    setTitle(keyToDisplay, for: .normal) // set button character
 
-    if showKeyboardLanguage && key == languageTextForSpaceBar {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-        self.layer.setValue(spaceBar, forKey: "original")
-        self.layer.setValue(spaceBar, forKey: "keyToDisplay")
-        self.setTitle(spaceBar, for: .normal)
+    /// Sets the character of the key and defines its capitalized state.
+    func setChar() {
+        key = keyboard[row][idx]
 
-        showKeyboardLanguage = false
-      }
-    }
-  }
+        if key == "space" {
+            key = showKeyboardLanguage ? languageTextForSpaceBar : spaceBar
+            layer.setValue(true, forKey: "isSpecial")
+        }
+        var capsKey = ""
 
-  /// Sets the character size of a capital key if the device is an iPhone given the orientation.
-  func setPhoneCapCharSize() {
-    if isLandscapeView {
-      if key == "#+="
-        || key == "ABC"
-        || key == "АБВ"
-        || key == "123" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
-      } else if key == spaceBar || key == languageTextForSpaceBar {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.9)
-      }
-    } else {
-      if key == "#+="
-        || key == "ABC"
-        || key == "АБВ"
-        || key == "123" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
-      } else if key == spaceBar || key == languageTextForSpaceBar {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.5)
-      }
-    }
-  }
-
-  /// Checks if the character is a lower case letter and adjusts it if so.
-  func checkSetPhoneLowerCharSize() {
-    guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
-
-    if keyboardState == .letters
-      && !isSpecial
-      && !["123", "´", spaceBar, languageTextForSpaceBar].contains(key)
-      && shiftButtonState == .normal {
-
-      if isLandscapeView {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.4)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.35)
-      }
-    }
-  }
-
-  /// Sets the character size of a key if the device is an iPhone.
-  func setPhoneCharSize() {
-    setPhoneCapCharSize()
-    checkSetPhoneLowerCharSize()
-  }
-
-  /// Sets the character size of a key if the device is an iPad given the orientation.
-  func setPadCapCharSize() {
-    if isLandscapeView {
-      if key == "#+="
-        || key == "ABC"
-        || key == "АБВ"
-        || key == "hideKeyboard" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
-      } else if key == spaceBar || key == languageTextForSpaceBar {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.25)
-      } else if key == ".?123" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.5)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
-      }
-    } else {
-      if key == "#+="
-        || key == "ABC"
-        || key == "АБВ"
-        || key == "hideKeyboard" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.25)
-      } else if key == spaceBar || key == languageTextForSpaceBar {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
-      } else if key == ".?123" {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3)
-      }
-    }
-  }
-
-  /// Sets the character size of a key if the device is an iPad given the orientation.
-  func checkSetPadLowerCharSize() {
-    guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
-
-    if keyboardState == .letters
-      && !isSpecial
-      && ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(key)
-      && shiftButtonState == .normal {
-
-      if isLandscapeView {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.35)
-      } else {
-        titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.75)
-      }
-    }
-  }
-
-  /// Sets the character size of a key if the device is an iPad.
-  func setPadCharSize() {
-    setPadCapCharSize()
-    checkSetPadLowerCharSize()
-  }
-
-  /// Sets the key character sizes depending on device type and orientation.
-  func setCharSize() {
-    if DeviceType.isPhone {
-      setPhoneCharSize()
-    } else if DeviceType.isPad {
-      setPadCharSize()
-    }
-  }
-
-  /// Adjusts the width of a key if it's one of the special characters on the iPhone keyboard.
-  func adjustPhoneKeyWidth() {
-    if ["ABC", "АБВ"].contains(key) {
-      layer.setValue(true, forKey: "isSpecial")
-      widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
-    } else if ["delete", "#+=", "shift", "selectKeyboard"].contains(key) {
-      if keyboardState == .letters
-        && (
-          (
-            commandState != .translate
-            && controllerLanguage == "Russian"
-          ) || (
-            commandState == .translate
-            && getControllerTranslateLangCode() == "ru"
-        )) {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      } else {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
-      }
-    } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
-      if row == 2 {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
-      } else if row != 2 {
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
-      }
-    } else if (keyboardState == .numbers || keyboardState == .symbols)
-      && row == 2 {
-      // Make second row number and symbol keys wider for iPhones.
-      widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.4).isActive = true
-    } else if key != spaceBar && key != languageTextForSpaceBar {
-      widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
-    }
-  }
-
-  /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
-  func adjustPadKeyWidth() {
-    if usingExpandedKeyboard {
-      scalarCapsLockKeyWidth = 1.3
-      scalarDeleteKeyWidth = 1.65
-      scalarReturnKeyWidth = 1.3
-      scalarShiftKeyWidth = 1.5
-      scalarSpecialKeysWidth = 1.0
-      switch key {
-      case "ABC", "АБВ":
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
-      case "#+=", "selectKeyboard":
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
-      case "delete":
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth).isActive = true
-      case SpecialKeys.capsLock:
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth).isActive = true
-      case SpecialKeys.indent:
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth).isActive = true
-      case "shift" where idx == 0:
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth).isActive = true
-      case "shift" where idx > 0:
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth).isActive = true
-      case "return":
-        layer.setValue(true, forKey: "isSpecial")
-        if DeviceType.isPad
-            && ((commandState != .translate && ["English", "Portuguese", "Italian"].contains(controllerLanguage)) ||
-                (commandState == .translate && ["en", "pt", "it"].contains(getControllerTranslateLangCode())))
-            && row == 1 {
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+        if key != "ß"
+            && key != "´"
+            && key != spaceBar
+            && key != languageTextForSpaceBar
+            && key != "ABC"
+            && key != "АБВ" {
+            capsKey = keyboard[row][idx].capitalized
         } else {
-          widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth).isActive = true
+            capsKey = key
         }
-      case "123", ".?123", "hideKeyboard":
-        layer.setValue(true, forKey: "isSpecial")
-        widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth).isActive = true
-      default:
-        if key != spaceBar && key != languageTextForSpaceBar {
-          widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+        let keyToDisplay =
+            shiftButtonState == .shift || shiftButtonState == .capsLocked ? capsKey : key
+        setTitleColor(keyCharColor, for: .normal)
+        layer.setValue(key, forKey: "original")
+        layer.setValue(keyToDisplay, forKey: "keyToDisplay")
+        layer.setValue(false, forKey: "isSpecial")
+        setTitle(keyToDisplay, for: .normal) // set button character
+
+        if showKeyboardLanguage, key == languageTextForSpaceBar {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.layer.setValue(spaceBar, forKey: "original")
+                self.layer.setValue(spaceBar, forKey: "keyToDisplay")
+                self.setTitle(spaceBar, for: .normal)
+
+                showKeyboardLanguage = false
+            }
         }
-      }
     }
-  }
 
-  /// Adjusts the width of a key if it's one of the special characters on the keyboard.
-  func adjustKeyWidth() {
-    if DeviceType.isPhone {
-      adjustPhoneKeyWidth()
-    } else if DeviceType.isPad {
-      adjustPadKeyWidth()
+    /// Sets the character size of a capital key if the device is an iPhone given the orientation.
+    func setPhoneCapCharSize() {
+        if isLandscapeView {
+            if key == "#+="
+                || key == "ABC"
+                || key == "АБВ"
+                || key == "123" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
+            } else if key == spaceBar || key == languageTextForSpaceBar {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.9)
+            }
+        } else {
+            if key == "#+="
+                || key == "ABC"
+                || key == "АБВ"
+                || key == "123" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.75)
+            } else if key == spaceBar || key == languageTextForSpaceBar {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.5)
+            }
+        }
     }
-  }
 
-  /// Adjusts the style of the button based on different states.
-  func adjustButtonStyle() {
-    guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
+    /// Checks if the character is a lower case letter and adjusts it if so.
+    func checkSetPhoneLowerCharSize() {
+        guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
 
-    switch key {
-    case SpecialKeys.indent:
-      backgroundColor = specialKeyColor
-
-    case SpecialKeys.capsLock:
-      switch shiftButtonState {
-      case .capsLocked:
-        backgroundColor = keyPressedColor
-        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
-
-      default:
-        backgroundColor = specialKeyColor
-        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
-      }
-
-    case "shift":
-      if shiftButtonState == .shift {
-        backgroundColor = keyPressedColor
-
-        styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
-      } else if DeviceType.isPhone && shiftButtonState == .capsLocked {
-        // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller.
-        backgroundColor = keyPressedColor
-
-        styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
-      } else {
-        backgroundColor = specialKeyColor
-      }
-
-    case "return":
-      if [.translate, .conjugate, .plural].contains(commandState) {
-        // Color the return key depending on if it's being used as enter for commands.
-        backgroundColor = commandKeyColor
-      } else {
-        backgroundColor = specialKeyColor
-      }
-
-    default:
-      if isSpecial {
-        backgroundColor = specialKeyColor
-      }
+        if keyboardState == .letters,
+           !isSpecial,
+           !["123", "´", spaceBar, languageTextForSpaceBar].contains(key),
+           shiftButtonState == .normal {
+            if isLandscapeView {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.4)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 1.35)
+            }
+        }
     }
-  }
+
+    /// Sets the character size of a key if the device is an iPhone.
+    func setPhoneCharSize() {
+        setPhoneCapCharSize()
+        checkSetPhoneLowerCharSize()
+    }
+
+    /// Sets the character size of a key if the device is an iPad given the orientation.
+    func setPadCapCharSize() {
+        if isLandscapeView {
+            if key == "#+="
+                || key == "ABC"
+                || key == "АБВ"
+                || key == "hideKeyboard" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
+            } else if key == spaceBar || key == languageTextForSpaceBar {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.25)
+            } else if key == ".?123" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4.5)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.75)
+            }
+        } else {
+            if key == "#+="
+                || key == "ABC"
+                || key == "АБВ"
+                || key == "hideKeyboard" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.25)
+            } else if key == spaceBar || key == languageTextForSpaceBar {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.5)
+            } else if key == ".?123" {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 4)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3)
+            }
+        }
+    }
+
+    /// Sets the character size of a key if the device is an iPad given the orientation.
+    func checkSetPadLowerCharSize() {
+        guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
+
+        if keyboardState == .letters,
+           !isSpecial,
+           ![".?123", spaceBar, languageTextForSpaceBar, "ß", "´", ",", ".", "'", "-"].contains(
+               key
+           ),
+           shiftButtonState == .normal {
+            if isLandscapeView {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 3.35)
+            } else {
+                titleLabel?.font = .systemFont(ofSize: letterKeyWidth / 2.75)
+            }
+        }
+    }
+
+    /// Sets the character size of a key if the device is an iPad.
+    func setPadCharSize() {
+        setPadCapCharSize()
+        checkSetPadLowerCharSize()
+    }
+
+    /// Sets the key character sizes depending on device type and orientation.
+    func setCharSize() {
+        if DeviceType.isPhone {
+            setPhoneCharSize()
+        } else if DeviceType.isPad {
+            setPadCharSize()
+        }
+    }
+
+    /// Adjusts the width of a key if it's one of the special characters on the iPhone keyboard.
+    func adjustPhoneKeyWidth() {
+        if ["ABC", "АБВ"].contains(key) {
+            layer.setValue(true, forKey: "isSpecial")
+            widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
+        } else if ["delete", "#+=", "shift", "selectKeyboard"].contains(key) {
+            if keyboardState == .letters,
+               (commandState != .translate
+                   && controllerLanguage == "Russian")
+               || (commandState == .translate
+                   && getControllerTranslateLangCode() == "ru") {
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+            } else {
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+            }
+        } else if ["123", ".?123", "return", "hideKeyboard"].contains(key) {
+            if row == 2 {
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+            } else if row != 2 {
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * 2).isActive = true
+            }
+        } else if keyboardState == .numbers || keyboardState == .symbols,
+                  row == 2 {
+            // Make second row number and symbol keys wider for iPhones.
+            widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.4).isActive = true
+        } else if key != spaceBar, key != languageTextForSpaceBar {
+            widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+        }
+    }
+
+    /// Adjusts the width of a key if it's one of the special characters on the iPad keyboard.
+    func adjustPadKeyWidth() {
+        if usingExpandedKeyboard {
+            scalarCapsLockKeyWidth = 1.3
+            scalarDeleteKeyWidth = 1.65
+            scalarReturnKeyWidth = 1.3
+            scalarShiftKeyWidth = 1.5
+            scalarSpecialKeysWidth = 1.0
+            switch key {
+            case "ABC", "АБВ":
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1).isActive = true
+            case "#+=", "selectKeyboard":
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth)
+                    .isActive =
+                    true
+            case "delete":
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarDeleteKeyWidth)
+                    .isActive =
+                    true
+            case SpecialKeys.capsLock:
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarCapsLockKeyWidth)
+                    .isActive =
+                    true
+            case SpecialKeys.indent:
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarIndentKeyWidth)
+                    .isActive =
+                    true
+            case "shift" where idx == 0:
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarShiftKeyWidth)
+                    .isActive =
+                    true
+            case "shift" where idx > 0:
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarRightShiftKeyWidth)
+                    .isActive = true
+            case "return":
+                layer.setValue(true, forKey: "isSpecial")
+                if DeviceType.isPad,
+                   (commandState != .translate
+                       && ["English", "Portuguese", "Italian"].contains(controllerLanguage))
+                   || (commandState == .translate
+                       && ["en", "pt", "it"].contains(getControllerTranslateLangCode())),
+                   row == 1 {
+                    widthAnchor.constraint(equalToConstant: numSymKeyWidth * 1.5).isActive = true
+                } else {
+                    widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarReturnKeyWidth)
+                        .isActive =
+                        true
+                }
+            case "123", ".?123", "hideKeyboard":
+                layer.setValue(true, forKey: "isSpecial")
+                widthAnchor.constraint(equalToConstant: numSymKeyWidth * scalarSpecialKeysWidth)
+                    .isActive =
+                    true
+            default:
+                if key != spaceBar, key != languageTextForSpaceBar {
+                    widthAnchor.constraint(equalToConstant: keyWidth).isActive = true
+                }
+            }
+        }
+    }
+
+    /// Adjusts the width of a key if it's one of the special characters on the keyboard.
+    func adjustKeyWidth() {
+        if DeviceType.isPhone {
+            adjustPhoneKeyWidth()
+        } else if DeviceType.isPad {
+            adjustPadKeyWidth()
+        }
+    }
+
+    /// Adjusts the style of the button based on different states.
+    func adjustButtonStyle() {
+        guard let isSpecial = layer.value(forKey: "isSpecial") as? Bool else { return }
+
+        switch key {
+        case SpecialKeys.indent:
+            backgroundColor = specialKeyColor
+
+        case SpecialKeys.capsLock:
+            switch shiftButtonState {
+            case .capsLocked:
+                backgroundColor = keyPressedColor
+                styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
+
+            default:
+                backgroundColor = specialKeyColor
+                styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock")
+            }
+
+        case "shift":
+            if shiftButtonState == .shift {
+                backgroundColor = keyPressedColor
+
+                styleIconBtn(btn: self, color: UIColor.label, iconName: "shift.fill")
+            } else if DeviceType.isPhone, shiftButtonState == .capsLocked {
+                // We need to style the SHIFT button instead of the CAPSLOCK since the keyboard is smaller.
+                backgroundColor = keyPressedColor
+
+                styleIconBtn(btn: self, color: UIColor.label, iconName: "capslock.fill")
+            } else {
+                backgroundColor = specialKeyColor
+            }
+
+        case "return":
+            if [.translate, .conjugate, .plural].contains(commandState) {
+                // Color the return key depending on if it's being used as enter for commands.
+                backgroundColor = commandKeyColor
+            } else {
+                backgroundColor = specialKeyColor
+            }
+
+        default:
+            if isSpecial {
+                backgroundColor = specialKeyColor
+            }
+        }
+    }
 }
 
 /// Sets a button's values that are displayed and inserted into the proxy as well as assigning a color.
@@ -351,22 +366,22 @@ class KeyboardKey: UIButton {
 ///   - canBeCapitalized: whether the key receives a capitalized character for the shift state.
 ///   - isSpecial: whether the btn should be marked as special to be colored accordingly.
 func setBtn(btn: UIButton, color: UIColor, name: String, canBeCapitalized: Bool, isSpecial: Bool) {
-  btn.backgroundColor = color
-  btn.layer.setValue(name, forKey: "original")
+    btn.backgroundColor = color
+    btn.layer.setValue(name, forKey: "original")
 
-  let charsWithoutShiftState = ["ß"]
+    let charsWithoutShiftState = ["ß"]
 
-  var capsKey = ""
-  if canBeCapitalized {
-    if !charsWithoutShiftState.contains(name) {
-      capsKey = name.capitalized
+    var capsKey = ""
+    if canBeCapitalized {
+        if !charsWithoutShiftState.contains(name) {
+            capsKey = name.capitalized
+        } else {
+            capsKey = name
+        }
+        let shiftChar = shiftButtonState == .normal ? name : capsKey
+        btn.layer.setValue(shiftChar, forKey: "keyToDisplay")
     } else {
-      capsKey = name
+        btn.layer.setValue(name, forKey: "keyToDisplay")
     }
-    let shiftChar = shiftButtonState == .normal ? name : capsKey
-    btn.layer.setValue(shiftChar, forKey: "keyToDisplay")
-  } else {
-    btn.layer.setValue(name, forKey: "keyToDisplay")
-  }
-  btn.layer.setValue(isSpecial, forKey: "isSpecial")
+    btn.layer.setValue(isSpecial, forKey: "isSpecial")
 }

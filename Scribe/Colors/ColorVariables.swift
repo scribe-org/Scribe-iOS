@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-/**
+/*
  * Variables associated with coloration for Scribe keyboards.
  */
 
 import UIKit
 
-// The Scribe key icon that changes based on light and dark mode as well as device.
+/// The Scribe key icon that changes based on light and dark mode as well as device.
 var scribeKeyIcon = UIImage(named: "scribeKeyIcon")
 
 // Initialize all colors.
