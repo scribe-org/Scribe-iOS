@@ -16,7 +16,14 @@ enum SettingsTableData {
           hasToggle: false,
           sectionState: .appLang,
           shortDescription: NSLocalizedString("i18n.app.settings.keyboard.translation.select_source", value: "Select language for app texts.", comment: "")
+        ),
+        Section(
+          sectionTitle: NSLocalizedString("i18n.app.settings.menu.increase_text_size", value: "Increase app text size", comment: ""),
+          hasToggle: true,
+          sectionState: .none(.increaseTextSize),
+          shortDescription: NSLocalizedString("i18n.app.settings.menu.increase_text_size_description", value: "Increase text sizes for better readability", comment: "")
         )
+
       ],
       hasDynamicData: nil
     ),
