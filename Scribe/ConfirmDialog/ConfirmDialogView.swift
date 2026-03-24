@@ -7,6 +7,10 @@
 import SwiftUI
 
 struct ConfirmDialogView: View {
+  @AppStorage("increaseTextSize", store: UserDefaults(suiteName: "group.be.scri.userDefaultsContainer"))
+  var increaseTextSize: Bool = false
+  var textSizeMultiplier: CGFloat { increaseTextSize ? 1.25 : 1.0 }
+
   private let cardCornerRadius: CGFloat = 10
   private let iconSize: CGFloat = 30.0
   private let cardPadding: CGFloat = 16
@@ -35,7 +39,7 @@ struct ConfirmDialogView: View {
             .foregroundColor(Color.scribeCTA)
 
           Text(infoText)
-            .font(.system(size: DeviceType.isPad ? 22 : 0))
+            .font(.system(size: DeviceType.isPad ? 22 * textSizeMultiplier : 17 * textSizeMultiplier))
             .fixedSize(horizontal: false, vertical: true)
         }
 
@@ -45,7 +49,7 @@ struct ConfirmDialogView: View {
               action: onChange,
               label: {
                   Text(changeButtonText)
-                  .font(.system(size: DeviceType.isPad ? 22 : 0))
+                  .font(.system(size: DeviceType.isPad ? 22 * textSizeMultiplier : 17 * textSizeMultiplier))
                   .foregroundColor(Color.keyChar)
                   })
             .buttonStyle(.borderedProminent)
@@ -61,6 +65,7 @@ struct ConfirmDialogView: View {
               label: {
                   Text(confirmButtonText)
                   .font(.system(size: DeviceType.isPad ? 22 : 0))
+                  .font(.system(size: DeviceType.isPad ? 22 * textSizeMultiplier : 17 * textSizeMultiplier))
                   .foregroundColor(Color.keyChar)
                   })
             .buttonStyle(.borderedProminent)

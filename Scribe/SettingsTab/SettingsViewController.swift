@@ -40,6 +40,7 @@ final class SettingsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
     setHeaderHeight()
     showTipCardView()
 
@@ -68,7 +69,23 @@ final class SettingsViewController: UIViewController {
 
       self.commonMethodToRefresh()
     }
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(handleFontSizeUpdate),
+      name: .fontSizeUpdatedNotification,
+      object: nil
+    )
   }
+  @objc func handleFontSizeUpdate() {
+      DispatchQueue.main.async {
+        self.parentTable.reloadData()
+        self.setFooterButtonView()
+      }
+    }
+
+  deinit {
+      NotificationCenter.default.removeObserver(self)
+    }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)

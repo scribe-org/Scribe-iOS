@@ -55,6 +55,7 @@ final class AboutTableViewCell: UITableViewCell {
     selectionStyle = .none
 
     setTableView()
+    titleLabel.font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
     titleLabel.text = section.sectionTitle
 
     if let icon = section.imageString {
