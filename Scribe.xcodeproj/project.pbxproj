@@ -3632,7 +3632,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97E65172F2CDD730070810A /* ESInterfaceVariables.swift in Sources */,
-				E9ED938A2F2A3C45008D7451 /* DynamicConjugationViewController.swift in Sources */,
 				F786BAD42F1E8F70003F7505 /* ThirdPartyLicense.swift in Sources */,
 				F786BAD52F1E8F70003F7505 /* (null) in Sources */,
 				F786BAD62F1E8F70003F7505 /* AppTextStyling.swift in Sources */,
@@ -3641,7 +3640,6 @@
 				F786BAD82F1E8F70003F7505 /* Conjugate.swift in Sources */,
 				F786BAD92F1E8F70003F7505 /* SettingsViewController.swift in Sources */,
 				F786BADA2F1E8F70003F7505 /* AboutTableData.swift in Sources */,
-				F786BADB2F1E8F70003F7505 /* DownloadStateManager.swift in Sources */,
 				F786BADC2F1E8F70003F7505 /* IDInterfaceVariables.swift in Sources */,
 				F786BADE2F1E8F70003F7505 /* ToolTipViewDatasource.swift in Sources */,
 				F786BADF2F1E8F70003F7505 /* Translate.swift in Sources */,
@@ -3671,7 +3669,6 @@
 				F786BAFD2F1E8F70003F7505 /* ToolTipViewTheme.swift in Sources */,
 				F786BAFE2F1E8F70003F7505 /* RadioTableViewCell.swift in Sources */,
 				F786BAFF2F1E8F70003F7505 /* CommandVariables.swift in Sources */,
-				F786BB002F1E8F70003F7505 /* DownloadDataScreen.swift in Sources */,
 				F786BB012F1E8F70003F7505 /* Utilities.swift in Sources */,
 				F786BB022F1E8F70003F7505 /* BaseTableViewController.swift in Sources */,
 				E98034E52F45B88C006C1CDC /* ToastView.swift in Sources */,
