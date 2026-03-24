@@ -133,7 +133,7 @@ extension SelectionViewTemplateViewController {
         self.userDefaults.setValue(newLang, forKey: dictionaryKey)
 
         // Trigger download state change.
-        DownloadStateManager.shared.handleDownloadAction(key: self.langCode)
+        DownloadStateManager.shared.handleDownloadAction(key: self.langCode, forceDownload: true)
 
         guard let tabBarController = self.tabBarController else { return }
 
