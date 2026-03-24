@@ -5,8 +5,9 @@
  */
 
 import Foundation
-@testable import Scribe
 import XCTest
+
+@testable import Scribe
 
 // MARK: secondToLast
 
@@ -86,7 +87,7 @@ extension ExtensionTest {
 
     func testSubstringRangeCorrectStringValidRange() {
         let string = "Hello, World!"
-        let range = Range(1 ... 4)
+        let range = Range(1...4)
 
         let result = string.substring(with: range)
 

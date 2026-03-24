@@ -5,8 +5,9 @@
  */
 
 import Foundation
-@testable import Scribe
 import XCTest
+
+@testable import Scribe
 
 // MARK: styleBtn
 

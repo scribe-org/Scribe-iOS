@@ -5,8 +5,9 @@
  */
 
 import Foundation
-@testable import Scribe
 import XCTest
+
+@testable import Scribe
 
 final class BaseTableViewControllerTest: XCTestCase {
     private var sut: BaseTableViewController!
