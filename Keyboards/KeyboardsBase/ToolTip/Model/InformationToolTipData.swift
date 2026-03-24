@@ -53,7 +53,7 @@ enum InformationToolTipData {
   )
 
   static let howToContributeWiktionary = NSMutableAttributedString(
-    string: invalidWiktionaryMsg_3,
+    string: invalidCommandTextWiktionary3,
     attributes: [
       NSAttributedString.Key.font: UIFont.systemFont(
       ofSize: DeviceType.isPhone ? letterKeyWidth / 2 : letterKeyWidth / 2.75

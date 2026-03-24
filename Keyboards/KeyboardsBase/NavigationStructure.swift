@@ -117,7 +117,7 @@ struct NavigationBuilder {
 
   return content.map { attributedText in
     NavigationLevel(
-      title: isTranslate ? invalidTranslationMsg : invalidCommandMsg,
+      title: isTranslate ? invalidCommandMsgWiktionary : invalidCommandMsgWikidata,
       options: [(label: "", node: .finalValue(attributedText.string))]
     )
   }

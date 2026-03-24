@@ -1627,7 +1627,7 @@ class KeyboardViewController: UIInputViewController {
         autoCapAtStartOfProxy()
 
         if commandState == .invalid {
-          let invalidMsg = prevToInvalidState == .translate ? invalidTranslationMsg : invalidCommandMsg
+          let invalidMsg = prevToInvalidState == .translate ? invalidCommandMsgWiktionary : invalidCommandMsgWikidata
           commandBar.text = commandPromptSpacing + invalidMsg
           commandBar.isShowingInfoButton = true
         } else {
