@@ -17,9 +17,16 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            ## Thank you for the pull request! 💙
+            ## Thank you for the pull request! 💙🩵
 
-            The Scribe-iOS team will do our best to address your contribution as soon as we can. If you're not already a member of our [public Matrix community](https://matrix.to/#/#scribe_community:matrix.org), please consider joining! We'd suggest that you use the [Element](https://element.io/) client as well as [Element X](https://element.io/app) for a mobile app, and definitely join the `General` and `iOS` rooms once you're in. Also consider attending our [bi-weekly Saturday dev syncs](https://etherpad.wikimedia.org/p/scribe-dev-sync). It'd be great to meet you 😊
+            The Scribe-iOS team will do our best to address your contribution as soon as we can. The following are some important points:
+            - Those interested in developing their skills and expanding their role in the community should read the [mentorship and growth section of the contribution guide](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md#mentorship-and-growth)
+            - If you're not already a member of our [public Matrix community](https://matrix.to/#/#scribe_community:matrix.org), please consider joining!
+              - We'd suggest that you use the [Element](https://element.io/) client as well as [Element X](https://element.io/app) for a mobile app
+              - Join the `General` and `iOS` rooms once you're in
+            - Also consider attending our bi-weekly Saturday developer syncs!
+              - Details are shared in the `General` room on Matrix each Wednesday before the sync
+              - It would be great to meet you 😊
 
             > [!NOTE]
             > Scribe uses [Conventional Comments](https://conventionalcomments.org/) in reviews to make sure that communication is as clear as possible.
@@ -45,5 +52,5 @@ jobs:
             ## First PR Commit Check
 
             - [ ] The commit messages for the remote branch should be checked to make sure the contributor's email is set up correctly so that they receive credit for their contribution
-            - The contributor's name and icon in remote commits should be the same as what appears in the PR
-            - If there's a mismatch, the contributor needs to make sure that the [email they use for GitHub](https://github.com/settings/emails) matches what they have for `git config user.email` in their local Scribe-iOS repo (can be set with `git config --global user.email "GITHUB_EMAIL"`)
+              - The contributor's name and icon in remote commits should be the same as what appears in the PR
+              - If there's a mismatch, the contributor needs to make sure that the [email they use for GitHub](https://github.com/settings/emails) matches what they have for `git config user.email` in their local Scribe-iOS repo (can be set with `git config --global user.email "GITHUB_EMAIL"`)
