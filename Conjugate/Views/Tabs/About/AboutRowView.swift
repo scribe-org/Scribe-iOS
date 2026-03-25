@@ -18,7 +18,10 @@ struct AboutRowView: View {
     let isCustomImage: Bool
     let title: String
     var trailing: AboutRowTrailing = .none
+    var invertIconInDarkMode: Bool = false
     let action: () -> Void
+
+    @Environment(\.colorScheme) private var colorScheme
 
     init(
         icon: String,
@@ -27,11 +30,13 @@ struct AboutRowView: View {
         hasExternalLink: Bool = false,
         hasNestedNavigation: Bool = false,
         isReset: Bool = false,
+        invertIconInDarkMode: Bool = false,
         action: @escaping () -> Void
     ) {
         self.icon = icon
         self.isCustomImage = isCustomImage
         self.title = title
+        self.invertIconInDarkMode = invertIconInDarkMode
         self.action = action
         if hasExternalLink {
             self.trailing = .externalLink
@@ -71,9 +76,14 @@ struct AboutRowView: View {
     @ViewBuilder
     private var iconView: some View {
         if isCustomImage {
-            Image(icon)
+            let image = Image(icon)
                 .resizable()
                 .scaledToFit()
+            if invertIconInDarkMode && colorScheme == .dark {
+                image.colorInvert()
+            } else {
+                image
+            }
         } else {
             Image(systemName: icon)
                 .resizable()

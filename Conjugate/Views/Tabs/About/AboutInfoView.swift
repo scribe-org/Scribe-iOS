@@ -81,7 +81,7 @@ struct AboutInfoView: View {
         }
         .background(Color("scribeAppBackground").ignoresSafeArea())
         .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

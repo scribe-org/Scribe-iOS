@@ -29,8 +29,8 @@ struct AboutTab: View {
                         if tipCardVisible {
                             AboutTipCardView(
                                 infoText: NSLocalizedString(
-                                    "i18n.app.about.tip_card",
-                                    value: "Tap a row to learn more or take action.",
+                                    "i18n.app.about.app_hint_tooltip",
+                                    value: "Here's where you can learn more about Scribe and its community.",
                                     comment: ""
                                 ),
                                 isVisible: $tipCardVisible,
@@ -92,7 +92,8 @@ struct AboutTab: View {
                                 title: NSLocalizedString(
                                     "i18n.app.about.community.bluesky",
                                     value: "Follow us on Bluesky", comment: ""),
-                                hasExternalLink: true
+                                hasExternalLink: true,
+                                invertIconInDarkMode: true
                             ) { openURL("https://bsky.app/profile/scribe-org.bsky.social") }
 
                             Divider().padding(.leading, 54)
