@@ -115,19 +115,15 @@ class DynamicConjugationViewController: UIViewController {
             rightArrowButton.widthAnchor.constraint(equalToConstant: 40),
             rightArrowButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
 
-                  buttonContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
-                  buttonContainerView.leadingAnchor.constraint(
-
+            buttonContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+            buttonContainerView.leadingAnchor.constraint(
                 equalTo: leftArrowButton.trailingAnchor, constant: 4
-
             ),
-                  buttonContainerView.trailingAnchor.constraint(
-
+            buttonContainerView.trailingAnchor.constraint(
                 equalTo: rightArrowButton.leadingAnchor, constant: -4
-
             ),
-                  buttonContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
-            ])
+            buttonContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
+        ])
       }
 
     /// Builds page control for linear navigation mode.
