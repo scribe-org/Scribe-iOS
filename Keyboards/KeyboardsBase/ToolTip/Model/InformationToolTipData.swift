@@ -34,11 +34,11 @@ enum InformationToolTipData {
         ]
     )
 
-  static func getContent() -> [NSMutableAttributedString] {
-    [wikiDataExplanation, wikiDataContationOrigin, howToContribute]
-  }
+    static func getContent() -> [NSMutableAttributedString] {
+        [wikiDataExplanation, wikiDataContationOrigin, howToContribute]
+    }
 
-  static func getWiktionaryContent() -> [NSMutableAttributedString] {
-    [wiktionaryExplanation, wiktionaryTranslationOrigin, howToContributeWiktionary]
-  }
+    static func getWiktionaryContent() -> [NSMutableAttributedString] {
+        [wiktionaryExplanation, wiktionaryTranslationOrigin, howToContributeWiktionary]
+    }
 }

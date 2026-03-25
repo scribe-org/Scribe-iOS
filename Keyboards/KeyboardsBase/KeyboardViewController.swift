@@ -9,12 +9,12 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
     var keyboardView: UIView!
 
-  // Stack views that are populated with they keyboard rows.
-  @IBOutlet var stackViewNum: UIStackView!
-  @IBOutlet var stackView0: UIStackView!
-  @IBOutlet var stackView1: UIStackView!
-  @IBOutlet var stackView2: UIStackView!
-  @IBOutlet var stackView3: UIStackView!
+    // Stack views that are populated with they keyboard rows.
+    @IBOutlet var stackViewNum: UIStackView!
+    @IBOutlet var stackView0: UIStackView!
+    @IBOutlet var stackView1: UIStackView!
+    @IBOutlet var stackView2: UIStackView!
+    @IBOutlet var stackView3: UIStackView!
 
     /// Changes the height of `stackViewNum` depending on device type and size.
     func conditionallyShowTopNumbersRow() {
@@ -90,13 +90,13 @@ class KeyboardViewController: UIInputViewController {
 
         loadKeys()
 
-    // Set tap handler for info button on CommandBar.
-    commandBar.infoButtonTapHandler = { [weak self] in
-      commandState = .displayInformation
-      conjViewShiftButtonsState = .leftInactive
-      self?.setInformationState()
+        // Set tap handler for info button on CommandBar.
+        commandBar.infoButtonTapHandler = { [weak self] in
+            commandState = .displayInformation
+            conjViewShiftButtonsState = .leftInactive
+            self?.setInformationState()
+        }
     }
-  }
 
     /// Activates a button by assigning key touch functions for their given actions.
     ///
@@ -282,10 +282,17 @@ class KeyboardViewController: UIInputViewController {
         rightAutoPartition.backgroundColor = .clear
     }
 
-  // Toggles visibility of the Conjugate and Plural buttons.
-  func hideConjugateAndPluralKeys(state: Bool) {
-    conjugateKey.isHidden = state
-    pluralKey.isHidden = state
+    /// Toggles visibility of the Conjugate and Plural buttons.
+    func hideConjugateAndPluralKeys(state: Bool) {
+        conjugateKey.isHidden = state
+        pluralKey.isHidden = state
+    }
+
+  // Logic to create notification tooltip.
+  func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
+    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
+
+    return ToolTipViewDatasource(content: text, theme: theme)
   }
 
   /// Sets the tooltip to display information to the user.
@@ -1054,13 +1061,12 @@ class KeyboardViewController: UIInputViewController {
     }
   }
 
-  /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
-  func conditionallyDisplayAnnotation() {
-    if [.idle, .alreadyPlural, .invalid].contains(commandState) {
-      typedWordAnnotation(KVC: self)
+    /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
+    func conditionallyDisplayAnnotation() {
+        if [.idle, .alreadyPlural, .invalid].contains(commandState) {
+            typedWordAnnotation(KVC: self)
+        }
     }
-  }
-
     // MARK: Key Sizing
 
     func setKeywidth() {
