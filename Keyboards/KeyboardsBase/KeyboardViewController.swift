@@ -288,13 +288,6 @@ class KeyboardViewController: UIInputViewController {
         pluralKey.isHidden = state
     }
 
-  // Logic to create notification tooltip.
-  func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor) -> ToolTipViewDatasource {
-    let theme = ToolTipViewTheme(backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor, textAlignment: .center, cornerRadius: 10, masksToBounds: true)
-
-    return ToolTipViewDatasource(content: text, theme: theme)
-  }
-
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
     children.forEach { child in
