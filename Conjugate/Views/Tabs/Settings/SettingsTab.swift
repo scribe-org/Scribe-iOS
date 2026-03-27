@@ -4,7 +4,7 @@ import SwiftUI
 
 struct SettingsTab: View {
   @AppStorage("isDarkMode") private var isDarkMode = false
-  @State private var isLargeText = false
+  @AppStorage("increaseTextSize") private var increaseTextSize = false
   @State private var isHighContrast = false
 
   var body: some View {
@@ -58,7 +58,7 @@ struct SettingsTab: View {
                 value: "Increase the size of menu texts for better readability.",
                 comment: ""
               ),
-              isOn: $isLargeText,
+              isOn: $increaseTextSize,
             )
             SettingsToggleRow(
               title: NSLocalizedString(
