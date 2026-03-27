@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct SettingsTab: View {
-  @State private var isDarkMode = false
+  @AppStorage("isDarkMode") private var isDarkMode = false
   @State private var isLargeText = false
   @State private var isHighContrast = false
 
@@ -76,7 +76,7 @@ struct SettingsTab: View {
           }
           .padding()
           .frame(maxWidth: .infinity)
-          .background(Color.white)
+          .background(Color(.systemBackground))
           .cornerRadius(16)
           .padding(.horizontal)
         }
