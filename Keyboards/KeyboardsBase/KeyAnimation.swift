@@ -293,6 +293,8 @@ func centerKeyPopPath(
 ///   - char: the character of the key.
 ///   - displayChar: the character to display on the pop up.
 func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
+    // We use idx to differentiate between keys that share the same character, for example "§" on Swedish iPad keyboards.
+    let idx = (key as? KeyboardKey)?.idx
     // Get the frame in respect to the superview.
     if let frame = key.superview?.convert(key.frame, to: nil) {
         var labelVertPosition = frame.origin.y - key.frame.height / 1.75
@@ -317,7 +319,7 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
             keyHoldPopChar.center = CGPoint(
                 x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition
             )
-        } else if leftKeyChars.contains(char) {
+        } else if leftKeyChars.contains(char) && idx == 0 {
             layer.path =
                 leftKeyPopPath(
                     startX: frame.origin.x, startY: frame.origin.y,
