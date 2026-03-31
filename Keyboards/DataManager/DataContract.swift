@@ -38,7 +38,7 @@ struct DeclensionSection: Codable {
     let declensionForms: [Int: DeclensionNode]?
 }
 
-struct DeclensionNode: Codable {
+class DeclensionNode: Codable {
     let label: String?
     let value: String?
     let displayValue: String?

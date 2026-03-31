@@ -6,15 +6,20 @@
 import Foundation
 
 /// Represents a single option in the navigation.
-enum NavigationNode {
+indirect enum NavigationNode {
     case nextLevel(NavigationLevel, displayValue: String?) // navigate deeper, with optional display value
     case finalValue(String) // terminal node, insert this text
 }
 
 /// Represents a level in the navigation hierarchy.
-struct NavigationLevel {
+class NavigationLevel {
     let title: String // title for command bar
     let options: [(label: String, node: NavigationNode)] // buttons to display
+
+    init(title: String, options: [(label: String, node: NavigationNode)]) {
+        self.title = title
+        self.options = options
+    }
 }
 
 /// Builds navigation trees for conjugations and declensions.
