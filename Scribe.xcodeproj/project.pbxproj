@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073976D82F7C5EF3004F0674 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073976D72F7C5EF3004F0674 /* NetworkMonitor.swift */; };
 		140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
 		1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */; };
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
@@ -1008,6 +1009,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		073976D72F7C5EF3004F0674 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		140158982A430DD000D14E52 /* ThirdPartyLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicense.swift; sourceTree = "<group>"; };
 		1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaAndScribe.swift; sourceTree = "<group>"; };
 		140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTemplateViewController.swift; sourceTree = "<group>"; };
@@ -2039,6 +2041,7 @@
 			children = (
 				EDEE62242B2DE65A00A0B9C1 /* UIEdgeInsetsExtensions.swift */,
 				84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */,
+				073976D72F7C5EF3004F0674 /* NetworkMonitor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2908,6 +2911,7 @@
 				D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */,
 				EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */,
 				D1CDED752A859DDD00098546 /* DAInterfaceVariables.swift in Sources */,
+				073976D82F7C5EF3004F0674 /* NetworkMonitor.swift in Sources */,
 				84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */,
 				69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */,
 				30453964293B9D18003AE55B /* InformationToolTipData.swift in Sources */,
