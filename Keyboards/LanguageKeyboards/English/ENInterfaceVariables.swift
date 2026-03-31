@@ -294,4 +294,5 @@ func setENKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Already plural"
+    downloadDataMsg = "Please download language data"
 }

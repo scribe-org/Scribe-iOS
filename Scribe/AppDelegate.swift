@@ -82,6 +82,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        // Handle scribe:// URL scheme to navigate to the download data screen.
+        if url.scheme == "scribe" {
+            NotificationCenter.default.post(name: NSNotification.Name("NavigateToDownloadScreen"), object: nil)
+            return true
+        }
+        return false
+    }
+
     func applicationDidBecomeActive(_: UIApplication) {
         /*
           Restart any tasks that were paused (or not yet started) while the application was inactive.

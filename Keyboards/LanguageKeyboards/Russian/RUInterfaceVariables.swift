@@ -269,4 +269,5 @@ func setRUKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Уже во множ-ом"
+    downloadDataMsg = "Загрузите языковые данные"
 }

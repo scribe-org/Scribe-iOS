@@ -300,4 +300,5 @@ func setNBKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Allerede flertall"
+    downloadDataMsg = "Last ned språkdata"
 }
