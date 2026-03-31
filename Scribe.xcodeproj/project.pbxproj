@@ -786,6 +786,11 @@
 		F786BB3B2F1E8F70003F7505 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EB62F6A8BFE0040B09B /* AppNavigation.swift */; };
 		F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */; };
+		FA001AAB2F9A000000000001 /* AboutTipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000001 /* AboutTipCardView.swift */; };
+		FA001AAB2F9A000000000002 /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000002 /* AboutSectionView.swift */; };
+		FA001AAB2F9A000000000003 /* AboutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000003 /* AboutRowView.swift */; };
+		FA001AAB2F9A000000000004 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000004 /* AboutInfoView.swift */; };
+		FA001AAB2F9A000000000005 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000005 /* ShareSheet.swift */; };
 		F7A17EBC2F6A8C200040B09B /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EAE2F6A8BFE0040B09B /* ConjugateTab.swift */; };
 		F7A17EBD2F6A8C230040B09B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EB42F6A8BFE0040B09B /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -1163,6 +1168,11 @@
 		F786BB422F1E8F70003F7505 /* ConjugateApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ConjugateApp-Info.plist"; path = "/Users/gauthammohanraj/Developer/Scribe-iOS/ConjugateApp-Info.plist"; sourceTree = "<absolute>"; };
 		F7A17EAB2F6A8BFE0040B09B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Conjugate/ContentView.swift; sourceTree = "<group>"; };
 		F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTab.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000001 /* AboutTipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTipCardView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000002 /* AboutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000003 /* AboutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRowView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000004 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfoView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000005 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		F7A17EAE2F6A8BFE0040B09B /* ConjugateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateTab.swift; sourceTree = "<group>"; };
 		F7A17EB02F6A8BFE0040B09B /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
 		F7A17EB22F6A8BFE0040B09B /* ConjugateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateTab.swift; sourceTree = "<group>"; };
@@ -2108,6 +2118,11 @@
 			isa = PBXGroup;
 			children = (
 				F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */,
+				FA001AAA2F9A000000000001 /* AboutTipCardView.swift */,
+				FA001AAA2F9A000000000002 /* AboutSectionView.swift */,
+				FA001AAA2F9A000000000003 /* AboutRowView.swift */,
+				FA001AAA2F9A000000000004 /* AboutInfoView.swift */,
+				FA001AAA2F9A000000000005 /* ShareSheet.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -3616,6 +3631,11 @@
 				F7A17EBD2F6A8C230040B09B /* ContentView.swift in Sources */,
 				F7A17EBC2F6A8C200040B09B /* ConjugateTab.swift in Sources */,
 				F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */,
+				FA001AAB2F9A000000000001 /* AboutTipCardView.swift in Sources */,
+				FA001AAB2F9A000000000002 /* AboutSectionView.swift in Sources */,
+				FA001AAB2F9A000000000003 /* AboutRowView.swift in Sources */,
+				FA001AAB2F9A000000000004 /* AboutInfoView.swift in Sources */,
+				FA001AAB2F9A000000000005 /* ShareSheet.swift in Sources */,
 				F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */,
 				F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */,
 				F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */,
