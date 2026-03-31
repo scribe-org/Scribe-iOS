@@ -293,4 +293,5 @@ func setFRKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Déjà pluriel"
+    downloadDataMsg = "Veuillez télécharger les données linguistiques"
 }

@@ -177,3 +177,8 @@ var pluralPromptAndCursor = ""
 var pluralPromptAndPlaceholder = ""
 var pluralPromptAndColorPlaceholder = NSMutableAttributedString()
 var alreadyPluralMsg = ""
+
+// MARK: Download Data Variables
+
+/// The message shown on the download data button when no language data has been downloaded.
+var downloadDataMsg = "Please download language data"

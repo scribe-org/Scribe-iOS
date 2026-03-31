@@ -281,4 +281,5 @@ func setITKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "Già plurale"
+    downloadDataMsg = "Scarica i dati della lingua"
 }
