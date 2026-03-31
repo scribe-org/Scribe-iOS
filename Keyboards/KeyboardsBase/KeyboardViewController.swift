@@ -326,10 +326,12 @@ class KeyboardViewController: UIInputViewController {
         // Only show the download button in idle state (not during commands).
         guard commandState == .idle else {
             downloadDataBtn?.isHidden = true
+            scribeKey.isHidden = false
             return
         }
         if hasLanguageData() {
             downloadDataBtn?.isHidden = true
+            scribeKey.isHidden = false
         } else {
             showDownloadDataBtn()
         }
@@ -340,47 +342,70 @@ class KeyboardViewController: UIInputViewController {
         // Remove any existing button first.
         downloadDataBtn?.removeFromSuperview()
 
+        // Hide the Scribe key when showing the download data button.
+        scribeKey.isHidden = true
+        scribeKey.shadow?.isHidden = true
+
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.backgroundColor = scribeCTAColor
-        btn.setTitleColor(.white, for: .normal)
-        btn.setTitle(downloadDataMsg, for: .normal)
-        btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         btn.layer.cornerRadius = commandKeyCornerRadius
         btn.layer.masksToBounds = true
 
-        // Add a download icon on the left side.
-        let iconConfig = UIImage.SymbolConfiguration(pointSize: 14, weight: .medium)
-        btn.setImage(UIImage(systemName: "arrow.down.circle.fill", withConfiguration: iconConfig), for: .normal)
-        btn.tintColor = .white
+        // Use non-filled icon for design consistency.
+        let iconConfig = UIImage.SymbolConfiguration(pointSize: 14, weight: .regular)
+        let iconName = "arrow.down.circle"
+
+        // Light mode: solid orange bg, black text.
+        // Dark mode: dark bg with orange border, orange text (outlined style).
+        let isDarkMode = traitCollection.userInterfaceStyle == .dark
+        let orangeColor = UIColor(ScribeColor.scribeCTA)
+        let bgColor = isDarkMode ? UIColor(red: 0.18, green: 0.12, blue: 0.05, alpha: 1.0) : orangeColor
+        let textColor = isDarkMode ? orangeColor : UIColor.black
+
+        btn.backgroundColor = bgColor
+        if isDarkMode {
+            btn.layer.borderColor = orangeColor.cgColor
+            btn.layer.borderWidth = 1.5
+        }
+
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
-            config.baseForegroundColor = .white
-            config.image = UIImage(systemName: "arrow.down.circle.fill", withConfiguration: iconConfig)
+            config.baseForegroundColor = textColor
+            config.image = UIImage(systemName: iconName, withConfiguration: iconConfig)
             config.imagePadding = 8
             config.imagePlacement = .leading
-            config.title = downloadDataMsg
             config.attributedTitle = AttributedString(
                 downloadDataMsg,
-                attributes: AttributeContainer([.font: UIFont.systemFont(ofSize: 16, weight: .medium)])
+                attributes: AttributeContainer([
+                    .font: UIFont.systemFont(ofSize: 16, weight: .medium),
+                    .foregroundColor: textColor
+                ])
             )
             btn.configuration = config
-            btn.backgroundColor = scribeCTAColor
+            btn.backgroundColor = bgColor
         } else {
+            btn.setImage(UIImage(systemName: iconName, withConfiguration: iconConfig), for: .normal)
+            btn.tintColor = textColor
+            btn.setTitle(downloadDataMsg, for: .normal)
+            btn.setTitleColor(textColor, for: .normal)
+            btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
             btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
             btn.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
         }
 
         btn.addTarget(self, action: #selector(openScribeApp), for: .touchUpInside)
 
+        // Place the button over the command bar area so it covers the autocomplete suggestions.
         view.addSubview(btn)
         downloadDataBtn = btn
+
+        let btnHeight = commandBar.frame.height > 0 ? commandBar.frame.height : (scribeKey.frame.height > 0 ? scribeKey.frame.height : 36)
 
         NSLayoutConstraint.activate([
             btn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
             btn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
-            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
-            btn.heightAnchor.constraint(equalToConstant: scribeKey.frame.height > 0 ? scribeKey.frame.height : 36)
+            btn.centerYAnchor.constraint(equalTo: commandBar.centerYAnchor),
+            btn.heightAnchor.constraint(equalToConstant: btnHeight)
         ])
     }
 
