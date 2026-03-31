@@ -3711,6 +3711,7 @@
 				F786BB132F1E8F70003F7505 /* ColorVariables.swift in Sources */,
 				F786BAD72F1E8F70003F7505 /* ScribeColor.swift in Sources */,
 				F786BAF62F1E8F70003F7505 /* UIColor+ScribeColors.swift in Sources */,
+				F786BB222F1E8F70003F7505 /* Extensions.swift in Sources */,
 				F786BAE72F1E8F70003F7505 /* ENInterfaceVariables.swift in Sources */,
 				F786BAE62F1E8F70003F7505 /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				F786BAE92F1E8F70003F7505 /* DEInterfaceVariables.swift in Sources */,
