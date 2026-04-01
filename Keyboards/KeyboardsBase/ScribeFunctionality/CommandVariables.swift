@@ -182,3 +182,25 @@ var alreadyPluralMsg = ""
 
 /// The message shown on the download data button when no language data has been downloaded.
 var downloadDataMsg = "Please download language data"
+
+/// Returns a "Did you mean: X?" suggestion string for an invalid command input.
+/// Progressively shortens the word to find the closest prefix match in the autocomplete lexicon.
+///
+/// - Parameter word: the word that was not found.
+/// - Returns: a suggestion string, or nil if no close match exists.
+func didYouMeanSuggestion(for word: String) -> String? {
+    guard !word.isEmpty else { return nil }
+
+    // Try progressively shorter prefixes (minimum 2 chars) to find a close match.
+    var prefix = word.lowercased()
+    while prefix.count >= 2 {
+        let suggestions = LanguageDBManager.shared.queryAutocompletions(word: prefix)
+        if let first = suggestions.first, !first.isEmpty {
+            // Only suggest if it's actually different from what was typed.
+            guard first.lowercased() != word.lowercased() else { return nil }
+            return "Did you mean: \(first)?"
+        }
+        prefix = String(prefix.dropLast())
+    }
+    return nil
+}
