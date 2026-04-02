@@ -87,6 +87,9 @@ class KeyboardViewController: UIInputViewController {
         keyboardView.translatesAutoresizingMaskIntoConstraints = true
         view.addSubview(keyboardView)
 
+        // Apply the saved theme before rendering keys.
+        ThemeManager.shared.loadSavedTheme()
+
         // Override prior command states from previous sessions.
         commandState = .idle
 
@@ -244,6 +247,8 @@ class KeyboardViewController: UIInputViewController {
             viewWithTag?.removeFromSuperview()
             alternatesShapeLayer.removeFromSuperlayer()
         }
+        // Re-apply theme so default theme respects the new appearance.
+        ThemeManager.shared.loadSavedTheme()
         annotationState = false
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
             isFirstKeyboardLoad = true

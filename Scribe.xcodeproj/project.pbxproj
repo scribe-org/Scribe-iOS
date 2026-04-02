@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07047B932F7DCD5900F40B79 /* ThemePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047B912F7DCD5900F40B79 /* ThemePickerViewController.swift */; };
+		07047B942F7DCD5900F40B79 /* ThemePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047B912F7DCD5900F40B79 /* ThemePickerViewController.swift */; };
+		07047D722F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D732F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D742F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D752F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D762F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D772F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D782F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D792F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D7A2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D7B2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D7C2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D7D2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
+		07047D7E2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */; };
 		140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
 		1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */; };
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
@@ -1008,6 +1023,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07047B912F7DCD5900F40B79 /* ThemePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerViewController.swift; sourceTree = "<group>"; };
+		07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTheme.swift; sourceTree = "<group>"; };
 		140158982A430DD000D14E52 /* ThirdPartyLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicense.swift; sourceTree = "<group>"; };
 		1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaAndScribe.swift; sourceTree = "<group>"; };
 		140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTemplateViewController.swift; sourceTree = "<group>"; };
@@ -1518,6 +1535,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07047B922F7DCD5900F40B79 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				07047B912F7DCD5900F40B79 /* ThemePickerViewController.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		1406B7852A2DFCBE001DF45B /* InfoChildTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1665,6 +1690,7 @@
 				144B56F22A568AC200C2F447 /* Scribe.entitlements */,
 				38BD214222D5908100C6795D /* Info.plist */,
 				E93179A32F03AE77002ED334 /* Localizable.xcstrings */,
+				07047B922F7DCD5900F40B79 /* Themes */,
 			);
 			path = Scribe;
 			sourceTree = "<group>";
@@ -1846,6 +1872,7 @@
 				E9ED937C2F2A3C32008D7451 /* DynamicConjugationViewController.swift */,
 				D16DD3A429E78A1500FB9022 /* Utilities.swift */,
 				D1C0ACD92719E0AA001E11C3 /* Keyboard.xib */,
+				07047D712F7E98FF00F40B79 /* KeyboardTheme.swift */,
 			);
 			path = KeyboardsBase;
 			sourceTree = "<group>";
@@ -2936,6 +2963,8 @@
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				E97E651C2F2CDEC50070810A /* ESCommandVariables.swift in Sources */,
 				D1CDED812A85A12400098546 /* NBInterfaceVariables.swift in Sources */,
+				07047B932F7DCD5900F40B79 /* ThemePickerViewController.swift in Sources */,
+				07047D7D2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */,
 				14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */,
@@ -2983,6 +3012,7 @@
 				E91980BB2F2F540A00B5852F /* NavigationStructure.swift in Sources */,
 				E996498E2E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */,
 				D111E9BC27AFE7B200746F92 /* Annotate.swift in Sources */,
+				07047D7A2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650C2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */,
 				3045399A293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
@@ -3038,6 +3068,7 @@
 				D109A227275B6A8B005E2271 /* KeyboardViewController.swift in Sources */,
 				30453998293B9E20003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				30453990293B9E1C003AE55B /* ToolTipViewUpdatable.swift in Sources */,
+				07047D7E2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650E2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				D17193E127AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D17193F127AECB350038660B /* SVInterfaceVariables.swift in Sources */,
@@ -3093,6 +3124,7 @@
 				D111E9BD27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D109A232275B6A8C005E2271 /* CommandVariables.swift in Sources */,
 				3045399C293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
+				07047D7C2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650F2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				30453994293B9E1D003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D17193E327AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
@@ -3158,6 +3190,7 @@
 				D17193DD27AECA450038660B /* PTInterfaceVariables.swift in Sources */,
 				D111E9BF27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D190B2442740576600705659 /* Extensions.swift in Sources */,
+				07047D772F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E65112F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				3045399E293B9E23003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
 				30453996293B9E1E003AE55B /* ToolTipViewUpdatable.swift in Sources */,
@@ -3213,6 +3246,7 @@
 				D111E9BE27AFE7B200746F92 /* Annotate.swift in Sources */,
 				D1671A77275A1FC000A7C118 /* CommandVariables.swift in Sources */,
 				3045399D293B9E23003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
+				07047D7B2F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E65132F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				30453995293B9E1D003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D17193E427AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
@@ -3268,6 +3302,7 @@
 				D111E9C027AFE7B200746F92 /* Annotate.swift in Sources */,
 				D18EA8A52760D6F5001E1358 /* ColorVariables.swift in Sources */,
 				3045399F293B9E24003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
+				07047D762F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650D2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				30453997293B9E1E003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D17193E627AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
@@ -3323,6 +3358,7 @@
 				D1AB5B4229C757A100CCB0C1 /* ColorVariables.swift in Sources */,
 				D1AB5B4329C757A100CCB0C1 /* Plural.swift in Sources */,
 				D1AB5B4429C757A100CCB0C1 /* Extensions.swift in Sources */,
+				07047D732F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E65122F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				D1AB5B4529C757A100CCB0C1 /* ToolTipViewDatasourceable.swift in Sources */,
 				D1AB5B4629C757A100CCB0C1 /* ToolTipViewUpdatable.swift in Sources */,
@@ -3378,6 +3414,7 @@
 				D1AFDF2029CA66D00033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDF2129CA66D00033BF27 /* Plural.swift in Sources */,
 				D1AFDF2229CA66D00033BF27 /* Extensions.swift in Sources */,
+				07047D792F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650B2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				D1AFDF2329CA66D00033BF27 /* ToolTipViewDatasourceable.swift in Sources */,
 				D1AFDF2429CA66D00033BF27 /* ToolTipViewUpdatable.swift in Sources */,
@@ -3433,6 +3470,7 @@
 				D1AFDF9D29CA66F40033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDF9E29CA66F40033BF27 /* Plural.swift in Sources */,
 				D1AFDF9F29CA66F40033BF27 /* Extensions.swift in Sources */,
+				07047D752F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E650A2F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				D1AFDFA029CA66F40033BF27 /* ToolTipViewDatasourceable.swift in Sources */,
 				D1AFDFA129CA66F40033BF27 /* ToolTipViewUpdatable.swift in Sources */,
@@ -3488,6 +3526,7 @@
 				D1AFDFF329CA6E900033BF27 /* ColorVariables.swift in Sources */,
 				D1AFDFF429CA6E900033BF27 /* Plural.swift in Sources */,
 				D1AFDFF529CA6E900033BF27 /* Extensions.swift in Sources */,
+				07047D742F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E65102F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				D1AFDFF629CA6E900033BF27 /* ToolTipViewDatasourceable.swift in Sources */,
 				D1AFDFF729CA6E900033BF27 /* ToolTipViewUpdatable.swift in Sources */,
@@ -3543,6 +3582,7 @@
 				D1B81D4827BBB71C0085FE5E /* Plural.swift in Sources */,
 				D1B81D3B27BBB6FC0085FE5E /* Extensions.swift in Sources */,
 				3045399B293B9E22003AE55B /* ToolTipViewDatasourceable.swift in Sources */,
+				07047D722F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E97E65152F2CDD5B0070810A /* ESInterfaceVariables.swift in Sources */,
 				30453993293B9E1D003AE55B /* ToolTipViewUpdatable.swift in Sources */,
 				D1B81D2227BBB5320085FE5E /* ITKeyboardViewController.swift in Sources */,
@@ -3582,6 +3622,7 @@
 				E996496E2E98A5FE00200F53 /* Conjugate.swift in Sources */,
 				E99649722E98A64700200F53 /* Annotate.swift in Sources */,
 				E996496D2E98A5E400200F53 /* InformationToolTipData.swift in Sources */,
+				07047D782F7E98FF00F40B79 /* KeyboardTheme.swift in Sources */,
 				E996497B2E98A7E600200F53 /* ToolTipViewDatasourceable.swift in Sources */,
 				E99649872E98A9FB00200F53 /* KeyAnimation.swift in Sources */,
 				E98034D92F45AE1F006C1CDC /* LanguageData.swift in Sources */,
@@ -3618,6 +3659,7 @@
 				F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */,
 				F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */,
 				F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */,
+				07047B942F7DCD5900F40B79 /* ThemePickerViewController.swift in Sources */,
 				F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

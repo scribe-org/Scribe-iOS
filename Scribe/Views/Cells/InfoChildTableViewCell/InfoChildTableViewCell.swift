@@ -131,6 +131,12 @@ final class InfoChildTableViewCell: UITableViewCell {
                 currentLang, value: langTranslateLanguage, comment: ""
             )
             subLabel.textColor = menuOptionColor
+        } else if case .none(.keyboardTheme) = section.sectionState {
+            // Show the currently active theme name as a subtitle.
+            let savedId = userDefaults.string(forKey: "selectedKeyboardTheme") ?? "default"
+            let themeName = KeyboardTheme.all.first { $0.id == savedId }?.displayName ?? "Default"
+            subLabel.text = themeName
+            subLabel.textColor = menuOptionColor
         } else {
             subLabel.removeFromSuperview()
         }
@@ -163,6 +169,7 @@ final class InfoChildTableViewCell: UITableViewCell {
             initializeFontSize()
             NotificationCenter.default.post(name: .fontSizeUpdatedNotification, object: nil)
 
+        case .keyboardTheme: break // handled by navigation in SettingsViewController
         case .none: break
         }
 
@@ -218,6 +225,7 @@ final class InfoChildTableViewCell: UITableViewCell {
                 toggleSwitch.isOn = false // default off
             }
 
+        case .keyboardTheme: break // no toggle state needed
         case .none: break
         }
     }

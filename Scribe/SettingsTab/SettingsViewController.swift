@@ -257,6 +257,10 @@ extension SettingsViewController: UITableViewDelegate {
                 navigationController?.pushViewController(viewController, animated: true)
             }
 
+        case .none(.keyboardTheme):
+            let themeVC = ThemePickerViewController()
+            navigationController?.pushViewController(themeVC, animated: true)
+
         default: break
         }
 

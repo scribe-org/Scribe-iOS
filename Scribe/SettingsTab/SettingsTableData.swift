@@ -36,6 +36,21 @@ enum SettingsTableData {
                         "i18n.app.settings.menu.increase_text_size_description",
                         value: "Increase text sizes for better readability", comment: ""
                     )
+                ),
+                Section(
+                    sectionTitle: NSLocalizedString(
+                        "i18n.app.settings.menu.keyboard_theme",
+                        value: "Keyboard theme",
+                        comment: ""
+                    ),
+                    hasToggle: false,
+                    hasNestedNavigation: true,
+                    sectionState: .none(.keyboardTheme),
+                    shortDescription: NSLocalizedString(
+                        "i18n.app.settings.menu.keyboard_theme_description",
+                        value: "Choose a color theme for all Scribe keyboards.",
+                        comment: ""
+                    )
                 )
 
             ],
