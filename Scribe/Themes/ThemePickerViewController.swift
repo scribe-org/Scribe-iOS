@@ -129,7 +129,17 @@ extension ThemePickerViewController: UICollectionViewDataSource {
 
 extension ThemePickerViewController: UICollectionViewDelegate {
     func collectionView(_ cv: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let theme = sections[indexPath.section].themes[indexPath.item] else { return }
+        guard let theme = sections[indexPath.section].themes[indexPath.item] else {
+            // "+" card — coming soon
+            let alert = UIAlertController(
+                title: "Custom Themes",
+                message: "Create your own keyboard theme — coming soon!",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
         ThemeManager.shared.apply(theme)
         cv.reloadData()
     }
@@ -166,7 +176,7 @@ private final class SectionHeaderView: UICollectionReusableView {
         ])
     }
 
-    required init?(coder: NSCoder) { fatalError() }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func configure(title: String) { label.text = title }
 }
@@ -196,7 +206,7 @@ private final class AddThemeCell: UICollectionViewCell {
         ])
     }
 
-    required init?(coder: NSCoder) { fatalError() }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
 // MARK: - ThemeCell
@@ -213,7 +223,7 @@ private final class ThemeCell: UICollectionViewCell {
         buildUI()
     }
 
-    required init?(coder: NSCoder) { fatalError() }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     private func buildUI() {
         contentView.layer.cornerRadius = 12
@@ -324,7 +334,7 @@ private final class KeyboardMiniPreview: UIView {
         let key0W = (rect.width - pad * 2 - gap * 4) / 5
         for i in 0 ..< 5 {
             let x = pad + CGFloat(i) * (key0W + gap)
-            drawKey(ctx: ctx, x: x, y: row0Y, w: key0W, h: keyH, color: keyCol, radius: r)
+            drawKey(ctx: ctx, in: CGRect(x: x, y: row0Y, width: key0W, height: keyH), color: keyCol, radius: r)
         }
 
         // Row 1: 4 keys (inset)
@@ -333,7 +343,7 @@ private final class KeyboardMiniPreview: UIView {
         let row1X = (rect.width - (key1W * 4 + gap * 3)) / 2
         for i in 0 ..< 4 {
             let x = row1X + CGFloat(i) * (key1W + gap)
-            drawKey(ctx: ctx, x: x, y: row1Y, w: key1W, h: keyH, color: keyCol, radius: r)
+            drawKey(ctx: ctx, in: CGRect(x: x, y: row1Y, width: key1W, height: keyH), color: keyCol, radius: r)
         }
 
         // Row 2: shift + 3 + delete
@@ -341,17 +351,18 @@ private final class KeyboardMiniPreview: UIView {
         let avail = rect.width - pad * 2
         let lw = (avail - gap * 4) / 6
         let ww = lw * 1.5
-        drawKey(ctx: ctx, x: pad, y: row2Y, w: ww, h: keyH, color: specialCol, radius: r)
+        drawKey(ctx: ctx, in: CGRect(x: pad, y: row2Y, width: ww, height: keyH), color: specialCol, radius: r)
         for i in 0 ..< 3 {
-            drawKey(ctx: ctx, x: pad + ww + gap + CGFloat(i) * (lw + gap), y: row2Y, w: lw, h: keyH, color: keyCol, radius: r)
+            let x = pad + ww + gap + CGFloat(i) * (lw + gap)
+            drawKey(ctx: ctx, in: CGRect(x: x, y: row2Y, width: lw, height: keyH), color: keyCol, radius: r)
         }
-        drawKey(ctx: ctx, x: pad + ww + gap + 3 * (lw + gap), y: row2Y, w: ww, h: keyH, color: specialCol, radius: r)
+        drawKey(ctx: ctx, in: CGRect(x: pad + ww + gap + 3 * (lw + gap), y: row2Y, width: ww, height: keyH), color: specialCol, radius: r)
 
-        // Spacebar strip at bottom — wide bar with a small dot (like Gboard)
+        // Spacebar strip at bottom
         let spaceY = rect.height - pad * 0.5 - keyH * 0.65
         let spaceW = rect.width * 0.55
         let spaceX = (rect.width - spaceW) / 2
-        drawKey(ctx: ctx, x: spaceX, y: spaceY, w: spaceW, h: keyH * 0.65, color: specialCol, radius: r * 0.8)
+        drawKey(ctx: ctx, in: CGRect(x: spaceX, y: spaceY, width: spaceW, height: keyH * 0.65), color: specialCol, radius: r * 0.8)
 
         // Small colored dot bottom-right (accent indicator)
         let dotR: CGFloat = 5
@@ -362,10 +373,10 @@ private final class KeyboardMiniPreview: UIView {
         dotPath.fill()
     }
 
-    private func drawKey(ctx: CGContext, x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, color: UIColor, radius: CGFloat) {
+    private func drawKey(ctx: CGContext, in keyRect: CGRect, color: UIColor, radius: CGFloat) {
         ctx.saveGState()
         ctx.setShadow(offset: CGSize(width: 0, height: 1), blur: 1, color: shadowCol.cgColor)
-        let path = UIBezierPath(roundedRect: CGRect(x: x, y: y, width: w, height: h), cornerRadius: radius)
+        let path = UIBezierPath(roundedRect: keyRect, cornerRadius: radius)
         color.setFill()
         path.fill()
         ctx.restoreGState()
