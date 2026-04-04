@@ -14,19 +14,14 @@
         <!--About View Controller-->
         <scene sceneID="wu0-fh-eQH">
             <objects>
-                <tableViewController id="4qA-Bq-SU4" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="6fu-7Z-I4m">
+                <viewController id="4qA-Bq-SU4" customClass="AboutViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fu-7Z-I4m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="4qA-Bq-SU4" id="kbz-xC-5xC"/>
-                            <outlet property="delegate" destination="4qA-Bq-SU4" id="cG0-24-ISc"/>
-                        </connections>
-                    </tableView>
+                    </view>
                     <navigationItem key="navigationItem" id="S38-5i-wqH"/>
-                </tableViewController>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZB-x0-ZvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-889" y="641"/>
