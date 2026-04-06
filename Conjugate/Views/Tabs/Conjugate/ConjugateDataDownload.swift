@@ -45,7 +45,7 @@ struct ConjugateDataDownload: View {
       .background(Color(.systemBackground))
       .cornerRadius(12)
       .onTapGesture {
-        // Navigation to download screen - to be implemented in a follow-up issue
+        // Navigation to download screen.
       }
     }
     .padding(.horizontal)
