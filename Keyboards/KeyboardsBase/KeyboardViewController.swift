@@ -288,6 +288,100 @@ class KeyboardViewController: UIInputViewController {
         pluralKey.isHidden = state
     }
 
+    // MARK: Download Data Button
+
+    /// A button shown above the keyboard when no language data has been downloaded.
+    var downloadDataBtn: UIButton?
+
+    /// Checks whether language data has been downloaded for the current keyboard language.
+    func hasLanguageData() -> Bool {
+        let langAbbr = getControllerLanguageAbbr()
+        guard !langAbbr.isEmpty,
+              let containerURL = FileManager.default.containerURL(
+                  forSecurityApplicationGroupIdentifier: "group.be.scri.userDefaultsContainer"
+              ) else {
+            return true // default to true to avoid showing the button unnecessarily
+        }
+        let dbPath = containerURL.appendingPathComponent("\(langAbbr.uppercased())LanguageData.sqlite").path
+        return FileManager.default.fileExists(atPath: dbPath)
+    }
+
+    /// Opens the Scribe app via the responder chain so the user can download language data.
+    @objc func openScribeApp() {
+        guard let url = URL(string: "scribe://") else { return }
+        var responder: UIResponder? = self
+        while responder != nil {
+            if let application = responder as? UIApplication {
+                application.open(url)
+                return
+            }
+            responder = responder?.next
+        }
+    }
+
+    /// Shows or hides the download data button based on whether language data is available.
+    func conditionallyShowDownloadDataBtn() {
+        // Only show the download button in idle state (not during commands).
+        guard commandState == .idle else {
+            downloadDataBtn?.isHidden = true
+            return
+        }
+        if hasLanguageData() {
+            downloadDataBtn?.isHidden = true
+        } else {
+            showDownloadDataBtn()
+        }
+    }
+
+    /// Creates and displays the download data button above the keyboard.
+    func showDownloadDataBtn() {
+        // Remove any existing button first.
+        downloadDataBtn?.removeFromSuperview()
+
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.backgroundColor = scribeCTAColor
+        btn.setTitleColor(.white, for: .normal)
+        btn.setTitle(downloadDataMsg, for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        btn.layer.cornerRadius = commandKeyCornerRadius
+        btn.layer.masksToBounds = true
+
+        // Add a download icon on the left side.
+        let iconConfig = UIImage.SymbolConfiguration(pointSize: 14, weight: .medium)
+        btn.setImage(UIImage(systemName: "arrow.down.circle.fill", withConfiguration: iconConfig), for: .normal)
+        btn.tintColor = .white
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.plain()
+            config.baseForegroundColor = .white
+            config.image = UIImage(systemName: "arrow.down.circle.fill", withConfiguration: iconConfig)
+            config.imagePadding = 8
+            config.imagePlacement = .leading
+            config.title = downloadDataMsg
+            config.attributedTitle = AttributedString(
+                downloadDataMsg,
+                attributes: AttributeContainer([.font: UIFont.systemFont(ofSize: 16, weight: .medium)])
+            )
+            btn.configuration = config
+            btn.backgroundColor = scribeCTAColor
+        } else {
+            btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
+            btn.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+        }
+
+        btn.addTarget(self, action: #selector(openScribeApp), for: .touchUpInside)
+
+        view.addSubview(btn)
+        downloadDataBtn = btn
+
+        NSLayoutConstraint.activate([
+            btn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            btn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            btn.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
+            btn.heightAnchor.constraint(equalToConstant: scribeKey.frame.height > 0 ? scribeKey.frame.height : 36)
+        ])
+    }
+
   /// Sets the tooltip to display information to the user.
   func setInformationState() {
     children.forEach { child in
@@ -1463,24 +1557,24 @@ class KeyboardViewController: UIInputViewController {
             keyWidth = numSymKeyWidth
         }
 
-    // Derive corner radii.
-    if DeviceType.isPhone {
-      if isLandscapeView {
-        keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPhone
-        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPhone
-      } else {
-        keyCornerRadius = keyWidth / scalarKeyCornerRadiusPhone
-        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPhone
-      }
-    } else if DeviceType.isPad {
-      if isLandscapeView {
-        keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPad
-        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPad
-      } else {
-        keyCornerRadius = keyWidth / scalarKeyCornerRadiusPad
-        commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPad
-      }
-    }
+        // Derive corner radii.
+        if DeviceType.isPhone {
+            if isLandscapeView {
+                keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPhone
+                commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPhone
+            } else {
+                keyCornerRadius = keyWidth / scalarKeyCornerRadiusPhone
+                commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPhone
+            }
+        } else if DeviceType.isPad {
+            if isLandscapeView {
+                keyCornerRadius = keyWidth / scalarKeyCornerRadiusLandscapeViewPad
+                commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusLandscapeViewPad
+            } else {
+                keyCornerRadius = keyWidth / scalarKeyCornerRadiusPad
+                commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPad
+            }
+        }
 
         // Normal keyboard view.
         for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
@@ -1600,6 +1694,7 @@ class KeyboardViewController: UIInputViewController {
         }
 
         setKeyPadding()
+        conditionallyShowDownloadDataBtn()
     }
 
     func setCommaAndPeriodKeysConditionally() {

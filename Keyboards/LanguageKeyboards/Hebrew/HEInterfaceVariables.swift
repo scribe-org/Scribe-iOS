@@ -254,4 +254,5 @@ func setHEKeyboardLayout() {
         withColor: UIColor(cgColor: commandBarPlaceholderColorCG)
     )
     alreadyPluralMsg = "כבר בצורת רבים"
+    downloadDataMsg = "אנא הורד נתוני שפה"
 }
