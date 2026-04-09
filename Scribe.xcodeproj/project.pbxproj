@@ -129,6 +129,8 @@
 		8B82A46F2F7D6E0400F1B04D /* TranslationLanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A46E2F7D6E0300F1B04D /* TranslationLanguagePickerView.swift */; };
 		8BA036E22F7FCA2D00F5ADF9 /* LanguageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA036E12F7FCA2D00F5ADF9 /* LanguageSettingsView.swift */; };
 		8BA036E42F7FCDC300F5ADF9 /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA036E32F7FCDC300F5ADF9 /* SettingsHomeView.swift */; };
+		A4C829A12F8400800015D657 /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE42F6A782500A8C950 /* ConjugateTab.swift */; };
+		A4C829A52F84366C0015D657 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -784,6 +786,11 @@
 		F786BB3B2F1E8F70003F7505 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EB62F6A8BFE0040B09B /* AppNavigation.swift */; };
 		F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */; };
+		FA001AAB2F9A000000000001 /* AboutTipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000001 /* AboutTipCardView.swift */; };
+		FA001AAB2F9A000000000002 /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000002 /* AboutSectionView.swift */; };
+		FA001AAB2F9A000000000003 /* AboutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000003 /* AboutRowView.swift */; };
+		FA001AAB2F9A000000000004 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000004 /* AboutInfoView.swift */; };
+		FA001AAB2F9A000000000005 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA001AAA2F9A000000000005 /* ShareSheet.swift */; };
 		F7A17EBC2F6A8C200040B09B /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EAE2F6A8BFE0040B09B /* ConjugateTab.swift */; };
 		F7A17EBD2F6A8C230040B09B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A17EB42F6A8BFE0040B09B /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -1160,6 +1167,11 @@
 		F786BB422F1E8F70003F7505 /* ConjugateApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ConjugateApp-Info.plist"; path = "/Users/gauthammohanraj/Developer/Scribe-iOS/ConjugateApp-Info.plist"; sourceTree = "<absolute>"; };
 		F7A17EAB2F6A8BFE0040B09B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Conjugate/ContentView.swift; sourceTree = "<group>"; };
 		F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTab.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000001 /* AboutTipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTipCardView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000002 /* AboutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000003 /* AboutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRowView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000004 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfoView.swift; sourceTree = "<group>"; };
+		FA001AAA2F9A000000000005 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		F7A17EAE2F6A8BFE0040B09B /* ConjugateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateTab.swift; sourceTree = "<group>"; };
 		F7A17EB02F6A8BFE0040B09B /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
 		F7A17EB22F6A8BFE0040B09B /* ConjugateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugateTab.swift; sourceTree = "<group>"; };
@@ -2104,6 +2116,11 @@
 			isa = PBXGroup;
 			children = (
 				F7A17EAC2F6A8BFE0040B09B /* AboutTab.swift */,
+				FA001AAA2F9A000000000001 /* AboutTipCardView.swift */,
+				FA001AAA2F9A000000000002 /* AboutSectionView.swift */,
+				FA001AAA2F9A000000000003 /* AboutRowView.swift */,
+				FA001AAA2F9A000000000004 /* AboutInfoView.swift */,
+				FA001AAA2F9A000000000005 /* ShareSheet.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -3609,10 +3626,38 @@
 			files = (
 				F7A17EBD2F6A8C230040B09B /* ContentView.swift in Sources */,
 				F7A17EBC2F6A8C200040B09B /* ConjugateTab.swift in Sources */,
+				A4C829A52F84366C0015D657 /* InstallationDownload.swift in Sources */,
 				F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */,
+				FA001AAB2F9A000000000001 /* AboutTipCardView.swift in Sources */,
+				FA001AAB2F9A000000000002 /* AboutSectionView.swift in Sources */,
+				FA001AAB2F9A000000000003 /* AboutRowView.swift in Sources */,
+				FA001AAB2F9A000000000004 /* AboutInfoView.swift in Sources */,
+				FA001AAB2F9A000000000005 /* ShareSheet.swift in Sources */,
 				F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */,
+				A4C829A12F8400800015D657 /* ConjugateTab.swift in Sources */,
 				F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */,
 				F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */,
+				E91980C82F2F540A00B5852F /* NavigationStructure.swift in Sources */,
+				F786BB0F2F1E8F70003F7505 /* InterfaceVariables.swift in Sources */,
+				F786BB232F1E8F70003F7505 /* InterfaceConstants.swift in Sources */,
+				F786BAF52F1E8F70003F7505 /* KeyboardProvider.swift in Sources */,
+				F786BAF42F1E8F70003F7505 /* KeyboardBuilder.swift in Sources */,
+				F786BB1D2F1E8F70003F7505 /* KeyAltChars.swift in Sources */,
+				F786BAFF2F1E8F70003F7505 /* CommandVariables.swift in Sources */,
+				F786BB132F1E8F70003F7505 /* ColorVariables.swift in Sources */,
+				F786BAD72F1E8F70003F7505 /* ScribeColor.swift in Sources */,
+				F786BAF62F1E8F70003F7505 /* UIColor+ScribeColors.swift in Sources */,
+				F786BB222F1E8F70003F7505 /* Extensions.swift in Sources */,
+				F786BAE72F1E8F70003F7505 /* ENInterfaceVariables.swift in Sources */,
+				F786BAE62F1E8F70003F7505 /* FR-AZERTYInterfaceVariables.swift in Sources */,
+				F786BAE92F1E8F70003F7505 /* DEInterfaceVariables.swift in Sources */,
+				F786BADC2F1E8F70003F7505 /* IDInterfaceVariables.swift in Sources */,
+				F786BB0A2F1E8F70003F7505 /* ITInterfaceVariables.swift in Sources */,
+				F786BB1E2F1E8F70003F7505 /* NBInterfaceVariables.swift in Sources */,
+				F786BB0B2F1E8F70003F7505 /* PTInterfaceVariables.swift in Sources */,
+				F786BB092F1E8F70003F7505 /* RUInterfaceVariables.swift in Sources */,
+				E97E65172F2CDD730070810A /* ESInterfaceVariables.swift in Sources */,
+				F786BAF72F1E8F70003F7505 /* SVInterfaceVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
