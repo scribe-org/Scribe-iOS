@@ -130,6 +130,8 @@
 		693150472C881DCE005F99E8 /* BaseTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
+		A4C829A12F8400800015D657 /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE42F6A782500A8C950 /* ConjugateTab.swift */; };
+		A4C829A52F84366C0015D657 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -3630,6 +3632,7 @@
 			files = (
 				F7A17EBD2F6A8C230040B09B /* ContentView.swift in Sources */,
 				F7A17EBC2F6A8C200040B09B /* ConjugateTab.swift in Sources */,
+				A4C829A52F84366C0015D657 /* InstallationDownload.swift in Sources */,
 				F7A17EBB2F6A8C1C0040B09B /* AboutTab.swift in Sources */,
 				FA001AAB2F9A000000000001 /* AboutTipCardView.swift in Sources */,
 				FA001AAB2F9A000000000002 /* AboutSectionView.swift in Sources */,
@@ -3637,6 +3640,7 @@
 				FA001AAB2F9A000000000004 /* AboutInfoView.swift in Sources */,
 				FA001AAB2F9A000000000005 /* ShareSheet.swift in Sources */,
 				F7A17EBA2F6A8C180040B09B /* AppNavigation.swift in Sources */,
+				A4C829A12F8400800015D657 /* ConjugateTab.swift in Sources */,
 				F725CADE2F6A72BC00A8C950 /* ConjugateApp.swift in Sources */,
 				F725CAE72F6A783400A8C950 /* SettingsTab.swift in Sources */,
 				E91980C82F2F540A00B5852F /* NavigationStructure.swift in Sources */,
