@@ -244,6 +244,8 @@ struct AboutTab: View {
                 .animation(.easeInOut(duration: 0.2), value: tipCardVisible)
             }
         }
+        .navigationTitle(NSLocalizedString("i18n.app.about.title", value: "About", comment: ""))
+        .navigationBarTitleDisplayMode(.large)
         .sheet(isPresented: $showShareSheet) {
             ShareSheet(items: [scribeShareURL()])
         }
