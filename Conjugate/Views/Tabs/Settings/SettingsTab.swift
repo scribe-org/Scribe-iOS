@@ -19,7 +19,7 @@ struct SettingsTab: View {
     var body: some View {
         AppNavigation {
             ZStack(alignment: .top) {
-                Color.scribeBlue
+                Color("scribeAppBackground")
                     .ignoresSafeArea()
                 VStack(alignment: .leading) {
                     Text(
