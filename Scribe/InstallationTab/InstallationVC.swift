@@ -395,7 +395,12 @@ extension InstallationVC {
             title: NSLocalizedString(
                 "i18n.app.installation.button_quick_tutorial", value: "Quick tutorial", comment: ""
             ),
-            action: {}
+            action: { [weak self] in
+                let tutorialView = TutorialView()
+                let hostingController = UIHostingController(rootView: tutorialView)
+                hostingController.modalPresentationStyle = .fullScreen
+                self?.present(hostingController, animated: true)
+            }
         )
 
         let hostingController = UIHostingController(rootView: ctaButton)
