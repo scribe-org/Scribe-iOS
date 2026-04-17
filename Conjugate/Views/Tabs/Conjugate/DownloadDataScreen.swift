@@ -74,7 +74,7 @@ class ConjugateDownloadStateManager: ObservableObject {
             showToastMessage(
                 String(
                     format: NSLocalizedString(
-                        "i18n.conjugate.download.already_up_to_date",
+                        "i18n.app.download.menu_ui.download_data.up_to_date",
                         value: "%@ data is already up to date",
                         comment: ""
                     ),
