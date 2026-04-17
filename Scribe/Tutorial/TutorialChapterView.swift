@@ -24,7 +24,7 @@ struct TutorialChapterView: View {
     @State private var inputText: String = ""
     @State private var feedbackState: FeedbackState = .idle
     @State private var navigateToNext = false
-    @State private var nextChapter: TutorialChapter? = nil
+    @State private var nextChapter: TutorialChapter?
     @State private var showWrongKeyboard = false
 
     enum FeedbackState { case idle, correct, incorrect }

@@ -11,7 +11,7 @@ import SwiftUI
 struct TutorialView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var startFull = false
-    @State private var selectedChapter: TutorialChapter? = nil
+    @State private var selectedChapter: TutorialChapter?
 
     private let chapters = TutorialKeyboardDetector.availableChapters()
 
