@@ -2069,7 +2069,11 @@ class KeyboardViewController: UIInputViewController {
                 autoCapAtStartOfProxy()
 
                 if commandState == .invalid {
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    if !didYouMeanWord.isEmpty {
+                        commandBar.text = commandPromptSpacing + "Did you mean: " + didYouMeanWord + "?"
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    }
                     commandBar.isShowingInfoButton = true
                 } else {
                     commandBar.isShowingInfoButton = false
@@ -2078,6 +2082,7 @@ class KeyboardViewController: UIInputViewController {
                     }
                 }
                 commandBar.textColor = keyCharColor
+                didYouMeanWord = ""
                 return
             } else if [.translate, .plural].contains(commandState) { // functional commands above
                 autoActionState = .suggest
@@ -2096,9 +2101,14 @@ class KeyboardViewController: UIInputViewController {
                     loadKeys()
                     proxy.insertText(selectedText)
                     autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+                    if !didYouMeanWord.isEmpty {
+                        commandBar.text = commandPromptSpacing + "Did you mean: " + didYouMeanWord + "?"
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+                    }
                     commandBar.isShowingInfoButton = true
                     commandBar.textColor = keyCharColor
+                    didYouMeanWord = ""
                     return
                 } else { // functional commands above
                     autoActionState = .suggest
@@ -2130,9 +2140,14 @@ class KeyboardViewController: UIInputViewController {
                     loadKeys()
                     proxy.insertText(selectedText)
                     autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    if !didYouMeanWord.isEmpty {
+                        commandBar.text = commandPromptSpacing + "Did you mean: " + didYouMeanWord + "?"
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    }
                     commandBar.isShowingInfoButton = true
                     commandBar.textColor = keyCharColor
+                    didYouMeanWord = ""
                     return
                 }
             } else {
