@@ -88,7 +88,7 @@ struct SettingsTipCardView: View {
     var body: some View {
         TipCardView(
             infoText: NSLocalizedString(
-                "i18n.app.settings.app_hint_tooltip",
+                "i18n.app.settings.keyboard_app_hint_tooltip",
                 value: "Settings for the app and installed language keyboards are found here.",
                 comment: ""
             ),
