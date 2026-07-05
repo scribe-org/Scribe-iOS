@@ -237,6 +237,7 @@ extension LanguageDBManager {
     }
 
     /// Returns the next three words in the `autocomplete_lexicon` that follow a given word.
+    /// Falls back to noun-based alphabetical autocompletions when the lexicon returns no results.
     ///
     /// - Parameters
     ///   - word: the word that autosuggestions should be returned for.
@@ -260,9 +261,52 @@ extension LanguageDBManager {
         let outputCols = ["word"]
         let args = ["\(word.lowercased())%"]
 
-        return queryDBRows(
+        let lexiconResults = queryDBRows(
             query: autocompletionsQuery, outputCols: outputCols, args: StatementArguments(args)
         )
+
+        // If the lexicon has results, return them; otherwise fall back to noun-based completions.
+        if !lexiconResults.isEmpty, !lexiconResults[0].isEmpty {
+            return lexiconResults
+        }
+
+        return queryNounAutocompletions(word: word)
+    }
+
+    /// Returns up to three alphabetically-ordered words from the nouns table that start with the given prefix.
+    /// Searches across all singular (key) columns defined in the language's data contract numbers section.
+    ///
+    /// - Parameters
+    ///   - word: the prefix to match against noun columns.
+    func queryNounAutocompletions(word: String) -> [String] {
+        let language = getControllerLanguageAbbr()
+        let contract = ContractManager.shared.loadContract(language: language)
+
+        guard let numbers = contract.numbers, !numbers.isEmpty else {
+            return [""]
+        }
+
+        // Use all singular (key) columns from the numbers contract.
+        let singularColumns = Array(numbers.keys)
+        let prefix = word.lowercased()
+
+        // Build a UNION query across all singular columns so we get a deduplicated,
+        // alphabetically sorted list of up to 3 matching nouns.
+        let unionParts = singularColumns.map { col in
+            "SELECT `\(col)` AS word FROM nouns WHERE LOWER(`\(col)`) LIKE ?"
+        }
+        let unionQuery = """
+        SELECT DISTINCT word
+        FROM (\(unionParts.joined(separator: " UNION ALL ")))
+        WHERE word IS NOT NULL AND word != ''
+        ORDER BY word COLLATE NOCASE ASC
+        LIMIT 3
+        """
+
+        // One `prefix%` argument per UNION part.
+        let args = StatementArguments(Array(repeating: "\(prefix)%", count: singularColumns.count))
+
+        return queryDBRows(query: unionQuery, outputCols: ["word"], args: args)
     }
 
     /// Query the suggestion of word in `autosuggestions`.

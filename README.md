@@ -19,7 +19,7 @@
   <a href="https://apps.apple.com/app/scribe-language-keyboards/id1596613886"><img alt="App Store QR Code" src="https://raw.githubusercontent.com/scribe-org/Organization/main/promotional/qr_codes/scribe_ios_qr_code.png" width="80"/></a>
 </div>
 
-## iOS app with keyboards for language learners
+### Scribe-iOS: Keyboards for language learners & Conjugate-iOS: Wikidata based verb conjugation app
 
 **Scribe-iOS** is a pack of iOS and iPadOS keyboards for language learners. Features include translation **`(beta)`**, verb conjugation and word annotation that give users the tools needed to communicate with confidence.
 
