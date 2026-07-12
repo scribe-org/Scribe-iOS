@@ -1,6 +1,8 @@
-# Changelog
+# Scribe-iOS Changelog
 
-See the [releases for Scribe-iOS](https://github.com/scribe-org/Scribe-iOS/releases) for an up to date list of versions and their release dates. Versions that are marked as released may yet to be in the App Store if it's within the 48 hour submission review period.
+Please note that this repository contains the code for two different applications: Scribe-iOS and Conjugate-iOS. This is the changelog for Scribe-iOS. See [CHANGELOG_CONJUGATE.md](/CHANGELOG_CONJUGATE.md) for the Conjugate-iOS changelog.
+
+See the [releases for this repository](https://github.com/scribe-org/Scribe-iOS/releases) for an up to date list of versions and their release dates. Versions that are marked as released may yet to be on Google Play and other stores if it's within the submission review period.
 
 Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.MINOR.PATCH version where increments are made of the:
 
@@ -10,7 +12,7 @@ Scribe-iOS tries to follow [semantic versioning](https://semver.org/), a MAJOR.M
 
 Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
-# [Upcoming] Scribe-iOS 3.2.0
+# [Upcoming] Scribe-iOS 4.0.0
 
 ### ⌨️ New Keyboards
 
