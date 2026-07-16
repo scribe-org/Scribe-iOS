@@ -17,7 +17,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            ## Thank you for the pull request! 💙🩵
+            ## Thank you for the pull request! 💙
 
             The Scribe-iOS team will do our best to address your contribution as soon as we can. The following are some important points:
             - Those interested in developing their skills and expanding their role in the community should read the [mentorship and growth section of the contribution guide](https://github.com/scribe-org/Scribe-iOS/blob/main/CONTRIBUTING.md#mentorship-and-growth)
