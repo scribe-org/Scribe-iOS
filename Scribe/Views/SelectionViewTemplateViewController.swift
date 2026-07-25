@@ -74,6 +74,14 @@ extension SelectionViewTemplateViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let fontScale: CGFloat = userDefaults.bool(forKey: "increaseTextSize") ? 1.25 : 1.0
+        if DeviceType.isPad {
+            return 66.0 * fontScale
+        }
+        return 48.0 * fontScale
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RadioTableViewCell
         let oldLang = userDefaults.string(forKey: langCode + "TranslateLanguage") ?? "en"
