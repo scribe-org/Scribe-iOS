@@ -12,6 +12,4 @@ Funciones actuales:
 
 - Scribe muestra también género y preposiciones para los sustantivos en la barra de comandos, para ayudar a los usuarios entender el contexto de lo que estén escribiendo. Esto se muestran una vez que el usuario ha escrito una palabra y ha presionado la tecla de espacio, cuando selecciona la palabra y presiona la tecla 'Scribe' así como debajo de los autocompletados y autosugerencias.
 
-- Para lenguajes que tienen declinación de pronombres, Scribe también permite seleccionar el caso y después el usuario puede seleccionar el pronombre que desea de acuerdo con el caso, predicado y objeto.
-
 Al ser un proyecto de Código Abierto, incluyendo datos provenientes de Wikidata, el equipo de Scribe realmente aprecia las contribuciones y retroalimentación. Por favor, visítanos en https://github.com/scribe-org/Scribe-iOS

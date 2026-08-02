@@ -1,0 +1,21 @@
+Scribe Conjugate provides an easy and streamlined verb conjugation experience based on open data from Wikidata. Find verbs to conjugate in an integrated search across all languages that data has been downloaded for.
+
+Included Languages:
+
+English, French, German, Italian, Portuguese, Russian, Spanish and Swedish.
+
+Current Features:
+
+- Search for verbs for all downloaded languages at once.
+
+- Filter for verb tenses to easily find the conjugation you're looking for.
+
+- Tap the conjugation to copy it to the clipboard and paste it in another app.
+
+- Recently conjugated verbs are saved in the conjugation screen.
+
+- Includes dark mode and other accessibility features.
+
+- Download new language data with an internet connection. The Scribe team updates the server with new language data every month.
+
+Being fully open-source, the Scribe team loves to get both feedback and contributions. Please visit us at https://github.com/scribe-org/Scribe-iOS!

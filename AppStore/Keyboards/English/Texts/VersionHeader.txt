@@ -1,0 +1,3 @@
+Thanks for using Scribe! We update the app regularly to add new keyboards, features and fix bugs.
+
+This version includes:

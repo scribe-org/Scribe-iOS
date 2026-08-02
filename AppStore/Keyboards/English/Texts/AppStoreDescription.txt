@@ -2,7 +2,7 @@ Scribe is a pack of iOS and iPadOS keyboards for language learners! It provides 
 
 Included Languages:
 
-French, German, Italian, Portuguese, Russian, Spanish and Swedish.
+English, French, German, Italian, Portuguese, Russian, Spanish and Swedish.
 
 Current Features:
 
@@ -14,6 +14,6 @@ Current Features:
 
 - Scribe further annotates noun genders and preposition cases in the command bar to help users understand the context of what they're typing. Annotations are displayed once a user has typed a given word and pressed space, by pressing the Scribe key while a word is selected as well as under autocompletions and autosuggestions.
 
-- For languages with pronoun declension, Scribe also allows for the case annotation to be clicked and then the user can select the pronoun they want based on case, subject and object.
+- Download new language data with an internet connection. The Scribe team updates the server with new language data every month.
 
-Being fully open-source including data from Wikidata, the Scribe team loves to get both feedback and contributions. Please visit us at https://github.com/scribe-org/Scribe-iOS!
+Being fully open-source including data from Wikidata and Wiktionary, the Scribe team loves to get both feedback and contributions. Please visit us at https://github.com/scribe-org/Scribe-iOS!
