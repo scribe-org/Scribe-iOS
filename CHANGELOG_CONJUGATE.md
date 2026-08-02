@@ -1,6 +1,7 @@
 # Conjugate-iOS Changelog
 
-Please note that this repository contains the code for two different applications: Scribe-iOS and Conjugate-iOS. This is the changelog for Conjugate-iOS. See [CHANGELOG.md](/CHANGELOG.md) for the Scribe-iOS changelog.
+> [!NOTE]
+> This repository contains the code for two different applications: Scribe-iOS and Conjugate-iOS (Scribe-Conjugate for iOS). This is the changelog for Conjugate-iOS. See [CHANGELOG.md](/CHANGELOG.md) for the Scribe-iOS changelog.
 
 See the [releases for this repository](https://github.com/scribe-org/Scribe-iOS/releases) for an up to date list of versions and their release dates. Versions that are marked as released may yet to be on Google Play and other stores if it's within the submission review period.
 
