@@ -99,6 +99,7 @@ final class InfoChildTableViewCell: UITableViewCell {
         } else {
             descriptionLabel.text = nil
             descriptionLabel.isHidden = true
+            descriptionLabel.removeFromSuperview()
         }
 
         if section.hasToggle {
