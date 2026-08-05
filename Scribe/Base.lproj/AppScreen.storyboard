@@ -238,61 +238,10 @@
                     <view key="view" contentMode="scaleToFill" id="rjV-Tb-pQl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R98-aa-uZS">
-                                <rect key="frame" x="0.0" y="150" width="375" height="545"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="2AI-Eq-Aoc" userLabel="footerContainer">
-                                    <rect key="frame" x="0.0" y="107" width="375" height="130"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-l8-ZuO">
-                                            <rect key="frame" x="15" y="24" width="345" height="70"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-ix-8Gq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="tintColor" name="keyChar"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" name="appBtn"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="3gB-ix-8Gq" secondAttribute="bottom" id="3zh-t3-d71"/>
-                                                <constraint firstItem="3gB-ix-8Gq" firstAttribute="top" secondItem="IUx-l8-ZuO" secondAttribute="top" id="3zq-SH-hyN"/>
-                                                <constraint firstAttribute="trailing" secondItem="3gB-ix-8Gq" secondAttribute="trailing" id="MZ5-Xu-bjk"/>
-                                                <constraint firstAttribute="height" constant="70" id="bea-I2-Fsx"/>
-                                                <constraint firstItem="3gB-ix-8Gq" firstAttribute="leading" secondItem="IUx-l8-ZuO" secondAttribute="leading" id="qaJ-cC-qVF"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="IUx-l8-ZuO" secondAttribute="trailing" constant="15" id="1f9-Bu-bhz"/>
-                                        <constraint firstItem="IUx-l8-ZuO" firstAttribute="top" secondItem="2AI-Eq-Aoc" secondAttribute="top" constant="24" id="2eq-kX-aJZ"/>
-                                        <constraint firstItem="IUx-l8-ZuO" firstAttribute="leading" secondItem="2AI-Eq-Aoc" secondAttribute="leading" constant="15" id="G55-3z-qUg"/>
-                                    </constraints>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dummyCell" id="O9h-lq-niX">
-                                        <rect key="frame" x="16" y="38" width="343" height="51"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9h-lq-niX" id="78r-CS-l4A">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
+                        <subviews/>
                         <viewLayoutGuide key="safeArea" id="I0X-V8-Xfd"/>
                         <color key="backgroundColor" name="scribeAppBackground"/>
-                        <constraints>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="top" secondItem="I0X-V8-Xfd" secondAttribute="top" constant="8" id="OWc-aW-GCS"/>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="trailing" secondItem="I0X-V8-Xfd" secondAttribute="trailing" id="bpS-fM-PPM"/>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="leading" secondItem="I0X-V8-Xfd" secondAttribute="leading" id="kfz-Wb-hJ6"/>
-                            <constraint firstItem="R98-aa-uZS" firstAttribute="bottom" secondItem="I0X-V8-Xfd" secondAttribute="bottom" id="rIQ-1I-NCm"/>
-                        </constraints>
+                        <constraints/>
                     </view>
                     <navigationItem key="navigationItem" id="XHq-V8-ZTt"/>
                     <connections>
@@ -542,47 +491,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okr-LC-69u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1831.2" y="-100.49261083743843"/>
-        </scene>
-        <!--Table View Template View Controller-->
-        <scene sceneID="okZ-mS-Z02">
-            <objects>
-                <tableViewController storyboardIdentifier="TableViewTemplateViewController" id="ZA3-mW-CXa" customClass="TableViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="AcG-ai-d5x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="scribeAppBackground"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ZA3-mW-CXa" id="LpK-sh-yHG"/>
-                            <outlet property="delegate" destination="ZA3-mW-CXa" id="6TP-eq-rrB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="vhy-kK-VNo"/>
-                    <connections>
-                        <segue destination="oOM-lN-cEA" kind="show" identifier="Select option within keyboard settings" id="5Pu-48-MeW"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWg-K9-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="25" y="-100"/>
-        </scene>
-        <!--Selection View Template View Controller-->
-        <scene sceneID="Y04-va-yC3">
-            <objects>
-                <tableViewController storyboardIdentifier="SelectionViewTemplateViewController" id="oOM-lN-cEA" userLabel="Selection View Template View Controller" customClass="SelectionViewTemplateViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="SS2-uh-4eH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="scribeAppBackground"/>
-                        <connections>
-                            <outlet property="dataSource" destination="oOM-lN-cEA" id="o1H-zm-BFJ"/>
-                            <outlet property="delegate" destination="oOM-lN-cEA" id="IoE-QL-Kun"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="ApL-7K-SMa"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T2o-Rh-3Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="956" y="-100"/>
         </scene>
         <!--i18n.app.installation.title-->
         <scene sceneID="2my-SI-kbz">
