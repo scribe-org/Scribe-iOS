@@ -117,6 +117,13 @@
 		30489C262936DB0200B59393 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30489C1D2936DAB700B59393 /* ToolTipView.swift */; };
 		38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD213322D5907F00C6795D /* AppDelegate.swift */; };
 		38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD213522D5907F00C6795D /* InstallationVC.swift */; };
+		FA002BBB2F9B000000000001 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000001 /* TutorialView.swift */; };
+		FA002BBB2F9B000000000002 /* TutorialChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000002 /* TutorialChapter.swift */; };
+		FA002BBB2F9B000000000003 /* TutorialChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000003 /* TutorialChapterView.swift */; };
+		FA002BBB2F9B000000000004 /* TutorialChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000004 /* TutorialChapterContent.swift */; };
+		FA002BBB2F9B000000000005 /* TutorialTipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000005 /* TutorialTipCard.swift */; };
+		FA002BBB2F9B000000000006 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000006 /* TutorialStep.swift */; };
+		FA002BBB2F9B000000000007 /* TutorialKeyboardDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA002BBA2F9B000000000007 /* TutorialKeyboardDetector.swift */; };
 		38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213722D5907F00C6795D /* AppScreen.storyboard */; };
 		38BD213E22D5908100C6795D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213D22D5908100C6795D /* Assets.xcassets */; };
 		38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
@@ -1041,6 +1048,13 @@
 		38BD213022D5907E00C6795D /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BD213322D5907F00C6795D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BD213522D5907F00C6795D /* InstallationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationVC.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000001 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000002 /* TutorialChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialChapter.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000003 /* TutorialChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialChapterView.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000004 /* TutorialChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialChapterContent.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000005 /* TutorialTipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTipCard.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000006 /* TutorialStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		FA002BBA2F9B000000000007 /* TutorialKeyboardDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialKeyboardDetector.swift; sourceTree = "<group>"; };
 		38BD213822D5907F00C6795D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AppScreen.storyboard; sourceTree = "<group>"; };
 		38BD213D22D5908100C6795D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38BD214022D5908100C6795D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1551,6 +1565,20 @@
 			path = InstallationTab;
 			sourceTree = "<group>";
 		};
+		FA002BC02F9B000000000001 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				FA002BBA2F9B000000000001 /* TutorialView.swift */,
+				FA002BBA2F9B000000000002 /* TutorialChapter.swift */,
+				FA002BBA2F9B000000000003 /* TutorialChapterView.swift */,
+				FA002BBA2F9B000000000004 /* TutorialChapterContent.swift */,
+				FA002BBA2F9B000000000005 /* TutorialTipCard.swift */,
+				FA002BBA2F9B000000000006 /* TutorialStep.swift */,
+				FA002BBA2F9B000000000007 /* TutorialKeyboardDetector.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		147797A92A2CD2B50044A53E /* AboutTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -1661,6 +1689,7 @@
 				CE1378C128F5D7AC00E1CBC2 /* Colors */,
 				EDEE62232B2DE64A00A0B9C1 /* Extensions */,
 				1406B7882A2DFE4C001DF45B /* InstallationTab */,
+				FA002BC02F9B000000000001 /* Tutorial */,
 				D198B5CD2BFA954100E1BF4F /* i18n */,
 				EDB460222B03BF7000BEA967 /* Resources */,
 				147797B62A2CFB560044A53E /* SettingsTab */,
@@ -2897,6 +2926,13 @@
 				D180EC0328FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */,
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
+				FA002BBB2F9B000000000001 /* TutorialView.swift in Sources */,
+				FA002BBB2F9B000000000002 /* TutorialChapter.swift in Sources */,
+				FA002BBB2F9B000000000003 /* TutorialChapterView.swift in Sources */,
+				FA002BBB2F9B000000000004 /* TutorialChapterContent.swift in Sources */,
+				FA002BBB2F9B000000000005 /* TutorialTipCard.swift in Sources */,
+				FA002BBB2F9B000000000006 /* TutorialStep.swift in Sources */,
+				FA002BBB2F9B000000000007 /* TutorialKeyboardDetector.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */,
 				E9F7273F2F45A6E60060B92D /* APIClient.swift in Sources */,
