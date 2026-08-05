@@ -153,6 +153,12 @@ enum SettingsTableData {
                         value: "Delete text word by word when the delete key is pressed and held.",
                         comment: ""
                     )
+                ),
+                Section(
+                    sectionTitle: "Haptic feedback",
+                    hasToggle: true,
+                    sectionState: .none(.hapticFeedback),
+                    shortDescription: "Enable haptic feedback on key press."
                 )
             ],
             hasDynamicData: nil
