@@ -16,8 +16,6 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var stackView2: UIStackView!
     @IBOutlet var stackView3: UIStackView!
 
-    private var tipView: ToolTipView?
-
     /// Changes the height of `stackViewNum` depending on device type and size.
     func conditionallyShowTopNumbersRow() {
         if DeviceType.isPhone {
@@ -96,7 +94,7 @@ class KeyboardViewController: UIInputViewController {
         commandBar.infoButtonTapHandler = { [weak self] in
             commandState = .displayInformation
             conjViewShiftButtonsState = .leftInactive
-            self?.loadKeys()
+            self?.setInformationState()
         }
     }
 
@@ -409,108 +407,46 @@ class KeyboardViewController: UIInputViewController {
         ])
     }
 
-    /// Logic to create notification tooltip.
-    func createInformationStateDatasource(text: NSMutableAttributedString, backgroundColor: UIColor)
-        -> ToolTipViewDatasource {
-        let theme = ToolTipViewTheme(
-            backgroundColor: backgroundColor, textFont: nil, textColor: keyCharColor,
-            textAlignment: .center, cornerRadius: 10, masksToBounds: true
-        )
-
-        return ToolTipViewDatasource(content: text, theme: theme)
-    }
-
-    /// Sets the tooltip to display information to the user.
-    func setInformationState() {
-        formKeySingle?.isHidden = false
-        formKeySingle?.alpha = 1.0
-
-        setFormDisplay1x1View()
-        let contentData = InformationToolTipData.getContent()
-        let datasources = contentData.compactMap { text in
-            createInformationStateDatasource(text: text, backgroundColor: keyColor)
-        }
-        tipView = ToolTipView(datasources: datasources)
-
-        bindTooltipview()
-
-        guard let tipView = tipView else { return }
-        tipView.translatesAutoresizingMaskIntoConstraints = false
-        formKeySingle.addSubview(tipView)
-        formKeySingle.isUserInteractionEnabled = false
-        tipView.leadingAnchor.constraint(
-            equalTo: formKeySingle.leadingAnchor
-        ).isActive = true
-        tipView.trailingAnchor.constraint(
-            equalTo: formKeySingle.trailingAnchor
-        ).isActive = true
-        tipView.topAnchor.constraint(equalTo: formKeySingle.topAnchor).isActive = true
-        tipView.bottomAnchor.constraint(equalTo: formKeySingle.bottomAnchor).isActive = true
-        styleBtn(btn: formKeySingle, title: "", radius: keyCornerRadius)
-
-        shiftFormsDisplayLeft?.isHidden = false
-        shiftFormsDisplayRight?.isHidden = false
-
-        setBtn(
-            btn: shiftFormsDisplayLeft, color: keyColor, name: "shiftFormsDisplayLeft",
-            canBeCapitalized: false, isSpecial: false
-        )
-        setBtn(
-            btn: shiftFormsDisplayRight, color: keyColor, name: "shiftFormsDisplayRight",
-            canBeCapitalized: false, isSpecial: false
-        )
-
-        activateBtn(btn: shiftFormsDisplayLeft)
-        activateBtn(btn: shiftFormsDisplayRight)
-
-        styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-        styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-
-        styleIconBtn(
-            btn: shiftFormsDisplayLeft, color: commandBarPlaceholderColor, iconName: "chevron.left"
-        )
-        styleIconBtn(btn: shiftFormsDisplayRight, color: keyCharColor, iconName: "chevron.right")
-    }
-
-    /// Shifts the view of the information tooltip view.
-    private func bindTooltipview() {
-        tipView?.didUpdatePage = { [weak self] currentState in
-            conjViewShiftButtonsState = currentState
-
-            guard let weakSelf = self else { return }
-
-            switch currentState {
-            case .rightInactive:
-                weakSelf.shiftFormsDisplayRight.isUserInteractionEnabled = false
-            case .leftInactive:
-                weakSelf.shiftFormsDisplayLeft.isUserInteractionEnabled = false
-            case .bothActive:
-                weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayLeft)
-                weakSelf.activateBtn(btn: weakSelf.shiftFormsDisplayRight)
-            default:
-                break
-            }
-
-            weakSelf.styleShiftButtons()
+  /// Sets the tooltip to display information to the user.
+  func setInformationState() {
+    children.forEach { child in
+        if child is DynamicConjugationViewController {
+        child.removeFromParent()
+        child.view.removeFromSuperview()
         }
     }
 
-    /// Styles the shift buttons for the displayInformation states.
-    private func styleShiftButtons() {
-        styleBtn(btn: shiftFormsDisplayLeft, title: "", radius: keyCornerRadius)
-        styleIconBtn(
-            btn: shiftFormsDisplayLeft,
-            color: ![.bothInactive, .leftInactive].contains(conjViewShiftButtonsState)
-                ? keyCharColor : commandBarPlaceholderColor,
-            iconName: "chevron.left"
-        )
-        styleBtn(btn: shiftFormsDisplayRight, title: "", radius: keyCornerRadius)
-        styleIconBtn(
-            btn: shiftFormsDisplayRight,
-            color: ![.bothInactive, .rightInactive].contains(conjViewShiftButtonsState)
-                ? keyCharColor : commandBarPlaceholderColor,
-            iconName: "chevron.right"
-        )
+    deactivateBtn(btn: translateKey)
+    deactivateBtn(btn: conjugateKey)
+    deactivateBtn(btn: pluralKey)
+    hideAutoActionPartitions()
+
+    scribeKey.toEscape()
+    scribeKey.setPartialCornerRadius()
+    scribeKey.setPartialShadow()
+
+    commandBar.set()
+    commandBar.setCornerRadiusAndShadow()
+    commandBar.backgroundColor = commandBarColor
+
+    let cases = NavigationBuilder.buildInformationCases(isTranslate: prevToInvalidState == .translate)
+
+    let infoVC = DynamicConjugationViewController(
+        linearCases: cases,
+        commandBar: commandBar,
+        startingIndex: 0
+    )
+
+    infoVC.isInfoState = true
+    addChild(infoVC)
+    infoVC.view.frame = CGRect(
+        x: 0,
+        y: commandBar.frame.maxY,
+        width: view.bounds.width,
+        height: view.bounds.height - commandBar.frame.maxY
+    )
+    view.addSubview(infoVC.view)
+    infoVC.didMove(toParent: self)
     }
 
     /// Generate emoji suggestions or completions for a given word.
@@ -1220,112 +1156,22 @@ class KeyboardViewController: UIInputViewController {
         }
     }
 
-    /// Hides all emoji dividers based on conditions determined by the keyboard state.
-    func conditionallyHideEmojiDividers() {
-        if commandState == .idle {
-            if [.zero, .one, .three].contains(emojisToShow) {
-                phoneEmojiDivider.backgroundColor = .clear
-            }
-            if [.zero, .one, .two].contains(emojisToShow) {
-                padEmojiDivider0.backgroundColor = .clear
-                padEmojiDivider1.backgroundColor = .clear
-            }
-        } else {
-            phoneEmojiDivider.backgroundColor = .clear
-            padEmojiDivider0.backgroundColor = .clear
-            padEmojiDivider1.backgroundColor = .clear
-        }
+  /// Hides all emoji dividers based on conditions determined by the keyboard state.
+  func conditionallyHideEmojiDividers() {
+    if commandState == .idle {
+      if [.zero, .one, .three].contains(emojisToShow) {
+        phoneEmojiDivider.backgroundColor = .clear
+      }
+      if [.zero, .one, .two].contains(emojisToShow) {
+        padEmojiDivider0.backgroundColor = .clear
+        padEmojiDivider1.backgroundColor = .clear
+      }
+    } else {
+      phoneEmojiDivider.backgroundColor = .clear
+      padEmojiDivider0.backgroundColor = .clear
+      padEmojiDivider1.backgroundColor = .clear
     }
-
-    // MARK: Conjugation Variables and Functions
-
-    // Note that we use "form" to describe both conjugations and declensions.
-    @IBOutlet var shiftFormsDisplayLeft: UIButton!
-    @IBOutlet var shiftFormsDisplayRight: UIButton!
-
-    @IBOutlet var formKeyFPS: UIButton!
-    @IBOutlet var formKeySPS: UIButton!
-    @IBOutlet var formKeyTPS: UIButton!
-    @IBOutlet var formKeyFPP: UIButton!
-    @IBOutlet var formKeySPP: UIButton!
-    @IBOutlet var formKeyTPP: UIButton!
-
-    // Labels for the conjugation view buttons.
-    // Note that we're using buttons as labels weren't allowing for certain constraints to be set.
-    @IBOutlet var formLblFPS: UIButton!
-    @IBOutlet var formLblSPS: UIButton!
-    @IBOutlet var formLblTPS: UIButton!
-    @IBOutlet var formLblFPP: UIButton!
-    @IBOutlet var formLblSPP: UIButton!
-    @IBOutlet var formLblTPP: UIButton!
-
-    @IBOutlet var formKeyTop: UIButton!
-    @IBOutlet var formKeyMiddle: UIButton!
-    @IBOutlet var formKeyBottom: UIButton!
-
-    @IBOutlet var formLblTop: UIButton!
-    @IBOutlet var formLblMiddle: UIButton!
-    @IBOutlet var formLblBottom: UIButton!
-    @IBOutlet var formKeyTL: UIButton!
-    @IBOutlet var formKeyTR: UIButton!
-    @IBOutlet var formKeyBL: UIButton!
-    @IBOutlet var formKeyBR: UIButton!
-
-    @IBOutlet var formLblTL: UIButton!
-    @IBOutlet var formLblTR: UIButton!
-    @IBOutlet var formLblBL: UIButton!
-    @IBOutlet var formLblBR: UIButton!
-
-    @IBOutlet var formKeyLeft: UIButton!
-    @IBOutlet var formKeyRight: UIButton!
-
-    @IBOutlet var formLblLeft: UIButton!
-    @IBOutlet var formLblRight: UIButton!
-
-    @IBOutlet var formKeySingle: UIButton!
-
-    /// Returns all buttons for the 1x1 conjugation display
-    func get1x1FormDisplayButtons() -> [UIButton] {
-        return [
-            formKeySingle
-        ]
-    }
-
-    @IBOutlet var formLblSingle: UIButton!
-
-    /// Returns all labels for the 1x1 conjugation display.
-    func get1x1FormDisplayLabels() -> [UIButton] {
-        return [
-            formLblSingle
-        ]
-    }
-
-    /// Sets up all buttons and labels that are associated with the 1x1 conjugation display.
-    func setFormDisplay1x1View() {
-        let conjugationNames = [
-            "formSingle"
-        ]
-
-        let displayBtns = get1x1FormDisplayButtons()
-
-        for (idx, btn) in displayBtns.enumerated() {
-            setBtn(
-                btn: btn, color: keyColor, name: conjugationNames[idx], canBeCapitalized: false,
-                isSpecial: false
-            )
-            activateBtn(btn: btn)
-        }
-
-        if DeviceType.isPad {
-            var conjugationFontDivisor = 3.5
-            if isLandscapeView {
-                conjugationFontDivisor = 4
-            }
-            for btn in get1x1FormDisplayButtons() {
-                btn.titleLabel?.font = .systemFont(ofSize: letterKeyWidth / conjugationFontDivisor)
-            }
-        }
-    }
+  }
 
     /// Displays an annotation instead of the translate auto action button given the word that was just typed or selected.
     func conditionallyDisplayAnnotation() {
@@ -1333,19 +1179,6 @@ class KeyboardViewController: UIInputViewController {
             typedWordAnnotation(KVC: self)
         }
     }
-
-    @objc func shiftLeft() {
-        if commandState == .displayInformation {
-            tipView?.updatePrevious()
-        }
-    }
-
-    @objc func shiftRight() {
-        if commandState == .displayInformation {
-            tipView?.updateNext()
-        }
-    }
-
     // MARK: Key Sizing
 
     func setKeywidth() {
@@ -1652,24 +1485,21 @@ class KeyboardViewController: UIInputViewController {
 
     // MARK: Load Keys
 
-    /// Loads the keys given the current constraints.
-    func loadKeys() {
-        // Early returns for dynamic views
-        if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
-            return
-        }
-        // The name of the language keyboard that's referencing KeyboardViewController.
-        controllerLanguage =
-            classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
-        if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
-            if userDefaults.bool(forKey: "deAccentCharacters")
-                || userDefaults.bool(forKey: "esAccentCharacters")
-                || userDefaults.bool(forKey: "svAccentCharacters") {
-                disableAccentCharacters = true
-            } else {
-                disableAccentCharacters = false
-            }
-        }
+  /// Loads the keys given the current constraints.
+  func loadKeys() {
+    // Early returns for dynamic views
+    if [.dynamicConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) {
+        return
+}
+    // The name of the language keyboard that's referencing KeyboardViewController.
+    controllerLanguage = classForCoder.description().components(separatedBy: ".KeyboardViewController")[0]
+    if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+      if userDefaults.bool(forKey: "deAccentCharacters") || userDefaults.bool(forKey: "esAccentCharacters") || userDefaults.bool(forKey: "svAccentCharacters") {
+        disableAccentCharacters = true
+      } else {
+        disableAccentCharacters = false
+      }
+    }
 
         // Actions to be done only on initial loads.
         if isFirstKeyboardLoad {
@@ -1769,72 +1599,6 @@ class KeyboardViewController: UIInputViewController {
                 keyCornerRadius = keyWidth / scalarKeyCornerRadiusPad
                 commandKeyCornerRadius = keyWidth / scalarCommandKeyCornerRadiusPad
             }
-        }
-
-        // Always hide old form buttons first.
-        formKeyFPS?.isHidden = true
-        formKeySPS?.isHidden = true
-        formKeyTPS?.isHidden = true
-        formKeyFPP?.isHidden = true
-        formKeySPP?.isHidden = true
-        formKeyTPP?.isHidden = true
-        formKeyTop?.isHidden = true
-        formKeyMiddle?.isHidden = true
-        formKeyBottom?.isHidden = true
-        formKeyTL?.isHidden = true
-        formKeyTR?.isHidden = true
-        formKeyBL?.isHidden = true
-        formKeyBR?.isHidden = true
-        formKeyLeft?.isHidden = true
-        formKeyRight?.isHidden = true
-        formKeySingle?.isHidden = true
-        formLblFPS?.isHidden = true
-        formLblSPS?.isHidden = true
-        formLblTPS?.isHidden = true
-        formLblFPP?.isHidden = true
-        formLblSPP?.isHidden = true
-        formLblTPP?.isHidden = true
-        formLblTop?.isHidden = true
-        formLblMiddle?.isHidden = true
-        formLblBottom?.isHidden = true
-        formLblTL?.isHidden = true
-        formLblTR?.isHidden = true
-        formLblBL?.isHidden = true
-        formLblBR?.isHidden = true
-        formLblLeft?.isHidden = true
-        formLblRight?.isHidden = true
-        formLblSingle?.isHidden = true
-        shiftFormsDisplayLeft?.isHidden = true
-        shiftFormsDisplayRight?.isHidden = true
-
-        // Handle displayInformation separately.
-        if commandState == .displayInformation {
-            for view in [stackViewNum, stackView0, stackView1, stackView2, stackView3] {
-                view?.isUserInteractionEnabled = false
-            }
-
-            scribeKey.toEscape()
-            scribeKey.setPartialShadow()
-            scribeKey.setPartialCornerRadius()
-
-            commandBar.backgroundColor = commandBarColor
-            commandBar.textColor = keyCharColor
-            commandBar.set()
-            commandBar.setCornerRadiusAndShadow()
-            hideAutoActionPartitions()
-
-            deactivateBtn(btn: conjugateKey)
-            deactivateBtn(btn: translateKey)
-            deactivateBtn(btn: pluralKey)
-            deactivateBtn(btn: phoneEmojiKey0)
-            deactivateBtn(btn: phoneEmojiKey1)
-            deactivateBtn(btn: padEmojiKey0)
-            deactivateBtn(btn: padEmojiKey1)
-            deactivateBtn(btn: padEmojiKey2)
-
-            setInformationState()
-            downloadDataBtn?.isHidden = true
-            return // return to skip normal keyboard setup
         }
 
         // Normal keyboard view.
@@ -2035,455 +1799,456 @@ class KeyboardViewController: UIInputViewController {
             doubleSpacePeriodPossible = false
         }
 
-        switch originalKey {
-        case "Scribe":
-            if [
-                .translate,
-                .conjugate,
-                .selectCaseDeclension,
-                .plural,
-                .dynamicConjugation
-            ].contains(commandState) { // escape
-                // If closing dynamic conjugation, remove the view.
-                if commandState == .dynamicConjugation || commandState == .selectCaseDeclension {
-                    for child in children {
-                        if child is DynamicConjugationViewController {
-                            child.removeFromParent()
-                            child.view.removeFromSuperview()
-                        }
-                    }
-                }
-                commandState = .idle
-            } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
-                commandState = .selectCommand
-                activateBtn(btn: translateKey)
-                activateBtn(btn: conjugateKey)
-                activateBtn(btn: pluralKey)
-            } else { // escape
-                commandState = .idle
+      switch originalKey {
+      case "Scribe":
+        if [.translate,
+            .conjugate,
+            .selectCaseDeclension,
+            .plural,
+            .dynamicConjugation,
+            .displayInformation].contains(commandState) { // escape
+
+          // If closing dynamic conjugation, remove the view.
+          if [.dynamicConjugation, .selectCaseDeclension, .displayInformation].contains(commandState) {
+            children.forEach { child in
+              if child is DynamicConjugationViewController {
+                child.removeFromParent()
+                child.view.removeFromSuperview()
+              }
             }
-            loadKeys()
-
-        case "return":
-            if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
-                proxy.insertText("\n")
-                if shiftButtonState == .normal { // capitalize the proxy
-                    shiftButtonState = .shift
-                }
-                commandState = .idle
-                autoActionState = .suggest
-                conditionallySetAutoActionBtns()
-                loadKeys()
-            } else if commandState == .translate {
-                queryTranslation(commandBar: commandBar)
-            } else if commandState == .conjugate {
-                let conjugationTblTriggered = triggerVerbConjugation(commandBar: commandBar)
-                if conjugationTblTriggered {
-                    commandState = .dynamicConjugation
-                    showDynamicConjugationView(verb: verbToConjugate)
-                    return
-                } else {
-                    commandState = .invalid
-                }
-            } else if commandState == .plural {
-                queryPlural(commandBar: commandBar)
-            }
-
-            if [.invalid, .alreadyPlural].contains(commandState) { // invalid state
-                loadKeys()
-                autoCapAtStartOfProxy()
-
-                if commandState == .invalid {
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
-                    commandBar.isShowingInfoButton = true
-                } else {
-                    commandBar.isShowingInfoButton = false
-                    if commandState == .alreadyPlural {
-                        commandBar.text = commandPromptSpacing + alreadyPluralMsg
-                    }
-                }
-                commandBar.textColor = keyCharColor
-                return
-            } else if [.translate, .plural].contains(commandState) { // functional commands above
-                autoActionState = .suggest
-                commandState = .idle
-                autoCapAtStartOfProxy()
-                loadKeys()
-                conditionallyDisplayAnnotation()
-            }
-
-        case "Translate":
-            if let selectedText = proxy.selectedText {
-                commandState = .translate
-                queryWordToTranslate(queriedWordToTranslate: selectedText)
-
-                if commandState == .invalid { // invalid state
-                    loadKeys()
-                    proxy.insertText(selectedText)
-                    autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
-                    commandBar.isShowingInfoButton = true
-                    commandBar.textColor = keyCharColor
-                    return
-                } else { // functional commands above
-                    autoActionState = .suggest
-                    commandState = .idle
-                    autoCapAtStartOfProxy()
-                    loadKeys()
-                    conditionallyDisplayAnnotation()
-                }
-            } else {
-                commandState = .translate
-                // Always start in letters with a new keyboard.
-                keyboardState = .letters
-                conditionallyHideEmojiDividers()
-                loadKeys()
-                commandBar.textColor = keyCharColor
-                commandBar.attributedText = translatePromptAndColorPlaceholder
-            }
-
-        case "Conjugate":
-            if let selectedText = proxy.selectedText {
-                let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
-                if verbInTable {
-                    commandState = .dynamicConjugation
-                    // Show dynamic conjugation view.
-                    showDynamicConjugationView(verb: verbToConjugate)
-                    return
-                } else {
-                    commandState = .invalid
-                    loadKeys()
-                    proxy.insertText(selectedText)
-                    autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
-                    commandBar.isShowingInfoButton = true
-                    commandBar.textColor = keyCharColor
-                    return
-                }
-            } else {
-                commandState = .conjugate
-                conditionallyHideEmojiDividers()
-                loadKeys()
-                commandBar.textColor = keyCharColor
-                commandBar.attributedText = conjugatePromptAndColorPlaceholder
-            }
-
-        case "Plural":
-            if let selectedText = proxy.selectedText {
-                queryPluralNoun(queriedNoun: selectedText)
-
-                if [.invalid, .alreadyPlural].contains(commandState) {
-                    loadKeys()
-
-                    if commandState == .invalid {
-                        proxy.insertText(selectedText)
-                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
-                        commandBar.isShowingInfoButton = true
-                    } else {
-                        commandBar.isShowingInfoButton = false
-                        if commandState == .alreadyPlural {
-                            commandBar.text = commandPromptSpacing + alreadyPluralMsg
-                        }
-                    }
-                    autoCapAtStartOfProxy()
-                    commandBar.textColor = keyCharColor
-                    return
-                } else { // functional commands above
-                    autoActionState = .suggest
-                    commandState = .idle
-                    autoCapAtStartOfProxy()
-                    loadKeys()
-                    conditionallyDisplayAnnotation()
-                }
-            } else {
-                commandState = .plural
-                if controllerLanguage == "German" { // capitalize for nouns
-                    if shiftButtonState == .normal {
-                        shiftButtonState = .shift
-                    }
-                }
-                conditionallyHideEmojiDividers()
-                loadKeys()
-                commandBar.textColor = keyCharColor
-                commandBar.attributedText = pluralPromptAndColorPlaceholder
-            }
-
-        case "shiftFormsDisplayLeft":
-            shiftLeft()
-
-        case "shiftFormsDisplayRight":
-            shiftRight()
-
-        case "AutoAction0":
-            executeAutoAction(keyPressed: translateKey)
-
-        case "AutoAction1":
-            executeAutoAction(keyPressed: conjugateKey)
-
-        case "AutoAction2":
-            executeAutoAction(keyPressed: pluralKey)
-            if emojisToShow == .one {
-                if shiftButtonState == .normal {
-                    shiftButtonState = .shift
-                }
-                loadKeys()
-            }
-
-        case "EmojiKey0":
-            if DeviceType.isPhone || emojisToShow == .two {
-                executeAutoAction(keyPressed: phoneEmojiKey0)
-            } else if DeviceType.isPad {
-                executeAutoAction(keyPressed: padEmojiKey0)
-            }
-            if shiftButtonState == .normal {
-                shiftButtonState = .shift
-            }
-            loadKeys()
-
-        case "EmojiKey1":
-            if DeviceType.isPhone || emojisToShow == .two {
-                executeAutoAction(keyPressed: phoneEmojiKey1)
-            } else if DeviceType.isPad {
-                executeAutoAction(keyPressed: padEmojiKey1)
-            }
-            if shiftButtonState == .normal {
-                shiftButtonState = .shift
-            }
-            loadKeys()
-
-        case "EmojiKey2":
-            executeAutoAction(keyPressed: padEmojiKey2)
-            if shiftButtonState == .normal {
-                shiftButtonState = .shift
-            }
-            loadKeys()
-
-        case "GetAnnotationInfo":
-            // Remove all prior annotations.
-            annotationBtns.forEach { $0.removeFromSuperview() }
-            annotationBtns.removeAll()
-            annotationSeparators.forEach { $0.removeFromSuperview() }
-            annotationSeparators.removeAll()
-
-            for i in 0 ..< annotationBtns.count {
-                annotationBtns[i].backgroundColor = annotationColors[i]
-            }
-
-            if let wordSelected = proxy.selectedText {
-                wordToCheck = wordSelected
-            } else {
-                if let contextBeforeInput = proxy.documentContextBeforeInput {
-                    wordsTyped = contextBeforeInput.components(separatedBy: " ")
-                    let lastWordTyped = wordsTyped.secondToLast()
-                    if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
-                        wordToCheck = lastWordTyped!.lowercased()
-                    } else {
-                        wordToCheck = lastWordTyped!
-                    }
-                }
-            }
-
-            let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck.lowercased())[0]
-            hasPrepForm = !prepForm.isEmpty
-            if hasPrepForm {
-                prepAnnotationForm = prepForm
-                commandState = .selectCaseDeclension
-                showDynamicDeclensionView(preposition: wordToCheck)
-                return
-            } else {
-                return
-            }
-
-        case "ScribeAnnotation":
-            for i in 0 ..< annotationBtns.count {
-                annotationBtns[i].backgroundColor = annotationColors[i]
-            }
-            let emojisToSelectFrom = "🥳🎉"
-            let emojis = String((0 ..< 3).compactMap { _ in emojisToSelectFrom.randomElement() })
-            sender.setTitle(emojis, for: .normal)
-            return
-
-        case "delete":
-            styleDeleteButton(sender, isPressed: false)
-            if ![.translate, .conjugate, .plural].contains(commandState) {
-                // Control shift state on delete.
-                if keyboardState == .letters, shiftButtonState == .shift,
-                   proxy.documentContextBeforeInput != nil {
-                    shiftButtonState = .normal
-                    loadKeys()
-                } else if keyboardState == .letters, shiftButtonState == .normal,
-                          proxy.documentContextBeforeInput == nil {
-                    autoCapAtStartOfProxy()
-                    pastStringInTextProxy = ""
-                }
-
-                handleDeleteButtonPressed()
-                autoCapAtStartOfProxy()
-
-                // Check if the last character is a space such that the user is deleting multiple spaces and suggest is so.
-                if proxy.documentContextBeforeInput?.suffix(" ".count) == " " {
-                    autoActionState = .suggest
-                } else {
-                    autoActionState = .complete
-                }
-                conditionallySetAutoActionBtns()
-            } else {
-                // Shift state if the user presses delete when the prompt is present.
-                if let commandBarText = commandBar?.text,
-                   let commandBarAttributedText = commandBar?.attributedText {
-                    if allPrompts.contains(commandBarText)
-                        || allColoredPrompts.contains(commandBarAttributedText) {
-                        shiftButtonState = .shift // Auto-capitalization
-                        loadKeys()
-                        // Function call required due to return.
-                        // Not including means placeholder is never added on last delete action.
-                        commandBar.conditionallyAddPlaceholder()
-                        return
-                    }
-                }
-
-                handleDeleteButtonPressed()
-
-                // Inserting the placeholder when commandBar text is deleted.
-                commandBar.conditionallyAddPlaceholder()
-            }
-
-        case spaceBar, languageTextForSpaceBar:
-            if currentPrefix != completionWords[0],
-               completionWords[0] != " ", spaceAutoInsertIsPossible {
-                previousWord = currentPrefix
-                clearPrefixFromTextFieldProxy()
-                proxy.insertText(completionWords[0])
-                autoActionState = .suggest
-                currentPrefix = ""
-                firstCompletionIsHighlighted = false
-                spaceAutoInsertIsPossible = false
-                allowUndo = true
-            }
-            autoActionState = .suggest
-            commandBar.conditionallyRemovePlaceholder()
-            if ![.translate, .conjugate, .plural].contains(commandState) {
-                proxy.insertText(" ")
-                if [". ", "? ", "! "].contains(proxy.documentContextBeforeInput?.suffix(2)) {
-                    shiftButtonState = .shift
-                }
-                if keyboardState != .letters {
-                    changeKeyboardToLetterKeys()
-                }
-            } else {
-                if let commandBarText = commandBar?.text {
-                    commandBar?.text = commandBarText.insertPriorToCursor(char: " ")
-                    if [". " + commandCursor, "? " + commandCursor, "! " + commandCursor].contains(
-                        String(commandBarText.suffix(3))
-                    ) {
-                        shiftButtonState = .shift
-                    }
-                    if keyboardState != .letters {
-                        changeKeyboardToLetterKeys()
-                    }
-                }
-            }
-
-            if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
-                // Remove all prior annotations.
-                annotationBtns.forEach { $0.removeFromSuperview() }
-                annotationBtns.removeAll()
-                annotationSeparators.forEach { $0.removeFromSuperview() }
-                annotationSeparators.removeAll()
-            }
-
-            conditionallyDisplayAnnotation()
-            doubleSpacePeriodPossible = true
-
-        case "'":
-            // Change back to letter keys.
-            commandBar.conditionallyRemovePlaceholder()
-            if ![.translate, .conjugate, .plural].contains(commandState) {
-                proxy.insertText("'")
-            } else {
-                if let commandBarText = commandBar.text {
-                    commandBar.text = commandBarText.insertPriorToCursor(char: "'")
-                }
-            }
-            changeKeyboardToLetterKeys()
-
-        case "-":
-            if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-                if proxy.documentContextBeforeInput?.last == "-" {
-                    proxy.deleteBackward()
-                    proxy.insertText("—")
-                } else {
-                    proxy.insertText(keyToDisplay)
-                }
-            } else {
-                if let commandBarText = commandBar.text {
-                    commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
-                }
-            }
-
-        case ",", ".", "!", "?":
-            if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-                if proxy.documentContextBeforeInput?.last == " " {
-                    proxy.deleteBackward()
-                }
-                proxy.insertText(keyToDisplay)
-            } else {
-                if let commandBarText = commandBar.text {
-                    commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
-                }
-            }
-
-        case "shift":
-            if shiftButtonState == .capsLocked {
-                shiftButtonState = .normal
-            } else {
-                shiftButtonState = shiftButtonState == .normal ? .shift : .normal
-            }
-
-            loadKeys()
-            capsLockPossible = true
-
-        case "123", ".?123":
-            if usingExpandedKeyboard {
-                changeKeyboardToSymbolKeys()
-            } else {
-                changeKeyboardToNumberKeys()
-            }
-
-        case "#+=":
-            changeKeyboardToSymbolKeys()
-
-        case "ABC", "АБВ":
-            changeKeyboardToLetterKeys()
-            autoCapAtStartOfProxy()
-
-        case SpecialKeys.capsLock:
-            switchToFullCaps()
-
-        case SpecialKeys.indent:
-            proxy.insertText("\t")
-
-        case "selectKeyboard":
-            advanceToNextInputMode()
-
-        case "hideKeyboard":
-            dismissKeyboard()
-
-        default:
-            autoActionState = .complete
-            commandBar.conditionallyRemovePlaceholder()
-            if shiftButtonState == .shift {
-                shiftButtonState = .normal
-                loadKeys()
-            }
-            if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
-                proxy.insertText(keyToDisplay)
-            } else {
-                if let currentText = commandBar.text {
-                    commandBar.text = currentText.insertPriorToCursor(char: keyToDisplay)
-                }
-            }
+          }
+          commandState = .idle
+        } else if [.idle, .alreadyPlural, .invalid].contains(commandState) { // ScribeKey
+          commandState = .selectCommand
+          activateBtn(btn: translateKey)
+          activateBtn(btn: conjugateKey)
+          activateBtn(btn: pluralKey)
+        } else { // escape
+          commandState = .idle
         }
+        loadKeys()
+
+      case "return":
+        if ![.translate, .conjugate, .plural].contains(commandState) { // normal return button
+          proxy.insertText("\n")
+          if shiftButtonState == .normal { // capitalize the proxy
+            shiftButtonState = .shift
+          }
+          commandState = .idle
+          autoActionState = .suggest
+          conditionallySetAutoActionBtns()
+          loadKeys()
+        } else if commandState == .translate {
+          prevToInvalidState = .translate
+          queryTranslation(commandBar: commandBar)
+        } else if commandState == .conjugate {
+          prevToInvalidState = .conjugate
+          let conjugationTblTriggered = triggerVerbConjugation(commandBar: commandBar)
+          if conjugationTblTriggered {
+            commandState = .dynamicConjugation
+            showDynamicConjugationView(verb: verbToConjugate)
+            return
+          } else {
+            commandState = .invalid
+          }
+        } else if commandState == .plural {
+          prevToInvalidState = .plural
+          queryPlural(commandBar: commandBar)
+        }
+
+        if [.invalid, .alreadyPlural].contains(commandState) { // invalid state
+          loadKeys()
+          autoCapAtStartOfProxy()
+
+          if commandState == .invalid {
+            let invalidMsg = prevToInvalidState == .translate ? invalidCommandMsgWiktionary : invalidCommandMsgWikidata
+            commandBar.text = commandPromptSpacing + invalidMsg
+            commandBar.isShowingInfoButton = true
+          } else {
+            commandBar.isShowingInfoButton = false
+            if commandState == .alreadyPlural {
+              commandBar.text = commandPromptSpacing + alreadyPluralMsg
+            }
+          }
+          commandBar.textColor = keyCharColor
+          return
+        } else if [.translate, .plural].contains(commandState) { // functional commands above
+          autoActionState = .suggest
+          commandState = .idle
+          autoCapAtStartOfProxy()
+          loadKeys()
+          conditionallyDisplayAnnotation()
+        }
+
+      case "Translate":
+        if let selectedText = proxy.selectedText {
+          commandState = .translate
+          prevToInvalidState = .translate
+          queryWordToTranslate(queriedWordToTranslate: selectedText)
+
+          if commandState == .invalid { // invalid state
+            loadKeys()
+            proxy.insertText(selectedText)
+            autoCapAtStartOfProxy()
+            commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+            commandBar.isShowingInfoButton = true
+            commandBar.textColor = keyCharColor
+            return
+          } else { // functional commands above
+            autoActionState = .suggest
+            commandState = .idle
+            autoCapAtStartOfProxy()
+            loadKeys()
+            conditionallyDisplayAnnotation()
+          }
+        } else {
+          commandState = .translate
+          // Always start in letters with a new keyboard.
+          keyboardState = .letters
+          conditionallyHideEmojiDividers()
+          loadKeys()
+          commandBar.textColor = keyCharColor
+          commandBar.attributedText = translatePromptAndColorPlaceholder
+        }
+
+      case "Conjugate":
+        if let selectedText = proxy.selectedText {
+          let verbInTable = isVerbInConjugationTable(queriedVerbToConjugate: selectedText)
+          if verbInTable {
+            commandState = .dynamicConjugation
+            // Show dynamic conjugation view.
+            showDynamicConjugationView(verb: verbToConjugate)
+            return
+          } else {
+            prevToInvalidState = .conjugate
+            commandState = .invalid
+            loadKeys()
+            proxy.insertText(selectedText)
+            autoCapAtStartOfProxy()
+            commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+            commandBar.isShowingInfoButton = true
+            commandBar.textColor = keyCharColor
+            return
+          }
+        } else {
+          commandState = .conjugate
+          conditionallyHideEmojiDividers()
+          loadKeys()
+          commandBar.textColor = keyCharColor
+          commandBar.attributedText = conjugatePromptAndColorPlaceholder
+        }
+
+      case "Plural":
+        if let selectedText = proxy.selectedText {
+          prevToInvalidState = .plural
+          queryPluralNoun(queriedNoun: selectedText)
+
+          if [.invalid, .alreadyPlural].contains(commandState) {
+            loadKeys()
+
+            if commandState == .invalid {
+              proxy.insertText(selectedText)
+              commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+              commandBar.isShowingInfoButton = true
+            } else {
+              commandBar.isShowingInfoButton = false
+              if commandState == .alreadyPlural {
+                commandBar.text = commandPromptSpacing + alreadyPluralMsg
+              }
+            }
+            autoCapAtStartOfProxy()
+            commandBar.textColor = keyCharColor
+            return
+          } else { // functional commands above
+            autoActionState = .suggest
+            commandState = .idle
+            autoCapAtStartOfProxy()
+            loadKeys()
+            conditionallyDisplayAnnotation()
+          }
+        } else {
+          commandState = .plural
+          if controllerLanguage == "German" { // capitalize for nouns
+            if shiftButtonState == .normal {
+              shiftButtonState = .shift
+            }
+          }
+          conditionallyHideEmojiDividers()
+          loadKeys()
+          commandBar.textColor = keyCharColor
+          commandBar.attributedText = pluralPromptAndColorPlaceholder
+        }
+
+      case "AutoAction0":
+        executeAutoAction(keyPressed: translateKey)
+
+      case "AutoAction1":
+        executeAutoAction(keyPressed: conjugateKey)
+
+      case "AutoAction2":
+        executeAutoAction(keyPressed: pluralKey)
+        if emojisToShow == .one {
+          if shiftButtonState == .normal {
+            shiftButtonState = .shift
+          }
+          loadKeys()
+        }
+
+      case "EmojiKey0":
+        if DeviceType.isPhone || emojisToShow == .two {
+          executeAutoAction(keyPressed: phoneEmojiKey0)
+        } else if DeviceType.isPad {
+          executeAutoAction(keyPressed: padEmojiKey0)
+        }
+        if shiftButtonState == .normal {
+          shiftButtonState = .shift
+        }
+        loadKeys()
+
+      case "EmojiKey1":
+        if DeviceType.isPhone || emojisToShow == .two {
+          executeAutoAction(keyPressed: phoneEmojiKey1)
+        } else if DeviceType.isPad {
+          executeAutoAction(keyPressed: padEmojiKey1)
+        }
+        if shiftButtonState == .normal {
+          shiftButtonState = .shift
+        }
+        loadKeys()
+
+      case "EmojiKey2":
+        executeAutoAction(keyPressed: padEmojiKey2)
+        if shiftButtonState == .normal {
+          shiftButtonState = .shift
+        }
+        loadKeys()
+
+      case "GetAnnotationInfo":
+        // Remove all prior annotations.
+        annotationBtns.forEach { $0.removeFromSuperview() }
+        annotationBtns.removeAll()
+        annotationSeparators.forEach { $0.removeFromSuperview() }
+        annotationSeparators.removeAll()
+
+        for i in 0 ..< annotationBtns.count {
+          annotationBtns[i].backgroundColor = annotationColors[i]
+        }
+
+        if let wordSelected = proxy.selectedText {
+          wordToCheck = wordSelected
+        } else {
+          if let contextBeforeInput = proxy.documentContextBeforeInput {
+            wordsTyped = contextBeforeInput.components(separatedBy: " ")
+            let lastWordTyped = wordsTyped.secondToLast()
+            if !languagesWithCapitalizedNouns.contains(controllerLanguage) {
+              wordToCheck = lastWordTyped!.lowercased()
+            } else {
+              wordToCheck = lastWordTyped!
+            }
+          }
+        }
+
+        let prepForm = LanguageDBManager.shared.queryPrepForm(of: wordToCheck.lowercased())[0]
+        hasPrepForm = !prepForm.isEmpty
+        if hasPrepForm {
+          prepAnnotationForm = prepForm
+          commandState = .selectCaseDeclension
+          showDynamicDeclensionView(preposition: wordToCheck)
+          return
+        } else {
+          return
+        }
+
+      case "ScribeAnnotation":
+        for i in 0 ..< annotationBtns.count {
+          annotationBtns[i].backgroundColor = annotationColors[i]
+        }
+        let emojisToSelectFrom = "🥳🎉"
+        let emojis = String((0 ..< 3).compactMap { _ in emojisToSelectFrom.randomElement() })
+        sender.setTitle(emojis, for: .normal)
+        return
+
+      case "delete":
+        styleDeleteButton(sender, isPressed: false)
+        if ![.translate, .conjugate, .plural].contains(commandState) {
+          // Control shift state on delete.
+          if keyboardState == .letters, shiftButtonState == .shift,
+             proxy.documentContextBeforeInput != nil {
+            shiftButtonState = .normal
+            loadKeys()
+          } else if keyboardState == .letters, shiftButtonState == .normal,
+                    proxy.documentContextBeforeInput == nil {
+            autoCapAtStartOfProxy()
+            pastStringInTextProxy = ""
+          }
+
+          handleDeleteButtonPressed()
+          autoCapAtStartOfProxy()
+
+          // Check if the last character is a space such that the user is deleting multiple spaces and suggest is so.
+          if proxy.documentContextBeforeInput?.suffix(" ".count) == " " {
+            autoActionState = .suggest
+          } else {
+            autoActionState = .complete
+          }
+          conditionallySetAutoActionBtns()
+        } else {
+          // Shift state if the user presses delete when the prompt is present.
+          if let commandBarText = commandBar?.text,
+             let commandBarAttributedText = commandBar?.attributedText {
+            if allPrompts.contains(commandBarText)
+                || allColoredPrompts.contains(commandBarAttributedText) {
+              shiftButtonState = .shift // Auto-capitalization
+              loadKeys()
+              // Function call required due to return.
+              // Not including means placeholder is never added on last delete action.
+              commandBar.conditionallyAddPlaceholder()
+              return
+            }
+          }
+
+          handleDeleteButtonPressed()
+
+          // Inserting the placeholder when commandBar text is deleted.
+          commandBar.conditionallyAddPlaceholder()
+        }
+
+      case spaceBar, languageTextForSpaceBar:
+        if currentPrefix != completionWords[0],
+           completionWords[0] != " ", spaceAutoInsertIsPossible {
+          previousWord = currentPrefix
+          clearPrefixFromTextFieldProxy()
+          proxy.insertText(completionWords[0])
+          autoActionState = .suggest
+          currentPrefix = ""
+          firstCompletionIsHighlighted = false
+          spaceAutoInsertIsPossible = false
+          allowUndo = true
+        }
+        autoActionState = .suggest
+        commandBar.conditionallyRemovePlaceholder()
+        if ![.translate, .conjugate, .plural].contains(commandState) {
+          proxy.insertText(" ")
+          if [". ", "? ", "! "].contains(proxy.documentContextBeforeInput?.suffix(2)) {
+            shiftButtonState = .shift
+          }
+          if keyboardState != .letters {
+            changeKeyboardToLetterKeys()
+          }
+        } else {
+          if let commandBarText = commandBar?.text {
+            commandBar?.text = commandBarText.insertPriorToCursor(char: " ")
+            if [". " + commandCursor, "? " + commandCursor, "! " + commandCursor].contains(
+              String(commandBarText.suffix(3))
+            ) {
+              shiftButtonState = .shift
+            }
+            if keyboardState != .letters {
+              changeKeyboardToLetterKeys()
+            }
+          }
+        }
+
+        if proxy.documentContextBeforeInput?.suffix("  ".count) == "  " {
+          // Remove all prior annotations.
+          annotationBtns.forEach { $0.removeFromSuperview() }
+          annotationBtns.removeAll()
+          annotationSeparators.forEach { $0.removeFromSuperview() }
+          annotationSeparators.removeAll()
+        }
+
+        conditionallyDisplayAnnotation()
+        doubleSpacePeriodPossible = true
+
+      case "'":
+        // Change back to letter keys.
+        commandBar.conditionallyRemovePlaceholder()
+        if ![.translate, .conjugate, .plural].contains(commandState) {
+          proxy.insertText("'")
+        } else {
+          if let commandBarText = commandBar.text {
+            commandBar.text = commandBarText.insertPriorToCursor(char: "'")
+          }
+        }
+        changeKeyboardToLetterKeys()
+
+      case "-":
+        if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+          if proxy.documentContextBeforeInput?.last == "-" {
+            proxy.deleteBackward()
+            proxy.insertText("—")
+          } else {
+            proxy.insertText(keyToDisplay)
+          }
+        } else {
+          if let commandBarText = commandBar.text {
+            commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
+          }
+        }
+
+      case ",", ".", "!", "?":
+        if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+          if proxy.documentContextBeforeInput?.last == " " {
+            proxy.deleteBackward()
+          }
+          proxy.insertText(keyToDisplay)
+        } else {
+          if let commandBarText = commandBar.text {
+            commandBar.text = commandBarText.insertPriorToCursor(char: keyToDisplay)
+          }
+        }
+
+      case "shift":
+        if shiftButtonState == .capsLocked {
+          shiftButtonState = .normal
+        } else {
+          shiftButtonState = shiftButtonState == .normal ? .shift : .normal
+        }
+
+        loadKeys()
+        capsLockPossible = true
+
+      case "123", ".?123":
+        if usingExpandedKeyboard {
+          changeKeyboardToSymbolKeys()
+        } else {
+          changeKeyboardToNumberKeys()
+        }
+
+      case "#+=":
+        changeKeyboardToSymbolKeys()
+
+      case "ABC", "АБВ":
+        changeKeyboardToLetterKeys()
+        autoCapAtStartOfProxy()
+
+      case SpecialKeys.capsLock:
+        switchToFullCaps()
+
+      case SpecialKeys.indent:
+        proxy.insertText("\t")
+
+      case "selectKeyboard":
+        advanceToNextInputMode()
+
+      case "hideKeyboard":
+        dismissKeyboard()
+
+      default:
+        autoActionState = .complete
+        commandBar.conditionallyRemovePlaceholder()
+        if shiftButtonState == .shift {
+          shiftButtonState = .normal
+          loadKeys()
+        }
+        if [.idle, .selectCommand, .alreadyPlural, .invalid].contains(commandState) {
+          proxy.insertText(keyToDisplay)
+        } else {
+          if let currentText = commandBar.text {
+            commandBar.text = currentText.insertPriorToCursor(char: keyToDisplay)
+          }
+        }
+      }
 
         // Cancel already plural and invalid states after another key press.
         if [.alreadyPlural, .invalid].contains(commandState) {
@@ -2514,19 +2279,13 @@ class KeyboardViewController: UIInputViewController {
         annotationState = false
         activateAnnotationBtn = false
 
-        // Remove alternates view if it's present.
-        if view.viewWithTag(1001) != nil {
-            let viewWithTag = view.viewWithTag(1001)
-            viewWithTag?.removeFromSuperview()
-            alternatesShapeLayer.removeFromSuperlayer()
-        }
-
-        // Remove tipview if it's present.
-        if commandState != .displayInformation, formsDisplayDimensions != .view1x1, tipView != nil {
-            tipView?.removeFromSuperview()
-            tipView = nil
-        }
+    // Remove alternates view if it's present.
+    if view.viewWithTag(1001) != nil {
+      let viewWithTag = view.viewWithTag(1001)
+      viewWithTag?.removeFromSuperview()
+      alternatesShapeLayer.removeFromSuperlayer()
     }
+  }
 
     // MARK: Key Press Functions
 

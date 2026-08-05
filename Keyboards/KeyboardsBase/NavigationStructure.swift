@@ -121,4 +121,16 @@ enum NavigationBuilder {
         }
         return 0
     }
+
+    /// Builds information navigation levels for tooltips.
+    static func buildInformationCases(isTranslate: Bool = false) -> [NavigationLevel] {
+    let content = isTranslate ? InformationToolTipData.getWiktionaryContent() : InformationToolTipData.getContent()
+
+        return content.map { attributedText in
+            NavigationLevel(
+            title: isTranslate ? invalidCommandMsgWiktionary : invalidCommandMsgWikidata,
+            options: [(label: "", node: .finalValue(attributedText.string))]
+            )
+        }
+    }
 }
