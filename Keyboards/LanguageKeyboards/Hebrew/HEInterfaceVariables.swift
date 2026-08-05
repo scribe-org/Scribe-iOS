@@ -156,12 +156,6 @@ func getHEKeys() {
         symbolKeys = HEKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
-        leftKeyChars = ["ק", "1", "-", "[", "_"]
-        rightKeyChars = ["פ", "0", "\"", "=", "·"]
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
@@ -178,12 +172,6 @@ func getHEKeys() {
 
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        leftKeyChars = ["1", "ק"]
-        rightKeyChars = []
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 }
