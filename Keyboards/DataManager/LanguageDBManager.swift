@@ -14,7 +14,10 @@ class LanguageDBManager {
 
     private init(translate: Bool) {
         if translate {
-            database = openDBQueue("TranslationData")
+            database = openDownloadedDBQueue("TranslationData")
+            if database == nil {
+                database = openDBQueue("TranslationData")
+            }
         } else {
             database = openDownloadedDBQueue(
                 "\(getControllerLanguageAbbr().uppercased())LanguageData"
@@ -23,8 +26,10 @@ class LanguageDBManager {
     }
 
     /// Makes a connection to the language database given the value for controllerLanguage.
-    private func openDBQueue(_ dbName: String) -> DatabaseQueue {
-        let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite")!
+    private func openDBQueue(_ dbName: String) -> DatabaseQueue? {
+        guard let dbResourcePath = Bundle.main.path(forResource: dbName, ofType: "sqlite") else {
+            return nil
+        }
         let fileManager = FileManager.default
         do {
             let dbPath =
@@ -42,7 +47,7 @@ class LanguageDBManager {
             return try DatabaseQueue(path: dbPath)
         } catch {
             print("An error occurred: UILexicon not available")
-            return try! DatabaseQueue(path: dbResourcePath)
+            return try? DatabaseQueue(path: dbResourcePath)
         }
     }
 
