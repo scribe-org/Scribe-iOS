@@ -15,6 +15,22 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ## Conjugate-iOS 1.0.0
 
+### MVP release of Scribe Conjugate on iOS
+
+### 🚀 Deployment
+
+- Releasing for iPhone and iPad.
+
 ### ✨ New Features
 
 - Feature
+
+### 🗃️ Data
+
+### 🎨 Design
+
+### 🌐 Localization
+
+### ✅ Tests
+
+### ⚖️ Legal

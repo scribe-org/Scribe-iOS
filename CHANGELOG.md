@@ -60,7 +60,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The app interface was refactored to allow for right to left languages for the app texts ([#513](https://github.com/scribe-org/Scribe-iOS/issues/513)).
 - Variables with language references were changed to only use ISO-2 codes rather than full language names to simplify the code ([#494](https://github.com/scribe-org/Scribe-iOS/issues/494)).
 
-# Scribe-iOS 3.1.1
+## Scribe-iOS 3.1.1
 
 ### ✨ New Features
 
@@ -75,7 +75,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - The plural command now reacts to the capitalization of the input word when a word that's already plural is entered.
 
-# Scribe-iOS 3.1.0
+## Scribe-iOS 3.1.0
 
 ### ✨ New Features
 
@@ -111,7 +111,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Keyboard layouts have been fixed for when the user has disabled accent characters ([#463](https://github.com/scribe-org/Scribe-iOS/issues/463)).
 - The disable accent characters option has been removed on iPads and will no longer crashes the app settings ([#477](https://github.com/scribe-org/Scribe-iOS/issues/477)).
 
-# Scribe-iOS 3.0.0
+## Scribe-iOS 3.0.0
 
 ### ✨ New Features
 
@@ -171,7 +171,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Extra whitespace was removed from the codebase ([#429](https://github.com/scribe-org/Scribe-iOS/issues/429)).
 - pre-commit hooks were added to the codebase to fix common errors on commit ([#450](https://github.com/scribe-org/Scribe-iOS/issues/450)).
 
-# Scribe-iOS 2.3.0
+## Scribe-iOS 2.3.0
 
 ### ✨ New Features
 
@@ -206,7 +206,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - The logic of `selectedWordAnnotation` and `typedWordAnnotation` is now shared in a single function.
 - Many variable names have been changed to be zero indexed.
 
-# Scribe-iOS 2.2.0
+## Scribe-iOS 2.2.0
 
 ### ✨ New Features
 
@@ -271,7 +271,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - All prior JSON data references have been replaced with database queries and JSON language data files have been removed ([#96](https://github.com/scribe-org/Scribe-iOS/issues/96)).
 - [GRDB.swift](https://github.com/groue/GRDB.swift) was added to the dependencies.
 
-# Scribe-iOS 2.1.0
+## Scribe-iOS 2.1.0
 
 ### ⌨️ New Keyboards
 
@@ -317,7 +317,7 @@ Thousands of new French verb conjugations have been added!
 - Light and dark mode colors are now defined in `Assets.xcassets` and accessed via `ScribeColor.getter:color` or `UIColor`'s new convenience initializer.
 - Variants of the Scribe key icon are placed into `Assets.xcassets`, making it unnecessary to check for light/dark mode and device type in code.
 
-# Scribe-iOS 2.0.0
+## Scribe-iOS 2.0.0
 
 ### ✨ New Features
 
@@ -364,7 +364,7 @@ Thousands of new French verb conjugations have been added!
 - Enums are now used to control switching between conjugations.
 - Enums are now used to control switching between different conjugation displays.
 
-# Scribe-iOS 1.4.0
+## Scribe-iOS 1.4.0
 
 ### ✨ New Features
 
@@ -387,7 +387,7 @@ Thousands of new French verb conjugations have been added!
 - The App Store images for translation have been changed to reflect the new enter key design.
 - Key pressed colors have been made darker to be more distinct from base key colors.
 
-# Scribe-iOS 1.3.8
+## Scribe-iOS 1.3.8
 
 ### 🗃️ Data Added
 
@@ -411,7 +411,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - Verb conjugation tables now always return to their base conjugation each time the command is used ([#168](https://github.com/scribe-org/Scribe-iOS/issues/168)).
 
-# Scribe-iOS 1.3.7
+## Scribe-iOS 1.3.7
 
 ### 🗃️ Data Added
 
@@ -431,7 +431,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - The privacy policy was updated to add the MIT licensed original source code.
 
-# Scribe-iOS 1.3.6
+## Scribe-iOS 1.3.6
 
 ### 🗃️ Data Added
 
@@ -442,7 +442,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 - Spanish: 6650 nouns, 70 verbs
 - Swedish: 512 nouns, 9 verbs
 
-# Scribe-iOS 1.3.5
+## Scribe-iOS 1.3.5
 
 ### 🗃️ Data Added
 
@@ -463,7 +463,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - The data files have been moved to a new directory within the organization on GitHub - [Scribe-Data](https://github.com/scribe-org/Scribe-Data).
 
-# Scribe-iOS 1.3.4
+## Scribe-iOS 1.3.4
 
 ### 🎨 Design Changes
 
@@ -475,7 +475,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - The privacy policy was updated to reflect the addition of the Wikidata logo into the app.
 
-# Scribe-iOS 1.3.3
+## Scribe-iOS 1.3.3
 
 ### 🗃️ Data Added
 
@@ -487,7 +487,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - Key long press for alternate characters has had cancellation removed to avoid buggy performance.
 
-# Scribe-iOS 1.3.2
+## Scribe-iOS 1.3.2
 
 ### 🗃️ Data Added
 
@@ -505,7 +505,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 
 - Key long press cancellation was switched from changed to cancel to avoid unnecessary cancels.
 
-# Scribe-iOS 1.3.1
+## Scribe-iOS 1.3.1
 
 ### 🗃️ Data Added
 
@@ -523,7 +523,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 - Key alternate views now stay if the key is canceled as they were disappearing too easily ([#143](https://github.com/scribe-org/Scribe-iOS/issues/143)).
 - The width of alternate character callouts for certain keys has been fixed for iPhones.
 
-# Scribe-iOS 1.3.0
+## Scribe-iOS 1.3.0
 
 ### ⌨️ New Keyboards
 
@@ -542,7 +542,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 - Hold to select characters have been redesigned to reflect the addition of keys popping up ([#26](https://github.com/scribe-org/Scribe-iOS/issues/26)).
 - All App Store media has been redone to reflect these changes ([#139](https://github.com/scribe-org/Scribe-iOS/issues/139)).
 
-# Scribe-iOS 1.2.1
+## Scribe-iOS 1.2.1
 
 ### ✨ New Features
 
@@ -582,7 +582,7 @@ Scribe's second design sprint with Spencer Arney focussed on the App Store media
 - Scribe has been modularized to be more easily worked with ([#1](https://github.com/scribe-org/Scribe-iOS/issues/1)).
 - The app screen's text was moved to a new directory where localizations will be stored.
 
-# Scribe-iOS 1.2.0
+## Scribe-iOS 1.2.0
 
 Scribe's first design sprint with the help of Berlin's Spencer Arney!
 
@@ -614,7 +614,7 @@ The entire layout of Scribe has been reworked to make the experience more aesthe
 
 - The privacy policy was updated to reflect the addition of the GitHub, Inc icon into the app ([#50](https://github.com/scribe-org/Scribe-iOS/issues/50)).
 
-# Scribe-iOS 1.1.1
+## Scribe-iOS 1.1.1
 
 ### 🗃️ Data Added
 
@@ -643,7 +643,7 @@ Data updates are now all done through a single Python file - update_data.py ([#9
 - Queries were refactored to reduce their total characters so they can be sent through query APIs.
 - Command variables were edited to interact with new formatting from query refactoring.
 
-# Scribe-iOS 1.1.0
+## Scribe-iOS 1.1.0
 
 ### ⌨️ New Keyboards
 
@@ -687,7 +687,7 @@ Data updates are now all done through a single Python file - update_data.py ([#9
 - Combines all conjugation logic into one function that is accessed by each button press case.
 - Combines all noun annotation logic into one function that accessed by child functions.
 
-# Scribe-iOS 1.0.1
+## Scribe-iOS 1.0.1
 
 ### ✨ New Features
 
@@ -711,7 +711,7 @@ Data updates are now all done through a single Python file - update_data.py ([#9
 
 - The hold-to-select character functions are now combined into one ([#5](https://github.com/scribe-org/Scribe-iOS/issues/5)).
 
-# Scribe-iOS 1.0.0
+## Scribe-iOS 1.0.0
 
 ### MVP release of Scribe - Language Keyboards
 
