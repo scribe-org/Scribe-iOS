@@ -1,0 +1,59 @@
+name: ci_changelog_check
+
+# Runs on every PR event that could change which files are included.
+# 'labeled' and 'unlabeled' are needed so that adding/removing the
+# 'no-changelog' label immediately re-evaluates the check.
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+      - unlabeled
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  changelog_check:
+    runs-on: ubuntu-latest
+    name: Check Changelog Entry
+
+    # Skip the whole job (shows as "skipped" = passing) when a maintainer
+    # has deliberately labelled the PR 'no-changelog'.
+    # Typical use-cases: CI-only fixes, typo corrections, dependency bumps.
+    if: "!contains(github.event.pull_request.labels.*.name, 'no-changelog')"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Full history is required so tj-actions/changed-files can compare
+          # the PR branch against the base branch correctly.
+          fetch-depth: 0
+
+      - name: Detect changed files
+        id: changed_files
+        uses: tj-actions/changed-files@v47
+        with:
+          # Check CHANGELOG.md and CHANGELOG_CONJUGATE.md.
+          files: CHANGELOG*.md
+
+      - name: Fail — no changelog entry found
+        if: steps.changed_files.outputs.any_changed == 'false'
+        run: |
+          echo "::error file=CHANGELOG.md::Missing changelog entry. Please add one before merging."
+          echo ""
+          echo "Every user-facing pull request must include an update to CHANGELOG.md"
+          echo "or CHANGELOG_CONJUGATE.md. If this PR genuinely does not need a changelog"
+          echo "entry (e.g. a CI fix, a typo correction, or a dependency bump), ask a"
+          echo "maintainer to add the 'no-changelog' label to skip this check."
+          exit 1
+
+      - name: Pass — changelog entry found
+        if: steps.changed_files.outputs.any_changed == 'true'
+        run: echo "CHANGELOG.md or CHANGELOG_CONJUGATE.md was updated. Check passed."
