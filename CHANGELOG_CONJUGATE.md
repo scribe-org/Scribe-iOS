@@ -23,21 +23,21 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 ### ✨ New Features
 
-- A verb Conjugation tab was added to the application.
-- Users can search for verbs across languages.
-- A reactive conjugation selection UI was developed to easily copy desired conjugations.
-- Users are able to filter verb conjugations by tense.
-- Recently conjugated verbs are displayed to the user in the Conjugation tab.
-- The Settings tab for the Scribe keyboard application was migrated to allow base settings for the app interface.
-- The About tab for the Scribe keyboard application was migrated to provide information on the application and community.
-- The application and community's relationship to the Wikimedia movement is explained in app.
+- A verb Conjugation tab was added to the application [#611](https://github.com/scribe-org/Scribe-iOS/issues/611).
+- Users can search for verbs across languages ([#616](https://github.com/scribe-org/Scribe-iOS/issues/616)).
+- A reactive conjugation selection UI was developed to easily copy desired conjugations ([#618](https://github.com/scribe-org/Scribe-iOS/issues/618), [#621](https://github.com/scribe-org/Scribe-iOS/issues/621)).
+- Users are able to filter verb conjugations by tense ([#622](https://github.com/scribe-org/Scribe-iOS/issues/622)).
+- Recently conjugated verbs are displayed to the user in the Conjugation tab ([#620](https://github.com/scribe-org/Scribe-iOS/issues/620)).
+- The Settings tab for the Scribe keyboard application was migrated to allow base settings for the app interface ([#609](https://github.com/scribe-org/Scribe-iOS/issues/609)).
+- The About tab for the Scribe keyboard application was migrated to provide information on the application and community ([#607](https://github.com/scribe-org/Scribe-iOS/issues/607)).
+- The application and community's relationship to the Wikimedia movement is explained in app ([#607](https://github.com/scribe-org/Scribe-iOS/issues/607)).
 
 ### 🗃️ Data
 
-- SQLite databases have been set up for all data needed for the conjugate UI.
-- Calls are made to the [Scribe-Server API](https://scribe-server.toolforge.org/) hosted on Toolforge to download language data and insert it into SQLite tables.
-- The data download UI was created to download data for any keyboards that have been installed.
-- Network indicators for data request have been added to the application and are shown via toasts.
+- SQLite databases have been set up for all data needed for the conjugate UI ([#617](https://github.com/scribe-org/Scribe-iOS/issues/617)).
+- Calls are made to the [Scribe-Server API](https://scribe-server.toolforge.org/) hosted on Toolforge to download language data and insert it into SQLite tables ([#613](https://github.com/scribe-org/Scribe-iOS/issues/613)).
+- The data download UI was created to download data for any keyboards that have been installed ([#612](https://github.com/scribe-org/Scribe-iOS/issues/612)).
+- Network indicators for data request have been added to the application and are shown via toasts ([#637](https://github.com/scribe-org/Scribe-iOS/issues/637)).
 
 ### 🎨 Design
 

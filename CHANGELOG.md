@@ -24,10 +24,12 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - Users can now delete text word for word instead of character by character by enabling a function in the settings menu. The words are deleted by holding down backspace ([#301](https://github.com/scribe-org/Scribe-iOS/issues/301)).
 - The Scribe translation functionality now allows the user to select which language to translate from via a convenient menu selector within the settings of each keyboard ([#255](https://github.com/scribe-org/Scribe-iOS/issues/255), [#307](https://github.com/scribe-org/Scribe-iOS/issues/307), [#469](https://github.com/scribe-org/Scribe-iOS/issues/469), [#470](https://github.com/scribe-org/Scribe-iOS/issues/470))
   - The keyboard will switch to the appropriate source keyboard during translation and results will be returned from that language.
+- The translation functionality is now based on Wiktionary based translations ([#597](https://github.com/scribe-org/Scribe-iOS/issues/597), [#606](https://github.com/scribe-org/Scribe-iOS/issues/606)).
 - Scribe commands can now be triggered directly on a selected word by pressing the Scribe key and then choosing which command to use ([#141](https://github.com/scribe-org/Scribe-iOS/issues/141)).
 - Users can toggle whether the double space period shortcut is enabled on a per keyboard basis ([#479](https://github.com/scribe-org/Scribe-iOS/issues/479)).
 - A period is added to the letter keys if the keyboard is being used in a search bar ([#447](https://github.com/scribe-org/Scribe-iOS/issues/447)).
 - A menu option that links to the Scribe website has been added ([#572](https://github.com/scribe-org/Scribe-iOS/issues/572)).
+- An in-app tutorial is provided to detail functionalities of the application ([#649](https://github.com/scribe-org/Scribe-iOS/issues/649)).
 
 ### 🎨 Design Changes
 
@@ -59,6 +61,7 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 - All if clauses within for loops have been removed from the codebase ([#428](https://github.com/scribe-org/Scribe-iOS/issues/428)).
 - The app interface was refactored to allow for right to left languages for the app texts ([#513](https://github.com/scribe-org/Scribe-iOS/issues/513)).
 - Variables with language references were changed to only use ISO-2 codes rather than full language names to simplify the code ([#494](https://github.com/scribe-org/Scribe-iOS/issues/494)).
+- Various parts of the application were switched from UIKit to SwiftUI ([#608](https://github.com/scribe-org/Scribe-iOS/issues/608), [#610](https://github.com/scribe-org/Scribe-iOS/issues/610)).
 
 ## Scribe-iOS 3.1.1
 
