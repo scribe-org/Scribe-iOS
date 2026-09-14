@@ -6,11 +6,14 @@
 import UIKit
 
 class DynamicConjugationViewController: UIViewController {
-    // MARK: UI Components
+    var isInfoState: Bool = false
+
+  // MARK: UI Components
 
     private var leftArrowButton: UIButton!
     private var rightArrowButton: UIButton!
     private var buttonContainerView: UIView!
+    private var pageControl: UIPageControl?
 
     // MARK: Navigation Data
 
@@ -55,7 +58,8 @@ class DynamicConjugationViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = keyboardBgColor
         setupUI()
-    }
+        setupPageControl()
+  }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -120,6 +124,26 @@ class DynamicConjugationViewController: UIViewController {
             ),
             buttonContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
         ])
+      }
+
+    /// Builds page control for linear navigation mode.
+    private func setupPageControl() {
+        guard isInfoState, let cases = linearCases else { return }
+
+        let pc = UIPageControl()
+        pc.numberOfPages = cases.count
+        pc.currentPage = currentCaseIndex
+        pc.pageIndicatorTintColor = keyCharColor.withAlphaComponent(0.3)
+        pc.currentPageIndicatorTintColor = keyCharColor
+        pc.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(pc)
+
+        NSLayoutConstraint.activate([
+            pc.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pc.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12)
+        ])
+
+        self.pageControl = pc
     }
 
     // MARK: Display
@@ -138,11 +162,7 @@ class DynamicConjugationViewController: UIViewController {
         commandBar?.isShowingInfoButton = false
 
         let options = currentLevel.options
-        guard !options.isEmpty
-        else {
-            commandBar?.text = commandPromptSpacing + "No options available"
-            return
-        }
+        guard !options.isEmpty else { return }
 
         // Create button grid.
         let count = options.count
@@ -173,21 +193,24 @@ class DynamicConjugationViewController: UIViewController {
                 height: buttonHeight
             )
 
-            button.setTitleColor(keyCharColor, for: .normal)
-            button.backgroundColor = keyColor
-            button.titleLabel?.font = .systemFont(ofSize: 16)
-            button.titleLabel?.numberOfLines = 0
-            button.titleLabel?.adjustsFontSizeToFitWidth = true
-            button.titleLabel?.minimumScaleFactor = 0.6
-            button.titleLabel?.textAlignment = .center
-            button.contentVerticalAlignment = .center
-            button.layer.cornerRadius = keyCornerRadius
-            button.layer.shadowColor = keyShadowColor
-            button.layer.shadowOffset = CGSize(width: 0, height: 1)
-            button.layer.shadowOpacity = 1.0
-            button.layer.shadowRadius = 0
-            button.tag = index
-            button.addTarget(self, action: #selector(optionButtonTapped(_:)), for: .touchUpInside)
+                  button.setTitleColor(keyCharColor, for: .normal)
+                  button.backgroundColor = keyColor
+                  button.titleLabel?.font = .systemFont(ofSize: 16)
+                  button.titleLabel?.numberOfLines = 0
+                  button.titleLabel?.adjustsFontSizeToFitWidth = true
+                  button.titleLabel?.minimumScaleFactor = 0.6
+                  button.titleLabel?.textAlignment = .center
+                  button.contentVerticalAlignment = .center
+                  button.layer.cornerRadius = keyCornerRadius
+                  button.layer.shadowColor = keyShadowColor
+                  button.layer.shadowOffset = CGSize(width: 0, height: 1)
+                  button.layer.shadowOpacity = 1.0
+                  button.layer.shadowRadius = 0
+                  button.tag = index
+                  button.addTarget(self, action: #selector(optionButtonTapped(_:)), for: .touchUpInside)
+                  if isInfoState {
+                      button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+                  }
 
             // Determine the display value.
             let displayValue: String?
@@ -240,7 +263,7 @@ class DynamicConjugationViewController: UIViewController {
 
         case let .finalValue(value):
             // Skip empty values.
-            guard !value.isEmpty else { return }
+            guard !value.isEmpty, !isInfoState else { return }
 
             // Insert text and close.
             proxy.insertText(value + " ")
@@ -248,44 +271,48 @@ class DynamicConjugationViewController: UIViewController {
         }
     }
 
-    /// Handles left arrow button tap.
-    @objc private func leftArrowTapped() {
-        if let cases = linearCases {
-            // Linear mode: navigate between cases or go back in tree.
-            if navigationStack.count > 1 {
-                // In a variant - go back.
-                navigationStack.removeLast()
-                displayCurrentLevel()
-            } else if currentCaseIndex > 0 {
-                // At root level - go to previous case.
-                currentCaseIndex -= 1
-                navigationStack = [cases[currentCaseIndex]]
-                displayCurrentLevel()
+      /// Handles left arrow button tap.
+      @objc private func leftArrowTapped() {
+            if let cases = linearCases {
+                  // Linear mode: navigate between cases or go back in tree.
+                  if navigationStack.count > 1 {
+                        // In a variant - go back.
+                        navigationStack.removeLast()
+                        displayCurrentLevel()
+                  } else if currentCaseIndex > 0 {
+                        // At root level - go to previous case.
+                        currentCaseIndex -= 1
+                        navigationStack = [cases[currentCaseIndex]]
+                        displayCurrentLevel()
+                  }
+            } else {
+                  // Tree mode: just go back.
+                  if navigationStack.count > 1 {
+                        navigationStack.removeLast()
+                        displayCurrentLevel()
+                  }
             }
-        } else {
-            // Tree mode: just go back.
-            if navigationStack.count > 1 {
-                navigationStack.removeLast()
-                displayCurrentLevel()
-            }
-        }
-    }
 
-    /// Handles right arrow button tap.
-    @objc private func rightArrowTapped() {
-        if let cases = linearCases {
-            // Linear mode: navigate to next case.
-            if navigationStack.count > 1 {
-                // In a variant - can't navigate cases.
-                return
-            } else if currentCaseIndex < cases.count - 1 {
-                // At root level - go to next case.
-                currentCaseIndex += 1
-                navigationStack = [cases[currentCaseIndex]]
-                displayCurrentLevel()
+            pageControl?.currentPage = currentCaseIndex
+  }
+
+      /// Handles right arrow button tap.
+      @objc private func rightArrowTapped() {
+            if let cases = linearCases {
+                  // Linear mode: navigate to next case.
+                  if navigationStack.count > 1 {
+                        // In a variant - can't navigate cases.
+                        return
+                  } else if currentCaseIndex < cases.count - 1 {
+                        // At root level - go to next case.
+                        currentCaseIndex += 1
+                        navigationStack = [cases[currentCaseIndex]]
+                        displayCurrentLevel()
+                  }
             }
-        }
-        // Tree mode: right arrow does nothing.
+            // Tree mode: right arrow does nothing.
+
+            pageControl?.currentPage = currentCaseIndex
     }
 
     /// Updates the enabled state of arrow buttons.
