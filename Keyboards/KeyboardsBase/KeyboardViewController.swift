@@ -2007,6 +2007,15 @@ class KeyboardViewController: UIInputViewController {
         }
     }
 
+    func hapticFeedbackIsEnabled() -> Bool {
+        let langCode = languagesAbbrDict[controllerLanguage] ?? "unknown"
+        if let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer") {
+            let dictionaryKey = langCode + "HapticFeedback"
+            return userDefaults.bool(forKey: dictionaryKey)
+        }
+        return false // default off
+    }
+
     // MARK: Button Actions
 
     /// Triggers actions based on the press of a key.
@@ -2567,6 +2576,32 @@ class KeyboardViewController: UIInputViewController {
         } else {
             sender.backgroundColor = keyPressedColor
         }
+
+        // Haptic feedback on key press.
+        // Heavy: destructive/dismiss actions.
+        // Medium: command, navigation, and action keys.
+        // Light: all regular character keys.
+        guard hapticFeedbackIsEnabled() else { return }
+        let heavyKeys = ["delete", "hideKeyboard"]
+        let mediumKeys = [
+            "shift", "return", "Translate", "Conjugate", "Plural",
+            "AutoAction0", "AutoAction1", "AutoAction2",
+            "EmojiKey0", "EmojiKey1", "EmojiKey2",
+            "GetAnnotationInfo", "ScribeAnnotation",
+            "shiftFormsDisplayLeft", "shiftFormsDisplayRight",
+            "ABC", "АБВ", "123", "#+=", ".?123", "selectKeyboard",
+            SpecialKeys.indent, SpecialKeys.capsLock,
+            spaceBar, languageTextForSpaceBar
+        ]
+        let style: UIImpactFeedbackGenerator.FeedbackStyle
+        if heavyKeys.contains(originalKey) {
+            style = .heavy
+        } else if mediumKeys.contains(originalKey) {
+            style = .medium
+        } else {
+            style = .light
+        }
+        UIImpactFeedbackGenerator(style: style).impactOccurred()
     }
 
     /// Shows the conjugation view for verbs.
