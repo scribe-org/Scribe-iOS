@@ -32,16 +32,22 @@ func queryTranslation(commandBar: UILabel) {
 func queryWordToTranslate(queriedWordToTranslate: String) {
     wordToTranslate = String(queriedWordToTranslate.trailingSpacesTrimmed)
 
+    guard !wordToTranslate.isEmpty else {
+        commandState = .invalid
+        return
+    }
+
     // Check to see if the input was uppercase to return an uppercase conjugation.
     inputWordIsCapitalized = wordToTranslate.substring(toIdx: 1).isUppercase
 
-    wordToReturn =
-        LanguageDBManager.translations.queryTranslation(of: wordToTranslate.lowercased())[0]
-
-    if wordToReturn.isEmpty {
-        wordToReturn = LanguageDBManager.translations.queryTranslation(of: wordToTranslate)[0]
-        guard !wordToReturn.isEmpty
-        else {
+    let translations = LanguageDBManager.translations.queryTranslation(of: wordToTranslate.lowercased())
+    if let firstTranslation = translations.first, !firstTranslation.isEmpty {
+        wordToReturn = firstTranslation
+    } else {
+        let fallbackTranslations = LanguageDBManager.translations.queryTranslation(of: wordToTranslate)
+        if let firstFallback = fallbackTranslations.first, !firstFallback.isEmpty {
+            wordToReturn = firstFallback
+        } else {
             commandState = .invalid
             return
         }
