@@ -293,6 +293,10 @@ func centerKeyPopPath(
 ///   - char: the character of the key.
 ///   - displayChar: the character to display on the pop up.
 func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar: String) {
+    // We use idx and row to differentiate between keys that share the same character, for example "§" on Swedish iPad keyboards.
+    let idx = (key as? KeyboardKey)?.idx
+    let row = (key as? KeyboardKey)?.row
+    let lastIdx = keyboard[row!].count - 1
     // Get the frame in respect to the superview.
     if let frame = key.superview?.convert(key.frame, to: nil) {
         var labelVertPosition = frame.origin.y - key.frame.height / 1.75
@@ -305,59 +309,60 @@ func getKeyPopPath(key: UIButton, layer: CAShapeLayer, char: String, displayChar
             labelVertPosition = frame.origin.y - key.frame.height / 2
         }
 
-        if centralKeyChars.contains(char) {
-            layer.path =
-                centerKeyPopPath(
-                    startX: frame.origin.x, startY: frame.origin.y,
-                    keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-                ).cgPath
+      if idx == 0 {
+        layer.path =
+            leftKeyPopPath(
+                startX: frame.origin.x, startY: frame.origin.y,
+                keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+            ).cgPath
+        keyPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition
+        )
+        keyHoldPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition
+        )
+        if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
             keyPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition
+                x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition
             )
             keyHoldPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition
+                x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition
             )
-        } else if leftKeyChars.contains(char) {
-            layer.path =
-                leftKeyPopPath(
-                    startX: frame.origin.x, startY: frame.origin.y,
-                    keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-                ).cgPath
-            keyPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition
-            )
-            keyHoldPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.85, y: labelVertPosition
-            )
-            if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
-                keyPopChar.center = CGPoint(
-                    x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition
-                )
-                keyHoldPopChar.center = CGPoint(
-                    x: frame.origin.x + key.frame.width * 0.65, y: labelVertPosition
-                )
-            }
-        } else if rightKeyChars.contains(char) {
-            layer.path =
-                rightKeyPopPath(
-                    startX: frame.origin.x, startY: frame.origin.y,
-                    keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
-                ).cgPath
-            keyPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition
-            )
-            keyHoldPopChar.center = CGPoint(
-                x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition
-            )
-            if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
-                keyPopChar.center = CGPoint(
-                    x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition
-                )
-                keyHoldPopChar.center = CGPoint(
-                    x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition
-                )
-            }
         }
+      } else if idx == lastIdx {
+        layer.path =
+            rightKeyPopPath(
+                startX: frame.origin.x, startY: frame.origin.y,
+                keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+            ).cgPath
+        keyPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition
+        )
+        keyHoldPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.15, y: labelVertPosition
+        )
+        if DeviceType.isPad || (DeviceType.isPhone && isLandscapeView) {
+            keyPopChar.center = CGPoint(
+                x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition
+            )
+            keyHoldPopChar.center = CGPoint(
+                x: frame.origin.x + key.frame.width * 0.35, y: labelVertPosition
+            )
+        }
+      } else {
+        layer.path =
+            centerKeyPopPath(
+                startX: frame.origin.x, startY: frame.origin.y,
+                keyWidth: key.frame.width, keyHeight: key.frame.height, char: char
+            ).cgPath
+        keyPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition
+        )
+        keyHoldPopChar.center = CGPoint(
+            x: frame.origin.x + key.frame.width * 0.5, y: labelVertPosition
+            )
+      }
+
 
         layer.strokeColor = keyShadowColor
         layer.fillColor = keyColor.cgColor

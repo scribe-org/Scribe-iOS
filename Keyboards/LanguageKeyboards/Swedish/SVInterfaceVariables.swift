@@ -215,16 +215,6 @@ func getSVKeys() {
         symbolKeys = SVKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
-        leftKeyChars = ["q", "a", "1", "-", "[", "_"]
-        if userDefaults.bool(forKey: "svAccentCharacters") {
-            rightKeyChars = ["p", "l", "0", "\"", "=", "·"]
-        } else {
-            rightKeyChars = ["å", "ä", "0", "\"", "=", "·"]
-        }
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
@@ -235,8 +225,6 @@ func getSVKeys() {
             }
             symbolKeys = SVKeyboardProvider.genPadExpandedSymbolKeys()
 
-            leftKeyChars = ["§", "`"]
-            rightKeyChars = ["§", "*"]
             allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
         } else {
             if userDefaults.bool(forKey: "svAccentCharacters") {
@@ -249,14 +237,8 @@ func getSVKeys() {
 
             letterKeys.removeFirst(1)
 
-            leftKeyChars = ["q", "a", "1", "@", "€"]
-            rightKeyChars = []
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 

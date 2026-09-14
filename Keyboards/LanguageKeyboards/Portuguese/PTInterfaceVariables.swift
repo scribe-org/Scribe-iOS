@@ -169,19 +169,12 @@ func getPTKeys() {
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
 
-        leftKeyChars = ["q", "1", "-", "[", "_"]
-        rightKeyChars = ["p", "0", "\"", "=", "·"]
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
             letterKeys = PTKeyboardProvider.genPadExpandedLetterKeys()
             symbolKeys = PTKeyboardProvider.genPadExpandedSymbolKeys()
 
-            leftKeyChars = ["~", "`"]
-            rightKeyChars = ["\\", "~"]
             allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
         } else {
             letterKeys = PTKeyboardProvider.genPadLetterKeys()
@@ -190,14 +183,8 @@ func getPTKeys() {
 
             letterKeys.removeFirst(1)
 
-            leftKeyChars = ["q", "1", "$"]
-            rightKeyChars = []
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 
