@@ -1,4 +1,4 @@
-name: ci_changelog_check
+name: ci_check_changelog
 
 # Runs on every PR event that could change which files are included.
 # 'labeled' and 'unlabeled' are needed so that adding/removing the
