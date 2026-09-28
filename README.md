@@ -118,9 +118,9 @@ The [designs for Scribe](https://www.figma.com/file/c8945w2iyoPYVhsqW7vRn6/scrib
 ### Data Edits
 
 > [!NOTE]\
-> Please see the [Wikidata and Scribe Guide](https://github.com/scribe-org/Organization/blob/main/WIKIDATAGUIDE.md) for an overview of [Wikidata](https://www.wikidata.org/) and how Scribe uses it.
+> Please see the [Wikidata and Scribe Guide](https://github.com/scribe-org/Organization/blob/main/WIKIDATAGUIDE.md) and the [data contracts guide](https://github.com/scribe-org/Organization/blob/main/DATA_CONTRACTS.md) and [Wikidata](https://www.wikidata.org/) for an overview of [Wikidata](https://www.wikidata.org/) and how Scribe uses it.
 
-Scribe does not accept direct edits to the grammar files as they are sourced from [Wikidata](https://www.wikidata.org/). Edits can be discussed and the [Scribe-Data](https://github.com/scribe-org/Scribe-Data) queries will be changed. If there is a problem with one of the files, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
+Scribe does not accept direct edits to the queries or any resulting Scribe-Data data files as they are sourced from [data contracts](https://github.com/scribe-org/Organization/blob/main/DATA_CONTRACTS.md) and [Wikidata](https://www.wikidata.org/). Edits can be discussed and the contracts themselves will be changed used to generate queries before an update. If there is a problem with data in Scribe applications, then the fix should be made on [Wikidata](https://www.wikidata.org/) and not on Scribe. Feel free to let us know that edits have been made by [opening a data issue](https://github.com/scribe-org/Scribe-iOS/issues/new?assignees=&labels=data&template=data_wikidata.yml) or contacting us in the [issues for Scribe-Data](https://github.com/scribe-org/Scribe-Data/issues) and we'll be happy to integrate them!
 
 <sub><a href="#top">Back to top.</a></sub>
 
