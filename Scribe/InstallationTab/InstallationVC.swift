@@ -469,14 +469,6 @@ extension InstallationVC {
     }
 
     private func navigateToTranslationSourceSelection(languageCode: String, languageName: String) {
-        guard
-            let selectionVC = storyboard?.instantiateViewController(
-                identifier: "SelectionViewTemplateViewController"
-            ) as? SelectionViewTemplateViewController
-        else {
-            return
-        }
-
         if let hostingController = navigationController?.viewControllers.last
             as? UIHostingController<DownloadDataScreen> {
             hostingController.navigationItem.backButtonTitle = NSLocalizedString(
@@ -495,7 +487,7 @@ extension InstallationVC {
             translateData[0].section.remove(at: langCodeIndex)
         }
 
-        let parentSection = Section(
+        let parentSection = Scribe.Section(
             sectionTitle: languageName,
             imageString: nil,
             hasToggle: false,
@@ -505,9 +497,13 @@ extension InstallationVC {
             externalLink: false
         )
 
-        selectionVC.configureTable(
-            for: translateData, parentSection: parentSection, langCode: languageCode
+        let pickerView = TranslationLanguagePickerView(
+            tableData: translateData,
+            parentSection: parentSection,
+            langCode: languageCode
         )
+
+        let selectionVC = UIHostingController(rootView: pickerView)
         selectionVC.edgesForExtendedLayout = .all
 
         // Copy navigation bar appearance from Settings tab.
