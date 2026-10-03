@@ -42,6 +42,8 @@ func queryWordToTranslate(queriedWordToTranslate: String) {
         wordToReturn = LanguageDBManager.translations.queryTranslation(of: wordToTranslate)[0]
         guard !wordToReturn.isEmpty
         else {
+            let suggestions = LanguageDBManager.shared.queryAutocompletions(word: wordToTranslate.lowercased())
+            didYouMeanWord = suggestions.first ?? ""
             commandState = .invalid
             return
         }
