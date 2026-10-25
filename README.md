@@ -307,7 +307,7 @@ Please see the [blog posts page on our website](https://scri.be/docs/about/blog-
 
 ### Organizations
 
-The following organizations have supported the development of Scribe projects through various programs. Thank you all! 💙
+The following organizations have supported the development of Scribe projects through various programs. Thank you all! 🩵
 
 <div align="center">
   <br>
