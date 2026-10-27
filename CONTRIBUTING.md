@@ -57,7 +57,7 @@ We also have expectations about the behavior of those who want to grow with us. 
 
 To be blunt, those who are mainly sending AI generated contributions are not demonstrating an interest in growing their skills and are not helping to develop the project. This is not to say that all uses of AI for contributions are bad, but **AI should be a tool, not the contributor itself**.
 
-Continued constructive contributions, new open issues, and clear communication help the project. We would be happy to support community members who make these contributions to expand their skills and take on further responsibilities.
+Continued constructive contributions, new open issues, and clear communication help this project achieve its goals. We would be happy to support community members who make these contributions to expand their skills and take on further responsibilities.
 
 If you like the sound of this, then we look forward to working with you!
 
