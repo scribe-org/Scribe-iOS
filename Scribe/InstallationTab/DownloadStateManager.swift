@@ -41,6 +41,18 @@ class DownloadStateManager: ObservableObject {
         let currentState = downloadStates[key] ?? .ready
         let displayName = getKeyInDict(givenValue: key, dict: languagesAbbrDict)
 
+        // Block if offline.
+        guard NetworkMonitor.shared.isConnected else {
+            showToastMessage(
+                NSLocalizedString(
+                    "i18n.app.download.error.no_internet",
+                    value: "No internet connection. Please connect and try again.",
+                    comment: ""
+                )
+            )
+            return
+        }
+
         // Block if already downloading.
         if currentState == .downloading {
             return
@@ -102,6 +114,16 @@ class DownloadStateManager: ObservableObject {
 
     /// Check all downloaded languages for updates.
     func checkAllForUpdates() {
+        guard NetworkMonitor.shared.isConnected else {
+            showToastMessage(
+                NSLocalizedString(
+                    "i18n.app.download.error.no_internet",
+                    value: "No internet connection. Please connect and try again.",
+                    comment: ""
+                )
+            )
+            return
+        }
         for (language, state) in downloadStates where state == .updated {
             checkForUpdates(language: language)
         }
