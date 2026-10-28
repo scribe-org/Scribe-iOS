@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _: UIApplication,
         didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        copyTranslationDataToSharedContainer()
         initializeFontSize()
         // Override point for customization after application launch.
         if #available(iOS 13.0, *) {
@@ -33,6 +34,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return true
+    }
+
+    private func copyTranslationDataToSharedContainer() {
+        let fileManager = FileManager.default
+        guard let containerURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.be.scri.userDefaultsContainer") else {
+            return
+        }
+
+        let destURL = containerURL.appendingPathComponent("TranslationData.sqlite")
+        guard let bundlePath = Bundle.main.path(forResource: "TranslationData", ofType: "sqlite") else {
+            return
+        }
+
+        var shouldCopy = false
+        if !fileManager.fileExists(atPath: destURL.path) {
+            shouldCopy = true
+        } else {
+            // Check if the bundle database is newer.
+            if let bundleAttributes = try? fileManager.attributesOfItem(atPath: bundlePath),
+               let destAttributes = try? fileManager.attributesOfItem(atPath: destURL.path),
+               let bundleModDate = bundleAttributes[.modificationDate] as? Date,
+               let destModDate = destAttributes[.modificationDate] as? Date {
+                if bundleModDate > destModDate {
+                    shouldCopy = true
+                    try? fileManager.removeItem(at: destURL)
+                }
+            }
+        }
+
+        if shouldCopy {
+            try? fileManager.copyItem(atPath: bundlePath, toPath: destURL.path)
+        }
     }
 
     func applicationWillResignActive(_: UIApplication) {

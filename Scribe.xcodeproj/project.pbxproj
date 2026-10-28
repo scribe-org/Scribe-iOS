@@ -228,6 +228,7 @@
 		D16151062E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
 		D16151072E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
 		D16151082E9DBDED00131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
+		D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */; };
 		D1671A67275A1E8700A7C118 /* Russian.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1671A60275A1E8700A7C118 /* Russian.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1671A71275A1FA200A7C118 /* RUKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */; };
 		D1671A72275A1FC000A7C118 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
@@ -1076,6 +1077,7 @@
 		D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESKeyboardViewController.swift; sourceTree = "<group>"; };
 		D1608669270B6D3C00134D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IDLanguageData.sqlite; sourceTree = "<group>"; };
+		D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data/TranslationData.sqlite; sourceTree = "<group>"; };
 		D166FCF1275A197B0047E62B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1671A60275A1E8700A7C118 /* Russian.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Russian.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1671A70275A1FA200A7C118 /* RUKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RUKeyboardViewController.swift; path = Keyboards/LanguageKeyboards/Russian/RUKeyboardViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -1968,6 +1970,7 @@
 				EDC364682AE408F20001E456 /* InterfaceConstants.swift */,
 				19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */,
 				198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */,
+				D1E3850F2C977FD100DCE538 /* TranslationData.sqlite */,
 				E9B89DCD2F226757003E396F /* DataManager */,
 				E98E73BF2F20D8C3005EEDA3 /* DataContracts */,
 			);
@@ -2676,6 +2679,7 @@
 				E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */,
 				38BD213922D5907F00C6795D /* AppScreen.storyboard in Resources */,
 				38BD213E22D5908100C6795D /* Assets.xcassets in Resources */,
+				D1E385102C977FD200DCE538 /* TranslationData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
