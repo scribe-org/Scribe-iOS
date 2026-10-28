@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Scribe.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA1B00010000000000EE0001"
+               BuildableName = "ScribeUITests.xctest"
+               BlueprintName = "ScribeUITests"
+               ReferencedContainer = "container:Scribe.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

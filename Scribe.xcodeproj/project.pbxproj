@@ -213,6 +213,10 @@
 		D12EB9C52C81C10900181765 /* HEInterfaceVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12EB9B92C81C0E700181765 /* HEInterfaceVariables.swift */; };
 		D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D190B240274056D400705659 /* ColorVariables.swift */; };
 		D13E0DC92C86530E007F00AF /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E0DC82C86530E007F00AF /* TestExtensions.swift */; };
+		AA1B00010000000000BB0001 /* AppLaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B00010000000000AA0001 /* AppLaunchUITests.swift */; };
+		AA1B00010000000000BB0002 /* InstallationTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B00010000000000AA0002 /* InstallationTabUITests.swift */; };
+		AA1B00010000000000BB0003 /* SettingsTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B00010000000000AA0003 /* SettingsTabUITests.swift */; };
+		AA1B00010000000000BB0004 /* AboutTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B00010000000000AA0004 /* AboutTabUITests.swift */; };
 		D1608668270B6D3C00134D48 /* ESKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */; };
 		D160866C270B6D3C00134D48 /* Spanish.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1608665270B6D3C00134D48 /* Spanish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D16150FC2E9DBDC500131732 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
@@ -833,6 +837,13 @@
 			remoteGlobalIDString = 38BD212F22D5907E00C6795D;
 			remoteInfo = Scribe;
 		};
+		AA1B00010000000000DD0001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38BD212F22D5907E00C6795D;
+			remoteInfo = Scribe;
+		};
 		D160866A270B6D3C00134D48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38BD212822D5907E00C6795D /* Project object */;
@@ -1071,6 +1082,11 @@
 		D1362A37274C040F00C00E48 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 		D13E0DC62C86530E007F00AF /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13E0DC82C86530E007F00AF /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		AA1B00010000000000AA0001 /* AppLaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchUITests.swift; sourceTree = "<group>"; };
+		AA1B00010000000000AA0002 /* InstallationTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationTabUITests.swift; sourceTree = "<group>"; };
+		AA1B00010000000000AA0003 /* SettingsTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabUITests.swift; sourceTree = "<group>"; };
+		AA1B00010000000000AA0004 /* AboutTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTabUITests.swift; sourceTree = "<group>"; };
+		AA1B00010000000000AA0005 /* ScribeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D155AD282BDC6CC20075B18C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D1608665270B6D3C00134D48 /* Spanish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spanish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1608667270B6D3C00134D48 /* ESKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -1427,6 +1443,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA1B00010000000000CC0002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1608662270B6D3C00134D48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1644,6 +1667,7 @@
 				D1AFDFBA29CA66F40033BF27 /* Danish.appex */,
 				D1AFE01029CA6E900033BF27 /* Hebrew.appex */,
 				D13E0DC62C86530E007F00AF /* Tests.xctest */,
+				AA1B00010000000000AA0005 /* ScribeUITests.xctest */,
 				E9FAC3932E989712008E00AC /* Indonesian.appex */,
 				F786BB3F2F1E8F70003F7505 /* Conjugate.app */,
 			);
@@ -1773,8 +1797,20 @@
 			children = (
 				693150442C881DAB005F99E8 /* Scribe */,
 				D13E0DD02C86531C007F00AF /* Keyboards */,
+				AA1B00010000000000FF0001 /* UITests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		AA1B00010000000000FF0001 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA1B00010000000000AA0001 /* AppLaunchUITests.swift */,
+				AA1B00010000000000AA0002 /* InstallationTabUITests.swift */,
+				AA1B00010000000000AA0003 /* SettingsTabUITests.swift */,
+				AA1B00010000000000AA0004 /* AboutTabUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		D13E0DD02C86531C007F00AF /* Keyboards */ = {
@@ -2312,6 +2348,24 @@
 			productReference = D13E0DC62C86530E007F00AF /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AA1B00010000000000EE0001 /* ScribeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA1B000100000000001100C1 /* Build configuration list for PBXNativeTarget "ScribeUITests" */;
+			buildPhases = (
+				AA1B00010000000000CC0001 /* Sources */,
+				AA1B00010000000000CC0002 /* Frameworks */,
+				AA1B00010000000000CC0003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA1B00010000000000DD0002 /* PBXTargetDependency */,
+			);
+			name = ScribeUITests;
+			productName = ScribeUITests;
+			productReference = AA1B00010000000000AA0005 /* ScribeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D1608664270B6D3C00134D48 /* Spanish */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D160866D270B6D3C00134D48 /* Build configuration list for PBXNativeTarget "Spanish" */;
@@ -2657,6 +2711,7 @@
 				D1608664270B6D3C00134D48 /* Spanish */,
 				D18EA8982760D4A6001E1358 /* Swedish */,
 				D13E0DC52C86530E007F00AF /* Tests */,
+				AA1B00010000000000EE0001 /* ScribeUITests */,
 				F786BAB22F1E8F70003F7505 /* Conjugate */,
 			);
 		};
@@ -2713,6 +2768,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D13E0DC42C86530E007F00AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1B00010000000000CC0003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3133,6 +3195,17 @@
 				693150472C881DCE005F99E8 /* BaseTableViewControllerTest.swift in Sources */,
 				1900C00E2C88BF980017A874 /* TestKeyboardStyling.swift in Sources */,
 				D13E0DC92C86530E007F00AF /* TestExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1B00010000000000CC0001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1B00010000000000BB0001 /* AppLaunchUITests.swift in Sources */,
+				AA1B00010000000000BB0002 /* InstallationTabUITests.swift in Sources */,
+				AA1B00010000000000BB0003 /* SettingsTabUITests.swift in Sources */,
+				AA1B00010000000000BB0004 /* AboutTabUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3695,6 +3768,11 @@
 			target = 38BD212F22D5907E00C6795D /* Scribe */;
 			targetProxy = D13E0DCA2C86530E007F00AF /* PBXContainerItemProxy */;
 		};
+		AA1B00010000000000DD0002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38BD212F22D5907E00C6795D /* Scribe */;
+			targetProxy = AA1B00010000000000DD0001 /* PBXContainerItemProxy */;
+		};
 		D160866B270B6D3C00134D48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1608664270B6D3C00134D48 /* Spanish */;
@@ -4219,6 +4297,49 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scribe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Scribe";
+			};
+			name = Release;
+		};
+		AA1B000100000000001100D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = be.scri.ScribeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Scribe;
+			};
+			name = Debug;
+		};
+		AA1B000100000000001100D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ATJ9U3WZ27;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = be.scri.ScribeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Scribe;
 			};
 			name = Release;
 		};
@@ -4857,6 +4978,15 @@
 			buildConfigurations = (
 				D13E0DCD2C86530E007F00AF /* Debug */,
 				D13E0DCE2C86530E007F00AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA1B000100000000001100C1 /* Build configuration list for PBXNativeTarget "ScribeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1B000100000000001100D1 /* Debug */,
+				AA1B000100000000001100D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
