@@ -88,7 +88,13 @@ extension AboutViewController {
         let setting = section.section[indexPath.row]
 
         let hasDescription = setting.shortDescription != nil
-        return hasDescription ? 80.0 : 48.0
+        let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")
+        let fontScale: CGFloat = userDefaults?.bool(forKey: "increaseTextSize") == true ? 1.25 : 1.0
+
+        if DeviceType.isPad {
+            return (hasDescription ? 110.0 : 72.0) * fontScale
+        }
+        return (hasDescription ? 80.0 : 48.0) * fontScale
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
