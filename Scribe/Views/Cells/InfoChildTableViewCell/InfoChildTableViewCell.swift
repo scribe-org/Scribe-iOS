@@ -158,6 +158,10 @@ final class InfoChildTableViewCell: UITableViewCell {
             let dictionaryKey = languageCode + "WordForWordDeletion"
             userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
 
+        case .hapticFeedback:
+            let dictionaryKey = languageCode + "HapticFeedback"
+            userDefaults.setValue(toggleSwitch.isOn, forKey: dictionaryKey)
+
         case .increaseTextSize:
             userDefaults.setValue(toggleSwitch.isOn, forKey: "increaseTextSize")
             initializeFontSize()
@@ -205,6 +209,14 @@ final class InfoChildTableViewCell: UITableViewCell {
 
         case .toggleWordForWordDeletion:
             let dictionaryKey = languageCode + "WordForWordDeletion"
+            if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
+                toggleSwitch.isOn = toggleValue
+            } else {
+                toggleSwitch.isOn = false // default off
+            }
+
+        case .hapticFeedback:
+            let dictionaryKey = languageCode + "HapticFeedback"
             if let toggleValue = userDefaults.object(forKey: dictionaryKey) as? Bool {
                 toggleSwitch.isOn = toggleValue
             } else {
