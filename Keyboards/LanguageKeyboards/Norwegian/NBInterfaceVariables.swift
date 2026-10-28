@@ -176,19 +176,12 @@ func getNBKeys() {
         symbolKeys = NBKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
-        leftKeyChars = ["q", "a", "1", "-", "[", "_"]
-        rightKeyChars = ["å", "æ", "0", "\"", "=", "·"]
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
             letterKeys = NBKeyboardProvider.genPadExpandedLetterKeys()
             symbolKeys = NBKeyboardProvider.genPadExpandedSymbolKeys()
-            leftKeyChars = ["kr", "`"]
-            rightKeyChars = ["¨", "—"]
+
             allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
         } else {
             letterKeys = NBKeyboardProvider.genPadLetterKeys()
@@ -196,14 +189,9 @@ func getNBKeys() {
             symbolKeys = NBKeyboardProvider.genPadSymbolKeys(currencyKeys: currencyKeys)
 
             letterKeys.removeFirst(1)
-            leftKeyChars = ["q", "a", "1", "@", "€"]
-            rightKeyChars = ["delete", "return"]
+
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 

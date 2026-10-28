@@ -163,20 +163,12 @@ func getRUKeys() {
         symbolKeys = RUKeyboardProvider.genPhoneSymbolKeys(currencyKeys: currencyKeys)
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
-        leftKeyChars = ["й", "ф", "1", "-", "[", "_"]
-        rightKeyChars = ["х", "э", "0", "\"", "=", "·"]
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
             letterKeys = RUKeyboardProvider.genPadExpandedLetterKeys()
             symbolKeys = RUKeyboardProvider.genPadExpandedSymbolKeys()
 
-            leftKeyChars = ["§", "`"]
-            rightKeyChars = ["+", "₽"]
             allKeys = Array(letterKeys.joined()) + Array(symbolKeys.joined())
         } else {
             letterKeys = RUKeyboardProvider.genPadLetterKeys()
@@ -185,14 +177,8 @@ func getRUKeys() {
 
             letterKeys.removeFirst(1)
 
-            leftKeyChars = ["й", "ф", "1", "@", "$"]
-            rightKeyChars = []
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 

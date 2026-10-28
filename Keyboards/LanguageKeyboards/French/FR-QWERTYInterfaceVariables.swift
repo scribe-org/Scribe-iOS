@@ -99,12 +99,6 @@ func getFRQWERTYKeys() {
         symbolKeys = FRQWERTYKeyboardConstants.symbolKeysPhone
         allKeys =
             Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-
-        leftKeyChars = ["a", "q", "1", "-", "[", "_"]
-        rightKeyChars = ["p", "m", "0", "\"", "=", "·"]
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
-        }
     } else {
         // Use the expanded keys layout if the iPad is wide enough and has no home button.
         if usingExpandedKeyboard {
@@ -121,12 +115,6 @@ func getFRQWERTYKeys() {
 
             allKeys =
                 Array(letterKeys.joined()) + Array(numberKeys.joined()) + Array(symbolKeys.joined())
-        }
-
-        leftKeyChars = ["q", "a", "1", "@", "~"]
-        rightKeyChars = []
-        centralKeyChars = allKeys.filter {
-            !leftKeyChars.contains($0) && !rightKeyChars.contains($0)
         }
     }
 
