@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
 		1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */; };
-		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
 		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
 		146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 146B70BC2A853A3800710BD4 /* SwipeableTabBarController */; };
@@ -123,13 +122,13 @@
 		38BD214F22D592CA00C6795D /* DEKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
-		5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */; };
-		5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */; };
-		5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */; };
 		5A8FFB6B2C5A9D9C00F4B571 /* English.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1AFDF3D29CA66D00033BF27 /* English.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		693150472C881DCE005F99E8 /* BaseTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */; };
 		69B81EBC2BFB8C77008CAB85 /* TipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */; };
 		84AF4D882C3575EA009AE0D2 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */; };
+		8B82A46F2F7D6E0400F1B04D /* TranslationLanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A46E2F7D6E0300F1B04D /* TranslationLanguagePickerView.swift */; };
+		8BA036E22F7FCA2D00F5ADF9 /* LanguageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA036E12F7FCA2D00F5ADF9 /* LanguageSettingsView.swift */; };
+		8BA036E42F7FCDC300F5ADF9 /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA036E32F7FCDC300F5ADF9 /* SettingsHomeView.swift */; };
 		A4C829A12F8400800015D657 /* ConjugateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725CAE42F6A782500A8C950 /* ConjugateTab.swift */; };
 		A4C829A52F84366C0015D657 /* InstallationDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96111472F04EC62001E4F95 /* InstallationDownload.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -771,7 +770,6 @@
 		F786BB292F1E8F70003F7505 /* IDLanguageData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D16150FB2E9DBDC500131732 /* IDLanguageData.sqlite */; };
 		F786BB2A2F1E8F70003F7505 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1895BD12C1D816F009FBEB0 /* Settings.bundle */; };
 		F786BB2B2F1E8F70003F7505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD213F22D5908100C6795D /* LaunchScreen.storyboard */; };
-		F786BB2C2F1E8F70003F7505 /* RadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */; };
 		F786BB2D2F1E8F70003F7505 /* InfoChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147797AF2A2CD3370044A53E /* InfoChildTableViewCell.xib */; };
 		F786BB2E2F1E8F70003F7505 /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2486F22B0B4E8C0038AE6A /* AboutTableViewCell.xib */; };
 		F786BB2F2F1E8F70003F7505 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E93179A32F03AE77002ED334 /* Localizable.xcstrings */; };
@@ -1017,7 +1015,6 @@
 /* Begin PBXFileReference section */
 		140158982A430DD000D14E52 /* ThirdPartyLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicense.swift; sourceTree = "<group>"; };
 		1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaAndScribe.swift; sourceTree = "<group>"; };
-		140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTemplateViewController.swift; sourceTree = "<group>"; };
 		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
@@ -1049,12 +1046,12 @@
 		38BD214E22D592CA00C6795D /* DEKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTableViewCell.swift; sourceTree = "<group>"; };
-		5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioTableViewCell.xib; sourceTree = "<group>"; };
-		5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewTemplateViewController.swift; sourceTree = "<group>"; };
 		693150462C881DCE005F99E8 /* BaseTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerTest.swift; sourceTree = "<group>"; };
 		69B81EBB2BFB8C77008CAB85 /* TipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCardView.swift; sourceTree = "<group>"; };
 		84AF4D872C3575EA009AE0D2 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
+		8B82A46E2F7D6E0300F1B04D /* TranslationLanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLanguagePickerView.swift; sourceTree = "<group>"; };
+		8BA036E12F7FCA2D00F5ADF9 /* LanguageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingsView.swift; sourceTree = "<group>"; };
+		8BA036E32F7FCDC300F5ADF9 /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
 		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
 		D109A20B275B6888005E2271 /* French.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = French.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1695,8 +1692,6 @@
 		5A68DA402CDE7B7900897FAD /* RadioTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5A68DA3D2CDE7B7900897FAD /* RadioTableViewCell.swift */,
-				5A68DA3E2CDE7B7900897FAD /* RadioTableViewCell.xib */,
 			);
 			path = RadioTableViewCell;
 			sourceTree = "<group>";
@@ -2030,10 +2025,11 @@
 		EDB4601F2B03B3B400BEA967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8BA036E32F7FCDC300F5ADF9 /* SettingsHomeView.swift */,
+				8BA036E12F7FCA2D00F5ADF9 /* LanguageSettingsView.swift */,
 				5A68DA442CDE7D2900897FAD /* Cells */,
 				EDB460202B03B3E400BEA967 /* BaseTableViewController.swift */,
-				5A68DA3F2CDE7B7900897FAD /* SelectionViewTemplateViewController.swift */,
-				140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */,
+				8B82A46E2F7D6E0300F1B04D /* TranslationLanguagePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2670,7 +2666,6 @@
 				D16150FD2E9DBDED00131732 /* IDLanguageData.sqlite in Resources */,
 				D1895BD22C1D816F009FBEB0 /* Settings.bundle in Resources */,
 				38BD214122D5908100C6795D /* LaunchScreen.storyboard in Resources */,
-				5A68DA422CDE7B7A00897FAD /* RadioTableViewCell.xib in Resources */,
 				147797B12A2CD3370044A53E /* InfoChildTableViewCell.xib in Resources */,
 				ED2486F42B0B4E8C0038AE6A /* AboutTableViewCell.xib in Resources */,
 				E93179A42F03AE78002ED334 /* Localizable.xcstrings in Resources */,
@@ -2824,7 +2819,6 @@
 				F786BB292F1E8F70003F7505 /* IDLanguageData.sqlite in Resources */,
 				F786BB2A2F1E8F70003F7505 /* Settings.bundle in Resources */,
 				F786BB2B2F1E8F70003F7505 /* LaunchScreen.storyboard in Resources */,
-				F786BB2C2F1E8F70003F7505 /* RadioTableViewCell.xib in Resources */,
 				F786BB2D2F1E8F70003F7505 /* InfoChildTableViewCell.xib in Resources */,
 				F786BB2E2F1E8F70003F7505 /* AboutTableViewCell.xib in Resources */,
 				F786BB2F2F1E8F70003F7505 /* Localizable.xcstrings in Resources */,
@@ -2886,8 +2880,10 @@
 				D17193C027AEA33A0038660B /* AppTextStyling.swift in Sources */,
 				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
+				8BA036E42F7FCDC300F5ADF9 /* SettingsHomeView.swift in Sources */,
 				147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */,
 				1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */,
+				8B82A46F2F7D6E0400F1B04D /* TranslationLanguagePickerView.swift in Sources */,
 				E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */,
 				E996498A2E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */,
 				3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */,
@@ -2914,13 +2910,12 @@
 				198369CC2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */,
 				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
-				140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				30489C1E2936DAB700B59393 /* ToolTipView.swift in Sources */,
 				3045396F293B9DF2003AE55B /* ToolTipViewTheme.swift in Sources */,
-				5A68DA412CDE7B7A00897FAD /* RadioTableViewCell.swift in Sources */,
 				E9F7273E2F45A6DE0060B92D /* LanguageDataService.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
+				8BA036E22F7FCA2D00F5ADF9 /* LanguageSettingsView.swift in Sources */,
 				E9CE5EA82F063E230068A930 /* DownloadDataScreen.swift in Sources */,
 				D16DD3A529E78A1500FB9022 /* Utilities.swift in Sources */,
 				EDB460212B03B3E400BEA967 /* BaseTableViewController.swift in Sources */,
@@ -2942,7 +2937,6 @@
 				D111E9A227AFE4F300746F92 /* CommandBar.swift in Sources */,
 				30453967293B9D31003AE55B /* ViewThemeable.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
-				5A68DA432CDE7B7A00897FAD /* SelectionViewTemplateViewController.swift in Sources */,
 				ED2486F32B0B4E8C0038AE6A /* AboutTableViewCell.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* InstallScreen.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
@@ -3951,7 +3945,7 @@
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3979,7 +3973,7 @@
 				DEVELOPMENT_TEAM = ATJ9U3WZ27;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribe/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
