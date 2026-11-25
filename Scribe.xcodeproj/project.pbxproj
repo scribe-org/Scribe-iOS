@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075257CC2F7D481E00E57E2A /* AboutTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257C92F7D481D00E57E2A /* AboutTab.swift */; };
+		075257CD2F7D481E00E57E2A /* AboutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257C72F7D481D00E57E2A /* AboutRowView.swift */; };
+		075257CE2F7D481E00E57E2A /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257C62F7D481D00E57E2A /* AboutInfoView.swift */; };
+		075257CF2F7D481E00E57E2A /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257C82F7D481D00E57E2A /* AboutSectionView.swift */; };
+		075257D02F7D481E00E57E2A /* AboutTipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257CA2F7D481D00E57E2A /* AboutTipCardView.swift */; };
+		075257D12F7D481E00E57E2A /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075257CB2F7D481D00E57E2A /* ShareSheet.swift */; };
+		14AC56842A24AED3006B1DDF /* AboutHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutHostingController.swift */; };
 		140158992A430DD000D14E52 /* ThirdPartyLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158982A430DD000D14E52 /* ThirdPartyLicense.swift */; };
 		1401589B2A45A07200D14E52 /* WikimediaAndScribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */; };
 		140158A22A4EDB2200D14E52 /* TableViewTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */; };
-		1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B7862A2DFCDD001DF45B /* AboutTableData.swift */; };
 		1406B78C2A3209CF001DF45B /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406B78B2A3209CF001DF45B /* AppExtensions.swift */; };
 		146B70BD2A853A3800710BD4 /* SwipeableTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 146B70BC2A853A3800710BD4 /* SwipeableTabBarController */; };
 		147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */; };
@@ -18,8 +24,6 @@
 		147797B32A2CD5AB0044A53E /* ParentTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */; };
 		147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797B42A2CFB490044A53E /* SettingsViewController.swift */; };
 		147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */; };
-		14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56832A24AED3006B1DDF /* AboutViewController.swift */; };
-		14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC56892A261663006B1DDF /* InformationScreenVC.swift */; };
 		1900C00E2C88BF980017A874 /* TestKeyboardStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1900C00D2C88BF980017A874 /* TestKeyboardStyling.swift */; };
 		198369CC2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */; };
 		198369CD2C7980BA00C1B583 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */; };
@@ -1018,7 +1022,13 @@
 		140158982A430DD000D14E52 /* ThirdPartyLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicense.swift; sourceTree = "<group>"; };
 		1401589A2A45A07200D14E52 /* WikimediaAndScribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaAndScribe.swift; sourceTree = "<group>"; };
 		140158A12A4EDB2200D14E52 /* TableViewTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTemplateViewController.swift; sourceTree = "<group>"; };
-		1406B7862A2DFCDD001DF45B /* AboutTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableData.swift; sourceTree = "<group>"; };
+		075257C62F7D481D00E57E2A /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfoView.swift; sourceTree = "<group>"; };
+		075257C72F7D481D00E57E2A /* AboutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRowView.swift; sourceTree = "<group>"; };
+		075257C82F7D481D00E57E2A /* AboutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionView.swift; sourceTree = "<group>"; };
+		075257C92F7D481D00E57E2A /* AboutTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTab.swift; sourceTree = "<group>"; };
+		075257CA2F7D481D00E57E2A /* AboutTipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTipCardView.swift; sourceTree = "<group>"; };
+		075257CB2F7D481D00E57E2A /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		14AC56832A24AED3006B1DDF /* AboutHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHostingController.swift; sourceTree = "<group>"; };
 		1406B78B2A3209CF001DF45B /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		144B56F22A568AC200C2F447 /* Scribe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribe.entitlements; sourceTree = "<group>"; };
 		147797AE2A2CD3370044A53E /* InfoChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoChildTableViewCell.swift; sourceTree = "<group>"; };
@@ -1026,8 +1036,6 @@
 		147797B22A2CD5AB0044A53E /* ParentTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableCellModel.swift; sourceTree = "<group>"; };
 		147797B42A2CFB490044A53E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		147797BF2A2D0CDF0044A53E /* SettingsTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableData.swift; sourceTree = "<group>"; };
-		14AC56832A24AED3006B1DDF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		14AC56892A261663006B1DDF /* InformationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenVC.swift; sourceTree = "<group>"; };
 		1900C00D2C88BF980017A874 /* TestKeyboardStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyboardStyling.swift; sourceTree = "<group>"; };
 		198369CB2C7980BA00C1B583 /* KeyboardProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProvider.swift; sourceTree = "<group>"; };
 		19DC85F92C7772FC006E32FD /* KeyboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBuilder.swift; sourceTree = "<group>"; };
@@ -1554,9 +1562,13 @@
 		147797A92A2CD2B50044A53E /* AboutTab */ = {
 			isa = PBXGroup;
 			children = (
-				1406B7862A2DFCDD001DF45B /* AboutTableData.swift */,
-				14AC56832A24AED3006B1DDF /* AboutViewController.swift */,
-				14AC56892A261663006B1DDF /* InformationScreenVC.swift */,
+				075257C62F7D481D00E57E2A /* AboutInfoView.swift */,
+				075257C72F7D481D00E57E2A /* AboutRowView.swift */,
+				075257C82F7D481D00E57E2A /* AboutSectionView.swift */,
+				075257C92F7D481D00E57E2A /* AboutTab.swift */,
+				075257CA2F7D481D00E57E2A /* AboutTipCardView.swift */,
+				075257CB2F7D481D00E57E2A /* ShareSheet.swift */,
+				14AC56832A24AED3006B1DDF /* AboutHostingController.swift */,
 			);
 			path = AboutTab;
 			sourceTree = "<group>";
@@ -2887,7 +2899,6 @@
 				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
 				147797B52A2CFB490044A53E /* SettingsViewController.swift in Sources */,
-				1406B7872A2DFCDD001DF45B /* AboutTableData.swift in Sources */,
 				E9202DF02F0FAA0C001590FC /* DownloadStateManager.swift in Sources */,
 				E996498A2E98AC6000200F53 /* IDInterfaceVariables.swift in Sources */,
 				3045396D293B9DDC003AE55B /* ToolTipViewDatasource.swift in Sources */,
@@ -2897,11 +2908,17 @@
 				D180EC0328FDFABF0018E29B /* FR-AZERTYInterfaceVariables.swift in Sources */,
 				D1CDED7B2A859FBF00098546 /* ENInterfaceVariables.swift in Sources */,
 				38BD213622D5907F00C6795D /* InstallationVC.swift in Sources */,
+				075257CC2F7D481E00E57E2A /* AboutTab.swift in Sources */,
+				075257CD2F7D481E00E57E2A /* AboutRowView.swift in Sources */,
+				075257CE2F7D481E00E57E2A /* AboutInfoView.swift in Sources */,
+				075257CF2F7D481E00E57E2A /* AboutSectionView.swift in Sources */,
+				075257D02F7D481E00E57E2A /* AboutTipCardView.swift in Sources */,
+				075257D12F7D481E00E57E2A /* ShareSheet.swift in Sources */,
+				14AC56842A24AED3006B1DDF /* AboutHostingController.swift in Sources */,
 				D171942D27AECEB80038660B /* DEInterfaceVariables.swift in Sources */,
 				147797C02A2D0CDF0044A53E /* SettingsTableData.swift in Sources */,
 				E9F7273F2F45A6E60060B92D /* APIClient.swift in Sources */,
 				E98034E42F45B88C006C1CDC /* ToastView.swift in Sources */,
-				14AC568A2A261663006B1DDF /* InformationScreenVC.swift in Sources */,
 				147797B02A2CD3370044A53E /* InfoChildTableViewCell.swift in Sources */,
 				D1A2DCB427AD3EB50057A10D /* AppUISymbols.swift in Sources */,
 				D171945427AF04E50038660B /* KeyboardViewController.swift in Sources */,
@@ -2955,7 +2972,6 @@
 				D1CDED812A85A12400098546 /* NBInterfaceVariables.swift in Sources */,
 				D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
 				D1B0719727C63C9100FD7DBD /* KeyAnimation.swift in Sources */,
-				14AC56842A24AED3006B1DDF /* AboutViewController.swift in Sources */,
 				D171945527AF05D40038660B /* Extensions.swift in Sources */,
 				EDC364692AE408F20001E456 /* InterfaceConstants.swift in Sources */,
 			);
