@@ -2094,7 +2094,13 @@ class KeyboardViewController: UIInputViewController {
                 autoCapAtStartOfProxy()
 
                 if commandState == .invalid {
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    // wordToTranslate is set by queryTranslation, verbToConjugate by triggerVerbConjugation.
+                    let failedWord = wordToTranslate.isEmpty ? verbToConjugate : wordToTranslate
+                    if let suggestion = didYouMeanSuggestion(for: failedWord) {
+                        commandBar.text = commandPromptSpacing + suggestion
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    }
                     commandBar.isShowingInfoButton = true
                 } else {
                     commandBar.isShowingInfoButton = false
@@ -2121,7 +2127,11 @@ class KeyboardViewController: UIInputViewController {
                     loadKeys()
                     proxy.insertText(selectedText)
                     autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+                    if let suggestion = didYouMeanSuggestion(for: selectedText) {
+                        commandBar.text = commandPromptSpacing + suggestion
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWiktionary
+                    }
                     commandBar.isShowingInfoButton = true
                     commandBar.textColor = keyCharColor
                     return
@@ -2155,7 +2165,11 @@ class KeyboardViewController: UIInputViewController {
                     loadKeys()
                     proxy.insertText(selectedText)
                     autoCapAtStartOfProxy()
-                    commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    if let suggestion = didYouMeanSuggestion(for: selectedText) {
+                        commandBar.text = commandPromptSpacing + suggestion
+                    } else {
+                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                    }
                     commandBar.isShowingInfoButton = true
                     commandBar.textColor = keyCharColor
                     return
@@ -2177,7 +2191,11 @@ class KeyboardViewController: UIInputViewController {
 
                     if commandState == .invalid {
                         proxy.insertText(selectedText)
-                        commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                        if let suggestion = didYouMeanSuggestion(for: selectedText) {
+                            commandBar.text = commandPromptSpacing + suggestion
+                        } else {
+                            commandBar.text = commandPromptSpacing + invalidCommandMsgWikidata
+                        }
                         commandBar.isShowingInfoButton = true
                     } else {
                         commandBar.isShowingInfoButton = false
