@@ -115,6 +115,7 @@ enum ConjViewShiftButtonsState {
 var keyboardState: KeyboardState = .letters
 var shiftButtonState: ShiftButtonState = .normal
 var commandState: CommandState = .idle
+var prevToInvalidState: CommandState = .idle
 var autoActionState: AutoActionState = .suggest
 var conjViewShiftButtonsState: ConjViewShiftButtonsState = .bothInactive
 var pluralWords: Set<String>?
