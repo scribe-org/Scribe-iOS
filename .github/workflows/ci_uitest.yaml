@@ -1,0 +1,56 @@
+name: ci_uitest
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+  push:
+    branches:
+      - main
+
+jobs:
+  ui-test:
+    runs-on: macos-latest
+
+    name: Run UI Tests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Set up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Install xcpretty
+        run: gem install xcpretty
+
+      - name: Cache DerivedData
+        uses: actions/cache@v3
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ${{ runner.os }}-xcode-uitest-${{ hashFiles('**/project.pbxproj') }}
+          restore-keys: |
+            ${{ runner.os }}-xcode-uitest-
+
+      - name: Build for Testing
+        run: |
+          xcodebuild build-for-testing \
+            -scheme Scribe \
+            -derivedDataPath Build/ \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.5' \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
+
+      - name: Run UI Tests
+        run: |
+          xcodebuild test-without-building \
+            -scheme Scribe \
+            -derivedDataPath Build/ \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.5' \
+            -only-testing:ScribeUITests \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
