@@ -41,5 +41,11 @@ func isVerbInConjugationTable(queriedVerbToConjugate: String) -> Bool {
     let columnName = (controllerLanguage == "Swedish") ? "verb" : "infinitive"
     let results = LanguageDBManager.shared.queryVerb(of: verbToConjugate, with: [columnName])
 
-    return !results.isEmpty && !results[0].isEmpty
+    let verbExists = !results.isEmpty && !results[0].isEmpty
+    if !verbExists {
+        let suggestions = LanguageDBManager.shared.queryAutocompletions(word: verbToConjugate)
+        didYouMeanWord = suggestions.first ?? ""
+    }
+
+    return verbExists
 }
