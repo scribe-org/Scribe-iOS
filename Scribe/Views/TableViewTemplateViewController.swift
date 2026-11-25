@@ -119,10 +119,12 @@ extension TableViewTemplateViewController {
         let section = dataSet[indexPath.section]
         let setting = section.section[indexPath.row]
 
+        let fontScale: CGFloat = userDefaults.bool(forKey: "increaseTextSize") ? 1.25 : 1.0
+
         // If there's no description, return a fixed small height.
         guard let description = setting.shortDescription
         else {
-            return 54.0
+            return (DeviceType.isPad ? 66.0 : 54.0) * fontScale
         }
 
         // Calculate available width for text.
@@ -156,7 +158,8 @@ extension TableViewTemplateViewController {
         ).height
 
         // Return total height: title + description + padding buffer.
-        return ceil(titleHeight + descHeight + 52)
+        let padding: CGFloat = DeviceType.isPad ? 64.0 : 52.0
+        return ceil((titleHeight + descHeight + padding) * fontScale)
     }
 
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {

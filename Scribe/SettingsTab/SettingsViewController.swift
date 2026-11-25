@@ -270,26 +270,46 @@ extension SettingsViewController: UITableViewDelegate {
         let setting = section.section[indexPath.row]
 
         let hasDescription = setting.shortDescription != nil
-        return hasDescription ? 80.0 : 48.0
+        let userDefaults = UserDefaults(suiteName: "group.be.scri.userDefaultsContainer")
+        let fontScale: CGFloat = userDefaults?.bool(forKey: "increaseTextSize") == true ? 1.25 : 1.0
+
+        if DeviceType.isPad {
+            return (hasDescription ? 110.0 : 66.0) * fontScale
+        }
+        return (hasDescription ? 80.0 : 48.0) * fontScale
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let label = UILabel()
+        label.text = tableData[section].headingTitle
+        label.font = UIFont.boldSystemFont(ofSize: fontSize * 1.1)
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+
+        let horizontalPadding: CGFloat = 32
+        let verticalPadding: CGFloat = 16
+
+        let constrainedWidth = parentTable.bounds.width - horizontalPadding
+        let size = label.sizeThatFits(
+            CGSize(width: constrainedWidth, height: CGFloat.greatestFiniteMagnitude)
+        )
+
+        let minHeaderHeight: CGFloat = DeviceType.isPad ? 42.0 : 32.0
+        return max(size.height + verticalPadding, minHeaderHeight)
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView: UIView
-
-        if let reusableHeaderView = tableView.headerView(forSection: section) {
-            headerView = reusableHeaderView
-        } else {
-            headerView = UIView(
-                frame: CGRect(x: 0, y: 0, width: parentTable.bounds.width, height: 32)
-            )
-        }
+        let headerHeight = self.tableView(tableView, heightForHeaderInSection: section)
+        let headerView = UIView(
+            frame: CGRect(x: 0, y: 0, width: parentTable.bounds.width, height: headerHeight)
+        )
 
         let label = UILabel(
             frame: CGRect(
                 x: preferredLanguage.prefix(2) == "ar" ? -1 * headerView.bounds.width / 10 : 0,
                 y: 0,
                 width: headerView.bounds.width,
-                height: 32
+                height: headerHeight
             )
         )
 
