@@ -246,13 +246,6 @@ func setKeyboardLayout() {
         pluralPromptAndColorPlaceholder
     ]
 }
-
-// Variables that define which keys are positioned on the very left, right or in the center of the keyboard.
-// The purpose of these is to define which key pop up functions should be ran.
-var centralKeyChars = [String]()
-var leftKeyChars = [String]()
-var rightKeyChars = [String]()
-
 // Variables for call out positioning.
 var horizStart = CGFloat(0)
 var vertStart = CGFloat(0)
