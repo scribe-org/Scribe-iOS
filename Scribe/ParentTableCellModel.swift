@@ -71,6 +71,7 @@ enum UserInteractiveState {
     case toggleAccentCharacters
     case toggleWordForWordDeletion
     case increaseTextSize
+    case hapticFeedback
     case none
 }
 
